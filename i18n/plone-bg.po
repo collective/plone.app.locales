@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.0\n"
-"POT-Creation-Date: 2005-04-15 14:52+0000\n"
+"POT-Creation-Date: 2005-05-06 19:17+0000\n"
 "PO-Revision-Date: 2005-02-24 11:13+0200\n"
 "Last-Translator: Vladimir Iliev <vladimir.iliev@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -49,10 +49,10 @@ msgid "About"
 msgstr "Относно"
 
 
-#: ./plone_3rdParty/CMFTopic/topic_criteria_form.pt
-#. <input class="context" i18n:attributes="value" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add"/>
 #: ./plone_forms/folder_factories.pt
 #. <input class="standalone" i18n:attributes="value" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add"/>
+#: ./plone_3rdParty/CMFTopic/topic_criteria_form.pt
+#. <input class="context" i18n:attributes="value" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add"/>
 msgid "Add"
 msgstr "Добавяне"
 
@@ -71,15 +71,14 @@ msgid "Add Comment"
 msgstr "Добавяне на коментар"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
-#. <input class="standalone add" i18n:attributes="value" name="prefs_group_details:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add New Group"/>
+#: ./plone_prefs/prefs_groups_overview.cpt
+#. <input class="standalone add" i18n:attributes="value" name="form.button.AddGroup" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add New Group"/>
 msgid "Add New Group"
 msgstr "Добавяне на нова група"
 
 
-#: ./plone_prefs/prefs_users_overview.pt
-#. <input class="standalone add" i18n:attributes="value" name="join_form:method" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="python:not portal.portal_quickinstaller.isProductInstalled('CMFMember')" type="submit" value="Add New User"/>
-#. <input class="standalone add" i18n:attributes="value" name="createMember:method" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="python:portal.portal_quickinstaller.isProductInstalled('CMFMember')" type="submit" value="Add New User"/>
+#: ./plone_prefs/prefs_users_overview.cpt
+#. <input class="standalone add" i18n:attributes="value" name="form.button.AddUser" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add New User"/>
 msgid "Add New User"
 msgstr "Добавяне на нов потребител"
 
@@ -89,7 +88,7 @@ msgstr "Добавяне на обект"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a href="#" i18n:attributes="title" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" title="Add new items to this folder">
+#. <a class="contentActionMenuHeader" href="#" i18n:attributes="title" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" title="Add new items to this folder">
 msgid "Add new items to this folder"
 msgstr "Добавяне на нови обекти към тази папка"
 
@@ -141,12 +140,18 @@ msgid "Apply"
 msgstr "Прилагане"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
-#. <input class="context" i18n:attributes="value" name="prefs_group_manage:method" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="groups" type="submit" value="Apply Changes"/>
-#: ./plone_prefs/prefs_users_overview.pt
-#. <input class="context" i18n:attributes="value" name="prefs_user_manage:method" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="batch" type="submit" value="Apply Changes"/>
+#: ./plone_prefs/prefs_groups_overview.cpt
+#. <input class="context" i18n:attributes="value" name="form.button.Modify" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="groups" type="submit" value="Apply Changes"/>
+#: ./plone_prefs/prefs_users_overview.cpt
+#. <input class="context" i18n:attributes="value" name="form.button.Modify" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="batch" type="submit" value="Apply Changes"/>
 msgid "Apply Changes"
 msgstr "Прилагане на промените"
+
+
+#: ./plone_forms/folder_localrole_form.pt
+#. <input class="context" i18n:attributes="value" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Apply Settings"/>
+msgid "Apply Settings"
+msgstr ""
 
 
 msgid "April"
@@ -170,8 +175,8 @@ msgstr "Възлагане на локални роли"
 
 
 #: ./plone_forms/folder_localrole_form.pt
-#. <input class="context" i18n:attributes="value" name="folder_localrole_add:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Assign selected role(s) to selected user(s)/group(s)"/>
-msgid "Assign selected role(s) to selected user(s)/group(s)"
+#. <input class="context" i18n:attributes="value" name="folder_localrole_add:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Assign Selected Role(s) to Selected User(s)/Group(s)"/>
+msgid "Assign Selected Role(s) to Selected User(s)/Group(s)"
 msgstr ""
 
 
@@ -203,12 +208,12 @@ msgid "Calendar"
 msgstr "Календар"
 
 
-#: ./plone_forms/folder_constraintypes_form.cpt
-#. <input class="standalone" i18n:attributes="value" name="form.button.Cancel" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Cancel"/>
 #: ./plone_forms/content_status_history.cpt
 #. <input class="standalone" i18n:attributes="value" name="form.button.Cancel" tal:attributes="tabindex tabindex/next;" type="submit" value="Cancel"/>
-#: ./plone_forms/select_default_page.cpt
-#. <input class="context" i18n:attributes="value" name="form.button.Cancel" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Cancel"/>
+#: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
+#. <input class="standalone" i18n:attributes="value" name="form.button.Cancel" tabindex="" tal:attributes="tabindex tabindex/next" type="submit" value="Cancel"/>
+#: ./plone_content/metadata_edit_form.cpt
+#. <input class="standalone" i18n:attributes="value" name="form.button.Cancel" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Cancel"/>
 msgid "Cancel"
 msgstr "Отказване"
 
@@ -232,7 +237,7 @@ msgstr "Промяна на състояние"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${folder/absolute_url}/select_default_page;" title="Change default page">
+#. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
 msgid "Change default page"
 msgstr ""
 
@@ -250,7 +255,7 @@ msgstr "Вашите промени бяха съхранени."
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a href="#" i18n:attributes="title" onclick="return buttonClick(event, 'templateMenu');" onmouseover="buttonMouseover(event, 'templateMenu');" tal:condition="not:dimMenu" title="Choose default view">
+#. <a class="contentActionMenuHeader" href="#" i18n:attributes="title" onclick="return buttonClick(event, 'templateMenu');" onmouseover="buttonMouseover(event, 'templateMenu');" tal:condition="not:dimMenu" title="Choose default view">
 msgid "Choose default view"
 msgstr ""
 
@@ -276,7 +281,7 @@ msgstr "Конфигуриране"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="folderAddSettings" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${folder/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
+#. <a class="folderAddSettings" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
 msgid "Configure which content types can be added here"
 msgstr ""
 
@@ -332,8 +337,8 @@ msgstr "Изтриване"
 
 
 #: ./plone_forms/folder_localrole_form.pt
-#. <input class="destructive" i18n:attributes="value" name="folder_localrole_delete:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Delete Selected Role(s) and User(s)"/>
-msgid "Delete Selected Role(s) and User(s)"
+#. <input class="destructive" i18n:attributes="value" name="folder_localrole_delete:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Delete Selected Role(s) and User(s)/Group(s)"/>
+msgid "Delete Selected Role(s) and User(s)/Group(s)"
 msgstr ""
 
 
@@ -536,6 +541,10 @@ msgstr "Индекс на папка"
 
 msgid "Fr"
 msgstr "Пе"
+
+
+msgid "Friday"
+msgstr ""
 
 
 msgid "Group ${name} has been added."
@@ -773,6 +782,10 @@ msgid "Mo"
 msgstr "По"
 
 
+msgid "Monday"
+msgstr ""
+
+
 #: ./plone_templates/folder_contents.pt
 #. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=down&amp;id=$item_id" title="Move item down">
 msgid "Move item down"
@@ -841,7 +854,7 @@ msgid "November"
 msgstr "Ноември"
 
 
-#: ./plone_content/document_edit_form.cpt
+#: ./plone_content/metadata_edit_form.cpt
 #. <img alt="Object locked" class="context" i18n:attributes="alt" src="" tal:condition="isLocked" tal:define="locked portal_object/lock_icon.gif;" tal:replace="structure python:locked.tag(title='This item is locked')"/>
 #: ./plone_templates/global_contentviews.pt
 #. <img alt="Object locked" i18n:attributes="alt" src="" tal:replace="structure python:locked.tag(title='This item is locked')"/>
@@ -970,7 +983,7 @@ msgstr "Външния вид на сайта беше променен"
 
 
 #: ./plone_tableless/colophon.pt
-#. <img alt="Powered by Plone" height="15" i18n:attributes="alt title" src="" tal:attributes="src string:$portal_u./plone_powered.gif" title="This Plone site was built using the Plone Content Management System. Click for more information." width="80"/>
+#. <img alt="Powered by Plone" height="15" i18n:attributes="alt title" src="" tal:attributes="src string:$portal_url/plone_powered.gif" title="This Plone site was built using the Plone Content Management System. Click for more information." width="80"/>
 msgid "Powered by Plone"
 msgstr "Powered by Plone"
 
@@ -1076,7 +1089,7 @@ msgstr "Премахване на този отговор"
 
 
 #: ./plone_prefs/prefs_user_memberships.pt
-#. <input class="destructive" i18n:attributes="value" name="prefs_user_membership_edit:method" tal:condition="member/getGroups" type="submit" value="Remove selected groups"/>
+#. <input class="destructive" i18n:attributes="value" name="prefs_user_membership_edit:method" tal:condition="groups" type="submit" value="Remove selected groups"/>
 msgid "Remove selected groups"
 msgstr "Премахване на избраните групи"
 
@@ -1117,7 +1130,7 @@ msgid "Reply to this"
 msgstr "Отговор"
 
 
-#: ./plone_forms/synPropertiesForm.cpt
+#: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
 #. <span class="fieldRequired" i18n:attributes="title" i18n:translate="label_required" title="Required">
 msgid "Required"
 msgstr "Задължителен"
@@ -1157,21 +1170,26 @@ msgid "Sa"
 msgstr "Съ"
 
 
-#: ./plone_forms/content_status_history.cpt
-#. <input class="context" i18n:attributes="value" name="form.button.Publish" tal:attributes="tabindex tabindex/next;" tal:condition="not:request/ids|nothing" type="submit" value="Save"/>
-#. <input class="context" i18n:attributes="value" name="form.button.FolderPublish" tal:attributes="tabindex tabindex/next;" tal:condition="request/ids|nothing" type="submit" value="Save"/>
-#: ./plone_forms/synPropertiesForm.cpt
-#. <input class="context" i18n:attributes="value" name="form.button.Save" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Save"/>
+msgid "Saturday"
+msgstr ""
+
+
+#: ./plone_content/metadata_edit_form.cpt
+#. <input class="context" i18n:attributes="value" name="form.button.Save" tabindex="" tal:attributes="tabindex tabindex/next;                                    disabled python:test(isLocked, 'disabled', None);" type="submit" value="Save"/>
+#: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
+#. <input class="context" i18n:attributes="value" name="form.button.Save" tabindex="5" type="submit" value="Save"/>
+#: ./plone_3rdParty/CMFTopic/topic_criteria_form.pt
+#. <input class="context" i18n:attributes="value" name="topic_editCriteria:action" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Save"/>
 msgid "Save"
 msgstr "Записване"
 
 
-#: ./plone_templates/global_searchbox.pt
-#. <input accesskey="accesskeys-search" class="searchButton" i18n:attributes="value accesskey" tabindex="" tal:attributes="tabindex tabindex/next" type="submit" value="Search"/>
 #: ./plone_prefs/prefs_search_macros.pt
 #. <input class="searchButton" i18n:attributes="value" name="prefs_user_group_search_form" tabindex="" tal:attributes="name string:${template/id}:method;                              tabindex tabindex/next;" type="submit" value="Search"/>
 #: ./plone_forms/member_search_form.pt
 #. <input class="context" i18n:attributes="value" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Search"/>
+#: ./plone_prefs/prefs_groups_overview.cpt
+#. <input class="searchButton" i18n:attributes="value" name="form.button.Search" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Search"/>
 msgid "Search"
 msgstr "Търсене"
 
@@ -1181,7 +1199,7 @@ msgstr "Резултати от търсене"
 
 
 #: ./plone_templates/global_searchbox.pt
-#. <input accesskey="accesskeys-search" alt="Search Site" autocomplete="off" class="visibility:visible" i18n:attributes="alt accesskey title" id="searchGadget" name="SearchableText" size="20" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
+#. <input accesskey="accesskeys-search" alt="Search Site" autocomplete="off" class="visibility:visible" i18n:attributes="alt accesskey title" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
 msgid "Search Site"
 msgstr ""
 
@@ -1202,37 +1220,37 @@ msgstr "Секция 508"
 
 #: ./plone_prefs/prefs_search_macros.pt
 #. <input alt="Select all items" class="noborder" i18n:attributes="title alt" name="selectButton" onClick="toggleSelect(this, 'add:list');" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
-#: ./plone_templates/folder_contents.pt
-#. <input alt="Select all items" class="noborder" i18n:attributes="title alt" name="selectButton" onClick="toggleSelect(this);" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
 #: ./plone_prefs/prefs_group_members.pt
 #. <input alt="Select all items" class="noborder" i18n:attributes="title alt" name="selectButton" onClick="toggleSelect(this, 'delete:list');" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
+#: ./plone_templates/folder_contents.pt
+#. <input alt="Select all items" class="noborder" i18n:attributes="title alt" name="selectButton" onClick="toggleSelect(this,'paths:list');" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
 msgid "Select all items"
 msgstr "Избиране на всички"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${folder/absolute_url}/select_default_page;" title="Select default page">
+#. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
 msgid "Select default page"
 msgstr ""
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <table class="listing" i18n:attributes="summary" summary="Select roles for each group">
 msgid "Select roles for each group"
 msgstr "Избиране на роли за всяка група"
 
 
-#: ./plone_forms/sendto_form.cpt
+#: ./plone_content/author.cpt
 #. <input class="context" i18n:attributes="value" name="form.button.Send" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Send"/>
 # , fuzzy
 msgid "Send"
 msgstr "Изпращане"
 
 
-#: ./plone_prefs/prefs_users_overview.pt
-#. <a class="link-plain" href="#" i18n:attributes="title" tal:attributes="href string:mailto:${email}" title="Send a mail to this user">
 #: ./plone_prefs/prefs_group_members.pt
 #. <a href="#" i18n:attributes="title" tal:attributes="href string:mailto:${email}" tal:condition="email" title="Send a mail to this user">
+#: ./plone_prefs/prefs_users_overview.cpt
+#. <a class="link-plain" href="#" i18n:attributes="title" tal:attributes="href string:mailto:${email}" title="Send a mail to this user">
 msgid "Send a mail to this user"
 msgstr "Изпращане e-mail на този потребител"
 
@@ -1262,7 +1280,7 @@ msgstr "Споделяне"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="folderAddMore" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${folder/absolute_url}/folder_factories;" title="Show all available content types">
+#. <a class="folderAddMore" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" title="Show all available content types">
 msgid "Show all available content types"
 msgstr ""
 
@@ -1311,6 +1329,10 @@ msgstr "Представяне"
 
 msgid "Subtopics"
 msgstr "Подтеми"
+
+
+msgid "Sunday"
+msgstr ""
 
 
 msgid "Syndication information has been saved."
@@ -1386,7 +1408,7 @@ msgstr "Този сайт използва валиден XHTML."
 
 
 #: ./plone_tableless/colophon.pt
-#. <img alt="Powered by Plone" height="15" i18n:attributes="alt title" src="" tal:attributes="src string:$portal_u./plone_powered.gif" title="This Plone site was built using the Plone Content Management System. Click for more information." width="80"/>
+#. <img alt="Powered by Plone" height="15" i18n:attributes="alt title" src="" tal:attributes="src string:$portal_url/plone_powered.gif" title="This Plone site was built using the Plone Content Management System. Click for more information." width="80"/>
 # , fuzzy
 msgid "This Plone site was built using the Plone Content Management System. Click for more information."
 msgstr "Този сайт е базиран на система за управление на съдържание Plone. Щракнете за повече информация."
@@ -1409,9 +1431,13 @@ msgstr "Този обект е в състояние ${review_state}"
 
 
 #: plone_templates/footer.pt
-#.     <img attributes="src string:$portal_u./plone_powered.gif" height="30" width="96" alt="Powered by Plone" src="" title="This site was built using the Plone Content Management System. Click for more information." />
+#.     <img attributes="src string:$portal_url/plone_powered.gif" height="30" width="96" alt="Powered by Plone" src="" title="This site was built using the Plone Content Management System. Click for more information." />
 msgid "This site was built using the Plone Content Management System. Click for more information."
 msgstr "Този сайт е базиран на система за управление на съдържание Plone. Щракнете за повече информация."
+
+
+msgid "Thursday"
+msgstr ""
 
 
 msgid "Too much input was given."
@@ -1446,6 +1472,10 @@ msgstr "Транзакциите бяха отказани"
 
 msgid "Tu"
 msgstr "Вт"
+
+
+msgid "Tuesday"
+msgstr ""
 
 
 msgid "Unable to send mail: ${exception}"
@@ -1553,6 +1583,10 @@ msgstr "WCAG"
 
 msgid "We"
 msgstr "Ср"
+
+
+msgid "Wednesday"
+msgstr ""
 
 
 msgid "Welcome! You are now logged in."
@@ -1718,7 +1752,7 @@ msgstr "u"
 
 
 #: ./plone_templates/global_searchbox.pt
-#. <input accesskey="accesskeys-search" alt="Search Site" autocomplete="off" class="visibility:visible" i18n:attributes="alt accesskey title" id="searchGadget" name="SearchableText" size="20" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
+#. <input accesskey="accesskeys-search" alt="Search Site" autocomplete="off" class="visibility:visible" i18n:attributes="alt accesskey title" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
 #. <input accesskey="accesskeys-search" class="searchButton" i18n:attributes="value accesskey" tabindex="" tal:attributes="tabindex tabindex/next" type="submit" value="Search"/>
 msgid "accesskeys-search"
 msgstr "s"
@@ -1730,18 +1764,12 @@ msgid "accesskeys-tabs"
 msgstr "t"
 
 
-#: ./plone_forms/folder_localrole_form.pt
-#. <input class="context" i18n:attributes="value" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="apply settings"/>
-msgid "apply settings"
-msgstr ""
-
-
 #: ./plone_templates/author_feedback_template.pt
 #. <div i18n:translate="author_feedback_mailtemplate_body" tal:omit-tag="">
 #. You are receiving this mail because
 #.  ${from_address}
 #.   is sending feedback about content created by you at
-#.  <span tal:replace="options/url"/>
+#.  ${url}
 #.  .
 #. The message sent was:
 #.  ${message}
@@ -1778,7 +1806,7 @@ msgid "batch_previous_x_items"
 msgstr "Предходящ(и) ${number} обект(а)"
 
 
-#: ./plone_forms/search.pt
+#: ./plone_forms/member_search_results.pt
 #. <span i18n:translate="batch_x_items_matching_your_criteria">
 #.  ${number}
 #.   items matching your criteria.
@@ -1844,11 +1872,14 @@ msgstr "Локални ресурси"
 
 
 #: ./plone_portlets/portlet_news.pt
-#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/news">
+#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/news" tal:condition="python:'news' in portal.contentIds()">
+#.                   More...
+#. </a>
+#: ./plone_portlets/portlet_events.pt
+#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/events" tal:condition="python:'events' in portal.contentIds()">
 #.                     More...
 #. </a>
-#: ./plone_portlets/portlet_recent.pt
-#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${portal_url}/recently_published">
+#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/events_listing" tal:condition="python:'events' not in portal.contentIds()">
 #.                     More...
 #. </a>
 msgid "box_morelink"
@@ -1991,6 +2022,18 @@ msgid "contact_phone"
 msgstr "Телефон за контакти"
 
 
+#: ./utils.py
+#. default is: %Y-%m-%d %H:%M
+msgid "date_format_long"
+msgstr ""
+
+
+#: ./utils.py
+#. default is: %Y-%m-%d
+msgid "date_format_short"
+msgstr ""
+
+
 #: ./plone_portlets/calendar_slot.pt
 #. <span i18n:translate="date_separator" tal:condition="not: python: years[0]['value'] and not show_single_year">
 #.  /
@@ -2094,7 +2137,7 @@ msgid "description_comment_preview"
 msgstr "Така ще изглежда вашия коментар, след изпращането му."
 
 
-#: ./plone_pre./plone_control_panel.pt
+#: ./plone_prefs/plone_control_panel.pt
 #. <div class="documentDescription" i18n:translate="description_control_panel">
 #.       Configuration area for Plone and add-on Products.
 #. </div>
@@ -2104,9 +2147,10 @@ msgstr "Място от където се конфигурират Plone и Add-
 
 #: ./plone_templates/footer.pt
 #. <span i18n:translate="description_copyright" tal:omit-tag="">
-#. Plone and its visual design is Copyright  2000-
+#.     Plone and its visual design is Copyright
+#.      2000-
 #.  ${current_year}
-#. by
+#.   by
 #.  ${limi}
 #.  ,
 #.  ${runyaga}
@@ -2116,31 +2160,6 @@ msgstr "Място от където се конфигурират Plone и Add-
 #. </span>
 msgid "description_copyright"
 msgstr "&copy; 2000-${current_year} от ${limi}, ${runyaga}, ${blacktar}. Всички права запазени."
-
-
-#: ./plone_content/document_edit_form.cpt
-#. <p i18n:translate="description_edit_document">
-#.         Fill in the details of this document.
-#. </p>
-msgid "description_edit_document"
-msgstr "Попълнете подробностите за този документ."
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <p i18n:translate="description_edit_event">
-#.         Fill in the details of the event you want to add.
-#. </p>
-msgid "description_edit_event"
-msgstr "Попълнете подробностите за събитието, което искате да добавите."
-
-
-#: ./plone_content/file_edit_form.cpt
-#. <p i18n:translate="description_edit_file">
-#.         Add the relevant details of the file to be added in the form below,
-#.         select the file with the 'Browse' button, and press 'Save'.
-#. </p>
-msgid "description_edit_file"
-msgstr "Въведете необходимите подробности за файла, изберете файла използвайки бутона 'Browse' и щракнете върху бутон 'Запис'."
 
 
 #: ./plone_prefs/prefs_group_details.pt
@@ -2154,43 +2173,16 @@ msgid "description_edit_groupproperties"
 msgstr "Групите са логически колекции от потребители, като отдели и бизнес единици. Те не са директно свързани с правата, използвайте роли за това и просто възлагайте роли на отделните групи потребители."
 
 
-#: ./plone_content/image_edit_form.cpt
-#. <p i18n:translate="description_edit_image">
-#.         Using this form, you can enter details about the image, and upload
-#.         an image if required.
-#. </p>
-msgid "description_edit_image"
-msgstr "Използвайки тази форма можете да въведете подробности за изображението и при необходимост да заредите самото изображение."
-
-
-#: ./plone_content/link_edit_form.cpt
-#. <p i18n:translate="description_edit_link_item">
-#.         A link is a pointer to a location on the internet or intranet.
-#.         Enter the relevant details below, and press 'Save'.
-#. </p>
-msgid "description_edit_link_item"
-msgstr "Връзката е указател към място в интернет или интранет. Въведете необходимите подробности по-долу и щракнете 'Запис'."
-
-
-#: ./plone_content/newsitem_edit_form.cpt
-#. <p i18n:translate="description_edit_news_item">
-#.         A news item is a small piece of news that is published on the front
-#.         page. Add the relevant details below, and press 'Save'.
-#. </p>
-msgid "description_edit_news_item"
-msgstr "Новините са обекти които се публикуват на началната страница. Въведете необходимите данни по-долу и щракнете 'Запис'."
-
-
 #: ./plone_content/metadata_edit_form.cpt
 #. <p i18n:translate="description_edit_properties">
-#.         This information, also referred to as
+#.     This information, also referred to as
 #.  <em>
 #.   metadata
 #.  </em>
 #.   is the
-#.         collection of information that is used to categorize an
-#.         object, assign effective dates and expiration dates,
-#.         language, and keywords.
+#.     collection of information that is used to categorize an
+#.     object, assign effective dates and expiration dates,
+#.     language, and keywords.
 #. </p>
 msgid "description_edit_properties"
 msgstr "Тази информация, също наричана <em>общи данни</em> е колекция от свойства, използвани за категоризация на обекта, като например  задаване на ефективна/начална и крайна дата, език и ключови думи."
@@ -2243,12 +2235,13 @@ msgid "description_group_shares"
 msgstr "Групите са удобен начин за споделяне на права с множество потребители. Изберете една или повече групи, и роля която да им бъде възложена."
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <p i18n:translate="description_groups_management">
-#.           Groups are logical collections of users, such as departments and
-#.           business units. Groups are not directly related to permissions on
-#.           a global level, you normally use Roles for that - and let
-#.           certain Groups have a particular role.
+#. 	      Groups are logical collections of users, such as
+#. 	      departments and business units. Groups are not directly
+#. 	      related to permissions on a global level, you normally
+#. 	      use Roles for that - and let certain Groups have a
+#. 	      particular role.
 #. </p>
 msgid "description_groups_management"
 msgstr "Групите са логически колекции от потребители, като отдели и бизнес единици. Те не са директно свързани с правата, използвайте роли за това и просто възлагайте роли на отделните групи потребители."
@@ -2262,6 +2255,15 @@ msgstr "Групите са логически колекции от потре�
 # , fuzzy
 msgid "description_historical_unavailable"
 msgstr "Този клас не поддържа история."
+
+
+#: ./plone_templates/footer.pt
+#. <div i18n:translate="description_license">
+#.     Licensed under the
+#.  ${license}
+#. </div>
+msgid "description_license"
+msgstr ""
 
 
 #: ./plone_forms/folder_localrole_form.pt
@@ -2323,7 +2325,7 @@ msgid "description_lost_password"
 msgstr "Въведете вашето потребителско име във формата по-долу. Щракнете 'Изпрати ми паролата' и парола ви ще бъде изпратена на посочения по време на регистрация e-mail адрес, ако сте предоставили  валиден такъв. Ако сте забравили потребителското си име или не сте въвели валиден e-mail адрес) изпратете e-mail до"
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <p i18n:translate="description_mail_setup">
 #.         Mail setup for Plone.
 #. </p>
@@ -2426,7 +2428,7 @@ msgstr "Този обект не поддържа сравняване."
 
 #: ./plone_templates/folder_listing.pt
 #. <p class="discreet" i18n:translate="description_no_items_in_folder" tal:condition="not: folderContents">
-#.          There are currently no items in this folder.
+#.                 There are currently no items in this folder.
 #. </p>
 msgid "description_no_items_in_folder"
 msgstr "В момента няма обекти в тази папка."
@@ -2441,7 +2443,7 @@ msgid "description_no_privileges"
 msgstr "Вие нямате необходимите права за да видите тази страница. Ако вярвате че получаването на тази страница е грешка, моля изпратете e-mail на"
 
 
-#: ./plone_forms/search.pt
+#: ./plone_forms/member_search_results.pt
 #. <strong i18n:translate="description_no_results_found">
 #.  No results were found.
 #. </strong>
@@ -2543,7 +2545,7 @@ msgid "description_rename_item"
 msgstr "Всеки обект има име и заглавие, което може да промените, използвайки формата по-долу."
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <p i18n:translate="description_roles_management">
 #.           Roles are collections of permissions. The most common role is
 #.           the Member role, which is any member of the portal. You can
@@ -2555,7 +2557,7 @@ msgid "description_roles_management"
 msgstr "Ролите са колекции от права. Най-често използваната роля е член, която всеки потребител на сайта има. Вие може да добавите допълнителни роли, но нормално от това бихте имали нужда само ако се налага да създадете нова конкретна колекция от права които желаете да комбинирате за създаване на нова група потребители."
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <p i18n:translate="description_roles_zmi">
 #.         Currently, if you want to add a new role, you must use the
 #.         Zope Management Interface, as adding roles is considered a
@@ -2724,7 +2726,7 @@ msgid "description_site_error_thank_you"
 msgstr "Благодарим ви!"
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <p i18n:translate="description_skin_setup">
 #.         Settings that affect the portal's look and template usage.
 #. </p>
@@ -2819,18 +2821,18 @@ msgid "description_use_form_to_change_password"
 msgstr "Използвайте формата по-долу за промяна на вашата парола."
 
 
-#: ./plone_prefs/prefs_users_overview.pt
+#: ./plone_prefs/prefs_users_overview.cpt
 #. <p i18n:translate="description_user_management">
-#.         Click the user's name to see and change the details of a specific
-#.         user. Click the envelope icon to send a mail to the user.
-#.         You can also edit
-#.         the e-mail addresses, and add/remove users.
+#. 	      Click the user's name to see and change the details of a
+#. 	      specific user. Click the envelope icon to send a mail to
+#. 	      the user.  You can also edit the e-mail addresses, and
+#. 	      add/remove users.
 #. </p>
 msgid "description_user_management"
 msgstr "Щракнете на името на потребителя ако желаете да промените някои от подробностите за него. Щракнете на плика ако желаете да изпратите e-mail на потребителя. Също така бихте могли да добавяте или да премахвате потребители."
 
 
-#: ./plone_pre./plone_memberprefs_panel.pt
+#: ./plone_prefs/plone_memberprefs_panel.pt
 #. <div i18n:translate="description_user_panel" id="description">
 #.       This area allows you to set your preferences.
 #. </div>
@@ -2970,7 +2972,7 @@ msgstr "Тази възможност не е налична докато авт
 
 #: ./plone_templates/global_contentmenu.pt
 #. <tal:title i18n:translate="folder_add_more">
-#.                             More...
+#.                             More
 #. </tal:title>
 msgid "folder_add_more"
 msgstr ""
@@ -2978,15 +2980,19 @@ msgstr ""
 
 #: ./plone_templates/global_contentmenu.pt
 #. <tal:title i18n:translate="folder_add_settings">
-#.                             Settings...
+#.                             Settings
 #. </tal:title>
 msgid "folder_add_settings"
 msgstr ""
 
 
 #: ./plone_templates/folder_contents.pt
-#. <a class="link-parent" href="" i18n:translate="go_to_parent_url" tal:attributes="href parent_url" tal:condition="parent_url" tal:define="parent_url python:here.navigationParent(here, template.getId())">
+#. <a class="link-parent" href="" i18n:translate="go_to_parent_url" tal:attributes="href string:${parent_url}/folder_contents" tal:condition="parent_url" tal:define="parent_url python:here.navigationParent(here, fallThroughDefaultPage = False, checkPermissions = ['List folder contents'])">
 #.                 Up one level
+#. </a>
+#: ./plone_templates/folder_listing.pt
+#. <a class="link-parent" href="" i18n:translate="go_to_parent_url" tal:attributes="href parent_url" tal:condition="parent_url" tal:define="parent_url python:here.navigationParent(here, template.getId())">
+#.         Up one level
 #. </a>
 msgid "go_to_parent_url"
 msgstr "Едно ниво нагоре"
@@ -3103,7 +3109,7 @@ msgstr "Предварителен преглед"
 #. <h5 i18n:translate="heading_control_panel">
 #.  Plone Setup
 #. </h5>
-#: ./plone_pre./plone_control_panel.pt
+#: ./plone_prefs/plone_control_panel.pt
 #. <h1 i18n:translate="heading_control_panel">
 #.  Plone Setup
 #. </h1>
@@ -3143,14 +3149,6 @@ msgstr "Споделени права за ${folder}"
 #. </tal:block>
 msgid "heading_description"
 msgstr "Кратко описание"
-
-
-#: ./plone_content/folder_edit_form.cpt
-#. <h1 i18n:translate="heading_edit_folder_properties">
-#.  Edit Folder
-#. </h1>
-msgid "heading_edit_folder_properties"
-msgstr "Редактиране на папка."
 
 
 #: ./plone_prefs/prefs_group_details.pt
@@ -3255,7 +3253,7 @@ msgid "heading_groupmembers_current"
 msgstr "Текущи членове на група"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <h1 i18n:translate="heading_groups_overview">
 #.  Groups Overview
 #. </h1>
@@ -3336,7 +3334,7 @@ msgid "heading_lost_password"
 msgstr "Изгубена парола"
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <h1 i18n:translate="heading_mail_setup">
 #.  Mail Setup
 #. </h1>
@@ -3458,7 +3456,7 @@ msgstr "Настройки на сайта"
 
 #: ./plone_prefs/prefs_user_details.cpt
 #. <h1 i18n:translate="heading_prefs_user_details">
-#.           User Properties for
+#. 	      User Properties for
 #.  ${username}
 #. </h1>
 msgid "heading_prefs_user_details"
@@ -3514,7 +3512,7 @@ msgid "heading_returned_results"
 msgstr "Резултати"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <h1 i18n:translate="heading_roles_management">
 #.  Roles Management
 #. </h1>
@@ -3570,7 +3568,7 @@ msgid "heading_select_default_page"
 msgstr ""
 
 
-#: ./plone_prefs/prefs_workflow_basic.pt
+#: ./plone_prefs/prefs_workflow_advanced.pt
 #. <h1 i18n:translate="heading_select_workflow">
 #.  Select workflow
 #. </h1>
@@ -3651,7 +3649,7 @@ msgid "heading_site_error_apologies"
 msgstr "Нашите извинения..."
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <h1 i18n:translate="heading_skin_setup">
 #.  Skin Setup
 #. </h1>
@@ -3708,7 +3706,7 @@ msgid "heading_undo_actions"
 msgstr "Отказване на действия"
 
 
-#: ./plone_pre./plone_memberprefs_panel.pt
+#: ./plone_prefs/plone_memberprefs_panel.pt
 #. <h1 i18n:translate="heading_user_panel">
 #.  My Preferences
 #. </h1>
@@ -3716,7 +3714,7 @@ msgid "heading_user_panel"
 msgstr "Мои предпочитания"
 
 
-#: ./plone_prefs/prefs_users_overview.pt
+#: ./plone_prefs/prefs_users_overview.cpt
 #. <h1 i18n:translate="heading_users_overview">
 #.  Users Overview
 #. </h1>
@@ -3732,7 +3730,7 @@ msgid "heading_views"
 msgstr "Изгледи"
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_forms/login_password.pt
 #. <h1 i18n:translate="heading_welcome">
 #.  Welcome!
 #. </h1>
@@ -3850,31 +3848,6 @@ msgid "help_confirm_password"
 msgstr "Въведете вашата нова парола отново. Убедете се, че двете пароли са идентични."
 
 
-#: ./plone_content/event_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_contact_email">
-#.               E-mail address to display for information regarding
-#.               the event.
-#. </div>
-msgid "help_contact_email"
-msgstr "Посочете e-mail адрес, на който желаете да получавате информация за събитието."
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_contact_name">
-#.               Contact person or organization for the event.
-#. </div>
-msgid "help_contact_name"
-msgstr "Посочете име на лице или организация за контакти във връзка със събитието."
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_contact_phone">
-#.               Phone number to call for information and/or booking.
-#. </div>
-msgid "help_contact_phone"
-msgstr "Въведете телефон за информация относно събитието."
-
-
 #: ./plone_prefs/personalize_form.cpt
 #. <div class="formHelp" i18n:translate="help_content_editor">
 #.                 Select the content editor that you would like to use.
@@ -3894,7 +3867,7 @@ msgid "help_contributors"
 msgstr "Имената на хората, които са съдействали за този обект. Всеки допринесъл трябва да е на отделен ред."
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <div class="formHelp" i18n:translate="help_cookie_persistence">
 #.                     If checked, the skin cookie will never expire.
 #. </div>
@@ -3942,7 +3915,7 @@ msgid "help_default_language"
 msgstr "Определете език по подразбиране за новосъздадените обекти."
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <div class="formHelp" i18n:translate="help_default_skin">
 #.                     Select the default skin for the Plone portal.
 #. </div>
@@ -3956,39 +3929,6 @@ msgstr "Определете стандартен външен вид."
 #. </div>
 msgid "help_description"
 msgstr "Въведете кратко описание на обекта."
-
-
-#: ./plone_content/image_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_description_image">
-#.               A brief description of the item.
-#. </div>
-msgid "help_description_image"
-msgstr "Kратко описание на изображението."
-
-
-#: ./plone_content/link_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_description_link">
-#.               A brief description of the item.
-#. </div>
-msgid "help_description_link"
-msgstr "Кратко описание на връзката."
-
-
-#: ./plone_content/newsitem_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_description_news">
-#.               Displayed on the news page along with the headline.
-#. </div>
-msgid "help_description_news"
-msgstr "Изобразява се на страницата с новини заедно с заглавието на новината."
-
-
-#: ./plone_content/file_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_edit_contents">
-#.               This file is a text file, and you can edit its
-#.               contents directly.
-#. </div>
-msgid "help_edit_contents"
-msgstr "Този файл е текстов и е възможно да бъде редактиран директно."
 
 
 #: ./plone_forms/content_status_history.cpt
@@ -4018,49 +3958,7 @@ msgid "help_email_creation"
 msgstr "Въведете вашия e-mail адрес. Той ще е необходим в случай, че изгубите вашата парола. Ние уважаваме кофиденциалността на вашата информация и няма да предоставим адреса на трети лица."
 
 
-#: ./plone_content/event_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_event_end">
-#.                     Click the calendar icon to select a date or browse the calendar.
-#. </div>
-msgid "help_event_end"
-msgstr "Въведете крайната дата или щракнете върху иконата вдясно и я изберете от календара."
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_event_location">
-#.               Enter the location where the event will take place.
-#. </div>
-msgid "help_event_location"
-msgstr "Въведете мястото, където ще протече събитието."
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_event_start">
-#.                     Click the calendar icon to select a date or browse the calendar.
-#. </div>
-msgid "help_event_start"
-msgstr "Въведете начална дата или щракнете на иконата в дясно и я изберете от календара."
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_event_type">
-#.               Multiple event types possible by depressing Ctrl (or Apple
-#.               key on Mac).
-#. </div>
-msgid "help_event_type"
-msgstr "Изберете тип на събитието. Възможен е избор на повече от един тип."
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_event_url">
-#.               Optional web address of a page containing more info about
-#.               the event.
-#. </div>
-msgid "help_event_url"
-msgstr "Въведете незадължителен веб адрес на страница, съдържаща повече информация относто събитието."
-
-
-#: ./plone_forms/content_status_history.cpt
+#: ./plone_content/metadata_edit_form.cpt
 #. <div class="formHelp" i18n:translate="help_expiration_date">
 #.               The date when the item expires. This will automatically
 #.               make the item invisible for others at the given date.
@@ -4068,14 +3966,6 @@ msgstr "Въведете незадължителен веб адрес на с�
 #. </div>
 msgid "help_expiration_date"
 msgstr "Това е датата, на която обекта ще стане невалиден. Това автоматично ще го направи невидим за останалите на зададената дата. Ако не бъде избрана дата, той никога няма да стане невалиден."
-
-
-#: ./plone_content/file_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_file">
-#.                     Select the file to be added by clicking the 'Browse' button.
-#. </div>
-msgid "help_file"
-msgstr "Изберете файл който да бъде добавен като щракнете на бутон 'Browse'."
 
 
 #: ./plone_wysiwyg/wysiwyg_support.pt
@@ -4103,14 +3993,6 @@ msgid "help_groupname"
 msgstr "Уникалния идентификатор на групата неможе да бъде променян след създаването и"
 
 
-#: ./plone_content/image_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_image">
-#.               Select the image to be added by clicking the 'Browse' button.
-#. </div>
-msgid "help_image"
-msgstr "Изберете изображение което да бъде добавено като щракнете на бутон 'Browse'."
-
-
 #: ./plone_forms/folder_constraintypes_form.cpt
 #. <div class="formHelp" i18n:translate="help_immediately_addable_types">
 #.                         Of the types selected above, certain items may be
@@ -4123,11 +4005,12 @@ msgstr ""
 
 
 #: ./plone_forms/content_status_history.cpt
-#. <div class="formHelp" i18n:translate="help_include_subfolders">
-#.               If checked, Plone will attempt to publish all content in subfolders.
+#. <div class="formHelp" i18n:translate="help_include_contained_objects">
+#.               If checked, Plone will attempt to modify the status of all content
+#.               in any selected folders and their subfolders.
 #. </div>
-msgid "help_include_subfolders"
-msgstr "Ако опцията е включена, ще бъде направен опит да се публикуват всички обекти в подпапките."
+msgid "help_include_contained_objects"
+msgstr ""
 
 
 #: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
@@ -4143,8 +4026,8 @@ msgstr "Определя наследяване на критериите. Пр�
 
 #: ./plone_content/metadata_edit_form.cpt
 #. <div class="formHelp" i18n:translate="help_keyword">
-#.               Keywords relate different types of content to each other.
-#.               Don't select too many categories.
+#.                   Keywords relate different types of content to each other.
+#.                   Don't select too many categories.
 #. </div>
 msgid "help_keyword"
 msgstr "Ключовите думи свързват различните типове обекти. Не избирайте прекалено много категории."
@@ -4194,7 +4077,7 @@ msgstr "MIME-тип на обекта. Ако не разбирате какво
 
 #: ./plone_content/metadata_edit_form.cpt
 #. <div class="formHelp" i18n:translate="help_new_keyword">
-#.                     Each new keyword must be on a separate line.
+#.                         Each new keyword must be on a separate line.
 #. </div>
 msgid "help_new_keyword"
 msgstr "Всяка ключова дума трябва да е на отделелен ред."
@@ -4464,22 +4347,24 @@ msgid "help_setup_ext_editor"
 msgstr "Определя дали възможността за външен редактор е разрешена. Тази възможност изисква инсталация на специалнo приложение на вашия компютър."
 
 
+#: ./plone_prefs/reconfig_form.cpt
+#. <div class="formHelp" i18n:translate="help_setup_visible_ids">
+#.                 Display and allow users to edit the &quot;Short name&quot; content identifiers, which form the URL of content.
+#. </div>
+msgid "help_setup_visible_ids"
+msgstr ""
+
+
 #: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
 #. <div class="formHelp" i18n:translate="help_shortname">
 #. 		       Short Name is part of the item's web address.
 #. 		       Should not contain spaces, upper case, underscores or other special characters.
 #. </div>
-#: ./plone_content/folder_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_shortname">
-#.                    Short Name is part of the item's web address.
-#. 		           For accessibility reasons, do not use spaces, upper case,
-#.                    underscores, or special characters.
-#. </div>
 msgid "help_shortname"
 msgstr "Краткото име е част от веб адреса. За достъпност, не трябва да съдържа интервали, главни букви, долни черти и специални символи."
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <div class="formHelp" i18n:translate="help_skin_flexibility">
 #.                     If checked, each user can select a skin from his
 #.                     preferences panel.
@@ -4488,7 +4373,7 @@ msgid "help_skin_flexibility"
 msgstr "Ако е избрано, всеки потребител може да избира външен вид на сайта в персоналните си настройки."
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <div class="formHelp" i18n:translate="help_smtp_pass">
 #.                 XXX
 #. </div>
@@ -4496,7 +4381,7 @@ msgid "help_smtp_pass"
 msgstr ""
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <div class="formHelp" i18n:translate="help_smtp_port">
 #.                 The port of your local SMTP (outgoing
 #.                 e-mail) server. Usually &quot;25&quot;.
@@ -4505,7 +4390,7 @@ msgid "help_smtp_port"
 msgstr "Това е адресът на вашия локален, изходящ e-mail сървър. Обикновено \"localhost\", освен ако не използвате външен такъв."
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <div class="formHelp" i18n:translate="help_smtp_server" id="smtp_server_help">
 #.                 The address of your local SMTP (outgoing
 #.                 e-mail) server. Usually &quot;localhost&quot;, unless you use an
@@ -4515,7 +4400,7 @@ msgid "help_smtp_server"
 msgstr "Това е адресът на вашия локален SMTP (изходящ e-mail) сървър. Обикновено \"localhost\", освен ако не използвате външен такъв."
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <div class="formHelp" i18n:translate="help_smtp_userid">
 #.                 XXX
 #. </div>
@@ -4600,22 +4485,6 @@ msgid "help_syndication_update_period"
 msgstr "Период на обновяване"
 
 
-#: ./plone_content/document_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_uploads">
-#.               Uploaded files will replace the body text entered above.
-#. </div>
-msgid "help_uploads"
-msgstr "Съдърванието на файла ще замени текста въведен по-горе."
-
-
-#: ./plone_content/link_edit_form.cpt
-#. <div class="formHelp" i18n:translate="help_url">
-#.                     Prefix is optional; if not provided, the link will be relative.
-#. </div>
-msgid "help_url"
-msgstr "Адресът на мястото, към което сочи връзката. Ако в адреса няма 'http://' префикс, връзката ще бъде относителна."
-
-
 #: ./plone_forms/folder_localrole_form.pt
 #. <div class="formHelp" i18n:translate="help_use_acquisition">
 #.                 Determines if the roles given to users and groups from higher levels are in
@@ -4686,7 +4555,7 @@ msgstr "Изберете обект който да бъде добавен"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_add_new_item" tal:condition="here/isPrincipiaFolderish">
+#. <span i18n:translate="label_add_new_item" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage">
 #.  Add item
 #. </span>
 msgid "label_add_new_item"
@@ -4694,8 +4563,8 @@ msgstr "Добавяне на нов(а)"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_add_new_item_in_folder" tal:condition="not:here/isPrincipiaFolderish">
-#.  Add to folder
+#. <span i18n:translate="label_add_new_item_in_folder" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage">
+#.  Add to above folder
 #. </span>
 msgid "label_add_new_item_in_folder"
 msgstr ""
@@ -4790,7 +4659,7 @@ msgstr "Текст (Съдържание)"
 
 
 #: ./plone_content/document_byline.pt
-#. <tal:name i18n:translate="label_author" tal:condition="creator" tal:define="author python:mtool.getMemberInfo(creator)">
+#. <tal:name i18n:translate="label_by_author" tal:condition="creator" tal:define="author python:mtool.getMemberInfo(creator)">
 #.     By
 #.  ${author}
 #. </tal:name>
@@ -4808,7 +4677,7 @@ msgstr "Календар"
 
 #: ./plone_prefs/prefs_user_details.cpt
 #. <p i18n:translate="label_change_member_properties">
-#.           Change member properties.
+#. 	      Change member properties.
 #. </p>
 msgid "label_change_member_properties"
 msgstr "Промяна на свойства за потребител."
@@ -4904,35 +4773,11 @@ msgstr "Общностен процес на публикуване "
 #.  Confirm password
 #. </label>
 #: ./plone_prefs/password_form.pt
-#. <label for="confirm" i18n:translate="label_confirm_password">
+#. <label for="password_confirm" i18n:translate="label_confirm_password">
 #.  Confirm password
 #. </label>
 msgid "label_confirm_password"
 msgstr "Потвърждение"
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <label for="contact_email" i18n:translate="label_contact_email">
-#.  Contact E-mail
-#. </label>
-msgid "label_contact_email"
-msgstr "E-mail за контакти"
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <label for="contact_name" i18n:translate="label_contact_name">
-#.  Contact Name
-#. </label>
-msgid "label_contact_name"
-msgstr "Лице за контакти"
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <label for="contact_phone" i18n:translate="label_contact_phone">
-#.  Contact Phone
-#. </label>
-msgid "label_contact_phone"
-msgstr "Телефон за контакти"
 
 
 #: ./plone_prefs/prefs_user_group_search_form.pt
@@ -4963,7 +4808,7 @@ msgid "label_contributors"
 msgstr "Сътрудници"
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <label for="cb_cookie" i18n:translate="label_cookie_persistence">
 #.  Make skin cookie persist indefinitely
 #. </label>
@@ -5027,7 +4872,7 @@ msgid "label_default_language"
 msgstr "Език по подразбиране"
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <label i18n:translate="label_default_skin">
 #.  Default skin
 #. </label>
@@ -5087,14 +4932,6 @@ msgid "label_discussion_enabled"
 msgstr "Разрешени"
 
 
-#: ./plone_content/file_edit_form.cpt
-#. <label for="file_data" i18n:translate="label_edit_contents">
-#.  Edit Contents
-#. </label>
-msgid "label_edit_contents"
-msgstr "Редактиране на обект"
-
-
 #: ./plone_forms/content_status_history.cpt
 #. <label i18n:translate="label_effective_date">
 #.  Effective Date
@@ -5111,7 +4948,7 @@ msgstr "Начална дата"
 #. <label for="email" i18n:translate="label_email">
 #.  E-mail
 #. </label>
-#: ./plone_forms/member_search_form.pt
+#: ./plone_forms/join_form.cpt
 #. <label i18n:translate="label_email">
 #.  E-mail
 #. </label>
@@ -5170,46 +5007,6 @@ msgid "label_error_value"
 msgstr "Стойност"
 
 
-#: ./plone_content/event_edit_form.cpt
-#. <label for="end_date" i18n:translate="label_event_end">
-#.  Event Ends
-#. </label>
-msgid "label_event_end"
-msgstr "Край"
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <label for="location" i18n:translate="label_event_location">
-#.  Event Location
-#. </label>
-msgid "label_event_location"
-msgstr "Място"
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <label for="start_date" i18n:translate="label_event_start">
-#.  Event Starts
-#. </label>
-msgid "label_event_start"
-msgstr "Начало"
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <label for="event_type" i18n:translate="label_event_type">
-#.  Event Type
-#. </label>
-msgid "label_event_type"
-msgstr "Тип"
-
-
-#: ./plone_content/event_edit_form.cpt
-#. <label for="event_url" i18n:translate="label_event_url">
-#.  Event URL
-#. </label>
-msgid "label_event_url"
-msgstr "URL"
-
-
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <th i18n:translate="label_exception">
 #.  Exception
@@ -5220,7 +5017,7 @@ msgstr "Изключение"
 
 #: ./plone_content/metadata_edit_form.cpt
 #. <label for="predefined_subjects" i18n:translate="label_existing_keywords">
-#.                   Existing keywords
+#.                       Existing keywords
 #. </label>
 msgid "label_existing_keywords"
 msgstr "Съществуващи ключови думи"
@@ -5238,14 +5035,6 @@ msgid "label_expiration_date"
 msgstr "Крайна дата"
 
 
-#: ./plone_content/file_edit_form.cpt
-#. <label for="file" i18n:translate="label_file">
-#.  File
-#. </label>
-msgid "label_file"
-msgstr "Файл"
-
-
 #: ./plone_content/file_view.pt
 #. <span i18n:translate="label_file_type">
 #.             File type
@@ -5254,9 +5043,10 @@ msgid "label_file_type"
 msgstr "Тип на файла"
 
 
-#: ./plone_prefs/prefs_group_details.pt
+#: ./plone_prefs/prefs_group_members.pt
 #. <a href="prefs_groups_overview" i18n:translate="label_find_group">
-#.  Find a group here
+#.  Find a group
+#. 		  here
 #. </a>
 msgid "label_find_group"
 msgstr "Търсене на група тук"
@@ -5266,18 +5056,10 @@ msgstr "Търсене на група тук"
 #. <label for="text_format" i18n:translate="label_format">
 #.  Format
 #. </label>
-#: ./plone_content/metadata_edit_form.cpt
-#. <label for="format" i18n:translate="label_format">
-#.               Format
-#. </label>
 msgid "label_format"
 msgstr "Формат"
 
 
-#: ./plone_prefs/prefs_user_details.cpt
-#. <label i18n:translate="label_full_name">
-#.  Full name
-#. </label>
 #: ./plone_prefs/personalize_form.cpt
 #. <label for="fullname" i18n:translate="label_full_name">
 #.  Full name
@@ -5307,11 +5089,11 @@ msgstr "Група"
 
 
 #: ./plone_prefs/prefs_group_members.pt
-#. <a href="" i18n:translate="label_group_members" tal:attributes="href string:${template/id}?groupname=${groupname}">
+#. <a href="" i18n:translate="label_group_members" tal:attributes="href string:${here/absolute_url}/${template/id}?groupname=${groupname}">
 #.  Group Members
 #. </a>
 #: ./plone_prefs/prefs_group_details.pt
-#. <a href="" i18n:translate="label_group_members" tal:attributes="href string:prefs_group_members?groupname=${groupname}">
+#. <a href="" i18n:translate="label_group_members" tal:attributes="href string:${here/absolute_url}/prefs_group_members?groupname=${groupname}">
 #.  Group Members
 #. </a>
 msgid "label_group_members"
@@ -5339,18 +5121,18 @@ msgstr ""
 
 
 #: ./plone_prefs/prefs_group_members.pt
-#. <a href="" i18n:translate="label_group_properties" tal:attributes="href string:prefs_group_details?groupname=${groupname}">
+#. <a href="" i18n:translate="label_group_properties" tal:attributes="href string:${here/absolute_url}/prefs_group_details?groupname=${groupname}">
 #.  Group Properties
 #. </a>
 #: ./plone_prefs/prefs_group_details.pt
-#. <a href="" i18n:translate="label_group_properties" tal:attributes="href string:${template/id}?groupname=${groupname}">
+#. <a href="" i18n:translate="label_group_properties" tal:attributes="href string:${here/absolute_url}/${template/id}?groupname=${groupname}">
 #.  Group Properties
 #. </a>
 msgid "label_group_properties"
 msgstr "Характеристики на група"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <span i18n:translate="label_group_search" tal:omit-tag="">
 #.  Group Search
 #. </span>
@@ -5358,27 +5140,20 @@ msgid "label_group_search"
 msgstr "Търсене на група потребители"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
-#. <a href="" i18n:translate="label_groups" tal:attributes="href string:${template/id}">
-#.  Groups
-#. </a>
 #: ./plone_prefs/prefs_user_group_search_form.pt
 #. <option i18n:translate="label_groups" value="groups">
 #.  Groups
 #. </option>
-#. <span i18n:translate="label_groups" tal:condition="python: here.prefs_valid_search_restriction(searchonly,['groups'])" tal:omit-tag="">
+#: ./plone_prefs/prefs_groups_overview.cpt
+#. <a href="" i18n:translate="label_groups" tal:attributes="href string:${here/absolute_url}/${template/id}">
 #.  Groups
-#. </span>
+#. </a>
+#: ./plone_prefs/prefs_users_overview.cpt
+#. <a href="prefs_groups_overview" i18n:translate="label_groups">
+#.  Groups
+#. </a>
 msgid "label_groups"
 msgstr "Групи"
-
-
-#: ./plone_content/newsitem_edit_form.cpt
-#. <label for="title" i18n:translate="label_headline">
-#.  Headline
-#. </label>
-msgid "label_headline"
-msgstr "Увод"
 
 
 #: ./plone_forms/history_form.pt
@@ -5398,14 +5173,6 @@ msgid "label_ignored_exception"
 msgstr "Пренебрегвани изключения"
 
 
-#: ./plone_content/image_edit_form.cpt
-#. <label for="file" i18n:translate="label_image">
-#.  Image
-#. </label>
-msgid "label_image"
-msgstr "Изображение"
-
-
 #: ./plone_forms/folder_constraintypes_form.cpt
 #. <label for="immediatelyAddableTypes" i18n:translate="label_immediately_addable_types">
 #.                         Preferred types
@@ -5415,11 +5182,11 @@ msgstr ""
 
 
 #: ./plone_forms/content_status_history.cpt
-#. <label for="include_subfolders" i18n:translate="label_include_subfolders">
-#.               Include subfolders
+#. <label for="include_contained_objects" i18n:translate="label_include_contained_objects">
+#.               Include folder items
 #. </label>
-msgid "label_include_subfolders"
-msgstr "Включително подпапките"
+msgid "label_include_contained_objects"
+msgstr ""
 
 
 #: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
@@ -5464,14 +5231,6 @@ msgstr "Език"
 #. </label>
 msgid "label_last_logged_in"
 msgstr "Последно влизане"
-
-
-#: ./plone_content/newsitem_edit_form.cpt
-#. <label for="description" i18n:translate="label_lead-in">
-#.  Lead-in
-#. </label>
-msgid "label_lead-in"
-msgstr "Увод"
 
 
 #: ./plone_prefs/personalize_form.cpt
@@ -5545,6 +5304,14 @@ msgid "label_mail_password"
 msgstr "Изпращане на паролата по e-mail?"
 
 
+#: ./plone_content/metadata_edit_form.cpt
+#. <label for="format" i18n:translate="label_mimetype">
+#.               MIME type
+#. </label>
+msgid "label_mimetype"
+msgstr ""
+
+
 #: ./plone_forms/mail_password_form.pt
 #. <label for="userid" i18n:translate="label_my_user_name_is">
 #.                 My user name is
@@ -5607,7 +5374,7 @@ msgstr "Нова парола"
 
 #: ./plone_forms/folder_rename_form.cpt
 #. <label i18n:translate="label_new_short_name">
-#.                 New Short Name
+#.                   New Short Name
 #. </label>
 msgid "label_new_short_name"
 msgstr "Ново кратко име"
@@ -5615,13 +5382,13 @@ msgstr "Ново кратко име"
 
 #: ./plone_forms/folder_rename_form.cpt
 #. <label i18n:translate="label_new_title">
-#.                 New Title
+#.                   New Title
 #. </label>
 msgid "label_new_title"
 msgstr "Ново заглавие"
 
 
-#: ./plone_prefs/prefs_group_details.pt
+#: ./plone_prefs/prefs_group_members.pt
 #. <p i18n:translate="label_no_group_specified">
 #.  No group was specified.
 #. </p>
@@ -5633,7 +5400,7 @@ msgstr "Няма избрана група."
 #. <li i18n:translate="label_no_panels_available" tal:condition="not:configlets">
 #.                         No Preference Panels available.
 #. </li>
-#: ./plone_pre./plone_memberprefs_panel.pt
+#: ./plone_prefs/plone_memberprefs_panel.pt
 #. <p i18n:translate="label_no_panels_available" tal:condition="not:configlets">
 #.               No Preference Panels available.
 #. </p>
@@ -5759,7 +5526,7 @@ msgid "label_pubdraft"
 msgstr "публична чернова"
 
 
-#: ./plone_templates/news_listing.pt
+#: ./plone_templates/events_listing.pt
 #. <span i18n:translate="label_published" tal:omit-tag="">
 #.  Published
 #. </span>
@@ -5767,7 +5534,7 @@ msgid "label_published"
 msgstr "публикуван"
 
 
-#: ./plone_forms/content_status_history.cpt
+#: ./plone_content/review_history.pt
 #. <span i18n:translate="label_publishing_effective" tal:omit-tag="">
 #.  effective
 #. </span>
@@ -5801,7 +5568,7 @@ msgid "label_remember_my_name"
 msgstr "Запомни моето име."
 
 
-#: ./plone_forms/synPropertiesForm.cpt
+#: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
 #. <span class="fieldRequired" i18n:attributes="title" i18n:translate="label_required" title="Required">
 #.  (Required)
 #. </span>
@@ -5928,6 +5695,14 @@ msgid "label_setup_ext_editor"
 msgstr "Разрешаване на възможност за външен редактор"
 
 
+#: ./plone_prefs/reconfig_form.cpt
+#. <label i18n:translate="label_setup_visible_ids">
+#.  Show &quot;Short Name&quot; on Content?
+#. </label>
+msgid "label_setup_visible_ids"
+msgstr ""
+
+
 #: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
 #. <label for="id" i18n:translate="label_short_name">
 #.  Short Name
@@ -5944,15 +5719,15 @@ msgid "label_show_me"
 msgstr "Показване на"
 
 
-#: ./plone_content/image_view.pt
+#: ./plone_content/file_view.pt
 #. <span i18n:translate="label_size">
-#.  Size
+#.             Size
 #. </span>
 msgid "label_size"
 msgstr "Размер:"
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <label for="cb_allow_any" i18n:translate="label_skin_flexibility">
 #.  Allow users to select skins
 #. </label>
@@ -5972,7 +5747,7 @@ msgid "label_skiptocontent"
 msgstr "Прескачане на съдържание."
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <label i18n:translate="label_smtp_pass">
 #.  ESMTP password
 #. </label>
@@ -5980,7 +5755,7 @@ msgid "label_smtp_pass"
 msgstr ""
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <label i18n:translate="label_smtp_port">
 #.  SMTP port
 #. </label>
@@ -5988,7 +5763,7 @@ msgid "label_smtp_port"
 msgstr "Това е адресът на вашия локален, изходящ e-mail сървър. Обикновено \"localhost\", освен ако не използвате външен такъв."
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <label i18n:translate="label_smtp_server">
 #.  SMTP server
 #. </label>
@@ -5996,7 +5771,7 @@ msgid "label_smtp_server"
 msgstr "SMTP сървър"
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <label i18n:translate="label_smtp_userid">
 #.  ESMTP user
 #. </label>
@@ -6166,44 +5941,28 @@ msgid "label_up_to_groups_overview"
 msgstr "Нагоре към управление на групи"
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
-#. <a class="link-parent" href="" i18n:translate="label_up_to_plone_setup" tal:attributes="href string: $portal_u./plone_control_panel">
+#: ./plone_prefs/prefs_error_log_form.pt
+#. <a class="link-parent" href="" i18n:translate="label_up_to_plone_setup" tal:attributes="href string: $portal_url/plone_control_panel">
 #.     Up to Plone Setup
 #. </a>
 msgid "label_up_to_plone_setup"
 msgstr "Нагоре към настройки на сайта"
 
 
-#: ./plone_prefs/personalize_form.cpt
-#. <a class="link-parent" href="" i18n:translate="label_up_to_preferences" tal:attributes="href string: $portal_u./plone_memberprefs_panel">
+#: ./plone_prefs/password_form.pt
+#. <a class="link-parent" href="" i18n:translate="label_up_to_preferences" tal:attributes="href string: $portal_url/plone_memberprefs_panel">
 #.     Up to My Preferences
 #. </a>
 msgid "label_up_to_preferences"
 msgstr "Нагоре към мои предпочитания"
 
 
-#: ./plone_prefs/prefs_user_memberships.pt
+#: ./plone_prefs/prefs_user_details.cpt
 #. <a class="link-parent" href="" i18n:translate="label_up_to_usersoverview" tal:attributes="href string: $portal_url/prefs_users_overview">
-#.         Up to Users Overview
+#. 	      Up to Users Overview
 #. </a>
 msgid "label_up_to_usersoverview"
 msgstr "Нагоре към управление на потребители"
-
-
-#: ./plone_content/document_edit_form.cpt
-#. <label for="file" i18n:translate="label_upload_contents_optional">
-#.  Upload contents (optional)
-#. </label>
-msgid "label_upload_contents_optional"
-msgstr "Зареждане на съдържание (незадължително)"
-
-
-#: ./plone_content/link_edit_form.cpt
-#. <label for="uri" i18n:translate="label_url">
-#.  URL
-#. </label>
-msgid "label_url"
-msgstr "URL"
 
 
 #: ./plone_forms/folder_localrole_form.pt
@@ -6218,12 +5977,11 @@ msgstr "Потребител"
 #. <th i18n:translate="label_user_name">
 #.  User Name
 #. </th>
+#. <option i18n:translate="label_user_name" value="name">
+#.                             User Name
+#. </option>
 #: ./plone_forms/failsafe_login.pt
 #. <label i18n:translate="label_user_name" tal:attributes="for ac_name">
-#.  User Name
-#. </label>
-#: ./plone_forms/join_form.cpt
-#. <label i18n:translate="label_user_name">
 #.  User Name
 #. </label>
 msgid "label_user_name"
@@ -6242,7 +6000,7 @@ msgid "label_user_properties"
 msgstr "Свойства на потребител"
 
 
-#: ./plone_prefs/prefs_users_overview.pt
+#: ./plone_prefs/prefs_users_overview.cpt
 #. <span i18n:translate="label_user_search" tal:omit-tag="">
 #.  User Search
 #. </span>
@@ -6250,17 +6008,18 @@ msgid "label_user_search"
 msgstr "Търсене на потребител"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
-#. <a href="" i18n:translate="label_users" tal:attributes="href string: prefs_users_overview">
-#.  Users
-#. </a>
 #: ./plone_prefs/prefs_user_group_search_form.pt
 #. <option i18n:translate="label_users" value="users">
 #.  Users
 #. </option>
-#. <span i18n:translate="label_users" tal:condition="python: here.prefs_valid_search_restriction(searchonly,['users'])" tal:omit-tag="">
+#: ./plone_prefs/prefs_groups_overview.cpt
+#. <a href="" i18n:translate="label_users" tal:attributes="href string:${here/absolute_url}/prefs_users_overview">
 #.  Users
-#. </span>
+#. </a>
+#: ./plone_prefs/prefs_users_overview.cpt
+#. <a href="" i18n:translate="label_users" tal:attributes="href template/getId">
+#.  Users
+#. </a>
 msgid "label_users"
 msgstr "Потребители"
 
@@ -6281,7 +6040,7 @@ msgid "label_visible_members"
 msgstr "Видими потребители"
 
 
-#: ./plone_prefs/prefs_workflow_basic.pt
+#: ./plone_prefs/prefs_workflow_advanced.pt
 #. <a href="prefs_workflow_advanced" i18n:translate="label_workflow_advanced">
 #.  Advanced
 #. </a>
@@ -6416,44 +6175,12 @@ msgid "legend_document_details"
 msgstr "Подробности за обект"
 
 
-#: ./plone_content/event_edit_form.cpt
-#. <legend i18n:translate="legend_event_details">
-#.  Event Details
-#. </legend>
-msgid "legend_event_details"
-msgstr "Подробности за събитието"
-
-
-#: ./plone_content/file_edit_form.cpt
-#. <legend i18n:translate="legend_file_details">
-#.  File Details
-#. </legend>
-msgid "legend_file_details"
-msgstr "Подробности за файла"
-
-
-#: ./plone_content/folder_edit_form.cpt
-#. <legend i18n:translate="legend_folder_details">
-#.  Folder Details
-#. </legend>
-msgid "legend_folder_details"
-msgstr "Подробности за папката"
-
-
 #: ./plone_forms/member_search_form.pt
 #. <label i18n:translate="legend_group">
 #.   Group
 #. </label>
 msgid "legend_group"
 msgstr ""
-
-
-#: ./plone_content/image_edit_form.cpt
-#. <legend i18n:translate="legend_image_details">
-#.  Image Details
-#. </legend>
-msgid "legend_image_details"
-msgstr "Подробност иза изображението"
 
 
 #: ./plone_prefs/prefs_install_products_form.pt
@@ -6488,14 +6215,6 @@ msgid "legend_items_available"
 msgstr "Налични обекти"
 
 
-#: ./plone_content/link_edit_form.cpt
-#. <legend i18n:translate="legend_link_details">
-#.  Link Details
-#. </legend>
-msgid "legend_link_details"
-msgstr "Подробности за връзката"
-
-
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <legend i18n:translate="legend_logdetails">
 #.  Log details
@@ -6523,7 +6242,7 @@ msgid "legend_lognoexceptions"
 msgstr "Няма прихванати изключения."
 
 
-#: ./plone_prefs/prefs_mailhost_form.pt
+#: ./plone_prefs/prefs_mailhost_form.cpt
 #. <legend i18n:translate="legend_mailhost_details">
 #.  Outgoing Mail Server (SMTP) Details
 #. </legend>
@@ -6546,14 +6265,6 @@ msgstr "Подробности за потребител"
 #. </legend>
 msgid "legend_member_search_criteria"
 msgstr "Критерии за търсене"
-
-
-#: ./plone_content/newsitem_edit_form.cpt
-#. <legend i18n:translate="legend_newsitem_details">
-#.  News Item Details
-#. </legend>
-msgid "legend_newsitem_details"
-msgstr "Подробности за новина"
 
 
 #: ./plone_forms/discussion_reply_form.cpt
@@ -6590,7 +6301,7 @@ msgid "legend_plone_details"
 msgstr "Подробности за Plone"
 
 
-#: ./plone_prefs/prefs_portalskin_form.pt
+#: ./plone_prefs/prefs_portalskin_form.cpt
 #. <legend i18n:translate="legend_portalskin_details">
 #.  PortalSkin Details
 #. </legend>
@@ -6615,7 +6326,7 @@ msgid "legend_replies_to_this_comment"
 msgstr "Отговори на този коментар"
 
 
-#: ./plone_forms/search_form.pt
+#: ./plone_forms/folder_localrole_form.pt
 #. <legend i18n:translate="legend_search_terms">
 #.  Search Terms
 #. </legend>
@@ -6663,7 +6374,7 @@ msgid "link_group_properties"
 msgstr "Характеристики на група"
 
 
-#: ./plone_prefs/prefs_search_macros.pt
+#: ./plone_prefs/prefs_group_members.pt
 #. <span i18n:translate="link_groupname_not_available">
 #.                         groupname not available
 #. </span>
@@ -6679,7 +6390,7 @@ msgid "link_install_products_log"
 msgstr "Журнал на инсталацията"
 
 
-#: ./plone_prefs/prefs_search_macros.pt
+#: ./plone_prefs/prefs_group_members.pt
 #. <span i18n:translate="link_username_not_available">
 #.                         username not available
 #. </span>
@@ -6687,15 +6398,7 @@ msgid "link_username_not_available"
 msgstr "Потребителя не съществува"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
-#. <th i18n:translate="listignheader_remove_group" rowspan="2">
-#.  Remove Group
-#. </th>
-msgid "listignheader_remove_group"
-msgstr "Премахване на група"
-
-
-#: ./plone_forms/content_status_history.cpt
+#: ./plone_content/review_history.pt
 #. <th i18n:translate="listingheader_action">
 #.  Action
 #. </th>
@@ -6719,7 +6422,7 @@ msgid "listingheader_affected_item"
 msgstr "Засегнати обекти"
 
 
-#: ./plone_forms/content_status_history.cpt
+#: ./plone_content/review_history.pt
 #. <th i18n:translate="listingheader_comment">
 #.  Comment
 #. </th>
@@ -6727,36 +6430,36 @@ msgid "listingheader_comment"
 msgstr "Коментар"
 
 
-#: ./plone_forms/content_status_history.cpt
-#. <th i18n:translate="listingheader_date_and_time">
-#.  DateandTime
-#. </th>
 #: ./plone_forms/undo_form.pt
 #. <th i18n:translate="listingheader_date_and_time">
 #.  Date and time
+#. </th>
+#: ./plone_content/review_history.pt
+#. <th i18n:translate="listingheader_date_and_time">
+#.  DateandTime
 #. </th>
 msgid "listingheader_date_and_time"
 msgstr "Дата и час"
 
 
-#: ./plone_prefs/prefs_users_overview.pt
-#. <th i18n:translate="listingheader_email_address" rowspan="2">
-#.  E-mail Address
-#. </th>
 #: ./plone_prefs/prefs_group_members.pt
 #. <th i18n:translate="listingheader_email_address">
+#.  E-mail Address
+#. </th>
+#: ./plone_prefs/prefs_users_overview.cpt
+#. <th i18n:translate="listingheader_email_address" rowspan="2">
 #.  E-mail Address
 #. </th>
 msgid "listingheader_email_address"
 msgstr "E-mail адрес"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
-#. <th i18n:translate="listingheader_group_name" rowspan="2">
-#.  Group name
-#. </th>
 #: ./plone_prefs/prefs_user_memberships.pt
 #. <th i18n:translate="listingheader_group_name">
+#.  Group name
+#. </th>
+#: ./plone_prefs/prefs_groups_overview.cpt
+#. <th i18n:translate="listingheader_group_name" rowspan="2">
 #.  Group name
 #. </th>
 msgid "listingheader_group_name"
@@ -6799,19 +6502,27 @@ msgid "listingheader_order"
 msgstr "Ред"
 
 
-#: ./plone_forms/content_status_history.cpt
-#. <th i18n:translate="listingheader_performed_by">
-#.  Performedby
-#. </th>
 #: ./plone_forms/undo_form.pt
 #. <th i18n:translate="listingheader_performed_by">
 #.  Performed by
+#. </th>
+#: ./plone_content/review_history.pt
+#. <th i18n:translate="listingheader_performed_by">
+#.  Performedby
 #. </th>
 msgid "listingheader_performed_by"
 msgstr "Извършено от"
 
 
-#: ./plone_prefs/prefs_users_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
+#. <th i18n:translate="listingheader_remove_group" rowspan="2">
+#.  Remove Group
+#. </th>
+msgid "listingheader_remove_group"
+msgstr ""
+
+
+#: ./plone_prefs/prefs_users_overview.cpt
 #. <th i18n:translate="listingheader_remove_user" rowspan="2">
 #.  Remove user
 #. </th>
@@ -6819,7 +6530,7 @@ msgid "listingheader_remove_user"
 msgstr "Премахване на потребител"
 
 
-#: ./plone_prefs/prefs_users_overview.pt
+#: ./plone_prefs/prefs_users_overview.cpt
 #. <th i18n:translate="listingheader_reset_password" rowspan="2">
 #.  Reset Password
 #. </th>
@@ -6827,7 +6538,7 @@ msgid "listingheader_reset_password"
 msgstr "Нулиране на парола"
 
 
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <th colspan="3" i18n:translate="listingheader_roles" tal:attributes="colspan python:len(portal_roles)">
 #.  Roles
 #. </th>
@@ -6875,12 +6586,12 @@ msgid "listingheader_undo"
 msgstr "Отмяна"
 
 
-#: ./plone_prefs/prefs_users_overview.pt
-#. <th i18n:translate="listingheader_user_name" rowspan="2">
-#.  User name
-#. </th>
 #: ./plone_prefs/prefs_group_members.pt
 #. <th i18n:translate="listingheader_user_name">
+#.  User name
+#. </th>
+#: ./plone_prefs/prefs_users_overview.cpt
+#. <th i18n:translate="listingheader_user_name" rowspan="2">
 #.  User name
 #. </th>
 msgid "listingheader_user_name"
@@ -6925,6 +6636,9 @@ msgstr "Авторизацията чрез бисквитки е забране
 #. <label for="cb_noext_editor" i18n:translate="no">
 #.  No
 #. </label>
+#. <label for="cb_novisible_ids" i18n:translate="no">
+#.  No
+#. </label>
 msgid "no"
 msgstr "Не"
 
@@ -6951,10 +6665,6 @@ msgid "no_comments"
 msgstr "Няма коментари."
 
 
-#: ./plone_content/file_edit_form.cpt
-#. <span i18n:translate="no_file_uploaded" tal:condition="not: file_size" tal:define="file_size python:here.getObjSize(here)">
-#.                     (No file has been uploaded yet)
-#. </span>
 #: ./plone_content/file_view.pt
 #. <span i18n:translate="no_file_uploaded" tal:condition="python:test(size,0,1)">
 #.               (No file has been uploaded yet)
@@ -6963,10 +6673,6 @@ msgid "no_file_uploaded"
 msgstr "(Все още няма зареден файл.]"
 
 
-#: ./plone_content/image_edit_form.cpt
-#. <div i18n:translate="no_image_uploaded" tal:condition="python:test(file_size, 0, 1)" tal:define="file_size here/size|nothing">
-#.               (No image has been uploaded yet)
-#. </div>
 #: ./plone_content/image_view.pt
 #. <span i18n:translate="no_image_uploaded" tal:condition="python:test(size, 0, 1)">
 #.                     (No image has been uploaded yet)
@@ -6986,7 +6692,7 @@ msgid "no_members_found"
 msgstr "Не са открити потребители, отговарящи на вашия <strong>критерий за търсене</strong>."
 
 
-#: ./plone_templates/news_listing.pt
+#: ./plone_templates/events_listing.pt
 #. <p i18n:translate="no_new_news" tal:condition="not: results">
 #.         No news has been posted.
 #. </p>
@@ -7024,7 +6730,7 @@ msgstr "Чист текст"
 #. <span i18n:translate="posted_by">
 #.  Posted by
 #. </span>
-#: ./plone_templates/news_listing.pt
+#: ./plone_templates/events_listing.pt
 #. <span i18n:translate="posted_by" tal:omit-tag="">
 #.  Posted by
 #. </span>
@@ -7058,6 +6764,10 @@ msgstr "публикуван"
 
 #: ./plone_templates/news_listing.pt
 #. <a href="/view" i18n:translate="read_more" tal:attributes="href resulturl" tal:condition="has_body">
+#.                                 Read More
+#. </a>
+#: ./plone_templates/events_listing.pt
+#. <a href="/view" i18n:translate="read_more" tal:attributes="href resulturl">
 #.                                 Read More
 #. </a>
 msgid "read_more"
@@ -7417,7 +7127,7 @@ msgstr "Няма публикувани обекти."
 #. <p i18n:translate="text_nomatches" tal:condition="not:batch">
 #.  No matches
 #. </p>
-#: ./plone_prefs/prefs_groups_overview.pt
+#: ./plone_prefs/prefs_groups_overview.cpt
 #. <td i18n:translate="text_nomatches" style="text-align:center;">
 #.  No matches
 #. </td>
@@ -7541,6 +7251,16 @@ msgid "title_member_personal_folder"
 msgstr ""
 
 
+#: ./plone_prefs/prefs_users_overview.cpt
+#. <p i18n:translate="user_role_note">
+#. 	      Note that roles listed here apply directly to a user.
+#. 	      They do not reflect additional roles users may have due
+#. 	      to group memberships.
+#. </p>
+msgid "user_role_note"
+msgstr ""
+
+
 msgid "visible"
 msgstr "видим"
 
@@ -7549,13 +7269,17 @@ msgstr "видим"
 #. <label for="cb_ext_editor" i18n:translate="yes">
 #.  Yes
 #. </label>
+#. <label for="cb_visible_ids" i18n:translate="yes">
+#.  Yes
+#. </label>
 msgid "yes"
 msgstr "Да"
 
 
 #: ./plone_templates/global_pathbar.pt
-#. <span i18n:translate="you_are_here" tal:omit-tag="">
-#.  You are here:
+#. <span i18n:translate="you_are_here" id="breadcrumbs-you-are-here">
+#.  You
+#. are here:
 #. </span>
 msgid "you_are_here"
 msgstr "Вие сте тук:"
