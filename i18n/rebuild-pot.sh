@@ -39,9 +39,6 @@ sed -ri "/## [0-9]+ more:/d" $POT
 # Made paths relative to Plone skins dir
 sed -ri "s,$PLONE/skins,\.,g" $POT
 
-# All msgstr's should be empty in the pot
-sed -ri "s,msgstr .*,msgstr \"\",g" $POT
-
 echo -e "\nTemplates with unneeded literal msgid:\n"
 grep 'Unneeded literal msgid in' $LOG | sed -s 's,Unneeded literal msgid in,,' | sort | uniq
 echo -e "\nFull report in rebuild-pot.log\n"

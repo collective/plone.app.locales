@@ -8,7 +8,7 @@ if [ ! -e $I18NDUDE ]; then
     exit 1
 fi
 
-for PO in *.po; do
+for PO in plone*.po; do
     if [ $PO != "plone-en.po" ]; then
         $PYTHON $I18NDUDE sync --pot plone.pot -s $PO
     fi
