@@ -1,5 +1,5 @@
 """
-Unit test package for the i18n package of CMFPlone
+Unit test package for PloneTranslations
 
 To run all tests type 'python runalltests.py'
 """

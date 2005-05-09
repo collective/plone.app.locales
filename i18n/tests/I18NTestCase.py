@@ -1,8 +1,6 @@
 #
-# PloneTestCase
+# I18NTestCase
 #
-
-# $Id: I18NTestCase.py,v 1.1 2004/01/28 12:47:50 tiran Exp $
 
 from Testing import ZopeTestCase
 
