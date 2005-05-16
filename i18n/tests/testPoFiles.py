@@ -5,9 +5,16 @@ if __name__ == '__main__':
 
 from Testing import ZopeTestCase
 import I18NTestCase
+import htmlentitydefs
 
 from gettext import GNUTranslations
 from Products.PlacelessTranslationService import msgfmt
+
+try:
+    import win32api
+    WIN32 = True
+except ImportError:
+    WIN32 = False
 
 def Xprint(s):
     """print helper
@@ -16,19 +23,45 @@ def Xprint(s):
 
 def getLanguageFromPath(path):
     # get file
-    file = path.split('/')[-1]
+    if WIN32:
+        file = path.split('\\')[-1]
+    else:
+        file = path.split('/')[-1]
     # strip of .po
     file = file[:-3]
     lang = file.split('-')[1:]
     return '-'.join(lang)
 
-def getPoFiles(path='..'):
+def getProductFromPath(path):
+    # get file
+    if WIN32:
+        file = path.split('\\')[-1]
+    else:
+        file = path.split('/')[-1]
+    # strip of .pot
+    file = '-'.join(file.split('.')[:1])
+    prod = '-'.join(file.split('-')[:1])
+    return prod
+
+def getPotFiles(path='..'):
     productPath = os.path.abspath(path)
     i18nPath = os.path.join(productPath, 'i18n')
     if not os.path.isdir(i18nPath):
         # for plone-i18n repository
         i18nPath = productPath
-    poFiles= glob(os.path.join(i18nPath, '*.po'))
+    potFiles= glob(os.path.join(i18nPath, '*.pot'))
+
+    if not potFiles:
+        raise IOError('No pot files found in %s!' % i18nPath)
+    return potFiles
+
+def getPoFiles(path='..', product=''):
+    productPath = os.path.abspath(path)
+    i18nPath = os.path.join(productPath, 'i18n')
+    if not os.path.isdir(i18nPath):
+        # for plone-i18n repository
+        i18nPath = productPath
+    poFiles= glob(os.path.join(i18nPath, '%s*.po' % product))
 
     if not poFiles:
         raise IOError('No po files found in %s!' % i18nPath)
@@ -66,11 +99,11 @@ class TestPoFile(I18NTestCase.I18NTestCase):
 
         language_new = tro._info.get('language-code', None) # new way
         language_old = tro._info.get('language', None) # old way
-	language = language_new or language_old
+        language = language_new or language_old
 
-	self.failIf(language_old, 'The file %s has the old style language flag set to %s. Please remove it!' % (poName, language_old))
-	#if language_old:
-	#    self.failUnless(language_new == language_old, 'language and language-code differ in file %s: %s / %s' % (poName, language_new, language_old))
+        self.failIf(language_old, 'The file %s has the old style language flag set to %s. Please remove it!' % (poName, language_old))
+        #if language_old:
+        #    self.failUnless(language_new == language_old, 'language and language-code differ in file %s: %s / %s' % (poName, language_new, language_old))
 
         self.failUnless(language, 'Po file %s has no language!' % po)
 
@@ -79,6 +112,20 @@ class TestPoFile(I18NTestCase.I18NTestCase):
         self.failUnless(fileLang == language,
             'The file %s has the wrong name or wrong language code. expected: %s, got: %s' % (poName, language, fileLang))
 
+        msgcatalog = tro._catalog
+        for msg in msgcatalog:
+             if msg:
+                 msgstr = msgcatalog.get(msg)
+                 # every ${foo} is properly closed
+                 if '${' in msgstr:
+                     self.failUnless(msgstr.count('${') - msgstr.count('}') == 0,
+                         'Error: Misformed message attribute ${foo} in file %s:\n %s' % (poName, msg))
+                 # no html-entities in msgstr
+                 if '&' in msgstr and ';' in msgstr:
+                     entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs]
+                     found = [entity for entity in entities if entity in msgstr]
+                     self.failIf(len(found) > 0,
+                         'Error: html-entities in file %s:\n %s\n %s' % (poName, msg, found))
 
 tests=[]
 

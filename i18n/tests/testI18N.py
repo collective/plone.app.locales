@@ -1,4 +1,4 @@
-"""Unit tests for Plone i18n
+"""Unit tests for PloneTranslations
 
 References:
 http://i18n.kde.org/translation-howto/check-gui.html#check-msgfmt
@@ -11,44 +11,37 @@ if __name__ == '__main__':
 from Testing import ZopeTestCase
 import I18NTestCase
 import unittest,re
-from testPoFiles import getPoFiles, Xprint
+from testPoFiles import getPoFiles, getPotFiles, getProductFromPath, Xprint
 
 from popen2 import popen4
 
 import commands
 
 class TestPOT(I18NTestCase.I18NTestCase):
+    pot = None
+
     def testNoDuplicateMsgId(self):
-        """Check that there are no duplicate msgid:s in plone.pot"""
-        cmd='grep ^msgid ../plone.pot|sort|uniq --repeated'
+        """Check that there are no duplicate msgid:s in the pot file"""
+        pot = self.pot
+        cmd='grep ^msgid ../%s.pot|sort|uniq --repeated' % pot
         status = commands.getstatusoutput(cmd)
         assert len(status[1])  == 0, "Duplicate msgid:s were found:\n\n%s" % status[1]
 
 class TestMsg(I18NTestCase.I18NTestCase):
     poFile = None
-
-# This test isn't functional yet; msgfmt is pretty useless for automated testing until
-# it can present the results in a simple machine-readable way. Now, the message varies
-# in formatting depending on the results.
-#
-#    def testMsgFiles(self):
-#        """Check that the .pot file is ok
-#
-#           "LC_ALL=C" is used so we don't get localised messages from msgfmt."""
-#        status = commands.getstatusoutput('LC_ALL=C msgfmt --check --statistics ../plone.pot')
-#        if status[0] != 0:
-#            self.fail (status[1])
-
+    pot = None
 
     def testMsgExists(self):
         """
         """
         po = self.poFile
         poName = os.path.split(po)[-1]
+        pot = self.pot
+        poEnglish = '%s-en.po' % pot[:-4]
         failed=[]
-        if not po.endswith("plone-en.po"):
+        if not po.endswith(poEnglish):
             os.environ['LC_ALL']='C'
-            o,i = popen4('msgcmp --directory=.. %s plone.pot' % poName)
+            o,i = popen4('msgcmp --directory=.. %s %s' % (poName, pot))
             del os.environ['LC_ALL']
             i.close()
             output = o.read()
@@ -59,15 +52,28 @@ class TestMsg(I18NTestCase.I18NTestCase):
                     output = output[:10]
                     output.append('... <more errors>')
                 output = '\n'.join(output)
-                self.fail("Comparing plone.pot with %s using msgcmp resulted in:\n%s" % (
-                              poName,
-                              output))
+                self.fail("Comparing %s with %s using msgcmp resulted in:\n%s" % (
+                              pot, poName, output))
 
 tests=[]
-for poFile in getPoFiles('..'):
-    class TestOneMsg(TestMsg):
-        poFile = poFile
-    tests.append(TestOneMsg)
+
+products=[]
+for potFile in getPotFiles('..'):
+    product = getProductFromPath(potFile)
+    if product not in products:
+        products.append(product)
+
+for product in products:
+    for poFile in getPoFiles('..', product=product):
+        class TestOneMsg(TestMsg):
+            poFile = poFile
+            pot = '%s.pot' % product
+        tests.append(TestOneMsg)
+
+    class TestOnePOT(TestPOT):
+        pot = product
+    tests.append(TestOnePOT)
+
 
 if __name__ == '__main__':
     framework()
