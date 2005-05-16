@@ -41,7 +41,7 @@ class TestMsg(I18NTestCase.I18NTestCase):
         failed=[]
         if not po.endswith(poEnglish):
             os.environ['LC_ALL']='C'
-            o,i = popen4('msgcmp --directory=.. %s %s' % (poName, pot))
+            o,i = popen4('msgcmp --directory=../i18n %s %s' % (poName, pot))
             del os.environ['LC_ALL']
             i.close()
             output = o.read()
