@@ -75,7 +75,7 @@ class TestPoFile(I18NTestCase.I18NTestCase):
         self.failUnless(language, 'Po file %s has no language!' % po)
 
         fileLang = getLanguageFromPath(po)
-        language = language.lower().replace('_', '-')
+        language = language.replace('_', '-')
         self.failUnless(fileLang == language,
             'The file %s has the wrong name or wrong language code. expected: %s, got: %s' % (poName, language, fileLang))
 
