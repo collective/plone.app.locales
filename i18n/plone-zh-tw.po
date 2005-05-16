@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-05-08 22:50+0000\n"
+"POT-Creation-Date: 2005-05-16 18:44+0000\n"
 "PO-Revision-Date: 2005-04-29 17:09+0800\n"
 "Last-Translator: T.C. Chou <tcchou@tcchou.org>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -39,6 +39,14 @@ msgstr "${titles} 已被加入你的喜好蒐集."
 
 msgid "${title} has been deleted."
 msgstr "${titles} 已被刪除."
+
+
+msgid "${title} is not copyable."
+msgstr ""
+
+
+msgid "${title} is not moveable."
+msgstr ""
 
 
 msgid "A line was too long."
@@ -89,9 +97,15 @@ msgstr "增加新項目"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="#" i18n:attributes="title" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" title="Add new items to this folder">
-msgid "Add new items to this folder"
-msgstr "加入新物件到此文件夾"
+#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+msgid "Add new items in the same folder as this item"
+msgstr ""
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+msgid "Add new items inside this item"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_group_members.pt
@@ -249,6 +263,16 @@ msgstr "變更預設頁面"
 
 msgid "Change password"
 msgstr "變更密碼"
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+msgid "Change the item used as default view in this folder"
+msgstr ""
+
+
+msgid "Changes applied."
+msgstr ""
 
 
 msgid "Changes made."
@@ -548,7 +572,7 @@ msgid "Folder listing"
 msgstr "目錄內容條列"
 
 
-# 2-letter shorthand for "Friday"
+# Shorthand for "Friday"
 msgid "Fr"
 msgstr "五"
 
@@ -791,7 +815,7 @@ msgid "Metadata"
 msgstr "詮釋資料"
 
 
-# 2-letter shorthand for "Monday"
+# Shorthand for "Monday"
 msgid "Mo"
 msgstr "一"
 
@@ -801,13 +825,13 @@ msgstr ""
 
 
 #: ./plone_templates/folder_contents.pt
-#. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=down&amp;id=$item_id" title="Move item down">
+#. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=down&amp;id=$item_id&amp;template_id=${template/getId}" title="Move item down">
 msgid "Move item down"
 msgstr "向下移動"
 
 
 #: ./plone_templates/folder_contents.pt
-#. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=up&amp;id=$item_id" title="Move item up">
+#. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=up&amp;id=$item_id&amp;template_id=${template/getId}" title="Move item up">
 msgid "Move item up"
 msgstr "向上移動"
 
@@ -872,7 +896,7 @@ msgstr "十一月"
 
 #: ./plone_content/metadata_edit_form.cpt
 #. <img alt="Object locked" class="context" i18n:attributes="alt" src="" tal:condition="isLocked" tal:define="locked portal_object/lock_icon.gif;" tal:replace="structure python:locked.tag(title='This item is locked')"/>
-#: ./plone_templates/global_contentviews.pt
+#: ./plone_content/document_byline.pt
 #. <img alt="Object locked" i18n:attributes="alt" src="" tal:replace="structure python:locked.tag(title='This item is locked')"/>
 msgid "Object locked"
 msgstr "物件已鎖定"
@@ -886,6 +910,18 @@ msgstr "十月"
 #. <input class="context" i18n:attributes="value" name="form.button.Cancel" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Ok"/>
 msgid "Ok"
 msgstr "確定"
+
+
+msgid "One or more items not copyable."
+msgstr ""
+
+
+msgid "One or more items not moveable."
+msgstr ""
+
+
+msgid "One or more selected items is no longer available."
+msgstr ""
 
 
 msgid "Owner"
@@ -932,6 +968,14 @@ msgstr "待審"
 #. <input class="context" i18n:attributes="value" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Perform Search"/>
 msgid "Perform Search"
 msgstr "進行搜詢"
+
+
+msgid "Permission denied to copy ${title}."
+msgstr ""
+
+
+msgid "Permission denied to cut ${title}."
+msgstr ""
 
 
 msgid "Please correct the indicated errors."
@@ -1088,22 +1132,12 @@ msgid "Relevance"
 msgstr "相關性"
 
 
+#: ./plone_templates/viewThreadsAtBottom.pt
+#. <input class="destructive" i18n:attributes="value" type="submit" value="Remove"/>
 #: ./plone_3rdParty/CMFTopic/topic_criteria_form.pt
 #. <input class="context" i18n:attributes="value" name="topic_deleteCriteria:action" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Remove"/>
 msgid "Remove"
 msgstr "移除"
-
-
-#: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="destructive" i18n:attributes="value" type="submit" value="Remove This Discussion"/>
-msgid "Remove This Discussion"
-msgstr "移除此項討論"
-
-
-#: ./plone_content/discussionitem_view.pt
-#. <input class="destructive" i18n:attributes="value" type="submit" value="Remove This Reply"/>
-msgid "Remove This Reply"
-msgstr "移除此項回覆"
 
 
 #: ./plone_prefs/prefs_user_memberships.pt
@@ -1134,18 +1168,18 @@ msgid "Rename items"
 msgstr "多筆改名"
 
 
+#: ./plone_templates/viewThreadsAtBottom.pt
+#. <input class="standalone" i18n:attributes="value" type="submit" value="Reply"/>
+msgid "Reply"
+msgstr ""
+
+
 msgid "Reply deleted"
 msgstr "回覆已刪除"
 
 
 msgid "Reply to Comment"
 msgstr "回覆評論"
-
-
-#: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="standalone" i18n:attributes="value" type="submit" value="Reply to this"/>
-msgid "Reply to this"
-msgstr "回覆此項"
 
 
 #: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
@@ -1183,7 +1217,7 @@ msgid "Reviewer"
 msgstr "審核者"
 
 
-# 2-letter shorthand for "Saturday"
+# Shorthand for "Saturday"
 msgid "Sa"
 msgstr "六"
 
@@ -1244,6 +1278,12 @@ msgstr "這個 Plone 站台遵照米國政府 508 部分的親和性指導原則
 #. <input alt="Select all items" class="noborder" i18n:attributes="title alt" name="selectButton" onClick="toggleSelect(this,'paths:list');" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
 msgid "Select all items"
 msgstr "全選"
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+msgid "Select an item to be used as default view in this folder"
+msgstr ""
 
 
 #: ./plone_templates/global_contentmenu.pt
@@ -1335,7 +1375,7 @@ msgid "State"
 msgstr "狀態"
 
 
-# 2-letter shorthand for "Sunday"
+# Shorthand for "Sunday"
 msgid "Su"
 msgstr "日"
 
@@ -1366,7 +1406,7 @@ msgid "Syndication properties updated."
 msgstr "聯合刊載屬性已經更新."
 
 
-# 2-letter shorthand for "Thursday"
+# Shorthand for "Thursday"
 msgid "Th"
 msgstr "四"
 
@@ -1449,6 +1489,12 @@ msgid "This Plone site was built with valid CSS."
 msgstr "這個 Plone 站台符合 CSS."
 
 
+#: ./plone_content/document_byline.pt
+#. <img alt="" i18n:attributes="title" src="" tal:condition="python:lockable and here.wl_isLocked()" tal:define="locked portal_object/lock_icon.gif;                    lockable python:hasattr(here, 'wl_isLocked');" tal:replace="structure python:locked.tag(title='Locked')" title="This document is locked."/>
+msgid "This document is locked."
+msgstr ""
+
+
 msgid "This item is currently in the ${review_state} state"
 msgstr "這個項目現在狀態是 ${review_state}"
 
@@ -1492,7 +1538,7 @@ msgid "Transaction(s)+undone."
 msgstr "回復成功"
 
 
-# 2-letter shorthand for "Tuesday"
+# Shorthand for "Tuesday"
 msgid "Tu"
 msgstr "二"
 
@@ -1606,7 +1652,7 @@ msgid "WCAG"
 msgstr "這 Plone 站台遵守 W3C-WAI 網站內容親和性指導原則."
 
 
-# 2-letter shorthand for "Wednesday"
+# Shorthand for "Wednesday"
 msgid "We"
 msgstr "三"
 
@@ -1899,9 +1945,13 @@ msgid "box_forgot_password_option"
 msgstr "忘記您的密碼?"
 
 
+#: ./plone_templates/folder_listing.pt
+#. <span i18n:translate="box_last_modified">
+#.                           Last modified
+#. </span>
 #: ./plone_content/document_byline.pt
 #. <span i18n:translate="box_last_modified">
-#.     Last modified
+#.     last modified
 #. </span>
 # English translation: "Last modified"
 msgid "box_last_modified"
@@ -2124,18 +2174,9 @@ msgid "description"
 msgstr "描述"
 
 
-#: ./plone_content/discussionitem_view.pt
-#. <span i18n:translate="description_above_in_comment_thread" tal:omit-tag="">
-#.  Above in this comment thread:
-#. </span>
-# English translation: "Above in this comment thread:"
-msgid "description_above_in_comment_thread"
-msgstr "上面的系列評論:"
-
-
 #: ./plone_forms/discussion_reply_form.cpt
 #. <p i18n:translate="description_add_comment">
-#.         You can add a comment by filling out the form below. Plain text formatting.
+#.                 You can add a comment by filling out the form below. Plain text formatting.
 #. </p>
 # English translation: "You can add a comment by filling out the form below. Plain text formatting."
 msgid "description_add_comment"
@@ -2175,9 +2216,9 @@ msgstr "這搜尋功能將提供一個或多個條件, 來搜尋這網站資料.
 
 
 #: ./plone_content/author.cpt
-#. <p i18n:translate="description_author_feedback">
-#.                 By filling in the form below, you can send an email to this author
-#.                 with feedback.
+#. <p class="discreet" i18n:translate="description_author_feedback">
+#.                 If you want to contact this author, fill in the form
+#.                 below.
 #. </p>
 # English translation: "By filling in the form below, you can send an email to this author with feedback."
 msgid "description_author_feedback"
@@ -2196,8 +2237,8 @@ msgstr "在您進行更多的探索之前，您必須變更最初的密碼. 這�
 
 #: ./plone_forms/ownership_form.cpt
 #. <p i18n:translate="description_change_ownership">
-#.     You can change the current objects ownership to
-#.     another member easily from this form.
+#.     You can transfer the current item's ownership to
+#.     somebody else using this form.
 #. </p>
 # English translation: "You can change the current objects ownership to another member easily from this form."
 msgid "description_change_ownership"
@@ -2224,10 +2265,11 @@ msgstr "設定Plone和相關產品。"
 
 #: ./plone_templates/footer.pt
 #. <span i18n:translate="description_copyright" tal:omit-tag="">
-#.     Plone and its visual design is Copyright
+#.     Plone
+#.  <sup/>
+#.   and its visual design is copyright
 #.      2000-
 #.  ${current_year}
-#.   by
 #.  ${limi}
 #.  ,
 #.  ${runyaga}
@@ -2342,10 +2384,10 @@ msgstr "這類別不支援歷史記錄界面. 內容必須加進 OFS.History.His
 
 
 #: ./plone_templates/footer.pt
-#. <div i18n:translate="description_license">
-#.     Licensed under the
+#. <span i18n:translate="description_license">
+#.     Distributed under the
 #.  ${license}
-#. </div>
+#. </span>
 # English translation: "Licensed under the ${license}"
 msgid "description_license"
 msgstr ""
@@ -2439,8 +2481,6 @@ msgid "description_member_listing"
 msgstr "可檢視的成員列表"
 
 
-#: MembershipTool.py
-#. English translation: "contains personal workarea items for ${member}"
 # ref. http://plone.org/documentation/tutorial/custom-type-member-folder/custom-membershiptool
 msgid "description_member_personal_folder"
 msgstr "包含 ${member} 個人工作區的項目"
@@ -2928,6 +2968,17 @@ msgid "description_syndication_setup"
 msgstr "這裡您所做的設定, 將影響整個站台聯合刊載的設定."
 
 
+#: ./plone_templates/footer.pt
+#. <span i18n:translate="description_trademark">
+#.     Plone
+#.  <sup/>
+#.   is a registered trademark of the
+#.  ${plonefoundation}
+#. </span>
+msgid "description_trademark"
+msgstr ""
+
+
 #: ./plone_forms/undo_form.pt
 #. <p i18n:translate="description_undo_action">
 #.         This applications transactional feature allows you to easily undo changes
@@ -3174,15 +3225,6 @@ msgid "heading_actions"
 msgstr "動作"
 
 
-#: ./plone_forms/discussion_reply_form.cpt
-#. <h1 i18n:translate="heading_add_comment">
-#.  Add Comment
-#. </h1>
-# English translation: "Add Comment"
-msgid "heading_add_comment"
-msgstr "增加評論"
-
-
 #: ./plone_forms/folder_factories.pt
 #. <h1 i18n:translate="heading_add_new_item">
 #.  Add new item
@@ -3229,15 +3271,6 @@ msgid "heading_author_content"
 msgstr "這位成員最近所做內容"
 
 
-#: ./plone_content/author.cpt
-#. <h2 i18n:translate="heading_author_feedback">
-#.                 Send feedback
-#. </h2>
-# English translation: "Send feedback"
-msgid "heading_author_feedback"
-msgstr "送出回報"
-
-
 #: ./plone_forms/ownership_form.cpt
 #. <h1 i18n:translate="heading_change_ownership">
 #.  Change ownership
@@ -3255,15 +3288,6 @@ msgstr "變更擁有者"
 # English translation: "Change password for ${user}"
 msgid "heading_change_password_for"
 msgstr "改變使用者 ${user} 密碼"
-
-
-#: ./plone_content/discussionitem_view.pt
-#. <h1 i18n:translate="heading_comment">
-#.  Comment
-#. </h1>
-# English translation: "Comment"
-msgid "heading_comment"
-msgstr "評論"
 
 
 #: ./plone_forms/discussion_reply_preview.pt
@@ -4022,9 +4046,7 @@ msgstr "指定這項目允許增加討論項目和評論. '預設' 是以站台�
 
 
 #: ./plone_forms/discussion_reply_form.cpt
-#. <div class="formHelp" i18n:translate="help_body_text">
-#. 			The message of your posting.
-#. </div>
+#. <div class="formHelp" i18n:translate="help_body_text"/>
 # English translation: "The message of your posting."
 msgid "help_body_text"
 msgstr "這些將是您張貼的訊息."
@@ -4486,6 +4508,14 @@ msgid "help_search_author"
 msgstr "傳回特定人士所建立的項目."
 
 
+#: ./plone_forms/member_search_form.pt
+#. <div class="formHelp" i18n:translate="help_search_before_specified_time">
+#.                 Return members who have NOT logged in since the time specified above.
+#. </div>
+msgid "help_search_before_specified_time"
+msgstr ""
+
+
 #: ./plone_forms/search_form.pt
 #. <div class="formHelp" i18n:translate="help_search_description">
 #.                 Return items matching this description.
@@ -4725,9 +4755,7 @@ msgstr "XXX"
 
 
 #: ./plone_forms/discussion_reply_form.cpt
-#. <div class="formHelp" i18n:translate="help_subject">
-#. 			The subject of your posting.
-#. </div>
+#. <div class="formHelp" i18n:translate="help_subject"/>
 # English translation: "The subject of your posting."
 msgid "help_subject"
 msgstr "這將是您張貼的主題."
@@ -4887,18 +4915,18 @@ msgstr "選擇增加一個項目"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_add_new_item" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage">
+#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 #.  Add item
-#. </span>
+#. </a>
 # English translation: "Add item"
 msgid "label_add_new_item"
 msgstr "加新項目"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_add_new_item_in_folder" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage">
-#.  Add to above folder
-#. </span>
+#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#.  Add to folder
+#. </a>
 # English translation: "Add to above folder"
 msgid "label_add_new_item_in_folder"
 msgstr "新增到目錄"
@@ -4949,7 +4977,7 @@ msgid "label_allow_members_to_create_password"
 msgstr "允許成員選擇他們自己初始的密碼"
 
 
-#: ./plone_templates/viewThreadsAtBottom.pt
+#: ./plone_forms/discussion_reply_form.cpt
 #. <span i18n:translate="label_anonymous_user" tal:condition="anonymous_creator">
 #.  Anonymous User
 #. </span>
@@ -4994,9 +5022,17 @@ msgid "label_back_to_errorlog"
 msgstr "回到錯誤記錄檔"
 
 
+#: ./plone_forms/member_search_form.pt
+#. <label i18n:translate="label_before_specified_time">
+#.  Not logged in since specified time
+#. </label>
+msgid "label_before_specified_time"
+msgstr ""
+
+
 #: ./plone_forms/discussion_reply_form.cpt
 #. <label for="text" i18n:translate="label_body_text">
-#.  Body text
+#.  Comment
 #. </label>
 # English translation: "Body text"
 msgid "label_body_text"
@@ -5005,7 +5041,7 @@ msgstr "主體內文"
 
 #: ./plone_content/document_byline.pt
 #. <tal:name i18n:translate="label_by_author" tal:condition="creator" tal:define="author python:mtool.getMemberInfo(creator)">
-#.     By
+#.         by
 #.  ${author}
 #. </tal:name>
 # English translation: "By ${author}"
@@ -5085,7 +5121,7 @@ msgid "label_comment"
 msgstr "評論"
 
 
-#: ./plone_templates/viewThreadsAtBottom.pt
+#: ./plone_forms/discussion_reply_form.cpt
 #. <span i18n:translate="label_comment_by">
 #.  Posted by
 #. </span>
@@ -5094,7 +5130,7 @@ msgid "label_comment_by"
 msgstr "建議者"
 
 
-#: ./plone_templates/viewThreadsAtBottom.pt
+#: ./plone_forms/discussion_reply_form.cpt
 #. <span i18n:translate="label_commented_at">
 #.  at
 #. </span>
@@ -5564,6 +5600,14 @@ msgid "label_historical_unavailable"
 msgstr "歷史資料無法取得"
 
 
+#: ./plone_content/review_history.pt
+#. <legend i18n:translate="label_history">
+#.  History
+#. </legend>
+msgid "label_history"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <label i18n:translate="label_ignored_exception">
 #.  Ignored exception types
@@ -5686,6 +5730,14 @@ msgstr "分配角色"
 # English translation: "Roles to assign to selected user(s)/group(s)"
 msgid "label_localroles_to_assign_to_selected_users"
 msgstr "指定角色給已選的使用者/群組"
+
+
+#: ./plone_content/author.cpt
+#. <span i18n:translate="label_location">
+#.  Location:
+#. </span>
+msgid "label_location"
+msgstr ""
 
 
 #: ./plone_portlets/portlet_login.pt
@@ -6642,7 +6694,7 @@ msgstr "變更擁有權"
 
 #: ./plone_forms/discussion_reply_form.cpt
 #. <legend i18n:translate="legend_comment_details">
-#.  Comment Details
+#.  Add comment
 #. </legend>
 # English translation: "Comment Details"
 msgid "legend_comment_details"
@@ -6840,15 +6892,6 @@ msgid "legend_publishing_details"
 msgstr "發佈的詳細資訊"
 
 
-#: ./plone_templates/viewThreadsAtBottom.pt
-#. <h4 i18n:translate="legend_replies_to_this_comment">
-#.  Replies to this comment
-#. </h4>
-# English translation: "Replies to this comment"
-msgid "legend_replies_to_this_comment"
-msgstr "回覆這個評論"
-
-
 #: ./plone_forms/folder_localrole_form.pt
 #. <legend i18n:translate="legend_search_terms">
 #.  Search Terms
@@ -6930,7 +6973,7 @@ msgid "link_username_not_available"
 msgstr "不能用此使用者名稱"
 
 
-#: ./plone_content/review_history.pt
+#: ./plone_forms/content_status_history.cpt
 #. <th i18n:translate="listingheader_action">
 #.  Action
 #. </th>
@@ -6957,7 +7000,7 @@ msgid "listingheader_affected_item"
 msgstr "影響的項目"
 
 
-#: ./plone_content/review_history.pt
+#: ./plone_forms/content_status_history.cpt
 #. <th i18n:translate="listingheader_comment">
 #.  Comment
 #. </th>
@@ -6966,13 +7009,13 @@ msgid "listingheader_comment"
 msgstr "建議"
 
 
+#: ./plone_forms/content_status_history.cpt
+#. <th i18n:translate="listingheader_date_and_time">
+#.  DateandTime
+#. </th>
 #: ./plone_forms/undo_form.pt
 #. <th i18n:translate="listingheader_date_and_time">
 #.  Date and time
-#. </th>
-#: ./plone_content/review_history.pt
-#. <th i18n:translate="listingheader_date_and_time">
-#.  DateandTime
 #. </th>
 # English translation: "DateandTime"
 msgid "listingheader_date_and_time"
@@ -7045,13 +7088,13 @@ msgid "listingheader_order"
 msgstr "順序"
 
 
+#: ./plone_forms/content_status_history.cpt
+#. <th i18n:translate="listingheader_performed_by">
+#.  Performedby
+#. </th>
 #: ./plone_forms/undo_form.pt
 #. <th i18n:translate="listingheader_performed_by">
 #.  Performed by
-#. </th>
-#: ./plone_content/review_history.pt
-#. <th i18n:translate="listingheader_performed_by">
-#.  Performedby
 #. </th>
 # English translation: "Performedby"
 msgid "listingheader_performed_by"
@@ -7189,6 +7232,56 @@ msgid "login_portlet_disabled"
 msgstr "cookie 授權已關閉. 登入方塊無法使用. "
 
 
+#: ./plone_templates/mail_password_template.pt
+#. <div i18n:domain="plone" i18n:translate="mailtemplate_membership_body" tal:omit-tag="">
+#.  Password:
+#.  ${password}
+#. Request made by IP
+#.  ${ip_address}
+#.   at
+#.  ${timestamp}
+#. </div>
+msgid "mailtemplate_membership_body"
+msgstr ""
+
+
+#: ./plone_templates/mail_password_template.pt
+#. <span i18n:domain="plone" i18n:translate="mailtemplate_membership_reminder" tal:omit-tag="">
+#.  Membership reminder
+#. </span>
+msgid "mailtemplate_membership_reminder"
+msgstr ""
+
+
+#: ./plone_templates/registered_notify_template.pt
+#. <div i18n:domain="plone" i18n:translate="mailtemplate_registered_body" tal:omit-tag="">
+#. You have been registered as a member of
+#.  ${portal_name}
+#.  , which
+#. allows you to personalize your view of the website and participate in
+#. the community.
+#. Description:
+#.  ${description}
+#. Visit us at
+#.  ${portal_url}
+#. Your login name and password are:
+#. Login name :
+#.  ${username}
+#. Password   :
+#.  ${password}
+#. </div>
+msgid "mailtemplate_registered_body"
+msgstr ""
+
+
+#: ./plone_templates/registered_notify_template.pt
+#. <span i18n:domain="plone" i18n:translate="mailtemplate_registered_portal_membership_info" tal:omit-tag="">
+#.  Portal Membership Information
+#. </span>
+msgid "mailtemplate_registered_portal_membership_info"
+msgstr ""
+
+
 #: ./plone_prefs/reconfig_form.cpt
 #. <label for="cb_noext_editor" i18n:translate="no">
 #.  No
@@ -7218,8 +7311,6 @@ msgstr "這個項目沒有任何內文, 點選 '編修' 標籤變更它."
 #. <span i18n:translate="no_comments" tal:condition="not: rhComments">
 #.                   No comments.
 #. </span>
-#: ./plone_content/review_history.pt
-#. <span i18n:translate="no_comments" tal:condition="not: event/comments"/>
 msgid "no_comments"
 msgstr "沒有評論."
 
@@ -7291,10 +7382,6 @@ msgid "plain_text"
 msgstr "一般文字"
 
 
-#: ./plone_content/discussionitem_view.pt
-#. <span i18n:translate="posted_by">
-#.  Posted by
-#. </span>
 #: ./plone_templates/events_listing.pt
 #. <span i18n:translate="posted_by" tal:omit-tag="">
 #.  Posted by
@@ -7302,15 +7389,6 @@ msgstr "一般文字"
 # English translation: "Posted by"
 msgid "posted_by"
 msgstr "張貼者:"
-
-
-#: ./plone_content/discussionitem_view.pt
-#. <span i18n:translate="posted_on">
-#.  at
-#. </span>
-# English translation: "at"
-msgid "posted_on"
-msgstr "在"
 
 
 msgid "private"
@@ -7452,9 +7530,6 @@ msgstr "提交"
 #. <a i18n:translate="tabs_home" tal:attributes="href python:portal_url">
 #.  Home
 #. </a>
-#. <span i18n:translate="tabs_home" tal:condition="not: breadcrumbs" tal:omit-tag="">
-#.         Home
-#. </span>
 #: ./plone_portlets/portlet_navigation.pt
 #. <span i18n:translate="tabs_home">
 #.                       Home
@@ -7806,12 +7881,12 @@ msgstr "在任何時候"
 
 
 #: ./plone_templates/folder_contents.pt
-#. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:isExpired(item)">
+#. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:portal.isExpired(item)">
 #.  expired
 #. </span>
 #: ./plone_content/document_byline.pt
-#. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:here.isExpired(here)">
-#.     expired
+#. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:portal.isExpired(here)">
+#.      expired
 #. </span>
 # English translation: "expired"
 msgid "time_expired"

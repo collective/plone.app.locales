@@ -42,7 +42,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-05-08 22:50+0000\n"
+"POT-Creation-Date: 2005-05-16 18:44+0000\n"
 "PO-Revision-Date: 2005-03-31 23:51+0100\n"
 "Last-Translator: Rastislav Mucha <rastislav.mucha@uniag.sk>\n"
 "Language-Team: slovak <www-fzki@uniag.sk>\n"
@@ -79,6 +79,14 @@ msgstr ""
 
 
 msgid "${title} has been deleted."
+msgstr ""
+
+
+msgid "${title} is not copyable."
+msgstr ""
+
+
+msgid "${title} is not moveable."
 msgstr ""
 
 
@@ -130,9 +138,15 @@ msgstr "Pridať"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="#" i18n:attributes="title" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" title="Add new items to this folder">
-msgid "Add new items to this folder"
-msgstr "Pridať nové položky do tohto adresára"
+#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+msgid "Add new items in the same folder as this item"
+msgstr ""
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+msgid "Add new items inside this item"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_group_members.pt
@@ -290,6 +304,16 @@ msgstr ""
 
 msgid "Change password"
 msgstr "Zmeniť heslo"
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+msgid "Change the item used as default view in this folder"
+msgstr ""
+
+
+msgid "Changes applied."
+msgstr ""
 
 
 msgid "Changes made."
@@ -589,7 +613,7 @@ msgid "Folder listing"
 msgstr "Obsah adresára"
 
 
-# 2-letter shorthand for "Friday"
+# Shorthand for "Friday"
 msgid "Fr"
 msgstr "Pia"
 
@@ -833,7 +857,7 @@ msgid "Metadata"
 msgstr "Metadáta"
 
 
-# 2-letter shorthand for "Monday"
+# Shorthand for "Monday"
 msgid "Mo"
 msgstr "Po"
 
@@ -843,13 +867,13 @@ msgstr ""
 
 
 #: ./plone_templates/folder_contents.pt
-#. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=down&amp;id=$item_id" title="Move item down">
+#. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=down&amp;id=$item_id&amp;template_id=${template/getId}" title="Move item down">
 msgid "Move item down"
 msgstr "Posunúť položku nadol"
 
 
 #: ./plone_templates/folder_contents.pt
-#. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=up&amp;id=$item_id" title="Move item up">
+#. <a href="" i18n:attributes="title" tal:attributes="href string:$here_url/folder_position?position=up&amp;id=$item_id&amp;template_id=${template/getId}" title="Move item up">
 msgid "Move item up"
 msgstr "Posunúť položku nahor"
 
@@ -914,7 +938,7 @@ msgstr "November"
 
 #: ./plone_content/metadata_edit_form.cpt
 #. <img alt="Object locked" class="context" i18n:attributes="alt" src="" tal:condition="isLocked" tal:define="locked portal_object/lock_icon.gif;" tal:replace="structure python:locked.tag(title='This item is locked')"/>
-#: ./plone_templates/global_contentviews.pt
+#: ./plone_content/document_byline.pt
 #. <img alt="Object locked" i18n:attributes="alt" src="" tal:replace="structure python:locked.tag(title='This item is locked')"/>
 msgid "Object locked"
 msgstr "Objekt je zamknutý"
@@ -927,6 +951,18 @@ msgstr "Október"
 #: ./plone_forms/select_default_page.cpt
 #. <input class="context" i18n:attributes="value" name="form.button.Cancel" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Ok"/>
 msgid "Ok"
+msgstr ""
+
+
+msgid "One or more items not copyable."
+msgstr ""
+
+
+msgid "One or more items not moveable."
+msgstr ""
+
+
+msgid "One or more selected items is no longer available."
 msgstr ""
 
 
@@ -974,6 +1010,14 @@ msgstr "Nevybavené"
 #. <input class="context" i18n:attributes="value" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Perform Search"/>
 msgid "Perform Search"
 msgstr "Vyhľadať"
+
+
+msgid "Permission denied to copy ${title}."
+msgstr ""
+
+
+msgid "Permission denied to cut ${title}."
+msgstr ""
 
 
 msgid "Please correct the indicated errors."
@@ -1130,22 +1174,12 @@ msgid "Relevance"
 msgstr "Relevantnosť"
 
 
+#: ./plone_templates/viewThreadsAtBottom.pt
+#. <input class="destructive" i18n:attributes="value" type="submit" value="Remove"/>
 #: ./plone_3rdParty/CMFTopic/topic_criteria_form.pt
 #. <input class="context" i18n:attributes="value" name="topic_deleteCriteria:action" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Remove"/>
 msgid "Remove"
 msgstr "Odstrániť"
-
-
-#: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="destructive" i18n:attributes="value" type="submit" value="Remove This Discussion"/>
-msgid "Remove This Discussion"
-msgstr "Odstrániť túto diskusiu"
-
-
-#: ./plone_content/discussionitem_view.pt
-#. <input class="destructive" i18n:attributes="value" type="submit" value="Remove This Reply"/>
-msgid "Remove This Reply"
-msgstr "Odstrániť túto reakciu"
 
 
 #: ./plone_prefs/prefs_user_memberships.pt
@@ -1176,18 +1210,18 @@ msgid "Rename items"
 msgstr "Premenovať"
 
 
+#: ./plone_templates/viewThreadsAtBottom.pt
+#. <input class="standalone" i18n:attributes="value" type="submit" value="Reply"/>
+msgid "Reply"
+msgstr ""
+
+
 msgid "Reply deleted"
 msgstr "Odpoveď bola zmazaná"
 
 
 msgid "Reply to Comment"
 msgstr "Reagovať na komentár"
-
-
-#: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="standalone" i18n:attributes="value" type="submit" value="Reply to this"/>
-msgid "Reply to this"
-msgstr "Zareagovať"
 
 
 #: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
@@ -1225,7 +1259,7 @@ msgid "Reviewer"
 msgstr "Oponent"
 
 
-# 2-letter shorthand for "Saturday"
+# Shorthand for "Saturday"
 msgid "Sa"
 msgstr "So"
 
@@ -1286,6 +1320,12 @@ msgstr "Odsek 508"
 #. <input alt="Select all items" class="noborder" i18n:attributes="title alt" name="selectButton" onClick="toggleSelect(this,'paths:list');" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
 msgid "Select all items"
 msgstr "Vybrať všetko"
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+msgid "Select an item to be used as default view in this folder"
+msgstr ""
 
 
 #: ./plone_templates/global_contentmenu.pt
@@ -1377,7 +1417,7 @@ msgid "State"
 msgstr "Stav"
 
 
-# 2-letter shorthand for "Sunday"
+# Shorthand for "Sunday"
 msgid "Su"
 msgstr "Ne"
 
@@ -1408,7 +1448,7 @@ msgid "Syndication properties updated."
 msgstr "Vlastnosti syndikovania - zmeny boli uložené."
 
 
-# 2-letter shorthand for "Thursday"
+# Shorthand for "Thursday"
 msgid "Th"
 msgstr "št"
 
@@ -1491,6 +1531,12 @@ msgid "This Plone site was built with valid CSS."
 msgstr "Web-Sídlo je vytvorené v Plone so správnymi CSS."
 
 
+#: ./plone_content/document_byline.pt
+#. <img alt="" i18n:attributes="title" src="" tal:condition="python:lockable and here.wl_isLocked()" tal:define="locked portal_object/lock_icon.gif;                    lockable python:hasattr(here, 'wl_isLocked');" tal:replace="structure python:locked.tag(title='Locked')" title="This document is locked."/>
+msgid "This document is locked."
+msgstr ""
+
+
 msgid "This item is currently in the ${review_state} state"
 msgstr "Aktuálny stav - ${review_state}"
 
@@ -1534,7 +1580,7 @@ msgid "Transaction(s)+undone."
 msgstr "Transakcie boli zrušené (vrátené späť)."
 
 
-# 2-letter shorthand for "Tuesday"
+# Shorthand for "Tuesday"
 msgid "Tu"
 msgstr "Ut"
 
@@ -1648,7 +1694,7 @@ msgid "WCAG"
 msgstr "WCAG"
 
 
-# 2-letter shorthand for "Wednesday"
+# Shorthand for "Wednesday"
 msgid "We"
 msgstr "St"
 
@@ -1941,9 +1987,13 @@ msgid "box_forgot_password_option"
 msgstr "Nemáte prístup k Vášmu heslu?"
 
 
+#: ./plone_templates/folder_listing.pt
+#. <span i18n:translate="box_last_modified">
+#.                           Last modified
+#. </span>
 #: ./plone_content/document_byline.pt
 #. <span i18n:translate="box_last_modified">
-#.     Last modified
+#.     last modified
 #. </span>
 # English translation: "Last modified"
 msgid "box_last_modified"
@@ -2166,18 +2216,9 @@ msgid "description"
 msgstr "popis"
 
 
-#: ./plone_content/discussionitem_view.pt
-#. <span i18n:translate="description_above_in_comment_thread" tal:omit-tag="">
-#.  Above in this comment thread:
-#. </span>
-# English translation: "Above in this comment thread:"
-msgid "description_above_in_comment_thread"
-msgstr "Nad týmto vláknom v komentároch:"
-
-
 #: ./plone_forms/discussion_reply_form.cpt
 #. <p i18n:translate="description_add_comment">
-#.         You can add a comment by filling out the form below. Plain text formatting.
+#.                 You can add a comment by filling out the form below. Plain text formatting.
 #. </p>
 # English translation: "You can add a comment by filling out the form below. Plain text formatting."
 msgid "description_add_comment"
@@ -2217,9 +2258,9 @@ msgstr "Tento vyhľadávací formulár Vám umožňuje špecifikovať jedno aleb
 
 
 #: ./plone_content/author.cpt
-#. <p i18n:translate="description_author_feedback">
-#.                 By filling in the form below, you can send an email to this author
-#.                 with feedback.
+#. <p class="discreet" i18n:translate="description_author_feedback">
+#.                 If you want to contact this author, fill in the form
+#.                 below.
 #. </p>
 # English translation: "By filling in the form below, you can send an email to this author with feedback."
 msgid "description_author_feedback"
@@ -2238,8 +2279,8 @@ msgstr "Než začnete, musíte si zmeniť heslo. To zaručí, že heslo ktoré s
 
 #: ./plone_forms/ownership_form.cpt
 #. <p i18n:translate="description_change_ownership">
-#.     You can change the current objects ownership to
-#.     another member easily from this form.
+#.     You can transfer the current item's ownership to
+#.     somebody else using this form.
 #. </p>
 # English translation: "You can change the current objects ownership to another member easily from this form."
 msgid "description_change_ownership"
@@ -2266,10 +2307,11 @@ msgstr "Konfigurácia Plone a doplnkových produktov."
 
 #: ./plone_templates/footer.pt
 #. <span i18n:translate="description_copyright" tal:omit-tag="">
-#.     Plone and its visual design is Copyright
+#.     Plone
+#.  <sup/>
+#.   and its visual design is copyright
 #.      2000-
 #.  ${current_year}
-#.   by
 #.  ${limi}
 #.  ,
 #.  ${runyaga}
@@ -2384,10 +2426,10 @@ msgstr "Táto trieda nepodporuje interface pre histórie. Obsah musí vkladať O
 
 
 #: ./plone_templates/footer.pt
-#. <div i18n:translate="description_license">
-#.     Licensed under the
+#. <span i18n:translate="description_license">
+#.     Distributed under the
 #.  ${license}
-#. </div>
+#. </span>
 # English translation: "Licensed under the ${license}"
 msgid "description_license"
 msgstr ""
@@ -2481,8 +2523,6 @@ msgid "description_member_listing"
 msgstr "Zoznam zaregistrovaných, viditeľných členov portálu."
 
 
-#: MembershipTool.py
-#. English translation: "contains personal workarea items for ${member}"
 msgid "description_member_personal_folder"
 msgstr "Osobný adresár registrovaného člena"
 
@@ -2969,6 +3009,17 @@ msgid "description_syndication_setup"
 msgstr "Konfigurácia niektorých štandardných nastavení syndikácie pre celé web-sídlo."
 
 
+#: ./plone_templates/footer.pt
+#. <span i18n:translate="description_trademark">
+#.     Plone
+#.  <sup/>
+#.   is a registered trademark of the
+#.  ${plonefoundation}
+#. </span>
+msgid "description_trademark"
+msgstr ""
+
+
 #: ./plone_forms/undo_form.pt
 #. <p i18n:translate="description_undo_action">
 #.         This applications transactional feature allows you to easily undo changes
@@ -3215,15 +3266,6 @@ msgid "heading_actions"
 msgstr "Akcie"
 
 
-#: ./plone_forms/discussion_reply_form.cpt
-#. <h1 i18n:translate="heading_add_comment">
-#.  Add Comment
-#. </h1>
-# English translation: "Add Comment"
-msgid "heading_add_comment"
-msgstr "Pridať komentár"
-
-
 #: ./plone_forms/folder_factories.pt
 #. <h1 i18n:translate="heading_add_new_item">
 #.  Add new item
@@ -3270,15 +3312,6 @@ msgid "heading_author_content"
 msgstr ""
 
 
-#: ./plone_content/author.cpt
-#. <h2 i18n:translate="heading_author_feedback">
-#.                 Send feedback
-#. </h2>
-# English translation: "Send feedback"
-msgid "heading_author_feedback"
-msgstr ""
-
-
 #: ./plone_forms/ownership_form.cpt
 #. <h1 i18n:translate="heading_change_ownership">
 #.  Change ownership
@@ -3296,15 +3329,6 @@ msgstr "Zmeniť vlastníctvo"
 # English translation: "Change password for ${user}"
 msgid "heading_change_password_for"
 msgstr "Zmeniť heslo pre ${user}"
-
-
-#: ./plone_content/discussionitem_view.pt
-#. <h1 i18n:translate="heading_comment">
-#.  Comment
-#. </h1>
-# English translation: "Comment"
-msgid "heading_comment"
-msgstr "Komentár"
 
 
 #: ./plone_forms/discussion_reply_preview.pt
@@ -4063,9 +4087,7 @@ msgstr "Prvá voľba nižšie znamená použitie nastavení sídla pre diskusie.
 
 
 #: ./plone_forms/discussion_reply_form.cpt
-#. <div class="formHelp" i18n:translate="help_body_text">
-#. 			The message of your posting.
-#. </div>
+#. <div class="formHelp" i18n:translate="help_body_text"/>
 # English translation: "The message of your posting."
 msgid "help_body_text"
 msgstr "Text správy."
@@ -4527,6 +4549,14 @@ msgid "help_search_author"
 msgstr "Vyhľadať položky (dokumenty, súbory a pod.) vytvorené danou osobou."
 
 
+#: ./plone_forms/member_search_form.pt
+#. <div class="formHelp" i18n:translate="help_search_before_specified_time">
+#.                 Return members who have NOT logged in since the time specified above.
+#. </div>
+msgid "help_search_before_specified_time"
+msgstr ""
+
+
 #: ./plone_forms/search_form.pt
 #. <div class="formHelp" i18n:translate="help_search_description">
 #.                 Return items matching this description.
@@ -4766,9 +4796,7 @@ msgstr "Užívateľské konto pre odosielanie pošty na SMTP server"
 
 
 #: ./plone_forms/discussion_reply_form.cpt
-#. <div class="formHelp" i18n:translate="help_subject">
-#. 			The subject of your posting.
-#. </div>
+#. <div class="formHelp" i18n:translate="help_subject"/>
 # English translation: "The subject of your posting."
 msgid "help_subject"
 msgstr "Subjekt správy."
@@ -4928,18 +4956,18 @@ msgstr "Vyberte vkladaný objekt"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_add_new_item" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage">
+#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 #.  Add item
-#. </span>
+#. </a>
 # English translation: "Add item"
 msgid "label_add_new_item"
 msgstr "Vložiť nový objekt"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_add_new_item_in_folder" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage">
-#.  Add to above folder
-#. </span>
+#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#.  Add to folder
+#. </a>
 # English translation: "Add to above folder"
 msgid "label_add_new_item_in_folder"
 msgstr ""
@@ -4990,7 +5018,7 @@ msgid "label_allow_members_to_create_password"
 msgstr "Povoliť členom voľbu počiatočných hesiel"
 
 
-#: ./plone_templates/viewThreadsAtBottom.pt
+#: ./plone_forms/discussion_reply_form.cpt
 #. <span i18n:translate="label_anonymous_user" tal:condition="anonymous_creator">
 #.  Anonymous User
 #. </span>
@@ -5035,9 +5063,17 @@ msgid "label_back_to_errorlog"
 msgstr "Naspäť k Error Log-u"
 
 
+#: ./plone_forms/member_search_form.pt
+#. <label i18n:translate="label_before_specified_time">
+#.  Not logged in since specified time
+#. </label>
+msgid "label_before_specified_time"
+msgstr ""
+
+
 #: ./plone_forms/discussion_reply_form.cpt
 #. <label for="text" i18n:translate="label_body_text">
-#.  Body text
+#.  Comment
 #. </label>
 # English translation: "Body text"
 msgid "label_body_text"
@@ -5046,7 +5082,7 @@ msgstr "Text - telo (element body)"
 
 #: ./plone_content/document_byline.pt
 #. <tal:name i18n:translate="label_by_author" tal:condition="creator" tal:define="author python:mtool.getMemberInfo(creator)">
-#.     By
+#.         by
 #.  ${author}
 #. </tal:name>
 # English translation: "By ${author}"
@@ -5126,7 +5162,7 @@ msgid "label_comment"
 msgstr "Komentár"
 
 
-#: ./plone_templates/viewThreadsAtBottom.pt
+#: ./plone_forms/discussion_reply_form.cpt
 #. <span i18n:translate="label_comment_by">
 #.  Posted by
 #. </span>
@@ -5135,7 +5171,7 @@ msgid "label_comment_by"
 msgstr "Vložil(a)"
 
 
-#: ./plone_templates/viewThreadsAtBottom.pt
+#: ./plone_forms/discussion_reply_form.cpt
 #. <span i18n:translate="label_commented_at">
 #.  at
 #. </span>
@@ -5605,6 +5641,14 @@ msgid "label_historical_unavailable"
 msgstr "História nie je k dispozícii"
 
 
+#: ./plone_content/review_history.pt
+#. <legend i18n:translate="label_history">
+#.  History
+#. </legend>
+msgid "label_history"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <label i18n:translate="label_ignored_exception">
 #.  Ignored exception types
@@ -5727,6 +5771,14 @@ msgstr "Priradiť rolu"
 # English translation: "Roles to assign to selected user(s)/group(s)"
 msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Lokálne role na priradenie vybraným užívateľom"
+
+
+#: ./plone_content/author.cpt
+#. <span i18n:translate="label_location">
+#.  Location:
+#. </span>
+msgid "label_location"
+msgstr ""
 
 
 #: ./plone_portlets/portlet_login.pt
@@ -6683,7 +6735,7 @@ msgstr "Zmeniť vlastníctvo"
 
 #: ./plone_forms/discussion_reply_form.cpt
 #. <legend i18n:translate="legend_comment_details">
-#.  Comment Details
+#.  Add comment
 #. </legend>
 # English translation: "Comment Details"
 msgid "legend_comment_details"
@@ -6881,15 +6933,6 @@ msgid "legend_publishing_details"
 msgstr "Detaily publikovania"
 
 
-#: ./plone_templates/viewThreadsAtBottom.pt
-#. <h4 i18n:translate="legend_replies_to_this_comment">
-#.  Replies to this comment
-#. </h4>
-# English translation: "Replies to this comment"
-msgid "legend_replies_to_this_comment"
-msgstr "Reakcie na tento komentár"
-
-
 #: ./plone_forms/folder_localrole_form.pt
 #. <legend i18n:translate="legend_search_terms">
 #.  Search Terms
@@ -6971,7 +7014,7 @@ msgid "link_username_not_available"
 msgstr "užívateľ nie je k dispozícii"
 
 
-#: ./plone_content/review_history.pt
+#: ./plone_forms/content_status_history.cpt
 #. <th i18n:translate="listingheader_action">
 #.  Action
 #. </th>
@@ -6998,7 +7041,7 @@ msgid "listingheader_affected_item"
 msgstr "Dotknutá položka"
 
 
-#: ./plone_content/review_history.pt
+#: ./plone_forms/content_status_history.cpt
 #. <th i18n:translate="listingheader_comment">
 #.  Comment
 #. </th>
@@ -7007,13 +7050,13 @@ msgid "listingheader_comment"
 msgstr "Komentár"
 
 
+#: ./plone_forms/content_status_history.cpt
+#. <th i18n:translate="listingheader_date_and_time">
+#.  DateandTime
+#. </th>
 #: ./plone_forms/undo_form.pt
 #. <th i18n:translate="listingheader_date_and_time">
 #.  Date and time
-#. </th>
-#: ./plone_content/review_history.pt
-#. <th i18n:translate="listingheader_date_and_time">
-#.  DateandTime
 #. </th>
 # English translation: "DateandTime"
 msgid "listingheader_date_and_time"
@@ -7086,13 +7129,13 @@ msgid "listingheader_order"
 msgstr "Poradie"
 
 
+#: ./plone_forms/content_status_history.cpt
+#. <th i18n:translate="listingheader_performed_by">
+#.  Performedby
+#. </th>
 #: ./plone_forms/undo_form.pt
 #. <th i18n:translate="listingheader_performed_by">
 #.  Performed by
-#. </th>
-#: ./plone_content/review_history.pt
-#. <th i18n:translate="listingheader_performed_by">
-#.  Performedby
 #. </th>
 # English translation: "Performedby"
 msgid "listingheader_performed_by"
@@ -7230,6 +7273,56 @@ msgid "login_portlet_disabled"
 msgstr "Autentifikácia kúkíkmi (cookie) je vypnutá - login portlet je nedostupný."
 
 
+#: ./plone_templates/mail_password_template.pt
+#. <div i18n:domain="plone" i18n:translate="mailtemplate_membership_body" tal:omit-tag="">
+#.  Password:
+#.  ${password}
+#. Request made by IP
+#.  ${ip_address}
+#.   at
+#.  ${timestamp}
+#. </div>
+msgid "mailtemplate_membership_body"
+msgstr ""
+
+
+#: ./plone_templates/mail_password_template.pt
+#. <span i18n:domain="plone" i18n:translate="mailtemplate_membership_reminder" tal:omit-tag="">
+#.  Membership reminder
+#. </span>
+msgid "mailtemplate_membership_reminder"
+msgstr ""
+
+
+#: ./plone_templates/registered_notify_template.pt
+#. <div i18n:domain="plone" i18n:translate="mailtemplate_registered_body" tal:omit-tag="">
+#. You have been registered as a member of
+#.  ${portal_name}
+#.  , which
+#. allows you to personalize your view of the website and participate in
+#. the community.
+#. Description:
+#.  ${description}
+#. Visit us at
+#.  ${portal_url}
+#. Your login name and password are:
+#. Login name :
+#.  ${username}
+#. Password   :
+#.  ${password}
+#. </div>
+msgid "mailtemplate_registered_body"
+msgstr ""
+
+
+#: ./plone_templates/registered_notify_template.pt
+#. <span i18n:domain="plone" i18n:translate="mailtemplate_registered_portal_membership_info" tal:omit-tag="">
+#.  Portal Membership Information
+#. </span>
+msgid "mailtemplate_registered_portal_membership_info"
+msgstr ""
+
+
 #: ./plone_prefs/reconfig_form.cpt
 #. <label for="cb_noext_editor" i18n:translate="no">
 #.  No
@@ -7259,8 +7352,6 @@ msgstr "Prázdne."
 #. <span i18n:translate="no_comments" tal:condition="not: rhComments">
 #.                   No comments.
 #. </span>
-#: ./plone_content/review_history.pt
-#. <span i18n:translate="no_comments" tal:condition="not: event/comments"/>
 msgid "no_comments"
 msgstr "Bez komentárov."
 
@@ -7332,10 +7423,6 @@ msgid "plain_text"
 msgstr "Obyčajný (Plain) Text"
 
 
-#: ./plone_content/discussionitem_view.pt
-#. <span i18n:translate="posted_by">
-#.  Posted by
-#. </span>
 #: ./plone_templates/events_listing.pt
 #. <span i18n:translate="posted_by" tal:omit-tag="">
 #.  Posted by
@@ -7343,15 +7430,6 @@ msgstr "Obyčajný (Plain) Text"
 # English translation: "Posted by"
 msgid "posted_by"
 msgstr "Vložil(a)"
-
-
-#: ./plone_content/discussionitem_view.pt
-#. <span i18n:translate="posted_on">
-#.  at
-#. </span>
-# English translation: "at"
-msgid "posted_on"
-msgstr "Kedy"
 
 
 msgid "private"
@@ -7493,9 +7571,6 @@ msgstr "odoslať"
 #. <a i18n:translate="tabs_home" tal:attributes="href python:portal_url">
 #.  Home
 #. </a>
-#. <span i18n:translate="tabs_home" tal:condition="not: breadcrumbs" tal:omit-tag="">
-#.         Home
-#. </span>
 #: ./plone_portlets/portlet_navigation.pt
 #. <span i18n:translate="tabs_home">
 #.                       Home
@@ -7847,12 +7922,12 @@ msgstr "Hocikedy"
 
 
 #: ./plone_templates/folder_contents.pt
-#. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:isExpired(item)">
+#. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:portal.isExpired(item)">
 #.  expired
 #. </span>
 #: ./plone_content/document_byline.pt
-#. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:here.isExpired(here)">
-#.     expired
+#. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:portal.isExpired(here)">
+#.      expired
 #. </span>
 # English translation: "expired"
 msgid "time_expired"

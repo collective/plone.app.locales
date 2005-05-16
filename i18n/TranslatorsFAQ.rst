@@ -2,8 +2,6 @@
 Plone Translator's FAQ
 ======================
 
-:Date: $Date: 2005/04/09 23:59:00 $
-
 About
 -----
 
@@ -57,17 +55,17 @@ translation is ok.
 SVN conflicts
 -------------
 
-*I have checked out plone-XY.po recently from SVN. Now I want to check in
-again, but there's already a newer plone-XY.po there. The SVN log says it has
-been merged with plone.pot. What do I do?*
+*I have checked out product-XY.po recently from SVN. Now I want to check in
+again, but there's already a newer product-XY.po there. The SVN log says it has
+been merged with product.pot. What do I do?*
    
 Make sure that you are not overwriting someone else's translations. If the only
-changes are that the new plone-XY.po is merged against plone.pot, you can just
+changes are that the new product-XY.po is merged against product.pot, you can just
 commit your work over the old version and drop a note to the mailing list.
  
-Alternatively, you can merge your plone-XY.po against plone.pot manually and
+Alternatively, you can merge your product-XY.po against product.pot manually and
 commit the final version. See `merge.sh`_ in SVN_. It's the shell script that
-we use to merge all PO-files with plone.pot.
+we use to merge all PO-files with its corresponding product.pot.
 
 .. _merge.sh: http://svn.plone.org/collective/PloneTranslations/trunk/i18n/merge.sh
 .. _SVN: http://svn.plone.org/collective/PloneTranslations/trunk/
