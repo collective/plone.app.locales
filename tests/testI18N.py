@@ -23,7 +23,7 @@ class TestPOT(I18NTestCase.I18NTestCase):
     def testNoDuplicateMsgId(self):
         """Check that there are no duplicate msgid:s in the pot file"""
         pot = self.pot
-        cmd='grep ^msgid ../%s.pot|sort|uniq --repeated' % pot
+        cmd='grep ^msgid ../i18n/%s.pot|sort|uniq --repeated' % pot
         status = commands.getstatusoutput(cmd)
         assert len(status[1])  == 0, "Duplicate msgid:s were found:\n\n%s" % status[1]
 
