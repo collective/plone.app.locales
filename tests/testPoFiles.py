@@ -51,6 +51,8 @@ def getPotFiles(path='..'):
         i18nPath = productPath
     potFiles= glob(os.path.join(i18nPath, '*.pot'))
 
+    potFiles = [pot for pot in potFiles if not (pot.endswith('manual.pot') or pot.endswith('generated.pot'))]
+
     if not potFiles:
         raise IOError('No pot files found in %s!' % i18nPath)
     return potFiles
