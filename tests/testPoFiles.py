@@ -1,4 +1,4 @@
-import os, sys
+import os, re, sys
 from glob import glob
 if __name__ == '__main__':
     execfile(os.path.join(sys.path[0], 'framework.py'))
@@ -104,8 +104,8 @@ class TestPoFile(I18NTestCase.I18NTestCase):
         language = language_new or language_old
 
         self.failIf(language_old, 'The file %s has the old style language flag set to %s. Please remove it!' % (poName, language_old))
-        #if language_old:
-        #    self.failUnless(language_new == language_old, 'language and language-code differ in file %s: %s / %s' % (poName, language_new, language_old))
+        if language_old:
+            self.failUnless(language_new == language_old, 'language and language-code differ in file %s: %s / %s' % (poName, language_new, language_old))
 
         self.failUnless(language, 'Po file %s has no language!' % po)
 
@@ -114,7 +114,25 @@ class TestPoFile(I18NTestCase.I18NTestCase):
         self.failUnless(fileLang == language,
             'The file %s has the wrong name or wrong language code. expected: %s, got: %s' % (poName, language, fileLang))
 
+        # these are taken from PTS
+        NAME_RE = r"[a-zA-Z][a-zA-Z0-9_]*"
+        _interp_regex = re.compile(r'(?<!\$)(\$(?:%(n)s|{%(n)s}))' %({'n': NAME_RE}))
+
         msgcatalog = tro._catalog
+
+        # testing for proper date_format_* settings
+        date_format_long = msgcatalog.get("date_format_long")
+        date_format_short = msgcatalog.get("date_format_short")
+
+        if(date_format_long is not None):
+            long_number = len(_interp_regex.findall(date_format_long))
+            self.failUnless( long_number == 5,
+                'Error: Wrong number of date format identifiers in date_format_long in file %s: Expected 5 got %s\n' % (poName, long_number))
+        if (date_format_short is not None):
+            short_number = len(_interp_regex.findall(date_format_short))
+            self.failUnless(short_number == 3,
+                'Error: Wrong number of date format identifiers in date_format_short in file %s: Expected 3 got %s\n' % (poName, short_number))
+
         for msg in msgcatalog:
              if msg:
                  msgstr = msgcatalog.get(msg)
