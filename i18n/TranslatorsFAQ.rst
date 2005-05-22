@@ -10,9 +10,9 @@ This document is part of the `Plone Translation Effort`_ documentation. See
 `mailing list`_ and IRC_ are two nice ways of getting help.
 
 .. _Plone Translation Effort: http://plone.org/development/i18n
-.. _Guidelines for Translators: http://plone.org/development/i18n/translators-guidelines
-.. _mailing list: http://plone.org/development/lists
-.. _IRC: http://plone.org/development/chat
+.. _Guidelines for Translators: http://plone.org/development/teams/i18n/translators-guidelines
+.. _mailing list: http://plone.org/contact/
+.. _IRC: http://plone.org/contact/chat
 
 .. contents::
 
@@ -62,11 +62,3 @@ been merged with product.pot. What do I do?*
 Make sure that you are not overwriting someone else's translations. If the only
 changes are that the new product-XY.po is merged against product.pot, you can just
 commit your work over the old version and drop a note to the mailing list.
- 
-Alternatively, you can merge your product-XY.po against product.pot manually and
-commit the final version. See `merge.sh`_ in SVN_. It's the shell script that
-we use to merge all PO-files with its corresponding product.pot.
-
-.. _merge.sh: http://svn.plone.org/collective/PloneTranslations/trunk/i18n/merge.sh
-.. _SVN: http://svn.plone.org/collective/PloneTranslations/trunk/
-
