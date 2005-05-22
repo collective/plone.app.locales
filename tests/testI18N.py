@@ -5,17 +5,12 @@ http://i18n.kde.org/translation-howto/check-gui.html#check-msgfmt
 """
 
 import os, os.path, sys
+import I18NTestCase
+from popen2 import popen4
+from testPoFiles import getPoFiles, getPotFiles, getProductFromPath
+
 if __name__ == '__main__':
     execfile(os.path.join(sys.path[0], 'framework.py'))
-
-from Testing import ZopeTestCase
-import I18NTestCase
-import unittest,re
-from testPoFiles import getPoFiles, getPotFiles, getProductFromPath, Xprint
-
-from popen2 import popen4
-
-import commands
 
 class TestPOT(I18NTestCase.I18NTestCase):
     pot = None
@@ -23,9 +18,11 @@ class TestPOT(I18NTestCase.I18NTestCase):
     def testNoDuplicateMsgId(self):
         """Check that there are no duplicate msgid:s in the pot file"""
         pot = self.pot
-        cmd='grep ^msgid ../i18n/%s.pot|sort|uniq --repeated' % pot
-        status = commands.getstatusoutput(cmd)
-        assert len(status[1])  == 0, "Duplicate msgid:s were found:\n\n%s" % status[1]
+        o,i = popen4('grep ^msgid ../i18n/%s.pot|sort|uniq --repeated' % pot)
+        i.close()
+        output = o.read()
+        o.close()
+        assert output == "", "Error occured or duplicate msgid:s were found:\n\n%s" % output
 
 class TestMsg(I18NTestCase.I18NTestCase):
     poFile = None
@@ -38,7 +35,6 @@ class TestMsg(I18NTestCase.I18NTestCase):
         poName = os.path.split(po)[-1]
         pot = self.pot
         poEnglish = '%s-en.po' % pot[:-4]
-        failed=[]
         if not po.endswith(poEnglish):
             os.environ['LC_ALL']='C'
             o,i = popen4('msgcmp --directory=../i18n %s %s' % (poName, pot))

@@ -1,14 +1,14 @@
 import os, re, sys
 from glob import glob
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
-
-from Testing import ZopeTestCase
-import I18NTestCase
 import htmlentitydefs
+import I18NTestCase
 
 from gettext import GNUTranslations
 from Products.PlacelessTranslationService import msgfmt
+try:
+    from Products.i18ndude import catalog
+except ImportError:
+    from i18ndude import catalog
 
 try:
     import win32api
@@ -16,28 +16,40 @@ try:
 except ImportError:
     WIN32 = False
 
-def Xprint(s):
-    """print helper
-    """
-    ZopeTestCase._print(str(s)+'\n')
+if __name__ == '__main__':
+    execfile(os.path.join(sys.path[0], 'framework.py'))
 
-def getLanguageFromPath(path):
-    # get file
+# for testing of untranslated msgstrs
+whitelist = ['Netscape Navigator',':','Version 4.x','Opera','Internet Explorer','HTML','[ ${percentage} %]',\
+             'Mozilla','Type','Format','/','Version 1.x','Status','Date','Navigation','Name', 'Version 6.x',\
+             'Version 5.x','Error','Titel','Transcript','E-mail','Mode','No','Roles','Description','Default',\
+             'Portrait','Action','Actions','Exception','SMTP port','Sections','Password','at','Home',\
+             'Calendar','SMTP server','Undo','Short Name']
+
+# html entities as they appear in templates
+entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs]
+
+# these are taken from PTS, used for format testing
+NAME_RE = r"[a-zA-Z][a-zA-Z0-9_]*"
+_interp_regex = re.compile(r'(?<!\$)(\$(?:%(n)s|{%(n)s}))' %({'n': NAME_RE}))
+
+
+def getFileFromPath(path):
     if WIN32:
         file = path.split('\\')[-1]
     else:
         file = path.split('/')[-1]
+    return file
+
+def getLanguageFromPath(path):
+    file = getFileFromPath(path)
     # strip of .po
     file = file[:-3]
     lang = file.split('-')[1:]
     return '-'.join(lang)
 
 def getProductFromPath(path):
-    # get file
-    if WIN32:
-        file = path.split('\\')[-1]
-    else:
-        file = path.split('/')[-1]
+    file = getFileFromPath(path)
     # strip of .pot
     file = '-'.join(file.split('.')[:1])
     prod = '-'.join(file.split('-')[:1])
@@ -71,10 +83,12 @@ def getPoFiles(path='..', product=''):
 
 class TestPoFile(I18NTestCase.I18NTestCase):
     poFile = None
+    product = None
 
     def testPoFile(self):
         po = self.poFile
-        poName = po.split('/')[-1]
+        product = self.product
+        poName = getFileFromPath(po)
         file = open(po, 'r')
         try:
             lines = file.readlines()
@@ -99,24 +113,13 @@ class TestPoFile(I18NTestCase.I18NTestCase):
         domain = tro._info.get('domain', None)
         self.failUnless(domain, 'Po file %s has no domain!' % po)
 
-        language_new = tro._info.get('language-code', None) # new way
-        language_old = tro._info.get('language', None) # old way
-        language = language_new or language_old
-
-        self.failIf(language_old, 'The file %s has the old style language flag set to %s. Please remove it!' % (poName, language_old))
-        if language_old:
-            self.failUnless(language_new == language_old, 'language and language-code differ in file %s: %s / %s' % (poName, language_new, language_old))
-
+        language = tro._info.get('language-code', None)
         self.failUnless(language, 'Po file %s has no language!' % po)
 
         fileLang = getLanguageFromPath(po)
         language = language.replace('_', '-')
         self.failUnless(fileLang == language,
             'The file %s has the wrong name or wrong language code. expected: %s, got: %s' % (poName, language, fileLang))
-
-        # these are taken from PTS
-        NAME_RE = r"[a-zA-Z][a-zA-Z0-9_]*"
-        _interp_regex = re.compile(r'(?<!\$)(\$(?:%(n)s|{%(n)s}))' %({'n': NAME_RE}))
 
         msgcatalog = tro._catalog
 
@@ -126,12 +129,15 @@ class TestPoFile(I18NTestCase.I18NTestCase):
 
         if(date_format_long is not None):
             long_number = len(_interp_regex.findall(date_format_long))
-            self.failUnless( long_number == 5,
+            self.failUnless(long_number == 5,
                 'Error: Wrong number of date format identifiers in date_format_long in file %s: Expected 5 got %s\n' % (poName, long_number))
         if (date_format_short is not None):
             short_number = len(_interp_regex.findall(date_format_short))
             self.failUnless(short_number == 3,
                 'Error: Wrong number of date format identifiers in date_format_short in file %s: Expected 3 got %s\n' % (poName, short_number))
+
+        # the corresponding catalog from products pot
+        pot_cat = pot_catalogs.get(product)
 
         for msg in msgcatalog:
              if msg:
@@ -142,16 +148,53 @@ class TestPoFile(I18NTestCase.I18NTestCase):
                          'Error: Misformed message attribute ${foo} in file %s:\n %s' % (poName, msg))
                  # no html-entities in msgstr
                  if '&' in msgstr and ';' in msgstr:
-                     entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs]
                      found = [entity for entity in entities if entity in msgstr]
                      self.failIf(len(found) > 0,
                          'Error: html-entities in file %s:\n %s\n %s' % (poName, msg, found))
+                 if new_i18ndude:
+                     orig = pot_cat.get_original(msg)
+
+                     # msgstr is not the same as the original translation
+                     if orig:
+                         orig.replace("&quot;","\"")
+                         orig.replace("&amp;","&")
+                         orig.replace("+"," ")
+                         self.failIf(orig not in whitelist and orig.lower() == msgstr.lower(),
+                             'Warning: msgid is the same as in original english in file %s: %s\n%s' % (poName, msg, orig))
+
+                         # all ${foo}'s from the original should be present in the translation
+                         orig_vars = _interp_regex.findall(orig)
+                     else:
+                         orig_vars = _interp_regex.findall(msg)
+                     if orig_vars:
+                         orig_vars = [unicode(var) for var in orig_vars]
+                         msg_vars = _interp_regex.findall(msgstr)
+                         msg_vars = [unicode(var) for var in msg_vars]
+                         missing = [var for var in orig_vars if var not in msg_vars]
+                         self.failIf(missing,
+                             'Warning: Missing message attributes in file %s: %s\n%s' % (poName, msg, missing))
 
 tests=[]
 
+new_i18ndude = True
+pot_catalogs={}
+for potFile in getPotFiles('..'):
+    product = getProductFromPath(potFile)
+    if product not in pot_catalogs:
+        try:
+            pot_catalogs.update({product: catalog.MessageCatalog(filename=potFile, allcomments=True)})
+        except TypeError, e:
+            if e.args[0].startswith("__init__() got an unexpected keyword argument 'allcomments'"):
+                print "You need a newer version (at least 0.5) of i18ndude installed to run all tests."
+                new_i18ndude = False
+            else:
+                raise e
+
 for poFile in getPoFiles('..'):
+    product = getProductFromPath(poFile)
     class TestOnePoFile(TestPoFile):
         poFile = poFile
+        product = product
 
     tests.append(TestOnePoFile)
 
