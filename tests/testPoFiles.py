@@ -151,6 +151,10 @@ class TestPoFile(I18NTestCase.I18NTestCase):
                      found = [entity for entity in entities if entity in msgstr]
                      self.failIf(len(found) > 0,
                          'Error: html-entities in file %s:\n %s\n %s' % (poName, msg, found))
+                 # check accesskeys for single char
+                 if msg.startswith('accesskey'):
+                     self.failIf(len(msgstr)>1,
+                         'Warning: Accesskey is not single character in file %s: %s' % (poName, msg))
                  if new_i18ndude:
                      orig = pot_cat.get_original(msg)
 
