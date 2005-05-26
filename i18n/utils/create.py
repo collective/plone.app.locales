@@ -14,22 +14,11 @@
 """
 
 import os, sys, shutil
+from utils import getPoFiles, getLanguage
 
 __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
 
-
-def getPoFiles(product):
-    files = os.listdir(os.curdir)
-    files = [file for file in files if file.startswith(product) and file.endswith('.po')]
-    return files
-
-def getLanguage(product, file):
-    lang = None
-    if file.endswith('.po'):
-        if file.startswith(product):
-            lang = '-'.join(file.split('-')[1:])[:-3]
-    return lang
 
 def main():
     if len(sys.argv) < 3:

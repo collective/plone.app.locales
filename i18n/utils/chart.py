@@ -6,17 +6,10 @@
 """
 
 import os, sys
+from utils import getPoFilesAsCmdLine
 
 __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
-
-def getPoFiles(product):
-    files = os.listdir(os.curdir)
-    files = [file for file in files if file.startswith(product) and file.endswith('.po') and file != '%s-en.po' % product]
-    filestring = ''
-    for file in files:
-        filestring += file + ' '
-    return filestring.rstrip()
 
 def main():
     if len(sys.argv) == 1:
@@ -33,7 +26,7 @@ def main():
         print 'No pot was found for the given product.'
         sys.exit(2)
 
-    poFiles = getPoFiles(product)
+    poFiles = getPoFilesAsCmdLine(product)
     if poFiles == '':
         print 'No po-files were found for the given product.'
         sys.exit(3)

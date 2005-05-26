@@ -7,20 +7,16 @@
 
 import os, sys
 import getopt
+from utils import getPoFiles
 
 try:
-    import common, untranslated, catalog, visualisation
+    import catalog
 except:
-    from i18ndude import common, untranslated, catalog, visualisation
+    from i18ndude import catalog
 
 
 __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
-
-def getPoFiles(product):
-    files = os.listdir(os.curdir)
-    files = [file for file in files if file.startswith(product) and file.endswith('.po')]
-    return files
 
 def main():
     if len(sys.argv) < 3:
@@ -32,7 +28,7 @@ def main():
 
     os.chdir('..')
 
-    poFiles = getPoFiles(product)
+    poFiles = getPoFiles(product, all=True)
     if poFiles == '':
         print 'No po-files were found for the given product.'
         sys.exit(2)
