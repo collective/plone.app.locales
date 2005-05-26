@@ -33,7 +33,7 @@ def main():
         sys.exit(3)
 
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
-    os.system(__PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s --create plone --merge %s -s %s > %s 2>&1') % (pot, manualpot, skins, log))
+    os.system(__PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s -s %s > %s 2>&1') % (pot, product, manualpot, skins, log))
 
     # Remove ## X more: occurences
     os.system('sed -r "/## [0-9]+ more:/d" %s > %s2' % (pot, pot))
@@ -42,8 +42,8 @@ def main():
     os.system('sed -r "s,%s,\.,g" %s2 > %s3' % (string.replace(skins, '\\', '\\\\'), pot, pot))
     os.remove('%s2' % pot)
 
-    # Make directory seperator unix like
-    os.system('sed -r "/^#:.*/s,\\\\,/,g" %s3 > %s' % (pot, pot))
+    # Make directory separator unix like
+    os.system('sed -r "/^#:.*/s,\\\\,/,g," %s3 > %s' % (pot, pot))
     os.remove('%s3' % pot)
 
 if __name__ == '__main__':
