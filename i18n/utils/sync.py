@@ -17,6 +17,15 @@ def main():
         sys.exit(1)
 
     product = sys.argv[1]
+
+    if product in ['atct', 'atrbw', 'at']:
+        if product == 'at':
+            product = 'archetypes'
+        elif product == 'atct':
+            product = 'atcontenttypes'
+        else:
+            product = 'atreferencebrowserwidget'
+
     pot = '%s.pot' % product
 
     os.chdir('..')

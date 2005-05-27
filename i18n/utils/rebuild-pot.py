@@ -67,7 +67,7 @@ def main():
                 elif product == 'atreferencebrowserwidget':
                     skins = os.path.join(skins, 'ATReferenceBrowserWidget')
                 elif product == 'plone':
-                    skins = os.path.join(skins, 'Plone')
+                    skins = os.path.join(skins, 'CMFPlone')
                 skins = os.path.join(skins, 'skins')
             else:
                 skinserror = True
