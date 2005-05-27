@@ -3,6 +3,11 @@
 """
    Usage: rebuild-pot.py <product> <path to products skins dir>
    Note that PYTHON and I18NDUDE must have been set as enviroment variables before calling this script
+
+   If you are really lazy you can also use atct, atrbw and at as shorthands and if you set your
+   INSTANCE_HOME correct, provide '-i' as second argument. This will automagically use the right version.
+
+   So 'rebuilt-pot.py atrbw -i' is a valid shorthand.
 """
 
 import os, sys, string
@@ -15,6 +20,8 @@ except ImportError:
 
 __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
+__INSTANCE_HOME = os.environ.get('INSTANCE_HOME', '')
+
 
 def main():
     if len(sys.argv) < 3:
@@ -22,13 +29,23 @@ def main():
         sys.exit(1)
 
     product = sys.argv[1]
+
+    if product in ['atct', 'atrbw', 'at']:
+        if product == 'at':
+            product = 'archetypes'
+        elif product == 'atct':
+            product = 'atcontenttypes'
+        else:
+            product = 'atreferencebrowserwidget'
+
     pot = product + '.pot-new'
     manualpot = '%s-manual.pot' % product
     log = 'rebuild-%s-pot.log' % product
 
-    domain = 'plone'
-    if product == 'atcontenttypes':
-        domain = product
+    if product == 'archetypes':
+        domain = 'plone'
+
+    domain = product    
 
     os.chdir('..')
 
@@ -38,9 +55,30 @@ def main():
 
     skins = sys.argv[2]
 
+    skinserror = False
     if not os.path.isdir(skins):
+        if skins == '-i':
+            skins = os.path.join(__INSTANCE_HOME, 'Products')
+            if os.path.isdir(skins):
+                if product == 'atcontenttypes':
+                    skins = os.path.join(skins, 'ATContentTypes')
+                elif product == 'archetypes':
+                    skins = os.path.join(skins, 'Archetypes')
+                elif product == 'atreferencebrowserwidget':
+                    skins = os.path.join(skins, 'ATReferenceBrowserWidget')
+                elif product == 'plone':
+                    skins = os.path.join(skins, 'Plone')
+                skins = os.path.join(skins, 'skins')
+            else:
+                skinserror = True
+        else:
+            skinserror = True
+
+    if skinserror:
         print 'Skins directory could not be found.'
         sys.exit(3)
+
+    print 'Using %s to build new pot.\n' % skins
 
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
     os.system(__PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s -s %s > %s 2>&1') % (pot, domain, manualpot, skins, log))
