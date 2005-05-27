@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-05-27 13:39+0000\n"
+"POT-Creation-Date: 2005-05-27 21:28+0000\n"
 "PO-Revision-Date: 2005-04-16 01:40+0000\n"
 "Last-Translator: Hanno Schlichting <schlichting@bakb.net>\n"
 "Language-Team: Deutsch <plone-i18n@lists.sourceforge.net>\n"
@@ -101,13 +101,13 @@ msgstr "Artikel hinzufügen"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
 msgid "Add new items in the same folder as this item"
 msgstr "Artikel in diesem Ordner hinzufügen."
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 msgid "Add new items inside this item"
 msgstr "Artikel in diesem Artikel hinzufügen."
 
@@ -249,7 +249,7 @@ msgstr "Status ändern"
 #: ./plone_content/document_byline.pt
 #. <a href="" i18n:attributes="title" tal:attributes="href string:${here/absolute_url}/base_metadata;" tal:condition="python: isEditable and checkPermission('Manage properties', here)" title="Change contributers">
 msgid "Change contributers"
-msgstr ""
+msgstr "Beitragende ändern"
 
 
 #: ./plone_templates/global_contentmenu.pt
@@ -259,9 +259,9 @@ msgstr "Ändere Standardseite"
 
 
 #: ./plone_content/document_byline.pt
-#. <a href="" i18n:attributes="title" tal:attributes="href string:${here/absolute_url}/ownership_form;" title="Change ownership">
+#. <a href="" i18n:attributes="title" i18n:translate="label_change_author" tal:attributes="href string:${here/absolute_url}/ownership_form;" title="Change ownership">
 msgid "Change ownership"
-msgstr ""
+msgstr "Eigentümer ändern"
 
 
 msgid "Change password"
@@ -272,6 +272,12 @@ msgstr "Passwort verändern"
 #. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
 msgid "Change the item used as default view in this folder"
 msgstr "Ändere den Artikel, der als Standardseite dieses Ordners angezeigt wird."
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="contentActionMenuHeader" href="content_status_history" i18n:attributes="title" onclick="return buttonClick(event, 'statusMenu');" onmouseover="buttonMouseover(event, 'statusMenu');" tal:attributes="href string:$here_url/content_status_history;" title="Change the state of this item">
+msgid "Change the state of this item"
+msgstr "Ändern Sie den Status dieses Artikels."
 
 
 msgid "Changes applied."
@@ -396,18 +402,6 @@ msgid "Discussion Item"
 msgstr "Diskussionsbeitrag"
 
 
-msgid "Document"
-msgstr "Dokument"
-
-
-msgid "Document changes saved."
-msgstr "Veränderungen am Dokument wurden gespeichert."
-
-
-msgid "Document has been created."
-msgstr "Dokument wurde erzeugt."
-
-
 msgid "Documentation"
 msgstr "Dokumentation"
 
@@ -494,6 +488,10 @@ msgstr "Veränderungen am Termin gespeichert."
 
 msgid "Event has been created."
 msgstr "Termin wurde erzeugt."
+
+
+msgid "Events"
+msgstr "Termine"
 
 
 # Description for Event type
@@ -628,7 +626,7 @@ msgstr "Bild wurde erzeugt."
 
 
 # Description for Image type
-msgid "Image objects can be embedded in Portal documents."
+msgid "Image objects can be embedded in pages."
 msgstr "Bilder können in Dokumente eingefügt werden."
 
 
@@ -795,6 +793,11 @@ msgid "Member"
 msgstr "Mitglied"
 
 
+# Member Preferences Header
+msgid "Member Preferences"
+msgstr "Mitgliedseinstellungen"
+
+
 msgid "Member with this email address already exists."
 msgstr "Ein Mitglied mit dieser E-Mail-Adresse existiert bereits."
 
@@ -928,6 +931,10 @@ msgid "Ownership has been changed."
 msgstr "Eigentümer hat gewechselt."
 
 
+msgid "Page"
+msgstr "Dokument"
+
+
 #: ./plone_portlets/portlet_login.pt
 #. <input accesskey="accesskeys-login" alt="Password" i18n:attributes="alt accesskey" size="10" tal:attributes="name ac_password; id ac_password;                                                tabindex tabindex/next;" type="password"/>
 #: ./plone_forms/discussion_reply_form.cpt
@@ -970,6 +977,11 @@ msgid "Permission denied to cut ${title}."
 msgstr "Berechtigung ${title} auszuschneiden verweigert."
 
 
+# Personal Preferences Item
+msgid "Personal Preferences"
+msgstr "Persönliche Einstellungen"
+
+
 msgid "Please correct the indicated errors."
 msgstr "Bitte korrigieren Sie die angezeigten Fehler."
 
@@ -1003,15 +1015,6 @@ msgid "Plone Configuration"
 msgstr "Plone Konfiguration"
 
 
-# Member Preferences Header
-msgid "Plone Member Preferences"
-msgstr "Plone Mitgliedseinstellungen"
-
-
-msgid "Plone Setup"
-msgstr "Plone Konfiguration"
-
-
 # Description for Folder type
 msgid "Plone folders can define custom 'view' actions, or will behave like directory listings without one defined."
 msgstr "Ordner können die üblichen Anzeige-Aktionen haben oder sie geben eine Auflistung des Ordnerinhalts aus, wenn keine Ansichtsaktion definiert wurde."
@@ -1040,12 +1043,8 @@ msgid "Powered by Plone"
 msgstr "Powered by Plone"
 
 
-msgid "Preference settings"
-msgstr "Einstellungen"
-
-
 msgid "Preferences"
-msgstr "Einstellungen"
+msgstr "Meine Einstellungen"
 
 
 msgid "Print"
@@ -1336,6 +1335,10 @@ msgid "Site Map"
 msgstr "Website-Übersicht"
 
 
+msgid "Site Setup"
+msgstr "Konfiguration"
+
+
 # Control Panel Item
 msgid "Skins"
 msgstr "Aussehen"
@@ -1348,6 +1351,10 @@ msgid "Small Text"
 msgstr "Kleiner Text"
 
 
+msgid "Smart Folder"
+msgstr "Thema"
+
+
 msgid "State"
 msgstr "Status"
 
@@ -1355,10 +1362,6 @@ msgstr "Status"
 # Shorthand for "Sunday"
 msgid "Su"
 msgstr "So"
-
-
-msgid "Subtopics"
-msgstr "Unterthemen"
 
 
 msgid "Sunday"
@@ -1462,23 +1465,6 @@ msgid "Too much input was given."
 msgstr "Zu viele Eingaben"
 
 
-msgid "Topic"
-msgstr "Thema"
-
-
-msgid "Topic changes saved."
-msgstr "Veränderungen am Thema gespeichert."
-
-
-msgid "Topic has been created."
-msgstr "Ein Thema wurde erzeugt."
-
-
-# Description for Topic type
-msgid "Topics are canned queries for organizing content with up to date queries into the catalog."
-msgstr "Themen sind vorgefertigte Suchanfragen um Artikel zu ordnen."
-
-
 msgid "Transaction undone."
 msgstr "Abwicklung rückgängig gemacht."
 
@@ -1569,10 +1555,6 @@ msgstr "Gültiges XHTML"
 
 msgid "View"
 msgstr "Anzeigen"
-
-
-msgid "View Document"
-msgstr "Dokument ansehen"
 
 
 msgid "View Event"
@@ -1682,10 +1664,6 @@ msgid "Your contents status has been modified."
 msgstr "Der Status Ihrer Artikel wurde verändert."
 
 
-msgid "Your document changes have been saved."
-msgstr "Ihre Änderungen im Dokument wurden gespeichert."
-
-
 msgid "Your event changes have been saved."
 msgstr "Ihre Veränderungen am Termin wurden gespeichert."
 
@@ -1724,10 +1702,6 @@ msgstr "Ihre Veränderungen an der Nachricht wurden gespeichert."
 
 msgid "Your personal settings have been saved."
 msgstr "Ihre persönlichen Einstellungen wurden gespeichert."
-
-
-msgid "Your topic changes have been saved."
-msgstr "Ihre Veränderungen am Thema wurden gespeichert."
 
 
 # Control Panel Item
@@ -2049,7 +2023,7 @@ msgstr "Manuell auswählen"
 #. </th>
 # Original: "Attendees"
 msgid "contact_attendees"
-msgstr ""
+msgstr "Teilnehmer"
 
 
 #: ./plone_content/event_view.pt
@@ -2260,7 +2234,7 @@ msgstr "Mehrere Benutzer können sinnvoll in Gruppen zusammengefasst werden; zum 
 #. </p>
 # Original: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
 msgid "description_edit_properties"
-msgstr "Diese Informationen, auch <em>Metadaten</em> genannt, sind eine Sammlung von Daten, die dazu benutzt werden, ein Objekt zu kategorisieren, ihm eine Sperrfrist oder ein Löschdatum zuzuteilen, seine Sprache oder Stichworte festzulegen.<br />Verändern Sie die Metadaten-Einträge mit Hilfe des unten stehenden Formulars. Beachten Sie, dass Metadaten sehr leistungsfähig sind und Sie mit Ihnen sehr viele nützliche Kategorisierungen vornehmen können. Benutzen Sie beim Eintrag prägnante Formulierungen und lassen Sie die Felder, zu denen Ihnen nichts einfällt, leer."
+msgstr "Diese Informationen, auch <em>Metadaten</em> genannt, sind eine Sammlung von Daten, die dazu benutzt werden, ein Objekt zu kategorisieren, ihm eine Sperrfrist oder ein Löschdatum zuzuteilen, seine Sprache oder Stichwörter festzulegen.<br />Verändern Sie die Metadaten-Einträge mit Hilfe des unten stehenden Formulars. Beachten Sie, dass Metadaten sehr leistungsfähig sind und Sie mit Ihnen sehr viele nützliche Kategorisierungen vornehmen können. Benutzen Sie beim Eintrag prägnante Formulierungen und lassen Sie die Felder, zu denen Ihnen nichts einfällt, leer."
 
 
 #: ./plone_3rdParty/CMFTopic/topic_edit_form.cpt
@@ -2853,6 +2827,16 @@ msgid "description_site_error_thank_you"
 msgstr "Vielen Dank"
 
 
+#: ./plone_templates/sitemap.pt
+#. <p class="documentDescription" i18n:translate="description_site_map">
+#.     An overview of the available content on this site. Keep the pointer still
+#.     over an item for a few seconds to get its description.
+#. </p>
+# Original: "An overview of the available content on this site. Keep the pointer still over an item for a few seconds to get its description."
+msgid "description_site_map"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_portalskin_form.cpt
 #. <p i18n:translate="description_skin_setup">
 #.         Settings that affect the portal's look and template usage.
@@ -3084,7 +3068,7 @@ msgstr "von"
 #. </a>
 # Original: "More information about this event"
 msgid "event_more_information"
-msgstr ""
+msgstr "Weitere Informationen über diesen Termin"
 
 
 #: ./plone_content/event_view.pt
@@ -4295,7 +4279,7 @@ msgstr "Schaltet die Vererbung von Kriterien ein und aus. Wenn Sie z.B. festgele
 #. </div>
 # Original: "Keywords relate different types of content to each other. Don't select too many categories."
 msgid "help_keyword"
-msgstr "Stichworte setzen verschiedene Artikel untereinander in Beziehung. Wählen Sie nicht zu viele Kategorien aus."
+msgstr "Stichwörter setzen verschiedene Artikel untereinander in Beziehung. Wählen Sie nicht zu viele Kategorien aus."
 
 
 #: ./plone_content/metadata_edit_form.cpt
@@ -4546,7 +4530,7 @@ msgstr "Findet Artikel diesen Typs."
 #. </div>
 # Original: "Return items matching one or more of these keywords. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 msgid "help_search_keywords"
-msgstr "Findet Artikel, die unter einem oder mehreren dieser Stichworte registriert sind. Sie können nach mehreren Begriffen suchen."
+msgstr "Findet Artikel, die unter einem oder mehreren dieser Stichwörter registriert sind. Sie können nach mehreren Begriffen suchen."
 
 
 #: ./plone_forms/member_search_form.pt
@@ -4685,9 +4669,11 @@ msgstr "Erlaube den Benutzern, das Aussehen einzustellen."
 
 #: ./plone_prefs/prefs_mailhost_form.cpt
 #. <div class="formHelp" i18n:translate="help_smtp_pass">
-#.                 XXX
+#.                 This is the password used for the given username.
+#.                 It is only required if you have specified a username.
 #. </div>
-# Original: "XXX"
+# Original: "This is the password used for the given username. It is only required if you have specified a username."
+#, fuzzy
 msgid "help_smtp_pass"
 msgstr "Dieses ist das Passwort Ihres lokalen ESMTP-Servers."
 
@@ -4715,9 +4701,11 @@ msgstr "Dieses ist die Adresse Ihres lokalen SMTP-Servers (für ausgehende E-Mail
 
 #: ./plone_prefs/prefs_mailhost_form.cpt
 #. <div class="formHelp" i18n:translate="help_smtp_userid">
-#.                 XXX
+#.                 This is the username used for authentication to your e-mail server.
+#.                 Usally it is not required to provide one.
 #. </div>
-# Original: "XXX"
+# Original: "This is the username used for authentication to your e-mail server. Usally it is not required to provide one."
+#, fuzzy
 msgid "help_smtp_userid"
 msgstr "Dieses ist der Benutzer Ihres lokalen ESMTP-Servers."
 
@@ -4882,7 +4870,7 @@ msgstr "Wählen Sie einen Artikel, den Sie hinzufügen wollen."
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 #.  Add item
 #. </a>
 # Original: "Add item"
@@ -4891,7 +4879,7 @@ msgstr "Neuen Artikel hinzufügen"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
 #.  Add to folder
 #. </a>
 # Original: "Add to folder"
@@ -4989,6 +4977,15 @@ msgid "label_back_to_errorlog"
 msgstr "Zurück zum Fehlerprotokoll"
 
 
+#: ./plone_content/image_view_fullscreen.pt
+#. <span i18n:translate="label_back_to_site">
+#.  Back to site
+#. </span>
+# Original: "Back to site"
+msgid "label_back_to_site"
+msgstr "Zurück zur Webseite"
+
+
 #: ./plone_forms/member_search_form.pt
 #. <label i18n:translate="label_before_specified_time">
 #.  Not logged in since specified time
@@ -5008,18 +5005,11 @@ msgstr "Haupttext"
 
 
 #: ./plone_content/document_byline.pt
-#. <tal:name i18n:translate="label_by_author" tal:condition="creator" tal:define="author python:mtool.getMemberInfo(creator)">
+#. <span i18n:translate="label_by_author">
 #.         by
 #.  ${author}
-#.  <tal:ownership condition="python: isEditable and checkPermission('Manage portal', here)">
-#.       [
-#.   <a href="" i18n:attributes="title" tal:attributes="href string:${here/absolute_url}/ownership_form;" title="Change ownership">
-#.    Change
-#.   </a>
-#.   ]
-#.  </tal:ownership>
-#. </tal:name>
-# Original: "by ${author}  <tal:ownership condition=\"python: isEditable and checkPermission('Manage portal', here)\"> [<a href=\"\" i18n:attributes=\"title\" tal:attributes=\"href string:${here/absolute_url}/ownership_form;\" title=\"Change ownership\">Change</a>] </tal:ownership>"
+#. </span>
+# Original: "by ${author}"
 msgid "label_by_author"
 msgstr "von ${author}"
 
@@ -5031,6 +5021,15 @@ msgstr "von ${author}"
 # Original: "Calendar"
 msgid "label_calendar"
 msgstr "Kalender"
+
+
+#: ./plone_content/document_byline.pt
+#. <a href="" i18n:attributes="title" i18n:translate="label_change_author" tal:attributes="href string:${here/absolute_url}/ownership_form;" title="Change ownership">
+#.  [Change ownership]
+#. </a>
+# Original: "[Change ownership]"
+msgid "label_change_author"
+msgstr "[Besitzer ändern]"
 
 
 #: ./plone_prefs/prefs_user_details.cpt
@@ -5417,7 +5416,7 @@ msgstr "Fehler"
 #. </label>
 # Original: "Existing keywords"
 msgid "label_existing_keywords"
-msgstr "Bereits existierende Stichworte"
+msgstr "Bereits existierende Stichwörter"
 
 
 #: ./plone_forms/content_status_history.cpt
@@ -5439,7 +5438,7 @@ msgstr "Löschdatum"
 #. </label>
 # Original: "Enable external editing"
 msgid "label_ext_editor"
-msgstr ""
+msgstr "Externen Editor erlauben"
 
 
 #: ./plone_content/file_view.pt
@@ -5593,6 +5592,26 @@ msgid "label_history"
 msgstr "Historie"
 
 
+#: ./plone_content/review_history.pt
+#. <span i18n:translate="label_history_entry">
+#.  ${action}
+#.   by
+#.  ${author}
+#. </span>
+# Original: "${action} by ${author}"
+msgid "label_history_entry"
+msgstr "${action} durch ${author}"
+
+
+#: ./plone_content/image_view_fullscreen.pt
+#. <span i18n:translate="label_home">
+#.  Home
+#. </span>
+# Original: "Home"
+msgid "label_home"
+msgstr "Startseite"
+
+
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <label i18n:translate="label_ignored_exception">
 #.  Ignored exception types
@@ -5648,7 +5667,7 @@ msgstr "Artikeltyp"
 #. </label>
 # Original: "Keywords"
 msgid "label_keywords"
-msgstr "Stichworte"
+msgstr "Stichwörter"
 
 
 #: ./plone_content/metadata_edit_form.cpt
@@ -6029,6 +6048,15 @@ msgid "label_quick_search"
 msgstr "Schnellsuche"
 
 
+#: ./plone_content/document_relateditems.pt
+#. <legend i18n:translate="label_related_items">
+#.  Related item(s)
+#. </legend>
+# Original: "Related item(s)"
+msgid "label_related_items"
+msgstr "Referenz(en)"
+
+
 #: ./plone_forms/search.pt
 #. <span class="discreet" i18n:attributes="title" i18n:translate="label_relevance_percentage" tal:condition="result/data_record_normalized_score_" title="Relevance">
 #.                     [
@@ -6216,6 +6244,15 @@ msgstr "Kurzname"
 # Original: "Show me"
 msgid "label_show_me"
 msgstr "Anzeigen"
+
+
+#: ./plone_templates/sitemap.pt
+#. <h1 i18n:translate="label_site_map">
+#.  Site map
+#. </h1>
+# Original: "Site map"
+msgid "label_site_map"
+msgstr "Website-Übersicht"
 
 
 #: ./plone_content/file_view.pt
@@ -6490,6 +6527,15 @@ msgstr "Zurück zu meinen Einstellungen"
 # Original: "Up to Users Overview"
 msgid "label_up_to_usersoverview"
 msgstr "Zurück zur Benutzerübersicht"
+
+
+#: ./plone_forms/folder_localrole_form.pt
+#. <label for="inherit" i18n:translate="label_use_acquisition">
+#.  Inherit roles from higher levels
+#. </label>
+# Original: "Inherit roles from higher levels"
+msgid "label_use_acquisition"
+msgstr "Übergeordnete Vollmachten übernehmen"
 
 
 #: ./plone_forms/folder_localrole_form.pt
@@ -7182,31 +7228,42 @@ msgstr "Benutzername"
 
 
 #: ./plone_forms/folder_localrole_form.pt
-#. <span i18n:translate="local_role_warning" style="font-weight:normal">
-#.  <strong>
-#.   Attention!
-#.  </strong>
-#.   You are setting the sharing permissions for a
-#.  <strong tal:content="here/portal_type"/>
-#.  .
-#.             If you want to set the permissions for its containing folder, click
-#.  <a href="" tal:attributes="href python:here.absolute_url()+'/../'+ template.id">
-#.   here
-#.  </a>
-#. </span>
-#. <span i18n:translate="local_role_warning" style="font-weight:normal">
+#. <span i18n:translate="local_role_warning_default_page" style="font-weight:normal">
 #.  <strong>
 #.   Attention!
 #.  </strong>
 #.   You are setting the sharing permissions for this folder's default page.
 #.             If you want to set the permissions for its containing folder, click
-#.  <a href="" tal:attributes="href python:here.absolute_url()+'/../'+ template.id">
-#.   here
-#.  </a>
+#.  ${link}
 #. </span>
-# Original: "<strong>Attention!</strong> You are setting the sharing permissions for a <strong tal:content=\"here/portal_type\"/> . If you want to set the permissions for its containing folder, click <a href=\"\" tal:attributes=\"href python:here.absolute_url()+'/../'+ template.id\">here</a>"
-msgid "local_role_warning"
-msgstr "<strong>Achtung!</strong> Sie setzen die Zugriffsrechte für ein <strong tal:content=\"here/portal_type\" />. Wenn Sie die Zugriffsrechte für den Ordner setzen wollen, klicken Sie <a href=\"\" tal:attributes=\"href python:here.absolute_url()+'/../'+ template.id\">hier</a>."
+# Original: "<strong>Attention!</strong> You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
+msgid "local_role_warning_default_page"
+msgstr "<strong>Achtung!</strong> Sie setzen die Zugriffsrechte für die Startseite. Wenn Sie die Zugriffsrechte für den Ordner setzen wollen, klicken Sie ${link}."
+
+
+#: ./plone_forms/folder_localrole_form.pt
+#. <a href="" i18n:translate="local_role_warning_link" tal:attributes="href python:here.absolute_url()+'/../'+ template.id">
+#.  here
+#. </a>
+# Original: "here"
+msgid "local_role_warning_link"
+msgstr "hier"
+
+
+#: ./plone_forms/folder_localrole_form.pt
+#. <span i18n:translate="local_role_warning_type" style="font-weight:normal">
+#.  <strong>
+#.   Attention!
+#.  </strong>
+#.   You are setting the sharing permissions for a
+#.  ${type}
+#.  .
+#.             If you want to set the permissions for its containing folder, click
+#.  ${link}
+#. </span>
+# Original: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type} . If you want to set the permissions for its containing folder, click ${link}"
+msgid "local_role_warning_type"
+msgstr "<strong>Achtung!</strong> Sie setzen die Zugriffsrechte für ein ${type}. Wenn Sie die Zugriffsrechte für den Ordner setzen wollen, klicken Sie ${link}."
 
 
 #: ./plone_forms/login_form.pt

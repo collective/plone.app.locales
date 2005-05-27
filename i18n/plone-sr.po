@@ -21,7 +21,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-05-27 13:39+0000\n"
+"POT-Creation-Date: 2005-05-27 21:28+0000\n"
 "PO-Revision-Date: 2005-05-16 01:00+02:00\n"
 "Last-Translator: Filip Miletic <f dot miletic at ewi dot tudelft dot nl>\n"
 "Language-Team: Serbian <gnu@prevod.org>\n"
@@ -114,13 +114,13 @@ msgstr "Нова ставка"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
 msgid "Add new items in the same folder as this item"
 msgstr ""
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 msgid "Add new items inside this item"
 msgstr ""
 
@@ -272,7 +272,7 @@ msgstr "Промени прву страну"
 
 
 #: ./plone_content/document_byline.pt
-#. <a href="" i18n:attributes="title" tal:attributes="href string:${here/absolute_url}/ownership_form;" title="Change ownership">
+#. <a href="" i18n:attributes="title" i18n:translate="label_change_author" tal:attributes="href string:${here/absolute_url}/ownership_form;" title="Change ownership">
 msgid "Change ownership"
 msgstr ""
 
@@ -284,6 +284,12 @@ msgstr "Промени лозинку"
 #: ./plone_templates/global_contentmenu.pt
 #. <a class="selected" href="#" i18n:attributes="title" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
 msgid "Change the item used as default view in this folder"
+msgstr ""
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="contentActionMenuHeader" href="content_status_history" i18n:attributes="title" onclick="return buttonClick(event, 'statusMenu');" onmouseover="buttonMouseover(event, 'statusMenu');" tal:attributes="href string:$here_url/content_status_history;" title="Change the state of this item">
+msgid "Change the state of this item"
 msgstr ""
 
 
@@ -409,18 +415,6 @@ msgid "Discussion Item"
 msgstr "Ставка у расправи"
 
 
-msgid "Document"
-msgstr "Документ"
-
-
-msgid "Document changes saved."
-msgstr "Измене у документу су снимљене."
-
-
-msgid "Document has been created."
-msgstr "Документ је створен."
-
-
 msgid "Documentation"
 msgstr "Документација"
 
@@ -507,6 +501,10 @@ msgstr "Промене догађаја су сачуване."
 
 msgid "Event has been created."
 msgstr "Догађај је направљен."
+
+
+msgid "Events"
+msgstr ""
 
 
 # Description for Event type
@@ -641,8 +639,8 @@ msgstr "Слика је направљена."
 
 
 # Description for Image type
-msgid "Image objects can be embedded in Portal documents."
-msgstr "Објекти слике се могу уградити у документе Портала."
+msgid "Image objects can be embedded in pages."
+msgstr ""
 
 
 msgid "Input is required but no input given."
@@ -808,6 +806,11 @@ msgid "Member"
 msgstr "Члан"
 
 
+# Member Preferences Header
+msgid "Member Preferences"
+msgstr ""
+
+
 msgid "Member with this email address already exists."
 msgstr "Члан са овом ел.адресом већ постоји."
 
@@ -941,6 +944,10 @@ msgid "Ownership has been changed."
 msgstr "Власништво је промењено."
 
 
+msgid "Page"
+msgstr ""
+
+
 #: ./plone_portlets/portlet_login.pt
 #. <input accesskey="accesskeys-login" alt="Password" i18n:attributes="alt accesskey" size="10" tal:attributes="name ac_password; id ac_password;                                                tabindex tabindex/next;" type="password"/>
 #: ./plone_forms/discussion_reply_form.cpt
@@ -983,6 +990,11 @@ msgid "Permission denied to cut ${title}."
 msgstr ""
 
 
+# Personal Preferences Item
+msgid "Personal Preferences"
+msgstr ""
+
+
 msgid "Please correct the indicated errors."
 msgstr "Молимо исправите назначене грешке."
 
@@ -1017,16 +1029,6 @@ msgid "Plone Configuration"
 msgstr "Подешавање програма Plone"
 
 
-# Member Preferences Header
-msgid "Plone Member Preferences"
-msgstr "Поставке за чланове"
-
-
-# FIXME: Should be translated in context
-msgid "Plone Setup"
-msgstr "Подешавање програма Плоне"
-
-
 # FIXME: a better translation for this should be put up.
 # Description for Folder type
 msgid "Plone folders can define custom 'view' actions, or will behave like directory listings without one defined."
@@ -1054,11 +1056,6 @@ msgstr "Изглед портала је промењен"
 #. <img alt="Powered by Plone" height="15" i18n:attributes="alt title" src="" tal:attributes="src string:$portal_url/plone_powered.gif" title="This Plone site was built using the Plone Content Management System. Click for more information." width="80"/>
 msgid "Powered by Plone"
 msgstr "Покреће нас Plone"
-
-
-# "Preference settings" is superfluous
-msgid "Preference settings"
-msgstr "Поставке"
 
 
 msgid "Preferences"
@@ -1354,6 +1351,10 @@ msgid "Site Map"
 msgstr "Мапа ел. места"
 
 
+msgid "Site Setup"
+msgstr ""
+
+
 # Control Panel Item
 msgid "Skins"
 msgstr "Изгледи"
@@ -1366,6 +1367,10 @@ msgid "Small Text"
 msgstr "Мали текст"
 
 
+msgid "Smart Folder"
+msgstr ""
+
+
 msgid "State"
 msgstr "Стање"
 
@@ -1373,10 +1378,6 @@ msgstr "Стање"
 # Shorthand for "Sunday"
 msgid "Su"
 msgstr "Не"
-
-
-msgid "Subtopics"
-msgstr "Под-теме"
 
 
 msgid "Sunday"
@@ -1480,23 +1481,6 @@ msgid "Too much input was given."
 msgstr "Улаз је сувише обиман."
 
 
-msgid "Topic"
-msgstr "Тема"
-
-
-msgid "Topic changes saved."
-msgstr "Измене теме су сачуване."
-
-
-msgid "Topic has been created."
-msgstr "Тема је направљена."
-
-
-# Description for Topic type
-msgid "Topics are canned queries for organizing content with up to date queries into the catalog."
-msgstr "Теме су спремни упити за уређивање садржаја са ажурним упитима у каталог."
-
-
 msgid "Transaction undone."
 msgstr "Трансакција је поништена."
 
@@ -1587,10 +1571,6 @@ msgstr "Исправан XHTML"
 
 msgid "View"
 msgstr "Преглед"
-
-
-msgid "View Document"
-msgstr "Преглед документа"
 
 
 msgid "View Event"
@@ -1701,10 +1681,6 @@ msgid "Your contents status has been modified."
 msgstr "Стање садржаја је измењено."
 
 
-msgid "Your document changes have been saved."
-msgstr "Измене које сте направили су сачуване."
-
-
 msgid "Your event changes have been saved."
 msgstr "Измене догађаја су сачуване."
 
@@ -1744,10 +1720,6 @@ msgstr "Ваше промене чланака су сачуване."
 
 msgid "Your personal settings have been saved."
 msgstr "Ваша лична подешавања су сачувана."
-
-
-msgid "Your topic changes have been saved."
-msgstr "Ваше промене тема су сачуване."
 
 
 # Control Panel Item
@@ -2872,6 +2844,16 @@ msgstr "Ако знате да сте навели исправну мрежну
 # Original: "Thank you."
 msgid "description_site_error_thank_you"
 msgstr "Хвала."
+
+
+#: ./plone_templates/sitemap.pt
+#. <p class="documentDescription" i18n:translate="description_site_map">
+#.     An overview of the available content on this site. Keep the pointer still
+#.     over an item for a few seconds to get its description.
+#. </p>
+# Original: "An overview of the available content on this site. Keep the pointer still over an item for a few seconds to get its description."
+msgid "description_site_map"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_portalskin_form.cpt
@@ -4706,9 +4688,11 @@ msgstr "Ако је укључено, сваки корисник може да 
 
 #: ./plone_prefs/prefs_mailhost_form.cpt
 #. <div class="formHelp" i18n:translate="help_smtp_pass">
-#.                 XXX
+#.                 This is the password used for the given username.
+#.                 It is only required if you have specified a username.
 #. </div>
-# Original: "XXX"
+# Original: "This is the password used for the given username. It is only required if you have specified a username."
+#, fuzzy
 msgid "help_smtp_pass"
 msgstr ""
 
@@ -4736,9 +4720,11 @@ msgstr "Адреса Вашег локалног SMTP сервера (за од�
 
 #: ./plone_prefs/prefs_mailhost_form.cpt
 #. <div class="formHelp" i18n:translate="help_smtp_userid">
-#.                 XXX
+#.                 This is the username used for authentication to your e-mail server.
+#.                 Usally it is not required to provide one.
 #. </div>
-# Original: "XXX"
+# Original: "This is the username used for authentication to your e-mail server. Usally it is not required to provide one."
+#, fuzzy
 msgid "help_smtp_userid"
 msgstr ""
 
@@ -4903,7 +4889,7 @@ msgstr "Изаберите ставку за додавање"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 #.  Add item
 #. </a>
 # Original: "Add item"
@@ -4912,7 +4898,7 @@ msgstr "Додај ставку"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
 #.  Add to folder
 #. </a>
 # Original: "Add to folder"
@@ -5010,6 +4996,15 @@ msgid "label_back_to_errorlog"
 msgstr "Назад на дневник грешака"
 
 
+#: ./plone_content/image_view_fullscreen.pt
+#. <span i18n:translate="label_back_to_site">
+#.  Back to site
+#. </span>
+# Original: "Back to site"
+msgid "label_back_to_site"
+msgstr ""
+
+
 #: ./plone_forms/member_search_form.pt
 #. <label i18n:translate="label_before_specified_time">
 #.  Not logged in since specified time
@@ -5029,18 +5024,12 @@ msgstr "Текст"
 
 
 #: ./plone_content/document_byline.pt
-#. <tal:name i18n:translate="label_by_author" tal:condition="creator" tal:define="author python:mtool.getMemberInfo(creator)">
+#. <span i18n:translate="label_by_author">
 #.         by
 #.  ${author}
-#.  <tal:ownership condition="python: isEditable and checkPermission('Manage portal', here)">
-#.       [
-#.   <a href="" i18n:attributes="title" tal:attributes="href string:${here/absolute_url}/ownership_form;" title="Change ownership">
-#.    Change
-#.   </a>
-#.   ]
-#.  </tal:ownership>
-#. </tal:name>
-# Original: "by ${author}  <tal:ownership condition=\"python: isEditable and checkPermission('Manage portal', here)\"> [<a href=\"\" i18n:attributes=\"title\" tal:attributes=\"href string:${here/absolute_url}/ownership_form;\" title=\"Change ownership\">Change</a>] </tal:ownership>"
+#. </span>
+# Original: "by ${author}"
+#, fuzzy
 msgid "label_by_author"
 msgstr "Нап. ${author}"
 
@@ -5052,6 +5041,15 @@ msgstr "Нап. ${author}"
 # Original: "Calendar"
 msgid "label_calendar"
 msgstr "Календар"
+
+
+#: ./plone_content/document_byline.pt
+#. <a href="" i18n:attributes="title" i18n:translate="label_change_author" tal:attributes="href string:${here/absolute_url}/ownership_form;" title="Change ownership">
+#.  [Change ownership]
+#. </a>
+# Original: "[Change ownership]"
+msgid "label_change_author"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_user_details.cpt
@@ -5614,6 +5612,26 @@ msgid "label_history"
 msgstr ""
 
 
+#: ./plone_content/review_history.pt
+#. <span i18n:translate="label_history_entry">
+#.  ${action}
+#.   by
+#.  ${author}
+#. </span>
+# Original: "${action} by ${author}"
+msgid "label_history_entry"
+msgstr ""
+
+
+#: ./plone_content/image_view_fullscreen.pt
+#. <span i18n:translate="label_home">
+#.  Home
+#. </span>
+# Original: "Home"
+msgid "label_home"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <label i18n:translate="label_ignored_exception">
 #.  Ignored exception types
@@ -6050,6 +6068,15 @@ msgid "label_quick_search"
 msgstr "Брза претрага"
 
 
+#: ./plone_content/document_relateditems.pt
+#. <legend i18n:translate="label_related_items">
+#.  Related item(s)
+#. </legend>
+# Original: "Related item(s)"
+msgid "label_related_items"
+msgstr ""
+
+
 #: ./plone_forms/search.pt
 #. <span class="discreet" i18n:attributes="title" i18n:translate="label_relevance_percentage" tal:condition="result/data_record_normalized_score_" title="Relevance">
 #.                     [
@@ -6237,6 +6264,15 @@ msgstr "Кратко име"
 # Original: "Show me"
 msgid "label_show_me"
 msgstr "Покажи"
+
+
+#: ./plone_templates/sitemap.pt
+#. <h1 i18n:translate="label_site_map">
+#.  Site map
+#. </h1>
+# Original: "Site map"
+msgid "label_site_map"
+msgstr ""
 
 
 #: ./plone_content/file_view.pt
@@ -6511,6 +6547,15 @@ msgstr "Горе на моје поставке"
 # Original: "Up to Users Overview"
 msgid "label_up_to_usersoverview"
 msgstr "Горе на преглед корисника"
+
+
+#: ./plone_forms/folder_localrole_form.pt
+#. <label for="inherit" i18n:translate="label_use_acquisition">
+#.  Inherit roles from higher levels
+#. </label>
+# Original: "Inherit roles from higher levels"
+msgid "label_use_acquisition"
+msgstr ""
 
 
 #: ./plone_forms/folder_localrole_form.pt
@@ -7204,31 +7249,42 @@ msgstr "Корисничко име"
 
 
 #: ./plone_forms/folder_localrole_form.pt
-#. <span i18n:translate="local_role_warning" style="font-weight:normal">
-#.  <strong>
-#.   Attention!
-#.  </strong>
-#.   You are setting the sharing permissions for a
-#.  <strong tal:content="here/portal_type"/>
-#.  .
-#.             If you want to set the permissions for its containing folder, click
-#.  <a href="" tal:attributes="href python:here.absolute_url()+'/../'+ template.id">
-#.   here
-#.  </a>
-#. </span>
-#. <span i18n:translate="local_role_warning" style="font-weight:normal">
+#. <span i18n:translate="local_role_warning_default_page" style="font-weight:normal">
 #.  <strong>
 #.   Attention!
 #.  </strong>
 #.   You are setting the sharing permissions for this folder's default page.
 #.             If you want to set the permissions for its containing folder, click
-#.  <a href="" tal:attributes="href python:here.absolute_url()+'/../'+ template.id">
-#.   here
-#.  </a>
+#.  ${link}
 #. </span>
-# Original: "<strong>Attention!</strong> You are setting the sharing permissions for a <strong tal:content=\"here/portal_type\"/> . If you want to set the permissions for its containing folder, click <a href=\"\" tal:attributes=\"href python:here.absolute_url()+'/../'+ template.id\">here</a>"
-msgid "local_role_warning"
-msgstr "<strong>Пажња!</strong> Подешавате дозволе за дељење за <strong tal:content=\"here/portal_type\"/> . Ако желите да подесите дозволе за директоријум који га садржи, притисните<a href=\"\" tal:attributes=\"href python:here.absolute_url()+'/../'+ template.id\">овде</a>"
+# Original: "<strong>Attention!</strong> You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
+msgid "local_role_warning_default_page"
+msgstr ""
+
+
+#: ./plone_forms/folder_localrole_form.pt
+#. <a href="" i18n:translate="local_role_warning_link" tal:attributes="href python:here.absolute_url()+'/../'+ template.id">
+#.  here
+#. </a>
+# Original: "here"
+msgid "local_role_warning_link"
+msgstr ""
+
+
+#: ./plone_forms/folder_localrole_form.pt
+#. <span i18n:translate="local_role_warning_type" style="font-weight:normal">
+#.  <strong>
+#.   Attention!
+#.  </strong>
+#.   You are setting the sharing permissions for a
+#.  ${type}
+#.  .
+#.             If you want to set the permissions for its containing folder, click
+#.  ${link}
+#. </span>
+# Original: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type} . If you want to set the permissions for its containing folder, click ${link}"
+msgid "local_role_warning_type"
+msgstr ""
 
 
 #: ./plone_forms/login_form.pt
