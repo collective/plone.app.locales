@@ -7,6 +7,12 @@
 
 import os, sys, string
 
+try:
+    import win32api
+    WIN32 = True
+except ImportError:
+    WIN32 = False
+
 __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
 
@@ -19,6 +25,10 @@ def main():
     pot = product + '.pot-new'
     manualpot = '%s-manual.pot' % product
     log = 'rebuild-%s-pot.log' % product
+
+    domain = 'plone'
+    if product == 'atcontenttypes':
+        domain = product
 
     os.chdir('..')
 
@@ -33,18 +43,22 @@ def main():
         sys.exit(3)
 
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
-    os.system(__PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s -s %s > %s 2>&1') % (pot, product, manualpot, skins, log))
+    os.system(__PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s -s %s > %s 2>&1') % (pot, domain, manualpot, skins, log))
 
     # Remove ## X more: occurences
     os.system('sed -r "/## [0-9]+ more:/d" %s > %s2' % (pot, pot))
 
     # Make paths relative to products skins dir
-    os.system('sed -r "s,%s,\.,g" %s2 > %s3' % (string.replace(skins, '\\', '\\\\'), pot, pot))
+    step3 = pot
+    if WIN32:
+        step3 = step3 + '3'
+    os.system('sed -r "s,%s,\.,g" %s2 > %s' % (string.replace(skins, '\\', '\\\\'), pot, step3))
     os.remove('%s2' % pot)
 
-    # Make directory separator unix like
-    os.system('sed -r "/^#:.*/s,\\\\,/,g," %s3 > %s' % (pot, pot))
-    os.remove('%s3' % pot)
+    if WIN32:
+        # Make directory separator unix like
+        os.system('sed -r "/^#:.*/s,\\\\,/,g" %s3 > %s' % (pot, pot))
+        os.remove('%s3' % pot)
 
 if __name__ == '__main__':
     main()
