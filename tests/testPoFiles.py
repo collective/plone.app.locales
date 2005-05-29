@@ -25,7 +25,7 @@ whitelist = ['Netscape Navigator',':','Version 4.x','Opera','Internet Explorer',
              'Version 5.x','Error','Titel','Transcript','E-mail','Mode','No','Roles','Description','Default',\
              'Portrait','Action','Actions','Exception','SMTP port','Sections','Password','at','Home',\
              'Calendar','SMTP server','Undo','Short Name','WCAG','Ok','Send','Section 508','RSS Feed',\
-             'Powered by Plone']
+             'Powered by Plone','Valid CSS','Valid XHTML']
 
 # html entities as they appear in templates
 entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs]
