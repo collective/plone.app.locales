@@ -68,7 +68,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
             provider_tool = getToolByName(self.portal, provider, None)
             for action in provider_tool.listActions():
                 title = norm(action.title)
-                ctl['plone'].add(title, msgstr=title, filename='action', excerpt=['definied in %s' %provider])
+                ctl['plone'].add(title, msgstr=title, filename='action', excerpt=['defined in %s' %provider])
 
 
         # description of action icons
@@ -78,7 +78,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
             action_icons = []
         for icon in action_icons:
             title= icon.getTitle()
-            ctl['plone'].add(title, msgstr=title, filename='action_icon', excerpt=['id: %s' % icon.getIconURL()])
+            ctl['plone'].add(title, msgstr=title, filename='action_icon', excerpt=['id: %s, category: %s' % (icon.getIconURL(), icon.getCategory())])
 
 
         # workflow states and worflow transitions
@@ -89,10 +89,10 @@ class TestI18N(PloneTestCase.PloneTestCase):
             for obj in wf.objectValues():
                 if isinstance(obj, States.States):
                     for state in obj.objectValues():
-                        ctl['plone'].add(state.getId(), msgstr=state.getId(), filename='workflow_state, excerpt=['definied in %s, title: %s' % (workflow, state.title)])
+                        ctl['plone'].add(state.getId(), msgstr=state.getId(), filename='workflow_state', excerpt=['defined in %s, title: %s' % (workflow, state.title)])
                 elif isinstance(obj, Transitions.Transitions):
                     for transition in obj.objectValues():
-                        ctl['plone'].add(transition.getId(), msgstr=transition.getId(), filename='workflow_transition', excerpt=['definied in %s, title: %s' % (workflow, transition.title), 'new state: %s' % transition.new_state_id])
+                        ctl['plone'].add(transition.getId(), msgstr=transition.getId(), filename='workflow_transition', excerpt=['defined in %s, title: %s' % (workflow, transition.title), 'new state: %s' % transition.new_state_id])
 
 
         # portal types and types actions
@@ -109,7 +109,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
             if title.lower().find('criteri') == -1:
                 for action in typeObj.listActions():
                     actionTitle = norm(action.title)
-                    ctl['plone'].addToSameFileName(actionTitle, msgstr=actionTitle, filename='type_action', excerpt=['definied on %s' % title])
+                    ctl['plone'].addToSameFileName(actionTitle, msgstr=actionTitle, filename='type_action', excerpt=['defined on %s' % title])
 
 
         # archetypes widgets
@@ -130,10 +130,10 @@ class TestI18N(PloneTestCase.PloneTestCase):
                 desc = dict.get('description')
                 desc_msgid = dict.get('description_msgid')
 
-                if label_msgid:
-                    ctl[domain].add(label_msgid, label, filename='label definied in %s' % w.getName(), excerpt=['description: %s' % desc])
-                if desc_msgid:
-                    ctl[domain].add(desc_msgid, desc, filename='description definied in %s' % w.getName(), excerpt=['for label: %s' % label])
+                if label_msgid and label:
+                    ctl[domain].add(label_msgid, label, filename='widget_label', excerpt=['of %s, description: %s' % (w.getName(), desc)])
+                if desc_msgid and desc:
+                    ctl[domain].add(desc_msgid, desc, filename='widget_description', excerpt=['of %s, for label: %s' % (w.getName(), label)])
 
         domains = ctl.keys()
 

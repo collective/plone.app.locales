@@ -40,6 +40,7 @@ def main():
 
     pot = product + '.pot-new'
     manualpot = '%s-manual.pot' % product
+    generatedpot = '%s-generated.pot' % product
     log = 'rebuild-%s-pot.log' % product
 
     if product == 'archetypes':
@@ -48,6 +49,12 @@ def main():
     domain = product    
 
     os.chdir('..')
+
+    if product == 'plone' and not os.path.isfile(generatedpot):
+        print '''
+plone-generated.pot was not found. This is needed to build a proper version of
+plone.pot. Have a look at i18ngenerate.py in this folder for details.'''
+        sys.exit(4)
 
     if not os.path.isfile(manualpot):
         print 'No manual pot was found for the given product.'
@@ -80,8 +87,15 @@ def main():
 
     print 'Using %s to build new pot.\n' % skins
 
+    cmd = __PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s ') % (pot, domain, manualpot)
+
+    if product == 'plone':
+        cmd += '--merge2 %s ' % generatedpot
+
+    cmd += '-s %s > %s 2>&1' % (skins, log)
+
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
-    os.system(__PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s -s %s > %s 2>&1') % (pot, domain, manualpot, skins, log))
+    os.system(cmd)
 
     # Remove ## X more: occurences
     os.system('sed -r "/## [0-9]+ more:/d" %s > %s2' % (pot, pot))
