@@ -24,7 +24,8 @@ whitelist = ['Netscape Navigator',':','Version 4.x','Opera','Internet Explorer',
              'Mozilla','Type','Format','/','Version 1.x','Status','Date','Navigation','Name', 'Version 6.x',\
              'Version 5.x','Error','Titel','Transcript','E-mail','Mode','No','Roles','Description','Default',\
              'Portrait','Action','Actions','Exception','SMTP port','Sections','Password','at','Home',\
-             'Calendar','SMTP server','Undo','Short Name']
+             'Calendar','SMTP server','Undo','Short Name','WCAG','Ok','Send','Section 508','RSS Feed',\
+             'Powered by Plone']
 
 # html entities as they appear in templates
 entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs]
@@ -129,11 +130,11 @@ class TestPoFile(I18NTestCase.I18NTestCase):
 
         if(date_format_long is not None):
             long_number = len(_interp_regex.findall(date_format_long))
-            self.failUnless(long_number == 5,
+            self.failUnless(long_number > 4,
                 'Error: Wrong number of date format identifiers in date_format_long in file %s: Expected 5 got %s\n' % (poName, long_number))
         if (date_format_short is not None):
             short_number = len(_interp_regex.findall(date_format_short))
-            self.failUnless(short_number == 3,
+            self.failUnless(short_number > 2,
                 'Error: Wrong number of date format identifiers in date_format_short in file %s: Expected 3 got %s\n' % (poName, short_number))
 
         # the corresponding catalog from products pot
