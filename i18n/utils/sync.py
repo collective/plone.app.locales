@@ -1,45 +1,54 @@
 #!/usr/bin/env python
 
 """
-   Usage: sync.py <product>
+   Usage: sync.py [<product> | <language-code>]
    Note that PYTHON and I18NDUDE must have been set as enviroment variables before calling this script
 """
 
 import os, sys
-from utils import getPoFilesAsCmdLine
+from utils import getPoFilesAsCmdLine, getPoFilesByLanguageCode, getProduct, getPotFiles
 
 __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
 
 def main():
     if len(sys.argv) == 1:
-        print 'You have to specify the product.'
+        print 'You have to specify a product or a language code.'
         sys.exit(1)
 
-    product = sys.argv[1]
+    arg = sys.argv[1]
 
-    if product in ['atct', 'atrbw', 'at']:
-        if product == 'at':
-            product = 'archetypes'
-        elif product == 'atct':
-            product = 'atcontenttypes'
+    if arg in ['atct', 'atrbw', 'at']:
+        if arg == 'at':
+            arg = 'archetypes'
+        elif arg == 'atct':
+            arg = 'atcontenttypes'
         else:
-            product = 'atreferencebrowserwidget'
+            arg = 'atreferencebrowserwidget'
 
-    pot = '%s.pot' % product
+    pot = '%s.pot' % arg
 
     os.chdir('..')
 
-    if not os.path.isfile(pot):
-        print 'No pot was found for the given product.'
-        sys.exit(2)
+    if not os.path.isfile(pot): # no pot? test for language-code
+        poFiles = getPoFilesByLanguageCode(arg)
+        if poFiles:
+            potFiles = getPotFiles()
+            for po in poFiles:
+                for pot in potFiles:
+                    if getProduct(po) == getProduct(pot):
+                        os.system(__PYTHON + ' ' + __I18NDUDE + (' sync --pot %s -s %s') % (pot, po))
+        else:
+            print 'Neither a pot nor po files for the given argument were found.'
+            sys.exit(3)
 
-    poFiles = getPoFilesAsCmdLine(product)
-    if poFiles == '':
-        print 'No po-files were found for the given product.'
-        sys.exit(3)
+    else: # product was given
+        poFiles = getPoFilesAsCmdLine(product)
+        if poFiles == '':
+            print 'No po-files were found for the given product.'
+            sys.exit(4)
 
-    os.system(__PYTHON + ' ' + __I18NDUDE + (' sync --pot %s -s %s') % (pot, poFiles))
+        os.system(__PYTHON + ' ' + __I18NDUDE + (' sync --pot %s -s %s') % (pot, poFiles))
 
 if __name__ == '__main__':
     main()
