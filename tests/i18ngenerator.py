@@ -165,16 +165,27 @@ class TestI18N(PloneTestCase.PloneTestCase):
             index = self.atct_tool.getIndex(index)
             id = index.index
             title = index.friendlyName
+            desc = index.description
             ctl[domain].addToSameFileName(id, msgstr=id, filename='index', excerpt=['index id with index friendly name: %s' % title])
             if title:
                 ctl[domain].addToSameFileName(title, msgstr=title, filename='index', excerpt=['index friendly name of index: %s' % id])
+            if desc:
+                ctl[domain].addToSameFileName(desc, msgstr=desc, filename='index', excerpt=['index description of index: %s' % id])
+            # add in criterions
+            for criterion in self.atct_tool.getCriteriaForIndex(id, as_dict= True):
+                name = criterion['name']
+                desc = criterion['description']
+                ctl[domain].addToSameFileName(desc, msgstr=desc, filename='criteria', excerpt=['criterion description of crterion: %s' % name])
         for meta in metadata:
             meta = self.atct_tool.getMetadata(meta)
             id = meta.index
             title = meta.friendlyName
+            desc = meta.description
             ctl[domain].addToSameFileName(id, msgstr=id, filename='metadata', excerpt=['metadata id with metadata friendly name: %s' % title])
             if title:
                 ctl[domain].addToSameFileName(title, msgstr=title, filename='metadata', excerpt=['metadata friendly name of metadata: %s' % id])
+            if desc:
+                ctl[domain].addToSameFileName(desc, msgstr=desc, filename='metadata', excerpt=['metadata description of metadata: %s' % id])
 
         # archetypes widgets
         if self.at_tool:
