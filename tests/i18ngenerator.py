@@ -57,6 +57,10 @@ class TestI18N(PloneTestCase.PloneTestCase):
         except AttributeError:
             self.at_tool = False
         try:
+            self.atct_tool = self.portal.portal_atct
+        except AttributeError:
+            self.atct_tool = False
+        try:
             self.ai_tool = self.portal.portal_actionicons
         except AttributeError:
             self.ai_tool = False
@@ -145,6 +149,32 @@ class TestI18N(PloneTestCase.PloneTestCase):
                 ctl['plone'].add(month, msgstr=month, filename='datetime', excerpt=['name of a month, format %B'])
                 month = monthname_english(num, 'a') # Jan, Feb...
                 ctl['plone'].add(month, msgstr=month, filename='datetime', excerpt=['name of a month, format %b'])
+
+        # atcontenttypes smart folder options
+        # indexes and metadata
+        if self.atct_tool:
+            indexes = self.atct_tool.getIndexes(enabledOnly=1)
+            metadata = self.atct_tool.getAllMetadata(enabledOnly=1)
+            domain = 'atcontenttypes' # in which domain should this go ?
+            if not domain in ctl.keys():
+                ctl[domain] = catalog.MessageCatalog(domain=domain)
+        else:
+            indexes = []
+            metadata = []
+        for index in indexes:
+            index = self.atct_tool.getIndex(index)
+            id = index.index
+            title = index.friendlyName
+            ctl[domain].addToSameFileName(id, msgstr=id, filename='index', excerpt=['index id with index friendly name: %s' % title])
+            if title:
+                ctl[domain].addToSameFileName(title, msgstr=title, filename='index', excerpt=['index friendly name of index: %s' % id])
+        for meta in metadata:
+            meta = self.atct_tool.getMetadata(meta)
+            id = meta.index
+            title = meta.friendlyName
+            ctl[domain].addToSameFileName(id, msgstr=id, filename='metadata', excerpt=['metadata id with metadata friendly name: %s' % title])
+            if title:
+                ctl[domain].addToSameFileName(title, msgstr=title, filename='metadata', excerpt=['metadata friendly name of metadata: %s' % id])
 
         # archetypes widgets
         if self.at_tool:
