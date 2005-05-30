@@ -60,6 +60,10 @@ class TestI18N(PloneTestCase.PloneTestCase):
             self.ai_tool = self.portal.portal_actionicons
         except AttributeError:
             self.ai_tool = False
+        try:
+            self.cp_tool = self.portal.portal_controlpanel
+        except AttributeError:
+            self.cp_tool = False
 
     def testI18Ngenerator(self):
         '''Runs the i18ngenerator'''
@@ -117,6 +121,15 @@ class TestI18N(PloneTestCase.PloneTestCase):
                     actionTitle = norm(action.title)
                     ctl['plone'].addToSameFileName(actionTitle, msgstr=actionTitle, filename='type_action', excerpt=['defined on %s' % title])
 
+        # portal_controlpanel categories
+        if self.cp_tool:
+            groups = self.cp_tool.getGroups()
+        else:
+            groups = []
+        for group in groups:
+            id = group.get('id')
+            title = group.get('title')
+            ctl['plone'].add(title, msgstr=title, filename='controlpanel_category', excerpt=['category-id: %s' % id])
 
         # day and monthnames
         if KNOWS_CALENDAR_NAMES:
