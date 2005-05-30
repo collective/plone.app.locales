@@ -133,7 +133,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
 
         # day and monthnames
         if KNOWS_CALENDAR_NAMES:
-            for num in range(6):
+            for num in range(7):
                 day = weekdayname_english(num) # Monday, Tuesday...
                 ctl['plone'].add(day, msgstr=day, filename='datetime', excerpt=['name of a day, format %A'])
                 day = weekdayname_english(num, 'a') # Mon, Tue, ...
