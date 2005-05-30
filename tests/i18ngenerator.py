@@ -39,6 +39,12 @@ except ImportError:
     from i18ndude import catalog
     from i18ndude.catalog import MAX_OCCUR
 
+KNOWS_CALENDAR_NAMES = True
+try:
+    from Products.CMFPlone.i18nl10n import monthname_english, weekdayname_english
+except ImportError:
+    KNOWS_CALENDAR_NAMES = False
+    print "Error importing i18nl10n.py -> no automatic day/monthname generation"
 
 class TestI18N(PloneTestCase.PloneTestCase):
 
@@ -111,6 +117,21 @@ class TestI18N(PloneTestCase.PloneTestCase):
                     actionTitle = norm(action.title)
                     ctl['plone'].addToSameFileName(actionTitle, msgstr=actionTitle, filename='type_action', excerpt=['defined on %s' % title])
 
+
+        # day and monthnames
+        if KNOWS_CALENDAR_NAMES:
+            for num in range(6):
+                day = weekdayname_english(num) # Monday, Tuesday...
+                ctl['plone'].add(day, msgstr=day, filename='datetime', excerpt=['name of a day, format %A'])
+                day = weekdayname_english(num, 'a') # Mon, Tue, ...
+                ctl['plone'].add(day, msgstr=day, filename='datetime', excerpt=['abbreviation of a day, format %a'])
+                day = weekdayname_english(num, 'a')[:2] # Mo, Tu, ...
+                ctl['plone'].add(day, msgstr=day, filename='datetime', excerpt=['two letter abbreviation of a day used in the portlet_calendar'])
+            for num in range(1,13):
+                month = monthname_english(num) # January, February...
+                ctl['plone'].add(month, msgstr=month, filename='datetime', excerpt=['name of a month, format %B'])
+                month = monthname_english(num, 'a') # Jan, Feb...
+                ctl['plone'].add(month, msgstr=month, filename='datetime', excerpt=['name of a month, format %b'])
 
         # archetypes widgets
         if self.at_tool:
