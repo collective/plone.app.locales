@@ -155,7 +155,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
         if self.atct_tool:
             indexes = self.atct_tool.getIndexes(enabledOnly=1)
             metadata = self.atct_tool.getAllMetadata(enabledOnly=1)
-            domain = 'atcontenttypes' # in which domain should this go ?
+            domain = 'atcontenttypes'
             if not domain in ctl.keys():
                 ctl[domain] = catalog.MessageCatalog(domain=domain)
         else:
@@ -186,6 +186,29 @@ class TestI18N(PloneTestCase.PloneTestCase):
                 ctl[domain].addToSameFileName(title, msgstr=title, filename='metadata', excerpt=['metadata friendly name of metadata: %s' % id])
             if desc:
                 ctl[domain].addToSameFileName(desc, msgstr=desc, filename='metadata', excerpt=['metadata description of metadata: %s' % id])
+
+        # DisplayList properties XXX This is a evil hack and should be done in more general way, but I couldn't find any "SchemaRegistry"
+
+        hasDisplayLists = False
+        try:
+            from Products.ATContentTypes.criteria.date import DateOptions, CompareOperations, RangeOperations
+            from Products.ATContentTypes.criteria.list import CompareOperators
+            hasDisplayLists = True
+            domain = 'atcontenttypes'
+            if not domain in ctl.keys():
+                ctl[domain] = catalog.MessageCatalog(domain=domain)
+        except ImportError:
+            print "ATCT DisplayLists not found."
+
+        if hasDisplayLists:
+            for value in DateOptions.values():
+                ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
+            for value in CompareOperations.values():
+                ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
+            for value in RangeOperations.values():
+                ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
+            for value in CompareOperators.values():
+                ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
 
         # archetypes widgets
         if self.at_tool:
