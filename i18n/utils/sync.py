@@ -43,7 +43,7 @@ def main():
             sys.exit(3)
 
     else: # product was given
-        poFiles = getPoFilesAsCmdLine(product)
+        poFiles = getPoFilesAsCmdLine(arg)
         if poFiles == '':
             print 'No po-files were found for the given product.'
             sys.exit(4)
