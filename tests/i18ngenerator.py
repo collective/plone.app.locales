@@ -82,8 +82,8 @@ class TestI18N(PloneTestCase.PloneTestCase):
             provider_tool = getToolByName(self.portal, provider, None)
             for action in provider_tool.listActions():
                 title = norm(action.title)
-                ctl['plone'].add(title, msgstr=title, filename='action', excerpt=['defined in %s' %provider])
-
+                if action.visible:
+                    ctl['plone'].add(title, msgstr=title, filename='action', excerpt=['defined in %s' %provider])
 
         # description of action icons
         if self.ai_tool:

@@ -43,18 +43,18 @@ def main():
     generatedpot = '%s-generated.pot' % product
     log = 'rebuild-%s-pot.log' % product
 
-    if product == 'archetypes':
+    if product == 'archetypes' or product == 'atreferencebrowserwidget':
         domain = 'plone'
 
     domain = product    
 
     os.chdir('..')
 
-#    if product == 'plone' and not os.path.isfile(generatedpot):
-#        print '''
-#plone-generated.pot was not found. This is needed to build a proper version of
-#plone.pot. Have a look at i18ngenerate.py in this folder for details.'''
-#        sys.exit(4)
+    if product == 'plone' and not os.path.isfile(generatedpot):
+        print '''
+plone-generated.pot was not found. This is needed to build a proper version of
+plone.pot. Have a look at i18ngenerate.py in this folder for details.'''
+        sys.exit(4)
 
     if not os.path.isfile(manualpot):
         print 'No manual pot was found for the given product.'
@@ -89,8 +89,8 @@ def main():
 
     cmd = __PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s ') % (pot, domain, manualpot)
 
-#    if product == 'plone':
-#        cmd += '--merge2 %s ' % generatedpot
+    if product == 'plone' or product == 'atcontenttypes':
+        cmd += '--merge2 %s ' % generatedpot
 
     cmd += '-s %s > %s 2>&1' % (skins, log)
 

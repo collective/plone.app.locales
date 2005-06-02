@@ -36,7 +36,13 @@ def main():
                'History' : 'summary_history',
                'Returned results' : 'summary_search_results',
                'Review History' : 'summary_review_history',
-               'Select roles for each group' : 'summary_roles_for_groups'
+               'Select roles for each group' : 'summary_roles_for_groups',
+               'Events are objects for use in Calendar topical queries on the catalog.' : 'Information about an upcoming event, which can be displayed in the calendar.', # event
+               'File objects can contain arbitrary downloadable files.' : 'An external file uploaded to the portal.', # file
+               'Image objects can be embedded in pages.' : 'An image, which can be referenced in documents or displayed in an album.', # image
+               'Link items are annotated URLs.' : 'A link to an external resource.', # link
+               'News Items contain short text articles and carry a title as well as an optional description.' : 'An announcement that will show up on the news portlet and in the news listing.', # news
+               'Plone folders can define custom \'view\' actions, or will behave like directory listings without one defined.' : 'A folder which can contain other items.' # folder
               }
 
     for poFile in poFiles:
