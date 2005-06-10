@@ -41,7 +41,9 @@ except ImportError:
 
 KNOWS_CALENDAR_NAMES = True
 try:
-    from Products.CMFPlone.i18nl10n import monthname_english, weekdayname_english
+    from Products.CMFPlone.i18nl10n import monthname_english, weekdayname_english, \
+         monthname_msgid, monthname_msgid_abbr, weekdayname_msgid, \
+         weekdayname_msgid_abbr, weekdayname_msgid_short
 except ImportError:
     KNOWS_CALENDAR_NAMES = False
     print "Error importing i18nl10n.py -> no automatic day/monthname generation"
@@ -139,16 +141,16 @@ class TestI18N(PloneTestCase.PloneTestCase):
         if KNOWS_CALENDAR_NAMES:
             for num in range(7):
                 day = weekdayname_english(num) # Monday, Tuesday...
-                ctl['plone'].add(day, msgstr=day, filename='datetime', excerpt=['name of a day, format %A'])
+                ctl['plone'].add(weekdayname_msgid(num), msgstr=day, filename='datetime', excerpt=['name of a day, format %A'])
                 day = weekdayname_english(num, 'a') # Mon, Tue, ...
-                ctl['plone'].add(day, msgstr=day, filename='datetime', excerpt=['abbreviation of a day, format %a'])
+                ctl['plone'].add(weekdayname_msgid_abbr(num), msgstr=day, filename='datetime', excerpt=['abbreviation of a day, format %a'])
                 day = weekdayname_english(num, 'a')[:2] # Mo, Tu, ...
-                ctl['plone'].add(day, msgstr=day, filename='datetime', excerpt=['two letter abbreviation of a day used in the portlet_calendar'])
+                ctl['plone'].add(weekdayname_msgid_short(num), msgstr=day, filename='datetime', excerpt=['two letter abbreviation of a day used in the portlet_calendar'])
             for num in range(1,13):
                 month = monthname_english(num) # January, February...
-                ctl['plone'].add(month, msgstr=month, filename='datetime', excerpt=['name of a month, format %B'])
+                ctl['plone'].add(monthname_msgid(num), msgstr=month, filename='datetime', excerpt=['name of a month, format %B'])
                 month = monthname_english(num, 'a') # Jan, Feb...
-                ctl['plone'].add(month, msgstr=month, filename='datetime', excerpt=['name of a month, format %b'])
+                ctl['plone'].add(monthname_msgid_abbr(num), msgstr=month, filename='datetime', excerpt=['name of a month, format %b'])
 
         # atcontenttypes smart folder options
         # indexes and metadata

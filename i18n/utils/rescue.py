@@ -43,7 +43,16 @@ def main():
                'Link items are annotated URLs.' : 'A link to an external resource.', # link
                'News Items contain short text articles and carry a title as well as an optional description.' : 'An announcement that will show up on the news portlet and in the news listing.', # news
                'Plone folders can define custom \'view\' actions, or will behave like directory listings without one defined.' : 'A folder which can contain other items.', # folder
-               'A placeholder item linking to a \\\"favorite\\\" object in the portal.' : 'A placeholder item linking to a favorite object in the portal.'
+               'A placeholder item linking to a \\\"favorite\\\" object in the portal.' : 'A placeholder item linking to a favorite object in the portal.',
+               'January' : 'month_jan', 'February' : 'month_feb', 'March' : 'month_mar', 'April' : 'month_apr', 'May' : 'month_may', 'June' : 'month_jun',
+               'July' : 'month_jul', 'August' : 'month_aug', 'September' : 'month_sep', 'October' : 'month_oct', 'November' : 'month_nov', 'December' : 'month_dec',
+               'Jan' : 'month_jan_abbr', 'Feb' : 'month_feb_abbr', 'Mar' : 'month_mar_abbr', 'Apr' : 'month_apr_abbr', 'Jun' : 'month_jun_abbr',
+               'Jul' : 'month_jul_abbr', 'Aug' : 'month_aug_abbr', 'Sep' : 'month_sep_abbr', 'Oct' : 'month_oct_abbr', 'Nov' : 'month_nov_abbr', 'Dec' : 'month_dec_abbr',
+               'Monday' : 'weekday_mon', 'Tuesday' : 'weekday_tue', 'Wednesday' : 'weekday_wed', 'Thursday' : 'weekday_thu', 'Friday' : 'weekday_fri',
+               'Saturday' : 'weekday_sat', 'Sunday' : 'weekday_sun', 'Mon' : 'weekday_mon_abbr', 'Tue' : 'weekday_tue_abbr', 'Wed' : 'weekday_wed_abbr',
+               'Thu' : 'weekday_thu_abbr', 'Fri' : 'weekday_fri_abbr', 'Sat' : 'weekday_sat_abbr', 'Sun' : 'weekday_sun_abbr', 'Mo' : 'weekday_mon_short',
+               'Tu' : 'weekday_tue_short', 'We' : 'weekday_wed_short', 'Th' : 'weekday_thu_short', 'Fr' : 'weekday_fri_short', 'Sa' : 'weekday_sat_short',
+               'Su' : 'weekday_sun_short'
               }
 
     for poFile in poFiles:
