@@ -52,7 +52,7 @@ def main():
                'Saturday' : 'weekday_sat', 'Sunday' : 'weekday_sun', 'Mon' : 'weekday_mon_abbr', 'Tue' : 'weekday_tue_abbr', 'Wed' : 'weekday_wed_abbr',
                'Thu' : 'weekday_thu_abbr', 'Fri' : 'weekday_fri_abbr', 'Sat' : 'weekday_sat_abbr', 'Sun' : 'weekday_sun_abbr', 'Mo' : 'weekday_mon_short',
                'Tu' : 'weekday_tue_short', 'We' : 'weekday_wed_short', 'Th' : 'weekday_thu_short', 'Fr' : 'weekday_fri_short', 'Sa' : 'weekday_sat_short',
-               'Su' : 'weekday_sun_short'
+               'Su' : 'weekday_sun_short', 'Required' : 'title_required'
               }
 
     for poFile in poFiles:
