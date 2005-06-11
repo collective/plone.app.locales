@@ -106,9 +106,11 @@ class TestI18N(PloneTestCase.PloneTestCase):
                 if isinstance(obj, States.States):
                     for state in obj.objectValues():
                         ctl['plone'].add(state.getId(), msgstr=state.getId(), filename='workflow_state', excerpt=['defined in %s, title: %s' % (workflow, state.title)])
+                        ctl['plone'].add(state.title, msgstr=state.title, filename='workflow_state', excerpt=['defined in %s, id: %s' % (workflow, state.getId())])
                 elif isinstance(obj, Transitions.Transitions):
                     for transition in obj.objectValues():
                         ctl['plone'].add(transition.getId(), msgstr=transition.getId(), filename='workflow_transition', excerpt=['defined in %s, title: %s' % (workflow, transition.title), 'new state: %s' % transition.new_state_id])
+                        ctl['plone'].add(transition.title, msgstr=transition.title, filename='workflow_transition', excerpt=['defined in %s, id: %s' % (workflow, transition.getId()), 'new state: %s' % transition.new_state_id])
 
 
         # portal types and types actions
