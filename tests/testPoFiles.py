@@ -20,15 +20,12 @@ if __name__ == '__main__':
     execfile(os.path.join(sys.path[0], 'framework.py'))
 
 # for testing of untranslated msgstrs
-whitelist = ['Netscape Navigator',':','Version 4.x','Internet Explorer','[ ${percentage} %]',\
-             'Mozilla','Format','/','Version 1.x','Navigation', 'Version 6.x',\
-             'Version 5.x','Transcript','Description','Default','Normal Text',\
-             'Portrait','Actions','Exception','SMTP port','Sections','Password',\
-             'Calendar','SMTP server','Short Name','Section 508','RSS Feed',\
-             'Powered by Plone','Valid CSS','Valid XHTML','Refresh','Favorite',\
-             'April','August','September','November','December','visible','Download',\
-             'Criteria','Zope Management Interface','${type} Details','${fieldset} Details',\
-             'vCalendar','iCalendar','vCalendar export','iCalendar export']
+whitelist = ['Netscape Navigator',':','Version 4.x','Internet Explorer',\
+             'Version 1.x','Version 6.x','[ ${percentage} %]',\
+             'Version 5.x','Description','Normal Text','Section 508',\
+             'SMTP server','Powered by Plone','Valid XHTML','iCal (Mac OS X)',\
+             'Zope Management Interface','${type} Details','${fieldset} Details',\
+             'vCalendar export','iCalendar export','vCal (Windows, Linux)']
 
 # html entities as they appear in templates
 entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs]
@@ -167,7 +164,7 @@ class TestPoFile(I18NTestCase.I18NTestCase):
                          orig.replace("&quot;","\"")
                          orig.replace("&amp;","&")
                          orig.replace("+"," ")
-                         self.failIf(orig not in whitelist and len(orig) > 6 and orig.lower() == msgstr.lower(),
+                         self.failIf(orig not in whitelist and len(orig) > 10 and orig.lower() == msgstr.lower(),
                              'Warning: msgid is the same as in original english in file %s: %s\n%s' % (poName, msg, orig))
 
                          # all ${foo}'s from the original should be present in the translation
