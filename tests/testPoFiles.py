@@ -161,8 +161,6 @@ class TestPoFile(I18NTestCase.I18NTestCase):
 
                      # msgstr is not the same as the original translation
                      if orig:
-                         orig.replace("&quot;","\"")
-                         orig.replace("&amp;","&")
                          orig.replace("+"," ")
                          self.failIf(orig not in whitelist and len(orig) > 10 and orig.lower() == msgstr.lower(),
                              'Warning: msgid is the same as in original english in file %s: %s\n%s' % (poName, msg, orig))
