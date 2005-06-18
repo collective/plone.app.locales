@@ -229,7 +229,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
                     ctl[domain] = catalog.MessageCatalog(domain=domain)
                 label = dict.get('label')
                 label_msgid = dict.get('label_msgid')
-                desc = dict.get('description')
+                desc = norm(dict.get('description'))
                 desc_msgid = dict.get('description_msgid')
 
                 if label_msgid and label:
