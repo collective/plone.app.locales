@@ -93,7 +93,8 @@ def main():
             'Send a mail to this user' : 'title_send_mail_to_user', 'Show all available content types' : 'title_show_all_content_types', 
             'This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.' : 'title_wcag', 
             'This Plone site is valid XHTML.' : 'title_xhtml', 'legend_comment_details' : 'legend_add_comment', 
-            'box_sign_in' : 'Log in', 'listingheader_undo' : 'Undo', 'help_user_name_caps' : 'help_login_name_caps'
+            'box_sign_in' : 'Log in', 'listingheader_undo' : 'Undo', 'help_user_name_caps' : 'help_login_name_caps',
+            'description_signin_fail_cookies_link' : 'description_login_fail_enable_cookies'
            }
 
     renamed['atreferencebrowserwidget'] = {

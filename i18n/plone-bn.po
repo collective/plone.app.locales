@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-06-19 00:16+0000\n"
+"POT-Creation-Date: 2005-06-19 19:45+0000\n"
 "PO-Revision-Date: 2004-04-18 17:52+0100\n"
 "Last-Translator: Dorneles Trema <dorneles@x3ng.com.br>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -2111,6 +2111,18 @@ msgid "description_edit_topic"
 msgstr "টপিক হল একটি পূর্ব নির্ধারিত্ত সার্চ,যা আপনার বিশেষীকৃত রীতিনীতির সেঙ্গ খাপ খাওয়া সমস্ত্ত আইটেমগুলিকে দেখায়৤ টপিক গুলির মধ্যে সাব-টপিক-ও থাকতে পারে৤"
 
 
+#: ./plone_login/login_failed.pt
+#. <p i18n:translate="description_enable_cookies">
+#.             If your user name and password are correct, the problem may be that
+#.             your browser is not configured to
+#.  ${link}
+#.  .
+#. </p>
+# Original: "If your user name and password are correct, the problem may be that your browser is not configured to ${link} ."
+msgid "description_enable_cookies"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <p i18n:translate="description_error_log_setup">
 #.         This page lists the exceptions that have occurred in this site
@@ -2233,6 +2245,15 @@ msgid "description_logged_out"
 msgstr "<p> আমরা আশা করিছ আমাদের পরিষেবা ব্যবহার করতে আপনার ভালো লেগেছে৤ আপনার সঙ্গে আবার দেখা হবার আশা রাখি৤ <p> <p> (পোর্টাল - টাইটেল টীমের পক্ষ থেকে শুভেচ্ছা জানাই৤"
 
 
+#: ./plone_login/login_failed.pt
+#. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_login_fail_enable_cookies">
+#.             accept cookies
+#. </a>
+# Original: "accept cookies"
+msgid "description_login_fail_enable_cookies"
+msgstr "কুকিজ গ্রহণ করুন"
+
+
 #: ./plone_forms/mail_password_form.pt
 #. <span i18n:translate="description_lost_password" tal:omit-tag="">
 #.     Enter your username below, click
@@ -2330,7 +2351,7 @@ msgid "description_newbie_pointers_yourfolder_link"
 msgstr "আপনার ফোল্ডার"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="description_no_account" tal:condition="python: join and checkPermission('Add portal member', here)" tal:define="join python:[a['url'] for a in actions['user'] if a['id']=='join']">
 #. If you do not have an account here, head over to the
 #.  ${registration_form}
@@ -2345,7 +2366,7 @@ msgstr "আপনার এখানে যদি কোন ঍কউন্ট �
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
 #.         registration form
 #. </a>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href python:join.pop()">
 #.         registration form
 #. </a>
@@ -2616,34 +2637,13 @@ msgid "description_sharing_item"
 msgstr "শেয়ারিং হল আপনার সঙ্গে আপনার কনটেন্টের ওপর অন্যদের সহযোগিতা পেতে অনুমোদন দেবার সহজ রাস্তা৤ এই আইটেম শেয়ার করার জন্য নীচের ফর্মে ব্যিক্তর নাম অথবা ই মেইল ঠিকানা সার্চ করুন, এবং তাদের কে একটি উপযুক্ত ভূমিকায় ঍সাইন করুন৤ সবচেয়ে সাধারণ ব্যবহারটি হল লোক কে ম্যানেজার অনুমতিগুলি দেয়া, যার মানে এই আইটেম এবং তার কনটেন্টস (যদি থাকে) - এর ওপর তাদের সম্পূর্ণ নিয়ন্ত্রণ আছে৤"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="description_sign_in">
 #. To access this part of the site, you need to log in with your user name and password.
 #. </p>
 # Original: "To access this part of the site, you need to log in with your user name and password."
 msgid "description_sign_in"
 msgstr "সাইটের এই অংশটি পাবার জন্য আপনাকে আপনার ইউজার নাম এবং পাসওয়ার্ড সহ লগ ইন করতে হবে৤"
-
-
-#: ./plone_login/login_failed.pt
-#. <p i18n:translate="description_signin_fail_cookies">
-#.             You are not currently signed in because you are not accepting
-#.             cookies. Please make sure that your browser is configured to
-#.  ${link}
-#.  .
-#. </p>
-# Original: "You are not currently signed in because you are not accepting cookies. Please make sure that your browser is configured to ${link} ."
-msgid "description_signin_fail_cookies"
-msgstr "আপনি কুকিজ্ গ্রহণ করছেন না বলে বর্তমানে আপনি সাইন-ইন-এ নেই৤ আপনার ব্রাউজারটি যাতে---(লিংক) এ কনফিউজারেড থাকে সেটি নিশ্চিত করুন৤"
-
-
-#: ./plone_login/login_failed.pt
-#. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_signin_fail_cookies_link">
-#.             accept cookies
-#. </a>
-# Original: "accept cookies"
-msgid "description_signin_fail_cookies_link"
-msgstr "কুকিজ গ্রহণ করুন"
 
 
 #: ./plone_templates/default_error_message.pt
@@ -2975,7 +2975,7 @@ msgid "event_where"
 msgstr "কোথায়"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div i18n:translate="failsafe_login_disabled" tal:condition="python:not auth">
 #.       This feature is not available while cookie authentication is disabled.
 #. </div>
@@ -3720,7 +3720,7 @@ msgid "heading_set_folder_type_restrictions"
 msgstr ""
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <h1 i18n:translate="heading_sign_in">
 #.  Please log in
 #. </h1>
@@ -3745,16 +3745,6 @@ msgstr "সাইন-ইন বিফল"
 # Original: "You are now logged out"
 msgid "heading_signed_out"
 msgstr "এখন আপনি লগড্-আউট হয়েছেন"
-
-
-#: ./plone_login/login_failed.pt
-#. <h1 i18n:translate="heading_signin_fail_cookies">
-#.  Cookies must be
-#.             enabled
-#. </h1>
-# Original: "Cookies must be enabled"
-msgid "heading_signin_fail_cookies"
-msgstr "কুকিজ্ কে অবশ্যই এনাবেল করতে হবে"
 
 
 #: ./plone_templates/default_error_message.pt
@@ -3930,7 +3920,7 @@ msgstr ""
 #.   .
 #.  </tal:block>
 #. </div>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_capslock_password_retrieval">
 #.                 Case sensitive, make sure caps lock is not enabled.
 #.                 If you have forgotten your password,
@@ -4331,11 +4321,10 @@ msgid "help_locally_allowed_types"
 msgstr ""
 
 
-#: ./plone_login/login_form.cpt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_login_name_caps">
 #.     		Login names are case sensitive, make sure the caps lock key is not enabled.
 #. </div>
-## 1 more: ./plone_forms/failsafe_login.pt
 # Original: "Login names are case sensitive, make sure the caps lock key is not enabled."
 #, fuzzy
 msgid "help_login_name_caps"
@@ -4499,7 +4488,7 @@ msgid "help_publishing_comments"
 msgstr "প্রকাশিত ইতিহাসে যুক্ত হবে৤ বহুমুখী আইটেম সিলেক্ট হলে এই কমেন্টটি সকলের সঙ্গে ঍টাচড্ হবে৤"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_remember_my_name">
 #.                 Check this to have your user name filled in automatically when you log in later.
 #. </div>
@@ -6293,7 +6282,7 @@ msgstr ""
 
 #: ./plone_login/login_form.cpt
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;                             onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Log in"/>
 #: ./plone_login/registered.pt
 #. <input class="standalone" i18n:attributes="value label_log_in;" tal:attributes="onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
@@ -6302,16 +6291,13 @@ msgid "label_log_in"
 msgstr "লগ ইন"
 
 
-#: ./plone_login/login_form.cpt
-#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
-#.  Login Name
-#. </label>
-#: ./plone_forms/failsafe_login.pt
-#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
-#.  User Name
-#. </label>
 #: ./plone_portlets/portlet_login.pt
 #. <label for="__ac_name" i18n:translate="label_login_name">
+#.  Login Name
+#. </label>
+#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                                value python:request.get(ac_name, '');                                                tabindex tabindex/next" type="text"/>
+#: ./plone_login/failsafe_login.pt
+#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
 #.  Login Name
 #. </label>
 # Original: "Login Name"
@@ -6559,7 +6545,7 @@ msgstr "এই উত্্পাদনটি পুরানো, পূর্�
 #.  Password
 #. </label>
 #. <input alt="Password" i18n:attributes="title label_password; alt label_password;" id="password" name="password" size="40" tabindex="" tal:attributes="tabindex tabindex/next;" title="Password" type="password" value=""/>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <label i18n:translate="label_password" tal:attributes="for ac_password">
 #.  Password
 #. </label>
@@ -6755,7 +6741,7 @@ msgid "label_relevance_percentage"
 msgstr ""
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <label for="cb_remember" i18n:translate="label_remember_my_name">
 #.  Remember my name.
 #. </label>
@@ -7580,7 +7566,7 @@ msgid "last_login"
 msgstr "শেষ লগ-ইন"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <legend i18n:translate="legend_account_details">
 #.  Account details
 #. </legend>
@@ -8607,7 +8593,7 @@ msgid "reject"
 msgstr "রিজেক্ট"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="remember_to_log_out">
 #.             Please log out or exit your browser when you're done.
 #. </p>

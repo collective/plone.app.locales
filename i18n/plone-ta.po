@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-06-19 00:16+0000\n"
+"POT-Creation-Date: 2005-06-19 19:45+0000\n"
 "PO-Revision-Date: 2004-04-18 17:52+0100\n"
 "Last-Translator: Dorneles Trema <dorneles@x3ng.com.br>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -2109,6 +2109,18 @@ msgid "description_edit_topic"
 msgstr "ஒரு தலைப்பு என்பது, முன்வரையறை செய்யப்பட்ட தேடுதலாகும். நீங்கள் குறிப்பிடும் அனைத்து உருப்படிகளையும் ஒத்துப் போகும் அடிப்படை தத்துவங்களை இது காண்பிக்கிறது. தலைப்புக்கள் துணை தலைப்புக்களையும் கொண்டிருக்கலாம்."
 
 
+#: ./plone_login/login_failed.pt
+#. <p i18n:translate="description_enable_cookies">
+#.             If your user name and password are correct, the problem may be that
+#.             your browser is not configured to
+#.  ${link}
+#.  .
+#. </p>
+# Original: "If your user name and password are correct, the problem may be that your browser is not configured to ${link} ."
+msgid "description_enable_cookies"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <p i18n:translate="description_error_log_setup">
 #.         This page lists the exceptions that have occurred in this site
@@ -2231,6 +2243,15 @@ msgid "description_logged_out"
 msgstr "<p> We hope you enjoyed using our services. We look forward to seeing you again. </p>  <p> Best Regards from the ${portal_title} team. </p><p> எங்கள் சேவைகளை உபயோகிப்பதை நீங்கள் அனுபவித்திருப்பீர்கள் என நம்புகிறோம். உங்களை மீண்டும் பார்ப்பதை நாங்கள் எதிர்நோக்குகிறோம். </p>  <p> மிகச் சிறந்த நல்வாழ்த்துக்கள் ${போர்ட்டல் டைட்டில்}அணியிடமிருந்து. <p>"
 
 
+#: ./plone_login/login_failed.pt
+#. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_login_fail_enable_cookies">
+#.             accept cookies
+#. </a>
+# Original: "accept cookies"
+msgid "description_login_fail_enable_cookies"
+msgstr "குக்கீஸை ஒப்புக்கொள்ளுங்கள்."
+
+
 #: ./plone_forms/mail_password_form.pt
 #. <span i18n:translate="description_lost_password" tal:omit-tag="">
 #.     Enter your username below, click
@@ -2328,7 +2349,7 @@ msgid "description_newbie_pointers_yourfolder_link"
 msgstr "உங்கள் ஃபோல்டர்"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="description_no_account" tal:condition="python: join and checkPermission('Add portal member', here)" tal:define="join python:[a['url'] for a in actions['user'] if a['id']=='join']">
 #. If you do not have an account here, head over to the
 #.  ${registration_form}
@@ -2343,7 +2364,7 @@ msgstr "உங்களுக்கு இங்கே கணக்கு இல
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
 #.         registration form
 #. </a>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href python:join.pop()">
 #.         registration form
 #. </a>
@@ -2614,34 +2635,13 @@ msgid "description_sharing_item"
 msgstr "உங்கள் உட்பொருள்மீது உங்களுடன் இணைந்து அணுக, பிறரை அனுமதிப்பதற்கான ஒரு எளிய வழியே பகிர்தல், இந்த உருப்படியை பகிர, குறிப்பிட்ட நபரின் பெயர் அல்லது மின் அஞ்சல் முகவரியை கீழே தரப்பட்டுள்ள படிவத்தில் தேடுங்கள் மற்றும் ஒரு பொருத்தமான ரோலை அவர்களுக்கு ஒதுக்குங்கள். மிகப் பொதுவான உபயோகமென்னவென்றால், மக்களுக்கு மேலாளர் அனுமதிகள் வழங்குவதுதான். அதாவது, இந்த உருப்படி மற்றும் அதன் உட்கூறுகள் மீது (ஏதாவது இருந்தால்) அவர்களுக்கு முழுமையான கட்டுப்பாடு உள்ளது என்பதுதான் இதன் பொருள்."
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="description_sign_in">
 #. To access this part of the site, you need to log in with your user name and password.
 #. </p>
 # Original: "To access this part of the site, you need to log in with your user name and password."
 msgid "description_sign_in"
 msgstr "தளத்தின் இப்பகுதியை அணுக, உங்கள் உபயோகிப்பாளர் பெயர் மற்றும் நுழைவு வார்த்தையுடன் நீங்கள் உள்ளே நுழைய வேண்டியது அவசியம்."
-
-
-#: ./plone_login/login_failed.pt
-#. <p i18n:translate="description_signin_fail_cookies">
-#.             You are not currently signed in because you are not accepting
-#.             cookies. Please make sure that your browser is configured to
-#.  ${link}
-#.  .
-#. </p>
-# Original: "You are not currently signed in because you are not accepting cookies. Please make sure that your browser is configured to ${link} ."
-msgid "description_signin_fail_cookies"
-msgstr "நீங்கள் தின்பண்டங்களை ஒப்புக் கொள்ளாததால், நீங்கள் தற்போது ஒப்புக் கொள்ளப்படவில்லை. உங்கள் ப்ரௌஸர் $ (இணைப்பு)-உடன் கூட்டு சேர்வதை தயவு செய்வது உறுதி படுத்திக் கொள்ளுங்கள்."
-
-
-#: ./plone_login/login_failed.pt
-#. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_signin_fail_cookies_link">
-#.             accept cookies
-#. </a>
-# Original: "accept cookies"
-msgid "description_signin_fail_cookies_link"
-msgstr "குக்கீஸை ஒப்புக்கொள்ளுங்கள்."
 
 
 #: ./plone_templates/default_error_message.pt
@@ -2973,7 +2973,7 @@ msgid "event_where"
 msgstr "எங்கே"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div i18n:translate="failsafe_login_disabled" tal:condition="python:not auth">
 #.       This feature is not available while cookie authentication is disabled.
 #. </div>
@@ -3718,7 +3718,7 @@ msgid "heading_set_folder_type_restrictions"
 msgstr ""
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <h1 i18n:translate="heading_sign_in">
 #.  Please log in
 #. </h1>
@@ -3743,16 +3743,6 @@ msgstr "வந்து சேர்ந்த குறி தோல்வி"
 # Original: "You are now logged out"
 msgid "heading_signed_out"
 msgstr "நீங்கள் இப்பொழுது வெளியேற்றப்பட்டு விட்டீர்கள்"
-
-
-#: ./plone_login/login_failed.pt
-#. <h1 i18n:translate="heading_signin_fail_cookies">
-#.  Cookies must be
-#.             enabled
-#. </h1>
-# Original: "Cookies must be enabled"
-msgid "heading_signin_fail_cookies"
-msgstr "குக்கீஸ் சாத்தியமாக்கப்பட வேண்டும்."
 
 
 #: ./plone_templates/default_error_message.pt
@@ -3928,7 +3918,7 @@ msgstr ""
 #.   .
 #.  </tal:block>
 #. </div>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_capslock_password_retrieval">
 #.                 Case sensitive, make sure caps lock is not enabled.
 #.                 If you have forgotten your password,
@@ -4329,11 +4319,10 @@ msgid "help_locally_allowed_types"
 msgstr ""
 
 
-#: ./plone_login/login_form.cpt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_login_name_caps">
 #.     		Login names are case sensitive, make sure the caps lock key is not enabled.
 #. </div>
-## 1 more: ./plone_forms/failsafe_login.pt
 # Original: "Login names are case sensitive, make sure the caps lock key is not enabled."
 #, fuzzy
 msgid "help_login_name_caps"
@@ -4497,7 +4486,7 @@ msgid "help_publishing_comments"
 msgstr "பிரசுரிப்பு வரலாற்றில் சேர்க்கப்படும். இரட்டிப்பு உருப்படிகள் தேர்ந்தெடுக்கப்பட்டால் இந்த கருத்து. அவை அனைத்துடனும் இணைக்கப்படும்."
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_remember_my_name">
 #.                 Check this to have your user name filled in automatically when you log in later.
 #. </div>
@@ -6291,7 +6280,7 @@ msgstr ""
 
 #: ./plone_login/login_form.cpt
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;                             onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Log in"/>
 #: ./plone_login/registered.pt
 #. <input class="standalone" i18n:attributes="value label_log_in;" tal:attributes="onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
@@ -6300,16 +6289,13 @@ msgid "label_log_in"
 msgstr "உள்ளே நுழை"
 
 
-#: ./plone_login/login_form.cpt
-#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
-#.  Login Name
-#. </label>
-#: ./plone_forms/failsafe_login.pt
-#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
-#.  User Name
-#. </label>
 #: ./plone_portlets/portlet_login.pt
 #. <label for="__ac_name" i18n:translate="label_login_name">
+#.  Login Name
+#. </label>
+#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                                value python:request.get(ac_name, '');                                                tabindex tabindex/next" type="text"/>
+#: ./plone_login/failsafe_login.pt
+#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
 #.  Login Name
 #. </label>
 # Original: "Login Name"
@@ -6557,7 +6543,7 @@ msgstr "இத் தயாரிப்பு காலம் கடந்தத
 #.  Password
 #. </label>
 #. <input alt="Password" i18n:attributes="title label_password; alt label_password;" id="password" name="password" size="40" tabindex="" tal:attributes="tabindex tabindex/next;" title="Password" type="password" value=""/>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <label i18n:translate="label_password" tal:attributes="for ac_password">
 #.  Password
 #. </label>
@@ -6753,7 +6739,7 @@ msgid "label_relevance_percentage"
 msgstr ""
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <label for="cb_remember" i18n:translate="label_remember_my_name">
 #.  Remember my name.
 #. </label>
@@ -7578,7 +7564,7 @@ msgid "last_login"
 msgstr "இறுதி நுழைவு"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <legend i18n:translate="legend_account_details">
 #.  Account details
 #. </legend>
@@ -8605,7 +8591,7 @@ msgid "reject"
 msgstr "மறுத்தல்"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="remember_to_log_out">
 #.             Please log out or exit your browser when you're done.
 #. </p>

@@ -42,7 +42,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-06-19 00:16+0000\n"
+"POT-Creation-Date: 2005-06-19 19:45+0000\n"
 "PO-Revision-Date: 2005-03-31 23:51+0100\n"
 "Last-Translator: Rastislav Mucha <rastislav.mucha@uniag.sk>\n"
 "Language-Team: slovak <www-fzki@uniag.sk>\n"
@@ -2144,6 +2144,18 @@ msgid "description_edit_topic"
 msgstr "Téma je preddefinované vyhľadávanie zobrazujúce všetky položky vyhovujúce špecifikovaným kritériám. Témy môžu obsahovať podtémy."
 
 
+#: ./plone_login/login_failed.pt
+#. <p i18n:translate="description_enable_cookies">
+#.             If your user name and password are correct, the problem may be that
+#.             your browser is not configured to
+#.  ${link}
+#.  .
+#. </p>
+# Original: "If your user name and password are correct, the problem may be that your browser is not configured to ${link} ."
+msgid "description_enable_cookies"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_error_log_form.pt
 #. <p i18n:translate="description_error_log_setup">
 #.         This page lists the exceptions that have occurred in this site
@@ -2266,6 +2278,15 @@ msgid "description_logged_out"
 msgstr "<p> Tešíme sa na Vašu ďalšiu návštevu. </p>  <p> Zdraví Vás: ${portal_title} </p>"
 
 
+#: ./plone_login/login_failed.pt
+#. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_login_fail_enable_cookies">
+#.             accept cookies
+#. </a>
+# Original: "accept cookies"
+msgid "description_login_fail_enable_cookies"
+msgstr "akceptovanie kúkíkov (cookies)"
+
+
 #: ./plone_forms/mail_password_form.pt
 #. <span i18n:translate="description_lost_password" tal:omit-tag="">
 #.     Enter your username below, click
@@ -2363,7 +2384,7 @@ msgid "description_newbie_pointers_yourfolder_link"
 msgstr "Váš adresár (priečinok)"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="description_no_account" tal:condition="python: join and checkPermission('Add portal member', here)" tal:define="join python:[a['url'] for a in actions['user'] if a['id']=='join']">
 #. If you do not have an account here, head over to the
 #.  ${registration_form}
@@ -2378,7 +2399,7 @@ msgstr "Ak tu nemáte konto, prejdite na ${registration_form} a zaregistrujte sa
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
 #.         registration form
 #. </a>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href python:join.pop()">
 #.         registration form
 #. </a>
@@ -2648,34 +2669,13 @@ msgid "description_sharing_item"
 msgstr "Zdieľanie je jednoduchý spôsob na umožnenie spolupráce iným osobám na Vašom obsahu. Na zdieľanie tejto položky, vyhľadajte meno osoby alebo jej e-mail adresu a priraďte jej vhodnú rolu. Najobvyklejšie je dať osobám práva Managéra, čo im dáva plnú kontrolu nad objektom a jeho obsahom."
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="description_sign_in">
 #. To access this part of the site, you need to log in with your user name and password.
 #. </p>
 # Original: "To access this part of the site, you need to log in with your user name and password."
 msgid "description_sign_in"
 msgstr "Na prístup k tejto časti sídla sa musíte prihlásiť Vašim používateľským menom a heslom."
-
-
-#: ./plone_login/login_failed.pt
-#. <p i18n:translate="description_signin_fail_cookies">
-#.             You are not currently signed in because you are not accepting
-#.             cookies. Please make sure that your browser is configured to
-#.  ${link}
-#.  .
-#. </p>
-# Original: "You are not currently signed in because you are not accepting cookies. Please make sure that your browser is configured to ${link} ."
-msgid "description_signin_fail_cookies"
-msgstr "Neprihlásili ste sa, lebo Váš prehliadač neakceptuje kúkíky (cookies). Zabezpečte, prosím, nakonfigurovanie prehliadača na ${link} ."
-
-
-#: ./plone_login/login_failed.pt
-#. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_signin_fail_cookies_link">
-#.             accept cookies
-#. </a>
-# Original: "accept cookies"
-msgid "description_signin_fail_cookies_link"
-msgstr "akceptovanie kúkíkov (cookies)"
 
 
 #: ./plone_templates/default_error_message.pt
@@ -3006,7 +3006,7 @@ msgid "event_where"
 msgstr "Kde"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div i18n:translate="failsafe_login_disabled" tal:condition="python:not auth">
 #.       This feature is not available while cookie authentication is disabled.
 #. </div>
@@ -3750,7 +3750,7 @@ msgid "heading_set_folder_type_restrictions"
 msgstr ""
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <h1 i18n:translate="heading_sign_in">
 #.  Please log in
 #. </h1>
@@ -3775,16 +3775,6 @@ msgstr "Prihlásenie zlyhalo"
 # Original: "You are now logged out"
 msgid "heading_signed_out"
 msgstr "Ste odhlásená(ý)"
-
-
-#: ./plone_login/login_failed.pt
-#. <h1 i18n:translate="heading_signin_fail_cookies">
-#.  Cookies must be
-#.             enabled
-#. </h1>
-# Original: "Cookies must be enabled"
-msgid "heading_signin_fail_cookies"
-msgstr "Kúkíky (Cookies) musia byť povolené"
 
 
 #: ./plone_templates/default_error_message.pt
@@ -3960,7 +3950,7 @@ msgstr ""
 #.   .
 #.  </tal:block>
 #. </div>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_capslock_password_retrieval">
 #.                 Case sensitive, make sure caps lock is not enabled.
 #.                 If you have forgotten your password,
@@ -4361,11 +4351,10 @@ msgid "help_locally_allowed_types"
 msgstr ""
 
 
-#: ./plone_login/login_form.cpt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_login_name_caps">
 #.     		Login names are case sensitive, make sure the caps lock key is not enabled.
 #. </div>
-## 1 more: ./plone_forms/failsafe_login.pt
 # Original: "Login names are case sensitive, make sure the caps lock key is not enabled."
 #, fuzzy
 msgid "help_login_name_caps"
@@ -4529,7 +4518,7 @@ msgid "help_publishing_comments"
 msgstr "Pripája sa k publikačnej histórii. Ak je vybraných viac položiek, tento komentár bude pripojený k nim všetkým."
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <div class="formHelp" i18n:translate="help_remember_my_name">
 #.                 Check this to have your user name filled in automatically when you log in later.
 #. </div>
@@ -6326,7 +6315,7 @@ msgstr ""
 
 #: ./plone_login/login_form.cpt
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;                             onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Log in"/>
 #: ./plone_login/registered.pt
 #. <input class="standalone" i18n:attributes="value label_log_in;" tal:attributes="onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
@@ -6335,16 +6324,13 @@ msgid "label_log_in"
 msgstr "Prihlásiť sa"
 
 
-#: ./plone_login/login_form.cpt
-#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
-#.  Login Name
-#. </label>
-#: ./plone_forms/failsafe_login.pt
-#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
-#.  User Name
-#. </label>
 #: ./plone_portlets/portlet_login.pt
 #. <label for="__ac_name" i18n:translate="label_login_name">
+#.  Login Name
+#. </label>
+#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                                value python:request.get(ac_name, '');                                                tabindex tabindex/next" type="text"/>
+#: ./plone_login/failsafe_login.pt
+#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
 #.  Login Name
 #. </label>
 # Original: "Login Name"
@@ -6592,7 +6578,7 @@ msgstr "Tento produkt je zastaralý, kliknite na jeho reinštaláciu"
 #.  Password
 #. </label>
 #. <input alt="Password" i18n:attributes="title label_password; alt label_password;" id="password" name="password" size="40" tabindex="" tal:attributes="tabindex tabindex/next;" title="Password" type="password" value=""/>
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <label i18n:translate="label_password" tal:attributes="for ac_password">
 #.  Password
 #. </label>
@@ -6788,7 +6774,7 @@ msgid "label_relevance_percentage"
 msgstr "[ ${percentage} %]"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <label for="cb_remember" i18n:translate="label_remember_my_name">
 #.  Remember my name.
 #. </label>
@@ -7612,7 +7598,7 @@ msgid "last_login"
 msgstr "Posledný log-in"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <legend i18n:translate="legend_account_details">
 #.  Account details
 #. </legend>
@@ -8637,7 +8623,7 @@ msgid "reject"
 msgstr "odmietnuť"
 
 
-#: ./plone_forms/failsafe_login.pt
+#: ./plone_login/failsafe_login.pt
 #. <p i18n:translate="remember_to_log_out">
 #.             Please log out or exit your browser when you're done.
 #. </p>
