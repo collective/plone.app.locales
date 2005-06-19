@@ -43,10 +43,10 @@ def main():
     generatedpot = '%s-generated.pot' % product
     log = 'rebuild-%s-pot.log' % product
 
-    if product == 'archetypes' or product == 'atreferencebrowserwidget':
-        domain = 'plone'
+    domain = product
 
-    domain = product    
+    if product == 'archetypes':
+        domain = 'plone'
 
     os.chdir('..')
 
