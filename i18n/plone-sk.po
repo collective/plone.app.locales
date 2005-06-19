@@ -42,7 +42,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-06-13 21:36+0000\n"
+"POT-Creation-Date: 2005-06-19 00:16+0000\n"
 "PO-Revision-Date: 2005-03-31 23:51+0100\n"
 "Last-Translator: Rastislav Mucha <rastislav.mucha@uniag.sk>\n"
 "Language-Team: slovak <www-fzki@uniag.sk>\n"
@@ -2048,7 +2048,7 @@ msgid "description_broken_products"
 msgstr ""
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <span i18n:translate="description_change_initial_password">
 #.             Before you start exploring, you need to change your original password.
 #.             This ensures that the password you received via email cannot be used in a malicious manner.
@@ -2091,7 +2091,7 @@ msgstr "Konfigurácia Plone a doplnkových produktov."
 #.     Plone
 #.  <sup/>
 #.   and its visual design is
-#.  <acronym title="Copyright"/>
+#.  ${copyright}
 #.     2000-
 #.  ${current_year}
 #.  ${limi}
@@ -2101,7 +2101,8 @@ msgstr "Konfigurácia Plone a doplnkových produktov."
 #.  ${blacktar}
 #.  .
 #. </span>
-# Original: "Plone <sup/> and its visual design is <acronym title=\"Copyright\"/> 2000- ${current_year}  ${limi} , ${runyaga} , ${blacktar} ."
+# Original: "Plone <sup/> and its visual design is ${copyright} 2000- ${current_year}  ${limi} , ${runyaga} , ${blacktar} ."
+#, fuzzy
 msgid "description_copyright"
 msgstr "Copyright 2000-${current_year} na Plone a jeho vizuálny dizajn: ${limi} , ${runyaga} , ${blacktar} ."
 
@@ -2155,7 +2156,7 @@ msgid "description_error_log_setup"
 msgstr "Táto stránka obsahuje zoznam chýb, ktoré sa vyskytli nedávno. Môžete nastaviť koľko chýb sa má uchovávať a či majú byť skopírované do súboru/súborov (logov) obsahujúcich záznamy o udalostich v Zope."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <a href="mail_password_form" i18n:translate="description_failed_login_link">
 #.                Click here to have your password mailed to you if you have forgotten it.
 #. </a>
@@ -2226,7 +2227,7 @@ msgid "description_localrole_select_member"
 msgstr "Zvoľte človeka resp. ľudí a priraďte im role."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <span i18n:translate="description_logged_in">
 #.                 This is the first time that you've logged in to
 #.  ${here}
@@ -2237,19 +2238,19 @@ msgid "description_logged_in"
 msgstr "Po prvý krát ste sa prihlásili sem: ${here} ."
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <p i18n:translate="description_logged_in_explain">
-#.                 Notice that the top right bar has changed. It now
-#.                 contains several personalized items. Use these items
-#.                 to control your settings and your personal area.
-#.                 They will remain as long as you are logged in.
+#.          Notice that the top right bar has changed. It now
+#.          contains several personalized items. Use these items
+#.          to control your settings and your personal area.
+#.          They will remain as long as you are logged in.
 #. </p>
 # Original: "Notice that the top right bar has changed. It now contains several personalized items. Use these items to control your settings and your personal area. They will remain as long as you are logged in."
 msgid "description_logged_in_explain"
 msgstr "Všimnite si zmeny vpravo v hornom riadku. Obsahuje odkazy na personalizované položky. Použite ich na kontrolu Vašich nastavení a osobnej oblasti. Budete ich vidieť len keď ste prihlásená(ý)."
 
 
-#: ./plone_forms/logged_out.pt
+#: ./plone_login/logged_out.pt
 #. <div i18n:translate="description_logged_out" tal:omit-tag="">
 #.  <p>
 #.     	 We hope you enjoyed using our services. We look forward to seeing you again.
@@ -2331,11 +2332,11 @@ msgid "description_my_preferences"
 msgstr "Vaše personálne nastavenia."
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <p i18n:translate="description_newbie_pointers">
-#.                 You might want to head over to
+#.         You might want to head over to
 #.  ${your_folder}
-#.                 and add some content, or
+#.         and add some content, or
 #.  ${set_up_your_preferences}
 #.  .
 #. </p>
@@ -2344,7 +2345,7 @@ msgid "description_newbie_pointers"
 msgstr ""
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <a href="" i18n:translate="description_newbie_pointers_preferences_link" tal:attributes="href python:prefs.pop()" tal:condition="prefs" tal:define="prefs python:[a['url'] for a in actions['user'] if a['id']=='preferences']">
 #.  set up your Preferences
 #. </a>
@@ -2353,7 +2354,7 @@ msgid "description_newbie_pointers_preferences_link"
 msgstr "nastaviť Vaše preferencie"
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <a href="" i18n:translate="description_newbie_pointers_yourfolder_link" tal:attributes="href python:mystuff.pop()" tal:condition="mystuff" tal:define="mystuff python:[a['url'] for a in actions['user'] if a['id']=='mystuff']">
 #.  your folder
 #. </a>
@@ -2373,7 +2374,7 @@ msgid "description_no_account"
 msgstr "Ak tu nemáte konto, prejdite na ${registration_form} a zaregistrujte sa."
 
 
-#: ./plone_forms/login_form.pt
+#: ./plone_login/login_form.cpt
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
 #.         registration form
 #. </a>
@@ -2433,7 +2434,7 @@ msgid "description_no_visible_items_add_paste"
 msgstr "Tento adresár nemá viditeľný obsah. Pridajte obsah stlačením tlačítka pridať, alebo vložte obsah z iného miesta."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_not_logged_in_username_incorrect">
 #.             You are not currently logged in. Your user name and/or password
 #.             may be incorrect.
@@ -2656,7 +2657,7 @@ msgid "description_sign_in"
 msgstr "Na prístup k tejto časti sídla sa musíte prihlásiť Vašim používateľským menom a heslom."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_signin_fail_cookies">
 #.             You are not currently signed in because you are not accepting
 #.             cookies. Please make sure that your browser is configured to
@@ -2668,7 +2669,7 @@ msgid "description_signin_fail_cookies"
 msgstr "Neprihlásili ste sa, lebo Váš prehliadač neakceptuje kúkíky (cookies). Zabezpečte, prosím, nakonfigurovanie prehliadača na ${link} ."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_signin_fail_cookies_link">
 #.             accept cookies
 #. </a>
@@ -2743,7 +2744,7 @@ msgid "description_skin_setup"
 msgstr "Nastavenia ovplyvňujúce vzhľad portálu a použitie šablón."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_still_failure">
 #.             If you are still reaching this page after correctly configuring
 #.             your browser, here are some possible reasons:
@@ -2753,7 +2754,7 @@ msgid "description_still_failure"
 msgstr "Ak sa stále dostávate sem napriek správnemu nastaveniu Vášho prehliadača, medzi možnými príčinami môžu byť:"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <li i18n:translate="description_still_failure_reason1">
 #.                You may be running web filtering software that
 #.                disables cookies.  If so, you will need to configure the
@@ -2765,7 +2766,7 @@ msgid "description_still_failure_reason1"
 msgstr "Môžete byť za web-filtrom, ktorý blokuje kúkíky (cookies). Ak áno, budete musieť nastaviť softwér na ich akceptovanie z adresy ${url}"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <li i18n:translate="description_still_failure_reason2">
 #.                Your computer may be behind a firewall or proxy server
 #.                that prevents cookies from being sent to or from your browser.
@@ -2840,7 +2841,7 @@ msgid "description_undo_action_select"
 msgstr "Vyberte transakciu(ie) a potom kliknite na tlačítko \"Vrátiť späť\" na odstránenie zmien. Hoci je nejaká transakcia uvedená v zozname, nemusí byť odvolateľná, ak neskoršie transakcie modifikovali rovnaké objekty ako táto transakcia (obvykle pomôže vrátenie všetkých takýchto zmien naraz)."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <p i18n:translate="description_use_form_to_change_password">
 #.             Please use the form below to change your password.
 #. </p>
@@ -2899,7 +2900,7 @@ msgid "description_workflow_one_step"
 msgstr "ak chcete aby bol obsah okamžite dostupný pre každého, bez oponentúry, tak použite tento jednokrokový (One step)!"
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_login/registered.pt
 #. <p i18n:translate="description_you_are_registered">
 #.   You have been registered as a member.
 #. </p>
@@ -2908,7 +2909,7 @@ msgid "description_you_are_registered"
 msgstr "Registrácia za člena portálu prebehla úspešne."
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_login/registered.pt
 #. <p i18n:translate="description_you_can_log_on_now">
 #.  Click the button to log in immediately.
 #. </p>
@@ -2917,7 +2918,7 @@ msgid "description_you_can_log_on_now"
 msgstr "Stlačte tlačítko na prihlásenie."
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_login/registered.pt
 #. <p i18n:translate="description_you_will_get_password" tal:condition="ve">
 #. You will receive an email shortly containing your password
 #.     and instructions on how to activate your membership.
@@ -3245,7 +3246,7 @@ msgid "heading_edit_properties"
 msgstr "Upraviť vlastnosti"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h1 i18n:translate="heading_enable_cookies">
 #.  How to Enable Cookies
 #. </h1>
@@ -3338,7 +3339,7 @@ msgid "heading_groups_overview"
 msgstr "Prehľad skupín"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_ie_version_4x">
 #.  Version 4.x
 #. </h4>
@@ -3347,7 +3348,7 @@ msgid "heading_ie_version_4x"
 msgstr "Verzia 4.x"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_ie_version_5x">
 #.  Version 5.x
 #. </h4>
@@ -3356,7 +3357,7 @@ msgid "heading_ie_version_5x"
 msgstr "Verzia 5.x"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_ie_version_6x">
 #.  Version 6.x
 #. </h4>
@@ -3384,7 +3385,7 @@ msgid "heading_installed_transcript"
 msgstr "Záznam (Transcript)"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <a href="" i18n:translate="heading_internet_explorer" tal:attributes="href string:${request/URL}#ie">
 #.  Internet Explorer
 #. </a>
@@ -3459,7 +3460,7 @@ msgid "heading_memberships_current"
 msgstr "Členstvá v skupinách"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_moz_version_1x">
 #.  Version 1.x
 #. </h4>
@@ -3468,7 +3469,7 @@ msgid "heading_moz_version_1x"
 msgstr "Verzia 1.x"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <a href="" i18n:translate="heading_mozilla" tal:attributes="href string:${request/URL}#mozilla">
 #.  Mozilla
 #. </a>
@@ -3489,7 +3490,7 @@ msgid "heading_my_preferences"
 msgstr "Osobné preferencie"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <a href="" i18n:translate="heading_netscape_navigator" tal:attributes="href string:${request/URL}#netscape">
 #.  Netscape Navigator
 #. </a>
@@ -3501,7 +3502,7 @@ msgid "heading_netscape_navigator"
 msgstr "Netscape Navigator"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_netscape_version_4x">
 #.  Version 4.x
 #. </h4>
@@ -3510,7 +3511,7 @@ msgid "heading_netscape_version_4x"
 msgstr "Verzia 4.x"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_netscape_version_6x">
 #.  Version 6.x
 #. </h4>
@@ -3528,7 +3529,7 @@ msgid "heading_no_privileges"
 msgstr "Nedostatočné oprávnenia"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <a href="" i18n:translate="heading_opera" tal:attributes="href string:${request/URL}#opera">
 #.  Opera
 #. </a>
@@ -3614,7 +3615,7 @@ msgid "heading_recently_published"
 msgstr "Publikované položky"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <h1 i18n:translate="heading_registration_form">
 #.  Registration Form
 #. </h1>
@@ -3758,7 +3759,7 @@ msgid "heading_sign_in"
 msgstr "Prihláste sa, prosím"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <h1 i18n:translate="heading_sign_in_failure_auth">
 #.  Sign-in failure
 #. </h1>
@@ -3767,7 +3768,7 @@ msgid "heading_sign_in_failure_auth"
 msgstr "Prihlásenie zlyhalo"
 
 
-#: ./plone_forms/logged_out.pt
+#: ./plone_login/logged_out.pt
 #. <h1 i18n:translate="heading_signed_out">
 #.  You are now logged out
 #. </h1>
@@ -3776,7 +3777,7 @@ msgid "heading_signed_out"
 msgstr "Ste odhlásená(ý)"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <h1 i18n:translate="heading_signin_fail_cookies">
 #.  Cookies must be
 #.             enabled
@@ -3894,7 +3895,7 @@ msgid "heading_views"
 msgstr "Pohľady"
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <h1 i18n:translate="heading_welcome">
 #.  Welcome!
 #. </h1>
@@ -3913,7 +3914,7 @@ msgid "heading_welcome_to"
 msgstr "${sitename} Vás víta"
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <h1 i18n:translate="heading_you_are_now_logged_in">
 #.  You are now logged in
 #. </h1>
@@ -3948,7 +3949,7 @@ msgid "help_boolean_criteria_bool"
 msgstr ""
 
 
-#: ./plone_forms/login_form.pt
+#: ./plone_login/login_form.cpt
 #. <div class="formHelp" i18n:translate="help_capslock_password_retrieval">
 #.                 Case sensitive, make sure caps lock is not enabled.
 #.  <tal:block condition="python:checkPermission('Mail forgotten password', here)">
@@ -4009,11 +4010,11 @@ msgid "help_comment_to_link"
 msgstr "Komentár k tomuto linku."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <div class="formHelp" i18n:translate="help_confirm_password">
 #.                         Enter your new password again. The passwords must be identical.
 #. </div>
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_confirm_password">
 #.                     Re-enter the password. Make sure the passwords are identical.
 #. </div>
@@ -4114,15 +4115,17 @@ msgstr "Vaše aktuálne heslo."
 
 
 #: widget_description
-#. of BooleanWidget, for label: Use Custom View
-# Original: "Toggles the view used to display the search results.  If selected, the view will use a table with fields determined by the values selected in 'Custom View Fields', otherwise the default listing will be used."
+#. of BooleanWidget, for label: Display as Table
+# Original: "Columns in the table are controlled by 'Table Columns' below."
+#, fuzzy
 msgid "help_custom_view"
 msgstr ""
 
 
 #: widget_description
-#. of InAndOutWidget, for label: Custom View Fields
-# Original: "If 'Use Custom View' is selected, the view will use a table with fields determined by the values selected in 'Custom View Fields'."
+#. of InAndOutWidget, for label: Table Columns
+# Original: "Select which fields to display when 'Display as Table' is checked."
+#, fuzzy
 msgid "help_custom_view_fields"
 msgstr ""
 
@@ -4186,7 +4189,7 @@ msgid "help_effective_date"
 msgstr "Dátum odkedy bude položka prístupná (samozrejme musí byť tiež publikovaná). Ak žiadny nezvolíte, tak bude dostupná okamžite."
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_email_creation">
 #.                     Enter an email address. This is necessary in case the password
 #.                     is lost. We respect your privacy, and will not give the address
@@ -4195,13 +4198,6 @@ msgstr "Dátum odkedy bude položka prístupná (samozrejme musí byť tiež pub
 # Original: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 msgid "help_email_creation"
 msgstr "Vložte e-mail adresu. Nutné, keď chcete získať Vaše heslo, ak sa stane pre Vás nedostupné (napr. ho zabudnete)."
-
-
-#: widget_description
-#. of LinesWidget, for label: Attendees
-# Original: " "
-msgid "help_event_attendees"
-msgstr ""
 
 
 #: widget_description
@@ -4232,7 +4228,7 @@ msgid "help_format_wysiwyg"
 msgstr "Ak si nie ste istý, aký formát použiť, zvoľte Obyčajný (Plain) Text a napíšte dokument ako obvykle."
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_full_name_creation">
 #.               Enter full name, eg. John Smith.
 #. </div>
@@ -4305,13 +4301,6 @@ msgid "help_int_criteria_value2"
 msgstr ""
 
 
-#: widget_description
-#. of IntegerWidget, for label: Number of Items
-# Original: "If 'Limit Number of Items' is selected, only the first 'Number of Items' will be displayed "
-msgid "help_item_count"
-msgstr ""
-
-
 #: ./plone_content/metadata_edit_form.cpt
 #. <div class="formHelp" i18n:translate="help_keyword">
 #.                   Keywords relate different types of content to each other.
@@ -4332,8 +4321,9 @@ msgstr "Jazyk v ktorom je daná položka."
 
 
 #: widget_description
-#. of BooleanWidget, for label: Limit Number of Items
-# Original: "Toggles limitation of number of items displayed. If selected, only the first 'Number of Items' will be displayed."
+#. of BooleanWidget, for label: Limit Search Results
+# Original: "If selected, only the 'Number of Items' indicated below will be displayed."
+#, fuzzy
 msgid "help_limit_number"
 msgstr ""
 
@@ -4371,6 +4361,17 @@ msgid "help_locally_allowed_types"
 msgstr ""
 
 
+#: ./plone_login/login_form.cpt
+#. <div class="formHelp" i18n:translate="help_login_name_caps">
+#.     		Login names are case sensitive, make sure the caps lock key is not enabled.
+#. </div>
+## 1 more: ./plone_forms/failsafe_login.pt
+# Original: "Login names are case sensitive, make sure the caps lock key is not enabled."
+#, fuzzy
+msgid "help_login_name_caps"
+msgstr "Užívateľské mená sú citlivé na veľkosť písmen, presvedčte sa, že Caps Lock nie je aktivovaný."
+
+
 #: ./plone_prefs/personalize_form.cpt
 #. <div class="formHelp" i18n:translate="help_look">
 #.                 Appearance of the site.
@@ -4406,7 +4407,7 @@ msgid "help_new_keyword"
 msgstr "Každé nové kľúčové slovo musí byť na novom riadku."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <div class="formHelp" i18n:translate="help_new_password">
 #.                         Enter your new password. Minimum 5 characters.
 #. </div>
@@ -4433,7 +4434,7 @@ msgid "help_no_selectable_default_pages"
 msgstr ""
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_password_creation">
 #.                     Minimum 5 characters.
 #. </div>
@@ -4526,13 +4527,6 @@ msgstr "Vloženie alebo zmena portrétu: kliknite \"Vyhľadať (Browse)\" ; vybe
 # Original: "Will be added to the publishing history. If multiple items are selected, this comment will be attached to all of them."
 msgid "help_publishing_comments"
 msgstr "Pripája sa k publikačnej histórii. Ak je vybraných viac položiek, tento komentár bude pripojený k nim všetkým."
-
-
-#: widget_description
-#. of ReferenceBrowserWidget, for label: Related Item(s)
-# Original: " "
-msgid "help_related_items"
-msgstr ""
 
 
 #: ./plone_forms/failsafe_login.pt
@@ -4920,20 +4914,7 @@ msgid "help_use_acquisition"
 msgstr "Použiť akvizíciu na získanie nastavení resp. údajov"
 
 
-#: ./plone_forms/login_form.pt
-#. <div class="formHelp" i18n:translate="help_user_name_caps">
-#.     		Login names are case sensitive, make sure the caps lock key is not enabled.
-#. </div>
-#: ./plone_forms/failsafe_login.pt
-#. <div class="formHelp" i18n:translate="help_user_name_caps">
-#.     		User names are case sensitive, make sure the caps lock key is not enabled.
-#. </div>
-# Original: "User names are case sensitive, make sure the caps lock key is not enabled."
-msgid "help_user_name_caps"
-msgstr "Užívateľské mená sú citlivé na veľkosť písmen, presvedčte sa, že Caps Lock nie je aktivovaný."
-
-
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_user_name_creation_casesensitive">
 #.                     Enter a user name, usually something like
 #.                     'jsmith'. No spaces or special characters.
@@ -5213,6 +5194,24 @@ msgid "label_author"
 msgstr "Autor(ka)"
 
 
+#: ./plone_content/author.cpt
+#. <a href="#" i18n:translate="label_author_external_home_page" tal:attributes="href authorinfo/home_page">
+#.  Author's external home page
+#. </a>
+# Original: "Author's external home page"
+msgid "label_author_external_home_page"
+msgstr ""
+
+
+#: ./plone_content/author.cpt
+#. <a href="#" i18n:translate="label_author_internal_home_page" tal:attributes="href authorinfo/home_page">
+#.  Author's home page in this site
+#. </a>
+# Original: "Author's home page in this site"
+msgid "label_author_internal_home_page"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_install_product_readme.pt
 #. <a class="link-parent" href="" i18n:translate="label_back_to_addremove_products" tal:attributes="href string: $portal_url/prefs_install_products_form">
 #.     Back to Add/Remove Products
@@ -5335,7 +5334,7 @@ msgid "label_change_ownership"
 msgstr ""
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <input class="standalone" i18n:attributes="value label_change_password;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Change Password"/>
 #: ./plone_prefs/password_form.pt
 #. <input class="context" i18n:attributes="value label_change_password;" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Change Password"/>
@@ -5452,16 +5451,16 @@ msgid "label_compare"
 msgstr "Porovnať"
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <label i18n:translate="label_confirm_password">
 #.  Confirm Password
 #. </label>
-#: ./plone_forms/join_form.cpt
-#. <label i18n:translate="label_confirm_password">
-#.  Confirm password
-#. </label>
 #: ./plone_prefs/password_form.pt
 #. <label for="password_confirm" i18n:translate="label_confirm_password">
+#.  Confirm password
+#. </label>
+#: ./plone_login/join_form.cpt
+#. <label i18n:translate="label_confirm_password">
 #.  Confirm password
 #. </label>
 # Original: "Confirm password"
@@ -5606,15 +5605,17 @@ msgstr "Aktuálne heslo"
 
 
 #: widget_label
-#. of BooleanWidget, description: Toggles the view used to display the search results.  If selected, the view will use a table with fields determined by the values selected in 'Custom View Fields', otherwise the default listing will be used.
-# Original: "Use Custom View"
+#. of BooleanWidget, description: Columns in the table are controlled by 'Table Columns' below.
+# Original: "Display as Table"
+#, fuzzy
 msgid "label_custom_view"
 msgstr ""
 
 
 #: widget_label
-#. of InAndOutWidget, description: If 'Use Custom View' is selected, the view will use a table with fields determined by the values selected in 'Custom View Fields'.
-# Original: "Custom View Fields"
+#. of InAndOutWidget, description: Select which fields to display when 'Display as Table' is checked.
+# Original: "Table Columns"
+#, fuzzy
 msgid "label_custom_view_fields"
 msgstr ""
 
@@ -5758,7 +5759,7 @@ msgstr "Efektívny (počiatočný) dátum"
 #. <label for="email" i18n:translate="label_email">
 #.  E-mail
 #. </label>
-#: ./plone_forms/join_form.cpt
+#: ./plone_forms/member_search_form.pt
 #. <label i18n:translate="label_email">
 #.  E-mail
 #. </label>
@@ -5979,7 +5980,7 @@ msgstr "Formát"
 #. <label for="fullname" i18n:translate="label_full_name">
 #.  Full name
 #. </label>
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <label i18n:translate="label_full_name">
 #.  Full Name
 #. </label>
@@ -6197,7 +6198,7 @@ msgstr ""
 
 
 #: widget_label
-#. of IntegerWidget, description: If 'Limit Number of Items' is selected, only the first 'Number of Items' will be displayed
+#. of IntegerWidget, description:
 # Original: "Number of Items"
 msgid "label_item_count"
 msgstr ""
@@ -6244,9 +6245,10 @@ msgstr "Posledné prihlásenie"
 
 
 #: widget_label
-#. of BooleanWidget, description: Toggles limitation of number of items displayed. If selected, only the first 'Number of Items' will be displayed.
+#. of BooleanWidget, description: If selected, only the 'Number of Items' indicated below will be displayed.
 # ATTopic
-# Original: "Limit Number of Items"
+# Original: "Limit Search Results"
+#, fuzzy
 msgid "label_limit_number"
 msgstr ""
 
@@ -6322,26 +6324,27 @@ msgid "label_location"
 msgstr ""
 
 
-#: ./plone_portlets/portlet_login.pt
-#. <h5 i18n:translate="label_log_in">
-#.  Log in
-#. </h5>
+#: ./plone_login/login_form.cpt
+#. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;                             onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
 #: ./plone_forms/failsafe_login.pt
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Log in"/>
-#: ./plone_forms/registered.pt
-#. <input class="standalone" i18n:attributes="value label_log_in;" type="submit" value="Log in"/>
+#: ./plone_login/registered.pt
+#. <input class="standalone" i18n:attributes="value label_log_in;" tal:attributes="onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
 # Original: "Log in"
 msgid "label_log_in"
 msgstr "Prihlásiť sa"
 
 
-#: ./plone_portlets/portlet_login.pt
-#. <label for="__ac_name" i18n:translate="label_login_name">
+#: ./plone_login/login_form.cpt
+#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
 #.  Login Name
 #. </label>
-#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                                value python:request.get(ac_name, '');                                                tabindex tabindex/next" type="text"/>
-#: ./plone_forms/login_form.pt
+#: ./plone_forms/failsafe_login.pt
 #. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
+#.  User Name
+#. </label>
+#: ./plone_portlets/portlet_login.pt
+#. <label for="__ac_name" i18n:translate="label_login_name">
 #.  Login Name
 #. </label>
 # Original: "Login Name"
@@ -6372,13 +6375,31 @@ msgid "label_look"
 msgstr "Vzhľad"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <label for="cb_mailme" i18n:translate="label_mail_password">
 #.  Send a mail with the password
 #. </label>
 # Original: "Send a mail with the password"
 msgid "label_mail_password"
 msgstr "Poslať e-mail s heslom"
+
+
+#: ./plone_content/author.cpt
+#. <span i18n:translate="label_main_language">
+#.  Main Language:
+#. </span>
+# Original: "Main Language:"
+msgid "label_main_language"
+msgstr ""
+
+
+#: ./plone_content/author.cpt
+#. <label for="message" i18n:translate="label_message">
+#.                 Message
+#. </label>
+# Original: "Message"
+msgid "label_message"
+msgstr ""
 
 
 #: ./plone_content/metadata_edit_form.cpt
@@ -6447,7 +6468,7 @@ msgid "label_new_owner"
 msgstr "Nový vlastník"
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <label i18n:translate="label_new_password">
 #.  New password
 #. </label>
@@ -6589,7 +6610,7 @@ msgid "label_password_policy"
 msgstr "Politika hesiel"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="label_password_will_be_mailed">
 #.               A password will be generated and
 #.               e-mailed to you to complete the registration process.
@@ -6740,7 +6761,7 @@ msgid "label_refresh"
 msgstr "Obnoviť"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <input class="context" i18n:attributes="value label_register;" name="form.button.Register" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Register"/>
 # Original: "Register"
 msgid "label_register"
@@ -7184,6 +7205,10 @@ msgstr ""
 #. <label for="title" i18n:translate="label_subject">
 #.  Subject
 #. </label>
+#: ./plone_content/author.cpt
+#. <label for="subject" i18n:translate="label_subject">
+#.                 Subject
+#. </label>
 # Original: "Subject"
 msgid "label_subject"
 msgstr "Subjekt"
@@ -7451,8 +7476,8 @@ msgstr "Užívateľ"
 #. <option i18n:translate="label_user_name" value="name">
 #.                             User Name
 #. </option>
-#: ./plone_forms/failsafe_login.pt
-#. <label i18n:translate="label_user_name" tal:attributes="for ac_name">
+#: ./plone_login/join_form.cpt
+#. <label i18n:translate="label_user_name">
 #.  User Name
 #. </label>
 # Original: "User Name"
@@ -7696,6 +7721,15 @@ msgid "legend_document_details"
 msgstr "Detaily dokumentu"
 
 
+#: ./plone_content/author.cpt
+#. <legend i18n:translate="legend_feedback_for_author">
+#.  Feedback for author
+#. </legend>
+# Original: "Feedback for author"
+msgid "legend_feedback_for_author"
+msgstr ""
+
+
 #: ./plone_forms/member_search_form.pt
 #. <label i18n:translate="legend_group">
 #.   Group
@@ -7806,7 +7840,7 @@ msgid "legend_note_reply_anonymous"
 msgstr "Pozn.: nie ste prihlásená(ý). Môžete vložiť Vaše meno a heslo nižšie. Ak to neurobíte, Váš komentár bude vložený ako anonymný."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <legend i18n:translate="legend_password_details">
 #.  Password Details
 #. </legend>
@@ -7815,7 +7849,7 @@ msgid "legend_password_details"
 msgstr "Detaily hesla"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <legend i18n:translate="legend_personal_details">
 #.  Personal Details
 #. </legend>
@@ -8184,7 +8218,16 @@ msgid "local_role_warning_type"
 msgstr ""
 
 
-#: ./plone_forms/login_form.pt
+#: ./plone_login/login_success.pt
+#. <a href="" i18n:translate="login_came_from" tal:attributes="href came_from">
+#.           Click here to continue to the page from which you came.
+#. </a>
+# Original: "Click here to continue to the page from which you came."
+msgid "login_came_from"
+msgstr ""
+
+
+#: ./plone_login/login_form.cpt
 #. <div i18n:translate="login_form_disabled" tal:condition="python: not auth">
 #.     While cookie authentication is disabled, cookie-based login is not available.
 #. </div>
@@ -8577,7 +8620,7 @@ msgid "read_more"
 msgstr "Viac..."
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_login/registered.pt
 #. <div i18n:translate="registered_disabled" tal:condition="python: not auth">
 #.    Cookie authentication has been disabled.
 #. </div>
@@ -8726,6 +8769,13 @@ msgid "summary_assigned_roles"
 msgstr ""
 
 
+#: ./plone_content/author.cpt
+#. <table class="listing" i18n:attributes="summary summary_author_content_list;" summary="Lists content written by an author grouped by content type">
+# Original: "Lists content written by an author grouped by content type"
+msgid "summary_author_content_list"
+msgstr ""
+
+
 #: ./plone_forms/folder_localrole_form.pt
 #. <table class="listing" i18n:attributes="summary summary_available_groups;" summary="Available groups">
 # Original: "Available groups"
@@ -8869,7 +8919,7 @@ msgid "text_group"
 msgstr "Skupina"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie4_cookies_step1">
 #.  Click View on the menu at the top of your browser and select Internet Options
 #. </li>
@@ -8878,7 +8928,7 @@ msgid "text_ie4_cookies_step1"
 msgstr "Kliknite na Zobraziť (View) v hornom menu prehliadača a vyberte Nastavenia internetu (Internet Options)"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie4_cookies_step2">
 #.  Click the Security tab at the top of the screen
 #. </li>
@@ -8887,7 +8937,7 @@ msgid "text_ie4_cookies_step2"
 msgstr "Kliknite na záložku Bezpečnosť (Security) hore"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie4_cookies_step3">
 #.  Click Custom Level and scroll down to the Cookies section
 #. </li>
@@ -8896,7 +8946,7 @@ msgid "text_ie4_cookies_step3"
 msgstr "Vyberte Vlastné nastavenia (Custom Level) a choďte do sekcie Cookies"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie4_cookies_step4">
 #.  Select &quot;Always accept cookies&quot; or &quot;Prompt before accepting cookies&quot; and click OK
 #. </li>
@@ -8905,7 +8955,7 @@ msgid "text_ie4_cookies_step4"
 msgstr "Zvoľte \"Akceptovať všetky cookies (Always accept cookies)\" alebo \"Varovať pred akceptovaním cookies (Prompt before accepting cookies)\" a dajte OK"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie5_cookies_step1">
 #.  Click Tools on the menu at the top of your browser and select Internet Options
 #. </li>
@@ -8914,7 +8964,7 @@ msgid "text_ie5_cookies_step1"
 msgstr "Kliknite na Nástroje (Tools) v hornom menu prehliadača a vyberte Nastavenia internetu (Internet Options)"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie5_cookies_step2">
 #.  Click the Security tab at the top of the screen
 #. </li>
@@ -8923,7 +8973,7 @@ msgid "text_ie5_cookies_step2"
 msgstr "Kliknite na záložku Bezpečnosť (Security) hore"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie5_cookies_step3">
 #.  Click Custom Level and scroll down to the Cookies section
 #. </li>
@@ -8932,7 +8982,7 @@ msgid "text_ie5_cookies_step3"
 msgstr "Vyberte Vlastné nastavenia (Custom Level) a choďte do sekcie Cookies"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie5_cookies_step4">
 #.  Set &quot;Allow per-session cookies&quot; to Enable and click OK
 #. </li>
@@ -8941,7 +8991,7 @@ msgid "text_ie5_cookies_step4"
 msgstr "Prepnite na \"Povoliť per-session cookies (Allow per-session cookies)\" a kliknite OK"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie6_cookies_step1">
 #.  Click Tools on the menu at the top of your browser and select Internet Options
 #. </li>
@@ -8950,7 +9000,7 @@ msgid "text_ie6_cookies_step1"
 msgstr "Kliknite na Nástroje (Tools) v hornom menu prehliadača a vyberte Nastavenia internetu (Internet Options)"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie6_cookies_step2">
 #.  Click the Privacy tab at the top of the screen
 #. </li>
@@ -8959,7 +9009,7 @@ msgid "text_ie6_cookies_step2"
 msgstr "Kliknite na záložku Súkromie (Privacy) hore"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie6_cookies_step3">
 #.  Move the slider to Medium and click OK
 #. </li>
@@ -8968,7 +9018,7 @@ msgid "text_ie6_cookies_step3"
 msgstr "Presuňte posuvník na strednú (Medium) úroveň a kliknite OK"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_moz_cookies_step1">
 #.  Click Edit on the menu at the top of your browser and select Preferences
 #. </li>
@@ -8977,7 +9027,7 @@ msgid "text_moz_cookies_step1"
 msgstr "Kliknite Upraviť (Edit) v hornom menu prehliadača a vyberte Predvoľby (Preferences)"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_moz_cookies_step2">
 #.  Find &quot;Privacy &amp; Security&quot; in the menu on the left.  If there is a [+] to the left of &quot;Privacy &amp; Security&quot;, click it.
 #. </li>
@@ -8986,7 +9036,7 @@ msgid "text_moz_cookies_step2"
 msgstr "Vyhľadajte \"Bezpečnosť a súkromie (Privacy & Security)\" v ľavom menu. Ak vidíte trojuholník orientovaný doprava na Bezpečnosť a súkromie (Privacy & Security), kliknite naň."
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_moz_cookies_step3">
 #.  Select &quot;Cookies&quot;.
 #. </li>
@@ -8995,7 +9045,7 @@ msgid "text_moz_cookies_step3"
 msgstr "Vyberte \"Kúkíky (Cookies)\" pod \"Bezpečnosť a súkromie (Privacy & Security)\""
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_moz_cookies_step4">
 #.  Select &quot;Enable cookies for the originating web site only&quot; or &quot;Enable all cookies&quot; and click &quot;OK&quot;
 #. </li>
@@ -9004,7 +9054,7 @@ msgid "text_moz_cookies_step4"
 msgstr "Zvoľte \"Povoliť Cookies len z pôvodného servera (Enable cookies for the originating web site only)\" alebo \"Povoliť všetky Cookies (Enable all cookies)\" a kliknite na \"OK\""
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape4_cookies_step1">
 #.  Click Edit on the menu at the top of your browser and select Preferences
 #. </li>
@@ -9013,7 +9063,7 @@ msgid "text_netscape4_cookies_step1"
 msgstr "Kliknite Editovať (Edit) v hornom menu prehliadača a vyberte Nastavenia (Preferences)"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape4_cookies_step2">
 #.  Select &quot;Advanced&quot;
 #. </li>
@@ -9022,7 +9072,7 @@ msgid "text_netscape4_cookies_step2"
 msgstr "Vyberte \"Pokročilé (Advanced)\""
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape4_cookies_step3">
 #.  Select &quot;Accept all cookies&quot; or &quot;Accept only cookies that get sent back to the originating server&quot; and click OK
 #. </li>
@@ -9031,7 +9081,7 @@ msgid "text_netscape4_cookies_step3"
 msgstr "Zvoľte \"Akceptovať všetky kúkíky (Accept all cookies)\" alebo \"Akceptovať len kúkíky zasielané pôvodnému serveru (Accept only cookies that get sent back to the originating server)\" a kliknite na \"OK\""
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape6_cookies_step1">
 #.  Click Edit on the menu at the top of your browser and select Preferences
 #. </li>
@@ -9040,7 +9090,7 @@ msgid "text_netscape6_cookies_step1"
 msgstr "Kliknite Upraviť (Edit) v hornom menu prehliadača a vyberte Nastavenia (Preferences)"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape6_cookies_step2">
 #.  Find &quot;Privacy &amp; Security&quot; in the menu on the left.  If there is a triangle pointing to the right next to Privacy &amp; Security, click it.
 #. </li>
@@ -9049,7 +9099,7 @@ msgid "text_netscape6_cookies_step2"
 msgstr "Vyhľadajte \"Bezpečnosť a súkromie (Privacy & Security)\" v ľavom menu. Ak vidíte trojuholník orientovaný doprava na Bezpečnosť a súkromie (Privacy & Security), kliknite naň."
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape6_cookies_step3">
 #.  Select &quot;Cookies&quot; under &quot;Privacy &amp; Security&quot;
 #. </li>
@@ -9058,7 +9108,7 @@ msgid "text_netscape6_cookies_step3"
 msgstr "Vyberte \"Kúkíky (Cookies)\" pod \"Bezpečnosť a súkromie (Privacy & Security)\""
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape6_cookies_step4">
 #.  Select &quot;Enable cookies for the originating web site only&quot; or &quot;Enable all cookies&quot; and click &quot;OK&quot;
 #. </li>
@@ -9076,6 +9126,15 @@ msgid "text_no_new_items"
 msgstr "Prázdne."
 
 
+#: ./plone_content/author.cpt
+#. <div class="portalMessage" i18n:translate="text_no_user_by_name">
+#.                 No user by that name
+#. </div>
+# Original: "No user by that name"
+msgid "text_no_user_by_name"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_search_macros.pt
 #. <p i18n:translate="text_nomatches" tal:condition="not:batch">
 #.  No matches
@@ -9089,7 +9148,7 @@ msgid "text_nomatches"
 msgstr "Bez výsledkov"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_opera_cookies_step1">
 #.  Press F12
 #. </li>
@@ -9098,7 +9157,7 @@ msgid "text_opera_cookies_step1"
 msgstr "Stlačiť F12"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_opera_cookies_step2">
 #.  Click &quot;Enable cookies&quot;
 #. </li>
@@ -9276,6 +9335,13 @@ msgstr ""
 #. <a class="folderAddSettings" href="#" i18n:attributes="title title_configure_addable_content_types;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
 # Original: "Configure which content types can be added here"
 msgid "title_configure_addable_content_types"
+msgstr ""
+
+
+#: ./plone_templates/footer.pt
+#. <acronym i18n:attributes="title title_copyright;" i18n:name="copyright" title="Copyright"/>
+# Original: "Copyright"
+msgid "title_copyright"
 msgstr ""
 
 

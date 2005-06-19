@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-06-13 21:36+0000\n"
+"POT-Creation-Date: 2005-06-19 00:16+0000\n"
 "PO-Revision-Date: 2005-05-23 20:53+0200\n"
 "Last-Translator: Tiberiu Ichim <tibi@life.org.ro>\n"
 "Language-Team: Romanian <plone-i18n@lists.sourceforge.net>\n"
@@ -2008,7 +2008,7 @@ msgid "description_broken_products"
 msgstr ""
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <span i18n:translate="description_change_initial_password">
 #.             Before you start exploring, you need to change your original password.
 #.             This ensures that the password you received via email cannot be used in a malicious manner.
@@ -2051,7 +2051,7 @@ msgstr "Zona de configurare Plone si Produse Add-on."
 #.     Plone
 #.  <sup/>
 #.   and its visual design is
-#.  <acronym title="Copyright"/>
+#.  ${copyright}
 #.     2000-
 #.  ${current_year}
 #.  ${limi}
@@ -2061,7 +2061,8 @@ msgstr "Zona de configurare Plone si Produse Add-on."
 #.  ${blacktar}
 #.  .
 #. </span>
-# Original: "Plone <sup/> and its visual design is <acronym title=\"Copyright\"/> 2000- ${current_year}  ${limi} , ${runyaga} , ${blacktar} ."
+# Original: "Plone <sup/> and its visual design is ${copyright} 2000- ${current_year}  ${limi} , ${runyaga} , ${blacktar} ."
+#, fuzzy
 msgid "description_copyright"
 msgstr "Plone este Copyright 2000-${current_year} de catre ${limi}, ${runyaga}, ${blacktar}."
 
@@ -2115,7 +2116,7 @@ msgid "description_error_log_setup"
 msgstr "Aceasta pagina listeaza exceptiile care au avut loc recent pe site. Poti configura cate exceptii sa fie pastrate si daca exceptiile sa fie copiate in jurnalul de evenimente al Zope."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <a href="mail_password_form" i18n:translate="description_failed_login_link">
 #.                Click here to have your password mailed to you if you have forgotten it.
 #. </a>
@@ -2186,7 +2187,7 @@ msgid "description_localrole_select_member"
 msgstr "Selecteaza unul sau mai multi membri si un drepturile pe care vrei sa le atribui."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <span i18n:translate="description_logged_in">
 #.                 This is the first time that you've logged in to
 #.  ${here}
@@ -2197,19 +2198,19 @@ msgid "description_logged_in"
 msgstr "Aceasta e prima data cand te-ai autentificat pe ${here}."
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <p i18n:translate="description_logged_in_explain">
-#.                 Notice that the top right bar has changed. It now
-#.                 contains several personalized items. Use these items
-#.                 to control your settings and your personal area.
-#.                 They will remain as long as you are logged in.
+#.          Notice that the top right bar has changed. It now
+#.          contains several personalized items. Use these items
+#.          to control your settings and your personal area.
+#.          They will remain as long as you are logged in.
 #. </p>
 # Original: "Notice that the top right bar has changed. It now contains several personalized items. Use these items to control your settings and your personal area. They will remain as long as you are logged in."
 msgid "description_logged_in_explain"
 msgstr "Vei observa ca bara de sus dreapta s-a schimbat, acum continand cateva articole personalizate. Va ramane asa cat timp esti autentificat si iti va permite sa controlezi setarile si directorul tau personal."
 
 
-#: ./plone_forms/logged_out.pt
+#: ./plone_login/logged_out.pt
 #. <div i18n:translate="description_logged_out" tal:omit-tag="">
 #.  <p>
 #.     	 We hope you enjoyed using our services. We look forward to seeing you again.
@@ -2291,11 +2292,11 @@ msgid "description_my_preferences"
 msgstr "Setarile personale"
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <p i18n:translate="description_newbie_pointers">
-#.                 You might want to head over to
+#.         You might want to head over to
 #.  ${your_folder}
-#.                 and add some content, or
+#.         and add some content, or
 #.  ${set_up_your_preferences}
 #.  .
 #. </p>
@@ -2304,7 +2305,7 @@ msgid "description_newbie_pointers"
 msgstr "Ai putea sa te indrepti spre ${your_folder} si sa adaugi continut, sau ${set_up_your_preferences}."
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <a href="" i18n:translate="description_newbie_pointers_preferences_link" tal:attributes="href python:prefs.pop()" tal:condition="prefs" tal:define="prefs python:[a['url'] for a in actions['user'] if a['id']=='preferences']">
 #.  set up your Preferences
 #. </a>
@@ -2313,7 +2314,7 @@ msgid "description_newbie_pointers_preferences_link"
 msgstr "seteaza-ti preferintele"
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <a href="" i18n:translate="description_newbie_pointers_yourfolder_link" tal:attributes="href python:mystuff.pop()" tal:condition="mystuff" tal:define="mystuff python:[a['url'] for a in actions['user'] if a['id']=='mystuff']">
 #.  your folder
 #. </a>
@@ -2333,7 +2334,7 @@ msgid "description_no_account"
 msgstr "Daca nu ai un cont aici, acceseaza ${registration_form} pentru a deveni membru."
 
 
-#: ./plone_forms/login_form.pt
+#: ./plone_login/login_form.cpt
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
 #.         registration form
 #. </a>
@@ -2393,7 +2394,7 @@ msgid "description_no_visible_items_add_paste"
 msgstr "Acest director nu are elemente vizibile. Pentru a adauga continut, apasa butonul 'Adauga', sau adauga continut din alta locatie."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_not_logged_in_username_incorrect">
 #.             You are not currently logged in. Your user name and/or password
 #.             may be incorrect.
@@ -2616,7 +2617,7 @@ msgid "description_sign_in"
 msgstr "Pentru a accesa aceasta parte a site-ului trebuie sa te autentifici cu numele de utilizator si parola."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_signin_fail_cookies">
 #.             You are not currently signed in because you are not accepting
 #.             cookies. Please make sure that your browser is configured to
@@ -2628,7 +2629,7 @@ msgid "description_signin_fail_cookies"
 msgstr "In acest moment nu esti autentificat pentru ca navigatorul (browser-ul) tau web nu accepta cookies. Te rugam sa verifici ca navigatorul este configurat sa le accepte ${link}"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_signin_fail_cookies_link">
 #.             accept cookies
 #. </a>
@@ -2703,7 +2704,7 @@ msgid "description_skin_setup"
 msgstr "Setari care afecteaza infatisarea portalului si folosirea template-urilor."
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_still_failure">
 #.             If you are still reaching this page after correctly configuring
 #.             your browser, here are some possible reasons:
@@ -2713,7 +2714,7 @@ msgid "description_still_failure"
 msgstr "Daca ai ajuns tot pe aceasta pagina dupa ce ti-ai configurat corect browser-ul, pot exista cateva motive posibile:"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <li i18n:translate="description_still_failure_reason1">
 #.                You may be running web filtering software that
 #.                disables cookies.  If so, you will need to configure the
@@ -2725,7 +2726,7 @@ msgid "description_still_failure_reason1"
 msgstr "S-ar putea ca pe calculatorul tau sa ruleze un program ce filtreaza continutul web si care dezactiveaza cookie-urile (sau chiar browser-ul este configurat astfel). In acest caz, te rugam sa iti configurezi acel program in asa fel incat sa permite cookie-urile din partea ${url}"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <li i18n:translate="description_still_failure_reason2">
 #.                Your computer may be behind a firewall or proxy server
 #.                that prevents cookies from being sent to or from your browser.
@@ -2800,7 +2801,7 @@ msgid "description_undo_action_select"
 msgstr "Selecteaza una sau mai multe tranzactii de mai jos apoi fa click pe butonul \"Undo\" pentru a anula tranzactiile. Chiar daca o tanzactie e prezenta mai jos, nu o vei putea anula daca alte tranzactii ulterioare au modificat aceleasi obiecte pe care le-a modificat si tranzactia curenta."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <p i18n:translate="description_use_form_to_change_password">
 #.             Please use the form below to change your password.
 #. </p>
@@ -2859,7 +2860,7 @@ msgid "description_workflow_one_step"
 msgstr "daca doresti ca tot continutul sa fie imediat disponibil tuturor, fara a fi revizuit de catre un redactor, ar trebui sa folosesti Publicarea intr-un singur pas."
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_login/registered.pt
 #. <p i18n:translate="description_you_are_registered">
 #.   You have been registered as a member.
 #. </p>
@@ -2868,7 +2869,7 @@ msgid "description_you_are_registered"
 msgstr "Ai fost inregistrat ca membru."
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_login/registered.pt
 #. <p i18n:translate="description_you_can_log_on_now">
 #.  Click the button to log in immediately.
 #. </p>
@@ -2877,7 +2878,7 @@ msgid "description_you_can_log_on_now"
 msgstr "Apasa acest buton pentru autentificare imediata"
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_login/registered.pt
 #. <p i18n:translate="description_you_will_get_password" tal:condition="ve">
 #. You will receive an email shortly containing your password
 #.     and instructions on how to activate your membership.
@@ -3205,7 +3206,7 @@ msgid "heading_edit_properties"
 msgstr "Editeaza Proprietati"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h1 i18n:translate="heading_enable_cookies">
 #.  How to Enable Cookies
 #. </h1>
@@ -3298,7 +3299,7 @@ msgid "heading_groups_overview"
 msgstr "Sumar al Grupurilor"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_ie_version_4x">
 #.  Version 4.x
 #. </h4>
@@ -3307,7 +3308,7 @@ msgid "heading_ie_version_4x"
 msgstr "Versiunea 4.x"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_ie_version_5x">
 #.  Version 5.x
 #. </h4>
@@ -3316,7 +3317,7 @@ msgid "heading_ie_version_5x"
 msgstr "Versiunea 5.x"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_ie_version_6x">
 #.  Version 6.x
 #. </h4>
@@ -3344,7 +3345,7 @@ msgid "heading_installed_transcript"
 msgstr "Inregistrare"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <a href="" i18n:translate="heading_internet_explorer" tal:attributes="href string:${request/URL}#ie">
 #.  Internet Explorer
 #. </a>
@@ -3419,7 +3420,7 @@ msgid "heading_memberships_current"
 msgstr "Membrii Grupului Curent"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_moz_version_1x">
 #.  Version 1.x
 #. </h4>
@@ -3428,7 +3429,7 @@ msgid "heading_moz_version_1x"
 msgstr "Versiunea 1.x"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <a href="" i18n:translate="heading_mozilla" tal:attributes="href string:${request/URL}#mozilla">
 #.  Mozilla
 #. </a>
@@ -3449,7 +3450,7 @@ msgid "heading_my_preferences"
 msgstr "Preferinte Personale"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <a href="" i18n:translate="heading_netscape_navigator" tal:attributes="href string:${request/URL}#netscape">
 #.  Netscape Navigator
 #. </a>
@@ -3461,7 +3462,7 @@ msgid "heading_netscape_navigator"
 msgstr "Netscape Navigator"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_netscape_version_4x">
 #.  Version 4.x
 #. </h4>
@@ -3470,7 +3471,7 @@ msgid "heading_netscape_version_4x"
 msgstr "Versiunea 4.x"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <h4 i18n:translate="heading_netscape_version_6x">
 #.  Version 6.x
 #. </h4>
@@ -3488,7 +3489,7 @@ msgid "heading_no_privileges"
 msgstr "Privilegii Insuficiente"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <a href="" i18n:translate="heading_opera" tal:attributes="href string:${request/URL}#opera">
 #.  Opera
 #. </a>
@@ -3574,7 +3575,7 @@ msgid "heading_recently_published"
 msgstr "Elemente publicate"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <h1 i18n:translate="heading_registration_form">
 #.  Registration Form
 #. </h1>
@@ -3718,7 +3719,7 @@ msgid "heading_sign_in"
 msgstr "Te rugam sa te autentifici"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <h1 i18n:translate="heading_sign_in_failure_auth">
 #.  Sign-in failure
 #. </h1>
@@ -3727,7 +3728,7 @@ msgid "heading_sign_in_failure_auth"
 msgstr "Autentificarea a esuat"
 
 
-#: ./plone_forms/logged_out.pt
+#: ./plone_login/logged_out.pt
 #. <h1 i18n:translate="heading_signed_out">
 #.  You are now logged out
 #. </h1>
@@ -3736,7 +3737,7 @@ msgid "heading_signed_out"
 msgstr "Nu mai esti autentificat"
 
 
-#: ./plone_forms/login_failed.pt
+#: ./plone_login/login_failed.pt
 #. <h1 i18n:translate="heading_signin_fail_cookies">
 #.  Cookies must be
 #.             enabled
@@ -3854,7 +3855,7 @@ msgid "heading_views"
 msgstr "Ecrane"
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <h1 i18n:translate="heading_welcome">
 #.  Welcome!
 #. </h1>
@@ -3873,7 +3874,7 @@ msgid "heading_welcome_to"
 msgstr "Bun venit pe ${sitename}"
 
 
-#: ./plone_forms/login_success.pt
+#: ./plone_login/login_success.pt
 #. <h1 i18n:translate="heading_you_are_now_logged_in">
 #.  You are now logged in
 #. </h1>
@@ -3908,7 +3909,7 @@ msgid "help_boolean_criteria_bool"
 msgstr ""
 
 
-#: ./plone_forms/login_form.pt
+#: ./plone_login/login_form.cpt
 #. <div class="formHelp" i18n:translate="help_capslock_password_retrieval">
 #.                 Case sensitive, make sure caps lock is not enabled.
 #.  <tal:block condition="python:checkPermission('Mail forgotten password', here)">
@@ -3969,11 +3970,11 @@ msgid "help_comment_to_link"
 msgstr "Un comentariu la acest link."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <div class="formHelp" i18n:translate="help_confirm_password">
 #.                         Enter your new password again. The passwords must be identical.
 #. </div>
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_confirm_password">
 #.                     Re-enter the password. Make sure the passwords are identical.
 #. </div>
@@ -4074,15 +4075,17 @@ msgstr "Introdu parola curenta"
 
 
 #: widget_description
-#. of BooleanWidget, for label: Use Custom View
-# Original: "Toggles the view used to display the search results.  If selected, the view will use a table with fields determined by the values selected in 'Custom View Fields', otherwise the default listing will be used."
+#. of BooleanWidget, for label: Display as Table
+# Original: "Columns in the table are controlled by 'Table Columns' below."
+#, fuzzy
 msgid "help_custom_view"
 msgstr ""
 
 
 #: widget_description
-#. of InAndOutWidget, for label: Custom View Fields
-# Original: "If 'Use Custom View' is selected, the view will use a table with fields determined by the values selected in 'Custom View Fields'."
+#. of InAndOutWidget, for label: Table Columns
+# Original: "Select which fields to display when 'Display as Table' is checked."
+#, fuzzy
 msgid "help_custom_view_fields"
 msgstr ""
 
@@ -4146,7 +4149,7 @@ msgid "help_effective_date"
 msgstr "Data cand va fi disponibil (bineinteles, trebuie publicat documentul). Astfel, poti publica un document in avans, dar nu va fi vizibil inainte de aceasta data. Daca nu este selectata nici o data, documentul va fi imediat activ."
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_email_creation">
 #.                     Enter an email address. This is necessary in case the password
 #.                     is lost. We respect your privacy, and will not give the address
@@ -4155,13 +4158,6 @@ msgstr "Data cand va fi disponibil (bineinteles, trebuie publicat documentul). A
 # Original: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 msgid "help_email_creation"
 msgstr "Introdu adresa ta de mail. Aceasta este necesara in cazul in care iti pierzi parola. Te asiguram ca iti vom respectam intimitatea si adresa ta nu va ajunge la o a terta parte."
-
-
-#: widget_description
-#. of LinesWidget, for label: Attendees
-# Original: " "
-msgid "help_event_attendees"
-msgstr ""
 
 
 #: widget_description
@@ -4192,7 +4188,7 @@ msgid "help_format_wysiwyg"
 msgstr "Daca nu esti sigur in legatura cu formatul pe care sa il alegi, selecteaza Text Simplu si introdu documentul asa cum ai face de obicei."
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_full_name_creation">
 #.               Enter full name, eg. John Smith.
 #. </div>
@@ -4265,13 +4261,6 @@ msgid "help_int_criteria_value2"
 msgstr ""
 
 
-#: widget_description
-#. of IntegerWidget, for label: Number of Items
-# Original: "If 'Limit Number of Items' is selected, only the first 'Number of Items' will be displayed "
-msgid "help_item_count"
-msgstr ""
-
-
 #: ./plone_content/metadata_edit_form.cpt
 #. <div class="formHelp" i18n:translate="help_keyword">
 #.                   Keywords relate different types of content to each other.
@@ -4292,8 +4281,9 @@ msgstr "Limba in care este scris documentul."
 
 
 #: widget_description
-#. of BooleanWidget, for label: Limit Number of Items
-# Original: "Toggles limitation of number of items displayed. If selected, only the first 'Number of Items' will be displayed."
+#. of BooleanWidget, for label: Limit Search Results
+# Original: "If selected, only the 'Number of Items' indicated below will be displayed."
+#, fuzzy
 msgid "help_limit_number"
 msgstr ""
 
@@ -4331,6 +4321,17 @@ msgid "help_locally_allowed_types"
 msgstr "Selecteaza tipurile de continut ce vor putea fi adaugate in acest director."
 
 
+#: ./plone_login/login_form.cpt
+#. <div class="formHelp" i18n:translate="help_login_name_caps">
+#.     		Login names are case sensitive, make sure the caps lock key is not enabled.
+#. </div>
+## 1 more: ./plone_forms/failsafe_login.pt
+# Original: "Login names are case sensitive, make sure the caps lock key is not enabled."
+#, fuzzy
+msgid "help_login_name_caps"
+msgstr "Introdu numele de utilizator pe care il vei folosi pe acest site. Daca nu ai inca un nume de utilizator sau l-ai uitat, foloseste link-urile de mai jos din acest formular."
+
+
 #: ./plone_prefs/personalize_form.cpt
 #. <div class="formHelp" i18n:translate="help_look">
 #.                 Appearance of the site.
@@ -4366,7 +4367,7 @@ msgid "help_new_keyword"
 msgstr "Fiecare cuvand cheie trebuie introdus pe o linie separata."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <div class="formHelp" i18n:translate="help_new_password">
 #.                         Enter your new password. Minimum 5 characters.
 #. </div>
@@ -4393,7 +4394,7 @@ msgid "help_no_selectable_default_pages"
 msgstr "Nu exista elemente in acest director ce pot fi selectate ca pagina implicita.  <div class=\"formControls\">  <input class=\"context\" i18n:attributes=\"value\" name=\"form.button.Cancel\" tabindex=\"\" tal:attributes=\"tabindex tabindex/next;\" type=\"submit\" value=\"Ok\"/> </div>"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_password_creation">
 #.                     Minimum 5 characters.
 #. </div>
@@ -4486,13 +4487,6 @@ msgstr "Pentru a adauga un nou portret, fa click pe butonul <strong>Selectare</s
 # Original: "Will be added to the publishing history. If multiple items are selected, this comment will be attached to all of them."
 msgid "help_publishing_comments"
 msgstr "Introdu o scurta descriere sau comentarii pentru a fi adaugate in campul de comentarii din istoricul publicarii. Daca sunt selectate mai multe articole, acest comentariu va fi atasat la fiecare."
-
-
-#: widget_description
-#. of ReferenceBrowserWidget, for label: Related Item(s)
-# Original: " "
-msgid "help_related_items"
-msgstr ""
 
 
 #: ./plone_forms/failsafe_login.pt
@@ -4880,20 +4874,7 @@ msgid "help_use_acquisition"
 msgstr "Determina daca rolurile date utilizatorilor si grupurilor din nivele mai mari au efect in acest context."
 
 
-#: ./plone_forms/login_form.pt
-#. <div class="formHelp" i18n:translate="help_user_name_caps">
-#.     		Login names are case sensitive, make sure the caps lock key is not enabled.
-#. </div>
-#: ./plone_forms/failsafe_login.pt
-#. <div class="formHelp" i18n:translate="help_user_name_caps">
-#.     		User names are case sensitive, make sure the caps lock key is not enabled.
-#. </div>
-# Original: "User names are case sensitive, make sure the caps lock key is not enabled."
-msgid "help_user_name_caps"
-msgstr "Introdu numele de utilizator pe care il vei folosi pe acest site. Daca nu ai inca un nume de utilizator sau l-ai uitat, foloseste link-urile de mai jos din acest formular."
-
-
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_user_name_creation_casesensitive">
 #.                     Enter a user name, usually something like
 #.                     'jsmith'. No spaces or special characters.
@@ -5173,6 +5154,24 @@ msgid "label_author"
 msgstr "Autor"
 
 
+#: ./plone_content/author.cpt
+#. <a href="#" i18n:translate="label_author_external_home_page" tal:attributes="href authorinfo/home_page">
+#.  Author's external home page
+#. </a>
+# Original: "Author's external home page"
+msgid "label_author_external_home_page"
+msgstr ""
+
+
+#: ./plone_content/author.cpt
+#. <a href="#" i18n:translate="label_author_internal_home_page" tal:attributes="href authorinfo/home_page">
+#.  Author's home page in this site
+#. </a>
+# Original: "Author's home page in this site"
+msgid "label_author_internal_home_page"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_install_product_readme.pt
 #. <a class="link-parent" href="" i18n:translate="label_back_to_addremove_products" tal:attributes="href string: $portal_url/prefs_install_products_form">
 #.     Back to Add/Remove Products
@@ -5295,7 +5294,7 @@ msgid "label_change_ownership"
 msgstr ""
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <input class="standalone" i18n:attributes="value label_change_password;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Change Password"/>
 #: ./plone_prefs/password_form.pt
 #. <input class="context" i18n:attributes="value label_change_password;" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Change Password"/>
@@ -5412,16 +5411,16 @@ msgid "label_compare"
 msgstr "Compara"
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <label i18n:translate="label_confirm_password">
 #.  Confirm Password
 #. </label>
-#: ./plone_forms/join_form.cpt
-#. <label i18n:translate="label_confirm_password">
-#.  Confirm password
-#. </label>
 #: ./plone_prefs/password_form.pt
 #. <label for="password_confirm" i18n:translate="label_confirm_password">
+#.  Confirm password
+#. </label>
+#: ./plone_login/join_form.cpt
+#. <label i18n:translate="label_confirm_password">
 #.  Confirm password
 #. </label>
 # Original: "Confirm password"
@@ -5566,15 +5565,17 @@ msgstr "Parola curenta"
 
 
 #: widget_label
-#. of BooleanWidget, description: Toggles the view used to display the search results.  If selected, the view will use a table with fields determined by the values selected in 'Custom View Fields', otherwise the default listing will be used.
-# Original: "Use Custom View"
+#. of BooleanWidget, description: Columns in the table are controlled by 'Table Columns' below.
+# Original: "Display as Table"
+#, fuzzy
 msgid "label_custom_view"
 msgstr ""
 
 
 #: widget_label
-#. of InAndOutWidget, description: If 'Use Custom View' is selected, the view will use a table with fields determined by the values selected in 'Custom View Fields'.
-# Original: "Custom View Fields"
+#. of InAndOutWidget, description: Select which fields to display when 'Display as Table' is checked.
+# Original: "Table Columns"
+#, fuzzy
 msgid "label_custom_view_fields"
 msgstr ""
 
@@ -5718,7 +5719,7 @@ msgstr "Data Efectiva"
 #. <label for="email" i18n:translate="label_email">
 #.  E-mail
 #. </label>
-#: ./plone_forms/join_form.cpt
+#: ./plone_forms/member_search_form.pt
 #. <label i18n:translate="label_email">
 #.  E-mail
 #. </label>
@@ -5939,7 +5940,7 @@ msgstr "Format"
 #. <label for="fullname" i18n:translate="label_full_name">
 #.  Full name
 #. </label>
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <label i18n:translate="label_full_name">
 #.  Full Name
 #. </label>
@@ -6157,7 +6158,7 @@ msgstr ""
 
 
 #: widget_label
-#. of IntegerWidget, description: If 'Limit Number of Items' is selected, only the first 'Number of Items' will be displayed
+#. of IntegerWidget, description:
 # Original: "Number of Items"
 msgid "label_item_count"
 msgstr ""
@@ -6204,9 +6205,10 @@ msgstr "Ultimul autentificat"
 
 
 #: widget_label
-#. of BooleanWidget, description: Toggles limitation of number of items displayed. If selected, only the first 'Number of Items' will be displayed.
+#. of BooleanWidget, description: If selected, only the 'Number of Items' indicated below will be displayed.
 # ATTopic
-# Original: "Limit Number of Items"
+# Original: "Limit Search Results"
+#, fuzzy
 msgid "label_limit_number"
 msgstr ""
 
@@ -6282,26 +6284,27 @@ msgid "label_location"
 msgstr "Locatie:"
 
 
-#: ./plone_portlets/portlet_login.pt
-#. <h5 i18n:translate="label_log_in">
-#.  Log in
-#. </h5>
+#: ./plone_login/login_form.cpt
+#. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;                             onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
 #: ./plone_forms/failsafe_login.pt
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Log in"/>
-#: ./plone_forms/registered.pt
-#. <input class="standalone" i18n:attributes="value label_log_in;" type="submit" value="Log in"/>
+#: ./plone_login/registered.pt
+#. <input class="standalone" i18n:attributes="value label_log_in;" tal:attributes="onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
 # Original: "Log in"
 msgid "label_log_in"
 msgstr "Autentificare"
 
 
-#: ./plone_portlets/portlet_login.pt
-#. <label for="__ac_name" i18n:translate="label_login_name">
+#: ./plone_login/login_form.cpt
+#. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
 #.  Login Name
 #. </label>
-#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                                value python:request.get(ac_name, '');                                                tabindex tabindex/next" type="text"/>
-#: ./plone_forms/login_form.pt
+#: ./plone_forms/failsafe_login.pt
 #. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
+#.  User Name
+#. </label>
+#: ./plone_portlets/portlet_login.pt
+#. <label for="__ac_name" i18n:translate="label_login_name">
 #.  Login Name
 #. </label>
 # Original: "Login Name"
@@ -6332,13 +6335,31 @@ msgid "label_look"
 msgstr "Design"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <label for="cb_mailme" i18n:translate="label_mail_password">
 #.  Send a mail with the password
 #. </label>
 # Original: "Send a mail with the password"
 msgid "label_mail_password"
 msgstr "Iti trimit parola prin mail?"
+
+
+#: ./plone_content/author.cpt
+#. <span i18n:translate="label_main_language">
+#.  Main Language:
+#. </span>
+# Original: "Main Language:"
+msgid "label_main_language"
+msgstr ""
+
+
+#: ./plone_content/author.cpt
+#. <label for="message" i18n:translate="label_message">
+#.                 Message
+#. </label>
+# Original: "Message"
+msgid "label_message"
+msgstr ""
 
 
 #: ./plone_content/metadata_edit_form.cpt
@@ -6407,7 +6428,7 @@ msgid "label_new_owner"
 msgstr "Proprietar nou"
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <label i18n:translate="label_new_password">
 #.  New password
 #. </label>
@@ -6549,7 +6570,7 @@ msgid "label_password_policy"
 msgstr "Politica parole"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="label_password_will_be_mailed">
 #.               A password will be generated and
 #.               e-mailed to you to complete the registration process.
@@ -6700,7 +6721,7 @@ msgid "label_refresh"
 msgstr "Actualizeaza"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <input class="context" i18n:attributes="value label_register;" name="form.button.Register" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Register"/>
 # Original: "Register"
 msgid "label_register"
@@ -7144,6 +7165,10 @@ msgstr ""
 #. <label for="title" i18n:translate="label_subject">
 #.  Subject
 #. </label>
+#: ./plone_content/author.cpt
+#. <label for="subject" i18n:translate="label_subject">
+#.                 Subject
+#. </label>
 # Original: "Subject"
 msgid "label_subject"
 msgstr "Subiect"
@@ -7411,8 +7436,8 @@ msgstr "Utilizator"
 #. <option i18n:translate="label_user_name" value="name">
 #.                             User Name
 #. </option>
-#: ./plone_forms/failsafe_login.pt
-#. <label i18n:translate="label_user_name" tal:attributes="for ac_name">
+#: ./plone_login/join_form.cpt
+#. <label i18n:translate="label_user_name">
 #.  User Name
 #. </label>
 # Original: "User Name"
@@ -7656,6 +7681,15 @@ msgid "legend_document_details"
 msgstr "Detalii Document"
 
 
+#: ./plone_content/author.cpt
+#. <legend i18n:translate="legend_feedback_for_author">
+#.  Feedback for author
+#. </legend>
+# Original: "Feedback for author"
+msgid "legend_feedback_for_author"
+msgstr ""
+
+
 #: ./plone_forms/member_search_form.pt
 #. <label i18n:translate="legend_group">
 #.   Group
@@ -7766,7 +7800,7 @@ msgid "legend_note_reply_anonymous"
 msgstr "Nota: nu esti autentificat. Ai posibilitatea sa iti introduci numele de utilizator si parola mai jos. Daca nu le vei introduce, acest comentariu va fi postat ca si 'Utilizator Anonim'."
 
 
-#: ./plone_forms/login_password.pt
+#: ./plone_login/login_password.cpt
 #. <legend i18n:translate="legend_password_details">
 #.  Password Details
 #. </legend>
@@ -7775,7 +7809,7 @@ msgid "legend_password_details"
 msgstr "Detalii Parola"
 
 
-#: ./plone_forms/join_form.cpt
+#: ./plone_login/join_form.cpt
 #. <legend i18n:translate="legend_personal_details">
 #.  Personal Details
 #. </legend>
@@ -8144,7 +8178,16 @@ msgid "local_role_warning_type"
 msgstr ""
 
 
-#: ./plone_forms/login_form.pt
+#: ./plone_login/login_success.pt
+#. <a href="" i18n:translate="login_came_from" tal:attributes="href came_from">
+#.           Click here to continue to the page from which you came.
+#. </a>
+# Original: "Click here to continue to the page from which you came."
+msgid "login_came_from"
+msgstr ""
+
+
+#: ./plone_login/login_form.cpt
 #. <div i18n:translate="login_form_disabled" tal:condition="python: not auth">
 #.     While cookie authentication is disabled, cookie-based login is not available.
 #. </div>
@@ -8537,7 +8580,7 @@ msgid "read_more"
 msgstr "Citeste restul"
 
 
-#: ./plone_forms/registered.pt
+#: ./plone_login/registered.pt
 #. <div i18n:translate="registered_disabled" tal:condition="python: not auth">
 #.    Cookie authentication has been disabled.
 #. </div>
@@ -8686,6 +8729,13 @@ msgid "summary_assigned_roles"
 msgstr ""
 
 
+#: ./plone_content/author.cpt
+#. <table class="listing" i18n:attributes="summary summary_author_content_list;" summary="Lists content written by an author grouped by content type">
+# Original: "Lists content written by an author grouped by content type"
+msgid "summary_author_content_list"
+msgstr ""
+
+
 #: ./plone_forms/folder_localrole_form.pt
 #. <table class="listing" i18n:attributes="summary summary_available_groups;" summary="Available groups">
 # Original: "Available groups"
@@ -8829,7 +8879,7 @@ msgid "text_group"
 msgstr "Grup"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie4_cookies_step1">
 #.  Click View on the menu at the top of your browser and select Internet Options
 #. </li>
@@ -8838,7 +8888,7 @@ msgid "text_ie4_cookies_step1"
 msgstr "Apasa View in bara de menu a browser-ului si selecteaza Internet Options"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie4_cookies_step2">
 #.  Click the Security tab at the top of the screen
 #. </li>
@@ -8847,7 +8897,7 @@ msgid "text_ie4_cookies_step2"
 msgstr "Selecteaza pagina Security din partea de sus a ecranului"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie4_cookies_step3">
 #.  Click Custom Level and scroll down to the Cookies section
 #. </li>
@@ -8856,7 +8906,7 @@ msgid "text_ie4_cookies_step3"
 msgstr "Selecteaza Custom Level si fa scroll in jos pana la sectiunea Cookies"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie4_cookies_step4">
 #.  Select &quot;Always accept cookies&quot; or &quot;Prompt before accepting cookies&quot; and click OK
 #. </li>
@@ -8865,7 +8915,7 @@ msgid "text_ie4_cookies_step4"
 msgstr "Selecteaza \"Always accept cookies\" sau \"Prompt before accepting cookies\" and fa click pe OK"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie5_cookies_step1">
 #.  Click Tools on the menu at the top of your browser and select Internet Options
 #. </li>
@@ -8874,7 +8924,7 @@ msgid "text_ie5_cookies_step1"
 msgstr "Fa click pe Tools in menul de sus al browser-ului si selecteaza Internet Options"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie5_cookies_step2">
 #.  Click the Security tab at the top of the screen
 #. </li>
@@ -8883,7 +8933,7 @@ msgid "text_ie5_cookies_step2"
 msgstr "Fa click pe tabul Security din partea de sus a ecranului"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie5_cookies_step3">
 #.  Click Custom Level and scroll down to the Cookies section
 #. </li>
@@ -8892,7 +8942,7 @@ msgid "text_ie5_cookies_step3"
 msgstr "Selecteaza Custom Level si fa scroll in jos pana la sectiunea Cookies"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie5_cookies_step4">
 #.  Set &quot;Allow per-session cookies&quot; to Enable and click OK
 #. </li>
@@ -8901,7 +8951,7 @@ msgid "text_ie5_cookies_step4"
 msgstr "Seteaza \"Allow per-session cookies\" la Enable asi fa click pe OK"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie6_cookies_step1">
 #.  Click Tools on the menu at the top of your browser and select Internet Options
 #. </li>
@@ -8910,7 +8960,7 @@ msgid "text_ie6_cookies_step1"
 msgstr "Fa click pe Tools in menul de sus al browser-ului si selecteaza Internet Options"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie6_cookies_step2">
 #.  Click the Privacy tab at the top of the screen
 #. </li>
@@ -8919,7 +8969,7 @@ msgid "text_ie6_cookies_step2"
 msgstr "Fa click pe tabul Privacy din partea de sus a ecranului"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_ie6_cookies_step3">
 #.  Move the slider to Medium and click OK
 #. </li>
@@ -8928,7 +8978,7 @@ msgid "text_ie6_cookies_step3"
 msgstr "Muta slider-ul la Medium si fa click pe OK"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_moz_cookies_step1">
 #.  Click Edit on the menu at the top of your browser and select Preferences
 #. </li>
@@ -8937,7 +8987,7 @@ msgid "text_moz_cookies_step1"
 msgstr "Fa click pe Edit in meniul din partea de sus a browser-ului si selecteaza Preferences"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_moz_cookies_step2">
 #.  Find &quot;Privacy &amp; Security&quot; in the menu on the left.  If there is a [+] to the left of &quot;Privacy &amp; Security&quot;, click it.
 #. </li>
@@ -8946,7 +8996,7 @@ msgid "text_moz_cookies_step2"
 msgstr "Cauta Find \"Privacy & Security\" in menul din stanga. Daca exista un  [+] in stanga lui \"Privacy & Security\", fa click pe el."
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_moz_cookies_step3">
 #.  Select &quot;Cookies&quot;.
 #. </li>
@@ -8955,7 +9005,7 @@ msgid "text_moz_cookies_step3"
 msgstr "Selecteaza \"Cookies\"."
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_moz_cookies_step4">
 #.  Select &quot;Enable cookies for the originating web site only&quot; or &quot;Enable all cookies&quot; and click &quot;OK&quot;
 #. </li>
@@ -8964,7 +9014,7 @@ msgid "text_moz_cookies_step4"
 msgstr "Selecteaza \"Enable cookies for the originating web site only\" sau \"Enable all cookies\" si fa click pe \"OK\""
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape4_cookies_step1">
 #.  Click Edit on the menu at the top of your browser and select Preferences
 #. </li>
@@ -8973,7 +9023,7 @@ msgid "text_netscape4_cookies_step1"
 msgstr "Fa click pe Edit in menul din partea de sus a browserului si selecteaza Preferences"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape4_cookies_step2">
 #.  Select &quot;Advanced&quot;
 #. </li>
@@ -8982,7 +9032,7 @@ msgid "text_netscape4_cookies_step2"
 msgstr "Selecteaza \"Advanced\""
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape4_cookies_step3">
 #.  Select &quot;Accept all cookies&quot; or &quot;Accept only cookies that get sent back to the originating server&quot; and click OK
 #. </li>
@@ -8991,7 +9041,7 @@ msgid "text_netscape4_cookies_step3"
 msgstr "Selecteaza \"Accept all cookies\" sau \"Accept only cookies that get sent back to the originating server\" si fa click pe OK"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape6_cookies_step1">
 #.  Click Edit on the menu at the top of your browser and select Preferences
 #. </li>
@@ -9000,7 +9050,7 @@ msgid "text_netscape6_cookies_step1"
 msgstr "Fa click pe Edit in menul din partea de sus browser-ului si selecteaza Preferences"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape6_cookies_step2">
 #.  Find &quot;Privacy &amp; Security&quot; in the menu on the left.  If there is a triangle pointing to the right next to Privacy &amp; Security, click it.
 #. </li>
@@ -9009,7 +9059,7 @@ msgid "text_netscape6_cookies_step2"
 msgstr "Cauta \"Privacy & Security\" in menul din partea stanga. Daca exista un triunghi indreptat in jos, chiar langa  Privacy & Security, apasa pe el."
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape6_cookies_step3">
 #.  Select &quot;Cookies&quot; under &quot;Privacy &amp; Security&quot;
 #. </li>
@@ -9018,7 +9068,7 @@ msgid "text_netscape6_cookies_step3"
 msgstr "Selecteaza \"Cookies\" din \"Privacy & Security\""
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_netscape6_cookies_step4">
 #.  Select &quot;Enable cookies for the originating web site only&quot; or &quot;Enable all cookies&quot; and click &quot;OK&quot;
 #. </li>
@@ -9036,6 +9086,15 @@ msgid "text_no_new_items"
 msgstr "Nu a fost publicat nimic."
 
 
+#: ./plone_content/author.cpt
+#. <div class="portalMessage" i18n:translate="text_no_user_by_name">
+#.                 No user by that name
+#. </div>
+# Original: "No user by that name"
+msgid "text_no_user_by_name"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_search_macros.pt
 #. <p i18n:translate="text_nomatches" tal:condition="not:batch">
 #.  No matches
@@ -9049,7 +9108,7 @@ msgid "text_nomatches"
 msgstr "Nimic corespunzator"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_opera_cookies_step1">
 #.  Press F12
 #. </li>
@@ -9058,7 +9117,7 @@ msgid "text_opera_cookies_step1"
 msgstr "Apasa F12"
 
 
-#: ./plone_forms/enabling_cookies.pt
+#: ./plone_login/enabling_cookies.pt
 #. <li i18n:translate="text_opera_cookies_step2">
 #.  Click &quot;Enable cookies&quot;
 #. </li>
@@ -9237,6 +9296,13 @@ msgstr "Alege pagina implicita"
 # Original: "Configure which content types can be added here"
 msgid "title_configure_addable_content_types"
 msgstr "Configureaza tipurile de continut care pot fi adaugate aici"
+
+
+#: ./plone_templates/footer.pt
+#. <acronym i18n:attributes="title title_copyright;" i18n:name="copyright" title="Copyright"/>
+# Original: "Copyright"
+msgid "title_copyright"
+msgstr ""
 
 
 #: ./plone_templates/colophon.pt

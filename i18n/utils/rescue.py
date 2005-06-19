@@ -87,7 +87,7 @@ def main():
                'Send a mail to this user' : 'title_send_mail_to_user', 'Show all available content types' : 'title_show_all_content_types', 
                'This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.' : 'title_wcag', 
                'This Plone site is valid XHTML.' : 'title_xhtml', 'legend_comment_details' : 'legend_add_comment', 
-               'box_sign_in' : 'Log in', 'listingheader_undo' : 'Undo'
+               'box_sign_in' : 'Log in', 'listingheader_undo' : 'Undo', 'help_user_name_caps' : 'help_login_name_caps'
               }
 
     for poFile in poFiles:
@@ -101,14 +101,10 @@ def main():
             for old in renamed.keys():
                 if old in msgids:
                     new = renamed.get(old)
-                    if new in msgids:
-                        print 'New message already in %s' % poFile
-                    else:
+                    if not new in msgids:
                         po_ctl[new] = po_ctl.get(old)
                         del po_ctl[old]
                         print 'Rename %s to %s in file %s' % (old, new, poFile)
-                else:
-                    pass
         except IndexError:
             print poFile
 
