@@ -32,7 +32,7 @@ def main():
 
     sourcePoFiles = getPoFiles(source)
 
-    if sourcePoFiles == '':
+    if sourcePoFiles == []:
         print 'No po-files were found for the source product.'
         sys.exit(3)
 

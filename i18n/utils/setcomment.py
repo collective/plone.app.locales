@@ -28,7 +28,7 @@ def main():
     os.chdir('..')
 
     poFiles = getPoFiles(product, all=True)
-    if poFiles == '':
+    if poFiles == []:
         print 'No po-files were found for the given product.'
         sys.exit(2)
 

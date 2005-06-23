@@ -24,7 +24,7 @@ def main():
     targetPoFiles = getPoFiles(target)
     sourcePoFiles = getPoFiles(source)
 
-    if targetPoFiles == '' or sourcePoFiles == '':
+    if targetPoFiles == [] or sourcePoFiles == []:
         print 'No po-files were found for one of the given products.'
         sys.exit(3)
 

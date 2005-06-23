@@ -44,7 +44,7 @@ def main():
 
     else: # product was given
         poFiles = getPoFilesAsCmdLine(arg)
-        if poFiles == '':
+        if poFiles == []:
             print 'No po-files were found for the given product.'
             sys.exit(4)
 
