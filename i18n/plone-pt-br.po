@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-06-19 19:45+0000\n"
+"POT-Creation-Date: 2005-07-01 16:20+0000\n"
 "PO-Revision-Date: 2005-06-15 01:41-0300\n"
 "Last-Translator: Dorneles Treméa <dorneles@x3ng.com.br>\n"
 "Language-Team: Português do Brasil\n"
@@ -1589,7 +1589,7 @@ msgstr "v"
 
 
 #: ./plone_portlets/portlet_login.pt
-#. <input accesskey="l" alt="Password" i18n:attributes="alt label_password; accesskey accesskeys-login;" size="10" tal:attributes="name ac_password; id ac_password;                                                tabindex tabindex/next;" type="password"/>
+#. <input accesskey="l" alt="Password" i18n:attributes="alt label_password; accesskey accesskeys-login;" size="10" tal:attributes="name ac_password; id ac_password;                                        tabindex tabindex/next;" type="password"/>
 # Original: "l"
 msgid "accesskeys-login"
 msgstr "l"
@@ -1684,9 +1684,9 @@ msgstr "Criado por"
 
 
 #: ./plone_portlets/portlet_events.pt
-#. <h5 i18n:translate="box_events">
+#. <a href="#" i18n:translate="box_events">
 #.  Upcoming Events
-#. </h5>
+#. </a>
 # Original: "Upcoming Events"
 msgid "box_events"
 msgstr "Próximos Eventos"
@@ -1732,12 +1732,21 @@ msgid "box_local_resources"
 msgstr "Recursos locais"
 
 
-#: ./plone_portlets/portlet_events.pt
-#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/events" tal:condition="python:'events' in portal.contentIds()">
-#.                     More...
+#: ./plone_portlets/portlet_recent.pt
+#. <a href="#" i18n:translate="box_more_recently_changed" tal:attributes="href string:${portal_url}/recently_modified">
+#.         All recent changes
 #. </a>
-#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/events_listing" tal:condition="python:'events' not in portal.contentIds()">
-#.                     More...
+# Original: "All recent changes"
+msgid "box_more_recently_changed"
+msgstr ""
+
+
+#: ./plone_portlets/portlet_news.pt
+#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/news" tal:condition="python:'news' in portal.contentIds()">
+#.               More...
+#. </a>
+#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/news_listing" tal:condition="python:'news' not in portal.contentIds()">
+#.               More...
 #. </a>
 #: ./plone_portlets/portlet_favorites.pt
 #. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${folder/absolute_url}/folder_contents">
@@ -1758,9 +1767,9 @@ msgstr "Meus favoritos"
 
 
 #: ./plone_portlets/portlet_navigation.pt
-#. <h5 i18n:translate="box_navigation">
+#. <a href="#" i18n:translate="box_navigation" tal:attributes="href string:$portal_url/sitemap">
 #.  Navigation
-#. </h5>
+#. </a>
 # Original: "Navigation"
 msgid "box_navigation"
 msgstr "Navegação"
@@ -1776,48 +1785,81 @@ msgstr "Novo usuário?"
 
 
 #: ./plone_portlets/portlet_news.pt
-#. <h5 i18n:translate="box_news">
+#. <a href="#" i18n:translate="box_news" tal:attributes="href string:${utool}/news" tal:condition="python:'news' in portal.contentIds()">
 #.  News
-#. </h5>
+#. </a>
+#. <a href="#" i18n:translate="box_news" tal:attributes="href string:${utool}/news_listing" tal:condition="python:'news' not in portal.contentIds()">
+#.  News
+#. </a>
 # Original: "News"
 msgid "box_news"
 msgstr "Notícias"
 
 
-#: ./plone_portlets/portlet_recent.pt
-#. <h5 i18n:translate="box_recentitems">
-#.  Recent Items
-#. </h5>
-# Original: "Recent Items"
-msgid "box_recentitems"
-msgstr "Itens recentes"
+#: ./plone_portlets/portlet_events.pt
+#. <span i18n:translate="box_previous_events">
+#.                 Previous events
+#. </span>
+# Original: "Previous events"
+msgid "box_previous_events"
+msgstr ""
 
 
 #: ./plone_portlets/portlet_recent.pt
-#. <div class="portletContent odd" i18n:translate="box_recently_no_items" tal:condition="not: results">
-#.             No items published or changed since your last log-in.
-#. </div>
-# Original: "No items published or changed since your last log-in."
-msgid "box_recently_no_items"
-msgstr "Nenhum item publicado desde seu último acesso."
+#. <a href="#" i18n:translate="box_recent_changes">
+#.  Recent Changes
+#. </a>
+# Original: "Recent Changes"
+msgid "box_recent_changes"
+msgstr ""
+
+
+#: ./plone_portlets/portlet_recent.pt
+#. <dd class="portletItem" i18n:translate="box_recent_no_items" tal:condition="not: results">
+#.         No items changed yet.
+#. </dd>
+# Original: "No items changed yet."
+msgid "box_recent_no_items"
+msgstr ""
 
 
 #: ./plone_portlets/portlet_related.pt
-#. <h5 i18n:translate="box_related">
+#. <dt class="portletHeader" i18n:translate="box_related">
 #.  Related
-#. </h5>
+#. </dt>
 # Original: "Related"
 msgid "box_related"
 msgstr "Relacionados"
 
 
 #: ./plone_portlets/portlet_review.pt
-#. <h5 i18n:translate="box_review_list">
+#. <dt class="portletHeader" i18n:translate="box_review_list">
 #.  Review List
-#. </h5>
+#. </dt>
 # Original: "Review List"
 msgid "box_review_list"
 msgstr "Lista de Revisão"
+
+
+#: ./plone_portlets/portlet_login.pt
+#. <a href="#" i18n:translate="box_sign_in" tal:attributes="href string:$portal_url/login_form">
+#.  Log in
+#. </a>
+#. <a href="#" i18n:translate="box_sign_in">
+#.  Log in
+#. </a>
+# Original: "Log in"
+msgid "box_sign_in"
+msgstr ""
+
+
+#: ./plone_portlets/portlet_events.pt
+#. <span i18n:translate="box_upcoming_events">
+#.                 Upcoming events
+#. </span>
+# Original: "Upcoming events"
+msgid "box_upcoming_events"
+msgstr ""
 
 
 #: ./plone_forms/folder_rename_form.cpt
@@ -2044,20 +2086,15 @@ msgstr "Área de configuração do Plone e dos Produtos adicionais."
 
 #: ./plone_templates/footer.pt
 #. <span i18n:translate="description_copyright" tal:omit-tag="">
-#.     Plone
-#.  <sup/>
-#.   and its visual design is
+#.     The Plone Content Management System is Copyright
 #.  ${copyright}
 #.     2000-
 #.  ${current_year}
-#.  ${limi}
-#.  ,
-#.  ${runyaga}
-#.  ,
-#.  ${blacktar}
-#.  .
+#.     by the
+#.  ${plonefoundation}
+#.     et al.
 #. </span>
-# Original: "Plone <sup/> and its visual design is ${copyright} 2000- ${current_year}  ${limi} , ${runyaga} , ${blacktar} ."
+# Original: "The Plone Content Management System is Copyright ${copyright} 2000- ${current_year} by the ${plonefoundation} et al."
 #, fuzzy
 msgid "description_copyright"
 msgstr "Plone tem Direitos Reservados © 2000-${current_year} por ${limi}, ${runyaga}, ${blacktar}."
@@ -2102,8 +2139,8 @@ msgstr "Um tópico é uma busca pré-definida, mostrando todos os itens que atendem
 
 #: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_enable_cookies">
-#.             If your user name and password are correct, the problem may be that
-#.             your browser is not configured to
+#.       If your user name and password are correct, the problem may be that
+#.       your browser is not configured to
 #.  ${link}
 #.  .
 #. </p>
@@ -2126,7 +2163,7 @@ msgstr "Essa página lista as exceções que ocorreram nesse site recentemente. Voc
 
 #: ./plone_login/login_failed.pt
 #. <a href="mail_password_form" i18n:translate="description_failed_login_link">
-#.                Click here to have your password mailed to you if you have forgotten it.
+#.       Click here to have your password mailed to you if you have forgotten it.
 #. </a>
 # Original: "Click here to have your password mailed to you if you have forgotten it."
 msgid "description_failed_login_link"
@@ -2221,22 +2258,23 @@ msgstr "Você perceberá que a barra superior foi modificada. Ela agora contém vár
 #: ./plone_login/logged_out.pt
 #. <div i18n:translate="description_logged_out" tal:omit-tag="">
 #.  <p>
-#.     	 We hope you enjoyed using our services. We look forward to seeing you again.
+#.   We hope you enjoyed using our services. We look forward to seeing you again.
 #.  </p>
 #.  <p>
-#.          Best Regards from the
+#.   Best Regards from the
 #.   ${portal_title}
-#.          team.
+#.       team.
 #.  </p>
 #. </div>
-# Original: "<p> We hope you enjoyed using our services. We look forward to seeing you again. </p>  <p> Best Regards from the ${portal_title} team. </p>"
+# Original: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p>  <p>Best Regards from the ${portal_title} team. </p>"
+#, fuzzy
 msgid "description_logged_out"
 msgstr "<p>Nós esperamos que você tenha gostado de nossos serviços. Nós gostaríamos de vê-lo novamente.</p> <p>Nossos sinceros agradecimentos, ${portal_title}.</p>"
 
 
 #: ./plone_login/login_failed.pt
-#. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_login_fail_enable_cookies">
-#.             accept cookies
+#. <a href="enabling_cookies" i18n:translate="description_login_fail_enable_cookies">
+#.           accept cookies
 #. </a>
 # Original: "accept cookies"
 msgid "description_login_fail_enable_cookies"
@@ -2352,7 +2390,7 @@ msgstr "Se você não tem uma conta aqui, acesse ${registration_form} para tornar-
 
 
 #: ./plone_login/login_form.cpt
-#. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
+#. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join join;                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
 #.         registration form
 #. </a>
 #: ./plone_login/failsafe_login.pt
@@ -2382,7 +2420,7 @@ msgid "description_no_items_in_folder"
 msgstr "Atualmente não existem itens nessa pasta."
 
 
-#: ./plone_forms/insufficient_privileges.pt
+#: ./plone_login/insufficient_privileges.pt
 #. <p i18n:translate="description_no_privileges">
 #.       You do not have sufficient privileges to view this page.  If you believe
 #.       you are receiving this message in error, please send an e-mail to
@@ -2413,8 +2451,8 @@ msgstr "Essa pasta não possui itens visíveis. Para adicionar conteúdo, pressione
 
 #: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_not_logged_in_username_incorrect">
-#.             You are not currently logged in. Your user name and/or password
-#.             may be incorrect.
+#.       You are not currently logged in. Your user name and/or password
+#.       may be incorrect.
 #. </p>
 # Original: "You are not currently logged in. Your user name and/or password may be incorrect."
 msgid "description_not_logged_in_username_incorrect"
@@ -2483,6 +2521,15 @@ msgid "description_publishing_process"
 msgstr "Um estado do item (também chamado de estado de revisão) determina quem pode vê-lo. Um item <strong>privado</strong> pode ser visto apenas pelo seu dono e pelo administrador do site. Somente itens <strong>publicados</strong> são disponíveis para a base de membros e visitantes anônimos. Para publicar um item, ele precisa ser revisado por um dos revisores do site. Você pode requisitar que um item seja revisado <strong>submetendo-o à revisão</strong>.<br /> Outra maneira de controlar a visibilidade de um item e com sua <strong> data de efetivação</strong>. Um item não fica disponível publicamente antes de sua data de efetivação, <em>mesmo que seu estado seja <strong>publicado</strong></em>."
 
 
+#: ./plone_templates/recently_modified.pt
+#. <div class="documentDescription" i18n:translate="description_recently_modified">
+#.         All recently modified items, latest first.
+#. </div>
+# Original: "All recently modified items, latest first."
+msgid "description_recently_modified"
+msgstr ""
+
+
 #: ./plone_templates/recently_published.pt
 #. <div class="documentDescription" i18n:translate="description_recently_published">
 #.         All published items, latest first.
@@ -2525,6 +2572,15 @@ msgid "description_roles_zmi"
 msgstr "Atualmente, se você quiser adicionar um novo papel, você terá que usar a Interface de Gerenciamento do Zope, pois essa é uma tarefa considerada em\ndesenvolvimento."
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <p i18n:translate="description_search_setup">
+#.         Search settings for Site.
+#. </p>
+# Original: "Search settings for Site."
+msgid "description_search_setup"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_group_search_form.pt
 #. <span i18n:translate="description_search_string" tal:omit-tag="">
 #.  Search string:
@@ -2552,6 +2608,16 @@ msgstr "Busque por usuários ou grupos que você queira localizar (deixe em branco
 # Original: "Please select item which will be displayed as the default page of the folder."
 msgid "description_select_default_page"
 msgstr "Por favor selecione qual item será exibido como página inicial da pasta."
+
+
+#: ./plone_forms/select_default_view.cpt
+#. <div class="documentDescription" i18n:translate="description_select_default_view">
+#.         Please select template which will be displayed as the default view of the
+#.         folder.
+#. </div>
+# Original: "Please select template which will be displayed as the default view of the folder."
+msgid "description_select_default_view"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_workflow_advanced.pt
@@ -2701,8 +2767,8 @@ msgstr "Configurações que afetam o uso do layout do portal."
 
 #: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_still_failure">
-#.             If you are still reaching this page after correctly configuring
-#.             your browser, here are some possible reasons:
+#.       If you are still reaching this page after correctly configuring
+#.       your browser, here are some possible reasons:
 #. </p>
 # Original: "If you are still reaching this page after correctly configuring your browser, here are some possible reasons:"
 msgid "description_still_failure"
@@ -2711,9 +2777,9 @@ msgstr "Se você ainda está recebendo essa página após configurar corretamente se
 
 #: ./plone_login/login_failed.pt
 #. <li i18n:translate="description_still_failure_reason1">
-#.                You may be running web filtering software that
-#.                disables cookies.  If so, you will need to configure the
-#.                software so that it enables you to accept cookies from
+#.         You may be running web filtering software that
+#.         disables cookies.  If so, you will need to configure the
+#.         software so that it enables you to accept cookies from
 #.  ${url}
 #. </li>
 # Original: "You may be running web filtering software that disables cookies. If so, you will need to configure the software so that it enables you to accept cookies from ${url}"
@@ -2723,10 +2789,10 @@ msgstr "Você pode estar executando um software de filtragem de conteúdo que desa
 
 #: ./plone_login/login_failed.pt
 #. <li i18n:translate="description_still_failure_reason2">
-#.                Your computer may be behind a firewall or proxy server
-#.                that prevents cookies from being sent to or from your browser.
-#.                If so, you will need to ask your systems administrator if the
-#.                problem can be fixed.
+#.         Your computer may be behind a firewall or proxy server
+#.         that prevents cookies from being sent to or from your browser.
+#.         If so, you will need to ask your systems administrator if the
+#.         problem can be fixed.
 #. </li>
 # Original: "Your computer may be behind a firewall or proxy server that prevents cookies from being sent to or from your browser. If so, you will need to ask your systems administrator if the problem can be fixed."
 msgid "description_still_failure_reason2"
@@ -2763,12 +2829,11 @@ msgstr "Aqui você configura algumas opções que afetam os padrões de divulgação e
 
 #: ./plone_templates/footer.pt
 #. <span i18n:translate="description_trademark">
-#.     Plone
-#.  <sup/>
-#.   is a registered trademark of the
+#.     Plone and the Plone logo are trademarks of the
 #.  ${plonefoundation}
 #. </span>
-# Original: "Plone <sup/> is a registered trademark of the ${plonefoundation}"
+# Original: "Plone and the Plone logo are trademarks of the ${plonefoundation}"
+#, fuzzy
 msgid "description_trademark"
 msgstr "Plone <sup/> é marca registrada da ${plonefoundation}"
 
@@ -3114,9 +3179,9 @@ msgstr "Visualização do Comentário"
 
 
 #: ./plone_portlets/portlet_prefs.pt
-#. <h5 i18n:translate="heading_control_panel">
+#. <dt class="portletHeader" i18n:translate="heading_control_panel">
 #.  Site Setup
-#. </h5>
+#. </dt>
 #: ./plone_prefs/plone_control_panel.pt
 #. <h1 i18n:translate="heading_control_panel">
 #.  Site Setup
@@ -3476,7 +3541,7 @@ msgid "heading_netscape_version_6x"
 msgstr "Versão 6.x"
 
 
-#: ./plone_forms/insufficient_privileges.pt
+#: ./plone_login/insufficient_privileges.pt
 #. <h1 i18n:translate="heading_no_privileges">
 #.  Insufficient Privileges
 #. </h1>
@@ -3562,6 +3627,15 @@ msgid "heading_publishing_process"
 msgstr "Processo de Publicação"
 
 
+#: ./plone_templates/recently_modified.pt
+#. <h1 i18n:translate="heading_recently_modified">
+#.  Modified items
+#. </h1>
+# Original: "Modified items"
+msgid "heading_recently_modified"
+msgstr ""
+
+
 #: ./plone_templates/recently_published.pt
 #. <h1 i18n:translate="heading_recently_published">
 #.  Published items
@@ -3643,6 +3717,15 @@ msgid "heading_search_results"
 msgstr "Resultados da busca"
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <h1 i18n:translate="heading_search_setup">
+#.  Search Settings
+#. </h1>
+# Original: "Search Settings"
+msgid "heading_search_setup"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_group_search_form.pt
 #. <h1 i18n:translate="heading_search_usersandgroups">
 #.  Search for Users and Groups
@@ -3668,6 +3751,15 @@ msgstr "Seções"
 # Original: "Select default page"
 msgid "heading_select_default_page"
 msgstr "Selecione a página padrão"
+
+
+#: ./plone_forms/select_default_view.cpt
+#. <h1 i18n:translate="heading_select_default_view">
+#.  Select default view
+#. </h1>
+# Original: "Select default view"
+msgid "heading_select_default_view"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_workflow_advanced.pt
@@ -3962,7 +4054,7 @@ msgstr "Um comentário sobre este link."
 #. </div>
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_confirm_password">
-#.                     Re-enter the password. Make sure the passwords are identical.
+#.                 Re-enter the password. Make sure the passwords are identical.
 #. </div>
 # Original: "Re-enter the password. Make sure the passwords are identical."
 msgid "help_confirm_password"
@@ -4137,9 +4229,9 @@ msgstr "A data quando este item estará disponível (ele precisa estar publicado t
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_email_creation">
-#.                     Enter an email address. This is necessary in case the password
-#.                     is lost. We respect your privacy, and will not give the address
-#.                     away to any third parties or expose it anywhere.
+#.                 Enter an email address. This is necessary in case the password
+#.                 is lost. We respect your privacy, and will not give the address
+#.                 away to any third parties or expose it anywhere.
 #. </div>
 # Original: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 msgid "help_email_creation"
@@ -4176,7 +4268,7 @@ msgstr "Se você não tem certeza sobre que formato usar, selecione 'Texto Puro' e
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_full_name_creation">
-#.               Enter full name, eg. John Smith.
+#.           Enter full name, eg. John Smith.
 #. </div>
 # Original: "Enter full name, eg. John Smith."
 msgid "help_full_name_creation"
@@ -4297,6 +4389,16 @@ msgid "help_listed_search"
 msgstr "Determina se o seu usuário é exibido nas buscas de membros realizadas nesse site."
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <div class="formHelp" i18n:translate="help_livesearch" id="livesearch_help">
+#. 		     Enable the LiveSearch feature (like Google) to see live
+#. 		     results if the Browser supports the JavaScript.
+#. </div>
+# Original: "Enable the LiveSearch feature (like Google) to see live results if the Browser supports the JavaScript."
+msgid "help_livesearch"
+msgstr ""
+
+
 #: ./plone_forms/folder_constraintypes_form.cpt
 #. <div class="formHelp" i18n:translate="help_locally_allowed_types">
 #.                            Select the content types that will be addable inside
@@ -4381,7 +4483,7 @@ msgstr "Não existem itens nessa pasta que podem ser selecionados como a visualiz
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_password_creation">
-#.                     Minimum 5 characters.
+#.                 Minimum 5 characters.
 #. </div>
 # Original: "Minimum 5 characters."
 msgid "help_password_creation"
@@ -4643,6 +4745,16 @@ msgid "help_search_title"
 msgstr "Retorna itens que atendam esse título."
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <div class="formHelp" i18n:translate="help_searchblacklist" id="searchblacklist_help">
+#. 		     Define the types that should NOT be searched when you use
+#. 		     the searchbox.
+#. </div>
+# Original: "Define the types that should NOT be searched when you use the searchbox."
+msgid "help_searchblacklist"
+msgstr ""
+
+
 #: widget_description
 #. of MultiSelectionWidget, for label: Value
 # Original: "Existing values."
@@ -4859,11 +4971,11 @@ msgstr "Determina se os papéis atribuídos aos usuários e grupos em níveis superi
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_user_name_creation_casesensitive">
-#.                     Enter a user name, usually something like
-#.                     'jsmith'. No spaces or special characters.
-#.                     Usernames and passwords are case sensitive,
-#.                     make sure the caps lock key is not enabled.
-#.                     This is the name used to log in.
+#.                 Enter a user name, usually something like
+#.                 'jsmith'. No spaces or special characters.
+#.                 Usernames and passwords are case sensitive,
+#.                 make sure the caps lock key is not enabled.
+#.                 This is the name used to log in.
 #. </div>
 # Original: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 msgid "help_user_name_creation_casesensitive"
@@ -4965,7 +5077,7 @@ msgstr "Adicionar novo grupo"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 #.  Add item
 #. </a>
 # Original: "Add item"
@@ -4974,7 +5086,7 @@ msgstr "Adicionar novo item"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
 #.  Add to folder
 #. </a>
 # Original: "Add to folder"
@@ -5641,8 +5753,8 @@ msgstr "Desabilitar Divulgação"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_disabled_display_menu">
-#.  Display
+#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#.                   Display
 #. </span>
 # Original: "Display"
 msgid "label_disabled_display_menu"
@@ -6032,9 +6144,9 @@ msgstr "Histórico não disponível"
 
 
 #: ./plone_content/review_history.pt
-#. <legend i18n:translate="label_history">
+#. <dt class="collapsibleHeader" i18n:translate="label_history">
 #.  History
-#. </legend>
+#. </dt>
 # Original: "History"
 msgid "label_history"
 msgstr "Histórico"
@@ -6217,6 +6329,15 @@ msgid "label_listed_status"
 msgstr "Lista de Membros"
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <label i18n:translate="label_livesearch_enable">
+#.  Enable LiveSearch
+#. </label>
+# Original: "Enable LiveSearch"
+msgid "label_livesearch_enable"
+msgstr ""
+
+
 #: ./plone_forms/folder_localrole_form.pt
 #. <th i18n:translate="label_local_roles" nowrap="nowrap">
 #.  Local Role(s)
@@ -6256,6 +6377,10 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Papéis para atribuir ao(s) usuário(s)/grupo(s) selecionado(s)"
 
 
+#: ./plone_prefs/personalize_form.cpt
+#. <label for="location" i18n:translate="label_location">
+#.  Location
+#. </label>
 #: ./plone_content/author.cpt
 #. <span i18n:translate="label_location">
 #.  Location:
@@ -6280,7 +6405,7 @@ msgstr "Acessar"
 #. <label for="__ac_name" i18n:translate="label_login_name">
 #.  Login Name
 #. </label>
-#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                                value python:request.get(ac_name, '');                                                tabindex tabindex/next" type="text"/>
+#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                        value python:request.get(ac_name, '');                                        tabindex tabindex/next" type="text"/>
 #: ./plone_login/failsafe_login.pt
 #. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
 #.  Login Name
@@ -6455,7 +6580,7 @@ msgstr "Nenhum grupo foi especificado."
 
 #: ./plone_portlets/portlet_prefs.pt
 #. <li i18n:translate="label_no_panels_available" tal:condition="not:configlets">
-#.                         No Preference Panels available.
+#.                     No Preference Panels available.
 #. </li>
 #: ./plone_prefs/plone_memberprefs_panel.pt
 #. <p i18n:translate="label_no_panels_available" tal:condition="not:configlets">
@@ -6549,8 +6674,8 @@ msgstr "Política de Senhas"
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="label_password_will_be_mailed">
-#.               A password will be generated and
-#.               e-mailed to you to complete the registration process.
+#.           A password will be generated and
+#.           e-mailed to you to complete the registration process.
 #. </div>
 # Original: "A password will be generated and e-mailed to you to complete the registration process."
 msgid "label_password_will_be_mailed"
@@ -6879,6 +7004,15 @@ msgstr "Termo de Busca"
 # Original: "Search Text"
 msgid "label_search_text"
 msgstr "Texto da Busca"
+
+
+#: ./plone_prefs/prefs_search_form.cpt
+#. <label i18n:translate="label_search_types_blacklist">
+#.  Define the types not to be searched
+#. </label>
+# Original: "Define the types not to be searched"
+msgid "label_search_types_blacklist"
+msgstr ""
 
 
 #: ./plone_tableless/colophon.pt
@@ -7586,10 +7720,11 @@ msgstr "Informação do endereço"
 
 #: ./plone_forms/folder_localrole_form.pt
 #. <legend i18n:translate="legend_assigned_roles">
-#.             Assigned Roles
+#.             Assigned Roles for
 #.  ${folder}
 #. </legend>
-# Original: "Assigned Roles ${folder}"
+# Original: "Assigned Roles for ${folder}"
+#, fuzzy
 msgid "legend_assigned_roles"
 msgstr "Papéis atribuídos ${folder}"
 
@@ -7747,7 +7882,7 @@ msgid "legend_mailhost_details"
 msgstr "Detalhes do Servidor de Envio de Emails (SMTP)"
 
 
-#: ./plone_prefs/personalize_form.cpt
+#: ./plone_prefs/prefs_user_details.cpt
 #. <legend i18n:translate="legend_member_details">
 #.  Member Details
 #. </legend>
@@ -7819,6 +7954,15 @@ msgstr "Detalhes da Aparência do Portal"
 # Original: "Publishing Details"
 msgid "legend_publishing_details"
 msgstr "Detalhes da Publicação"
+
+
+#: ./plone_prefs/prefs_search_form.cpt
+#. <legend i18n:translate="legend_search_details">
+#.  Search details
+#. </legend>
+# Original: "Search details"
+msgid "legend_search_details"
+msgstr ""
 
 
 #: ./plone_forms/folder_localrole_form.pt
@@ -8173,11 +8317,12 @@ msgstr "Enquanto a autenticação por cookies estiver desativada, o acesso baseado
 
 
 #: ./plone_portlets/portlet_login.pt
-#. <div class="portletContent" i18n:translate="login_portlet_disabled">
-#.             Cookie authentication disabled.  Login portlet
-#.             not available.
-#. </div>
-# Original: "Cookie authentication disabled. Login portlet not available."
+#. <dd class="portletItem" i18n:translate="login_portlet_disabled" tal:condition="python: not auth">
+#.         Cookie authentication is disabled.
+#.         Login portlet not available.
+#. </dd>
+# Original: "Cookie authentication is disabled. Login portlet not available."
+#, fuzzy
 msgid "login_portlet_disabled"
 msgstr "Autenticação por cookies desativada. Módulo de acesso não disponível."
 
@@ -8404,6 +8549,10 @@ msgid "month_sep_abbr"
 msgstr "Set"
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <label for="cb_livesearch_off" i18n:translate="no">
+#.  No
+#. </label>
 #: ./plone_prefs/reconfig_form.cpt
 #. <label for="cb_noext_editor" i18n:translate="no">
 #.  No
@@ -8726,6 +8875,13 @@ msgid "summary_calendar"
 msgstr "Calendário"
 
 
+#: ./plone_templates/folder_contents.pt
+#. <table class="listing" i18n:attributes="summary summary_content_listing;" id="sortable" summary="Content listing">
+# Original: "Content listing"
+msgid "summary_content_listing"
+msgstr ""
+
+
 #: ./plone_content/event_view.pt
 #. <table class="vertical listing" i18n:attributes="summary summary_event_details;" style="float: right; width: 20em;" summary="Event details">
 # Original: "Event details"
@@ -8780,9 +8936,9 @@ msgstr "Resultados encontrados"
 #.  Home
 #. </a>
 #: ./plone_portlets/portlet_navigation.pt
-#. <a i18n:translate="tabs_home" tal:attributes="href string:$portal_url;                                            title portal/Description;                                            class python:test(portal == here or (portal == here.aq_parent and here.plone_utils.isDefaultPage(here)), 'navTreeCurrentItem visualIconPadding', 'visualIconPadding');">
-#.                         Home
-#. </a>
+#. <span i18n:translate="tabs_home" tal:omit-tag="">
+#.  Home
+#. </span>
 # Original: "Home"
 msgid "tabs_home"
 msgstr "Página Inicial"
@@ -8806,7 +8962,7 @@ msgid "text_conforms_to_standards"
 msgstr "Este site está em conformidade com os seguintes padrões:"
 
 
-#: ./plone_templates/recently_published.pt
+#: ./plone_templates/recently_modified.pt
 #. <span class="discreet" i18n:translate="text_creator_date">
 #.                         by
 #.  ${creator}
@@ -9062,6 +9218,15 @@ msgid "text_no_new_items"
 msgstr "Nenhum item foi publicado."
 
 
+#: ./plone_templates/recently_modified.pt
+#. <p i18n:translate="text_no_new_modified_items" tal:condition="not: results">
+#.         No items have been modified.
+#. </p>
+# Original: "No items have been modified."
+msgid "text_no_new_modified_items"
+msgstr ""
+
+
 #: ./plone_content/author.cpt
 #. <div class="portalMessage" i18n:translate="text_no_user_by_name">
 #.                 No user by that name
@@ -9197,14 +9362,14 @@ msgstr "Ontem"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
 # Original: "Add new items in the same folder as this item"
 msgid "title_add_new_items_inside_folder"
 msgstr "Adiciona novos itens na mesma paste deste item"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 # Original: "Add new items inside this item"
 msgid "title_add_new_items_inside_item"
 msgstr "Adiciona novos itens dentro deste item"
@@ -9239,35 +9404,35 @@ msgstr "Este site Plone foi feito usando o Sistema de Gerenciamento de Conteúdo 
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
 # Original: "Change default page"
 msgid "title_change_default_page"
 msgstr "Alterar página padrão"
 
 
-#: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#: ./plone_forms/select_default_view.cpt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
 # Original: "Change the item used as default view in this folder"
 msgid "title_change_default_view_item"
 msgstr "Altera o item usando como visualização padrão desta pasta"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="content_status_history" i18n:attributes="title title_change_state_of_item;" onclick="return buttonClick(event, 'statusMenu');" onmouseover="buttonMouseover(event, 'statusMenu');" tal:attributes="href string:$here_url/content_status_history;" title="Change the state of this item">
+#. <a href="content_status_history" i18n:attributes="title title_change_state_of_item;" tal:attributes="href string:$here_url/content_status_history;" title="Change the state of this item">
 # Original: "Change the state of this item"
 msgid "title_change_state_of_item"
 msgstr "Altera o estado deste item"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="#" i18n:attributes="title title_choose_default_view;" onclick="return buttonClick(event, 'templateMenu');" onmouseover="buttonMouseover(event, 'templateMenu');" tal:condition="not:dimMenu" title="Choose default view">
+#. <a href="#" i18n:attributes="title title_choose_default_view;" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
 # Original: "Choose default view"
 msgid "title_choose_default_view"
 msgstr "Selecione a visualização padrão"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="folderAddSettings" href="#" i18n:attributes="title title_configure_addable_content_types;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
+#. <a class="folderAddSettings" href="#" i18n:attributes="title title_configure_addable_content_types;" tal:attributes="href string:${parent_folder/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
 # Original: "Configure which content types can be added here"
 msgid "title_configure_addable_content_types"
 msgstr "Defina que tipos de conteúdo podem ser adicionado aqui"
@@ -9351,7 +9516,7 @@ msgstr "Relevância"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:attributes="title title_remove_index_html_for_display_control;" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 # Original: "Delete or rename the index_html item to gain full control over how this folder is displayed."
 msgid "title_remove_index_html_for_display_control"
 msgstr "Exclui ou renomeia o item index_html para obter controle total sobre como essa pasta é exibida."
@@ -9386,14 +9551,14 @@ msgstr "Este site Plone está em conformidade com as recomendações da Seção 508 s
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
 # Original: "Select default page"
 msgid "title_select_default_page"
 msgstr "Selecione a página padrão"
 
 
-#: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#: ./plone_forms/select_default_view.cpt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
 # Original: "Select an item to be used as default view in this folder"
 msgid "title_select_default_view_item"
 msgstr "Selecione um item para ser usado como visualização padrão desta pasta"
@@ -9409,7 +9574,7 @@ msgstr "Enviar um email para esse usuário"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="folderAddMore" href="#" i18n:attributes="title title_show_all_content_types;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" title="Show all available content types">
+#. <a class="folderAddMore" href="#" i18n:attributes="title title_show_all_content_types;" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" title="Show all available content types">
 # Original: "Show all available content types"
 msgid "title_show_all_content_types"
 msgstr "Exibir todos os tipos de conteúdo disponíveis"
@@ -9616,6 +9781,10 @@ msgid "weekday_wed_short"
 msgstr "Qu"
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <label for="cb_livesearch_on" i18n:translate="yes">
+#.  Yes
+#. </label>
 #: ./plone_prefs/reconfig_form.cpt
 #. <label for="cb_ext_editor" i18n:translate="yes">
 #.  Yes

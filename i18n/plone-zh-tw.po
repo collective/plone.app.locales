@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-06-19 19:45+0000\n"
+"POT-Creation-Date: 2005-07-01 16:20+0000\n"
 "PO-Revision-Date: 2005-06-22 22:22+0800\n"
 "Last-Translator: T.C. Chou <tcchou@tcchou.org>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -1587,7 +1587,7 @@ msgstr "v"
 
 
 #: ./plone_portlets/portlet_login.pt
-#. <input accesskey="l" alt="Password" i18n:attributes="alt label_password; accesskey accesskeys-login;" size="10" tal:attributes="name ac_password; id ac_password;                                                tabindex tabindex/next;" type="password"/>
+#. <input accesskey="l" alt="Password" i18n:attributes="alt label_password; accesskey accesskeys-login;" size="10" tal:attributes="name ac_password; id ac_password;                                        tabindex tabindex/next;" type="password"/>
 # Original: "l"
 msgid "accesskeys-login"
 msgstr "l"
@@ -1682,9 +1682,9 @@ msgstr "作者"
 
 
 #: ./plone_portlets/portlet_events.pt
-#. <h5 i18n:translate="box_events">
+#. <a href="#" i18n:translate="box_events">
 #.  Upcoming Events
-#. </h5>
+#. </a>
 # Original: "Upcoming Events"
 msgid "box_events"
 msgstr "事件預報"
@@ -1730,12 +1730,21 @@ msgid "box_local_resources"
 msgstr "本站資源"
 
 
-#: ./plone_portlets/portlet_events.pt
-#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/events" tal:condition="python:'events' in portal.contentIds()">
-#.                     More...
+#: ./plone_portlets/portlet_recent.pt
+#. <a href="#" i18n:translate="box_more_recently_changed" tal:attributes="href string:${portal_url}/recently_modified">
+#.         All recent changes
 #. </a>
-#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/events_listing" tal:condition="python:'events' not in portal.contentIds()">
-#.                     More...
+# Original: "All recent changes"
+msgid "box_more_recently_changed"
+msgstr ""
+
+
+#: ./plone_portlets/portlet_news.pt
+#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/news" tal:condition="python:'news' in portal.contentIds()">
+#.               More...
+#. </a>
+#. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${utool}/news_listing" tal:condition="python:'news' not in portal.contentIds()">
+#.               More...
 #. </a>
 #: ./plone_portlets/portlet_favorites.pt
 #. <a class="portletMore" href="" i18n:translate="box_morelink" tal:attributes="href string:${folder/absolute_url}/folder_contents">
@@ -1756,9 +1765,9 @@ msgstr "我的最愛"
 
 
 #: ./plone_portlets/portlet_navigation.pt
-#. <h5 i18n:translate="box_navigation">
+#. <a href="#" i18n:translate="box_navigation" tal:attributes="href string:$portal_url/sitemap">
 #.  Navigation
-#. </h5>
+#. </a>
 # Original: "Navigation"
 msgid "box_navigation"
 msgstr "導覽"
@@ -1774,48 +1783,81 @@ msgstr "新使用者?"
 
 
 #: ./plone_portlets/portlet_news.pt
-#. <h5 i18n:translate="box_news">
+#. <a href="#" i18n:translate="box_news" tal:attributes="href string:${utool}/news" tal:condition="python:'news' in portal.contentIds()">
 #.  News
-#. </h5>
+#. </a>
+#. <a href="#" i18n:translate="box_news" tal:attributes="href string:${utool}/news_listing" tal:condition="python:'news' not in portal.contentIds()">
+#.  News
+#. </a>
 # Original: "News"
 msgid "box_news"
 msgstr "新聞"
 
 
-#: ./plone_portlets/portlet_recent.pt
-#. <h5 i18n:translate="box_recentitems">
-#.  Recent Items
-#. </h5>
-# Original: "Recent Items"
-msgid "box_recentitems"
-msgstr "最新項目"
+#: ./plone_portlets/portlet_events.pt
+#. <span i18n:translate="box_previous_events">
+#.                 Previous events
+#. </span>
+# Original: "Previous events"
+msgid "box_previous_events"
+msgstr ""
 
 
 #: ./plone_portlets/portlet_recent.pt
-#. <div class="portletContent odd" i18n:translate="box_recently_no_items" tal:condition="not: results">
-#.             No items published or changed since your last log-in.
-#. </div>
-# Original: "No items published or changed since your last log-in."
-msgid "box_recently_no_items"
-msgstr "從您上次登入後沒有新物件發表或更新"
+#. <a href="#" i18n:translate="box_recent_changes">
+#.  Recent Changes
+#. </a>
+# Original: "Recent Changes"
+msgid "box_recent_changes"
+msgstr ""
+
+
+#: ./plone_portlets/portlet_recent.pt
+#. <dd class="portletItem" i18n:translate="box_recent_no_items" tal:condition="not: results">
+#.         No items changed yet.
+#. </dd>
+# Original: "No items changed yet."
+msgid "box_recent_no_items"
+msgstr ""
 
 
 #: ./plone_portlets/portlet_related.pt
-#. <h5 i18n:translate="box_related">
+#. <dt class="portletHeader" i18n:translate="box_related">
 #.  Related
-#. </h5>
+#. </dt>
 # Original: "Related"
 msgid "box_related"
 msgstr "相關項目"
 
 
 #: ./plone_portlets/portlet_review.pt
-#. <h5 i18n:translate="box_review_list">
+#. <dt class="portletHeader" i18n:translate="box_review_list">
 #.  Review List
-#. </h5>
+#. </dt>
 # Original: "Review List"
 msgid "box_review_list"
 msgstr "審核列表"
+
+
+#: ./plone_portlets/portlet_login.pt
+#. <a href="#" i18n:translate="box_sign_in" tal:attributes="href string:$portal_url/login_form">
+#.  Log in
+#. </a>
+#. <a href="#" i18n:translate="box_sign_in">
+#.  Log in
+#. </a>
+# Original: "Log in"
+msgid "box_sign_in"
+msgstr ""
+
+
+#: ./plone_portlets/portlet_events.pt
+#. <span i18n:translate="box_upcoming_events">
+#.                 Upcoming events
+#. </span>
+# Original: "Upcoming events"
+msgid "box_upcoming_events"
+msgstr ""
 
 
 #: ./plone_forms/folder_rename_form.cpt
@@ -2042,20 +2084,16 @@ msgstr "設定Plone和相關產品。"
 
 #: ./plone_templates/footer.pt
 #. <span i18n:translate="description_copyright" tal:omit-tag="">
-#.     Plone
-#.  <sup/>
-#.   and its visual design is
+#.     The Plone Content Management System is Copyright
 #.  ${copyright}
 #.     2000-
 #.  ${current_year}
-#.  ${limi}
-#.  ,
-#.  ${runyaga}
-#.  ,
-#.  ${blacktar}
-#.  .
+#.     by the
+#.  ${plonefoundation}
+#.     et al.
 #. </span>
-# Original: "Plone <sup/> and its visual design is ${copyright} 2000- ${current_year}  ${limi} , ${runyaga} , ${blacktar} ."
+# Original: "The Plone Content Management System is Copyright ${copyright} 2000- ${current_year} by the ${plonefoundation} et al."
+#, fuzzy
 msgid "description_copyright"
 msgstr "Plone與其視覺設計${copyright} 2000-${current_year} ${limi},${runyaga},${blacktar} ."
 
@@ -2099,8 +2137,8 @@ msgstr "主題(topic)是預先定義的搜尋條件, 將呈現所有滿足您定
 
 #: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_enable_cookies">
-#.             If your user name and password are correct, the problem may be that
-#.             your browser is not configured to
+#.       If your user name and password are correct, the problem may be that
+#.       your browser is not configured to
 #.  ${link}
 #.  .
 #. </p>
@@ -2123,7 +2161,7 @@ msgstr "此頁面列出本站最近所遭遇的例外事件，您可以設定要
 
 #: ./plone_login/login_failed.pt
 #. <a href="mail_password_form" i18n:translate="description_failed_login_link">
-#.                Click here to have your password mailed to you if you have forgotten it.
+#.       Click here to have your password mailed to you if you have forgotten it.
 #. </a>
 # Original: "Click here to have your password mailed to you if you have forgotten it."
 msgid "description_failed_login_link"
@@ -2218,22 +2256,23 @@ msgstr "您也許已經注意到右上方的條狀有變動, 它現在包含數�
 #: ./plone_login/logged_out.pt
 #. <div i18n:translate="description_logged_out" tal:omit-tag="">
 #.  <p>
-#.     	 We hope you enjoyed using our services. We look forward to seeing you again.
+#.   We hope you enjoyed using our services. We look forward to seeing you again.
 #.  </p>
 #.  <p>
-#.          Best Regards from the
+#.   Best Regards from the
 #.   ${portal_title}
-#.          team.
+#.       team.
 #.  </p>
 #. </div>
-# Original: "<p> We hope you enjoyed using our services. We look forward to seeing you again. </p>  <p> Best Regards from the ${portal_title} team. </p>"
+# Original: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p>  <p>Best Regards from the ${portal_title} team. </p>"
+#, fuzzy
 msgid "description_logged_out"
 msgstr "<p>希望您能喜愛我們提供的服務. 必期待下次相遇.</p><p>來自${portal_title}網站團隊誠摯的祝福.</p>"
 
 
 #: ./plone_login/login_failed.pt
-#. <a href="enabling_cookies" i18n:name="link" i18n:translate="description_login_fail_enable_cookies">
-#.             accept cookies
+#. <a href="enabling_cookies" i18n:translate="description_login_fail_enable_cookies">
+#.           accept cookies
 #. </a>
 # Original: "accept cookies"
 msgid "description_login_fail_enable_cookies"
@@ -2350,7 +2389,7 @@ msgstr "如果您在這裡沒有帳號, 可完成 ${registration_form} 以取得
 
 
 #: ./plone_login/login_form.cpt
-#. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
+#. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join join;                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
 #.         registration form
 #. </a>
 #: ./plone_login/failsafe_login.pt
@@ -2380,7 +2419,7 @@ msgid "description_no_items_in_folder"
 msgstr "在這目錄裡頭沒有任何項目."
 
 
-#: ./plone_forms/insufficient_privileges.pt
+#: ./plone_login/insufficient_privileges.pt
 #. <p i18n:translate="description_no_privileges">
 #.       You do not have sufficient privileges to view this page.  If you believe
 #.       you are receiving this message in error, please send an e-mail to
@@ -2411,8 +2450,8 @@ msgstr "這目錄有不可視項目. 要增加內容, 請按下 '新增項目' �
 
 #: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_not_logged_in_username_incorrect">
-#.             You are not currently logged in. Your user name and/or password
-#.             may be incorrect.
+#.       You are not currently logged in. Your user name and/or password
+#.       may be incorrect.
 #. </p>
 # Original: "You are not currently logged in. Your user name and/or password may be incorrect."
 msgid "description_not_logged_in_username_incorrect"
@@ -2481,6 +2520,15 @@ msgid "description_publishing_process"
 msgstr "一個項目的狀態（也稱為它的審核狀態）決定誰能看到它. <strong>私有</strong>的項目僅擁有者和網站管理者可看到. 只有<strong>公開</strong>的項目才能被所有的成員和匿名參觀者看到. 必須通過網站審核者所審核過的項目才能成為公開狀態. 您可用 '<strong>提交審核</strong>'功能來要求一項目被審核. <br /> 還有項目的 <strong>生效日</strong> 可控制該項目的觀看期間. 一項目在生效日之前不會被發佈, 就算被設定成 <strong>公開</strong> 也不會被看到. 這可避免項目顯示在頁面區塊(portlet)(或任何其它透過編目查詢的模板程序), 即便是項目仍然可由URL直接連至."
 
 
+#: ./plone_templates/recently_modified.pt
+#. <div class="documentDescription" i18n:translate="description_recently_modified">
+#.         All recently modified items, latest first.
+#. </div>
+# Original: "All recently modified items, latest first."
+msgid "description_recently_modified"
+msgstr ""
+
+
 #: ./plone_templates/recently_published.pt
 #. <div class="documentDescription" i18n:translate="description_recently_published">
 #.         All published items, latest first.
@@ -2523,6 +2571,15 @@ msgid "description_roles_zmi"
 msgstr "目前，若您要新增一個角色，您需使用Zope管理介面. 新增角色視為一項開發工作."
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <p i18n:translate="description_search_setup">
+#.         Search settings for Site.
+#. </p>
+# Original: "Search settings for Site."
+msgid "description_search_setup"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_group_search_form.pt
 #. <span i18n:translate="description_search_string" tal:omit-tag="">
 #.  Search string:
@@ -2550,6 +2607,16 @@ msgstr "搜尋您想要的使用者或群組(空白可列出全部), 並選擇�
 # Original: "Please select item which will be displayed as the default page of the folder."
 msgid "description_select_default_page"
 msgstr "請選擇目錄預設顯示的項目."
+
+
+#: ./plone_forms/select_default_view.cpt
+#. <div class="documentDescription" i18n:translate="description_select_default_view">
+#.         Please select template which will be displayed as the default view of the
+#.         folder.
+#. </div>
+# Original: "Please select template which will be displayed as the default view of the folder."
+msgid "description_select_default_view"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_workflow_advanced.pt
@@ -2699,8 +2766,8 @@ msgstr "設定這個將影響網站的外觀以及樣板的使用."
 
 #: ./plone_login/login_failed.pt
 #. <p i18n:translate="description_still_failure">
-#.             If you are still reaching this page after correctly configuring
-#.             your browser, here are some possible reasons:
+#.       If you are still reaching this page after correctly configuring
+#.       your browser, here are some possible reasons:
 #. </p>
 # Original: "If you are still reaching this page after correctly configuring your browser, here are some possible reasons:"
 msgid "description_still_failure"
@@ -2709,9 +2776,9 @@ msgstr "如果您確認正確設定瀏覽器後, 仍然看到這個網頁, 下�
 
 #: ./plone_login/login_failed.pt
 #. <li i18n:translate="description_still_failure_reason1">
-#.                You may be running web filtering software that
-#.                disables cookies.  If so, you will need to configure the
-#.                software so that it enables you to accept cookies from
+#.         You may be running web filtering software that
+#.         disables cookies.  If so, you will need to configure the
+#.         software so that it enables you to accept cookies from
 #.  ${url}
 #. </li>
 # Original: "You may be running web filtering software that disables cookies. If so, you will need to configure the software so that it enables you to accept cookies from ${url}"
@@ -2721,10 +2788,10 @@ msgstr "您可能執行會過濾cookies的網頁過濾程式. 如果這樣的話
 
 #: ./plone_login/login_failed.pt
 #. <li i18n:translate="description_still_failure_reason2">
-#.                Your computer may be behind a firewall or proxy server
-#.                that prevents cookies from being sent to or from your browser.
-#.                If so, you will need to ask your systems administrator if the
-#.                problem can be fixed.
+#.         Your computer may be behind a firewall or proxy server
+#.         that prevents cookies from being sent to or from your browser.
+#.         If so, you will need to ask your systems administrator if the
+#.         problem can be fixed.
 #. </li>
 # Original: "Your computer may be behind a firewall or proxy server that prevents cookies from being sent to or from your browser. If so, you will need to ask your systems administrator if the problem can be fixed."
 msgid "description_still_failure_reason2"
@@ -2761,12 +2828,11 @@ msgstr "這裡您所做的設定, 將影響整個站台串聯的設定."
 
 #: ./plone_templates/footer.pt
 #. <span i18n:translate="description_trademark">
-#.     Plone
-#.  <sup/>
-#.   is a registered trademark of the
+#.     Plone and the Plone logo are trademarks of the
 #.  ${plonefoundation}
 #. </span>
-# Original: "Plone <sup/> is a registered trademark of the ${plonefoundation}"
+# Original: "Plone and the Plone logo are trademarks of the ${plonefoundation}"
+#, fuzzy
 msgid "description_trademark"
 msgstr "Plone<sup/> Plone是 ${plonefoundation} 的註冊商標"
 
@@ -3111,9 +3177,9 @@ msgstr "預覽留言"
 
 
 #: ./plone_portlets/portlet_prefs.pt
-#. <h5 i18n:translate="heading_control_panel">
+#. <dt class="portletHeader" i18n:translate="heading_control_panel">
 #.  Site Setup
-#. </h5>
+#. </dt>
 #: ./plone_prefs/plone_control_panel.pt
 #. <h1 i18n:translate="heading_control_panel">
 #.  Site Setup
@@ -3473,7 +3539,7 @@ msgid "heading_netscape_version_6x"
 msgstr "版本6.x"
 
 
-#: ./plone_forms/insufficient_privileges.pt
+#: ./plone_login/insufficient_privileges.pt
 #. <h1 i18n:translate="heading_no_privileges">
 #.  Insufficient Privileges
 #. </h1>
@@ -3559,6 +3625,15 @@ msgid "heading_publishing_process"
 msgstr "發佈流程"
 
 
+#: ./plone_templates/recently_modified.pt
+#. <h1 i18n:translate="heading_recently_modified">
+#.  Modified items
+#. </h1>
+# Original: "Modified items"
+msgid "heading_recently_modified"
+msgstr ""
+
+
 #: ./plone_templates/recently_published.pt
 #. <h1 i18n:translate="heading_recently_published">
 #.  Published items
@@ -3640,6 +3715,15 @@ msgid "heading_search_results"
 msgstr "搜尋結果"
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <h1 i18n:translate="heading_search_setup">
+#.  Search Settings
+#. </h1>
+# Original: "Search Settings"
+msgid "heading_search_setup"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_group_search_form.pt
 #. <h1 i18n:translate="heading_search_usersandgroups">
 #.  Search for Users and Groups
@@ -3665,6 +3749,15 @@ msgstr "部分"
 # Original: "Select default page"
 msgid "heading_select_default_page"
 msgstr "選擇預設頁面"
+
+
+#: ./plone_forms/select_default_view.cpt
+#. <h1 i18n:translate="heading_select_default_view">
+#.  Select default view
+#. </h1>
+# Original: "Select default view"
+msgid "heading_select_default_view"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_workflow_advanced.pt
@@ -3959,7 +4052,7 @@ msgstr "關於此連結的一些留言或意見."
 #. </div>
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_confirm_password">
-#.                     Re-enter the password. Make sure the passwords are identical.
+#.                 Re-enter the password. Make sure the passwords are identical.
 #. </div>
 # Original: "Re-enter the password. Make sure the passwords are identical."
 msgid "help_confirm_password"
@@ -4132,9 +4225,9 @@ msgstr "這日期用來指定該文件開始顯示的日期(當然也需要被�
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_email_creation">
-#.                     Enter an email address. This is necessary in case the password
-#.                     is lost. We respect your privacy, and will not give the address
-#.                     away to any third parties or expose it anywhere.
+#.                 Enter an email address. This is necessary in case the password
+#.                 is lost. We respect your privacy, and will not give the address
+#.                 away to any third parties or expose it anywhere.
 #. </div>
 # Original: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 msgid "help_email_creation"
@@ -4171,7 +4264,7 @@ msgstr "如果您不確定用那種格式, 請選擇一般文字(Plain Text), �
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_full_name_creation">
-#.               Enter full name, eg. John Smith.
+#.           Enter full name, eg. John Smith.
 #. </div>
 # Original: "Enter full name, eg. John Smith."
 msgid "help_full_name_creation"
@@ -4291,6 +4384,16 @@ msgid "help_listed_search"
 msgstr "請決定您的名稱是否列出在本站台的成員搜尋結果中."
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <div class="formHelp" i18n:translate="help_livesearch" id="livesearch_help">
+#. 		     Enable the LiveSearch feature (like Google) to see live
+#. 		     results if the Browser supports the JavaScript.
+#. </div>
+# Original: "Enable the LiveSearch feature (like Google) to see live results if the Browser supports the JavaScript."
+msgid "help_livesearch"
+msgstr ""
+
+
 #: ./plone_forms/folder_constraintypes_form.cpt
 #. <div class="formHelp" i18n:translate="help_locally_allowed_types">
 #.                            Select the content types that will be addable inside
@@ -4373,7 +4476,7 @@ msgstr "在這目錄裡, 沒有任何項目可被選為預設檢視頁面."
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_password_creation">
-#.                     Minimum 5 characters.
+#.                 Minimum 5 characters.
 #. </div>
 # Original: "Minimum 5 characters."
 msgid "help_password_creation"
@@ -4635,6 +4738,16 @@ msgid "help_search_title"
 msgstr "傳回符合標題的項目."
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <div class="formHelp" i18n:translate="help_searchblacklist" id="searchblacklist_help">
+#. 		     Define the types that should NOT be searched when you use
+#. 		     the searchbox.
+#. </div>
+# Original: "Define the types that should NOT be searched when you use the searchbox."
+msgid "help_searchblacklist"
+msgstr ""
+
+
 #: widget_description
 #. of MultiSelectionWidget, for label: Value
 # Original: "Existing values."
@@ -4851,11 +4964,11 @@ msgstr "決定上層設定使用者和群組的角色在這裡是否沿用."
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="help_user_name_creation_casesensitive">
-#.                     Enter a user name, usually something like
-#.                     'jsmith'. No spaces or special characters.
-#.                     Usernames and passwords are case sensitive,
-#.                     make sure the caps lock key is not enabled.
-#.                     This is the name used to log in.
+#.                 Enter a user name, usually something like
+#.                 'jsmith'. No spaces or special characters.
+#.                 Usernames and passwords are case sensitive,
+#.                 make sure the caps lock key is not enabled.
+#.                 This is the name used to log in.
 #. </div>
 # Original: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 msgid "help_user_name_creation_casesensitive"
@@ -4957,7 +5070,7 @@ msgstr "新增群組"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 #.  Add item
 #. </a>
 # Original: "Add item"
@@ -4966,7 +5079,7 @@ msgstr "新加項目"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
 #.  Add to folder
 #. </a>
 # Original: "Add to folder"
@@ -5631,8 +5744,8 @@ msgstr "取消串聯功能"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_disabled_display_menu">
-#.  Display
+#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#.                   Display
 #. </span>
 # Original: "Display"
 msgid "label_disabled_display_menu"
@@ -6022,9 +6135,9 @@ msgstr "歷史資料無法取得"
 
 
 #: ./plone_content/review_history.pt
-#. <legend i18n:translate="label_history">
+#. <dt class="collapsibleHeader" i18n:translate="label_history">
 #.  History
-#. </legend>
+#. </dt>
 # Original: "History"
 msgid "label_history"
 msgstr "歷史"
@@ -6206,6 +6319,15 @@ msgid "label_listed_status"
 msgstr "列出狀態"
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <label i18n:translate="label_livesearch_enable">
+#.  Enable LiveSearch
+#. </label>
+# Original: "Enable LiveSearch"
+msgid "label_livesearch_enable"
+msgstr ""
+
+
 #: ./plone_forms/folder_localrole_form.pt
 #. <th i18n:translate="label_local_roles" nowrap="nowrap">
 #.  Local Role(s)
@@ -6245,6 +6367,10 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "指定角色給已選的使用者/群組"
 
 
+#: ./plone_prefs/personalize_form.cpt
+#. <label for="location" i18n:translate="label_location">
+#.  Location
+#. </label>
 #: ./plone_content/author.cpt
 #. <span i18n:translate="label_location">
 #.  Location:
@@ -6269,7 +6395,7 @@ msgstr "登入"
 #. <label for="__ac_name" i18n:translate="label_login_name">
 #.  Login Name
 #. </label>
-#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                                value python:request.get(ac_name, '');                                                tabindex tabindex/next" type="text"/>
+#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                        value python:request.get(ac_name, '');                                        tabindex tabindex/next" type="text"/>
 #: ./plone_login/failsafe_login.pt
 #. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
 #.  Login Name
@@ -6444,7 +6570,7 @@ msgstr "沒有選擇任何群組."
 
 #: ./plone_portlets/portlet_prefs.pt
 #. <li i18n:translate="label_no_panels_available" tal:condition="not:configlets">
-#.                         No Preference Panels available.
+#.                     No Preference Panels available.
 #. </li>
 #: ./plone_prefs/plone_memberprefs_panel.pt
 #. <p i18n:translate="label_no_panels_available" tal:condition="not:configlets">
@@ -6538,8 +6664,8 @@ msgstr "密碼原則"
 
 #: ./plone_login/join_form.cpt
 #. <div class="formHelp" i18n:translate="label_password_will_be_mailed">
-#.               A password will be generated and
-#.               e-mailed to you to complete the registration process.
+#.           A password will be generated and
+#.           e-mailed to you to complete the registration process.
 #. </div>
 # Original: "A password will be generated and e-mailed to you to complete the registration process."
 msgid "label_password_will_be_mailed"
@@ -6868,6 +6994,15 @@ msgstr "搜尋項目"
 # Original: "Search Text"
 msgid "label_search_text"
 msgstr "搜尋文字"
+
+
+#: ./plone_prefs/prefs_search_form.cpt
+#. <label i18n:translate="label_search_types_blacklist">
+#.  Define the types not to be searched
+#. </label>
+# Original: "Define the types not to be searched"
+msgid "label_search_types_blacklist"
+msgstr ""
 
 
 #: ./plone_tableless/colophon.pt
@@ -7575,10 +7710,11 @@ msgstr "信箱資訊"
 
 #: ./plone_forms/folder_localrole_form.pt
 #. <legend i18n:translate="legend_assigned_roles">
-#.             Assigned Roles
+#.             Assigned Roles for
 #.  ${folder}
 #. </legend>
-# Original: "Assigned Roles ${folder}"
+# Original: "Assigned Roles for ${folder}"
+#, fuzzy
 msgid "legend_assigned_roles"
 msgstr ""
 
@@ -7736,7 +7872,7 @@ msgid "legend_mailhost_details"
 msgstr "寄出郵件伺服器(SMTP)詳細資訊"
 
 
-#: ./plone_prefs/personalize_form.cpt
+#: ./plone_prefs/prefs_user_details.cpt
 #. <legend i18n:translate="legend_member_details">
 #.  Member Details
 #. </legend>
@@ -7808,6 +7944,15 @@ msgstr "網站外觀詳細資料"
 # Original: "Publishing Details"
 msgid "legend_publishing_details"
 msgstr "發佈的詳細資訊"
+
+
+#: ./plone_prefs/prefs_search_form.cpt
+#. <legend i18n:translate="legend_search_details">
+#.  Search details
+#. </legend>
+# Original: "Search details"
+msgid "legend_search_details"
+msgstr ""
 
 
 #: ./plone_forms/folder_localrole_form.pt
@@ -8162,11 +8307,12 @@ msgstr "當cookie認證被關閉, 以cookie為基礎的認證是無法進行的.
 
 
 #: ./plone_portlets/portlet_login.pt
-#. <div class="portletContent" i18n:translate="login_portlet_disabled">
-#.             Cookie authentication disabled.  Login portlet
-#.             not available.
-#. </div>
-# Original: "Cookie authentication disabled. Login portlet not available."
+#. <dd class="portletItem" i18n:translate="login_portlet_disabled" tal:condition="python: not auth">
+#.         Cookie authentication is disabled.
+#.         Login portlet not available.
+#. </dd>
+# Original: "Cookie authentication is disabled. Login portlet not available."
+#, fuzzy
 msgid "login_portlet_disabled"
 msgstr "cookie授權已關閉. 登入頁面區塊無法使用. "
 
@@ -8393,6 +8539,10 @@ msgid "month_sep_abbr"
 msgstr "九"
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <label for="cb_livesearch_off" i18n:translate="no">
+#.  No
+#. </label>
 #: ./plone_prefs/reconfig_form.cpt
 #. <label for="cb_noext_editor" i18n:translate="no">
 #.  No
@@ -8715,6 +8865,13 @@ msgid "summary_calendar"
 msgstr "日曆"
 
 
+#: ./plone_templates/folder_contents.pt
+#. <table class="listing" i18n:attributes="summary summary_content_listing;" id="sortable" summary="Content listing">
+# Original: "Content listing"
+msgid "summary_content_listing"
+msgstr ""
+
+
 #: ./plone_content/event_view.pt
 #. <table class="vertical listing" i18n:attributes="summary summary_event_details;" style="float: right; width: 20em;" summary="Event details">
 # Original: "Event details"
@@ -8769,9 +8926,9 @@ msgstr "搜尋結果"
 #.  Home
 #. </a>
 #: ./plone_portlets/portlet_navigation.pt
-#. <a i18n:translate="tabs_home" tal:attributes="href string:$portal_url;                                            title portal/Description;                                            class python:test(portal == here or (portal == here.aq_parent and here.plone_utils.isDefaultPage(here)), 'navTreeCurrentItem visualIconPadding', 'visualIconPadding');">
-#.                         Home
-#. </a>
+#. <span i18n:translate="tabs_home" tal:omit-tag="">
+#.  Home
+#. </span>
 # Original: "Home"
 msgid "tabs_home"
 msgstr "首頁"
@@ -8795,7 +8952,7 @@ msgid "text_conforms_to_standards"
 msgstr "這站台符合以下標準:"
 
 
-#: ./plone_templates/recently_published.pt
+#: ./plone_templates/recently_modified.pt
 #. <span class="discreet" i18n:translate="text_creator_date">
 #.                         by
 #.  ${creator}
@@ -9051,6 +9208,15 @@ msgid "text_no_new_items"
 msgstr "沒有新文件發佈."
 
 
+#: ./plone_templates/recently_modified.pt
+#. <p i18n:translate="text_no_new_modified_items" tal:condition="not: results">
+#.         No items have been modified.
+#. </p>
+# Original: "No items have been modified."
+msgid "text_no_new_modified_items"
+msgstr ""
+
+
 #: ./plone_content/author.cpt
 #. <div class="portalMessage" i18n:translate="text_no_user_by_name">
 #.                 No user by that name
@@ -9186,14 +9352,14 @@ msgstr "昨天"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
 # Original: "Add new items in the same folder as this item"
 msgid "title_add_new_items_inside_folder"
 msgstr "如同這項目一般, 在相同目錄下添加新項目"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" onclick="return buttonClick(event, 'objectMenu');" onmouseover="buttonMouseover(event, 'objectMenu');" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
 # Original: "Add new items inside this item"
 msgid "title_add_new_items_inside_item"
 msgstr "在這項目裡頭添加新項目"
@@ -9228,35 +9394,35 @@ msgstr "本站使用Plone內容管理系統建構, 點選以取得更多信息."
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
 # Original: "Change default page"
 msgid "title_change_default_page"
 msgstr "變更預設頁面"
 
 
-#: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#: ./plone_forms/select_default_view.cpt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
 # Original: "Change the item used as default view in this folder"
 msgid "title_change_default_view_item"
 msgstr "更改這項目為這目錄的預設頁面"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="content_status_history" i18n:attributes="title title_change_state_of_item;" onclick="return buttonClick(event, 'statusMenu');" onmouseover="buttonMouseover(event, 'statusMenu');" tal:attributes="href string:$here_url/content_status_history;" title="Change the state of this item">
+#. <a href="content_status_history" i18n:attributes="title title_change_state_of_item;" tal:attributes="href string:$here_url/content_status_history;" title="Change the state of this item">
 # Original: "Change the state of this item"
 msgid "title_change_state_of_item"
 msgstr "更改這項目狀態"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="contentActionMenuHeader" href="#" i18n:attributes="title title_choose_default_view;" onclick="return buttonClick(event, 'templateMenu');" onmouseover="buttonMouseover(event, 'templateMenu');" tal:condition="not:dimMenu" title="Choose default view">
+#. <a href="#" i18n:attributes="title title_choose_default_view;" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
 # Original: "Choose default view"
 msgid "title_choose_default_view"
 msgstr "選擇預設檢視"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="folderAddSettings" href="#" i18n:attributes="title title_configure_addable_content_types;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
+#. <a class="folderAddSettings" href="#" i18n:attributes="title title_configure_addable_content_types;" tal:attributes="href string:${parent_folder/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
 # Original: "Configure which content types can be added here"
 msgid "title_configure_addable_content_types"
 msgstr "設定何種型態皆可在這裡被新增"
@@ -9340,7 +9506,7 @@ msgstr "相關性"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:attributes="title title_remove_index_html_for_display_control;" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 # Original: "Delete or rename the index_html item to gain full control over how this folder is displayed."
 msgid "title_remove_index_html_for_display_control"
 msgstr "刪除或變更index_html名稱, 將獲得目錄如何顯示的全部權力."
@@ -9375,14 +9541,14 @@ msgstr "這個Plone站台符合美國政府Section 508親和性指導原則."
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
 # Original: "Select default page"
 msgid "title_select_default_page"
 msgstr "選擇預設頁面"
 
 
-#: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#: ./plone_forms/select_default_view.cpt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
 # Original: "Select an item to be used as default view in this folder"
 msgid "title_select_default_view_item"
 msgstr "選擇一項目做為這個目錄的預設檢視"
@@ -9398,7 +9564,7 @@ msgstr "寄發電子郵件給這名使用者"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="folderAddMore" href="#" i18n:attributes="title title_show_all_content_types;" onMouseUp="if (activeButton != null) resetButton(activeButton);" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" title="Show all available content types">
+#. <a class="folderAddMore" href="#" i18n:attributes="title title_show_all_content_types;" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" title="Show all available content types">
 # Original: "Show all available content types"
 msgid "title_show_all_content_types"
 msgstr "顯示所有可用的內容型態"
@@ -9605,6 +9771,10 @@ msgid "weekday_wed_short"
 msgstr "三"
 
 
+#: ./plone_prefs/prefs_search_form.cpt
+#. <label for="cb_livesearch_on" i18n:translate="yes">
+#.  Yes
+#. </label>
 #: ./plone_prefs/reconfig_form.cpt
 #. <label for="cb_ext_editor" i18n:translate="yes">
 #.  Yes
