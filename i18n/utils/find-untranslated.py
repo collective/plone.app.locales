@@ -11,6 +11,7 @@
 """
 
 import os, sys, string
+from utils import getLongProductName
 
 try:
     import win32api
@@ -28,16 +29,7 @@ def main():
         print 'You have to specify the product und skins directory.'
         sys.exit(1)
 
-    product = sys.argv[1]
-
-    if product in ['atct', 'atrbw', 'at']:
-        if product == 'at':
-            product = 'archetypes'
-        elif product == 'atct':
-            product = 'atcontenttypes'
-        else:
-            product = 'atreferencebrowserwidget'
-
+    product = getLongProductName(sys.argv[1])
     log = 'untranslated-%s.log' % product
 
     skins = sys.argv[2]

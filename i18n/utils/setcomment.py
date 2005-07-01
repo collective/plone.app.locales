@@ -7,7 +7,7 @@
 
 import os, sys
 import getopt
-from utils import getPoFiles
+from utils import getPoFiles, getLongProductName
 
 try:
     import catalog
@@ -23,7 +23,7 @@ def main():
         print 'You have to specify the product.'
         sys.exit(1)
 
-    product = sys.argv[1]
+    product = getLongProductName(sys.argv[1])
 
     os.chdir('..')
 

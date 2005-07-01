@@ -6,7 +6,7 @@
 """
 
 import os, sys
-from utils import getPoFilesAsCmdLine, getPoFilesByLanguageCode, getProduct, getPotFiles
+from utils import getPoFilesAsCmdLine, getPoFilesByLanguageCode, getProduct, getPotFiles, getLongProductName
 
 __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
@@ -16,22 +16,13 @@ def main():
         print 'You have to specify a product or a language code.'
         sys.exit(1)
 
-    arg = sys.argv[1]
-
-    if arg in ['atct', 'atrbw', 'at']:
-        if arg == 'at':
-            arg = 'archetypes'
-        elif arg == 'atct':
-            arg = 'atcontenttypes'
-        else:
-            arg = 'atreferencebrowserwidget'
-
-    pot = '%s.pot' % arg
+    product = getLongProductName(sys.argv[1])
+    pot = '%s.pot' % product
 
     os.chdir('..')
 
     if not os.path.isfile(pot): # no pot? test for language-code
-        poFiles = getPoFilesByLanguageCode(arg)
+        poFiles = getPoFilesByLanguageCode(product)
         if poFiles:
             potFiles = getPotFiles()
             for po in poFiles:
@@ -43,7 +34,7 @@ def main():
             sys.exit(3)
 
     else: # product was given
-        poFiles = getPoFilesAsCmdLine(arg)
+        poFiles = getPoFilesAsCmdLine(product)
         if poFiles == []:
             print 'No po-files were found for the given product.'
             sys.exit(4)

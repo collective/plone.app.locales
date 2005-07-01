@@ -11,6 +11,7 @@
 """
 
 import os, sys, string
+from utils import getLongProductName
 
 try:
     import win32api
@@ -30,13 +31,7 @@ def main():
 
     product = sys.argv[1]
 
-    if product in ['atct', 'atrbw', 'at']:
-        if product == 'at':
-            product = 'archetypes'
-        elif product == 'atct':
-            product = 'atcontenttypes'
-        else:
-            product = 'atreferencebrowserwidget'
+    product = getLongProductName(product)
 
     pot = product + '.pot-new'
     manualpot = '%s-manual.pot' % product

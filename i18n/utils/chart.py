@@ -6,7 +6,7 @@
 """
 
 import os, sys
-from utils import getPoFilesAsCmdLine
+from utils import getPoFilesAsCmdLine, getLongProductName
 
 __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
@@ -16,7 +16,7 @@ def main():
         print 'You have to specify the product.'
         sys.exit(1)
 
-    product = sys.argv[1]
+    product = getLongProductName(sys.argv[1])
     pot = '%s.pot' % product
     chart = os.curdir + os.sep + 'charts' + os.sep + '%s-chart.gif' % product
 

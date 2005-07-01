@@ -56,3 +56,15 @@ def getProduct(file):
     file = file.split('-')[0] # only take product
 
     return file
+
+
+def getLongProductName(product):
+    """ Returns the product name for a known abbreviation or the given value."""
+    if product in ['atct', 'atrbw', 'at']:
+        if product == 'at':
+            product = 'archetypes'
+        elif product == 'atct':
+            product = 'atcontenttypes'
+        else:
+            product = 'atreferencebrowserwidget'
+    return product
