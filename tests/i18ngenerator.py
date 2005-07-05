@@ -78,7 +78,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
         ctl['plone'] = catalog.MessageCatalog(domain='plone')
 
         # global actions
-        action_providers = [tool for tool in self.action_tool.listActionProviders() if tool != 'portal_workflow']
+        action_providers = [tool for tool in self.action_tool.listActionProviders()]
 
         for provider in action_providers:
             provider_tool = getToolByName(self.portal, provider, None)
@@ -154,14 +154,11 @@ class TestI18N(PloneTestCase.PloneTestCase):
                 month = monthname_english(num, 'a') # Jan, Feb...
                 ctl['plone'].add(monthname_msgid_abbr(num), msgstr=month, filename='datetime', excerpt=['name of a month, format %b'])
 
-        # atcontenttypes smart folder options
-        # indexes and metadata
+        # indexes and metadata and smart folder options
         if self.atct_tool:
             indexes = self.atct_tool.getIndexes(enabledOnly=1)
             metadata = self.atct_tool.getAllMetadata(enabledOnly=1)
-            domain = 'atcontenttypes'
-            if not domain in ctl.keys():
-                ctl[domain] = catalog.MessageCatalog(domain=domain)
+            domain = 'plone'
         else:
             indexes = []
             metadata = []

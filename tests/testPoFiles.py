@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
 # for testing of untranslated msgstrs
 whitelist = ['Netscape Navigator',':','Version 4.x','Internet Explorer',\
-             'Version 1.x','Version 6.x','[ ${percentage} %]',\
+             'Version 1.x','Version 6.x','[ ${percentage} %]','${monthname} ${year}',\
              'Version 5.x','Description','Normal Text','Section 508',\
              'SMTP server','Powered by Plone','Valid XHTML','iCal (Mac OS X)',\
              'Zope Management Interface','${type} Details','${fieldset} Details',\

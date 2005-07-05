@@ -38,16 +38,38 @@ def main():
 
     # format: 'old-domain' : ['msgid1', 'msgid2', ...]
     # currently only relocating between atcontenttypes and plone and vica versa is possibly
-    relocated = {'atcontenttypes' : ['A boolean criterion', 'A date criteria',
-                 'A date range criterion', 'A list criterion', 'A path criterion',
-                 'A portal_types criterion', 'A reference criterion', 'A selection criterion',
-                 'A simple int criterion', 'A simple string criterion',
-                 'A criterion that searches for the currently logged in user\'s id',
-                 'help_event_attendees', 'help_int_criteria_value', 'help_item_count',
-                 'help_limit_number', 'help_list_criteria_operator', 'help_list_criteria_value',
-                 'help_string_criteria_value', 'label_event_attendees', 'label_int_criteria_value',
-                 'label_item_count', 'label_limit_number', 'label_list_criteria_operator',
-                 'label_list_criteria_value', 'label_string_criteria_value']
+    relocated = {'atcontenttypes' :
+                  ['A boolean criterion', 'A date criteria',
+                   'A date range criterion', 'A list criterion', 'A path criterion',
+                   'A portal_types criterion', 'A reference criterion', 'A selection criterion',
+                   'A simple int criterion', 'A simple string criterion',
+                   'A criterion that searches for the currently logged in user\'s id',
+                   'help_event_attendees', 'help_int_criteria_value', 'help_item_count',
+                   'help_limit_number', 'help_list_criteria_operator', 'help_list_criteria_value',
+                   'help_string_criteria_value', 'label_event_attendees', 'label_int_criteria_value',
+                   'label_item_count', 'label_limit_number', 'label_list_criteria_operator',
+                   'label_list_criteria_value', 'label_string_criteria_value',
+                   'An item\'s title transformed for sorting', 'An item\'s type (e.g. Event)',
+                   'An item\'s workflow state (e.g.published)', 'Boolean (True/False)',
+                   'Creation Date', 'CreationDate', 'Creator', 'Date range', 'Description',
+                   'Effective Date', 'EffectiveDate', 'End Date', 'Expiration Date',
+                   'ExpirationDate', 'Find items related to the selected items',
+                   'Integer value or range', 'Item Type', 'List of values', 'Location',
+                   'Location in portal', 'Modification Date', 'ModificationDate',
+                   'Related To', 'Relative date', 'Restrict to current user',
+                   'Search Text', 'SearchableText', 'Select content types',
+                   'Select referenced content', 'Select values from list', 'Short Name',
+                   'Size', 'Start Date', 'State', 'Subject', 'Text', 'start',
+                   'Text search of an item\'s contents', 'Text search of an item\'s title',
+                   'The end date and time of an event', 'The location an item in the portal (path)',
+                   'The short name of an item (used in the url)', 'The size of an item',
+                   'The start date and time of an event', 'The time and date an item becomes publicly available',
+                   'The time and date an item is no longer publically available',
+                   'The time and date an item is no longer publicly available',
+                   'The time and date an item was created', 'The time and date an item was last modified',
+                   'Title', 'Type', 'created', 'effective', 'end', 'expires', 'getId', 'getObjSize',
+                   'getRawRelatedItems', 'location', 'modified', 'path', 'review_state', 'sortable_title'
+                  ]
                 }
 
     # make sure we only try on languages for which both po files exist
@@ -83,12 +105,12 @@ def main():
                     msgstr = po_ctl[old_domain].get(relocate_msgid)
                     del po_ctl[old_domain][relocate_msgid]
                     changes[old_domain] = True
-                    #print 'deleted %s from %s-%s.po' % (relocate_msgid, old_domain, lang)
 
                     new_domain = relocate_domain.get(old_domain)
                     if relocate_msgid in msgids[new_domain]:
                         old_msgstr = po_ctl[new_domain].get(relocate_msgid)
-                        if not old_msgstr and msgstr:
+                        print old_msgstr[0], 'bla ', msgstr
+                        if old_msgstr[0] == '' and msgstr:
                             po_ctl[new_domain][relocate_msgid] = msgstr
                             changes[new_domain] = True
                             print 'copied msgstr for %s' % relocate_msgid
