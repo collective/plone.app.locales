@@ -19,7 +19,7 @@ def main():
     os.system(__PYTHON + ' create.py combinedchart plone')
 
     os.chdir('..')
-    additional_pots = [p for p in getPotFiles() if p != 'plone.pot']
+    additional_pots = [p for p in getPotFiles() if p not in ['plone.pot','combinedchart.pot']]
     shutil.copy('plone.pot', 'combinedchart.pot')
     os.chdir('utils')
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-07-01 16:20+0000\n"
+"POT-Creation-Date: 2005-07-05 14:14+0000\n"
 "PO-Revision-Date: 2005-05-23 20:53+0200\n"
 "Last-Translator: Tiberiu Ichim <tibi@life.org.ro>\n"
 "Language-Team: Romanian <plone-i18n@lists.sourceforge.net>\n"
@@ -21,6 +21,7 @@ msgstr ""
 
 #: ./plone_portlets/portlet_calendar.pt
 #. Allows to change the order of month / year
+# Original: "${monthname} ${year}"
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
@@ -180,15 +181,6 @@ msgstr ""
 # Original: "ATCT Setup"
 msgid "ATCT Setup"
 msgstr ""
-
-
-# When only one type can be added
-msgid "Add ${type}"
-msgstr "Adauga ${type}"
-
-
-msgid "Add item"
-msgstr "Adauga..."
 
 
 #: ./migrations/v2/release_candidates.py
@@ -553,6 +545,13 @@ msgid "Folder changes saved."
 msgstr "Modificarile directorului au fost salvate."
 
 
+#: type_action
+#. defined on TempFolder
+# Original: "Folder contents"
+msgid "Folder contents"
+msgstr ""
+
+
 msgid "Folder has been created."
 msgstr "Directorul a fost creat."
 
@@ -757,6 +756,13 @@ msgid "Mail your password"
 msgstr "Trimite-mi prin email parola"
 
 
+#: action
+#. defined in portal_membership
+# Original: "Manage members"
+msgid "Manage members"
+msgstr ""
+
+
 msgid "Manager"
 msgstr "Manager"
 
@@ -825,6 +831,14 @@ msgstr "Membri"
 # Original: "My Folder"
 msgid "My Folder"
 msgstr "Directorul Meu"
+
+
+#: type_action
+#. defined on TempFolder
+#. defined on Smart Folder
+# Original: "New..."
+msgid "New..."
+msgstr ""
 
 
 # portal-tab
@@ -1155,6 +1169,13 @@ msgid "Rotate clockwise"
 msgstr ""
 
 
+#: action_icon
+#. id: search_icon.gif, category: controlpanel
+# Original: "Search Settings"
+msgid "Search Settings"
+msgstr ""
+
+
 #: portal_type_title
 #. type description: A selection criterion
 # Original: "Selection Criterion"
@@ -1287,6 +1308,13 @@ msgstr "Status"
 #. defined on Smart Folder
 # Original: "Subfolders"
 msgid "Subfolders"
+msgstr ""
+
+
+#: type_action
+#. defined on Smart Folder
+# Original: "Subtopics"
+msgid "Subtopics"
 msgstr ""
 
 
@@ -5134,6 +5162,28 @@ msgid "label_add_to_vcal"
 msgstr ""
 
 
+#: ./plone_templates/global_contentmenu.pt
+#. <span i18n:translate="label_add_type" tal:condition="python:folder == parent_folder">
+#.                 Add
+#.  ${type}
+#. </span>
+# When only one type can be added
+# Original: "Add ${type}"
+msgid "label_add_type"
+msgstr "Adauga ${type}"
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <span i18n:translate="label_add_type_to_folder" tal:condition="python:folder != parent_folder">
+#.                 Add
+#.  ${type}
+#.   to folder
+#. </span>
+# Original: "Add ${type} to folder"
+msgid "label_add_type_to_folder"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_memberships.pt
 #. <input class="context" i18n:attributes="value label_add_user_to_group;" name="prefs_user_membership_edit:method" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="batch" type="submit" value="Add user to selected groups"/>
 # Original: "Add user to selected groups"
@@ -5203,7 +5253,9 @@ msgstr "Oricare Autor"
 
 
 #: ./plone_templates/colophon.pt
-#. <img alt="Usable in any browser" height="15" i18n:attributes="alt label_any_browser; title title_any_browser;" src="" tal:attributes="src string:$portal_url/colophon_anybrowser.png" title="This Plone site is usable in any web browser." width="80"/>
+#. <a class="colophonIcon" href="http://plone.org/browsersupport" i18n:attributes="title title_any_browser;" i18n:translate="label_any_browser" tal:attributes="style string:background-image: url(${portal_url}/colophon_anybrowser.png);;" title="This Plone site is usable in any web browser.">
+#.         Usable in any browser
+#. </a>
 # Original: "Usable in any browser"
 msgid "label_any_browser"
 msgstr "Utilizabil in orice browser"
@@ -5648,7 +5700,9 @@ msgstr "Tip criteriu"
 
 
 #: ./plone_templates/colophon.pt
-#. <img alt="Valid CSS" height="15" i18n:attributes="alt label_css; title title_css;" src="" tal:attributes="src string:$portal_url/colophon_css.png" title="This Plone site was built with valid CSS." width="80"/>
+#. <a class="colophonIcon" href="http://jigsaw.w3.org/css-validator/check/referer" i18n:attributes="title title_css;" i18n:translate="label_css" tal:attributes="style string:background-image: url(${portal_url}/colophon_css.png);;" title="This Plone site was built with valid CSS.">
+#.         Valid CSS
+#. </a>
 #: ./plone_tableless/colophon.pt
 #. <img alt="Valid CSS" height="15" i18n:attributes="alt label_css; title title_css_with_semantically_correct_tables;" src="" tal:attributes="src string:$portal_url/colophon_csstableless.gif" title="This Plone site was built with valid CSS and semantically correct use of tables." width="80"/>
 # Original: "Valid CSS"
@@ -6782,6 +6836,10 @@ msgid "label_portrait"
 msgstr "Portret"
 
 
+#: ./plone_templates/colophon.pt
+#. <a class="colophonIcon" href="http://plone.org" i18n:attributes="title title_built_with_plone;" i18n:translate="label_powered_by_plone" tal:attributes="style string:background-image: url(${portal_url}/plone_powered.gif);;" title="This Plone site was built using the Plone Content Management System. Click for more information.">
+#.         Powered by Plone
+#. </a>
 #: ./plone_tableless/colophon.pt
 #. <img alt="Powered by Plone" height="15" i18n:attributes="alt label_powered_by_plone; title title_built_with_plone;" src="" tal:attributes="src string:$portal_url/plone_powered.gif" title="This Plone site was built using the Plone Content Management System. Click for more information." width="80"/>
 # Original: "Powered by Plone"
@@ -7024,6 +7082,10 @@ msgid "label_search_types_blacklist"
 msgstr ""
 
 
+#: ./plone_templates/colophon.pt
+#. <a class="colophonIcon" href="http://www.section508.gov" i18n:attributes="title title_section_508;" i18n:translate="label_section_508" tal:attributes="style string:background-image: url(${portal_url}/colophon_sec508.gif);;" title="This Plone site conforms to the US Government Section 508 Accessibility Guidelines.">
+#.         Section 508
+#. </a>
 #: ./plone_tableless/colophon.pt
 #. <img alt="Section 508" height="15" i18n:attributes="alt label_section_508; title title_section_508;" src="" tal:attributes="src string:$portal_url/colophon_sec508.gif" title="This Plone site conforms to the US Government Section 508 Accessibility Guidelines." width="80"/>
 # Original: "Section 508"
@@ -7629,6 +7691,10 @@ msgid "label_visible_members"
 msgstr "Membrii Vizibili"
 
 
+#: ./plone_templates/colophon.pt
+#. <a class="colophonIcon" href="http://www.w3.org/WAI/WCAG1AA-Conformance" i18n:attributes="title title_wcag;" i18n:translate="label_wcag" tal:attributes="style string:background-image: url(${portal_url}/colophon_wai-aa.gif);;" title="This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.">
+#.         WCAG
+#. </a>
 #: ./plone_tableless/colophon.pt
 #. <img alt="WCAG" height="15" i18n:attributes="alt label_wcag; title title_wcag;" src="" tal:attributes="src string:$portal_url/colophon_wai-aa.gif" title="This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines." width="80"/>
 # Original: "WCAG"
@@ -7676,6 +7742,10 @@ msgid "label_workflows"
 msgstr ""
 
 
+#: ./plone_templates/colophon.pt
+#. <a class="colophonIcon" href="http://validator.w3.org/check/referer" i18n:attributes="title title_xhtml;" i18n:translate="label_xhtml" tal:attributes="style string:background-image: url(${portal_url}/colophon_xhtml.png);;" title="This Plone site is valid XHTML.">
+#.         Valid XHTML
+#. </a>
 #: ./plone_tableless/colophon.pt
 #. <img alt="Valid XHTML" height="15" i18n:attributes="alt label_xhtml; title title_xhtml;" src="" tal:attributes="src string:$portal_url/colophon_xhtml.png" title="This Plone site is valid XHTML." width="80"/>
 # Original: "Valid XHTML"
@@ -9012,6 +9082,14 @@ msgid "text_error_not_found"
 msgstr ""
 
 
+#: ./plone_ecmascript/plone_javascript_variables.js.dtml
+#. form_modified_message = '<dtml-var expr="translate('text_form_modified_message', default=
+#. 'Your form has not been saved. All changes you have made will be lost')">'
+# Original: "Your form has not been saved. All changes you have made will be lost"
+msgid "text_form_modified_message"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_group_search_form.pt
 #. <td i18n:translate="text_group" tal:condition="usergroup/getGroupName | nothing">
 #.  Group
@@ -9401,12 +9479,14 @@ msgstr ""
 
 
 #: ./plone_templates/colophon.pt
-#. <img alt="Usable in any browser" height="15" i18n:attributes="alt label_any_browser; title title_any_browser;" src="" tal:attributes="src string:$portal_url/colophon_anybrowser.png" title="This Plone site is usable in any web browser." width="80"/>
+#. <a class="colophonIcon" href="http://plone.org/browsersupport" i18n:attributes="title title_any_browser;" i18n:translate="label_any_browser" tal:attributes="style string:background-image: url(${portal_url}/colophon_anybrowser.png);;" title="This Plone site is usable in any web browser.">
 # Original: "This Plone site is usable in any web browser."
 msgid "title_any_browser"
 msgstr "Acest site Plone este folosibil in orice navigator web."
 
 
+#: ./plone_templates/colophon.pt
+#. <a class="colophonIcon" href="http://plone.org" i18n:attributes="title title_built_with_plone;" i18n:translate="label_powered_by_plone" tal:attributes="style string:background-image: url(${portal_url}/plone_powered.gif);;" title="This Plone site was built using the Plone Content Management System. Click for more information.">
 #: ./plone_tableless/colophon.pt
 #. <img alt="Powered by Plone" height="15" i18n:attributes="alt label_powered_by_plone; title title_built_with_plone;" src="" tal:attributes="src string:$portal_url/plone_powered.gif" title="This Plone site was built using the Plone Content Management System. Click for more information." width="80"/>
 # Original: "This Plone site was built using the Plone Content Management System. Click for more information."
@@ -9457,7 +9537,7 @@ msgstr ""
 
 
 #: ./plone_templates/colophon.pt
-#. <img alt="Valid CSS" height="15" i18n:attributes="alt label_css; title title_css;" src="" tal:attributes="src string:$portal_url/colophon_css.png" title="This Plone site was built with valid CSS." width="80"/>
+#. <a class="colophonIcon" href="http://jigsaw.w3.org/css-validator/check/referer" i18n:attributes="title title_css;" i18n:translate="label_css" tal:attributes="style string:background-image: url(${portal_url}/colophon_css.png);;" title="This Plone site was built with valid CSS.">
 # Original: "This Plone site was built with valid CSS."
 msgid "title_css"
 msgstr "Acest site realizat cu Plone contine numai CSS valid."
@@ -9506,14 +9586,14 @@ msgstr "Muta elementul in sus"
 
 
 #: ./plone_portlets/portlet_calendar.pt
-#. <img alt="" i18n:attributes="title title_next_month;" src="" tal:attributes="src string:${portal_url}/arrowRight.gif" title="Next month"/>
+#. <a href="#" i18n:attributes="title title_next_month;" rel="nofollow" tal:attributes="href python:'%s/%s?%s&amp;month:int=%d&amp;year:int=%d&amp;orig_query=%s' % (anchor_url, anchor_method, query_string, nextMonthTime.month(),nextMonthTime.year(),url_quote(query_string))" tal:condition="python: yearmonth &lt; (nextYearMax.year(), nextYearMax.month())" title="Next month"/>
 # Original: "Next month"
 msgid "title_next_month"
 msgstr ""
 
 
 #: ./plone_portlets/portlet_calendar.pt
-#. <img alt="" i18n:attributes="title title_previous_month;" src="" tal:attributes="src string:${portal_url}/arrowLeft.gif" title="Previous month"/>
+#. <a href="#" i18n:attributes="title title_previous_month;" rel="nofollow" tal:attributes="href python:'%s/%s?%s&amp;month:int=%d&amp;year:int=%d&amp;orig_query=%s' % (anchor_url, anchor_method, query_string, prevMonthTime.month(),prevMonthTime.year(),url_quote(query_string))" tal:condition="python: yearmonth &gt; (prevYearMin.year(), prevYearMin.month())" title="Previous month"/>
 # Original: "Previous month"
 msgid "title_previous_month"
 msgstr ""
@@ -9554,6 +9634,8 @@ msgid "title_search_site"
 msgstr "Cauta in Site"
 
 
+#: ./plone_templates/colophon.pt
+#. <a class="colophonIcon" href="http://www.section508.gov" i18n:attributes="title title_section_508;" i18n:translate="label_section_508" tal:attributes="style string:background-image: url(${portal_url}/colophon_sec508.gif);;" title="This Plone site conforms to the US Government Section 508 Accessibility Guidelines.">
 #: ./plone_tableless/colophon.pt
 #. <img alt="Section 508" height="15" i18n:attributes="alt label_section_508; title title_section_508;" src="" tal:attributes="src string:$portal_url/colophon_sec508.gif" title="This Plone site conforms to the US Government Section 508 Accessibility Guidelines." width="80"/>
 # Original: "This Plone site conforms to the US Government Section 508 Accessibility Guidelines."
@@ -9591,6 +9673,8 @@ msgid "title_show_all_content_types"
 msgstr "Arata toate tipurile de continut disponibile"
 
 
+#: ./plone_templates/colophon.pt
+#. <a class="colophonIcon" href="http://www.w3.org/WAI/WCAG1AA-Conformance" i18n:attributes="title title_wcag;" i18n:translate="label_wcag" tal:attributes="style string:background-image: url(${portal_url}/colophon_wai-aa.gif);;" title="This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.">
 #: ./plone_tableless/colophon.pt
 #. <img alt="WCAG" height="15" i18n:attributes="alt label_wcag; title title_wcag;" src="" tal:attributes="src string:$portal_url/colophon_wai-aa.gif" title="This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines." width="80"/>
 # Original: "This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines."
@@ -9598,6 +9682,8 @@ msgid "title_wcag"
 msgstr "Acest site realizat cu Plone se conformeaza cu specificatiile W3C-WAI-Web pentru Accesibilitatea Continutului."
 
 
+#: ./plone_templates/colophon.pt
+#. <a class="colophonIcon" href="http://validator.w3.org/check/referer" i18n:attributes="title title_xhtml;" i18n:translate="label_xhtml" tal:attributes="style string:background-image: url(${portal_url}/colophon_xhtml.png);;" title="This Plone site is valid XHTML.">
 #: ./plone_tableless/colophon.pt
 #. <img alt="Valid XHTML" height="15" i18n:attributes="alt label_xhtml; title title_xhtml;" src="" tal:attributes="src string:$portal_url/colophon_xhtml.png" title="This Plone site is valid XHTML." width="80"/>
 # Original: "This Plone site is valid XHTML."

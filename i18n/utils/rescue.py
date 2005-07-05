@@ -94,7 +94,8 @@ def main():
             'This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.' : 'title_wcag', 
             'This Plone site is valid XHTML.' : 'title_xhtml', 'legend_comment_details' : 'legend_add_comment', 
             'box_sign_in' : 'Log in', 'listingheader_undo' : 'Undo', 'help_user_name_caps' : 'help_login_name_caps',
-            'description_signin_fail_cookies_link' : 'description_login_fail_enable_cookies'
+            'description_signin_fail_cookies_link' : 'description_login_fail_enable_cookies',
+            'Add ${type}' : 'label_add_type', 'Add ${type} to folder' : 'label_add_type_to_folder'
            }
 
     renamed['atreferencebrowserwidget'] = {
