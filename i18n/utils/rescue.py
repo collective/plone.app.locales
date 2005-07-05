@@ -27,7 +27,7 @@ __I18NDUDE = os.environ.get('I18NDUDE', '')
 def main():
     os.chdir('..')
 
-    products = ['plone','atreferencebrowserwidget']
+    products = ['plone','atreferencebrowserwidget','atcontenttypes']
     poFiles = {}
 
     for product in products:
@@ -101,6 +101,10 @@ def main():
     renamed['atreferencebrowserwidget'] = {
             'No reference set. Click the browse button to select.' : 'label_no_reference_set', 'Browse...' : 'label_browse',
             'Remove reference' : 'label_remove_reference', 'Remove selected items' : 'label_remove_selected_items'
+           }
+
+    renamed['atcontenttypes'] = {
+            'Execute' : 'label_execute', 'text_no_albuns_uploaded' : 'text_no_albums_uploaded'
            }
 
     for product in products:
