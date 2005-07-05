@@ -39,14 +39,9 @@ except ImportError:
     from i18ndude import catalog
     from i18ndude.catalog import MAX_OCCUR
 
-KNOWS_CALENDAR_NAMES = True
-try:
-    from Products.CMFPlone.i18nl10n import monthname_english, weekdayname_english, \
-         monthname_msgid, monthname_msgid_abbr, weekdayname_msgid, \
-         weekdayname_msgid_abbr, weekdayname_msgid_short
-except ImportError:
-    KNOWS_CALENDAR_NAMES = False
-    print "Error importing i18nl10n.py -> no automatic day/monthname generation"
+from Products.CMFPlone.i18nl10n import monthname_english, weekdayname_english, \
+     monthname_msgid, monthname_msgid_abbr, weekdayname_msgid, \
+     weekdayname_msgid_abbr, weekdayname_msgid_short
 
 class TestI18N(PloneTestCase.PloneTestCase):
 
@@ -54,22 +49,10 @@ class TestI18N(PloneTestCase.PloneTestCase):
         self.action_tool = self.portal.portal_actions
         self.wf_tool = self.portal.portal_workflow
         self.types_tool = self.portal.portal_types
-        try:
-            self.at_tool = self.portal.archetype_tool
-        except AttributeError:
-            self.at_tool = False
-        try:
-            self.atct_tool = self.portal.portal_atct
-        except AttributeError:
-            self.atct_tool = False
-        try:
-            self.ai_tool = self.portal.portal_actionicons
-        except AttributeError:
-            self.ai_tool = False
-        try:
-            self.cp_tool = self.portal.portal_controlpanel
-        except AttributeError:
-            self.cp_tool = False
+        self.at_tool = self.portal.archetype_tool
+        self.atct_tool = self.portal.portal_atct
+        self.ai_tool = self.portal.portal_actionicons
+        self.cp_tool = self.portal.portal_controlpanel
 
     def testI18Ngenerator(self):
         '''Runs the i18ngenerator'''
@@ -78,9 +61,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
         ctl['plone'] = catalog.MessageCatalog(domain='plone')
 
         # global actions
-        action_providers = [tool for tool in self.action_tool.listActionProviders()]
-
-        for provider in action_providers:
+        for provider in self.action_tool.listActionProviders():
             provider_tool = getToolByName(self.portal, provider, None)
             for action in provider_tool.listActions():
                 title = norm(action.title)
@@ -88,19 +69,13 @@ class TestI18N(PloneTestCase.PloneTestCase):
                     ctl['plone'].add(title, msgstr=title, filename='action', excerpt=['defined in %s' %provider])
 
         # description of action icons
-        if self.ai_tool:
-            action_icons = self.ai_tool.listActionIcons()
-        else:
-            action_icons = []
-        for icon in action_icons:
+        for icon in self.ai_tool.listActionIcons():
             title= icon.getTitle()
             ctl['plone'].add(title, msgstr=title, filename='action_icon', excerpt=['id: %s, category: %s' % (icon.getIconURL(), icon.getCategory())])
 
 
         # workflow states and worflow transitions
-        workflows = self.wf_tool.listWorkflows()
-
-        for workflow in workflows:
+        for workflow in self.wf_tool.listWorkflows():
             wf = self.wf_tool.getWorkflowById(workflow)
             for obj in wf.objectValues():
                 if isinstance(obj, States.States):
@@ -111,6 +86,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
                     for transition in obj.objectValues():
                         ctl['plone'].add(transition.getId(), msgstr=transition.getId(), filename='workflow_transition', excerpt=['defined in %s, title: %s' % (workflow, transition.title), 'new state: %s' % transition.new_state_id])
                         ctl['plone'].add(transition.title, msgstr=transition.title, filename='workflow_transition', excerpt=['defined in %s, id: %s' % (workflow, transition.getId()), 'new state: %s' % transition.new_state_id])
+                        ctl['plone'].add(transition.actbox_name, msgstr=transition.actbox_name, filename='workflow_action', excerpt=['defined in %s, title: %s' % (workflow, transition.title), 'new state: %s' % transition.new_state_id])
 
 
         # portal types and types actions
@@ -130,39 +106,28 @@ class TestI18N(PloneTestCase.PloneTestCase):
                     ctl['plone'].addToSameFileName(actionTitle, msgstr=actionTitle, filename='type_action', excerpt=['defined on %s' % title])
 
         # portal_controlpanel categories
-        if self.cp_tool:
-            groups = self.cp_tool.getGroups()
-        else:
-            groups = []
-        for group in groups:
+        for group in self.cp_tool.getGroups():
             id = group.get('id')
             title = group.get('title')
             ctl['plone'].add(title, msgstr=title, filename='controlpanel_category', excerpt=['category-id: %s' % id])
 
         # day and monthnames
-        if KNOWS_CALENDAR_NAMES:
-            for num in range(7):
-                day = weekdayname_english(num) # Monday, Tuesday...
-                ctl['plone'].add(weekdayname_msgid(num), msgstr=day, filename='datetime', excerpt=['name of a day, format %A'])
-                day = weekdayname_english(num, 'a') # Mon, Tue, ...
-                ctl['plone'].add(weekdayname_msgid_abbr(num), msgstr=day, filename='datetime', excerpt=['abbreviation of a day, format %a'])
-                day = weekdayname_english(num, 'a')[:2] # Mo, Tu, ...
-                ctl['plone'].add(weekdayname_msgid_short(num), msgstr=day, filename='datetime', excerpt=['two letter abbreviation of a day used in the portlet_calendar'])
-            for num in range(1,13):
-                month = monthname_english(num) # January, February...
-                ctl['plone'].add(monthname_msgid(num), msgstr=month, filename='datetime', excerpt=['name of a month, format %B'])
-                month = monthname_english(num, 'a') # Jan, Feb...
-                ctl['plone'].add(monthname_msgid_abbr(num), msgstr=month, filename='datetime', excerpt=['name of a month, format %b'])
+        for num in range(7):
+            day = weekdayname_english(num) # Monday, Tuesday...
+            ctl['plone'].add(weekdayname_msgid(num), msgstr=day, filename='datetime', excerpt=['name of a day, format %A'])
+            day = weekdayname_english(num, 'a') # Mon, Tue, ...
+            ctl['plone'].add(weekdayname_msgid_abbr(num), msgstr=day, filename='datetime', excerpt=['abbreviation of a day, format %a'])
+            day = weekdayname_english(num, 'a')[:2] # Mo, Tu, ...
+            ctl['plone'].add(weekdayname_msgid_short(num), msgstr=day, filename='datetime', excerpt=['two letter abbreviation of a day used in the portlet_calendar'])
+        for num in range(1,13):
+            month = monthname_english(num) # January, February...
+            ctl['plone'].add(monthname_msgid(num), msgstr=month, filename='datetime', excerpt=['name of a month, format %B'])
+            month = monthname_english(num, 'a') # Jan, Feb...
+            ctl['plone'].add(monthname_msgid_abbr(num), msgstr=month, filename='datetime', excerpt=['name of a month, format %b'])
 
         # indexes and metadata and smart folder options
-        if self.atct_tool:
-            indexes = self.atct_tool.getIndexes(enabledOnly=1)
-            metadata = self.atct_tool.getAllMetadata(enabledOnly=1)
-            domain = 'plone'
-        else:
-            indexes = []
-            metadata = []
-        for index in indexes:
+        domain = 'plone'
+        for index in self.atct_tool.getIndexes(enabledOnly=1):
             index = self.atct_tool.getIndex(index)
             id = index.index
             title = index.friendlyName
@@ -177,7 +142,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
                 name = criterion['name']
                 desc = criterion['description']
                 ctl[domain].addToSameFileName(desc, msgstr=desc, filename='criteria', excerpt=['criterion description of crterion: %s' % name])
-        for meta in metadata:
+        for meta in self.atct_tool.getAllMetadata(enabledOnly=1):
             meta = self.atct_tool.getMetadata(meta)
             id = meta.index
             title = meta.friendlyName
@@ -212,12 +177,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
                 ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
 
         # archetypes widgets
-        if self.at_tool:
-            widgets = self.at_tool.getWidgets()
-        else:
-            widgets = []
-
-        for widget in widgets:
+        for widget in self.at_tool.getWidgets():
             w = widget._args.get('widget')
             dict = w.__dict__
             domain = dict.get('i18n_domain')
