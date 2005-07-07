@@ -31,6 +31,9 @@ from Testing import ZopeTestCase
 from Products.CMFPlone.tests import PloneTestCase
 from Products.CMFCore.utils import getToolByName
 from Products.DCWorkflow import States, Transitions
+from Products.Archetypes.Schema import getSchemata
+from Products.Archetypes.Field import ReferenceField
+from Products.Archetypes.utils import DisplayList
 
 try:
     from Products.i18ndude import catalog
@@ -153,30 +156,28 @@ class TestI18N(PloneTestCase.PloneTestCase):
             if desc:
                 ctl[domain].addToSameFileName(desc, msgstr=desc, filename='metadata', excerpt=['metadata description of metadata: %s' % id])
 
-        # DisplayList properties XXX This is a evil hack and should be done in more general way, but I couldn't find any "SchemaRegistry"
+        # DisplayList properties XXX This takes only static DisplayLists for now. Need to look at dynamically generated ones (which need a content object to be present)
 
-        hasDisplayLists = False
-        try:
-            from Products.ATContentTypes.criteria.date import DateOptions, CompareOperations, RangeOperations
-            from Products.ATContentTypes.criteria.list import CompareOperators
-            hasDisplayLists = True
-            domain = 'atcontenttypes'
-            if not domain in ctl.keys():
-                ctl[domain] = catalog.MessageCatalog(domain=domain)
-        except ImportError:
-            print "ATCT DisplayLists not found."
+        for attype in self.at_tool.listRegisteredTypes():
+            schema = attype['schema']
+            for field in schema.fields():
+                if not isinstance(field, ReferenceField):
+                    domain = field.widget.__dict__.get('i18n_domain')
+                    vocab = field.Vocabulary()
+                    if isinstance(vocab, DisplayList):
+                        for key in vocab:
+                            value = vocab.getValue(key)
+                            if len(value) > 1:
+                                msgid = vocab.getMsgId(key)
+                                if domain == None:
+                                    domain = 'plone'
+                                if not domain in ctl.keys():
+                                    ctl[domain] = catalog.MessageCatalog(domain=domain)
+                                ctl[domain].addToSameFileName(msgid, msgstr=value, filename='schema', excerpt=['DisplayList entry for field %s' % field.getName()])
 
-        if hasDisplayLists:
-            for value in DateOptions.values():
-                ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
-            for value in CompareOperations.values():
-                ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
-            for value in RangeOperations.values():
-                ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
-            for value in CompareOperators.values():
-                ctl[domain].addToSameFileName(value, msgstr=value, filename='schema', excerpt=['DisplayList entry'])
 
-        # archetypes widgets
+        # archetypes widgets XXX Should be merged with the DisplayList stuff
+
         for widget in self.at_tool.getWidgets():
             w = widget._args.get('widget')
             dict = w.__dict__
