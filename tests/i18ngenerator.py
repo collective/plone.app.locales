@@ -34,6 +34,7 @@ from Products.DCWorkflow import States, Transitions
 from Products.Archetypes.Schema import getSchemata
 from Products.Archetypes.Field import ReferenceField
 from Products.Archetypes.utils import DisplayList
+from Products.CMFDynamicViewFTI.interfaces import IDynamicViewTypeInformation
 
 try:
     from Products.i18ndude import catalog
@@ -97,6 +98,20 @@ class TestI18N(PloneTestCase.PloneTestCase):
 
         for type in types:
             typeObj = self.types_tool.getTypeInfo(type)
+
+            methods = []
+            try:
+                methods = typeObj.view_methods
+            except AttributeError:
+                # this type doesn't support the DynamicViewFTI
+                pass
+
+            for method in methods:
+                mid = getattr(typeObj, method, None)
+                title = mid.aq_inner.aq_explicit.title_or_id()
+                if type.endswith('Folder') or type == 'Topic': # XXX Need a better way to filter out unused views
+                    ctl['plone'].addToSameFileName(title, msgstr=title, filename='dynamic view name', excerpt=['template %s on type: %s' % (method, type)])
+
             title = norm(typeObj.Title())
             desc = norm(typeObj.Description())
             ctl['plone'].add(title, msgstr=title, filename='portal_type_title', excerpt=['type description: %s' % desc])
