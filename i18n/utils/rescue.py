@@ -104,7 +104,8 @@ def main():
            }
 
     renamed['atcontenttypes'] = {
-            'Execute' : 'label_execute', 'text_no_albuns_uploaded' : 'text_no_albums_uploaded'
+            'Execute' : 'label_execute', 'text_no_albuns_uploaded' : 'text_no_albums_uploaded',
+            'constraintypes_disabled_label' : 'constraintypes_disable_label', 'constraintypes_enabled_label' : 'constraintypes_enable_label'
            }
 
     renamed['archetypes'] = {

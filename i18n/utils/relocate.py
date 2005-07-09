@@ -69,6 +69,13 @@ def main():
                    'The time and date an item was created', 'The time and date an item was last modified',
                    'Title', 'Type', 'created', 'effective', 'end', 'expires', 'getId', 'getObjSize',
                    'getRawRelatedItems', 'location', 'modified', 'path', 'review_state', 'sortable_title'
+                  ],
+                 'plone' :
+                  ['help_int_criteria_direction', 'help_int_criteria_value', 'help_int_criteria_value2',
+                   'help_list_criteria_operator', 'help_list_criteria_value', 'label_int_criteria_direction',
+                   'label_int_criteria_value', 'label_int_criteria_value2', 'label_list_criteria_operator',
+                   'label_list_criteria_value'
+
                   ]
                 }
 
