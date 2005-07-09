@@ -70,7 +70,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
             for action in provider_tool.listActions():
                 title = norm(action.title)
                 if action.visible:
-                    ctl['plone'].add(title, msgstr=title, filename='action', excerpt=['defined in %s' %provider])
+                    ctl['plone'].add(title, msgstr=title, filename='action', excerpt=['defined in %s' % provider])
 
         # description of action icons
         for icon in self.ai_tool.listActionIcons():
@@ -174,6 +174,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
         # DisplayList properties XXX This takes only static DisplayLists for now. Need to look at dynamically generated ones (which need a content object to be present)
 
         for attype in self.at_tool.listRegisteredTypes():
+            # typename = attype['name']
             schema = attype['schema']
             for field in schema.fields():
                 if not isinstance(field, ReferenceField):

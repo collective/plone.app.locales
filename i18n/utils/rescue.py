@@ -27,7 +27,7 @@ __I18NDUDE = os.environ.get('I18NDUDE', '')
 def main():
     os.chdir('..')
 
-    products = ['plone','atreferencebrowserwidget','atcontenttypes']
+    products = ['plone','atreferencebrowserwidget','atcontenttypes','archetypes']
     poFiles = {}
 
     for product in products:
@@ -105,6 +105,10 @@ def main():
 
     renamed['atcontenttypes'] = {
             'Execute' : 'label_execute', 'text_no_albuns_uploaded' : 'text_no_albums_uploaded'
+           }
+
+    renamed['archetypes'] = {
+            'Previous' : 'label_previous', 'Next' : 'label_next'
            }
 
     for product in products:
