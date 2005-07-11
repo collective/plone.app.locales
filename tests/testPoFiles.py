@@ -25,7 +25,8 @@ whitelist = ['Netscape Navigator',':','Version 4.x','Internet Explorer',\
              'Version 5.x','Description','Normal Text','Section 508',\
              'SMTP server','Powered by Plone','Valid XHTML','iCal (Mac OS X)',\
              'Zope Management Interface','${type} Details','${fieldset} Details',\
-             'vCalendar export','iCalendar export','vCal (Windows, Linux)']
+             'vCalendar export','iCalendar export','vCal (Windows, Linux)',\
+             'getRawRelatedItems']
 
 # html entities as they appear in templates
 entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs]
