@@ -19,12 +19,13 @@ This document is part of the `Plone Translation Effort`_ documentation. See
 Access Keys
 -----------
 
-*What does ``accesskeys-XY`` as msgid stand for? How do I translate that?*
+*Where have all those accesskeys gone?*
 
-Accesskeys allow users to access certain parts of the interface through
-buttons. Each msgstr must be a single character, e.g. ``s`` for accessing
-the search form (see plone-en.po for more examples). A key may not be used
-twice.
+Accesskeys are a concept to allow users to access certain parts of the
+interface through keyboard shortcuts. Each must be a single character. As these
+have caused more problems with existing keyboard shortcuts from screen readers
+or browsers and operating systems, they are de-emphasized in the WCAG 2.0
+standard and not used any more in Plone.
 
 Fuzzy entries
 -------------

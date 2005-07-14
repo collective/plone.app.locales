@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-07-11 15:20+0000\n"
+"POT-Creation-Date: 2005-07-14 11:27+0000\n"
 "PO-Revision-Date: 2004-11-22 09:22+0300\n"
 "Last-Translator: Gia Shervashidze <guiasher@mes.gov.ge>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -307,6 +307,13 @@ msgid "Comment"
 msgstr "კომენტარი"
 
 
+#: ./ATContentTypes/atct_topic_subtopics.pt
+#. Used as title of the folder_contents form
+# Original: "Contained Smart Folders:"
+msgid "Contained Smart Folders:"
+msgstr ""
+
+
 msgid "Content has been changed."
 msgstr "შინაარსი შეიცვალა"
 
@@ -387,13 +394,6 @@ msgstr ""
 # Original: "Date range"
 msgid "Date range"
 msgstr "თარიღები"
-
-
-#: action
-#. defined in portal_actions
-# Original: "Default view"
-msgid "Default view"
-msgstr ""
 
 
 #: action
@@ -1109,6 +1109,13 @@ msgid "Path Criterion"
 msgstr ""
 
 
+#: workflow_state
+#. defined in plone_workflow, id: pending
+# Original: "Pending"
+msgid "Pending"
+msgstr ""
+
+
 msgid "Permission denied to copy ${title}."
 msgstr "${title} კოპირება აკრძალულია."
 
@@ -1232,6 +1239,14 @@ msgid "Print this page"
 msgstr "ამ გვერდის ბეჭდვა"
 
 
+#: workflow_state
+#. defined in plone_workflow, id: private
+#. defined in folder_workflow, id: private
+# Original: "Private"
+msgid "Private"
+msgstr ""
+
+
 #: type_action
 #. defined on Page
 #. defined on Event
@@ -1249,10 +1264,10 @@ msgstr "პარამეტრები"
 
 
 #: workflow_state
-#. defined in plone_workflow, id: published
-#. defined in folder_workflow, id: published
-# Original: "Public"
-msgid "Public"
+#. defined in plone_workflow, id: visible
+#. defined in folder_workflow, id: visible
+# Original: "Public Draft"
+msgid "Public Draft"
 msgstr ""
 
 
@@ -1268,6 +1283,14 @@ msgstr "წარმოჩენა"
 # Original: "Publish"
 msgid "Publish"
 msgstr "გამოქვეყნება"
+
+
+#: workflow_state
+#. defined in plone_workflow, id: published
+#. defined in folder_workflow, id: published
+# Original: "Published"
+msgid "Published"
+msgstr ""
 
 
 #: action
@@ -1879,29 +1902,6 @@ msgid "View"
 msgstr "ჩვენება"
 
 
-#: workflow_state
-#. defined in plone_workflow, id: private
-#. defined in folder_workflow, id: private
-# Original: "Visible and editable only by owner"
-msgid "Visible and editable only by owner"
-msgstr ""
-
-
-#: workflow_state
-#. defined in plone_workflow, id: visible
-#. defined in folder_workflow, id: visible
-# Original: "Visible but not published"
-msgid "Visible but not published"
-msgstr ""
-
-
-#: workflow_state
-#. defined in plone_workflow, id: pending
-# Original: "Waiting for reviewer"
-msgid "Waiting for reviewer"
-msgstr ""
-
-
 msgid "Welcome! You are now logged in."
 msgstr "კეთილი იყოს თქვენი შემობრძანება!"
 
@@ -2020,54 +2020,6 @@ msgstr "თქვენი პირადი პარამეტრები 
 # Original: "Zope Management Interface"
 msgid "Zope Management Interface"
 msgstr "Zope-ს მართვის პანელი"
-
-
-# Generated accesskey id's. Other accesskeys are autoextracted from the templates.
-# See plone-en.po for the default english accesskeys used.
-msgid "accesskeys-Contents"
-msgstr "შ"
-
-
-# Generated accesskey id's. Other accesskeys are autoextracted from the templates.
-# See plone-en.po for the default english accesskeys used.
-msgid "accesskeys-Edit"
-msgstr "რ"
-
-
-# Generated accesskey id's. Other accesskeys are autoextracted from the templates.
-# See plone-en.po for the default english accesskeys used.
-msgid "accesskeys-Properties"
-msgstr "პ"
-
-
-# Generated accesskey id's. Other accesskeys are autoextracted from the templates.
-# See plone-en.po for the default english accesskeys used.
-msgid "accesskeys-View"
-msgstr "ჩ"
-
-
-#: ./plone_portlets/portlet_login.pt
-#. <input accesskey="l" alt="Password" i18n:attributes="alt label_password; accesskey accesskeys-login;" size="10" tal:attributes="name ac_password; id ac_password;                                        tabindex tabindex/next;" type="password"/>
-# Original: "l"
-#, fuzzy
-msgid "accesskeys-login"
-msgstr "ს"
-
-
-#: ./plone_templates/global_personalbar.pt
-#. <a accesskey="u" i18n:attributes="accesskey accesskeys-personalbar;" id="user-name" tal:attributes="href string:${mtool/getHomeUrl}" tal:omit-tag="not: mtool/getHomeFolder">
-# Original: "u"
-#, fuzzy
-msgid "accesskeys-personalbar"
-msgstr "ნ"
-
-
-#: ./plone_templates/global_searchbox.pt
-#. <input accesskey="s" class="visibility:visible" i18n:attributes="accesskey accesskeys-search; title title_search_site;" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
-# Original: "s"
-#, fuzzy
-msgid "accesskeys-search"
-msgstr "ძ"
 
 
 #: ./plone_templates/batch_macros.pt
@@ -3091,10 +3043,11 @@ msgstr "გთხოვთ აირჩიოთ დასტის საწყ
 
 #: ./plone_forms/select_default_view.cpt
 #. <div class="documentDescription" i18n:translate="description_select_default_view">
-#.         Please select template which will be displayed as the default view of the
+#.         Please select which template should be used as the default view of the
 #.         folder.
 #. </div>
-# Original: "Please select template which will be displayed as the default view of the folder."
+# Original: "Please select which template should be used as the default view of the folder."
+#, fuzzy
 msgid "description_select_default_view"
 msgstr ""
 
@@ -3147,10 +3100,11 @@ msgstr "შეგიძლიათ მიუთითოთ თუ შიგთ
 
 #: ./plone_forms/folder_localrole_form.pt
 #. <p i18n:translate="description_share_folders_items_current_shares">
-#.         You can share the rights for both folders (including content) and single items.
+#.         You can share the rights for both entire folders and single items.
 #.         These users have privileges here:
 #. </p>
-# Original: "You can share the rights for both folders (including content) and single items. These users have privileges here:"
+# Original: "You can share the rights for both entire folders and single items. These users have privileges here:"
+#, fuzzy
 msgid "description_share_folders_items_current_shares"
 msgstr "შეგიძლიათ გაზიარების უფლების მინიჭება როგორც დასტებისთვის (მათი შიგთავსის ჩათვლით), ისე ცალკეული ელემენტებისთვის.  ასეთ მონაწილეებს აქ შემდეგი უპირატესობები აქვთ:"
 
@@ -4500,6 +4454,16 @@ msgid "help_allow_discussion"
 msgstr "მიუთითებს შიძლება თუ არა ამ ელემენტისთვის კომენტარების დამატება. \"შაბლონი\" გამოიყენებს საიტის გლობალურ პარამეტრებს."
 
 
+#: ./plone_prefs/personalize_form.cpt
+#. <div class="formHelp" i18n:translate="help_biography">
+#.                 A short overview of who you are and what you do. Will be displayed
+#.                 on the your author page, linked from the items you create.
+#. </div>
+# Original: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
+msgid "help_biography"
+msgstr ""
+
+
 #: widget_description
 #. of BooleanWidget, for label: Value
 # Original: "True or false"
@@ -4592,13 +4556,22 @@ msgid "help_content_editor"
 msgstr "შეარჩიეთ ტექსტური რედაქტორი, რომლის გამოყენებასაც ტექსტთან სამუშაოდ ისურვებდით.  შინაარსის რედაქტორებს ხშირად ბრაუზერებისადმი სპეციალური მოთხოვნები გააჩნიათ."
 
 
-#: ./plone_prefs/personalize_form.cpt
+#: ./plone_prefs/prefs_user_details.cpt
 #. <div class="formHelp" i18n:translate="help_content_ext_editor">
 #.                  When checked, an icon will be made visible on each page which allows
 #.                  you to edit content locally. Ask your administrator for more information
 #.                  when needed.
 #. </div>
-# Original: "When checked, an icon will be made visible on each page which allows you to edit content locally. Ask your administrator for more information when needed."
+#: ./plone_prefs/personalize_form.cpt
+#. <div class="formHelp" i18n:translate="help_content_ext_editor">
+#.                  When checked, an icon will be made visible on each page which allows
+#.                  you to edit content with your favorite editor instead of using
+#.                  browser-based editors. This requires an additional application
+#.                  called ExternalEditor installed client-side.
+#.                  Ask your administrator for more information if needed.
+#. </div>
+# Original: "When checked, an icon will be made visible on each page which allows you to edit content with your favorite editor instead of using browser-based editors. This requires an additional application called ExternalEditor installed client-side. Ask your administrator for more information if needed."
+#, fuzzy
 msgid "help_content_ext_editor"
 msgstr ""
 
@@ -4892,6 +4865,16 @@ msgstr ""
 # Original: "Select the content types that will be addable inside this folder."
 msgid "help_locally_allowed_types"
 msgstr "ამ დასტაში დამატებადი შიგთავსის ტიპების არჩევა."
+
+
+#: ./plone_prefs/personalize_form.cpt
+#. <div class="formHelp" i18n:translate="help_location">
+#.                 Your location - either city and country - or in a company setting,
+#.                 where your office is located.
+#. </div>
+# Original: "Your location - either city and country - or in a company setting, where your office is located."
+msgid "help_location"
+msgstr ""
 
 
 #: ./plone_login/failsafe_login.pt
@@ -5447,9 +5430,11 @@ msgstr ""
 #: ./plone_forms/folder_localrole_form.pt
 #. <div class="formHelp" i18n:translate="help_use_acquisition">
 #.                 Determines if the roles given to users and groups from higher levels are in
-#.                 effect in this context.
+#.                 effect in this context. Use this to block people that have local roles in higher-level
+#.                 folders from accessing this folder.
 #. </div>
-# Original: "Determines if the roles given to users and groups from higher levels are in effect in this context."
+# Original: "Determines if the roles given to users and groups from higher levels are in effect in this context. Use this to block people that have local roles in higher-level folders from accessing this folder."
+#, fuzzy
 msgid "help_use_acquisition"
 msgstr "ზედა დონის მონაწილეებისა და ჯგუფების მინიჭებული როლების ამ შიგთავსზე ქმედუნარიანობის განსაზღვრა."
 
@@ -5812,6 +5797,15 @@ msgid "label_before_specified_time"
 msgstr "არ შესულა მითითებული თარიღიდან"
 
 
+#: ./plone_prefs/personalize_form.cpt
+#. <label for="description" i18n:translate="label_biography">
+#.  Biography
+#. </label>
+# Original: "Biography"
+msgid "label_biography"
+msgstr ""
+
+
 #: widget_label
 #. of RichWidget, description:
 # Original: "Body Text"
@@ -5881,6 +5875,18 @@ msgid "label_change_contributers"
 msgstr ""
 
 
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#.                                  Change item
+#. </a>
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
+#.                                  Change item
+#. </a>
+# Original: "Change item"
+msgid "label_change_item"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_details.cpt
 #. <p i18n:translate="label_change_member_properties">
 #.           Change member properties.
@@ -5915,6 +5921,24 @@ msgid "label_change_status"
 msgstr "სტატუსის შეცვლა"
 
 
+#: ./plone_forms/select_default_view.cpt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#.                              Choose a content item
+#. </a>
+# Original: "Choose a content item"
+msgid "label_choose_content_item"
+msgstr ""
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#.                                  Choose item
+#. </a>
+# Original: "Choose item"
+msgid "label_choose_item"
+msgstr ""
+
+
 #: ./plone_prefs/reconfig_form.cpt
 #. <option i18n:translate="label_choose_language" value="">
 #.  Choose Language
@@ -5934,9 +5958,9 @@ msgstr "MIME-ტიპის არჩევა"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_choose_template">
-#.  Display
-#. </span>
+#. <a href="#" i18n:attributes="title title_choose_default_view;" i18n:translate="label_choose_template" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
+#.                     Display
+#. </a>
 # Original: "Display"
 msgid "label_choose_template"
 msgstr "ჩვენება"
@@ -6160,6 +6184,15 @@ msgid "label_css"
 msgstr "მართებული CSS"
 
 
+#: ./plone_forms/select_default_view.cpt
+#. <span class="discreet" i18n:translate="label_current" tal:condition="python:value==selectedLayout">
+#.  (current)
+#. </span>
+# Original: "(current)"
+msgid "label_current"
+msgstr ""
+
+
 #: ./plone_prefs/password_form.pt
 #. <label for="current" i18n:translate="label_current_password">
 #.  Current password
@@ -6266,7 +6299,7 @@ msgstr "სინდიკაციის გაუქმება"
 
 #: ./plone_templates/global_contentmenu.pt
 #. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
-#.                   Display
+#.                     Display
 #. </span>
 # Original: "Display"
 msgid "label_disabled_display_menu"
@@ -6882,7 +6915,7 @@ msgstr "შესვლა"
 #. <label for="__ac_name" i18n:translate="label_login_name">
 #.  Login Name
 #. </label>
-#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                        value python:request.get(ac_name, '');                                        tabindex tabindex/next" type="text"/>
+#. <input alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                        value python:request.get(ac_name, '');                                        tabindex tabindex/next" type="text"/>
 #: ./plone_login/failsafe_login.pt
 #. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
 #.  Login Name
@@ -7102,15 +7135,25 @@ msgid "label_one_step_workflow"
 msgstr "საქმეთწარმოება ერთბიჯიანი გამოქვეყნებით"
 
 
+#: ./plone_forms/select_default_view.cpt
+#. <span i18n:translate="label_or">
+#.  or
+#. </span>
+# Original: "or"
+msgid "label_or"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_details.cpt
 #. <option i18n:translate="label_ordinary_content_editor" tal:attributes="value editor;                                                 selected python:test(editor==wysiwyg_editor, 'selected', None);" tal:condition="python:editor == 'None'" tal:content="editor" value="None">
 #.                         Ordinary Form-based Editor (works in all browsers)
 #. </option>
 #: ./plone_prefs/personalize_form.cpt
-#. <option i18n:translate="label_ordinary_content_editor" tal:attributes="value editor;                                             selected python:test(editor==wysiwyg_editor, 'selected', None);" tal:condition="python:editor == 'None'" tal:content="editor" value="None">
-#.                     Ordinary Form-based Editor (works in all browsers)
+#. <option i18n:translate="label_ordinary_content_editor" tal:attributes="value editor;                                             selected python:test(editor==wysiwyg_editor, 'selected', None);" tal:condition="python:editor == 'None'" value="None">
+#.                     Basic HTML textarea editor (works in all browsers)
 #. </option>
-# Original: "Ordinary Form-based Editor (works in all browsers)"
+# Original: "Basic HTML textarea editor (works in all browsers)"
+#, fuzzy
 msgid "label_ordinary_content_editor"
 msgstr "ფორმაზე დაფუძნებული რედაქტორი (მუშაობს ყველა ბრაუზერზე)"
 
@@ -7532,6 +7575,15 @@ msgid "label_select_all_items"
 msgstr "ყველა ელემენტის შერჩევა"
 
 
+#: ./plone_forms/select_default_view.cpt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_select_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#.                              Select a content item
+#. </a>
+# Original: "Select a content item"
+msgid "label_select_content_item"
+msgstr ""
+
+
 #: ./plone_forms/folder_localrole_form.pt
 #. <label class="hiddenLabel" for="member_ids:list" i18n:translate="label_select_group">
 #.                                 select group
@@ -7540,6 +7592,15 @@ msgstr "ყველა ელემენტის შერჩევა"
 # Original: "select group ${name}"
 msgid "label_select_group"
 msgstr "აირჩიეთ ჯგუფი ${name}"
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_select_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
+#.                                  Select item
+#. </a>
+# Original: "Select item"
+msgid "label_select_item"
+msgstr ""
 
 
 #: ./plone_forms/folder_localrole_form.pt
@@ -8000,7 +8061,7 @@ msgstr ""
 
 #: ./plone_forms/folder_localrole_form.pt
 #. <label for="inherit" i18n:translate="label_use_acquisition">
-#.  Inherit roles from higher levels
+#.             Inherit roles from higher levels
 #. </label>
 # Original: "Inherit roles from higher levels"
 msgid "label_use_acquisition"
@@ -8781,13 +8842,16 @@ msgstr ""
 #.  <strong>
 #.   Attention!
 #.  </strong>
-#.   You are setting the sharing permissions for a
+#.                 You are setting the sharing permissions for a
 #.  ${type}
 #.  .
-#.             If you want to set the permissions for its containing folder, click
+#.                 If you want to set the permissions for its containing folder,
+#.                 click
 #.  ${link}
+#.  .
 #. </span>
-# Original: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type} . If you want to set the permissions for its containing folder, click ${link}"
+# Original: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type} . If you want to set the permissions for its containing folder, click ${link} ."
+#, fuzzy
 msgid "local_role_warning_type"
 msgstr ""
 
@@ -9157,7 +9221,7 @@ msgstr "გეზი"
 
 
 #: workflow_state
-#. defined in plone_workflow, title: Waiting for reviewer
+#. defined in plone_workflow, title: Pending
 # Original: "pending"
 msgid "pending"
 msgstr "ყოვნდება"
@@ -9182,8 +9246,8 @@ msgstr "გაგზავნა:"
 
 
 #: workflow_state
-#. defined in plone_workflow, title: Visible and editable only by owner
-#. defined in folder_workflow, title: Visible and editable only by owner
+#. defined in plone_workflow, title: Private
+#. defined in folder_workflow, title: Private
 # Original: "private"
 msgid "private"
 msgstr "კერძო"
@@ -9200,8 +9264,8 @@ msgstr "გამოქვეყნება"
 
 
 #: workflow_state
-#. defined in plone_workflow, title: Public
-#. defined in folder_workflow, title: Public
+#. defined in plone_workflow, title: Published
+#. defined in folder_workflow, title: Published
 # Original: "published"
 msgid "published"
 msgstr "გამოქვეყნდა"
@@ -9951,14 +10015,16 @@ msgstr "ეს საიტი შეიქმნა Plone-ს შინაა�
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
 # Original: "Change default page"
 msgid "title_change_default_page"
 msgstr "საწყისი გვერდის შეცვლა"
 
 
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
 #: ./plone_forms/select_default_view.cpt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_select_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
 # Original: "Change the item used as default view in this folder"
 msgid "title_change_default_view_item"
 msgstr "ამ დასტიშტვის საწყისი საჩვენებელი ელემენტის შეცვლა"
@@ -9972,7 +10038,7 @@ msgstr ""
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a href="#" i18n:attributes="title title_choose_default_view;" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
+#. <a href="#" i18n:attributes="title title_choose_default_view;" i18n:translate="label_choose_template" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
 # Original: "Choose default view"
 msgid "title_choose_default_view"
 msgstr "საწყისი ჩვენების არჩევა"
@@ -10084,7 +10150,7 @@ msgstr "ძიების შედეგების RSS გამოტან
 
 
 #: ./plone_templates/global_searchbox.pt
-#. <input accesskey="s" class="visibility:visible" i18n:attributes="accesskey accesskeys-search; title title_search_site;" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
+#. <input class="visibility:visible" i18n:attributes="title title_search_site;" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
 # Original: "Search Site"
 msgid "title_search_site"
 msgstr "საძიებო საიტი"
@@ -10100,14 +10166,16 @@ msgstr "ეს საიტი შეესაბამება აშშ ხ�
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_select_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
 # Original: "Select default page"
 msgid "title_select_default_page"
 msgstr "სათაო გვერდის არჩევა"
 
 
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
 #: ./plone_forms/select_default_view.cpt
-#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
 # Original: "Select an item to be used as default view in this folder"
 msgid "title_select_default_view_item"
 msgstr "ამ დასტის საწყისი საჩვენებელი ელემენტის არჩევა"
@@ -10180,8 +10248,8 @@ msgstr ""
 
 
 #: workflow_state
-#. defined in plone_workflow, title: Visible but not published
-#. defined in folder_workflow, title: Visible but not published
+#. defined in plone_workflow, title: Public Draft
+#. defined in folder_workflow, title: Public Draft
 # Original: "visible"
 msgid "visible"
 msgstr "ხილული"

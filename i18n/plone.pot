@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-07-11 15:20+0000\n"
+"POT-Creation-Date: 2005-07-14 11:27+0000\n"
 "PO-Revision-Date: 2005-05-09 21:22+0000\n"
 "Last-Translator: Hanno Schlichting <schlichting@bakb.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -309,6 +309,13 @@ msgid "Comment"
 msgstr ""
 
 
+#: ./ATContentTypes/atct_topic_subtopics.pt
+#. Used as title of the folder_contents form
+# Original: "Contained Smart Folders:"
+msgid "Contained Smart Folders:"
+msgstr ""
+
+
 msgid "Content has been changed."
 msgstr ""
 
@@ -388,13 +395,6 @@ msgstr ""
 #. criterion description of crterion: ATDateRangeCriterion
 # Original: "Date range"
 msgid "Date range"
-msgstr ""
-
-
-#: action
-#. defined in portal_actions
-# Original: "Default view"
-msgid "Default view"
 msgstr ""
 
 
@@ -1110,6 +1110,13 @@ msgid "Path Criterion"
 msgstr ""
 
 
+#: workflow_state
+#. defined in plone_workflow, id: pending
+# Original: "Pending"
+msgid "Pending"
+msgstr ""
+
+
 #: ./plone_scripts/object_copy.cpy
 msgid "Permission denied to copy ${title}."
 msgstr ""
@@ -1231,6 +1238,14 @@ msgid "Print this page"
 msgstr ""
 
 
+#: workflow_state
+#. defined in plone_workflow, id: private
+#. defined in folder_workflow, id: private
+# Original: "Private"
+msgid "Private"
+msgstr ""
+
+
 #: type_action
 #. defined on Page
 #. defined on Event
@@ -1248,10 +1263,10 @@ msgstr ""
 
 
 #: workflow_state
-#. defined in plone_workflow, id: published
-#. defined in folder_workflow, id: published
-# Original: "Public"
-msgid "Public"
+#. defined in plone_workflow, id: visible
+#. defined in folder_workflow, id: visible
+# Original: "Public Draft"
+msgid "Public Draft"
 msgstr ""
 
 
@@ -1266,6 +1281,14 @@ msgstr ""
 #. new state: published
 # Original: "Publish"
 msgid "Publish"
+msgstr ""
+
+
+#: workflow_state
+#. defined in plone_workflow, id: published
+#. defined in folder_workflow, id: published
+# Original: "Published"
+msgid "Published"
 msgstr ""
 
 
@@ -1871,29 +1894,6 @@ msgid "View"
 msgstr ""
 
 
-#: workflow_state
-#. defined in plone_workflow, id: private
-#. defined in folder_workflow, id: private
-# Original: "Visible and editable only by owner"
-msgid "Visible and editable only by owner"
-msgstr ""
-
-
-#: workflow_state
-#. defined in plone_workflow, id: visible
-#. defined in folder_workflow, id: visible
-# Original: "Visible but not published"
-msgid "Visible but not published"
-msgstr ""
-
-
-#: workflow_state
-#. defined in plone_workflow, id: pending
-# Original: "Waiting for reviewer"
-msgid "Waiting for reviewer"
-msgstr ""
-
-
 msgid "Welcome! You are now logged in."
 msgstr ""
 
@@ -2010,51 +2010,6 @@ msgstr ""
 #. id: zope_icon.gif, category: controlpanel
 # Original: "Zope Management Interface"
 msgid "Zope Management Interface"
-msgstr ""
-
-
-# Generated accesskey id's. Other accesskeys are autoextracted from the templates.
-# See plone-en.po for the default english accesskeys used.
-msgid "accesskeys-Contents"
-msgstr ""
-
-
-# Generated accesskey id's. Other accesskeys are autoextracted from the templates.
-# See plone-en.po for the default english accesskeys used.
-msgid "accesskeys-Edit"
-msgstr ""
-
-
-# Generated accesskey id's. Other accesskeys are autoextracted from the templates.
-# See plone-en.po for the default english accesskeys used.
-msgid "accesskeys-Properties"
-msgstr ""
-
-
-# Generated accesskey id's. Other accesskeys are autoextracted from the templates.
-# See plone-en.po for the default english accesskeys used.
-msgid "accesskeys-View"
-msgstr ""
-
-
-#: ./plone_portlets/portlet_login.pt
-#. <input accesskey="l" alt="Password" i18n:attributes="alt label_password; accesskey accesskeys-login;" size="10" tal:attributes="name ac_password; id ac_password;                                        tabindex tabindex/next;" type="password"/>
-# Original: "l"
-msgid "accesskeys-login"
-msgstr ""
-
-
-#: ./plone_templates/global_personalbar.pt
-#. <a accesskey="u" i18n:attributes="accesskey accesskeys-personalbar;" id="user-name" tal:attributes="href string:${mtool/getHomeUrl}" tal:omit-tag="not: mtool/getHomeFolder">
-# Original: "u"
-msgid "accesskeys-personalbar"
-msgstr ""
-
-
-#: ./plone_templates/global_searchbox.pt
-#. <input accesskey="s" class="visibility:visible" i18n:attributes="accesskey accesskeys-search; title title_search_site;" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
-# Original: "s"
-msgid "accesskeys-search"
 msgstr ""
 
 
@@ -3081,10 +3036,10 @@ msgstr ""
 
 #: ./plone_forms/select_default_view.cpt
 #. <div class="documentDescription" i18n:translate="description_select_default_view">
-#.         Please select template which will be displayed as the default view of the
+#.         Please select which template should be used as the default view of the
 #.         folder.
 #. </div>
-# Original: "Please select template which will be displayed as the default view of the folder."
+# Original: "Please select which template should be used as the default view of the folder."
 msgid "description_select_default_view"
 msgstr ""
 
@@ -3137,10 +3092,10 @@ msgstr ""
 
 #: ./plone_forms/folder_localrole_form.pt
 #. <p i18n:translate="description_share_folders_items_current_shares">
-#.         You can share the rights for both folders (including content) and single items.
+#.         You can share the rights for both entire folders and single items.
 #.         These users have privileges here:
 #. </p>
-# Original: "You can share the rights for both folders (including content) and single items. These users have privileges here:"
+# Original: "You can share the rights for both entire folders and single items. These users have privileges here:"
 msgid "description_share_folders_items_current_shares"
 msgstr ""
 
@@ -4493,6 +4448,16 @@ msgid "help_allow_discussion"
 msgstr ""
 
 
+#: ./plone_prefs/personalize_form.cpt
+#. <div class="formHelp" i18n:translate="help_biography">
+#.                 A short overview of who you are and what you do. Will be displayed
+#.                 on the your author page, linked from the items you create.
+#. </div>
+# Original: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
+msgid "help_biography"
+msgstr ""
+
+
 #: widget_description
 #. of BooleanWidget, for label: Value
 # Original: "True or false"
@@ -4588,10 +4553,18 @@ msgstr ""
 #: ./plone_prefs/personalize_form.cpt
 #. <div class="formHelp" i18n:translate="help_content_ext_editor">
 #.                  When checked, an icon will be made visible on each page which allows
+#.                  you to edit content with your favorite editor instead of using
+#.                  browser-based editors. This requires an additional application
+#.                  called ExternalEditor installed client-side.
+#.                  Ask your administrator for more information if needed.
+#. </div>
+#: ./plone_prefs/prefs_user_details.cpt
+#. <div class="formHelp" i18n:translate="help_content_ext_editor">
+#.                  When checked, an icon will be made visible on each page which allows
 #.                  you to edit content locally. Ask your administrator for more information
 #.                  when needed.
 #. </div>
-# Original: "When checked, an icon will be made visible on each page which allows you to edit content locally. Ask your administrator for more information when needed."
+# Original: "When checked, an icon will be made visible on each page which allows you to edit content with your favorite editor instead of using browser-based editors. This requires an additional application called ExternalEditor installed client-side. Ask your administrator for more information if needed."
 msgid "help_content_ext_editor"
 msgstr ""
 
@@ -4881,6 +4854,16 @@ msgstr ""
 #. </div>
 # Original: "Select the content types that will be addable inside this folder."
 msgid "help_locally_allowed_types"
+msgstr ""
+
+
+#: ./plone_prefs/personalize_form.cpt
+#. <div class="formHelp" i18n:translate="help_location">
+#.                 Your location - either city and country - or in a company setting,
+#.                 where your office is located.
+#. </div>
+# Original: "Your location - either city and country - or in a company setting, where your office is located."
+msgid "help_location"
 msgstr ""
 
 
@@ -5435,9 +5418,10 @@ msgstr ""
 #: ./plone_forms/folder_localrole_form.pt
 #. <div class="formHelp" i18n:translate="help_use_acquisition">
 #.                 Determines if the roles given to users and groups from higher levels are in
-#.                 effect in this context.
+#.                 effect in this context. Use this to block people that have local roles in higher-level
+#.                 folders from accessing this folder.
 #. </div>
-# Original: "Determines if the roles given to users and groups from higher levels are in effect in this context."
+# Original: "Determines if the roles given to users and groups from higher levels are in effect in this context. Use this to block people that have local roles in higher-level folders from accessing this folder."
 msgid "help_use_acquisition"
 msgstr ""
 
@@ -5799,6 +5783,15 @@ msgid "label_before_specified_time"
 msgstr ""
 
 
+#: ./plone_prefs/personalize_form.cpt
+#. <label for="description" i18n:translate="label_biography">
+#.  Biography
+#. </label>
+# Original: "Biography"
+msgid "label_biography"
+msgstr ""
+
+
 #: widget_label
 #. of RichWidget, description:
 # Original: "Body Text"
@@ -5868,6 +5861,19 @@ msgid "label_change_contributers"
 msgstr ""
 
 
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#.                                  Change item
+#. </a>
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
+#.                                  Change item
+#. </a>
+# Original: "Change item"
+msgid "label_change_item"
+msgstr ""
+
+
 #: ./plone_prefs/prefs_user_details.cpt
 #. <p i18n:translate="label_change_member_properties">
 #.           Change member properties.
@@ -5902,6 +5908,24 @@ msgid "label_change_status"
 msgstr ""
 
 
+#: ./plone_forms/select_default_view.cpt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#.                              Choose a content item
+#. </a>
+# Original: "Choose a content item"
+msgid "label_choose_content_item"
+msgstr ""
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#.                                  Choose item
+#. </a>
+# Original: "Choose item"
+msgid "label_choose_item"
+msgstr ""
+
+
 #: ./plone_prefs/reconfig_form.cpt
 #. <option i18n:translate="label_choose_language" value="">
 #.  Choose Language
@@ -5921,9 +5945,9 @@ msgstr ""
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:translate="label_choose_template">
-#.  Display
-#. </span>
+#. <a href="#" i18n:attributes="title title_choose_default_view;" i18n:translate="label_choose_template" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
+#.                     Display
+#. </a>
 # Original: "Display"
 msgid "label_choose_template"
 msgstr ""
@@ -6147,6 +6171,15 @@ msgid "label_css"
 msgstr ""
 
 
+#: ./plone_forms/select_default_view.cpt
+#. <span class="discreet" i18n:translate="label_current" tal:condition="python:value==selectedLayout">
+#.  (current)
+#. </span>
+# Original: "(current)"
+msgid "label_current"
+msgstr ""
+
+
 #: ./plone_prefs/password_form.pt
 #. <label for="current" i18n:translate="label_current_password">
 #.  Current password
@@ -6251,7 +6284,7 @@ msgstr ""
 
 #: ./plone_templates/global_contentmenu.pt
 #. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
-#.                   Display
+#.                     Display
 #. </span>
 # Original: "Display"
 msgid "label_disabled_display_menu"
@@ -6872,7 +6905,7 @@ msgstr ""
 #.  Login Name
 #. </label>
 #: ./plone_portlets/portlet_login.pt
-#. <input accesskey="accesskeys-login" alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                        value python:request.get(ac_name, '');                                        tabindex tabindex/next" type="text"/>
+#. <input alt="Login Name" i18n:attributes="alt label_login_name;" size="10" tal:attributes="name ac_name; id ac_name;                                        value python:request.get(ac_name, '');                                        tabindex tabindex/next" type="text"/>
 # Original: "Login Name"
 msgid "label_login_name"
 msgstr ""
@@ -7089,15 +7122,24 @@ msgid "label_one_step_workflow"
 msgstr ""
 
 
+#: ./plone_forms/select_default_view.cpt
+#. <span i18n:translate="label_or">
+#.  or
+#. </span>
+# Original: "or"
+msgid "label_or"
+msgstr ""
+
+
 #: ./plone_prefs/personalize_form.cpt
-#. <option i18n:translate="label_ordinary_content_editor" tal:attributes="value editor;                                             selected python:test(editor==wysiwyg_editor, 'selected', None);" tal:condition="python:editor == 'None'" tal:content="editor" value="None">
-#.                     Ordinary Form-based Editor (works in all browsers)
+#. <option i18n:translate="label_ordinary_content_editor" tal:attributes="value editor;                                             selected python:test(editor==wysiwyg_editor, 'selected', None);" tal:condition="python:editor == 'None'" value="None">
+#.                     Basic HTML textarea editor (works in all browsers)
 #. </option>
 #: ./plone_prefs/prefs_user_details.cpt
 #. <option i18n:translate="label_ordinary_content_editor" tal:attributes="value editor;                                                 selected python:test(editor==wysiwyg_editor, 'selected', None);" tal:condition="python:editor == 'None'" tal:content="editor" value="None">
 #.                         Ordinary Form-based Editor (works in all browsers)
 #. </option>
-# Original: "Ordinary Form-based Editor (works in all browsers)"
+# Original: "Basic HTML textarea editor (works in all browsers)"
 msgid "label_ordinary_content_editor"
 msgstr ""
 
@@ -7519,6 +7561,15 @@ msgid "label_select_all_items"
 msgstr ""
 
 
+#: ./plone_forms/select_default_view.cpt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_select_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#.                              Select a content item
+#. </a>
+# Original: "Select a content item"
+msgid "label_select_content_item"
+msgstr ""
+
+
 #: ./plone_forms/folder_localrole_form.pt
 #. <label class="hiddenLabel" for="member_ids:list" i18n:translate="label_select_group">
 #.                                 select group
@@ -7526,6 +7577,15 @@ msgstr ""
 #. </label>
 # Original: "select group ${name}"
 msgid "label_select_group"
+msgstr ""
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_select_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
+#.                                  Select item
+#. </a>
+# Original: "Select item"
+msgid "label_select_item"
 msgstr ""
 
 
@@ -7990,7 +8050,7 @@ msgstr ""
 
 #: ./plone_forms/folder_localrole_form.pt
 #. <label for="inherit" i18n:translate="label_use_acquisition">
-#.  Inherit roles from higher levels
+#.             Inherit roles from higher levels
 #. </label>
 # Original: "Inherit roles from higher levels"
 msgid "label_use_acquisition"
@@ -8771,13 +8831,15 @@ msgstr ""
 #.  <strong>
 #.   Attention!
 #.  </strong>
-#.   You are setting the sharing permissions for a
+#.                 You are setting the sharing permissions for a
 #.  ${type}
 #.  .
-#.             If you want to set the permissions for its containing folder, click
+#.                 If you want to set the permissions for its containing folder,
+#.                 click
 #.  ${link}
+#.  .
 #. </span>
-# Original: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type} . If you want to set the permissions for its containing folder, click ${link}"
+# Original: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type} . If you want to set the permissions for its containing folder, click ${link} ."
 msgid "local_role_warning_type"
 msgstr ""
 
@@ -9147,7 +9209,7 @@ msgstr ""
 
 
 #: workflow_state
-#. defined in plone_workflow, title: Waiting for reviewer
+#. defined in plone_workflow, title: Pending
 # Original: "pending"
 msgid "pending"
 msgstr ""
@@ -9172,8 +9234,8 @@ msgstr ""
 
 
 #: workflow_state
-#. defined in plone_workflow, title: Visible and editable only by owner
-#. defined in folder_workflow, title: Visible and editable only by owner
+#. defined in plone_workflow, title: Private
+#. defined in folder_workflow, title: Private
 # Original: "private"
 msgid "private"
 msgstr ""
@@ -9190,8 +9252,8 @@ msgstr ""
 
 
 #: workflow_state
-#. defined in plone_workflow, title: Public
-#. defined in folder_workflow, title: Public
+#. defined in plone_workflow, title: Published
+#. defined in folder_workflow, title: Published
 # Original: "published"
 msgid "published"
 msgstr ""
@@ -9940,14 +10002,16 @@ msgstr ""
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
 # Original: "Change default page"
 msgid "title_change_default_page"
 msgstr ""
 
 
 #: ./plone_forms/select_default_view.cpt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_select_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
 # Original: "Change the item used as default view in this folder"
 msgid "title_change_default_view_item"
 msgstr ""
@@ -9961,7 +10025,7 @@ msgstr ""
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a href="#" i18n:attributes="title title_choose_default_view;" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
+#. <a href="#" i18n:attributes="title title_choose_default_view;" i18n:translate="label_choose_template" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
 # Original: "Choose default view"
 msgid "title_choose_default_view"
 msgstr ""
@@ -10073,7 +10137,7 @@ msgstr ""
 
 
 #: ./plone_templates/global_searchbox.pt
-#. <input accesskey="s" class="visibility:visible" i18n:attributes="accesskey accesskeys-search; title title_search_site;" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
+#. <input class="visibility:visible" i18n:attributes="title title_search_site;" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
 # Original: "Search Site"
 msgid "title_search_site"
 msgstr ""
@@ -10089,14 +10153,16 @@ msgstr ""
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_select_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select default page">
 # Original: "Select default page"
 msgid "title_select_default_page"
 msgstr ""
 
 
 #: ./plone_forms/select_default_view.cpt
-#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#: ./plone_templates/global_contentmenu.pt
+#. <a class="selected" href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
 # Original: "Select an item to be used as default view in this folder"
 msgid "title_select_default_view_item"
 msgstr ""
@@ -10169,8 +10235,8 @@ msgstr ""
 
 
 #: workflow_state
-#. defined in plone_workflow, title: Visible but not published
-#. defined in folder_workflow, title: Visible but not published
+#. defined in plone_workflow, title: Public Draft
+#. defined in folder_workflow, title: Public Draft
 # Original: "visible"
 msgid "visible"
 msgstr ""
