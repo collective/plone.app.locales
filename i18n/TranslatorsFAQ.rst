@@ -23,9 +23,10 @@ Access Keys
 
 Accesskeys are a concept to allow users to access certain parts of the
 interface through keyboard shortcuts. Each must be a single character. As these
-have caused more problems with existing keyboard shortcuts from screen readers
-or browsers and operating systems, they are de-emphasized in the WCAG 2.0
-standard and not used any more in Plone.
+have caused problems with existing keyboard shortcuts from screen readers
+or browsers and operating systems, we have changed these to conform to
+internal standards and definied an according set of numerical accesskeys, which
+don't need to be changed for different languages.
 
 Fuzzy entries
 -------------
