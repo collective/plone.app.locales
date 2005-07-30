@@ -29,7 +29,7 @@ whitelist = ['Netscape Navigator',':','Version 4.x','Internet Explorer',\
              'getRawRelatedItems','ExternalEdit','EffectiveDate']
 
 # html entities as they appear in templates
-entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs if ent not in ['hellip','mdash']]
+entities = ['&'+ent+';' for ent in htmlentitydefs.entitydefs if ent not in ['hellip','mdash','trade']]
 
 # these are taken from PTS, used for format testing
 NAME_RE = r"[a-zA-Z][a-zA-Z0-9_]*"
