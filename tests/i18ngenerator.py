@@ -145,7 +145,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
 
         # indexes and metadata and smart folder options
         domain = 'plone'
-        for index in self.atct_tool.getIndexes(enabledOnly=1):
+        for index in self.atct_tool.getIndexes():
             index = self.atct_tool.getIndex(index)
             id = index.index
             title = index.friendlyName

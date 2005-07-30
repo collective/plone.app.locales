@@ -38,10 +38,8 @@ def main():
 
     renamed = {}
     renamed['plone'] = {
-            'Exception Log (most recent first)' : 'summary_exception_log',
-            'History' : 'summary_history',
-            'Returned results' : 'summary_search_results',
-            'Review History' : 'summary_review_history',
+            'Exception Log (most recent first)' : 'summary_exception_log', 'History' : 'summary_history',
+            'Returned results' : 'summary_search_results', 'Review History' : 'summary_review_history',
             'Select roles for each group' : 'summary_roles_for_groups',
             'Events are objects for use in Calendar topical queries on the catalog.' : 'Information about an upcoming event, which can be displayed in the calendar.', # event
             'File objects can contain arbitrary downloadable files.' : 'An external file uploaded to the portal.', # file
@@ -95,7 +93,7 @@ def main():
             'This Plone site is valid XHTML.' : 'title_xhtml', 'legend_comment_details' : 'legend_add_comment', 
             'box_sign_in' : 'Log in', 'listingheader_undo' : 'Undo', 'help_user_name_caps' : 'help_login_name_caps',
             'description_signin_fail_cookies_link' : 'description_login_fail_enable_cookies',
-            'Add ${type}' : 'label_add_type', 'Add ${type} to folder' : 'label_add_type_to_folder'
+            'Add ${type} to folder' : 'label_add_type_to_folder', 'accessibility' : 'Accessibility'
            }
 
     renamed['atreferencebrowserwidget'] = {
