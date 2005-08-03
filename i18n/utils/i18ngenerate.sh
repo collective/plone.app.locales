@@ -14,4 +14,6 @@ if [ -z $PLONE ]; then
     exit 1
 fi
 
+export PYTHON PLONE
+
 $PYTHON i18ngenerate.py

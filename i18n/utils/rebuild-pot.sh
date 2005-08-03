@@ -21,4 +21,6 @@ if [ -z $I18NDUDE ]; then
     exit 2
 fi
 
+export PYTHON I18DUDE
+
 $PYTHON rebuild-pot.py $1 $2
