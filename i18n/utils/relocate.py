@@ -42,13 +42,12 @@ def main():
                   ['A boolean criterion', 'A date criteria',
                    'A date range criterion', 'A list criterion', 'A path criterion',
                    'A portal_types criterion', 'A reference criterion', 'A selection criterion',
-                   'A simple int criterion', 'A simple string criterion',
+                   'A simple int criterion', 'A simple string criterion', 'help_limit_number',
                    'A criterion that searches for the currently logged in user\'s id',
-                   'help_event_attendees', 'help_int_criteria_value', 'help_item_count',
-                   'help_limit_number', 'help_list_criteria_operator', 'help_list_criteria_value',
-                   'help_string_criteria_value', 'label_event_attendees', 'label_int_criteria_value',
-                   'label_item_count', 'label_limit_number', 'label_list_criteria_operator',
-                   'label_list_criteria_value', 'label_string_criteria_value',
+                   'help_event_attendees', 'help_item_count',
+                   'help_string_criteria_value', 'label_event_attendees',
+                   'label_item_count', 'label_limit_number',
+                   'label_string_criteria_value',
                    'An item\'s title transformed for sorting', 'An item\'s type (e.g. Event)',
                    'An item\'s workflow state (e.g.published)', 'Boolean (True/False)',
                    'Creation Date', 'CreationDate', 'Creator', 'Date range', 'Description',
@@ -71,11 +70,8 @@ def main():
                    'getRawRelatedItems', 'location', 'modified', 'path', 'review_state', 'sortable_title'
                   ],
                  'plone' :
-                  ['help_int_criteria_direction', 'help_int_criteria_value', 'help_int_criteria_value2',
-                   'help_list_criteria_operator', 'help_list_criteria_value', 'label_int_criteria_direction',
-                   'label_int_criteria_value', 'label_int_criteria_value2', 'label_list_criteria_operator',
-                   'label_list_criteria_value'
-
+                  ['help_int_criteria_direction', 'help_int_criteria_value2',
+                   'label_int_criteria_direction', 'label_int_criteria_value2'
                   ]
                 }
 
