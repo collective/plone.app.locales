@@ -19,7 +19,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-08-02 20:40+0000\n"
+"POT-Creation-Date: 2005-08-14 09:57+0000\n"
 "PO-Revision-Date: 2005-08-03 03:00+01:00\n"
 "Last-Translator: Filip Miletic <f dot miletic at ewi dot tudelft dot nl>\n"
 "Language-Team: Serbian <gnu@prevod.org>\n"
@@ -32,6 +32,7 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: plone\n"
 
+#: ./plone_scripts/folder_delete.cpy
 msgid "${itemCount} items have been deleted."
 msgstr "Број обрисаних ставки: ${itemCount}."
 
@@ -43,30 +44,37 @@ msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
 
+#: ./plone_scripts/folder_delete.cpy
 msgid "${titles} have been deleted."
 msgstr "Обрисани наслови: ${titles}."
 
 
+#: ./plone_scripts/object_copy.cpy
 msgid "${title} copied."
 msgstr "Умножен је ${title}."
 
 
+#: ./plone_scripts/object_cut.cpy
 msgid "${title} cut."
 msgstr "Исечен ${title}."
 
 
+#: ./plone_scripts/addtoFavorites.py
 msgid "${title} has been added to your Favorites."
 msgstr "${title} је додат у списак омиљених."
 
 
+#: ./plone_scripts/folder_delete.cpy
 msgid "${title} has been deleted."
 msgstr "${title} је обрисан."
 
 
+#: ./plone_scripts/object_copy.cpy
 msgid "${title} is not copyable."
 msgstr "${title} се не може умножити."
 
 
+#: ./plone_scripts/object_cut.cpy
 msgid "${title} is not moveable."
 msgstr "${title} се не може померати."
 
@@ -207,6 +215,8 @@ msgstr "приступачност"
 
 #: ./plone_templates/folder_contents.pt
 #. Used if only one type is available as in smart folders
+#: ./plone_forms/folder_factories.pt
+#. Used as dynamically generated button label
 # Original: "Add ${type}"
 msgid "Add ${type}"
 msgstr "Додај ${type}"
@@ -321,6 +331,7 @@ msgid "Change State"
 msgstr "Промени стање"
 
 
+#: ./plone_prefs/prefs_user_manage.cpy
 msgid "Changes applied."
 msgstr "Промене су сачуване."
 
@@ -750,10 +761,12 @@ msgid "Friendly Date Criteria"
 msgstr "Критеријум пријатељског датума"
 
 
+#: ./plone_prefs/prefs_group_edit.py
 msgid "Group ${name} has been added."
 msgstr "Додата је група под именом ${name}."
 
 
+#: ./plone_prefs/prefs_group_modify.cpy
 msgid "Group ${name} has been deleted."
 msgstr "Обрисана је група под именом ${name}."
 
@@ -762,6 +775,7 @@ msgid "Groups"
 msgstr "Групе"
 
 
+#: ./plone_prefs/prefs_group_modify.cpy
 msgid "Groups ${names} have been deleted."
 msgstr "Обрисане су групе ${names}."
 
@@ -1134,18 +1148,22 @@ msgid "No change"
 msgstr "Без измена"
 
 
+#: ./plone_scripts/availableLanguages.py
 msgid "Not specified"
 msgstr "Није назначено"
 
 
+#: ./plone_scripts/folder_copy.cpy
 msgid "One or more items not copyable."
 msgstr "Једна или више ставки се не могу умножити."
 
 
+#: ./plone_scripts/folder_cut.cpy
 msgid "One or more items not moveable."
 msgstr "Једна или више ставки се не могу померати."
 
 
+#: ./plone_scripts/folder_copy.cpy
 msgid "One or more selected items is no longer available."
 msgstr "Једна или више изабраних ставки више нису доступне."
 
@@ -1209,10 +1227,12 @@ msgid "Pending"
 msgstr "На чекању"
 
 
+#: ./plone_scripts/object_copy.cpy
 msgid "Permission denied to copy ${title}."
 msgstr "Не можете умножити ${title}."
 
 
+#: ./plone_scripts/object_cut.cpy
 msgid "Permission denied to cut ${title}."
 msgstr "Не можете исећи ${title}."
 
@@ -1381,8 +1401,9 @@ msgstr "Објављено"
 
 #: action
 #. defined in portal_actions
-# Original: "RSS feed of this folder's contents"
-msgid "RSS feed of this folder's contents"
+# Original: "RSS feed of this listing"
+#, fuzzy
+msgid "RSS feed of this listing"
 msgstr "Довод RSSа за садржај овог директоријума"
 
 
@@ -1671,8 +1692,9 @@ msgstr "Критеријум поретка"
 #. template folder_listing on type: Folder
 #. template folder_listing on type: Large Plone Folder
 #. template folder_listing on type: Topic
-# Original: "Standard listing"
-msgid "Standard listing"
+# Original: "Standard view"
+#, fuzzy
+msgid "Standard view"
 msgstr "Уобичајен списак"
 
 
@@ -1723,8 +1745,6 @@ msgid "Submit"
 msgstr "Пошаљи"
 
 
-#: action
-#. defined in portal_syndication
 #: action_icon
 #. id: rss.gif, category: plone
 # Original: "Syndication"
@@ -1738,6 +1758,15 @@ msgstr "Подаци о удруживању су снимљени."
 
 msgid "Syndication properties updated."
 msgstr "Подаци о удруживању су ажурирани."
+
+
+#: name
+#. template folder_tabular_view on type: Folder
+#. template folder_tabular_view on type: Large Plone Folder
+#. template folder_tabular_view on type: Topic
+# Original: "Tabular view"
+msgid "Tabular view"
+msgstr ""
 
 
 #: portal_type_title
@@ -1897,8 +1926,18 @@ msgid "There is already an item named '${name}' in this folder."
 msgstr "У овом директоријуму већ постоји ставка са именом '${name}'."
 
 
+#: ./plone_form_scripts/saveDefaultPage.cpy
 msgid "There is no object with short name ${name} in this folder."
 msgstr "Не постоји објекат са именом ${name} у овом директоријуму."
+
+
+#: name
+#. template folder_tile_view on type: Folder
+#. template folder_tile_view on type: Large Plone Folder
+#. template folder_tile_view on type: Topic
+# Original: "Tile view"
+msgid "Tile view"
+msgstr ""
 
 
 #: index
@@ -1952,6 +1991,7 @@ msgid "Type"
 msgstr "Врста"
 
 
+#: ./plone_form_scripts/send_feedback.cpy
 msgid "Unable to send mail: ${exception}"
 msgstr "Није могуће послати пошту: ${exception}"
 
@@ -2306,17 +2346,8 @@ msgid "box_comment_preview"
 msgstr "Преглед коментара"
 
 
-#: ./plone_templates/folder_listing.pt
-#. <span i18n:translate="box_created_by">
-#.                                     by
-#. </span>
-# Original: "by"
-msgid "box_created_by"
-msgstr "Аутор"
-
-
 #: ./plone_portlets/portlet_events.pt
-#. <a href="#" i18n:translate="box_events">
+#. <a href="#" i18n:translate="box_events" tal:attributes="href string:${utool}/events">
 #.  Upcoming Events
 #. </a>
 # Original: "Upcoming Events"
@@ -2342,7 +2373,16 @@ msgid "box_forgot_password_option"
 msgstr "Да ли сте заборавили лозинку?"
 
 
-#: ./plone_templates/folder_listing.pt
+#: ./plone_portlets/portlet_review.pt
+#. <a href="#" i18n:translate="box_full_review_list" tal:attributes="href string:${portal_url}/full_review_list">
+#.  Full review list
+#. </a>
+# Original: "Full review list"
+msgid "box_full_review_list"
+msgstr ""
+
+
+#: ./plone_content/folder_listing.pt
 #. <tal:mod i18n:translate="box_last_modified">
 #.                                   last modified
 #. </tal:mod>
@@ -2365,10 +2405,10 @@ msgstr "Локални ресурси"
 
 
 #: ./plone_portlets/portlet_news.pt
-#. <a class="portletMore" href="" i18n:translate="box_more_news_link" tal:attributes="href string:${utool}/news" tal:condition="python:'news' in portal.contentIds()">
+#. <a href="" i18n:translate="box_more_news_link" tal:attributes="href string:${utool}/news" tal:condition="python:'news' in portal.contentIds()">
 #.               More news
 #. </a>
-#. <a class="portletMore" href="" i18n:translate="box_more_news_link" tal:attributes="href string:${utool}/news_listing" tal:condition="python:'news' not in portal.contentIds()">
+#. <a href="" i18n:translate="box_more_news_link" tal:attributes="href string:${utool}/news_listing" tal:condition="python:'news' not in portal.contentIds()">
 #.               More news
 #. </a>
 # Original: "More news"
@@ -2431,15 +2471,6 @@ msgstr "Нови корисник?"
 # Original: "News"
 msgid "box_news"
 msgstr "Вести"
-
-
-#: ./plone_portlets/portlet_events.pt
-#. <span i18n:translate="box_previous_events">
-#.                 Previous events
-#. </span>
-# Original: "Previous events"
-msgid "box_previous_events"
-msgstr "Прошли догађаји"
 
 
 #: ./plone_portlets/portlet_recent.pt
@@ -2614,9 +2645,10 @@ msgstr "."
 
 #: ./plone_prefs/prefs_group_members.cpt
 #. <p i18n:translate="decription_no_members_assigned" tal:condition="not:groupMembers">
-#.  There is no user attached to this group.
+#.  There is no group or user attached to this group.
 #. </p>
-# Original: "There is no user attached to this group."
+# Original: "There is no group or user attached to this group."
+#, fuzzy
 msgid "decription_no_members_assigned"
 msgstr "Ниједан корисник није придружен овој групи."
 
@@ -2891,11 +2923,12 @@ msgstr "Овако ће изгледати ваш коментар када га
 
 
 #: ./plone_templates/contact-info.cpt
-#. <p class="discreet" i18n:translate="description_contact_info_feedback">
-#.                 If you want to contact the portal administrator, fill in the form
+#. <p class="documentDescription" i18n:translate="description_contact_info_feedback">
+#.                 If you want to contact the site administration, fill in the form
 #.                 below.
 #. </p>
-# Original: "If you want to contact the portal administrator, fill in the form below."
+# Original: "If you want to contact the site administration, fill in the form below."
+#, fuzzy
 msgid "description_contact_info_feedback"
 msgstr "Ако желите да се обратите администратору портала, испуните формулар дат доле."
 
@@ -2998,10 +3031,11 @@ msgstr "Притисните овде уколико сте заборавили
 
 #: ./plone_prefs/prefs_group_members.cpt
 #. <p i18n:translate="description_group_members_of">
-#.             You can add or remove users from this particular group here. Note that this
-#.             doesn't actually delete the user, it is only removed from this group.
+#.             You can add or remove groups and users from this particular group here. Note that this
+#.             doesn't actually delete the group or user, it is only removed from this group.
 #. </p>
-# Original: "You can add or remove users from this particular group here. Note that this doesn't actually delete the user, it is only removed from this group."
+# Original: "You can add or remove groups and users from this particular group here. Note that this doesn't actually delete the group or user, it is only removed from this group."
+#, fuzzy
 msgid "description_group_members_of"
 msgstr "Овде можете додати или уклонити кориснике из одређене групе. Приметите да ово не уклања корисника сасвим. Корисник ће само бити уклоњен из ове групе."
 
@@ -3242,7 +3276,7 @@ msgid "description_no_comparison_support"
 msgstr "Овај објекат нема подршку за поређење."
 
 
-#: ./plone_templates/folder_listing.pt
+#: ./plone_content/folder_listing.pt
 #. <p class="discreet" i18n:translate="description_no_items_in_folder" tal:condition="not: folderContents">
 #.                 There are currently no items in this folder.
 #. </p>
@@ -4011,7 +4045,7 @@ msgstr "дајСировеПовезанеСтавке"
 #. <a class="link-parent" href="" i18n:translate="go_to_parent_url" tal:attributes="href string:${parent_url}/folder_contents" tal:condition="parent_url" tal:define="parent_url python:here.navigationParent(here, fallThroughDefaultPage = False, checkPermissions = ['List folder contents'])">
 #.                 Up one level
 #. </a>
-#: ./plone_templates/folder_listing.pt
+#: ./plone_content/folder_listing.pt
 #. <a class="link-parent" href="" i18n:translate="go_to_parent_url" tal:attributes="href parent_url" tal:condition="parent_url" tal:define="parent_url python:here.navigationParent(here, template_id)">
 #.         Up one level
 #. </a>
@@ -6215,7 +6249,7 @@ msgstr "Додај нову групу"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${addContext/absolute_url}/folder_factories;" tal:condition="useSelf" title="Add new items inside this item">
 #.  Add item
 #. </a>
 # Original: "Add item"
@@ -6224,7 +6258,7 @@ msgstr "Додај ставку"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" tal:attributes="href string:${addContext/absolute_url}/folder_factories;" tal:condition="not:useSelf" title="Add new items in the same folder as this item">
 #.  Add to folder
 #. </a>
 # Original: "Add to folder"
@@ -6296,8 +6330,9 @@ msgstr "Додај корисника у изабране групе"
 
 
 #: ./plone_prefs/prefs_group_members.cpt
-#. <input class="context" i18n:attributes="value label_add_users_to_group;" name="form.button.Add" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="batch" type="submit" value="Add selected users to this group"/>
-# Original: "Add selected users to this group"
+#. <input class="context" i18n:attributes="value label_add_users_to_group;" name="form.button.Add" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="batch" type="submit" value="Add selected groups and users to this group"/>
+# Original: "Add selected groups and users to this group"
+#, fuzzy
 msgid "label_add_users_to_group"
 msgstr "Додај изабране кориснике у ову групу"
 
@@ -6536,15 +6571,22 @@ msgstr "Измени коментар"
 
 #: ./plone_templates/global_contentmenu.pt
 #. <a href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
-#.                                          Change item
+#.                                          Change content item
+#.  <br/>
+#.  as default view
 #. </a>
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${here/absolute_url}/select_default_page;" title="Change default page">
-#.                                          Change item
+#. <a href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${here/absolute_url}/select_default_page;" title="Change default page">
+#.                                          Change content item
+#.  <br/>
+#.  as default view
 #. </a>
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
-#.                                      Change item
+#. <a href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
+#.                                      Change content item
+#.  <br/>
+#.  as default view
 #. </a>
-# Original: "Change item"
+# Original: "Change content item <br/> as default view"
+#, fuzzy
 msgid "label_change_item"
 msgstr "Промени ставку"
 
@@ -6596,15 +6638,22 @@ msgstr "Промени ставку садржаја"
 
 #: ./plone_templates/global_contentmenu.pt
 #. <a href="#" i18n:attributes="title title_select_default_view_item;" i18n:translate="label_choose_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
-#.                                          Choose item
+#.                                          Choose content item
+#.  <br/>
+#.  as default view
 #. </a>
 #. <a href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_choose_item" tal:attributes="href string:${here/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
-#.                                          Choose item
+#.                                          Choose content item
+#.  <br/>
+#.  as default view
 #. </a>
 #. <a href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_choose_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
-#.                                      Choose item
+#.                                      Choose content item
+#.  <br/>
+#.  as default view
 #. </a>
-# Original: "Choose item"
+# Original: "Choose content item <br/> as default view"
+#, fuzzy
 msgid "label_choose_item"
 msgstr "Изабери ставку"
 
@@ -6876,6 +6925,18 @@ msgstr "Исправан CSS"
 # Original: "(current)"
 msgid "label_current"
 msgstr "(тренутно)"
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <div class="actionLabel" i18n:translate="label_current_item_views">
+#.                             Folder display
+#. </div>
+#. <div class="actionLabel" i18n:translate="label_current_item_views">
+#.                             Item display
+#. </div>
+# Original: "Folder display"
+msgid "label_current_item_views"
+msgstr ""
 
 
 #: ./plone_prefs/password_form.pt
@@ -7522,6 +7583,16 @@ msgstr "Постави"
 # Original: "Number of Items"
 msgid "label_item_count"
 msgstr "Број ставки"
+
+
+#: ./plone_templates/global_contentmenu.pt
+#. <span class="currentDefaultPage actionMenuSelected" i18n:translate="label_item_selected">
+#.                                         Item:
+#.  ${contentitem}
+#. </span>
+# Original: "Item: ${contentitem}"
+msgid "label_item_selected"
+msgstr ""
 
 
 #: ./plone_forms/search_form.pt
@@ -8205,8 +8276,9 @@ msgstr "Уклони изабране групе"
 
 
 #: ./plone_prefs/prefs_group_members.cpt
-#. <input class="destructive" i18n:attributes="value label_remove_selected_users;" name="form.button.Edit" tal:condition="groupMembers" type="submit" value="Remove selected users"/>
-# Original: "Remove selected users"
+#. <input class="destructive" i18n:attributes="value label_remove_selected_users;" name="form.button.Edit" tal:condition="groupMembers" type="submit" value="Remove selected groups / users"/>
+# Original: "Remove selected groups / users"
+#, fuzzy
 msgid "label_remove_selected_users"
 msgstr "Уклони изабране кориснике"
 
@@ -9218,9 +9290,10 @@ msgstr "Повратна информација за аутора"
 
 #: ./plone_templates/contact-info.cpt
 #. <legend i18n:translate="legend_feedback_for_contact_info">
-#.  Feedback for contact page
+#.  Feedback details
 #. </legend>
-# Original: "Feedback for contact page"
+# Original: "Feedback details"
+#, fuzzy
 msgid "legend_feedback_for_contact_info"
 msgstr "Повратна информација за контактну страну"
 
@@ -9506,6 +9579,15 @@ msgid "listingheader_affected_item"
 msgstr "Циљна ставка"
 
 
+#: ./plone_content/folder_tabular_view.pt
+#. <tal:title i18n:translate="listingheader_author">
+#.  Author
+#. </tal:title>
+# Original: "Author"
+msgid "listingheader_author"
+msgstr ""
+
+
 #: ./plone_content/review_history.pt
 #. <th i18n:translate="listingheader_comment">
 #.  Comment
@@ -9581,7 +9663,7 @@ msgid "listingheader_group_user_name"
 msgstr "Име групе/корисника"
 
 
-#: ./plone_templates/folder_contents.pt
+#: ./plone_content/folder_tabular_view.pt
 #. <tal:modified i18n:translate="listingheader_modified">
 #.  Modified
 #. </tal:modified>
@@ -9680,7 +9762,7 @@ msgstr "Стање"
 #. <th i18n:translate="listingheader_title">
 #.  Title
 #. </th>
-#: ./plone_templates/folder_contents.pt
+#: ./plone_content/folder_tabular_view.pt
 #. <tal:title i18n:translate="listingheader_title">
 #.  Title
 #. </tal:title>
@@ -9693,15 +9775,15 @@ msgstr "Наслов"
 #. <th i18n:translate="listingheader_type">
 #.  Type
 #. </th>
+#: ./plone_content/folder_tabular_view.pt
+#. <tal:title i18n:translate="listingheader_type">
+#.  Type
+#. </tal:title>
 # Original: "Type"
 msgid "listingheader_type"
 msgstr "Врста"
 
 
-#: ./plone_prefs/prefs_group_members.cpt
-#. <th i18n:translate="listingheader_user_name">
-#.  User name
-#. </th>
 #: ./plone_prefs/prefs_users_overview.cpt
 #. <th i18n:translate="listingheader_user_name" rowspan="2">
 #.  User name
@@ -10190,11 +10272,16 @@ msgstr "објављено"
 #. <a href="/view" i18n:translate="read_more" tal:attributes="href resulturl" tal:condition="has_body">
 #.                                 Read More
 #. </a>
+#: ./plone_content/folder_tile_view.pt
+#. <a href="" i18n:translate="read_more" tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url+'/');">
+#.                         Read more
+#. </a>
 #: ./plone_templates/events_listing.pt
 #. <a href="/view" i18n:translate="read_more" tal:attributes="href resulturl">
 #.                                 Read More
 #. </a>
-# Original: "Read More"
+# Original: "Read more"
+#, fuzzy
 msgid "read_more"
 msgstr "Више детаља"
 
@@ -10417,6 +10504,8 @@ msgstr "Календар"
 
 #: ./plone_templates/folder_contents.pt
 #. <table class="listing" i18n:attributes="summary summary_content_listing;" id="sortable" summary="Content listing">
+#: ./plone_content/folder_tabular_view.pt
+#. <table class="listing" i18n:attributes="summary summary_content_listing;" summary="Content listing">
 # Original: "Content listing"
 msgid "summary_content_listing"
 msgstr "Списак садржаја"
@@ -10779,13 +10868,14 @@ msgstr "Ниједна ставка није измењена."
 
 #: ./plone_prefs/prefs_group_members.cpt
 #. <p class="discreet" i18n:translate="text_no_searchstring" tal:condition="not:searchstring">
-#.  Enter a username to search for, or click 'Show All'.
+#.  Enter a group or user name to search for, or click 'Show All'.
 #. </p>
 #: ./plone_prefs/prefs_users_overview.cpt
 #. <td class="discreet" i18n:translate="text_no_searchstring" style="text-align:center; font-size: 100%;" tal:condition="not:searchstring">
 #.  Enter a username to search for, or click 'Show All'
 #. </td>
-# Original: "Enter a username to search for, or click 'Show All'."
+# Original: "Enter a group or user name to search for, or click 'Show All'."
+#, fuzzy
 msgid "text_no_searchstring"
 msgstr "Унесите корисничко име за претрагу или притисните „Покажи све“."
 
@@ -10945,14 +11035,14 @@ msgstr "Дејства"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" tal:condition="not: python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items in the same folder as this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_folder;" i18n:translate="label_add_new_item_in_folder" tal:attributes="href string:${addContext/absolute_url}/folder_factories;" tal:condition="not:useSelf" title="Add new items in the same folder as this item">
 # Original: "Add new items in the same folder as this item"
 msgid "title_add_new_items_inside_folder"
 msgstr "Додај нове ставке у исти директоријум у ком је ова ставка"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${here_url}/folder_factories;" tal:condition="python: here.isPrincipiaFolderish and not isContextDefaultPage" title="Add new items inside this item">
+#. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${addContext/absolute_url}/folder_factories;" tal:condition="useSelf" title="Add new items inside this item">
 # Original: "Add new items inside this item"
 msgid "title_add_new_items_inside_item"
 msgstr "Додај нове ставке унутар ове ставке"
@@ -10996,8 +11086,8 @@ msgstr "Ово ел. место је изграђено коришћењем П�
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${here/absolute_url}/select_default_page;" title="Change default page">
-#. <a class="selected" href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
+#. <a href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${here/absolute_url}/select_default_page;" title="Change default page">
+#. <a href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
 # Original: "Change default page"
 msgid "title_change_default_page"
 msgstr "Промени изворну страну"
@@ -11027,7 +11117,7 @@ msgstr "Изабери изворни преглед"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="folderAddSettings" href="#" i18n:attributes="title title_configure_addable_content_types;" tal:attributes="href string:${parent_folder/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
+#. <a class="folderAddSettings" href="#" i18n:attributes="title title_configure_addable_content_types;" tal:attributes="href string:${addContext/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
 # Original: "Configure which content types can be added here"
 msgid "title_configure_addable_content_types"
 msgstr "Одредите које врсте садржаја се овде смеју додавати"
@@ -11186,7 +11276,7 @@ msgstr "Пошаљите ел. пошту овом кориснику"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <a class="folderAddMore" href="#" i18n:attributes="title title_show_all_content_types;" tal:attributes="href string:${parent_folder/absolute_url}/folder_factories;" title="Show all available content types">
+#. <a class="folderAddMore" href="#" i18n:attributes="title title_show_all_content_types;" tal:attributes="href string:${addContext/absolute_url}/folder_factories;" title="Show all available content types">
 # Original: "Show all available content types"
 msgid "title_show_all_content_types"
 msgstr "Прикажи све доступне врсте садржаја"

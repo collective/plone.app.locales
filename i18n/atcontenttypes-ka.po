@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ATContentTypes SVN\n"
-"POT-Creation-Date: 2005-07-09 13:55+0000\n"
+"POT-Creation-Date: 2005-08-14 09:49+0000\n"
 "PO-Revision-Date: 2004-11-22 09:22+0300\n"
 "Last-Translator: Gia Shervashidze <guiasher@mes.gov.ge>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -102,6 +102,7 @@ msgid "Between"
 msgstr ""
 
 
+#: ./ATContentTypes/criterion_save.cpy
 msgid "Changes saved."
 msgstr "ცვლილებები შენახულია"
 
@@ -135,8 +136,8 @@ msgstr ""
 
 
 #: schema
-#. DisplayList entry for field operation
 #. DisplayList entry for field direction
+#. DisplayList entry for field operation
 # English: "Less than"
 # Original: "Less than"
 msgid "Less than"
@@ -284,7 +285,7 @@ msgstr "ცვლილებების ოქმი გასუფთავ�
 
 
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
-#. <a href="" i18n:translate="atct_show_all_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly=0'" tal:condition="python:enabledOnly=='1'">
+#. <a href="" i18n:translate="atct_show_all_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly:int=0'" tal:condition="enabledOnly">
 #.                   All fields
 #. </a>
 # Original: "All fields"
@@ -293,7 +294,7 @@ msgstr "ყველა ველი"
 
 
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
-#. <a href="" i18n:translate="atct_show_enabled_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly=1'" tal:condition="python:enabledOnly=='0'">
+#. <a href="" i18n:translate="atct_show_enabled_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly:int=1'" tal:condition="not:enabledOnly">
 #.                   Enabled fields only
 #. </a>
 # Original: "Enabled fields only"
@@ -842,9 +843,10 @@ msgstr "${num_photos} ფოტო ალბომში"
 
 #: ./ATContentTypes/atct_topic_view.pt
 #. <h2 i18n:domain="atcontenttypes" i18n:translate="sub_topics_heading">
-#.                 Sub-topics:
+#.                 Contained Smart Folders:
 #. </h2>
-# Original: "Sub-topics:"
+# Original: "Contained Smart Folders:"
+#, fuzzy
 msgid "sub_topics_heading"
 msgstr "ქვე–თემები"
 

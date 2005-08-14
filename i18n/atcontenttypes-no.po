@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ATContentTypes SVN\n"
-"POT-Creation-Date: 2005-07-09 13:55+0000\n"
+"POT-Creation-Date: 2005-08-14 09:49+0000\n"
 "PO-Revision-Date: 2004-11-06 11:34+0100\n"
 "Last-Translator: Alexander Limi <limi at plone.org>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -95,6 +95,7 @@ msgid "Between"
 msgstr "Mellom"
 
 
+#: ./ATContentTypes/criterion_save.cpy
 msgid "Changes saved."
 msgstr "Endringer lagret."
 
@@ -128,8 +129,8 @@ msgstr "Større enn"
 
 
 #: schema
-#. DisplayList entry for field operation
 #. DisplayList entry for field direction
+#. DisplayList entry for field operation
 # Original: "Less than"
 msgid "Less than"
 msgstr "Mindre enn"
@@ -272,7 +273,7 @@ msgstr "Loggen over endringer vil bli nullstilt når administratoren utfører vedl
 
 
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
-#. <a href="" i18n:translate="atct_show_all_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly=0'" tal:condition="python:enabledOnly=='1'">
+#. <a href="" i18n:translate="atct_show_all_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly:int=0'" tal:condition="enabledOnly">
 #.                   All fields
 #. </a>
 # Original: "All fields"
@@ -281,7 +282,7 @@ msgstr "Alle felt"
 
 
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
-#. <a href="" i18n:translate="atct_show_enabled_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly=1'" tal:condition="python:enabledOnly=='0'">
+#. <a href="" i18n:translate="atct_show_enabled_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly:int=1'" tal:condition="not:enabledOnly">
 #.                   Enabled fields only
 #. </a>
 # Original: "Enabled fields only"
@@ -819,9 +820,10 @@ msgstr "${num_photos} bilder i albumet"
 
 #: ./ATContentTypes/atct_topic_view.pt
 #. <h2 i18n:domain="atcontenttypes" i18n:translate="sub_topics_heading">
-#.                 Sub-topics:
+#.                 Contained Smart Folders:
 #. </h2>
-# Original: "Sub-topics:"
+# Original: "Contained Smart Folders:"
+#, fuzzy
 msgid "sub_topics_heading"
 msgstr "Under-emner:"
 
