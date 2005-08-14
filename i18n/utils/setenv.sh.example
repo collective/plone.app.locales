@@ -14,6 +14,11 @@ if [ -z $PLONE ]; then
     exit 1
 fi
 
-export PYTHON PLONE
+[ -e $PLONE/../i18ndude/i18ndude ] && I18NDUDE=$PLONE/../i18ndude/i18ndude
 
-$PYTHON i18ngenerate.py
+if [ -z $I18NDUDE ]; then
+    echo "Unable to locate i18ndude utility!"
+    exit 2
+fi
+
+export PYTHON I18DUDE
