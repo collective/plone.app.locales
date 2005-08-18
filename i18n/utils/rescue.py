@@ -94,7 +94,8 @@ def main():
             'box_sign_in' : 'Log in', 'listingheader_undo' : 'Undo', 'help_user_name_caps' : 'help_login_name_caps',
             'description_signin_fail_cookies_link' : 'description_login_fail_enable_cookies',
             'Add ${type} to folder' : 'label_add_type_to_folder', 'accessibility' : 'Accessibility',
-            'RSS feed of this folder\'s contents' : 'RSS feed of this listing', 'Standard listing' : 'Standard view'
+            'RSS feed of this folder\'s contents' : 'RSS feed of this listing', 'Standard listing' : 'Standard view',
+            'Tile view' : 'Summary view'
            }
 
     renamed['atreferencebrowserwidget'] = {
