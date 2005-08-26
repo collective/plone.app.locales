@@ -216,7 +216,7 @@ class TestI18N(PloneTestCase.PloneTestCase):
         for domain in domains:
             file = open('%s-generated.pot' % domain, 'w')
             writer = catalog.POWriter(file, ctl[domain])
-            writer.write(sort=True, msgstrToComment=True, noMoreComments=True)
+            writer.write(sort=True, msgstrToComment=True)
 
 def norm(str):
     return str.strip().replace('\n','')
