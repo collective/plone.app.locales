@@ -26,3 +26,4 @@ for test in tests:
 
 if __name__ == '__main__':
     TestRunner().run(suite)
+
