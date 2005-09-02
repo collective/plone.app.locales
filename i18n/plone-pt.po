@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-08-18 22:05+0000\n"
+"POT-Creation-Date: 2005-09-02 21:07+0000\n"
 "PO-Revision-Date: 2005-08-21 17:37+0100\n"
 "Last-Translator: J M Cerqueira Esteves <jmce@artenumerica.com>\n"
 "Language-Team: Português <plone-i18n@lists.sourceforge.net>\n"
@@ -24,7 +24,10 @@ msgstr "${itemCount} itens foram apagados."
 
 
 #: ./plone_portlets/portlet_calendar.pt
-#. Allows to change the order of month / year
+#. <span i18n:translate="" tal:omit-tag="">
+#.  ${monthname}
+#.  ${year}
+#. </span>
 # Original: "${monthname} ${year}"
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
@@ -773,10 +776,6 @@ msgid "Groups ${names} have been deleted."
 msgstr "Os grupos ${names} foram removidos."
 
 
-msgid "Help"
-msgstr "Ajuda"
-
-
 #: type_action
 #. defined on Page
 #. defined on Event
@@ -877,6 +876,18 @@ msgstr "Itens renomeados."
 # Original: "Join"
 msgid "Join"
 msgstr "Aderir"
+
+
+#: index
+#. index friendly name of index: Subject
+# Original: "Keywords"
+msgid "Keywords"
+msgstr ""
+
+
+#: ./plone_scripts/availableLanguages.py
+msgid "Language neutral (site default)"
+msgstr ""
 
 
 #: portal_type_title
@@ -1141,11 +1152,6 @@ msgstr "Não"
 
 msgid "No change"
 msgstr "Nenhuma alteração"
-
-
-#: ./plone_scripts/availableLanguages.py
-msgid "Not specified"
-msgstr "Não especificado"
 
 
 #: ./plone_scripts/folder_copy.cpy
@@ -1680,6 +1686,13 @@ msgid "Smart Folder Settings"
 msgstr "Configuração da Pasta Inteligente"
 
 
+#: name
+#. template atct_topic_view on type: Topic
+# Original: "Smart Folder View"
+msgid "Smart Folder View"
+msgstr ""
+
+
 #: portal_type_title
 #. type description: A sort criterion
 # Original: "Sort Criterion"
@@ -1729,7 +1742,7 @@ msgstr "Subpastas"
 
 
 #: index
-#. index id with index friendly name:
+#. index id with index friendly name: Keywords
 # Original: "Subject"
 msgid "Subject"
 msgstr "Subject"
@@ -1821,6 +1834,13 @@ msgstr "Data e hora finais de um evento"
 
 msgid "The integer you entered was out of range."
 msgstr "O número inteiro que indicou está fora do limite permitido."
+
+
+#: index
+#. index description of index: Subject
+# Original: "The keywords used to describe an item"
+msgid "The keywords used to describe an item"
+msgstr ""
 
 
 #: index
@@ -1958,13 +1978,6 @@ msgstr "Comutar modo de ecrã completo"
 
 msgid "Too much input was given."
 msgstr "Fornecidos dados em excesso."
-
-
-#: name
-#. template atct_topic_view on type: Topic
-# Original: "Topic View"
-msgid "Topic View"
-msgstr "Vista de Tópico"
 
 
 msgid "Transaction undone."
@@ -2521,9 +2534,12 @@ msgstr "Autenticação"
 
 
 #: ./plone_portlets/portlet_events.pt
-#. <span i18n:translate="box_upcoming_events">
+#. <a href="" i18n:translate="box_upcoming_events" tal:attributes="href string:${utool}/events" tal:condition="python:'events' in portal.contentIds()">
 #.                 Upcoming events
-#. </span>
+#. </a>
+#. <a href="" i18n:translate="box_upcoming_events" tal:attributes="href string:${utool}/events_listing" tal:condition="python:'events' not in portal.contentIds()">
+#.                 Upcoming events
+#. </a>
 # Original: "Upcoming events"
 msgid "box_upcoming_events"
 msgstr "Próximos eventos"
@@ -3048,11 +3064,11 @@ msgstr "Os Grupos são uma forma conveniente de partilhar itens com um\nconjunto
 
 #: ./plone_prefs/prefs_groups_overview.cpt
 #. <p i18n:translate="description_groups_management">
-#. 	      Groups are logical collections of users, such as
-#. 	      departments and business units. Groups are not directly
-#. 	      related to permissions on a global level, you normally
-#. 	      use Roles for that - and let certain Groups have a
-#. 	      particular role.
+#.           Groups are logical collections of users, such as
+#.           departments and business units. Groups are not directly
+#.           related to permissions on a global level, you normally
+#.           use Roles for that - and let certain Groups have a
+#.           particular role.
 #. </p>
 # Original: "Groups are logical collections of users, such as departments and business units. Groups are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 msgid "description_groups_management"
@@ -6222,7 +6238,7 @@ msgstr "Adicionar"
 #: ./plone_forms/discussion_reply_preview.pt
 #. <input class="standalone" i18n:attributes="value label_add_comment;" name="discussion_reply:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add Comment"/>
 #: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="standalone" i18n:attributes="value label_add_comment;" type="submit" value="Add Comment"/>
+#. <input class="standalone" i18n:attributes="value label_add_comment;" style="margin-bottom: 1.25em;" type="submit" value="Add Comment"/>
 # Original: "Add Comment"
 msgid "label_add_comment"
 msgstr "Adicionar Comentário"
@@ -7050,7 +7066,7 @@ msgstr "Desactivar Divulgação"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#. <span class="actionMenuDisabled" i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 #.                     Display
 #. </span>
 # Original: "Display"
@@ -7214,6 +7230,21 @@ msgstr "Anúncio de Evento"
 # Original: "Attendees"
 msgid "label_event_attendees"
 msgstr "Participantes"
+
+
+#: ./plone_content/folder_listing.pt
+#. <span i18n:translate="label_event_byline" tal:condition="python: item_type == 'Event'">
+#.                                 (
+#.  ${location}
+#.  , from
+#.  ${start}
+#.   to
+#.  ${end}
+#.  )
+#. </span>
+# Original: "( ${location} , from ${start} to ${end} )"
+msgid "label_event_byline"
+msgstr ""
 
 
 #: widget_label
@@ -7747,7 +7778,7 @@ msgstr "Nome de Utilizador"
 
 
 #: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="standalone" i18n:attributes="value label_login_to_add_comments;" type="submit" value="Log in to add comments"/>
+#. <input class="standalone" i18n:attributes="value label_login_to_add_comments;" style="margin-bottom: 1.25em;" type="submit" value="Log in to add comments"/>
 # Original: "Log in to add comments"
 msgid "label_login_to_add_comments"
 msgstr "Autentique-se para adicionar comentários"
@@ -10176,6 +10207,15 @@ msgstr "Não foram encontrados membros usando os seus <strong>Critérios de Pesq
 
 
 #: ./plone_templates/events_listing.pt
+#. <p i18n:translate="no_new_events" tal:condition="not: results">
+#.         No events have been posted.
+#. </p>
+# Original: "No events have been posted."
+msgid "no_new_events"
+msgstr ""
+
+
+#: ./plone_templates/news_listing.pt
 #. <p i18n:translate="no_new_news" tal:condition="not: results">
 #.         No news has been posted.
 #. </p>
@@ -10641,6 +10681,14 @@ msgstr "404 - Não encontrado"
 # Original: "Your form has not been saved. All changes you have made will be lost"
 msgid "text_form_modified_message"
 msgstr "Os dados no seu formulário não foram guardados.  Todas as alterações serão perdidas."
+
+
+#: ./plone_ecmascript/plone_javascript_variables.js.dtml
+#. text_form_resubmit_message = '<dtml-var expr="translate('text_form_resubmit_message', default=
+#. 'Your already clicked the submit button. Do you really want to submit this form again?')">'
+# Original: "Your already clicked the submit button. Do you really want to submit this form again?"
+msgid "text_form_resubmit_message"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_user_group_search_form.pt
@@ -11154,20 +11202,6 @@ msgstr "Texto Grande"
 
 #: MembershipTool.py
 #. title
-# Original: "${member}'s Home"
-msgid "title_member_folder"
-msgstr "Área de ${member}"
-
-
-#: MembershipTool.py
-#. title
-# Original: "Home page for ${member}"
-msgid "title_member_folder_index_html"
-msgstr "Página de entrada de ${member}"
-
-
-#: MembershipTool.py
-#. title
 # Original: "Personal Items for ${member}"
 msgid "title_member_personal_folder"
 msgstr "Itens pessoais de ${member}"
@@ -11216,7 +11250,7 @@ msgstr "Relevância"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#. <span class="actionMenuDisabled" i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 # Original: "Delete or rename the index_html item to gain full control over how this folder is displayed."
 msgid "title_remove_index_html_for_display_control"
 msgstr "Apague ou renomeie o item index_html para obter controlo completo sobre a forma como esta pasta é exibida."

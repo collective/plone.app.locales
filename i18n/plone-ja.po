@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-08-18 22:05+0000\n"
+"POT-Creation-Date: 2005-09-02 21:07+0000\n"
 "PO-Revision-Date: 2004-03-24 03:57+0900\n"
 "Last-Translator: Retsu <tyam@mac.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -29,7 +29,10 @@ msgstr "${itemCount}は削除されました"
 
 
 #: ./plone_portlets/portlet_calendar.pt
-#. Allows to change the order of month / year
+#. <span i18n:translate="" tal:omit-tag="">
+#.  ${monthname}
+#.  ${year}
+#. </span>
 # Original: "${monthname} ${year}"
 msgid "${monthname} ${year}"
 msgstr "${year}年 ${monthname}"
@@ -778,10 +781,6 @@ msgid "Groups ${names} have been deleted."
 msgstr "グループ ${names} が削除されました。"
 
 
-msgid "Help"
-msgstr "ヘルプ"
-
-
 #: type_action
 #. defined on Page
 #. defined on Event
@@ -882,6 +881,18 @@ msgstr "アイテムの名前が変更されました。"
 # Original: "Join"
 msgid "Join"
 msgstr "登録"
+
+
+#: index
+#. index friendly name of index: Subject
+# Original: "Keywords"
+msgid "Keywords"
+msgstr ""
+
+
+#: ./plone_scripts/availableLanguages.py
+msgid "Language neutral (site default)"
+msgstr ""
 
 
 #: portal_type_title
@@ -1146,11 +1157,6 @@ msgstr "No"
 
 msgid "No change"
 msgstr "変更なし"
-
-
-#: ./plone_scripts/availableLanguages.py
-msgid "Not specified"
-msgstr "指定されていない"
 
 
 #: ./plone_scripts/folder_copy.cpy
@@ -1685,6 +1691,13 @@ msgid "Smart Folder Settings"
 msgstr "スマートフォルダの設定"
 
 
+#: name
+#. template atct_topic_view on type: Topic
+# Original: "Smart Folder View"
+msgid "Smart Folder View"
+msgstr ""
+
+
 #: portal_type_title
 #. type description: A sort criterion
 # Original: "Sort Criterion"
@@ -1734,7 +1747,7 @@ msgstr "サブフォルダ"
 
 
 #: index
-#. index id with index friendly name:
+#. index id with index friendly name: Keywords
 # Original: "Subject"
 msgid "Subject"
 msgstr "件名"
@@ -1826,6 +1839,13 @@ msgstr "イベントの終了日時"
 
 msgid "The integer you entered was out of range."
 msgstr "入力された整数は範囲を越えています。"
+
+
+#: index
+#. index description of index: Subject
+# Original: "The keywords used to describe an item"
+msgid "The keywords used to describe an item"
+msgstr ""
 
 
 #: index
@@ -1963,13 +1983,6 @@ msgstr "全画面モードに変更"
 
 msgid "Too much input was given."
 msgstr "入力が多すぎます"
-
-
-#: name
-#. template atct_topic_view on type: Topic
-# Original: "Topic View"
-msgid "Topic View"
-msgstr "トピック表示"
 
 
 msgid "Transaction undone."
@@ -2526,9 +2539,12 @@ msgstr "ログイン"
 
 
 #: ./plone_portlets/portlet_events.pt
-#. <span i18n:translate="box_upcoming_events">
+#. <a href="" i18n:translate="box_upcoming_events" tal:attributes="href string:${utool}/events" tal:condition="python:'events' in portal.contentIds()">
 #.                 Upcoming events
-#. </span>
+#. </a>
+#. <a href="" i18n:translate="box_upcoming_events" tal:attributes="href string:${utool}/events_listing" tal:condition="python:'events' not in portal.contentIds()">
+#.                 Upcoming events
+#. </a>
 # Original: "Upcoming events"
 msgid "box_upcoming_events"
 msgstr "これからのイベント"
@@ -3053,11 +3069,11 @@ msgstr "グループはアイテムを何人かのユーザで共有するのに
 
 #: ./plone_prefs/prefs_groups_overview.cpt
 #. <p i18n:translate="description_groups_management">
-#. 	      Groups are logical collections of users, such as
-#. 	      departments and business units. Groups are not directly
-#. 	      related to permissions on a global level, you normally
-#. 	      use Roles for that - and let certain Groups have a
-#. 	      particular role.
+#.           Groups are logical collections of users, such as
+#.           departments and business units. Groups are not directly
+#.           related to permissions on a global level, you normally
+#.           use Roles for that - and let certain Groups have a
+#.           particular role.
 #. </p>
 # Original: "Groups are logical collections of users, such as departments and business units. Groups are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 msgid "description_groups_management"
@@ -6227,7 +6243,7 @@ msgstr "追加"
 #: ./plone_forms/discussion_reply_preview.pt
 #. <input class="standalone" i18n:attributes="value label_add_comment;" name="discussion_reply:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add Comment"/>
 #: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="standalone" i18n:attributes="value label_add_comment;" type="submit" value="Add Comment"/>
+#. <input class="standalone" i18n:attributes="value label_add_comment;" style="margin-bottom: 1.25em;" type="submit" value="Add Comment"/>
 # Original: "Add Comment"
 msgid "label_add_comment"
 msgstr "コメントを追加"
@@ -7055,7 +7071,7 @@ msgstr "RSS配信を無効にする"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#. <span class="actionMenuDisabled" i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 #.                     Display
 #. </span>
 # Original: "Display"
@@ -7219,6 +7235,21 @@ msgstr "イベントの知らせ"
 # Original: "Attendees"
 msgid "label_event_attendees"
 msgstr "参加できる方"
+
+
+#: ./plone_content/folder_listing.pt
+#. <span i18n:translate="label_event_byline" tal:condition="python: item_type == 'Event'">
+#.                                 (
+#.  ${location}
+#.  , from
+#.  ${start}
+#.   to
+#.  ${end}
+#.  )
+#. </span>
+# Original: "( ${location} , from ${start} to ${end} )"
+msgid "label_event_byline"
+msgstr ""
 
 
 #: widget_label
@@ -7752,7 +7783,7 @@ msgstr "ユーザ名"
 
 
 #: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="standalone" i18n:attributes="value label_login_to_add_comments;" type="submit" value="Log in to add comments"/>
+#. <input class="standalone" i18n:attributes="value label_login_to_add_comments;" style="margin-bottom: 1.25em;" type="submit" value="Log in to add comments"/>
 # Original: "Log in to add comments"
 msgid "label_login_to_add_comments"
 msgstr "コメントを追加するためにログイン"
@@ -10181,6 +10212,15 @@ msgstr "<strong>検索条件</strong>に合致するメンバーが見つかり�
 
 
 #: ./plone_templates/events_listing.pt
+#. <p i18n:translate="no_new_events" tal:condition="not: results">
+#.         No events have been posted.
+#. </p>
+# Original: "No events have been posted."
+msgid "no_new_events"
+msgstr ""
+
+
+#: ./plone_templates/news_listing.pt
 #. <p i18n:translate="no_new_news" tal:condition="not: results">
 #.         No news has been posted.
 #. </p>
@@ -10646,6 +10686,14 @@ msgstr "404 見つかりません"
 # Original: "Your form has not been saved. All changes you have made will be lost"
 msgid "text_form_modified_message"
 msgstr "フォームが保存されていません。すべての変更が失われます。"
+
+
+#: ./plone_ecmascript/plone_javascript_variables.js.dtml
+#. text_form_resubmit_message = '<dtml-var expr="translate('text_form_resubmit_message', default=
+#. 'Your already clicked the submit button. Do you really want to submit this form again?')">'
+# Original: "Your already clicked the submit button. Do you really want to submit this form again?"
+msgid "text_form_resubmit_message"
+msgstr ""
 
 
 #: ./plone_prefs/prefs_user_group_search_form.pt
@@ -11159,20 +11207,6 @@ msgstr "大"
 
 #: MembershipTool.py
 #. title
-# Original: "${member}'s Home"
-msgid "title_member_folder"
-msgstr "${member}のホーム"
-
-
-#: MembershipTool.py
-#. title
-# Original: "Home page for ${member}"
-msgid "title_member_folder_index_html"
-msgstr "${member}のホームページ"
-
-
-#: MembershipTool.py
-#. title
 # Original: "Personal Items for ${member}"
 msgid "title_member_personal_folder"
 msgstr "${member}の個人アイテム"
@@ -11221,7 +11255,7 @@ msgstr "関連性"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#. <span class="actionMenuDisabled" i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 # Original: "Delete or rename the index_html item to gain full control over how this folder is displayed."
 msgid "title_remove_index_html_for_display_control"
 msgstr "このフォルダの見え方を指定できるようにindex_htmlアイテムを削除するか名前を変更する。"

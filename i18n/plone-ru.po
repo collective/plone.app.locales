@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-08-18 22:05+0000\n"
+"POT-Creation-Date: 2005-09-02 21:07+0000\n"
 "PO-Revision-Date: 2004-12-01 04:38+0300\n"
 "Last-Translator: Mikhail Kashkin <mailbox-at-xen-ru>, http://plone.org.ru/\n"
 "Language-Team: <mailbox@xen.ru>\n"
@@ -26,7 +26,10 @@ msgstr ""
 
 
 #: ./plone_portlets/portlet_calendar.pt
-#. Allows to change the order of month / year
+#. <span i18n:translate="" tal:omit-tag="">
+#.  ${monthname}
+#.  ${year}
+#. </span>
 # Original: "${monthname} ${year}"
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
@@ -776,10 +779,6 @@ msgid "Groups ${names} have been deleted."
 msgstr ""
 
 
-msgid "Help"
-msgstr "Справка"
-
-
 #: type_action
 #. defined on Page
 #. defined on Event
@@ -881,6 +880,18 @@ msgstr "Элемент(ы) переименован(ы)."
 # Original: "Join"
 msgid "Join"
 msgstr "Регистрация"
+
+
+#: index
+#. index friendly name of index: Subject
+# Original: "Keywords"
+msgid "Keywords"
+msgstr ""
+
+
+#: ./plone_scripts/availableLanguages.py
+msgid "Language neutral (site default)"
+msgstr ""
 
 
 #: portal_type_title
@@ -1145,11 +1156,6 @@ msgstr "Нет"
 
 msgid "No change"
 msgstr "Без изменений"
-
-
-#: ./plone_scripts/availableLanguages.py
-msgid "Not specified"
-msgstr ""
 
 
 #: ./plone_scripts/folder_copy.cpy
@@ -1685,6 +1691,13 @@ msgid "Smart Folder Settings"
 msgstr ""
 
 
+#: name
+#. template atct_topic_view on type: Topic
+# Original: "Smart Folder View"
+msgid "Smart Folder View"
+msgstr ""
+
+
 #: portal_type_title
 #. type description: A sort criterion
 # Original: "Sort Criterion"
@@ -1735,7 +1748,7 @@ msgstr ""
 
 
 #: index
-#. index id with index friendly name:
+#. index id with index friendly name: Keywords
 # Original: "Subject"
 msgid "Subject"
 msgstr ""
@@ -1828,6 +1841,13 @@ msgstr ""
 
 msgid "The integer you entered was out of range."
 msgstr "Введенное Вами целое число было вне допустимого диапазона."
+
+
+#: index
+#. index description of index: Subject
+# Original: "The keywords used to describe an item"
+msgid "The keywords used to describe an item"
+msgstr ""
 
 
 #: index
@@ -1965,13 +1985,6 @@ msgstr ""
 
 msgid "Too much input was given."
 msgstr "Слишком большой ввод."
-
-
-#: name
-#. template atct_topic_view on type: Topic
-# Original: "Topic View"
-msgid "Topic View"
-msgstr ""
 
 
 msgid "Transaction undone."
@@ -2528,9 +2541,12 @@ msgstr "Вход"
 
 
 #: ./plone_portlets/portlet_events.pt
-#. <span i18n:translate="box_upcoming_events">
+#. <a href="" i18n:translate="box_upcoming_events" tal:attributes="href string:${utool}/events" tal:condition="python:'events' in portal.contentIds()">
 #.                 Upcoming events
-#. </span>
+#. </a>
+#. <a href="" i18n:translate="box_upcoming_events" tal:attributes="href string:${utool}/events_listing" tal:condition="python:'events' not in portal.contentIds()">
+#.                 Upcoming events
+#. </a>
 # Original: "Upcoming events"
 msgid "box_upcoming_events"
 msgstr ""
@@ -3060,11 +3076,11 @@ msgstr "Группы являются удобным способом орган
 
 #: ./plone_prefs/prefs_groups_overview.cpt
 #. <p i18n:translate="description_groups_management">
-#. 	      Groups are logical collections of users, such as
-#. 	      departments and business units. Groups are not directly
-#. 	      related to permissions on a global level, you normally
-#. 	      use Roles for that - and let certain Groups have a
-#. 	      particular role.
+#.           Groups are logical collections of users, such as
+#.           departments and business units. Groups are not directly
+#.           related to permissions on a global level, you normally
+#.           use Roles for that - and let certain Groups have a
+#.           particular role.
 #. </p>
 # Original: "Groups are logical collections of users, such as departments and business units. Groups are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 msgid "description_groups_management"
@@ -6258,7 +6274,7 @@ msgstr "Добавить"
 #: ./plone_forms/discussion_reply_preview.pt
 #. <input class="standalone" i18n:attributes="value label_add_comment;" name="discussion_reply:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add Comment"/>
 #: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="standalone" i18n:attributes="value label_add_comment;" type="submit" value="Add Comment"/>
+#. <input class="standalone" i18n:attributes="value label_add_comment;" style="margin-bottom: 1.25em;" type="submit" value="Add Comment"/>
 # Original: "Add Comment"
 msgid "label_add_comment"
 msgstr "Добавить комментарий"
@@ -7095,7 +7111,7 @@ msgstr "Отменить синдикацию"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#. <span class="actionMenuDisabled" i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 #.                     Display
 #. </span>
 # Original: "Display"
@@ -7258,6 +7274,21 @@ msgstr ""
 #. of LinesWidget, description:
 # Original: "Attendees"
 msgid "label_event_attendees"
+msgstr ""
+
+
+#: ./plone_content/folder_listing.pt
+#. <span i18n:translate="label_event_byline" tal:condition="python: item_type == 'Event'">
+#.                                 (
+#.  ${location}
+#.  , from
+#.  ${start}
+#.   to
+#.  ${end}
+#.  )
+#. </span>
+# Original: "( ${location} , from ${start} to ${end} )"
+msgid "label_event_byline"
 msgstr ""
 
 
@@ -7793,7 +7824,7 @@ msgstr ""
 
 
 #: ./plone_templates/viewThreadsAtBottom.pt
-#. <input class="standalone" i18n:attributes="value label_login_to_add_comments;" type="submit" value="Log in to add comments"/>
+#. <input class="standalone" i18n:attributes="value label_login_to_add_comments;" style="margin-bottom: 1.25em;" type="submit" value="Log in to add comments"/>
 # Original: "Log in to add comments"
 msgid "label_login_to_add_comments"
 msgstr "Зарегистрируйтесь чтобы добавлять комментарии"
@@ -10233,6 +10264,15 @@ msgstr "Не было найдено ни одного участника сай
 
 
 #: ./plone_templates/events_listing.pt
+#. <p i18n:translate="no_new_events" tal:condition="not: results">
+#.         No events have been posted.
+#. </p>
+# Original: "No events have been posted."
+msgid "no_new_events"
+msgstr ""
+
+
+#: ./plone_templates/news_listing.pt
 #. <p i18n:translate="no_new_news" tal:condition="not: results">
 #.         No news has been posted.
 #. </p>
@@ -10699,6 +10739,14 @@ msgstr ""
 #. 'Your form has not been saved. All changes you have made will be lost')">'
 # Original: "Your form has not been saved. All changes you have made will be lost"
 msgid "text_form_modified_message"
+msgstr ""
+
+
+#: ./plone_ecmascript/plone_javascript_variables.js.dtml
+#. text_form_resubmit_message = '<dtml-var expr="translate('text_form_resubmit_message', default=
+#. 'Your already clicked the submit button. Do you really want to submit this form again?')">'
+# Original: "Your already clicked the submit button. Do you really want to submit this form again?"
+msgid "text_form_resubmit_message"
 msgstr ""
 
 
@@ -11216,20 +11264,6 @@ msgstr ""
 
 #: MembershipTool.py
 #. title
-# Original: "${member}'s Home"
-msgid "title_member_folder"
-msgstr ""
-
-
-#: MembershipTool.py
-#. title
-# Original: "Home page for ${member}"
-msgid "title_member_folder_index_html"
-msgstr ""
-
-
-#: MembershipTool.py
-#. title
 # Original: "Personal Items for ${member}"
 msgid "title_member_personal_folder"
 msgstr ""
@@ -11278,7 +11312,7 @@ msgstr "Релевантность"
 
 
 #: ./plone_templates/global_contentmenu.pt
-#. <span i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
+#. <span class="actionMenuDisabled" i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 # Original: "Delete or rename the index_html item to gain full control over how this folder is displayed."
 msgid "title_remove_index_html_for_display_control"
 msgstr ""
