@@ -1,4 +1,8 @@
 import os, sys
+
+if __name__ == '__main__':
+    execfile(os.path.join(sys.path[0], 'framework.py'))
+
 from Testing import ZopeTestCase
 from Products.I18NTestCase import PotTestCase, PoTestCase
 from Products.I18NTestCase.I18NTestCase import getPoFiles, getPotFiles, getProductFromPath
@@ -7,9 +11,6 @@ from Globals import package_home
 
 GLOBALS = globals()
 PACKAGE_HOME = os.path.join(package_home(GLOBALS), '..')
-
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
 
 i18ndir = os.path.join(PACKAGE_HOME, '..', 'i18n')
 
@@ -43,13 +44,13 @@ for product in products:
             pot_cat = pot_catalogs[product]
         tests.append(TestOnePoFile)
 
-if __name__ == '__main__':
-    framework()
-else:
     import unittest
     def test_suite():
         suite = unittest.TestSuite()
         for test in tests:
             suite.addTest(unittest.makeSuite(test))
         return suite
+
+if __name__ == '__main__':
+    framework()
 
