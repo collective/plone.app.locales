@@ -10,7 +10,7 @@ from i18ndude import catalog
 from Globals import package_home
 
 GLOBALS = globals()
-PACKAGE_HOME = os.path.join(package_home(GLOBALS), '..')
+PACKAGE_HOME = os.path.normpath(os.path.join(package_home(GLOBALS), '..'))
 
 i18ndir = os.path.join(PACKAGE_HOME, '..', 'i18n')
 
