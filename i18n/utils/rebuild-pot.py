@@ -77,7 +77,7 @@ plone.pot. Have a look at i18ngenerate.py in this folder for details.'''
             skinserror = True
 
     if skinserror:
-        print 'Skins directory could not be found.'
+        print 'Skins directory (%s) could not be found.' % skins
         sys.exit(3)
 
     print 'Using %s to build new pot.\n' % skins
@@ -87,7 +87,7 @@ plone.pot. Have a look at i18ngenerate.py in this folder for details.'''
     if product == 'plone' or product == 'atcontenttypes':
         cmd += '--merge2 %s ' % generatedpot
 
-    cmd += '-s %s > %s 2>&1' % (skins, log)
+    cmd += '%s > %s 2>&1' % (skins, log)
 
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
     os.system(cmd)

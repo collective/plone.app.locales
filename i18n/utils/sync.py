@@ -28,7 +28,7 @@ def main():
             for po in poFiles:
                 for pot in potFiles:
                     if getProduct(po) == getProduct(pot):
-                        os.system(__PYTHON + ' ' + __I18NDUDE + (' sync --pot %s -s %s') % (pot, po))
+                        os.system(__PYTHON + ' ' + __I18NDUDE + (' sync --pot %s %s') % (pot, po))
         else:
             print 'Neither a pot nor po files for the given argument were found.'
             sys.exit(3)
@@ -39,7 +39,7 @@ def main():
             print 'No po-files were found for the given product.'
             sys.exit(4)
 
-        os.system(__PYTHON + ' ' + __I18NDUDE + (' sync --pot %s -s %s') % (pot, poFiles))
+        os.system(__PYTHON + ' ' + __I18NDUDE + (' sync --pot %s %s') % (pot, poFiles))
 
 if __name__ == '__main__':
     main()

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ATContentTypes SVN\n"
-"POT-Creation-Date: 2005-08-14 09:49+0000\n"
+"POT-Creation-Date: 2005-09-10 00:34+0000\n"
 "PO-Revision-Date: 2005-08-14 16:08+0100\n"
 "Last-Translator: Sebastien Douche <sdouche@gmail.com>\n"
 "Language-Team: French Translation Team <plone-i18n@lists.sourceforge.net>\n"
@@ -83,7 +83,7 @@ msgstr "6 mois"
 msgid "Between"
 msgstr "Entre"
 
-#: ./ATContentTypes/criterion_save.cpy
+#: ./ATContentTypes/validate_atct.vpy:37
 msgid "Changes saved."
 msgstr "Modifications sauvegardées."
 
@@ -113,6 +113,7 @@ msgstr "Plus grand que"
 
 # Original: "Less than"
 #. DisplayList entry for field direction
+#. DisplayList entry for field operation
 #: schema
 msgid "Less than"
 msgstr "Moins que"
@@ -167,13 +168,16 @@ msgstr "et"
 
 # Original: "Changes of ${title}"
 #. <h1 class="documentFirstHeading" i18n:domain="atcontenttypes" i18n:translate="atct_history_changes_of">
-#.  ${title}
+#. Changes of
+#. ${title}
+#. </h1>
 #: ./ATContentTypes/atct_history.pt
 msgid "atct_history_changes_of"
 msgstr "Historique de ${title}"
 
 # Original: "Changes in this revision"
 #. <legend i18n:translate="atct_history_changes_revision">
+#. Changes in this revision
 #. </legend>
 #: ./ATContentTypes/atct_history.pt
 msgid "atct_history_changes_revision"
@@ -181,6 +185,7 @@ msgstr "Historique dans cette révision"
 
 # Original: "Comment"
 #. <dt i18n:translate="atct_history_comment">
+#. Comment
 #. </dt>
 #: ./ATContentTypes/atct_history.pt
 msgid "atct_history_comment"
@@ -188,21 +193,27 @@ msgstr "Commentaire"
 
 # Original: "Comparison between ${from} and ${to}"
 #. <h2 i18n:translate="atct_history_comparison_between">
-#.  ${from}
-#.  ${to}
+#. Comparison between
+#. ${from}
+#. and
+#. ${to}
+#. </h2>
 #: ./ATContentTypes/atct_history.pt
 msgid "atct_history_comparison_between"
 msgstr "Comparaison entre ${from} et ${to}"
 
 # Original: "Shows the last changes of the item, with new content in green (normal text), and deleted content in red (strike-out text)."
 #. <div class="documentDescription" i18n:domain="atcontenttypes" i18n:translate="atct_history_lastchanges_description">
-#.         and deleted content in red (strike-out text).
+#. Shows the last changes of the item, with new content in green (normal text),
+#. and deleted content in red (strike-out text).
+#. </div>
 #: ./ATContentTypes/atct_history.pt
 msgid "atct_history_lastchanges_description"
 msgstr "Affiche les dernières modification, avec le nouveau contenu en vert (texte normal) et le contenu effacé en rouge (texte raturé)"
 
 # Original: "No changes available for this document"
 #. <p i18n:domain="atcontenttypes" i18n:translate="atct_history_lastchanges_notavailable">
+#. No changes available for this document
 #. </p>
 #: ./ATContentTypes/atct_history.pt
 msgid "atct_history_lastchanges_notavailable"
@@ -210,6 +221,7 @@ msgstr "Pas de modification pour ce document"
 
 # Original: "User"
 #. <dt i18n:translate="atct_history_user">
+#. User
 #. </dt>
 #: ./ATContentTypes/atct_history.pt
 msgid "atct_history_user"
@@ -217,23 +229,30 @@ msgstr "Utilisateur"
 
 # Original: "This changelog will be emptied when the site administrator performs maintenance (packing) of the database, and is only provided for your convenience. If the item has no history, it normally means that no changes have been made since the last time the history log was removed by the administrator."
 #. <p class="discreet" i18n:domain="atcontenttypes" i18n:translate="atct_lastchanges_warning">
-#.         (packing) of the database, and is only provided for your convenience. If the item
-#.         the history log was removed by the administrator.
+#. This changelog will be emptied when the site administrator performs maintenance
+#. (packing) of the database, and is only provided for your convenience. If the item
+#. has no history, it normally means that no changes have been made since the last time
+#. the history log was removed by the administrator.
+#. </p>
 #: ./ATContentTypes/atct_history.pt
 msgid "atct_lastchanges_warning"
 msgstr "Ce journal des modifications est fournie gracieusement pour un meilleur confort d'utilisation et se vide quand l'administrateur du site effectue des opérations de maintenance (compactage) de la base de données. S'il est vide, c'est qu'il n'existe pas de modification depuis la dernière suppression de l'administrateur."
 
 # Original: "All fields"
 #. <a href="" i18n:translate="atct_show_all_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly:int=0'" tal:condition="enabledOnly">
+#. All fields
 #. </a>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
+#: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "atct_show_all_fields"
 msgstr "Tout les champs"
 
 # Original: "Enabled fields only"
 #. <a href="" i18n:translate="atct_show_enabled_fields" tal:attributes="href python:here.absolute_url() +'/'+ template.id + '?showEnabledOnly:int=1'" tal:condition="not:enabledOnly">
+#. Enabled fields only
 #. </a>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
+#: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "atct_show_enabled_fields"
 msgstr "Uniquement les champs sélectionnés"
 
@@ -257,6 +276,7 @@ msgstr "Sélectionner manuellement"
 
 # Original: "Configure which metadata will be available for Smart Folder views."
 #. <p i18n:domain="atcontenttypes" i18n:translate="description_configure_available_metadata">
+#. Configure which metadata will be available for Smart Folder views.
 #. </p>
 #: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "description_configure_available_metadata"
@@ -264,7 +284,9 @@ msgstr "Configurez les métadonnées qui seront disponibles pour les vues des do
 
 # Original: "Configure which indices will be displayed while creating criteria for Smart Folders, and how they will be displayed."
 #. <p i18n:domain="atcontenttypes" i18n:translate="description_configure_indices">
-#.         for Smart Folders, and how they will be displayed.
+#. Configure which indices will be displayed while creating criteria
+#. for Smart Folders, and how they will be displayed.
+#. </p>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
 msgid "description_configure_indices"
 msgstr "Configurez les index qui seront affichés pendant la création de critères pour les dossiers automatiques, et comment ils seront affichés."
@@ -289,20 +311,25 @@ msgstr "Sélectionnez le mode restreint pour ce répertoire."
 
 # Original: "No criteria defined yet. The search will not show any results. Please add criteria below."
 #. <p class="discreet" i18n:domain="atcontenttypes" i18n:translate="description_no_criteria_in_criteria_form" tal:condition="not: here/listCriteria">
-#.         Please add criteria below.
+#. No criteria defined yet. The search will not show any results.
+#. Please add criteria below.
+#. </p>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "description_no_criteria_in_criteria_form"
 msgstr "Aucun critère définit. La recherche n'affichera pas de résultat. Veuillez ajouter des critères."
 
 # Original: "There are currently no criteria on which to search. Please add them using the 'criteria' tab."
 #. <p class="discreet" i18n:domain="atcontenttypes" i18n:translate="description_no_criteria_in_topic" tal:condition="not: here/listCriteria">
-#.                 Please add them using the 'criteria' tab.
+#. There are currently no criteria on which to search.
+#. Please add them using the 'criteria' tab.
+#. </p>
 #: ./ATContentTypes/atct_topic_view.pt
 msgid "description_no_criteria_in_topic"
 msgstr "Il n'existe pas de critère pour la recherche. Veuillez en ajouter en allant sur l'onglet 'critères'."
 
 # Original: "There are currently no results for this search."
 #. <p class="discreet" i18n:domain="atcontenttypes" i18n:translate="description_no_items_in_topic" tal:condition="python: not topicContents and here.listCriteria()">
+#. There are currently no results for this search.
 #. </p>
 #: ./ATContentTypes/atct_topic_view.pt
 msgid "description_no_items_in_topic"
@@ -310,13 +337,16 @@ msgstr "Pas de résultat pour cette recherche."
 
 # Original: "Criteria for ${title}"
 #. <h1 i18n:domain="atcontenttypes" i18n:translate="heading_criteria_for">
-#.  ${title}
+#. Criteria for
+#. ${title}
+#. </h1>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "heading_criteria_for"
 msgstr "Critères pour ${title}"
 
 # Original: "Indices (fields for searching)"
 #. <h3 i18n:translate="heading_indices_fields_for_searching">
+#. Indices (fields for searching)
 #. </h3>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
 msgid "heading_indices_fields_for_searching"
@@ -324,6 +354,7 @@ msgstr "Index (champs pour la recherche)"
 
 # Original: "Metadata (fields for display)"
 #. <h3 i18n:translate="heading_metadata_fields_for_display">
+#. Metadata (fields for display)
 #. </h3>
 #: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "heading_metadata_fields_for_display"
@@ -331,21 +362,25 @@ msgstr "Metadonnées (champs pour l'affichage)"
 
 # Original: "Smart Folder Settings"
 #. <h1 i18n:domain="atcontenttypes" i18n:translate="heading_smart_folder_settings">
+#. Smart Folder Settings
 #. </h1>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
+#: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "heading_smart_folder_settings"
 msgstr "Configuration des dossiers automatiques"
 
 # Original: "List Available Fields"
 #. <div class="formHelp" i18n:translate="help_criteria_field_name" id="fieldHelp">
+#. List Available Fields
 #. </div>
-#.                     List Available Fields
+#. <div class="formHelp" i18n:translate="help_criteria_field_name" id="fieldHelpSort">
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "help_criteria_field_name"
 msgstr "Liste des champs disponibles"
 
 # Original: "Criteria does match"
 #. <div class="formHelp" i18n:translate="help_criteria_type">
+#. Criteria does match
 #. </div>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "help_criteria_type"
@@ -401,6 +436,7 @@ msgstr "Valeurs, une par ligne."
 
 # Original: "Select transformation method."
 #. <div class="help" i18n:translate="help_select_transformation_method" id="display_help" style="visibility:hidden; left:-18em;">
+#. Select transformation method.
 #. </div>
 #: ./ATContentTypes/atct_image_transform.pt
 msgid "help_select_transformation_method"
@@ -408,6 +444,7 @@ msgstr "Sélectionnez la méthode de transformation."
 
 # Original: "Reverse display order"
 #. <div class="formHelp" i18n:translate="help_sort_reverse">
+#. Reverse display order
 #. </div>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "help_sort_reverse"
@@ -421,6 +458,7 @@ msgstr "dans le futur"
 
 # Original: "Allowed Criteria:"
 #. <span i18n:translate="label_allowed_criteria">
+#. Allowed Criteria:
 #. </span>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
 msgid "label_allowed_criteria"
@@ -452,14 +490,16 @@ msgstr "Mode types contraints"
 
 # Original: "Field name"
 #. <label for="field" i18n:translate="label_criteria_field_name">
+#. Field name
 #. </label>
-#.  Field Name
+#. Field Name
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "label_criteria_field_name"
 msgstr "Champs nom"
 
 # Original: "Criteria type"
 #. <label for="criterion_type" i18n:translate="label_criteria_type">
+#. Criteria type
 #. </label>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "label_criteria_type"
@@ -485,6 +525,7 @@ msgstr "Quelle jour"
 
 # Original: "Download PDF"
 #. <a href="#" i18n:domain="atcontenttypes" i18n:translate="label_download_as_pdf" style="text-align: right" tal:attributes="href string:${here_url}/asPDF/atct_topic_pdf_template/atct_topic_pdf" tal:condition="nocall: here/asPDF|nothing">
+#. Download PDF
 #. </a>
 #: ./ATContentTypes/atct_topic_view.pt
 msgid "label_download_as_pdf"
@@ -498,6 +539,7 @@ msgstr "Exécuter"
 
 # Original: "Help Text:"
 #. <span i18n:translate="label_help_text">
+#. Help Text:
 #. </span>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
 msgid "label_help_text"
@@ -535,6 +577,7 @@ msgstr "Valeurs"
 
 # Original: "(No file has been uploaded)"
 #. <span i18n:translate="label_no_file_uploaded" tal:condition="not: size">
+#. (No file has been uploaded)
 #. </span>
 #: ./ATContentTypes/atct_image_transform.pt
 msgid "label_no_file_uploaded"
@@ -542,6 +585,7 @@ msgstr "(Aucun fichier téléchargé vers le serveur)"
 
 # Original: "Original size"
 #. <span i18n:translate="label_original_size" tal:omit-tag="">
+#. Original size
 #. </span>
 #: ./ATContentTypes/atct_image_transform.pt
 msgid "label_original_size"
@@ -549,6 +593,7 @@ msgstr "Taille originale"
 
 # Original: "Select method"
 #. <option disabled="disabled" i18n:translate="label_select_method" value="">
+#. Select method
 #. </option>
 #: ./ATContentTypes/atct_image_transform.pt
 msgid "label_select_method"
@@ -556,31 +601,36 @@ msgstr "Sélectionnez la méthode"
 
 # Original: "Reverse"
 #. <label for="reversed" i18n:translate="label_sort_reverse">
+#. Reverse
 #. </label>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "label_sort_reverse"
 msgstr "Inversé"
 
 # Original: "Smart Folder Indexes"
-#. <a href="" i18n:translate="label_topic_indexes" tal:attributes="href string:${here/absolute_url}/atct_manageTopicIndex">
-#. </a>
 #. <a href="" i18n:translate="label_topic_indexes" tal:attributes="href string:${here/absolute_url}/${template/id}">
-#: ./ATContentTypes/atct_manageTopicMetadata.cpt
+#. Smart Folder Indexes
+#. </a>
+#. <a href="" i18n:translate="label_topic_indexes" tal:attributes="href string:${here/absolute_url}/atct_manageTopicIndex">
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
+#: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "label_topic_indexes"
 msgstr "Index des dossiers automatiques"
 
 # Original: "Smart Folder Metadata"
-#. <a href="" i18n:translate="label_topic_metadata" tal:attributes="href string:${here/absolute_url}/${template/id}">
-#. </a>
 #. <a href="" i18n:translate="label_topic_metadata" tal:attributes="href string:${here/absolute_url}/atct_manageTopicMetadata">
-#: ./ATContentTypes/atct_manageTopicMetadata.cpt
+#. Smart Folder Metadata
+#. </a>
+#. <a href="" i18n:translate="label_topic_metadata" tal:attributes="href string:${here/absolute_url}/${template/id}">
+#. Smart Folder MetaData
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
+#: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "label_topic_metadata"
 msgstr "Métadonnées des dossiers automatiques"
 
 # Original: "Transform"
 #. <span i18n:translate="label_transform">
+#. Transform
 #. </span>
 #: ./ATContentTypes/atct_image_transform.pt
 msgid "label_transform"
@@ -588,6 +638,7 @@ msgstr "Transformation"
 
 # Original: "Add New Search Criteria"
 #. <legend i18n:translate="legend_add_new_search_criteria">
+#. Add New Search Criteria
 #. </legend>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "legend_add_new_search_criteria"
@@ -595,6 +646,7 @@ msgstr "Ajouter de nouveaux critères de recherches"
 
 # Original: "Set Sort Order"
 #. <legend i18n:translate="legend_set_sort_order">
+#. Set Sort Order
 #. </legend>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "legend_set_sort_order"
@@ -602,6 +654,7 @@ msgstr "Définir l'ordre de trie"
 
 # Original: "Catalog index"
 #. <th i18n:translate="listingheader_catalog_index">
+#. Catalog index
 #. </th>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
 msgid "listingheader_catalog_index"
@@ -609,6 +662,7 @@ msgstr "Index du catalogue"
 
 # Original: "Catalog metadata"
 #. <th i18n:translate="listingheader_catalog_metadata">
+#. Catalog metadata
 #. </th>
 #: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "listingheader_catalog_metadata"
@@ -616,27 +670,34 @@ msgstr "Metadonnées du catalogue"
 
 # Original: "Enable"
 #. <th i18n:translate="listingheader_enable">
+#. Enable
 #. </th>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
+#: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "listingheader_enable"
 msgstr "Activer"
 
 # Original: "Explanation"
 #. <th i18n:translate="listingheader_explanation">
+#. Explanation
 #. </th>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
+#: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "listingheader_explanation"
 msgstr "Explication"
 
 # Original: "Friendly name"
 #. <th i18n:translate="listingheader_friendly_name">
+#. Friendly name
 #. </th>
 #: ./ATContentTypes/atct_manageTopicIndex.cpt
+#: ./ATContentTypes/atct_manageTopicMetadata.cpt
 msgid "listingheader_friendly_name"
 msgstr "Nom courant"
 
 # Original: "No sort order"
 #. <option i18n:translate="no_sort_order" tal:attributes="selected python:not here.hasSortCriterion();" value="no_sort">
+#. No sort order
 #. </option>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "no_sort_order"
@@ -650,13 +711,16 @@ msgstr "ou"
 
 # Original: "${num_photos} photos in album"
 #. <span i18n:translate="photos_in_album" tal:omit-tag="">
-#.                                      photos in album
+#. ${num_photos}
+#. photos in album
+#. </span>
 #: ./ATContentTypes/atct_album_view.pt
 msgid "photos_in_album"
 msgstr "${num_photos} photos dans l'album"
 
 # Original: "Contained Smart Folders:"
 #. <h2 i18n:domain="atcontenttypes" i18n:translate="sub_topics_heading">
+#. Contained Smart Folders:
 #. </h2>
 #: ./ATContentTypes/atct_topic_view.pt
 msgid "sub_topics_heading"
@@ -682,6 +746,7 @@ msgstr "Configuration des métadonnées"
 
 # Original: "Field"
 #. <th i18n:translate="table_criteria_field">
+#. Field
 #. </th>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "table_criteria_field"
@@ -689,6 +754,7 @@ msgstr "Champs"
 
 # Original: "Criterion Details"
 #. <th i18n:translate="table_criterion_details">
+#. Criterion Details
 #. </th>
 #: ./ATContentTypes/criterion_edit_form.cpt
 msgid "table_criterion_details"
@@ -696,6 +762,7 @@ msgstr "Détails des critères"
 
 # Original: "Empty album"
 #. <span i18n:translate="text_empty_album" tal:omit-tag="">
+#. Empty album
 #. </span>
 #: ./ATContentTypes/atct_album_view.pt
 msgid "text_empty_album"
@@ -703,6 +770,7 @@ msgstr "Album vide"
 
 # Original: "No albums or photos uploaded yet."
 #. <p i18n:domain="atcontenttypes" i18n:translate="text_no_albums_uploaded" tal:condition="python:not (albums or images)">
+#. No albums or photos uploaded yet.
 #. </p>
 #: ./ATContentTypes/atct_album_view.pt
 msgid "text_no_albums_uploaded"

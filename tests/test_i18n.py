@@ -23,7 +23,7 @@ for potFile in getPotFiles(path=PACKAGE_HOME):
     if product not in products:
         products.append(product)
     if product not in pot_catalogs:
-        pot_catalogs.update({product: catalog.MessageCatalog(filename=potFile, allcomments=True)})
+        pot_catalogs.update({product: catalog.MessageCatalog(filename=potFile)})
 
 for product in products:
     class TestOnePOT(PotTestCase.PotTestCase):
