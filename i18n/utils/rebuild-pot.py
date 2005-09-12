@@ -23,7 +23,6 @@ __PYTHON = os.environ.get('PYTHON', '')
 __I18NDUDE = os.environ.get('I18NDUDE', '')
 __INSTANCE_HOME = os.environ.get('INSTANCE_HOME', '')
 
-
 def main():
     if len(sys.argv) < 3:
         print 'You have to specify the product und skins directory.'
@@ -45,14 +44,8 @@ def main():
 
     os.chdir('..')
 
-    if product == 'plone' and not os.path.isfile(generatedpot):
-        print '''
-plone-generated.pot was not found. This is needed to build a proper version of
-plone.pot. Have a look at i18ngenerate.py in this folder for details.'''
-        sys.exit(4)
-
     if not os.path.isfile(manualpot):
-        print 'No manual pot was found for the given product.'
+        print 'Manual pot missing for the given product: %s.' % manualpot
         sys.exit(2)
 
     skins = sys.argv[2]
@@ -70,6 +63,10 @@ plone.pot. Have a look at i18ngenerate.py in this folder for details.'''
                     skins = os.path.join(skins, 'ATReferenceBrowserWidget')
                 elif product == 'plone':
                     skins = os.path.join(skins, 'CMFPlone')
+                elif product == 'plonelanguagetool':
+                    skins = os.path.join(skins, 'PloneLanguageTool')
+                elif product == 'linguaplone':
+                    skins = os.path.join(skins, 'LinguaPlone')
                 skins = os.path.join(skins, 'skins')
             else:
                 skinserror = True
