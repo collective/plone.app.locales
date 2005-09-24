@@ -4,9 +4,9 @@ def getPoFiles(product, all=False):
     """ Returns all product*.po files in the current folder """
     files = os.listdir(os.curdir)
     if all:
-        files = [file for file in files if file.startswith(product) and file.endswith('.po')]
+        files = [file for file in files if file.startswith('%s-' % product) and file.endswith('.po')]
     else:
-        files = [file for file in files if file.startswith(product) and file.endswith('.po') and file != '%s-en.po' % product]
+        files = [file for file in files if file.startswith('%s-' % product) and file.endswith('.po') and file != '%s-en.po' % product]
     return files
 
 
