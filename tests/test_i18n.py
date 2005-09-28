@@ -4,8 +4,8 @@ if __name__ == '__main__':
     execfile(os.path.join(sys.path[0], 'framework.py'))
 
 from Testing import ZopeTestCase
-from Products.I18NTestCase import PotTestCase, PoTestCase
-from Products.I18NTestCase.I18NTestCase import getPoFiles, getPotFiles, getProductFromPath
+from Products.i18ntestcase import PotTestCase, PoTestCase
+from Products.i18ntestcase.I18NTestCase import getPoFiles, getPotFiles, getProductFromPath
 from i18ndude import catalog
 from Globals import package_home
 
