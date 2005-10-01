@@ -18,6 +18,7 @@ def main():
 
     os.chdir('..')
     chart = os.curdir + os.sep + 'charts' + os.sep + 'plone-combined-chart.gif'
+    title = '"Plone 2.1.1"'
 
     pots = getPotFiles()
 
@@ -29,7 +30,7 @@ def main():
 
     products = ' '.join(products)
 
-    os.system(__PYTHON + ' ' + __I18NDUDE + (' combinedchart -o %s --products %s') % (chart, products))
+    os.system(__PYTHON + ' ' + __I18NDUDE + (' combinedchart -o %s --title %s --products %s') % (chart, title, products))
 
 if __name__ == '__main__':
     main()
