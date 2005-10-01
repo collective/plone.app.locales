@@ -30,6 +30,14 @@ def getPoFilesAsCmdLine(product):
     return filestring.rstrip()
 
 
+def getPotFilesAsCmdLine():
+    files = getPotFiles()
+    filestring = ''
+    for file in files:
+        filestring += file + ' '
+    return filestring.rstrip()
+
+
 def getPoFilesByLanguageCode(lang):
     """ Returns all po files which ends with given language code."""
     files = os.listdir(os.curdir)
