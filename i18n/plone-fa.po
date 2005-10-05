@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-09-15 22:57+0000\n"
+"POT-Creation-Date: 2005-10-05 21:13+0000\n"
 "PO-Revision-Date: 2005-09-08 05:04+0330\n"
 "Last-Translator: Mohsen Moeeni <mohsen@plone.ir>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -154,8 +154,6 @@ msgstr "تنظیمات ATCT"
 msgid "Accessibility"
 msgstr "قابلیت دسترسی"
 
-#. Used as dynamically generated button label
-#. Used if only one type is available as in smart folders
 #. Default: "Add ${type}"
 #: ./plone_forms/folder_factories.pt
 #: ./plone_templates/folder_contents.pt
@@ -263,12 +261,14 @@ msgstr "تغییرات در معیار ذخیره شد."
 msgid "Comment"
 msgstr "نظر"
 
+msgid "Comment added"
+msgstr ""
+
 #. Default: "Contact"
 #: action defined in portal_actions
 msgid "Contact"
 msgstr "تماس"
 
-#. Used as title of the folder_contents form
 #. Default: "Contained Smart Folders:"
 #: ./ATContentTypes/atct_topic_subtopics.pt
 msgid "Contained Smart Folders:"
@@ -356,8 +356,7 @@ msgstr "حذف"
 msgid "Description"
 msgstr "شرح"
 
-#. tab
-#: plone.org
+#: plone.org tab
 msgid "Development"
 msgstr "توسعه"
 
@@ -371,8 +370,7 @@ msgstr "آیتم گفتگو"
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "آیتم‌های گفتگو مدارکی هستند که به محتواهای دیگر پاسخ می‌دهند. آنها نمی‌بایست از طریق میانای 'folder_factories' قابل افزودن باشند."
 
-#. tab
-#: plone.org
+#: plone.org tab
 msgid "Documentation"
 msgstr "مستندات"
 
@@ -944,6 +942,10 @@ msgstr "لطفا خطاهای مشخص شده را تصحیح کنید."
 msgid "Please enter a valid date and time."
 msgstr "لطفا تاریخ و ساعت مجاز وارد کنید."
 
+#: ./plone_form_scripts/saveDefaultPage.cpy:14
+msgid "Please select an item to use."
+msgstr ""
+
 msgid "Please select one or more items to copy."
 msgstr "لطفا یک یا چند آیتم را جهت کپی انتخاب کنید."
 
@@ -1429,7 +1431,7 @@ msgstr "زمان و تاریخی که آیتمی آخرین بار تغییر ک
 msgid "There is already an item named '${name}' in this folder."
 msgstr "در حال حاضر آیتمی با نام '${name}' در این پوشه موجود است."
 
-#: ./plone_form_scripts/saveDefaultPage.cpy:30
+#: ./plone_form_scripts/saveDefaultPage.cpy:28
 msgid "There is no object with short name ${name} in this folder."
 msgstr ""
 
@@ -1495,6 +1497,10 @@ msgstr "مدیریت کاربرها و گروه‌ها"
 #: type action defined on Event
 msgid "View"
 msgstr "نمایش"
+
+#: ./plone_form_scripts/saveDefaultPage.cpy:33
+msgid "View changed."
+msgstr ""
 
 msgid "Welcome! You are now logged in."
 msgstr "خوش آمدید ! شما هم اکنون وارد سامانه شده‌اید."
@@ -1586,58 +1592,46 @@ msgstr "تنظیمات شخصی شما ذخیره گشت."
 msgid "Zope Management Interface"
 msgstr "میانای مدیریت Zope"
 
-#. Default: "<code>0</code>Access Key details"
+#. Default: "<code>0</code> Access Key details"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_accesskey_details"
 msgstr "<code>0</code> جزئیات کلیدهای دسترسی"
 
-#. Default: "<code>5</code>Advanced Search"
+#. Default: "<code>5</code> Advanced Search"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_advanced_search"
 msgstr "<code>5</code> جستجوی پیشرفته"
 
-#. Default: "<code>9</code>Contact information"
+#. Default: "<code>9</code> Contact information"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_contact"
 msgstr "<code>9</code> اطلاعات تماس"
 
-#. Default: "<code>1</code>Home Page"
+#. Default: "<code>1</code> Home Page"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_home_page"
 msgstr "<code>1</code> خانه"
 
-#. Default: "<code>6</code>Site navigation tree"
+#. Default: "<code>6</code> Site navigation tree"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_navigation"
 msgstr "<code>6</code> درخت جهت‌یابی سایت"
 
-#. Default: "<code>4</code>Search field focus"
+#. Default: "<code>4</code> Search field focus"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_search_field"
 msgstr "<code>4</code> تمرکز بر فیلد جستجو"
 
-#. Default: "<code>3</code>Site Map"
+#. Default: "<code>3</code> Site Map"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_sitemap"
 msgstr "<code>3</code> نقشه سایت"
 
-#. Default: "<code>2</code>Skip to content"
+#. Default: "<code>2</code> Skip to content"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_skip_to_content"
 msgstr "<code>2</code> پرش به محتوا"
 
-#. <a onclick="#"
-#. tal:define="ptype here/portal_type;
-#. alert_msg python:here.translate('alert_really_delete', default='Do you really want to delete the item?');
-#. ptype_translated python:here.translate(ptype);"
-#. tal:attributes="href editAction/url;
-#. title editAction/name;
-#. class python:test(icon, 'visualIconReplace', nothing);
-#. onclick string:return confirm('$ptype_translated\n${alert_msg}');;"
-#. tal:content="editAction/name"
-#. i18n:attributes="title"
-#. i18n:translate="">
-#. </a>
 #. Default: "Do you really want to delete the item?"
 #: ./plone_templates/batch_macros.pt
 msgid "alert_really_delete"
@@ -1876,27 +1870,27 @@ msgstr "ما تعهد کرده‌ایم که از دانش و فهم خود در
 msgid "description_accesskey_ie4_mac"
 msgstr "کلیدهای دسترسی پشتیبانی نمی‌شوند. لطفا از مرورگر دیگری استفاده کنید."
 
-#. Default: "Hold down the<code>Alt</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie4_win"
 msgstr "کلید <code>Alt</code> را پایین نگه‌داشته و عدد یا حرف کلید دسترسی را فشار دهید."
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie5_mac"
 msgstr "کلید <code>Ctrl</code> را پایین نگه‌داشته و عدد یا حرف کلید دسترسی را فشار دهید."
 
-#. Default: "Hold down the<code>Alt</code>key, press the number or letter of the access key, release both keys then press<code>ENTER</code>."
+#. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie5_win"
 msgstr "کلید <code>Alt</code> را پایین نگه‌داشته، عدد یا حرف کلید دسترسی را فشار دهید، هر دو کلید را رها کرده و سپس <code>ENTER</code> را فشار دهید."
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_mozilla_mac"
 msgstr "کلید <code>Ctrl</code> را پایین نگه‌داشته و عدد یا حرف کلید دسترسی را فشار دهید."
 
-#. Default: "Hold down the<code>Alt</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_mozilla_win"
 msgstr "کلید <code>Alt</code> را پایین نگه‌داشته و عدد یا حرف کلید دسترسی را فشار دهید."
@@ -1906,7 +1900,7 @@ msgstr "کلید <code>Alt</code> را پایین نگه‌داشته و عدد 
 msgid "description_accesskey_netscape6_all"
 msgstr "کلیدهای دسترسی پشتیبانی نمی‌شوند. لطفا از مرورگر دیگری استفاده کنید."
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_safari_mac"
 msgstr "کلید <code>Ctrl</code> را پایین نگه‌داشته و عدد یا حرف کلید دسترسی را فشار دهید."
@@ -1926,7 +1920,7 @@ msgstr "نوع آیتمی را که می‌خواهید به پوشه خود ا�
 msgid "description_addremove_products"
 msgstr "هم اکنون در بخش نصب محصولات افزودنی هستید. شما می‌توانید محصولات واقع در لیست زیر را اضافه یا خذف کنید."
 
-#. Default: "This search form enables you to find content on the site by specifying one or more search terms.<br/>Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
+#. Default: "This search form enables you to find content on the site by specifying one or more search terms. <br/> Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
 #: ./plone_forms/search_form.pt
 msgid "description_advanced_search"
 msgstr "با استفاده از این فرم جستجو می‌توانید مطالب مورد نظر خود را در این سایت، با مشخص کردن یک یا چند عبارت جستجو، پیدا کنید.<br/> به یاد داشته باشید که در هر زمانی می‌توانید از جستجوی سریع استفاده کنید و به اندازه‌ای کافی مناسب هست. از این فرم جستجو تنها زمانی استفاده کنید که می‌خواهید صراحت بیشتری داشته باشید."
@@ -1986,7 +1980,7 @@ msgstr "${plonecms} کپی‌رایت ${copyright} ${plonefoundation} و دیگ�
 msgid "description_edit_groupproperties"
 msgstr "گروه‌ مجموعه‌ای مرتبط از کاربران، مثل یک دپارتمان یا واحد تجاری می‌باشد. این گروه‌ها بطور مستقیم با اختیارات ارتباطی ندارند. معمولا جهت تعیین اختیارات از نقش‌ها استفاده می‌شود و هر گروه‌ به نقشی خاص مربوط می‌گردد."
 
-#. Default: "This information, also referred to as<em>metadata</em>is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
+#. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
 #: ./plone_content/metadata_edit_form.cpt
 msgid "description_edit_properties"
 msgstr "این اطلاعات، که آنها را <em>فراداده</em> نیز می‌نامند، مجموعه‌ایی از اطلاعات می‌باشد که از آن برای طبقه‌بندی یک شیئ و تعیین تاریخ‌ موثر، تاریخ انقضا، زبان و کلید‌واژه‌ها استفاده می‌شود."
@@ -2051,7 +2045,7 @@ msgstr "این نخستین باریست که شما وارد ${here} شده‌�
 msgid "description_logged_in_explain"
 msgstr "دقت فرمایید که نوار بالا در سمت راست تغییر کرده است و هم‌اکنون این نوار حاوی چندین آیتم شخصی می‌باشد. از این آیتم‌ها برای کنترل تنظیمات خود و ناحیه شخصی خود استفاده نمایید. مادامی که در حالت login می‌باشید، این آیتم‌ها نیز برای شما آشکار هستند."
 
-#. Default: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p><p>Best Regards from the ${portal_title} team. </p>"
+#. Default: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p> <p>Best Regards from the ${portal_title} team. </p>"
 #: ./plone_login/logged_out.pt
 msgid "description_logged_out"
 msgstr "<p> امیدوریم که از استفاده از خدمات ما خرسند باشید. ما منتظر می‌مانیم که شما را دوباره ببینیم. </p> <p> با تقدیم احترامات، گروه ${portal_title} </p>"
@@ -2061,7 +2055,7 @@ msgstr "<p> امیدوریم که از استفاده از خدمات ما خر�
 msgid "description_login_fail_enable_cookies"
 msgstr "قبول کوکی"
 
-#. Default: "Enter your username below, click<strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid email address when you registered. If this will not work for you (for example, if you forgot your member name or didn't enter your email address) send an email to"
+#. Default: "Enter your username below, click <strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid email address when you registered. If this will not work for you (for example, if you forgot your member name or didn't enter your email address) send an email to"
 #: ./plone_forms/mail_password_form.pt
 msgid "description_lost_password"
 msgstr "نام‌کاربری خود را در زیر وارد کرده و دکمه <strong>گذرواژه‌ام را برایم بفرست</strong> را فشار دهید. در صورتی که هنگام ثبت‌نام آدرس ایمیل معتبری وارد کرده باشید، گذرواژه‌اتان برایتان پست می‌شود. چنانچه این اتفاق نیافتاد(مثلا اگر نام‌کاربری خود را فراموش کرده‌اید و یا آدرس ایمیل معتبر وارد نکرده‌اید با این آدرس تماس بگیرید."
@@ -2071,7 +2065,7 @@ msgstr "نام‌کاربری خود را در زیر وارد کرده و دک�
 msgid "description_mail_setup"
 msgstr "تنظیمات ایمیل در پلون.."
 
-#. "Home page area that contains the items created and collected by ${member}"
+#. Default: "Home page area that contains the items created and collected by ${member}"
 #: MembershipTool.py
 msgid "description_member_folder"
 msgstr "ناحیه خانگی ${member} که شامل آیتم‌های ساخته‌شده و جمع‌آوری‌شده توسط او می‌باشد"
@@ -2081,7 +2075,6 @@ msgstr "ناحیه خانگی ${member} که شامل آیتم‌های ساخت
 msgid "description_member_listing"
 msgstr "لیستی از کاربران مشهود."
 
-#. desc
 #. Default: "contains personal workarea items for ${member}"
 #: MembershipTool.py
 msgid "description_member_personal_folder"
@@ -2172,7 +2165,7 @@ msgstr "تنظیمات فراگیر پورتال."
 msgid "description_portal_properties"
 msgstr "لیست متعلقاتی که می‌توانید برای سایت خود تعیین کنید"
 
-#. Default: "An item's status (also called its review state) determines who can see it. A<strong>private</strong>item can only be viewed by its Owner and by the site management. Only<strong>published</strong>items are available to the general member base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by<strong>submitting it for review</strong>.<br/>Another way to control the visibility of an item is with its<strong>effective date</strong>. An item is not publicly searchable before its effective date,<em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
+#. Default: "An item's status (also called its review state) determines who can see it. A <strong>private</strong> item can only be viewed by its Owner and by the site management. Only <strong>published</strong> items are available to the general member base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by <strong>submitting it for review</strong>. <br/> Another way to control the visibility of an item is with its <strong>effective date</strong>. An item is not publicly searchable before its effective date, <em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
 #: ./plone_forms/content_status_history.cpt
 msgid "description_publishing_process"
 msgstr "وضعیت یک آیتم (که به آن وضعیت بازبینی نیز گفته می‌شود)، مشخص کننده این است که چه کسی می‌تواند آنرا ببیند. یک آیتم <strong>شخصی</strong> فقط توسط صاحب آن و مدیران سایت قابل رویت می‌باشد و تنها آیتم‌های <strong>منتشر شده</strong> قابل دسترسی توسط اعضای دیگر و بازدیدکنندگان بی‌نام می‌باشد. منتشر شدن یک آیتم مستلزم بازبینی آن توسط یکی از بازبین‌های سایت می‌باشد. شما می‌توانید درخواست بازبینی یک آیتم را با <strong>ارائه آن برای بازبینی</strong> بدهید.<br/> یک راه دیگر برای کنترل مرئی بودن یک آیتم استفاده از <strong>تاریخ موثر</strong> آن می‌باشد. یک آیتم قبل از تاریخ موثرش قابل دسترسی برای عموم نمی‌باشد؛<em>حتی اگر دارای وضعیت <strong>منتشر شده</strong> باشد</em>."
@@ -3432,7 +3425,7 @@ msgstr "آیتم‌هایی را که توسط شخصی خاص ساخته شده
 msgid "help_search_before_specified_time"
 msgstr "اعضایی را بگردان که از زمان مشخص شده در بالا login نکرده‌اند."
 
-#. Default: "Return items matching this description. Multiple words may be found by combining them with<strong>AND</strong>and<strong>OR</strong>."
+#. Default: "Return items matching this description. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>."
 #: ./plone_forms/search_form.pt
 msgid "help_search_description"
 msgstr "آیتم‌هایی را که با این شرح جور می‌شوند، برگردان. کلمات چندگانه با ترکیب توسط  <strong>AND</strong> و <strong>OR</strong> می‌توانند جستجو شوند."
@@ -3452,7 +3445,7 @@ msgstr "اعضای متعلق به گروه گزیده را بازگردان."
 msgid "help_search_item_type"
 msgstr "آیتم‌های این نوع خاص را برگردان."
 
-#. Default: "Return items matching some or all of these keywords. Multiple words may be found by pressing<strong>Ctrl</strong>(or<strong>Apple</strong>key on Mac) while clicking the keywords."
+#. Default: "Return items matching some or all of these keywords. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 #: ./plone_forms/search_form.pt
 #, fuzzy
 msgid "help_search_keywords"
@@ -3483,7 +3476,7 @@ msgstr "به عنوان یک بازبین، شما می‌توانید آیتم�
 msgid "help_search_roles"
 msgstr "اعضایی را که تمامی نقش‌های انتخاب شده را دارند، برگردان."
 
-#. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with<strong>AND</strong>and<strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
+#. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
 #: ./plone_forms/search_form.pt
 msgid "help_search_text"
 msgstr "برای یک جستجوی ساده متنی، عبارت جستجوی خود را اینجا وارد کنید. کلمات چندگانه با ترکیب توسط <strong>AND</strong> و <strong>OR</strong> می‌توانند جستجو شوند. متن داخل این فیلد با محتوا، عنوان و شرح آیتم‌ها مقایسه می‌شود. "
@@ -3920,7 +3913,7 @@ msgstr "انصراف"
 msgid "label_change_comment"
 msgstr "ویرایش نظر"
 
-#. Default: "Change content item<br/>as default view"
+#. Default: "Change content item <br/> as default view"
 #: ./plone_templates/global_contentmenu.pt
 #, fuzzy
 msgid "label_change_item"
@@ -3952,7 +3945,7 @@ msgstr "تغییر وضعیت"
 msgid "label_choose_content_item"
 msgstr "یک آیتم محتوا را انتخاب کنید"
 
-#. Default: "Choose content item<br/>as default view"
+#. Default: "Choose content item <br/> as default view"
 #: ./plone_templates/global_contentmenu.pt
 #, fuzzy
 msgid "label_choose_item"
@@ -4063,8 +4056,7 @@ msgstr "شامل"
 msgid "label_content_editor"
 msgstr "ویرایشگر محتوا"
 
-#. Default: "Contributors:"
-#: ./plone_content/document_byline.pt
+#. Default: "Contributors"
 #: ./plone_content/metadata_edit_form.cpt
 #, fuzzy
 msgid "label_contributors"
@@ -4252,7 +4244,7 @@ msgstr "آدرس پست‌الکترونیک"
 msgid "label_enable_cookies"
 msgstr "کوکی را فعال کنید"
 
-#. Default: "Enable syndication"
+#. Default: "Enable Syndication"
 #: ./plone_forms/synPropertiesForm.cpt
 #: ./plone_prefs/prefs_syndication_form.pt
 msgid "label_enable_syndication"
@@ -4579,8 +4571,7 @@ msgstr "نقش جهت انتساب"
 msgid "label_localroles_to_assign_to_selected_users"
 msgstr "نقش‌ها جهت انتساب به کاربرها/گروه‌های گزیده"
 
-#. Default: "Location:"
-#: ./plone_content/author.cpt
+#. Default: "Location"
 #: ./plone_prefs/personalize_form.cpt
 #: ./plone_prefs/prefs_user_details.cpt
 msgid "label_location"
@@ -5680,7 +5671,7 @@ msgstr "نویسنده"
 msgid "listingheader_comment"
 msgstr "نظر"
 
-#. Default: "DateandTime"
+#. Default: "Date and Time"
 #: ./plone_content/review_history.pt
 #: ./plone_forms/undo_form.pt
 msgid "listingheader_date_and_time"
@@ -5730,7 +5721,7 @@ msgstr "نام"
 msgid "listingheader_order"
 msgstr "ترتیب"
 
-#. Default: "Performedby"
+#. Default: "Performed by"
 #: ./plone_content/review_history.pt
 #: ./plone_forms/undo_form.pt
 msgid "listingheader_performed_by"
@@ -5785,7 +5776,7 @@ msgstr "نوع"
 msgid "listingheader_user_name"
 msgstr "نام ‌کاربر"
 
-#. Default: "<strong>Attention!</strong>You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
+#. Default: "<strong>Attention!</strong> You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
 #: ./plone_forms/folder_localrole_form.pt
 #, fuzzy
 msgid "local_role_warning_default_page"
@@ -5796,7 +5787,7 @@ msgstr "<strong>توجه!</strong> شما در حال تعیین مجوزهای 
 msgid "local_role_warning_link"
 msgstr "اینجا"
 
-#. Default: "<strong>Attention!</strong>You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
+#. Default: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
 #: ./plone_forms/folder_localrole_form.pt
 #, fuzzy
 msgid "local_role_warning_type"
@@ -5843,14 +5834,6 @@ msgstr "شما به عنوان یک عضو ${portal_name} ثبت‌نام شده
 #: ./plone_templates/registered_notify_template.pt
 msgid "mailtemplate_registered_portal_membership_info"
 msgstr "اطلاعات عضویت در پورتال"
-
-#: ./plone_form_scripts/saveDefaultPage.cpy:15
-msgid "message_select_item_to_use"
-msgstr ""
-
-#: ./plone_scripts/selectViewTemplate.cpy:24
-msgid "message_view_changed"
-msgstr ""
 
 #. Default: "meta_type"
 #: index id with index friendly name
@@ -6008,7 +5991,7 @@ msgstr "(هنوز هیچ پرونده‌ای upload نشده است)"
 msgid "no_image_uploaded"
 msgstr "(هنوز هیچ تصویری upload نشده است)"
 
-#. Default: "No members were found using your<strong>Search Criteria</strong>"
+#. Default: "No members were found using your <strong>Search Criteria</strong>"
 #: ./plone_forms/folder_localrole_form.pt
 msgid "no_members_found"
 msgstr "هیچ عضوی مطابق <strong>معیار جستجو</strong>ی شما پیدا نشد"
@@ -6028,7 +6011,6 @@ msgstr "هیچ خبری ارسال نشده است."
 msgid "no_results_found"
 msgstr "هیچ نتیجه‌ایی برای معیار شما پیدا نشد."
 
-#. <span tal:content="request/searchstring | default" i18n:translate="">none specified</span>
 #: prefs_user_group_search_form.pt
 msgid "none specified"
 msgstr "مشخص نشده"
@@ -6082,7 +6064,7 @@ msgstr "منتشر کردن"
 msgid "published"
 msgstr "منتشر شده"
 
-#. Default: "Read more"
+#. Default: "Read More"
 #: ./plone_content/folder_summary_view.pt
 #: ./plone_templates/events_listing.pt
 #: ./plone_templates/news_listing.pt
@@ -6270,6 +6252,11 @@ msgstr "این محصول ایراد دارد"
 msgid "text_conforms_to_standards"
 msgstr "این سایت با استانداردهای زیر مطابقت دارد:"
 
+#. Default: "Contributors: ${name}"
+#: ./plone_content/document_byline.pt
+msgid "text_contributors"
+msgstr ""
+
 #. Default: "by ${creator}, last updated: ${date}"
 #: ./plone_templates/recently_modified.pt
 #: ./plone_templates/recently_published.pt
@@ -6291,15 +6278,11 @@ msgstr "خطا"
 msgid "text_error_not_found"
 msgstr ""
 
-#. form_modified_message = '<dtml-var expr="translate('text_form_modified_message', default=
-#. 'Your form has not been saved. All changes you have made will be lost')">'
 #. Default: "Your form has not been saved. All changes you have made will be lost"
 #: ./plone_ecmascript/plone_javascript_variables.js.dtml
 msgid "text_form_modified_message"
 msgstr "اطلاعات فرم شما ذخیره نشده است. تمامی تغییراتی که انجام داده‌اید، از بین خواهد رفت"
 
-#. text_form_resubmit_message = '<dtml-var expr="translate('text_form_resubmit_message', default=
-#. 'Your already clicked the submit button. Do you really want to submit this form again?')">'
 #. Default: "Your already clicked the submit button. Do you really want to submit this form again?"
 #: ./plone_ecmascript/plone_javascript_variables.js.dtml
 msgid "text_form_resubmit_message"
@@ -6364,6 +6347,11 @@ msgstr "بندک Privacy را در بالای صفحه کلیک کنید"
 #: ./plone_login/enabling_cookies.pt
 msgid "text_ie6_cookies_step3"
 msgstr "لغزنده را به حالت Medium منتقل‌کرده و OK را کلیک کنید"
+
+#. Default: "Location: ${location}"
+#: ./plone_content/author.cpt
+msgid "text_location"
+msgstr ""
 
 #. Default: "Click Edit on the menu at the top of your browser and select Preferences"
 #: ./plone_login/enabling_cookies.pt
@@ -6432,7 +6420,6 @@ msgstr "هیچ آیتمی تغییر نیافته است."
 
 #. Default: "Enter a group or user name to search for, or click 'Show All'."
 #: ./plone_prefs/prefs_group_members.cpt
-#: ./plone_prefs/prefs_users_overview.cpt
 #, fuzzy
 msgid "text_no_searchstring"
 msgstr "نام کاربری را برای جستجو وارد کنید یا «نمایش همه» را کلیک کنید."
@@ -6441,6 +6428,11 @@ msgstr "نام کاربری را برای جستجو وارد کنید یا «ن
 #: ./plone_content/author.cpt
 msgid "text_no_user_by_name"
 msgstr "کاربری با این نام وجود ندارد"
+
+#. Default: "Enter a username to search for, or click 'Show All'"
+#: ./plone_prefs/prefs_users_overview.cpt
+msgid "text_no_user_searchstring"
+msgstr ""
 
 #. Default: "No matches"
 #: ./plone_prefs/prefs_groups_overview.cpt
@@ -6556,7 +6548,7 @@ msgstr "این سایت پلون در هر مرورگر وبی قابل استف
 msgid "title_built_with_css"
 msgstr "این سایت پلون با بکارگیری CSS معتبر ساخته شده است."
 
-#. Default: "This Plone site was built using the Plone Content Management System. Click for more information."
+#. Default: "This Plone site was built using Plone, the Open Source Content Management System. Click for more information."
 #: ./plone_tableless/colophon.pt
 #: ./plone_templates/colophon.pt
 msgid "title_built_with_plone"
@@ -6609,7 +6601,6 @@ msgstr "این سایت پلون با بکارگیری CSS معتبر و کار�
 msgid "title_large_text"
 msgstr "متن درشت"
 
-#. title
 #. Default: "Personal Items for ${member}"
 #: MembershipTool.py
 msgid "title_member_personal_folder"
@@ -6700,10 +6691,15 @@ msgstr "نمایش تمام نوع‌های محتوا"
 msgid "title_small_text"
 msgstr "متن ریز"
 
-#. title_unset = utranslate(domain='plone', msgid='title_unset', default=empty)
 #. Default: [···]
 #: PloneTool.py
 msgid "title_unset"
+msgstr ""
+
+#. Default: "This Plone site is valid XHTML."
+#: ./plone_tableless/colophon.pt
+#: ./plone_templates/colophon.pt
+msgid "title_valid_xhtml"
 msgstr ""
 
 #. Default: "World Wide Web Consortium"
@@ -6711,17 +6707,19 @@ msgstr ""
 msgid "title_w3c"
 msgstr "کنسرسیوم جهانی وب"
 
-#. Default: "This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines."
-#: ./plone_tableless/colophon.pt
+#. Default: "Web Content Accessibility Guidelines"
 #: ./plone_templates/accessibility-info.pt
-#: ./plone_templates/colophon.pt
 msgid "title_wcag"
 msgstr "این سایت پلون مطابقت دارد با رهنمودهای قابلیت دسترسی محتوای وب W3C-WAI"
 
-#. Default: "This Plone site is valid XHTML."
+#. Default: "This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines."
 #: ./plone_tableless/colophon.pt
-#: ./plone_templates/accessibility-info.pt
 #: ./plone_templates/colophon.pt
+msgid "title_wcag_conformance"
+msgstr ""
+
+#. Default: "eXtensible Hyper Text Markup Language"
+#: ./plone_templates/accessibility-info.pt
 msgid "title_xhtml"
 msgstr "این سایت پلون XHTML معتبر می‌باشد"
 

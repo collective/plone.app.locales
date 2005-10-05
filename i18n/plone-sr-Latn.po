@@ -19,7 +19,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-09-15 22:57+0000\n"
+"POT-Creation-Date: 2005-10-05 21:13+0000\n"
 "PO-Revision-Date: 2005-10-04 13:20+01:00\n"
 "Last-Translator: Filip Miletic <f dot miletic at ewi dot tudelft dot nl>\n"
 "Language-Team: Serbian <gnu@prevod.org>\n"
@@ -166,8 +166,6 @@ msgstr "Podešavanje ATCT-a"
 msgid "Accessibility"
 msgstr "pristupačnost"
 
-#. Used as dynamically generated button label
-#. Used if only one type is available as in smart folders
 #. Default: "Add ${type}"
 #: ./plone_forms/folder_factories.pt
 #: ./plone_templates/folder_contents.pt
@@ -270,12 +268,14 @@ msgstr "Promene kriterijuma su sačuvane."
 msgid "Comment"
 msgstr "Komentar"
 
+msgid "Comment added"
+msgstr "Komentar je dodat"
+
 #. Default: "Contact"
 #: action defined in portal_actions
 msgid "Contact"
 msgstr "Kontakt"
 
-#. Used as title of the folder_contents form
 #. Default: "Contained Smart Folders:"
 #: ./ATContentTypes/atct_topic_subtopics.pt
 msgid "Contained Smart Folders:"
@@ -363,8 +363,7 @@ msgstr "Obriši"
 msgid "Description"
 msgstr "Opis"
 
-#. tab
-#: plone.org
+#: plone.org tab
 msgid "Development"
 msgstr "Razvoj"
 
@@ -378,8 +377,7 @@ msgstr "Stavka u raspravi"
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Stavke rasprave koje predstavljaju odgovor na drugi sadržaj. One se *ne* smeju dodavati kroz standardno sučelje 'folder_factories'."
 
-#. tab
-#: plone.org
+#: plone.org tab
 msgid "Documentation"
 msgstr "Dokumentacija"
 
@@ -944,6 +942,10 @@ msgstr "Molimo ispravite naznačene greške."
 msgid "Please enter a valid date and time."
 msgstr "Molimo unesite važeći datum i vreme."
 
+#: ./plone_form_scripts/saveDefaultPage.cpy:14
+msgid "Please select an item to use."
+msgstr ""
+
 msgid "Please select one or more items to copy."
 msgstr "Molim izaberite jednu ili više stavki za umnožavanje."
 
@@ -1425,7 +1427,7 @@ msgstr "Vreme i datum poslednje izmene stavke (umnožak)"
 msgid "There is already an item named '${name}' in this folder."
 msgstr "U ovom direktorijumu već postoji stavka sa imenom '${name}'."
 
-#: ./plone_form_scripts/saveDefaultPage.cpy:30
+#: ./plone_form_scripts/saveDefaultPage.cpy:28
 msgid "There is no object with short name ${name} in this folder."
 msgstr "Ne postoji objekat sa imenom ${name} u ovom direktorijumu."
 
@@ -1490,6 +1492,10 @@ msgstr "Upravljanje korisnicima i grupama"
 #: type action defined on Event
 msgid "View"
 msgstr "Pregled"
+
+#: ./plone_form_scripts/saveDefaultPage.cpy:33
+msgid "View changed."
+msgstr ""
 
 msgid "Welcome! You are now logged in."
 msgstr "Dobrodošli! Prijavljeni ste."
@@ -1581,58 +1587,46 @@ msgstr "Lična podešavanja su sačuvana."
 msgid "Zope Management Interface"
 msgstr "Sučelje za upravljanje Zopom"
 
-#. Default: "<code>0</code>Access Key details"
+#. Default: "<code>0</code> Access Key details"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_accesskey_details"
 msgstr "<code>0</code> Detalji o tasterima za pristup"
 
-#. Default: "<code>5</code>Advanced Search"
+#. Default: "<code>5</code> Advanced Search"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_advanced_search"
 msgstr "<code>5</code> Napredna pretraga"
 
-#. Default: "<code>9</code>Contact information"
+#. Default: "<code>9</code> Contact information"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_contact"
 msgstr "<code>9</code> Podaci za kontakt"
 
-#. Default: "<code>1</code>Home Page"
+#. Default: "<code>1</code> Home Page"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_home_page"
 msgstr "<code>1</code> Domaća strana"
 
-#. Default: "<code>6</code>Site navigation tree"
+#. Default: "<code>6</code> Site navigation tree"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_navigation"
 msgstr "<code>6</code> Stablo za upravljanje mestom"
 
-#. Default: "<code>4</code>Search field focus"
+#. Default: "<code>4</code> Search field focus"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_search_field"
 msgstr "<code>4</code> Fokus na polje za pretragu"
 
-#. Default: "<code>3</code>Site Map"
+#. Default: "<code>3</code> Site Map"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_sitemap"
 msgstr "<code>3</code> Mapa el. mesta"
 
-#. Default: "<code>2</code>Skip to content"
+#. Default: "<code>2</code> Skip to content"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_skip_to_content"
 msgstr "<code>2</code> Skoči na sadržaj"
 
-#. <a onclick="#"
-#. tal:define="ptype here/portal_type;
-#. alert_msg python:here.translate('alert_really_delete', default='Do you really want to delete the item?');
-#. ptype_translated python:here.translate(ptype);"
-#. tal:attributes="href editAction/url;
-#. title editAction/name;
-#. class python:test(icon, 'visualIconReplace', nothing);
-#. onclick string:return confirm('$ptype_translated\n${alert_msg}');;"
-#. tal:content="editAction/name"
-#. i18n:attributes="title"
-#. i18n:translate="">
-#. </a>
 #. Default: "Do you really want to delete the item?"
 #: ./plone_templates/batch_macros.pt
 msgid "alert_really_delete"
@@ -1870,27 +1864,27 @@ msgstr "Trudimo se da koristimo znanje i razumevanje načina na koji različiti 
 msgid "description_accesskey_ie4_mac"
 msgstr "Tasteri za pristup nisu podržani, molimo da koristite drugi čitač."
 
-#. Default: "Hold down the<code>Alt</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie4_win"
 msgstr "Držite pritisnut taster <code>Alt</code> i pritisnite broj ili slovo tastera za pristup."
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie5_mac"
 msgstr "Držite pritisnut taster <code>Ctrl</code> i pritisnite slovo ili broj tastera za pristup."
 
-#. Default: "Hold down the<code>Alt</code>key, press the number or letter of the access key, release both keys then press<code>ENTER</code>."
+#. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie5_win"
 msgstr "Držite pritisnut taster <code>Alt</code>, pritisnite broj ili slovo tastera za pristup, otpustite oba tastera i zatim pritisnite <code>ENTER</code> ."
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_mozilla_mac"
 msgstr "Držite pritisnut taster <code>Ctrl</code> i pritisnite broj ili slovo na tasteru za pristup."
 
-#. Default: "Hold down the<code>Alt</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_mozilla_win"
 msgstr "Držite pritisnut taster <code>Alt</code> i pritisnite broj ili slovo tastera za pristup."
@@ -1900,7 +1894,7 @@ msgstr "Držite pritisnut taster <code>Alt</code> i pritisnite broj ili slovo ta
 msgid "description_accesskey_netscape6_all"
 msgstr "Tasteri za pristup nisu podržani, molimo da koristite drugi čitač."
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_safari_mac"
 msgstr "Držite pritisnut taster <code>Ctrl</code> i pritisnite broj ili slovo tastera za pristup."
@@ -1920,7 +1914,7 @@ msgstr "Odaberite vrstu stavke koju želite da dodate u vaš direktorijum."
 msgid "description_addremove_products"
 msgstr "Ovo je odeljak za postavljanje dodatnih proizvoda, proizvode možete dodati ili ukloniti sa spiska ispod."
 
-#. Default: "This search form enables you to find content on the site by specifying one or more search terms.<br/>Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
+#. Default: "This search form enables you to find content on the site by specifying one or more search terms. <br/> Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
 #: ./plone_forms/search_form.pt
 msgid "description_advanced_search"
 msgstr "Ovaj obrazac za pretragu omogućava da pronađete sadržaj na el.mestu upisujući jedan ili više ključeva za pretragu. <br/> Zapamtite da možete koristiti brzu pretragu u bilo koje vreme. Obično je dovoljno dobra, ovaj obrazac služi samo kada želite da budete određeniji."
@@ -1980,7 +1974,7 @@ msgstr "${plonecms} je zaštićen zakonom o autorskim pravima: Copyright ${copyr
 msgid "description_edit_groupproperties"
 msgstr "Grupe su logičke skupine korisnika, poput odeljenja ili poslovnih jedinica. One nisu neposredno povezane sa dozvolama na globalnom nivou, za tu svrhu služe uloge, i dodeljivanje uloga određenim grupama."
 
-#. Default: "This information, also referred to as<em>metadata</em>is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
+#. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
 #: ./plone_content/metadata_edit_form.cpt
 msgid "description_edit_properties"
 msgstr "Ova informacija, koja se takođe naziva i <em>metapodatak</em> je skupina informacija koje se koriste za razvrstavanje objekta, dodele važećih datuma i datuma isteka važnosti, jezika i ključnih reči."
@@ -2045,7 +2039,7 @@ msgstr "Ovo je prvi put da ste se prijavili na ${here}."
 msgid "description_logged_in_explain"
 msgstr "Primetite da se natpis gore desno promenio. Sada sadrži nekoliko ličnih stavki. Koristite ove stavke kako biste upravljali ličnim podešavanjima i ličnim prostorom. One će ostati tu dokle god ste prijavljeni."
 
-#. Default: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p><p>Best Regards from the ${portal_title} team. </p>"
+#. Default: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p> <p>Best Regards from the ${portal_title} team. </p>"
 #: ./plone_login/logged_out.pt
 msgid "description_logged_out"
 msgstr "<p>Nadamo se da Vam je poseta koristila. Dođite nam opet. </p> <p>Sve najbolje želi Vam ekipa portala ${portal_title}.</p>"
@@ -2055,7 +2049,7 @@ msgstr "<p>Nadamo se da Vam je poseta koristila. Dođite nam opet. </p> <p>Sve n
 msgid "description_login_fail_enable_cookies"
 msgstr "prihvata kolačiće"
 
-#. Default: "Enter your username below, click<strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid email address when you registered. If this will not work for you (for example, if you forgot your member name or didn't enter your email address) send an email to"
+#. Default: "Enter your username below, click <strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid email address when you registered. If this will not work for you (for example, if you forgot your member name or didn't enter your email address) send an email to"
 #: ./plone_forms/mail_password_form.pt
 msgid "description_lost_password"
 msgstr "Unesite dole Vaše korisničko ime, pritisnite <strong>Pošalji mi lozinku</strong>, i lozinka će biti poslata ako ste uneli važeću el.adresu. Ukoliko ovo ne radi u Vašem slučaju (na primer ako ste zaboravili korisničko ime ili niste uneli el.adresu) pošaljite el.poruku za"
@@ -2065,7 +2059,7 @@ msgstr "Unesite dole Vaše korisničko ime, pritisnite <strong>Pošalji mi lozin
 msgid "description_mail_setup"
 msgstr "Podešavanje el.pošte za Plon."
 
-#. "Home page area that contains the items created and collected by ${member}"
+#. Default: "Home page area that contains the items created and collected by ${member}"
 #: MembershipTool.py
 msgid "description_member_folder"
 msgstr "Oblast domaće strane koja sadrži stavke koje je napravio i sakupio član ${member}"
@@ -2075,7 +2069,6 @@ msgstr "Oblast domaće strane koja sadrži stavke koje je napravio i sakupio čl
 msgid "description_member_listing"
 msgstr "Spisak vidljivih članova."
 
-#. desc
 #. Default: "contains personal workarea items for ${member}"
 #: MembershipTool.py
 msgid "description_member_personal_folder"
@@ -2166,7 +2159,7 @@ msgstr "Podešavanja na nivou celog portala."
 msgid "description_portal_properties"
 msgstr "opis_portal_osobine"
 
-#. Default: "An item's status (also called its review state) determines who can see it. A<strong>private</strong>item can only be viewed by its Owner and by the site management. Only<strong>published</strong>items are available to the general member base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by<strong>submitting it for review</strong>.<br/>Another way to control the visibility of an item is with its<strong>effective date</strong>. An item is not publicly searchable before its effective date,<em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
+#. Default: "An item's status (also called its review state) determines who can see it. A <strong>private</strong> item can only be viewed by its Owner and by the site management. Only <strong>published</strong> items are available to the general member base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by <strong>submitting it for review</strong>. <br/> Another way to control the visibility of an item is with its <strong>effective date</strong>. An item is not publicly searchable before its effective date, <em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
 #: ./plone_forms/content_status_history.cpt
 msgid "description_publishing_process"
 msgstr "Stanje stavke (takođe pod imenom stanje pregleda) određuje ko može da je vidi. <strong>Privatnu</strong> stavku može pregledati samo vlasnik i uprava el. mesta. Samo <strong>objavljene</strong> stavke su dostupne širokom krugu korisnika i anonimnim posetiocima. Da bi stavka bila objavljena, moraju da je pregledaju urednici. Možete da zahtevate da se stavka podnese urednicima na uvid tako što je <strong>podnesete na pregled</strong> . <br/> Drugi način za upravljanje vidljivošću stavke je pomoću njenog <strong>efektivnog datuma</strong> . Stavka nije javno pretraživa pre efektivnog datuma, <em>čak i u slučaju da je <strong>objavljena</strong></em> . Ovo će onemogućiti da se stavka pojavljuje u portletima (ili drugim obrascima koje snabdevaju upiti nad katalozima), iako će biti dostupna ako joj se pristupa direktno kroz URL."
@@ -3419,7 +3412,7 @@ msgstr "Vraća stavke koje je načinila neka druga osoba."
 msgid "help_search_before_specified_time"
 msgstr "Ispisuje članove koji se NISU  prijavljivali od gore naznačenog vremena."
 
-#. Default: "Return items matching this description. Multiple words may be found by combining them with<strong>AND</strong>and<strong>OR</strong>."
+#. Default: "Return items matching this description. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>."
 #: ./plone_forms/search_form.pt
 msgid "help_search_description"
 msgstr "Vraća stavke koje odgovaraju ovom opisu. Pretraga je moguća po više reči, ako se povežu sa <strong>AND</strong> i <strong>OR</strong> ."
@@ -3439,7 +3432,7 @@ msgstr "Prikaži članove u izabranoj grupi."
 msgid "help_search_item_type"
 msgstr "Vrati stavke određenog tipa."
 
-#. Default: "Return items matching some or all of these keywords. Multiple words may be found by pressing<strong>Ctrl</strong>(or<strong>Apple</strong>key on Mac) while clicking the keywords."
+#. Default: "Return items matching some or all of these keywords. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 #: ./plone_forms/search_form.pt
 msgid "help_search_keywords"
 msgstr "Prikaži stavke koje odgovaraju jednoj ili više zadatih ključnih reči. Višestruke reči mogu se tražiti pritiskanjem <strong>Ctrl</strong> (ili <strong>Apple</strong> tastera na Mekintošu) pri izboru reči."
@@ -3469,7 +3462,7 @@ msgstr "Kao recenzent, možete tražiti stavke prema stanju pregleda. Ako želit
 msgid "help_search_roles"
 msgstr "Prikaži članove sa svim izabranim ulogama."
 
-#. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with<strong>AND</strong>and<strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
+#. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
 #: ./plone_forms/search_form.pt
 msgid "help_search_text"
 msgstr "Za običnu tekstualnu pretragu, ovde unesite upit. Višestruke reči mogu se tražiti ako se povežu sa <strong>AND</strong> i <strong>OR</stron> . Tekst u ovom polju biće upoređen sa sadržajem stavke, naslovom i opisom."
@@ -3900,7 +3893,7 @@ msgstr "Otkaži"
 msgid "label_change_comment"
 msgstr "Izmeni komentar"
 
-#. Default: "Change content item<br/>as default view"
+#. Default: "Change content item <br/> as default view"
 #: ./plone_templates/global_contentmenu.pt
 msgid "label_change_item"
 msgstr "Promeni sadržaj stavke <br/> kao podrazumevani pogled"
@@ -3931,7 +3924,7 @@ msgstr "Promeni stanje"
 msgid "label_choose_content_item"
 msgstr "Promeni stavku sadržaja"
 
-#. Default: "Choose content item<br/>as default view"
+#. Default: "Choose content item <br/> as default view"
 #: ./plone_templates/global_contentmenu.pt
 msgid "label_choose_item"
 msgstr "Izaberi stavku sadržaja <br /> kao podrazumevani pogled"
@@ -4038,8 +4031,7 @@ msgstr "sadržava"
 msgid "label_content_editor"
 msgstr "Uređivač sadržaja"
 
-#. Default: "Contributors:"
-#: ./plone_content/document_byline.pt
+#. Default: "Contributors"
 #: ./plone_content/metadata_edit_form.cpt
 msgid "label_contributors"
 msgstr "Doprineli:"
@@ -4224,7 +4216,7 @@ msgstr "Elektronska adresa"
 msgid "label_enable_cookies"
 msgstr "dozvoli kolačiće"
 
-#. Default: "Enable syndication"
+#. Default: "Enable Syndication"
 #: ./plone_forms/synPropertiesForm.cpt
 #: ./plone_prefs/prefs_syndication_form.pt
 msgid "label_enable_syndication"
@@ -4550,8 +4542,7 @@ msgstr "Uloga za dodelu"
 msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Uloge za dodelu izabranim korisnicima/grupama"
 
-#. Default: "Location:"
-#: ./plone_content/author.cpt
+#. Default: "Location"
 #: ./plone_prefs/personalize_form.cpt
 #: ./plone_prefs/prefs_user_details.cpt
 msgid "label_location"
@@ -5639,7 +5630,7 @@ msgstr "Autor"
 msgid "listingheader_comment"
 msgstr "Komentar"
 
-#. Default: "DateandTime"
+#. Default: "Date and Time"
 #: ./plone_content/review_history.pt
 #: ./plone_forms/undo_form.pt
 msgid "listingheader_date_and_time"
@@ -5690,7 +5681,7 @@ msgstr "Ime"
 msgid "listingheader_order"
 msgstr "Redosled"
 
-#. Default: "Performedby"
+#. Default: "Performed by"
 #: ./plone_content/review_history.pt
 #: ./plone_forms/undo_form.pt
 msgid "listingheader_performed_by"
@@ -5745,7 +5736,7 @@ msgstr "Vrsta"
 msgid "listingheader_user_name"
 msgstr "Korisničko ime"
 
-#. Default: "<strong>Attention!</strong>You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
+#. Default: "<strong>Attention!</strong> You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
 #: ./plone_forms/folder_localrole_form.pt
 msgid "local_role_warning_default_page"
 msgstr "<strong>Pažnja!</strong> Upravo podešavate dozvole za deljenje za podrazumevanu stranu ovog direktorijuma. Ako želite da podesite dozvole za direktorijum koji je sadrži, pritisnite ${link}"
@@ -5755,7 +5746,7 @@ msgstr "<strong>Pažnja!</strong> Upravo podešavate dozvole za deljenje za podr
 msgid "local_role_warning_link"
 msgstr "ovde"
 
-#. Default: "<strong>Attention!</strong>You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
+#. Default: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
 #: ./plone_forms/folder_localrole_form.pt
 msgid "local_role_warning_type"
 msgstr "<strong>Pažnja!</strong> Upravo podešavate dozvole za deljenje za ${type} . Ako želite da podesite dozvole za stavku koja ga sadrži, pritisnite ${link} ."
@@ -5801,18 +5792,6 @@ msgstr "Prijavljeni ste u članstvo ${portal_name} , što Vam dozvoljava da pril
 #: ./plone_templates/registered_notify_template.pt
 msgid "mailtemplate_registered_portal_membership_info"
 msgstr "Podaci o članstvu na portalu"
-
-# FIXME needs proper translation
-#: ./plone_form_scripts/saveDefaultPage.cpy:15
-#, fuzzy
-msgid "message_select_item_to_use"
-msgstr "Izaberite stavku koja se koristi."
-
-# FIXME needs translation
-#: ./plone_scripts/selectViewTemplate.cpy:24
-#, fuzzy
-msgid "message_view_changed"
-msgstr "Pogled je promenjen."
 
 #. Default: "meta_type"
 #: index id with index friendly name
@@ -5970,7 +5949,7 @@ msgstr "(Nijedna datoteka još nije poslana)"
 msgid "no_image_uploaded"
 msgstr "(Nijedna slika još nije poslata)"
 
-#. Default: "No members were found using your<strong>Search Criteria</strong>"
+#. Default: "No members were found using your <strong>Search Criteria</strong>"
 #: ./plone_forms/folder_localrole_form.pt
 msgid "no_members_found"
 msgstr "Nijedan član nije pronađen prema Vašim <strong>kriterijumima za pretragu</strong>"
@@ -5990,7 +5969,6 @@ msgstr "Nijedan članak nije poslat."
 msgid "no_results_found"
 msgstr "Nijedan rezultat ne odgovara kriterijumu."
 
-#. <span tal:content="request/searchstring | default" i18n:translate="">none specified</span>
 #: prefs_user_group_search_form.pt
 msgid "none specified"
 msgstr "nema naznake"
@@ -6044,7 +6022,7 @@ msgstr "objava"
 msgid "published"
 msgstr "objavljeno"
 
-#. Default: "Read more"
+#. Default: "Read More"
 #: ./plone_content/folder_summary_view.pt
 #: ./plone_templates/events_listing.pt
 #: ./plone_templates/news_listing.pt
@@ -6229,6 +6207,11 @@ msgstr "Ovaj proizvod je neispravan"
 msgid "text_conforms_to_standards"
 msgstr "Ovo mesto je saglasno sa navedenim standardima:"
 
+#. Default: "Contributors: ${name}"
+#: ./plone_content/document_byline.pt
+msgid "text_contributors"
+msgstr ""
+
 #. Default: "by ${creator}, last updated: ${date}"
 #: ./plone_templates/recently_modified.pt
 #: ./plone_templates/recently_published.pt
@@ -6250,15 +6233,11 @@ msgstr "Greška"
 msgid "text_error_not_found"
 msgstr "404 Nije pronađeno"
 
-#. form_modified_message = '<dtml-var expr="translate('text_form_modified_message', default=
-#. 'Your form has not been saved. All changes you have made will be lost')">'
 #. Default: "Your form has not been saved. All changes you have made will be lost"
 #: ./plone_ecmascript/plone_javascript_variables.js.dtml
 msgid "text_form_modified_message"
 msgstr "Vaš obrazac nije sačuvan. Izmene koje ste napravili će biti izgubljene."
 
-#. text_form_resubmit_message = '<dtml-var expr="translate('text_form_resubmit_message', default=
-#. 'Your already clicked the submit button. Do you really want to submit this form again?')">'
 #. Default: "Your already clicked the submit button. Do you really want to submit this form again?"
 #: ./plone_ecmascript/plone_javascript_variables.js.dtml
 msgid "text_form_resubmit_message"
@@ -6324,6 +6303,11 @@ msgstr "Pritisnite jezičak Privatnost na vrhu ekrana"
 #: ./plone_login/enabling_cookies.pt
 msgid "text_ie6_cookies_step3"
 msgstr "Pomerite klizač na sredinu i pritisnite „U redu“"
+
+#. Default: "Location: ${location}"
+#: ./plone_content/author.cpt
+msgid "text_location"
+msgstr ""
 
 #. Default: "Click Edit on the menu at the top of your browser and select Preferences"
 #: ./plone_login/enabling_cookies.pt
@@ -6393,7 +6377,6 @@ msgstr "Nijedna stavka nije izmenjena."
 
 #. Default: "Enter a group or user name to search for, or click 'Show All'."
 #: ./plone_prefs/prefs_group_members.cpt
-#: ./plone_prefs/prefs_users_overview.cpt
 msgid "text_no_searchstring"
 msgstr "Unesite ime grupe ili korisnika za pretragu ili pritisnite „Prikaži sve“."
 
@@ -6401,6 +6384,11 @@ msgstr "Unesite ime grupe ili korisnika za pretragu ili pritisnite „Prikaži s
 #: ./plone_content/author.cpt
 msgid "text_no_user_by_name"
 msgstr "Nema korisnika pod tim imenom"
+
+#. Default: "Enter a username to search for, or click 'Show All'"
+#: ./plone_prefs/prefs_users_overview.cpt
+msgid "text_no_user_searchstring"
+msgstr ""
 
 #. Default: "No matches"
 #: ./plone_prefs/prefs_groups_overview.cpt
@@ -6515,7 +6503,7 @@ msgstr "Upotrebljiv sa svakim čitačem"
 msgid "title_built_with_css"
 msgstr "Ovo Plonovo mesto je izgrađneno upotrebom važećeg CSSa."
 
-#. Default: "This Plone site was built using the Plone Content Management System. Click for more information."
+#. Default: "This Plone site was built using Plone, the Open Source Content Management System. Click for more information."
 #: ./plone_tableless/colophon.pt
 #: ./plone_templates/colophon.pt
 msgid "title_built_with_plone"
@@ -6567,7 +6555,6 @@ msgstr "Ovo Plonovo el. mesto je izgrađeno upotrebom ispravnog CSS-a i semanti�
 msgid "title_large_text"
 msgstr "Velika slova"
 
-#. title
 #. Default: "Personal Items for ${member}"
 #: MembershipTool.py
 msgid "title_member_personal_folder"
@@ -6658,28 +6645,35 @@ msgstr "Prikaži sve dostupne vrste sadržaja"
 msgid "title_small_text"
 msgstr "Mala slova"
 
-#. title_unset = utranslate(domain='plone', msgid='title_unset', default=empty)
 #. Default: [···]
 #: PloneTool.py
 msgid "title_unset"
 msgstr "[...]"
+
+#. Default: "This Plone site is valid XHTML."
+#: ./plone_tableless/colophon.pt
+#: ./plone_templates/colophon.pt
+msgid "title_valid_xhtml"
+msgstr ""
 
 #. Default: "World Wide Web Consortium"
 #: ./plone_templates/accessibility-info.pt
 msgid "title_w3c"
 msgstr "Konzorcijum svetske mreže (World Wide Web)"
 
-#. Default: "This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines."
-#: ./plone_tableless/colophon.pt
+#. Default: "Web Content Accessibility Guidelines"
 #: ./plone_templates/accessibility-info.pt
-#: ./plone_templates/colophon.pt
 msgid "title_wcag"
 msgstr "Ovo Plonovo el. mesto je saglasno sa W3C-WAI uputstvima o pristupačnosti mrežnog sadržaja."
 
-#. Default: "This Plone site is valid XHTML."
+#. Default: "This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines."
 #: ./plone_tableless/colophon.pt
-#: ./plone_templates/accessibility-info.pt
 #: ./plone_templates/colophon.pt
+msgid "title_wcag_conformance"
+msgstr ""
+
+#. Default: "eXtensible Hyper Text Markup Language"
+#: ./plone_templates/accessibility-info.pt
 msgid "title_xhtml"
 msgstr "Ovo Plon mesto sadrži ispravan XHTML."
 
@@ -6819,6 +6813,3 @@ msgstr "Da"
 msgid "you_are_here"
 msgstr "Nalazite se ovde:"
 
-# This text does not exist in the plone po.
-msgid "Comment added"
-msgstr "Komentar je dodat"

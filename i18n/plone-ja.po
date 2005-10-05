@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-09-15 22:57+0000\n"
+"POT-Creation-Date: 2005-10-05 21:13+0000\n"
 "PO-Revision-Date: 2004-03-24 03:57+0900\n"
 "Last-Translator: Retsu <tyam@mac.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -157,8 +157,6 @@ msgstr "ATコンテンツタイプのセットアップ"
 msgid "Accessibility"
 msgstr "アクセシビリティ"
 
-#. Used as dynamically generated button label
-#. Used if only one type is available as in smart folders
 #. Default: "Add ${type}"
 #: ./plone_forms/folder_factories.pt
 #: ./plone_templates/folder_contents.pt
@@ -266,12 +264,14 @@ msgstr "条件の変更が保存されました。"
 msgid "Comment"
 msgstr "コメント"
 
+msgid "Comment added"
+msgstr ""
+
 #. Default: "Contact"
 #: action defined in portal_actions
 msgid "Contact"
 msgstr "連絡"
 
-#. Used as title of the folder_contents form
 #. Default: "Contained Smart Folders:"
 #: ./ATContentTypes/atct_topic_subtopics.pt
 msgid "Contained Smart Folders:"
@@ -359,8 +359,7 @@ msgstr "削除"
 msgid "Description"
 msgstr "説明"
 
-#. tab
-#: plone.org
+#: plone.org tab
 msgid "Development"
 msgstr "開発"
 
@@ -374,8 +373,7 @@ msgstr "議論アイテム"
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "議論アイテムは他のコンテンツへのコメントです。これは標準の'folder_factories'インターフェースを通して追加されるべきものではありません。"
 
-#. tab
-#: plone.org
+#: plone.org tab
 msgid "Documentation"
 msgstr "ドキュメント"
 
@@ -945,6 +943,10 @@ msgstr "指摘されたエラーを修正してください。"
 msgid "Please enter a valid date and time."
 msgstr "適切な日時を入力してください。"
 
+#: ./plone_form_scripts/saveDefaultPage.cpy:14
+msgid "Please select an item to use."
+msgstr ""
+
 msgid "Please select one or more items to copy."
 msgstr "コピーするアイテムを一つ以上選んでください。"
 
@@ -1430,7 +1432,7 @@ msgstr "アイテム最終更新日時（複製）"
 msgid "There is already an item named '${name}' in this folder."
 msgstr "このフォルダの中に'${name}'とい名前のアイテムがすでにあります。"
 
-#: ./plone_form_scripts/saveDefaultPage.cpy:30
+#: ./plone_form_scripts/saveDefaultPage.cpy:28
 msgid "There is no object with short name ${name} in this folder."
 msgstr ""
 
@@ -1496,6 +1498,10 @@ msgstr "ユーザとグループの管理"
 #: type action defined on Event
 msgid "View"
 msgstr "表示"
+
+#: ./plone_form_scripts/saveDefaultPage.cpy:33
+msgid "View changed."
+msgstr ""
 
 msgid "Welcome! You are now logged in."
 msgstr "ようこそ！　ログインしました。"
@@ -1587,58 +1593,46 @@ msgstr "個人設定が保存されました。"
 msgid "Zope Management Interface"
 msgstr "Zope管理インターフェース(ZMI)"
 
-#. Default: "<code>0</code>Access Key details"
+#. Default: "<code>0</code> Access Key details"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_accesskey_details"
 msgstr "<code>0</code>アクセスキーの詳細"
 
-#. Default: "<code>5</code>Advanced Search"
+#. Default: "<code>5</code> Advanced Search"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_advanced_search"
 msgstr "<code>5</code>高度な検索"
 
-#. Default: "<code>9</code>Contact information"
+#. Default: "<code>9</code> Contact information"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_contact"
 msgstr "<code>9</code>連絡先情報"
 
-#. Default: "<code>1</code>Home Page"
+#. Default: "<code>1</code> Home Page"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_home_page"
 msgstr "<code>1</code>ホームページ"
 
-#. Default: "<code>6</code>Site navigation tree"
+#. Default: "<code>6</code> Site navigation tree"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_navigation"
 msgstr "<code>6</code>ナビゲーション項目(Site navigation tree)"
 
-#. Default: "<code>4</code>Search field focus"
+#. Default: "<code>4</code> Search field focus"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_search_field"
 msgstr "<code>4</code>検索部分を強調"
 
-#. Default: "<code>3</code>Site Map"
+#. Default: "<code>3</code> Site Map"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_sitemap"
 msgstr "<code>3</code>サイトマップ"
 
-#. Default: "<code>2</code>Skip to content"
+#. Default: "<code>2</code> Skip to content"
 #: ./plone_templates/accessibility-info.pt
 msgid "accesskey_skip_to_content"
 msgstr "<code>2</code>コンテンツへ移動"
 
-#. <a onclick="#"
-#. tal:define="ptype here/portal_type;
-#. alert_msg python:here.translate('alert_really_delete', default='Do you really want to delete the item?');
-#. ptype_translated python:here.translate(ptype);"
-#. tal:attributes="href editAction/url;
-#. title editAction/name;
-#. class python:test(icon, 'visualIconReplace', nothing);
-#. onclick string:return confirm('$ptype_translated\n${alert_msg}');;"
-#. tal:content="editAction/name"
-#. i18n:attributes="title"
-#. i18n:translate="">
-#. </a>
 #. Default: "Do you really want to delete the item?"
 #: ./plone_templates/batch_macros.pt
 msgid "alert_really_delete"
@@ -1876,27 +1870,27 @@ msgstr "私たちは、今まで蓄積してきた「多様化するインター
 msgid "description_accesskey_ie4_mac"
 msgstr "アクセスキーはサポートされていません　別のブラウザを使ってください。"
 
-#. Default: "Hold down the<code>Alt</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie4_win"
 msgstr "<code>Alt</code>キーと同時に、アクセスキーの数字か文字を押してください。"
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie5_mac"
 msgstr "<code>Ctrl</code>キーと同時に、アクセスキーの数字か文字を押してください。"
 
-#. Default: "Hold down the<code>Alt</code>key, press the number or letter of the access key, release both keys then press<code>ENTER</code>."
+#. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_ie5_win"
 msgstr "<code>Alt</code>キーと同時に、アクセスキーの数字か文字を押し、次に<code>ENTER</code>を押してください。"
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_mozilla_mac"
 msgstr "<code>Ctrl</code>キーと同時に、アクセスキーの数字か文字を押してください。"
 
-#. Default: "Hold down the<code>Alt</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_mozilla_win"
 msgstr "<code>Alt</code>キーと同時に、アクセスキーの数字か文字を押してください。"
@@ -1906,7 +1900,7 @@ msgstr "<code>Alt</code>キーと同時に、アクセスキーの数字か文�
 msgid "description_accesskey_netscape6_all"
 msgstr "アクセスキーはサポートされていません　別のブラウザを使ってください。"
 
-#. Default: "Hold down the<code>Ctrl</code>key and press the number or letter of the access key."
+#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
 #: ./plone_templates/accessibility-info.pt
 msgid "description_accesskey_safari_mac"
 msgstr "<code>Ctrl</code>キーと同時に、アクセスキーの数字か文字を押してください。"
@@ -1926,7 +1920,7 @@ msgstr "フォルダに追加したいアイテムの種類を選びます。"
 msgid "description_addremove_products"
 msgstr "アドオンプロダクトのインストールページです。下のリストでプロダクトの追加や削除ができます。"
 
-#. Default: "This search form enables you to find content on the site by specifying one or more search terms.<br/>Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
+#. Default: "This search form enables you to find content on the site by specifying one or more search terms. <br/> Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
 #: ./plone_forms/search_form.pt
 msgid "description_advanced_search"
 msgstr "この検索フォームでは一つ以上の条件を指定してコンテンツを探せます。<br/>いつでも使えるクイック検索で大抵の場合は十分間に合うでしょう。この検索フォームはさらに限定的に絞り込みむためのものです。"
@@ -1986,7 +1980,7 @@ msgstr "${plonecms} の著作権 ${copyright} 2000- ${current_year} は ${plonef
 msgid "description_edit_groupproperties"
 msgstr "グループとは課や事業部といったユーザの論理的な集合です。権限とは直接の関連はありません。通常は権限はロールと関連を持ち、グループはロールと関連を持つ事で間接的に権限と関連を持ちます。"
 
-#. Default: "This information, also referred to as<em>metadata</em>is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
+#. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
 #: ./plone_content/metadata_edit_form.cpt
 msgid "description_edit_properties"
 msgstr "この情報は<em>メタデータ</em>とも呼ばれるもので、オブジェクトの分類に用いられる情報の集まりです。開始日時や終了日時、言語、キーワードです。"
@@ -2051,7 +2045,7 @@ msgstr " ${here} への初めてのログインです。"
 msgid "description_logged_in_explain"
 msgstr "右上のバーが変わりました。いくつかの個人別の項目が含まれています。これらを使って個人設定や個人別領域の設定をコントロールします。ログインしている間ずっとあります。"
 
-#. Default: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p><p>Best Regards from the ${portal_title} team. </p>"
+#. Default: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p> <p>Best Regards from the ${portal_title} team. </p>"
 #: ./plone_login/logged_out.pt
 msgid "description_logged_out"
 msgstr "<p>私たちのサービスに満足してもらえたことを願っています。またのご利用をお待ちしています。</p><p>敬具 <br>   ${portal_title} チーム一同 </p>"
@@ -2061,7 +2055,7 @@ msgstr "<p>私たちのサービスに満足してもらえたことを願って
 msgid "description_login_fail_enable_cookies"
 msgstr "クッキーを受け入れる。"
 
-#. Default: "Enter your username below, click<strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid email address when you registered. If this will not work for you (for example, if you forgot your member name or didn't enter your email address) send an email to"
+#. Default: "Enter your username below, click <strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid email address when you registered. If this will not work for you (for example, if you forgot your member name or didn't enter your email address) send an email to"
 #: ./plone_forms/mail_password_form.pt
 msgid "description_lost_password"
 msgstr "ユーザ名を下に入力し、<strong>パスワードの送信</strong>をクリックしてください。登録されたメールアドレスが有効であれば、パスワードがＥメールで送られます。もしユーザ名を忘れたりメールアドレスを入力していない等の理由でうまくいかない場合は、こちらまでメールしてください: "
@@ -2071,7 +2065,7 @@ msgstr "ユーザ名を下に入力し、<strong>パスワードの送信</stron
 msgid "description_mail_setup"
 msgstr "サイトのメール設定"
 
-#. "Home page area that contains the items created and collected by ${member}"
+#. Default: "Home page area that contains the items created and collected by ${member}"
 #: MembershipTool.py
 msgid "description_member_folder"
 msgstr "メンバー ${member} が作成･収集したアイテムが保存されるホームページ領域"
@@ -2081,7 +2075,6 @@ msgstr "メンバー ${member} が作成･収集したアイテムが保存さ�
 msgid "description_member_listing"
 msgstr "表示可能なメンバーのリスト"
 
-#. desc
 #. Default: "contains personal workarea items for ${member}"
 #: MembershipTool.py
 msgid "description_member_personal_folder"
@@ -2172,7 +2165,7 @@ msgstr "サイト全体の設定"
 msgid "description_portal_properties"
 msgstr "サイトに設定できるプロパティのリストです。"
 
-#. Default: "An item's status (also called its review state) determines who can see it. A<strong>private</strong>item can only be viewed by its Owner and by the site management. Only<strong>published</strong>items are available to the general member base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by<strong>submitting it for review</strong>.<br/>Another way to control the visibility of an item is with its<strong>effective date</strong>. An item is not publicly searchable before its effective date,<em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
+#. Default: "An item's status (also called its review state) determines who can see it. A <strong>private</strong> item can only be viewed by its Owner and by the site management. Only <strong>published</strong> items are available to the general member base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by <strong>submitting it for review</strong>. <br/> Another way to control the visibility of an item is with its <strong>effective date</strong>. An item is not publicly searchable before its effective date, <em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
 #: ./plone_forms/content_status_history.cpt
 msgid "description_publishing_process"
 msgstr "誰がアイテムを見ることができるのかはアイテムの状態(審査状態とも呼ばれます)によって決まります。<strong>非公開</strong>のアイテムは、その所有者とサイト管理者だけが見ることができます。<strong>公開</strong>されたアイテムだけがと一般メンバーとログインしていない匿名ユーザに公開されます。アイテムを公開するためにはサイトの審査員のうちの１人にチェックしてもらわねばなりません。審査を依頼する際は<strong>提出</strong>してください。<br />アイテムの公開をコントロールするもうひとつの方法は、アイテムの<strong>開始日時</strong>です。この開始日時以前には<em>たとえ状態が<strong>公開</strong>に設定されていたとしても</em>アイテムは一般に検索できません。これはポートレット（あるいはカタログクエリーを使った他のテンプレート）に表示されるのも防ぎます。ただしURLを直接指定することでアイテムへアクセスできます。"
@@ -3425,7 +3418,7 @@ msgstr "ユーザによって作成されたアイテムを検索します。"
 msgid "help_search_before_specified_time"
 msgstr "上で指定された日時以降にログインして<strong>いない</strong>メンバーを検索します。"
 
-#. Default: "Return items matching this description. Multiple words may be found by combining them with<strong>AND</strong>and<strong>OR</strong>."
+#. Default: "Return items matching this description. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>."
 #: ./plone_forms/search_form.pt
 msgid "help_search_description"
 msgstr "この単語に合致するアイテムを検索します。<strong>AND</strong> や <strong>OR</strong> を使って複数の単語でも探せます。"
@@ -3445,7 +3438,7 @@ msgstr "選択されたグループに属するメンバーを検索します。
 msgid "help_search_item_type"
 msgstr "特定の種類のアイテムを検索します。"
 
-#. Default: "Return items matching some or all of these keywords. Multiple words may be found by pressing<strong>Ctrl</strong>(or<strong>Apple</strong>key on Mac) while clicking the keywords."
+#. Default: "Return items matching some or all of these keywords. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 #: ./plone_forms/search_form.pt
 msgid "help_search_keywords"
 msgstr "いくつか、またはすべてのキーワードに合致するアイテムを返します。キーワードを複数選ぶには<strong>Ctrl</strong>キーを押しながらキーワードをクリックして選びます。(MacはAppleキーを押しながら)"
@@ -3475,7 +3468,7 @@ msgstr "審査員として審査状態を条件にしてアイテムを探すこ
 msgid "help_search_roles"
 msgstr "選ばれたすべてのロールを持つメンバーを探します。"
 
-#. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with<strong>AND</strong>and<strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
+#. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
 #: ./plone_forms/search_form.pt
 msgid "help_search_text"
 msgstr "単純なテキスト検索として、ここに検索語を入力します。<strong>AND</strong>や<strong>OR</strong>を間に入れて複数単語を組み合わせることができます。テキストはアイテムのコンテンツ、タイトル、説明と照合されます。"
@@ -3906,7 +3899,7 @@ msgstr "取り消し"
 msgid "label_change_comment"
 msgstr "コメントを変更"
 
-#. Default: "Change content item<br/>as default view"
+#. Default: "Change content item <br/> as default view"
 #: ./plone_templates/global_contentmenu.pt
 msgid "label_change_item"
 msgstr "デフォルトビューの <br/> アイテムを変更"
@@ -3937,7 +3930,7 @@ msgstr "状態を変更"
 msgid "label_choose_content_item"
 msgstr "コンテンツアイテムを選択"
 
-#. Default: "Choose content item<br/>as default view"
+#. Default: "Choose content item <br/> as default view"
 #: ./plone_templates/global_contentmenu.pt
 msgid "label_choose_item"
 msgstr "デフォルトビューの <br/> アイテムを選択"
@@ -4044,8 +4037,7 @@ msgstr "次の語を含む"
 msgid "label_content_editor"
 msgstr "コンテンツエディタ"
 
-#. Default: "Contributors:"
-#: ./plone_content/document_byline.pt
+#. Default: "Contributors"
 #: ./plone_content/metadata_edit_form.cpt
 msgid "label_contributors"
 msgstr "協力者:"
@@ -4230,7 +4222,7 @@ msgstr "Ｅメールアドレス"
 msgid "label_enable_cookies"
 msgstr "cookiesを有効にする"
 
-#. Default: "Enable syndication"
+#. Default: "Enable Syndication"
 #: ./plone_forms/synPropertiesForm.cpt
 #: ./plone_prefs/prefs_syndication_form.pt
 msgid "label_enable_syndication"
@@ -4557,8 +4549,7 @@ msgstr "割り当てるロール"
 msgid "label_localroles_to_assign_to_selected_users"
 msgstr "選択されたユーザやグループに割り当てるロール"
 
-#. Default: "Location:"
-#: ./plone_content/author.cpt
+#. Default: "Location"
 #: ./plone_prefs/personalize_form.cpt
 #: ./plone_prefs/prefs_user_details.cpt
 msgid "label_location"
@@ -5646,7 +5637,7 @@ msgstr "作成者"
 msgid "listingheader_comment"
 msgstr "コメント"
 
-#. Default: "DateandTime"
+#. Default: "Date and Time"
 #: ./plone_content/review_history.pt
 #: ./plone_forms/undo_form.pt
 msgid "listingheader_date_and_time"
@@ -5696,7 +5687,7 @@ msgstr "名前"
 msgid "listingheader_order"
 msgstr "順序"
 
-#. Default: "Performedby"
+#. Default: "Performed by"
 #: ./plone_content/review_history.pt
 #: ./plone_forms/undo_form.pt
 msgid "listingheader_performed_by"
@@ -5751,7 +5742,7 @@ msgstr "種類"
 msgid "listingheader_user_name"
 msgstr "ユーザ名"
 
-#. Default: "<strong>Attention!</strong>You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
+#. Default: "<strong>Attention!</strong> You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
 #: ./plone_forms/folder_localrole_form.pt
 msgid "local_role_warning_default_page"
 msgstr "<strong>注意！</strong>このフォルダのデフォルトページについて共有権限を設定しようとしています。もし、その親フォルダの共有権限を設定したいのであれば、 ${link} をクリックします。"
@@ -5761,7 +5752,7 @@ msgstr "<strong>注意！</strong>このフォルダのデフォルトページ�
 msgid "local_role_warning_link"
 msgstr "ここ"
 
-#. Default: "<strong>Attention!</strong>You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
+#. Default: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
 #: ./plone_forms/folder_localrole_form.pt
 msgid "local_role_warning_type"
 msgstr "<strong>注意！</strong> ${type}の共有権限を設定しようとしています。もしその親フォルダの共有権限を設定したいのであれば ${link} をクリックします。"
@@ -5806,14 +5797,6 @@ msgstr "あなたは ${portal_name} のメンバーとして登録されまし�
 #: ./plone_templates/registered_notify_template.pt
 msgid "mailtemplate_registered_portal_membership_info"
 msgstr "ポータルメンバーシップの情報"
-
-#: ./plone_form_scripts/saveDefaultPage.cpy:15
-msgid "message_select_item_to_use"
-msgstr ""
-
-#: ./plone_scripts/selectViewTemplate.cpy:24
-msgid "message_view_changed"
-msgstr ""
 
 #. Default: "meta_type"
 #: index id with index friendly name
@@ -5971,7 +5954,7 @@ msgstr "(ファイルはまだアップロードされていません)"
 msgid "no_image_uploaded"
 msgstr "(画像はまだアップロードされていません)"
 
-#. Default: "No members were found using your<strong>Search Criteria</strong>"
+#. Default: "No members were found using your <strong>Search Criteria</strong>"
 #: ./plone_forms/folder_localrole_form.pt
 msgid "no_members_found"
 msgstr "<strong>検索条件</strong>に合致するメンバーが見つかりません。"
@@ -5991,7 +5974,6 @@ msgstr "新しいニュースがありません。"
 msgid "no_results_found"
 msgstr "条件に合うものがありません。"
 
-#. <span tal:content="request/searchstring | default" i18n:translate="">none specified</span>
 #: prefs_user_group_search_form.pt
 msgid "none specified"
 msgstr "何も指定されていません。"
@@ -6045,7 +6027,7 @@ msgstr "公開"
 msgid "published"
 msgstr "公開"
 
-#. Default: "Read more"
+#. Default: "Read More"
 #: ./plone_content/folder_summary_view.pt
 #: ./plone_templates/events_listing.pt
 #: ./plone_templates/news_listing.pt
@@ -6230,6 +6212,11 @@ msgstr "このプロダクトは壊れています。"
 msgid "text_conforms_to_standards"
 msgstr "このサイトは次の標準に準拠しています:"
 
+#. Default: "Contributors: ${name}"
+#: ./plone_content/document_byline.pt
+msgid "text_contributors"
+msgstr ""
+
 #. Default: "by ${creator}, last updated: ${date}"
 #: ./plone_templates/recently_modified.pt
 #: ./plone_templates/recently_published.pt
@@ -6251,15 +6238,11 @@ msgstr "エラー"
 msgid "text_error_not_found"
 msgstr "404 見つかりません"
 
-#. form_modified_message = '<dtml-var expr="translate('text_form_modified_message', default=
-#. 'Your form has not been saved. All changes you have made will be lost')">'
 #. Default: "Your form has not been saved. All changes you have made will be lost"
 #: ./plone_ecmascript/plone_javascript_variables.js.dtml
 msgid "text_form_modified_message"
 msgstr "フォームが保存されていません。すべての変更が失われます。"
 
-#. text_form_resubmit_message = '<dtml-var expr="translate('text_form_resubmit_message', default=
-#. 'Your already clicked the submit button. Do you really want to submit this form again?')">'
 #. Default: "Your already clicked the submit button. Do you really want to submit this form again?"
 #: ./plone_ecmascript/plone_javascript_variables.js.dtml
 msgid "text_form_resubmit_message"
@@ -6324,6 +6307,11 @@ msgstr "画面上部のタブからプライバシータブをクリックしま
 #: ./plone_login/enabling_cookies.pt
 msgid "text_ie6_cookies_step3"
 msgstr "スライダのつまみをミディアムに移動してOKボタンをクリックします。"
+
+#. Default: "Location: ${location}"
+#: ./plone_content/author.cpt
+msgid "text_location"
+msgstr ""
 
 #. Default: "Click Edit on the menu at the top of your browser and select Preferences"
 #: ./plone_login/enabling_cookies.pt
@@ -6392,7 +6380,6 @@ msgstr "何も更新されていません。"
 
 #. Default: "Enter a group or user name to search for, or click 'Show All'."
 #: ./plone_prefs/prefs_group_members.cpt
-#: ./plone_prefs/prefs_users_overview.cpt
 msgid "text_no_searchstring"
 msgstr "検索するユーザ名やグループを入力するか、'Show All'をクリックします。"
 
@@ -6400,6 +6387,11 @@ msgstr "検索するユーザ名やグループを入力するか、'Show All'�
 #: ./plone_content/author.cpt
 msgid "text_no_user_by_name"
 msgstr "その名前のユーザはいません。"
+
+#. Default: "Enter a username to search for, or click 'Show All'"
+#: ./plone_prefs/prefs_users_overview.cpt
+msgid "text_no_user_searchstring"
+msgstr ""
 
 #. Default: "No matches"
 #: ./plone_prefs/prefs_groups_overview.cpt
@@ -6514,7 +6506,7 @@ msgstr "このサイトはどのウェブブラウザでも使えます。"
 msgid "title_built_with_css"
 msgstr "このPloneサイトは、標準のCSSに対応しています"
 
-#. Default: "This Plone site was built using the Plone Content Management System. Click for more information."
+#. Default: "This Plone site was built using Plone, the Open Source Content Management System. Click for more information."
 #: ./plone_tableless/colophon.pt
 #: ./plone_templates/colophon.pt
 msgid "title_built_with_plone"
@@ -6566,7 +6558,6 @@ msgstr "このサイトは正しくCSSを使い、またテーブルも意味的
 msgid "title_large_text"
 msgstr "大"
 
-#. title
 #. Default: "Personal Items for ${member}"
 #: MembershipTool.py
 msgid "title_member_personal_folder"
@@ -6657,28 +6648,35 @@ msgstr "利用可能なすべてのコンテンツタイプを表示"
 msgid "title_small_text"
 msgstr "小"
 
-#. title_unset = utranslate(domain='plone', msgid='title_unset', default=empty)
 #. Default: [···]
 #: PloneTool.py
 msgid "title_unset"
 msgstr "[···]"
+
+#. Default: "This Plone site is valid XHTML."
+#: ./plone_tableless/colophon.pt
+#: ./plone_templates/colophon.pt
+msgid "title_valid_xhtml"
+msgstr ""
 
 #. Default: "World Wide Web Consortium"
 #: ./plone_templates/accessibility-info.pt
 msgid "title_w3c"
 msgstr "World Wide Web Consortium"
 
-#. Default: "This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines."
-#: ./plone_tableless/colophon.pt
+#. Default: "Web Content Accessibility Guidelines"
 #: ./plone_templates/accessibility-info.pt
-#: ./plone_templates/colophon.pt
 msgid "title_wcag"
 msgstr "このサイトはW3C-WAIウェブコンテンツアクセシビリティガイドラインに準拠しています。"
 
-#. Default: "This Plone site is valid XHTML."
+#. Default: "This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines."
 #: ./plone_tableless/colophon.pt
-#: ./plone_templates/accessibility-info.pt
 #: ./plone_templates/colophon.pt
+msgid "title_wcag_conformance"
+msgstr ""
+
+#. Default: "eXtensible Hyper Text Markup Language"
+#: ./plone_templates/accessibility-info.pt
 msgid "title_xhtml"
 msgstr "このサイトは正しくXHTMLを使用しています。"
 
