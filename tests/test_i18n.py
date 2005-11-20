@@ -12,14 +12,18 @@ from Globals import package_home
 GLOBALS = globals()
 PACKAGE_HOME = os.path.normpath(os.path.join(package_home(GLOBALS), '..'))
 
-i18ndir = os.path.join(PACKAGE_HOME, '..', 'i18n')
+head, tail = os.path.split(PACKAGE_HOME)
+if tail == 'tests':
+    PACKAGE_HOME = os.path.join(PACKAGE_HOME, '..')
+
+i18ndir = os.path.join(PACKAGE_HOME, 'i18n')
 
 tests=[]
 products=[]
 pot_catalogs={}
 pot_lens={}
 
-for potFile in getPotFiles(path=PACKAGE_HOME):
+for potFile in getPotFiles(path=i18ndir):
     product = getProductFromPath(potFile)
     if product not in products:
         products.append(product)
@@ -35,7 +39,7 @@ for product in products:
         path = i18ndir
     tests.append(TestOnePOT)
 
-    for poFile in getPoFiles(path=PACKAGE_HOME, product=product):
+    for poFile in getPoFiles(path=i18ndir, product=product):
         class TestOnePoFile(PoTestCase.PoTestCase):
             po = poFile
             product = product
