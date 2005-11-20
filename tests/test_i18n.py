@@ -17,13 +17,17 @@ i18ndir = os.path.join(PACKAGE_HOME, '..', 'i18n')
 tests=[]
 products=[]
 pot_catalogs={}
+pot_lens={}
 
 for potFile in getPotFiles(path=PACKAGE_HOME):
     product = getProductFromPath(potFile)
     if product not in products:
         products.append(product)
     if product not in pot_catalogs:
-        pot_catalogs.update({product: catalog.MessageCatalog(filename=potFile)})
+        cat = catalog.MessageCatalog(filename=potFile)
+        cat_len = len(cat)
+        pot_catalogs.update({product: cat})
+        pot_lens.update({product: cat_len})
 
 for product in products:
     class TestOnePOT(PotTestCase.PotTestCase):
@@ -32,16 +36,11 @@ for product in products:
     tests.append(TestOnePOT)
 
     for poFile in getPoFiles(path=PACKAGE_HOME, product=product):
-        class TestOneMsg(PoTestCase.PotPoTestCase):
-            po = poFile
-            pot = '%s.pot' % product
-            path = i18ndir
-        tests.append(TestOneMsg)
-
         class TestOnePoFile(PoTestCase.PoTestCase):
             po = poFile
             product = product
             pot_cat = pot_catalogs[product]
+            pot_len = pot_lens[product]
         tests.append(TestOnePoFile)
 
     import unittest
