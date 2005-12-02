@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-11-20 14:19+0000\n"
+"POT-Creation-Date: 2005-12-02 16:27+0000\n"
 "PO-Revision-Date: 2005-10-01 00:36+0900\n"
 "Last-Translator: jun miyamoto <junichiro_miyamoto@yahoo.co.jp>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -2121,11 +2121,6 @@ msgstr "${plonecms} の著作権 ${copyright} 2000- ${current_year} は ${plonef
 msgid "description_edit_groupproperties"
 msgstr "グループとは課や事業部といったユーザの論理的な集合です。権限とは直接の関連はありません。通常は権限はロールと関連を持ち、グループはロールと関連を持つ事で間接的に権限と関連を持ちます。"
 
-#. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "description_edit_properties"
-msgstr "以下の情報は<em>メタデータ</em>とも呼ばれるもので、オブジェクトの分類に用いられる情報の集まり、つまり開始日時や終了日時、言語、キーワード等のことです。"
-
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to ${link}."
 #: ./plone_login/login_failed.pt
 msgid "description_enable_cookies"
@@ -2771,11 +2766,6 @@ msgstr "編集操作"
 msgid "heading_edit_groupproperties"
 msgstr "グループ ${groupname} のプロパティを編集"
 
-#. Default: "Edit Properties"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "heading_edit_properties"
-msgstr "プロパティを編集"
-
 #. Default: "How to Enable Cookies"
 #: ./plone_login/enabling_cookies.pt
 msgid "heading_enable_cookies"
@@ -3156,11 +3146,6 @@ msgstr "ログインしました"
 msgid "help_add_restriction_mode"
 msgstr "このフォルダで追加できるコンテンツの種類をコントロールする方法を選びます。"
 
-#. Default: "'Default' will use the site-wide setting for discussions."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_allow_discussion"
-msgstr "「デフォルト」の場合にはサイト全体の議論の設定が適用されます。"
-
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
 #: ./plone_prefs/personalize_form.cpt
 #: ./plone_prefs/prefs_user_details.cpt
@@ -3218,7 +3203,7 @@ msgid "help_content_ext_editor"
 msgstr "チェックマークが付いている場合、各ページに鉛筆アイコンが表示されます。そのアイコンをクリックするとブラウザ上のエディタではなくて自分の好みのエディタを使ってコンテンツを編集することができます。そのためにはExternalEditorと呼ばれるプラグインをPC側にインストールする必要があります。詳しくは管理者に尋ねてください。"
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: ./plone_content/metadata_edit_form.cpt
+#: widget description of LinesWidget for label Contributors
 msgid "help_contributors"
 msgstr "このアイテムに協力した人たちの名前です。一行につき一名づつの名前を入力します。"
 
@@ -3228,7 +3213,7 @@ msgid "help_cookie_persistence"
 msgstr "ここをチェックすると、クッキーが永久有効に設定されます。"
 
 #. Default: "The copyrights on this item."
-#: ./plone_content/metadata_edit_form.cpt
+#: widget description of TextAreaWidget for label Copyrights
 msgid "help_copyrights"
 msgstr "このアイテムの著作権情報"
 
@@ -3296,7 +3281,6 @@ msgid "help_display_names"
 msgstr "アイテムを編集する際に、ショートネームが変更できるか決定します。もしもショートネームが入力されない場合は自動的に生成されます。"
 
 #. Default: "The date when the item will be available (of course it needs to be published too). If no date is selected the item will be effective immediately."
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 msgid "help_effective_date"
 msgstr "アイテムが公開される日時です。もちろんアイテムは公開状態になっている必要があります。この日時を設定しない場合は公開状態になり次第すぐに公開されます。"
@@ -3313,7 +3297,6 @@ msgid "help_exclude_from_nav"
 msgstr "ここが選択されていると、このアイテムはナビゲーションツリーに表示されません。"
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 msgid "help_expiration_date"
 msgstr "アイテムの公開が終了する日時です。この日時以降は自動的に他のユーザからはアイテムが見えなくなります。日時が設定されていなければ公開は終了しません。"
@@ -3354,16 +3337,6 @@ msgstr "ここにチェックマークが付いている場合、Ploneは選択�
 #, fuzzy
 msgid "help_inherit_criteria"
 msgstr "条件の継承をオン/オフします。継承とは、例えば現トピックより上のトピックに「過去三日間からのアイテムのみが表示される」よう設定したとすると、その検索条件が自動的に現トピックにも適用されることです。"
-
-#. Default: "Keywords relate different types of content to each other. Don't select too many categories."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_keyword"
-msgstr "キーワードにより様々な種類のコンテンツを関連づけます。カテゴリをたくさんを選びすぎないようにします。"
-
-#. Default: "The language of this item."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_language"
-msgstr "このアイテムに使用されてる言語"
 
 #. Default: "If selected, only the 'Number of Items' indicated below will be displayed."
 #: widget description of BooleanWidget for label Limit Search Results
@@ -3408,11 +3381,6 @@ msgstr "サイトの外観"
 msgid "help_message"
 msgstr "送りたいメッセージを入力してください。"
 
-#. Default: "The MIME-type of the item. If you don't know what this does, just leave it."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_mimetype"
-msgstr "アイテムのMIMEタイプです。わからない場合は空欄のままにします。"
-
 #. Default: "Date this content was modified last"
 #: widget description of CalendarWidget for label Modification Date
 msgid "help_modification_date"
@@ -3422,11 +3390,6 @@ msgstr "このコンテンツが最後に変更された日時"
 #: ./plone_prefs/prefs_navigation_form.cpt
 msgid "help_navigationtypes"
 msgstr "ナビゲーションツリーとサイトマップに表示されるべきコンテンツタイプ"
-
-#. Default: "Each new keyword must be on a separate line."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_new_keyword"
-msgstr "新しいキーワードは、一行に一つずつ入力します。"
 
 #. Default: "Enter your new password. Minimum 5 characters."
 #: ./plone_login/login_password.cpt
@@ -3877,7 +3840,7 @@ msgid "label_affected_content"
 msgstr "影響を受けるコンテンツ"
 
 #. Default: "Allow Discussion on this item"
-#: ./plone_content/metadata_edit_form.cpt
+#: widget label of SelectionWidget - description ""
 msgid "label_allow_discussion"
 msgstr "このアイテムでの議論を許可する"
 
@@ -3992,9 +3955,9 @@ msgid "label_calendar"
 msgstr "カレンダー"
 
 #. Default: "Cancel"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 #: ./plone_forms/folder_constraintypes_form.cpt
+#: ./plone_forms/folder_rename_form.cpt
 msgid "label_cancel"
 msgstr "取り消し"
 
@@ -4044,11 +4007,6 @@ msgstr "デフォルトビューの <br/> アイテムを選択"
 #: ./plone_prefs/reconfig_form.cpt
 msgid "label_choose_language"
 msgstr "言語を選ぶ"
-
-#. Default: "Choose MIME-type"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "label_choose_mime"
-msgstr "MIMEタイプを選ぶ"
 
 #. Default: "Display"
 #: ./plone_templates/global_contentmenu.pt
@@ -4143,7 +4101,7 @@ msgid "label_content_editor"
 msgstr "コンテンツエディタ"
 
 #. Default: "Contributors"
-#: ./plone_content/metadata_edit_form.cpt
+#: widget label of LinesWidget - description "The names of people that have contributed to this item. Each contributor should be on a separate line."
 msgid "label_contributors"
 msgstr "協力者:"
 
@@ -4163,7 +4121,7 @@ msgid "label_copy_to_present"
 msgstr "現在のものへコピー"
 
 #. Default: "Copyrights"
-#: ./plone_content/metadata_edit_form.cpt
+#: widget label of TextAreaWidget - description "The copyrights on this item."
 msgid "label_copyrights"
 msgstr "著作権"
 
@@ -4266,17 +4224,17 @@ msgid "label_disabled_display_menu"
 msgstr "表示する"
 
 #. Default: "Default"
-#: ./plone_content/metadata_edit_form.cpt
+#: DisplayList entry for field allowDiscussion
 msgid "label_discussion_default"
 msgstr "デフォルト"
 
 #. Default: "Disabled"
-#: ./plone_content/metadata_edit_form.cpt
+#: DisplayList entry for field allowDiscussion
 msgid "label_discussion_disabled"
 msgstr "許可しない"
 
 #. Default: "Enabled"
-#: ./plone_content/metadata_edit_form.cpt
+#: DisplayList entry for field allowDiscussion
 msgid "label_discussion_enabled"
 msgstr "許可する"
 
@@ -4292,7 +4250,6 @@ msgid "label_edit_short_names"
 msgstr "ショートネームの検索を許可する"
 
 #. Default: "Effective Date"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 msgid "label_effective_date"
 msgstr "開始日時"
@@ -4404,13 +4361,7 @@ msgstr "エラーの値"
 msgid "label_exclude_from_nav"
 msgstr "ナビゲーションに含まない"
 
-#. Default: "Existing keywords"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "label_existing_keywords"
-msgstr "既存のキーワード"
-
 #. Default: "Expiration Date"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 msgid "label_expiration_date"
 msgstr "終了日時"
@@ -4589,7 +4540,6 @@ msgid "label_item_type"
 msgstr "アイテムの種類"
 
 #. Default: "Keywords"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/search_form.pt
 msgid "label_keywords"
 msgstr "キーワード"
@@ -4600,7 +4550,6 @@ msgid "label_konqueror_linux"
 msgstr ""
 
 #. Default: "Language"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_prefs/personalize_form.cpt
 #: ./plone_prefs/prefs_user_details.cpt
 msgid "label_language"
@@ -4699,11 +4648,6 @@ msgstr "主たる言語"
 msgid "label_message"
 msgstr "メッセージ"
 
-#. Default: "MIME type"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "label_mimetype"
-msgstr "MIMEタイプ"
-
 #. Default: "Modification Date"
 #: widget label of CalendarWidget - description "Date this content was modified last"
 msgid "label_modification_date"
@@ -4751,11 +4695,6 @@ msgstr "Netscape 6 and earlier (All platforms)"
 msgid "label_new_items_since"
 msgstr "アイテムの追加時点"
 
-#. Default: "New keywords"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "label_new_keywords"
-msgstr "新しいキーワード"
-
 #. Default: "New owner"
 #: ./plone_forms/ownership_form.cpt
 msgid "label_new_owner"
@@ -4801,7 +4740,6 @@ msgstr "記録しておくエラーの個数"
 
 #. Default: "Object locked"
 #: ./plone_content/document_byline.pt
-#: ./plone_content/metadata_edit_form.cpt
 msgid "label_object_locked"
 msgstr "オブジェクトがロックされています。"
 
@@ -5036,9 +4974,9 @@ msgid "label_safari_mac"
 msgstr "Safari and Omniweb (Mac OS X)"
 
 #. Default: "Save"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 #: ./plone_forms/discussion_reply_form.cpt
+#: ./plone_forms/folder_constraintypes_form.cpt
 msgid "label_save"
 msgstr "保存"
 
@@ -5383,8 +5321,6 @@ msgstr "ユーザの概要へ移動"
 #: widget label of StringWidget - description "Add http://
 #: to link outside the portal."
 #: widget label of StringWidget - description "Web address with more info about the event. Add http://
-#: for external links."
-#: widget label of StringWidget - description ""
 msgid "label_url"
 msgstr "URL"
 
@@ -5563,11 +5499,6 @@ msgstr "インストール可能なプロダクト"
 #: ./plone_prefs/prefs_install_products_form.pt
 msgid "legend_installed_products"
 msgstr "インストール済みのプロダクト"
-
-#. Default: "Item Properties"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "legend_item_properties"
-msgstr "アイテムのプロパティ"
 
 #. Default: "Items Available"
 #: ./plone_forms/folder_factories.pt

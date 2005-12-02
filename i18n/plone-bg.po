@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2005-11-20 14:19+0000\n"
+"POT-Creation-Date: 2005-12-02 16:27+0000\n"
 "PO-Revision-Date: 2005-11-30 20:12+0200\n"
 "Last-Translator: Vladimir Iliev <vladimir.iliev@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -1943,11 +1943,21 @@ msgid "created"
 msgstr "създаден"
 
 #. The variables used here are the same as used in the strftime formating.
+#. Supported are ${A}, ${a}, ${B}, ${b}, ${H}, ${I}, ${m}, ${d}, ${M}, ${p},
+#. ${S}, ${Y}, ${y}, ${Z}, each used as variable in the msgstr.
+#. For example: "${A} ${d}. ${B} ${Y}, ${H}:${M} ${Z}"
+#. In english speaking countries default is:
+#. ${Y}-${m}-${d} ${H}:${M}
 #: ./TranslationServiceTool.py
 msgid "date_format_long"
 msgstr ""
 
 #. The variables used here are the same as used in the strftime formating.
+#. Supported are ${A}, ${a}, ${B}, ${b}, ${H}, ${I}, ${m}, ${d}, ${M}, ${p},
+#. ${S}, ${Y}, ${y}, ${Z}, each used as variable in the msgstr.
+#. For example: "${A} ${d}. ${B} ${Y}, ${H}:${M} ${Z}"
+#. In english speaking countries default is:
+#. ${Y}-${m}-${d}
 #: ./TranslationServiceTool.py
 msgid "date_format_short"
 msgstr ""
@@ -2101,11 +2111,6 @@ msgstr "${plonecms}, ${copyright} 2000- ${current_year} ${plonefoundation}."
 #: ./plone_prefs/prefs_group_details.pt
 msgid "description_edit_groupproperties"
 msgstr "Групите са логически колекции от потребители, като отдели и бизнес единици. Те не са директно свързани с правата, използвайте роли за това и просто възлагайте роли на отделните групи потребители."
-
-#. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "description_edit_properties"
-msgstr "Тази информация, също наричана <em>общи данни</em> е колекция от свойства, използвани за категоризация на обекта, като например  задаване на ефективна/начална и крайна дата, език и ключови думи."
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to ${link}."
 #: ./plone_login/login_failed.pt
@@ -2755,11 +2760,6 @@ msgstr "Действия към документ"
 msgid "heading_edit_groupproperties"
 msgstr "Редактиране на свойства за група ${groupname}"
 
-#. Default: "Edit Properties"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "heading_edit_properties"
-msgstr "Редактиране на свойства"
-
 #. Default: "How to Enable Cookies"
 #: ./plone_login/enabling_cookies.pt
 msgid "heading_enable_cookies"
@@ -3141,11 +3141,6 @@ msgstr "Току що влязохте"
 msgid "help_add_restriction_mode"
 msgstr "Моля изберете, как желаете да контролирате, кои типове обекти, могат да бъдат добавяни към тази папка."
 
-#. Default: "'Default' will use the site-wide setting for discussions."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_allow_discussion"
-msgstr "Определя, дали модат да бъдат добавяни коментари към този обект. 'По-подразбиране' ще използва глобалните настройки."
-
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
 #: ./plone_prefs/personalize_form.cpt
 #: ./plone_prefs/prefs_user_details.cpt
@@ -3203,7 +3198,7 @@ msgid "help_content_ext_editor"
 msgstr "Когато е избрано, към страниците ще бъде добавена връзка, която ви позволява да редактирате документите в вашия любим редактор, вместо да използвате браузър-базиран такъв. Това изисква допълнитенло приложение, наричано ExternalEditor, инсталирано на клиента. За повече информация се обърнете към вашия администратор."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: ./plone_content/metadata_edit_form.cpt
+#: widget description of LinesWidget for label Contributors
 msgid "help_contributors"
 msgstr "Имената на хората, които са съдействали за този обект. Всеки допринесъл трябва да е на отделен ред."
 
@@ -3213,7 +3208,7 @@ msgid "help_cookie_persistence"
 msgstr "Ако е избрано, бисквитката никога няма да стане невалидна."
 
 #. Default: "The copyrights on this item."
-#: ./plone_content/metadata_edit_form.cpt
+#: widget description of TextAreaWidget for label Copyrights
 msgid "help_copyrights"
 msgstr "Информация за авторските права на този обект."
 
@@ -3281,7 +3276,6 @@ msgid "help_display_names"
 msgstr "Определя, дали кратките имена (или идентификатори), могат да бъдат променяни, по време на редакция на обектите. Когато е забранено, кратките имена се генерират автоматично."
 
 #. Default: "The date when the item will be available (of course it needs to be published too). If no date is selected the item will be effective immediately."
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 msgid "help_effective_date"
 msgstr "Това е датата, на която обекта ще бъде видим след публикуване.Така бихте могли да публикувате обекти предварително, но те няма да бъдат видими преди тази дата. Ако не бъде избрана дата, обектът ще стане ефективен незабавно."
@@ -3298,7 +3292,6 @@ msgid "help_exclude_from_nav"
 msgstr "Ако е избрано, този обект няма да се появи в навигационното дърво."
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 msgid "help_expiration_date"
 msgstr "Това е датата, на която обекта ще стане невалиден. Това автоматично ще го направи невидим за останалите на зададената дата. Ако не бъде избрана дата, той никога няма да стане невалиден."
@@ -3339,16 +3332,6 @@ msgstr "Ако е избран, Plone ще направи опит да пром
 #, fuzzy
 msgid "help_inherit_criteria"
 msgstr "Определя наследяване на критериите. Примерно, ако сте избрали в тема от по-горно ниво да бъдат включени само обекти от последните три дни, тази тема ще наследи тези критерии автоматично."
-
-#. Default: "Keywords relate different types of content to each other. Don't select too many categories."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_keyword"
-msgstr "Ключовите думи свързват различните типове обекти. Не избирайте прекалено много категории."
-
-#. Default: "The language of this item."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_language"
-msgstr "Езика, на който е този обект."
 
 #. Default: "If selected, only the 'Number of Items' indicated below will be displayed."
 #: widget description of BooleanWidget for label Limit Search Results
@@ -3393,11 +3376,6 @@ msgstr "Тук можете да изберете външния вид на с�
 msgid "help_message"
 msgstr "Моля въведете съобщението което желаете да изпратите."
 
-#. Default: "The MIME-type of the item. If you don't know what this does, just leave it."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_mimetype"
-msgstr "MIME-тип на обекта. Ако не разбирате какво значи това, просто оставете полето както си е."
-
 #. Default: "Date this content was modified last"
 #: widget description of CalendarWidget for label Modification Date
 msgid "help_modification_date"
@@ -3407,11 +3385,6 @@ msgstr "Датата на която този обект е последно р�
 #: ./plone_prefs/prefs_navigation_form.cpt
 msgid "help_navigationtypes"
 msgstr "Типове обекти, които да бъдат показвани в навигационното дърво и картата на сайта."
-
-#. Default: "Each new keyword must be on a separate line."
-#: ./plone_content/metadata_edit_form.cpt
-msgid "help_new_keyword"
-msgstr "Всяка ключова дума трябва да е на отделелен ред."
 
 #. Default: "Enter your new password. Minimum 5 characters."
 #: ./plone_login/login_password.cpt
@@ -3862,7 +3835,7 @@ msgid "label_affected_content"
 msgstr "Засегнати обекти"
 
 #. Default: "Allow Discussion on this item"
-#: ./plone_content/metadata_edit_form.cpt
+#: widget label of SelectionWidget - description ""
 msgid "label_allow_discussion"
 msgstr "Разрешаване на коментари"
 
@@ -3977,9 +3950,9 @@ msgid "label_calendar"
 msgstr "Календар"
 
 #. Default: "Cancel"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 #: ./plone_forms/folder_constraintypes_form.cpt
+#: ./plone_forms/folder_rename_form.cpt
 msgid "label_cancel"
 msgstr "Отказване"
 
@@ -4029,11 +4002,6 @@ msgstr "Изберете обект <br/> за изглед по подразб�
 #: ./plone_prefs/reconfig_form.cpt
 msgid "label_choose_language"
 msgstr "Избор на език"
-
-#. Default: "Choose MIME-type"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "label_choose_mime"
-msgstr "Избор на MIME тип"
 
 #. Default: "Display"
 #: ./plone_templates/global_contentmenu.pt
@@ -4129,7 +4097,7 @@ msgid "label_content_editor"
 msgstr "Редактор"
 
 #. Default: "Contributors"
-#: ./plone_content/metadata_edit_form.cpt
+#: widget label of LinesWidget - description "The names of people that have contributed to this item. Each contributor should be on a separate line."
 msgid "label_contributors"
 msgstr "Сътрудници:"
 
@@ -4149,7 +4117,7 @@ msgid "label_copy_to_present"
 msgstr "Копиране в настоящето"
 
 #. Default: "Copyrights"
-#: ./plone_content/metadata_edit_form.cpt
+#: widget label of TextAreaWidget - description "The copyrights on this item."
 msgid "label_copyrights"
 msgstr "Авторски права"
 
@@ -4252,17 +4220,17 @@ msgid "label_disabled_display_menu"
 msgstr "Изобразяване"
 
 #. Default: "Default"
-#: ./plone_content/metadata_edit_form.cpt
+#: DisplayList entry for field allowDiscussion
 msgid "label_discussion_default"
 msgstr "По подразбиране"
 
 #. Default: "Disabled"
-#: ./plone_content/metadata_edit_form.cpt
+#: DisplayList entry for field allowDiscussion
 msgid "label_discussion_disabled"
 msgstr "Забранени"
 
 #. Default: "Enabled"
-#: ./plone_content/metadata_edit_form.cpt
+#: DisplayList entry for field allowDiscussion
 msgid "label_discussion_enabled"
 msgstr "Разрешени"
 
@@ -4278,7 +4246,6 @@ msgid "label_edit_short_names"
 msgstr "Разрешаване радактирането на кратки имена"
 
 #. Default: "Effective Date"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 msgid "label_effective_date"
 msgstr "Начална дата"
@@ -4390,13 +4357,7 @@ msgstr "Стойност"
 msgid "label_exclude_from_nav"
 msgstr "Изключване от навигацията"
 
-#. Default: "Existing keywords"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "label_existing_keywords"
-msgstr "Съществуващи ключови думи"
-
 #. Default: "Expiration Date"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 msgid "label_expiration_date"
 msgstr "Крайна дата"
@@ -4575,7 +4536,6 @@ msgid "label_item_type"
 msgstr "Тип"
 
 #. Default: "Keywords"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/search_form.pt
 msgid "label_keywords"
 msgstr "Ключови думи"
@@ -4586,7 +4546,6 @@ msgid "label_konqueror_linux"
 msgstr ""
 
 #. Default: "Language"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_prefs/personalize_form.cpt
 #: ./plone_prefs/prefs_user_details.cpt
 msgid "label_language"
@@ -4686,11 +4645,6 @@ msgstr "Основен език:"
 msgid "label_message"
 msgstr "Съобщение"
 
-#. Default: "MIME type"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "label_mimetype"
-msgstr "MIME тип"
-
 #. Default: "Modification Date"
 #: widget label of CalendarWidget - description "Date this content was modified last"
 msgid "label_modification_date"
@@ -4738,11 +4692,6 @@ msgstr "Netscape 6 и по-стар (Всички платформи)"
 msgid "label_new_items_since"
 msgstr "Обекти създадени след"
 
-#. Default: "New keywords"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "label_new_keywords"
-msgstr "Нови ключови думи"
-
 #. Default: "New owner"
 #: ./plone_forms/ownership_form.cpt
 msgid "label_new_owner"
@@ -4788,7 +4737,6 @@ msgstr "Брой изключения които да бъдат запазен�
 
 #. Default: "Object locked"
 #: ./plone_content/document_byline.pt
-#: ./plone_content/metadata_edit_form.cpt
 msgid "label_object_locked"
 msgstr "Обекта е заключен"
 
@@ -5024,9 +4972,9 @@ msgid "label_safari_mac"
 msgstr "Safari и Omniweb (Mac OS X)"
 
 #. Default: "Save"
-#: ./plone_content/metadata_edit_form.cpt
 #: ./plone_forms/content_status_history.cpt
 #: ./plone_forms/discussion_reply_form.cpt
+#: ./plone_forms/folder_constraintypes_form.cpt
 msgid "label_save"
 msgstr "Записване"
 
@@ -5371,8 +5319,6 @@ msgstr "Нагоре към управление на потребители"
 #: widget label of StringWidget - description "Add http://
 #: to link outside the portal."
 #: widget label of StringWidget - description "Web address with more info about the event. Add http://
-#: for external links."
-#: widget label of StringWidget - description ""
 msgid "label_url"
 msgstr ""
 
@@ -5552,11 +5498,6 @@ msgstr "Налични продукти"
 #: ./plone_prefs/prefs_install_products_form.pt
 msgid "legend_installed_products"
 msgstr "Инсталирани продукти"
-
-#. Default: "Item Properties"
-#: ./plone_content/metadata_edit_form.cpt
-msgid "legend_item_properties"
-msgstr "Общи данни"
 
 #. Default: "Items Available"
 #: ./plone_forms/folder_factories.pt
