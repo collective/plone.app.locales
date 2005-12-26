@@ -18,7 +18,7 @@ def main():
 
     os.chdir('..')
     chart = os.curdir + os.sep + 'charts' + os.sep + 'plone-combined-chart.gif'
-    title = '"Plone 2.1.1"'
+    title = '"Plone 2.1.2"'
 
     pots = getPotFiles()
 
