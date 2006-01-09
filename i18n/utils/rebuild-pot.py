@@ -25,7 +25,7 @@ __INSTANCE_HOME = os.environ.get('INSTANCE_HOME', '')
 
 def main():
     if len(sys.argv) < 3:
-        print 'You have to specify the product und skins directory.'
+        print 'You have to specify the product and skins directory.'
         sys.exit(1)
 
     product = sys.argv[1]
@@ -67,7 +67,9 @@ def main():
                     skins = os.path.join(skins, 'PloneLanguageTool')
                 elif product == 'linguaplone':
                     skins = os.path.join(skins, 'LinguaPlone')
-                skins = os.path.join(skins, 'skins')
+                    
+                if product != 'plone':
+                    skins = os.path.join(skins, 'skins')
             else:
                 skinserror = True
         else:
