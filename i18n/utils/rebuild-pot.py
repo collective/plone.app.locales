@@ -67,7 +67,9 @@ def main():
                     skins = os.path.join(skins, 'PloneLanguageTool')
                 elif product == 'linguaplone':
                     skins = os.path.join(skins, 'LinguaPlone')
-                    
+                elif product == 'cmfplacefulworkflow':
+                    skins = os.path.join(skins, 'CMFPlacefulWorkflow')
+
                 if product != 'plone':
                     skins = os.path.join(skins, 'skins')
             else:
