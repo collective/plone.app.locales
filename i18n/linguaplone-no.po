@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LinguaPlone\n"
-"POT-Creation-Date: 2005-09-11 22:17+0000\n"
+"POT-Creation-Date: 2006-03-06 22:17+0000\n"
 "PO-Revision-Date: 2006-01-25 00:16-0800\n"
 "Last-Translator: Alexander Limi <limi@plonesolutions.com>\n"
 "Language-Team: Plone-i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -18,13 +18,38 @@ msgstr ""
 "Preferred-encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: nb nb-no no-bok\n"
 
+#: ./LinguaPlone/languageSelectorData.py:33
+msgid " (Content is language neutral)"
+msgstr ""
+
+#: ./LinguaPlone/languageSelectorData.py:38
+msgid " (Content translation not available)"
+msgstr " (Innholdet har ingen oversettelse)"
+
+#: ./LinguaPlone/linkTranslation.cpy:18
+msgid "Invalid language."
+msgstr "Ugyldig språk."
+
+#: ./LinguaPlone/changeLanguage.cpy:11
+msgid "Neutral"
+msgstr ""
+
+#: ./LinguaPlone/validate_translate.vpy:15
+msgid "Please select different values for each language."
+msgstr "Vennligst velg forskjellige verdier for hvert språk."
+
+#: ./LinguaPlone/linkTranslation.cpy:12
+msgid "Translation content not found."
+msgstr "Oversettelse ikke funnet."
+
 #. Default: "Select the language you want to change the content to."
 #: ./LinguaPlone/manage_translations_form.pt
 msgid "description_change_language"
 msgstr "Velg språk du vil endre innholdet til."
 
-#. Default: "The content you were viewing does not exist in the language you just selected. The language has been switched to ${language} and you can keep browsing the site in this language."
+#. Default: "The content you were viewing does not exist in the language you just selected. The site language has been switched to ${language} and you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_changed_translation_unavailable"
 msgstr "Innholdet finnes ikke oversatt til språket du valgte. Nåværende språk er ${language}, og du kan fortsette å navigere nettstedet i dette språket."
 
@@ -55,6 +80,7 @@ msgstr "Det finnes ingen oversettelser som kan slettes."
 
 #. Default: "If you want to read the content of this document, you have to switch to one of the following languages:"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_read_translated_versions"
 msgstr "Hvis du vil lese innholdet i dette dokumentet, må du bytte til et av følgende språk:"
 
@@ -70,6 +96,7 @@ msgstr "Oversetter fra ${from} til ${to}"
 
 #. Default: "This content does not exist in your current language, ${language}, but you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_translation_unavailable"
 msgstr "Innholdet finnes ikke oversatt til ditt nåværende språk ${language}, men du kan fortsette å navigere nettstedet i dette språket."
 
@@ -91,6 +118,7 @@ msgstr "Assosiér oversettelser"
 #. Default: "Manage translations"
 #: ./LinguaPlone/global_languagemenu.pt
 #: ./LinguaPlone/manage_translations_form.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "header_manage_translations"
 msgstr "Oversettelses-innstillinger"
 
@@ -101,6 +129,7 @@ msgstr "Fjern oversettelser"
 
 #. Default: "Translation Unavailable"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "header_translation_unavailable"
 msgstr "Oversettelse ikke tilgjengelig"
 
@@ -130,17 +159,13 @@ msgid "label_change_language"
 msgstr "Endre språk"
 
 #. Default: " (Content is language neutral)"
-#: ./LinguaPlone/languageSelectorData.py:31
+#: ./LinguaPlone/languageSelectorData.py
 msgid "label_content_is_language_neutral"
 msgstr " (innholdet er språkuavhengig)"
 
-#. Default: " (Content translation not available)"
-#: ./LinguaPlone/languageSelectorData.py:35
-msgid "label_content_translation_not_available"
-msgstr " (Innholdet har ingen oversettelse)"
-
 #. Default: "Language settings..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_language_settings"
 msgstr "Språkinnstillinger…"
 
@@ -161,6 +186,7 @@ msgstr "Assosiér oversettelse"
 
 #. Default: "Manage translations..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_manage_translations"
 msgstr "Oversettelses-innstillinger…"
 
@@ -181,6 +207,7 @@ msgstr "Bytt språk til ${language}"
 
 #. Default: "Translate into"
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_translate_into"
 msgstr "Oversett til"
 
@@ -203,21 +230,6 @@ msgstr "Endret språk til ${language}."
 #: ./LinguaPlone/linkTranslation.cpy
 msgid "message_content_linked_to"
 msgstr "«${title}» er assosiert som ${language} oversettelse av innholdet."
-
-#. Default: "Translation content not found."
-#: ./LinguaPlone/linkTranslation.cpy:11
-msgid "message_content_not_found"
-msgstr "Oversettelse ikke funnet."
-
-#. Default: "Invalid language."
-#: ./LinguaPlone/linkTranslation.cpy:16
-msgid "message_invalid_language"
-msgstr "Ugyldig språk."
-
-#. Default: "Please select different values for each language."
-#: ./LinguaPlone/validate_translate.vpy:14
-msgid "message_select_different_languages"
-msgstr "Vennligst velg forskjellige verdier for hvert språk."
 
 #. Default: "${type} has been created."
 #: ./LinguaPlone/createTranslation.cpy

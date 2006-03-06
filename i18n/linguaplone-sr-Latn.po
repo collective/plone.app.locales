@@ -19,7 +19,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LinguaPlone\n"
-"POT-Creation-Date: 2005-09-11 22:17+0000\n"
+"POT-Creation-Date: 2006-03-06 22:17+0000\n"
 "PO-Revision-Date: 2005-10-03 19:00+01:00\n"
 "Last-Translator: Filip Miletic <f dot miletic at ewi dot tudelft dot nl>\n"
 "Language-Team: Serbian <gnu@prevod.org>\n"
@@ -32,13 +32,38 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: linguaplone\n"
 
+#: ./LinguaPlone/languageSelectorData.py:33
+msgid " (Content is language neutral)"
+msgstr ""
+
+#: ./LinguaPlone/languageSelectorData.py:38
+msgid " (Content translation not available)"
+msgstr " (prevod sadržaja nije dostupan)"
+
+#: ./LinguaPlone/linkTranslation.cpy:18
+msgid "Invalid language."
+msgstr "Jezik ne postoji."
+
+#: ./LinguaPlone/changeLanguage.cpy:11
+msgid "Neutral"
+msgstr ""
+
+#: ./LinguaPlone/validate_translate.vpy:15
+msgid "Please select different values for each language."
+msgstr "Molimo izaberite druge vrednosti za svaki jezik."
+
+#: ./LinguaPlone/linkTranslation.cpy:12
+msgid "Translation content not found."
+msgstr "Sadržaj prevoda nije pronađen."
+
 #. Default: "Select the language you want to change the content to."
 #: ./LinguaPlone/manage_translations_form.pt
 msgid "description_change_language"
 msgstr "Izaberite jezik u kojem želite da se sadržaj prikazuje."
 
-#. Default: "The content you were viewing does not exist in the language you just selected. The language has been switched to ${language} and you can keep browsing the site in this language."
+#. Default: "The content you were viewing does not exist in the language you just selected. The site language has been switched to ${language} and you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_changed_translation_unavailable"
 msgstr "Sadržaj kojeg pregledate ne postoji na jeziku kog ste upravo izabrali. Jezik je postavljen na ${language} i možete nastaviti da čitate el. mesto na njemu."
 
@@ -69,6 +94,7 @@ msgstr "Nema prevoda koje je moguće ukloniti."
 
 #. Default: "If you want to read the content of this document, you have to switch to one of the following languages:"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_read_translated_versions"
 msgstr "Ako želite da čitate sadržaj ovog dokumenta morate izabrati jedan od navedenih jezika:"
 
@@ -84,6 +110,7 @@ msgstr "Prevođenje sa jezika ${from} na ${to} jezik"
 
 #. Default: "This content does not exist in your current language, ${language}, but you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_translation_unavailable"
 msgstr "Ovaj sadržaj ne postoji na trenutno izabranom jeziku (${language}). Možete nastaviti da pregledate el. mesto na ovom jeziku."
 
@@ -105,6 +132,7 @@ msgstr "Poveži prevode"
 #. Default: "Manage translations"
 #: ./LinguaPlone/global_languagemenu.pt
 #: ./LinguaPlone/manage_translations_form.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "header_manage_translations"
 msgstr "Upravljanje prevodima"
 
@@ -115,6 +143,7 @@ msgstr "Ukloni prevode"
 
 #. Default: "Translation Unavailable"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "header_translation_unavailable"
 msgstr "Prevodi su nedostupni"
 
@@ -144,17 +173,13 @@ msgid "label_change_language"
 msgstr "Promeni jezik"
 
 #. Default: " (Content is language neutral)"
-#: ./LinguaPlone/languageSelectorData.py:31
+#: ./LinguaPlone/languageSelectorData.py
 msgid "label_content_is_language_neutral"
 msgstr " (sadržaj je nezavisan od jezika)"
 
-#. Default: " (Content translation not available)"
-#: ./LinguaPlone/languageSelectorData.py:35
-msgid "label_content_translation_not_available"
-msgstr " (prevod sadržaja nije dostupan)"
-
 #. Default: "Language settings..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_language_settings"
 msgstr "Podešavanja jezika..."
 
@@ -175,6 +200,7 @@ msgstr "Veza ka prevodu"
 
 #. Default: "Manage translations..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_manage_translations"
 msgstr "Upravljanje prevodima..."
 
@@ -195,6 +221,7 @@ msgstr "Promeni na ${language} jezik"
 
 #. Default: "Translate into"
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_translate_into"
 msgstr "Prevedi na"
 
@@ -217,21 +244,6 @@ msgstr "Promeni jezik sadržaja na ${language}."
 #: ./LinguaPlone/linkTranslation.cpy
 msgid "message_content_linked_to"
 msgstr "„${title}“ je povezan kao prevod trenutnog sadržaja na ${language} jezik"
-
-#. Default: "Translation content not found."
-#: ./LinguaPlone/linkTranslation.cpy:11
-msgid "message_content_not_found"
-msgstr "Sadržaj prevoda nije pronađen."
-
-#. Default: "Invalid language."
-#: ./LinguaPlone/linkTranslation.cpy:16
-msgid "message_invalid_language"
-msgstr "Jezik ne postoji."
-
-#. Default: "Please select different values for each language."
-#: ./LinguaPlone/validate_translate.vpy:14
-msgid "message_select_different_languages"
-msgstr "Molimo izaberite druge vrednosti za svaki jezik."
 
 #. Default: "${type} has been created."
 #: ./LinguaPlone/createTranslation.cpy

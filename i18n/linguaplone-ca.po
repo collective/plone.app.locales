@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LinguaPlone\n"
-"POT-Creation-Date: 2005-09-11 22:17+0000\n"
+"POT-Creation-Date: 2006-03-06 22:17+0000\n"
 "PO-Revision-Date: 2005-08-30 03:11-0300\n"
 "Last-Translator: Albert Lombarte <artomb-pCzzcW6XgXY@public.gmane.org>\n"
 "Language-Team: Plone-i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -17,13 +17,38 @@ msgstr ""
 "Domain: linguaplone\n"
 "X-Is-Fallback-For: ca-ad ca-es ca-fr ca-it\n"
 
+#: ./LinguaPlone/languageSelectorData.py:33
+msgid " (Content is language neutral)"
+msgstr ""
+
+#: ./LinguaPlone/languageSelectorData.py:38
+msgid " (Content translation not available)"
+msgstr "(Traducció del contingut no disponible)"
+
+#: ./LinguaPlone/linkTranslation.cpy:18
+msgid "Invalid language."
+msgstr "Idioma invàlid"
+
+#: ./LinguaPlone/changeLanguage.cpy:11
+msgid "Neutral"
+msgstr ""
+
+#: ./LinguaPlone/validate_translate.vpy:15
+msgid "Please select different values for each language."
+msgstr "Seleccioneu diferents valors per a cada idioma."
+
+#: ./LinguaPlone/linkTranslation.cpy:12
+msgid "Translation content not found."
+msgstr "No s'ha trobat el contingut traduït."
+
 #. Default: "Select the language you want to change the content to."
 #: ./LinguaPlone/manage_translations_form.pt
 msgid "description_change_language"
 msgstr "Seleccioneu l'idioma al que voleu canviar el contingut."
 
-#. Default: "The content you were viewing does not exist in the language you just selected. The language has been switched to ${language} and you can keep browsing the site in this language."
+#. Default: "The content you were viewing does not exist in the language you just selected. The site language has been switched to ${language} and you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_changed_translation_unavailable"
 msgstr "El contingut que esteu visualitzan no està disponible en l'idioma que heu seleccionat. S'ha canviat l'idioma a ${language} i podeu continuar navegant aquest lloc web en aquest idioma."
 
@@ -54,6 +79,7 @@ msgstr "No hi ha cap traducció per esborrar."
 
 #. Default: "If you want to read the content of this document, you have to switch to one of the following languages:"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_read_translated_versions"
 msgstr "Si voleu llegir el contingut d'aquest document heu de canviar a un dels següents idiomes:"
 
@@ -69,6 +95,7 @@ msgstr "Traducció del ${from} al ${to}"
 
 #. Default: "This content does not exist in your current language, ${language}, but you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_translation_unavailable"
 msgstr "Aquest contingut no existeix en l'idioma actual, ${language}, però podeu continuar navegant aquest lloc en aquest idioma."
 
@@ -90,6 +117,7 @@ msgstr "Enllaça traduccions"
 #. Default: "Manage translations"
 #: ./LinguaPlone/global_languagemenu.pt
 #: ./LinguaPlone/manage_translations_form.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "header_manage_translations"
 msgstr "Gestiona traduccions"
 
@@ -100,6 +128,7 @@ msgstr "Esborra traduccions"
 
 #. Default: "Translation Unavailable"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "header_translation_unavailable"
 msgstr "Traducció no disponible"
 
@@ -129,17 +158,13 @@ msgid "label_change_language"
 msgstr "Canvia l'idioma"
 
 #. Default: " (Content is language neutral)"
-#: ./LinguaPlone/languageSelectorData.py:31
+#: ./LinguaPlone/languageSelectorData.py
 msgid "label_content_is_language_neutral"
 msgstr "(El contingut és idiomàticament neutre)"
 
-#. Default: " (Content translation not available)"
-#: ./LinguaPlone/languageSelectorData.py:35
-msgid "label_content_translation_not_available"
-msgstr "(Traducció del contingut no disponible)"
-
 #. Default: "Language settings..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_language_settings"
 msgstr "Paràmetres d'idioma..."
 
@@ -160,6 +185,7 @@ msgstr "Enllaça traducció"
 
 #. Default: "Manage translations..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_manage_translations"
 msgstr "Gestiona les traduccions..."
 
@@ -180,6 +206,7 @@ msgstr "Canvieu l'idioma a ${language}"
 
 #. Default: "Translate into"
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_translate_into"
 msgstr "Tradueix al"
 
@@ -202,21 +229,6 @@ msgstr "S'ha canviat l'idioma del contingut a ${language}."
 #: ./LinguaPlone/linkTranslation.cpy
 msgid "message_content_linked_to"
 msgstr "'${title}' s'ha enllaçat com una traducció del ${language} pel contingut actual."
-
-#. Default: "Translation content not found."
-#: ./LinguaPlone/linkTranslation.cpy:11
-msgid "message_content_not_found"
-msgstr "No s'ha trobat el contingut traduït."
-
-#. Default: "Invalid language."
-#: ./LinguaPlone/linkTranslation.cpy:16
-msgid "message_invalid_language"
-msgstr "Idioma invàlid"
-
-#. Default: "Please select different values for each language."
-#: ./LinguaPlone/validate_translate.vpy:14
-msgid "message_select_different_languages"
-msgstr "Seleccioneu diferents valors per a cada idioma."
 
 #. Default: "${type} has been created."
 #: ./LinguaPlone/createTranslation.cpy

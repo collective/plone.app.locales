@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LinguaPlone\n"
-"POT-Creation-Date: 2005-09-11 22:17+0000\n"
+"POT-Creation-Date: 2006-03-06 22:17+0000\n"
 "PO-Revision-Date: 2005-08-30 03:12-0300\n"
 "Last-Translator: TANIGUCHI Takaki <takaki@assist.media.nagoya-u.ac.jp>\n"
 "Language-Team: Plone-i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -19,13 +19,38 @@ msgstr ""
 "Domain: linguaplone\n"
 "X-Is-Fallback-For: ja-jp\n"
 
+#: ./LinguaPlone/languageSelectorData.py:33
+msgid " (Content is language neutral)"
+msgstr ""
+
+#: ./LinguaPlone/languageSelectorData.py:38
+msgid " (Content translation not available)"
+msgstr "(コンテンツの翻訳はありません)"
+
+#: ./LinguaPlone/linkTranslation.cpy:18
+msgid "Invalid language."
+msgstr "無効な言語"
+
+#: ./LinguaPlone/changeLanguage.cpy:11
+msgid "Neutral"
+msgstr ""
+
+#: ./LinguaPlone/validate_translate.vpy:15
+msgid "Please select different values for each language."
+msgstr "各言語に別の値を選択して下さい。"
+
+#: ./LinguaPlone/linkTranslation.cpy:12
+msgid "Translation content not found."
+msgstr "翻訳は見つかりませんでした。"
+
 #. Default: "Select the language you want to change the content to."
 #: ./LinguaPlone/manage_translations_form.pt
 msgid "description_change_language"
 msgstr "コンテンツの翻訳後の言語を選択する。"
 
-#. Default: "The content you were viewing does not exist in the language you just selected. The language has been switched to ${language} and you can keep browsing the site in this language."
+#. Default: "The content you were viewing does not exist in the language you just selected. The site language has been switched to ${language} and you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_changed_translation_unavailable"
 msgstr "表示中のコンテンツには選択した言語の翻訳がなく、${language}言語に切り替えられました。引き続きこの言語でサイトの閲覧をつづけられます。"
 
@@ -56,6 +81,7 @@ msgstr "削除できる翻訳がありません。"
 
 #. Default: "If you want to read the content of this document, you have to switch to one of the following languages:"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_read_translated_versions"
 msgstr "このドキュメントの内容を読むには、次のいずれかの言語に切り替えてください:"
 
@@ -71,6 +97,7 @@ msgstr "${from}から${to}へ翻訳"
 
 #. Default: "This content does not exist in your current language, ${language}, but you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_translation_unavailable"
 msgstr "このコンテンツには${language}でのコンテンツはありません。ですがこの言語でサイトのブラウズが続けられます。"
 
@@ -92,6 +119,7 @@ msgstr "翻訳をリンク"
 #. Default: "Manage translations"
 #: ./LinguaPlone/global_languagemenu.pt
 #: ./LinguaPlone/manage_translations_form.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "header_manage_translations"
 msgstr "翻訳を管理"
 
@@ -102,6 +130,7 @@ msgstr "翻訳を削除"
 
 #. Default: "Translation Unavailable"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "header_translation_unavailable"
 msgstr "翻訳はありません"
 
@@ -131,17 +160,13 @@ msgid "label_change_language"
 msgstr "言語を変更"
 
 #. Default: " (Content is language neutral)"
-#: ./LinguaPlone/languageSelectorData.py:31
+#: ./LinguaPlone/languageSelectorData.py
 msgid "label_content_is_language_neutral"
 msgstr "(コンテンツは言語中立です)"
 
-#. Default: " (Content translation not available)"
-#: ./LinguaPlone/languageSelectorData.py:35
-msgid "label_content_translation_not_available"
-msgstr "(コンテンツの翻訳はありません)"
-
 #. Default: "Language settings..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_language_settings"
 msgstr "言語設定..."
 
@@ -162,6 +187,7 @@ msgstr "翻訳をリンク"
 
 #. Default: "Manage translations..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_manage_translations"
 msgstr "翻訳を管理..."
 
@@ -182,6 +208,7 @@ msgstr "言語を${language}へ変更"
 
 #. Default: "Translate into"
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_translate_into"
 msgstr "翻訳する"
 
@@ -204,21 +231,6 @@ msgstr "${language}へコンテンツ言語を変更する。"
 #: ./LinguaPlone/linkTranslation.cpy
 msgid "message_content_linked_to"
 msgstr "現在のコンテンツの${language}言語での翻訳として'${title}'がリンクされました。"
-
-#. Default: "Translation content not found."
-#: ./LinguaPlone/linkTranslation.cpy:11
-msgid "message_content_not_found"
-msgstr "翻訳は見つかりませんでした。"
-
-#. Default: "Invalid language."
-#: ./LinguaPlone/linkTranslation.cpy:16
-msgid "message_invalid_language"
-msgstr "無効な言語"
-
-#. Default: "Please select different values for each language."
-#: ./LinguaPlone/validate_translate.vpy:14
-msgid "message_select_different_languages"
-msgstr "各言語に別の値を選択して下さい。"
 
 #. Default: "${type} has been created."
 #: ./LinguaPlone/createTranslation.cpy

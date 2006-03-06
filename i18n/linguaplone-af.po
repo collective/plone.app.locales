@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LinguaPlone\n"
-"POT-Creation-Date: 2005-09-11 22:17+0000\n"
+"POT-Creation-Date: 2006-03-06 22:17+0000\n"
 "PO-Revision-Date: 2005-12-07 15:48+0200\n"
 "Last-Translator: Andreas Pauley\n"
 "Language-Team: Afrikaans <plone-i18n@lists.sourceforge.net>\n"
@@ -16,13 +16,38 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: linguaplone\n"
 
+#: ./LinguaPlone/languageSelectorData.py:33
+msgid " (Content is language neutral)"
+msgstr ""
+
+#: ./LinguaPlone/languageSelectorData.py:38
+msgid " (Content translation not available)"
+msgstr " (Vertaalde inhoud nie beskikbaar nie)"
+
+#: ./LinguaPlone/linkTranslation.cpy:18
+msgid "Invalid language."
+msgstr "Ongeldige taal."
+
+#: ./LinguaPlone/changeLanguage.cpy:11
+msgid "Neutral"
+msgstr ""
+
+#: ./LinguaPlone/validate_translate.vpy:15
+msgid "Please select different values for each language."
+msgstr "Kies asb verskillende waardes vir elke taal."
+
+#: ./LinguaPlone/linkTranslation.cpy:12
+msgid "Translation content not found."
+msgstr "Vertaling inhoud nie gevind nie."
+
 #. Default: "Select the language you want to change the content to."
 #: ./LinguaPlone/manage_translations_form.pt
 msgid "description_change_language"
 msgstr "Kies die taal waarheen jy hierdie inhoud wil verander."
 
-#. Default: "The content you were viewing does not exist in the language you just selected. The language has been switched to ${language} and you can keep browsing the site in this language."
+#. Default: "The content you were viewing does not exist in the language you just selected. The site language has been switched to ${language} and you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_changed_translation_unavailable"
 msgstr "Die inhoud waarna jy besig was om te kyk is nie beskikbaar jou verkose taal nie. Die taal is verander na ${language}, en jy kan die webwerf in hierdie taal verder lees."
 
@@ -53,6 +78,7 @@ msgstr "Daar is geen vertalings om te verwyder nie."
 
 #. Default: "If you want to read the content of this document, you have to switch to one of the following languages:"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_read_translated_versions"
 msgstr "Indien jy hierdie dokument wil lees, sal jy een van die volgende tale moet kies:"
 
@@ -68,6 +94,7 @@ msgstr "Vertaal inhoud van ${from} na ${to}"
 
 #. Default: "This content does not exist in your current language, ${language}, but you can keep browsing the site in this language."
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "description_translation_unavailable"
 msgstr "Hierdie dokument is nie beskikbaar in jou verkose taal (${language}) nie, maar jy kan steeds die res van die webwerf in jou taal lees."
 
@@ -89,6 +116,7 @@ msgstr "Koppel Vertalings"
 #. Default: "Manage translations"
 #: ./LinguaPlone/global_languagemenu.pt
 #: ./LinguaPlone/manage_translations_form.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "header_manage_translations"
 msgstr "Administreer Vertalings"
 
@@ -99,6 +127,7 @@ msgstr "Verwyder Vertalings"
 
 #. Default: "Translation Unavailable"
 #: ./LinguaPlone/not_available_lang.pt
+#: ./LinguaPlone-Compat20/not_available_lang.pt
 msgid "header_translation_unavailable"
 msgstr "Vertaling Nie Beskikbaar"
 
@@ -128,17 +157,13 @@ msgid "label_change_language"
 msgstr "Verander Taal"
 
 #. Default: " (Content is language neutral)"
-#: ./LinguaPlone/languageSelectorData.py:31
+#: ./LinguaPlone/languageSelectorData.py
 msgid "label_content_is_language_neutral"
 msgstr " (Inhoud is neutraal ten opsigte van taal)"
 
-#. Default: " (Content translation not available)"
-#: ./LinguaPlone/languageSelectorData.py:35
-msgid "label_content_translation_not_available"
-msgstr " (Vertaalde inhoud nie beskikbaar nie)"
-
 #. Default: "Language settings..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_language_settings"
 msgstr "Taal instellings..."
 
@@ -159,6 +184,7 @@ msgstr "Koppel Vertaling"
 
 #. Default: "Manage translations..."
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_manage_translations"
 msgstr "Administreer vertalings..."
 
@@ -179,6 +205,7 @@ msgstr "Verander taal na ${language}"
 
 #. Default: "Translate into"
 #: ./LinguaPlone/global_languagemenu.pt
+#: ./LinguaPlone-Compat20/global_languagemenu.pt
 msgid "label_translate_into"
 msgstr "Vertaal na"
 
@@ -201,21 +228,6 @@ msgstr "Die inhoudstaal is verander na ${language}."
 #: ./LinguaPlone/linkTranslation.cpy
 msgid "message_content_linked_to"
 msgstr "'${title}' is gekoppel as die ${language} vertaling van die inhoud."
-
-#. Default: "Translation content not found."
-#: ./LinguaPlone/linkTranslation.cpy:11
-msgid "message_content_not_found"
-msgstr "Vertaling inhoud nie gevind nie."
-
-#. Default: "Invalid language."
-#: ./LinguaPlone/linkTranslation.cpy:16
-msgid "message_invalid_language"
-msgstr "Ongeldige taal."
-
-#. Default: "Please select different values for each language."
-#: ./LinguaPlone/validate_translate.vpy:14
-msgid "message_select_different_languages"
-msgstr "Kies asb verskillende waardes vir elke taal."
 
 #. Default: "${type} has been created."
 #: ./LinguaPlone/createTranslation.cpy
