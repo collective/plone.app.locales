@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2006-03-06 21:16+0000\n"
+"POT-Creation-Date: 2006-03-07 00:17+0000\n"
 "PO-Revision-Date: 2003-01-03 17:15-0200\n"
 "Last-Translator: 潘俊勇 <panjy@zopechina.com>\n"
 "Language-Team: www.zopechina.com <panjy@zopechina.com>\n"
@@ -2169,6 +2169,11 @@ msgstr "Plone和附加产品的配置区域。"
 msgid "description_copyright"
 msgstr "${plonecms} 的版权${copyright} 2000- ${current_year} 由 ${plonefoundation} 等所有。"
 
+#. Default: "The current owner is ${name}."
+#: ./skins/plone_forms/ownership_form.cpt
+msgid "description_current_owner"
+msgstr ""
+
 #. Default: "Groups are logical collections of users, like departments and business units. They are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 #: ./skins/plone_prefs/prefs_group_details.pt
 msgid "description_edit_groupproperties"
@@ -2349,6 +2354,16 @@ msgstr "这个文件夹没有可见的项目。欲添加内容，您可以点击
 #: ./skins/plone_login/login_failed.pt
 msgid "description_not_logged_in_username_incorrect"
 msgstr "您还没有正确登录。您的用户名和(或)口令可能不正确"
+
+#. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
+#: ./skins/plone_prefs/prefs_groups_overview.cpt
+msgid "description_pas_group_listing"
+msgstr ""
+
+#. Default: "Note: Some or all of your PAS user source plugins do not allow listing of users, so you may not see the users defined by those plugins unless doing a specific search."
+#: ./skins/plone_prefs/prefs_users_overview.cpt
+msgid "description_pas_users_listing"
+msgstr ""
 
 #. Default: "Site-wide settings."
 #: ./skins/plone_prefs/reconfig_form.cpt
@@ -2780,6 +2795,11 @@ msgstr "安装/卸载产品"
 msgid "heading_advanced_search"
 msgstr "内容高级搜索"
 
+#. Default: "Advanced settings"
+#: ./skins/plone_forms/folder_localrole_form.pt
+msgid "heading_advanced_settings"
+msgstr ""
+
 #. Default: "Latest content created by this user"
 #: ./skins/plone_content/author.cpt
 msgid "heading_author_content"
@@ -2990,6 +3010,11 @@ msgstr "4.x版本"
 #: ./skins/plone_login/enabling_cookies.pt
 msgid "heading_netscape_version_6x"
 msgstr "6.x版本"
+
+#. Default: "New owner"
+#: ./skins/plone_forms/ownership_form.cpt
+msgid "heading_new_owner"
+msgstr ""
 
 #. Default: "Insufficient Privileges"
 #: ./skins/plone_login/insufficient_privileges.pt
@@ -3607,6 +3632,11 @@ msgstr "返回登录名中保含此值的所有网站成员."
 #: ./skins/plone_forms/search_form.pt
 msgid "help_search_new_items_since"
 msgstr "返回自从你上次登录、上周等开始新增的内容。"
+
+#. Default: "Search for users."
+#: ./skins/plone_forms/ownership_form.cpt
+msgid "help_search_new_owner"
+msgstr ""
 
 #. Default: "As a reviewer, you may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
 #: ./skins/plone_forms/search_form.pt
@@ -4526,6 +4556,11 @@ msgstr "组名"
 msgid "label_group_properties"
 msgstr "组属性"
 
+#. Default: "Group Search"
+#: ./skins/plone_prefs/prefs_groups_overview.cpt
+msgid "label_group_search"
+msgstr ""
+
 #. Default: "Groups"
 #: ./skins/plone_prefs/prefs_groups_overview.cpt
 #: ./skins/plone_prefs/prefs_users_overview.cpt
@@ -4804,6 +4839,11 @@ msgstr "新创建的内容, 自从..."
 #: ./skins/plone_forms/ownership_form.cpt
 msgid "label_new_owner"
 msgstr "新的所有者"
+
+#. Default: "Search for new owner"
+#: ./skins/plone_forms/ownership_form.cpt
+msgid "label_new_owner_search"
+msgstr ""
 
 #. Default: "New password"
 #: ./skins/plone_login/login_password.cpt
@@ -5687,6 +5727,11 @@ msgstr "发布详细信息"
 msgid "legend_search_details"
 msgstr "搜索详细信息"
 
+#. Default: "Search for possible new owner"
+#: ./skins/plone_forms/ownership_form.cpt
+msgid "legend_search_owners"
+msgstr ""
+
 #. Default: "Search Terms"
 #: ./skins/plone_forms/folder_localrole_form.pt
 #: ./skins/plone_forms/search_form.pt
@@ -6084,13 +6129,19 @@ msgstr "没有评注。"
 msgid "no_file_uploaded"
 msgstr "（还没有上载文件）"
 
+#. Default: "No groups were found using your search criteria."
+#: ./skins/plone_forms/folder_localrole_form.pt
+msgid "no_groups_found"
+msgstr ""
+
 #. Default: "(No image has been uploaded yet)"
 #: ./skins/plone_content/image_view.pt
 msgid "no_image_uploaded"
 msgstr "（还没有上载图片）"
 
-#. Default: "No members were found using your <strong>Search Criteria</strong>"
+#. Default: "No users were found using your search criteria."
 #: ./skins/plone_forms/folder_localrole_form.pt
+#, fuzzy
 msgid "no_members_found"
 msgstr "按照您的<strong>搜索条件</strong>找不到任何网站成员"
 
@@ -6529,8 +6580,9 @@ msgstr "没有修改的条目。"
 msgid "text_no_pil_installed"
 msgstr ""
 
-#. Default: "Enter a group or user name to search for, or click 'Show All'."
+#. Default: "Enter a group or user name to search for."
 #: ./skins/plone_prefs/prefs_group_members.cpt
+#, fuzzy
 msgid "text_no_searchstring"
 msgstr "输入需要搜索的用户或组名，或者点击“全部显示”。"
 
@@ -6539,8 +6591,9 @@ msgstr "输入需要搜索的用户或组名，或者点击“全部显示”。
 msgid "text_no_user_by_name"
 msgstr "没有这个名字的用户"
 
-#. Default: "Enter a username to search for, or click 'Show All'"
+#. Default: "Enter a username to search for"
 #: ./skins/plone_prefs/prefs_users_overview.cpt
+#, fuzzy
 msgid "text_no_user_searchstring"
 msgstr "输入要查找的用户，或者点击“全部显示”"
 
