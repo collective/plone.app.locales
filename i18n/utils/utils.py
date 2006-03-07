@@ -68,11 +68,13 @@ def getProduct(file):
 
 def getLongProductName(product):
     """ Returns the product name for a known abbreviation or the given value."""
-    if product in ['atct', 'atrbw', 'at', 'plt', 'lp', 'cmfpw']:
+    if product in ['atct', 'atrbw', 'at', 'prt', 'plt', 'lp', 'cmfpw']:
         if product == 'at':
             product = 'archetypes'
         elif product == 'atct':
             product = 'atcontenttypes'
+        elif product == 'prt':
+            product = 'passwordresettool'
         elif product == 'plt':
             product = 'plonelanguagetool'
         elif product == 'lp':

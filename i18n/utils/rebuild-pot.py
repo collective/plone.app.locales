@@ -63,6 +63,8 @@ def main():
                     skins = os.path.join(skins, 'ATReferenceBrowserWidget')
                 elif product == 'plone':
                     skins = os.path.join(skins, 'CMFPlone')
+                elif product == 'passwordresettool':
+                    skins = os.path.join(skins, 'PasswordResetTool')
                 elif product == 'plonelanguagetool':
                     skins = os.path.join(skins, 'PloneLanguageTool')
                 elif product == 'linguaplone':
