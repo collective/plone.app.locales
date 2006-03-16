@@ -18,7 +18,8 @@ def main():
 
     os.chdir('..')
     chart = os.curdir + os.sep + 'charts' + os.sep + 'plone-combined-chart.gif'
-    title = '"Plone 2.1.2"'
+    version = '2.1.3'
+    title = '"Plone %s"' % version
 
     pots = getPotFiles()
 
@@ -26,7 +27,11 @@ def main():
     for pot in pots:
         product = getProduct(pot)
         if not product in products:
-            products.append(product)
+            if version.startswith('2.1') and product \
+                    in ['cmfplacefulworkflow', 'passwordresettool']:
+                pass
+            else:
+                products.append(product)
 
     products = ' '.join(products)
 
