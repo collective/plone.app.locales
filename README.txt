@@ -2,17 +2,7 @@ PloneTranslations
 =================
 
 This product contains the translation files for Plone, Archetypes,
-ATContentTypes, ATReferenceBrowserWidget, PloneLanguageTool and LinguPlone.
+ATContentTypes, ATReferenceBrowserWidget, CMFPlacefulWorkflow,
+PasswordResetTool, PloneLanguageTool and LinguaPlone.
 
-On April 9th, 2005 the i18n directory was merged with the PloneTranslations
-product and the repository was moved from cvs.sf.net to svn.plone.org
-please fix/add all translations here.
-
-On May 4th, 2005 the i18n/locales directories of Archetypes,
-ATContentTypes and ATReferenceBrowserWidget were included in PloneTranslations.
-
-On September 11th, 2005 the i18n directories of PloneLanguageTool and
-LinguaPlone were included.
-
-This PloneTranslations version is suitable for the Plone-2.1 series, 
-please use PloneTranslations-0.7 with Plone-2.0.x 
+This PloneTranslations version is suitable for both Plone 2.1 and Plone 2.5.
