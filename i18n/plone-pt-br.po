@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2006-03-07 00:17+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2006-03-24 01:30-0300\n"
 "Last-Translator: Dorneles Treméa <dorneles@x3ng.com.br>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -311,6 +311,7 @@ msgstr "Conteúdo"
 
 #. Default: "Copy"
 #: action defined in portal_actions
+#: action_icon id copy_icon.gif - category object_buttons
 msgid "Copy"
 msgstr "Copiar"
 
@@ -351,6 +352,7 @@ msgstr "Critério de autor atual"
 
 #. Default: "Cut"
 #: action defined in portal_actions
+#: action_icon id cut_icon.gif - category object_buttons
 msgid "Cut"
 msgstr "Recortar"
 
@@ -376,6 +378,7 @@ msgstr "Página Padrão"
 
 #. Default: "Delete"
 #: action defined in portal_actions
+#: action_icon id delete_icon.gif - category object_buttons
 msgid "Delete"
 msgstr "Excluir"
 
@@ -495,9 +498,9 @@ msgid "ExpirationDate"
 msgstr "Data de expiração"
 
 #. Default: "External Edit"
-#: type action defined on Discussion Item
 #: type action defined on Page
 #: type action defined on Event
+#: type action defined on Favorite
 msgid "External Edit"
 msgstr "Editor Externo"
 
@@ -846,6 +849,11 @@ msgstr "Data de Modificação"
 msgid "My Folder"
 msgstr "Minha Pasta"
 
+#. Default: "Navigation"
+#: ./skins/plone_portlets/portlet_navigation.pt
+msgid "Navigation"
+msgstr ""
+
 #. Default: "Navigation Settings"
 #: action_icon id navigation_icon.gif - category controlpanel
 msgid "Navigation Settings"
@@ -893,6 +901,13 @@ msgstr "Nenhuma alteração foi feita."
 #: ./skins/plone_prefs/prefs_group_modify.cpy:15
 msgid "No changes done."
 msgstr "Alterações não realizadas."
+
+#. Default: "Object locked"
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "Object locked"
+msgstr ""
 
 #: ./skins/plone_scripts/folder_copy.cpy:20
 msgid "One or more items not copyable."
@@ -950,6 +965,7 @@ msgstr "As senhas devem ser iguais."
 
 #. Default: "Paste"
 #: action defined in portal_actions
+#: action_icon id paste_icon.gif - category object_buttons
 msgid "Paste"
 msgstr "Colar"
 
@@ -1372,10 +1388,10 @@ msgstr "Pasta Esperta"
 msgid "Smart Folder Settings"
 msgstr "Configurações da Pasta Esperta"
 
-#. Default: "Smart Folder View"
+#. Default: "Smart Folder view"
 #: dynamic view name template atct_topic_view on type Topic
-msgid "Smart Folder View"
-msgstr "Pasta Esperta"
+msgid "Smart Folder view"
+msgstr ""
 
 #. Default: "Sort Criterion"
 #: portal type title of type with description A sort criterion
@@ -1601,12 +1617,12 @@ msgstr "Este arquivo não é texto. Para enviar arquivos binários, crie um cont
 msgid "This username is reserved. Please choose a different name."
 msgstr "Este nome de usuário está reservado. Favor escolher um nome diferente."
 
-#. Default: "Thumbnail View"
+#. Default: "Thumbnail view"
 #: dynamic view name template atct_album_view on type Folder
 #: dynamic view name template atct_album_view on type Large Plone Folder
 #: dynamic view name template atct_album_view on type Topic
-msgid "Thumbnail View"
-msgstr "Visão de Miniaturas"
+msgid "Thumbnail view"
+msgstr ""
 
 #. Default: "Title"
 #: index friendly name of index sortable_title
@@ -1679,7 +1695,7 @@ msgstr "Administração de usuários e grupos"
 msgid "View"
 msgstr "Visão"
 
-#: ./skins/plone_form_scripts/saveDefaultPage.cpy:33
+#: ./skins/plone_scripts/selectViewTemplate.cpy:23
 msgid "View changed."
 msgstr "Visão alterada."
 
@@ -1896,11 +1912,6 @@ msgstr "Mais..."
 #: ./skins/plone_portlets/portlet_favorites.pt
 msgid "box_my_favorites"
 msgstr "Meus favoritos"
-
-#. Default: "Navigation"
-#: ./skins/plone_portlets/portlet_navigation.pt
-msgid "box_navigation"
-msgstr "Navegação"
 
 #. Default: "New user?"
 #: ./skins/plone_portlets/portlet_login.pt
@@ -2162,15 +2173,50 @@ msgstr "Área de configuração do Plone e dos produtos adicionais."
 msgid "description_copyright"
 msgstr "O ${plonecms} tem direitos reservados ${copyright} 2000-${current_year} pela ${plonefoundation}."
 
-#. Default: "The current owner is ${name}."
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "description_current_owner"
-msgstr "O dono atual é ${name}."
+#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately evident, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt
+msgid "description_debug_mode"
+msgstr ""
+
+#. Default: "Fill in the details of this document."
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "description_edit_document"
+msgstr ""
+
+#. Default: "Fill in the details of the event you want to add."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "description_edit_event"
+msgstr ""
+
+#. Default: "Add the relevant details of the file to be added in the form below, select the file with the 'Browse' button, and press 'Save'."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "description_edit_file"
+msgstr ""
 
 #. Default: "Groups are logical collections of users, like departments and business units. They are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 #: ./skins/plone_prefs/prefs_group_details.pt
 msgid "description_edit_groupproperties"
 msgstr "Grupos são coleções lógicas de usuários, como departamentos e unidades de negócio. Eles não estão diretamente ligados com permissões em um nível global. Você normalmente usa papéis para isso, atribuindo papéis para um grupo em particular."
+
+#. Default: "Using this form, you can enter details about the image, and upload an image if required."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "description_edit_image"
+msgstr ""
+
+#. Default: "A link is a pointer to a location on the internet or intranet. Enter the relevant details below, and press 'Save'."
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "description_edit_link_item"
+msgstr ""
+
+#. Default: "A news item is a small piece of news that is published on the front page. Add the relevant details below, and press 'Save'."
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "description_edit_news_item"
+msgstr ""
+
+#. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "description_edit_properties"
+msgstr ""
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to ${link}."
 #: ./skins/plone_login/login_failed.pt
@@ -2347,16 +2393,6 @@ msgstr "Essa pasta não possui ítens visíveis. Para adicionar conteúdo, press
 msgid "description_not_logged_in_username_incorrect"
 msgstr "Você ainda não está autenticado. Seu usuário e/ou senha podem estar incorretos."
 
-#. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
-msgid "description_pas_group_listing"
-msgstr "Nota: Alguns ou todos os plugins de fontes de grupos do PAS não permitem a listagem de grupos, então você não conseguirá ver os grupos definidos por estes plugins a menos que você estiver fazendo uma busca específica."
-
-#. Default: "Note: Some or all of your PAS user source plugins do not allow listing of users, so you may not see the users defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_users_overview.cpt
-msgid "description_pas_users_listing"
-msgstr "Nota: Alguns ou todos os plugins de fontes de usuários do PAS não permitem a listagem de usuários, então você não conseguirá ver os usuários definidos por estes plugins a menos que você estiver fazendo uma busca específica."
-
 #. Default: "Site-wide settings."
 #: ./skins/plone_prefs/reconfig_form.cpt
 msgid "description_plone_setup"
@@ -2366,6 +2402,16 @@ msgstr "Configurações gerais do site"
 #: ./skins/plone_prefs/prefs_portal_properties_list.pt
 msgid "description_portal_properties"
 msgstr "Esta é a lista de propriedades que você pode definir para o seu site."
+
+#. Default: "To make products show up here, put them in the directory ${location} on the file system, and restart the server process."
+#: ./skins/plone_prefs/prefs_install_products_form.pt
+msgid "description_product_location"
+msgstr ""
+
+#. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt
+msgid "description_production_mode"
+msgstr ""
 
 #. Default: "An item's status (also called its review state) determines who can see it. A <strong>private</strong> item can only be viewed by its Owner and by the site management. Only <strong>published</strong> items are available to the general user base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by <strong>submitting it for review</strong>. <br/> Another way to control the visibility of an item is with its <strong>effective date</strong>. An item is not publicly searchable before its effective date, <em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
 #: ./skins/plone_forms/content_status_history.cpt
@@ -2543,8 +2589,9 @@ msgstr "Divulgação permite que você divulgue essa pasta de forma que ela seja
 msgid "description_syndication_setup"
 msgstr "Aqui você configura algumas opções que afetam os padrões de divulgação em todo o site."
 
-#. Default: "Plone and the Plone logo are trademarks of the ${plonefoundation}."
+#. Default: "Plone <sup/> and the Plone logo are registered trademarks of the ${plonefoundation}."
 #: ./skins/plone_templates/footer.pt
+#, fuzzy
 msgid "description_trademark"
 msgstr "Plone™ e o logo do Plone são marcas registradas da ${plonefoundation}."
 
@@ -2787,11 +2834,6 @@ msgstr "Adicionar/Remover produtos"
 msgid "heading_advanced_search"
 msgstr "Busca avançada por conteúdo"
 
-#. Default: "Advanced settings"
-#: ./skins/plone_forms/folder_localrole_form.pt
-msgid "heading_advanced_settings"
-msgstr "Configurações Avançadas"
-
 #. Default: "Latest content created by this user"
 #: ./skins/plone_content/author.cpt
 msgid "heading_author_content"
@@ -2848,10 +2890,27 @@ msgstr "Permissões de compartilhamento atuais de ${folder}"
 msgid "heading_document_actions"
 msgstr "Ações do documento"
 
+#. Default: "Edit Folder"
+#: ./skins/plone_content/folder_edit_form.cpt
+msgid "heading_edit_folder_properties"
+msgstr ""
+
 #. Default: "Edit Group Properties for ${groupname}"
 #: ./skins/plone_prefs/prefs_group_details.pt
 msgid "heading_edit_groupproperties"
 msgstr "Editar as propriedades do grupo ${groupname}"
+
+#. Default: "Edit ${itemtype}"
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "heading_edit_item"
+msgstr ""
+
+#. Default: "Edit Properties"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "heading_edit_properties"
+msgstr ""
 
 #. Default: "How to Enable Cookies"
 #: ./skins/plone_login/enabling_cookies.pt
@@ -3002,11 +3061,6 @@ msgstr "Versão 4.x"
 #: ./skins/plone_login/enabling_cookies.pt
 msgid "heading_netscape_version_6x"
 msgstr "Versão 6.x"
-
-#. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "heading_new_owner"
-msgstr "Novo dono"
 
 #. Default: "Insufficient Privileges"
 #: ./skins/plone_login/insufficient_privileges.pt
@@ -3243,6 +3297,11 @@ msgstr "Você agora está autenticado"
 msgid "help_add_restriction_mode"
 msgstr "Por favor selecione como você gostaria de controlar que tipos de conteúdo são adicionáveis nessa pasta."
 
+#. Default: "'Default' will use the site-wide setting for comments."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_allow_discussion"
+msgstr ""
+
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -3287,6 +3346,21 @@ msgstr "Um comentário sobre este link."
 msgid "help_confirm_password"
 msgstr "Informe novamente a senha. Certifique-se que as senhas informadas são idênticas."
 
+#. Default: "E-mail address to display for information regarding the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_email"
+msgstr ""
+
+#. Default: "Contact person or organization for the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_name"
+msgstr ""
+
+#. Default: "Phone number to call for information and/or booking."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_phone"
+msgstr ""
+
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -3300,7 +3374,7 @@ msgid "help_content_ext_editor"
 msgstr "Quando selecionado, um ícone ficará visível em cada página permitindo que você edite o conteúdo com o seu editor favorito ao invés de usar editores dentro do navegador. Isso requer que uma aplicação adicional chamada ExternalEditor seja instalada no lado cliente. Pergunte ao seu administrador caso precise de mais informações."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: widget description of LinesWidget for label Contributors
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "help_contributors"
 msgstr "Os nomes das pessoas que contribuíram para esse item. Cada contribuidor deve estar em uma linha separada."
 
@@ -3310,7 +3384,7 @@ msgid "help_cookie_persistence"
 msgstr "Manter o cookie da aparência indefinidamente."
 
 #. Default: "The copyrights on this item."
-#: widget description of TextAreaWidget for label Copyrights
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "help_copyrights"
 msgstr "Informação sobre os direitos reservados desse item."
 
@@ -3328,6 +3402,11 @@ msgstr "Pessoas responsáveis por criar o conteúdo desse item. Por favor, infor
 #: widget description of StringWidget for label Field name
 msgid "help_criteria_field_name"
 msgstr "Não deve coniter espaços, sublinhados ou maiúsculas e minúsculas misturadas. Nome curto é parte do endereço web do item."
+
+#. Default: "If selected, the navigation tree will only show the current folder and its children at all times."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt
+msgid "help_current_folder_only"
+msgstr ""
 
 #. Default: "Enter your current password."
 #: ./skins/plone_prefs/password_form.pt
@@ -3364,10 +3443,28 @@ msgstr "Especifique o idioma padrão a ser atribuído para os novos ítens a ser
 msgid "help_default_skin"
 msgstr "Selecione a aparência padrão do site Plone."
 
-#. Default: "A short summary of the content"
-#: widget description of TextAreaWidget for label Description
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+#, fuzzy
 msgid "help_description"
 msgstr "Uma breve descrição do conteúdo"
+
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "help_description_image"
+msgstr ""
+
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "help_description_link"
+msgstr ""
+
+#. Default: "Displayed on the news page along with the headline."
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "help_description_news"
+msgstr ""
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
 #: ./skins/plone_prefs/personalize_form.cpt
@@ -3375,7 +3472,13 @@ msgstr "Uma breve descrição do conteúdo"
 msgid "help_display_names"
 msgstr "Determina se Nomes Curtos (Também conhecidos como IDs) são alteráveis quando os ítens estão sendo editados. Se os Nomes Curtos não forem mostrados, eles serão gerados automaticamente."
 
+#. Default: "This file is a text file, and you can edit its contents directly."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "help_edit_contents"
+msgstr ""
+
 #. Default: "The date when the item will be available (of course it needs to be published too). If no date is selected the item will be effective immediately."
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "help_effective_date"
 msgstr "A data quando este item estará disponível (ele precisa estar publicado também). Se nenhuma data for selecionada o item será efetivado imediatamente."
@@ -3386,15 +3489,46 @@ msgstr "A data quando este item estará disponível (ele precisa estar publicado
 msgid "help_email_creation"
 msgstr "Informe seu endereço de email. Isso é necessário caso você esqueça sua senha. Nós respeitamos sua privacidade e não iremos fornecer seu endereço a terceiros ou divulgar-lo em nenhum lugar."
 
+#. Default: "Click the calendar icon to select a date or browse the calendar."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_end"
+msgstr ""
+
+#. Default: "Enter the location where the event will take place."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_location"
+msgstr ""
+
+#. Default: "Click the calendar icon to select a date or browse the calendar."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_start"
+msgstr ""
+
+#. Default: "Multiple event types possible by depressing Ctrl (or Apple key on Mac)."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_type"
+msgstr ""
+
+#. Default: "Optional web address of a page containing more info about the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_url"
+msgstr ""
+
 #. Default: "If selected, this item will not appear in the navigation tree"
 #: widget description of BooleanWidget for label Exclude from navigation
 msgid "help_exclude_from_nav"
 msgstr "Se selecionado, esse item não irá aparecer na árvore de navegação"
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "help_expiration_date"
 msgstr "A data quando o item expira. Isso irá automaticamente tornar o item invisível para os outros na data informada. Se nenhuma data for escolhida, o item nunca irá expirar."
+
+#. Default: "Select the file to be added by clicking the 'Browse' button."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "help_file"
+msgstr ""
 
 #. Default: "If you are unsure of which format to use, just select Plain Text and type the document as you usually do."
 #: ./skins/plone_wysiwyg/wysiwyg_support.pt
@@ -3422,6 +3556,11 @@ msgstr "Um identificador único para o grupo. Ele não pode ser modificado depoi
 msgid "help_homepage"
 msgstr "A URL para a sua página pessoal externa, se você tem uma."
 
+#. Default: "Select the image to be added by clicking the 'Browse' button."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "help_image"
+msgstr ""
+
 #. Default: "Of the types selected above, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected above will be addable via a separate form accessible from the same menu."
 #: ./skins/plone_forms/folder_constraintypes_form.cpt
 msgid "help_immediately_addable_types"
@@ -3436,6 +3575,16 @@ msgstr "Caso marcado, o Plone irá tentar modificar o estado de todo o conteúdo
 #: widget description of BooleanWidget for label Inherit Criteria
 msgid "help_inherit_criteria"
 msgstr "Limitar o resultado da busca da Pasta Esperta pai, usando os critérios desta Pasta Esperta."
+
+#. Default: "Keywords relate different types of content to each other. Don't select too many categories."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_keyword"
+msgstr ""
+
+#. Default: "The language of this item."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_language"
+msgstr ""
 
 #. Default: "If selected, only the 'Number of Items' indicated below will be displayed."
 #: widget description of BooleanWidget for label Limit Search Results
@@ -3480,6 +3629,11 @@ msgstr "Aparência do site."
 msgid "help_message"
 msgstr "Por favor insira a mensagem que você quer enviar."
 
+#. Default: "The MIME-type of the item. If you don't know what this does, just leave it."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_mimetype"
+msgstr ""
+
 #. Default: "Date this content was modified last"
 #: widget description of CalendarWidget for label Modification Date
 msgid "help_modification_date"
@@ -3489,6 +3643,11 @@ msgstr "Data de modificação do conteúdo"
 #: ./skins/plone_prefs/prefs_navigation_form.cpt
 msgid "help_navigationtypes"
 msgstr "Os tipos de conteúdo que devem ser mostrados na árvore de navegação e no mapa do site."
+
+#. Default: "Each new keyword must be on a separate line."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_new_keyword"
+msgstr ""
 
 #. Default: "Enter your new password. Minimum 5 characters."
 #: ./skins/plone_login/login_password.cpt
@@ -3626,13 +3785,9 @@ msgstr "Retorna os membros cujo nome de usuário contenha esse valor."
 msgid "help_search_new_items_since"
 msgstr "Retorna os ítens adicionados desde seu último acesso, última semana, etc."
 
-#. Default: "Search for users."
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "help_search_new_owner"
-msgstr "Buscar por usuários"
-
-#. Default: "As a reviewer, you may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
+#. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
 #: ./skins/plone_forms/search_form.pt
+#, fuzzy
 msgid "help_search_review_status"
 msgstr "Como revisor, você pode buscar por ítens baseando-se no estado de revisão. Se você quiser restringir resultados dos ítens a certos estados, selecione-os na lista."
 
@@ -3696,8 +3851,11 @@ msgstr "Exibe e permite aos usuários editarem o identificador \"Nome Curto\" do
 msgid "help_short_name_url"
 msgstr "O Nome Curto é a parte que aparece na URL do item."
 
-#. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: widget description of IdWidget for label Short Name
+#. Default: "Short Name is part of the item's web address. For accessibility reasons, do not use spaces, upper case, underscores, or special characters."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+#, fuzzy
 msgid "help_shortname"
 msgstr "Não deve conter espaços, sublinhados, letras maiúsculas e minúsculas misturadas. O Nome Curto é parte do endereço web do item."
 
@@ -3781,9 +3939,14 @@ msgstr "Controla com que freqüência o canal é atualizado."
 msgid "help_template_mixin"
 msgstr "Escolha o template que será utilizada para visualizar esse item."
 
-#. Default: "Add http:// to link outside the site."
-#: widget description of StringWidget for label URL
-#: widget description of StringWidget for label Event URL
+#. Default: "Uploaded files will replace the body text entered above."
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "help_uploads"
+msgstr ""
+
+#. Default: "Prefix is optional; if not provided, the link will be relative."
+#: ./skins/plone_content/link_edit_form.cpt
+#, fuzzy
 msgid "help_url"
 msgstr "Adicione http:// para links fora do site."
 
@@ -3945,8 +4108,9 @@ msgstr "Busca Avançada"
 msgid "label_affected_content"
 msgstr "Conteúdo Afetado"
 
-#. Default: "Allow Discussion on this item"
-#: widget label of SelectionWidget - description ""
+#. Default: "Allow comments on this item?"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_allow_discussion"
 msgstr "Permitir Discussão"
 
@@ -4039,7 +4203,7 @@ msgid "label_biography"
 msgstr "Biografia"
 
 #. Default: "Body Text"
-#: widget label of RichWidget - description ""
+#: ./skins/plone_content/document_edit_form.cpt
 msgid "label_body_text"
 msgstr "Corpo do texto"
 
@@ -4051,6 +4215,7 @@ msgstr "Valor"
 #. Default: "by ${author}"
 #: ./skins/plone_content/document_byline.pt
 #: ./skins/plone_content/folder_listing.pt
+#: ./skins/plone_content/folder_summary_view.pt
 msgid "label_by_author"
 msgstr "por ${author}"
 
@@ -4060,9 +4225,9 @@ msgid "label_calendar"
 msgstr "Calendário"
 
 #. Default: "Cancel"
-#: ./skins/plone_forms/content_status_history.cpt
-#: ./skins/plone_forms/folder_constraintypes_form.cpt
-#: ./skins/plone_forms/folder_rename_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_cancel"
 msgstr "Cancelar"
 
@@ -4111,6 +4276,11 @@ msgstr "Selecionar um item <br /> como visão padrão"
 #: ./skins/plone_prefs/reconfig_form.cpt
 msgid "label_choose_language"
 msgstr "Escolher Idioma"
+
+#. Default: "Choose MIME-type"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_choose_mime"
+msgstr ""
 
 #. Default: "Display"
 #: ./skins/plone_templates/global_contentmenu.pt
@@ -4179,17 +4349,17 @@ msgid "label_confirm_password"
 msgstr "Confirme a senha"
 
 #. Default: "Contact E-mail"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_email"
 msgstr "Email de Contato"
 
 #. Default: "Contact Name"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_name"
 msgstr "Nome do Contato"
 
 #. Default: "Contact Phone"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_phone"
 msgstr "Telefone de Contato"
 
@@ -4205,7 +4375,7 @@ msgid "label_content_editor"
 msgstr "Editor de conteúdo"
 
 #. Default: "Contributors"
-#: widget label of LinesWidget - description "The names of people that have contributed to this item. Each contributor should be on a separate line."
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_contributors"
 msgstr "Contribuidores:"
 
@@ -4225,7 +4395,7 @@ msgid "label_copy_to_present"
 msgstr "Copiar para a versão atual"
 
 #. Default: "Copyrights"
-#: widget label of TextAreaWidget - description "The copyrights on this item."
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_copyrights"
 msgstr "Direitos Autorais"
 
@@ -4253,6 +4423,11 @@ msgstr "CSS Válido"
 #: ./skins/plone_forms/select_default_view.cpt
 msgid "label_current"
 msgstr "(atual)"
+
+#. Default: "Root navigation tree in current folder"
+#: ./skins/plone_prefs/prefs_navigation_form.cpt
+msgid "label_current_folder_only"
+msgstr ""
 
 #. Default: "Folder display"
 #: ./skins/plone_templates/global_contentmenu.pt
@@ -4311,7 +4486,9 @@ msgid "label_delete_roles_users_groups"
 msgstr "Exclui Papéis selecionados e Usuários/Grupos"
 
 #. Default: "Description"
-#: ./skins/plone_forms/search_form.pt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_description"
 msgstr "Descrição"
 
@@ -4326,18 +4503,21 @@ msgstr "Desabilitar Divulgação"
 msgid "label_disabled_display_menu"
 msgstr "Exibição"
 
-#. Default: "Default"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Use default setting for comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_default"
 msgstr "Padrão"
 
-#. Default: "Disabled"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Never allow comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_disabled"
 msgstr "Desabilitado"
 
-#. Default: "Enabled"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Always allow comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_enabled"
 msgstr "Habilitado"
 
@@ -4352,6 +4532,11 @@ msgstr "Este documento está bloqueado."
 msgid "label_edit"
 msgstr "Editar"
 
+#. Default: "Edit Contents"
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "label_edit_contents"
+msgstr ""
+
 #. Default: "Allow editing of Short Names"
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -4359,6 +4544,7 @@ msgid "label_edit_short_names"
 msgstr "Permitir a edição de Nomes Curtos"
 
 #. Default: "Effective Date"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "label_effective_date"
 msgstr "Data de Efetivação"
@@ -4431,24 +4617,29 @@ msgid "label_event_byline"
 msgstr "(${location}, de ${start} até ${end})"
 
 #. Default: "Event Ends"
-#: widget label of CalendarWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_end"
 msgstr "Final do Evento"
 
 #. Default: "Event Location"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_location"
 msgstr "Local do Evento"
 
 #. Default: "Event Starts"
-#: widget label of CalendarWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_start"
 msgstr "Início do Evento"
 
 #. Default: "Event Type(s)"
-#: widget label of MultiSelectionWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_type"
 msgstr "Tipos de Evento"
+
+#. Default: "Event URL"
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "label_event_url"
+msgstr ""
 
 #. Default: "Exception"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
@@ -4470,7 +4661,13 @@ msgstr "Valor da Exceção"
 msgid "label_exclude_from_nav"
 msgstr "Excluir da navegação"
 
+#. Default: "Existing keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_existing_keywords"
+msgstr ""
+
 #. Default: "Expiration Date"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "label_expiration_date"
 msgstr "Data de Expiração"
@@ -4482,7 +4679,7 @@ msgid "label_ext_editor"
 msgstr "Habilitar edição externa"
 
 #. Default: "File"
-#: widget label of FileWidget - description ""
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_file"
 msgstr "Arquivo"
 
@@ -4549,17 +4746,17 @@ msgstr "Nome do Grupo"
 msgid "label_group_properties"
 msgstr "Propriedades do Grupo"
 
-#. Default: "Group Search"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
-msgid "label_group_search"
-msgstr "Busca de Grupos"
-
 #. Default: "Groups"
 #: ./skins/plone_prefs/prefs_groups_overview.cpt
-#: ./skins/plone_prefs/prefs_users_overview.cpt
 #: ./skins/plone_prefs/prefs_user_group_search_form.pt
+#: ./skins/plone_prefs/prefs_users_overview.cpt
 msgid "label_groups"
 msgstr "Grupos"
+
+#. Default: "Headline"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "label_headline"
+msgstr ""
 
 #. Default: "here"
 #: ./skins/plone_forms/folder_localrole_form.pt
@@ -4612,7 +4809,7 @@ msgid "label_ignored_exception"
 msgstr "Ignorar tipos de exceções"
 
 #. Default: "Image"
-#: widget label of ImageWidget - description ""
+#: ./skins/plone_content/image_edit_form.cpt
 msgid "label_image"
 msgstr "Imagem"
 
@@ -4657,6 +4854,7 @@ msgid "label_item_type"
 msgstr "Tipo de Item"
 
 #. Default: "Keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/search_form.pt
 msgid "label_keywords"
 msgstr "Palavras-chave"
@@ -4667,6 +4865,7 @@ msgid "label_konqueror_linux"
 msgstr "Konqueror (Linux)"
 
 #. Default: "Language"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
 msgid "label_language"
@@ -4676,6 +4875,11 @@ msgstr "Idioma"
 #: ./skins/plone_forms/member_search_form.pt
 msgid "label_last_logged_in"
 msgstr "Último acesso"
+
+#. Default: "Lead-in"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "label_lead-in"
+msgstr ""
 
 # ATTopic
 #. Default: "Limit Search Results"
@@ -4781,6 +4985,11 @@ msgstr "Idioma Principal:"
 msgid "label_message"
 msgstr "Mensagem"
 
+#. Default: "MIME type"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_mimetype"
+msgstr ""
+
 #. Default: "Modification Date"
 #: widget label of CalendarWidget - description "Date this content was modified last"
 msgid "label_modification_date"
@@ -4828,15 +5037,15 @@ msgstr "Netscape 6 e mais recentes (Todas as plataformas)"
 msgid "label_new_items_since"
 msgstr "Notícias desde"
 
+#. Default: "New keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_new_keywords"
+msgstr ""
+
 #. Default: "New owner"
 #: ./skins/plone_forms/ownership_form.cpt
 msgid "label_new_owner"
 msgstr "Novo dono"
-
-#. Default: "Search for new owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "label_new_owner_search"
-msgstr "Buscar por um novo dono"
 
 #. Default: "New password"
 #: ./skins/plone_login/login_password.cpt
@@ -4871,6 +5080,10 @@ msgstr "Nenhum grupo foi especificado."
 msgid "label_no_panels_available"
 msgstr "Nenhum painel de preferências disponível."
 
+#: ./skins/plone_scripts/livesearch_reply.py:57
+msgid "label_no_results_found"
+msgstr ""
+
 #. Default: "Number of exceptions to keep"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
 msgid "label_number_exceptions"
@@ -4878,6 +5091,7 @@ msgstr "Número de exceções a serem mantidas."
 
 #. Default: "Object locked"
 #: ./skins/plone_content/document_byline.pt
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_object_locked"
 msgstr "Objeto bloqueado"
 
@@ -4939,8 +5153,9 @@ msgstr "Pastas"
 msgid "label_perform_search"
 msgstr "Buscar"
 
-#. Default: "Plone CMS Open Source Content Management System"
+#. Default: "Plone <sup/> CMS Open Source Content Management System"
 #: ./skins/plone_templates/footer.pt
+#, fuzzy
 msgid "label_plone_cms"
 msgstr "Plone™ CMS, um sistema de código aberto para gerenciamento de conteúdo,"
 
@@ -5075,8 +5290,8 @@ msgstr "URL Requisitada"
 
 #. Default: "(Required)"
 #: ./skins/plone_content/author.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/ownership_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_required"
 msgstr "(Obrigatório)"
 
@@ -5111,9 +5326,9 @@ msgid "label_safari_mac"
 msgstr "Safari e Omniweb (Mac OS X)"
 
 #. Default: "Save"
-#: ./skins/plone_forms/content_status_history.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/folder_constraintypes_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_save"
 msgstr "Salvar"
 
@@ -5230,7 +5445,9 @@ msgid "label_setup_visible_ids"
 msgstr "Exibir \"Nomes Curtos\" no conteúdo?"
 
 #. Default: "Short Name"
-#: widget label of IdWidget - description "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_short_name"
 msgstr "Nome Curto"
 
@@ -5394,7 +5611,9 @@ msgid "label_time"
 msgstr "Hora"
 
 #. Default: "Title"
-#: ./skins/plone_forms/search_form.pt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_title"
 msgstr "Título"
 
@@ -5453,10 +5672,13 @@ msgstr "Voltar para as Minhas Preferências"
 msgid "label_up_to_usersoverview"
 msgstr "Voltar para a Visão Geral dos Usuários"
 
+#. Default: "Upload contents (optional)"
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "label_upload_contents_optional"
+msgstr ""
+
 #. Default: "URL"
-#: widget label of StringWidget - description "Add http://
-#: to link outside the site."
-#: widget label of StringWidget - description "Web address with more info about the event. Add http://
+#: ./skins/plone_content/link_edit_form.cpt
 msgid "label_url"
 msgstr "URL"
 
@@ -5501,8 +5723,8 @@ msgstr "Usuário"
 
 #. Default: "Users"
 #: ./skins/plone_prefs/prefs_groups_overview.cpt
-#: ./skins/plone_prefs/prefs_users_overview.cpt
 #: ./skins/plone_prefs/prefs_user_group_search_form.pt
+#: ./skins/plone_prefs/prefs_users_overview.cpt
 msgid "label_users"
 msgstr "Usuários"
 
@@ -5615,6 +5837,16 @@ msgstr "Opções de tipos adicionáveis"
 msgid "legend_contenttypes"
 msgstr "Tipos de Conteúdo"
 
+#. Default: "Document Details"
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "legend_document_details"
+msgstr ""
+
+#. Default: "Event Details"
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "legend_event_details"
+msgstr ""
+
 #. Default: "Feedback for author"
 #: ./skins/plone_content/author.cpt
 msgid "legend_feedback_for_author"
@@ -5625,10 +5857,25 @@ msgstr "Mensagem de retorno para o autor"
 msgid "legend_feedback_for_contact_info"
 msgstr "Detalhes da mensagem de retorno"
 
+#. Default: "File Details"
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "legend_file_details"
+msgstr ""
+
+#. Default: "Folder Details"
+#: ./skins/plone_content/folder_edit_form.cpt
+msgid "legend_folder_details"
+msgstr ""
+
 #. Default: "Group"
 #: ./skins/plone_forms/member_search_form.pt
 msgid "legend_group"
 msgstr "Grupo"
+
+#. Default: "Image Details"
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "legend_image_details"
+msgstr ""
 
 #. Default: "Products available for install"
 #: ./skins/plone_prefs/prefs_install_products_form.pt
@@ -5640,10 +5887,24 @@ msgstr "Produtos disponíveis para instalação"
 msgid "legend_installed_products"
 msgstr "Produtos instalados"
 
+#. Default: "Item Properties"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "legend_item_properties"
+msgstr ""
+
 #. Default: "Items Available"
 #: ./skins/plone_forms/folder_factories.pt
 msgid "legend_items_available"
 msgstr "Itens Disponíveis"
+
+#. Default: "Link Details"
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "legend_link_details"
+msgstr ""
+
+#: ./skins/plone_scripts/livesearch_reply.py:56
+msgid "legend_livesearch"
+msgstr ""
 
 #. Default: "Log details"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
@@ -5679,6 +5940,11 @@ msgstr "Critérios de Busca de Membros"
 #: ./skins/plone_prefs/prefs_navigation_form.cpt
 msgid "legend_navigation_details"
 msgstr "Detalhes da navegação"
+
+#. Default: "News Item Details"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "legend_newsitem_details"
+msgstr ""
 
 #. Default: "Note: you are not logged in. You may optionally enter your username and password below. If you don't enter your username and password below, this comment will be posted as the 'Anonymous User'."
 #: ./skins/plone_forms/discussion_reply_form.cpt
@@ -5717,11 +5983,6 @@ msgstr "Detalhes da Publicação"
 #: ./skins/plone_prefs/prefs_search_form.cpt
 msgid "legend_search_details"
 msgstr "Detalhes da busca"
-
-#. Default: "Search for possible new owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "legend_search_owners"
-msgstr "Procurar por possíveis novos donos"
 
 #. Default: "Search Terms"
 #: ./skins/plone_forms/folder_localrole_form.pt
@@ -6100,22 +6361,20 @@ msgid "no_comments"
 msgstr "Sem comentários."
 
 #. Default: "(No file has been uploaded yet)"
+#: ./skins/plone_content/file_edit_form.cpt
 #: ./skins/plone_content/file_view.pt
 msgid "no_file_uploaded"
 msgstr "(Nenhum arquivo foi enviado ainda)"
 
-#. Default: "No groups were found using your search criteria."
-#: ./skins/plone_forms/folder_localrole_form.pt
-msgid "no_groups_found"
-msgstr "Nenhum grupo foi encontrado usando seu critério de busca."
-
 #. Default: "(No image has been uploaded yet)"
+#: ./skins/plone_content/image_edit_form.cpt
 #: ./skins/plone_content/image_view.pt
 msgid "no_image_uploaded"
 msgstr "(Nenhuma imagem foi enviada ainda)"
 
-#. Default: "No users were found using your search criteria."
+#. Default: "No members were found using your <strong>Search Criteria</strong>"
 #: ./skins/plone_forms/folder_localrole_form.pt
+#, fuzzy
 msgid "no_members_found"
 msgstr "Nenhum usuário foi encontrado usando seu critério de busca."
 
@@ -6532,13 +6791,15 @@ msgstr "Nenhum item foi publicado."
 msgid "text_no_new_modified_items"
 msgstr "Nenhum item foi modificado."
 
-#. Default: "Warning: PIL is not installed properly, so image scaling will not work."
+#. Default: "Warning: PIL is not installed properly, image scaling will not work."
 #: ./skins/plone_prefs/plone_control_panel.pt
+#, fuzzy
 msgid "text_no_pil_installed"
 msgstr "Atenção: A PIL não está instalada corretamente, então o redimensionamento de imagens não funcionará."
 
-#. Default: "Enter a group or user name to search for."
+#. Default: "Enter a group or user name to search for, or click 'Show All'."
 #: ./skins/plone_prefs/prefs_group_members.cpt
+#, fuzzy
 msgid "text_no_searchstring"
 msgstr "Entre com o nome de grupo ou usuário a ser procurado."
 
@@ -6547,14 +6808,15 @@ msgstr "Entre com o nome de grupo ou usuário a ser procurado."
 msgid "text_no_user_by_name"
 msgstr "Nenhum usuário com esse nome"
 
-#. Default: "Enter a username to search for"
+#. Default: "Enter a username to search for, or click 'Show All'"
 #: ./skins/plone_prefs/prefs_users_overview.cpt
+#, fuzzy
 msgid "text_no_user_searchstring"
 msgstr "Entre com o nome do usuário a ser procurado"
 
 #. Default: "No matches"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
 #: ./skins/plone_prefs/prefs_group_members.cpt
+#: ./skins/plone_prefs/prefs_groups_overview.cpt
 #: ./skins/plone_prefs/prefs_search_macros.pt
 msgid "text_nomatches"
 msgstr "Nenhum resultado encontrado."
@@ -6763,8 +7025,8 @@ msgstr "Exclui ou renomeia o item index_html para obter controle total sobre com
 
 #. Default: "Required"
 #: ./skins/plone_content/author.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/ownership_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "title_required"
 msgstr "Obrigatório"
 
@@ -6811,7 +7073,7 @@ msgid "title_small_text"
 msgstr "Texto Pequeno"
 
 #. Default: [···]
-#: ./PloneTool.py:1390
+#: ./PloneTool.py:1387
 msgid "title_unset"
 msgstr "[···]"
 

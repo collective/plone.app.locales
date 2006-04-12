@@ -96,18 +96,18 @@ def main():
     os.system(cmd)
 
     # Remove ## X more: occurences
-    os.system('sed -r "/## [0-9]+ more:/d" %s > %s2' % (pot, pot))
+    os.system('sed -e "/## [0-9]+ more:/d" %s > %s2' % (pot, pot))
 
     # Make paths relative to products skins dir
     step3 = pot
     if WIN32:
         step3 = step3 + '3'
-    os.system('sed -r "s,%s,\.,g" %s2 > %s' % (string.replace(skins, '\\', '\\\\'), pot, step3))
+    os.system('sed -e "s,%s,\.,g" %s2 > %s' % (string.replace(skins, '\\', '\\\\'), pot, step3))
     os.remove('%s2' % pot)
 
     if WIN32:
         # Make directory separator unix like
-        os.system('sed -r "/^#:.*/s,\\\\,/,g" %s3 > %s' % (pot, pot))
+        os.system('sed -e "/^#:.*/s,\\\\,/,g" %s3 > %s' % (pot, pot))
         os.remove('%s3' % pot)
 
 if __name__ == '__main__':

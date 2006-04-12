@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2006-03-07 00:17+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2006-01-18 07:18+0800\n"
 "Last-Translator: T.C. Chou <tcchou@tcchou.org>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -308,6 +308,7 @@ msgstr "內容"
 
 #. Default: "Copy"
 #: action defined in portal_actions
+#: action_icon id copy_icon.gif - category object_buttons
 msgid "Copy"
 msgstr "拷貝"
 
@@ -348,6 +349,7 @@ msgstr "目前使用者"
 
 #. Default: "Cut"
 #: action defined in portal_actions
+#: action_icon id cut_icon.gif - category object_buttons
 msgid "Cut"
 msgstr "剪下"
 
@@ -373,6 +375,7 @@ msgstr "預設頁面"
 
 #. Default: "Delete"
 #: action defined in portal_actions
+#: action_icon id delete_icon.gif - category object_buttons
 msgid "Delete"
 msgstr "刪除"
 
@@ -493,9 +496,9 @@ msgid "ExpirationDate"
 msgstr "失效日"
 
 #. Default: "External Edit"
-#: type action defined on Discussion Item
 #: type action defined on Page
 #: type action defined on Event
+#: type action defined on Favorite
 msgid "External Edit"
 msgstr "外部編輯"
 
@@ -845,6 +848,11 @@ msgstr "修改日"
 msgid "My Folder"
 msgstr "我的目錄"
 
+#. Default: "Navigation"
+#: ./skins/plone_portlets/portlet_navigation.pt
+msgid "Navigation"
+msgstr ""
+
 #. Default: "Navigation Settings"
 #: action_icon id navigation_icon.gif - category controlpanel
 msgid "Navigation Settings"
@@ -893,6 +901,13 @@ msgstr "沒有做任何改變。"
 #: ./skins/plone_prefs/prefs_group_modify.cpy:15
 msgid "No changes done."
 msgstr "沒做改變。"
+
+#. Default: "Object locked"
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "Object locked"
+msgstr ""
 
 #: ./skins/plone_scripts/folder_copy.cpy:20
 msgid "One or more items not copyable."
@@ -950,6 +965,7 @@ msgstr ""
 
 #. Default: "Paste"
 #: action defined in portal_actions
+#: action_icon id paste_icon.gif - category object_buttons
 msgid "Paste"
 msgstr "貼上"
 
@@ -1372,10 +1388,10 @@ msgstr "智慧目錄"
 msgid "Smart Folder Settings"
 msgstr "智慧目錄設定"
 
-#. Default: "Smart Folder View"
+#. Default: "Smart Folder view"
 #: dynamic view name template atct_topic_view on type Topic
-msgid "Smart Folder View"
-msgstr "智慧資料夾檢視"
+msgid "Smart Folder view"
+msgstr ""
 
 #. Default: "Sort Criterion"
 #: portal type title of type with description A sort criterion
@@ -1601,12 +1617,12 @@ msgstr "這檔案不是文字檔。請建立檔案型態的內容，然後上傳
 msgid "This username is reserved. Please choose a different name."
 msgstr "使用者名稱被保留。請選擇不同的名字。"
 
-#. Default: "Thumbnail View"
+#. Default: "Thumbnail view"
 #: dynamic view name template atct_album_view on type Folder
 #: dynamic view name template atct_album_view on type Large Plone Folder
 #: dynamic view name template atct_album_view on type Topic
-msgid "Thumbnail View"
-msgstr "縮圖檢視"
+msgid "Thumbnail view"
+msgstr ""
 
 #. Default: "Title"
 #: index friendly name of index sortable_title
@@ -1679,7 +1695,7 @@ msgstr "管理使用者和群組"
 msgid "View"
 msgstr "檢視"
 
-#: ./skins/plone_form_scripts/saveDefaultPage.cpy:33
+#: ./skins/plone_scripts/selectViewTemplate.cpy:23
 msgid "View changed."
 msgstr "檢視改變。"
 
@@ -1901,11 +1917,6 @@ msgstr "更多…"
 #: ./skins/plone_portlets/portlet_favorites.pt
 msgid "box_my_favorites"
 msgstr "我的最愛"
-
-#. Default: "Navigation"
-#: ./skins/plone_portlets/portlet_navigation.pt
-msgid "box_navigation"
-msgstr "導覽"
 
 #. Default: "New user?"
 #: ./skins/plone_portlets/portlet_login.pt
@@ -2168,15 +2179,50 @@ msgstr "設定 Plone 和相關產品。"
 msgid "description_copyright"
 msgstr "${plonecms} 的著作權 ${copyright} 2000-${current_year} 為 ${plonefoundation}… 等所有。"
 
-#. Default: "The current owner is ${name}."
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "description_current_owner"
+#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately evident, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt
+msgid "description_debug_mode"
+msgstr ""
+
+#. Default: "Fill in the details of this document."
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "description_edit_document"
+msgstr ""
+
+#. Default: "Fill in the details of the event you want to add."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "description_edit_event"
+msgstr ""
+
+#. Default: "Add the relevant details of the file to be added in the form below, select the file with the 'Browse' button, and press 'Save'."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "description_edit_file"
 msgstr ""
 
 #. Default: "Groups are logical collections of users, like departments and business units. They are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 #: ./skins/plone_prefs/prefs_group_details.pt
 msgid "description_edit_groupproperties"
 msgstr "群組是使用者的組成，如同部門是營業單位的組成. 群組不直接與全域權限有所關連，您該用角色來設定權限 -- 藉由指定一個角色給某個群組來設定群組的權限。"
+
+#. Default: "Using this form, you can enter details about the image, and upload an image if required."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "description_edit_image"
+msgstr ""
+
+#. Default: "A link is a pointer to a location on the internet or intranet. Enter the relevant details below, and press 'Save'."
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "description_edit_link_item"
+msgstr ""
+
+#. Default: "A news item is a small piece of news that is published on the front page. Add the relevant details below, and press 'Save'."
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "description_edit_news_item"
+msgstr ""
+
+#. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "description_edit_properties"
+msgstr ""
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to ${link}."
 #: ./skins/plone_login/login_failed.pt
@@ -2355,16 +2401,6 @@ msgstr "這資料夾沒有可視的項目。若要增加內容，請按下 '新�
 msgid "description_not_logged_in_username_incorrect"
 msgstr "登入失敗！可能是您輸入的使用者名稱或密碼不正確。"
 
-#. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
-msgid "description_pas_group_listing"
-msgstr ""
-
-#. Default: "Note: Some or all of your PAS user source plugins do not allow listing of users, so you may not see the users defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_users_overview.cpt
-msgid "description_pas_users_listing"
-msgstr ""
-
 #. Default: "Site-wide settings."
 #: ./skins/plone_prefs/reconfig_form.cpt
 msgid "description_plone_setup"
@@ -2374,6 +2410,16 @@ msgstr "整個網站系統的設定。"
 #: ./skins/plone_prefs/prefs_portal_properties_list.pt
 msgid "description_portal_properties"
 msgstr "這是可設定網站相關特性的列表。"
+
+#. Default: "To make products show up here, put them in the directory ${location} on the file system, and restart the server process."
+#: ./skins/plone_prefs/prefs_install_products_form.pt
+msgid "description_product_location"
+msgstr ""
+
+#. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt
+msgid "description_production_mode"
+msgstr ""
 
 #. Default: "An item's status (also called its review state) determines who can see it. A <strong>private</strong> item can only be viewed by its Owner and by the site management. Only <strong>published</strong> items are available to the general user base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by <strong>submitting it for review</strong>. <br/> Another way to control the visibility of an item is with its <strong>effective date</strong>. An item is not publicly searchable before its effective date, <em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
 #: ./skins/plone_forms/content_status_history.cpt
@@ -2552,8 +2598,9 @@ msgstr "這功能可讓您將此資料夾的內容對外開放串聯，以便其
 msgid "description_syndication_setup"
 msgstr "這裡您所做的設定，將影響整個網站串聯的設定。"
 
-#. Default: "Plone and the Plone logo are trademarks of the ${plonefoundation}."
+#. Default: "Plone <sup/> and the Plone logo are registered trademarks of the ${plonefoundation}."
 #: ./skins/plone_templates/footer.pt
+#, fuzzy
 msgid "description_trademark"
 msgstr "Plone&trade; 和 Plone 標誌是 ${plonefoundation} 的註冊商標。"
 
@@ -2795,11 +2842,6 @@ msgstr "新增/移除產品"
 msgid "heading_advanced_search"
 msgstr "進階內容搜尋"
 
-#. Default: "Advanced settings"
-#: ./skins/plone_forms/folder_localrole_form.pt
-msgid "heading_advanced_settings"
-msgstr ""
-
 #. Default: "Latest content created by this user"
 #: ./skins/plone_content/author.cpt
 msgid "heading_author_content"
@@ -2856,10 +2898,27 @@ msgstr "目前被指定在 ${folder} 資料夾中的分享權限"
 msgid "heading_document_actions"
 msgstr "文件動作"
 
+#. Default: "Edit Folder"
+#: ./skins/plone_content/folder_edit_form.cpt
+msgid "heading_edit_folder_properties"
+msgstr ""
+
 #. Default: "Edit Group Properties for ${groupname}"
 #: ./skins/plone_prefs/prefs_group_details.pt
 msgid "heading_edit_groupproperties"
 msgstr "修改群組 ${groupname} 的特性"
+
+#. Default: "Edit ${itemtype}"
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "heading_edit_item"
+msgstr ""
+
+#. Default: "Edit Properties"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "heading_edit_properties"
+msgstr ""
 
 #. Default: "How to Enable Cookies"
 #: ./skins/plone_login/enabling_cookies.pt
@@ -3010,11 +3069,6 @@ msgstr "版本 4.x"
 #: ./skins/plone_login/enabling_cookies.pt
 msgid "heading_netscape_version_6x"
 msgstr "版本 6.x"
-
-#. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "heading_new_owner"
-msgstr ""
 
 #. Default: "Insufficient Privileges"
 #: ./skins/plone_login/insufficient_privileges.pt
@@ -3251,6 +3305,11 @@ msgstr "您現在已經登入"
 msgid "help_add_restriction_mode"
 msgstr "請選擇您要控制在這資料夾中可被新增的內容型態。"
 
+#. Default: "'Default' will use the site-wide setting for comments."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_allow_discussion"
+msgstr ""
+
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -3295,6 +3354,21 @@ msgstr "關於此連結的一些留言或意見。"
 msgid "help_confirm_password"
 msgstr "再次輸入密碼，請確定密碼是一致的。"
 
+#. Default: "E-mail address to display for information regarding the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_email"
+msgstr ""
+
+#. Default: "Contact person or organization for the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_name"
+msgstr ""
+
+#. Default: "Phone number to call for information and/or booking."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_phone"
+msgstr ""
+
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -3308,7 +3382,7 @@ msgid "help_content_ext_editor"
 msgstr "若選取此項，則每個頁面上會顯示一個鉛筆圖示，讓您可以啟動自己喜好的應用程式來編輯內容，以取代瀏覽器介面的編輯器。這需要在客戶端額外安裝一個稱為 ExternalEditor 的應用程式，必要的話，請向您的網站管理者詢問細節。"
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: widget description of LinesWidget for label Contributors
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "help_contributors"
 msgstr "貢獻者的名字。注意：每一列輸入一位貢獻者。"
 
@@ -3318,7 +3392,7 @@ msgid "help_cookie_persistence"
 msgstr "如果選取，外觀設定 cookie 將永遠不會失效。"
 
 #. Default: "The copyrights on this item."
-#: widget description of TextAreaWidget for label Copyrights
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "help_copyrights"
 msgstr "這項目的著作權資訊"
 
@@ -3336,6 +3410,11 @@ msgstr "負責建立這個項目的人。請務必是每列輸入一個成員的
 #: widget description of StringWidget for label Field name
 msgid "help_criteria_field_name"
 msgstr "不該包含空白，底線或混用大小寫。簡短名稱會是該項目一部份的網址。"
+
+#. Default: "If selected, the navigation tree will only show the current folder and its children at all times."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt
+msgid "help_current_folder_only"
+msgstr ""
 
 #. Default: "Enter your current password."
 #: ./skins/plone_prefs/password_form.pt
@@ -3372,10 +3451,28 @@ msgstr "指定新建立項目的預設語言。"
 msgid "help_default_skin"
 msgstr "指定 Plone 網站預設的外觀。"
 
-#. Default: "A short summary of the content"
-#: widget description of TextAreaWidget for label Description
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+#, fuzzy
 msgid "help_description"
 msgstr "項目的簡短說明"
+
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "help_description_image"
+msgstr ""
+
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "help_description_link"
+msgstr ""
+
+#. Default: "Displayed on the news page along with the headline."
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "help_description_news"
+msgstr ""
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
 #: ./skins/plone_prefs/personalize_form.cpt
@@ -3383,7 +3480,13 @@ msgstr "項目的簡短說明"
 msgid "help_display_names"
 msgstr "決定在編輯項目時是否可改變名稱（也就是 ID）。如果名稱不顯示，則會自動產生。"
 
+#. Default: "This file is a text file, and you can edit its contents directly."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "help_edit_contents"
+msgstr ""
+
 #. Default: "The date when the item will be available (of course it needs to be published too). If no date is selected the item will be effective immediately."
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "help_effective_date"
 msgstr "這日期用來指定該文件開始生效的日期（當然也需要被發佈）。如果沒指定日期，內容立即生效。"
@@ -3394,15 +3497,46 @@ msgstr "這日期用來指定該文件開始生效的日期（當然也需要被
 msgid "help_email_creation"
 msgstr "輸入您的電子信箱地址。當您的密碼遺失時，您的密碼將會被寄到此信箱地址。我們尊重您的隱私權，不會將此信箱地址交給任何第三者，也不會在任何地方洩漏此信箱地址。"
 
+#. Default: "Click the calendar icon to select a date or browse the calendar."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_end"
+msgstr ""
+
+#. Default: "Enter the location where the event will take place."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_location"
+msgstr ""
+
+#. Default: "Click the calendar icon to select a date or browse the calendar."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_start"
+msgstr ""
+
+#. Default: "Multiple event types possible by depressing Ctrl (or Apple key on Mac)."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_type"
+msgstr ""
+
+#. Default: "Optional web address of a page containing more info about the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_url"
+msgstr ""
+
 #. Default: "If selected, this item will not appear in the navigation tree"
 #: widget description of BooleanWidget for label Exclude from navigation
 msgid "help_exclude_from_nav"
 msgstr "若選此項，這項目將不在導覽樹中顯示"
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "help_expiration_date"
 msgstr "項目失效日期。當到達此日期時，此項目會自動變成不可視。如果沒指定日期，文件將永不失效。"
+
+#. Default: "Select the file to be added by clicking the 'Browse' button."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "help_file"
+msgstr ""
 
 #. Default: "If you are unsure of which format to use, just select Plain Text and type the document as you usually do."
 #: ./skins/plone_wysiwyg/wysiwyg_support.pt
@@ -3431,6 +3565,11 @@ msgstr "獨一無二的群組名稱。建立之後不能改變。"
 msgid "help_homepage"
 msgstr "您外部的首頁網址，如果有的話。"
 
+#. Default: "Select the image to be added by clicking the 'Browse' button."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "help_image"
+msgstr ""
+
 #. Default: "Of the types selected above, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected above will be addable via a separate form accessible from the same menu."
 #: ./skins/plone_forms/folder_constraintypes_form.cpt
 msgid "help_immediately_addable_types"
@@ -3446,6 +3585,16 @@ msgstr "如被選取，Plone 將嘗試在所有已選資料夾及其子資料夾
 #: widget description of BooleanWidget for label Inherit Criteria
 msgid "help_inherit_criteria"
 msgstr "經由這個智慧資料夾的條件，更進一步縮小在上層智慧資料夾的搜尋結果。"
+
+#. Default: "Keywords relate different types of content to each other. Don't select too many categories."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_keyword"
+msgstr ""
+
+#. Default: "The language of this item."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_language"
+msgstr ""
 
 #. Default: "If selected, only the 'Number of Items' indicated below will be displayed."
 #: widget description of BooleanWidget for label Limit Search Results
@@ -3491,6 +3640,11 @@ msgstr "網站外觀。"
 msgid "help_message"
 msgstr "請輸入您想送出的訊息。"
 
+#. Default: "The MIME-type of the item. If you don't know what this does, just leave it."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_mimetype"
+msgstr ""
+
 #. Default: "Date this content was modified last"
 #: widget description of CalendarWidget for label Modification Date
 msgid "help_modification_date"
@@ -3500,6 +3654,11 @@ msgstr "這內容被修改的最近日期"
 #: ./skins/plone_prefs/prefs_navigation_form.cpt
 msgid "help_navigationtypes"
 msgstr "該內容型態可在導覽樹和網站地圖中顯示。"
+
+#. Default: "Each new keyword must be on a separate line."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_new_keyword"
+msgstr ""
 
 #. Default: "Enter your new password. Minimum 5 characters."
 #: ./skins/plone_login/login_password.cpt
@@ -3636,13 +3795,9 @@ msgstr "傳回登入名稱包含這個值的成員。"
 msgid "help_search_new_items_since"
 msgstr "傳回從您上次登入或是上星期…等等之後增加的項目。"
 
-#. Default: "Search for users."
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "help_search_new_owner"
-msgstr ""
-
-#. Default: "As a reviewer, you may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
+#. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
 #: ./skins/plone_forms/search_form.pt
+#, fuzzy
 msgid "help_search_review_status"
 msgstr "身為審核者，您可以依據審核狀態來做為搜尋項目的方式。如果您希望限制搜尋結果的項目是特定狀態，請在列表中選擇。"
 
@@ -3707,8 +3862,11 @@ msgstr "顯示並允許使用者修改 \"簡短名稱\"（也就是內容 ID）�
 msgid "help_short_name_url"
 msgstr "簡短名稱是項目所顯示 URL 的一部份網址。"
 
-#. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: widget description of IdWidget for label Short Name
+#. Default: "Short Name is part of the item's web address. For accessibility reasons, do not use spaces, upper case, underscores, or special characters."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+#, fuzzy
 msgid "help_shortname"
 msgstr "這名稱是網址的一部分，請不要使用空白、底線或混用大小寫。簡短名稱是該項目的一部份網址。"
 
@@ -3792,9 +3950,14 @@ msgstr "控制這頻道多久更新一次。"
 msgid "help_template_mixin"
 msgstr "選擇用來顯示這項目的樣板。"
 
-#. Default: "Add http:// to link outside the site."
-#: widget description of StringWidget for label URL
-#: widget description of StringWidget for label Event URL
+#. Default: "Uploaded files will replace the body text entered above."
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "help_uploads"
+msgstr ""
+
+#. Default: "Prefix is optional; if not provided, the link will be relative."
+#: ./skins/plone_content/link_edit_form.cpt
+#, fuzzy
 msgid "help_url"
 msgstr "為外部連結加上 http://。"
 
@@ -3956,8 +4119,9 @@ msgstr "進階搜尋"
 msgid "label_affected_content"
 msgstr "受影響內容"
 
-#. Default: "Allow Discussion on this item"
-#: widget label of SelectionWidget - description ""
+#. Default: "Allow comments on this item?"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_allow_discussion"
 msgstr "允許留言討論"
 
@@ -4050,7 +4214,7 @@ msgid "label_biography"
 msgstr "個人簡介"
 
 #. Default: "Body Text"
-#: widget label of RichWidget - description ""
+#: ./skins/plone_content/document_edit_form.cpt
 msgid "label_body_text"
 msgstr "主體內文"
 
@@ -4062,6 +4226,7 @@ msgstr "資料"
 #. Default: "by ${author}"
 #: ./skins/plone_content/document_byline.pt
 #: ./skins/plone_content/folder_listing.pt
+#: ./skins/plone_content/folder_summary_view.pt
 msgid "label_by_author"
 msgstr "作者 ${author}"
 
@@ -4071,9 +4236,9 @@ msgid "label_calendar"
 msgstr "日曆"
 
 #. Default: "Cancel"
-#: ./skins/plone_forms/content_status_history.cpt
-#: ./skins/plone_forms/folder_constraintypes_form.cpt
-#: ./skins/plone_forms/folder_rename_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_cancel"
 msgstr "取消"
 
@@ -4122,6 +4287,11 @@ msgstr "選擇內容項目 <br/> 成為預設檢視"
 #: ./skins/plone_prefs/reconfig_form.cpt
 msgid "label_choose_language"
 msgstr "選擇語言"
+
+#. Default: "Choose MIME-type"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_choose_mime"
+msgstr ""
 
 #. Default: "Display"
 #: ./skins/plone_templates/global_contentmenu.pt
@@ -4190,17 +4360,17 @@ msgid "label_confirm_password"
 msgstr "確認密碼"
 
 #. Default: "Contact E-mail"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_email"
 msgstr "連絡電子信箱"
 
 #. Default: "Contact Name"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_name"
 msgstr "連絡名稱"
 
 #. Default: "Contact Phone"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_phone"
 msgstr "連絡電話"
 
@@ -4216,7 +4386,7 @@ msgid "label_content_editor"
 msgstr "內容編輯器"
 
 #. Default: "Contributors"
-#: widget label of LinesWidget - description "The names of people that have contributed to this item. Each contributor should be on a separate line."
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_contributors"
 msgstr "貢獻者："
 
@@ -4236,7 +4406,7 @@ msgid "label_copy_to_present"
 msgstr "拷貝到當前"
 
 #. Default: "Copyrights"
-#: widget label of TextAreaWidget - description "The copyrights on this item."
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_copyrights"
 msgstr "著作權"
 
@@ -4264,6 +4434,11 @@ msgstr "正確的 CSS"
 #: ./skins/plone_forms/select_default_view.cpt
 msgid "label_current"
 msgstr "（目前）"
+
+#. Default: "Root navigation tree in current folder"
+#: ./skins/plone_prefs/prefs_navigation_form.cpt
+msgid "label_current_folder_only"
+msgstr ""
 
 #. Default: "Folder display"
 #: ./skins/plone_templates/global_contentmenu.pt
@@ -4322,7 +4497,9 @@ msgid "label_delete_roles_users_groups"
 msgstr "刪除已選的角色和使用者/群組"
 
 #. Default: "Description"
-#: ./skins/plone_forms/search_form.pt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_description"
 msgstr "簡短說明"
 
@@ -4337,18 +4514,21 @@ msgstr "取消串聯功能"
 msgid "label_disabled_display_menu"
 msgstr "顯示"
 
-#. Default: "Default"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Use default setting for comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_default"
 msgstr "預設"
 
-#. Default: "Disabled"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Never allow comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_disabled"
 msgstr "取消"
 
-#. Default: "Enabled"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Always allow comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_enabled"
 msgstr "開放"
 
@@ -4363,6 +4543,11 @@ msgstr "這份文件被鎖住。"
 msgid "label_edit"
 msgstr "修改"
 
+#. Default: "Edit Contents"
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "label_edit_contents"
+msgstr ""
+
 #. Default: "Allow editing of Short Names"
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -4370,6 +4555,7 @@ msgid "label_edit_short_names"
 msgstr "允許編輯名稱"
 
 #. Default: "Effective Date"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "label_effective_date"
 msgstr "生效日"
@@ -4443,24 +4629,29 @@ msgid "label_event_byline"
 msgstr "（${location}，從 ${start} 到 ${end}）"
 
 #. Default: "Event Ends"
-#: widget label of CalendarWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_end"
 msgstr "事件結束"
 
 #. Default: "Event Location"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_location"
 msgstr "事件所在"
 
 #. Default: "Event Starts"
-#: widget label of CalendarWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_start"
 msgstr "事件開始"
 
 #. Default: "Event Type(s)"
-#: widget label of MultiSelectionWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_type"
 msgstr "事件類型"
+
+#. Default: "Event URL"
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "label_event_url"
+msgstr ""
 
 #. Default: "Exception"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
@@ -4482,7 +4673,13 @@ msgstr "例外資料值"
 msgid "label_exclude_from_nav"
 msgstr "排除於導覽樹之外"
 
+#. Default: "Existing keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_existing_keywords"
+msgstr ""
+
 #. Default: "Expiration Date"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "label_expiration_date"
 msgstr "失效日"
@@ -4494,7 +4691,7 @@ msgid "label_ext_editor"
 msgstr "開啟外部編輯"
 
 #. Default: "File"
-#: widget label of FileWidget - description ""
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_file"
 msgstr "檔案"
 
@@ -4561,17 +4758,17 @@ msgstr "群組名稱"
 msgid "label_group_properties"
 msgstr "群組特性"
 
-#. Default: "Group Search"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
-msgid "label_group_search"
-msgstr ""
-
 #. Default: "Groups"
 #: ./skins/plone_prefs/prefs_groups_overview.cpt
-#: ./skins/plone_prefs/prefs_users_overview.cpt
 #: ./skins/plone_prefs/prefs_user_group_search_form.pt
+#: ./skins/plone_prefs/prefs_users_overview.cpt
 msgid "label_groups"
 msgstr "群組"
+
+#. Default: "Headline"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "label_headline"
+msgstr ""
 
 #. Default: "here"
 #: ./skins/plone_forms/folder_localrole_form.pt
@@ -4624,7 +4821,7 @@ msgid "label_ignored_exception"
 msgstr "忽略例外的型別"
 
 #. Default: "Image"
-#: widget label of ImageWidget - description ""
+#: ./skins/plone_content/image_edit_form.cpt
 msgid "label_image"
 msgstr "圖檔"
 
@@ -4669,6 +4866,7 @@ msgid "label_item_type"
 msgstr "項目類型"
 
 #. Default: "Keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/search_form.pt
 msgid "label_keywords"
 msgstr "關鍵字"
@@ -4679,6 +4877,7 @@ msgid "label_konqueror_linux"
 msgstr "Konqueror (Linux)"
 
 #. Default: "Language"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
 msgid "label_language"
@@ -4688,6 +4887,11 @@ msgstr "語言"
 #: ./skins/plone_forms/member_search_form.pt
 msgid "label_last_logged_in"
 msgstr "上次登入"
+
+#. Default: "Lead-in"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "label_lead-in"
+msgstr ""
 
 # ATTopic
 #. Default: "Limit Search Results"
@@ -4793,6 +4997,11 @@ msgstr "主要語言："
 msgid "label_message"
 msgstr "訊息"
 
+#. Default: "MIME type"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_mimetype"
+msgstr ""
+
 #. Default: "Modification Date"
 #: widget label of CalendarWidget - description "Date this content was modified last"
 msgid "label_modification_date"
@@ -4840,15 +5049,15 @@ msgstr "Netscape 6 及更早版本（所有平台）"
 msgid "label_new_items_since"
 msgstr "新的項目，自從…"
 
+#. Default: "New keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_new_keywords"
+msgstr ""
+
 #. Default: "New owner"
 #: ./skins/plone_forms/ownership_form.cpt
 msgid "label_new_owner"
 msgstr "新擁有者"
-
-#. Default: "Search for new owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "label_new_owner_search"
-msgstr ""
 
 #. Default: "New password"
 #: ./skins/plone_login/login_password.cpt
@@ -4883,6 +5092,10 @@ msgstr "沒有選擇任何群組。"
 msgid "label_no_panels_available"
 msgstr "沒有任何偏好設定控制台可用。"
 
+#: ./skins/plone_scripts/livesearch_reply.py:57
+msgid "label_no_results_found"
+msgstr ""
+
 #. Default: "Number of exceptions to keep"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
 msgid "label_number_exceptions"
@@ -4890,6 +5103,7 @@ msgstr "例外保留的數量"
 
 #. Default: "Object locked"
 #: ./skins/plone_content/document_byline.pt
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_object_locked"
 msgstr "物件已鎖定"
 
@@ -4951,7 +5165,7 @@ msgstr "資料夾"
 msgid "label_perform_search"
 msgstr "進行搜尋"
 
-#. Default: "Plone CMS Open Source Content Management System"
+#. Default: "Plone <sup/> CMS Open Source Content Management System"
 #: ./skins/plone_templates/footer.pt
 #, fuzzy
 msgid "label_plone_cms"
@@ -5089,8 +5303,8 @@ msgstr "請求的 URL"
 
 #. Default: "(Required)"
 #: ./skins/plone_content/author.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/ownership_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_required"
 msgstr "（必要的）"
 
@@ -5125,9 +5339,9 @@ msgid "label_safari_mac"
 msgstr "Safari 和 Omniweb（Mac OS X）"
 
 #. Default: "Save"
-#: ./skins/plone_forms/content_status_history.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/folder_constraintypes_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_save"
 msgstr "儲存"
 
@@ -5244,7 +5458,9 @@ msgid "label_setup_visible_ids"
 msgstr "顯示內容的 \"簡短名稱\" 嗎？"
 
 #. Default: "Short Name"
-#: widget label of IdWidget - description "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_short_name"
 msgstr "名稱"
 
@@ -5408,7 +5624,9 @@ msgid "label_time"
 msgstr "時間"
 
 #. Default: "Title"
-#: ./skins/plone_forms/search_form.pt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_title"
 msgstr "標題"
 
@@ -5467,10 +5685,13 @@ msgstr "回到個人設定"
 msgid "label_up_to_usersoverview"
 msgstr "回到使用者概觀"
 
+#. Default: "Upload contents (optional)"
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "label_upload_contents_optional"
+msgstr ""
+
 #. Default: "URL"
-#: widget label of StringWidget - description "Add http://
-#: to link outside the site."
-#: widget label of StringWidget - description "Web address with more info about the event. Add http://
+#: ./skins/plone_content/link_edit_form.cpt
 msgid "label_url"
 msgstr "網址"
 
@@ -5515,8 +5736,8 @@ msgstr "使用者名稱"
 
 #. Default: "Users"
 #: ./skins/plone_prefs/prefs_groups_overview.cpt
-#: ./skins/plone_prefs/prefs_users_overview.cpt
 #: ./skins/plone_prefs/prefs_user_group_search_form.pt
+#: ./skins/plone_prefs/prefs_users_overview.cpt
 msgid "label_users"
 msgstr "使用者"
 
@@ -5629,6 +5850,16 @@ msgstr "可新增型態選項"
 msgid "legend_contenttypes"
 msgstr "內容型態"
 
+#. Default: "Document Details"
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "legend_document_details"
+msgstr ""
+
+#. Default: "Event Details"
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "legend_event_details"
+msgstr ""
+
 #. Default: "Feedback for author"
 #: ./skins/plone_content/author.cpt
 msgid "legend_feedback_for_author"
@@ -5639,10 +5870,25 @@ msgstr "給作者回饋"
 msgid "legend_feedback_for_contact_info"
 msgstr "意見反應的細節"
 
+#. Default: "File Details"
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "legend_file_details"
+msgstr ""
+
+#. Default: "Folder Details"
+#: ./skins/plone_content/folder_edit_form.cpt
+msgid "legend_folder_details"
+msgstr ""
+
 #. Default: "Group"
 #: ./skins/plone_forms/member_search_form.pt
 msgid "legend_group"
 msgstr "群組"
+
+#. Default: "Image Details"
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "legend_image_details"
+msgstr ""
 
 #. Default: "Products available for install"
 #: ./skins/plone_prefs/prefs_install_products_form.pt
@@ -5654,10 +5900,24 @@ msgstr "可安裝產品"
 msgid "legend_installed_products"
 msgstr "已安裝產品"
 
+#. Default: "Item Properties"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "legend_item_properties"
+msgstr ""
+
 #. Default: "Items Available"
 #: ./skins/plone_forms/folder_factories.pt
 msgid "legend_items_available"
 msgstr "有效項目"
+
+#. Default: "Link Details"
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "legend_link_details"
+msgstr ""
+
+#: ./skins/plone_scripts/livesearch_reply.py:56
+msgid "legend_livesearch"
+msgstr ""
 
 #. Default: "Log details"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
@@ -5693,6 +5953,11 @@ msgstr "成員搜尋條件"
 #: ./skins/plone_prefs/prefs_navigation_form.cpt
 msgid "legend_navigation_details"
 msgstr "導覽細節"
+
+#. Default: "News Item Details"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "legend_newsitem_details"
+msgstr ""
 
 #. Default: "Note: you are not logged in. You may optionally enter your username and password below. If you don't enter your username and password below, this comment will be posted as the 'Anonymous User'."
 #: ./skins/plone_forms/discussion_reply_form.cpt
@@ -5731,11 +5996,6 @@ msgstr "發佈的詳細資訊"
 #: ./skins/plone_prefs/prefs_search_form.cpt
 msgid "legend_search_details"
 msgstr "搜尋細節"
-
-#. Default: "Search for possible new owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "legend_search_owners"
-msgstr ""
 
 #. Default: "Search Terms"
 #: ./skins/plone_forms/folder_localrole_form.pt
@@ -6117,21 +6377,18 @@ msgid "no_comments"
 msgstr "沒有留言。"
 
 #. Default: "(No file has been uploaded yet)"
+#: ./skins/plone_content/file_edit_form.cpt
 #: ./skins/plone_content/file_view.pt
 msgid "no_file_uploaded"
 msgstr "（沒有檔案被上傳）"
 
-#. Default: "No groups were found using your search criteria."
-#: ./skins/plone_forms/folder_localrole_form.pt
-msgid "no_groups_found"
-msgstr ""
-
 #. Default: "(No image has been uploaded yet)"
+#: ./skins/plone_content/image_edit_form.cpt
 #: ./skins/plone_content/image_view.pt
 msgid "no_image_uploaded"
 msgstr "（沒有圖片被上傳）"
 
-#. Default: "No users were found using your search criteria."
+#. Default: "No members were found using your <strong>Search Criteria</strong>"
 #: ./skins/plone_forms/folder_localrole_form.pt
 #, fuzzy
 msgid "no_members_found"
@@ -6558,12 +6815,12 @@ msgstr "沒有新文件發佈。"
 msgid "text_no_new_modified_items"
 msgstr "沒有項目被修改。"
 
-#. Default: "Warning: PIL is not installed properly, so image scaling will not work."
+#. Default: "Warning: PIL is not installed properly, image scaling will not work."
 #: ./skins/plone_prefs/plone_control_panel.pt
 msgid "text_no_pil_installed"
 msgstr ""
 
-#. Default: "Enter a group or user name to search for."
+#. Default: "Enter a group or user name to search for, or click 'Show All'."
 #: ./skins/plone_prefs/prefs_group_members.cpt
 #, fuzzy
 msgid "text_no_searchstring"
@@ -6574,15 +6831,15 @@ msgstr "輸入群組或使用者名稱用來搜尋，或點選『全部顯示』
 msgid "text_no_user_by_name"
 msgstr "沒有相符名稱的使用者"
 
-#. Default: "Enter a username to search for"
+#. Default: "Enter a username to search for, or click 'Show All'"
 #: ./skins/plone_prefs/prefs_users_overview.cpt
 #, fuzzy
 msgid "text_no_user_searchstring"
 msgstr "輸入使用者名稱來搜尋，或點選『全部顯示』"
 
 #. Default: "No matches"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
 #: ./skins/plone_prefs/prefs_group_members.cpt
+#: ./skins/plone_prefs/prefs_groups_overview.cpt
 #: ./skins/plone_prefs/prefs_search_macros.pt
 msgid "text_nomatches"
 msgstr "找不到相符物件"
@@ -6792,8 +7049,8 @@ msgstr "刪除或變更 index_html 名稱，將獲得資料夾顯示的全部權
 
 #. Default: "Required"
 #: ./skins/plone_content/author.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/ownership_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "title_required"
 msgstr "必要的"
 
@@ -6840,7 +7097,7 @@ msgid "title_small_text"
 msgstr "小型文字"
 
 #. Default: [···]
-#: ./PloneTool.py:1390
+#: ./PloneTool.py:1387
 msgid "title_unset"
 msgstr "[...]"
 

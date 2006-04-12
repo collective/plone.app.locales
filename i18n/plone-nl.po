@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone 2.1\n"
-"POT-Creation-Date: 2006-03-07 00:17+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2005-08-18 15:41+0100\n"
 "Last-Translator: Esther Ladage <e.ladage@zestsoftware.nl>\n"
 "Language-Team: <plone-i18n@lists.sourceforge.net>\n"
@@ -315,6 +315,7 @@ msgstr "Inhoud"
 
 #. Default: "Copy"
 #: action defined in portal_actions
+#: action_icon id copy_icon.gif - category object_buttons
 msgid "Copy"
 msgstr "Kopiëren"
 
@@ -355,6 +356,7 @@ msgstr "Huidige Gebruiker Criterium"
 
 #. Default: "Cut"
 #: action defined in portal_actions
+#: action_icon id cut_icon.gif - category object_buttons
 msgid "Cut"
 msgstr "Knippen"
 
@@ -380,6 +382,7 @@ msgstr "Standaard Pagina"
 
 #. Default: "Delete"
 #: action defined in portal_actions
+#: action_icon id delete_icon.gif - category object_buttons
 msgid "Delete"
 msgstr "Verwijderen"
 
@@ -500,9 +503,9 @@ msgid "ExpirationDate"
 msgstr "Vervaldatum"
 
 #. Default: "External Edit"
-#: type action defined on Discussion Item
 #: type action defined on Page
 #: type action defined on Event
+#: type action defined on Favorite
 msgid "External Edit"
 msgstr "Extern Bewerken"
 
@@ -854,6 +857,11 @@ msgstr "WijzigingsDatum"
 msgid "My Folder"
 msgstr "Mijn map"
 
+#. Default: "Navigation"
+#: ./skins/plone_portlets/portlet_navigation.pt
+msgid "Navigation"
+msgstr ""
+
 #. Default: "Navigation Settings"
 #: action_icon id navigation_icon.gif - category controlpanel
 msgid "Navigation Settings"
@@ -902,6 +910,13 @@ msgstr "Niets gewijzigd."
 #: ./skins/plone_prefs/prefs_group_modify.cpy:15
 msgid "No changes done."
 msgstr "Niets gewijzigd."
+
+#. Default: "Object locked"
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "Object locked"
+msgstr ""
 
 #: ./skins/plone_scripts/folder_copy.cpy:20
 msgid "One or more items not copyable."
@@ -959,6 +974,7 @@ msgstr ""
 
 #. Default: "Paste"
 #: action defined in portal_actions
+#: action_icon id paste_icon.gif - category object_buttons
 msgid "Paste"
 msgstr "Plakken"
 
@@ -1385,10 +1401,10 @@ msgstr "Zoekmap"
 msgid "Smart Folder Settings"
 msgstr "Zoekmap Instellingen"
 
-#. Default: "Smart Folder View"
+#. Default: "Smart Folder view"
 #: dynamic view name template atct_topic_view on type Topic
-msgid "Smart Folder View"
-msgstr "Zoekmap weergave"
+msgid "Smart Folder view"
+msgstr ""
 
 #. Default: "Sort Criterion"
 #: portal type title of type with description A sort criterion
@@ -1614,12 +1630,12 @@ msgstr "Dit is geen tekstbestand. MSWord documenten dient u als type 'bestand' t
 msgid "This username is reserved. Please choose a different name."
 msgstr "Deze gebruikersnaam is niet toegestaan, kies een andere naam."
 
-#. Default: "Thumbnail View"
+#. Default: "Thumbnail view"
 #: dynamic view name template atct_album_view on type Folder
 #: dynamic view name template atct_album_view on type Large Plone Folder
 #: dynamic view name template atct_album_view on type Topic
-msgid "Thumbnail View"
-msgstr "Fotoalbum weergave"
+msgid "Thumbnail view"
+msgstr ""
 
 #. Default: "Title"
 #: index friendly name of index sortable_title
@@ -1692,7 +1708,7 @@ msgstr "Gebruikers- en Groepenbeheer"
 msgid "View"
 msgstr "Bekijken"
 
-#: ./skins/plone_form_scripts/saveDefaultPage.cpy:33
+#: ./skins/plone_scripts/selectViewTemplate.cpy:23
 msgid "View changed."
 msgstr "Weergave aangepast"
 
@@ -1914,11 +1930,6 @@ msgstr "Meer..."
 #: ./skins/plone_portlets/portlet_favorites.pt
 msgid "box_my_favorites"
 msgstr "Mijn favorieten"
-
-#. Default: "Navigation"
-#: ./skins/plone_portlets/portlet_navigation.pt
-msgid "box_navigation"
-msgstr "Navigatie"
 
 #. Default: "New user?"
 #: ./skins/plone_portlets/portlet_login.pt
@@ -2181,15 +2192,50 @@ msgstr "Configuratiescherm voor Plone en toegevoegde producten."
 msgid "description_copyright"
 msgstr "Het ${plonecms} is Copyright ${copyright} 2000-${current_year} van ${plonefoundation} et al."
 
-#. Default: "The current owner is ${name}."
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "description_current_owner"
+#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately evident, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt
+msgid "description_debug_mode"
+msgstr ""
+
+#. Default: "Fill in the details of this document."
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "description_edit_document"
+msgstr ""
+
+#. Default: "Fill in the details of the event you want to add."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "description_edit_event"
+msgstr ""
+
+#. Default: "Add the relevant details of the file to be added in the form below, select the file with the 'Browse' button, and press 'Save'."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "description_edit_file"
 msgstr ""
 
 #. Default: "Groups are logical collections of users, like departments and business units. They are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 #: ./skins/plone_prefs/prefs_group_details.pt
 msgid "description_edit_groupproperties"
 msgstr "Groepen zijn verzamelingen van gebruikers, vergelijkbaar met afdelingen in organisaties. Hier kunt u groepen gebruikers rechten toekennen die gelden voor de hele website. Voor het toekennen van rechten op een bepaalde map kunt u gebruik maken van het tabblad \"delen\" van de betreffende map."
+
+#. Default: "Using this form, you can enter details about the image, and upload an image if required."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "description_edit_image"
+msgstr ""
+
+#. Default: "A link is a pointer to a location on the internet or intranet. Enter the relevant details below, and press 'Save'."
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "description_edit_link_item"
+msgstr ""
+
+#. Default: "A news item is a small piece of news that is published on the front page. Add the relevant details below, and press 'Save'."
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "description_edit_news_item"
+msgstr ""
+
+#. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "description_edit_properties"
+msgstr ""
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to ${link}."
 #: ./skins/plone_login/login_failed.pt
@@ -2367,16 +2413,6 @@ msgstr "Deze map bevat geen zichtbare items. Klik op \"Nieuw item toevoegen\" om
 msgid "description_not_logged_in_username_incorrect"
 msgstr "U bent op dit moment niet ingelogd. Mogelijk is de loginnaam en/of wachtwoord onjuist."
 
-#. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
-msgid "description_pas_group_listing"
-msgstr ""
-
-#. Default: "Note: Some or all of your PAS user source plugins do not allow listing of users, so you may not see the users defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_users_overview.cpt
-msgid "description_pas_users_listing"
-msgstr ""
-
 #. Default: "Site-wide settings."
 #: ./skins/plone_prefs/reconfig_form.cpt
 msgid "description_plone_setup"
@@ -2386,6 +2422,16 @@ msgstr "Hier kunnen Plone-instellingen worden aangepast."
 #: ./skins/plone_prefs/prefs_portal_properties_list.pt
 msgid "description_portal_properties"
 msgstr "Hier kunt u de eigenschappen van de website aanpassen."
+
+#. Default: "To make products show up here, put them in the directory ${location} on the file system, and restart the server process."
+#: ./skins/plone_prefs/prefs_install_products_form.pt
+msgid "description_product_location"
+msgstr ""
+
+#. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt
+msgid "description_production_mode"
+msgstr ""
 
 #. Default: "An item's status (also called its review state) determines who can see it. A <strong>private</strong> item can only be viewed by its Owner and by the site management. Only <strong>published</strong> items are available to the general user base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by <strong>submitting it for review</strong>. <br/> Another way to control the visibility of an item is with its <strong>effective date</strong>. An item is not publicly searchable before its effective date, <em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
 #: ./skins/plone_forms/content_status_history.cpt
@@ -2564,8 +2610,9 @@ msgstr "XML Publicatie stelt u in staat om deze map te synchroniseren vanaf ande
 msgid "description_syndication_setup"
 msgstr "Hier kunt u instellingen aanpassen die gelden voor de gehele site met betrekking tot de standaard wijze van XML Publicatie."
 
-#. Default: "Plone and the Plone logo are trademarks of the ${plonefoundation}."
+#. Default: "Plone <sup/> and the Plone logo are registered trademarks of the ${plonefoundation}."
 #: ./skins/plone_templates/footer.pt
+#, fuzzy
 msgid "description_trademark"
 msgstr "Plone en het logo van Plone zijn trademarks van de  ${plonefoundation} ."
 
@@ -2808,11 +2855,6 @@ msgstr "Producten verwijderen/toevoegen"
 msgid "heading_advanced_search"
 msgstr "Uitgebreide zoekopdracht naar inhoud"
 
-#. Default: "Advanced settings"
-#: ./skins/plone_forms/folder_localrole_form.pt
-msgid "heading_advanced_settings"
-msgstr ""
-
 #. Default: "Latest content created by this user"
 #: ./skins/plone_content/author.cpt
 msgid "heading_author_content"
@@ -2869,10 +2911,27 @@ msgstr "Huidige gedeelde rechten voor ${folder}"
 msgid "heading_document_actions"
 msgstr "Document Acties"
 
+#. Default: "Edit Folder"
+#: ./skins/plone_content/folder_edit_form.cpt
+msgid "heading_edit_folder_properties"
+msgstr ""
+
 #. Default: "Edit Group Properties for ${groupname}"
 #: ./skins/plone_prefs/prefs_group_details.pt
 msgid "heading_edit_groupproperties"
 msgstr "Groepeigenschappen bewerken van ${groupname}"
+
+#. Default: "Edit ${itemtype}"
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "heading_edit_item"
+msgstr ""
+
+#. Default: "Edit Properties"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "heading_edit_properties"
+msgstr ""
 
 #. Default: "How to Enable Cookies"
 #: ./skins/plone_login/enabling_cookies.pt
@@ -3023,11 +3082,6 @@ msgstr "Versie 4.x"
 #: ./skins/plone_login/enabling_cookies.pt
 msgid "heading_netscape_version_6x"
 msgstr "Versie 6.x"
-
-#. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "heading_new_owner"
-msgstr ""
 
 #. Default: "Insufficient Privileges"
 #: ./skins/plone_login/insufficient_privileges.pt
@@ -3264,6 +3318,11 @@ msgstr "U bent nu ingelogd"
 msgid "help_add_restriction_mode"
 msgstr "Selecteer op welke wijze u wilt bepalen welke content types toe te voegen zijn in deze map."
 
+#. Default: "'Default' will use the site-wide setting for comments."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_allow_discussion"
+msgstr ""
+
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -3308,6 +3367,21 @@ msgstr "Een opmerking bij deze link."
 msgid "help_confirm_password"
 msgstr "Voer het wachtwoord nogmaals in. Zorg dat de wachtwoorden identiek zijn."
 
+#. Default: "E-mail address to display for information regarding the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_email"
+msgstr ""
+
+#. Default: "Contact person or organization for the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_name"
+msgstr ""
+
+#. Default: "Phone number to call for information and/or booking."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_contact_phone"
+msgstr ""
+
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -3321,7 +3395,7 @@ msgid "help_content_ext_editor"
 msgstr "Indien aangevinkt, komt er op iedere pagina een icoon beschikbaar waarmee u teksten kunt aanpassen met behulp van uw favoriete externe editor in plaats van de editor beschikbaar via de website (bijv. Kupu, Epoz). Hiervoor heeft u een extra programma nodig, genaamd ExternalEditor. Indien u meer informatie of hulp wenst bij de installatie daarvan, kunt u contact opnemen met uw websitebeheerder."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: widget description of LinesWidget for label Contributors
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "help_contributors"
 msgstr "De namen van personen die bijgedragen hebben aan dit item. Elke persoon moet op een aparte regel staan."
 
@@ -3331,7 +3405,7 @@ msgid "help_cookie_persistence"
 msgstr "Indien aangevinkt, wordt het \"skin\"-cookie zonder vervaldatum bewaard."
 
 #. Default: "The copyrights on this item."
-#: widget description of TextAreaWidget for label Copyrights
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "help_copyrights"
 msgstr "Auteursrechten van dit item."
 
@@ -3349,6 +3423,11 @@ msgstr "Geef hier de gebruikers op die verantwoordelijk zijn voor de inhoud van 
 #: widget description of StringWidget for label Field name
 msgid "help_criteria_field_name"
 msgstr "Gebruik geen spaties, speciale tekens of hoofdletters. De verkorte naam maakt onderdeel uit van het internet adres."
+
+#. Default: "If selected, the navigation tree will only show the current folder and its children at all times."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt
+msgid "help_current_folder_only"
+msgstr ""
 
 #. Default: "Enter your current password."
 #: ./skins/plone_prefs/password_form.pt
@@ -3385,10 +3464,28 @@ msgstr "Bepaal de standaard taalinstelling voor nieuwe items."
 msgid "help_default_skin"
 msgstr "Selecteer de standaard \"stijl\" of \"skin\" voor de website."
 
-#. Default: "A short summary of the content"
-#: widget description of TextAreaWidget for label Description
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+#, fuzzy
 msgid "help_description"
 msgstr "Een korte beschrijving van de inhoud."
+
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "help_description_image"
+msgstr ""
+
+#. Default: "A brief description of the item."
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "help_description_link"
+msgstr ""
+
+#. Default: "Displayed on the news page along with the headline."
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "help_description_news"
+msgstr ""
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
 #: ./skins/plone_prefs/personalize_form.cpt
@@ -3396,7 +3493,13 @@ msgstr "Een korte beschrijving van de inhoud."
 msgid "help_display_names"
 msgstr "Bepaalt of Verkorte Namen (ook wel ID's) veranderd kunnen worden bij het bewerken van items. Indien de Verkorte Namen niet worden weergegeven, dan worden zij automatisch gegenereerd."
 
+#. Default: "This file is a text file, and you can edit its contents directly."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "help_edit_contents"
+msgstr ""
+
 #. Default: "The date when the item will be available (of course it needs to be published too). If no date is selected the item will be effective immediately."
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "help_effective_date"
 msgstr "De datum waarop het item zichtbaar wordt indien het is gepubliceerd. Op deze manier kan een item van te voren worden gepubliceerd, terwijl het toch onzichtbaar blijft tot deze datum. Als geen datum wordt gekozen zal het document direct zichtbaar zijn voor alle bezoekers van de website."
@@ -3407,15 +3510,46 @@ msgstr "De datum waarop het item zichtbaar wordt indien het is gepubliceerd. Op 
 msgid "help_email_creation"
 msgstr "Voer uw e-mailadres in. Dit is nodig voor het geval u uw wachtwoord kwijt bent. Wij respecteren uw privacy; adressen worden niet aan derden doorgegeven."
 
+#. Default: "Click the calendar icon to select a date or browse the calendar."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_end"
+msgstr ""
+
+#. Default: "Enter the location where the event will take place."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_location"
+msgstr ""
+
+#. Default: "Click the calendar icon to select a date or browse the calendar."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_start"
+msgstr ""
+
+#. Default: "Multiple event types possible by depressing Ctrl (or Apple key on Mac)."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_type"
+msgstr ""
+
+#. Default: "Optional web address of a page containing more info about the event."
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "help_event_url"
+msgstr ""
+
 #. Default: "If selected, this item will not appear in the navigation tree"
 #: widget description of BooleanWidget for label Exclude from navigation
 msgid "help_exclude_from_nav"
 msgstr "Indien geselecteerd, wordt het item niet getoond in de navigatiestructuur"
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "help_expiration_date"
 msgstr "De vervaldatum van dit document. Op deze datum wordt het document automatisch onzichtbaar voor anderen. Als geen datum wordt gekozen, vervalt het document nooit automatisch."
+
+#. Default: "Select the file to be added by clicking the 'Browse' button."
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "help_file"
+msgstr ""
 
 #. Default: "If you are unsure of which format to use, just select Plain Text and type the document as you usually do."
 #: ./skins/plone_wysiwyg/wysiwyg_support.pt
@@ -3444,6 +3578,11 @@ msgstr "Een unieke naam voor een groep. Deze kan niet meer worden gewijzigd nada
 msgid "help_homepage"
 msgstr ""
 
+#. Default: "Select the image to be added by clicking the 'Browse' button."
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "help_image"
+msgstr ""
+
 #. Default: "Of the types selected above, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected above will be addable via a separate form accessible from the same menu."
 #: ./skins/plone_forms/folder_constraintypes_form.cpt
 msgid "help_immediately_addable_types"
@@ -3459,6 +3598,16 @@ msgstr "Indien geselecteerd, zal Plone de status van alle inhoud in de geselecte
 #: widget description of BooleanWidget for label Inherit Criteria
 msgid "help_inherit_criteria"
 msgstr "Breng de zoekresultaten van de bovenliggende Zoekmap terug door de criteria van deze Zoekmap te gebruiken."
+
+#. Default: "Keywords relate different types of content to each other. Don't select too many categories."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_keyword"
+msgstr ""
+
+#. Default: "The language of this item."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_language"
+msgstr ""
 
 #. Default: "If selected, only the 'Number of Items' indicated below will be displayed."
 #: widget description of BooleanWidget for label Limit Search Results
@@ -3504,6 +3653,11 @@ msgstr "Het uiterlijk van de site."
 msgid "help_message"
 msgstr "Voer hier de boodschap in die u wilt verzenden."
 
+#. Default: "The MIME-type of the item. If you don't know what this does, just leave it."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_mimetype"
+msgstr ""
+
 #. Default: "Date this content was modified last"
 #: widget description of CalendarWidget for label Modification Date
 msgid "help_modification_date"
@@ -3513,6 +3667,11 @@ msgstr "Datum waarop dit item voor het laatst is gewijzigd"
 #: ./skins/plone_prefs/prefs_navigation_form.cpt
 msgid "help_navigationtypes"
 msgstr "De content types die getoond moeten worden in de navigatiestructuur en het websiteoverzicht."
+
+#. Default: "Each new keyword must be on a separate line."
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "help_new_keyword"
+msgstr ""
 
 #. Default: "Enter your new password. Minimum 5 characters."
 #: ./skins/plone_login/login_password.cpt
@@ -3649,13 +3808,9 @@ msgstr "Zoek leden met loginnamen die voldoen aan deze waarde."
 msgid "help_search_new_items_since"
 msgstr "Zoek items die zijn toegevoegd sinds de vorige login."
 
-#. Default: "Search for users."
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "help_search_new_owner"
-msgstr ""
-
-#. Default: "As a reviewer, you may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
+#. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
 #: ./skins/plone_forms/search_form.pt
+#, fuzzy
 msgid "help_search_review_status"
 msgstr "Als redacteur kan worden gezocht naar items met een bepaalde status. Kies een status uit de lijst, indien de zoekopdracht beperkt moet blijven tot een bepaalde status. Indien u geen status opgeeft, worden alle items - ongeacht hun status - getoond."
 
@@ -3720,8 +3875,11 @@ msgstr "Geeft de gebruikers de mogelijkheid om de \"Verkorte Naam\" te bewerken,
 msgid "help_short_name_url"
 msgstr "De verkorte naam is het gedeelte dat in het internet adres wordt gebruikt."
 
-#. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: widget description of IdWidget for label Short Name
+#. Default: "Short Name is part of the item's web address. For accessibility reasons, do not use spaces, upper case, underscores, or special characters."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
+#, fuzzy
 msgid "help_shortname"
 msgstr "Gebruik geen spaties, speciale tekens of hoofdletters bevatten. Het zal deel uit maken van het internetadres van dit item."
 
@@ -3805,9 +3963,14 @@ msgstr "Bepaalt hoe vaak een kanaal dient te worden ververst."
 msgid "help_template_mixin"
 msgstr "Kies een sjabloon dat gebruikt wordt voor het weergeven van dit item."
 
-#. Default: "Add http:// to link outside the site."
-#: widget description of StringWidget for label URL
-#: widget description of StringWidget for label Event URL
+#. Default: "Uploaded files will replace the body text entered above."
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "help_uploads"
+msgstr ""
+
+#. Default: "Prefix is optional; if not provided, the link will be relative."
+#: ./skins/plone_content/link_edit_form.cpt
+#, fuzzy
 msgid "help_url"
 msgstr "Voeg http:// toe voor een link naar een externe website."
 
@@ -3969,8 +4132,9 @@ msgstr "Geavanceerd Zoeken"
 msgid "label_affected_content"
 msgstr "Betroffen inhoud"
 
-#. Default: "Allow Discussion on this item"
-#: widget label of SelectionWidget - description ""
+#. Default: "Allow comments on this item?"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_allow_discussion"
 msgstr "Sta discussie bij dit item toe"
 
@@ -4063,7 +4227,7 @@ msgid "label_biography"
 msgstr "Biografie"
 
 #. Default: "Body Text"
-#: widget label of RichWidget - description ""
+#: ./skins/plone_content/document_edit_form.cpt
 msgid "label_body_text"
 msgstr "Hoofdtekst"
 
@@ -4075,6 +4239,7 @@ msgstr "Waarde"
 #. Default: "by ${author}"
 #: ./skins/plone_content/document_byline.pt
 #: ./skins/plone_content/folder_listing.pt
+#: ./skins/plone_content/folder_summary_view.pt
 msgid "label_by_author"
 msgstr "door ${author}"
 
@@ -4084,9 +4249,9 @@ msgid "label_calendar"
 msgstr "Agenda"
 
 #. Default: "Cancel"
-#: ./skins/plone_forms/content_status_history.cpt
-#: ./skins/plone_forms/folder_constraintypes_form.cpt
-#: ./skins/plone_forms/folder_rename_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_cancel"
 msgstr "Annuleren"
 
@@ -4135,6 +4300,11 @@ msgstr "Kies een item <br/> as standaardweergave"
 #: ./skins/plone_prefs/reconfig_form.cpt
 msgid "label_choose_language"
 msgstr "Taal kiezen"
+
+#. Default: "Choose MIME-type"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_choose_mime"
+msgstr ""
 
 #. Default: "Display"
 #: ./skins/plone_templates/global_contentmenu.pt
@@ -4203,17 +4373,17 @@ msgid "label_confirm_password"
 msgstr "Wachtwoord bevestigen"
 
 #. Default: "Contact E-mail"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_email"
 msgstr "E-mail"
 
 #. Default: "Contact Name"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_name"
 msgstr "Naam"
 
 #. Default: "Contact Phone"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_contact_phone"
 msgstr "Telefoonnummer"
 
@@ -4229,7 +4399,7 @@ msgid "label_content_editor"
 msgstr "Tekstverwerker"
 
 #. Default: "Contributors"
-#: widget label of LinesWidget - description "The names of people that have contributed to this item. Each contributor should be on a separate line."
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_contributors"
 msgstr "Mede-auteurs"
 
@@ -4249,7 +4419,7 @@ msgid "label_copy_to_present"
 msgstr "Naar huidige versie kopiëren"
 
 #. Default: "Copyrights"
-#: widget label of TextAreaWidget - description "The copyrights on this item."
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_copyrights"
 msgstr "Auteursrechten"
 
@@ -4277,6 +4447,11 @@ msgstr "Valide CSS"
 #: ./skins/plone_forms/select_default_view.cpt
 msgid "label_current"
 msgstr "(huidig)"
+
+#. Default: "Root navigation tree in current folder"
+#: ./skins/plone_prefs/prefs_navigation_form.cpt
+msgid "label_current_folder_only"
+msgstr ""
 
 #. Default: "Folder display"
 #: ./skins/plone_templates/global_contentmenu.pt
@@ -4335,7 +4510,9 @@ msgid "label_delete_roles_users_groups"
 msgstr "Verwijder geselecteerde rol(len) en gebruiker(s)/groep(en)"
 
 #. Default: "Description"
-#: ./skins/plone_forms/search_form.pt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_description"
 msgstr "Beschrijving"
 
@@ -4350,18 +4527,21 @@ msgstr "XML publicatie uitschakelen"
 msgid "label_disabled_display_menu"
 msgstr "Weergeven"
 
-#. Default: "Default"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Use default setting for comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_default"
 msgstr "Standaard"
 
-#. Default: "Disabled"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Never allow comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_disabled"
 msgstr "Uitgeschakeld"
 
-#. Default: "Enabled"
-#: DisplayList entry for field allowDiscussion
+#. Default: "Always allow comments"
+#: ./skins/plone_content/metadata_edit_form.cpt
+#, fuzzy
 msgid "label_discussion_enabled"
 msgstr "Ingeschakeld"
 
@@ -4376,6 +4556,11 @@ msgstr "Dit document is geblokkeerd"
 msgid "label_edit"
 msgstr ""
 
+#. Default: "Edit Contents"
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "label_edit_contents"
+msgstr ""
+
 #. Default: "Allow editing of Short Names"
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
@@ -4383,6 +4568,7 @@ msgid "label_edit_short_names"
 msgstr "Sta bewerken van Verkorte Namen toe"
 
 #. Default: "Effective Date"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "label_effective_date"
 msgstr "Ingangsdatum"
@@ -4456,24 +4642,29 @@ msgid "label_event_byline"
 msgstr "(${location}, van ${start} tot ${end})"
 
 #. Default: "Event Ends"
-#: widget label of CalendarWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_end"
 msgstr "Einde"
 
 #. Default: "Event Location"
-#: widget label of StringWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_location"
 msgstr "Locatie"
 
 #. Default: "Event Starts"
-#: widget label of CalendarWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_start"
 msgstr "Aanvang"
 
 #. Default: "Event Type(s)"
-#: widget label of MultiSelectionWidget - description ""
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_event_type"
 msgstr "Type"
+
+#. Default: "Event URL"
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "label_event_url"
+msgstr ""
 
 #. Default: "Exception"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
@@ -4495,7 +4686,13 @@ msgstr "Foutwaarde"
 msgid "label_exclude_from_nav"
 msgstr "Sluit uit van navigatie"
 
+#. Default: "Existing keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_existing_keywords"
+msgstr ""
+
 #. Default: "Expiration Date"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/content_status_history.cpt
 msgid "label_expiration_date"
 msgstr "Vervaldatum"
@@ -4507,7 +4704,7 @@ msgid "label_ext_editor"
 msgstr "Extern bewerken inschakelen"
 
 #. Default: "File"
-#: widget label of FileWidget - description ""
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_file"
 msgstr "Bestand"
 
@@ -4574,17 +4771,17 @@ msgstr "Groepsnaam"
 msgid "label_group_properties"
 msgstr "Groepseigenschappen"
 
-#. Default: "Group Search"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
-msgid "label_group_search"
-msgstr ""
-
 #. Default: "Groups"
 #: ./skins/plone_prefs/prefs_groups_overview.cpt
-#: ./skins/plone_prefs/prefs_users_overview.cpt
 #: ./skins/plone_prefs/prefs_user_group_search_form.pt
+#: ./skins/plone_prefs/prefs_users_overview.cpt
 msgid "label_groups"
 msgstr "Groepen"
+
+#. Default: "Headline"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "label_headline"
+msgstr ""
 
 #. Default: "here"
 #: ./skins/plone_forms/folder_localrole_form.pt
@@ -4637,7 +4834,7 @@ msgid "label_ignored_exception"
 msgstr "Genegeerde meldingen"
 
 #. Default: "Image"
-#: widget label of ImageWidget - description ""
+#: ./skins/plone_content/image_edit_form.cpt
 msgid "label_image"
 msgstr "Afbeelding"
 
@@ -4682,6 +4879,7 @@ msgid "label_item_type"
 msgstr "Type item"
 
 #. Default: "Keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_forms/search_form.pt
 msgid "label_keywords"
 msgstr "Trefwoorden"
@@ -4692,6 +4890,7 @@ msgid "label_konqueror_linux"
 msgstr "Konqueror (Linux)"
 
 #. Default: "Language"
+#: ./skins/plone_content/metadata_edit_form.cpt
 #: ./skins/plone_prefs/personalize_form.cpt
 #: ./skins/plone_prefs/prefs_user_details.cpt
 msgid "label_language"
@@ -4701,6 +4900,11 @@ msgstr "Taal"
 #: ./skins/plone_forms/member_search_form.pt
 msgid "label_last_logged_in"
 msgstr "Laatste login"
+
+#. Default: "Lead-in"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "label_lead-in"
+msgstr ""
 
 # ATTopic
 #. Default: "Limit Search Results"
@@ -4807,6 +5011,11 @@ msgstr "Standaard Taal:"
 msgid "label_message"
 msgstr "Bericht"
 
+#. Default: "MIME type"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_mimetype"
+msgstr ""
+
 #. Default: "Modification Date"
 #: widget label of CalendarWidget - description "Date this content was modified last"
 msgid "label_modification_date"
@@ -4854,15 +5063,15 @@ msgstr "Netscape 6 en eerder (alle besturingssystemen)"
 msgid "label_new_items_since"
 msgstr "Nieuwe items sinds"
 
+#. Default: "New keywords"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "label_new_keywords"
+msgstr ""
+
 #. Default: "New owner"
 #: ./skins/plone_forms/ownership_form.cpt
 msgid "label_new_owner"
 msgstr "Nieuwe eigenaar"
-
-#. Default: "Search for new owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "label_new_owner_search"
-msgstr ""
 
 #. Default: "New password"
 #: ./skins/plone_login/login_password.cpt
@@ -4897,6 +5106,10 @@ msgstr "Geen groep aangegeven."
 msgid "label_no_panels_available"
 msgstr "Geen voorkeurscherm beschikbaar."
 
+#: ./skins/plone_scripts/livesearch_reply.py:57
+msgid "label_no_results_found"
+msgstr ""
+
 #. Default: "Number of exceptions to keep"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
 msgid "label_number_exceptions"
@@ -4904,6 +5117,7 @@ msgstr "Aantal te bewaren foutmeldingen"
 
 #. Default: "Object locked"
 #: ./skins/plone_content/document_byline.pt
+#: ./skins/plone_content/metadata_edit_form.cpt
 msgid "label_object_locked"
 msgstr "Item geblokkeerd"
 
@@ -4965,7 +5179,7 @@ msgstr "Mappen"
 msgid "label_perform_search"
 msgstr "Zoekopdracht uitvoeren"
 
-#. Default: "Plone CMS Open Source Content Management System"
+#. Default: "Plone <sup/> CMS Open Source Content Management System"
 #: ./skins/plone_templates/footer.pt
 #, fuzzy
 msgid "label_plone_cms"
@@ -5103,8 +5317,8 @@ msgstr "URL"
 
 #. Default: "(Required)"
 #: ./skins/plone_content/author.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/ownership_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "label_required"
 msgstr "(Verplicht)"
 
@@ -5139,9 +5353,9 @@ msgid "label_safari_mac"
 msgstr "Safari en Omniweb (Mac OS X)"
 
 #. Default: "Save"
-#: ./skins/plone_forms/content_status_history.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/folder_constraintypes_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_save"
 msgstr "Bewaren"
 
@@ -5258,7 +5472,9 @@ msgid "label_setup_visible_ids"
 msgstr "\"Verkorte naam\" in- of uitschakelen"
 
 #. Default: "Short Name"
-#: widget label of IdWidget - description "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_short_name"
 msgstr "Naam"
 
@@ -5422,7 +5638,9 @@ msgid "label_time"
 msgstr "Tijd"
 
 #. Default: "Title"
-#: ./skins/plone_forms/search_form.pt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
+#: ./skins/plone_content/file_edit_form.cpt
 msgid "label_title"
 msgstr "Titel"
 
@@ -5481,10 +5699,13 @@ msgstr "Terug naar persoonlijke instellingen"
 msgid "label_up_to_usersoverview"
 msgstr "Terug naar gebruikersoverzicht"
 
+#. Default: "Upload contents (optional)"
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "label_upload_contents_optional"
+msgstr ""
+
 #. Default: "URL"
-#: widget label of StringWidget - description "Add http://
-#: to link outside the site."
-#: widget label of StringWidget - description "Web address with more info about the event. Add http://
+#: ./skins/plone_content/link_edit_form.cpt
 msgid "label_url"
 msgstr "internetadres (url)"
 
@@ -5529,8 +5750,8 @@ msgstr "Gebruikersnaam"
 
 #. Default: "Users"
 #: ./skins/plone_prefs/prefs_groups_overview.cpt
-#: ./skins/plone_prefs/prefs_users_overview.cpt
 #: ./skins/plone_prefs/prefs_user_group_search_form.pt
+#: ./skins/plone_prefs/prefs_users_overview.cpt
 msgid "label_users"
 msgstr "Gebruikers"
 
@@ -5643,6 +5864,16 @@ msgstr "Instellingen voor toe te voegen types"
 msgid "legend_contenttypes"
 msgstr "Content types"
 
+#. Default: "Document Details"
+#: ./skins/plone_content/document_edit_form.cpt
+msgid "legend_document_details"
+msgstr ""
+
+#. Default: "Event Details"
+#: ./skins/plone_content/event_edit_form.cpt
+msgid "legend_event_details"
+msgstr ""
+
 #. Default: "Feedback for author"
 #: ./skins/plone_content/author.cpt
 msgid "legend_feedback_for_author"
@@ -5653,10 +5884,25 @@ msgstr "Feedback aan de auteur"
 msgid "legend_feedback_for_contact_info"
 msgstr "Details"
 
+#. Default: "File Details"
+#: ./skins/plone_content/file_edit_form.cpt
+msgid "legend_file_details"
+msgstr ""
+
+#. Default: "Folder Details"
+#: ./skins/plone_content/folder_edit_form.cpt
+msgid "legend_folder_details"
+msgstr ""
+
 #. Default: "Group"
 #: ./skins/plone_forms/member_search_form.pt
 msgid "legend_group"
 msgstr "Groep"
+
+#. Default: "Image Details"
+#: ./skins/plone_content/image_edit_form.cpt
+msgid "legend_image_details"
+msgstr ""
 
 #. Default: "Products available for install"
 #: ./skins/plone_prefs/prefs_install_products_form.pt
@@ -5668,10 +5914,24 @@ msgstr "Producten beschikbaar voor installatie"
 msgid "legend_installed_products"
 msgstr "Geïnstalleerde producten"
 
+#. Default: "Item Properties"
+#: ./skins/plone_content/metadata_edit_form.cpt
+msgid "legend_item_properties"
+msgstr ""
+
 #. Default: "Items Available"
 #: ./skins/plone_forms/folder_factories.pt
 msgid "legend_items_available"
 msgstr "Beschikbare items"
+
+#. Default: "Link Details"
+#: ./skins/plone_content/link_edit_form.cpt
+msgid "legend_link_details"
+msgstr ""
+
+#: ./skins/plone_scripts/livesearch_reply.py:56
+msgid "legend_livesearch"
+msgstr ""
 
 #. Default: "Log details"
 #: ./skins/plone_prefs/prefs_error_log_form.pt
@@ -5707,6 +5967,11 @@ msgstr "Leden zoektermen"
 #: ./skins/plone_prefs/prefs_navigation_form.cpt
 msgid "legend_navigation_details"
 msgstr "Navigatie details"
+
+#. Default: "News Item Details"
+#: ./skins/plone_content/newsitem_edit_form.cpt
+msgid "legend_newsitem_details"
+msgstr ""
 
 #. Default: "Note: you are not logged in. You may optionally enter your username and password below. If you don't enter your username and password below, this comment will be posted as the 'Anonymous User'."
 #: ./skins/plone_forms/discussion_reply_form.cpt
@@ -5745,11 +6010,6 @@ msgstr "Publicatiedetails"
 #: ./skins/plone_prefs/prefs_search_form.cpt
 msgid "legend_search_details"
 msgstr "Zoek opties"
-
-#. Default: "Search for possible new owner"
-#: ./skins/plone_forms/ownership_form.cpt
-msgid "legend_search_owners"
-msgstr ""
 
 #. Default: "Search Terms"
 #: ./skins/plone_forms/folder_localrole_form.pt
@@ -5971,11 +6231,12 @@ msgstr "Wachtwoord: ${password} Verzoek gedaan door IP ${ip_address} om ${timest
 msgid "mailtemplate_membership_reminder"
 msgstr "Lidmaatschapsherinnering"
 
+# fuzzy
 #. Default: "You have been registered as a member of ${portal_name}, which allows you to personalize your view of the website and participate in the community. Description: ${description} Visit us at ${portal_url} Your login name and password are: Login name: ${username} Password: ${password} Log in here: ${log_in_here}"
 #: ./skins/plone_templates/registered_notify_template.pt
-# fuzzy
 msgid "mailtemplate_registered_body"
-msgstr "U bent geregistreerd als lid van ${portal_name}\n"
+msgstr ""
+"U bent geregistreerd als lid van ${portal_name}\n"
 "en kunt nu deze website personaliseren en deelnemen aan de gemeenschap.\n"
 "\n"
 "Omschrijving: ${description}\n"
@@ -6143,21 +6404,18 @@ msgid "no_comments"
 msgstr "Geen opmerkingen."
 
 #. Default: "(No file has been uploaded yet)"
+#: ./skins/plone_content/file_edit_form.cpt
 #: ./skins/plone_content/file_view.pt
 msgid "no_file_uploaded"
 msgstr "(Er is nog geen bestand ge-upload)"
 
-#. Default: "No groups were found using your search criteria."
-#: ./skins/plone_forms/folder_localrole_form.pt
-msgid "no_groups_found"
-msgstr ""
-
 #. Default: "(No image has been uploaded yet)"
+#: ./skins/plone_content/image_edit_form.cpt
 #: ./skins/plone_content/image_view.pt
 msgid "no_image_uploaded"
 msgstr "(Er is nog geen bestand ge-upload)"
 
-#. Default: "No users were found using your search criteria."
+#. Default: "No members were found using your <strong>Search Criteria</strong>"
 #: ./skins/plone_forms/folder_localrole_form.pt
 #, fuzzy
 msgid "no_members_found"
@@ -6576,12 +6834,12 @@ msgstr "Geen gepubliceerde items"
 msgid "text_no_new_modified_items"
 msgstr "Er zijn geen items gewijzigd."
 
-#. Default: "Warning: PIL is not installed properly, so image scaling will not work."
+#. Default: "Warning: PIL is not installed properly, image scaling will not work."
 #: ./skins/plone_prefs/plone_control_panel.pt
 msgid "text_no_pil_installed"
 msgstr ""
 
-#. Default: "Enter a group or user name to search for."
+#. Default: "Enter a group or user name to search for, or click 'Show All'."
 #: ./skins/plone_prefs/prefs_group_members.cpt
 #, fuzzy
 msgid "text_no_searchstring"
@@ -6592,15 +6850,15 @@ msgstr "Voer een gebruikersnaam in of klik op \"Toon Alle\"."
 msgid "text_no_user_by_name"
 msgstr "Er is geen gebruiker bekend met die naam"
 
-#. Default: "Enter a username to search for"
+#. Default: "Enter a username to search for, or click 'Show All'"
 #: ./skins/plone_prefs/prefs_users_overview.cpt
 #, fuzzy
 msgid "text_no_user_searchstring"
 msgstr "Vul een gebruikersnaam in om naar te zoeken, of klik op te knop 'Alle gebruikers tonen'"
 
 #. Default: "No matches"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt
 #: ./skins/plone_prefs/prefs_group_members.cpt
+#: ./skins/plone_prefs/prefs_groups_overview.cpt
 #: ./skins/plone_prefs/prefs_search_macros.pt
 msgid "text_nomatches"
 msgstr "Geen overeenkomsten"
@@ -6810,8 +7068,8 @@ msgstr "Verwijder of hernoem de standaardpagina om te bepalen hoe de map wordt w
 
 #. Default: "Required"
 #: ./skins/plone_content/author.cpt
-#: ./skins/plone_forms/discussion_reply_form.cpt
-#: ./skins/plone_forms/ownership_form.cpt
+#: ./skins/plone_content/document_edit_form.cpt
+#: ./skins/plone_content/event_edit_form.cpt
 msgid "title_required"
 msgstr "Verplicht"
 
@@ -6858,7 +7116,7 @@ msgid "title_small_text"
 msgstr "Kleine Tekst"
 
 #. Default: [···]
-#: ./PloneTool.py:1390
+#: ./PloneTool.py:1387
 msgid "title_unset"
 msgstr "[...]"
 
