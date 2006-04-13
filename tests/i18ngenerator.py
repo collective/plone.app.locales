@@ -31,6 +31,7 @@ from Testing import ZopeTestCase
 
 ZopeTestCase.installProduct('PloneLanguageTool')
 ZopeTestCase.installProduct('LinguaPlone')
+ZopeTestCase.installProduct('kupu')
 
 from Products.CMFPlone.tests import PloneTestCase
 from Products.CMFCore.utils import getToolByName
