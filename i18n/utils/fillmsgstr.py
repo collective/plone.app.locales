@@ -48,32 +48,34 @@ msgstr ""
 msgid "You are here:"
 msgstr ""
 
-  Notice that the msgid, "you_are_here", has been relabeled #savedmsgid and the Default: value
-  has been put in its place.
+  Notice that the msgid, "you_are_here", has been relabeled #savedmsgid and
+  the Default: value has been put in its place.
 
-  Then the file is run through a translation tool. It's probably useful to rename the
-  plone.po.filled file to plone.po before this, so the extension meets expectations.
-  If the tool has a translation memory the english value of the msgid, "You are here:" 
-  is used as the lookup key. You can see how a msgid of "you_are_here" might not occur 
-  much in literature and would not be automatically translated by a TM tool.
-  
+  Then the file is run through a translation tool. It's probably useful to
+  rename the plone.po.filled file to plone.po before this, so the extension
+  meets expectations. If the tool has a translation memory the english value
+  of the msgid, "You are here:" is used as the lookup key. You can see how a
+  msgid of "you_are_here" might not occur much in literature and would not be
+  automatically translated by a TM tool.
+
 #. Default: "You are here:"
 #: ./skins/plone_templates/global_pathbar.pt
 #savedmsgid "you_are_here"
 msgid "You are here:"
 msgstr "Sie sind hier:"
 
-  So finally we run fillmsgstr.py with the -r option, giving the plone.po file as
-  the input file. The last entry in the resulting plone.po.unfilled file will look
-  like this:
-  
+  So finally we run fillmsgstr.py with the -r option, giving the plone.po file
+  as the input file. The last entry in the resulting plone.po.unfilled file
+  will look like this:
+
 #. Default: "You are here:"
 #: ./skins/plone_templates/global_pathbar.pt
 msgid "you_are_here"
 msgstr "Sie sind hier:"
-  
-  Notice that the original msgid has been replaced, and the savedmsgid has been removed.
-  
+
+  Notice that the original msgid has been replaced, and the savedmsgid has
+  been removed.
+
   Copyright (c) 2006 Russ Ferriday - russf@topia.com 
 '''
 
@@ -90,12 +92,14 @@ def main(argv=None):
         argv = sys.argv
     try:
         try:
-            opts, args = getopt.getopt(argv[1:], "hro:v", ["help", "output="])
+            opts, args = getopt.getopt(argv[1:], "hro:v", 
+                                       ["help", "output="])
         except getopt.error, msg:
              raise Usage(msg)
     
         # option processing
-        verbose, output, infile, infilepath, reverse = False, None, None, None, False
+        verbose, output, infile, infilepath, reverse = \
+          False, None, None, None, False
         for option, value in opts:
             if option == "-v":
                 verbose = True
@@ -138,7 +142,7 @@ def main(argv=None):
     if reverse:
         for line in infile:
             # convert the #savedmsgid lines back to msgid lines
-            # and swallow the next msgid - it is the fake one we created before
+            # and swallow the next msgid, i.e. the fake one we created earlier
             if line.startswith(savedMark):
                 buff=1          
                 outfile.write(line[len(savedMark):])
@@ -165,7 +169,8 @@ def main(argv=None):
             # ok, so we're buffering, which means...
         
             # we rename msgid to savedmsgid
-            # and if the msgid is cryptic (diff from buff) write buff as msgid, else write line
+            # and if the msgid is cryptic (different from buff) write buff 
+            # as msgid, else write line
             if line.startswith(msgidMark):
                 outfile.write('#saved%s' % line)
                 if line[len(msgidMark):] <> buff:
