@@ -19,12 +19,12 @@ import getopt
 import fileinput
 
 help_message = '''
-fillmsgstr [-h] [-v] [-o] <inputFile>
+fillmsgstr [-h] [-v] [-o] <inputFile1> [ <inputFile2> [<inputFile3> ... ] ]
   -h : print this text
   -r : reverse the process
   -v : verbose -- a good way to get just the messages
-  -o : output file -- defaults to <inputFile>.filled
-  <inputFile> : the file you want to process or reverse process
+  -o : output file -- defaults to <inputFile>.filled - Only works with single input file.
+  <inputFile> : the file(s) you want to process or reverse process
   
   'Processing' takes the contents of all Default lines, and copies them
   into msgid lines, as a starting point for Translation Memory enabled tools.
@@ -112,80 +112,88 @@ def main(argv=None):
         if len(args) < 1:
             print >> sys.stderr, "You forgot your input file..."
             raise Usage(help_message)
-         
-        infilepath=args[0]
-        if os.path.isfile(infilepath):
-            infile=fileinput.input(infilepath)
-        else:
-            print >> sys.stderr, "Check your input file. Is it a text file?"
+
+        if len(args) > 1 and output:
+            print >> sys.stderr, "If you specify an output file, then you may only provide a single input file..."
             raise Usage(help_message)
+                        
+         
+        for infilepath in args:
+            if os.path.isfile(infilepath):
+                infile=fileinput.input(infilepath)
+            else:
+                print >> sys.stderr, "Check your input file. %s Is it a text file?" % infilepath
+                raise Usage(help_message)
 
     except Usage, err:
         print >> sys.stderr, sys.argv[0].split("/")[-1] + ": " + str(err.msg)
         print >> sys.stderr, "\t for help use --help"
         return 2
     
-    if output:
-        outfilepath=output
-    else:
-        if reverse:
-            outfilepath=infilepath + '.unfilled'
+    for infilepath in args:
+        infile=fileinput.input(infilepath)        
+
+        if output:
+            outfilepath=output
         else:
-            outfilepath=infilepath + '.filled'
+            if reverse:
+                outfilepath=infilepath + '.unfilled'
+            else:
+                outfilepath=infilepath + '.filled'
     
-    outfile=open(outfilepath, 'w')
+        outfile=open(outfilepath, 'w')
     
-    defMark='#. Default:'
-    msgidMark='msgid'
-    savedMark='#saved'
-    buff = None
-    if reverse:
-        for line in infile:
-            # convert the #savedmsgid lines back to msgid lines
-            # and swallow the next msgid, i.e. the fake one we created earlier
-            if line.startswith(savedMark):
-                buff=1          
-                outfile.write(line[len(savedMark):])
-                continue
-            if not buff:
+        defMark='#. Default:'
+        msgidMark='msgid'
+        savedMark='#saved'
+        buff = None
+        if reverse:
+            for line in infile:
+                # convert the #savedmsgid lines back to msgid lines
+                # and swallow the next msgid, i.e. the fake one we created earlier
+                if line.startswith(savedMark):
+                    buff=1          
+                    outfile.write(line[len(savedMark):])
+                    continue
+                if not buff:
+                    outfile.write(line)
+                    continue
+                # ok, so we're buffering, which means...
+                # delete next msgid   
+                if line.startswith(msgidMark): 
+                    buff=None
+                    continue
+                # but meanwhile other lines unchanged
                 outfile.write(line)
-                continue
-            # ok, so we're buffering, which means...
-            # delete next msgid   
-            if line.startswith(msgidMark): 
-                buff=None
-                continue
-            # but meanwhile other lines unchanged
-            outfile.write(line)
-    else:
-        for line in infile:
-            if line.startswith(defMark):
-                buff=line[len(defMark):]
-                outfile.write(line)
-                continue
-            if not buff:
-                outfile.write(line)
-                continue
-            # ok, so we're buffering, which means...
+        else:
+            for line in infile:
+                if line.startswith(defMark):
+                    buff=line[len(defMark):]
+                    outfile.write(line)
+                    continue
+                if not buff:
+                    outfile.write(line)
+                    continue
+                # ok, so we're buffering, which means...
         
-            # we rename msgid to savedmsgid
-            # and if the msgid is cryptic (different from buff) write buff 
-            # as msgid, else write line
-            if line.startswith(msgidMark):
-                outfile.write('#saved%s' % line)
-                if line[len(msgidMark):] <> buff:
-                    oline='msgid%s' % buff
-                else:
-                    oline=line
-                outfile.write(oline)
-                buff=None
-                if verbose:
-                    dump(oline)            
-                continue
-            outfile.write(line)
+                # we rename msgid to savedmsgid
+                # and if the msgid is cryptic (different from buff) write buff 
+                # as msgid, else write line
+                if line.startswith(msgidMark):
+                    outfile.write('#saved%s' % line)
+                    if line[len(msgidMark):] <> buff:
+                        oline='msgid%s' % buff
+                    else:
+                        oline=line
+                    outfile.write(oline)
+                    buff=None
+                    if verbose:
+                        dump(oline)            
+                    continue
+                outfile.write(line)
         
-    outfile.close()
-    infile.close()
+        outfile.close()
+        infile.close()
     
 
 if __name__ == "__main__":
