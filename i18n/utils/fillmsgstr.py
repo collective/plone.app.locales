@@ -19,7 +19,7 @@ import getopt
 import fileinput
 
 help_message = '''
-fillmsgstr [-h] [-v] [-o] <inputFile1> [ <inputFile2> [<inputFile3> ... ] ]
+fillmsgstr [-h] [-r] [-v] [-o] <inputFile1> [ <inputFile2> [<inputFile3> ... ] ]
   -h : print this text
   -r : reverse the process
   -v : verbose -- a good way to get just the messages
@@ -144,7 +144,8 @@ def main(argv=None):
         outfile=open(outfilepath, 'w')
     
         defMark='#. Default:'
-        msgidMark='msgid'
+        msgidMark='msgid '
+        msgstrMark='msgstr '
         savedMark='#saved'
         buff = None
         if reverse:
@@ -153,17 +154,21 @@ def main(argv=None):
                 # and swallow the next msgid, i.e. the fake one we created earlier
                 if line.startswith(savedMark):
                     buff=1          
-                    outfile.write(line[len(savedMark):])
+                    # save this line, less the savedMark, until we see the msgstr line
+                    delayedLine=line[len(savedMark):]
                     continue
                 if not buff:
                     outfile.write(line)
                     continue
                 # ok, so we're buffering, which means...
-                # delete next msgid   
+                #   Delete next msgid, by omission, and drop the delayedLine in its place.
+                #   This ensures it appears after any comments that it may been 
+                #   moved ahead of by some translation memory tools.
                 if line.startswith(msgidMark): 
                     buff=None
+                    outfile.write(delayedLine)
                     continue
-                # but meanwhile other lines unchanged
+                # but meanwhile other lines remain unchanged
                 outfile.write(line)
         else:
             for line in infile:
