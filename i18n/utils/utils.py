@@ -7,7 +7,7 @@ PRODUCTS = {'at'    : {'name': 'archetypes', 'path': 'Archetypes'},
             'plone' : {'name': 'plone', 'path': 'CMFPlone'},
             'plt'   : {'name': 'plonelanguagetool', 'path': 'PloneLanguageTool'},
             'prt'   : {'name': 'passwordresettool', 'path': 'PasswordResetTool'},
-            'cmfpw' : {'name': 'archetypes', 'path': 'Archetypes'},
+            'cmfpw' : {'name': 'cmfplacefulworkflow', 'path': 'CMFPlacefulWorkflow'},
            }
 
 PRODUCTNAMES = [PRODUCTS[abbr]['name'] for abbr in PRODUCTS]
