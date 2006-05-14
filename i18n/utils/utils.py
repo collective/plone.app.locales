@@ -1,5 +1,17 @@
 import os
 
+PRODUCTS = {'at'    : {'name': 'archetypes', 'path': 'Archetypes'},
+            'atct'  : {'name': 'atcontenttypes', 'path': 'ATContentTypes'},
+            'atrbw' : {'name': 'atreferencebrowserwidget', 'path': 'ATReferenceBrowserWidget'},
+            'lp'    : {'name': 'linguaplone', 'path': 'LinguaPlone'},
+            'plone' : {'name': 'plone', 'path': 'CMFPlone'},
+            'plt'   : {'name': 'plonelanguagetool', 'path': 'PloneLanguageTool'},
+            'prt'   : {'name': 'passwordresettool', 'path': 'PasswordResetTool'},
+            'cmfpw' : {'name': 'archetypes', 'path': 'Archetypes'},
+           }
+
+PRODUCTNAMES = [PRODUCTS[abbr]['name'] for abbr in PRODUCTS]
+
 def getPoFiles(product, all=False):
     """ Returns all product*.po files in the current folder """
     files = os.listdir(os.curdir)
@@ -65,23 +77,19 @@ def getProduct(file):
 
     return file
 
-
 def getLongProductName(product):
-    """ Returns the product name for a known abbreviation or the given value."""
-    if product in ['atct', 'atrbw', 'at', 'prt', 'plt', 'lp', 'cmfpw']:
-        if product == 'at':
-            product = 'archetypes'
-        elif product == 'atct':
-            product = 'atcontenttypes'
-        elif product == 'prt':
-            product = 'passwordresettool'
-        elif product == 'plt':
-            product = 'plonelanguagetool'
-        elif product == 'lp':
-            product = 'linguaplone'
-        elif product == 'cmfpw':
-            product = 'cmfplacefulworkflow'
-        else:
-            product = 'atreferencebrowserwidget'
+    """ Returns the product name for a known abbreviation."""
+    if product in PRODUCTS.keys():
+        return PRODUCTS[product]['name']
+    return product
+
+def getProductPath(product):
+    """ Returns the product path for a known abbreviation."""
+    if product in PRODUCTS.keys():
+        return PRODUCTS[product]['path']
+    if product in PRODUCTNAMES:
+        for abbr in PRODUCTS.keys():
+            if PRODUCTS[abbr]['name'] == product:
+                return PRODUCTS[abbr]['path']
     return product
 

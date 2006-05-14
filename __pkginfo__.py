@@ -4,7 +4,7 @@ version = open('version.txt').read().strip()
 numversion = version.split('.')
 
 license = 'GPL'
-copyright = '''Jodok Batlogg (c) 2005'''
+copyright = '''Jodok Batlogg (c) 2006'''
 
 author = "Plone I18N team"
 author_email = "plone-i18n@lists.sourceforge.net"
