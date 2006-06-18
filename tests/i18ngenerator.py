@@ -42,12 +42,8 @@ from Products.Archetypes.utils import DisplayList
 from Products.CMFDynamicViewFTI.interfaces import IDynamicViewTypeInformation
 from Products.PloneTestCase import PloneTestCase as BasePloneTestCase
 
-try:
-    from Products.i18ndude import catalog
-    from Products.i18ndude.catalog import MAX_OCCUR
-except ImportError:
-    from i18ndude import catalog
-    from i18ndude.catalog import MAX_OCCUR
+from i18ndude import catalog
+from i18ndude.catalog import MAX_OCCUR
 
 from Products.CMFPlone.i18nl10n import monthname_english, weekdayname_english, \
      monthname_msgid, monthname_msgid_abbr, weekdayname_msgid, \
@@ -158,7 +154,8 @@ class TestI18N(PloneTestCase.PloneTestCase, BasePloneTestCase.PloneTestCase):
             id = index.index
             title = index.friendlyName
             desc = index.description
-            ctl[domain].add(id, msgstr=id, references=['index id with index friendly name %s' % title])
+            # We don't translate index ids anymore
+            # ctl[domain].add(id, msgstr=id, references=['index id with index friendly name %s' % title])
             if title:
                 ctl[domain].add(title, msgstr=title, references=['index friendly name of index %s' % id])
             if desc:
@@ -173,7 +170,8 @@ class TestI18N(PloneTestCase.PloneTestCase, BasePloneTestCase.PloneTestCase):
             id = meta.index
             title = meta.friendlyName
             desc = meta.description
-            ctl[domain].add(id, msgstr=id, references=['metadata id with metadata friendly name %s' % title])
+            # We don't translate metadata ids anymore
+            # ctl[domain].add(id, msgstr=id, references=['metadata id with metadata friendly name %s' % title])
             if title:
                 ctl[domain].add(title, msgstr=title, references=['metadata friendly name of metadata %s' % id])
             if desc:
