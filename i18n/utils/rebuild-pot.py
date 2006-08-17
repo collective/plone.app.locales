@@ -73,14 +73,14 @@ def rebuild(product, skins=''):
     step2 = pot
     if WIN32:
         step2 = pot + '3'
-        
+
     # Make paths relative to products skins dir
-    os.system('sed -r "s,%s,\.,g" %s2 > %s' % (string.replace(skins, '\\', '\\\\'), pot, step2))
+    os.system('sed -E "s,%s,\.,g" %s2 > %s' % (string.replace(skins, '\\', '\\\\'), pot, step2))
     os.remove('%s2' % pot)
 
     if WIN32:
         # Make directory separator unix like
-        os.system('sed -r "/^#:.*/s,\\\\,/,g" %s3 > %s' % (pot, pot))
+        os.system('sed -E "/^#:.*/s,\\\\,/,g" %s3 > %s' % (pot, pot))
         os.remove('%s3' % pot)
 
 def main():
