@@ -4,14 +4,11 @@
    Usage: filter.py <target-product> <source-product>
 
    Filter out all msgid's in target product that are already in source product.
-
-   Note that PYTHON and I18NDUDE must have been set as enviroment variables before calling this script
 """
 
 import os, sys
 
-__PYTHON = os.environ.get('PYTHON', '')
-__I18NDUDE = os.environ.get('I18NDUDE', '')
+__I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 
 def main():
     if len(sys.argv) < 3:
@@ -31,7 +28,7 @@ def main():
         print 'Target pot was not found for the given product.'
         sys.exit(3)
 
-    os.system(__PYTHON + ' ' + __I18NDUDE + (' filter %s %s > %s-new') % (target, source, target))
+    os.system(__I18NDUDE + (' filter %s %s > %s-new') % (target, source, target))
 
 if __name__ == '__main__':
     main()
