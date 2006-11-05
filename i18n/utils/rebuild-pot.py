@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-   Usage: rebuild-pot.py <product> <path to products skins dir>
+   Usage: rebuild-pot.py <product> <path to products dir>
    Note that either 'i18ndude' must be on your path or you have to have set
    I18NDUDE as enviroment variable.
 
@@ -27,7 +27,7 @@ except ImportError:
 __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 __INSTANCE_HOME = os.environ.get('INSTANCE_HOME', '')
 
-def rebuild(product, skins=''):
+def rebuild(product, folder=''):
     product = getLongProductName(product)
 
     pot = product + '.pot'
@@ -44,32 +44,30 @@ def rebuild(product, skins=''):
         print 'Manual pot missing for the given product: %s.' % manualpot
         sys.exit(3)
 
-    skinserror = False
-    if not os.path.isdir(skins):
-        if skins == '':
-            skins = os.path.join(__INSTANCE_HOME, 'Products')
-            if os.path.isdir(skins):
-                skins = os.path.join(skins, getProductPath(product))
-                if product not in ['plone', 'cmfplacefulworkflow']:
-                    skins = os.path.join(skins, 'skins')
+    foldererror = False
+    if not os.path.isdir(folder):
+        if folder == '':
+            folder = os.path.join(__INSTANCE_HOME, 'Products')
+            if os.path.isdir(folder):
+                folder = os.path.join(folder, getProductPath(product))
             else:
-                skinserror = True
+                foldererror = True
         else:
-            skinserror = True
+            foldererror = True
 
-    if skinserror:
-        print 'Skins directory (%s) could not be found.' % skins
+    if foldererror:
+        print 'Product directory (%s) could not be found.' % folder
         sys.exit(4)
 
     # Remove the original file
     if os.path.isfile(pot):
         os.remove(pot)
 
-    print 'Using %s to build new pot.\n' % skins
+    print 'Using %s to build new pot.\n' % folder
     cmd = __I18NDUDE + (' rebuild-pot --pot %s2 --create %s --merge %s ') % (pot, domain, manualpot)
     if product == 'plone' or product == 'atcontenttypes':
         cmd += '--merge2 %s ' % generatedpot
-    cmd += '%s > %s 2>&1' % (skins, log)
+    cmd += '%s > %s 2>&1' % (folder, log)
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
     os.system(cmd)
 
@@ -78,7 +76,7 @@ def rebuild(product, skins=''):
         step2 = pot + '3'
 
     # Make paths relative to products skins dir
-    os.system('sed "s,%s,\.,g" %s2 > %s' % (string.replace(skins, '\\', '\\\\'), pot, step2))
+    os.system('sed "s,%s,\.,g" %s2 > %s' % (string.replace(folder, '\\', '\\\\'), pot, step2))
     os.remove('%s2' % pot)
 
     if WIN32:
