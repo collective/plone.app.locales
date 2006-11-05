@@ -2,8 +2,8 @@
 
 """
    Usage: rebuild-pot.py <product> <path to products skins dir>
-   Note that either 'python' and 'i18ndude' must be on your path or you have to
-   have set PYTHON and I18NDUDE as enviroment variables.
+   Note that either 'i18ndude' must be on your path or you have to have set
+   I18NDUDE as enviroment variable.
 
    If you are lazy you can also use atct, atrbw etc. as shorthands and if you
    set your INSTANCE_HOME correctly it will automagically use the right version.
@@ -24,14 +24,13 @@ try:
 except ImportError:
     WIN32 = False
 
-__PYTHON = os.environ.get('PYTHON', 'python')
 __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 __INSTANCE_HOME = os.environ.get('INSTANCE_HOME', '')
 
 def rebuild(product, skins=''):
     product = getLongProductName(product)
 
-    pot = product + '.pot-new'
+    pot = product + '.pot'
     manualpot = '%s-manual.pot' % product
     generatedpot = '%s-generated.pot' % product
     log = 'rebuild-%s-pot.log' % product
@@ -62,8 +61,12 @@ def rebuild(product, skins=''):
         print 'Skins directory (%s) could not be found.' % skins
         sys.exit(4)
 
+    # Remove the original file
+    if os.path.isfile(pot):
+        os.remove(pot)
+
     print 'Using %s to build new pot.\n' % skins
-    cmd = __PYTHON + ' ' + __I18NDUDE + (' rebuild-pot --pot %s2 --create %s --merge %s ') % (pot, domain, manualpot)
+    cmd = __I18NDUDE + (' rebuild-pot --pot %s2 --create %s --merge %s ') % (pot, domain, manualpot)
     if product == 'plone' or product == 'atcontenttypes':
         cmd += '--merge2 %s ' % generatedpot
     cmd += '%s > %s 2>&1' % (skins, log)
