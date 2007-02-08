@@ -15,8 +15,8 @@ except:
     from i18ndude import catalog
 
 
-__PYTHON = os.environ.get('PYTHON', '')
-__I18NDUDE = os.environ.get('I18NDUDE', '')
+__PYTHON = os.environ.get('PYTHON', 'python')
+__I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 
 def main():
     if len(sys.argv) < 3:
