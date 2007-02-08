@@ -4,18 +4,11 @@
    Usage: i18ngenerate.py 
 
    This is just a simple wrapper script for i18ngenerator.
-
-   Note that PYTHON and INSTANCE_HOME and SOFTWARE_HOME must have been set as
-   enviroment variables before calling this script
-
 """
 
 import os, sys, shutil
 
-__PYTHON = os.environ.get('PYTHON', '')
-__INSTANCE_HOME = os.environ.get('INSTANCE_HOME', '')
-__SOFTWARE_HOME = os.environ.get('SOFTWARE_HOME', '')
-
+__PYTHON = os.environ.get('PYTHON', 'python')
 
 def main():
 
