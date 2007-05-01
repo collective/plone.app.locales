@@ -28,19 +28,21 @@ if __name__ == '__main__':
     execfile(os.path.join(sys.path[0], 'framework.py'))
 
 from Testing import ZopeTestCase
+from Products.PloneTestCase import PloneTestCase
+from Products.PloneTestCase.ptc import setupPloneSite
 
 ZopeTestCase.installProduct('PloneLanguageTool')
 ZopeTestCase.installProduct('LinguaPlone')
 ZopeTestCase.installProduct('kupu')
 
-from Products.CMFPlone.tests import PloneTestCase
+setupPloneSite()
+
 from Products.CMFCore.utils import getToolByName
 from Products.DCWorkflow import States, Transitions
 from Products.Archetypes.Schema import getSchemata
 from Products.Archetypes.Field import ReferenceField
 from Products.Archetypes.utils import DisplayList
 from Products.CMFDynamicViewFTI.interfaces import IDynamicViewTypeInformation
-from Products.PloneTestCase import PloneTestCase as BasePloneTestCase
 
 from i18ndude import catalog
 from i18ndude.catalog import MAX_OCCUR
@@ -49,7 +51,7 @@ from Products.CMFPlone.i18nl10n import monthname_english, weekdayname_english, \
      monthname_msgid, monthname_msgid_abbr, weekdayname_msgid, \
      weekdayname_msgid_abbr, weekdayname_msgid_short
 
-class TestI18N(PloneTestCase.PloneTestCase, BasePloneTestCase.PloneTestCase):
+class TestI18N(PloneTestCase.PloneTestCase):
 
     def afterSetUp(self):
         self.addProduct('PloneLanguageTool')
