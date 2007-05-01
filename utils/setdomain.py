@@ -2,21 +2,14 @@
 
 """
    Usage: setdomain.py <product> <domain>
-   Note that PYTHON and I18NDUDE must have been set as enviroment variables before calling this script
 """
 
 import os, sys
 import getopt
 from utils import getPoFiles, getLongProductName
 
-try:
-    import catalog
-except:
-    from i18ndude import catalog
+from i18ndude import catalog
 
-
-__PYTHON = os.environ.get('PYTHON', 'python')
-__I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 
 def main():
     if len(sys.argv) < 3:
@@ -27,6 +20,7 @@ def main():
     domain = sys.argv[2]
 
     os.chdir('..')
+    os.chdir('i18n')
 
     poFiles = getPoFiles(product, all=True)
     if poFiles == []:

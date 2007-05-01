@@ -15,7 +15,6 @@ def main():
     # go to the tests folder
 
     os.chdir('..')
-    os.chdir('..')
     os.chdir('tests')
 
     if not os.path.isfile('i18ngenerator.py'):

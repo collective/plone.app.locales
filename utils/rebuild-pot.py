@@ -2,8 +2,6 @@
 
 """
    Usage: rebuild-pot.py <product> <path to products dir>
-   Note that either 'i18ndude' must be on your path or you have to have set
-   I18NDUDE as enviroment variable.
 
    If you are lazy you can also use atct, atrbw etc. as shorthands and if you
    set your INSTANCE_HOME correctly it will automagically use the right version.
@@ -40,6 +38,8 @@ def rebuild(product, folder=''):
         domain = 'plone'
 
     os.chdir('..')
+    os.chdir('i18n')
+
     if not os.path.isfile(manualpot):
         print 'Manual pot missing for the given product: %s.' % manualpot
         sys.exit(3)

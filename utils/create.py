@@ -9,15 +9,10 @@
    You have to run merge after that, to remove the wrong msgid's and include the one's from the actual product
 
    Using admix.py can then copy over existing translations.
-
-   Note that PYTHON  must have been set as enviroment variables before calling this script
 """
 
 import os, sys, shutil
 from utils import getPoFiles, getLanguage
-
-__PYTHON = os.environ.get('PYTHON', 'python')
-__I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 
 
 def main():

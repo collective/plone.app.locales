@@ -19,6 +19,7 @@ def main():
     source = sys.argv[2]+'.pot'
 
     os.chdir('..')
+    os.chdir('i18n')
 
     if not os.path.isfile(source):
         print 'Source pot was not found for the given product.'

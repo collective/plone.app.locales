@@ -18,6 +18,7 @@ def main():
     pot = '%s.pot' % product
 
     os.chdir('..')
+    os.chdir('i18n')
 
     if not os.path.isfile(pot): # no pot? test for language-code
         poFiles = getPoFilesByLanguageCode(product)
