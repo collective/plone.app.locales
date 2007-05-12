@@ -15,9 +15,6 @@
 # archetype_tool and collects all labels and descriptions (including msgids)
 # and puts these into seperate files for their definied i18n_domain.
 #
-# For now this generates a atcontenttypes-generated.pot in addition to the
-# plone-generated.pot.
-#
 # These pot's should contain much of the strings currently in the
 # <domain>-manual.pot's and can be used instead. As they are automatically
 # build there should be much less outdated msgids.
@@ -156,8 +153,6 @@ class TestI18N(PloneTestCase.PloneTestCase):
             id = index.index
             title = index.friendlyName
             desc = index.description
-            # We don't translate index ids anymore
-            # ctl[domain].add(id, msgstr=id, references=['index id with index friendly name %s' % title])
             if title:
                 ctl[domain].add(title, msgstr=title, references=['index friendly name of index %s' % id])
             if desc:
@@ -172,8 +167,6 @@ class TestI18N(PloneTestCase.PloneTestCase):
             id = meta.index
             title = meta.friendlyName
             desc = meta.description
-            # We don't translate metadata ids anymore
-            # ctl[domain].add(id, msgstr=id, references=['metadata id with metadata friendly name %s' % title])
             if title:
                 ctl[domain].add(title, msgstr=title, references=['metadata friendly name of metadata %s' % id])
             if desc:

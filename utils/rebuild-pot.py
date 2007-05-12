@@ -65,7 +65,7 @@ def rebuild(product, folder=''):
 
     print 'Using %s to build new pot.\n' % folder
     cmd = __I18NDUDE + (' rebuild-pot --pot %s2 --create %s --merge %s ') % (pot, domain, manualpot)
-    if product == 'plone' or product == 'atcontenttypes':
+    if product == 'plone':
         cmd += '--merge2 %s ' % generatedpot
     if product == 'plone':
         cmd += '--exclude="rss_template.pt metadata_edit_form.cpt" '
