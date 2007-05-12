@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2007-05-01 18:30+0000\n"
+"POT-Creation-Date: 2007-05-12 16:21+0000\n"
 "PO-Revision-Date: 2005-09-13 10:00+0800\n"
 "Last-Translator: Arthur Chan (ccube) <arthur@soqhome.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -28,20 +28,20 @@ msgstr ""
 msgid "${count} item(s) renamed."
 msgstr ""
 
-#: ./skins/plone_scripts/folder_delete.cpy:49
+#: ./skins/plone_scripts/folder_delete.cpy:59
 msgid "${items} could not be deleted."
 msgstr ""
 
 #. Default: "${monthname} ${year}"
-#: ./skins/plone_portlets/portlet_calendar.pt:56
+#: ./skins/plone_deprecated/portlet_calendar.pt:56
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
-#: ./skins/plone_scripts/check_id.py:62
+#: ./skins/plone_scripts/check_id.py:66
 msgid "${name} is not a legal name. The following characters are invalid: ${characters}"
 msgstr ""
 
-#: ./skins/plone_scripts/check_id.py:70
+#: ./skins/plone_scripts/check_id.py:59
 msgid "${name} is reserved."
 msgstr ""
 
@@ -57,7 +57,7 @@ msgstr "${title} 剪下."
 msgid "${title} has been added to your Favorites."
 msgstr "${title} 已加入你的最愛."
 
-#: ./skins/plone_scripts/object_delete.cpy:23
+#: ./skins/plone_form_scripts/delete_confirmation.cpy:23
 msgid "${title} has been deleted."
 msgstr "${title} 已被刪除."
 
@@ -100,7 +100,7 @@ msgstr "適合存放大量項目的文件夾"
 # Description for Folder type
 # portal type description of type with title:
 #. Default: "A folder which can contain other items."
-#: ./skins/plone_content/folder_edit_form.cpt:27
+#: ./skins/plone_content/folder_edit_form.cpt:30
 msgid "A folder which can contain other items."
 msgstr "Plone 文件夾可以定義個人化的 '檢視'. 或者沒有定義, 就如同一般作業系統文件夾般列出."
 
@@ -346,7 +346,7 @@ msgid "Copy or cut one or more items to paste."
 msgstr ""
 
 #: ./skins/plone_prefs/prefs_group_edit.py:19
-msgid "Could not add group ${name}, perhaps a member or group with this name already exists."
+msgid "Could not add group ${name}, perhaps a user or group with this name already exists."
 msgstr ""
 
 #: ./skins/plone_prefs/prefs_navigation_form_validate.vpy:27
@@ -401,17 +401,13 @@ msgid "Default Page"
 msgstr "預設頁面"
 
 #. Default: "Delete"
-#: ./skins/plone_forms/delete_confirmation.cpt:38
+#: ./skins/plone_forms/delete_confirmation_page.cpt:43
 msgid "Delete"
 msgstr "刪除"
 
 #: Metadata which might show up in atct_topic_view
 msgid "Description"
 msgstr ""
-
-#: plone.org tab
-msgid "Development"
-msgstr "發展"
 
 #: ./skins/plone_scripts/folder_paste.cpy:28
 msgid "Disallowed to paste item(s)."
@@ -433,10 +429,6 @@ msgstr "討論項目是回應其他內容的文件. 它們*不*能在標準文�
 msgid "Document changes saved."
 msgstr ""
 
-#: plone.org tab
-msgid "Documentation"
-msgstr "網頁"
-
 #: ./skins/plone_form_scripts/plone_change_password.py:20
 msgid "Does not match current password."
 msgstr "和現有密碼不吻合．"
@@ -449,7 +441,9 @@ msgid "Download"
 msgstr "下載"
 
 #. Default: "Edit"
-#: ./PloneFolder.py:80
+#: type action defined on Page
+#: type action defined on Event
+#: type action defined on Favorite
 msgid "Edit"
 msgstr "修改"
 
@@ -485,6 +479,11 @@ msgstr "結束日期"
 msgid "Entries cleared"
 msgstr ""
 
+#. Default: "Error"
+#: ./skins/plone_content/author.cpt:33
+msgid "Error"
+msgstr ""
+
 # Control Panel Item
 # action_icon id:
 # error_log_icon.gif, category:
@@ -507,11 +506,6 @@ msgstr "事件"
 #: ./skins/plone_form_scripts/event_edit.cpy:59
 msgid "Event changes saved."
 msgstr "事件項目的變更經已儲存."
-
-# portal-tab
-# portal-tab
-msgid "Events"
-msgstr "事件"
 
 # index friendly name of index:
 # metadata friendly name of metadata:
@@ -582,18 +576,16 @@ msgstr "垂直反轉"
 
 # portal type title of type with description:
 #. Default: "Folder"
-#: ./skins/plone_content/folder_edit_form.cpt:18
+#: ./skins/plone_content/folder_edit_form.cpt:21
 msgid "Folder"
 msgstr "文件夾"
 
 #. Default: "Folder Listing"
-#: ./PloneFolder.py:87
+#: type action defined on Folder
+#: type action defined on Large Folder
+#: type action defined on Smart Folder
 msgid "Folder Listing"
 msgstr "文件夾名單"
-
-#: ./PloneFolder.py:337
-msgid "Folder added."
-msgstr ""
 
 #: ./skins/plone_form_scripts/folder_edit.cpy:27
 msgid "Folder changes saved."
@@ -652,6 +644,11 @@ msgstr "圖像"
 msgid "Image changes saved."
 msgstr "圖像改變經已儲存."
 
+#. Default: "Info"
+#: ./skins/plone_forms/discussion_reply_form.cpt:79
+msgid "Info"
+msgstr ""
+
 # Description for Event type
 # portal type description of type with title:
 #. Default: "Information about an upcoming event, which can be displayed in the calendar."
@@ -693,11 +690,15 @@ msgstr "項目類別"
 msgid "Item Type (internal)"
 msgstr "項目類別 (內部)"
 
-#: ./skins/plone_scripts/folder_position.cpy:33
+#: ./skins/plone_form_scripts/content_status_modify.cpy:80
+msgid "Item state changed."
+msgstr ""
+
+#: ./skins/plone_scripts/folder_position.cpy:31
 msgid "Item's position has changed."
 msgstr "項目位置已改變."
 
-#: ./skins/plone_scripts/folder_delete.cpy:44
+#: ./skins/plone_scripts/folder_delete.cpy:54
 msgid "Item(s) deleted."
 msgstr ""
 
@@ -728,7 +729,7 @@ msgstr ""
 msgid "Language Settings"
 msgstr ""
 
-#: ./skins/plone_scripts/availableLanguages.py:160
+#: ./Portal.py:135
 msgid "Language neutral (site default)"
 msgstr "不指定語言(網站預設)"
 
@@ -762,15 +763,15 @@ msgid "List of values"
 msgstr "一列數值"
 
 #. Default: "Local Roles"
-#: ./PloneFolder.py:73
+#: type action defined on TempFolder
 msgid "Local Roles"
 msgstr "區域角色"
 
-#: ./skins/plone_form_scripts/folder_localrole_add.py:20
+#: ./skins/plone_deprecated/folder_localrole_add.py:20
 msgid "Local roles changed."
 msgstr ""
 
-#: ./skins/plone_form_scripts/folder_localrole_delete.py:73
+#: ./skins/plone_deprecated/folder_localrole_delete.py:73
 msgid "Local roles deleted."
 msgstr ""
 
@@ -797,8 +798,12 @@ msgstr "登入"
 msgid "Log out"
 msgstr "登出"
 
-#: ./skins/plone_login/logged_in.cpy:22
+#: ./skins/plone_login/login_next.cpy:28
 msgid "Login failed"
+msgstr ""
+
+#: ./skins/plone_login/logged_in.cpy:22
+msgid "Login failed. Both login name and password is case sensitive, check that caps lock is not enabled."
 msgstr ""
 
 #: ./skins/plone_login/login_form_validate.vpy:44
@@ -844,14 +849,6 @@ msgstr "設為可檢視"
 msgid "Manage members"
 msgstr "管理成員"
 
-#. not sure if this is actually used
-msgid "Manager"
-msgstr "管理員"
-
-#. not sure if this is actually used
-msgid "Member"
-msgstr "成員"
-
 # Member Preferences Header
 # controlpanel category-id:
 #. Default: "Member Preferences"
@@ -893,11 +890,6 @@ msgstr "成員要求發佈"
 msgid "Member retracts submission"
 msgstr "成員收回提交"
 
-# portal-tab
-# portal-tab
-msgid "Members"
-msgstr "成員"
-
 # index friendly name of index:
 # metadata friendly name of metadata:
 #. Default: "Modification Date"
@@ -920,7 +912,7 @@ msgstr "我的文件夾"
 msgid "Navigation Settings"
 msgstr "導覽設定"
 
-#: ./skins/plone_prefs/prefs_navigation_set.cpy:42
+#: ./skins/plone_prefs/prefs_navigation_set.cpy:36
 msgid "Navigation settings updated."
 msgstr ""
 
@@ -937,11 +929,6 @@ msgstr ""
 #: type action defined on Smart Folder
 msgid "New..."
 msgstr "新..."
-
-# portal-tab
-# portal-tab
-msgid "News"
-msgstr "最新消息"
 
 # portal type title of type with description:
 #. Default: "News Item"
@@ -978,10 +965,6 @@ msgstr "一個或多個已選項目已經無效."
 #: index friendly name of index getObjPositionInParent
 msgid "Order in folder"
 msgstr "在文件夾中次序"
-
-#. not sure if this is actually used
-msgid "Owner"
-msgstr "擁有者"
 
 #: ./skins/plone_form_scripts/change_ownership.cpy:23
 msgid "Ownership has been changed."
@@ -1085,7 +1068,7 @@ msgstr ""
 msgid "Please enter a valid date and time."
 msgstr "請輸入有效的日期和時間."
 
-#: ./skins/plone_login/register.cpy:56
+#: ./skins/plone_login/register.cpy:53
 msgid "Please enter a valid email address."
 msgstr ""
 
@@ -1117,7 +1100,7 @@ msgstr "請選擇複製(copy)一筆或多筆項目."
 msgid "Please select one or more items to cut."
 msgstr "請選擇剪下(cut)一個或多個項目."
 
-#: ./skins/plone_scripts/folder_delete.cpy:27
+#: ./skins/plone_scripts/folder_delete.cpy:28
 msgid "Please select one or more items to delete."
 msgstr "請選擇刪除一個或多個項目."
 
@@ -1153,10 +1136,6 @@ msgstr "Plone 設定"
 #: portal type title of type with description The portal_type for the root object in a Plone system.
 msgid "Plone Site"
 msgstr "Plone 網站"
-
-#: ./PloneFolder.py:56
-msgid "Plone folders can define custom 'view' actions, or will behave like directory listings without one defined."
-msgstr ""
 
 # Control Panel Item
 # action_icon id:
@@ -1229,14 +1208,16 @@ msgstr "公開草稿"
 # new state:
 # workflow action defined in folder_workflow, title:
 #. Default: "Publish"
-#: ./PloneWorkflow.py:58
+#: workflow action defined in folder_workflow - title Reviewer publishes content new state published
+#: workflow action defined in plone_workflow - title Reviewer publishes content new state published
 msgid "Publish"
 msgstr "發佈"
 
 # workflow state defined in plone_workflow, id:
 # workflow state defined in folder_workflow, id:
 #. Default: "Published"
-#: ./PloneWorkflow.py:50
+#: workflow state defined in folder_workflow - id published
+#: workflow state defined in plone_workflow - id published
 msgid "Published"
 msgstr "已發佈"
 
@@ -1290,7 +1271,7 @@ msgstr "改名"
 msgid "Rename items"
 msgstr "項目改名"
 
-#: ./skins/plone_scripts/deleteDiscussion.py:29
+#: ./skins/plone_scripts/deleteDiscussion.py:27
 msgid "Reply deleted."
 msgstr ""
 
@@ -1309,10 +1290,6 @@ msgstr "只限目前用者"
 msgid "Retract"
 msgstr "收回"
 
-#. not sure if this is actually used
-msgid "Reviewer"
-msgstr "覆核者"
-
 # workflow transition defined in plone_workflow, id:
 # new state:
 # workflow transition defined in folder_workflow, id:
@@ -1329,11 +1306,11 @@ msgstr "評審員發佈內容"
 msgid "Reviewer rejects submission"
 msgstr "評審員駁回提交"
 
-#: ./skins/plone_form_scripts/folder_localrole_set.py:14
+#: ./skins/plone_deprecated/folder_localrole_set.py:14
 msgid "Role Acquisition is now turned off."
 msgstr ""
 
-#: ./skins/plone_form_scripts/folder_localrole_set.py:12
+#: ./skins/plone_deprecated/folder_localrole_set.py:12
 msgid "Role Acquisition is now turned on."
 msgstr ""
 
@@ -1698,7 +1675,7 @@ msgstr "項目被建立日期和時間"
 msgid "The time and date an item was last modified"
 msgstr "項目最近修改日期和時間"
 
-#: ./skins/plone_scripts/check_id.py:118
+#: ./skins/plone_scripts/check_id.py:122
 msgid "There is already an item named ${name} in this folder."
 msgstr ""
 
@@ -1782,7 +1759,7 @@ msgstr ""
 msgid "Use folders to put content in categories."
 msgstr "使用文件夾分類內容."
 
-#: ./skins/plone_login/register.cpy:62
+#: ./skins/plone_login/register.cpy:59
 msgid "User added."
 msgstr ""
 
@@ -1795,7 +1772,9 @@ msgid "Users and Groups Administration"
 msgstr "用者及組別管理"
 
 #. Default: "View"
-#: ./PloneFolder.py:66
+#: type action defined on Discussion Item
+#: type action defined on Page
+#: type action defined on Event
 msgid "View"
 msgstr "檢視"
 
@@ -1803,7 +1782,12 @@ msgstr "檢視"
 msgid "View changed."
 msgstr ""
 
-#: ./skins/plone_login/register.cpy:51
+#. Default: "Warning"
+#: ./skins/plone_prefs/plone_control_panel.pt:35
+msgid "Warning"
+msgstr ""
+
+#: ./skins/plone_login/register.cpy:48
 msgid "We were unable to send your password to your email address: ${address}"
 msgstr ""
 
@@ -1822,6 +1806,10 @@ msgstr "是"
 #: ./skins/plone_form_scripts/sendto.cpy:25
 msgid "You are not allowed to send this link."
 msgstr "您沒權送出這連結."
+
+#: ./skins/plone_form_scripts/validate_folder_constraintypes.vpy:21
+msgid "You cannot have a type as secondary type withot having it allowed. You have selected ${types}."
+msgstr ""
 
 #: ./skins/plone_form_scripts/validate_folder_constraintypes.vpy:19
 msgid "You cannot select a preferred type that is not also in the list of addable types. You have selected ${types}."
@@ -1851,7 +1839,7 @@ msgstr "您必須選擇出版動作."
 msgid "You must select content to change."
 msgstr "您必須選擇內容來改變."
 
-#: ./skins/plone_scripts/rejectAnonymous.py:16
+#: ./skins/plone_deprecated/rejectAnonymous.py:19
 msgid "You must sign in first."
 msgstr "您必須先登入."
 
@@ -1884,61 +1872,61 @@ msgid "Zope Management Interface"
 msgstr "Zope管理介面"
 
 #. Default: "<code>0</code> - Access Key details"
-#: ./skins/plone_templates/accessibility-info.pt:77
+#: ./skins/plone_templates/accessibility-info.pt:75
 #, fuzzy
 msgid "accesskey_accesskey_details"
 msgstr "<code>0</code> 快速鍵說明"
 
 #. Default: "<code>5</code> - Advanced Search"
-#: ./skins/plone_templates/accessibility-info.pt:74
+#: ./skins/plone_templates/accessibility-info.pt:72
 #, fuzzy
 msgid "accesskey_advanced_search"
 msgstr "<code>5</code> 進階搜尋"
 
 #. Default: "<code>9</code> - Contact information"
-#: ./skins/plone_templates/accessibility-info.pt:76
+#: ./skins/plone_templates/accessibility-info.pt:74
 #, fuzzy
 msgid "accesskey_contact"
 msgstr "<code>9</code> 連絡資訊"
 
 #. Default: "<code>1</code> - Home Page"
-#: ./skins/plone_templates/accessibility-info.pt:70
+#: ./skins/plone_templates/accessibility-info.pt:68
 #, fuzzy
 msgid "accesskey_home_page"
 msgstr "<code>1</code> 首頁"
 
 #. Default: "<code>6</code> - Site navigation tree"
-#: ./skins/plone_templates/accessibility-info.pt:75
+#: ./skins/plone_templates/accessibility-info.pt:73
 #, fuzzy
 msgid "accesskey_navigation"
 msgstr "<code>6</code> 網站導覽樹"
 
 #. Default: "<code>4</code> - Search field focus"
-#: ./skins/plone_templates/accessibility-info.pt:73
+#: ./skins/plone_templates/accessibility-info.pt:71
 #, fuzzy
 msgid "accesskey_search_field"
 msgstr "<code>4</code> 焦點到搜尋欄位"
 
 #. Default: "<code>3</code> - Site Map"
-#: ./skins/plone_templates/accessibility-info.pt:72
+#: ./skins/plone_templates/accessibility-info.pt:70
 #, fuzzy
 msgid "accesskey_sitemap"
 msgstr "<code>3</code> 網站地圖"
 
 #. Default: "<code>2</code> - Skip to content"
-#: ./skins/plone_templates/accessibility-info.pt:71
+#: ./skins/plone_templates/accessibility-info.pt:69
 #, fuzzy
 msgid "accesskey_skip_to_content"
 msgstr "<code>2</code> 跳到內容"
 
 #. Default: "Do you really want to delete this item?"
-#: ./skins/plone_forms/delete_confirmation.cpt:19
+#: ./skins/plone_forms/delete_confirmation_page.cpt:23
 #, fuzzy
 msgid "alert_really_delete"
 msgstr "你確要刪除這個項目?"
 
 #. Default: "Do you really want to delete this folder and all its contents?"
-#: ./skins/plone_forms/delete_confirmation.cpt:14
+#: ./skins/plone_forms/delete_confirmation_page.cpt:17
 msgid "alert_really_delete_folder"
 msgstr ""
 
@@ -1948,32 +1936,32 @@ msgid "author_feedback_mailtemplate_body"
 msgstr "您收到這封信件是由於 ${from_address} 對您所建立的 ${url} 提出意見. 這訊息是:${message}"
 
 #. Default: "Back to Add/Remove Products"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:16
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:20
 msgid "back_to_addremove_products"
 msgstr "返回加入／移除產品"
 
 #. Default: "Next ${number} items"
-#: ./skins/plone_templates/batch_macros.pt:45
+#: ./skins/plone_templates/batch_macros.pt:47
 msgid "batch_next_x_items"
 msgstr "後 ${number} 項"
 
 #. Default: "Previous ${number} items"
-#: ./skins/plone_templates/batch_macros.pt:32
+#: ./skins/plone_templates/batch_macros.pt:34
 msgid "batch_previous_x_items"
 msgstr "前 ${number} 項"
 
 #. Default: "${number} items matching your criteria."
-#: ./skins/plone_forms/member_search_results.pt:21
+#: ./skins/plone_forms/member_search_results.pt:26
 msgid "batch_x_items_matching_your_criteria"
 msgstr "${number} 項資料符合您的條件."
 
 #. Default: "Comment Preview"
-#: ./skins/plone_forms/discussion_reply_preview.pt:22
+#: ./skins/plone_forms/discussion_reply_preview.pt:25
 msgid "box_comment_preview"
 msgstr "預覽意見"
 
 #. Default: "Upcoming Events"
-#: ./skins/plone_portlets/portlet_events.pt:16
+#: ./skins/plone_deprecated/portlet_events.pt:16
 msgid "box_events"
 msgstr "事件預報"
 
@@ -1983,18 +1971,18 @@ msgid "box_external_links"
 msgstr "外部連接"
 
 #. Default: "Forgot your password?"
-#: ./skins/plone_portlets/portlet_login.pt:99
+#: ./skins/plone_deprecated/portlet_login.pt:97
 msgid "box_forgot_password_option"
 msgstr "忘記您的密碼?"
 
 #. Default: "Full review list..."
-#: ./skins/plone_portlets/portlet_review.pt:41
+#: ./skins/plone_deprecated/portlet_review.pt:48
 #, fuzzy
 msgid "box_full_review_list"
 msgstr "完整的審核清單"
 
 #. Default: "last modified"
-#: ./skins/plone_content/document_byline.pt:32
+#: ./skins/plone_content/folder_listing.pt:135
 msgid "box_last_modified"
 msgstr "最近修改"
 
@@ -2004,13 +1992,13 @@ msgid "box_local_resources"
 msgstr "本區資源"
 
 #. Default: "More news..."
-#: ./skins/plone_portlets/portlet_news.pt:47
+#: ./skins/plone_deprecated/portlet_news.pt:47
 #, fuzzy
 msgid "box_more_news_link"
 msgstr "更多新聞…"
 
 #. Default: "All recent changes..."
-#: ./skins/plone_portlets/portlet_recent.pt:52
+#: ./skins/plone_deprecated/portlet_recent.pt:58
 #, fuzzy
 msgid "box_more_recently_changed"
 msgstr "全部最近更新"
@@ -2027,32 +2015,32 @@ msgid "box_my_favorites"
 msgstr "我的最愛"
 
 #. Default: "Navigation"
-#: ./skins/plone_portlets/portlet_navigation.pt:15
+#: ./skins/plone_deprecated/portlet_navigation.pt:15
 msgid "box_navigation"
 msgstr "導覽"
 
 #. Default: "New user?"
-#: ./skins/plone_portlets/portlet_login.pt:108
+#: ./skins/plone_deprecated/portlet_login.pt:106
 msgid "box_new_user_option"
 msgstr "新使用者?"
 
 #. Default: "News"
-#: ./skins/plone_portlets/portlet_news.pt:15
+#: ./skins/plone_deprecated/portlet_news.pt:15
 msgid "box_news"
 msgstr "最新消息"
 
 #. Default: "Previous events..."
-#: ./skins/plone_portlets/portlet_events.pt:54
+#: ./skins/plone_deprecated/portlet_events.pt:54
 msgid "box_previous_events"
 msgstr ""
 
 #. Default: "Recent Changes"
-#: ./skins/plone_portlets/portlet_recent.pt:15
+#: ./skins/plone_deprecated/portlet_recent.pt:15
 msgid "box_recent_changes"
 msgstr "最近更新"
 
 #. Default: "No items changed yet."
-#: ./skins/plone_portlets/portlet_recent.pt:45
+#: ./skins/plone_deprecated/portlet_recent.pt:51
 msgid "box_recent_no_items"
 msgstr "尚未有更新項目."
 
@@ -2062,28 +2050,28 @@ msgid "box_related"
 msgstr "相關的"
 
 #. Default: "Review List"
-#: ./skins/plone_portlets/portlet_review.pt:14
+#: ./skins/plone_deprecated/portlet_review.pt:14
 msgid "box_review_list"
 msgstr "覆核名單"
 
 #. Default: "Log in"
-#: ./skins/plone_portlets/portlet_login.pt:25
+#: ./skins/plone_deprecated/portlet_login.pt:24
 msgid "box_sign_in"
 msgstr "登入"
 
 #. Default: "Upcoming events..."
-#: ./skins/plone_portlets/portlet_events.pt:61
+#: ./skins/plone_deprecated/portlet_events.pt:61
 #, fuzzy
 msgid "box_upcoming_events"
 msgstr "將近事件"
 
 #. Default: "You are not allowed to modify the title of this item."
-#: ./skins/plone_forms/folder_rename_form.cpt:99
+#: ./skins/plone_forms/folder_rename_form.cpt:102
 msgid "change_id_for_item_not_allowed"
 msgstr "您不能修改這項目的標題."
 
 #. Default: "Use parent folder setting"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:68
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:103
 msgid "constraintypes_mode_acquire"
 msgstr "使用母文件夾的設定"
 
@@ -2098,22 +2086,22 @@ msgid "constraintypes_mode_enable"
 msgstr "人手選擇"
 
 #. Default: "Attendees"
-#: ./skins/plone_content/event_view.pt:102
+#: ./skins/plone_content/event_view.pt:146
 msgid "contact_attendees"
 msgstr "參與者"
 
 #. Default: "Contact Email"
-#: ./skins/plone_content/event_view.pt:91
+#: ./skins/plone_content/event_view.pt:126
 msgid "contact_email"
 msgstr "電郵"
 
 #. Default: "Contact Name"
-#: ./skins/plone_content/event_view.pt:85
+#: ./skins/plone_content/event_view.pt:113
 msgid "contact_name"
 msgstr "姓名"
 
 #. Default: "Contact Phone"
-#: ./skins/plone_content/event_view.pt:97
+#: ./skins/plone_content/event_view.pt:134
 msgid "contact_phone"
 msgstr "電話"
 
@@ -2138,12 +2126,12 @@ msgid "date_format_short"
 msgstr "${Y}/${m}/${d}"
 
 #. Default: "/"
-#: ./skins/plone_templates/calendar_macros.pt:68
+#: ./skins/plone_templates/calendar_macros.pt:63
 msgid "date_separator"
 msgstr "/"
 
 #. Default: "There is no group or user attached to this group."
-#: ./skins/plone_prefs/prefs_group_members.cpt:169
+#: ./skins/plone_prefs/prefs_group_members.cpt:180
 msgid "decription_no_members_assigned"
 msgstr "沒有群組或用戶"
 
@@ -2153,7 +2141,7 @@ msgid "description"
 msgstr ""
 
 #. Default: "Access keys are a navigation device enabling you to get around this web site using your keyboard."
-#: ./skins/plone_templates/accessibility-info.pt:52
+#: ./skins/plone_templates/accessibility-info.pt:56
 msgid "description_access_keys"
 msgstr "快速鍵是讓您用鍵盤就可瀏覽這個網站的導覽設備."
 
@@ -2163,114 +2151,114 @@ msgid "description_access_keys_more_info"
 msgstr "關於快速鍵的深入資訊可在 ${wcag} 找到."
 
 #. Default: "This site uses the ${plone} and has been designed to be completely accessible and usable, working in accordance with the Web Content Accessibility Guidelines (${wcag} v1.0). If there is anything on this site - accessibility or validation related - that is not according to the standard, please contact the ${site_admin}, and not the Plone Team."
-#: ./skins/plone_templates/accessibility-info.pt:43
+#: ./skins/plone_templates/accessibility-info.pt:47
 #, fuzzy
 msgid "description_accessibility_info"
 msgstr "這網站使用 ${plone} 及被設計成全面可探訪及使用, 其運作是遵行 Web Content Accessibility Guidelines ( ${wcag} v1.0). 如若此網站有任何探訪性或相關查核不付合此標準, 請聯絡 ${site_admin} , 並不包括 Plone 組."
 
 #. Default: "We have undertaken to use our knowledge and understanding of the ways in which different people access the Internet, to develop a web site that is clear and simple for everybody to use."
-#: ./skins/plone_templates/accessibility-info.pt:139
+#: ./skins/plone_templates/accessibility-info.pt:137
 msgid "description_accessibility_statement"
 msgstr "我們盡力發揮我們的知識及瞭解不同人使用互聯網的方法, 去開發對各位也簡潔的網站."
 
 #. Default: "Access keys are not supported, please use a different browser."
-#: ./skins/plone_templates/accessibility-info.pt:126
+#: ./skins/plone_templates/accessibility-info.pt:124
 msgid "description_accesskey_ie4_mac"
 msgstr "不支援快速鍵, 請使用其他瀏覽器."
 
 #. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:114
+#: ./skins/plone_templates/accessibility-info.pt:112
 msgid "description_accesskey_ie4_win"
 msgstr "按著 <code>Alt</code> 鍵, 並按下快速鍵的數字或字母."
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:120
+#: ./skins/plone_templates/accessibility-info.pt:118
 msgid "description_accesskey_ie5_mac"
 msgstr "按著 <code>Ctrl</code> 鍵, 並按下快速鍵的數字或字母."
 
 #. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
-#: ./skins/plone_templates/accessibility-info.pt:84
+#: ./skins/plone_templates/accessibility-info.pt:82
 msgid "description_accesskey_ie5_win"
 msgstr "按著 <code>Alt</code> 鍵, 並按下快速鍵的數字或字母, 放開兩個鍵後, 再按 <code>Enter</code>鍵."
 
 #. Default: "Press and release the <code>Ctrl</code> key, then press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:108
+#: ./skins/plone_templates/accessibility-info.pt:106
 msgid "description_accesskey_konqueror_linux"
 msgstr ""
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:96
+#: ./skins/plone_templates/accessibility-info.pt:94
 msgid "description_accesskey_mozilla_mac"
 msgstr "按著 <code>Ctrl</code> 鍵, 並按下快速鍵的數字或字母."
 
 #. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:90
+#: ./skins/plone_templates/accessibility-info.pt:88
 msgid "description_accesskey_mozilla_win"
 msgstr "按著 <code>Alt</code> 鍵, 並按下快速鍵的數字或字母."
 
 #. Default: "Access keys are not supported, please use a different browser."
-#: ./skins/plone_templates/accessibility-info.pt:131
+#: ./skins/plone_templates/accessibility-info.pt:129
 msgid "description_accesskey_netscape6_all"
 msgstr "不支援快速鍵, 請使用其他瀏覽器."
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:102
+#: ./skins/plone_templates/accessibility-info.pt:100
 msgid "description_accesskey_safari_mac"
 msgstr "按著 <code>Ctrl</code> 鍵, 並按下快速鍵的數字或字母."
 
 #. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: ./skins/plone_forms/discussion_reply_form.cpt:68
+#: ./skins/plone_forms/discussion_reply_form.cpt:69
 msgid "description_add_comment"
 msgstr "你可以填寫意見表格. 在存檔前, 可選擇 '預覽意見', 看看顯示模樣."
 
 #. Default: "Select the type of item you want to add to your folder."
-#: ./skins/plone_forms/folder_factories.pt:19
+#: ./skins/plone_forms/folder_factories.pt:29
 msgid "description_add_new_item"
 msgstr "選擇您要增加到文件夾中的項目類型"
 
 #. Default: "This is the Add-on Products install section, you can add and remove products in the lists below."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:22
+#: ./skins/plone_prefs/prefs_install_products_form.pt:26
 msgid "description_addremove_products"
 msgstr "<p>這是附加產品部份，您可以新增或移除下列產品。</p>"
 
 #. Default: "This search form enables you to find content on the site by specifying one or more search terms. <br /> Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
-#: ./skins/plone_forms/search_form.pt:13
+#: ./skins/plone_forms/search_form.pt:17
 #, fuzzy
 msgid "description_advanced_search"
 msgstr "這搜尋功能將提供一個或多個條件, 來搜尋這網站資料. <br/>右上角的快速搜尋已能符合大部分需求, 進階搜尋將提供您更特別的條件設定."
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: ./skins/plone_content/author.cpt:141
+#: ./skins/plone_content/author.cpt:150
 msgid "description_author_feedback"
 msgstr "如果您想要聯絡作者, 請填寫下面表格."
 
 #. Default: "This site uses a setup that closely matches most international recommendations on access keys. These are:"
-#: ./skins/plone_templates/accessibility-info.pt:65
+#: ./skins/plone_templates/accessibility-info.pt:63
 msgid "description_available_access_keys"
 msgstr "這網站使用一組快速鍵設定, 非常接近於大部份國際建議快速鍵. 它們是:"
 
 #. Default: "Some products were found to have errors when compiling the install file."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:195
+#: ./skins/plone_prefs/prefs_install_products_form.pt:202
 msgid "description_broken_products"
 msgstr "部份產品在編譯安裝檔案時發生錯誤."
 
 #. Default: "Before you start exploring, you need to change your original password. This ensures that the password you received via email cannot be used in a malicious manner."
-#: ./skins/plone_login/login_password.cpt:27
+#: ./skins/plone_login/login_password.cpt:31
 msgid "description_change_initial_password"
 msgstr "在您進行更多的探索之前，您必須變更最初的密碼. 這可確保我們以電郵寄送給您的密碼, 不會被別人盜取, 並在這系統中使用."
 
 #. Default: "You can transfer the current item's ownership to somebody else using this form."
-#: ./skins/plone_forms/ownership_form.cpt:13
+#: ./skins/plone_forms/ownership_form.cpt:14
 msgid "description_change_ownership"
 msgstr "在這表格中, 您可改更目前物件擁有權為其他成員所有."
 
 #. Default: "To change the ownership for this ${type}, click ${link_to_ownership_form}"
-#: ./skins/plone_forms/folder_localrole_form.pt:654
+#: ./skins/plone_deprecated/folder_localrole_form.pt:614
 msgid "description_change_ownership_of_article"
 msgstr "要改變這個 ${type} 的物主 , 按下 ${link_to_ownership_form}"
 
 #. Default: "This is how your comment will look when posted."
-#: ./skins/plone_forms/discussion_reply_preview.pt:13
+#: ./skins/plone_forms/discussion_reply_preview.pt:16
 msgid "description_comment_preview"
 msgstr "這可以預先看看您的意見將會如何顯示."
 
@@ -2279,29 +2267,34 @@ msgstr "這可以預先看看您的意見將會如何顯示."
 msgid "description_contact_info_feedback"
 msgstr "如果你想連絡網站管理者, 請填妥下面表單."
 
+#. Default: "Fill in this form to contact the site owners."
+#: ./skins/plone_templates/contact-info.cpt:22
+msgid "description_contact_site_owner"
+msgstr ""
+
 #. Default: "Configuration area for Plone and add-on Products."
-#: ./skins/plone_prefs/plone_control_panel.pt:18
+#: ./skins/plone_prefs/plone_control_panel.pt:24
 msgid "description_control_panel"
 msgstr "Plone 及產品控制台"
 
-#. Default: "The ${plonecms} is Copyright ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
-#: ./skins/plone_templates/footer.pt:18
+#. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
+#: ./skins/plone_templates/footer.pt:21
 #, fuzzy
 msgid "description_copyright"
 msgstr "${plonecms} 版權所有 ${copyright} 2000-${current_year} 由 ${plonefoundation} 等人所有."
 
 #. Default: "The current owner is ${name}."
-#: ./skins/plone_forms/ownership_form.cpt:20
+#: ./skins/plone_forms/ownership_form.cpt:21
 msgid "description_current_owner"
 msgstr ""
 
-#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately evident, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' - then restart the server process."
-#: ./skins/plone_prefs/plone_control_panel.pt:84
+#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' - then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt:135
 msgid "description_debug_mode"
 msgstr ""
 
 #. Default: "Groups are logical collections of users, like departments and business units. They are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
-#: ./skins/plone_prefs/prefs_group_details.pt:90
+#: ./skins/plone_prefs/prefs_group_details.pt:101
 msgid "description_edit_groupproperties"
 msgstr "這裡的資訊, 也被視為 <em>詮釋資料(metadata)</em> 用以收集下列資訊: 物件分類, 指定生效日和過期日, 語系, 以及關鍵字.<br />在表格裡可變更這項目的詮釋資料, 詮釋資料具有相當功效的 - 它可讓我們進行有用的分類. 因此盡可能填入簡潔的資料, 如果您不確定的話, 請保持空白."
 
@@ -2315,33 +2308,43 @@ msgstr "如果您的使用者名稱和密碼都是正確的, 那問題可能在�
 msgid "description_enable_cookies_for_login"
 msgstr ""
 
+#. Default: "Note: If you do not remain logged in after leaving this page, it is because you need to enable cookies in your browser."
+#: ./skins/plone_login/login_success.pt:87
+msgid "description_enable_cookies_to_stay_logged_in"
+msgstr ""
+
+#. Default: "The error has been logged as entry number ${entryid}."
+#: ./skins/plone_templates/default_error_message.pt:138
+msgid "description_error_has_been_logged"
+msgstr ""
+
 #. Default: "This page lists the exceptions that have occurred in this site recently. You can configure how many exceptions should be kept and whether the exceptions should be copied to Zope's event log file(s)."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:22
+#: ./skins/plone_prefs/prefs_error_log_form.pt:26
 msgid "description_error_log_setup"
 msgstr "您可在這指定一些影響 Plone 系統的設定."
 
 #. Default: "Refer to the plone.org error reference for more information about these exceptions."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:30
+#: ./skins/plone_prefs/prefs_error_log_form.pt:34
 msgid "description_error_rerference_link"
 msgstr ""
 
 #. Default: "Click here to have your password mailed to you if you have forgotten it."
-#: ./skins/plone_login/login_failed.pt:19
+#: ./skins/plone_login/login_failed.pt:23
 msgid "description_failed_login_link"
 msgstr "請確認您已開啟瀏覽器的 cookie 功能. 當您結束工作, 不要忘記登出系統或關閉瀏覽器."
 
 #. Default: "You can add or remove groups and users from this particular group here. Note that this doesn't actually delete the group or user, it is only removed from this group."
-#: ./skins/plone_prefs/prefs_group_members.cpt:83
+#: ./skins/plone_prefs/prefs_group_members.cpt:94
 msgid "description_group_members_of"
 msgstr "您可加入或移除成員在這指定組別內. 注意這其實沒有真正移除用者, 這只移除其在這組別內."
 
 #. Default: "Groups are a convenient way to share items to a common set of users. Select one or more groups, and a role to assign."
-#: ./skins/plone_forms/folder_localrole_form.pt:442
+#: ./skins/plone_deprecated/folder_localrole_form.pt:416
 msgid "description_group_shares"
 msgstr "組別是一個簡易的方法去分享項目給一組用者. 選擇一個或多個組別, 及分配本區身份."
 
 #. Default: "Groups are logical collections of users, such as departments and business units. Groups are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:60
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:68
 msgid "description_groups_management"
 msgstr "組別是一個合理的用者組合, 例如部間及商業單位. 組別並不直接和整體的特權有關連, 您一般應使用本區身份去完成這要求 - 及讓一些組別有特別的本區身份."
 
@@ -2350,28 +2353,33 @@ msgstr "組別是一個合理的用者組合, 例如部間及商業單位. 組�
 msgid "description_historical_unavailable"
 msgstr "此分類不支援過往歷史介面.  內容必須支持OFS.History.Historical"
 
+#. Default: "If you need to report this to the ${site_admin}, please include this entry number in your message."
+#: ./skins/plone_templates/default_error_message.pt:143
+msgid "description_include_error_in_admin_message"
+msgstr ""
+
 #. Default: "You can take fuller advantage of the features of this site if you enable javascript in your browser."
-#: ./skins/plone_login/login_success.pt:79
+#: ./skins/plone_login/login_success.pt:82
 msgid "description_javascript_advantage"
 msgstr ""
 
 #. Default: "Distributed under the ${license}."
-#: ./skins/plone_templates/footer.pt:36
+#: ./skins/plone_templates/footer.pt:38
 msgid "description_license"
 msgstr "依據${license}散佈"
 
 #. Default: "Select one or more people, and a role to assign."
-#: ./skins/plone_forms/folder_localrole_form.pt:252
+#: ./skins/plone_deprecated/folder_localrole_form.pt:240
 msgid "description_localrole_select_member"
 msgstr "選擇一個或多個成員, 然後分配身份."
 
 #. Default: "This is the first time that you've logged in to ${here}."
-#: ./skins/plone_login/login_password.cpt:24
+#: ./skins/plone_login/login_password.cpt:28
 msgid "description_logged_in"
 msgstr "這是您第一次登入到 ${here}."
 
 #. Default: "Notice that the top right bar has changed. It now contains several personalized items. Use these items to control your settings and your personal area. They will remain as long as you are logged in."
-#: ./skins/plone_login/login_success.pt:29
+#: ./skins/plone_login/login_success.pt:32
 msgid "description_logged_in_explain"
 msgstr "您也許已經注意到右上方的條形有變動, 它現在包含數個個人選項. 這些選項在您登入期間都會被保留, 而且讓你可能變更您的設定和私人區域資料."
 
@@ -2384,6 +2392,11 @@ msgstr "<p>我們希望您喜歡我們的服務. 並期待再次見到您.</p><p
 #: ./skins/plone_login/login_failed.pt:26
 msgid "description_login_fail_enable_cookies"
 msgstr "接受 cookie"
+
+#. Default: "You can log in again below."
+#: ./skins/plone_login/logged_out.cpt:32
+msgid "description_loginagain"
+msgstr ""
 
 #. Default: "Enter your user name below, click <strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid e-mail address when you registered. If this will not work for you (for example, if you forgot your user name or didn't enter your e-mail address) send a request to ${email_address}."
 #: ./skins/plone_forms/mail_password_form.pt:17
@@ -2412,42 +2425,47 @@ msgid "description_member_personal_folder"
 msgstr "包含 ${member} 個人工作區項目."
 
 #. Default: "This search form enables you to find users by specifying one or more search criteria."
-#: ./skins/plone_forms/member_search_form.pt:12
+#: ./skins/plone_forms/member_search_form.pt:16
 msgid "description_member_search"
 msgstr "這個搜尋表格, 將可讓您設定一個或多個條件, 來找尋特定成員."
 
 #. Default: "Your personal settings."
-#: ./skins/plone_prefs/personalize_form.cpt:55
+#: ./skins/plone_prefs/personalize_form.cpt:60
 msgid "description_my_preferences"
 msgstr "我的設定"
 
 #. Default: "Lets you control how navigation is constructed in your site."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:24
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:28
 msgid "description_navigation_setup"
 msgstr "讓您控制在網站中怎樣建立導覽的方式."
 
+#. Default: "Note that to control how the navigation tree is displayed, you should go to \"Manage portlets\" at the root of the site (or wherever) a navigation tree portlet has been added, and change its settings directly."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:32
+msgid "description_navigation_setup_navtree"
+msgstr ""
+
 #. Default: "You might want to head over to ${your_folder} and add some content, or ${set_up_your_preferences}."
-#: ./skins/plone_login/login_success.pt:46
+#: ./skins/plone_login/login_success.pt:49
 msgid "description_newbie_pointers"
 msgstr "您希望進入 ${your_folder} 增加一些內容, 或者 ${set_up_your_preferences}"
 
 #. Default: "set up your Preferences"
-#: ./skins/plone_login/login_success.pt:47
+#: ./skins/plone_login/login_success.pt:50
 msgid "description_newbie_pointers_preferences_link"
 msgstr "進行您個人設定"
 
 #. Default: "your folder"
-#: ./skins/plone_login/login_success.pt:39
+#: ./skins/plone_login/login_success.pt:42
 msgid "description_newbie_pointers_yourfolder_link"
 msgstr "您的文件夾"
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
-#: ./skins/plone_login/failsafe_login_form.cpt:31
+#: ./skins/plone_login/failsafe_login_form.cpt:34
 msgid "description_no_account"
 msgstr "如果您在這裡沒有帳號, 可完成 ${registration_form} 已取得會員資格."
 
 #. Default: "registration form"
-#: ./skins/plone_login/failsafe_login_form.cpt:32
+#: ./skins/plone_login/failsafe_login_form.cpt:35
 msgid "description_no_account_registration_linktext"
 msgstr "註冊表格"
 
@@ -2457,7 +2475,7 @@ msgid "description_no_comparison_support"
 msgstr "這物件不提供比較功能."
 
 #. Default: "There are currently no items in this folder."
-#: ./skins/plone_content/folder_listing.pt:156
+#: ./skins/plone_content/folder_listing.pt:166
 msgid "description_no_items_in_folder"
 msgstr "這文件夾中目前沒有任何項目."
 
@@ -2466,33 +2484,43 @@ msgstr "這文件夾中目前沒有任何項目."
 msgid "description_no_privileges"
 msgstr "你沒有足夠權限觀看此頁. 如果您有查詢，請電郵至"
 
+#. Default: "You do not have sufficient privileges to view this page. If you believe you are receiving this message in error, contact the ${site_admin}."
+#: ./skins/plone_login/insufficient_privileges.pt:19
+msgid "description_no_privileges_for_page"
+msgstr ""
+
 #. Default: "No results were found."
-#: ./skins/plone_forms/member_search_results.pt:57
+#: ./skins/plone_forms/member_search_results.pt:67
 msgid "description_no_results_found"
 msgstr "沒有找到任何結果."
 
 #. Default: "This folder has no visible items. To add content, press the add button, or paste content from another location."
-#: ./skins/plone_templates/folder_contents.pt:59
+#: ./skins/plone_deprecated/old_folder_contents.pt:62
 msgid "description_no_visible_items_add_paste"
 msgstr "這文件夾沒有可視的項目． 要增加內容，請按下 '新增項目' 按鈕，或貼上其他位罝的資料．"
 
+#. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
+#: ./skins/plone_login/login_failed.pt:27
+msgid "description_not_accept_cookies"
+msgstr ""
+
 #. Default: "You are not currently logged in. Your user name and/or password may be incorrect."
-#: ./skins/plone_login/login_failed.pt:14
+#: ./skins/plone_login/login_failed.pt:18
 msgid "description_not_logged_in_username_incorrect"
 msgstr "您也許已經注意到右上方的條形有變動, 它現在包含數個個人選項. 這些選項在您登入期間都會被保留, 而且讓你可能變更您的設定和私人區域資料."
 
 #. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:69
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:77
 msgid "description_pas_group_listing"
 msgstr ""
 
 #. Default: "Note: Some or all of your PAS user source plugins do not allow listing of users, so you may not see the users defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:67
+#: ./skins/plone_prefs/prefs_users_overview.cpt:74
 msgid "description_pas_users_listing"
 msgstr ""
 
 #. Default: "You will receive an e-mail shortly containing a URL that will allow you to set your password. When you receive this e-mail, please follow the link to complete your registration process. NOTE: The password reset URL will expire in ${time} hours. If your password reset request expires, you may use the \"Forgot your password\" link to generate another password reset request."
-#: ./skins/plone_login/registered.pt:31
+#: ./skins/plone_login/registered.pt:34
 msgid "description_password_reset_or_registered"
 msgstr ""
 
@@ -2507,12 +2535,12 @@ msgid "description_portal_properties"
 msgstr "這是你可設定的屬性清單."
 
 #. Default: "To make new products show up here, put them in the directory ${location} on the file system, and restart the server process."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:30
+#: ./skins/plone_prefs/prefs_install_products_form.pt:34
 msgid "description_product_location"
 msgstr ""
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' - then restart the server process."
-#: ./skins/plone_prefs/plone_control_panel.pt:73
+#: ./skins/plone_prefs/plone_control_panel.pt:124
 msgid "description_production_mode"
 msgstr ""
 
@@ -2522,8 +2550,13 @@ msgstr ""
 msgid "description_publishing_process"
 msgstr "一個項目的狀態（也稱為它的覆核狀態）決定誰能看到它. <strong>私有</strong>的項目僅擁有者和網站管理員可看到。只有<strong>已發佈</strong>的項目才能被所有的成員和匿名參觀者看到. 必須通過網站覆核者所覆核過的項目才能成為已發佈狀態. 您可用 '<strong>提交覆核</strong>'功能來要求一項目被覆核. <br /> 還有項目的 <strong>生效日</strong> 可控制該項目的觀看期間. 一項目在生效日之前不會被發佈, 就算被設定成 <strong>已發佈</strong> 也不會被看到."
 
+#. Default: "An item's status (also called its review state) determines who can see it. Another way to control the visibility of an item is with its <strong>Publishing Date</strong>. An item is not publicly searchable before its publishing date. This will prevent the item from showing up in portlets and folder listings, although the item will still be available if accessed directly via its URL."
+#: ./skins/plone_forms/content_status_history.cpt:52
+msgid "description_publishing_process_short"
+msgstr ""
+
 #. Default: "Because you are logged in via HTTP authentication (i.e. the Zope Management Interface), the only way to log out is to quit your web browser."
-#: ./skins/plone_login/logged_out.pt:27
+#: ./skins/plone_login/logged_out.cpt:75
 msgid "description_quit_to_log_out"
 msgstr ""
 
@@ -2533,27 +2566,27 @@ msgid "description_received_password"
 msgstr ""
 
 #. Default: "All recently modified items, latest first."
-#: ./skins/plone_templates/recently_modified.pt:21
+#: ./skins/plone_templates/recently_modified.pt:25
 msgid "description_recently_modified"
 msgstr "所有最近更新項目, 最新先列."
 
 #. Default: "All published items, latest first."
-#: ./skins/plone_templates/recently_published.pt:21
+#: ./skins/plone_templates/recently_published.pt:25
 msgid "description_recently_published"
 msgstr "這可以預先看看您的意見將會如何顯示."
 
 #. Default: "Each item has a Short Name and a Title, which you can change by entering the new details below."
-#: ./skins/plone_forms/folder_rename_form.cpt:17
+#: ./skins/plone_forms/folder_rename_form.cpt:21
 msgid "description_rename_item"
 msgstr "每個項目都有名稱和標題, 您可以在下方輸入新的資料."
 
 #. Default: "Roles are collections of permissions. The most common role is the Member role, which is any member of the portal. You can define additional roles, but you normally only do that when you need to create a new discrete unit of permissions that you can combine to make up a Group."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:238
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:240
 msgid "description_roles_management"
 msgstr "每個項目都有名稱和標題, 您可以在下方輸入新的資料.身份是特權的組合. 最常見的身份是成員身份, 這是給任何一個在此的成員. 您可以界定附加的身份, 但您一般要這樣做是因為需加入個別單位的特權及可以和組別一起完成."
 
 #. Default: "Currently, if you want to add a new role, you must use the Zope Management Interface, as adding roles is considered a development task."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:247
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:249
 msgid "description_roles_zmi"
 msgstr "現在, 若您要加入新的本區身份, 您一定要使用 Zope Management Interface, 因加入身份被認定為開發工作."
 
@@ -2563,22 +2596,22 @@ msgid "description_search_setup"
 msgstr "網站搜尋設定"
 
 #. Default: "Search string:"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:69
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:68
 msgid "description_search_string"
 msgstr "找尋字句"
 
 #. Default: "Search for the users or groups you want to locate (blank search returns all), and select the ones you want to add."
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:21
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:25
 msgid "description_search_usersandgroups"
 msgstr "搜尋需要的用者及組別(空白搜尋會尋回所有), 及選擇您所需的加入. "
 
 #. Default: "Please select item which will be displayed as the default page of the folder."
-#: ./skins/plone_forms/select_default_page.cpt:14
+#: ./skins/plone_forms/select_default_page.cpt:18
 msgid "description_select_default_page"
 msgstr "請選擇文件夾預設顯示項目."
 
 #. Default: "Please select which template should be used as the default view of the folder."
-#: ./skins/plone_forms/select_default_view.cpt:14
+#: ./skins/plone_forms/select_default_view.cpt:18
 msgid "description_select_default_view"
 msgstr "請選擇文件夾預設檢視模範."
 
@@ -2592,6 +2625,11 @@ msgstr "流程讓您管理網站發佈過程. Plone 包括以下流程:"
 msgid "description_send_page_to"
 msgstr "填入朋友的電郵, 就會寄到該電郵地址."
 
+#. Default: "Fill in the email address of your friend, and we will send an email that contains a link to this page."
+#: ./skins/plone_forms/sendto_form.cpt:23
+msgid "description_send_page_url_to"
+msgstr ""
+
 #. Default: "Your password has been mailed. It should arrive in your mailbox shortly."
 #: ./skins/plone_forms/mail_password_response.pt:12
 #, fuzzy
@@ -2599,22 +2637,22 @@ msgid "description_sent_password"
 msgstr "<p>您的密碼已被寄出<br/> 您應立即收到電郵.</p>"
 
 #. Default: "You may restrict which content types are available in this folder, either by manually selecting them from the list below, by relying on the site default, or by using the settings from the parent folder. You can also select a subset of the available types to be immediately available in the \"Add\" menu. Any additional allowed types will be available from a \"More...\" menu item, taking you to a new page where all enabled types will be available for selection."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:16
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:57
 msgid "description_set_folder_type_restrictions"
 msgstr "您可限制在這資料夾中使用的類別, 由下面列表逐一選擇網站項目, 或沿用母文件夾的設定. 您也可選擇在\"新增\"選單中的一個可用類別的子集. 任何其他可用類別, 將在\"更多…\"選單項目中出現, 點擊後會有一新頁面, 告知您所有可選擇類別."
 
 #. Default: "You can share the rights for both entire folders and single items. These users have privileges here:"
-#: ./skins/plone_forms/folder_localrole_form.pt:55
+#: ./skins/plone_deprecated/folder_localrole_form.pt:52
 msgid "description_share_folders_items_current_shares"
 msgstr "您有分享整個文件夾和單一項目的權限. 這些成員都在這享有特權:"
 
 #. Default: "Sharing is an easy way to allow others access to collaborate with you on your content. To share this item, search for the person's name or email address in the form below, and assign them an appropriate role. The most common use is to give people Manager permissions, which means they have full control of this item and its contents (if any)."
-#: ./skins/plone_forms/folder_localrole_form.pt:365
+#: ./skins/plone_deprecated/folder_localrole_form.pt:345
 msgid "description_sharing_item"
 msgstr "分享是一個簡便的方法去讓其他人和您共同合作. 要分享此項目, 在以下表格找尋此人的名字或電郵地址, 及分配適當的本區身份. 最慣常的用法是給予他人管理員特權, 這代表他們有此項目及其內容 (如有的話) 的完全控制."
 
 #. Default: "To access this part of the site, you need to log in with your user name and password."
-#: ./skins/plone_login/failsafe_login_form.cpt:21
+#: ./skins/plone_login/failsafe_login_form.cpt:24
 msgid "description_sign_in"
 msgstr "要進入這部分的網站, 您必須先以您的名稱與密碼登入."
 
@@ -2629,7 +2667,7 @@ msgid "description_site_error_does_not_exist"
 msgstr "您所要求的項目不存在於這伺服器上, 或它已不能提供服務了."
 
 #. Default: "Please double check the web address or use the search function on this page to find what you are looking for."
-#: ./skins/plone_templates/default_error_message.pt:29
+#: ./skins/plone_templates/default_error_message.pt:39
 msgid "description_site_error_double_check_or_search"
 msgstr "請再確認網址, 或利用網頁上搜尋功能來找到您所需要的資料."
 
@@ -2638,13 +2676,18 @@ msgstr "請再確認網址, 或利用網頁上搜尋功能來找到您所需要�
 msgid "description_site_error_mail_admin"
 msgstr "如果您確定網址是正確的, 但仍然發生錯誤. 請寄信給網站管理員 ${site_admin} ."
 
+#. Default: "If you are certain you have the correct web address but are encountering an error, please contact the ${site_admin}."
+#: ./skins/plone_templates/default_error_message.pt:45
+msgid "description_site_error_mail_site_admin"
+msgstr ""
+
 #. Default: "Thank you."
-#: ./skins/plone_templates/default_error_message.pt:41
+#: ./skins/plone_templates/default_error_message.pt:51
 msgid "description_site_error_thank_you"
 msgstr "感謝您."
 
 #. Default: "An overview of the available content on this site. Keep the pointer still over an item for a few seconds to get its description."
-#: ./skins/plone_templates/sitemap.pt:16
+#: ./skins/plone_templates/sitemap.pt:20
 msgid "description_site_map"
 msgstr "一覽這網站的可行內容. 保持游標在某一項目數秒, 便可看到它的描述."
 
@@ -2669,22 +2712,22 @@ msgid "description_still_failure_reason2"
 msgstr "您的電腦可能在一個防止cookie 的防火牆或代理服務器(proxy)後。若屬此問題，您將要詢問系統管理員以解決此問題"
 
 #. Default: "Match all"
-#: ./skins/plone_forms/search_form.pt:116
+#: ./skins/plone_forms/search_form.pt:111
 msgid "description_subject_and"
 msgstr "全部相符"
 
 #. Default: "Match any"
-#: ./skins/plone_forms/search_form.pt:103
+#: ./skins/plone_forms/search_form.pt:100
 msgid "description_subject_or"
 msgstr "任一相符"
 
 #. Default: "Syndication has been disabled by site administrator."
-#: ./skins/plone_forms/synPropertiesForm.cpt:200
+#: ./skins/plone_forms/synPropertiesForm.cpt:191
 msgid "description_syndication_disabled"
 msgstr "聯合刊載功能已被站台的管理員取消."
 
 #. Default: "Syndication enables you to syndicate this folder so it can be synchronized from other web sites."
-#: ./skins/plone_forms/synPropertiesForm.cpt:14
+#: ./skins/plone_forms/synPropertiesForm.cpt:18
 msgid "description_syndication_properties"
 msgstr "這功能將可讓您聯合刊載現在的目錄, 它可和其他站台的資料同步."
 
@@ -2694,43 +2737,43 @@ msgid "description_syndication_setup"
 msgstr "聯合刊載功能已被站台的管理員取消."
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: ./skins/plone_templates/footer.pt:29
+#: ./skins/plone_templates/footer.pt:32
 #, fuzzy
 msgid "description_trademark"
 msgstr "Plone 和 Plone 圖示是 ${plonefoundation} 的註冊商標."
 
 #. Default: "This applications transactional feature allows you to easily undo changes made to the applications settings or data. You can revert the application to a \"snapshot\" of its state at a previous point in time."
-#: ./skins/plone_forms/undo_form.pt:27
+#: ./skins/plone_forms/undo_form.pt:31
 msgid "description_undo_action"
 msgstr "這應用過渡性特點, 讓您很容易對應用程式設定與資料變更做復原的動作. 可使應用程式回到先前某一特定時刻的狀態."
 
 #. Default: "Select one or more transactions below and then click on the \"Undo\" button to undo the transactions. Note that even though a transaction is shown below, you will not be able to undo it if later transactions modified objects that were modified by the transaction."
-#: ./skins/plone_forms/undo_form.pt:33
+#: ./skins/plone_forms/undo_form.pt:37
 msgid "description_undo_action_select"
 msgstr "選擇一個或多個過渡, 接著按下 \"復原\" 按鈕使過渡復原. 要注意: 如果之後有其它過渡改變之前的過渡, 即使條列出來的過渡, 也可能無法復原."
 
 #. Default: "Please use the form below to change your password."
-#: ./skins/plone_login/login_password.cpt:33
+#: ./skins/plone_login/login_password.cpt:37
 msgid "description_use_form_to_change_password"
 msgstr "請使用下方表格來變更您的密碼."
 
 #. Default: "Click the user's name to see and change the details of a specific user. Click the envelope icon to send a mail to the user. You can also edit the e-mail addresses, and add/remove users."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:56
+#: ./skins/plone_prefs/prefs_users_overview.cpt:63
 msgid "description_user_management"
 msgstr "按下用者名稱及變更指定用者的詳情. 按下信封圖示以寄出電郵給用者. 您還可修改電郵地址, 及加入/移除用者."
 
 #. Default: "This area allows you to set your preferences."
-#: ./skins/plone_prefs/plone_memberprefs_panel.pt:18
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:22
 msgid "description_user_panel"
 msgstr "這空間允許您設定喜好."
 
 #. Default: "We have used ${xhtml} 1.0 and ${css} that conforms to specification, as laid out by the ${w3c} because we believe that usability and accessibility must have a solid foundation. If anything on this web site does not validate correctly, please contact the ${site_admin}, and not the Plone Team."
-#: ./skins/plone_templates/accessibility-info.pt:161
+#: ./skins/plone_templates/accessibility-info.pt:159
 msgid "description_validation"
 msgstr "我們使用 ${xhtml} 1.0 以及 ${css}，遵守相關規格如 ${w3c} 的規劃設計, 因為我們相信易用性和訪問性定要有堅固的基礎. 如果這網站沒有正確驗証,請連絡${site_admin}，而不是Plone團隊。"
 
 #. Default: "We have also endeavoured to achieve AA accessibility as measured against version 1.0 of the ${wcag}. We are aware however, that a number of the checkpoints of the ${wcag2} are subjective - and although we are sure that we have met them squarely, there may be instances where interpretation may vary."
-#: ./skins/plone_templates/accessibility-info.pt:174
+#: ./skins/plone_templates/accessibility-info.pt:172
 #, fuzzy
 msgid "description_wcag_aa_rating"
 msgstr "我們盡力達成 AA 訪問性, 並依據 ${wcag} 的 1.0 版本評量. 我們明瞭若干 ${wcag2} 的檢查點有些主觀, 儘管如此, 雖然我們確信有嚴格符合其規範, 但他們有機會隨著時間有不同的詮釋."
@@ -2751,12 +2794,12 @@ msgid "description_workflow_one_step"
 msgstr "如果您希望所有內容立即有效, 並不須任何審核過程便用這個一步過發佈"
 
 #. Default: "You have been registered."
-#: ./skins/plone_login/registered.pt:21
+#: ./skins/plone_login/registered.pt:24
 msgid "description_you_are_registered"
 msgstr "您已經是本站註冊成員."
 
 #. Default: "Click the button to log in immediately."
-#: ./skins/plone_login/registered.pt:37
+#: ./skins/plone_login/registered.pt:40
 msgid "description_you_can_log_on_now"
 msgstr "按下按鈕即可立即登入."
 
@@ -2772,142 +2815,147 @@ msgstr "電郵"
 msgid "enable_cookies_message"
 msgstr "Cookie 沒有啟用. 在登入前您必須先${enable_cookies}."
 
+#. Default: "Cookies are not enabled. You must enable cookies before you can log in."
+#: ./skins/plone_deprecated/portlet_login.pt:72
+msgid "enable_cookies_message_before_login"
+msgstr ""
+
 #. Default: "There were Errors during install, check Transcript"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:32
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:36
 msgid "error_installed_product"
 msgstr "安裝時出現了故障，請檢查記錄"
 
 #. Default: "to"
-#: ./skins/plone_templates/events_listing.pt:61
+#: ./skins/plone_templates/events_listing.pt:64
 msgid "event_and"
 msgstr "至"
 
 #. Default: "from"
-#: ./skins/plone_content/event_view.pt:72
+#: ./skins/plone_content/event_view.pt:92
 msgid "event_from"
 msgstr "由"
 
 #. Default: "More information about this event..."
-#: ./skins/plone_content/event_view.pt:131
+#: ./skins/plone_content/event_view.pt:190
 #, fuzzy
 msgid "event_more_information"
 msgstr "更多關於這事件的資訊"
 
 #. Default: "to"
-#: ./skins/plone_content/event_view.pt:49
+#: ./skins/plone_content/event_view.pt:63
 msgid "event_to"
 msgstr "至"
 
 #. Default: "What"
-#: ./skins/plone_content/event_view.pt:35
+#: ./skins/plone_content/event_view.pt:39
 msgid "event_what"
 msgstr "為何"
 
 #. Default: "When"
-#: ./skins/plone_content/event_view.pt:41
+#: ./skins/plone_content/event_view.pt:49
 msgid "event_when"
 msgstr "時間:"
 
 #. Default: "Where"
-#: ./skins/plone_content/event_view.pt:81
+#: ./skins/plone_content/event_view.pt:101
 msgid "event_where"
 msgstr "地點:"
 
 #. Default: "More..."
-#: ./skins/plone_templates/global_contentmenu.pt:130
+#: ./skins/plone_deprecated/global_contentmenu.pt:132
 #, fuzzy
 msgid "folder_add_more"
 msgstr "更多…"
 
 #. Default: "Restrict..."
-#: ./skins/plone_templates/global_contentmenu.pt:139
+#: ./skins/plone_deprecated/global_contentmenu.pt:141
 #, fuzzy
 msgid "folder_add_settings"
 msgstr "設定…"
 
 #. Default: "Click to configure what type of items can be added here..."
-#: ./skins/plone_forms/folder_factories.pt:25
+#: ./skins/plone_forms/folder_factories.pt:36
 msgid "folder_add_settings_long"
 msgstr ""
 
 #. Default: "Up one level"
-#: ./skins/plone_content/folder_listing.pt:19
+#: ./skins/plone_deprecated/old_folder_contents.pt:45
 msgid "go_to_parent_url"
 msgstr "到上一層"
 
 #. Default: "All content created by ${user}..."
-#: ./skins/plone_content/author.cpt:266
+#: ./skins/plone_content/author.cpt:270
 #, fuzzy
 msgid "go_to_search_author_content"
 msgstr "全部由 ${user} 建立的內容"
 
 #. Default: "Access keys"
-#: ./skins/plone_templates/accessibility-info.pt:50
+#: ./skins/plone_templates/accessibility-info.pt:54
 msgid "heading_access_keys"
 msgstr "快速鍵"
 
 #. Default: "Using access keys in different web browsers"
-#: ./skins/plone_templates/accessibility-info.pt:80
+#: ./skins/plone_templates/accessibility-info.pt:78
 msgid "heading_access_keys_usage"
 msgstr "在不同瀏覽器使用快速鍵"
 
 #. Default: "Accessibility"
-#: ./skins/plone_templates/accessibility-info.pt:15
+#: ./skins/plone_templates/accessibility-info.pt:18
 msgid "heading_accessibility_info"
 msgstr "可訪問性"
 
 #. Default: "Accessibility Statement"
-#: ./skins/plone_templates/accessibility-info.pt:137
+#: ./skins/plone_templates/accessibility-info.pt:135
 msgid "heading_accessibility_statement"
 msgstr "可訪問性聲明"
 
 #. Default: "Actions"
-#: ./skins/plone_templates/global_contentviews.pt:42
+#: ./skins/plone_templates/global_contentviews.pt:44
 msgid "heading_actions"
 msgstr "動作"
 
 #. Default: "Add new item"
-#: ./skins/plone_forms/folder_factories.pt:17
+#: ./skins/plone_forms/folder_factories.pt:27
 msgid "heading_add_new_item"
 msgstr "增加新項目"
 
 #. Default: "Add sharing permissions to users"
-#: ./skins/plone_forms/folder_localrole_form.pt:233
+#: ./skins/plone_deprecated/folder_localrole_form.pt:221
 msgid "heading_add_sharing_permissions"
 msgstr "新增分享權限給成員"
 
 #. Default: "Add event to calendar"
-#: ./skins/plone_content/event_view.pt:106
+#: ./skins/plone_content/event_view.pt:157
 msgid "heading_add_to_calendar"
 msgstr "增加事件至日曆"
 
 #. Default: "Add/Remove Products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:13
+#: ./skins/plone_prefs/prefs_install_products_form.pt:16
 msgid "heading_addremove_products"
 msgstr "新增/移除產品"
 
 #. Default: "Advanced search for content"
-#: ./skins/plone_forms/search_form.pt:11
+#: ./skins/plone_forms/search_form.pt:14
 msgid "heading_advanced_search"
 msgstr "進階內容搜尋"
 
 #. Default: "Advanced settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:601
+#: ./skins/plone_deprecated/folder_localrole_form.pt:563
 msgid "heading_advanced_settings"
 msgstr ""
 
 #. Default: "Latest content created by this user"
-#: ./skins/plone_content/author.cpt:225
+#: ./skins/plone_content/author.cpt:229
 msgid "heading_author_content"
 msgstr "這成員最新建立的內容"
 
 #. Default: "Available access keys"
-#: ./skins/plone_templates/accessibility-info.pt:63
+#: ./skins/plone_templates/accessibility-info.pt:61
 msgid "heading_available_access_keys"
 msgstr "可用的快速鍵"
 
 #. Default: "Broken products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:193
+#: ./skins/plone_prefs/prefs_install_products_form.pt:200
 msgid "heading_broken_products"
 msgstr "無效產品"
 
@@ -2917,14 +2965,19 @@ msgid "heading_change_ownership"
 msgstr "變更擁有者"
 
 #. Default: "Change password for ${user}"
-#: ./skins/plone_prefs/password_form.pt:14
+#: ./skins/plone_prefs/password_form.pt:18
 msgid "heading_change_password_for"
 msgstr "改變使用者 ${user} 的密碼"
 
 #. Default: "Comment Preview"
-#: ./skins/plone_forms/discussion_reply_preview.pt:11
+#: ./skins/plone_forms/discussion_reply_preview.pt:13
 msgid "heading_comment_preview"
 msgstr "預覽意見"
+
+#. Default: "Contact form"
+#: ./skins/plone_templates/contact-info.cpt:17
+msgid "heading_contact_form"
+msgstr ""
 
 #. Default: "Contact information"
 #: ./skins/plone_templates/contact-info.cpt:14
@@ -2932,32 +2985,32 @@ msgid "heading_contact_information"
 msgstr "連絡資料"
 
 #. Default: "Site Setup"
-#: ./skins/plone_portlets/portlet_prefs.pt:14
+#: ./skins/plone_prefs/plone_control_panel.pt:21
 msgid "heading_control_panel"
 msgstr "Plone 設定"
 
 #. Default: "Create a Group"
-#: ./skins/plone_prefs/prefs_group_details.pt:53
+#: ./skins/plone_prefs/prefs_group_details.pt:62
 msgid "heading_create_group"
 msgstr "加入組別"
 
 #. Default: "Current sharing permissions for ${folder}"
-#: ./skins/plone_forms/folder_localrole_form.pt:35
+#: ./skins/plone_deprecated/folder_localrole_form.pt:32
 msgid "heading_currently_assigned_shares"
 msgstr "目前被指定在 ${folder}文件夾中的本區身份"
 
 #. Default: "Document Actions"
-#: ./skins/plone_content/document_actions.pt:11
+#: ./skins/plone_deprecated/document_actions.pt:14
 msgid "heading_document_actions"
 msgstr "文件動作"
 
 #. Default: "Edit Group Properties for ${groupname}"
-#: ./skins/plone_prefs/prefs_group_details.pt:80
+#: ./skins/plone_prefs/prefs_group_details.pt:91
 msgid "heading_edit_groupproperties"
 msgstr "修改${groupname}組別屬性"
 
 #. Default: "Edit ${itemtype}"
-#: ./skins/plone_content/folder_edit_form.cpt:17
+#: ./skins/plone_content/folder_edit_form.cpt:20
 msgid "heading_edit_item"
 msgstr ""
 
@@ -2967,17 +3020,17 @@ msgid "heading_enable_cookies"
 msgstr "更改名稱"
 
 #. Default: "Error log"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:13
+#: ./skins/plone_prefs/prefs_error_log_form.pt:16
 msgid "heading_error_log"
 msgstr "錯誤記錄"
 
 #. Default: "Exception Details"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:16
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:19
 msgid "heading_exception_details"
 msgstr "錯誤詳情"
 
 #. Default: "File contents"
-#: ./skins/plone_content/file_view.pt:69
+#: ./skins/plone_content/file_view.pt:70
 msgid "heading_file_contents"
 msgstr "檔案內容"
 
@@ -2987,32 +3040,32 @@ msgid "heading_full_review_list"
 msgstr "完整審核清單:"
 
 #. Default: "Group Members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:56
+#: ./skins/plone_prefs/prefs_group_members.cpt:65
 msgid "heading_group_members"
 msgstr "組別成員"
 
 #. Default: "Members of the ${groupname} group"
-#: ./skins/plone_prefs/prefs_group_members.cpt:73
+#: ./skins/plone_prefs/prefs_group_members.cpt:84
 msgid "heading_group_members_of"
 msgstr "群組 ${groupname} 成員"
 
 #. Default: "Group Memberships for ${username}"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:50
+#: ./skins/plone_prefs/prefs_user_memberships.pt:56
 msgid "heading_group_memberships_for"
 msgstr "${username}的組別會藉"
 
 #. Default: "Add sharing permissions to groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:440
+#: ./skins/plone_deprecated/folder_localrole_form.pt:414
 msgid "heading_group_shares"
 msgstr "加入分享特權給組別"
 
 #. Default: "Current group members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:98
+#: ./skins/plone_prefs/prefs_group_members.cpt:109
 msgid "heading_groupmembers_current"
 msgstr "目前群組成員"
 
 #. Default: "Groups Overview"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:51
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:58
 msgid "heading_groups_overview"
 msgstr "組別一覽"
 
@@ -3032,12 +3085,12 @@ msgid "heading_ie_version_6x"
 msgstr "Version 6.x"
 
 #. Default: "Install log for ${productname}"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:11
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:15
 msgid "heading_install_log_for"
 msgstr "${productname}的安裝記錄"
 
 #. Default: "Transcript"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:111
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:115
 msgid "heading_installed_transcript"
 msgstr "安裝項目"
 
@@ -3067,12 +3120,12 @@ msgid "heading_member_listing"
 msgstr "成員名單"
 
 #. Default: "Search for users"
-#: ./skins/plone_forms/member_search_form.pt:10
+#: ./skins/plone_forms/member_search_form.pt:13
 msgid "heading_member_search"
 msgstr "搜尋成員"
 
 #. Default: "Current Group Memberships"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:81
+#: ./skins/plone_prefs/prefs_user_memberships.pt:88
 msgid "heading_memberships_current"
 msgstr "此組成員名單"
 
@@ -3087,12 +3140,12 @@ msgid "heading_mozilla"
 msgstr "Mozilla"
 
 #. Default: "Personal Preferences"
-#: ./skins/plone_prefs/personalize_form.cpt:46
+#: ./skins/plone_prefs/personalize_form.cpt:50
 msgid "heading_my_preferences"
 msgstr "我的設定"
 
 #. Default: "Navigation Settings"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:15
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:18
 msgid "heading_navigation_setup"
 msgstr "導覽設定"
 
@@ -3112,14 +3165,19 @@ msgid "heading_netscape_version_6x"
 msgstr "Version 6.x"
 
 #. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt:45
+#: ./skins/plone_forms/ownership_form.cpt:47
 msgid "heading_new_owner"
 msgstr ""
 
 #. Default: "Insufficient Privileges"
-#: ./skins/plone_login/insufficient_privileges.pt:10
+#: ./skins/plone_login/insufficient_privileges.pt:13
 msgid "heading_no_privileges"
 msgstr "權限不足"
+
+#. Default: "You might have been looking for..."
+#: ./skins/plone_templates/default_error_message.pt:64
+msgid "heading_not_found_suggestions"
+msgstr ""
 
 #. Default: "Opera"
 #: ./skins/plone_login/enabling_cookies.pt:14
@@ -3127,12 +3185,13 @@ msgid "heading_opera"
 msgstr "Opera"
 
 #. Default: "Personal tools"
-#: ./skins/plone_templates/global_personalbar.pt:13
+#: ./skins/plone_deprecated/global_personalbar.pt:16
 msgid "heading_personal_tools"
 msgstr "個人工具"
 
-#. Default: "Plone version overview"
-#: ./skins/plone_prefs/plone_control_panel.pt:54
+#. Default: "Plone Version Overview"
+#: ./skins/plone_prefs/plone_control_panel.pt:110
+#, fuzzy
 msgid "heading_plone_version_overview"
 msgstr "Plone版本一覽"
 
@@ -3147,59 +3206,64 @@ msgid "heading_portal_setup"
 msgstr "Portal 設定"
 
 #. Default: "User Properties for ${username}"
-#: ./skins/plone_prefs/prefs_user_details.cpt:54
+#: ./skins/plone_prefs/prefs_user_details.cpt:58
 msgid "heading_prefs_user_details"
 msgstr "${username} 的成員屬性"
 
 #. Default: "Description of ${productname}"
-#: ./skins/plone_prefs/prefs_install_product_readme.pt:17
+#: ./skins/plone_prefs/prefs_install_product_readme.pt:21
 msgid "heading_product_readme"
 msgstr "${productname} 描述"
 
 #. Default: "Publishing process"
-#: ./skins/plone_forms/content_status_history.cpt:46
+#: ./skins/plone_forms/content_status_history.cpt:49
 msgid "heading_publishing_process"
 msgstr "發佈流程"
 
 #. Default: "Quit your web browser to log out"
-#: ./skins/plone_login/logged_out.pt:25
+#: ./skins/plone_login/logged_out.cpt:72
 msgid "heading_quit_to_log_out"
 msgstr ""
 
 #. Default: "Modified items"
-#: ./skins/plone_templates/recently_modified.pt:17
+#: ./skins/plone_templates/recently_modified.pt:20
 msgid "heading_recently_modified"
 msgstr "修改項目"
 
 #. Default: "Published items"
-#: ./skins/plone_templates/recently_published.pt:17
+#: ./skins/plone_templates/recently_published.pt:20
 msgid "heading_recently_published"
 msgstr "已發佈項目"
 
 #. Default: "Registration Form"
-#: ./skins/plone_login/join_form.cpt:16
+#: ./skins/plone_login/join_form.cpt:21
 msgid "heading_registration_form"
 msgstr "請註冊"
 
 #. Default: "Rename item"
-#: ./skins/plone_forms/folder_rename_form.cpt:15
+#: ./skins/plone_forms/folder_rename_form.cpt:18
 msgid "heading_rename_item"
 msgstr "更改名稱"
 
 #. Default: "REQUEST"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:68
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:72
 msgid "heading_request"
 msgstr "要求"
 
 #. Default: "Returned results"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:68
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:67
 msgid "heading_returned_results"
 msgstr "傳回結果"
 
 #. Default: "Roles Management"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:236
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:237
 msgid "heading_roles_management"
 msgstr "身份管理"
+
+#. Default: "Search for groups"
+#: ./skins/plone_prefs/prefs_user_memberships.pt:68
+msgid "heading_search_groups"
+msgstr ""
 
 #. Default: "Search for new groups"
 #: ./skins/plone_prefs/prefs_user_memberships.pt:62
@@ -3207,12 +3271,12 @@ msgid "heading_search_newgroups"
 msgstr "搜尋新的組別"
 
 #. Default: "Search for new group members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:178
+#: ./skins/plone_prefs/prefs_group_members.cpt:189
 msgid "heading_search_newmembers"
 msgstr "搜尋新的組別成員"
 
 #. Default: "Search results"
-#: ./skins/plone_forms/folder_localrole_form.pt:238
+#: ./skins/plone_deprecated/folder_localrole_form.pt:226
 msgid "heading_search_results"
 msgstr "搜尋結果"
 
@@ -3222,22 +3286,22 @@ msgid "heading_search_setup"
 msgstr "搜尋設定"
 
 #. Default: "Search for Users and Groups"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:19
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:22
 msgid "heading_search_usersandgroups"
 msgstr "搜尋組別及成員"
 
 #. Default: "Sections"
-#: ./skins/plone_templates/global_sections.pt:12
+#: ./skins/plone_deprecated/global_sections.pt:15
 msgid "heading_sections"
 msgstr "節"
 
 #. Default: "Select default page"
-#: ./skins/plone_forms/select_default_page.cpt:12
+#: ./skins/plone_forms/select_default_page.cpt:15
 msgid "heading_select_default_page"
 msgstr "選擇預設頁面"
 
 #. Default: "Select default view"
-#: ./skins/plone_forms/select_default_view.cpt:12
+#: ./skins/plone_forms/select_default_view.cpt:15
 msgid "heading_select_default_view"
 msgstr "選擇預設檢視"
 
@@ -3247,12 +3311,13 @@ msgid "heading_select_workflow"
 msgstr "選擇流程"
 
 #. Default: "Site Administrator has been contacted."
-#: ./skins/plone_templates/send_feedback_confirm.cpt:15
+#: ./skins/plone_templates/send_feedback_confirm.cpt:18
 msgid "heading_send_feedback_confirm"
 msgstr ""
 
-#. Default: "Send this page to somebody"
-#: ./skins/plone_forms/sendto_form.cpt:17
+#. Default: "Send this page to someone"
+#: ./skins/plone_forms/sendto_form.cpt:20
+#, fuzzy
 msgid "heading_send_page_to"
 msgstr "寄送此網頁給某人"
 
@@ -3261,23 +3326,28 @@ msgstr "寄送此網頁給某人"
 msgid "heading_sent_password"
 msgstr "已寄出密碼"
 
+#. Default: "Restrict what types of content can be added"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:52
+msgid "heading_set_content_type_restrictions"
+msgstr ""
+
 #. Default: "Restrict addable types"
 #: ./skins/plone_forms/folder_constraintypes_form.cpt:12
 msgid "heading_set_folder_type_restrictions"
 msgstr "限制可加類別"
 
 #. Default: "Please log in"
-#: ./skins/plone_login/failsafe_login_form.cpt:4
+#: ./skins/plone_login/failsafe_login_form.cpt:7
 msgid "heading_sign_in"
 msgstr "請登入"
 
 #. Default: "Sign-in failure"
-#: ./skins/plone_login/login_failed.pt:12
+#: ./skins/plone_login/login_failed.pt:15
 msgid "heading_sign_in_failure_auth"
 msgstr "登入失敗"
 
 #. Default: "You are now logged out"
-#: ./skins/plone_login/logged_out.pt:12
+#: ./skins/plone_login/logged_out.cpt:29
 msgid "heading_signed_out"
 msgstr "您現在已經登出"
 
@@ -3291,13 +3361,23 @@ msgstr "網站錯誤"
 msgid "heading_site_error_apologies"
 msgstr "很抱歉..."
 
+#. Default: "We're sorry, but there seems to be an error..."
+#: ./skins/plone_templates/default_error_message.pt:130
+msgid "heading_site_error_sorry"
+msgstr ""
+
+#. Default: "We're sorry, but that page doesn't exist..."
+#: ./skins/plone_templates/default_error_message.pt:34
+msgid "heading_site_there_seems_to_be_an_error"
+msgstr ""
+
 #. Default: "Skin Setup"
 #: ./skins/plone_prefs/prefs_portalskin_form.cpt:14
 msgid "heading_skin_setup"
 msgstr "顯示風格設定"
 
 #. Default: "Syndication Properties"
-#: ./skins/plone_forms/synPropertiesForm.cpt:12
+#: ./skins/plone_forms/synPropertiesForm.cpt:15
 msgid "heading_syndication_properties"
 msgstr "聯合刊載屬性"
 
@@ -3307,47 +3387,47 @@ msgid "heading_syndication_setup"
 msgstr "網站聯合刊載設定"
 
 #. Default: "Undo actions"
-#: ./skins/plone_forms/undo_form.pt:25
+#: ./skins/plone_forms/undo_form.pt:28
 msgid "heading_undo_actions"
 msgstr "復原動作"
 
 #. Default: "My Preferences"
-#: ./skins/plone_prefs/plone_memberprefs_panel.pt:16
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:19
 msgid "heading_user_panel"
 msgstr "我的設定"
 
 #. Default: "Users Overview"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:47
+#: ./skins/plone_prefs/prefs_users_overview.cpt:53
 msgid "heading_users_overview"
 msgstr "成員一覽"
 
 #. Default: "Validation"
-#: ./skins/plone_templates/accessibility-info.pt:145
+#: ./skins/plone_templates/accessibility-info.pt:143
 msgid "heading_validation"
 msgstr "驗証"
 
 #. Default: "Views"
-#: ./skins/plone_templates/global_contentviews.pt:13
+#: ./skins/plone_templates/global_contentviews.pt:15
 msgid "heading_views"
 msgstr "觀看"
 
 #. Default: "Welcome!"
-#: ./skins/plone_login/login_password.cpt:19
+#: ./skins/plone_login/login_password.cpt:22
 msgid "heading_welcome"
 msgstr "歡迎!"
 
 #. Default: "Welcome to ${sitename}"
-#: ./skins/plone_templates/index_html.pt:11
+#: ./skins/plone_templates/index_html.pt:14
 msgid "heading_welcome_to"
 msgstr "歡迎來臨 ${sitename}"
 
 #. Default: "You are now logged in"
-#: ./skins/plone_login/login_success.pt:25
+#: ./skins/plone_login/login_success.pt:28
 msgid "heading_you_are_now_logged_in"
 msgstr "您現在已經登入"
 
 #. Default: "Please select how you would like to control which content types are addable in this folder."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:54
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:91
 msgid "help_add_restriction_mode"
 msgstr "請選擇您要控制在這文件夾內可被新增的內容類別."
 
@@ -3362,7 +3442,7 @@ msgid "help_allowRolesToAddKeywords"
 msgstr ""
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
-#: ./skins/plone_prefs/personalize_form.cpt:196
+#: ./skins/plone_prefs/personalize_form.cpt:202
 msgid "help_biography"
 msgstr "一份關於你是誰和做什麼的一概. 連結至你建立的項目."
 
@@ -3373,17 +3453,17 @@ msgid "help_boolean_criteria_bool"
 msgstr "是或否"
 
 #. Default: "Case sensitive, make sure caps lock is not enabled."
-#: ./skins/plone_login/failsafe_login_form.cpt:107
+#: ./skins/plone_login/failsafe_login_form.cpt:116
 msgid "help_capslock_password"
 msgstr "大小寫敏感, 請確大寫鎖定沒有啟用."
 
 #. Default: "Changes the ownership of the current object."
-#: ./skins/plone_forms/ownership_form.cpt:41
+#: ./skins/plone_forms/ownership_form.cpt:43
 msgid "help_change_ownership"
 msgstr "變更此物件的擁有者"
 
 #. Default: "Select the new state for the selected items."
-#: ./skins/plone_forms/content_status_history.cpt:183
+#: ./skins/plone_forms/content_status_history.cpt:167
 msgid "help_change_status"
 msgstr "為已選的內容選擇新的狀態."
 
@@ -3393,17 +3473,17 @@ msgid "help_choose_a_date"
 msgstr "選一個日期"
 
 #. Default: "A comment about this link."
-#: ./skins/plone_forms/sendto_form.cpt:89
+#: ./skins/plone_forms/sendto_form.cpt:92
 msgid "help_comment_to_link"
 msgstr "關於此連結的一些評論或意見."
 
 #. Default: "Re-enter the password. Make sure the passwords are identical."
-#: ./skins/plone_login/join_form.cpt:174
+#: ./skins/plone_login/join_form.cpt:173
 msgid "help_confirm_password"
 msgstr "重新輸入密碼, 請確定密碼是一致的."
 
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
-#: ./skins/plone_prefs/personalize_form.cpt:245
+#: ./skins/plone_prefs/personalize_form.cpt:248
 msgid "help_content_editor"
 msgstr "選擇您喜愛使用編輯內容的編輯器. 注意: 內容編輯器通常需要瀏覽器配合."
 
@@ -3451,7 +3531,7 @@ msgid "help_current_folder_only"
 msgstr ""
 
 #. Default: "Enter your current password."
-#: ./skins/plone_prefs/password_form.pt:35
+#: ./skins/plone_prefs/password_form.pt:40
 msgid "help_current_password"
 msgstr "輸入您現有密碼"
 
@@ -3490,23 +3570,24 @@ msgid "help_default_skin"
 msgstr "指定網站預設給用者使用的顯示風格."
 
 #. Default: "A short summary of the content"
-#: ./skins/plone_content/folder_edit_form.cpt:105
+#: ./skins/plone_content/folder_edit_form.cpt:104
 #, fuzzy
 msgid "help_description"
 msgstr "輸入對於項目的簡短說明."
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
-#: ./skins/plone_prefs/personalize_form.cpt:335
+#: ./skins/plone_prefs/personalize_form.cpt:333
 msgid "help_display_names"
 msgstr "決定是否簡稱 (也就是 ID) 修該時能否變更. 如果簡稱不顯示, 則會自動產生."
 
-#. Default: "The date when the item will be available (of course it needs to be published too). If no date is selected the item will be effective immediately."
-#: ./skins/plone_forms/content_status_history.cpt:111
+#. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
+#: ./skins/plone_forms/content_status_history.cpt:100
+#, fuzzy
 msgid "help_effective_date"
 msgstr "這日期用來指定該內容已被發佈之後, 開始顯示的日期. 藉由這方式, 可更進階的控制文件發佈, 因為它不會在該日期之前顯示. 如果沒有指定日期, 文件會被立即顯示 (當然要有符合的權限)."
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
-#: ./skins/plone_login/join_form.cpt:112
+#: ./skins/plone_login/join_form.cpt:115
 msgid "help_email_creation"
 msgstr "輸入您的電郵地址. 當您的密碼遺失, 這資料將非常需要, 將以這電郵將密碼寄給您. 我們保證資料被妥善保護, 不會做為其他用途."
 
@@ -3517,43 +3598,44 @@ msgid "help_exclude_from_nav"
 msgstr "如被選擇, 這項目將不在導覽樹中顯示"
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
-#: ./skins/plone_forms/content_status_history.cpt:137
+#: ./skins/plone_forms/content_status_history.cpt:124
 msgid "help_expiration_date"
 msgstr "這日期用來指定項目過期日. 當到達此日期時, 此項目會自動不顯示. 如果沒指定日期, 內容將永不過期."
 
 #. Default: "If you are unsure of which format to use, just select Plain Text and type the document as you usually do."
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:21
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:20
 msgid "help_format_wysiwyg"
 msgstr "選擇內文使用的格式. 如果你不確定使用哪種格式, 只要選擇純文字格式, 並用一般方式輸入即可."
 
 #. Default: "Enter full name, eg. John Smith."
-#: ./skins/plone_login/join_form.cpt:48
+#: ./skins/plone_login/join_form.cpt:55
 msgid "help_full_name_creation"
 msgstr "輸入全名， 如 John Smith。"
 
 #. Default: "By default, all items created at the root level will add to the global section navigation. You can turn this off if you prefer manually constructing this part of the navigation."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:54
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:65
 #, fuzzy
 msgid "help_generated_tabs"
 msgstr "預設是所有在根目錄建立的文件夾會生成全域導覽. 你可關閉這功能如果你較喜歡手動產生這導覽部份."
 
 #. Default: "A unique identifier for the group. Can not be changed after creation."
-#: ./skins/plone_prefs/prefs_group_details.pt:64
+#: ./skins/plone_prefs/prefs_group_details.pt:74
 msgid "help_groupname"
 msgstr "組別的獨特名稱, 加入後不能作出修改. "
 
 #. Default: "The URL for your external home page, if you have one."
-#: ./skins/plone_prefs/personalize_form.cpt:221
+#: ./skins/plone_prefs/personalize_form.cpt:226
 msgid "help_homepage"
 msgstr ""
 
-#. Default: "Of the types selected above, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected above will be addable via a separate form accessible from the same menu."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:137
+#. Default: "Of the types selected below, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected below will be addable via a separate form accessible from the same menu."
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:148
+#, fuzzy
 msgid "help_immediately_addable_types"
 msgstr "在上面被選類別中, 特定項目可透過標準\"新增\"下拉列被新增.上面所選的更多類別可在此下拉列選擇一個單獨的表單添加."
 
 #. Default: "If checked, this will attempt to modify the status of all content in any selected folders and their subfolders."
-#: ./skins/plone_forms/content_status_history.cpt:94
+#: ./skins/plone_forms/content_status_history.cpt:90
 #, fuzzy
 msgid "help_include_contained_objects"
 msgstr "如被選取, Plone將嘗試在所有已選文件夾及其子文件夾下, 修改所有內容的狀態."
@@ -3576,7 +3658,7 @@ msgid "help_limit_number"
 msgstr "如被選擇, 只有在下面指示的'項目數目'會被顯示."
 
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: ./skins/plone_prefs/personalize_form.cpt:313
+#: ./skins/plone_prefs/personalize_form.cpt:312
 msgid "help_listed_search"
 msgstr "決定您的姓名是否列在此網站的成員搜尋中."
 
@@ -3586,28 +3668,29 @@ msgstr "決定您的姓名是否列在此網站的成員搜尋中."
 msgid "help_livesearch"
 msgstr "如果瀏覽器支援 JavaScript,開啟即時搜尋功能 (類似 Google), 以看到即時結果."
 
-#. Default: "Select the content types that will be addable inside this folder."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:108
+#. Default: "Select the content types that will be addable to this folder using the 'more ...' link."
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:192
+#, fuzzy
 msgid "help_locally_allowed_types"
 msgstr "選擇的內容類別將被新增在這文件夾內."
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
-#: ./skins/plone_prefs/personalize_form.cpt:139
+#: ./skins/plone_prefs/personalize_form.cpt:149
 msgid "help_location"
 msgstr "您的所在位置 - 城市或國家 - 或你所在公司的設定."
 
 #. Default: "Login names are case sensitive, make sure the caps lock key is not enabled."
-#: ./skins/plone_login/failsafe_login_form.cpt:81
+#: ./skins/plone_login/failsafe_login_form.cpt:92
 msgid "help_login_name_caps"
 msgstr "成員登入名稱有大小寫敏感, 請確定大寫鎖定鍵是否被啟用."
 
 #. Default: "Appearance of the site."
-#: ./skins/plone_prefs/personalize_form.cpt:351
+#: ./skins/plone_prefs/personalize_form.cpt:349
 msgid "help_look"
 msgstr "這裡您可選擇站台的外觀. 有數種格式可供選擇."
 
 #. Default: "Please enter the message you want to send."
-#: ./skins/plone_templates/contact-info.cpt:123
+#: ./skins/plone_templates/contact-info.cpt:124
 msgid "help_message"
 msgstr "請輸入您想寄出的短訊."
 
@@ -3643,7 +3726,7 @@ msgid "help_navigationtypes"
 msgstr "該內容類別可在導覽樹和網站地圖上顯示."
 
 #. Default: "Enter your new password. Minimum 5 characters."
-#: ./skins/plone_login/login_password.cpt:62
+#: ./skins/plone_login/login_password.cpt:67
 msgid "help_new_password"
 msgstr "輸入您新的密碼, 至少 5 個字母."
 
@@ -3659,7 +3742,7 @@ msgid "help_no_selectable_default_pages"
 msgstr "在這文件夾內, 沒有任何項目可被選為預設檢視頁面."
 
 #. Default: "Minimum 5 characters."
-#: ./skins/plone_login/join_form.cpt:144
+#: ./skins/plone_login/join_form.cpt:145
 msgid "help_password_creation"
 msgstr " 至少 5 個字母."
 
@@ -3669,7 +3752,7 @@ msgid "help_password_policy"
 msgstr "選擇使用者是否能夠在註冊系統時, 設定自己的密碼或由系統產生. 如果密碼不由系統產生, 將容易造成一些問題. 如果在意的話, 選擇 \"產生密碼\"."
 
 #. Default: "If you have forgotten your password, ${click_here}."
-#: ./skins/plone_login/failsafe_login_form.cpt:113
+#: ./skins/plone_login/failsafe_login_form.cpt:122
 msgid "help_password_retrieval"
 msgstr "如果您忘記密碼, ${click_here} ."
 
@@ -3707,27 +3790,27 @@ msgid "help_portal_type_criteria_value"
 msgstr "其中一個註冊的網站類別."
 
 #. Default: "To add or change the portrait: click the \"Browse\" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall."
-#: ./skins/plone_prefs/personalize_form.cpt:386
+#: ./skins/plone_prefs/personalize_form.cpt:382
 msgid "help_portrait"
 msgstr "要增加個人相片, 點選 <strong>瀏覽</strong> 按鈕並且選擇您的相片檔案. 建議大小為 75 像素闊, 100 像素高.<br />"
 
 #. Default: "Your preferred language."
-#: ./skins/plone_prefs/personalize_form.cpt:166
+#: ./skins/plone_prefs/personalize_form.cpt:174
 msgid "help_preferred_language"
 msgstr "您偏好的語言."
 
 #. Default: "Will be added to the publishing history. If multiple items are selected, this comment will be attached to all of them."
-#: ./skins/plone_forms/content_status_history.cpt:165
+#: ./skins/plone_forms/content_status_history.cpt:151
 msgid "help_publishing_comments"
 msgstr "輸入簡短敘述或者一些意見, 加在發佈歷史的建議欄中. 如果有多個項目被選擇, 這建議將會附加在所有項目."
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
-#: ./skins/plone_login/failsafe_login_form.cpt:146
+#: ./skins/plone_login/failsafe_login_form.cpt:151
 msgid "help_remember_my_name"
 msgstr "設定 '記住我的名字' 選項將以您的用者名稱建立一個 cookie. 當您再次登入系統, 您的用者名稱將自動為您填妥."
 
 #. Default: "Return items created by a particular person."
-#: ./skins/plone_forms/search_form.pt:224
+#: ./skins/plone_forms/search_form.pt:209
 msgid "help_search_author"
 msgstr "傳回指定人士所建立的項目."
 
@@ -3736,28 +3819,35 @@ msgstr "傳回指定人士所建立的項目."
 msgid "help_search_before_specified_time"
 msgstr "傳回的成員是指定時間後未曾登入過的."
 
+#. Default: "Return items matching some or all of these Categories. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
+#: ./skins/plone_forms/search_form.pt:70
+msgid "help_search_categories"
+msgstr ""
+
 #. Default: "Return items matching this description. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>."
-#: ./skins/plone_forms/search_form.pt:124
+#: ./skins/plone_forms/search_form.pt:119
 msgid "help_search_description"
 msgstr "傳回在描述中符合的項目. 多個字的搜尋可用 <strong>AND</strong> 或 <strong>OR</strong> 兩種連接詞來協助組合."
 
-#. Default: "Return users with email addresses containing this value."
-#: ./skins/plone_forms/member_search_form.pt:63
+#. Default: "Find users whose email-addresses contain"
+#: ./skins/plone_forms/member_search_form.pt:49
+#, fuzzy
 msgid "help_search_email"
 msgstr "傳回電郵包含這個值的成員."
 
 #. Default: "Return users with full names containing this value."
-#: ./skins/plone_forms/member_search_form.pt:46
+#: ./skins/plone_forms/member_search_form.pt:64
 msgid "help_search_fullname"
 msgstr ""
 
-#. Default: "Return users in the selected group."
-#: ./skins/plone_forms/member_search_form.pt:123
+#. Default: "Find users in the selected group."
+#: ./skins/plone_forms/member_search_form.pt:84
+#, fuzzy
 msgid "help_search_group"
 msgstr "傳回已選群組的成員."
 
 #. Default: "Return items of a specific type."
-#: ./skins/plone_forms/search_form.pt:172
+#: ./skins/plone_forms/search_form.pt:163
 msgid "help_search_item_type"
 msgstr "傳回指定型態的項目."
 
@@ -3771,39 +3861,41 @@ msgstr "傳回符合一個或多個關鍵字的項目. 選取多個關鍵字可�
 msgid "help_search_last_logged_in"
 msgstr "傳回從昨天以後登入系統的成員, 或是上星期 ... 等等."
 
-#. Default: "Return users with login names containing this value."
-#: ./skins/plone_forms/member_search_form.pt:29
+#. Default: "Find users whose login-names contain"
+#: ./skins/plone_forms/member_search_form.pt:34
+#, fuzzy
 msgid "help_search_name"
 msgstr "傳回登入名稱包含這個值的成員."
 
 #. Default: "Return items added since you were last logged on, the last week, etc."
-#: ./skins/plone_forms/search_form.pt:142
+#: ./skins/plone_forms/search_form.pt:135
 msgid "help_search_new_items_since"
 msgstr "傳回從您上次登入之後增加的項目, 或是上星期 ... 等等."
 
 #. Default: "Search for users."
-#: ./skins/plone_forms/ownership_form.cpt:186
+#: ./skins/plone_forms/ownership_form.cpt:189
 msgid "help_search_new_owner"
 msgstr ""
 
 #. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
-#: ./skins/plone_forms/search_form.pt:251
+#: ./skins/plone_forms/search_form.pt:232
 #, fuzzy
 msgid "help_search_review_status"
 msgstr "做為一個覆核者, 您可以依據覆核狀態來作為搜尋項目的方式. 如果你希望搜尋結果的項目是特定狀態, 請在列表中選擇."
 
-#. Default: "Return users with all of the selected roles."
-#: ./skins/plone_forms/member_search_form.pt:144
+#. Default: "Find users with all of the selected roles."
+#: ./skins/plone_forms/member_search_form.pt:105
+#, fuzzy
 msgid "help_search_roles"
 msgstr "傳回所有指定身份的成員."
 
 #. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
-#: ./skins/plone_forms/search_form.pt:33
+#: ./skins/plone_forms/search_form.pt:38
 msgid "help_search_text"
 msgstr "以簡短文字進行搜尋, 在這裡輸入您想搜尋的字詞. 多個字詞的搜尋可用 <strong>AND</strong> 或 <strong>OR</strong> 兩種連接詞來協助組合. 在這欄位中的文字, 搜尋時將在項目的內文, 標題, 以及描述中, 找尋符合的文字."
 
 #. Default: "Return items matching this title."
-#: ./skins/plone_forms/search_form.pt:53
+#: ./skins/plone_forms/search_form.pt:56
 msgid "help_search_title"
 msgstr "搜尋並傳回符合標題的項目."
 
@@ -3819,22 +3911,22 @@ msgid "help_selection_criteria_value"
 msgstr "存在數值."
 
 #. Default: "Your email address."
-#: ./skins/plone_forms/sendto_form.cpt:70
+#: ./skins/plone_forms/sendto_form.cpt:75
 msgid "help_send_from"
 msgstr "您的電郵地址."
 
 #. Default: "The e-mail address to send this link to."
-#: ./skins/plone_forms/sendto_form.cpt:44
+#: ./skins/plone_forms/sendto_form.cpt:51
 msgid "help_send_to_mail"
 msgstr "要收到此網頁連結的電郵地址."
 
 #. Default: "Please enter your e-mail address"
-#: ./skins/plone_templates/contact-info.cpt:66
+#: ./skins/plone_templates/contact-info.cpt:69
 msgid "help_sender_from_address"
 msgstr "請輸入您電郵地址"
 
 #. Default: "Please enter your full name"
-#: ./skins/plone_templates/contact-info.cpt:41
+#: ./skins/plone_templates/contact-info.cpt:45
 msgid "help_sender_fullname"
 msgstr "請輸入您的全名"
 
@@ -3856,15 +3948,20 @@ msgid "help_setup_visible_ids"
 msgstr "顯示並允許使用者修改\"簡稱\"內容ID,這組成URL網址的一部份."
 
 #. Default: "Short name is the part that shows up in the URL of the item."
-#: ./skins/plone_forms/folder_rename_form.cpt:63
+#: ./skins/plone_forms/folder_rename_form.cpt:68
 msgid "help_short_name_url"
 msgstr ""
 
 #. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: ./skins/plone_content/folder_edit_form.cpt:47
+#: ./skins/plone_content/folder_edit_form.cpt:50
 #, fuzzy
 msgid "help_shortname"
 msgstr "Short Name 是網址的一部份. 請勿輸入空白鍵, 大寫, 底線或其他特別字碼."
+
+#. Default: "The content types that should be shown in the site map."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:85
+msgid "help_sitemaptypes"
+msgstr ""
 
 #. Default: "If checked, each user can select a skin from his preferences panel."
 #: ./skins/plone_prefs/prefs_portalskin_form.cpt:70
@@ -3898,12 +3995,12 @@ msgid "help_string_criteria_value"
 msgstr "字串數值."
 
 #. Default: "Please enter the subject of the message you want to send."
-#: ./skins/plone_templates/contact-info.cpt:98
+#: ./skins/plone_templates/contact-info.cpt:100
 msgid "help_subject"
 msgstr "請輸入您想送出短訊的標題."
 
 #. Default: "Changes all the contained objects if selected."
-#: ./skins/plone_forms/ownership_form.cpt:63
+#: ./skins/plone_forms/ownership_form.cpt:65
 msgid "help_subobjects"
 msgstr "如選取此項, 所會改變所有子物件"
 
@@ -3918,7 +4015,7 @@ msgid "help_syndication_frequency"
 msgstr "控制更新頻率. 例如, 如您需要每第二星期更新, 選取以上的\"每週\" , 及在此的\"2\""
 
 #. Default: "Maximum number of items that will be syndicated."
-#: ./skins/plone_forms/synPropertiesForm.cpt:165
+#: ./skins/plone_forms/synPropertiesForm.cpt:160
 msgid "help_syndication_max_items"
 msgstr "最大共同刋載數目"
 
@@ -3928,12 +4025,12 @@ msgid "help_syndication_maxitems"
 msgstr "最大共同刋載數"
 
 #. Default: "This is the date the updater starts counting from. So if you want to update weekly every Tuesday, make sure this starts on a Tuesday."
-#: ./skins/plone_forms/synPropertiesForm.cpt:140
+#: ./skins/plone_forms/synPropertiesForm.cpt:135
 msgid "help_syndication_update_base"
 msgstr "這是更新倒數的起始日期. 所以若您需要逢星期二更新, 請確保這是由星期二開始."
 
 #. Default: "Controls the frequency of the updates. For example, if you want it to update every second week, select \"weekly\" above, and \"2\" here."
-#: ./skins/plone_forms/synPropertiesForm.cpt:112
+#: ./skins/plone_forms/synPropertiesForm.cpt:109
 msgid "help_syndication_update_frequency"
 msgstr "控制更新頻率. 例如, 如您需要每第二星期更新, 選取以上的\"每週\" , 及在此的\"2\""
 
@@ -3956,18 +4053,18 @@ msgid "help_url"
 msgstr "加上 http:// 以連結外界網站."
 
 #. Default: "Determines if the roles given to users and groups from higher levels are in effect in this context. Use this to block people who have local roles in higher-level folders from accessing this folder."
-#: ./skins/plone_forms/folder_localrole_form.pt:625
+#: ./skins/plone_deprecated/folder_localrole_form.pt:587
 #, fuzzy
 msgid "help_use_acquisition"
 msgstr "決定在上層的使用者和群組所使用角色是否在這裡續有效. 這可阻止在上層有區域角色的人，存取這個文件夾."
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
-#: ./skins/plone_login/join_form.cpt:78
+#: ./skins/plone_login/join_form.cpt:83
 msgid "help_user_name_creation_casesensitive"
 msgstr "輸入用者名稱, 通常會像是 'jsmith'. 請不要使用空白或特殊字元(中文). 用者名稱及密碼是Case sensitive 的, 確保caps lock 沒有啟動. 這名字是用來登入的."
 
 #. Default: "The workflow states that should be shown in the navigation tree and the site map."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:287
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:132
 msgid "help_wf_states"
 msgstr "應該在導覽樹和網佔地圖中顯示的工作流狀態."
 
@@ -3981,7 +4078,7 @@ msgid "hide"
 msgstr "隱藏"
 
 #. Default: "HTML"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:46
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:41
 msgid "html"
 msgstr "HTML"
 
@@ -3998,27 +4095,32 @@ msgid "iCalendar export"
 msgstr "匯出iCalendar"
 
 #. Default: "Inherited Role(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:105
+#: ./skins/plone_deprecated/folder_localrole_form.pt:100
 msgid "label_acquired_roles"
 msgstr "繼承的角色"
 
 #. Default: "(inactive)"
-#: ./skins/plone_forms/folder_localrole_form.pt:106
+#: ./skins/plone_deprecated/folder_localrole_form.pt:101
 msgid "label_acquired_roles_inactive"
 msgstr "(停用)"
 
 #. Default: "Actions"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:62
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:66
 msgid "label_actions"
 msgstr "動作"
 
 #. Default: "Actions"
-#: ./skins/plone_templates/global_contentmenu.pt:403
+#: ./skins/plone_deprecated/global_contentmenu.pt:405
 msgid "label_actions_menu"
 msgstr "動作"
 
+#. Default: "Add"
+#: ./skins/plone_forms/folder_factories.pt:82
+msgid "label_add"
+msgstr ""
+
 #. Default: "Add Comment"
-#: ./skins/plone_forms/discussion_reply_preview.pt:54
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:25
 msgid "label_add_comment"
 msgstr "加入意見"
 
@@ -4028,22 +4130,22 @@ msgid "label_add_item"
 msgstr "選擇要加入的項目"
 
 #. Default: "Add New Group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:84
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:92
 msgid "label_add_new_group"
 msgstr "加入新的組別"
 
 #. Default: "Add item"
-#: ./skins/plone_templates/global_contentmenu.pt:97
+#: ./skins/plone_deprecated/global_contentmenu.pt:99
 msgid "label_add_new_item"
 msgstr "加入新項目"
 
 #. Default: "Add to folder"
-#: ./skins/plone_templates/global_contentmenu.pt:104
+#: ./skins/plone_deprecated/global_contentmenu.pt:106
 msgid "label_add_new_item_in_folder"
 msgstr "新增到文件夾"
 
 #. Default: "Add New User"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:80
+#: ./skins/plone_prefs/prefs_users_overview.cpt:87
 msgid "label_add_new_user"
 msgstr "加入新用者"
 
@@ -4053,52 +4155,52 @@ msgid "label_add_restriction_mode"
 msgstr "模式"
 
 #. Default: "iCal"
-#: ./skins/plone_content/event_view.pt:119
+#: ./skins/plone_content/event_view.pt:170
 #, fuzzy
 msgid "label_add_to_ical"
 msgstr "iCal (Mac OS X)"
 
 #. Default: "vCal"
-#: ./skins/plone_content/event_view.pt:113
+#: ./skins/plone_content/event_view.pt:164
 #, fuzzy
 msgid "label_add_to_vcal"
 msgstr "vCal (Windows, Linux)"
 
 # When only one type can be added
 #. Default: "Add ${type}"
-#: ./skins/plone_templates/global_contentmenu.pt:166
+#: ./skins/plone_deprecated/global_contentmenu.pt:168
 msgid "label_add_type"
 msgstr "新增 ${type}"
 
 #. Default: "Add ${type} to folder"
-#: ./skins/plone_templates/global_contentmenu.pt:170
+#: ./skins/plone_deprecated/global_contentmenu.pt:172
 msgid "label_add_type_to_folder"
 msgstr "新增 ${type} 到文件夾"
 
 #. Default: "Add user to selected groups"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:69
+#: ./skins/plone_prefs/prefs_user_memberships.pt:77
 msgid "label_add_user_to_group"
 msgstr "刪除已選組別"
 
 #. Default: "Add selected groups and users to this group"
-#: ./skins/plone_prefs/prefs_group_members.cpt:280
+#: ./skins/plone_prefs/prefs_group_members.cpt:285
 msgid "label_add_users_to_group"
 msgstr "在此組別加入已選用用者"
 
 #. Default: "Advanced..."
-#: ./skins/plone_templates/global_contentmenu.pt:60
+#: ./skins/plone_deprecated/global_contentmenu.pt:62
 #, fuzzy
 msgid "label_advanced"
 msgstr "進階"
 
 #. Default: "Advanced Search..."
-#: ./skins/plone_templates/global_searchbox.pt:45
+#: ./skins/plone_deprecated/global_searchbox.pt:57
 #, fuzzy
 msgid "label_advanced_search"
 msgstr "進階搜尋"
 
 #. Default: "Affected content"
-#: ./skins/plone_forms/content_status_history.cpt:79
+#: ./skins/plone_forms/content_status_history.cpt:70
 msgid "label_affected_content"
 msgstr "受影響的內容"
 
@@ -4123,12 +4225,12 @@ msgid "label_allow_members_to_create_password"
 msgstr "允許成員選擇他們自己起始的密碼"
 
 #. Default: "Anonymous User"
-#: ./skins/plone_forms/discussion_reply_form.cpt:45
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:64
 msgid "label_anonymous_user"
 msgstr "惹名用者"
 
 #. Default: "Any Author"
-#: ./skins/plone_forms/search_form.pt:234
+#: ./skins/plone_forms/search_form.pt:217
 msgid "label_any_author"
 msgstr "任何作者"
 
@@ -4138,59 +4240,59 @@ msgid "label_any_browser"
 msgstr "適用於任何瀏覽器"
 
 #. Default: "Apply Changes"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:225
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:228
 msgid "label_apply_changes"
 msgstr "套用改動"
 
 #. Default: "Apply Settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:634
+#: ./skins/plone_deprecated/folder_localrole_form.pt:596
 msgid "label_apply_settings"
 msgstr "使用設定"
 
 #. Default: "Assign Local Role to Selected User(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:344
+#: ./skins/plone_deprecated/folder_localrole_form.pt:326
 msgid "label_assign_local_role_to_users"
 msgstr "將已選擇的用者分配本區身份"
 
 #. Default: "Assign Local Role to Selected Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:543
+#: ./skins/plone_deprecated/folder_localrole_form.pt:511
 msgid "label_assign_role_to_groups"
 msgstr "將已選擇的用者分配本區身份"
 
 #. Default: "Assign Selected Role(s) to Selected User(s)/Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:211
+#: ./skins/plone_deprecated/folder_localrole_form.pt:203
 msgid "label_assign_roles_to_users_groups"
 msgstr "分配已選角色給已選的使用者/群組"
 
 #. Default: "Author"
-#: ./skins/plone_forms/search_form.pt:222
+#: ./skins/plone_forms/search_form.pt:207
 msgid "label_author"
 msgstr "作者"
 
 #. Default: "Author's external home page..."
-#: ./skins/plone_content/author.cpt:119
+#: ./skins/plone_content/author.cpt:128
 #, fuzzy
 msgid "label_author_external_home_page"
 msgstr "作者外部首頁"
 
 #. Default: "Author's home page in this site..."
-#: ./skins/plone_content/author.cpt:114
+#: ./skins/plone_content/author.cpt:123
 #, fuzzy
 msgid "label_author_internal_home_page"
 msgstr "作者本站首頁"
 
 #. Default: "Back to Add/Remove Products"
-#: ./skins/plone_prefs/prefs_install_product_readme.pt:24
+#: ./skins/plone_prefs/prefs_install_product_readme.pt:28
 msgid "label_back_to_addremove_products"
 msgstr "返回加入／移除產品"
 
 #. Default: "Back to Error Log"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:18
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:22
 msgid "label_back_to_errorlog"
 msgstr "返回錯誤記錄"
 
 #. Default: "Back to site"
-#: ./skins/plone_content/image_view_fullscreen.pt:45
+#: ./skins/plone_content/image_view_fullscreen.pt:48
 msgid "label_back_to_site"
 msgstr "返回網站"
 
@@ -4200,7 +4302,7 @@ msgid "label_before_specified_time"
 msgstr "自從這顯示時間以來從沒登入"
 
 #. Default: "Biography"
-#: ./skins/plone_prefs/personalize_form.cpt:194
+#: ./skins/plone_prefs/personalize_form.cpt:200
 msgid "label_biography"
 msgstr "個人簡介"
 
@@ -4216,8 +4318,8 @@ msgstr "主體內文"
 msgid "label_boolean_criteria_bool"
 msgstr "數值"
 
-#. Default: "by ${author} -"
-#: ./skins/plone_content/document_byline.pt:18
+#. Default: "by ${author}"
+#: ./skins/plone_content/folder_listing.pt:122
 #, fuzzy
 msgid "label_by_author"
 msgstr "作者 ${author}"
@@ -4228,49 +4330,54 @@ msgid "label_calendar"
 msgstr "日曆"
 
 #. Default: "Cancel"
-#: ./skins/plone_content/folder_edit_form.cpt:131
+#: ./skins/plone_content/folder_edit_form.cpt:126
 msgid "label_cancel"
 msgstr "取消"
 
+#. Default: "Categories"
+#: ./skins/plone_forms/search_form.pt:68
+msgid "label_categories"
+msgstr ""
+
 #. Default: "Change Comment"
-#: ./skins/plone_forms/discussion_reply_preview.pt:44
+#: ./skins/plone_forms/discussion_reply_preview.pt:47
 msgid "label_change_comment"
 msgstr "變更意見"
 
 #. Default: "Change content item<br />as default view..."
-#: ./skins/plone_templates/global_contentmenu.pt:269
+#: ./skins/plone_deprecated/global_contentmenu.pt:271
 #, fuzzy
 msgid "label_change_item"
 msgstr "改變項目<br/> 為預設檢視"
 
 #. Default: "Change user properties."
-#: ./skins/plone_prefs/prefs_user_details.cpt:66
+#: ./skins/plone_prefs/prefs_user_details.cpt:70
 msgid "label_change_member_properties"
 msgstr "改變成員屬性"
 
 #. Default: "Change ownership"
-#: ./skins/plone_forms/folder_localrole_form.pt:648
+#: ./skins/plone_deprecated/folder_localrole_form.pt:608
 msgid "label_change_ownership"
 msgstr "更改擁有者"
 
 #. Default: "Change Password"
-#: ./skins/plone_login/login_password.cpt:100
+#: ./skins/plone_login/login_password.cpt:101
 msgid "label_change_password"
 msgstr "變更密碼"
 
 #. Default: "Change State"
-#: ./skins/plone_forms/content_status_history.cpt:182
+#: ./skins/plone_forms/content_status_history.cpt:166
 msgid "label_change_status"
 msgstr "變更狀態"
 
 #. Default: "Choose a content item..."
-#: ./skins/plone_forms/select_default_view.cpt:59
+#: ./skins/plone_forms/select_default_view.cpt:54
 #, fuzzy
 msgid "label_choose_content_item"
 msgstr "選取內容項目"
 
 #. Default: "Select a content item<br />as default view..."
-#: ./skins/plone_templates/global_contentmenu.pt:251
+#: ./skins/plone_deprecated/global_contentmenu.pt:253
 #, fuzzy
 msgid "label_choose_item"
 msgstr "選擇項目<br/> 為預設檢視"
@@ -4281,48 +4388,48 @@ msgid "label_choose_language"
 msgstr "選擇語言"
 
 #. Default: "Display"
-#: ./skins/plone_templates/global_contentmenu.pt:204
+#: ./skins/plone_deprecated/global_contentmenu.pt:206
 msgid "label_choose_template"
 msgstr "顯示"
 
 #. Default: "Clear Displayed Entries"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:53
+#: ./skins/plone_prefs/prefs_error_log_form.pt:57
 msgid "label_clear_displayed_entries"
 msgstr "清除顯示項目"
 
 #. Default: "click here to retrieve it"
-#: ./skins/plone_login/failsafe_login_form.cpt:114
+#: ./skins/plone_login/failsafe_login_form.cpt:123
 msgid "label_click_here_to_retrieve"
 msgstr "點選這裡以取得它"
 
 #. Default: "Click here to get the file"
-#: ./skins/plone_content/file_view.pt:35
+#: ./skins/plone_content/file_view.pt:36
 msgid "label_click_to_get_file"
 msgstr "按下這裡以取得檔案."
 
 #. Default: "Click to view full-size image..."
-#: ./skins/plone_content/image_view.pt:37
+#: ./skins/plone_content/image_view.pt:38
 #, fuzzy
 msgid "label_click_to_view_full_image"
 msgstr "按此查看完整大小圖像"
 
 #. Default: "Comment"
-#: ./skins/plone_forms/discussion_reply_form.cpt:146
+#: ./skins/plone_forms/discussion_reply_form.cpt:141
 msgid "label_comment"
 msgstr "意見"
 
 #. Default: "Posted by"
-#: ./skins/plone_forms/discussion_reply_form.cpt:42
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:61
 msgid "label_comment_by"
 msgstr "建議者"
 
 #. Default: "at"
-#: ./skins/plone_forms/discussion_reply_form.cpt:47
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:66
 msgid "label_commented_at"
 msgstr "在"
 
 #. Default: "Comments"
-#: ./skins/plone_forms/content_status_history.cpt:162
+#: ./skins/plone_forms/content_status_history.cpt:148
 msgid "label_comments"
 msgstr "意見"
 
@@ -4337,9 +4444,19 @@ msgid "label_compare"
 msgstr "比較"
 
 #. Default: "Confirm password"
-#: ./skins/plone_login/join_form.cpt:167
+#: ./skins/plone_login/join_form.cpt:166
 msgid "label_confirm_password"
 msgstr "確認密碼"
+
+#. Default: "Allow the standard set of addable types"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:116
+msgid "label_constraintypes_allow_standard"
+msgstr ""
+
+#. Default: "Specify manually"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:127
+msgid "label_constraintypes_specify_manually"
+msgstr ""
 
 # widget label of StringWidget, description:
 #. Default: "Contact E-mail"
@@ -4360,12 +4477,12 @@ msgid "label_contact_phone"
 msgstr "連絡電話"
 
 #. Default: "containing"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:49
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:52
 msgid "label_containing"
 msgstr "包含"
 
 #. Default: "Content editor"
-#: ./skins/plone_prefs/personalize_form.cpt:243
+#: ./skins/plone_prefs/personalize_form.cpt:246
 msgid "label_content_editor"
 msgstr "內容編輯器"
 
@@ -4380,7 +4497,7 @@ msgid "label_cookie_persistence"
 msgstr "使顯示風格 Cookie 永遠存在"
 
 #. Default: "Copy exceptions to the event log"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:136
+#: ./skins/plone_prefs/prefs_error_log_form.pt:140
 msgid "label_copy_exceptions"
 msgstr "複製錯誤至事件記錄"
 
@@ -4418,7 +4535,7 @@ msgid "label_css"
 msgstr "有效 CSS"
 
 #. Default: "(current)"
-#: ./skins/plone_forms/select_default_view.cpt:51
+#: ./skins/plone_forms/select_default_view.cpt:46
 msgid "label_current"
 msgstr "(目前)"
 
@@ -4428,17 +4545,17 @@ msgid "label_current_folder_only"
 msgstr ""
 
 #. Default: "Folder display"
-#: ./skins/plone_templates/global_contentmenu.pt:217
+#: ./skins/plone_deprecated/global_contentmenu.pt:219
 msgid "label_current_folder_views"
 msgstr "文件夾顯示"
 
 #. Default: "Item display"
-#: ./skins/plone_templates/global_contentmenu.pt:283
+#: ./skins/plone_deprecated/global_contentmenu.pt:285
 msgid "label_current_item_views"
 msgstr "項目顯示"
 
 #. Default: "Current password"
-#: ./skins/plone_prefs/password_form.pt:33
+#: ./skins/plone_prefs/password_form.pt:38
 msgid "label_current_password"
 msgstr "現有密碼"
 
@@ -4477,27 +4594,27 @@ msgid "label_default_skin"
 msgstr "預設顯示風格"
 
 #. Default: "Delete Portrait"
-#: ./skins/plone_prefs/personalize_form.cpt:411
+#: ./skins/plone_prefs/personalize_form.cpt:403
 msgid "label_delete_portrait"
 msgstr "清除個人相片"
 
 #. Default: "Delete Selected Role(s) and User(s)/Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:219
+#: ./skins/plone_deprecated/folder_localrole_form.pt:209
 msgid "label_delete_roles_users_groups"
 msgstr "刪除已選角色和成員/群組"
 
 #. Default: "Description"
-#: ./skins/plone_content/folder_edit_form.cpt:103
+#: ./skins/plone_content/folder_edit_form.cpt:102
 msgid "label_description"
 msgstr "描述"
 
 #. Default: "Disable Syndication"
-#: ./skins/plone_forms/synPropertiesForm.cpt:28
+#: ./skins/plone_forms/synPropertiesForm.cpt:32
 msgid "label_disable_syndication"
 msgstr "取消聯合刊載功能"
 
 #. Default: "Display"
-#: ./skins/plone_templates/global_contentmenu.pt:195
+#: ./skins/plone_deprecated/global_contentmenu.pt:197
 msgid "label_disabled_display_menu"
 msgstr "顯示"
 
@@ -4517,27 +4634,28 @@ msgid "label_discussion_enabled"
 msgstr "開啟"
 
 #. Default: "Edit"
-#: ./skins/plone_content/author.cpt:53
+#: ./skins/plone_content/author.cpt:62
 msgid "label_edit"
 msgstr ""
 
 #. Default: "Allow editing of Short Names"
-#: ./skins/plone_prefs/personalize_form.cpt:332
+#: ./skins/plone_prefs/personalize_form.cpt:330
 msgid "label_edit_short_names"
 msgstr "允許編輯簡稱"
 
-#. Default: "Effective Date"
-#: ./skins/plone_forms/content_status_history.cpt:110
+#. Default: "Publishing Date"
+#: ./skins/plone_forms/content_status_history.cpt:99
+#, fuzzy
 msgid "label_effective_date"
 msgstr "生效日"
 
 #. Default: "E-mail"
-#: ./skins/plone_forms/member_search_form.pt:60
+#: ./skins/plone_forms/member_search_form.pt:46
 msgid "label_email"
 msgstr "電郵"
 
 #. Default: "Email Address"
-#: ./skins/plone_forms/folder_localrole_form.pt:401
+#: ./skins/plone_deprecated/folder_localrole_form.pt:379
 msgid "label_email_address"
 msgstr "電郵地址"
 
@@ -4547,12 +4665,12 @@ msgid "label_enable_cookies"
 msgstr "啟用 cookies"
 
 #. Default: "Enable Syndication"
-#: ./skins/plone_forms/synPropertiesForm.cpt:49
+#: ./skins/plone_forms/synPropertiesForm.cpt:51
 msgid "label_enable_syndication"
 msgstr "開啟聯合刊載功能"
 
 #. Default: "Error"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:27
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:31
 msgid "label_error"
 msgstr "錯誤"
 
@@ -4567,12 +4685,12 @@ msgid "label_error_time"
 msgstr "遞交時間"
 
 #. Default: "Error Type"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:210
+#: ./skins/plone_prefs/prefs_install_products_form.pt:217
 msgid "label_error_type"
 msgstr "錯誤類型"
 
 #. Default: "Error Value"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:212
+#: ./skins/plone_prefs/prefs_install_products_form.pt:219
 msgid "label_error_value"
 msgstr "錯誤值"
 
@@ -4590,7 +4708,7 @@ msgid "label_event_attendees"
 msgstr "參與者 "
 
 #. Default: "(${location}, from ${start} to ${end})"
-#: ./skins/plone_content/folder_listing.pt:99
+#: ./skins/plone_content/folder_listing.pt:109
 #, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location}, 由 ${start} 至 ${end} )"
@@ -4620,17 +4738,17 @@ msgid "label_event_type"
 msgstr "事件類別"
 
 #. Default: "Exception"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:74
+#: ./skins/plone_prefs/prefs_error_log_form.pt:78
 msgid "label_exception"
 msgstr "錯誤"
 
 #. Default: "Exception Type"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:47
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:51
 msgid "label_exception_type"
 msgstr "例外類別"
 
 #. Default: "Exception Value"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:51
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:55
 msgid "label_exception_value"
 msgstr "例外數值"
 
@@ -4642,7 +4760,7 @@ msgid "label_exclude_from_nav"
 msgstr "從網站導覽中排除"
 
 #. Default: "Expiration Date"
-#: ./skins/plone_forms/content_status_history.cpt:136
+#: ./skins/plone_forms/content_status_history.cpt:123
 msgid "label_expiration_date"
 msgstr "過期日"
 
@@ -4658,27 +4776,27 @@ msgid "label_file"
 msgstr "檔案"
 
 #. Default: "File type"
-#: ./skins/plone_content/file_view.pt:57
+#: ./skins/plone_content/file_view.pt:58
 msgid "label_file_type"
 msgstr "檔案類型"
 
 #. Default: "Find a group here"
-#: ./skins/plone_prefs/prefs_group_members.cpt:67
+#: ./skins/plone_prefs/prefs_group_members.cpt:77
 msgid "label_find_group"
 msgstr "在這裏找尋組別"
 
 #. Default: "Format"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:19
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:18
 msgid "label_format"
 msgstr "格式"
 
 #. Default: "Full Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:286
+#: ./skins/plone_deprecated/folder_localrole_form.pt:272
 msgid "label_full_name"
 msgstr "您的全名"
 
 #. Default: "Full Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:395
+#: ./skins/plone_deprecated/folder_localrole_form.pt:373
 msgid "label_fullname"
 msgstr ""
 
@@ -4688,52 +4806,52 @@ msgid "label_generate_and_email_passwords"
 msgstr "產生起始密碼, 並以電郵寄送給成員."
 
 #. Default: "Automatically generate tabs"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:49
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:60
 msgid "label_generated_tabs_enable"
 msgstr "自動產生標籤"
 
 #. Default: "GNU GPL license"
-#: ./skins/plone_templates/footer.pt:37
+#: ./skins/plone_templates/footer.pt:39
 msgid "label_gnu_gpl_licence"
 msgstr "GNU GPL 版權"
 
 #. Default: "Group"
-#: ./skins/plone_forms/folder_localrole_form.pt:147
+#: ./skins/plone_deprecated/folder_localrole_form.pt:140
 msgid "label_group"
 msgstr "組別"
 
 #. Default: "Group Members"
-#: ./skins/plone_prefs/prefs_group_details.pt:27
+#: ./skins/plone_prefs/prefs_group_details.pt:31
 msgid "label_group_members"
 msgstr "組別成員"
 
 #. Default: "Group Memberships"
-#: ./skins/plone_prefs/prefs_user_details.cpt:32
+#: ./skins/plone_prefs/prefs_user_details.cpt:35
 msgid "label_group_memberships"
 msgstr "組別成員"
 
 #. Default: "Group Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:404
+#: ./skins/plone_deprecated/folder_localrole_form.pt:382
 msgid "label_group_name"
 msgstr "群組名稱"
 
 #. Default: "Group Properties"
-#: ./skins/plone_prefs/prefs_group_details.pt:32
+#: ./skins/plone_prefs/prefs_group_details.pt:36
 msgid "label_group_properties"
 msgstr "組別屬性"
 
 #. Default: "Group Search"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:103
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:109
 msgid "label_group_search"
 msgstr ""
 
 #. Default: "Groups"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:33
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:35
 msgid "label_groups"
 msgstr "在這裏找尋組別"
 
 #. Default: "here"
-#: ./skins/plone_forms/folder_localrole_form.pt:655
+#: ./skins/plone_deprecated/folder_localrole_form.pt:615
 msgid "label_here"
 msgstr "這裡"
 
@@ -4748,37 +4866,37 @@ msgid "label_history"
 msgstr "歷史"
 
 #. Default: "Home"
-#: ./skins/plone_content/image_view_fullscreen.pt:50
+#: ./skins/plone_content/image_view_fullscreen.pt:53
 msgid "label_home"
 msgstr "首頁"
 
 #. Default: "Home page"
-#: ./skins/plone_prefs/personalize_form.cpt:219
+#: ./skins/plone_prefs/personalize_form.cpt:224
 msgid "label_homepage"
 msgstr ""
 
 #. Default: "Internet Explorer 4.5 (Mac)"
-#: ./skins/plone_templates/accessibility-info.pt:125
+#: ./skins/plone_templates/accessibility-info.pt:123
 msgid "label_ie4_mac"
 msgstr "Internet Explorer 4.5 (Mac)"
 
 #. Default: "Internet Explorer 4 (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:113
+#: ./skins/plone_templates/accessibility-info.pt:111
 msgid "label_ie4_win"
 msgstr "Internet Explorer 4 (Windows)"
 
 #. Default: "Internet Explorer 5+ (Mac)"
-#: ./skins/plone_templates/accessibility-info.pt:119
+#: ./skins/plone_templates/accessibility-info.pt:117
 msgid "label_ie5_mac"
 msgstr "Internet Explorer 5+ (Mac)"
 
 #. Default: "Internet Explorer 5+ (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:83
+#: ./skins/plone_templates/accessibility-info.pt:81
 msgid "label_ie5_win"
 msgstr "Internet Explorer 5+ (Windows)"
 
 #. Default: "Ignored exception types"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:143
+#: ./skins/plone_prefs/prefs_error_log_form.pt:147
 msgid "label_ignored_exception"
 msgstr "忽略錯誤類型"
 
@@ -4795,12 +4913,13 @@ msgid "label_image_caption"
 msgstr "圖檔標題"
 
 #. Default: "Preferred types"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:132
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:143
 msgid "label_immediately_addable_types"
 msgstr "偏好類別"
 
-#. Default: "Include folder items"
-#: ./skins/plone_forms/content_status_history.cpt:90
+#. Default: "Include contained items"
+#: ./skins/plone_forms/content_status_history.cpt:86
+#, fuzzy
 msgid "label_include_contained_objects"
 msgstr "包括文件夾項目"
 
@@ -4815,7 +4934,7 @@ msgid "label_inherit_criteria"
 msgstr "條件繼承"
 
 #. Default: "Install"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:93
+#: ./skins/plone_prefs/prefs_install_products_form.pt:100
 msgid "label_install"
 msgstr "安裝"
 
@@ -4826,27 +4945,27 @@ msgid "label_item_count"
 msgstr "項目數量"
 
 #. Default: "Item: ${contentitem}"
-#: ./skins/plone_templates/global_contentmenu.pt:263
+#: ./skins/plone_deprecated/global_contentmenu.pt:265
 msgid "label_item_selected"
 msgstr "項目: ${contentitem}"
 
 #. Default: "Item type"
-#: ./skins/plone_forms/search_form.pt:170
+#: ./skins/plone_forms/search_form.pt:161
 msgid "label_item_type"
 msgstr "項目類型"
 
 #. Default: "Keywords"
-#: ./skins/plone_forms/search_form.pt:67
+#: widget label of KeywordWidget - description ""
 msgid "label_keywords"
 msgstr "關鍵字"
 
 #. Default: "Konqueror (Linux)"
-#: ./skins/plone_templates/accessibility-info.pt:107
+#: ./skins/plone_templates/accessibility-info.pt:105
 msgid "label_konqueror_linux"
 msgstr ""
 
 #. Default: "Language"
-#: ./skins/plone_prefs/personalize_form.cpt:164
+#: ./skins/plone_prefs/personalize_form.cpt:172
 msgid "label_language"
 msgstr "語言"
 
@@ -4864,7 +4983,7 @@ msgid "label_limit_number"
 msgstr "限制搜尋結果"
 
 #. Default: "Listed in searches"
-#: ./skins/plone_prefs/personalize_form.cpt:311
+#: ./skins/plone_prefs/personalize_form.cpt:310
 msgid "label_listed_status"
 msgstr "列出狀態"
 
@@ -4874,32 +4993,32 @@ msgid "label_livesearch_enable"
 msgstr "開啟即時搜尋"
 
 #. Default: "Local Role(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:108
+#: ./skins/plone_deprecated/folder_localrole_form.pt:103
 msgid "label_local_roles"
 msgstr "區域角色"
 
 #. Default: "Addable types"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:103
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:187
 msgid "label_locally_allowed_types"
 msgstr "可新增類別"
 
 #. Default: "Role to assign"
-#: ./skins/plone_forms/folder_localrole_form.pt:323
+#: ./skins/plone_deprecated/folder_localrole_form.pt:307
 msgid "label_localrole_to_assign"
 msgstr "分配身份"
 
 #. Default: "Roles to assign to selected user(s)/group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:187
+#: ./skins/plone_deprecated/folder_localrole_form.pt:180
 msgid "label_localroles_to_assign_to_selected_users"
 msgstr "指定角色給已選的使用者/群組"
 
 #. Default: "Location"
-#: ./skins/plone_prefs/personalize_form.cpt:137
+#: ./skins/plone_prefs/personalize_form.cpt:147
 msgid "label_location"
 msgstr "位於: "
 
 #. Default: "Log in"
-#: ./skins/plone_login/failsafe_login_form.cpt:155
+#: ./skins/plone_deprecated/portlet_login.pt:81
 msgid "label_log_in"
 msgstr "登入"
 
@@ -4909,47 +5028,47 @@ msgid "label_log_in_here"
 msgstr ""
 
 #. Default: "Continue"
-#: ./skins/plone_login/login_success.pt:60
+#: ./skins/plone_login/login_success.pt:63
 msgid "label_login_continue"
 msgstr ""
 
 #. Default: "Continue to the ${portal_title} home page"
-#: ./skins/plone_login/login_success.pt:71
+#: ./skins/plone_login/login_success.pt:74
 msgid "label_login_continue_to_home_page"
 msgstr ""
 
 #. Default: "Login Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:398
+#: ./skins/plone_deprecated/folder_localrole_form.pt:376
 msgid "label_login_name"
 msgstr "登入名稱"
 
 #. Default: "Log in to add comments"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:34
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:37
 msgid "label_login_to_add_comments"
 msgstr "登入以加入意見"
 
 #. Default: "Log in to send feedback"
-#: ./skins/plone_content/author.cpt:129
+#: ./skins/plone_content/author.cpt:138
 msgid "label_login_to_send_feedback"
 msgstr "登入以送出回饋信息"
 
 #. Default: "Look"
-#: ./skins/plone_prefs/personalize_form.cpt:349
+#: ./skins/plone_prefs/personalize_form.cpt:347
 msgid "label_look"
 msgstr "外觀"
 
 #. Default: "Send a mail with the password"
-#: ./skins/plone_login/join_form.cpt:203
+#: ./skins/plone_login/join_form.cpt:198
 msgid "label_mail_password"
 msgstr "寄送密碼?"
 
 #. Default: "Main Language:"
-#: ./skins/plone_content/author.cpt:94
+#: ./skins/plone_content/author.cpt:103
 msgid "label_main_language"
 msgstr "主要語言:"
 
 #. Default: "Message"
-#: ./skins/plone_content/author.cpt:180
+#: ./skins/plone_content/author.cpt:188
 msgid "label_message"
 msgstr "訊息"
 
@@ -4960,12 +5079,12 @@ msgid "label_modification_date"
 msgstr "修該日期"
 
 #. Default: "Firefox, Mozilla and Netscape 7+ (Mac OS X)"
-#: ./skins/plone_templates/accessibility-info.pt:95
+#: ./skins/plone_templates/accessibility-info.pt:93
 msgid "label_mozilla_mac"
 msgstr "Firefox, Mozilla 和 Netscape 7+ (Mac OS X)"
 
 #. Default: "Firefox, Mozilla and Netscape 7+ (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:89
+#: ./skins/plone_templates/accessibility-info.pt:87
 msgid "label_mozilla_win"
 msgstr "Firefox, Mozilla 和 Netscape 7+ (Windows)"
 
@@ -4975,7 +5094,7 @@ msgid "label_my_user_name_is"
 msgstr "我的用者名稱:"
 
 #. Default: "Name"
-#: ./skins/plone_forms/discussion_reply_form.cpt:90
+#: ./skins/plone_deprecated/folder_localrole_form.pt:95
 msgid "label_name"
 msgstr "名稱"
 
@@ -5000,47 +5119,47 @@ msgid "label_navigation_tree_depth"
 msgstr ""
 
 #. Default: "Displayed content types"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:235
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:81
 msgid "label_navigation_types"
 msgstr "顯示內容類別"
 
 #. Default: "Filter on workflow state"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:280
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:125
 msgid "label_navtree_wf_enable"
 msgstr "過濾工作流狀態"
 
 #. Default: "Netscape 6 and earlier (All platforms)"
-#: ./skins/plone_templates/accessibility-info.pt:130
+#: ./skins/plone_templates/accessibility-info.pt:128
 msgid "label_netscape6_all"
 msgstr "Netscape 6和更早版本(所有平台)"
 
 #. Default: "New items since"
-#: ./skins/plone_forms/search_form.pt:140
+#: ./skins/plone_forms/search_form.pt:133
 msgid "label_new_items_since"
 msgstr "新的項目, 自從"
 
 #. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt:35
+#: ./skins/plone_forms/ownership_form.cpt:37
 msgid "label_new_owner"
 msgstr "新擁有者"
 
 #. Default: "Search for new owner"
-#: ./skins/plone_forms/ownership_form.cpt:177
+#: ./skins/plone_forms/ownership_form.cpt:180
 msgid "label_new_owner_search"
 msgstr ""
 
 #. Default: "New password"
-#: ./skins/plone_login/login_password.cpt:59
+#: ./skins/plone_login/login_password.cpt:64
 msgid "label_new_password"
 msgstr "新密碼"
 
 #. Default: "New Short Name"
-#: ./skins/plone_forms/folder_rename_form.cpt:58
+#: ./skins/plone_forms/folder_rename_form.cpt:63
 msgid "label_new_short_name"
 msgstr "新的Short name"
 
 #. Default: "New Title"
-#: ./skins/plone_forms/folder_rename_form.cpt:94
+#: ./skins/plone_forms/folder_rename_form.cpt:97
 msgid "label_new_title"
 msgstr "新的標題"
 
@@ -5052,27 +5171,32 @@ msgid "label_news_image"
 msgstr "圖像"
 
 #. Default: "No change"
-#: ./skins/plone_forms/content_status_history.cpt:215
+#: ./skins/plone_forms/content_status_history.cpt:198
 msgid "label_no_change"
 msgstr ""
 
 #. Default: "No group was specified."
-#: ./skins/plone_prefs/prefs_group_members.cpt:64
+#: ./skins/plone_prefs/prefs_group_members.cpt:74
 msgid "label_no_group_specified"
 msgstr "沒有特定的組別"
 
 #. Default: "No Preference Panels available."
-#: ./skins/plone_portlets/portlet_prefs.pt:39
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:48
 msgid "label_no_panels_available"
 msgstr "沒有可用的設定控制台"
 
+#. Default: "No preference panels available."
+#: ./skins/plone_prefs/plone_control_panel.pt:96
+msgid "label_no_prefs_panels_available"
+msgstr ""
+
 #. Default: "No matching results found."
-#: ./skins/plone_scripts/livesearch_reply.py:77
+#: ./skins/plone_scripts/livesearch_reply.py:81
 msgid "label_no_results_found"
 msgstr ""
 
 #. Default: "Number of exceptions to keep"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:116
+#: ./skins/plone_prefs/prefs_error_log_form.pt:120
 msgid "label_number_exceptions"
 msgstr "要保存的錯誤記錄數目"
 
@@ -5087,27 +5211,27 @@ msgid "label_one_step_workflow"
 msgstr "一步過發佈流程"
 
 #. Default: "or"
-#: ./skins/plone_forms/select_default_view.cpt:58
+#: ./skins/plone_forms/select_default_view.cpt:53
 msgid "label_or"
 msgstr "或"
 
 #. Default: "Basic HTML textarea editor (works in all browsers)"
-#: ./skins/plone_prefs/personalize_form.cpt:264
+#: ./skins/plone_prefs/personalize_form.cpt:265
 msgid "label_ordinary_content_editor"
 msgstr "基本HTML文字區域(textarea)編輯器(可在所有瀏覽器上使用)"
 
 #. Default: "This product has been upgraded, click here to reinstall. Filesystem version is ${version}"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:160
+#: ./skins/plone_prefs/prefs_install_products_form.pt:167
 msgid "label_outdated_product_reinstall"
 msgstr "這產品已被升級, 點選這裡重新安裝. 檔案系統版本是 ${version}."
 
 #. Default: "Password"
-#: ./skins/plone_forms/discussion_reply_form.cpt:104
+#: ./skins/plone_deprecated/portlet_login.pt:60
 msgid "label_password"
 msgstr "密碼"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
-#: ./skins/plone_login/join_form.cpt:209
+#: ./skins/plone_login/join_form.cpt:204
 msgid "label_password_change_mail"
 msgstr ""
 
@@ -5129,18 +5253,18 @@ msgid "label_path_criteria_value"
 msgstr "文件夾"
 
 #. Default: "Perform Search"
-#: ./skins/plone_forms/folder_localrole_form.pt:426
+#: ./skins/plone_deprecated/folder_localrole_form.pt:402
 msgid "label_perform_search"
 msgstr "執行搜尋"
 
 #. Default: "Plone<sup>&reg;</sup> CMS - Open Source Content Management System"
-#: ./skins/plone_templates/footer.pt:10
+#: ./skins/plone_templates/footer.pt:13
 #, fuzzy
 msgid "label_plone_cms"
 msgstr "Plone 開放源碼內容管理系統"
 
 #. Default: "Plone Foundation"
-#: ./skins/plone_templates/footer.pt:19
+#: ./skins/plone_templates/footer.pt:22
 msgid "label_plone_foundation"
 msgstr "Plone 基金會"
 
@@ -5160,7 +5284,7 @@ msgid "label_portal_from_name"
 msgstr "站台 '來自'(From) 的大名"
 
 #. Default: "Portal Objects"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:74
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:78
 msgid "label_portal_objects"
 msgstr "網站物件"
 
@@ -5176,23 +5300,23 @@ msgid "label_portal_type_criteria_value"
 msgstr "數值"
 
 #. Default: "Portlets"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:98
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:102
 msgid "label_portlets"
 msgstr "功能端口"
 
 #. Default: "Portrait"
-#: ./skins/plone_prefs/personalize_form.cpt:375
+#: ./skins/plone_prefs/personalize_form.cpt:371
 msgid "label_portrait"
 msgstr "個人相片"
 
-#. Default: "Powered by Plone CMS, the Open Source Content Management System"
-#: ./skins/plone_templates/colophon.pt:23
+#. Default: "Powered by Plone"
+#: ./skins/plone_templates/colophon.pt:31
 #, fuzzy
 msgid "label_powered_by_plone"
 msgstr "由 Plone 建立的開源碼內容管理系統"
 
 #. Default: "Published"
-#: ./skins/plone_templates/events_listing.pt:77
+#: ./skins/plone_templates/events_listing.pt:80
 msgid "label_published"
 msgstr "已發佈"
 
@@ -5202,68 +5326,68 @@ msgid "label_publishing_effective"
 msgstr "有效的"
 
 #. Default: "Quick search"
-#: ./skins/plone_prefs/prefs_group_members.cpt:186
+#: ./skins/plone_prefs/prefs_group_members.cpt:197
 msgid "label_quick_search"
 msgstr "快捷搜尋"
 
 #. Default: "Refresh"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:48
+#: ./skins/plone_prefs/prefs_error_log_form.pt:52
 msgid "label_refresh"
 msgstr "重新整理"
 
 #. Default: "Register"
-#: ./skins/plone_login/join_form.cpt:217
+#: ./skins/plone_login/join_form.cpt:212
 msgid "label_register"
 msgstr "註冊"
 
 #. Default: "Related content"
-#: ./skins/plone_content/document_relateditems.pt:13
+#: ./skins/plone_content/document_relateditems.pt:16
 msgid "label_related_items"
 msgstr "相關內容"
 
 #. Default: "[${percentage}%]"
-#: ./skins/plone_forms/search.pt:79
+#: ./skins/plone_forms/search.pt:84
 #, fuzzy
 msgid "label_relevance_percentage"
 msgstr "[${percentage}%]"
 
 #. Default: "Remember my name."
-#: ./skins/plone_login/failsafe_login_form.cpt:144
+#: ./skins/plone_login/failsafe_login_form.cpt:149
 msgid "label_remember_my_name"
 msgstr "記住我的名稱"
 
 #. Default: "Remove"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:89
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:92
 msgid "label_remove"
 msgstr "移除"
 
 #. Default: "Remove selected groups"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:113
+#: ./skins/plone_prefs/prefs_user_memberships.pt:122
 msgid "label_remove_selected_groups"
 msgstr "刪除已選組別"
 
 #. Default: "Remove selected groups / users"
-#: ./skins/plone_prefs/prefs_group_members.cpt:171
+#: ./skins/plone_prefs/prefs_group_members.cpt:182
 msgid "label_remove_selected_users"
 msgstr "刪除已選群組/用戶"
 
 #. Default: "Rename All"
-#: ./skins/plone_forms/folder_rename_form.cpt:124
+#: ./skins/plone_forms/folder_rename_form.cpt:125
 msgid "label_rename_all"
 msgstr "改名"
 
 #. Default: "Reply"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:77
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:80
 msgid "label_reply"
 msgstr "回覆"
 
 #. Default: "Request URL"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:43
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:47
 msgid "label_request_url"
 msgstr "要求的URL"
 
 #. Default: "(Required)"
-#: ./skins/plone_content/author.cpt:163
+#: ./skins/plone_content/author.cpt:172
 msgid "label_required"
 msgstr "(必需)"
 
@@ -5278,52 +5402,52 @@ msgid "label_rev_later"
 msgstr "以後版本"
 
 #. Default: "Review status"
-#: ./skins/plone_forms/search_form.pt:249
+#: ./skins/plone_forms/search_form.pt:230
 msgid "label_review_status"
 msgstr "覆核狀態"
 
 #. Default: "Role(s)"
-#: ./skins/plone_forms/member_search_form.pt:141
+#: ./skins/plone_forms/member_search_form.pt:102
 msgid "label_roles"
 msgstr "身份："
 
 #. Default: "RSS Feed"
-#: ./skins/plone_forms/search.pt:50
+#: ./skins/plone_forms/search.pt:55
 msgid "label_rss_feed"
 msgstr "RSS Feed"
 
 #. Default: "Safari and Omniweb (Mac OS X)"
-#: ./skins/plone_templates/accessibility-info.pt:101
+#: ./skins/plone_templates/accessibility-info.pt:99
 msgid "label_safari_mac"
 msgstr "Safari 和 Omniweb (Mac OS X)"
 
 #. Default: "Save"
-#: ./skins/plone_content/folder_edit_form.cpt:124
+#: ./skins/plone_content/folder_edit_form.cpt:121
 msgid "label_save"
 msgstr "儲存"
 
 #. Default: "Search"
-#: ./skins/plone_forms/member_search_form.pt:170
+#: ./skins/plone_deprecated/global_searchbox.pt:33
 msgid "label_search"
 msgstr "搜尋"
 
 #. Default: "Search by"
-#: ./skins/plone_forms/folder_localrole_form.pt:387
+#: ./skins/plone_deprecated/folder_localrole_form.pt:367
 msgid "label_search_by"
 msgstr "搜尋由"
 
 #. Default: "Show all"
-#: ./skins/plone_prefs/prefs_group_members.cpt:203
+#: ./skins/plone_prefs/prefs_group_members.cpt:210
 msgid "label_search_large"
 msgstr ""
 
 #. Default: "Search Term"
-#: ./skins/plone_forms/folder_localrole_form.pt:412
+#: ./skins/plone_deprecated/folder_localrole_form.pt:390
 msgid "label_search_term"
 msgstr "搜尋項目"
 
 #. Default: "Search Text"
-#: ./skins/plone_forms/search_form.pt:31
+#: ./skins/plone_forms/search_form.pt:36
 msgid "label_search_text"
 msgstr "搜尋文字"
 
@@ -5331,6 +5455,11 @@ msgstr "搜尋文字"
 #: ./skins/plone_prefs/prefs_search_form.cpt:84
 msgid "label_search_types"
 msgstr "定義搜尋類別"
+
+#. Default: "only in current section"
+#: ./skins/plone_deprecated/global_searchbox.pt:44
+msgid "label_searchbox_currentfolder_only"
+msgstr ""
 
 #. Default: "Section 508"
 #: ./skins/plone_templates/colophon.pt:40
@@ -5343,28 +5472,28 @@ msgid "label_select"
 msgstr "選擇"
 
 #. Default: "Select all items"
-#: ./skins/plone_prefs/prefs_group_members.cpt:104
+#: ./skins/plone_deprecated/old_folder_contents.pt:98
 msgid "label_select_all_items"
 msgstr "選擇所有項目"
 
 #. Default: "Select a content item..."
-#: ./skins/plone_forms/select_default_view.cpt:68
+#: ./skins/plone_forms/select_default_view.cpt:63
 #, fuzzy
 msgid "label_select_content_item"
 msgstr "選取內容項目"
 
 #. Default: "select group ${name}"
-#: ./skins/plone_forms/folder_localrole_form.pt:499
+#: ./skins/plone_deprecated/folder_localrole_form.pt:471
 msgid "label_select_group"
 msgstr "選擇組別${name}"
 
 #. Default: "Select user ${user}"
-#: ./skins/plone_forms/folder_localrole_form.pt:297
+#: ./skins/plone_deprecated/folder_localrole_form.pt:283
 msgid "label_select_user"
 msgstr "選擇成員${user}"
 
 #. Default: "select user/group ${role}"
-#: ./skins/plone_forms/folder_localrole_form.pt:119
+#: ./skins/plone_deprecated/folder_localrole_form.pt:114
 msgid "label_select_usergroup"
 msgstr "選擇成員/組別 ${role}"
 
@@ -5375,12 +5504,12 @@ msgid "label_selection_criteria_value"
 msgstr "數值"
 
 #. Default: "Send"
-#: ./skins/plone_content/author.cpt:200
+#: ./skins/plone_content/author.cpt:206
 msgid "label_send"
 msgstr "送出"
 
 #. Default: "From"
-#: ./skins/plone_forms/sendto_form.cpt:64
+#: ./skins/plone_forms/sendto_form.cpt:69
 msgid "label_send_from"
 msgstr "來自"
 
@@ -5390,17 +5519,17 @@ msgid "label_send_my_password"
 msgstr "寄回我的密碼"
 
 #. Default: "Send to"
-#: ./skins/plone_forms/sendto_form.cpt:38
+#: ./skins/plone_forms/sendto_form.cpt:45
 msgid "label_send_to_mail"
 msgstr "送至(電子地址)"
 
 #. Default: "E-Mail"
-#: ./skins/plone_templates/contact-info.cpt:59
+#: ./skins/plone_templates/contact-info.cpt:62
 msgid "label_sender_from_address"
 msgstr "電郵"
 
 #. Default: "Name"
-#: ./skins/plone_templates/contact-info.cpt:37
+#: ./skins/plone_templates/contact-info.cpt:41
 msgid "label_sender_fullname"
 msgstr "姓名"
 
@@ -5420,42 +5549,47 @@ msgid "label_setup_visible_ids"
 msgstr "顯示內容的\"簡稱\"嗎?"
 
 #. Default: "Short Name"
-#: ./skins/plone_content/folder_edit_form.cpt:45
+#: ./skins/plone_content/folder_edit_form.cpt:48
 msgid "label_short_name"
 msgstr "Short Name"
 
 #. Default: "Show all..."
-#: ./skins/plone_scripts/livesearch_reply.py:79
+#: ./skins/plone_scripts/livesearch_reply.py:83
 msgid "label_show_all"
 msgstr ""
 
 #. Default: "Show all entries"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:58
+#: ./skins/plone_prefs/prefs_error_log_form.pt:62
 msgid "label_show_all_entries"
 msgstr "顯示所有項目"
 
 #. Default: "Show me"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:30
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:35
 msgid "label_show_me"
 msgstr "顯示給我"
 
 #. Default: "Show all"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:122
+#: ./skins/plone_prefs/prefs_users_overview.cpt:127
 msgid "label_showall"
 msgstr "顯示全部"
 
 #. Default: "Site Administration"
-#: ./skins/plone_templates/accessibility-info.pt:44
+#: ./skins/plone_templates/accessibility-info.pt:48
 msgid "label_site_admin"
 msgstr "網站管理員"
 
+#. Default: "site administration"
+#: ./skins/plone_login/insufficient_privileges.pt:19
+msgid "label_site_administration"
+msgstr ""
+
 #. Default: "Site map"
-#: ./skins/plone_templates/sitemap.pt:14
+#: ./skins/plone_templates/sitemap.pt:17
 msgid "label_site_map"
 msgstr "網站地圖"
 
 #. Default: "Size"
-#: ./skins/plone_content/file_view.pt:42
+#: ./skins/plone_content/file_view.pt:43
 msgid "label_size"
 msgstr "大小:"
 
@@ -5465,7 +5599,7 @@ msgid "label_skin_flexibility"
 msgstr "允許用者選擇顯示風格"
 
 #. Default: "Skins"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:50
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:54
 msgid "label_skins"
 msgstr "外觀層"
 
@@ -5500,12 +5634,12 @@ msgid "label_smtp_userid"
 msgstr "ESMTP使用戶名稱"
 
 #. Default: "State:"
-#: ./skins/plone_templates/global_contentmenu.pt:20
+#: ./skins/plone_deprecated/global_contentmenu.pt:22
 msgid "label_state"
 msgstr "狀態"
 
 #. Default: "Status"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:24
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:28
 msgid "label_status"
 msgstr "狀態"
 
@@ -5516,12 +5650,12 @@ msgid "label_string_criteria_value"
 msgstr "數值"
 
 #. Default: "Subject"
-#: ./skins/plone_content/author.cpt:159
+#: ./skins/plone_content/author.cpt:168
 msgid "label_subject"
 msgstr "標題"
 
 #. Default: "Subobjects"
-#: ./skins/plone_forms/ownership_form.cpt:58
+#: ./skins/plone_forms/ownership_form.cpt:60
 msgid "label_subobjects"
 msgstr "子物件"
 
@@ -5546,7 +5680,7 @@ msgid "label_syndication_frequency"
 msgstr "更新頻率"
 
 #. Default: "Maximum Items"
-#: ./skins/plone_forms/synPropertiesForm.cpt:158
+#: ./skins/plone_forms/synPropertiesForm.cpt:153
 msgid "label_syndication_max_items"
 msgstr "最大項目數"
 
@@ -5556,12 +5690,12 @@ msgid "label_syndication_maxitems"
 msgstr "最大共同刋載數"
 
 #. Default: "Update Base"
-#: ./skins/plone_forms/synPropertiesForm.cpt:138
+#: ./skins/plone_forms/synPropertiesForm.cpt:133
 msgid "label_syndication_update_base"
 msgstr "更新起點"
 
 #. Default: "Update Frequency"
-#: ./skins/plone_forms/synPropertiesForm.cpt:109
+#: ./skins/plone_forms/synPropertiesForm.cpt:106
 msgid "label_syndication_update_frequency"
 msgstr "更新頻率"
 
@@ -5577,52 +5711,62 @@ msgid "label_template_mixin"
 msgstr "查看模範"
 
 #. Default: "Time"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:72
+#: ./skins/plone_prefs/prefs_error_log_form.pt:76
 msgid "label_time"
 msgstr "時間"
 
 #. Default: "Title"
-#: ./skins/plone_content/folder_edit_form.cpt:80
+#: ./skins/plone_content/folder_edit_form.cpt:81
 msgid "label_title"
 msgstr "標題"
 
+#. Default: "Up to my dashboard"
+#: ./skins/plone_prefs/password_form.pt:21
+msgid "label_to_dashboard"
+msgstr ""
+
 #. Default: "Select All/None"
-#: ./skins/plone_forms/search_form.pt:186
+#: ./skins/plone_forms/search_form.pt:175
 msgid "label_toggle"
 msgstr "選擇所有/沒有"
 
 #. Default: "Display traceback as text"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:63
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:67
 msgid "label_traceback_as_text"
 msgstr "以文字顯示追遡"
 
 #. Default: "Type"
-#: ./skins/plone_forms/folder_localrole_form.pt:101
+#: ./skins/plone_deprecated/folder_localrole_form.pt:96
 msgid "label_type"
 msgstr "類型"
 
+#. Default: "Type restrictions"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:86
+msgid "label_type_restrictions"
+msgstr ""
+
 #. Default: "Types"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:38
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:42
 msgid "label_types"
 msgstr "類別"
 
 #. Default: "Undo"
-#: ./skins/plone_forms/undo_form.pt:50
+#: ./skins/plone_forms/undo_form.pt:54
 msgid "label_undo"
 msgstr "復原"
 
 #. Default: "Uninstall"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:178
+#: ./skins/plone_prefs/prefs_install_products_form.pt:185
 msgid "label_uninstall"
 msgstr "移除"
 
 #. Default: "Up to Groups Overview"
-#: ./skins/plone_prefs/prefs_group_details.pt:83
+#: ./skins/plone_prefs/prefs_group_details.pt:94
 msgid "label_up_to_groups_overview"
 msgstr "上至組別一覽"
 
 #. Default: "Up to Site Setup"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:15
+#: ./skins/plone_prefs/prefs_error_log_form.pt:19
 msgid "label_up_to_plone_setup"
 msgstr "返回 Plone 設定"
 
@@ -5632,7 +5776,7 @@ msgid "label_up_to_preferences"
 msgstr "上至我的設定"
 
 #. Default: "Up to Users Overview"
-#: ./skins/plone_prefs/prefs_user_details.cpt:59
+#: ./skins/plone_prefs/prefs_user_details.cpt:63
 msgid "label_up_to_usersoverview"
 msgstr "上至用者一覽"
 
@@ -5647,52 +5791,57 @@ msgid "label_url"
 msgstr "網址"
 
 #. Default: "Inherit roles from higher levels"
-#: ./skins/plone_forms/folder_localrole_form.pt:622
+#: ./skins/plone_deprecated/folder_localrole_form.pt:584
 msgid "label_use_acquisition"
 msgstr "從上層繼承角色"
 
 #. Default: "Use Selected..."
-#: ./skins/plone_prefs/prefs_search_macros.pt:121
+#: ./skins/plone_prefs/prefs_search_macros.pt:120
 msgid "label_use_selected"
 msgstr "使用已選..."
 
 #. Default: "User"
-#: ./skins/plone_forms/folder_localrole_form.pt:151
+#: ./skins/plone_deprecated/folder_localrole_form.pt:144
 msgid "label_user"
 msgstr "用者"
 
 #. Default: "User Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:287
+#: ./skins/plone_deprecated/folder_localrole_form.pt:273
 msgid "label_user_name"
 msgstr "用者名稱"
 
 #. Default: "User Properties"
-#: ./skins/plone_prefs/prefs_user_details.cpt:24
+#: ./skins/plone_prefs/prefs_user_details.cpt:27
 msgid "label_user_properties"
 msgstr "成員屬性"
 
 #. Default: "User Search"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:104
+#: ./skins/plone_prefs/prefs_users_overview.cpt:112
 msgid "label_user_search"
 msgstr "成員搜尋"
 
+#. Default: "Settings"
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:40
+msgid "label_usergroup_settings"
+msgstr ""
+
 #. Default: "Username"
-#: ./skins/plone_forms/discussion_reply_form.cpt:92
+#: ./skins/plone_forms/discussion_reply_form.cpt:93
 msgid "label_username"
 msgstr "用戶名稱"
 
 #. Default: "Users"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:28
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:30
 msgid "label_users"
 msgstr "用者"
 
 #. Default: "Users and groups"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:36
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:39
 msgid "label_usersandgroups"
 msgstr "用者及組別"
 
 #. Default: "View"
-#: ./skins/plone_content/author.cpt:48
+#: ./skins/plone_content/author.cpt:57
 msgid "label_view"
 msgstr ""
 
@@ -5727,7 +5876,7 @@ msgid "label_workflow_default_state"
 msgstr "您也可以改變所有內容的起始狀態:"
 
 #. Default: "Workflows"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:86
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:90
 msgid "label_workflows"
 msgstr "工作流"
 
@@ -5737,52 +5886,52 @@ msgid "label_xhtml"
 msgstr "有效 XHTML"
 
 #. Default: "Large"
-#: ./skins/plone_templates/accessibility-info.pt:20
+#: ./skins/plone_templates/accessibility-info.pt:24
 msgid "large_text"
 msgstr "大字"
 
 #. Default: "Last log-in"
-#: ./skins/plone_forms/search_form.pt:155
+#: ./skins/plone_forms/search_form.pt:146
 msgid "last_login"
 msgstr "上次登入"
 
 #. Default: "Account details"
-#: ./skins/plone_login/failsafe_login_form.cpt:60
+#: ./skins/plone_login/failsafe_login_form.cpt:71
 msgid "legend_account_details"
 msgstr "詳細帳號資訊"
 
 #. Default: "Add comment"
-#: ./skins/plone_forms/discussion_reply_form.cpt:67
+#: ./skins/plone_forms/discussion_reply_form.cpt:68
 msgid "legend_add_comment"
 msgstr "詳細評論資訊"
 
 #. Default: "Address info"
-#: ./skins/plone_forms/sendto_form.cpt:32
+#: ./skins/plone_forms/sendto_form.cpt:39
 msgid "legend_address_info"
 msgstr "電郵地址資訊"
 
 #. Default: "Assigned Roles for ${folder}"
-#: ./skins/plone_forms/folder_localrole_form.pt:80
+#: ./skins/plone_deprecated/folder_localrole_form.pt:77
 msgid "legend_assigned_roles"
 msgstr "為 ${folder} 分配的角色"
 
 #. Default: "Available Groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:467
+#: ./skins/plone_deprecated/folder_localrole_form.pt:441
 msgid "legend_available_groups"
 msgstr "可用的組別"
 
 #. Default: "Available Users"
-#: ./skins/plone_forms/folder_localrole_form.pt:266
+#: ./skins/plone_deprecated/folder_localrole_form.pt:254
 msgid "legend_available_users"
 msgstr "有效的成員"
 
 #. Default: "Change Ownership"
-#: ./skins/plone_forms/ownership_form.cpt:25
+#: ./skins/plone_forms/ownership_form.cpt:26
 msgid "legend_change_ownership"
 msgstr "變更擁有權"
 
 #. Default: "Addable types options"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:46
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:83
 msgid "legend_constraintypes"
 msgstr "可新增類別選項"
 
@@ -5792,27 +5941,27 @@ msgid "legend_contenttypes"
 msgstr "內容類型"
 
 #. Default: "Feedback for author"
-#: ./skins/plone_content/author.cpt:154
+#: ./skins/plone_content/author.cpt:163
 msgid "legend_feedback_for_author"
 msgstr "給作者回饋"
 
 #. Default: "Feedback details"
-#: ./skins/plone_templates/contact-info.cpt:31
+#: ./skins/plone_templates/contact-info.cpt:35
 msgid "legend_feedback_for_contact_info"
 msgstr "回饋詳情"
 
 #. Default: "Group"
-#: ./skins/plone_forms/member_search_form.pt:120
+#: ./skins/plone_forms/member_search_form.pt:81
 msgid "legend_group"
 msgstr "群組"
 
 #. Default: "Products available for install"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:40
+#: ./skins/plone_prefs/prefs_install_products_form.pt:44
 msgid "legend_install_products_available"
 msgstr "可供安裝的產品"
 
 #. Default: "Installed products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:107
+#: ./skins/plone_prefs/prefs_install_products_form.pt:114
 msgid "legend_installed_products"
 msgstr "已安裝的產品"
 
@@ -5822,22 +5971,22 @@ msgid "legend_items_available"
 msgstr "有效項目"
 
 #. Default: "LiveSearch &#8595;"
-#: ./skins/plone_scripts/livesearch_reply.py:76
+#: ./skins/plone_scripts/livesearch_reply.py:80
 msgid "legend_livesearch"
 msgstr ""
 
 #. Default: "Log details"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:113
+#: ./skins/plone_prefs/prefs_error_log_form.pt:117
 msgid "legend_logdetails"
 msgstr "記錄詳情"
 
 #. Default: "Exception Log (most recent first)"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:41
+#: ./skins/plone_prefs/prefs_error_log_form.pt:45
 msgid "legend_logexception"
 msgstr "錯誤記錄(由最近的開始)"
 
 #. Default: "No exceptions logged."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:43
+#: ./skins/plone_prefs/prefs_error_log_form.pt:47
 msgid "legend_lognoexceptions"
 msgstr "沒有錯誤記錄"
 
@@ -5847,32 +5996,33 @@ msgid "legend_mailhost_details"
 msgstr "外出電郵伺服器 (SMTP) 詳情"
 
 #. Default: "User Details"
-#: ./skins/plone_prefs/prefs_user_details.cpt:86
+#: ./skins/plone_prefs/prefs_user_details.cpt:90
 msgid "legend_member_details"
 msgstr "詳細成員資訊"
 
 #. Default: "User Search Criteria"
-#: ./skins/plone_forms/member_search_form.pt:23
+#: ./skins/plone_forms/member_search_form.pt:28
 msgid "legend_member_search_criteria"
 msgstr "成員搜尋條件"
 
 #. Default: "Navigation details"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:34
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:45
 msgid "legend_navigation_details"
 msgstr "導覽詳情"
 
-#. Default: "Note: you are not logged in. You may optionally enter your username and password below. If you don't enter your username and password below, this comment will be posted as the 'Anonymous User'."
-#: ./skins/plone_forms/discussion_reply_form.cpt:81
+#. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
+#: ./skins/plone_forms/discussion_reply_form.cpt:82
+#, fuzzy
 msgid "legend_note_reply_anonymous"
 msgstr "注意,您沒有登入. 您可以選擇在下面鍵入您的名字及密碼. 如果您不輸入您的名字及密碼, 這備註將會發佈為'匿名用者'."
 
 #. Default: "Password Details"
-#: ./skins/plone_login/login_password.cpt:42
+#: ./skins/plone_login/login_password.cpt:47
 msgid "legend_password_details"
 msgstr "詳細密碼資訊"
 
 #. Default: "Personal Details"
-#: ./skins/plone_login/join_form.cpt:26
+#: ./skins/plone_login/join_form.cpt:33
 msgid "legend_personal_details"
 msgstr "詳細個人資訊"
 
@@ -5897,17 +6047,17 @@ msgid "legend_search_details"
 msgstr "搜尋細節"
 
 #. Default: "Search for possible new owner"
-#: ./skins/plone_forms/ownership_form.cpt:159
+#: ./skins/plone_forms/ownership_form.cpt:161
 msgid "legend_search_owners"
 msgstr ""
 
 #. Default: "Search Terms"
-#: ./skins/plone_forms/folder_localrole_form.pt:382
+#: ./skins/plone_deprecated/folder_localrole_form.pt:362
 msgid "legend_search_terms"
 msgstr "搜尋項目"
 
 #. Default: "Advanced Settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:610
+#: ./skins/plone_deprecated/folder_localrole_form.pt:572
 msgid "legend_security_settings"
 msgstr "進階設定"
 
@@ -5922,17 +6072,17 @@ msgid "legend_user_details"
 msgstr "詳細成員資訊"
 
 #. Default: "The link address is:"
-#: ./skins/plone_content/link_view.pt:30
+#: ./skins/plone_content/link_view.pt:31
 msgid "link_address"
 msgstr "該連接位址是:"
 
 #. Default: "Group Properties"
-#: ./skins/plone_prefs/prefs_group_details.pt:105
+#: ./skins/plone_prefs/prefs_group_details.pt:116
 msgid "link_group_properties"
 msgstr "組別屬性"
 
 #. Default: "Install log"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:149
+#: ./skins/plone_prefs/prefs_install_products_form.pt:156
 msgid "link_install_products_log"
 msgstr "<tal:block replace=\"structure here/document_icon.gif\"/> 安裝記錄"
 
@@ -5942,17 +6092,17 @@ msgid "listingheader_action"
 msgstr "動作"
 
 #. Default: "Action performed"
-#: ./skins/plone_forms/undo_form.pt:51
+#: ./skins/plone_forms/undo_form.pt:55
 msgid "listingheader_action_performed"
 msgstr "執行的動作"
 
 #. Default: "Affected Item"
-#: ./skins/plone_forms/undo_form.pt:52
+#: ./skins/plone_forms/undo_form.pt:56
 msgid "listingheader_affected_item"
 msgstr "影響的項目"
 
 #. Default: "Author"
-#: ./skins/plone_content/folder_tabular_view.pt:58
+#: ./skins/plone_content/folder_tabular_view.pt:66
 msgid "listingheader_author"
 msgstr "作者"
 
@@ -5967,42 +6117,42 @@ msgid "listingheader_date_and_time"
 msgstr "日期和時間"
 
 #. Default: "Description"
-#: ./skins/plone_forms/folder_localrole_form.pt:487
+#: ./skins/plone_deprecated/folder_localrole_form.pt:459
 msgid "listingheader_description"
 msgstr "說明"
 
 #. Default: "E-mail Address"
-#: ./skins/plone_prefs/prefs_group_members.cpt:116
+#: ./skins/plone_prefs/prefs_group_members.cpt:127
 msgid "listingheader_email_address"
 msgstr "電郵地址"
 
 #. Default: "Group name"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:136
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:138
 msgid "listingheader_group_name"
 msgstr "組別名稱"
 
 #. Default: "Remove Group"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:86
+#: ./skins/plone_prefs/prefs_user_memberships.pt:93
 msgid "listingheader_group_remove"
 msgstr "移除組別"
 
 #. Default: "Group/User name"
-#: ./skins/plone_prefs/prefs_group_members.cpt:115
+#: ./skins/plone_prefs/prefs_group_members.cpt:126
 msgid "listingheader_group_user_name"
 msgstr "群組名稱"
 
 #. Default: "Modified"
-#: ./skins/plone_content/folder_tabular_view.pt:63
+#: ./skins/plone_content/folder_tabular_view.pt:71
 msgid "listingheader_modified"
 msgstr "修改"
 
 #. Default: "Name"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:80
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:79
 msgid "listingheader_name"
 msgstr "名字"
 
 #. Default: "Order"
-#: ./skins/plone_templates/folder_contents.pt:165
+#: ./skins/plone_deprecated/old_folder_contents.pt:124
 msgid "listingheader_order"
 msgstr "次序"
 
@@ -6012,72 +6162,72 @@ msgid "listingheader_performed_by"
 msgstr "執行者"
 
 #. Default: "Remove Group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:147
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:149
 msgid "listingheader_remove_group"
 msgstr "刪除群組"
 
 #. Default: "Remove user"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:139
+#: ./skins/plone_prefs/prefs_users_overview.cpt:143
 msgid "listingheader_remove_user"
 msgstr "移除用者"
 
 #. Default: "Reset Password"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:138
+#: ./skins/plone_prefs/prefs_users_overview.cpt:142
 msgid "listingheader_reset_password"
 msgstr "重設密碼"
 
 #. Default: "Roles"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:141
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:143
 msgid "listingheader_roles"
 msgstr "身份"
 
 #. Default: "Size"
-#: ./skins/plone_templates/folder_contents.pt:155
+#: ./skins/plone_deprecated/old_folder_contents.pt:114
 msgid "listingheader_size"
 msgstr "大小"
 
 #. Default: "State"
-#: ./skins/plone_templates/folder_contents.pt:161
+#: ./skins/plone_deprecated/old_folder_contents.pt:120
 msgid "listingheader_status"
 msgstr "狀態"
 
 #. Default: "Title"
-#: ./skins/plone_content/folder_tabular_view.pt:55
+#: ./skins/plone_content/folder_tabular_view.pt:63
 msgid "listingheader_title"
 msgstr "標題"
 
 #. Default: "Type"
-#: ./skins/plone_content/folder_tabular_view.pt:60
+#: ./skins/plone_content/folder_tabular_view.pt:68
 msgid "listingheader_type"
 msgstr "類型"
 
 #. Default: "User name"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:134
+#: ./skins/plone_prefs/prefs_users_overview.cpt:138
 msgid "listingheader_user_name"
 msgstr "名字"
 
 #. Default: "<strong>Attention!</strong> You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
-#: ./skins/plone_forms/folder_localrole_form.pt:64
+#: ./skins/plone_deprecated/folder_localrole_form.pt:61
 msgid "local_role_warning_default_page"
 msgstr "<strong>注意！</strong> 您正對這個文件夾的預設頁面設定分享權限. 您如果要設定它的相關文件夾權限, 請點選 ${link}"
 
 #. Default: "here"
-#: ./skins/plone_forms/folder_localrole_form.pt:47
+#: ./skins/plone_deprecated/folder_localrole_form.pt:44
 msgid "local_role_warning_link"
 msgstr "這裡"
 
 #. Default: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
-#: ./skins/plone_forms/folder_localrole_form.pt:46
+#: ./skins/plone_deprecated/folder_localrole_form.pt:43
 msgid "local_role_warning_type"
 msgstr "<strong>注意！</strong> 您正對 ${type} 設定分享權限. 您如果要設定它的所在容器權限, 請點選 ${link} ."
 
 #. Default: "While cookie authentication is disabled, cookie-based login is not available."
-#: ./skins/plone_login/failsafe_login_form.cpt:47
+#: ./skins/plone_login/failsafe_login_form.cpt:58
 msgid "login_form_disabled"
 msgstr "當cookie認證被關閉, cookie登錄將無效."
 
 #. Default: "Cookie authentication is disabled. Login portlet not available."
-#: ./skins/plone_portlets/portlet_login.pt:128
+#: ./skins/plone_deprecated/portlet_login.pt:123
 msgid "login_portlet_disabled"
 msgstr "Cookie授權被關閉. 登入功能端無效."
 
@@ -6106,7 +6256,7 @@ msgid "mailtemplate_registered_portal_membership_info"
 msgstr "成員會藉資訊"
 
 #. Default: "A mail has now been sent to the site administrator regarding your questions and/or comments."
-#: ./skins/plone_templates/send_feedback_confirm.cpt:19
+#: ./skins/plone_templates/send_feedback_confirm.cpt:23
 msgid "message_send_feedback_confirm"
 msgstr ""
 
@@ -6260,7 +6410,7 @@ msgid "no"
 msgstr "否"
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
-#: ./skins/plone_content/document_view.pt:28
+#: ./skins/plone_content/document_view.pt:31
 msgid "no_body_text"
 msgstr "這個項目沒有任何內文, 點選 '修改' 標籤變更它."
 
@@ -6270,17 +6420,17 @@ msgid "no_comments"
 msgstr "沒有意見."
 
 #. Default: "(No file has been uploaded yet)"
-#: ./skins/plone_content/file_view.pt:51
+#: ./skins/plone_content/file_view.pt:52
 msgid "no_file_uploaded"
 msgstr "(尚未有檔案被上傳)"
 
 #. Default: "No groups were found using your search criteria."
-#: ./skins/plone_forms/folder_localrole_form.pt:452
+#: ./skins/plone_deprecated/folder_localrole_form.pt:426
 msgid "no_groups_found"
 msgstr ""
 
 #. Default: "(No image has been uploaded yet)"
-#: ./skins/plone_content/image_view.pt:50
+#: ./skins/plone_content/image_view.pt:51
 msgid "no_image_uploaded"
 msgstr "(尚未有圖片被上傳)"
 
@@ -6291,7 +6441,7 @@ msgid "no_members_found"
 msgstr "根據您的搜尋條件, 並沒有找到任何成員."
 
 #. Default: "No events have been posted."
-#: ./skins/plone_templates/events_listing.pt:113
+#: ./skins/plone_templates/events_listing.pt:116
 msgid "no_new_events"
 msgstr "沒有新事件"
 
@@ -6300,12 +6450,17 @@ msgstr "沒有新事件"
 msgid "no_new_news"
 msgstr "沒有最新消息被張貼."
 
+#. Default: "No users were found using your search criteria."
+#: ./skins/plone_deprecated/folder_localrole_form.pt:230
+msgid "no_users_found"
+msgstr ""
+
 #: prefs_user_group_search_form.pt
 msgid "none specified"
 msgstr "沒有特定"
 
 #. Default: "Normal"
-#: ./skins/plone_templates/accessibility-info.pt:24
+#: ./skins/plone_templates/accessibility-info.pt:28
 msgid "normal_text"
 msgstr "一般"
 
@@ -6316,12 +6471,12 @@ msgid "pending"
 msgstr "等待"
 
 #. Default: "Plain Text"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:57
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:50
 msgid "plain_text"
 msgstr "一般文字"
 
 #. Default: "Posted by"
-#: ./skins/plone_templates/events_listing.pt:66
+#: ./skins/plone_templates/events_listing.pt:69
 msgid "posted_by"
 msgstr "張貼者:"
 
@@ -6351,13 +6506,13 @@ msgid "published"
 msgstr "已發佈"
 
 #. Default: "Read More..."
-#: ./skins/plone_content/folder_summary_view.pt:147
+#: ./skins/plone_content/folder_summary_view.pt:155
 #, fuzzy
 msgid "read_more"
 msgstr "閱讀更多"
 
 #. Default: "Cookie authentication has been disabled."
-#: ./skins/plone_login/registered.pt:10
+#: ./skins/plone_login/registered.pt:12
 msgid "registered_disabled"
 msgstr "Cookie認証無效。"
 
@@ -6369,17 +6524,17 @@ msgid "reject"
 msgstr "拒絕"
 
 #. Default: "Please log out or exit your browser when you're done."
-#: ./skins/plone_login/failsafe_login_form.cpt:165
+#: ./skins/plone_login/failsafe_login_form.cpt:168
 msgid "remember_to_log_out"
 msgstr "請記得登出"
 
 #. Default: "You are not allowed to modify the id of this item."
-#: ./skins/plone_forms/folder_rename_form.cpt:67
+#: ./skins/plone_forms/folder_rename_form.cpt:72
 msgid "rename_item_not_allowed"
 msgstr "您不能修改這項目的名稱."
 
 #. Default: "by ${author}, ${date}"
-#: ./skins/plone_forms/search.pt:86
+#: ./skins/plone_forms/search.pt:91
 msgid "results_by_author"
 msgstr "由 ${author} , ${date}"
 
@@ -6393,17 +6548,17 @@ msgid "retract"
 msgstr "收回"
 
 #. Default: "Any Group"
-#: ./skins/plone_forms/member_search_form.pt:128
+#: ./skins/plone_forms/member_search_form.pt:89
 msgid "search_any_group"
 msgstr "任何群組"
 
 #. Default: "Did you not find what you were looking for? Try the ${advanced_search} for more precise search options."
-#: ./skins/plone_forms/search.pt:33
+#: ./skins/plone_forms/search.pt:38
 msgid "search_results_advanced"
 msgstr "找不到您想要的嗎? 嘗試 ${advanced_search} 進行更精確的搜尋選項."
 
 #. Default: "Advanced Search"
-#: ./skins/plone_forms/search.pt:34
+#: ./skins/plone_forms/search.pt:39
 msgid "search_results_advanced_link"
 msgstr "進階搜尋"
 
@@ -6423,17 +6578,17 @@ msgid "show"
 msgstr "顯示"
 
 #. Default: "You are receiving this mail because ${fullname} ${from_address} is sending feedback about the site administered by you at ${url}. The message sent was: ${message}"
-#: ./skins/plone_templates/site_feedback_template.pt:12
+#: ./skins/plone_templates/site_feedback_template.pt:13
 msgid "site_feedback_mailtemplate_body"
 msgstr "您收到這封信件是由於 ${fullname} ${from_address} 送了一封回饋有關您在${url}管理的 plone 網站. 寄出訊息如下: ${message}"
 
 #. Default: "Small"
-#: ./skins/plone_templates/accessibility-info.pt:28
+#: ./skins/plone_templates/accessibility-info.pt:32
 msgid "small_text"
 msgstr "小字"
 
 #. Default: "Structured Text"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:35
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:32
 msgid "structured_text"
 msgstr "結構化文字"
 
@@ -6445,42 +6600,42 @@ msgid "submit"
 msgstr "提交"
 
 #. Default: "Affected content"
-#: ./skins/plone_forms/content_status_history.cpt:81
+#: ./skins/plone_forms/content_status_history.cpt:72
 msgid "summary_affected_content"
 msgstr "受影響內容"
 
 #. Default: "Currently assigned local roles"
-#: ./skins/plone_forms/folder_localrole_form.pt:86
+#: ./skins/plone_deprecated/folder_localrole_form.pt:83
 msgid "summary_assigned_roles"
 msgstr "目前已分配區域角色"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: ./skins/plone_content/author.cpt:230
+#: ./skins/plone_content/author.cpt:234
 msgid "summary_author_content_list"
 msgstr "列出作者相關項目, 以內容類別分類"
 
 #. Default: "Available groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:473
+#: ./skins/plone_deprecated/folder_localrole_form.pt:447
 msgid "summary_available_groups"
 msgstr "可用群組"
 
 #. Default: "Calendar"
-#: ./skins/plone_portlets/portlet_calendar.pt:38
+#: ./skins/plone_deprecated/portlet_calendar.pt:38
 msgid "summary_calendar"
 msgstr "日曆"
 
 #. Default: "Content listing"
-#: ./skins/plone_content/folder_tabular_view.pt:50
+#: ./skins/plone_content/folder_tabular_view.pt:58
 msgid "summary_content_listing"
 msgstr "內容清單"
 
 #. Default: "Event details"
-#: ./skins/plone_content/event_view.pt:30
+#: ./skins/plone_content/event_view.pt:33
 msgid "summary_event_details"
 msgstr "事件詳情"
 
 #. Default: "Exception Log (most recent first)"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:65
+#: ./skins/plone_prefs/prefs_error_log_form.pt:69
 msgid "summary_exception_log"
 msgstr "錯誤記錄(由最近期開始)"
 
@@ -6490,7 +6645,7 @@ msgid "summary_history"
 msgstr "歷史"
 
 #. Default: "Roles to assign"
-#: ./skins/plone_forms/folder_localrole_form.pt:194
+#: ./skins/plone_deprecated/folder_localrole_form.pt:187
 msgid "summary_localroles_to_assign"
 msgstr "可分配角色"
 
@@ -6500,22 +6655,22 @@ msgid "summary_review_history"
 msgstr "歷史"
 
 #. Default: "Select roles for each group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:96
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:102
 msgid "summary_roles_for_groups"
 msgstr "選擇每個組別的本區身份"
 
 #. Default: "Search results"
-#: ./skins/plone_forms/folder_localrole_form.pt:273
+#: ./skins/plone_deprecated/folder_localrole_form.pt:261
 msgid "summary_search_results"
 msgstr "傳回結果"
 
 #. Default: "Home"
-#: ./skins/plone_portlets/portlet_navigation.pt:41
+#: ./skins/plone_deprecated/global_pathbar.pt:16
 msgid "tabs_home"
 msgstr "首頁"
 
 #. Default: "This Product is broken"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:83
+#: ./skins/plone_prefs/prefs_install_products_form.pt:90
 msgid "text_broken_product"
 msgstr "此產品已破裂"
 
@@ -6525,17 +6680,17 @@ msgid "text_conforms_to_standards"
 msgstr "此網站遵從以下標準:"
 
 #. Default: "Contributors: ${name}"
-#: ./skins/plone_content/document_byline.pt:58
+#: ./skins/plone_deprecated/document_byline.pt:53
 msgid "text_contributors"
 msgstr ""
 
 #. Default: "by ${creator}, last updated: ${date}"
-#: ./skins/plone_templates/recently_modified.pt:50
+#: ./skins/plone_templates/recently_modified.pt:56
 msgid "text_creator_date"
 msgstr "由 ${creator} , 最後更新: ${date}"
 
 #. Default: "The specified log entry was not found. It may have expired."
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:28
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:32
 msgid "text_errlog_notfound"
 msgstr "此特定記錄不能尋回. 這可能已過期."
 
@@ -6555,7 +6710,7 @@ msgid "text_form_resubmit_message"
 msgstr "你經已按下遞交鍵. 你是否再次遞交這表格?"
 
 #. Default: "Group"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:114
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:113
 msgid "text_group"
 msgstr "組別"
 
@@ -6615,7 +6770,7 @@ msgid "text_ie6_cookies_step3"
 msgstr "將拉條移至中級及按 OK"
 
 #. Default: "Location: ${location}"
-#: ./skins/plone_content/author.cpt:85
+#: ./skins/plone_content/author.cpt:94
 msgid "text_location"
 msgstr ""
 
@@ -6674,49 +6829,55 @@ msgstr "選擇在\"隱私及安全性\"下的\"Cookies\"項目"
 msgid "text_netscape6_cookies_step4"
 msgstr "選擇\"只允許所選網站傳回的 \"或\"允許所有 cookies\", 並按\"確定\"鍵"
 
+#. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the <a href=\"${DYNAMIC_CONTENT}\">Mail control panel</a> to fix this."
+#: ./skins/plone_prefs/plone_control_panel.pt:42
+msgid "text_no_mailhost_configured"
+msgstr ""
+
 #. Default: "No items have been published."
-#: ./skins/plone_templates/recently_published.pt:76
+#: ./skins/plone_templates/recently_published.pt:80
 msgid "text_no_new_items"
 msgstr "沒有最新消息被張貼."
 
 #. Default: "No items have been modified."
-#: ./skins/plone_templates/recently_modified.pt:72
+#: ./skins/plone_templates/recently_modified.pt:78
 msgid "text_no_new_modified_items"
 msgstr "沒有項目被修改."
 
 #. Default: "Warning: PIL is not installed properly, image scaling will not work."
-#: ./skins/plone_prefs/plone_control_panel.pt:65
+#: ./skins/plone_prefs/plone_control_panel.pt:52
 msgid "text_no_pil_installed"
 msgstr ""
 
 #. Default: "Enter a group or user name to search for or click 'Show All'."
-#: ./skins/plone_prefs/prefs_group_members.cpt:269
+#: ./skins/plone_prefs/prefs_group_members.cpt:274
 #, fuzzy
 msgid "text_no_searchstring"
 msgstr "輸入成員名稱或群組來搜尋, 或點選 '顯示全部'."
 
 #. Default: "Enter a group or user name to search for."
-#: ./skins/plone_prefs/prefs_group_members.cpt:266
+#: ./skins/plone_prefs/prefs_group_members.cpt:271
 msgid "text_no_searchstring_large"
 msgstr ""
 
-#. Default: "No user by that name"
-#: ./skins/plone_content/author.cpt:30
+#. Default: "No user by that name."
+#: ./skins/plone_content/author.cpt:36
+#, fuzzy
 msgid "text_no_user_by_name"
 msgstr "沒有相符名稱的成員"
 
 #. Default: "Enter a username to search for"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:213
+#: ./skins/plone_prefs/prefs_users_overview.cpt:218
 msgid "text_no_user_searchstring"
 msgstr ""
 
 #. Default: "Enter a username to search for, or click 'Show All'"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:219
+#: ./skins/plone_prefs/prefs_users_overview.cpt:224
 msgid "text_no_user_searchstring_largesite"
 msgstr ""
 
 #. Default: "No matches"
-#: ./skins/plone_prefs/prefs_group_members.cpt:263
+#: ./skins/plone_prefs/prefs_group_members.cpt:268
 msgid "text_nomatches"
 msgstr "沒有相符項目"
 
@@ -6731,63 +6892,63 @@ msgid "text_opera_cookies_step2"
 msgstr "點選\"啟用cookies\""
 
 #. Default: "Product Description"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:73
+#: ./skins/plone_prefs/prefs_install_products_form.pt:80
 msgid "text_product_description"
 msgstr "產品描述"
 
 #. Default: "This Product has been removed from the file system."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:168
+#: ./skins/plone_prefs/prefs_install_products_form.pt:175
 msgid "text_product_unavailable"
 msgstr "這產品已由檔案系統移除"
 
 #. Default: "Search Site"
-#: ./skins/plone_templates/global_searchbox.pt:15
+#: ./skins/plone_deprecated/global_searchbox.pt:18
 msgid "text_search"
 msgstr "搜尋"
 
 #. Default: "Text size:"
-#: ./skins/plone_templates/accessibility-info.pt:17
+#: ./skins/plone_templates/accessibility-info.pt:21
 msgid "text_size"
 msgstr "文字大小:"
 
 #. Default: "User"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:112
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:111
 msgid "text_user"
 msgstr "成員"
 
 #. Default: "This user does not belong to any group."
-#: ./skins/plone_prefs/prefs_user_memberships.pt:112
+#: ./skins/plone_prefs/prefs_user_memberships.pt:119
 msgid "text_user_not_in_any_group"
 msgstr ""
 
 #. Default: "Ever"
-#: ./skins/plone_forms/member_search_form.pt:97
+#: ./skins/plone_forms/search_form.pt:153
 msgid "time_ever"
 msgstr "在任何時候"
 
 #. Default: "- expired"
-#: ./skins/plone_content/document_byline.pt:40
+#: ./skins/plone_deprecated/document_byline.pt:43
 #, fuzzy
 msgid "time_expired"
 msgstr "過期"
 
 #. Default: "Last month"
-#: ./skins/plone_forms/member_search_form.pt:96
+#: ./skins/plone_forms/search_form.pt:152
 msgid "time_last_month"
 msgstr "上個月"
 
 #. Default: "Last week"
-#: ./skins/plone_forms/member_search_form.pt:95
+#: ./skins/plone_forms/search_form.pt:151
 msgid "time_last_week"
 msgstr "上週"
 
 #. Default: ":"
-#: ./skins/plone_templates/calendar_macros.pt:151
+#: ./skins/plone_templates/calendar_macros.pt:133
 msgid "time_separator"
 msgstr ":"
 
 #. Default: "Yesterday"
-#: ./skins/plone_forms/member_search_form.pt:94
+#: ./skins/plone_forms/search_form.pt:150
 msgid "time_yesterday"
 msgstr "昨天"
 
@@ -6797,28 +6958,28 @@ msgid "title"
 msgstr ""
 
 #. Default: "Actions for the current content item"
-#: ./skins/plone_templates/global_contentmenu.pt:403
+#: ./skins/plone_deprecated/global_contentmenu.pt:405
 #, fuzzy
 msgid "title_actions_menu"
 msgstr "動作"
 
 #. Default: "Add new items in the same folder as this item"
-#: ./skins/plone_templates/global_contentmenu.pt:104
+#: ./skins/plone_deprecated/global_contentmenu.pt:106
 msgid "title_add_new_items_inside_folder"
 msgstr "如同這項目在相一文件夾下新增項目"
 
 #. Default: "Add new items inside this item"
-#: ./skins/plone_templates/global_contentmenu.pt:97
+#: ./skins/plone_deprecated/global_contentmenu.pt:99
 msgid "title_add_new_items_inside_item"
 msgstr "在這項目裡新增項目"
 
 #. Default: "Add this item to your iCal calendar"
-#: ./skins/plone_content/event_view.pt:114
+#: ./skins/plone_content/event_view.pt:165
 msgid "title_add_to_ical"
 msgstr "新增這項目至您的iCal月曆"
 
 #. Default: "Add this item to your vCal calendar"
-#: ./skins/plone_content/event_view.pt:108
+#: ./skins/plone_content/event_view.pt:159
 msgid "title_add_to_vcal"
 msgstr "新增這項目至您的vCal月曆"
 
@@ -6838,44 +6999,44 @@ msgid "title_built_with_css"
 msgstr "這 Plone 網站以有效 CSS 建立."
 
 #. Default: "This Plone site was built using Plone CMS, the Open Source Content Management System. Click for more information."
-#: ./skins/plone_templates/colophon.pt:23
+#: ./skins/plone_templates/colophon.pt:31
 #, fuzzy
 msgid "title_built_with_plone"
 msgstr "本站使用 Plone 內容管理系統建構, 按下以取得更多資信."
 
 #. Default: "Change default page"
-#: ./skins/plone_templates/global_contentmenu.pt:345
+#: ./skins/plone_deprecated/global_contentmenu.pt:347
 msgid "title_change_default_page"
 msgstr "變更預設頁面"
 
 #. Default: "Change the item used as default view in this folder"
-#: ./skins/plone_forms/select_default_view.cpt:68
+#: ./skins/plone_deprecated/global_contentmenu.pt:271
 msgid "title_change_default_view_item"
 msgstr "更改這項目為這文件夾的預設頁面"
 
 #. Default: "Change the state of this item"
-#: ./skins/plone_templates/global_contentmenu.pt:33
+#: ./skins/plone_deprecated/global_contentmenu.pt:35
 msgid "title_change_state_of_item"
 msgstr "更改這項目的狀態"
 
 #. Default: "Select the view mode for this folder, or set a content item as its default view."
-#: ./skins/plone_templates/global_contentmenu.pt:204
+#: ./skins/plone_deprecated/global_contentmenu.pt:206
 #, fuzzy
 msgid "title_choose_default_view"
 msgstr "選擇預設檢視"
 
 #. Default: "Configure which content types can be added here"
-#: ./skins/plone_forms/folder_factories.pt:25
+#: ./skins/plone_deprecated/global_contentmenu.pt:138
 msgid "title_configure_addable_content_types"
 msgstr "設定哪些類別可在這裡被新增"
 
 #. Default: "Copyright"
-#: ./skins/plone_templates/footer.pt:13
+#: ./skins/plone_templates/footer.pt:16
 msgid "title_copyright"
 msgstr "版權"
 
 #. Default: "Cascading Style Sheets"
-#: ./skins/plone_templates/accessibility-info.pt:152
+#: ./skins/plone_templates/accessibility-info.pt:150
 msgid "title_css"
 msgstr "串聯式樣式表(CSS)"
 
@@ -6885,7 +7046,7 @@ msgid "title_frontpage"
 msgstr ""
 
 #. Default: "Large Text"
-#: ./skins/plone_templates/accessibility-info.pt:20
+#: ./skins/plone_templates/accessibility-info.pt:24
 msgid "title_large_text"
 msgstr "大型字"
 
@@ -6895,52 +7056,52 @@ msgid "title_member_personal_folder"
 msgstr "${member} 的個人項目"
 
 #. Default: "Move item down"
-#: ./skins/plone_templates/folder_contents.pt:269
+#: ./skins/plone_deprecated/old_folder_contents.pt:230
 msgid "title_move_item_down"
 msgstr "向下移"
 
 #. Default: "Move item up"
-#: ./skins/plone_templates/folder_contents.pt:262
+#: ./skins/plone_deprecated/old_folder_contents.pt:223
 msgid "title_move_item_up"
 msgstr "向上移"
 
 #. Default: "Next month"
-#: ./skins/plone_portlets/portlet_calendar.pt:65
+#: ./skins/plone_deprecated/portlet_calendar.pt:65
 msgid "title_next_month"
 msgstr "下月"
 
 #. Default: "Normal Text"
-#: ./skins/plone_templates/accessibility-info.pt:24
+#: ./skins/plone_templates/accessibility-info.pt:28
 msgid "title_normal_text"
 msgstr "正常字體"
 
 #. Default: "Previous month"
-#: ./skins/plone_portlets/portlet_calendar.pt:43
+#: ./skins/plone_deprecated/portlet_calendar.pt:43
 msgid "title_previous_month"
 msgstr "上月"
 
 #. Default: "Relevance"
-#: ./skins/plone_forms/search.pt:74
+#: ./skins/plone_forms/search.pt:79
 msgid "title_relevance"
 msgstr "關聯"
 
 #. Default: "Delete or rename the index_html item to gain full control over how this folder is displayed."
-#: ./skins/plone_templates/global_contentmenu.pt:195
+#: ./skins/plone_deprecated/global_contentmenu.pt:197
 msgid "title_remove_index_html_for_display_control"
 msgstr "刪除或改名 index_html 項目以完全控制這文件夾的顯示方式."
 
 #. Default: "Required"
-#: ./skins/plone_content/author.cpt:163
+#: ./skins/plone_content/author.cpt:172
 msgid "title_required"
 msgstr "註冊"
 
 #. Default: "RSS feed of these search results"
-#: ./skins/plone_forms/search.pt:50
+#: ./skins/plone_forms/search.pt:55
 msgid "title_rss_feed"
 msgstr "搜尋結果的 RSS Feed"
 
 #. Default: "Search Site"
-#: ./skins/plone_templates/global_searchbox.pt:19
+#: ./skins/plone_deprecated/global_searchbox.pt:22
 msgid "title_search_site"
 msgstr "搜尋網站"
 
@@ -6955,17 +7116,17 @@ msgid "title_section_508"
 msgstr "此Plone網站遵從美國政府存取指引第508部份"
 
 #. Default: "Select an item to be used as default view in this folder"
-#: ./skins/plone_forms/select_default_view.cpt:59
+#: ./skins/plone_deprecated/global_contentmenu.pt:253
 msgid "title_select_default_page"
 msgstr "在這文件夾中選取一個項目作為預設檢視"
 
 #. Default: "Send a mail to this user"
-#: ./skins/plone_prefs/prefs_group_members.cpt:156
+#: ./skins/plone_prefs/prefs_group_members.cpt:167
 msgid "title_send_mail_to_user"
 msgstr "寄電郵給這個用者"
 
 #. Default: "Show all available content types"
-#: ./skins/plone_templates/global_contentmenu.pt:127
+#: ./skins/plone_deprecated/global_contentmenu.pt:129
 msgid "title_show_all_content_types"
 msgstr "顯示所有可用的內容類別"
 
@@ -6975,7 +7136,7 @@ msgid "title_sitemap"
 msgstr ""
 
 #. Default: "Small Text"
-#: ./skins/plone_templates/accessibility-info.pt:28
+#: ./skins/plone_templates/accessibility-info.pt:32
 msgid "title_small_text"
 msgstr "小字體"
 
@@ -6990,12 +7151,12 @@ msgid "title_valid_xhtml"
 msgstr ""
 
 #. Default: "World Wide Web Consortium"
-#: ./skins/plone_templates/accessibility-info.pt:156
+#: ./skins/plone_templates/accessibility-info.pt:154
 msgid "title_w3c"
 msgstr "互聯網協會"
 
 #. Default: "Web Content Accessibility Guidelines"
-#: ./skins/plone_templates/accessibility-info.pt:39
+#: ./skins/plone_templates/accessibility-info.pt:43
 msgid "title_wcag"
 msgstr "此Plone網站遵從W3C-@AI網上內容存取指引."
 
@@ -7005,12 +7166,12 @@ msgid "title_wcag_conformance"
 msgstr ""
 
 #. Default: "eXtensible Hyper Text Markup Language"
-#: ./skins/plone_templates/accessibility-info.pt:149
+#: ./skins/plone_templates/accessibility-info.pt:147
 msgid "title_xhtml"
 msgstr "此Plone網站是有效的XHTML."
 
 #. Default: "Note that roles listed here apply directly to a user. They do not reflect additional roles users may have due to group memberships."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:62
+#: ./skins/plone_prefs/prefs_users_overview.cpt:69
 msgid "user_role_note"
 msgstr "注意在這裡列出的角色是直接分配給該成員的. 這些並不包含該成員所屬群組所分配的角色."
 
@@ -7161,7 +7322,7 @@ msgid "weekday_wed_short"
 msgstr "三"
 
 #. Default: "Policy"
-#: ./skins/plone_templates/global_contentmenu.pt:69
+#: ./skins/plone_deprecated/global_contentmenu.pt:71
 msgid "workflow_policy"
 msgstr ""
 
@@ -7171,7 +7332,7 @@ msgid "yes"
 msgstr "是"
 
 #. Default: "You are here:"
-#: ./skins/plone_templates/global_pathbar.pt:11
+#: ./skins/plone_deprecated/global_pathbar.pt:14
 msgid "you_are_here"
 msgstr "您位在:"
 

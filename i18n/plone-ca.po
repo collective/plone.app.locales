@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2007-05-01 18:30+0000\n"
+"POT-Creation-Date: 2007-05-12 16:21+0000\n"
 "PO-Revision-Date: 2006-01-23 20:39+0100\n"
 "Last-Translator: Albert Lombarte <alombarte@harecoded.com>\n"
 "Language-Team: Català <plone@softcatala.net>\n"
@@ -36,20 +36,20 @@ msgstr ""
 msgid "${count} item(s) renamed."
 msgstr ""
 
-#: ./skins/plone_scripts/folder_delete.cpy:49
+#: ./skins/plone_scripts/folder_delete.cpy:59
 msgid "${items} could not be deleted."
 msgstr ""
 
 #. Default: "${monthname} ${year}"
-#: ./skins/plone_portlets/portlet_calendar.pt:56
+#: ./skins/plone_deprecated/portlet_calendar.pt:56
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
-#: ./skins/plone_scripts/check_id.py:62
+#: ./skins/plone_scripts/check_id.py:66
 msgid "${name} is not a legal name. The following characters are invalid: ${characters}"
 msgstr ""
 
-#: ./skins/plone_scripts/check_id.py:70
+#: ./skins/plone_scripts/check_id.py:59
 msgid "${name} is reserved."
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr "S'ha tallat ${title}"
 msgid "${title} has been added to your Favorites."
 msgstr "S'ha afegit a les adreçes d'interès ${title}"
 
-#: ./skins/plone_scripts/object_delete.cpy:23
+#: ./skins/plone_form_scripts/delete_confirmation.cpy:23
 msgid "${title} has been deleted."
 msgstr "S'ha esborrat ${title}"
 
@@ -103,7 +103,7 @@ msgstr "Una carpeta pensada per a contenir un nombre elevat d'elements"
 
 # Description for Folder type
 #. Default: "A folder which can contain other items."
-#: ./skins/plone_content/folder_edit_form.cpt:27
+#: ./skins/plone_content/folder_edit_form.cpt:30
 msgid "A folder which can contain other items."
 msgstr "Les carpetes es visualitzen per defecte com un llistat d'elements dins d'un directori, o bé, mitjançant una vista personalitzada."
 
@@ -322,7 +322,7 @@ msgid "Copy or cut one or more items to paste."
 msgstr "Copia o retalla un o varis elements per enganxar."
 
 #: ./skins/plone_prefs/prefs_group_edit.py:19
-msgid "Could not add group ${name}, perhaps a member or group with this name already exists."
+msgid "Could not add group ${name}, perhaps a user or group with this name already exists."
 msgstr ""
 
 #: ./skins/plone_prefs/prefs_navigation_form_validate.vpy:27
@@ -371,17 +371,13 @@ msgid "Default Page"
 msgstr "Pàgina per defecte"
 
 #. Default: "Delete"
-#: ./skins/plone_forms/delete_confirmation.cpt:38
+#: ./skins/plone_forms/delete_confirmation_page.cpt:43
 msgid "Delete"
 msgstr "Suprimeix"
 
 #: Metadata which might show up in atct_topic_view
 msgid "Description"
 msgstr ""
-
-#: plone.org tab
-msgid "Development"
-msgstr "Desenvolupament"
 
 #: ./skins/plone_scripts/folder_paste.cpy:28
 msgid "Disallowed to paste item(s)."
@@ -401,10 +397,6 @@ msgstr "Els elements de discussió són documents en contestació a un altre contin
 msgid "Document changes saved."
 msgstr "S'han desat el canvis del document."
 
-#: plone.org tab
-msgid "Documentation"
-msgstr "Documentació"
-
 #: ./skins/plone_form_scripts/plone_change_password.py:20
 msgid "Does not match current password."
 msgstr "No correspon amb la contrasenya actual."
@@ -416,7 +408,9 @@ msgid "Download"
 msgstr "Descarrega"
 
 #. Default: "Edit"
-#: ./PloneFolder.py:80
+#: type action defined on Page
+#: type action defined on Event
+#: type action defined on Favorite
 msgid "Edit"
 msgstr "Edita"
 
@@ -447,6 +441,11 @@ msgstr "Data de finalització"
 msgid "Entries cleared"
 msgstr "S'han netejat les entrades"
 
+#. Default: "Error"
+#: ./skins/plone_content/author.cpt:33
+msgid "Error"
+msgstr ""
+
 # Control Panel Item
 #. Default: "Error Log"
 #: action_icon id error_log_icon.gif - category controlpanel
@@ -465,11 +464,6 @@ msgstr "Esdeveniment"
 #: ./skins/plone_form_scripts/event_edit.cpy:59
 msgid "Event changes saved."
 msgstr "Canvis en l'esdeveniment desats."
-
-# portal-tab
-# portal-tab
-msgid "Events"
-msgstr "Events"
 
 #. Default: "Expiration Date"
 #: index friendly name of index expires
@@ -525,18 +519,16 @@ msgid "Flip vertical"
 msgstr "Volteja verticalment"
 
 #. Default: "Folder"
-#: ./skins/plone_content/folder_edit_form.cpt:18
+#: ./skins/plone_content/folder_edit_form.cpt:21
 msgid "Folder"
 msgstr "Carpeta"
 
 #. Default: "Folder Listing"
-#: ./PloneFolder.py:87
+#: type action defined on Folder
+#: type action defined on Large Folder
+#: type action defined on Smart Folder
 msgid "Folder Listing"
 msgstr "Llistat de la carpeta"
-
-#: ./PloneFolder.py:337
-msgid "Folder added."
-msgstr ""
 
 #: ./skins/plone_form_scripts/folder_edit.cpy:27
 msgid "Folder changes saved."
@@ -592,6 +584,11 @@ msgstr "Imatge"
 msgid "Image changes saved."
 msgstr "Canvis en la imatge desats."
 
+#. Default: "Info"
+#: ./skins/plone_forms/discussion_reply_form.cpt:79
+msgid "Info"
+msgstr ""
+
 # Description for Event type
 #. Default: "Information about an upcoming event, which can be displayed in the calendar."
 #: portal type description of type with title Event
@@ -627,11 +624,15 @@ msgstr "Tipus d'element"
 msgid "Item Type (internal)"
 msgstr "Tipus d'element (intern)"
 
-#: ./skins/plone_scripts/folder_position.cpy:33
+#: ./skins/plone_form_scripts/content_status_modify.cpy:80
+msgid "Item state changed."
+msgstr ""
+
+#: ./skins/plone_scripts/folder_position.cpy:31
 msgid "Item's position has changed."
 msgstr "La posició de l'element ha variat."
 
-#: ./skins/plone_scripts/folder_delete.cpy:44
+#: ./skins/plone_scripts/folder_delete.cpy:54
 msgid "Item(s) deleted."
 msgstr "Els elements s'han suprimit"
 
@@ -660,7 +661,7 @@ msgstr ""
 msgid "Language Settings"
 msgstr "Paràmetres d'idioma"
 
-#: ./skins/plone_scripts/availableLanguages.py:160
+#: ./Portal.py:135
 msgid "Language neutral (site default)"
 msgstr "Idioma neutre (lloc per defecte)"
 
@@ -689,15 +690,15 @@ msgid "List of values"
 msgstr "Llistat de valors"
 
 #. Default: "Local Roles"
-#: ./PloneFolder.py:73
+#: type action defined on TempFolder
 msgid "Local Roles"
 msgstr "Rols locals"
 
-#: ./skins/plone_form_scripts/folder_localrole_add.py:20
+#: ./skins/plone_deprecated/folder_localrole_add.py:20
 msgid "Local roles changed."
 msgstr "S'han canviat els rols locals."
 
-#: ./skins/plone_form_scripts/folder_localrole_delete.py:73
+#: ./skins/plone_deprecated/folder_localrole_delete.py:73
 msgid "Local roles deleted."
 msgstr "S'han suprimit els rols locals"
 
@@ -722,9 +723,13 @@ msgstr "Identificació"
 msgid "Log out"
 msgstr "Surt"
 
-#: ./skins/plone_login/logged_in.cpy:22
+#: ./skins/plone_login/login_next.cpy:28
 msgid "Login failed"
 msgstr "L'inici de sessió ha fallat."
+
+#: ./skins/plone_login/logged_in.cpy:22
+msgid "Login failed. Both login name and password is case sensitive, check that caps lock is not enabled."
+msgstr ""
 
 #: ./skins/plone_login/login_form_validate.vpy:44
 msgid "Login name not found."
@@ -761,14 +766,6 @@ msgstr "Fes visible"
 msgid "Manage members"
 msgstr "Gestió de membres"
 
-#. not sure if this is actually used
-msgid "Manager"
-msgstr "Gestor"
-
-#. not sure if this is actually used
-msgid "Member"
-msgstr "Membre"
-
 # Member Preferences Header
 #. Default: "Member Preferences"
 #: controlpanel category-id Member
@@ -798,11 +795,6 @@ msgstr "El membre sol·licita publicació"
 msgid "Member retracts submission"
 msgstr "El membre rebutja la tramesa"
 
-# portal-tab
-# portal-tab
-msgid "Members"
-msgstr "Membres"
-
 #. Default: "Modification Date"
 #: index friendly name of index Date
 #: index friendly name of index modified
@@ -820,7 +812,7 @@ msgstr "La meva carpeta"
 msgid "Navigation Settings"
 msgstr "Paràmetres de navegació"
 
-#: ./skins/plone_prefs/prefs_navigation_set.cpy:42
+#: ./skins/plone_prefs/prefs_navigation_set.cpy:36
 msgid "Navigation settings updated."
 msgstr "Els paràmetres de navegació s'han actualitzat."
 
@@ -837,11 +829,6 @@ msgstr "Els ids de contingut font són necessàris"
 #: type action defined on Smart Folder
 msgid "New..."
 msgstr "Nou..."
-
-# portal-tab
-# portal-tab
-msgid "News"
-msgstr "Notícies"
 
 #. Default: "News Item"
 #: portal type title of type with description An announcement that will show up on the news portlet and in the news listing.
@@ -876,10 +863,6 @@ msgstr "Un o més elements seleccionats ja no estan disponibles"
 #: index friendly name of index getObjPositionInParent
 msgid "Order in folder"
 msgstr "Ordre en la carpeta"
-
-#. not sure if this is actually used
-msgid "Owner"
-msgstr "Propietari"
 
 #: ./skins/plone_form_scripts/change_ownership.cpy:23
 msgid "Ownership has been changed."
@@ -977,7 +960,7 @@ msgstr "Entreu un assumpte."
 msgid "Please enter a valid date and time."
 msgstr "Si us plau, introduïu una data i una hora vàlida."
 
-#: ./skins/plone_login/register.cpy:56
+#: ./skins/plone_login/register.cpy:53
 msgid "Please enter a valid email address."
 msgstr "Entreu una adreça de correu vàlida"
 
@@ -1009,7 +992,7 @@ msgstr "Seleccioneu un o més elements per a copiar."
 msgid "Please select one or more items to cut."
 msgstr "Seleccioneu un o més elements per a tallar."
 
-#: ./skins/plone_scripts/folder_delete.cpy:27
+#: ./skins/plone_scripts/folder_delete.cpy:28
 msgid "Please select one or more items to delete."
 msgstr "Seleccioneu un o més elements per a suprimir."
 
@@ -1043,10 +1026,6 @@ msgstr "Configuració del Plone"
 #: portal type title of type with description The portal_type for the root object in a Plone system.
 msgid "Plone Site"
 msgstr "Lloc Plone"
-
-#: ./PloneFolder.py:56
-msgid "Plone folders can define custom 'view' actions, or will behave like directory listings without one defined."
-msgstr ""
 
 # Control Panel Item
 #. Default: "Portal Settings"
@@ -1107,12 +1086,14 @@ msgid "Public Draft"
 msgstr "Esborrany públic"
 
 #. Default: "Publish"
-#: ./PloneWorkflow.py:58
+#: workflow action defined in folder_workflow - title Reviewer publishes content new state published
+#: workflow action defined in plone_workflow - title Reviewer publishes content new state published
 msgid "Publish"
 msgstr "Publica"
 
 #. Default: "Published"
-#: ./PloneWorkflow.py:50
+#: workflow state defined in folder_workflow - id published
+#: workflow state defined in plone_workflow - id published
 msgid "Published"
 msgstr "Publicat"
 
@@ -1161,7 +1142,7 @@ msgstr "Canvia el nom"
 msgid "Rename items"
 msgstr "Canvia el nom als elements"
 
-#: ./skins/plone_scripts/deleteDiscussion.py:29
+#: ./skins/plone_scripts/deleteDiscussion.py:27
 msgid "Reply deleted."
 msgstr "S'ha suprimit la resposta."
 
@@ -1176,10 +1157,6 @@ msgstr "Restringeix a l'usuari actual"
 msgid "Retract"
 msgstr "Retira"
 
-#. not sure if this is actually used
-msgid "Reviewer"
-msgstr "Revisor"
-
 #. Default: "Reviewer publishes content"
 #: workflow transition defined in folder_workflow - id publish new state published
 #: workflow transition defined in plone_workflow - id publish new state published
@@ -1191,11 +1168,11 @@ msgstr "El revisor publica contingut"
 msgid "Reviewer rejects submission"
 msgstr "El revisor rebutja la tramesa"
 
-#: ./skins/plone_form_scripts/folder_localrole_set.py:14
+#: ./skins/plone_deprecated/folder_localrole_set.py:14
 msgid "Role Acquisition is now turned off."
 msgstr "S'ha desactivat l'adquisició de rols."
 
-#: ./skins/plone_form_scripts/folder_localrole_set.py:12
+#: ./skins/plone_deprecated/folder_localrole_set.py:12
 msgid "Role Acquisition is now turned on."
 msgstr "S'ha activat l'adquisició de rols."
 
@@ -1505,7 +1482,7 @@ msgstr "La data i hora en que un element va esser creat"
 msgid "The time and date an item was last modified"
 msgstr "La data i hora en que un element va esser modificat per darrer cop"
 
-#: ./skins/plone_scripts/check_id.py:118
+#: ./skins/plone_scripts/check_id.py:122
 msgid "There is already an item named ${name} in this folder."
 msgstr ""
 
@@ -1584,7 +1561,7 @@ msgstr "Actualitzat."
 msgid "Use folders to put content in categories."
 msgstr "Utilitzeu les carpetes per a posar el contingut en categories."
 
-#: ./skins/plone_login/register.cpy:62
+#: ./skins/plone_login/register.cpy:59
 msgid "User added."
 msgstr "S'ha afegit l'usuari."
 
@@ -1595,7 +1572,9 @@ msgid "Users and Groups Administration"
 msgstr "Administració d'usuaris i grups"
 
 #. Default: "View"
-#: ./PloneFolder.py:66
+#: type action defined on Discussion Item
+#: type action defined on Page
+#: type action defined on Event
 msgid "View"
 msgstr "Visualitza"
 
@@ -1603,7 +1582,12 @@ msgstr "Visualitza"
 msgid "View changed."
 msgstr "S'ha canviat la vista."
 
-#: ./skins/plone_login/register.cpy:51
+#. Default: "Warning"
+#: ./skins/plone_prefs/plone_control_panel.pt:35
+msgid "Warning"
+msgstr ""
+
+#: ./skins/plone_login/register.cpy:48
 msgid "We were unable to send your password to your email address: ${address}"
 msgstr "Ha estat impossible enviar la vostra contrasenya a la adreça ${address}"
 
@@ -1623,6 +1607,10 @@ msgstr "Sí"
 #: ./skins/plone_form_scripts/sendto.cpy:25
 msgid "You are not allowed to send this link."
 msgstr "No teniu autorització per a enviar aquest enllaç."
+
+#: ./skins/plone_form_scripts/validate_folder_constraintypes.vpy:21
+msgid "You cannot have a type as secondary type withot having it allowed. You have selected ${types}."
+msgstr ""
 
 #: ./skins/plone_form_scripts/validate_folder_constraintypes.vpy:19
 msgid "You cannot select a preferred type that is not also in the list of addable types. You have selected ${types}."
@@ -1652,7 +1640,7 @@ msgstr "Heu de seleccionar alguna acció de publicació."
 msgid "You must select content to change."
 msgstr "Heu de seleccionar un contingut per a canviar-lo."
 
-#: ./skins/plone_scripts/rejectAnonymous.py:16
+#: ./skins/plone_deprecated/rejectAnonymous.py:19
 msgid "You must sign in first."
 msgstr "Cal que abans us identifiqueu."
 
@@ -1683,61 +1671,61 @@ msgid "Zope Management Interface"
 msgstr "Interfície d'administració del Zope"
 
 #. Default: "<code>0</code> - Access Key details"
-#: ./skins/plone_templates/accessibility-info.pt:77
+#: ./skins/plone_templates/accessibility-info.pt:75
 #, fuzzy
 msgid "accesskey_accesskey_details"
 msgstr "<code>0</code> detalls de clau d'accés"
 
 #. Default: "<code>5</code> - Advanced Search"
-#: ./skins/plone_templates/accessibility-info.pt:74
+#: ./skins/plone_templates/accessibility-info.pt:72
 #, fuzzy
 msgid "accesskey_advanced_search"
 msgstr "<code>5</code> Cerca avançada"
 
 #. Default: "<code>9</code> - Contact information"
-#: ./skins/plone_templates/accessibility-info.pt:76
+#: ./skins/plone_templates/accessibility-info.pt:74
 #, fuzzy
 msgid "accesskey_contact"
 msgstr "<code>9</code> Informació de contacte"
 
 #. Default: "<code>1</code> - Home Page"
-#: ./skins/plone_templates/accessibility-info.pt:70
+#: ./skins/plone_templates/accessibility-info.pt:68
 #, fuzzy
 msgid "accesskey_home_page"
 msgstr "<code>1</code> Pàgina d'inici"
 
 #. Default: "<code>6</code> - Site navigation tree"
-#: ./skins/plone_templates/accessibility-info.pt:75
+#: ./skins/plone_templates/accessibility-info.pt:73
 #, fuzzy
 msgid "accesskey_navigation"
 msgstr "<code>6</code> Arbre de navegació"
 
 #. Default: "<code>4</code> - Search field focus"
-#: ./skins/plone_templates/accessibility-info.pt:73
+#: ./skins/plone_templates/accessibility-info.pt:71
 #, fuzzy
 msgid "accesskey_search_field"
 msgstr "<code>4</code> Focus del camp de cerca"
 
 #. Default: "<code>3</code> - Site Map"
-#: ./skins/plone_templates/accessibility-info.pt:72
+#: ./skins/plone_templates/accessibility-info.pt:70
 #, fuzzy
 msgid "accesskey_sitemap"
 msgstr "<code>3</code> Mapa del lloc web"
 
 #. Default: "<code>2</code> - Skip to content"
-#: ./skins/plone_templates/accessibility-info.pt:71
+#: ./skins/plone_templates/accessibility-info.pt:69
 #, fuzzy
 msgid "accesskey_skip_to_content"
 msgstr "<code>2</code> Salta al contingut"
 
 #. Default: "Do you really want to delete this item?"
-#: ./skins/plone_forms/delete_confirmation.cpt:19
+#: ./skins/plone_forms/delete_confirmation_page.cpt:23
 #, fuzzy
 msgid "alert_really_delete"
 msgstr "Esteu segurs que voleu suprimir l'element?"
 
 #. Default: "Do you really want to delete this folder and all its contents?"
-#: ./skins/plone_forms/delete_confirmation.cpt:14
+#: ./skins/plone_forms/delete_confirmation_page.cpt:17
 msgid "alert_really_delete_folder"
 msgstr ""
 
@@ -1747,32 +1735,32 @@ msgid "author_feedback_mailtemplate_body"
 msgstr "Heu rebut aquest correu perquè ${from_address} ha enviat comentaris sobre el contingut que vau crear en la direcció ${url}. El comentari és: ${message}"
 
 #. Default: "Back to Add/Remove Products"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:16
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:20
 msgid "back_to_addremove_products"
 msgstr "Torna a Afegeix/Suprimeix productes"
 
 #. Default: "Next ${number} items"
-#: ./skins/plone_templates/batch_macros.pt:45
+#: ./skins/plone_templates/batch_macros.pt:47
 msgid "batch_next_x_items"
 msgstr "${number} elements següents"
 
 #. Default: "Previous ${number} items"
-#: ./skins/plone_templates/batch_macros.pt:32
+#: ./skins/plone_templates/batch_macros.pt:34
 msgid "batch_previous_x_items"
 msgstr "${number} elements anteriors"
 
 #. Default: "${number} items matching your criteria."
-#: ./skins/plone_forms/member_search_results.pt:21
+#: ./skins/plone_forms/member_search_results.pt:26
 msgid "batch_x_items_matching_your_criteria"
 msgstr "${number} elements coincideixen amb el vostre criteri."
 
 #. Default: "Comment Preview"
-#: ./skins/plone_forms/discussion_reply_preview.pt:22
+#: ./skins/plone_forms/discussion_reply_preview.pt:25
 msgid "box_comment_preview"
 msgstr "Previsualitza el comentari"
 
 #. Default: "Upcoming Events"
-#: ./skins/plone_portlets/portlet_events.pt:16
+#: ./skins/plone_deprecated/portlet_events.pt:16
 msgid "box_events"
 msgstr "Propers esdeveniments"
 
@@ -1782,18 +1770,18 @@ msgid "box_external_links"
 msgstr "Enllaços externs"
 
 #. Default: "Forgot your password?"
-#: ./skins/plone_portlets/portlet_login.pt:99
+#: ./skins/plone_deprecated/portlet_login.pt:97
 msgid "box_forgot_password_option"
 msgstr "Heu oblidat la contrasenya?"
 
 #. Default: "Full review list..."
-#: ./skins/plone_portlets/portlet_review.pt:41
+#: ./skins/plone_deprecated/portlet_review.pt:48
 #, fuzzy
 msgid "box_full_review_list"
 msgstr "Llistat de revisions complet"
 
 #. Default: "last modified"
-#: ./skins/plone_content/document_byline.pt:32
+#: ./skins/plone_content/folder_listing.pt:135
 msgid "box_last_modified"
 msgstr "Darrera modificació"
 
@@ -1803,13 +1791,13 @@ msgid "box_local_resources"
 msgstr "Recursos locals"
 
 #. Default: "More news..."
-#: ./skins/plone_portlets/portlet_news.pt:47
+#: ./skins/plone_deprecated/portlet_news.pt:47
 #, fuzzy
 msgid "box_more_news_link"
 msgstr "Més notícies"
 
 #. Default: "All recent changes..."
-#: ./skins/plone_portlets/portlet_recent.pt:52
+#: ./skins/plone_deprecated/portlet_recent.pt:58
 #, fuzzy
 msgid "box_more_recently_changed"
 msgstr "Tots els canvis recents"
@@ -1826,32 +1814,32 @@ msgid "box_my_favorites"
 msgstr "Adreces d'interès"
 
 #. Default: "Navigation"
-#: ./skins/plone_portlets/portlet_navigation.pt:15
+#: ./skins/plone_deprecated/portlet_navigation.pt:15
 msgid "box_navigation"
 msgstr "Navegació"
 
 #. Default: "New user?"
-#: ./skins/plone_portlets/portlet_login.pt:108
+#: ./skins/plone_deprecated/portlet_login.pt:106
 msgid "box_new_user_option"
 msgstr "Alta d'usuari"
 
 #. Default: "News"
-#: ./skins/plone_portlets/portlet_news.pt:15
+#: ./skins/plone_deprecated/portlet_news.pt:15
 msgid "box_news"
 msgstr "Notícies"
 
 #. Default: "Previous events..."
-#: ./skins/plone_portlets/portlet_events.pt:54
+#: ./skins/plone_deprecated/portlet_events.pt:54
 msgid "box_previous_events"
 msgstr ""
 
 #. Default: "Recent Changes"
-#: ./skins/plone_portlets/portlet_recent.pt:15
+#: ./skins/plone_deprecated/portlet_recent.pt:15
 msgid "box_recent_changes"
 msgstr "Canvis recents"
 
 #. Default: "No items changed yet."
-#: ./skins/plone_portlets/portlet_recent.pt:45
+#: ./skins/plone_deprecated/portlet_recent.pt:51
 msgid "box_recent_no_items"
 msgstr "Encara no s'ha canviat cap element"
 
@@ -1861,28 +1849,28 @@ msgid "box_related"
 msgstr "Relacionat"
 
 #. Default: "Review List"
-#: ./skins/plone_portlets/portlet_review.pt:14
+#: ./skins/plone_deprecated/portlet_review.pt:14
 msgid "box_review_list"
 msgstr "Llista de revisió"
 
 #. Default: "Log in"
-#: ./skins/plone_portlets/portlet_login.pt:25
+#: ./skins/plone_deprecated/portlet_login.pt:24
 msgid "box_sign_in"
 msgstr "Identificació"
 
 #. Default: "Upcoming events..."
-#: ./skins/plone_portlets/portlet_events.pt:61
+#: ./skins/plone_deprecated/portlet_events.pt:61
 #, fuzzy
 msgid "box_upcoming_events"
 msgstr "Events pròxims"
 
 #. Default: "You are not allowed to modify the title of this item."
-#: ./skins/plone_forms/folder_rename_form.cpt:99
+#: ./skins/plone_forms/folder_rename_form.cpt:102
 msgid "change_id_for_item_not_allowed"
 msgstr "No teniu permís per a canviar el contingut d'aquest element."
 
 #. Default: "Use parent folder setting"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:68
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:103
 msgid "constraintypes_mode_acquire"
 msgstr "Utilitza els paràmetres de la carpeta superior"
 
@@ -1897,22 +1885,22 @@ msgid "constraintypes_mode_enable"
 msgstr "Selecciona manualment"
 
 #. Default: "Attendees"
-#: ./skins/plone_content/event_view.pt:102
+#: ./skins/plone_content/event_view.pt:146
 msgid "contact_attendees"
 msgstr "Assistents"
 
 #. Default: "Contact Email"
-#: ./skins/plone_content/event_view.pt:91
+#: ./skins/plone_content/event_view.pt:126
 msgid "contact_email"
 msgstr "Adreça de correu electrònic"
 
 #. Default: "Contact Name"
-#: ./skins/plone_content/event_view.pt:85
+#: ./skins/plone_content/event_view.pt:113
 msgid "contact_name"
 msgstr "Nom"
 
 #. Default: "Contact Phone"
-#: ./skins/plone_content/event_view.pt:97
+#: ./skins/plone_content/event_view.pt:134
 msgid "contact_phone"
 msgstr "Telèfon de contacte"
 
@@ -1937,12 +1925,12 @@ msgid "date_format_short"
 msgstr "${Y}-${m}-${d}"
 
 #. Default: "/"
-#: ./skins/plone_templates/calendar_macros.pt:68
+#: ./skins/plone_templates/calendar_macros.pt:63
 msgid "date_separator"
 msgstr "/"
 
 #. Default: "There is no group or user attached to this group."
-#: ./skins/plone_prefs/prefs_group_members.cpt:169
+#: ./skins/plone_prefs/prefs_group_members.cpt:180
 #, fuzzy
 msgid "decription_no_members_assigned"
 msgstr "Aquest grup no conté cap membre"
@@ -1953,7 +1941,7 @@ msgid "description"
 msgstr "descripció"
 
 #. Default: "Access keys are a navigation device enabling you to get around this web site using your keyboard."
-#: ./skins/plone_templates/accessibility-info.pt:52
+#: ./skins/plone_templates/accessibility-info.pt:56
 msgid "description_access_keys"
 msgstr "Les tecles d'accés són un dispositiu de navegació que us permet visitar aquest lloc web utilitzant el teclat."
 
@@ -1963,115 +1951,115 @@ msgid "description_access_keys_more_info"
 msgstr "Informació més acurada sobre les tecles d'accés està disponible a ${wcag}."
 
 #. Default: "This site uses the ${plone} and has been designed to be completely accessible and usable, working in accordance with the Web Content Accessibility Guidelines (${wcag} v1.0). If there is anything on this site - accessibility or validation related - that is not according to the standard, please contact the ${site_admin}, and not the Plone Team."
-#: ./skins/plone_templates/accessibility-info.pt:43
+#: ./skins/plone_templates/accessibility-info.pt:47
 #, fuzzy
 msgid "description_accessibility_info"
 msgstr "Aquest lloc web utilitza el ${plone} i ha estat dissenyat per a ser completament accessible i usable, funcionant d'acord amb les Guies d'accessibilitat de contingut web ( ${wcag} v1.0). Si hi ha quelcom en aquest lloc relacionat amb l'accessibilitat o la validació que no va d'acord amb els estandards, contacteu amb en/na ${site_admin}, i no pas el Plone Team."
 
 #. Default: "We have undertaken to use our knowledge and understanding of the ways in which different people access the Internet, to develop a web site that is clear and simple for everybody to use."
-#: ./skins/plone_templates/accessibility-info.pt:139
+#: ./skins/plone_templates/accessibility-info.pt:137
 msgid "description_accessibility_statement"
 msgstr "Ens hem compromès a fer servir el nostre coneixement i comprendre les diferents formes en que la gent accedeix a internet, per tal de desenvolupar un lloc web que sigui clar i simple d'utilitzar per tothom."
 
 #. Default: "Access keys are not supported, please use a different browser."
-#: ./skins/plone_templates/accessibility-info.pt:126
+#: ./skins/plone_templates/accessibility-info.pt:124
 msgid "description_accesskey_ie4_mac"
 msgstr "Les tecles d'accés no estan suportades, si us plau, utilitzeu un navegador diferent."
 
 #. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:114
+#: ./skins/plone_templates/accessibility-info.pt:112
 msgid "description_accesskey_ie4_win"
 msgstr "Manteniu polsada la tecla <code>Alt</code> i premeu el nombre o lletra de la tecla d'accés."
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:120
+#: ./skins/plone_templates/accessibility-info.pt:118
 msgid "description_accesskey_ie5_mac"
 msgstr "Manteniu polsada la tecla <code>Ctrl</code> i premeu el nombre o lletra de la tecla d'accés."
 
 #. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
-#: ./skins/plone_templates/accessibility-info.pt:84
+#: ./skins/plone_templates/accessibility-info.pt:82
 msgid "description_accesskey_ie5_win"
 msgstr "Manteniu polsada la tecla <code>Alt</code>, premeu el nombre o lletra de la tecla d'accés, deixeu-les anar i premeu <code>Intro</code>."
 
 #. Default: "Press and release the <code>Ctrl</code> key, then press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:108
+#: ./skins/plone_templates/accessibility-info.pt:106
 #, fuzzy
 msgid "description_accesskey_konqueror_linux"
 msgstr "Manteniu polsada la tecla <code>Ctrl</code> i premeu el nombre o lletra de la tecla d'accés."
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:96
+#: ./skins/plone_templates/accessibility-info.pt:94
 msgid "description_accesskey_mozilla_mac"
 msgstr "Manteniu polsada la tecla <code>Ctrl</code> i premeu el nombre o lletra de la tecla d'accés."
 
 #. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:90
+#: ./skins/plone_templates/accessibility-info.pt:88
 msgid "description_accesskey_mozilla_win"
 msgstr "Manteniu polsada la tecla <code>Alt</code> i premeu el nombre o lletra de la tecla d'accés."
 
 #. Default: "Access keys are not supported, please use a different browser."
-#: ./skins/plone_templates/accessibility-info.pt:131
+#: ./skins/plone_templates/accessibility-info.pt:129
 msgid "description_accesskey_netscape6_all"
 msgstr "Les tecles d'accés no estan suportades, si us plau, utilitzey un altre navegador."
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:102
+#: ./skins/plone_templates/accessibility-info.pt:100
 msgid "description_accesskey_safari_mac"
 msgstr "Manteniu polsat el <code>Ctrl</code> i premeu el nombre o lletra de la tecla d'accés."
 
 #. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: ./skins/plone_forms/discussion_reply_form.cpt:68
+#: ./skins/plone_forms/discussion_reply_form.cpt:69
 msgid "description_add_comment"
 msgstr "Podeu afegir un comentari omplint el següent formulari."
 
 #. Default: "Select the type of item you want to add to your folder."
-#: ./skins/plone_forms/folder_factories.pt:19
+#: ./skins/plone_forms/folder_factories.pt:29
 msgid "description_add_new_item"
 msgstr "Seleccioneu el tipus de contingut que voleu afegir a la carpeta."
 
 #. Default: "This is the Add-on Products install section, you can add and remove products in the lists below."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:22
+#: ./skins/plone_prefs/prefs_install_products_form.pt:26
 msgid "description_addremove_products"
 msgstr "Aquesta és la secció d'instal·lació de productes addicionals, podeu afegir o suprimir productes a continuació."
 
 #. Default: "This search form enables you to find content on the site by specifying one or more search terms. <br /> Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
-#: ./skins/plone_forms/search_form.pt:13
+#: ./skins/plone_forms/search_form.pt:17
 #, fuzzy
 msgid "description_advanced_search"
 msgstr "Aquest formulari de cerca us permetrà localitzar continguts al portal utilitzant un o més termes de cerca. <br />Recordeu que també podeu utilitzar la cerca ràpida, que normalment us resultarà suficient. Aquest formulari és només per a cerques més específiques."
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: ./skins/plone_content/author.cpt:141
+#: ./skins/plone_content/author.cpt:150
 msgid "description_author_feedback"
 msgstr "Omplint el formulari següent podeu enviar un email al autor amb els vostres comentaris."
 
 #. Default: "This site uses a setup that closely matches most international recommendations on access keys. These are:"
-#: ./skins/plone_templates/accessibility-info.pt:65
+#: ./skins/plone_templates/accessibility-info.pt:63
 msgid "description_available_access_keys"
 msgstr "Aquest lloc web utilitza una configuració que quasi coincideix amb moltes recomanacions d'accessibilitat internacionals. Aquestes són:"
 
 #. Default: "Some products were found to have errors when compiling the install file."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:195
+#: ./skins/plone_prefs/prefs_install_products_form.pt:202
 msgid "description_broken_products"
 msgstr "Alguns productes contenen errors al compilar el fitxer d'instal·lació."
 
 #. Default: "Before you start exploring, you need to change your original password. This ensures that the password you received via email cannot be used in a malicious manner."
-#: ./skins/plone_login/login_password.cpt:27
+#: ./skins/plone_login/login_password.cpt:31
 msgid "description_change_initial_password"
 msgstr "Abans de començar a explorar cal que modifiqueu la contrasenya original. D'aquesta forma s'evita que la contrasenya que heu rebut per correu electrònic sigui utilitzada per un altre usuari de forma malintencionada."
 
 #. Default: "You can transfer the current item's ownership to somebody else using this form."
-#: ./skins/plone_forms/ownership_form.cpt:13
+#: ./skins/plone_forms/ownership_form.cpt:14
 msgid "description_change_ownership"
 msgstr "Mitjançant aquest formulari podeu canviar el propietari dels objectes."
 
 #. Default: "To change the ownership for this ${type}, click ${link_to_ownership_form}"
-#: ./skins/plone_forms/folder_localrole_form.pt:654
+#: ./skins/plone_deprecated/folder_localrole_form.pt:614
 msgid "description_change_ownership_of_article"
 msgstr "Per tal de canviar la propietat d'aquest ${type}, feu clic a ${link_to_ownership_form}"
 
 #. Default: "This is how your comment will look when posted."
-#: ./skins/plone_forms/discussion_reply_preview.pt:13
+#: ./skins/plone_forms/discussion_reply_preview.pt:16
 msgid "description_comment_preview"
 msgstr "Així és com es mostrarà el vostre comentari un cop publicat."
 
@@ -2081,29 +2069,34 @@ msgstr "Així és com es mostrarà el vostre comentari un cop publicat."
 msgid "description_contact_info_feedback"
 msgstr "Si voleu posar-vos en contacte amb l'administrador web cal que ompliu el formulari següent"
 
+#. Default: "Fill in this form to contact the site owners."
+#: ./skins/plone_templates/contact-info.cpt:22
+msgid "description_contact_site_owner"
+msgstr ""
+
 #. Default: "Configuration area for Plone and add-on Products."
-#: ./skins/plone_prefs/plone_control_panel.pt:18
+#: ./skins/plone_prefs/plone_control_panel.pt:24
 msgid "description_control_panel"
 msgstr "Àrea de configuració del Plone i dels productes addicionals."
 
-#. Default: "The ${plonecms} is Copyright ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
-#: ./skins/plone_templates/footer.pt:18
+#. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
+#: ./skins/plone_templates/footer.pt:21
 #, fuzzy
 msgid "description_copyright"
 msgstr "Plone i el seu disseny visual és Copyright © 2000-${current_year} d'${limi}, ${runyaga}, ${blacktar}."
 
 #. Default: "The current owner is ${name}."
-#: ./skins/plone_forms/ownership_form.cpt:20
+#: ./skins/plone_forms/ownership_form.cpt:21
 msgid "description_current_owner"
 msgstr ""
 
-#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately evident, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' - then restart the server process."
-#: ./skins/plone_prefs/plone_control_panel.pt:84
+#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' - then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt:135
 msgid "description_debug_mode"
 msgstr ""
 
 #. Default: "Groups are logical collections of users, like departments and business units. They are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
-#: ./skins/plone_prefs/prefs_group_details.pt:90
+#: ./skins/plone_prefs/prefs_group_details.pt:101
 msgid "description_edit_groupproperties"
 msgstr "Els grups són agrupacions lògiques d'usuaris com ara departaments o unitats de negoci. No estan vinculats directament als permisos, sinó que normalment per a aquest efecte s'usen els rols i aquests, posteriorment, s'assignen a un grup."
 
@@ -2117,34 +2110,44 @@ msgstr "Si el vostre nom d'usuari i contrasenya són correctes, el problema pot s
 msgid "description_enable_cookies_for_login"
 msgstr "Nota: Si no esteu identificat al abandonar aquesta pàgina és perquè necessiteu ${enable_cookies} al vostre navegador."
 
+#. Default: "Note: If you do not remain logged in after leaving this page, it is because you need to enable cookies in your browser."
+#: ./skins/plone_login/login_success.pt:87
+msgid "description_enable_cookies_to_stay_logged_in"
+msgstr ""
+
+#. Default: "The error has been logged as entry number ${entryid}."
+#: ./skins/plone_templates/default_error_message.pt:138
+msgid "description_error_has_been_logged"
+msgstr ""
+
 #. Default: "This page lists the exceptions that have occurred in this site recently. You can configure how many exceptions should be kept and whether the exceptions should be copied to Zope's event log file(s)."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:22
+#: ./skins/plone_prefs/prefs_error_log_form.pt:26
 msgid "description_error_log_setup"
 msgstr "Aquesta plana mostra els errors que s'han produït al lloc web recentment. Podeu configurar el nombre de registres d'error que cal desar i en quins casos cal copiar-los al registre d'esdeveniments de Zope."
 
 #. Default: "Refer to the plone.org error reference for more information about these exceptions."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:30
+#: ./skins/plone_prefs/prefs_error_log_form.pt:34
 msgid "description_error_rerference_link"
 msgstr ""
 
 #. Default: "Click here to have your password mailed to you if you have forgotten it."
-#: ./skins/plone_login/login_failed.pt:19
+#: ./skins/plone_login/login_failed.pt:23
 msgid "description_failed_login_link"
 msgstr "Si heu oblidat la contrasenya premeu aquí per rebre-la per correu electrònic"
 
 #. Default: "You can add or remove groups and users from this particular group here. Note that this doesn't actually delete the group or user, it is only removed from this group."
-#: ./skins/plone_prefs/prefs_group_members.cpt:83
+#: ./skins/plone_prefs/prefs_group_members.cpt:94
 #, fuzzy
 msgid "description_group_members_of"
 msgstr "Des d'aquí es poden afegir o suprimir usuaris dins d'aquest grup en particular. Tingueu en compte que l'usuari no es suprimeix del sistema sinó que només deixa de pertanyer a aquest grup en concret."
 
 #. Default: "Groups are a convenient way to share items to a common set of users. Select one or more groups, and a role to assign."
-#: ./skins/plone_forms/folder_localrole_form.pt:442
+#: ./skins/plone_deprecated/folder_localrole_form.pt:416
 msgid "description_group_shares"
 msgstr "Els grups permeten compartir continguts entre un conjunt d'usuaris. Seleccioneu un o més grups i el rol que voleu assignar."
 
 #. Default: "Groups are logical collections of users, such as departments and business units. Groups are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:60
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:68
 msgid "description_groups_management"
 msgstr "Els grups són agrupacions lògiques d'usuaris com ara departaments o unitats de negoci. Normalment s'utilitzen els rols per a establir permisos i s'assigna un d'aquests rols en particular als grups."
 
@@ -2153,29 +2156,34 @@ msgstr "Els grups són agrupacions lògiques d'usuaris com ara departaments o unit
 msgid "description_historical_unavailable"
 msgstr "Aquesta classe no suporta la interfície històrica. El contingut ha de contenir OFS.History.Historical"
 
+#. Default: "If you need to report this to the ${site_admin}, please include this entry number in your message."
+#: ./skins/plone_templates/default_error_message.pt:143
+msgid "description_include_error_in_admin_message"
+msgstr ""
+
 #. Default: "You can take fuller advantage of the features of this site if you enable javascript in your browser."
-#: ./skins/plone_login/login_success.pt:79
+#: ./skins/plone_login/login_success.pt:82
 msgid "description_javascript_advantage"
 msgstr "Podreu beneficiar-vos de les característiques avançades d'aquest portal si activeu el javascript en el vostre navegador"
 
 #. Default: "Distributed under the ${license}."
-#: ./skins/plone_templates/footer.pt:36
+#: ./skins/plone_templates/footer.pt:38
 #, fuzzy
 msgid "description_license"
 msgstr "LLicenciat sota la llicència ${license}"
 
 #. Default: "Select one or more people, and a role to assign."
-#: ./skins/plone_forms/folder_localrole_form.pt:252
+#: ./skins/plone_deprecated/folder_localrole_form.pt:240
 msgid "description_localrole_select_member"
 msgstr "Seleccioneu un o més membres i el rol que voleu assignar."
 
 #. Default: "This is the first time that you've logged in to ${here}."
-#: ./skins/plone_login/login_password.cpt:24
+#: ./skins/plone_login/login_password.cpt:28
 msgid "description_logged_in"
 msgstr "Aquest és el primer cop que entreu a ${here}."
 
 #. Default: "Notice that the top right bar has changed. It now contains several personalized items. Use these items to control your settings and your personal area. They will remain as long as you are logged in."
-#: ./skins/plone_login/login_success.pt:29
+#: ./skins/plone_login/login_success.pt:32
 msgid "description_logged_in_explain"
 msgstr "Fixeu-vos que la barra superior dreta ha canviat. Ara conté diversos elements personalitzats. Amb ells podeu gestionar les vostres preferències així com  l'espai personal. Es mantindran en aquest lloc mentre romaneu identificats."
 
@@ -2189,6 +2197,11 @@ msgstr "<p>Esperem que hagueu gaudit dels nostres serveis i tornar-vos a veure b
 #: ./skins/plone_login/login_failed.pt:26
 msgid "description_login_fail_enable_cookies"
 msgstr "acceptar galetes"
+
+#. Default: "You can log in again below."
+#: ./skins/plone_login/logged_out.cpt:32
+msgid "description_loginagain"
+msgstr ""
 
 #. Default: "Enter your user name below, click <strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid e-mail address when you registered. If this will not work for you (for example, if you forgot your user name or didn't enter your e-mail address) send a request to ${email_address}."
 #: ./skins/plone_forms/mail_password_form.pt:17
@@ -2218,42 +2231,47 @@ msgid "description_member_personal_folder"
 msgstr "Llista de carpetes personals"
 
 #. Default: "This search form enables you to find users by specifying one or more search criteria."
-#: ./skins/plone_forms/member_search_form.pt:12
+#: ./skins/plone_forms/member_search_form.pt:16
 msgid "description_member_search"
 msgstr "Aquest formulari de cerca us permet localitzar membres especificant un o més criteris."
 
 #. Default: "Your personal settings."
-#: ./skins/plone_prefs/personalize_form.cpt:55
+#: ./skins/plone_prefs/personalize_form.cpt:60
 msgid "description_my_preferences"
 msgstr "Aquesta àrea recull les vostres preferències."
 
 #. Default: "Lets you control how navigation is constructed in your site."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:24
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:28
 msgid "description_navigation_setup"
 msgstr "Permet controlar com es construeix la navegació en el lloc web."
 
+#. Default: "Note that to control how the navigation tree is displayed, you should go to \"Manage portlets\" at the root of the site (or wherever) a navigation tree portlet has been added, and change its settings directly."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:32
+msgid "description_navigation_setup_navtree"
+msgstr ""
+
 #. Default: "You might want to head over to ${your_folder} and add some content, or ${set_up_your_preferences}."
-#: ./skins/plone_login/login_success.pt:46
+#: ./skins/plone_login/login_success.pt:49
 msgid "description_newbie_pointers"
 msgstr "Si ho desitjeu, podeu anar a la ${your_folder} i crear continguts o bé ${set_up_your_preferences}"
 
 #. Default: "set up your Preferences"
-#: ./skins/plone_login/login_success.pt:47
+#: ./skins/plone_login/login_success.pt:50
 msgid "description_newbie_pointers_preferences_link"
 msgstr "editar les vostres preferències"
 
 #. Default: "your folder"
-#: ./skins/plone_login/login_success.pt:39
+#: ./skins/plone_login/login_success.pt:42
 msgid "description_newbie_pointers_yourfolder_link"
 msgstr "la vostra carpeta"
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
-#: ./skins/plone_login/failsafe_login_form.cpt:31
+#: ./skins/plone_login/failsafe_login_form.cpt:34
 msgid "description_no_account"
 msgstr "Si no teniu un compte d'usuari utilitzeu el ${registration_form} per donar-vos d'alta."
 
 #. Default: "registration form"
-#: ./skins/plone_login/failsafe_login_form.cpt:32
+#: ./skins/plone_login/failsafe_login_form.cpt:35
 msgid "description_no_account_registration_linktext"
 msgstr "formulari de registre"
 
@@ -2263,7 +2281,7 @@ msgid "description_no_comparison_support"
 msgstr "Aquest objecte no ofereix funcionalitats de comparació."
 
 #. Default: "There are currently no items in this folder."
-#: ./skins/plone_content/folder_listing.pt:156
+#: ./skins/plone_content/folder_listing.pt:166
 msgid "description_no_items_in_folder"
 msgstr "No hi ha elements dins d'aquesta carpeta."
 
@@ -2272,33 +2290,43 @@ msgstr "No hi ha elements dins d'aquesta carpeta."
 msgid "description_no_privileges"
 msgstr "No teniu els permisos necessaris per a visualitzar aquesta carpeta. Si creieu que es tracta d'un error envieu un correu electrònic a "
 
+#. Default: "You do not have sufficient privileges to view this page. If you believe you are receiving this message in error, contact the ${site_admin}."
+#: ./skins/plone_login/insufficient_privileges.pt:19
+msgid "description_no_privileges_for_page"
+msgstr ""
+
 #. Default: "No results were found."
-#: ./skins/plone_forms/member_search_results.pt:57
+#: ./skins/plone_forms/member_search_results.pt:67
 msgid "description_no_results_found"
 msgstr "Cap resultat en la cerca."
 
 #. Default: "This folder has no visible items. To add content, press the add button, or paste content from another location."
-#: ./skins/plone_templates/folder_contents.pt:59
+#: ./skins/plone_deprecated/old_folder_contents.pt:62
 msgid "description_no_visible_items_add_paste"
 msgstr "Aquesta carpeta no té elements visibles. Per a afegir continguts seleccioneu l'opció desitjada o enganxeu els continguts des d'un altre punt."
 
+#. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
+#: ./skins/plone_login/login_failed.pt:27
+msgid "description_not_accept_cookies"
+msgstr ""
+
 #. Default: "You are not currently logged in. Your user name and/or password may be incorrect."
-#: ./skins/plone_login/login_failed.pt:14
+#: ./skins/plone_login/login_failed.pt:18
 msgid "description_not_logged_in_username_incorrect"
 msgstr "No us heu identificat correctament. Verifiqueu el nom d'usuari i la contrasenya."
 
 #. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:69
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:77
 msgid "description_pas_group_listing"
 msgstr ""
 
 #. Default: "Note: Some or all of your PAS user source plugins do not allow listing of users, so you may not see the users defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:67
+#: ./skins/plone_prefs/prefs_users_overview.cpt:74
 msgid "description_pas_users_listing"
 msgstr ""
 
 #. Default: "You will receive an e-mail shortly containing a URL that will allow you to set your password. When you receive this e-mail, please follow the link to complete your registration process. NOTE: The password reset URL will expire in ${time} hours. If your password reset request expires, you may use the \"Forgot your password\" link to generate another password reset request."
-#: ./skins/plone_login/registered.pt:31
+#: ./skins/plone_login/registered.pt:34
 msgid "description_password_reset_or_registered"
 msgstr ""
 
@@ -2314,12 +2342,12 @@ msgid "description_portal_properties"
 msgstr "Des d'aquí podeu configurar les opcions del portal."
 
 #. Default: "To make new products show up here, put them in the directory ${location} on the file system, and restart the server process."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:30
+#: ./skins/plone_prefs/prefs_install_products_form.pt:34
 msgid "description_product_location"
 msgstr ""
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' - then restart the server process."
-#: ./skins/plone_prefs/plone_control_panel.pt:73
+#: ./skins/plone_prefs/plone_control_panel.pt:124
 msgid "description_production_mode"
 msgstr ""
 
@@ -2329,8 +2357,13 @@ msgstr ""
 msgid "description_publishing_process"
 msgstr "L'estat d'un element (també anomenat estat de revisió) determina qui el pot visualitzar. Un element <strong>privat</strong> només pot ésser visualitzat pel seu propietari i per l'administrador. Només els elements <strong>publicats</strong> estan disponibles pels membres del portal i pels visitants no registrats. Per a la seva publicació, un element ha d'ésser publicat per un revisor. Podeu sol·licitar la revisió d'un element amb la opció corresponent. <br /> Una altra forma de controlar la visibilitat d'un element és mitjançant la seva <strong>data efectiva</strong>. Un element no es troba disponible públicament fins que arriba la seva data efectiva, <em>fins i tot si el seu estat és <strong>publicat</strong></em>."
 
+#. Default: "An item's status (also called its review state) determines who can see it. Another way to control the visibility of an item is with its <strong>Publishing Date</strong>. An item is not publicly searchable before its publishing date. This will prevent the item from showing up in portlets and folder listings, although the item will still be available if accessed directly via its URL."
+#: ./skins/plone_forms/content_status_history.cpt:52
+msgid "description_publishing_process_short"
+msgstr ""
+
 #. Default: "Because you are logged in via HTTP authentication (i.e. the Zope Management Interface), the only way to log out is to quit your web browser."
-#: ./skins/plone_login/logged_out.pt:27
+#: ./skins/plone_login/logged_out.cpt:75
 msgid "description_quit_to_log_out"
 msgstr ""
 
@@ -2340,27 +2373,27 @@ msgid "description_received_password"
 msgstr "Quan rebeu la contrasenya us podeu ${login_in_here}."
 
 #. Default: "All recently modified items, latest first."
-#: ./skins/plone_templates/recently_modified.pt:21
+#: ./skins/plone_templates/recently_modified.pt:25
 msgid "description_recently_modified"
 msgstr "Tots els elements modificats recentement, els darrers en primer lloc."
 
 #. Default: "All published items, latest first."
-#: ./skins/plone_templates/recently_published.pt:21
+#: ./skins/plone_templates/recently_published.pt:25
 msgid "description_recently_published"
 msgstr "Tots els elements publicats (els darrers apareixen primer)."
 
 #. Default: "Each item has a Short Name and a Title, which you can change by entering the new details below."
-#: ./skins/plone_forms/folder_rename_form.cpt:17
+#: ./skins/plone_forms/folder_rename_form.cpt:21
 msgid "description_rename_item"
 msgstr "Cada element es composa d'un nom i un títol que podeu canviar tot omplint els detalls que es mostren a continuació."
 
 #. Default: "Roles are collections of permissions. The most common role is the Member role, which is any member of the portal. You can define additional roles, but you normally only do that when you need to create a new discrete unit of permissions that you can combine to make up a Group."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:238
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:240
 msgid "description_roles_management"
 msgstr "Els rols són agrupacions de permisos. El rol més comú és el de <em>membre</em> que té qualsevol usuari. Podeu definir rols addicionals quan necessiteu una unitat de permisos per formar un grup."
 
 #. Default: "Currently, if you want to add a new role, you must use the Zope Management Interface, as adding roles is considered a development task."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:247
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:249
 msgid "description_roles_zmi"
 msgstr "Actualment, si voleu crear un nou rol heu d'utilitzar la Consola d'administració de Zope ja que aquesta funcionalitat es troba en desenvolupament."
 
@@ -2370,22 +2403,22 @@ msgid "description_search_setup"
 msgstr "Cerca paràmetres pel lloc web."
 
 #. Default: "Search string:"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:69
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:68
 msgid "description_search_string"
 msgstr "Cadena de cerca:"
 
 #. Default: "Search for the users or groups you want to locate (blank search returns all), and select the ones you want to add."
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:21
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:25
 msgid "description_search_usersandgroups"
 msgstr "Cerqueu els usuaris o grups que voleu localitzar (o deixeu-ho en blanc per a mostrar-los tots) i seleccioneu els que voleu afegir."
 
 #. Default: "Please select item which will be displayed as the default page of the folder."
-#: ./skins/plone_forms/select_default_page.cpt:14
+#: ./skins/plone_forms/select_default_page.cpt:18
 msgid "description_select_default_page"
 msgstr "Seleccioneu l'element que es mostrarà com a pàgina per defecte en aquesta carpeta."
 
 #. Default: "Please select which template should be used as the default view of the folder."
-#: ./skins/plone_forms/select_default_view.cpt:14
+#: ./skins/plone_forms/select_default_view.cpt:18
 #, fuzzy
 msgid "description_select_default_view"
 msgstr "Seleccioneu quina plantilla s'hauria de fer servir com a vista per defecte de la carpeta."
@@ -2400,6 +2433,11 @@ msgstr "Seleccioneu el tipus de cicle de publicació que voleu associar a cada ti
 msgid "description_send_page_to"
 msgstr "Introduïu l'adreça de correu electrònic de la persona a la que voleu enviar un missatge amb l'adreça de la pàgina."
 
+#. Default: "Fill in the email address of your friend, and we will send an email that contains a link to this page."
+#: ./skins/plone_forms/sendto_form.cpt:23
+msgid "description_send_page_url_to"
+msgstr ""
+
 #. Default: "Your password has been mailed. It should arrive in your mailbox shortly."
 #: ./skins/plone_forms/mail_password_response.pt:12
 #, fuzzy
@@ -2407,23 +2445,23 @@ msgid "description_sent_password"
 msgstr "S'ha enviat la contrasenya.<br/>Properament arribarà a la vostra bústia electrònica."
 
 #. Default: "You may restrict which content types are available in this folder, either by manually selecting them from the list below, by relying on the site default, or by using the settings from the parent folder. You can also select a subset of the available types to be immediately available in the \"Add\" menu. Any additional allowed types will be available from a \"More...\" menu item, taking you to a new page where all enabled types will be available for selection."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:16
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:57
 msgid "description_set_folder_type_restrictions"
 msgstr "Podeu restringir els tipus de continguts que estaran disponibles dins d'aquesta carpeta seleccionant els elements que voleu en llista que s'ofereix a continuació, aprofitant els tipus que us dona aquest lloc web per defecte, o usant la configuració que utilitza la carpeta superior. Tanmateix podeu seleccionar un conjunt de tipus per a que estiguin immediatament disponibles en el menú 'Afegeix'. Qualsevol altre tipus permès apareixerà en l'element de menú 'Més' que us portarà a una nova pàgina on tots els tipus disponibles estaran presents per a la seva selecció."
 
 #. Default: "You can share the rights for both entire folders and single items. These users have privileges here:"
-#: ./skins/plone_forms/folder_localrole_form.pt:55
+#: ./skins/plone_deprecated/folder_localrole_form.pt:52
 #, fuzzy
 msgid "description_share_folders_items_current_shares"
 msgstr "Podeu compartir els drets d'accés tant de les carpetes com d'elements individuals. Els següents usuaris tenen privilegis aquí:"
 
 #. Default: "Sharing is an easy way to allow others access to collaborate with you on your content. To share this item, search for the person's name or email address in the form below, and assign them an appropriate role. The most common use is to give people Manager permissions, which means they have full control of this item and its contents (if any)."
-#: ./skins/plone_forms/folder_localrole_form.pt:365
+#: ./skins/plone_deprecated/folder_localrole_form.pt:345
 msgid "description_sharing_item"
 msgstr "Compartir és una manera senzilla de permetre a altres persones que puguin col·laborar en el contingut. Per a compartir aquest element amb algú altre escriviu el nom o la adreça electrònica de la persona en el formulari i assigneu-li el rol desitjat. El més habitual és assignar permisos de 'gestor' a un usuari per a que tingui control total sobre aquest element i els seus continguts (si és que n'hi ha)."
 
 #. Default: "To access this part of the site, you need to log in with your user name and password."
-#: ./skins/plone_login/failsafe_login_form.cpt:21
+#: ./skins/plone_login/failsafe_login_form.cpt:24
 msgid "description_sign_in"
 msgstr "Per a accedir a aquesta part del lloc web cal que entreu amb el vostre nom d'usuari i contrasenya."
 
@@ -2438,7 +2476,7 @@ msgid "description_site_error_does_not_exist"
 msgstr "L'element que heu sol·licitat no existeix al servidor o no es pot mostrar."
 
 #. Default: "Please double check the web address or use the search function on this page to find what you are looking for."
-#: ./skins/plone_templates/default_error_message.pt:29
+#: ./skins/plone_templates/default_error_message.pt:39
 msgid "description_site_error_double_check_or_search"
 msgstr "Si us plau, verifiqueu l'adreça web a la que voleu accedir o utilitzeu la funció de cerca per a localitzar el contingut."
 
@@ -2448,13 +2486,18 @@ msgstr "Si us plau, verifiqueu l'adreça web a la que voleu accedir o utilitzeu l
 msgid "description_site_error_mail_admin"
 msgstr "Si considereu que l'adreça web és correcta però en canvi heu trobat un error, si us plau, envieu un missatge a l'administrador d'aquest lloc web."
 
+#. Default: "If you are certain you have the correct web address but are encountering an error, please contact the ${site_admin}."
+#: ./skins/plone_templates/default_error_message.pt:45
+msgid "description_site_error_mail_site_admin"
+msgstr ""
+
 #. Default: "Thank you."
-#: ./skins/plone_templates/default_error_message.pt:41
+#: ./skins/plone_templates/default_error_message.pt:51
 msgid "description_site_error_thank_you"
 msgstr "Gràcies."
 
 #. Default: "An overview of the available content on this site. Keep the pointer still over an item for a few seconds to get its description."
-#: ./skins/plone_templates/sitemap.pt:16
+#: ./skins/plone_templates/sitemap.pt:20
 msgid "description_site_map"
 msgstr "Una visió general del contingut disponible en aquest lloc. Mantingueu el punter del ratolí sobre un element durant uns segons per a veure'n la seva descripció."
 
@@ -2479,22 +2522,22 @@ msgid "description_still_failure_reason2"
 msgstr "Potser esteu accedint a través d'un tallafocs (<em>firewall</em>) o un servidor intermediari (<em>proxy</em>) que no permet enviar galetes al vostre navegador. Si és així caldrà que contacteu amb l'administrador de xarxa."
 
 #. Default: "Match all"
-#: ./skins/plone_forms/search_form.pt:116
+#: ./skins/plone_forms/search_form.pt:111
 msgid "description_subject_and"
 msgstr "Coincideix amb tot"
 
 #. Default: "Match any"
-#: ./skins/plone_forms/search_form.pt:103
+#: ./skins/plone_forms/search_form.pt:100
 msgid "description_subject_or"
 msgstr "Coincideix amb qualsevol"
 
 #. Default: "Syndication has been disabled by site administrator."
-#: ./skins/plone_forms/synPropertiesForm.cpt:200
+#: ./skins/plone_forms/synPropertiesForm.cpt:191
 msgid "description_syndication_disabled"
 msgstr "La funcionalitat de sindicació ha estat desactivada per l'administrador."
 
 #. Default: "Syndication enables you to syndicate this folder so it can be synchronized from other web sites."
-#: ./skins/plone_forms/synPropertiesForm.cpt:14
+#: ./skins/plone_forms/synPropertiesForm.cpt:18
 msgid "description_syndication_properties"
 msgstr "La sindicació permet compartir i sincronitzar aquesta carpeta des d'altres llocs web."
 
@@ -2504,44 +2547,44 @@ msgid "description_syndication_setup"
 msgstr "Des d'aquí podeu configurar alguns dels paràmetres que afecten les funcionalitats de sindicació de tot el lloc web."
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: ./skins/plone_templates/footer.pt:29
+#: ./skins/plone_templates/footer.pt:32
 #, fuzzy
 msgid "description_trademark"
 msgstr "Plone<sup>&reg;</sup> és una marca registrada de ${plonefoundation}"
 
 #. Default: "This applications transactional feature allows you to easily undo changes made to the applications settings or data. You can revert the application to a \"snapshot\" of its state at a previous point in time."
-#: ./skins/plone_forms/undo_form.pt:27
+#: ./skins/plone_forms/undo_form.pt:31
 msgid "description_undo_action"
 msgstr "Aquesta aplicació disposa d'una funcionalitat transaccional que permet desfer els canvis realitzats a les preferències o a les dades. Podeu retornar l'aplicació a un estat anterior."
 
 #. Default: "Select one or more transactions below and then click on the \"Undo\" button to undo the transactions. Note that even though a transaction is shown below, you will not be able to undo it if later transactions modified objects that were modified by the transaction."
-#: ./skins/plone_forms/undo_form.pt:33
+#: ./skins/plone_forms/undo_form.pt:37
 msgid "description_undo_action_select"
 msgstr "Seleccioneu una o més transaccions i premeu Desfés per a executar l'acció. Fixeu-vos en que tot i que es mostri una transacció, no la podeu desfer si una transacció posterior ha modificat els mateixos objectes."
 
 #. Default: "Please use the form below to change your password."
-#: ./skins/plone_login/login_password.cpt:33
+#: ./skins/plone_login/login_password.cpt:37
 msgid "description_use_form_to_change_password"
 msgstr "Si us plau, utilitzeu el següent formulari per a canviar la contrasenya."
 
 #. Default: "Click the user's name to see and change the details of a specific user. Click the envelope icon to send a mail to the user. You can also edit the e-mail addresses, and add/remove users."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:56
+#: ./skins/plone_prefs/prefs_users_overview.cpt:63
 msgid "description_user_management"
 msgstr "Feu clic en un usuari per a visualitzar-lo i modificar-ne els detalls o feu clic damunt del sobre per a enviar-li un missatge de correu electrònic. Podeu editar els rols i les adreces de correu mitjançant aquest formulari. També podeu accedir al formulari de registre per a afegir nous usuaris. Per a desactivar un usuari sense suprimir-lo elimineu els rols que tingui associats."
 
 #. Default: "This area allows you to set your preferences."
-#: ./skins/plone_prefs/plone_memberprefs_panel.pt:18
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:22
 msgid "description_user_panel"
 msgstr "Aquesta àrea permet editar les vostres preferències."
 
 #. Default: "We have used ${xhtml} 1.0 and ${css} that conforms to specification, as laid out by the ${w3c} because we believe that usability and accessibility must have a solid foundation. If anything on this web site does not validate correctly, please contact the ${site_admin}, and not the Plone Team."
-#: ./skins/plone_templates/accessibility-info.pt:161
+#: ./skins/plone_templates/accessibility-info.pt:159
 #, fuzzy
 msgid "description_validation"
 msgstr "Hem utilitzat ${xhtml} 1.0 i ${css} que està en conformitat amb les especificacions, com dictamina el ${w3c} perquè creiem que la usabilitat i l'accessibilitat han de tenir una base sòlida. Si hi ha res en aquest lloc web que no valida correctament, si us plau, poseu-vos en contacte amb ${site_admin}, i no pas amb l'equip del Plone."
 
 #. Default: "We have also endeavoured to achieve AA accessibility as measured against version 1.0 of the ${wcag}. We are aware however, that a number of the checkpoints of the ${wcag2} are subjective - and although we are sure that we have met them squarely, there may be instances where interpretation may vary."
-#: ./skins/plone_templates/accessibility-info.pt:174
+#: ./skins/plone_templates/accessibility-info.pt:172
 #, fuzzy
 msgid "description_wcag_aa_rating"
 msgstr "També hem procurat aconseguir l'accessibilitat AA versió 1.0 de ${wcag}. No obstant, tenim en compte que el nombre de regles del ${wcag2} són subjectives i tot i que pensem que les hem acomplert la seva interpretació pot variar en algunes instàncies."
@@ -2562,12 +2605,12 @@ msgid "description_workflow_one_step"
 msgstr "utilitzeu aquesta 'publicació en una sola fase' si voleu que els continguts siguin accessibles immediatament per a tothom sense cap procés de revisió."
 
 #. Default: "You have been registered."
-#: ./skins/plone_login/registered.pt:21
+#: ./skins/plone_login/registered.pt:24
 msgid "description_you_are_registered"
 msgstr "Heu estat registrats com a membre en aquest portal."
 
 #. Default: "Click the button to log in immediately."
-#: ./skins/plone_login/registered.pt:37
+#: ./skins/plone_login/registered.pt:40
 msgid "description_you_can_log_on_now"
 msgstr "Feu clic al botó per a entrar"
 
@@ -2583,145 +2626,150 @@ msgstr "correu electrònic"
 msgid "enable_cookies_message"
 msgstr "Les galetes no estan habilitades. ${enable_cookies} abans d'entrar."
 
+#. Default: "Cookies are not enabled. You must enable cookies before you can log in."
+#: ./skins/plone_deprecated/portlet_login.pt:72
+msgid "enable_cookies_message_before_login"
+msgstr ""
+
 #. Default: "There were Errors during install, check Transcript"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:32
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:36
 msgid "error_installed_product"
 msgstr "S'han produït errors en la instal·lació, verifiqueu la transcripció."
 
 #. Default: "to"
-#: ./skins/plone_templates/events_listing.pt:61
+#: ./skins/plone_templates/events_listing.pt:64
 msgid "event_and"
 msgstr "i"
 
 #. Default: "from"
-#: ./skins/plone_content/event_view.pt:72
+#: ./skins/plone_content/event_view.pt:92
 msgid "event_from"
 msgstr "de"
 
 #. Default: "More information about this event..."
-#: ./skins/plone_content/event_view.pt:131
+#: ./skins/plone_content/event_view.pt:190
 #, fuzzy
 msgid "event_more_information"
 msgstr "Més informació sobre aquest event"
 
 #. Default: "to"
-#: ./skins/plone_content/event_view.pt:49
+#: ./skins/plone_content/event_view.pt:63
 msgid "event_to"
 msgstr "a"
 
 #. Default: "What"
-#: ./skins/plone_content/event_view.pt:35
+#: ./skins/plone_content/event_view.pt:39
 msgid "event_what"
 msgstr "Què"
 
 #. Default: "When"
-#: ./skins/plone_content/event_view.pt:41
+#: ./skins/plone_content/event_view.pt:49
 msgid "event_when"
 msgstr "Quan"
 
 #. Default: "Where"
-#: ./skins/plone_content/event_view.pt:81
+#: ./skins/plone_content/event_view.pt:101
 msgid "event_where"
 msgstr "On"
 
 #. Default: "More..."
-#: ./skins/plone_templates/global_contentmenu.pt:130
+#: ./skins/plone_deprecated/global_contentmenu.pt:132
 #, fuzzy
 msgid "folder_add_more"
 msgstr "Més"
 
 #. Default: "Restrict..."
-#: ./skins/plone_templates/global_contentmenu.pt:139
+#: ./skins/plone_deprecated/global_contentmenu.pt:141
 #, fuzzy
 msgid "folder_add_settings"
 msgstr "Paràmetres"
 
 #. Default: "Click to configure what type of items can be added here..."
-#: ./skins/plone_forms/folder_factories.pt:25
+#: ./skins/plone_forms/folder_factories.pt:36
 #, fuzzy
 msgid "folder_add_settings_long"
 msgstr "Cliqueu per configurar quins tipus d'elements es poden afegir aquí"
 
 #. Default: "Up one level"
-#: ./skins/plone_content/folder_listing.pt:19
+#: ./skins/plone_deprecated/old_folder_contents.pt:45
 msgid "go_to_parent_url"
 msgstr "Puja un nivell"
 
 #. Default: "All content created by ${user}..."
-#: ./skins/plone_content/author.cpt:266
+#: ./skins/plone_content/author.cpt:270
 #, fuzzy
 msgid "go_to_search_author_content"
 msgstr "Cerca tot el contingut publicat per ${user}"
 
 #. Default: "Access keys"
-#: ./skins/plone_templates/accessibility-info.pt:50
+#: ./skins/plone_templates/accessibility-info.pt:54
 msgid "heading_access_keys"
 msgstr "Tecles d'accés"
 
 #. Default: "Using access keys in different web browsers"
-#: ./skins/plone_templates/accessibility-info.pt:80
+#: ./skins/plone_templates/accessibility-info.pt:78
 msgid "heading_access_keys_usage"
 msgstr "Ús de tecles d'accés en diferents navegadors web"
 
 #. Default: "Accessibility"
-#: ./skins/plone_templates/accessibility-info.pt:15
+#: ./skins/plone_templates/accessibility-info.pt:18
 msgid "heading_accessibility_info"
 msgstr "Accessibilitat"
 
 #. Default: "Accessibility Statement"
-#: ./skins/plone_templates/accessibility-info.pt:137
+#: ./skins/plone_templates/accessibility-info.pt:135
 msgid "heading_accessibility_statement"
 msgstr "Declaració d'accessibilitat"
 
 #. Default: "Actions"
-#: ./skins/plone_templates/global_contentviews.pt:42
+#: ./skins/plone_templates/global_contentviews.pt:44
 msgid "heading_actions"
 msgstr "Accions"
 
 #. Default: "Add new item"
-#: ./skins/plone_forms/folder_factories.pt:17
+#: ./skins/plone_forms/folder_factories.pt:27
 msgid "heading_add_new_item"
 msgstr "Afegeix un element nou"
 
 #. Default: "Add sharing permissions to users"
-#: ./skins/plone_forms/folder_localrole_form.pt:233
+#: ./skins/plone_deprecated/folder_localrole_form.pt:221
 #, fuzzy
 msgid "heading_add_sharing_permissions"
 msgstr "Comparteix ${item}"
 
 #. Default: "Add event to calendar"
-#: ./skins/plone_content/event_view.pt:106
+#: ./skins/plone_content/event_view.pt:157
 msgid "heading_add_to_calendar"
 msgstr "Afegeix un event al calendari"
 
 #. Default: "Add/Remove Products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:13
+#: ./skins/plone_prefs/prefs_install_products_form.pt:16
 msgid "heading_addremove_products"
 msgstr "Afegeix/Suprimeix productes"
 
 #. Default: "Advanced search for content"
-#: ./skins/plone_forms/search_form.pt:11
+#: ./skins/plone_forms/search_form.pt:14
 msgid "heading_advanced_search"
 msgstr "Cerca avançanda de continguts"
 
 #. Default: "Advanced settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:601
+#: ./skins/plone_deprecated/folder_localrole_form.pt:563
 msgid "heading_advanced_settings"
 msgstr ""
 
 #. Default: "Latest content created by this user"
-#: ./skins/plone_content/author.cpt:225
+#: ./skins/plone_content/author.cpt:229
 #, fuzzy
 msgid "heading_author_content"
 msgstr "Contingut recent d'aquest usuari"
 
 #. Default: "Available access keys"
-#: ./skins/plone_templates/accessibility-info.pt:63
+#: ./skins/plone_templates/accessibility-info.pt:61
 msgid "heading_available_access_keys"
 msgstr "Tecles d'accés disponibles"
 
 #. Default: "Broken products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:193
+#: ./skins/plone_prefs/prefs_install_products_form.pt:200
 msgid "heading_broken_products"
 msgstr "Productes corruptes"
 
@@ -2731,14 +2779,19 @@ msgid "heading_change_ownership"
 msgstr "Canvia propietari"
 
 #. Default: "Change password for ${user}"
-#: ./skins/plone_prefs/password_form.pt:14
+#: ./skins/plone_prefs/password_form.pt:18
 msgid "heading_change_password_for"
 msgstr "Canvia la contrasenya de l'usuari ${user}"
 
 #. Default: "Comment Preview"
-#: ./skins/plone_forms/discussion_reply_preview.pt:11
+#: ./skins/plone_forms/discussion_reply_preview.pt:13
 msgid "heading_comment_preview"
 msgstr "Previsualització del comentari"
+
+#. Default: "Contact form"
+#: ./skins/plone_templates/contact-info.cpt:17
+msgid "heading_contact_form"
+msgstr ""
 
 #. Default: "Contact information"
 #: ./skins/plone_templates/contact-info.cpt:14
@@ -2746,32 +2799,32 @@ msgid "heading_contact_information"
 msgstr "Informació de contacte"
 
 #. Default: "Site Setup"
-#: ./skins/plone_portlets/portlet_prefs.pt:14
+#: ./skins/plone_prefs/plone_control_panel.pt:21
 msgid "heading_control_panel"
 msgstr "Configuració del Plone"
 
 #. Default: "Create a Group"
-#: ./skins/plone_prefs/prefs_group_details.pt:53
+#: ./skins/plone_prefs/prefs_group_details.pt:62
 msgid "heading_create_group"
 msgstr "Crea un grup"
 
 #. Default: "Current sharing permissions for ${folder}"
-#: ./skins/plone_forms/folder_localrole_form.pt:35
+#: ./skins/plone_deprecated/folder_localrole_form.pt:32
 msgid "heading_currently_assigned_shares"
 msgstr "Permisos actuals per ${folder}"
 
 #. Default: "Document Actions"
-#: ./skins/plone_content/document_actions.pt:11
+#: ./skins/plone_deprecated/document_actions.pt:14
 msgid "heading_document_actions"
 msgstr "Accions del document"
 
 #. Default: "Edit Group Properties for ${groupname}"
-#: ./skins/plone_prefs/prefs_group_details.pt:80
+#: ./skins/plone_prefs/prefs_group_details.pt:91
 msgid "heading_edit_groupproperties"
 msgstr "Edita propietats del grup ${groupname}"
 
 #. Default: "Edit ${itemtype}"
-#: ./skins/plone_content/folder_edit_form.cpt:17
+#: ./skins/plone_content/folder_edit_form.cpt:20
 msgid "heading_edit_item"
 msgstr ""
 
@@ -2781,17 +2834,17 @@ msgid "heading_enable_cookies"
 msgstr "Com habilitar les galetes"
 
 #. Default: "Error log"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:13
+#: ./skins/plone_prefs/prefs_error_log_form.pt:16
 msgid "heading_error_log"
 msgstr "Registre d'errors"
 
 #. Default: "Exception Details"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:16
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:19
 msgid "heading_exception_details"
 msgstr "Detalls de l'error"
 
 #. Default: "File contents"
-#: ./skins/plone_content/file_view.pt:69
+#: ./skins/plone_content/file_view.pt:70
 msgid "heading_file_contents"
 msgstr "Continguts del fitxer"
 
@@ -2801,34 +2854,34 @@ msgid "heading_full_review_list"
 msgstr "Llistat de revisions complet"
 
 #. Default: "Group Members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:56
+#: ./skins/plone_prefs/prefs_group_members.cpt:65
 msgid "heading_group_members"
 msgstr "Membres del grup"
 
 #. Default: "Members of the ${groupname} group"
-#: ./skins/plone_prefs/prefs_group_members.cpt:73
+#: ./skins/plone_prefs/prefs_group_members.cpt:84
 #, fuzzy
 msgid "heading_group_members_of"
 msgstr "Membres del grup ${groupname}"
 
 #. Default: "Group Memberships for ${username}"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:50
+#: ./skins/plone_prefs/prefs_user_memberships.pt:56
 msgid "heading_group_memberships_for"
 msgstr "Grups als que pertany ${username}"
 
 #. Default: "Add sharing permissions to groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:440
+#: ./skins/plone_deprecated/folder_localrole_form.pt:414
 msgid "heading_group_shares"
 msgstr "Comparteix amb els grups"
 
 #. Default: "Current group members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:98
+#: ./skins/plone_prefs/prefs_group_members.cpt:109
 #, fuzzy
 msgid "heading_groupmembers_current"
 msgstr "Actuals membres del grup"
 
 #. Default: "Groups Overview"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:51
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:58
 msgid "heading_groups_overview"
 msgstr "Propietats del grups"
 
@@ -2848,12 +2901,12 @@ msgid "heading_ie_version_6x"
 msgstr "Versió 6.x"
 
 #. Default: "Install log for ${productname}"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:11
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:15
 msgid "heading_install_log_for"
 msgstr "Registre d'instal·lació del producte ${productname}"
 
 #. Default: "Transcript"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:111
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:115
 msgid "heading_installed_transcript"
 msgstr "Transcripció"
 
@@ -2883,12 +2936,12 @@ msgid "heading_member_listing"
 msgstr "Llista d'usuaris"
 
 #. Default: "Search for users"
-#: ./skins/plone_forms/member_search_form.pt:10
+#: ./skins/plone_forms/member_search_form.pt:13
 msgid "heading_member_search"
 msgstr "Cerca membres"
 
 #. Default: "Current Group Memberships"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:81
+#: ./skins/plone_prefs/prefs_user_memberships.pt:88
 msgid "heading_memberships_current"
 msgstr "Llista d'usuaris actuals"
 
@@ -2903,12 +2956,12 @@ msgid "heading_mozilla"
 msgstr "Mozilla"
 
 #. Default: "Personal Preferences"
-#: ./skins/plone_prefs/personalize_form.cpt:46
+#: ./skins/plone_prefs/personalize_form.cpt:50
 msgid "heading_my_preferences"
 msgstr "Preferències personals"
 
 #. Default: "Navigation Settings"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:15
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:18
 msgid "heading_navigation_setup"
 msgstr "Paràmetres de navegació"
 
@@ -2928,14 +2981,19 @@ msgid "heading_netscape_version_6x"
 msgstr "Versió 6.x"
 
 #. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt:45
+#: ./skins/plone_forms/ownership_form.cpt:47
 msgid "heading_new_owner"
 msgstr ""
 
 #. Default: "Insufficient Privileges"
-#: ./skins/plone_login/insufficient_privileges.pt:10
+#: ./skins/plone_login/insufficient_privileges.pt:13
 msgid "heading_no_privileges"
 msgstr "Permisos insuficients"
+
+#. Default: "You might have been looking for..."
+#: ./skins/plone_templates/default_error_message.pt:64
+msgid "heading_not_found_suggestions"
+msgstr ""
 
 #. Default: "Opera"
 #: ./skins/plone_login/enabling_cookies.pt:14
@@ -2943,12 +3001,13 @@ msgid "heading_opera"
 msgstr "Opera"
 
 #. Default: "Personal tools"
-#: ./skins/plone_templates/global_personalbar.pt:13
+#: ./skins/plone_deprecated/global_personalbar.pt:16
 msgid "heading_personal_tools"
 msgstr "Eines personals"
 
-#. Default: "Plone version overview"
-#: ./skins/plone_prefs/plone_control_panel.pt:54
+#. Default: "Plone Version Overview"
+#: ./skins/plone_prefs/plone_control_panel.pt:110
+#, fuzzy
 msgid "heading_plone_version_overview"
 msgstr "Visió general de la versió del Plone"
 
@@ -2963,59 +3022,64 @@ msgid "heading_portal_setup"
 msgstr "Configuració del Plone"
 
 #. Default: "User Properties for ${username}"
-#: ./skins/plone_prefs/prefs_user_details.cpt:54
+#: ./skins/plone_prefs/prefs_user_details.cpt:58
 msgid "heading_prefs_user_details"
 msgstr "Propietats del usuari ${username}"
 
 #. Default: "Description of ${productname}"
-#: ./skins/plone_prefs/prefs_install_product_readme.pt:17
+#: ./skins/plone_prefs/prefs_install_product_readme.pt:21
 msgid "heading_product_readme"
 msgstr "Descripció de ${productname}"
 
 #. Default: "Publishing process"
-#: ./skins/plone_forms/content_status_history.cpt:46
+#: ./skins/plone_forms/content_status_history.cpt:49
 msgid "heading_publishing_process"
 msgstr "Procés de publicació"
 
 #. Default: "Quit your web browser to log out"
-#: ./skins/plone_login/logged_out.pt:25
+#: ./skins/plone_login/logged_out.cpt:72
 msgid "heading_quit_to_log_out"
 msgstr ""
 
 #. Default: "Modified items"
-#: ./skins/plone_templates/recently_modified.pt:17
+#: ./skins/plone_templates/recently_modified.pt:20
 msgid "heading_recently_modified"
 msgstr "Elements modificats"
 
 #. Default: "Published items"
-#: ./skins/plone_templates/recently_published.pt:17
+#: ./skins/plone_templates/recently_published.pt:20
 msgid "heading_recently_published"
 msgstr "Elements publicats"
 
 #. Default: "Registration Form"
-#: ./skins/plone_login/join_form.cpt:16
+#: ./skins/plone_login/join_form.cpt:21
 msgid "heading_registration_form"
 msgstr "Formulari de registre"
 
 #. Default: "Rename item"
-#: ./skins/plone_forms/folder_rename_form.cpt:15
+#: ./skins/plone_forms/folder_rename_form.cpt:18
 msgid "heading_rename_item"
 msgstr "Canvia nom a l'element"
 
 #. Default: "REQUEST"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:68
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:72
 msgid "heading_request"
 msgstr "Sol·licitud"
 
 #. Default: "Returned results"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:68
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:67
 msgid "heading_returned_results"
 msgstr "Resultats obtinguts"
 
 #. Default: "Roles Management"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:236
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:237
 msgid "heading_roles_management"
 msgstr "Gestió de rols"
+
+#. Default: "Search for groups"
+#: ./skins/plone_prefs/prefs_user_memberships.pt:68
+msgid "heading_search_groups"
+msgstr ""
 
 #. Default: "Search for new groups"
 #: ./skins/plone_prefs/prefs_user_memberships.pt:62
@@ -3023,12 +3087,12 @@ msgid "heading_search_newgroups"
 msgstr "Cerca nous grups"
 
 #. Default: "Search for new group members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:178
+#: ./skins/plone_prefs/prefs_group_members.cpt:189
 msgid "heading_search_newmembers"
 msgstr "Cerca nous membres del grup"
 
 #. Default: "Search results"
-#: ./skins/plone_forms/folder_localrole_form.pt:238
+#: ./skins/plone_deprecated/folder_localrole_form.pt:226
 msgid "heading_search_results"
 msgstr "Resultats de la cerca"
 
@@ -3038,22 +3102,22 @@ msgid "heading_search_setup"
 msgstr "Paràmetres de cerca"
 
 #. Default: "Search for Users and Groups"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:19
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:22
 msgid "heading_search_usersandgroups"
 msgstr "Cerca usuaris i grups"
 
 #. Default: "Sections"
-#: ./skins/plone_templates/global_sections.pt:12
+#: ./skins/plone_deprecated/global_sections.pt:15
 msgid "heading_sections"
 msgstr "Seccions"
 
 #. Default: "Select default page"
-#: ./skins/plone_forms/select_default_page.cpt:12
+#: ./skins/plone_forms/select_default_page.cpt:15
 msgid "heading_select_default_page"
 msgstr "Selecciona pàgina per defecte"
 
 #. Default: "Select default view"
-#: ./skins/plone_forms/select_default_view.cpt:12
+#: ./skins/plone_forms/select_default_view.cpt:15
 msgid "heading_select_default_view"
 msgstr "Seleccioneu vista per defecte"
 
@@ -3063,12 +3127,13 @@ msgid "heading_select_workflow"
 msgstr "Seleccioneu el cicle de publicació"
 
 #. Default: "Site Administrator has been contacted."
-#: ./skins/plone_templates/send_feedback_confirm.cpt:15
+#: ./skins/plone_templates/send_feedback_confirm.cpt:18
 msgid "heading_send_feedback_confirm"
 msgstr ""
 
-#. Default: "Send this page to somebody"
-#: ./skins/plone_forms/sendto_form.cpt:17
+#. Default: "Send this page to someone"
+#: ./skins/plone_forms/sendto_form.cpt:20
+#, fuzzy
 msgid "heading_send_page_to"
 msgstr "Envia aquesta pàgina per correu electrònic"
 
@@ -3077,23 +3142,28 @@ msgstr "Envia aquesta pàgina per correu electrònic"
 msgid "heading_sent_password"
 msgstr "Contrasenya enviada"
 
+#. Default: "Restrict what types of content can be added"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:52
+msgid "heading_set_content_type_restrictions"
+msgstr ""
+
 #. Default: "Restrict addable types"
 #: ./skins/plone_forms/folder_constraintypes_form.cpt:12
 msgid "heading_set_folder_type_restrictions"
 msgstr "Restringir els tipus que es poden afegir"
 
 #. Default: "Please log in"
-#: ./skins/plone_login/failsafe_login_form.cpt:4
+#: ./skins/plone_login/failsafe_login_form.cpt:7
 msgid "heading_sign_in"
 msgstr "Si us plau, identifiqueu-vos"
 
 #. Default: "Sign-in failure"
-#: ./skins/plone_login/login_failed.pt:12
+#: ./skins/plone_login/login_failed.pt:15
 msgid "heading_sign_in_failure_auth"
 msgstr "Error d'identificació"
 
 #. Default: "You are now logged out"
-#: ./skins/plone_login/logged_out.pt:12
+#: ./skins/plone_login/logged_out.cpt:29
 msgid "heading_signed_out"
 msgstr "Heu estat desconnectat"
 
@@ -3107,13 +3177,23 @@ msgstr "Error del lloc web"
 msgid "heading_site_error_apologies"
 msgstr "Disculpi les molèsties..."
 
+#. Default: "We're sorry, but there seems to be an error..."
+#: ./skins/plone_templates/default_error_message.pt:130
+msgid "heading_site_error_sorry"
+msgstr ""
+
+#. Default: "We're sorry, but that page doesn't exist..."
+#: ./skins/plone_templates/default_error_message.pt:34
+msgid "heading_site_there_seems_to_be_an_error"
+msgstr ""
+
 #. Default: "Skin Setup"
 #: ./skins/plone_prefs/prefs_portalskin_form.cpt:14
 msgid "heading_skin_setup"
 msgstr "Configuració de l'aparença"
 
 #. Default: "Syndication Properties"
-#: ./skins/plone_forms/synPropertiesForm.cpt:12
+#: ./skins/plone_forms/synPropertiesForm.cpt:15
 msgid "heading_syndication_properties"
 msgstr "Propietats de sindicació"
 
@@ -3123,47 +3203,47 @@ msgid "heading_syndication_setup"
 msgstr "Propietats de sindicació del lloc web"
 
 #. Default: "Undo actions"
-#: ./skins/plone_forms/undo_form.pt:25
+#: ./skins/plone_forms/undo_form.pt:28
 msgid "heading_undo_actions"
 msgstr "Desfés accions"
 
 #. Default: "My Preferences"
-#: ./skins/plone_prefs/plone_memberprefs_panel.pt:16
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:19
 msgid "heading_user_panel"
 msgstr "Les meves preferències"
 
 #. Default: "Users Overview"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:47
+#: ./skins/plone_prefs/prefs_users_overview.cpt:53
 msgid "heading_users_overview"
 msgstr "Visió general dels usuaris"
 
 #. Default: "Validation"
-#: ./skins/plone_templates/accessibility-info.pt:145
+#: ./skins/plone_templates/accessibility-info.pt:143
 msgid "heading_validation"
 msgstr "Validació"
 
 #. Default: "Views"
-#: ./skins/plone_templates/global_contentviews.pt:13
+#: ./skins/plone_templates/global_contentviews.pt:15
 msgid "heading_views"
 msgstr "Vistes"
 
 #. Default: "Welcome!"
-#: ./skins/plone_login/login_password.cpt:19
+#: ./skins/plone_login/login_password.cpt:22
 msgid "heading_welcome"
 msgstr "Benvinguts!"
 
 #. Default: "Welcome to ${sitename}"
-#: ./skins/plone_templates/index_html.pt:11
+#: ./skins/plone_templates/index_html.pt:14
 msgid "heading_welcome_to"
 msgstr "Benvinguts a ${sitename}!"
 
 #. Default: "You are now logged in"
-#: ./skins/plone_login/login_success.pt:25
+#: ./skins/plone_login/login_success.pt:28
 msgid "heading_you_are_now_logged_in"
 msgstr "Us heu identificat correctament"
 
 #. Default: "Please select how you would like to control which content types are addable in this folder."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:54
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:91
 msgid "help_add_restriction_mode"
 msgstr "Si us plau, escolliu com us agradaria controlar quin contingut es pot afegir en aquesta carpeta."
 
@@ -3178,7 +3258,7 @@ msgid "help_allowRolesToAddKeywords"
 msgstr ""
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
-#: ./skins/plone_prefs/personalize_form.cpt:196
+#: ./skins/plone_prefs/personalize_form.cpt:202
 msgid "help_biography"
 msgstr "Una visió general escueta de qui sou i què feu. Es mostrarà en la vostra pàgina d'autor, enllaçada desde els elements que creeu."
 
@@ -3188,17 +3268,17 @@ msgid "help_boolean_criteria_bool"
 msgstr "Vertader o fals"
 
 #. Default: "Case sensitive, make sure caps lock is not enabled."
-#: ./skins/plone_login/failsafe_login_form.cpt:107
+#: ./skins/plone_login/failsafe_login_form.cpt:116
 msgid "help_capslock_password"
 msgstr "Sensible a majúscules i minúscules, assegureu-vos que la tecla de les majúscules no està activada."
 
 #. Default: "Changes the ownership of the current object."
-#: ./skins/plone_forms/ownership_form.cpt:41
+#: ./skins/plone_forms/ownership_form.cpt:43
 msgid "help_change_ownership"
 msgstr "Canvia el propietari de l'objecte actual."
 
 #. Default: "Select the new state for the selected items."
-#: ./skins/plone_forms/content_status_history.cpt:183
+#: ./skins/plone_forms/content_status_history.cpt:167
 msgid "help_change_status"
 msgstr "Seleccioneu el nou estat per als documents seleccionats."
 
@@ -3208,17 +3288,17 @@ msgid "help_choose_a_date"
 msgstr "Escolliu una data"
 
 #. Default: "A comment about this link."
-#: ./skins/plone_forms/sendto_form.cpt:89
+#: ./skins/plone_forms/sendto_form.cpt:92
 msgid "help_comment_to_link"
 msgstr "Un comentari sobre aquest enllaç."
 
 #. Default: "Re-enter the password. Make sure the passwords are identical."
-#: ./skins/plone_login/join_form.cpt:174
+#: ./skins/plone_login/join_form.cpt:173
 msgid "help_confirm_password"
 msgstr "Torneu a introduir la contrasenya. Assegureu-vos que és idèntica a l'anterior."
 
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
-#: ./skins/plone_prefs/personalize_form.cpt:245
+#: ./skins/plone_prefs/personalize_form.cpt:248
 msgid "help_content_editor"
 msgstr "Seleccioneu l'editor de continguts que voleu utilitzar. Els editors de continguts poden requerir utilitzar determinats navegadors."
 
@@ -3265,7 +3345,7 @@ msgid "help_current_folder_only"
 msgstr ""
 
 #. Default: "Enter your current password."
-#: ./skins/plone_prefs/password_form.pt:35
+#: ./skins/plone_prefs/password_form.pt:40
 msgid "help_current_password"
 msgstr "Introduïu la contrasenya"
 
@@ -3302,23 +3382,24 @@ msgid "help_default_skin"
 msgstr "Especifiqueu l'aparença per defecte del lloc web entre els estils disponibles."
 
 #. Default: "A short summary of the content"
-#: ./skins/plone_content/folder_edit_form.cpt:105
+#: ./skins/plone_content/folder_edit_form.cpt:104
 #, fuzzy
 msgid "help_description"
 msgstr "Breu descripció de l'element."
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
-#: ./skins/plone_prefs/personalize_form.cpt:335
+#: ./skins/plone_prefs/personalize_form.cpt:333
 msgid "help_display_names"
 msgstr "Determina si els noms curts (també anomenats IDs) es poden canviar en l'edició dels elements. Si els noms curts no es mostres, es generaran automàticament."
 
-#. Default: "The date when the item will be available (of course it needs to be published too). If no date is selected the item will be effective immediately."
-#: ./skins/plone_forms/content_status_history.cpt:111
+#. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
+#: ./skins/plone_forms/content_status_history.cpt:100
+#, fuzzy
 msgid "help_effective_date"
 msgstr "Data en que serà visible el document un cop publicat. D'aquesta forma és possible publicar un document anticipadament, però sense que sigui visible als visitants fins a una data determinada. Si es deixa en blanc aquest camp el document es mostrarà un cop publicat."
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
-#: ./skins/plone_login/join_form.cpt:112
+#: ./skins/plone_login/join_form.cpt:115
 msgid "help_email_creation"
 msgstr "Introduïu la vostra adreça de correu. Serà necessària en cas que oblidi la contrasenya. Per respecte a la vostra privacitat aquesta adreça no serà facilitada a tercers ni mostrada enlloc sense el vostre consentiment."
 
@@ -3328,43 +3409,44 @@ msgid "help_exclude_from_nav"
 msgstr "Si està seleccionat, aquest element no es mostrarà en l'arbre de navegació"
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
-#: ./skins/plone_forms/content_status_history.cpt:137
+#: ./skins/plone_forms/content_status_history.cpt:124
 msgid "help_expiration_date"
 msgstr "Data en la qual l'element venç i en la qual, per tant, deixarà de ser visible als visitants. Si no s'omple aquest camp l'element no vencerà mai."
 
 #. Default: "If you are unsure of which format to use, just select Plain Text and type the document as you usually do."
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:21
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:20
 msgid "help_format_wysiwyg"
 msgstr "Si no esteu segurs de quin format heu d'utilitzar seleccioneu Text simple i teclejeu el document normalment."
 
 #. Default: "Enter full name, eg. John Smith."
-#: ./skins/plone_login/join_form.cpt:48
+#: ./skins/plone_login/join_form.cpt:55
 msgid "help_full_name_creation"
 msgstr "Introduïu el nom complet, per exemple: Víctor Sauler i Portal."
 
 #. Default: "By default, all items created at the root level will add to the global section navigation. You can turn this off if you prefer manually constructing this part of the navigation."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:54
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:65
 #, fuzzy
 msgid "help_generated_tabs"
 msgstr "Per defecte, totes les carpetes que es crein a l'arrel tindran secció global de navegació. Podeu desactivar-ho si preferiu construir aquesta part de la navegació manualment."
 
 #. Default: "A unique identifier for the group. Can not be changed after creation."
-#: ./skins/plone_prefs/prefs_group_details.pt:64
+#: ./skins/plone_prefs/prefs_group_details.pt:74
 msgid "help_groupname"
 msgstr "Un identificador únic per al grup. No es pot modificar un cop creat."
 
 #. Default: "The URL for your external home page, if you have one."
-#: ./skins/plone_prefs/personalize_form.cpt:221
+#: ./skins/plone_prefs/personalize_form.cpt:226
 msgid "help_homepage"
 msgstr "La URL de la vostra pàgina d'inici externa, si és que en teniu."
 
-#. Default: "Of the types selected above, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected above will be addable via a separate form accessible from the same menu."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:137
+#. Default: "Of the types selected below, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected below will be addable via a separate form accessible from the same menu."
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:148
+#, fuzzy
 msgid "help_immediately_addable_types"
 msgstr "Dels tipus que heu seleccionat abans, alguns elements poden estar disponibles a través del menú desplegable 'Afegeix'. Els demés tipus estaran disponibles un cop seleccioneu el menú 'Més' "
 
 #. Default: "If checked, this will attempt to modify the status of all content in any selected folders and their subfolders."
-#: ./skins/plone_forms/content_status_history.cpt:94
+#: ./skins/plone_forms/content_status_history.cpt:90
 #, fuzzy
 msgid "help_include_contained_objects"
 msgstr "Si ho marqueu, Plone intentarà modificar l'estat de tot el contingut en qualsevol carpeta seleccionada i en totes les seves subcarpetes"
@@ -3387,7 +3469,7 @@ msgid "help_limit_number"
 msgstr "Si està seleccionat, només es mostrarà el 'Nombre d'elements' indicat a continuació."
 
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: ./skins/plone_prefs/personalize_form.cpt:313
+#: ./skins/plone_prefs/personalize_form.cpt:312
 msgid "help_listed_search"
 msgstr "Determina si el vostre nom d'usuari apareix a les cerques en la llista de membres d'aquest lloc web."
 
@@ -3397,29 +3479,30 @@ msgstr "Determina si el vostre nom d'usuari apareix a les cerques en la llista d
 msgid "help_livesearch"
 msgstr "Activa la característica de cerca en viu (com al google) per a veure els resultats al teclejar si el vostre navegador suporta javascript."
 
-#. Default: "Select the content types that will be addable inside this folder."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:108
+#. Default: "Select the content types that will be addable to this folder using the 'more ...' link."
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:192
+#, fuzzy
 msgid "help_locally_allowed_types"
 msgstr "Seleccioneu els tipus de contingut que es podrà afegir dins d'aquesta carpeta."
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
-#: ./skins/plone_prefs/personalize_form.cpt:139
+#: ./skins/plone_prefs/personalize_form.cpt:149
 msgid "help_location"
 msgstr "La vostra ubicació - ja sigui la ciutat i país o la oficina en la que us trobeu."
 
 #. Default: "Login names are case sensitive, make sure the caps lock key is not enabled."
-#: ./skins/plone_login/failsafe_login_form.cpt:81
+#: ./skins/plone_login/failsafe_login_form.cpt:92
 #, fuzzy
 msgid "help_login_name_caps"
 msgstr "Els noms d'usuari diferencien majúscules i minúscules. Verifiqueu que la tecla de majúscules no està activada."
 
 #. Default: "Appearance of the site."
-#: ./skins/plone_prefs/personalize_form.cpt:351
+#: ./skins/plone_prefs/personalize_form.cpt:349
 msgid "help_look"
 msgstr "Seleccioneu l'aparença del lloc web entre els estils disponibles."
 
 #. Default: "Please enter the message you want to send."
-#: ./skins/plone_templates/contact-info.cpt:123
+#: ./skins/plone_templates/contact-info.cpt:124
 msgid "help_message"
 msgstr "Si us plau, escriviu el missatge que voleu enviar."
 
@@ -3454,7 +3537,7 @@ msgid "help_navigationtypes"
 msgstr "Els tipus de contingut que són visible en l'arbre de navegació i en el mapa del lloc web."
 
 #. Default: "Enter your new password. Minimum 5 characters."
-#: ./skins/plone_login/login_password.cpt:62
+#: ./skins/plone_login/login_password.cpt:67
 msgid "help_new_password"
 msgstr "Introduïu la nova contrasenya (5 caràcters com a mínim)."
 
@@ -3470,7 +3553,7 @@ msgid "help_no_selectable_default_pages"
 msgstr "No hi ha cap element dins d'aquesta carpeta que es pugui seleccionar com a pàgina de vista per defecte."
 
 #. Default: "Minimum 5 characters."
-#: ./skins/plone_login/join_form.cpt:144
+#: ./skins/plone_login/join_form.cpt:145
 msgid "help_password_creation"
 msgstr "5 caràcters com a mínim"
 
@@ -3480,7 +3563,7 @@ msgid "help_password_policy"
 msgstr "Determina si els usuaris poden escollir la seva contrasenya inicial. Si el password és escollit per l'usuari és molt fàcil que acabi acumulant comptes falsos en el sistema creats per a fer proves. Si no voleu que això passi escolliu la opció de generar la contrasenya."
 
 #. Default: "If you have forgotten your password, ${click_here}."
-#: ./skins/plone_login/failsafe_login_form.cpt:113
+#: ./skins/plone_login/failsafe_login_form.cpt:122
 msgid "help_password_retrieval"
 msgstr "Si heu oblidat la contrasenya, ${click_here}."
 
@@ -3516,27 +3599,27 @@ msgid "help_portal_type_criteria_value"
 msgstr "On dels tipus registrats del portal."
 
 #. Default: "To add or change the portrait: click the \"Browse\" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall."
-#: ./skins/plone_prefs/personalize_form.cpt:386
+#: ./skins/plone_prefs/personalize_form.cpt:382
 msgid "help_portrait"
 msgstr "Per a afegir o modificar una fotografia d'usuari seleccioneu-la utilitzant el botò Navega. La mida recomanada és de 75 píxels d'ample per 100 d'alt. <br />"
 
 #. Default: "Your preferred language."
-#: ./skins/plone_prefs/personalize_form.cpt:166
+#: ./skins/plone_prefs/personalize_form.cpt:174
 msgid "help_preferred_language"
 msgstr "Idioma preferit."
 
 #. Default: "Will be added to the publishing history. If multiple items are selected, this comment will be attached to all of them."
-#: ./skins/plone_forms/content_status_history.cpt:165
+#: ./skins/plone_forms/content_status_history.cpt:151
 msgid "help_publishing_comments"
 msgstr "Informació a afegir a l'historial del document. Si heu seleccionat diversos elements la informació serà associada a tots ells."
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
-#: ./skins/plone_login/failsafe_login_form.cpt:146
+#: ./skins/plone_login/failsafe_login_form.cpt:151
 msgid "help_remember_my_name"
 msgstr "Marqueu aquesta opció per no haver d'escriure el nom d'usuari la propera vegada."
 
 #. Default: "Return items created by a particular person."
-#: ./skins/plone_forms/search_form.pt:224
+#: ./skins/plone_forms/search_form.pt:209
 msgid "help_search_author"
 msgstr "Mostra els elements creats per un determinat usuari."
 
@@ -3545,28 +3628,35 @@ msgstr "Mostra els elements creats per un determinat usuari."
 msgid "help_search_before_specified_time"
 msgstr "Retorna els membres que no s'han identificat en el temps que heu especificat"
 
+#. Default: "Return items matching some or all of these Categories. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
+#: ./skins/plone_forms/search_form.pt:70
+msgid "help_search_categories"
+msgstr ""
+
 #. Default: "Return items matching this description. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>."
-#: ./skins/plone_forms/search_form.pt:124
+#: ./skins/plone_forms/search_form.pt:119
 msgid "help_search_description"
 msgstr "Retorna els elements coincidents amb una descripció. Podeu realitzar una cerca booleana utilitzant <strong>AND</strong> i <strong>OR</strong>."
 
-#. Default: "Return users with email addresses containing this value."
-#: ./skins/plone_forms/member_search_form.pt:63
+#. Default: "Find users whose email-addresses contain"
+#: ./skins/plone_forms/member_search_form.pt:49
+#, fuzzy
 msgid "help_search_email"
 msgstr "Mostra els membres amb adreces de correu electrònic contenint aquest valor."
 
 #. Default: "Return users with full names containing this value."
-#: ./skins/plone_forms/member_search_form.pt:46
+#: ./skins/plone_forms/member_search_form.pt:64
 msgid "help_search_fullname"
 msgstr ""
 
-#. Default: "Return users in the selected group."
-#: ./skins/plone_forms/member_search_form.pt:123
+#. Default: "Find users in the selected group."
+#: ./skins/plone_forms/member_search_form.pt:84
+#, fuzzy
 msgid "help_search_group"
 msgstr "Retorna els membres dins del grup seleccionat"
 
 #. Default: "Return items of a specific type."
-#: ./skins/plone_forms/search_form.pt:172
+#: ./skins/plone_forms/search_form.pt:163
 msgid "help_search_item_type"
 msgstr "Mostra els elements d'un tipus determinat."
 
@@ -3581,39 +3671,41 @@ msgstr "Mostra els elements corresponents a una o vàries paraules clau. Podeu se
 msgid "help_search_last_logged_in"
 msgstr "Mostra els membres que s'han connectat des d'ahir, la darrera setmana, etc."
 
-#. Default: "Return users with login names containing this value."
-#: ./skins/plone_forms/member_search_form.pt:29
+#. Default: "Find users whose login-names contain"
+#: ./skins/plone_forms/member_search_form.pt:34
+#, fuzzy
 msgid "help_search_name"
 msgstr "Mostra els membres amb un nom d'usuari que contingui aquest valor."
 
 #. Default: "Return items added since you were last logged on, the last week, etc."
-#: ./skins/plone_forms/search_form.pt:142
+#: ./skins/plone_forms/search_form.pt:135
 msgid "help_search_new_items_since"
 msgstr "Mostra els elements creats des d'una determinada data (la darrera connexió, la darrera setmana, ...)"
 
 #. Default: "Search for users."
-#: ./skins/plone_forms/ownership_form.cpt:186
+#: ./skins/plone_forms/ownership_form.cpt:189
 msgid "help_search_new_owner"
 msgstr ""
 
 #. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
-#: ./skins/plone_forms/search_form.pt:251
+#: ./skins/plone_forms/search_form.pt:232
 #, fuzzy
 msgid "help_search_review_status"
 msgstr "Com a revisor podeu cercar elements en funció del seu estat de revisió. Si voleu limitar els resultats als elements en determinats estats, seleccioneu-los de la llista."
 
-#. Default: "Return users with all of the selected roles."
-#: ./skins/plone_forms/member_search_form.pt:144
+#. Default: "Find users with all of the selected roles."
+#: ./skins/plone_forms/member_search_form.pt:105
+#, fuzzy
 msgid "help_search_roles"
 msgstr "Mostra tots els membres amb els rols seleccionats."
 
 #. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
-#: ./skins/plone_forms/search_form.pt:33
+#: ./skins/plone_forms/search_form.pt:38
 msgid "help_search_text"
 msgstr "Per a una cerca de text senzilla introduïu el terme aquí. Podeu realitzar una cerca de múltiples paraules utilitzant <strong>AND</strong> i <strong>OR</strong>. El text en aquest camp es compararà amb els continguts de l'element, títol i descripció."
 
 #. Default: "Return items matching this title."
-#: ./skins/plone_forms/search_form.pt:53
+#: ./skins/plone_forms/search_form.pt:56
 msgid "help_search_title"
 msgstr "Mostra elements amb un títol coincident."
 
@@ -3628,22 +3720,22 @@ msgid "help_selection_criteria_value"
 msgstr "Valors existents."
 
 #. Default: "Your email address."
-#: ./skins/plone_forms/sendto_form.cpt:70
+#: ./skins/plone_forms/sendto_form.cpt:75
 msgid "help_send_from"
 msgstr "La vostra adreça de correu."
 
 #. Default: "The e-mail address to send this link to."
-#: ./skins/plone_forms/sendto_form.cpt:44
+#: ./skins/plone_forms/sendto_form.cpt:51
 msgid "help_send_to_mail"
 msgstr "L'adreça de correu a la que voleu enviar aquest enllaç."
 
 #. Default: "Please enter your e-mail address"
-#: ./skins/plone_templates/contact-info.cpt:66
+#: ./skins/plone_templates/contact-info.cpt:69
 msgid "help_sender_from_address"
 msgstr "Si us plau escriviu, la vostra adreça de correu electrònic"
 
 #. Default: "Please enter your full name"
-#: ./skins/plone_templates/contact-info.cpt:41
+#: ./skins/plone_templates/contact-info.cpt:45
 msgid "help_sender_fullname"
 msgstr "Inseriu el vostre nom complet"
 
@@ -3665,15 +3757,20 @@ msgid "help_setup_visible_ids"
 msgstr "Mostra i permet als usuaris editar el 'nom curt' que forma l'adreça URL del contingut."
 
 #. Default: "Short name is the part that shows up in the URL of the item."
-#: ./skins/plone_forms/folder_rename_form.cpt:63
+#: ./skins/plone_forms/folder_rename_form.cpt:68
 msgid "help_short_name_url"
 msgstr "El nom curt és la part que es mostra en la URL d'un element"
 
 #. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: ./skins/plone_content/folder_edit_form.cpt:47
+#: ./skins/plone_content/folder_edit_form.cpt:50
 #, fuzzy
 msgid "help_shortname"
 msgstr "El nom curt forma part de l'adreça web de l'element. No hauria de contenir espais, majúscules, subratllats o altres caràcters especials."
+
+#. Default: "The content types that should be shown in the site map."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:85
+msgid "help_sitemaptypes"
+msgstr ""
 
 #. Default: "If checked, each user can select a skin from his preferences panel."
 #: ./skins/plone_prefs/prefs_portalskin_form.cpt:70
@@ -3708,12 +3805,12 @@ msgid "help_string_criteria_value"
 msgstr "Un valor de cadena."
 
 #. Default: "Please enter the subject of the message you want to send."
-#: ./skins/plone_templates/contact-info.cpt:98
+#: ./skins/plone_templates/contact-info.cpt:100
 msgid "help_subject"
 msgstr "Si us plau, entreu l'assumpte del missatge que voleu enviar."
 
 #. Default: "Changes all the contained objects if selected."
-#: ./skins/plone_forms/ownership_form.cpt:63
+#: ./skins/plone_forms/ownership_form.cpt:65
 msgid "help_subobjects"
 msgstr "Determina si els canvis s'apliquen a tots els objectes continguts."
 
@@ -3728,7 +3825,7 @@ msgid "help_syndication_frequency"
 msgstr "Controla la freqüència de les actualitzacions. Per exemple, si voleu que es faci una actualització cada dues setmanes, seleccioneu \"setmanal\" a dalt i \"2\" aquí."
 
 #. Default: "Maximum number of items that will be syndicated."
-#: ./skins/plone_forms/synPropertiesForm.cpt:165
+#: ./skins/plone_forms/synPropertiesForm.cpt:160
 msgid "help_syndication_max_items"
 msgstr "Nombre màxim d'elements que es sindicaran."
 
@@ -3738,12 +3835,12 @@ msgid "help_syndication_maxitems"
 msgstr "Nombre màxim d'elements sindicats."
 
 #. Default: "This is the date the updater starts counting from. So if you want to update weekly every Tuesday, make sure this starts on a Tuesday."
-#: ./skins/plone_forms/synPropertiesForm.cpt:140
+#: ./skins/plone_forms/synPropertiesForm.cpt:135
 msgid "help_syndication_update_base"
 msgstr "Data a partir de la qual l'actualitzador comença a comptar. Per tant, si voleu actualitzar setmanalment cada dimarts verifiqueu que aquesta data és un dimarts."
 
 #. Default: "Controls the frequency of the updates. For example, if you want it to update every second week, select \"weekly\" above, and \"2\" here."
-#: ./skins/plone_forms/synPropertiesForm.cpt:112
+#: ./skins/plone_forms/synPropertiesForm.cpt:109
 msgid "help_syndication_update_frequency"
 msgstr "Controla la freqüència de les actualitzacions. Per exemple, si voleu que es faci una actualització cada dues setmanes seleccioneu \"setmanal\" a dalt i \"2\" aquí"
 
@@ -3764,18 +3861,18 @@ msgid "help_url"
 msgstr "Afegiu http:// si voleu enllaçar fora del portal."
 
 #. Default: "Determines if the roles given to users and groups from higher levels are in effect in this context. Use this to block people who have local roles in higher-level folders from accessing this folder."
-#: ./skins/plone_forms/folder_localrole_form.pt:625
+#: ./skins/plone_deprecated/folder_localrole_form.pt:587
 #, fuzzy
 msgid "help_use_acquisition"
 msgstr "Determina si els rols assignats als usuaris i grups de nivells superiors són efectius en aquest context"
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
-#: ./skins/plone_login/join_form.cpt:78
+#: ./skins/plone_login/join_form.cpt:83
 msgid "help_user_name_creation_casesensitive"
 msgstr "Introduïu un nom d'usuari, normalment del tipus <em>jpujol</em>. No utilitzeu espais o caràcters especials. Els noms d'usuari i contrasenya diferencien majúscules i minúscules. Verifiqueu que la tecla de majúscules no estigui activada. Aquest és el nom amb el que us identificareu en el futur."
 
 #. Default: "The workflow states that should be shown in the navigation tree and the site map."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:287
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:132
 msgid "help_wf_states"
 msgstr "Els estats de flux de treball que s'haurien de mostrar en l'arbre de navegació i en el mapa del lloc web."
 
@@ -3786,7 +3883,7 @@ msgid "hide"
 msgstr "oculta"
 
 #. Default: "HTML"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:46
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:41
 msgid "html"
 msgstr "HTML"
 
@@ -3801,27 +3898,32 @@ msgid "iCalendar export"
 msgstr "Exportació iCalendar"
 
 #. Default: "Inherited Role(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:105
+#: ./skins/plone_deprecated/folder_localrole_form.pt:100
 msgid "label_acquired_roles"
 msgstr "Rols heretats"
 
 #. Default: "(inactive)"
-#: ./skins/plone_forms/folder_localrole_form.pt:106
+#: ./skins/plone_deprecated/folder_localrole_form.pt:101
 msgid "label_acquired_roles_inactive"
 msgstr "(inactiu)"
 
 #. Default: "Actions"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:62
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:66
 msgid "label_actions"
 msgstr "Accions"
 
 #. Default: "Actions"
-#: ./skins/plone_templates/global_contentmenu.pt:403
+#: ./skins/plone_deprecated/global_contentmenu.pt:405
 msgid "label_actions_menu"
 msgstr "Accions"
 
+#. Default: "Add"
+#: ./skins/plone_forms/folder_factories.pt:82
+msgid "label_add"
+msgstr ""
+
 #. Default: "Add Comment"
-#: ./skins/plone_forms/discussion_reply_preview.pt:54
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:25
 msgid "label_add_comment"
 msgstr "Afegeix un comentari"
 
@@ -3831,22 +3933,22 @@ msgid "label_add_item"
 msgstr "Seleccioneu un element per a afegir"
 
 #. Default: "Add New Group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:84
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:92
 msgid "label_add_new_group"
 msgstr "Afegeix un grup nou"
 
 #. Default: "Add item"
-#: ./skins/plone_templates/global_contentmenu.pt:97
+#: ./skins/plone_deprecated/global_contentmenu.pt:99
 msgid "label_add_new_item"
 msgstr "Afegeix un nou element"
 
 #. Default: "Add to folder"
-#: ./skins/plone_templates/global_contentmenu.pt:104
+#: ./skins/plone_deprecated/global_contentmenu.pt:106
 msgid "label_add_new_item_in_folder"
 msgstr "Afegeix a la carpeta de dalt"
 
 #. Default: "Add New User"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:80
+#: ./skins/plone_prefs/prefs_users_overview.cpt:87
 msgid "label_add_new_user"
 msgstr "Afegeix un usuari nou"
 
@@ -3856,53 +3958,53 @@ msgid "label_add_restriction_mode"
 msgstr "Mode"
 
 #. Default: "iCal"
-#: ./skins/plone_content/event_view.pt:119
+#: ./skins/plone_content/event_view.pt:170
 #, fuzzy
 msgid "label_add_to_ical"
 msgstr "iCal (Mac OS X)"
 
 #. Default: "vCal"
-#: ./skins/plone_content/event_view.pt:113
+#: ./skins/plone_content/event_view.pt:164
 #, fuzzy
 msgid "label_add_to_vcal"
 msgstr "vCal (Windows, Linux)"
 
 # When only one type can be added
 #. Default: "Add ${type}"
-#: ./skins/plone_templates/global_contentmenu.pt:166
+#: ./skins/plone_deprecated/global_contentmenu.pt:168
 msgid "label_add_type"
 msgstr "Afegeix ${type}"
 
 #. Default: "Add ${type} to folder"
-#: ./skins/plone_templates/global_contentmenu.pt:170
+#: ./skins/plone_deprecated/global_contentmenu.pt:172
 msgid "label_add_type_to_folder"
 msgstr "Afegeix ${type} a la carpeta"
 
 #. Default: "Add user to selected groups"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:69
+#: ./skins/plone_prefs/prefs_user_memberships.pt:77
 msgid "label_add_user_to_group"
 msgstr "Afegeix l'usuari als grups seleccionats"
 
 #. Default: "Add selected groups and users to this group"
-#: ./skins/plone_prefs/prefs_group_members.cpt:280
+#: ./skins/plone_prefs/prefs_group_members.cpt:285
 #, fuzzy
 msgid "label_add_users_to_group"
 msgstr "Afegeix els usuaris seleccionats dins d'aquest grup"
 
 #. Default: "Advanced..."
-#: ./skins/plone_templates/global_contentmenu.pt:60
+#: ./skins/plone_deprecated/global_contentmenu.pt:62
 #, fuzzy
 msgid "label_advanced"
 msgstr "Avançat"
 
 #. Default: "Advanced Search..."
-#: ./skins/plone_templates/global_searchbox.pt:45
+#: ./skins/plone_deprecated/global_searchbox.pt:57
 #, fuzzy
 msgid "label_advanced_search"
 msgstr "Cerca avançada"
 
 #. Default: "Affected content"
-#: ./skins/plone_forms/content_status_history.cpt:79
+#: ./skins/plone_forms/content_status_history.cpt:70
 msgid "label_affected_content"
 msgstr "Contingut afectat"
 
@@ -3927,12 +4029,12 @@ msgid "label_allow_members_to_create_password"
 msgstr "Permetre als membres seleccionar la seva contrasenya inicial"
 
 #. Default: "Anonymous User"
-#: ./skins/plone_forms/discussion_reply_form.cpt:45
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:64
 msgid "label_anonymous_user"
 msgstr "Usuari anònim"
 
 #. Default: "Any Author"
-#: ./skins/plone_forms/search_form.pt:234
+#: ./skins/plone_forms/search_form.pt:217
 msgid "label_any_author"
 msgstr "Qualsevol autor"
 
@@ -3942,59 +4044,59 @@ msgid "label_any_browser"
 msgstr "Visible en qualsevol navegador"
 
 #. Default: "Apply Changes"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:225
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:228
 msgid "label_apply_changes"
 msgstr "Aplica els canvis"
 
 #. Default: "Apply Settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:634
+#: ./skins/plone_deprecated/folder_localrole_form.pt:596
 msgid "label_apply_settings"
 msgstr "Aplica els paràmetres"
 
 #. Default: "Assign Local Role to Selected User(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:344
+#: ./skins/plone_deprecated/folder_localrole_form.pt:326
 msgid "label_assign_local_role_to_users"
 msgstr "Assigna un rol local als usuaris seleccionats"
 
 #. Default: "Assign Local Role to Selected Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:543
+#: ./skins/plone_deprecated/folder_localrole_form.pt:511
 msgid "label_assign_role_to_groups"
 msgstr "Assigna un rol local als grups seleccionats"
 
 #. Default: "Assign Selected Role(s) to Selected User(s)/Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:211
+#: ./skins/plone_deprecated/folder_localrole_form.pt:203
 msgid "label_assign_roles_to_users_groups"
 msgstr "Assigna els rols seleccionats al'usuarI/grup seleccionat"
 
 #. Default: "Author"
-#: ./skins/plone_forms/search_form.pt:222
+#: ./skins/plone_forms/search_form.pt:207
 msgid "label_author"
 msgstr "Autor"
 
 #. Default: "Author's external home page..."
-#: ./skins/plone_content/author.cpt:119
+#: ./skins/plone_content/author.cpt:128
 #, fuzzy
 msgid "label_author_external_home_page"
 msgstr "Pàgina externa de l'autor"
 
 #. Default: "Author's home page in this site..."
-#: ./skins/plone_content/author.cpt:114
+#: ./skins/plone_content/author.cpt:123
 #, fuzzy
 msgid "label_author_internal_home_page"
 msgstr "Pàgina inicial de l'autor dins d'aquest lloc"
 
 #. Default: "Back to Add/Remove Products"
-#: ./skins/plone_prefs/prefs_install_product_readme.pt:24
+#: ./skins/plone_prefs/prefs_install_product_readme.pt:28
 msgid "label_back_to_addremove_products"
 msgstr "Torna a la opció d'Afegeix/Suprimeix productes"
 
 #. Default: "Back to Error Log"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:18
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:22
 msgid "label_back_to_errorlog"
 msgstr "Torna al registre d'errors"
 
 #. Default: "Back to site"
-#: ./skins/plone_content/image_view_fullscreen.pt:45
+#: ./skins/plone_content/image_view_fullscreen.pt:48
 msgid "label_back_to_site"
 msgstr "Torna al lloc"
 
@@ -4004,7 +4106,7 @@ msgid "label_before_specified_time"
 msgstr "No identificat desde el temps especificat"
 
 #. Default: "Biography"
-#: ./skins/plone_prefs/personalize_form.cpt:194
+#: ./skins/plone_prefs/personalize_form.cpt:200
 msgid "label_biography"
 msgstr "Biografia"
 
@@ -4019,8 +4121,8 @@ msgstr "Cos del document"
 msgid "label_boolean_criteria_bool"
 msgstr "Valor"
 
-#. Default: "by ${author} -"
-#: ./skins/plone_content/document_byline.pt:18
+#. Default: "by ${author}"
+#: ./skins/plone_content/folder_listing.pt:122
 #, fuzzy
 msgid "label_by_author"
 msgstr "Per ${author}"
@@ -4031,49 +4133,54 @@ msgid "label_calendar"
 msgstr "Calendari"
 
 #. Default: "Cancel"
-#: ./skins/plone_content/folder_edit_form.cpt:131
+#: ./skins/plone_content/folder_edit_form.cpt:126
 msgid "label_cancel"
 msgstr "Cancel·la"
 
+#. Default: "Categories"
+#: ./skins/plone_forms/search_form.pt:68
+msgid "label_categories"
+msgstr ""
+
 #. Default: "Change Comment"
-#: ./skins/plone_forms/discussion_reply_preview.pt:44
+#: ./skins/plone_forms/discussion_reply_preview.pt:47
 msgid "label_change_comment"
 msgstr "Canvia comentari"
 
 #. Default: "Change content item<br />as default view..."
-#: ./skins/plone_templates/global_contentmenu.pt:269
+#: ./skins/plone_deprecated/global_contentmenu.pt:271
 #, fuzzy
 msgid "label_change_item"
 msgstr "Canvia l'element"
 
 #. Default: "Change user properties."
-#: ./skins/plone_prefs/prefs_user_details.cpt:66
+#: ./skins/plone_prefs/prefs_user_details.cpt:70
 msgid "label_change_member_properties"
 msgstr "Modifica les propietats de l'usuari."
 
 #. Default: "Change ownership"
-#: ./skins/plone_forms/folder_localrole_form.pt:648
+#: ./skins/plone_deprecated/folder_localrole_form.pt:608
 msgid "label_change_ownership"
 msgstr "Canvia la propietat"
 
 #. Default: "Change Password"
-#: ./skins/plone_login/login_password.cpt:100
+#: ./skins/plone_login/login_password.cpt:101
 msgid "label_change_password"
 msgstr "Canvia contrasenya"
 
 #. Default: "Change State"
-#: ./skins/plone_forms/content_status_history.cpt:182
+#: ./skins/plone_forms/content_status_history.cpt:166
 msgid "label_change_status"
 msgstr "Canvia estat"
 
 #. Default: "Choose a content item..."
-#: ./skins/plone_forms/select_default_view.cpt:59
+#: ./skins/plone_forms/select_default_view.cpt:54
 #, fuzzy
 msgid "label_choose_content_item"
 msgstr "Escolliu un element de contingut"
 
 #. Default: "Select a content item<br />as default view..."
-#: ./skins/plone_templates/global_contentmenu.pt:251
+#: ./skins/plone_deprecated/global_contentmenu.pt:253
 #, fuzzy
 msgid "label_choose_item"
 msgstr "Escolliu un element"
@@ -4084,48 +4191,48 @@ msgid "label_choose_language"
 msgstr "Seleccioneu idioma"
 
 #. Default: "Display"
-#: ./skins/plone_templates/global_contentmenu.pt:204
+#: ./skins/plone_deprecated/global_contentmenu.pt:206
 msgid "label_choose_template"
 msgstr "Mostra"
 
 #. Default: "Clear Displayed Entries"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:53
+#: ./skins/plone_prefs/prefs_error_log_form.pt:57
 msgid "label_clear_displayed_entries"
 msgstr "Esborra les entrades mostrades"
 
 #. Default: "click here to retrieve it"
-#: ./skins/plone_login/failsafe_login_form.cpt:114
+#: ./skins/plone_login/failsafe_login_form.cpt:123
 msgid "label_click_here_to_retrieve"
 msgstr "Cliqueu aquí per obtenir-ho"
 
 #. Default: "Click here to get the file"
-#: ./skins/plone_content/file_view.pt:35
+#: ./skins/plone_content/file_view.pt:36
 msgid "label_click_to_get_file"
 msgstr "Feu clic aquí per a descarregar el fitxer"
 
 #. Default: "Click to view full-size image..."
-#: ./skins/plone_content/image_view.pt:37
+#: ./skins/plone_content/image_view.pt:38
 #, fuzzy
 msgid "label_click_to_view_full_image"
 msgstr "Feu clic per veure la imatge en la mida original"
 
 #. Default: "Comment"
-#: ./skins/plone_forms/discussion_reply_form.cpt:146
+#: ./skins/plone_forms/discussion_reply_form.cpt:141
 msgid "label_comment"
 msgstr "Comentari"
 
 #. Default: "Posted by"
-#: ./skins/plone_forms/discussion_reply_form.cpt:42
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:61
 msgid "label_comment_by"
 msgstr "Enviat per"
 
 #. Default: "at"
-#: ./skins/plone_forms/discussion_reply_form.cpt:47
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:66
 msgid "label_commented_at"
 msgstr "en"
 
 #. Default: "Comments"
-#: ./skins/plone_forms/content_status_history.cpt:162
+#: ./skins/plone_forms/content_status_history.cpt:148
 msgid "label_comments"
 msgstr "Comentaris"
 
@@ -4140,9 +4247,19 @@ msgid "label_compare"
 msgstr "Compara"
 
 #. Default: "Confirm password"
-#: ./skins/plone_login/join_form.cpt:167
+#: ./skins/plone_login/join_form.cpt:166
 msgid "label_confirm_password"
 msgstr "Confirmació de contrasenya"
+
+#. Default: "Allow the standard set of addable types"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:116
+msgid "label_constraintypes_allow_standard"
+msgstr ""
+
+#. Default: "Specify manually"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:127
+msgid "label_constraintypes_specify_manually"
+msgstr ""
 
 #. Default: "Contact E-mail"
 #: widget label of StringWidget - description ""
@@ -4160,12 +4277,12 @@ msgid "label_contact_phone"
 msgstr "Telèfon de contacte"
 
 #. Default: "containing"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:49
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:52
 msgid "label_containing"
 msgstr "contenint"
 
 #. Default: "Content editor"
-#: ./skins/plone_prefs/personalize_form.cpt:243
+#: ./skins/plone_prefs/personalize_form.cpt:246
 msgid "label_content_editor"
 msgstr "Editor de continguts"
 
@@ -4181,7 +4298,7 @@ msgid "label_cookie_persistence"
 msgstr "Fes que la galeta d'aparença persisteixi indefinidament"
 
 #. Default: "Copy exceptions to the event log"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:136
+#: ./skins/plone_prefs/prefs_error_log_form.pt:140
 msgid "label_copy_exceptions"
 msgstr "Copia errors al registre d'esdeveniments"
 
@@ -4216,7 +4333,7 @@ msgid "label_css"
 msgstr "CSS vàlid"
 
 #. Default: "(current)"
-#: ./skins/plone_forms/select_default_view.cpt:51
+#: ./skins/plone_forms/select_default_view.cpt:46
 msgid "label_current"
 msgstr "(actual)"
 
@@ -4226,18 +4343,18 @@ msgid "label_current_folder_only"
 msgstr ""
 
 #. Default: "Folder display"
-#: ./skins/plone_templates/global_contentmenu.pt:217
+#: ./skins/plone_deprecated/global_contentmenu.pt:219
 msgid "label_current_folder_views"
 msgstr "Mostra la carpeta"
 
 #. Default: "Item display"
-#: ./skins/plone_templates/global_contentmenu.pt:283
+#: ./skins/plone_deprecated/global_contentmenu.pt:285
 #, fuzzy
 msgid "label_current_item_views"
 msgstr "Mostra l'element"
 
 #. Default: "Current password"
-#: ./skins/plone_prefs/password_form.pt:33
+#: ./skins/plone_prefs/password_form.pt:38
 msgid "label_current_password"
 msgstr "Contrasenya actual"
 
@@ -4274,27 +4391,27 @@ msgid "label_default_skin"
 msgstr "Aparença per defecte"
 
 #. Default: "Delete Portrait"
-#: ./skins/plone_prefs/personalize_form.cpt:411
+#: ./skins/plone_prefs/personalize_form.cpt:403
 msgid "label_delete_portrait"
 msgstr "Suprimeix fotografia"
 
 #. Default: "Delete Selected Role(s) and User(s)/Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:219
+#: ./skins/plone_deprecated/folder_localrole_form.pt:209
 msgid "label_delete_roles_users_groups"
 msgstr "Suprimeix els rols i usuaris/grups seleccionats"
 
 #. Default: "Description"
-#: ./skins/plone_content/folder_edit_form.cpt:103
+#: ./skins/plone_content/folder_edit_form.cpt:102
 msgid "label_description"
 msgstr "Descripció"
 
 #. Default: "Disable Syndication"
-#: ./skins/plone_forms/synPropertiesForm.cpt:28
+#: ./skins/plone_forms/synPropertiesForm.cpt:32
 msgid "label_disable_syndication"
 msgstr "Inhabilita la sindicació"
 
 #. Default: "Display"
-#: ./skins/plone_templates/global_contentmenu.pt:195
+#: ./skins/plone_deprecated/global_contentmenu.pt:197
 msgid "label_disabled_display_menu"
 msgstr "Mostra"
 
@@ -4314,27 +4431,28 @@ msgid "label_discussion_enabled"
 msgstr "Permetre"
 
 #. Default: "Edit"
-#: ./skins/plone_content/author.cpt:53
+#: ./skins/plone_content/author.cpt:62
 msgid "label_edit"
 msgstr "Edita"
 
 #. Default: "Allow editing of Short Names"
-#: ./skins/plone_prefs/personalize_form.cpt:332
+#: ./skins/plone_prefs/personalize_form.cpt:330
 msgid "label_edit_short_names"
 msgstr "Permet l'edició de noms curts"
 
-#. Default: "Effective Date"
-#: ./skins/plone_forms/content_status_history.cpt:110
+#. Default: "Publishing Date"
+#: ./skins/plone_forms/content_status_history.cpt:99
+#, fuzzy
 msgid "label_effective_date"
 msgstr "Data efectiva"
 
 #. Default: "E-mail"
-#: ./skins/plone_forms/member_search_form.pt:60
+#: ./skins/plone_forms/member_search_form.pt:46
 msgid "label_email"
 msgstr "Correu electrònic"
 
 #. Default: "Email Address"
-#: ./skins/plone_forms/folder_localrole_form.pt:401
+#: ./skins/plone_deprecated/folder_localrole_form.pt:379
 msgid "label_email_address"
 msgstr "Adreça de correu electrònic"
 
@@ -4344,12 +4462,12 @@ msgid "label_enable_cookies"
 msgstr "Habiliteu les galetes"
 
 #. Default: "Enable Syndication"
-#: ./skins/plone_forms/synPropertiesForm.cpt:49
+#: ./skins/plone_forms/synPropertiesForm.cpt:51
 msgid "label_enable_syndication"
 msgstr "Habilita la sindicació"
 
 #. Default: "Error"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:27
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:31
 msgid "label_error"
 msgstr "Error"
 
@@ -4364,12 +4482,12 @@ msgid "label_error_time"
 msgstr "Petició feta en"
 
 #. Default: "Error Type"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:210
+#: ./skins/plone_prefs/prefs_install_products_form.pt:217
 msgid "label_error_type"
 msgstr "Tipus d'error"
 
 #. Default: "Error Value"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:212
+#: ./skins/plone_prefs/prefs_install_products_form.pt:219
 msgid "label_error_value"
 msgstr "Valor de l'error"
 
@@ -4385,7 +4503,7 @@ msgid "label_event_attendees"
 msgstr "Assistents"
 
 #. Default: "(${location}, from ${start} to ${end})"
-#: ./skins/plone_content/folder_listing.pt:99
+#: ./skins/plone_content/folder_listing.pt:109
 #, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location} , de ${start} a ${end} )"
@@ -4411,17 +4529,17 @@ msgid "label_event_type"
 msgstr "Tipus d'event"
 
 #. Default: "Exception"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:74
+#: ./skins/plone_prefs/prefs_error_log_form.pt:78
 msgid "label_exception"
 msgstr "Error"
 
 #. Default: "Exception Type"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:47
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:51
 msgid "label_exception_type"
 msgstr "Tipus d'excepció"
 
 #. Default: "Exception Value"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:51
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:55
 msgid "label_exception_value"
 msgstr "Valor d'excepció"
 
@@ -4431,7 +4549,7 @@ msgid "label_exclude_from_nav"
 msgstr "Exclou de la navegació"
 
 #. Default: "Expiration Date"
-#: ./skins/plone_forms/content_status_history.cpt:136
+#: ./skins/plone_forms/content_status_history.cpt:123
 msgid "label_expiration_date"
 msgstr "Data de caducitat"
 
@@ -4446,27 +4564,27 @@ msgid "label_file"
 msgstr "Fitxer"
 
 #. Default: "File type"
-#: ./skins/plone_content/file_view.pt:57
+#: ./skins/plone_content/file_view.pt:58
 msgid "label_file_type"
 msgstr "Tipus de fitxer"
 
 #. Default: "Find a group here"
-#: ./skins/plone_prefs/prefs_group_members.cpt:67
+#: ./skins/plone_prefs/prefs_group_members.cpt:77
 msgid "label_find_group"
 msgstr "Troba un grup aquí"
 
 #. Default: "Format"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:19
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:18
 msgid "label_format"
 msgstr "Format"
 
 #. Default: "Full Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:286
+#: ./skins/plone_deprecated/folder_localrole_form.pt:272
 msgid "label_full_name"
 msgstr "Nom complet"
 
 #. Default: "Full Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:395
+#: ./skins/plone_deprecated/folder_localrole_form.pt:373
 msgid "label_fullname"
 msgstr ""
 
@@ -4476,52 +4594,52 @@ msgid "label_generate_and_email_passwords"
 msgstr "Generar contrasenya inicial per al nou membre i enviar-li per correu electrònic"
 
 #. Default: "Automatically generate tabs"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:49
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:60
 msgid "label_generated_tabs_enable"
 msgstr "Genera pestanyes automàticament"
 
 #. Default: "GNU GPL license"
-#: ./skins/plone_templates/footer.pt:37
+#: ./skins/plone_templates/footer.pt:39
 msgid "label_gnu_gpl_licence"
 msgstr "Llicència GNU GPL"
 
 #. Default: "Group"
-#: ./skins/plone_forms/folder_localrole_form.pt:147
+#: ./skins/plone_deprecated/folder_localrole_form.pt:140
 msgid "label_group"
 msgstr "Grup"
 
 #. Default: "Group Members"
-#: ./skins/plone_prefs/prefs_group_details.pt:27
+#: ./skins/plone_prefs/prefs_group_details.pt:31
 msgid "label_group_members"
 msgstr "Membres del grup"
 
 #. Default: "Group Memberships"
-#: ./skins/plone_prefs/prefs_user_details.cpt:32
+#: ./skins/plone_prefs/prefs_user_details.cpt:35
 msgid "label_group_memberships"
 msgstr "Grups als que pertany"
 
 #. Default: "Group Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:404
+#: ./skins/plone_deprecated/folder_localrole_form.pt:382
 msgid "label_group_name"
 msgstr "Nom del grup"
 
 #. Default: "Group Properties"
-#: ./skins/plone_prefs/prefs_group_details.pt:32
+#: ./skins/plone_prefs/prefs_group_details.pt:36
 msgid "label_group_properties"
 msgstr "Propietats del grup"
 
 #. Default: "Group Search"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:103
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:109
 msgid "label_group_search"
 msgstr ""
 
 #. Default: "Groups"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:33
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:35
 msgid "label_groups"
 msgstr "Grups"
 
 #. Default: "here"
-#: ./skins/plone_forms/folder_localrole_form.pt:655
+#: ./skins/plone_deprecated/folder_localrole_form.pt:615
 msgid "label_here"
 msgstr "aquí"
 
@@ -4536,37 +4654,37 @@ msgid "label_history"
 msgstr "Historial"
 
 #. Default: "Home"
-#: ./skins/plone_content/image_view_fullscreen.pt:50
+#: ./skins/plone_content/image_view_fullscreen.pt:53
 msgid "label_home"
 msgstr "Inici"
 
 #. Default: "Home page"
-#: ./skins/plone_prefs/personalize_form.cpt:219
+#: ./skins/plone_prefs/personalize_form.cpt:224
 msgid "label_homepage"
 msgstr "Pàgina d'inici"
 
 #. Default: "Internet Explorer 4.5 (Mac)"
-#: ./skins/plone_templates/accessibility-info.pt:125
+#: ./skins/plone_templates/accessibility-info.pt:123
 msgid "label_ie4_mac"
 msgstr "Internet Explorer 4.5 (Mac)"
 
 #. Default: "Internet Explorer 4 (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:113
+#: ./skins/plone_templates/accessibility-info.pt:111
 msgid "label_ie4_win"
 msgstr "Internet Explorer 4 (Windows)"
 
 #. Default: "Internet Explorer 5+ (Mac)"
-#: ./skins/plone_templates/accessibility-info.pt:119
+#: ./skins/plone_templates/accessibility-info.pt:117
 msgid "label_ie5_mac"
 msgstr "Internet Explorer 5+ (Mac)"
 
 #. Default: "Internet Explorer 5+ (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:83
+#: ./skins/plone_templates/accessibility-info.pt:81
 msgid "label_ie5_win"
 msgstr "Internet Explorer 5+ (Windows)"
 
 #. Default: "Ignored exception types"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:143
+#: ./skins/plone_prefs/prefs_error_log_form.pt:147
 msgid "label_ignored_exception"
 msgstr "Tipus d'error ignorats"
 
@@ -4581,12 +4699,13 @@ msgid "label_image_caption"
 msgstr "Peu de la imatge"
 
 #. Default: "Preferred types"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:132
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:143
 msgid "label_immediately_addable_types"
 msgstr "Tipus de contingut preferits"
 
-#. Default: "Include folder items"
-#: ./skins/plone_forms/content_status_history.cpt:90
+#. Default: "Include contained items"
+#: ./skins/plone_forms/content_status_history.cpt:86
+#, fuzzy
 msgid "label_include_contained_objects"
 msgstr "Inclou els elements de la carpeta"
 
@@ -4601,7 +4720,7 @@ msgid "label_inherit_criteria"
 msgstr "Hereta criteri"
 
 #. Default: "Install"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:93
+#: ./skins/plone_prefs/prefs_install_products_form.pt:100
 msgid "label_install"
 msgstr "Instal·la"
 
@@ -4611,27 +4730,27 @@ msgid "label_item_count"
 msgstr "Nombre d'elements"
 
 #. Default: "Item: ${contentitem}"
-#: ./skins/plone_templates/global_contentmenu.pt:263
+#: ./skins/plone_deprecated/global_contentmenu.pt:265
 msgid "label_item_selected"
 msgstr "Element: ${contentitem}"
 
 #. Default: "Item type"
-#: ./skins/plone_forms/search_form.pt:170
+#: ./skins/plone_forms/search_form.pt:161
 msgid "label_item_type"
 msgstr "Tipus d'element"
 
 #. Default: "Keywords"
-#: ./skins/plone_forms/search_form.pt:67
+#: widget label of KeywordWidget - description ""
 msgid "label_keywords"
 msgstr "Paraules clau"
 
 #. Default: "Konqueror (Linux)"
-#: ./skins/plone_templates/accessibility-info.pt:107
+#: ./skins/plone_templates/accessibility-info.pt:105
 msgid "label_konqueror_linux"
 msgstr "Konqueror (Linux)"
 
 #. Default: "Language"
-#: ./skins/plone_prefs/personalize_form.cpt:164
+#: ./skins/plone_prefs/personalize_form.cpt:172
 msgid "label_language"
 msgstr "Idioma"
 
@@ -4648,7 +4767,7 @@ msgid "label_limit_number"
 msgstr "Límit dels resultats de cerca"
 
 #. Default: "Listed in searches"
-#: ./skins/plone_prefs/personalize_form.cpt:311
+#: ./skins/plone_prefs/personalize_form.cpt:310
 msgid "label_listed_status"
 msgstr "Estat mostrat a la llista"
 
@@ -4658,32 +4777,32 @@ msgid "label_livesearch_enable"
 msgstr "Activa la cerca en viu"
 
 #. Default: "Local Role(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:108
+#: ./skins/plone_deprecated/folder_localrole_form.pt:103
 msgid "label_local_roles"
 msgstr "Rols locals"
 
 #. Default: "Addable types"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:103
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:187
 msgid "label_locally_allowed_types"
 msgstr "Tipus de contingut afegibles"
 
 #. Default: "Role to assign"
-#: ./skins/plone_forms/folder_localrole_form.pt:323
+#: ./skins/plone_deprecated/folder_localrole_form.pt:307
 msgid "label_localrole_to_assign"
 msgstr "Rol a assignar"
 
 #. Default: "Roles to assign to selected user(s)/group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:187
+#: ./skins/plone_deprecated/folder_localrole_form.pt:180
 msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Rols locals a assignar als usuaris/grups seleccionats"
 
 #. Default: "Location"
-#: ./skins/plone_prefs/personalize_form.cpt:137
+#: ./skins/plone_prefs/personalize_form.cpt:147
 msgid "label_location"
 msgstr "Ubicació:"
 
 #. Default: "Log in"
-#: ./skins/plone_login/failsafe_login_form.cpt:155
+#: ./skins/plone_deprecated/portlet_login.pt:81
 msgid "label_log_in"
 msgstr "Identifica"
 
@@ -4693,47 +4812,47 @@ msgid "label_log_in_here"
 msgstr ""
 
 #. Default: "Continue"
-#: ./skins/plone_login/login_success.pt:60
+#: ./skins/plone_login/login_success.pt:63
 msgid "label_login_continue"
 msgstr "Continúa"
 
 #. Default: "Continue to the ${portal_title} home page"
-#: ./skins/plone_login/login_success.pt:71
+#: ./skins/plone_login/login_success.pt:74
 msgid "label_login_continue_to_home_page"
 msgstr "Continua a la pàgina d'inici ${portal_title}"
 
 #. Default: "Login Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:398
+#: ./skins/plone_deprecated/folder_localrole_form.pt:376
 msgid "label_login_name"
 msgstr "Nom d'usuari"
 
 #. Default: "Log in to add comments"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:34
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:37
 msgid "label_login_to_add_comments"
 msgstr "Identifiqueu-vos per a afegir comentaris"
 
 #. Default: "Log in to send feedback"
-#: ./skins/plone_content/author.cpt:129
+#: ./skins/plone_content/author.cpt:138
 msgid "label_login_to_send_feedback"
 msgstr "Identifiqui's per a enviar comentaris"
 
 #. Default: "Look"
-#: ./skins/plone_prefs/personalize_form.cpt:349
+#: ./skins/plone_prefs/personalize_form.cpt:347
 msgid "label_look"
 msgstr "Aparença"
 
 #. Default: "Send a mail with the password"
-#: ./skins/plone_login/join_form.cpt:203
+#: ./skins/plone_login/join_form.cpt:198
 msgid "label_mail_password"
 msgstr "Envia missatge de correu amb la contrasenya"
 
 #. Default: "Main Language:"
-#: ./skins/plone_content/author.cpt:94
+#: ./skins/plone_content/author.cpt:103
 msgid "label_main_language"
 msgstr "Idioma principal:"
 
 #. Default: "Message"
-#: ./skins/plone_content/author.cpt:180
+#: ./skins/plone_content/author.cpt:188
 msgid "label_message"
 msgstr "Missatge"
 
@@ -4743,12 +4862,12 @@ msgid "label_modification_date"
 msgstr "Data de modificació"
 
 #. Default: "Firefox, Mozilla and Netscape 7+ (Mac OS X)"
-#: ./skins/plone_templates/accessibility-info.pt:95
+#: ./skins/plone_templates/accessibility-info.pt:93
 msgid "label_mozilla_mac"
 msgstr "Firefox, Mozilla i Netscape 7+ (Mac OS X)"
 
 #. Default: "Firefox, Mozilla and Netscape 7+ (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:89
+#: ./skins/plone_templates/accessibility-info.pt:87
 msgid "label_mozilla_win"
 msgstr "Firefox, Mozilla i Netscape 7+ (Windows)"
 
@@ -4758,7 +4877,7 @@ msgid "label_my_user_name_is"
 msgstr "El meu nom d'usuari és"
 
 #. Default: "Name"
-#: ./skins/plone_forms/discussion_reply_form.cpt:90
+#: ./skins/plone_deprecated/folder_localrole_form.pt:95
 msgid "label_name"
 msgstr "Nom curt"
 
@@ -4783,47 +4902,47 @@ msgid "label_navigation_tree_depth"
 msgstr ""
 
 #. Default: "Displayed content types"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:235
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:81
 msgid "label_navigation_types"
 msgstr "Tipus de contingut mostrats"
 
 #. Default: "Filter on workflow state"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:280
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:125
 msgid "label_navtree_wf_enable"
 msgstr "Filtra en l'estat de flux de treball"
 
 #. Default: "Netscape 6 and earlier (All platforms)"
-#: ./skins/plone_templates/accessibility-info.pt:130
+#: ./skins/plone_templates/accessibility-info.pt:128
 msgid "label_netscape6_all"
 msgstr "Netscape 6 i anteriors (Totes les plataformes)"
 
 #. Default: "New items since"
-#: ./skins/plone_forms/search_form.pt:140
+#: ./skins/plone_forms/search_form.pt:133
 msgid "label_new_items_since"
 msgstr "Nous elements des de"
 
 #. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt:35
+#: ./skins/plone_forms/ownership_form.cpt:37
 msgid "label_new_owner"
 msgstr "Nou propietari"
 
 #. Default: "Search for new owner"
-#: ./skins/plone_forms/ownership_form.cpt:177
+#: ./skins/plone_forms/ownership_form.cpt:180
 msgid "label_new_owner_search"
 msgstr ""
 
 #. Default: "New password"
-#: ./skins/plone_login/login_password.cpt:59
+#: ./skins/plone_login/login_password.cpt:64
 msgid "label_new_password"
 msgstr "Nova contrasenya"
 
 #. Default: "New Short Name"
-#: ./skins/plone_forms/folder_rename_form.cpt:58
+#: ./skins/plone_forms/folder_rename_form.cpt:63
 msgid "label_new_short_name"
 msgstr "Nou nom curt"
 
 #. Default: "New Title"
-#: ./skins/plone_forms/folder_rename_form.cpt:94
+#: ./skins/plone_forms/folder_rename_form.cpt:97
 msgid "label_new_title"
 msgstr "Nou títol"
 
@@ -4833,27 +4952,32 @@ msgid "label_news_image"
 msgstr "Imatge"
 
 #. Default: "No change"
-#: ./skins/plone_forms/content_status_history.cpt:215
+#: ./skins/plone_forms/content_status_history.cpt:198
 msgid "label_no_change"
 msgstr ""
 
 #. Default: "No group was specified."
-#: ./skins/plone_prefs/prefs_group_members.cpt:64
+#: ./skins/plone_prefs/prefs_group_members.cpt:74
 msgid "label_no_group_specified"
 msgstr "No heu indicat cap grup."
 
 #. Default: "No Preference Panels available."
-#: ./skins/plone_portlets/portlet_prefs.pt:39
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:48
 msgid "label_no_panels_available"
 msgstr "No hi ha preferències disponibles."
 
+#. Default: "No preference panels available."
+#: ./skins/plone_prefs/plone_control_panel.pt:96
+msgid "label_no_prefs_panels_available"
+msgstr ""
+
 #. Default: "No matching results found."
-#: ./skins/plone_scripts/livesearch_reply.py:77
+#: ./skins/plone_scripts/livesearch_reply.py:81
 msgid "label_no_results_found"
 msgstr ""
 
 #. Default: "Number of exceptions to keep"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:116
+#: ./skins/plone_prefs/prefs_error_log_form.pt:120
 msgid "label_number_exceptions"
 msgstr "Nombre de registres d'error a mantenir"
 
@@ -4868,29 +4992,29 @@ msgid "label_one_step_workflow"
 msgstr "Cicle de publicació d'una sola fase"
 
 #. Default: "or"
-#: ./skins/plone_forms/select_default_view.cpt:58
+#: ./skins/plone_forms/select_default_view.cpt:53
 msgid "label_or"
 msgstr "o"
 
 #. Default: "Basic HTML textarea editor (works in all browsers)"
-#: ./skins/plone_prefs/personalize_form.cpt:264
+#: ./skins/plone_prefs/personalize_form.cpt:265
 #, fuzzy
 msgid "label_ordinary_content_editor"
 msgstr "Editor basat en formularis (disponible a tots els navegadors)"
 
 #. Default: "This product has been upgraded, click here to reinstall. Filesystem version is ${version}"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:160
+#: ./skins/plone_prefs/prefs_install_products_form.pt:167
 #, fuzzy
 msgid "label_outdated_product_reinstall"
 msgstr "Aquest producte no està actualitzat. Feu clic aqui per reinstal·lar-lo."
 
 #. Default: "Password"
-#: ./skins/plone_forms/discussion_reply_form.cpt:104
+#: ./skins/plone_deprecated/portlet_login.pt:60
 msgid "label_password"
 msgstr "Contrasenya"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
-#: ./skins/plone_login/join_form.cpt:209
+#: ./skins/plone_login/join_form.cpt:204
 msgid "label_password_change_mail"
 msgstr ""
 
@@ -4910,17 +5034,17 @@ msgid "label_path_criteria_value"
 msgstr "Carpetes"
 
 #. Default: "Perform Search"
-#: ./skins/plone_forms/folder_localrole_form.pt:426
+#: ./skins/plone_deprecated/folder_localrole_form.pt:402
 msgid "label_perform_search"
 msgstr "Cerca"
 
 #. Default: "Plone<sup>&reg;</sup> CMS - Open Source Content Management System"
-#: ./skins/plone_templates/footer.pt:10
+#: ./skins/plone_templates/footer.pt:13
 msgid "label_plone_cms"
 msgstr "Sistema de gestió de continguts de codi obert Plone<sup>&reg;</sup>"
 
 #. Default: "Plone Foundation"
-#: ./skins/plone_templates/footer.pt:19
+#: ./skins/plone_templates/footer.pt:22
 msgid "label_plone_foundation"
 msgstr "Fundació Plone"
 
@@ -4940,7 +5064,7 @@ msgid "label_portal_from_name"
 msgstr "Nom del remitent dels missatges del portal"
 
 #. Default: "Portal Objects"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:74
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:78
 msgid "label_portal_objects"
 msgstr "Objectes del portal"
 
@@ -4955,23 +5079,23 @@ msgid "label_portal_type_criteria_value"
 msgstr "Valor"
 
 #. Default: "Portlets"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:98
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:102
 msgid "label_portlets"
 msgstr "Portlets"
 
 #. Default: "Portrait"
-#: ./skins/plone_prefs/personalize_form.cpt:375
+#: ./skins/plone_prefs/personalize_form.cpt:371
 msgid "label_portrait"
 msgstr "Fotografia"
 
-#. Default: "Powered by Plone CMS, the Open Source Content Management System"
-#: ./skins/plone_templates/colophon.pt:23
+#. Default: "Powered by Plone"
+#: ./skins/plone_templates/colophon.pt:31
 #, fuzzy
 msgid "label_powered_by_plone"
 msgstr "Fet amb Plone"
 
 #. Default: "Published"
-#: ./skins/plone_templates/events_listing.pt:77
+#: ./skins/plone_templates/events_listing.pt:80
 msgid "label_published"
 msgstr "Publicat"
 
@@ -4981,70 +5105,70 @@ msgid "label_publishing_effective"
 msgstr "efectiu"
 
 #. Default: "Quick search"
-#: ./skins/plone_prefs/prefs_group_members.cpt:186
+#: ./skins/plone_prefs/prefs_group_members.cpt:197
 msgid "label_quick_search"
 msgstr "Cerca ràpida"
 
 #. Default: "Refresh"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:48
+#: ./skins/plone_prefs/prefs_error_log_form.pt:52
 msgid "label_refresh"
 msgstr "Refresca"
 
 #. Default: "Register"
-#: ./skins/plone_login/join_form.cpt:217
+#: ./skins/plone_login/join_form.cpt:212
 msgid "label_register"
 msgstr "Registre"
 
 #. Default: "Related content"
-#: ./skins/plone_content/document_relateditems.pt:13
+#: ./skins/plone_content/document_relateditems.pt:16
 #, fuzzy
 msgid "label_related_items"
 msgstr "Element(s) vinculats"
 
 #. Default: "[${percentage}%]"
-#: ./skins/plone_forms/search.pt:79
+#: ./skins/plone_forms/search.pt:84
 #, fuzzy
 msgid "label_relevance_percentage"
 msgstr "[ ${percentage} %]"
 
 #. Default: "Remember my name."
-#: ./skins/plone_login/failsafe_login_form.cpt:144
+#: ./skins/plone_login/failsafe_login_form.cpt:149
 msgid "label_remember_my_name"
 msgstr "Recorda el meu nom."
 
 #. Default: "Remove"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:89
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:92
 msgid "label_remove"
 msgstr "Suprimeix"
 
 #. Default: "Remove selected groups"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:113
+#: ./skins/plone_prefs/prefs_user_memberships.pt:122
 msgid "label_remove_selected_groups"
 msgstr "Suprimeix els grups seleccionats"
 
 #. Default: "Remove selected groups / users"
-#: ./skins/plone_prefs/prefs_group_members.cpt:171
+#: ./skins/plone_prefs/prefs_group_members.cpt:182
 #, fuzzy
 msgid "label_remove_selected_users"
 msgstr "Suprimeix els usuaris seleccionats"
 
 #. Default: "Rename All"
-#: ./skins/plone_forms/folder_rename_form.cpt:124
+#: ./skins/plone_forms/folder_rename_form.cpt:125
 msgid "label_rename_all"
 msgstr "Canvia el nom a tots"
 
 #. Default: "Reply"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:77
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:80
 msgid "label_reply"
 msgstr "Respon"
 
 #. Default: "Request URL"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:43
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:47
 msgid "label_request_url"
 msgstr "Sol·licita l'URL"
 
 #. Default: "(Required)"
-#: ./skins/plone_content/author.cpt:163
+#: ./skins/plone_content/author.cpt:172
 msgid "label_required"
 msgstr "(Necessari)"
 
@@ -5059,52 +5183,52 @@ msgid "label_rev_later"
 msgstr "Revisions posteriors"
 
 #. Default: "Review status"
-#: ./skins/plone_forms/search_form.pt:249
+#: ./skins/plone_forms/search_form.pt:230
 msgid "label_review_status"
 msgstr "Estat de la revisió"
 
 #. Default: "Role(s)"
-#: ./skins/plone_forms/member_search_form.pt:141
+#: ./skins/plone_forms/member_search_form.pt:102
 msgid "label_roles"
 msgstr "Rols:"
 
 #. Default: "RSS Feed"
-#: ./skins/plone_forms/search.pt:50
+#: ./skins/plone_forms/search.pt:55
 msgid "label_rss_feed"
 msgstr "Sindicació RSS"
 
 #. Default: "Safari and Omniweb (Mac OS X)"
-#: ./skins/plone_templates/accessibility-info.pt:101
+#: ./skins/plone_templates/accessibility-info.pt:99
 msgid "label_safari_mac"
 msgstr "Safari i Omniweb (Mac OS X)"
 
 #. Default: "Save"
-#: ./skins/plone_content/folder_edit_form.cpt:124
+#: ./skins/plone_content/folder_edit_form.cpt:121
 msgid "label_save"
 msgstr "Desa"
 
 #. Default: "Search"
-#: ./skins/plone_forms/member_search_form.pt:170
+#: ./skins/plone_deprecated/global_searchbox.pt:33
 msgid "label_search"
 msgstr "Cerca"
 
 #. Default: "Search by"
-#: ./skins/plone_forms/folder_localrole_form.pt:387
+#: ./skins/plone_deprecated/folder_localrole_form.pt:367
 msgid "label_search_by"
 msgstr "Cerca per"
 
 #. Default: "Show all"
-#: ./skins/plone_prefs/prefs_group_members.cpt:203
+#: ./skins/plone_prefs/prefs_group_members.cpt:210
 msgid "label_search_large"
 msgstr ""
 
 #. Default: "Search Term"
-#: ./skins/plone_forms/folder_localrole_form.pt:412
+#: ./skins/plone_deprecated/folder_localrole_form.pt:390
 msgid "label_search_term"
 msgstr "Terme de cerca"
 
 #. Default: "Search Text"
-#: ./skins/plone_forms/search_form.pt:31
+#: ./skins/plone_forms/search_form.pt:36
 msgid "label_search_text"
 msgstr "Text de cerca"
 
@@ -5112,6 +5236,11 @@ msgstr "Text de cerca"
 #: ./skins/plone_prefs/prefs_search_form.cpt:84
 msgid "label_search_types"
 msgstr "Definiu els tipus que voleu cercar"
+
+#. Default: "only in current section"
+#: ./skins/plone_deprecated/global_searchbox.pt:44
+msgid "label_searchbox_currentfolder_only"
+msgstr ""
 
 #. Default: "Section 508"
 #: ./skins/plone_templates/colophon.pt:40
@@ -5124,28 +5253,28 @@ msgid "label_select"
 msgstr "Selecciona"
 
 #. Default: "Select all items"
-#: ./skins/plone_prefs/prefs_group_members.cpt:104
+#: ./skins/plone_deprecated/old_folder_contents.pt:98
 msgid "label_select_all_items"
 msgstr "Seleccionar tots els elements"
 
 #. Default: "Select a content item..."
-#: ./skins/plone_forms/select_default_view.cpt:68
+#: ./skins/plone_forms/select_default_view.cpt:63
 #, fuzzy
 msgid "label_select_content_item"
 msgstr "Seleccioneu un element de contingut"
 
 #. Default: "select group ${name}"
-#: ./skins/plone_forms/folder_localrole_form.pt:499
+#: ./skins/plone_deprecated/folder_localrole_form.pt:471
 msgid "label_select_group"
 msgstr "selecciona grup ${name}"
 
 #. Default: "Select user ${user}"
-#: ./skins/plone_forms/folder_localrole_form.pt:297
+#: ./skins/plone_deprecated/folder_localrole_form.pt:283
 msgid "label_select_user"
 msgstr "selecciona usuari ${user}"
 
 #. Default: "select user/group ${role}"
-#: ./skins/plone_forms/folder_localrole_form.pt:119
+#: ./skins/plone_deprecated/folder_localrole_form.pt:114
 msgid "label_select_usergroup"
 msgstr "selecciona usuari/grup ${role}"
 
@@ -5155,12 +5284,12 @@ msgid "label_selection_criteria_value"
 msgstr "Valor"
 
 #. Default: "Send"
-#: ./skins/plone_content/author.cpt:200
+#: ./skins/plone_content/author.cpt:206
 msgid "label_send"
 msgstr "Envia"
 
 #. Default: "From"
-#: ./skins/plone_forms/sendto_form.cpt:64
+#: ./skins/plone_forms/sendto_form.cpt:69
 msgid "label_send_from"
 msgstr "De"
 
@@ -5170,17 +5299,17 @@ msgid "label_send_my_password"
 msgstr "Envia la meva contrasenya"
 
 #. Default: "Send to"
-#: ./skins/plone_forms/sendto_form.cpt:38
+#: ./skins/plone_forms/sendto_form.cpt:45
 msgid "label_send_to_mail"
 msgstr "Envia a"
 
 #. Default: "E-Mail"
-#: ./skins/plone_templates/contact-info.cpt:59
+#: ./skins/plone_templates/contact-info.cpt:62
 msgid "label_sender_from_address"
 msgstr "Correu electrònic"
 
 #. Default: "Name"
-#: ./skins/plone_templates/contact-info.cpt:37
+#: ./skins/plone_templates/contact-info.cpt:41
 msgid "label_sender_fullname"
 msgstr "Nom"
 
@@ -5200,42 +5329,47 @@ msgid "label_setup_visible_ids"
 msgstr "Mostrar 'nom curt' en el contingut?"
 
 #. Default: "Short Name"
-#: ./skins/plone_content/folder_edit_form.cpt:45
+#: ./skins/plone_content/folder_edit_form.cpt:48
 msgid "label_short_name"
 msgstr "Nom curt"
 
 #. Default: "Show all..."
-#: ./skins/plone_scripts/livesearch_reply.py:79
+#: ./skins/plone_scripts/livesearch_reply.py:83
 msgid "label_show_all"
 msgstr ""
 
 #. Default: "Show all entries"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:58
+#: ./skins/plone_prefs/prefs_error_log_form.pt:62
 msgid "label_show_all_entries"
 msgstr "Mostra totes les entrades"
 
 #. Default: "Show me"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:30
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:35
 msgid "label_show_me"
 msgstr "Mostra"
 
 #. Default: "Show all"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:122
+#: ./skins/plone_prefs/prefs_users_overview.cpt:127
 msgid "label_showall"
 msgstr "Mostra-ho tot"
 
 #. Default: "Site Administration"
-#: ./skins/plone_templates/accessibility-info.pt:44
+#: ./skins/plone_templates/accessibility-info.pt:48
 msgid "label_site_admin"
 msgstr "Administració del lloc web"
 
+#. Default: "site administration"
+#: ./skins/plone_login/insufficient_privileges.pt:19
+msgid "label_site_administration"
+msgstr ""
+
 #. Default: "Site map"
-#: ./skins/plone_templates/sitemap.pt:14
+#: ./skins/plone_templates/sitemap.pt:17
 msgid "label_site_map"
 msgstr "Mapa del lloc"
 
 #. Default: "Size"
-#: ./skins/plone_content/file_view.pt:42
+#: ./skins/plone_content/file_view.pt:43
 msgid "label_size"
 msgstr "Mida"
 
@@ -5245,7 +5379,7 @@ msgid "label_skin_flexibility"
 msgstr "Permet als usuaris seleccionar l'aparença"
 
 #. Default: "Skins"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:50
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:54
 msgid "label_skins"
 msgstr "Aparences"
 
@@ -5281,13 +5415,13 @@ msgid "label_smtp_userid"
 msgstr "Usuari SMTP"
 
 #. Default: "State:"
-#: ./skins/plone_templates/global_contentmenu.pt:20
+#: ./skins/plone_deprecated/global_contentmenu.pt:22
 #, fuzzy
 msgid "label_state"
 msgstr "Estat"
 
 #. Default: "Status"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:24
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:28
 msgid "label_status"
 msgstr "Estat"
 
@@ -5297,12 +5431,12 @@ msgid "label_string_criteria_value"
 msgstr "Valor"
 
 #. Default: "Subject"
-#: ./skins/plone_content/author.cpt:159
+#: ./skins/plone_content/author.cpt:168
 msgid "label_subject"
 msgstr "Assumpte"
 
 #. Default: "Subobjects"
-#: ./skins/plone_forms/ownership_form.cpt:58
+#: ./skins/plone_forms/ownership_form.cpt:60
 msgid "label_subobjects"
 msgstr "Subobjectes"
 
@@ -5327,7 +5461,7 @@ msgid "label_syndication_frequency"
 msgstr "Freqüència d'actualització"
 
 #. Default: "Maximum Items"
-#: ./skins/plone_forms/synPropertiesForm.cpt:158
+#: ./skins/plone_forms/synPropertiesForm.cpt:153
 msgid "label_syndication_max_items"
 msgstr "Nombre màxim d'elements"
 
@@ -5337,12 +5471,12 @@ msgid "label_syndication_maxitems"
 msgstr "Nombre màxim d'elements sindicats"
 
 #. Default: "Update Base"
-#: ./skins/plone_forms/synPropertiesForm.cpt:138
+#: ./skins/plone_forms/synPropertiesForm.cpt:133
 msgid "label_syndication_update_base"
 msgstr "Base d'actualització"
 
 #. Default: "Update Frequency"
-#: ./skins/plone_forms/synPropertiesForm.cpt:109
+#: ./skins/plone_forms/synPropertiesForm.cpt:106
 msgid "label_syndication_update_frequency"
 msgstr "Freqüència d'actualització"
 
@@ -5357,52 +5491,62 @@ msgid "label_template_mixin"
 msgstr "Visualitza la plantilla"
 
 #. Default: "Time"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:72
+#: ./skins/plone_prefs/prefs_error_log_form.pt:76
 msgid "label_time"
 msgstr "Hora"
 
 #. Default: "Title"
-#: ./skins/plone_content/folder_edit_form.cpt:80
+#: ./skins/plone_content/folder_edit_form.cpt:81
 msgid "label_title"
 msgstr "Títol"
 
+#. Default: "Up to my dashboard"
+#: ./skins/plone_prefs/password_form.pt:21
+msgid "label_to_dashboard"
+msgstr ""
+
 #. Default: "Select All/None"
-#: ./skins/plone_forms/search_form.pt:186
+#: ./skins/plone_forms/search_form.pt:175
 msgid "label_toggle"
 msgstr "Commuta"
 
 #. Default: "Display traceback as text"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:63
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:67
 msgid "label_traceback_as_text"
 msgstr "Mostra el seguiment com a text"
 
 #. Default: "Type"
-#: ./skins/plone_forms/folder_localrole_form.pt:101
+#: ./skins/plone_deprecated/folder_localrole_form.pt:96
 msgid "label_type"
 msgstr "Tipus"
 
+#. Default: "Type restrictions"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:86
+msgid "label_type_restrictions"
+msgstr ""
+
 #. Default: "Types"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:38
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:42
 msgid "label_types"
 msgstr "Tipus"
 
 #. Default: "Undo"
-#: ./skins/plone_forms/undo_form.pt:50
+#: ./skins/plone_forms/undo_form.pt:54
 msgid "label_undo"
 msgstr "Desfés"
 
 #. Default: "Uninstall"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:178
+#: ./skins/plone_prefs/prefs_install_products_form.pt:185
 msgid "label_uninstall"
 msgstr "Desinstal·la"
 
 #. Default: "Up to Groups Overview"
-#: ./skins/plone_prefs/prefs_group_details.pt:83
+#: ./skins/plone_prefs/prefs_group_details.pt:94
 msgid "label_up_to_groups_overview"
 msgstr "Ves a visió general dels grups"
 
 #. Default: "Up to Site Setup"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:15
+#: ./skins/plone_prefs/prefs_error_log_form.pt:19
 msgid "label_up_to_plone_setup"
 msgstr "Ves a configuració del Plone"
 
@@ -5412,7 +5556,7 @@ msgid "label_up_to_preferences"
 msgstr "Ves a les meves preferències"
 
 #. Default: "Up to Users Overview"
-#: ./skins/plone_prefs/prefs_user_details.cpt:59
+#: ./skins/plone_prefs/prefs_user_details.cpt:63
 msgid "label_up_to_usersoverview"
 msgstr "Ves a visió general dels usuaris"
 
@@ -5424,52 +5568,57 @@ msgid "label_url"
 msgstr "URL"
 
 #. Default: "Inherit roles from higher levels"
-#: ./skins/plone_forms/folder_localrole_form.pt:622
+#: ./skins/plone_deprecated/folder_localrole_form.pt:584
 msgid "label_use_acquisition"
 msgstr "Hereta els rols dels nivells superiors"
 
 #. Default: "Use Selected..."
-#: ./skins/plone_prefs/prefs_search_macros.pt:121
+#: ./skins/plone_prefs/prefs_search_macros.pt:120
 msgid "label_use_selected"
 msgstr "Utilitza el seleccionat..."
 
 #. Default: "User"
-#: ./skins/plone_forms/folder_localrole_form.pt:151
+#: ./skins/plone_deprecated/folder_localrole_form.pt:144
 msgid "label_user"
 msgstr "Usuari"
 
 #. Default: "User Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:287
+#: ./skins/plone_deprecated/folder_localrole_form.pt:273
 msgid "label_user_name"
 msgstr "Nom d'usuari"
 
 #. Default: "User Properties"
-#: ./skins/plone_prefs/prefs_user_details.cpt:24
+#: ./skins/plone_prefs/prefs_user_details.cpt:27
 msgid "label_user_properties"
 msgstr "Propietats d'usuari"
 
 #. Default: "User Search"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:104
+#: ./skins/plone_prefs/prefs_users_overview.cpt:112
 msgid "label_user_search"
 msgstr "Cerca usuari"
 
+#. Default: "Settings"
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:40
+msgid "label_usergroup_settings"
+msgstr ""
+
 #. Default: "Username"
-#: ./skins/plone_forms/discussion_reply_form.cpt:92
+#: ./skins/plone_forms/discussion_reply_form.cpt:93
 msgid "label_username"
 msgstr "Nom d'usuari"
 
 #. Default: "Users"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:28
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:30
 msgid "label_users"
 msgstr "Usuaris"
 
 #. Default: "Users and groups"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:36
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:39
 msgid "label_usersandgroups"
 msgstr "Usuaris i grups"
 
 #. Default: "View"
-#: ./skins/plone_content/author.cpt:48
+#: ./skins/plone_content/author.cpt:57
 msgid "label_view"
 msgstr "Visualitza"
 
@@ -5504,7 +5653,7 @@ msgid "label_workflow_default_state"
 msgstr "També podeu modificar l'estat inicial de tots els documents:"
 
 #. Default: "Workflows"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:86
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:90
 msgid "label_workflows"
 msgstr "Fluxes de treball"
 
@@ -5514,53 +5663,53 @@ msgid "label_xhtml"
 msgstr "XHTML vàlid"
 
 #. Default: "Large"
-#: ./skins/plone_templates/accessibility-info.pt:20
+#: ./skins/plone_templates/accessibility-info.pt:24
 msgid "large_text"
 msgstr "Gran"
 
 #. Default: "Last log-in"
-#: ./skins/plone_forms/search_form.pt:155
+#: ./skins/plone_forms/search_form.pt:146
 msgid "last_login"
 msgstr "Darrera connexió"
 
 #. Default: "Account details"
-#: ./skins/plone_login/failsafe_login_form.cpt:60
+#: ./skins/plone_login/failsafe_login_form.cpt:71
 msgid "legend_account_details"
 msgstr "Detalls del compte"
 
 #. Default: "Add comment"
-#: ./skins/plone_forms/discussion_reply_form.cpt:67
+#: ./skins/plone_forms/discussion_reply_form.cpt:68
 msgid "legend_add_comment"
 msgstr "Detalls del comentari"
 
 #. Default: "Address info"
-#: ./skins/plone_forms/sendto_form.cpt:32
+#: ./skins/plone_forms/sendto_form.cpt:39
 msgid "legend_address_info"
 msgstr "Informació de l'adreça"
 
 #. Default: "Assigned Roles for ${folder}"
-#: ./skins/plone_forms/folder_localrole_form.pt:80
+#: ./skins/plone_deprecated/folder_localrole_form.pt:77
 #, fuzzy
 msgid "legend_assigned_roles"
 msgstr "Rols assignats ${folder}"
 
 #. Default: "Available Groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:467
+#: ./skins/plone_deprecated/folder_localrole_form.pt:441
 msgid "legend_available_groups"
 msgstr "Grups disponibles"
 
 #. Default: "Available Users"
-#: ./skins/plone_forms/folder_localrole_form.pt:266
+#: ./skins/plone_deprecated/folder_localrole_form.pt:254
 msgid "legend_available_users"
 msgstr "Membres disponibles"
 
 #. Default: "Change Ownership"
-#: ./skins/plone_forms/ownership_form.cpt:25
+#: ./skins/plone_forms/ownership_form.cpt:26
 msgid "legend_change_ownership"
 msgstr "Canvia propietari"
 
 #. Default: "Addable types options"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:46
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:83
 msgid "legend_constraintypes"
 msgstr "Opcions dels tipus de contingut afegibles"
 
@@ -5570,28 +5719,28 @@ msgid "legend_contenttypes"
 msgstr "Tipus de contingut"
 
 #. Default: "Feedback for author"
-#: ./skins/plone_content/author.cpt:154
+#: ./skins/plone_content/author.cpt:163
 msgid "legend_feedback_for_author"
 msgstr "Comentaris per l'autor"
 
 #. Default: "Feedback details"
-#: ./skins/plone_templates/contact-info.cpt:31
+#: ./skins/plone_templates/contact-info.cpt:35
 #, fuzzy
 msgid "legend_feedback_for_contact_info"
 msgstr "Detalls dels comentaris"
 
 #. Default: "Group"
-#: ./skins/plone_forms/member_search_form.pt:120
+#: ./skins/plone_forms/member_search_form.pt:81
 msgid "legend_group"
 msgstr "Grup"
 
 #. Default: "Products available for install"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:40
+#: ./skins/plone_prefs/prefs_install_products_form.pt:44
 msgid "legend_install_products_available"
 msgstr "Productes disponibles per a instal·lar"
 
 #. Default: "Installed products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:107
+#: ./skins/plone_prefs/prefs_install_products_form.pt:114
 msgid "legend_installed_products"
 msgstr "Productes instal·lats"
 
@@ -5601,22 +5750,22 @@ msgid "legend_items_available"
 msgstr "Elements disponibles"
 
 #. Default: "LiveSearch &#8595;"
-#: ./skins/plone_scripts/livesearch_reply.py:76
+#: ./skins/plone_scripts/livesearch_reply.py:80
 msgid "legend_livesearch"
 msgstr ""
 
 #. Default: "Log details"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:113
+#: ./skins/plone_prefs/prefs_error_log_form.pt:117
 msgid "legend_logdetails"
 msgstr "Detalls del registre"
 
 #. Default: "Exception Log (most recent first)"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:41
+#: ./skins/plone_prefs/prefs_error_log_form.pt:45
 msgid "legend_logexception"
 msgstr "Registre d'errors (els més recents primer)"
 
 #. Default: "No exceptions logged."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:43
+#: ./skins/plone_prefs/prefs_error_log_form.pt:47
 msgid "legend_lognoexceptions"
 msgstr "No s'han registrat errors."
 
@@ -5626,32 +5775,33 @@ msgid "legend_mailhost_details"
 msgstr "Detalls del servidor de correu sortint (SMTP)"
 
 #. Default: "User Details"
-#: ./skins/plone_prefs/prefs_user_details.cpt:86
+#: ./skins/plone_prefs/prefs_user_details.cpt:90
 msgid "legend_member_details"
 msgstr "Detalls del membre"
 
 #. Default: "User Search Criteria"
-#: ./skins/plone_forms/member_search_form.pt:23
+#: ./skins/plone_forms/member_search_form.pt:28
 msgid "legend_member_search_criteria"
 msgstr "Criteri de cerca de membres"
 
 #. Default: "Navigation details"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:34
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:45
 msgid "legend_navigation_details"
 msgstr "Detalls de la navegació"
 
-#. Default: "Note: you are not logged in. You may optionally enter your username and password below. If you don't enter your username and password below, this comment will be posted as the 'Anonymous User'."
-#: ./skins/plone_forms/discussion_reply_form.cpt:81
+#. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
+#: ./skins/plone_forms/discussion_reply_form.cpt:82
+#, fuzzy
 msgid "legend_note_reply_anonymous"
 msgstr "Nota: no us heu identificat. Podeu introduir el vostre nom d'usuari i contrasenya a continuació. Si no ho feu el comentari es tramitarà com a 'Usuari anònim'"
 
 #. Default: "Password Details"
-#: ./skins/plone_login/login_password.cpt:42
+#: ./skins/plone_login/login_password.cpt:47
 msgid "legend_password_details"
 msgstr "Detalls de la contrasenya"
 
 #. Default: "Personal Details"
-#: ./skins/plone_login/join_form.cpt:26
+#: ./skins/plone_login/join_form.cpt:33
 msgid "legend_personal_details"
 msgstr "Informació personal"
 
@@ -5676,17 +5826,17 @@ msgid "legend_search_details"
 msgstr "Detalls de la cerca"
 
 #. Default: "Search for possible new owner"
-#: ./skins/plone_forms/ownership_form.cpt:159
+#: ./skins/plone_forms/ownership_form.cpt:161
 msgid "legend_search_owners"
 msgstr ""
 
 #. Default: "Search Terms"
-#: ./skins/plone_forms/folder_localrole_form.pt:382
+#: ./skins/plone_deprecated/folder_localrole_form.pt:362
 msgid "legend_search_terms"
 msgstr "Termes de cerca"
 
 #. Default: "Advanced Settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:610
+#: ./skins/plone_deprecated/folder_localrole_form.pt:572
 msgid "legend_security_settings"
 msgstr "Paràmetres avançats"
 
@@ -5701,17 +5851,17 @@ msgid "legend_user_details"
 msgstr "Detalls del membre"
 
 #. Default: "The link address is:"
-#: ./skins/plone_content/link_view.pt:30
+#: ./skins/plone_content/link_view.pt:31
 msgid "link_address"
 msgstr "L'adreça de l'enllaç és:"
 
 #. Default: "Group Properties"
-#: ./skins/plone_prefs/prefs_group_details.pt:105
+#: ./skins/plone_prefs/prefs_group_details.pt:116
 msgid "link_group_properties"
 msgstr "Propietats del grup"
 
 #. Default: "Install log"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:149
+#: ./skins/plone_prefs/prefs_install_products_form.pt:156
 msgid "link_install_products_log"
 msgstr "Registre d'instal·lació"
 
@@ -5721,17 +5871,17 @@ msgid "listingheader_action"
 msgstr "Acció"
 
 #. Default: "Action performed"
-#: ./skins/plone_forms/undo_form.pt:51
+#: ./skins/plone_forms/undo_form.pt:55
 msgid "listingheader_action_performed"
 msgstr "Acció realitzada"
 
 #. Default: "Affected Item"
-#: ./skins/plone_forms/undo_form.pt:52
+#: ./skins/plone_forms/undo_form.pt:56
 msgid "listingheader_affected_item"
 msgstr "Element afectat"
 
 #. Default: "Author"
-#: ./skins/plone_content/folder_tabular_view.pt:58
+#: ./skins/plone_content/folder_tabular_view.pt:66
 msgid "listingheader_author"
 msgstr "Autor"
 
@@ -5746,42 +5896,42 @@ msgid "listingheader_date_and_time"
 msgstr "Data i hora"
 
 #. Default: "Description"
-#: ./skins/plone_forms/folder_localrole_form.pt:487
+#: ./skins/plone_deprecated/folder_localrole_form.pt:459
 msgid "listingheader_description"
 msgstr "Descripció"
 
 #. Default: "E-mail Address"
-#: ./skins/plone_prefs/prefs_group_members.cpt:116
+#: ./skins/plone_prefs/prefs_group_members.cpt:127
 msgid "listingheader_email_address"
 msgstr "Adreça de correu"
 
 #. Default: "Group name"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:136
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:138
 msgid "listingheader_group_name"
 msgstr "Nom del grup"
 
 #. Default: "Remove Group"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:86
+#: ./skins/plone_prefs/prefs_user_memberships.pt:93
 msgid "listingheader_group_remove"
 msgstr "Suprimeix grup"
 
 #. Default: "Group/User name"
-#: ./skins/plone_prefs/prefs_group_members.cpt:115
+#: ./skins/plone_prefs/prefs_group_members.cpt:126
 msgid "listingheader_group_user_name"
 msgstr "Nom de grup/usuari"
 
 #. Default: "Modified"
-#: ./skins/plone_content/folder_tabular_view.pt:63
+#: ./skins/plone_content/folder_tabular_view.pt:71
 msgid "listingheader_modified"
 msgstr "Modificat"
 
 #. Default: "Name"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:80
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:79
 msgid "listingheader_name"
 msgstr "Nom"
 
 #. Default: "Order"
-#: ./skins/plone_templates/folder_contents.pt:165
+#: ./skins/plone_deprecated/old_folder_contents.pt:124
 msgid "listingheader_order"
 msgstr "Ordre"
 
@@ -5791,73 +5941,73 @@ msgid "listingheader_performed_by"
 msgstr "Realitzat per"
 
 #. Default: "Remove Group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:147
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:149
 msgid "listingheader_remove_group"
 msgstr "Esborrar grup"
 
 #. Default: "Remove user"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:139
+#: ./skins/plone_prefs/prefs_users_overview.cpt:143
 msgid "listingheader_remove_user"
 msgstr "Suprimeix l'usuari"
 
 #. Default: "Reset Password"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:138
+#: ./skins/plone_prefs/prefs_users_overview.cpt:142
 msgid "listingheader_reset_password"
 msgstr "Reinicia contrasenya"
 
 #. Default: "Roles"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:141
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:143
 msgid "listingheader_roles"
 msgstr "Rols"
 
 #. Default: "Size"
-#: ./skins/plone_templates/folder_contents.pt:155
+#: ./skins/plone_deprecated/old_folder_contents.pt:114
 msgid "listingheader_size"
 msgstr "Mida"
 
 #. Default: "State"
-#: ./skins/plone_templates/folder_contents.pt:161
+#: ./skins/plone_deprecated/old_folder_contents.pt:120
 msgid "listingheader_status"
 msgstr "Estat"
 
 #. Default: "Title"
-#: ./skins/plone_content/folder_tabular_view.pt:55
+#: ./skins/plone_content/folder_tabular_view.pt:63
 msgid "listingheader_title"
 msgstr "Títol"
 
 #. Default: "Type"
-#: ./skins/plone_content/folder_tabular_view.pt:60
+#: ./skins/plone_content/folder_tabular_view.pt:68
 msgid "listingheader_type"
 msgstr "Tipus"
 
 #. Default: "User name"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:134
+#: ./skins/plone_prefs/prefs_users_overview.cpt:138
 msgid "listingheader_user_name"
 msgstr "Nom d'usuari"
 
 #. Default: "<strong>Attention!</strong> You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
-#: ./skins/plone_forms/folder_localrole_form.pt:64
+#: ./skins/plone_deprecated/folder_localrole_form.pt:61
 msgid "local_role_warning_default_page"
 msgstr "<strong>Atenció</strong> Esteu configurant els permisos de compartició per la pàgina per defecte d'aquesta carpeta. Si voleu configurar els permisos per la carpeta, cliqueu ${link}"
 
 #. Default: "here"
-#: ./skins/plone_forms/folder_localrole_form.pt:47
+#: ./skins/plone_deprecated/folder_localrole_form.pt:44
 msgid "local_role_warning_link"
 msgstr "aquí"
 
 #. Default: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
-#: ./skins/plone_forms/folder_localrole_form.pt:46
+#: ./skins/plone_deprecated/folder_localrole_form.pt:43
 #, fuzzy
 msgid "local_role_warning_type"
 msgstr "<strong>Atenció!</strong> Esteu configurant els permisos de compartició per al tipus ${type}. Si el que voleu és configurar els permisos per la carpeta contenidora, cliqueu ${link}."
 
 #. Default: "While cookie authentication is disabled, cookie-based login is not available."
-#: ./skins/plone_login/failsafe_login_form.cpt:47
+#: ./skins/plone_login/failsafe_login_form.cpt:58
 msgid "login_form_disabled"
 msgstr "Mentre l'autenticació per galetes estigui inhabilitada la identificació per galetes no estarà disponible."
 
 #. Default: "Cookie authentication is disabled. Login portlet not available."
-#: ./skins/plone_portlets/portlet_login.pt:128
+#: ./skins/plone_deprecated/portlet_login.pt:123
 #, fuzzy
 msgid "login_portlet_disabled"
 msgstr "Autenticació per galetes inhabilitada. 'Portlet' no disponible."
@@ -5884,7 +6034,7 @@ msgid "mailtemplate_registered_portal_membership_info"
 msgstr "Informació de membre del portal"
 
 #. Default: "A mail has now been sent to the site administrator regarding your questions and/or comments."
-#: ./skins/plone_templates/send_feedback_confirm.cpt:19
+#: ./skins/plone_templates/send_feedback_confirm.cpt:23
 msgid "message_send_feedback_confirm"
 msgstr ""
 
@@ -6014,7 +6164,7 @@ msgid "no"
 msgstr "No"
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
-#: ./skins/plone_content/document_view.pt:28
+#: ./skins/plone_content/document_view.pt:31
 msgid "no_body_text"
 msgstr "Aquest element no conté cap text principal. Feu clic a la pestanya edita per a introduir-lo."
 
@@ -6024,17 +6174,17 @@ msgid "no_comments"
 msgstr "No hi ha comentaris."
 
 #. Default: "(No file has been uploaded yet)"
-#: ./skins/plone_content/file_view.pt:51
+#: ./skins/plone_content/file_view.pt:52
 msgid "no_file_uploaded"
 msgstr "(Encara no s'ha pujat al servidor cap fitxer)"
 
 #. Default: "No groups were found using your search criteria."
-#: ./skins/plone_forms/folder_localrole_form.pt:452
+#: ./skins/plone_deprecated/folder_localrole_form.pt:426
 msgid "no_groups_found"
 msgstr ""
 
 #. Default: "(No image has been uploaded yet)"
-#: ./skins/plone_content/image_view.pt:50
+#: ./skins/plone_content/image_view.pt:51
 msgid "no_image_uploaded"
 msgstr "(Encara no s'ha pujat al servidor cap imatge)"
 
@@ -6045,7 +6195,7 @@ msgid "no_members_found"
 msgstr "No s'ha trobat cap membre que correspongui al <strong>criteri de cerca</strong> introduït"
 
 #. Default: "No events have been posted."
-#: ./skins/plone_templates/events_listing.pt:113
+#: ./skins/plone_templates/events_listing.pt:116
 msgid "no_new_events"
 msgstr "No s'ha enviat cap event."
 
@@ -6054,12 +6204,17 @@ msgstr "No s'ha enviat cap event."
 msgid "no_new_news"
 msgstr "No s'ha publicat cap notícia."
 
+#. Default: "No users were found using your search criteria."
+#: ./skins/plone_deprecated/folder_localrole_form.pt:230
+msgid "no_users_found"
+msgstr ""
+
 #: prefs_user_group_search_form.pt
 msgid "none specified"
 msgstr "no se n'ha especificat cap"
 
 #. Default: "Normal"
-#: ./skins/plone_templates/accessibility-info.pt:24
+#: ./skins/plone_templates/accessibility-info.pt:28
 msgid "normal_text"
 msgstr "Normal"
 
@@ -6069,12 +6224,12 @@ msgid "pending"
 msgstr "pendent"
 
 #. Default: "Plain Text"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:57
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:50
 msgid "plain_text"
 msgstr "Text simple"
 
 #. Default: "Posted by"
-#: ./skins/plone_templates/events_listing.pt:66
+#: ./skins/plone_templates/events_listing.pt:69
 msgid "posted_by"
 msgstr "Enviat per"
 
@@ -6097,13 +6252,13 @@ msgid "published"
 msgstr "publicat"
 
 #. Default: "Read More..."
-#: ./skins/plone_content/folder_summary_view.pt:147
+#: ./skins/plone_content/folder_summary_view.pt:155
 #, fuzzy
 msgid "read_more"
 msgstr "Llegir més"
 
 #. Default: "Cookie authentication has been disabled."
-#: ./skins/plone_login/registered.pt:10
+#: ./skins/plone_login/registered.pt:12
 msgid "registered_disabled"
 msgstr "L'autenticació per galetes ha estat inhabilitada."
 
@@ -6113,17 +6268,17 @@ msgid "reject"
 msgstr "rebutja"
 
 #. Default: "Please log out or exit your browser when you're done."
-#: ./skins/plone_login/failsafe_login_form.cpt:165
+#: ./skins/plone_login/failsafe_login_form.cpt:168
 msgid "remember_to_log_out"
 msgstr "No oblidi desconnectar-se o tancar el navegador un cop hagi finalitzat."
 
 #. Default: "You are not allowed to modify the id of this item."
-#: ./skins/plone_forms/folder_rename_form.cpt:67
+#: ./skins/plone_forms/folder_rename_form.cpt:72
 msgid "rename_item_not_allowed"
 msgstr "No teniu permís per modificar el nom curt d'aquest element."
 
 #. Default: "by ${author}, ${date}"
-#: ./skins/plone_forms/search.pt:86
+#: ./skins/plone_forms/search.pt:91
 msgid "results_by_author"
 msgstr "per ${author}, ${date}"
 
@@ -6134,17 +6289,17 @@ msgid "retract"
 msgstr "retira"
 
 #. Default: "Any Group"
-#: ./skins/plone_forms/member_search_form.pt:128
+#: ./skins/plone_forms/member_search_form.pt:89
 msgid "search_any_group"
 msgstr "Qualsevol grup"
 
 #. Default: "Did you not find what you were looking for? Try the ${advanced_search} for more precise search options."
-#: ./skins/plone_forms/search.pt:33
+#: ./skins/plone_forms/search.pt:38
 msgid "search_results_advanced"
 msgstr "No heu trobat el que buscaveu? Utilitzeu la ${advanced_search} per a cerques més específiques."
 
 #. Default: "Advanced Search"
-#: ./skins/plone_forms/search.pt:34
+#: ./skins/plone_forms/search.pt:39
 msgid "search_results_advanced_link"
 msgstr "cerca avançada"
 
@@ -6161,18 +6316,18 @@ msgid "show"
 msgstr "mostra"
 
 #. Default: "You are receiving this mail because ${fullname} ${from_address} is sending feedback about the site administered by you at ${url}. The message sent was: ${message}"
-#: ./skins/plone_templates/site_feedback_template.pt:12
+#: ./skins/plone_templates/site_feedback_template.pt:13
 #, fuzzy
 msgid "site_feedback_mailtemplate_body"
 msgstr "Heu rebut aquest correu perquè en/na ${fullname} ${from_address} ha enviat comentaris sobre el lloc web plone que administreu a ${url}. El missatge és: ${message}"
 
 #. Default: "Small"
-#: ./skins/plone_templates/accessibility-info.pt:28
+#: ./skins/plone_templates/accessibility-info.pt:32
 msgid "small_text"
 msgstr "Petit"
 
 #. Default: "Structured Text"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:35
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:32
 msgid "structured_text"
 msgstr "Text estructurat"
 
@@ -6182,42 +6337,42 @@ msgid "submit"
 msgstr "envia"
 
 #. Default: "Affected content"
-#: ./skins/plone_forms/content_status_history.cpt:81
+#: ./skins/plone_forms/content_status_history.cpt:72
 msgid "summary_affected_content"
 msgstr "Contingut afectat"
 
 #. Default: "Currently assigned local roles"
-#: ./skins/plone_forms/folder_localrole_form.pt:86
+#: ./skins/plone_deprecated/folder_localrole_form.pt:83
 msgid "summary_assigned_roles"
 msgstr "Rols locals assignats actualment"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: ./skins/plone_content/author.cpt:230
+#: ./skins/plone_content/author.cpt:234
 msgid "summary_author_content_list"
 msgstr "Llista contingut escrit per un autor agrupat per tipus de contingut"
 
 #. Default: "Available groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:473
+#: ./skins/plone_deprecated/folder_localrole_form.pt:447
 msgid "summary_available_groups"
 msgstr "Grups disponibles"
 
 #. Default: "Calendar"
-#: ./skins/plone_portlets/portlet_calendar.pt:38
+#: ./skins/plone_deprecated/portlet_calendar.pt:38
 msgid "summary_calendar"
 msgstr "Calendari"
 
 #. Default: "Content listing"
-#: ./skins/plone_content/folder_tabular_view.pt:50
+#: ./skins/plone_content/folder_tabular_view.pt:58
 msgid "summary_content_listing"
 msgstr "Llistat de contingut"
 
 #. Default: "Event details"
-#: ./skins/plone_content/event_view.pt:30
+#: ./skins/plone_content/event_view.pt:33
 msgid "summary_event_details"
 msgstr "Detalls de l'event"
 
 #. Default: "Exception Log (most recent first)"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:65
+#: ./skins/plone_prefs/prefs_error_log_form.pt:69
 msgid "summary_exception_log"
 msgstr "Registre d'errors (els més recents primer)"
 
@@ -6227,7 +6382,7 @@ msgid "summary_history"
 msgstr "Historial"
 
 #. Default: "Roles to assign"
-#: ./skins/plone_forms/folder_localrole_form.pt:194
+#: ./skins/plone_deprecated/folder_localrole_form.pt:187
 msgid "summary_localroles_to_assign"
 msgstr "Rols a assignar"
 
@@ -6237,22 +6392,22 @@ msgid "summary_review_history"
 msgstr "Historial de revisions"
 
 #. Default: "Select roles for each group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:96
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:102
 msgid "summary_roles_for_groups"
 msgstr "Selecciona rols per a cada grup"
 
 #. Default: "Search results"
-#: ./skins/plone_forms/folder_localrole_form.pt:273
+#: ./skins/plone_deprecated/folder_localrole_form.pt:261
 msgid "summary_search_results"
 msgstr "Resultats obtinguts"
 
 #. Default: "Home"
-#: ./skins/plone_portlets/portlet_navigation.pt:41
+#: ./skins/plone_deprecated/global_pathbar.pt:16
 msgid "tabs_home"
 msgstr "Inici"
 
 #. Default: "This Product is broken"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:83
+#: ./skins/plone_prefs/prefs_install_products_form.pt:90
 msgid "text_broken_product"
 msgstr "Aquest producte no està instal·lat correctament"
 
@@ -6262,17 +6417,17 @@ msgid "text_conforms_to_standards"
 msgstr "Aquest lloc web compleix els següents estàndards:"
 
 #. Default: "Contributors: ${name}"
-#: ./skins/plone_content/document_byline.pt:58
+#: ./skins/plone_deprecated/document_byline.pt:53
 msgid "text_contributors"
 msgstr "Col·laboradors: ${name}"
 
 #. Default: "by ${creator}, last updated: ${date}"
-#: ./skins/plone_templates/recently_modified.pt:50
+#: ./skins/plone_templates/recently_modified.pt:56
 msgid "text_creator_date"
 msgstr "per ${creator}, darrera actualització: ${date}"
 
 #. Default: "The specified log entry was not found. It may have expired."
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:28
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:32
 msgid "text_errlog_notfound"
 msgstr "L'entrada de registre especificada no s'ha trobat. Potser ha expirat."
 
@@ -6292,7 +6447,7 @@ msgid "text_form_resubmit_message"
 msgstr "Ja heu clicat el botó d'enviar. Voleu tornar a enviar el formulari un altre cop?"
 
 #. Default: "Group"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:114
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:113
 msgid "text_group"
 msgstr "Grup"
 
@@ -6352,7 +6507,7 @@ msgid "text_ie6_cookies_step3"
 msgstr "Moveu el botó de desplaçament fins a Mitjà i feu clic a D'acord"
 
 #. Default: "Location: ${location}"
-#: ./skins/plone_content/author.cpt:85
+#: ./skins/plone_content/author.cpt:94
 msgid "text_location"
 msgstr "Ubicació: ${location}"
 
@@ -6411,50 +6566,56 @@ msgstr "Seleccioneu \"galetes\"."
 msgid "text_netscape6_cookies_step4"
 msgstr "Seleccioneu \"Habilita les galetes només per al lloc web original\" o \"Habilita totes les galetes\" i feu clic a \"D'acord\""
 
+#. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the <a href=\"${DYNAMIC_CONTENT}\">Mail control panel</a> to fix this."
+#: ./skins/plone_prefs/plone_control_panel.pt:42
+msgid "text_no_mailhost_configured"
+msgstr ""
+
 #. Default: "No items have been published."
-#: ./skins/plone_templates/recently_published.pt:76
+#: ./skins/plone_templates/recently_published.pt:80
 msgid "text_no_new_items"
 msgstr "No s'ha publicat cap element."
 
 #. Default: "No items have been modified."
-#: ./skins/plone_templates/recently_modified.pt:72
+#: ./skins/plone_templates/recently_modified.pt:78
 msgid "text_no_new_modified_items"
 msgstr "No s'ha modificat cap element"
 
 #. Default: "Warning: PIL is not installed properly, image scaling will not work."
-#: ./skins/plone_prefs/plone_control_panel.pt:65
+#: ./skins/plone_prefs/plone_control_panel.pt:52
 msgid "text_no_pil_installed"
 msgstr ""
 
 #. Default: "Enter a group or user name to search for or click 'Show All'."
-#: ./skins/plone_prefs/prefs_group_members.cpt:269
+#: ./skins/plone_prefs/prefs_group_members.cpt:274
 #, fuzzy
 msgid "text_no_searchstring"
 msgstr "Entreu un grup o nom d'usuari per fer una cerca, o feu clic en 'Mostra-ho tot'"
 
 #. Default: "Enter a group or user name to search for."
-#: ./skins/plone_prefs/prefs_group_members.cpt:266
+#: ./skins/plone_prefs/prefs_group_members.cpt:271
 msgid "text_no_searchstring_large"
 msgstr ""
 
-#. Default: "No user by that name"
-#: ./skins/plone_content/author.cpt:30
+#. Default: "No user by that name."
+#: ./skins/plone_content/author.cpt:36
+#, fuzzy
 msgid "text_no_user_by_name"
 msgstr "No hi ha cap usuari amb aquest nom"
 
 #. Default: "Enter a username to search for"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:213
+#: ./skins/plone_prefs/prefs_users_overview.cpt:218
 #, fuzzy
 msgid "text_no_user_searchstring"
 msgstr "Entreu un nom d'usuari per fer una cerca, o feu clic a 'Mostrar-ho tot'"
 
 #. Default: "Enter a username to search for, or click 'Show All'"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:219
+#: ./skins/plone_prefs/prefs_users_overview.cpt:224
 msgid "text_no_user_searchstring_largesite"
 msgstr ""
 
 #. Default: "No matches"
-#: ./skins/plone_prefs/prefs_group_members.cpt:263
+#: ./skins/plone_prefs/prefs_group_members.cpt:268
 msgid "text_nomatches"
 msgstr "Cap coincidència"
 
@@ -6469,64 +6630,64 @@ msgid "text_opera_cookies_step2"
 msgstr "Feu clic a \"Enable cookies\""
 
 #. Default: "Product Description"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:73
+#: ./skins/plone_prefs/prefs_install_products_form.pt:80
 msgid "text_product_description"
 msgstr "Descripció del producte"
 
 #. Default: "This Product has been removed from the file system."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:168
+#: ./skins/plone_prefs/prefs_install_products_form.pt:175
 #, fuzzy
 msgid "text_product_unavailable"
 msgstr "Aquest producte ha estat eliminat del sistema de fitxers"
 
 #. Default: "Search Site"
-#: ./skins/plone_templates/global_searchbox.pt:15
+#: ./skins/plone_deprecated/global_searchbox.pt:18
 msgid "text_search"
 msgstr "Cerca"
 
 #. Default: "Text size:"
-#: ./skins/plone_templates/accessibility-info.pt:17
+#: ./skins/plone_templates/accessibility-info.pt:21
 msgid "text_size"
 msgstr "Mida del text:"
 
 #. Default: "User"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:112
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:111
 msgid "text_user"
 msgstr "Usuari"
 
 #. Default: "This user does not belong to any group."
-#: ./skins/plone_prefs/prefs_user_memberships.pt:112
+#: ./skins/plone_prefs/prefs_user_memberships.pt:119
 msgid "text_user_not_in_any_group"
 msgstr "Aquest usuari no pertany a cap grup"
 
 #. Default: "Ever"
-#: ./skins/plone_forms/member_search_form.pt:97
+#: ./skins/plone_forms/search_form.pt:153
 msgid "time_ever"
 msgstr "Algun cop"
 
 #. Default: "- expired"
-#: ./skins/plone_content/document_byline.pt:40
+#: ./skins/plone_deprecated/document_byline.pt:43
 #, fuzzy
 msgid "time_expired"
 msgstr "caducat"
 
 #. Default: "Last month"
-#: ./skins/plone_forms/member_search_form.pt:96
+#: ./skins/plone_forms/search_form.pt:152
 msgid "time_last_month"
 msgstr "Darrer mes"
 
 #. Default: "Last week"
-#: ./skins/plone_forms/member_search_form.pt:95
+#: ./skins/plone_forms/search_form.pt:151
 msgid "time_last_week"
 msgstr "Darrera setmana"
 
 #. Default: ":"
-#: ./skins/plone_templates/calendar_macros.pt:151
+#: ./skins/plone_templates/calendar_macros.pt:133
 msgid "time_separator"
 msgstr ":"
 
 #. Default: "Yesterday"
-#: ./skins/plone_forms/member_search_form.pt:94
+#: ./skins/plone_forms/search_form.pt:150
 msgid "time_yesterday"
 msgstr "Ahir"
 
@@ -6536,28 +6697,28 @@ msgid "title"
 msgstr "títol"
 
 #. Default: "Actions for the current content item"
-#: ./skins/plone_templates/global_contentmenu.pt:403
+#: ./skins/plone_deprecated/global_contentmenu.pt:405
 #, fuzzy
 msgid "title_actions_menu"
 msgstr "Accions"
 
 #. Default: "Add new items in the same folder as this item"
-#: ./skins/plone_templates/global_contentmenu.pt:104
+#: ./skins/plone_deprecated/global_contentmenu.pt:106
 msgid "title_add_new_items_inside_folder"
 msgstr "Afegeix nous elements en la mateixa carpeta que està aquest element"
 
 #. Default: "Add new items inside this item"
-#: ./skins/plone_templates/global_contentmenu.pt:97
+#: ./skins/plone_deprecated/global_contentmenu.pt:99
 msgid "title_add_new_items_inside_item"
 msgstr "Afegeix nous elements dins d'aquest element"
 
 #. Default: "Add this item to your iCal calendar"
-#: ./skins/plone_content/event_view.pt:114
+#: ./skins/plone_content/event_view.pt:165
 msgid "title_add_to_ical"
 msgstr "Afegeix aquest element al meu calendari iCal"
 
 #. Default: "Add this item to your vCal calendar"
-#: ./skins/plone_content/event_view.pt:108
+#: ./skins/plone_content/event_view.pt:159
 msgid "title_add_to_vcal"
 msgstr "Afegeix aquest element al meu calendari vCal"
 
@@ -6577,44 +6738,44 @@ msgid "title_built_with_css"
 msgstr "Aquest lloc web Plone ha estat creat amb CSS vàlid"
 
 #. Default: "This Plone site was built using Plone CMS, the Open Source Content Management System. Click for more information."
-#: ./skins/plone_templates/colophon.pt:23
+#: ./skins/plone_templates/colophon.pt:31
 #, fuzzy
 msgid "title_built_with_plone"
 msgstr "Aquest lloc web ha estat desenvolupat amb el gestor de continguts Plone. Feu clic per a obtenir més informació."
 
 #. Default: "Change default page"
-#: ./skins/plone_templates/global_contentmenu.pt:345
+#: ./skins/plone_deprecated/global_contentmenu.pt:347
 msgid "title_change_default_page"
 msgstr "Canvia la pàgina per defecte"
 
 #. Default: "Change the item used as default view in this folder"
-#: ./skins/plone_forms/select_default_view.cpt:68
+#: ./skins/plone_deprecated/global_contentmenu.pt:271
 msgid "title_change_default_view_item"
 msgstr "Canvia l'element que es fa servir com a vista per defecte en aquesta carpeta"
 
 #. Default: "Change the state of this item"
-#: ./skins/plone_templates/global_contentmenu.pt:33
+#: ./skins/plone_deprecated/global_contentmenu.pt:35
 msgid "title_change_state_of_item"
 msgstr "Canvia l'estat d'aquest element"
 
 #. Default: "Select the view mode for this folder, or set a content item as its default view."
-#: ./skins/plone_templates/global_contentmenu.pt:204
+#: ./skins/plone_deprecated/global_contentmenu.pt:206
 #, fuzzy
 msgid "title_choose_default_view"
 msgstr "Escull la vista per defecte"
 
 #. Default: "Configure which content types can be added here"
-#: ./skins/plone_forms/folder_factories.pt:25
+#: ./skins/plone_deprecated/global_contentmenu.pt:138
 msgid "title_configure_addable_content_types"
 msgstr "Configura quins tipus de continguts es poden afegir aquí"
 
 #. Default: "Copyright"
-#: ./skins/plone_templates/footer.pt:13
+#: ./skins/plone_templates/footer.pt:16
 msgid "title_copyright"
 msgstr "Copyright"
 
 #. Default: "Cascading Style Sheets"
-#: ./skins/plone_templates/accessibility-info.pt:152
+#: ./skins/plone_templates/accessibility-info.pt:150
 #, fuzzy
 msgid "title_css"
 msgstr "Aquest portal ha estat realitzat en Plone utilitzant codi CSS vàlid."
@@ -6625,7 +6786,7 @@ msgid "title_frontpage"
 msgstr ""
 
 #. Default: "Large Text"
-#: ./skins/plone_templates/accessibility-info.pt:20
+#: ./skins/plone_templates/accessibility-info.pt:24
 msgid "title_large_text"
 msgstr "Text gran"
 
@@ -6635,52 +6796,52 @@ msgid "title_member_personal_folder"
 msgstr "Elements personals d'en/na ${member}"
 
 #. Default: "Move item down"
-#: ./skins/plone_templates/folder_contents.pt:269
+#: ./skins/plone_deprecated/old_folder_contents.pt:230
 msgid "title_move_item_down"
 msgstr "Mou l'element avall"
 
 #. Default: "Move item up"
-#: ./skins/plone_templates/folder_contents.pt:262
+#: ./skins/plone_deprecated/old_folder_contents.pt:223
 msgid "title_move_item_up"
 msgstr "Mou l'element amunt"
 
 #. Default: "Next month"
-#: ./skins/plone_portlets/portlet_calendar.pt:65
+#: ./skins/plone_deprecated/portlet_calendar.pt:65
 msgid "title_next_month"
 msgstr "Mes següent"
 
 #. Default: "Normal Text"
-#: ./skins/plone_templates/accessibility-info.pt:24
+#: ./skins/plone_templates/accessibility-info.pt:28
 msgid "title_normal_text"
 msgstr "Text normal"
 
 #. Default: "Previous month"
-#: ./skins/plone_portlets/portlet_calendar.pt:43
+#: ./skins/plone_deprecated/portlet_calendar.pt:43
 msgid "title_previous_month"
 msgstr "Mes anterior"
 
 #. Default: "Relevance"
-#: ./skins/plone_forms/search.pt:74
+#: ./skins/plone_forms/search.pt:79
 msgid "title_relevance"
 msgstr "Rellevància"
 
 #. Default: "Delete or rename the index_html item to gain full control over how this folder is displayed."
-#: ./skins/plone_templates/global_contentmenu.pt:195
+#: ./skins/plone_deprecated/global_contentmenu.pt:197
 msgid "title_remove_index_html_for_display_control"
 msgstr "Suprimiu o reanomeneu l'element index_html per a tenir el control total sobre com es mostra aquesta carpeta"
 
 #. Default: "Required"
-#: ./skins/plone_content/author.cpt:163
+#: ./skins/plone_content/author.cpt:172
 msgid "title_required"
 msgstr "Requerit"
 
 #. Default: "RSS feed of these search results"
-#: ./skins/plone_forms/search.pt:50
+#: ./skins/plone_forms/search.pt:55
 msgid "title_rss_feed"
 msgstr "Sindicació RSS d'aquesta cerca"
 
 #. Default: "Search Site"
-#: ./skins/plone_templates/global_searchbox.pt:19
+#: ./skins/plone_deprecated/global_searchbox.pt:22
 msgid "title_search_site"
 msgstr "Cerca en el lloc"
 
@@ -6695,18 +6856,18 @@ msgid "title_section_508"
 msgstr "Declaració de conformitat amb les directrius d'accessibilitat de la Secció 508 del Govern dels Estats Units."
 
 #. Default: "Select an item to be used as default view in this folder"
-#: ./skins/plone_forms/select_default_view.cpt:59
+#: ./skins/plone_deprecated/global_contentmenu.pt:253
 #, fuzzy
 msgid "title_select_default_page"
 msgstr "Selecciona pàgina per defecte"
 
 #. Default: "Send a mail to this user"
-#: ./skins/plone_prefs/prefs_group_members.cpt:156
+#: ./skins/plone_prefs/prefs_group_members.cpt:167
 msgid "title_send_mail_to_user"
 msgstr "Envia un correu electrònic a aquest usuari"
 
 #. Default: "Show all available content types"
-#: ./skins/plone_templates/global_contentmenu.pt:127
+#: ./skins/plone_deprecated/global_contentmenu.pt:129
 msgid "title_show_all_content_types"
 msgstr "Mostra tots els tipus de contingut disponibles"
 
@@ -6716,7 +6877,7 @@ msgid "title_sitemap"
 msgstr ""
 
 #. Default: "Small Text"
-#: ./skins/plone_templates/accessibility-info.pt:28
+#: ./skins/plone_templates/accessibility-info.pt:32
 msgid "title_small_text"
 msgstr "Text petit"
 
@@ -6731,12 +6892,12 @@ msgid "title_valid_xhtml"
 msgstr "Aquest lloc web Plone es XHTML vàlid."
 
 #. Default: "World Wide Web Consortium"
-#: ./skins/plone_templates/accessibility-info.pt:156
+#: ./skins/plone_templates/accessibility-info.pt:154
 msgid "title_w3c"
 msgstr "Consorci del World Wide Web"
 
 #. Default: "Web Content Accessibility Guidelines"
-#: ./skins/plone_templates/accessibility-info.pt:39
+#: ./skins/plone_templates/accessibility-info.pt:43
 msgid "title_wcag"
 msgstr "Declaració de conformitat amb les directrius d'accessibilitat per al contingut web del W3C-WAI."
 
@@ -6746,12 +6907,12 @@ msgid "title_wcag_conformance"
 msgstr "Aquest lloc web Plone està en conformitat amb la Guia d'accessibilitat de contingut web W3C-WAI."
 
 #. Default: "eXtensible Hyper Text Markup Language"
-#: ./skins/plone_templates/accessibility-info.pt:149
+#: ./skins/plone_templates/accessibility-info.pt:147
 msgid "title_xhtml"
 msgstr "Aquest lloc web conté codi XHTML vàlid."
 
 #. Default: "Note that roles listed here apply directly to a user. They do not reflect additional roles users may have due to group memberships."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:62
+#: ./skins/plone_prefs/prefs_users_overview.cpt:69
 msgid "user_role_note"
 msgstr "Tingueu en compte que els rols llistats aquí s'apliquen directament a un usuari. No reflecteixen els rols addicionals que els usuaris puguin haver adquirit per ser membres d'altres grups."
 
@@ -6884,7 +7045,7 @@ msgid "weekday_wed_short"
 msgstr "Dc"
 
 #. Default: "Policy"
-#: ./skins/plone_templates/global_contentmenu.pt:69
+#: ./skins/plone_deprecated/global_contentmenu.pt:71
 msgid "workflow_policy"
 msgstr ""
 
@@ -6894,7 +7055,7 @@ msgid "yes"
 msgstr "Sí"
 
 #. Default: "You are here:"
-#: ./skins/plone_templates/global_pathbar.pt:11
+#: ./skins/plone_deprecated/global_pathbar.pt:14
 msgid "you_are_here"
 msgstr "Esteu aquí:"
 

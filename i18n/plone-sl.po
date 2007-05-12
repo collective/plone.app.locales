@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone-sl\n"
-"POT-Creation-Date: 2007-05-01 18:30+0000\n"
+"POT-Creation-Date: 2007-05-12 16:21+0000\n"
 "PO-Revision-Date: 2007-01-14 15:36+0100\n"
 "Last-Translator: Jadran Prodan <jadran@globalsoft.si>\n"
 "Language-Team: slovenščina <sl@li.org>\n"
@@ -30,20 +30,20 @@ msgstr "${count} prispevkov izrezanih"
 msgid "${count} item(s) renamed."
 msgstr "${count} prispevkov preimenovanih"
 
-#: ./skins/plone_scripts/folder_delete.cpy:49
+#: ./skins/plone_scripts/folder_delete.cpy:59
 msgid "${items} could not be deleted."
 msgstr "${items} prispevkov ni bilo moč zbrisati"
 
 #. Default: "${monthname} ${year}"
-#: ./skins/plone_portlets/portlet_calendar.pt:56
+#: ./skins/plone_deprecated/portlet_calendar.pt:56
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
-#: ./skins/plone_scripts/check_id.py:62
+#: ./skins/plone_scripts/check_id.py:66
 msgid "${name} is not a legal name. The following characters are invalid: ${characters}"
 msgstr "${name} ni korektno ime. Naslednji znaki so neveljavni: ${characters}"
 
-#: ./skins/plone_scripts/check_id.py:70
+#: ./skins/plone_scripts/check_id.py:59
 msgid "${name} is reserved."
 msgstr "${name} je rezervirano"
 
@@ -59,7 +59,7 @@ msgstr "${title} so bili izrezani."
 msgid "${title} has been added to your Favorites."
 msgstr "${title} so bili dodani med priljubljene."
 
-#: ./skins/plone_scripts/object_delete.cpy:23
+#: ./skins/plone_form_scripts/delete_confirmation.cpy:23
 msgid "${title} has been deleted."
 msgstr "${title} so bili zbrisani."
 
@@ -96,7 +96,7 @@ msgid "A folder suitable for holding a very large number of items"
 msgstr "Mapa, ki lahko vsebuje veliko število prispevkov"
 
 #. Default: "A folder which can contain other items."
-#: ./skins/plone_content/folder_edit_form.cpt:27
+#: ./skins/plone_content/folder_edit_form.cpt:30
 msgid "A folder which can contain other items."
 msgstr "Mapa, ki lahko vsebuje ostale prispevke"
 
@@ -310,7 +310,7 @@ msgid "Copy or cut one or more items to paste."
 msgstr "Prosim, kopirajte ali izrezite enega ali več prispevkov, da bi ga prilepili."
 
 #: ./skins/plone_prefs/prefs_group_edit.py:19
-msgid "Could not add group ${name}, perhaps a member or group with this name already exists."
+msgid "Could not add group ${name}, perhaps a user or group with this name already exists."
 msgstr ""
 
 #: ./skins/plone_prefs/prefs_navigation_form_validate.vpy:27
@@ -359,17 +359,13 @@ msgid "Default Page"
 msgstr "Privzeta stran"
 
 #. Default: "Delete"
-#: ./skins/plone_forms/delete_confirmation.cpt:38
+#: ./skins/plone_forms/delete_confirmation_page.cpt:43
 msgid "Delete"
 msgstr "Briši"
 
 #: Metadata which might show up in atct_topic_view
 msgid "Description"
 msgstr ""
-
-#: plone.org tab
-msgid "Development"
-msgstr "Razvoj"
 
 #: ./skins/plone_scripts/folder_paste.cpy:28
 msgid "Disallowed to paste item(s)."
@@ -389,10 +385,6 @@ msgstr "Prispevki k debati so dokumenti, ki odgovarjajo na neko drugo vsebino. N
 msgid "Document changes saved."
 msgstr "Spremembe dokumenta shranjene."
 
-#: plone.org tab
-msgid "Documentation"
-msgstr "Dokumentacija"
-
 #: ./skins/plone_form_scripts/plone_change_password.py:20
 msgid "Does not match current password."
 msgstr "Ni usklajen s trenutnim geslom."
@@ -405,7 +397,9 @@ msgid "Download"
 msgstr "Naloži"
 
 #. Default: "Edit"
-#: ./PloneFolder.py:80
+#: type action defined on Page
+#: type action defined on Event
+#: type action defined on Favorite
 msgid "Edit"
 msgstr "Uredi"
 
@@ -435,6 +429,11 @@ msgstr "Končni datum"
 msgid "Entries cleared"
 msgstr "Vnosi brisani"
 
+#. Default: "Error"
+#: ./skins/plone_content/author.cpt:33
+msgid "Error"
+msgstr ""
+
 #. Default: "Error Log"
 #: action_icon id error_log_icon.gif - category controlpanel
 msgid "Error Log"
@@ -453,11 +452,6 @@ msgstr "Dogodek"
 #: ./skins/plone_form_scripts/event_edit.cpy:59
 msgid "Event changes saved."
 msgstr "Spremembe dogodka shranjene."
-
-# portal-tab
-# portal-tab
-msgid "Events"
-msgstr "Dogodki"
 
 #. Default: "Expiration Date"
 #: index friendly name of index expires
@@ -514,18 +508,16 @@ msgid "Flip vertical"
 msgstr "Prezrcali čez navpično os"
 
 #. Default: "Folder"
-#: ./skins/plone_content/folder_edit_form.cpt:18
+#: ./skins/plone_content/folder_edit_form.cpt:21
 msgid "Folder"
 msgstr "Mapa"
 
 #. Default: "Folder Listing"
-#: ./PloneFolder.py:87
+#: type action defined on Folder
+#: type action defined on Large Folder
+#: type action defined on Smart Folder
 msgid "Folder Listing"
 msgstr "Vsebina mape"
-
-#: ./PloneFolder.py:337
-msgid "Folder added."
-msgstr "Mapa dodana"
 
 #: ./skins/plone_form_scripts/folder_edit.cpy:27
 msgid "Folder changes saved."
@@ -581,6 +573,11 @@ msgstr "Slika"
 msgid "Image changes saved."
 msgstr "Spremembe slike shranjene."
 
+#. Default: "Info"
+#: ./skins/plone_forms/discussion_reply_form.cpt:79
+msgid "Info"
+msgstr ""
+
 #. Default: "Information about an upcoming event, which can be displayed in the calendar."
 #: portal type description of type with title Event
 msgid "Information about an upcoming event, which can be displayed in the calendar."
@@ -615,11 +612,15 @@ msgstr "Tip prispevka"
 msgid "Item Type (internal)"
 msgstr "Tip prispevka (interni)"
 
-#: ./skins/plone_scripts/folder_position.cpy:33
+#: ./skins/plone_form_scripts/content_status_modify.cpy:80
+msgid "Item state changed."
+msgstr ""
+
+#: ./skins/plone_scripts/folder_position.cpy:31
 msgid "Item's position has changed."
 msgstr "Lega prispevka spremenjena."
 
-#: ./skins/plone_scripts/folder_delete.cpy:44
+#: ./skins/plone_scripts/folder_delete.cpy:54
 msgid "Item(s) deleted."
 msgstr "Prispevki brisani."
 
@@ -648,7 +649,7 @@ msgstr "Urejevalnik besedil Kupu"
 msgid "Language Settings"
 msgstr "Nastavitve jezika"
 
-#: ./skins/plone_scripts/availableLanguages.py:160
+#: ./Portal.py:135
 msgid "Language neutral (site default)"
 msgstr "Neodvisno od jezika (privzeto za celo spletišče)"
 
@@ -678,15 +679,15 @@ msgid "List of values"
 msgstr "Seznam vrednosti"
 
 #. Default: "Local Roles"
-#: ./PloneFolder.py:73
+#: type action defined on TempFolder
 msgid "Local Roles"
 msgstr "Lokalne vloge"
 
-#: ./skins/plone_form_scripts/folder_localrole_add.py:20
+#: ./skins/plone_deprecated/folder_localrole_add.py:20
 msgid "Local roles changed."
 msgstr "Lokalne vloge spremenjene."
 
-#: ./skins/plone_form_scripts/folder_localrole_delete.py:73
+#: ./skins/plone_deprecated/folder_localrole_delete.py:73
 msgid "Local roles deleted."
 msgstr "Lokalne vloge spremenjene."
 
@@ -711,9 +712,13 @@ msgstr "Prijava"
 msgid "Log out"
 msgstr "Odjava"
 
-#: ./skins/plone_login/logged_in.cpy:22
+#: ./skins/plone_login/login_next.cpy:28
 msgid "Login failed"
 msgstr "Prijava ni uspela"
+
+#: ./skins/plone_login/logged_in.cpy:22
+msgid "Login failed. Both login name and password is case sensitive, check that caps lock is not enabled."
+msgstr ""
 
 #: ./skins/plone_login/login_form_validate.vpy:44
 msgid "Login name not found."
@@ -749,14 +754,6 @@ msgstr "Označi kot vidno"
 msgid "Manage members"
 msgstr "Upravljaj s člani"
 
-#. not sure if this is actually used
-msgid "Manager"
-msgstr "Skrbnik"
-
-#. not sure if this is actually used
-msgid "Member"
-msgstr "Član"
-
 #. Default: "Member Preferences"
 #: controlpanel category-id Member
 msgid "Member Preferences"
@@ -785,11 +782,6 @@ msgstr "Član zahteva objavo"
 msgid "Member retracts submission"
 msgstr "Član umika željo za objavo"
 
-# portal-tab
-# portal-tab
-msgid "Members"
-msgstr "Člani"
-
 #. Default: "Modification Date"
 #: index friendly name of index Date
 #: index friendly name of index modified
@@ -807,7 +799,7 @@ msgstr "Moja mapa"
 msgid "Navigation Settings"
 msgstr "Nastavitve navigacije"
 
-#: ./skins/plone_prefs/prefs_navigation_set.cpy:42
+#: ./skins/plone_prefs/prefs_navigation_set.cpy:36
 msgid "Navigation settings updated."
 msgstr "Nastavitve navigacije osvežene"
 
@@ -824,11 +816,6 @@ msgstr "Potrebujem identifikacijo izvorne vsebine"
 #: type action defined on Smart Folder
 msgid "New..."
 msgstr "Nov..."
-
-# portal-tab
-# portal-tab
-msgid "News"
-msgstr "Novice"
 
 #. Default: "News Item"
 #: portal type title of type with description An announcement that will show up on the news portlet and in the news listing.
@@ -863,10 +850,6 @@ msgstr "En ali več izmed izbranih prispevkov ni več na voljo."
 #: index friendly name of index getObjPositionInParent
 msgid "Order in folder"
 msgstr "Urejenost v mapi"
-
-#. not sure if this is actually used
-msgid "Owner"
-msgstr "Lastnik"
 
 #: ./skins/plone_form_scripts/change_ownership.cpy:23
 msgid "Ownership has been changed."
@@ -964,7 +947,7 @@ msgstr "Prosim vnesite predmet."
 msgid "Please enter a valid date and time."
 msgstr "Prosim vnesite veljaven datum in čas."
 
-#: ./skins/plone_login/register.cpy:56
+#: ./skins/plone_login/register.cpy:53
 msgid "Please enter a valid email address."
 msgstr "Prosim vnesite veljaven poštni naslov."
 
@@ -996,7 +979,7 @@ msgstr "Prosim izberite eno ali več prispevkov za kopiranje."
 msgid "Please select one or more items to cut."
 msgstr "Prosim izberite eno ali več prispevkov za izrez."
 
-#: ./skins/plone_scripts/folder_delete.cpy:27
+#: ./skins/plone_scripts/folder_delete.cpy:28
 msgid "Please select one or more items to delete."
 msgstr "Prosim izberite eno ali več prispevkov za brisanje."
 
@@ -1029,10 +1012,6 @@ msgstr "Prilagoditve programa Plone"
 #: portal type title of type with description The portal_type for the root object in a Plone system.
 msgid "Plone Site"
 msgstr "Plonovo spletišče"
-
-#: ./PloneFolder.py:56
-msgid "Plone folders can define custom 'view' actions, or will behave like directory listings without one defined."
-msgstr "Plonovi mapam lahko določite aktivnosti ob vpogledih, sicer pa se obnašajo kot običaje mape"
 
 #. Default: "Portal Settings"
 #: action_icon id logoIcon.gif - category controlpanel
@@ -1091,12 +1070,14 @@ msgid "Public Draft"
 msgstr "Javni osnutek"
 
 #. Default: "Publish"
-#: ./PloneWorkflow.py:58
+#: workflow action defined in folder_workflow - title Reviewer publishes content new state published
+#: workflow action defined in plone_workflow - title Reviewer publishes content new state published
 msgid "Publish"
 msgstr "Objavi"
 
 #. Default: "Published"
-#: ./PloneWorkflow.py:50
+#: workflow state defined in folder_workflow - id published
+#: workflow state defined in plone_workflow - id published
 msgid "Published"
 msgstr "Objavljeno"
 
@@ -1144,7 +1125,7 @@ msgstr "Preimenuj"
 msgid "Rename items"
 msgstr "Preimenuj prispevke"
 
-#: ./skins/plone_scripts/deleteDiscussion.py:29
+#: ./skins/plone_scripts/deleteDiscussion.py:27
 msgid "Reply deleted."
 msgstr "Odgovor zbrisan"
 
@@ -1159,10 +1140,6 @@ msgstr "Omeji na trenutnega uporabnika"
 msgid "Retract"
 msgstr "Umakni"
 
-#. not sure if this is actually used
-msgid "Reviewer"
-msgstr "Recenzent"
-
 #. Default: "Reviewer publishes content"
 #: workflow transition defined in folder_workflow - id publish new state published
 #: workflow transition defined in plone_workflow - id publish new state published
@@ -1174,11 +1151,11 @@ msgstr "Recenzent objavi vsebino"
 msgid "Reviewer rejects submission"
 msgstr "Recenzent zavrne objavo"
 
-#: ./skins/plone_form_scripts/folder_localrole_set.py:14
+#: ./skins/plone_deprecated/folder_localrole_set.py:14
 msgid "Role Acquisition is now turned off."
 msgstr "Uporaba vlog je izklopljena"
 
-#: ./skins/plone_form_scripts/folder_localrole_set.py:12
+#: ./skins/plone_deprecated/folder_localrole_set.py:12
 msgid "Role Acquisition is now turned on."
 msgstr "Uporaba vlog je vklopljena"
 
@@ -1482,7 +1459,7 @@ msgstr "Čas in datum, ko je bil prispevek ustvarjen"
 msgid "The time and date an item was last modified"
 msgstr "Čas in datum, ko je bil prispevek zadnjič spremenjen"
 
-#: ./skins/plone_scripts/check_id.py:118
+#: ./skins/plone_scripts/check_id.py:122
 msgid "There is already an item named ${name} in this folder."
 msgstr "Prispevek z imenom ${name} v tej mapi že obstaja."
 
@@ -1561,7 +1538,7 @@ msgstr "Osveženo"
 msgid "Use folders to put content in categories."
 msgstr "Uporabite mape, da shranite vsebine v kategorije."
 
-#: ./skins/plone_login/register.cpy:62
+#: ./skins/plone_login/register.cpy:59
 msgid "User added."
 msgstr "Dodan uporabnik"
 
@@ -1571,7 +1548,9 @@ msgid "Users and Groups Administration"
 msgstr "Upravljanje z uporabniki in skupinami"
 
 #. Default: "View"
-#: ./PloneFolder.py:66
+#: type action defined on Discussion Item
+#: type action defined on Page
+#: type action defined on Event
 msgid "View"
 msgstr "Pogled"
 
@@ -1579,7 +1558,12 @@ msgstr "Pogled"
 msgid "View changed."
 msgstr "Vpogled je spremenjen."
 
-#: ./skins/plone_login/register.cpy:51
+#. Default: "Warning"
+#: ./skins/plone_prefs/plone_control_panel.pt:35
+msgid "Warning"
+msgstr ""
+
+#: ./skins/plone_login/register.cpy:48
 msgid "We were unable to send your password to your email address: ${address}"
 msgstr "Nismo vam mogli poslati vašega gesla na poštni naslov ${address}"
 
@@ -1598,6 +1582,10 @@ msgstr "Da"
 #: ./skins/plone_form_scripts/sendto.cpy:25
 msgid "You are not allowed to send this link."
 msgstr "Nimate dovoljenja, da pošljete to povezavo."
+
+#: ./skins/plone_form_scripts/validate_folder_constraintypes.vpy:21
+msgid "You cannot have a type as secondary type withot having it allowed. You have selected ${types}."
+msgstr ""
 
 #: ./skins/plone_form_scripts/validate_folder_constraintypes.vpy:19
 msgid "You cannot select a preferred type that is not also in the list of addable types. You have selected ${types}."
@@ -1627,7 +1615,7 @@ msgstr "Izbrati morate akcijo v zvezi z objavo."
 msgid "You must select content to change."
 msgstr "Izbrati morate vsebino za spremembo."
 
-#: ./skins/plone_scripts/rejectAnonymous.py:16
+#: ./skins/plone_deprecated/rejectAnonymous.py:19
 msgid "You must sign in first."
 msgstr "Najprej se morate prijaviti."
 
@@ -1657,52 +1645,52 @@ msgid "Zope Management Interface"
 msgstr "Vmesnik za upravljanje programa Zope"
 
 #. Default: "<code>0</code> - Access Key details"
-#: ./skins/plone_templates/accessibility-info.pt:77
+#: ./skins/plone_templates/accessibility-info.pt:75
 msgid "accesskey_accesskey_details"
 msgstr "<code>0</code> - podrobnosti tipke za dostop"
 
 #. Default: "<code>5</code> - Advanced Search"
-#: ./skins/plone_templates/accessibility-info.pt:74
+#: ./skins/plone_templates/accessibility-info.pt:72
 msgid "accesskey_advanced_search"
 msgstr "<code>5</code> Napredno Iskanje"
 
 #. Default: "<code>9</code> - Contact information"
-#: ./skins/plone_templates/accessibility-info.pt:76
+#: ./skins/plone_templates/accessibility-info.pt:74
 msgid "accesskey_contact"
 msgstr "<code>9</code> - Informacija o stiku"
 
 #. Default: "<code>1</code> - Home Page"
-#: ./skins/plone_templates/accessibility-info.pt:70
+#: ./skins/plone_templates/accessibility-info.pt:68
 msgid "accesskey_home_page"
 msgstr "<code>1</code> - Domača stran"
 
 #. Default: "<code>6</code> - Site navigation tree"
-#: ./skins/plone_templates/accessibility-info.pt:75
+#: ./skins/plone_templates/accessibility-info.pt:73
 msgid "accesskey_navigation"
 msgstr "<code>6</code> - Drevo navigacije po spletu"
 
 #. Default: "<code>4</code> - Search field focus"
-#: ./skins/plone_templates/accessibility-info.pt:73
+#: ./skins/plone_templates/accessibility-info.pt:71
 msgid "accesskey_search_field"
 msgstr "<code>4</code> - Polje iskanja"
 
 #. Default: "<code>3</code> - Site Map"
-#: ./skins/plone_templates/accessibility-info.pt:72
+#: ./skins/plone_templates/accessibility-info.pt:70
 msgid "accesskey_sitemap"
 msgstr "<code>3</code> - Načrt spletišča"
 
 #. Default: "<code>2</code> - Skip to content"
-#: ./skins/plone_templates/accessibility-info.pt:71
+#: ./skins/plone_templates/accessibility-info.pt:69
 msgid "accesskey_skip_to_content"
 msgstr "<code>2</code> - Preskoči na vsebino"
 
 #. Default: "Do you really want to delete this item?"
-#: ./skins/plone_forms/delete_confirmation.cpt:19
+#: ./skins/plone_forms/delete_confirmation_page.cpt:23
 msgid "alert_really_delete"
 msgstr "Ali zares želite zbrisati ta prispevek?"
 
 #. Default: "Do you really want to delete this folder and all its contents?"
-#: ./skins/plone_forms/delete_confirmation.cpt:14
+#: ./skins/plone_forms/delete_confirmation_page.cpt:17
 msgid "alert_really_delete_folder"
 msgstr "Ali res želite zbrisati to mapo in njeno vsebino?"
 
@@ -1712,32 +1700,32 @@ msgid "author_feedback_mailtemplate_body"
 msgstr "To pošto ste dobili od ${from_address}, ki vam pošilja odziv na vsebino strani na naslovu ${url}. Poslano sporočilo se glasi: ${message}"
 
 #. Default: "Back to Add/Remove Products"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:16
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:20
 msgid "back_to_addremove_products"
 msgstr "Nazaj na Dodaj/Odstrani proizvode"
 
 #. Default: "Next ${number} items"
-#: ./skins/plone_templates/batch_macros.pt:45
+#: ./skins/plone_templates/batch_macros.pt:47
 msgid "batch_next_x_items"
 msgstr "Naslednjih ${number} prispevkov"
 
 #. Default: "Previous ${number} items"
-#: ./skins/plone_templates/batch_macros.pt:32
+#: ./skins/plone_templates/batch_macros.pt:34
 msgid "batch_previous_x_items"
 msgstr "Prejšnjih ${number} prispevkov"
 
 #. Default: "${number} items matching your criteria."
-#: ./skins/plone_forms/member_search_results.pt:21
+#: ./skins/plone_forms/member_search_results.pt:26
 msgid "batch_x_items_matching_your_criteria"
 msgstr "${number} prispevkov, ki ustrezajo kriteriju"
 
 #. Default: "Comment Preview"
-#: ./skins/plone_forms/discussion_reply_preview.pt:22
+#: ./skins/plone_forms/discussion_reply_preview.pt:25
 msgid "box_comment_preview"
 msgstr "Pregled komentarjev"
 
 #. Default: "Upcoming Events"
-#: ./skins/plone_portlets/portlet_events.pt:16
+#: ./skins/plone_deprecated/portlet_events.pt:16
 msgid "box_events"
 msgstr "Bližnji dogodki"
 
@@ -1747,17 +1735,17 @@ msgid "box_external_links"
 msgstr "Zunanje povezave"
 
 #. Default: "Forgot your password?"
-#: ./skins/plone_portlets/portlet_login.pt:99
+#: ./skins/plone_deprecated/portlet_login.pt:97
 msgid "box_forgot_password_option"
 msgstr "Ali ste pozabili geslo?"
 
 #. Default: "Full review list..."
-#: ./skins/plone_portlets/portlet_review.pt:41
+#: ./skins/plone_deprecated/portlet_review.pt:48
 msgid "box_full_review_list"
 msgstr "Seznam celotnih pregledov..."
 
 #. Default: "last modified"
-#: ./skins/plone_content/document_byline.pt:32
+#: ./skins/plone_content/folder_listing.pt:135
 msgid "box_last_modified"
 msgstr "Zadnja sprememba"
 
@@ -1767,12 +1755,12 @@ msgid "box_local_resources"
 msgstr "Lokalni viri"
 
 #. Default: "More news..."
-#: ./skins/plone_portlets/portlet_news.pt:47
+#: ./skins/plone_deprecated/portlet_news.pt:47
 msgid "box_more_news_link"
 msgstr "Več novic..."
 
 #. Default: "All recent changes..."
-#: ./skins/plone_portlets/portlet_recent.pt:52
+#: ./skins/plone_deprecated/portlet_recent.pt:58
 msgid "box_more_recently_changed"
 msgstr "Vse zadnje spremembe..."
 
@@ -1787,32 +1775,32 @@ msgid "box_my_favorites"
 msgstr "Priljubljene"
 
 #. Default: "Navigation"
-#: ./skins/plone_portlets/portlet_navigation.pt:15
+#: ./skins/plone_deprecated/portlet_navigation.pt:15
 msgid "box_navigation"
 msgstr "Navigacija"
 
 #. Default: "New user?"
-#: ./skins/plone_portlets/portlet_login.pt:108
+#: ./skins/plone_deprecated/portlet_login.pt:106
 msgid "box_new_user_option"
 msgstr "Nov uporabnik?"
 
 #. Default: "News"
-#: ./skins/plone_portlets/portlet_news.pt:15
+#: ./skins/plone_deprecated/portlet_news.pt:15
 msgid "box_news"
 msgstr "Novice"
 
 #. Default: "Previous events..."
-#: ./skins/plone_portlets/portlet_events.pt:54
+#: ./skins/plone_deprecated/portlet_events.pt:54
 msgid "box_previous_events"
 msgstr "Pretekli dogodki..."
 
 #. Default: "Recent Changes"
-#: ./skins/plone_portlets/portlet_recent.pt:15
+#: ./skins/plone_deprecated/portlet_recent.pt:15
 msgid "box_recent_changes"
 msgstr "Zadnje spremembe"
 
 #. Default: "No items changed yet."
-#: ./skins/plone_portlets/portlet_recent.pt:45
+#: ./skins/plone_deprecated/portlet_recent.pt:51
 msgid "box_recent_no_items"
 msgstr "Noben prispevek ni spremenjen"
 
@@ -1822,27 +1810,27 @@ msgid "box_related"
 msgstr "V zvezi"
 
 #. Default: "Review List"
-#: ./skins/plone_portlets/portlet_review.pt:14
+#: ./skins/plone_deprecated/portlet_review.pt:14
 msgid "box_review_list"
 msgstr "Seznam za pregled"
 
 #. Default: "Log in"
-#: ./skins/plone_portlets/portlet_login.pt:25
+#: ./skins/plone_deprecated/portlet_login.pt:24
 msgid "box_sign_in"
 msgstr "Prijavite se"
 
 #. Default: "Upcoming events..."
-#: ./skins/plone_portlets/portlet_events.pt:61
+#: ./skins/plone_deprecated/portlet_events.pt:61
 msgid "box_upcoming_events"
 msgstr "Bližnji dogodki..."
 
 #. Default: "You are not allowed to modify the title of this item."
-#: ./skins/plone_forms/folder_rename_form.cpt:99
+#: ./skins/plone_forms/folder_rename_form.cpt:102
 msgid "change_id_for_item_not_allowed"
 msgstr "Nimate dovoljenja za spremembno naslova tega prispevka."
 
 #. Default: "Use parent folder setting"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:68
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:103
 msgid "constraintypes_mode_acquire"
 msgstr "Uporabi lastnosti nadrejene mape"
 
@@ -1857,22 +1845,22 @@ msgid "constraintypes_mode_enable"
 msgstr "Ročno izberi"
 
 #. Default: "Attendees"
-#: ./skins/plone_content/event_view.pt:102
+#: ./skins/plone_content/event_view.pt:146
 msgid "contact_attendees"
 msgstr "Udeleženci"
 
 #. Default: "Contact Email"
-#: ./skins/plone_content/event_view.pt:91
+#: ./skins/plone_content/event_view.pt:126
 msgid "contact_email"
 msgstr "E-pošta stika"
 
 #. Default: "Contact Name"
-#: ./skins/plone_content/event_view.pt:85
+#: ./skins/plone_content/event_view.pt:113
 msgid "contact_name"
 msgstr "Ime stika"
 
 #. Default: "Contact Phone"
-#: ./skins/plone_content/event_view.pt:97
+#: ./skins/plone_content/event_view.pt:134
 msgid "contact_phone"
 msgstr "Telefon stika"
 
@@ -1897,12 +1885,12 @@ msgid "date_format_short"
 msgstr "${d}.${m}.${Y}"
 
 #. Default: "/"
-#: ./skins/plone_templates/calendar_macros.pt:68
+#: ./skins/plone_templates/calendar_macros.pt:63
 msgid "date_separator"
 msgstr "."
 
 #. Default: "There is no group or user attached to this group."
-#: ./skins/plone_prefs/prefs_group_members.cpt:169
+#: ./skins/plone_prefs/prefs_group_members.cpt:180
 msgid "decription_no_members_assigned"
 msgstr "Ta skupina še nima nobenega uporabnika. "
 
@@ -1912,7 +1900,7 @@ msgid "description"
 msgstr "opis"
 
 #. Default: "Access keys are a navigation device enabling you to get around this web site using your keyboard."
-#: ./skins/plone_templates/accessibility-info.pt:52
+#: ./skins/plone_templates/accessibility-info.pt:56
 msgid "description_access_keys"
 msgstr "Tipke za dostop so orodja za navigacijo po spletišču samo z uporabo tipkovnice."
 
@@ -1922,112 +1910,112 @@ msgid "description_access_keys_more_info"
 msgstr "Podrobnejši opis dostopnih tipk (v angleščini) lahko najdete na ${wcag}."
 
 #. Default: "This site uses the ${plone} and has been designed to be completely accessible and usable, working in accordance with the Web Content Accessibility Guidelines (${wcag} v1.0). If there is anything on this site - accessibility or validation related - that is not according to the standard, please contact the ${site_admin}, and not the Plone Team."
-#: ./skins/plone_templates/accessibility-info.pt:43
+#: ./skins/plone_templates/accessibility-info.pt:47
 msgid "description_accessibility_info"
 msgstr "To spletišče uporablja ${plone} , ki je bilo načrtovano tako, da je v popolnosti dostopno in uporabno v skladu s priporočili Web Content Accessibility Guidelines ( ${wcag} v1.0 ). Če karkoli na tem spletišču ne ustreza temu standardu, se obrnite na ${site_admin} in ne na razvijalce sistema Plone."
 
 #. Default: "We have undertaken to use our knowledge and understanding of the ways in which different people access the Internet, to develop a web site that is clear and simple for everybody to use."
-#: ./skins/plone_templates/accessibility-info.pt:139
+#: ./skins/plone_templates/accessibility-info.pt:137
 msgid "description_accessibility_statement"
 msgstr "Za razvoj smo uporabili smo vse znanje in razumevanje uporabe spletnih strani za različne uporabnike, da bi naredili splet, ki je jasen in preposto uporaben za vsakodnevno rabo."
 
 #. Default: "Access keys are not supported, please use a different browser."
-#: ./skins/plone_templates/accessibility-info.pt:126
+#: ./skins/plone_templates/accessibility-info.pt:124
 msgid "description_accesskey_ie4_mac"
 msgstr "Dostopne tipke niso podprte. Prosim uporabite kak drug brskalnik."
 
 #. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:114
+#: ./skins/plone_templates/accessibility-info.pt:112
 msgid "description_accesskey_ie4_win"
 msgstr "Držite tipko <code>Alt</code> in pritisnite številko ali črko dostopne tipke."
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:120
+#: ./skins/plone_templates/accessibility-info.pt:118
 msgid "description_accesskey_ie5_mac"
 msgstr "Držite tipko <code>Ctrl</code> in pritisnite številko ali črko dostopne tipke."
 
 #. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
-#: ./skins/plone_templates/accessibility-info.pt:84
+#: ./skins/plone_templates/accessibility-info.pt:82
 msgid "description_accesskey_ie5_win"
 msgstr "Držite tipko <code>Alt</code> in pritisnite številko ali črko dostopne tipke nato sprostite obe tipki in pritisnite <code>ENTER</code> ."
 
 #. Default: "Press and release the <code>Ctrl</code> key, then press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:108
+#: ./skins/plone_templates/accessibility-info.pt:106
 msgid "description_accesskey_konqueror_linux"
 msgstr "Držite tipko <code>Alt</code> in pritisnite številko ali črko tipke za to funkcijo."
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:96
+#: ./skins/plone_templates/accessibility-info.pt:94
 msgid "description_accesskey_mozilla_mac"
 msgstr "Držite tipko <code>Ctrl</code> in pritisnite številko ali črko dostopne tipke."
 
 #. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:90
+#: ./skins/plone_templates/accessibility-info.pt:88
 msgid "description_accesskey_mozilla_win"
 msgstr "Držite tipko <code>Alt</code> in pritisnite številko ali črko dostopne tipke."
 
 #. Default: "Access keys are not supported, please use a different browser."
-#: ./skins/plone_templates/accessibility-info.pt:131
+#: ./skins/plone_templates/accessibility-info.pt:129
 msgid "description_accesskey_netscape6_all"
 msgstr "Dostopne tipke niso podprte. Prosim uporabite kak drug brskalnik."
 
 #. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: ./skins/plone_templates/accessibility-info.pt:102
+#: ./skins/plone_templates/accessibility-info.pt:100
 msgid "description_accesskey_safari_mac"
 msgstr "Držite tipko <code>Ctrl</code> in pritisnite številko ali črko dostopne tipke."
 
 #. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: ./skins/plone_forms/discussion_reply_form.cpt:68
+#: ./skins/plone_forms/discussion_reply_form.cpt:69
 msgid "description_add_comment"
 msgstr "Komentar lahko dodate tako, da izpolnite spodnji obrazec. Uporabljajte enostavno besedilo."
 
 #. Default: "Select the type of item you want to add to your folder."
-#: ./skins/plone_forms/folder_factories.pt:19
+#: ./skins/plone_forms/folder_factories.pt:29
 msgid "description_add_new_item"
 msgstr "Izberite tip prispevka, ki jo želite dodati v vašo mapo."
 
 #. Default: "This is the Add-on Products install section, you can add and remove products in the lists below."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:22
+#: ./skins/plone_prefs/prefs_install_products_form.pt:26
 msgid "description_addremove_products"
 msgstr "To je sekcija za nameščanje dodatnih izdelkov - lahko dodate ali odstranite izdelek iz spodnjega seznama."
 
 #. Default: "This search form enables you to find content on the site by specifying one or more search terms. <br /> Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
-#: ./skins/plone_forms/search_form.pt:13
+#: ./skins/plone_forms/search_form.pt:17
 msgid "description_advanced_search"
 msgstr "Ta iskalni obrazec omogoča iskanje po vsebini spletišča, če vnesete eno ali več iskanih besed.<br/>Navadno zadošča hitro iskanje, ki ga lahko vedno uporabljate. Ta obrazec uporabite zgolj za bolj podrobno iskanje."
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: ./skins/plone_content/author.cpt:141
+#: ./skins/plone_content/author.cpt:150
 msgid "description_author_feedback"
 msgstr "Če želite kaj sporočiti avtorju, izpolnite spodnji obrazec."
 
 #. Default: "This site uses a setup that closely matches most international recommendations on access keys. These are:"
-#: ./skins/plone_templates/accessibility-info.pt:65
+#: ./skins/plone_templates/accessibility-info.pt:63
 msgid "description_available_access_keys"
 msgstr "To spletišče uporablja nastavitve, ki kar najbolj ustrezajo priporočilom za dostopne tipke. Te so:"
 
 #. Default: "Some products were found to have errors when compiling the install file."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:195
+#: ./skins/plone_prefs/prefs_install_products_form.pt:202
 msgid "description_broken_products"
 msgstr "Pri nekaterih proizvodih so bile najdene napake pri prevajanju namestitvenih datotek."
 
 #. Default: "Before you start exploring, you need to change your original password. This ensures that the password you received via email cannot be used in a malicious manner."
-#: ./skins/plone_login/login_password.cpt:27
+#: ./skins/plone_login/login_password.cpt:31
 msgid "description_change_initial_password"
 msgstr "Pred preiskovanjem morate zamenjati vaše prvo geslo. To zagotavlja, da geslo, ki ste ga dobili po elektronski pošti, ne bi bilo zlorabljeno."
 
 #. Default: "You can transfer the current item's ownership to somebody else using this form."
-#: ./skins/plone_forms/ownership_form.cpt:13
+#: ./skins/plone_forms/ownership_form.cpt:14
 msgid "description_change_ownership"
 msgstr "V tem obrazcu lahko spremenite lastništvo predmeta."
 
 #. Default: "To change the ownership for this ${type}, click ${link_to_ownership_form}"
-#: ./skins/plone_forms/folder_localrole_form.pt:654
+#: ./skins/plone_deprecated/folder_localrole_form.pt:614
 msgid "description_change_ownership_of_article"
 msgstr "Za spremembo lastništva tipa ${type} , kliknite ${link_to_ownership_form}"
 
 #. Default: "This is how your comment will look when posted."
-#: ./skins/plone_forms/discussion_reply_preview.pt:13
+#: ./skins/plone_forms/discussion_reply_preview.pt:16
 msgid "description_comment_preview"
 msgstr "Tako bi izledal vaš komentar, ko bi bil objavljen."
 
@@ -2036,28 +2024,35 @@ msgstr "Tako bi izledal vaš komentar, ko bi bil objavljen."
 msgid "description_contact_info_feedback"
 msgstr "Če želite kaj sporočiti skrbniku spletišča, izpolnite spodnji obrazec."
 
+#. Default: "Fill in this form to contact the site owners."
+#: ./skins/plone_templates/contact-info.cpt:22
+msgid "description_contact_site_owner"
+msgstr ""
+
 #. Default: "Configuration area for Plone and add-on Products."
-#: ./skins/plone_prefs/plone_control_panel.pt:18
+#: ./skins/plone_prefs/plone_control_panel.pt:24
 msgid "description_control_panel"
 msgstr "Področje nastavitev za program Plone in dodatne izdelke."
 
-#. Default: "The ${plonecms} is Copyright ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
-#: ./skins/plone_templates/footer.pt:18
+#. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
+#: ./skins/plone_templates/footer.pt:21
+#, fuzzy
 msgid "description_copyright"
 msgstr "Nosilec avtorskih pravic za ${plonecms} Copyright ${copyright} 2000- ${current_year} ${plonefoundation} et al."
 
 #. Default: "The current owner is ${name}."
-#: ./skins/plone_forms/ownership_form.cpt:20
+#: ./skins/plone_forms/ownership_form.cpt:21
 msgid "description_current_owner"
 msgstr "Trenutni lastnik je ${name}."
 
-#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately evident, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' - then restart the server process."
-#: ./skins/plone_prefs/plone_control_panel.pt:84
+#. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' - then restart the server process."
+#: ./skins/plone_prefs/plone_control_panel.pt:135
+#, fuzzy
 msgid "description_debug_mode"
 msgstr "Opozorilo. Obratujete v razhroščevalnem načinu. Ta način je namenjen spletiščem v razvoju in omogoča, da so spremembe nastavitev spletišča sprotno vidne, a na račun počasnejšega delovanja. Za izključitev razhroščevalnega načina, spremenite datoteko zope.conf, tako da spremenite vrstico na 'debug-mode off' in ponovno poženite strežnik."
 
 #. Default: "Groups are logical collections of users, like departments and business units. They are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
-#: ./skins/plone_prefs/prefs_group_details.pt:90
+#: ./skins/plone_prefs/prefs_group_details.pt:101
 msgid "description_edit_groupproperties"
 msgstr "Skupine so logične zbirke uporabnikov kot npr. oddelki ali poslovne enote. Ni nujno, da so kakorkoli povezane s splošnimi pravicami. Za dodeljevanje pravic uporabljate vloge in tako da dodelite ustrezni osebi neko vlogo."
 
@@ -2071,33 +2066,43 @@ msgstr "Če je vaše uporabniško ime in geslo pravo, je verjeten problem, da va
 msgid "description_enable_cookies_for_login"
 msgstr "Opozorilo: Če boste zapustili to stran in ne boste več prijavljeni, se je to zgodilo zato bi morali omogočiti ${enable_cookies} v vašem brskalniku."
 
+#. Default: "Note: If you do not remain logged in after leaving this page, it is because you need to enable cookies in your browser."
+#: ./skins/plone_login/login_success.pt:87
+msgid "description_enable_cookies_to_stay_logged_in"
+msgstr ""
+
+#. Default: "The error has been logged as entry number ${entryid}."
+#: ./skins/plone_templates/default_error_message.pt:138
+msgid "description_error_has_been_logged"
+msgstr ""
+
 #. Default: "This page lists the exceptions that have occurred in this site recently. You can configure how many exceptions should be kept and whether the exceptions should be copied to Zope's event log file(s)."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:22
+#: ./skins/plone_prefs/prefs_error_log_form.pt:26
 msgid "description_error_log_setup"
 msgstr "Ta stran vsebuje vse izjeme, ki so se zgodile na spletišču v zadnjem času. Tu lahko nastavite koliko izjem hranimo in ali izjeme zapisujemo tudi v Zope-jeve dnevnike dogodkov."
 
 #. Default: "Refer to the plone.org error reference for more information about these exceptions."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:30
+#: ./skins/plone_prefs/prefs_error_log_form.pt:34
 msgid "description_error_rerference_link"
 msgstr "Poglejte seznam napak na plone.org za dodatne informacije o teh izjemah."
 
 #. Default: "Click here to have your password mailed to you if you have forgotten it."
-#: ./skins/plone_login/login_failed.pt:19
+#: ./skins/plone_login/login_failed.pt:23
 msgid "description_failed_login_link"
 msgstr "Kliknite sem, da vam pošljem geslo po elektronski pošti, če ste ga pozabili."
 
 #. Default: "You can add or remove groups and users from this particular group here. Note that this doesn't actually delete the group or user, it is only removed from this group."
-#: ./skins/plone_prefs/prefs_group_members.cpt:83
+#: ./skins/plone_prefs/prefs_group_members.cpt:94
 msgid "description_group_members_of"
 msgstr "Tu lahko dodate ali odstranite uporabnika v/iz določene skupine. Odstranitev uporabnika iz skupine ne briše uporabnika iz portala, ampak ga samo izloči iz skupine."
 
 #. Default: "Groups are a convenient way to share items to a common set of users. Select one or more groups, and a role to assign."
-#: ./skins/plone_forms/folder_localrole_form.pt:442
+#: ./skins/plone_deprecated/folder_localrole_form.pt:416
 msgid "description_group_shares"
 msgstr "Skupine so prikladni način skupne uporabe prispevkov skupni množici uporabnikov. Izberite eno ali več skupin ter vlogo in jim jo dodelite."
 
 #. Default: "Groups are logical collections of users, such as departments and business units. Groups are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:60
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:68
 msgid "description_groups_management"
 msgstr "Skupine so logične zbirke uporabnikov kot npr. oddelki ali poslovne enote. Ni nujno, da so kakorkoli povezane s splošnimi pravicami. Za dodeljevanje pravic uporabljate vloge tako, da dodelite skupini ustrezno vlogo."
 
@@ -2106,28 +2111,33 @@ msgstr "Skupine so logične zbirke uporabnikov kot npr. oddelki ali poslovne eno
 msgid "description_historical_unavailable"
 msgstr "Ta razred ne podpira vmesnika z zgodovino. Vsebina se mora vmešati z OFS.History.Historical"
 
+#. Default: "If you need to report this to the ${site_admin}, please include this entry number in your message."
+#: ./skins/plone_templates/default_error_message.pt:143
+msgid "description_include_error_in_admin_message"
+msgstr ""
+
 #. Default: "You can take fuller advantage of the features of this site if you enable javascript in your browser."
-#: ./skins/plone_login/login_success.pt:79
+#: ./skins/plone_login/login_success.pt:82
 msgid "description_javascript_advantage"
 msgstr "Več možnosti tega spletišča lahko izkoristite, če omogočite javascript v vašem brskalniku."
 
 #. Default: "Distributed under the ${license}."
-#: ./skins/plone_templates/footer.pt:36
+#: ./skins/plone_templates/footer.pt:38
 msgid "description_license"
 msgstr "Distribuirano z licenco ${license}"
 
 #. Default: "Select one or more people, and a role to assign."
-#: ./skins/plone_forms/folder_localrole_form.pt:252
+#: ./skins/plone_deprecated/folder_localrole_form.pt:240
 msgid "description_localrole_select_member"
 msgstr "Izberite eno ali več oseb in jim dodelite vlogo."
 
 #. Default: "This is the first time that you've logged in to ${here}."
-#: ./skins/plone_login/login_password.cpt:24
+#: ./skins/plone_login/login_password.cpt:28
 msgid "description_logged_in"
 msgstr "To je prvič, da ste prijavljeni na ${here} ."
 
 #. Default: "Notice that the top right bar has changed. It now contains several personalized items. Use these items to control your settings and your personal area. They will remain as long as you are logged in."
-#: ./skins/plone_login/login_success.pt:29
+#: ./skins/plone_login/login_success.pt:32
 msgid "description_logged_in_explain"
 msgstr "Upoštevajte, da se se je spremenila letvica zgoraj desno, ki sedaj vsebuje več vam prilagojenih možnosti. Uporabite te možnosti za upravljanje vaših nastavitev. Te bodo na voljo ves čas vaše seje."
 
@@ -2140,6 +2150,11 @@ msgstr "<p> Upamo, da so ste bili zadovoljni z našimi storitvami. V upanju, da 
 #: ./skins/plone_login/login_failed.pt:26
 msgid "description_login_fail_enable_cookies"
 msgstr "sprejema piškotke"
+
+#. Default: "You can log in again below."
+#: ./skins/plone_login/logged_out.cpt:32
+msgid "description_loginagain"
+msgstr ""
 
 #. Default: "Enter your user name below, click <strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid e-mail address when you registered. If this will not work for you (for example, if you forgot your user name or didn't enter your e-mail address) send a request to ${email_address}."
 #: ./skins/plone_forms/mail_password_form.pt:17
@@ -2167,42 +2182,47 @@ msgid "description_member_personal_folder"
 msgstr "vsebuje osebne delovne prispevke člana ${member}"
 
 #. Default: "This search form enables you to find users by specifying one or more search criteria."
-#: ./skins/plone_forms/member_search_form.pt:12
+#: ./skins/plone_forms/member_search_form.pt:16
 msgid "description_member_search"
 msgstr "Ta iskalni obrazec omogoča iskanje članov po enem ali več kriterijih iskanja."
 
 #. Default: "Your personal settings."
-#: ./skins/plone_prefs/personalize_form.cpt:55
+#: ./skins/plone_prefs/personalize_form.cpt:60
 msgid "description_my_preferences"
 msgstr "Vaše osebne nastavitve."
 
 #. Default: "Lets you control how navigation is constructed in your site."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:24
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:28
 msgid "description_navigation_setup"
 msgstr "Dovoljuje krmiljenje kakšno navigacijo želite na spletišču."
 
+#. Default: "Note that to control how the navigation tree is displayed, you should go to \"Manage portlets\" at the root of the site (or wherever) a navigation tree portlet has been added, and change its settings directly."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:32
+msgid "description_navigation_setup_navtree"
+msgstr ""
+
 #. Default: "You might want to head over to ${your_folder} and add some content, or ${set_up_your_preferences}."
-#: ./skins/plone_login/login_success.pt:46
+#: ./skins/plone_login/login_success.pt:49
 msgid "description_newbie_pointers"
 msgstr "Morda bi se radi preselili v ${your_folder} in dodali kako vsebino ali izvedli ${set_up_your_preferences} ."
 
 #. Default: "set up your Preferences"
-#: ./skins/plone_login/login_success.pt:47
+#: ./skins/plone_login/login_success.pt:50
 msgid "description_newbie_pointers_preferences_link"
 msgstr "nastavitev vaših osebnih preferenc"
 
 #. Default: "your folder"
-#: ./skins/plone_login/login_success.pt:39
+#: ./skins/plone_login/login_success.pt:42
 msgid "description_newbie_pointers_yourfolder_link"
 msgstr "vaša mapa"
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
-#: ./skins/plone_login/failsafe_login_form.cpt:31
+#: ./skins/plone_login/failsafe_login_form.cpt:34
 msgid "description_no_account"
 msgstr "Če še nimate računa pri nas, prosim izpolnite ${registration_form} in se včlanite."
 
 #. Default: "registration form"
-#: ./skins/plone_login/failsafe_login_form.cpt:32
+#: ./skins/plone_login/failsafe_login_form.cpt:35
 msgid "description_no_account_registration_linktext"
 msgstr "obrazec za včlanitev"
 
@@ -2212,7 +2232,7 @@ msgid "description_no_comparison_support"
 msgstr "Ta predmet ne dovoljuje primerjav."
 
 #. Default: "There are currently no items in this folder."
-#: ./skins/plone_content/folder_listing.pt:156
+#: ./skins/plone_content/folder_listing.pt:166
 msgid "description_no_items_in_folder"
 msgstr "Trenutno v tej mapi ni prispevkov."
 
@@ -2221,33 +2241,43 @@ msgstr "Trenutno v tej mapi ni prispevkov."
 msgid "description_no_privileges"
 msgstr "Trenutno pravice ne zadoščajo za vpogled v to stran. Če mislite, da ste to sporočilo dobili po pomoti, prosim pošljite elektronsko sporočilo"
 
+#. Default: "You do not have sufficient privileges to view this page. If you believe you are receiving this message in error, contact the ${site_admin}."
+#: ./skins/plone_login/insufficient_privileges.pt:19
+msgid "description_no_privileges_for_page"
+msgstr ""
+
 #. Default: "No results were found."
-#: ./skins/plone_forms/member_search_results.pt:57
+#: ./skins/plone_forms/member_search_results.pt:67
 msgid "description_no_results_found"
 msgstr "Nisem našel nobenih rezultatov."
 
 #. Default: "This folder has no visible items. To add content, press the add button, or paste content from another location."
-#: ./skins/plone_templates/folder_contents.pt:59
+#: ./skins/plone_deprecated/old_folder_contents.pt:62
 msgid "description_no_visible_items_add_paste"
 msgstr "Ta mapa nima nobenih javno vidnih prispevkov. Za dodajanje vsebine pritisnite gumb Dodaj nov prispevek ali prilepite vsebino iz druge lokacije."
 
+#. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
+#: ./skins/plone_login/login_failed.pt:27
+msgid "description_not_accept_cookies"
+msgstr ""
+
 #. Default: "You are not currently logged in. Your user name and/or password may be incorrect."
-#: ./skins/plone_login/login_failed.pt:14
+#: ./skins/plone_login/login_failed.pt:18
 msgid "description_not_logged_in_username_incorrect"
 msgstr "Niste prijavljeni. Vaše uporabniško ime in/ali geslo je bilo napačno."
 
 #. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:69
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:77
 msgid "description_pas_group_listing"
 msgstr "Opozorilo. Nekateri vstavki PAS grup ne dovolijo izpisa vseh grup, zato morda ne vidite vseh definiranih grup teh vstavkov, razen če ne sprožite prav posebnega iskanja."
 
 #. Default: "Note: Some or all of your PAS user source plugins do not allow listing of users, so you may not see the users defined by those plugins unless doing a specific search."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:67
+#: ./skins/plone_prefs/prefs_users_overview.cpt:74
 msgid "description_pas_users_listing"
 msgstr "Opozorilo. Nekateri vstavki PAS grup ne dovolijo izpisa vseh uporabnikov, zato morda ne vidite vseh definiranih uporabnikov teh vstavkov, razen če ne sprožite prav posebnega iskanja."
 
 #. Default: "You will receive an e-mail shortly containing a URL that will allow you to set your password. When you receive this e-mail, please follow the link to complete your registration process. NOTE: The password reset URL will expire in ${time} hours. If your password reset request expires, you may use the \"Forgot your password\" link to generate another password reset request."
-#: ./skins/plone_login/registered.pt:31
+#: ./skins/plone_login/registered.pt:34
 msgid "description_password_reset_or_registered"
 msgstr "Kmalu boste prejeli elektronsko sporočilo, ki bo vseboval naslov URL, kjer vam bo dovoljeno nastavljanje vašega gesla. Ko boste prejeli to elektronsko pošto, sledite tej povezavi in tako dokončajte proces prijave. UPOŠTEVAJTE: naslov za nastavljanje gesla bo potekel v ${time} urah. Če bo vaš zahtevek za spremembo gesla potekel, lahko uporabite povezavo 'Ste pozabili geslo?' tako za aktivirate nov zahtevek za nastavljanje vašega gesla."
 
@@ -2262,12 +2292,12 @@ msgid "description_portal_properties"
 msgstr "To je seznam možnih nastavitev za vaše spletišče."
 
 #. Default: "To make new products show up here, put them in the directory ${location} on the file system, and restart the server process."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:30
+#: ./skins/plone_prefs/prefs_install_products_form.pt:34
 msgid "description_product_location"
 msgstr "Da bi videli vse proizvode, jih postavite v mapo ${location} v sistemu datotek in ponovno poženite strežnik."
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' - then restart the server process."
-#: ./skins/plone_prefs/plone_control_panel.pt:73
+#: ./skins/plone_prefs/plone_control_panel.pt:124
 msgid "description_production_mode"
 msgstr "Strežnik obratuje v produkcijskem načinu. To je priporočeni način delovanja Plonovega spletišča, a pomeni, da nekatere spremembe nastavitev veljajo šele po ponovnem zagonu strežnika ali osvežitvi proizvoda. Če je to spletišče namenjeno razvoju in želite delovati v razhroščevalnem načinu, spremenite datoteko zope.conf, tako da vsebuje vrstico 'debug-mode on' in ponovno zaženite strežnik."
 
@@ -2276,8 +2306,13 @@ msgstr "Strežnik obratuje v produkcijskem načinu. To je priporočeni način de
 msgid "description_publishing_process"
 msgstr "Status prispevka (status pregleda) določa, kdo ga lahko vidi. <strong>Zasebni</strong> prispevek lahko vidi samo lastnik in skrbnik spletišča. Samo <strong>objavljeni</strong> prispevki so dostopni vsem članom in anonimnim obiskovalcem. Da nek prispevek postane objavljen, ga mora pregledati vsaj en od recenzentov. Z <strong>zahtevo za pregled</strong> zahtevamo pregled tega prispevka. <br/> Drugi način upravljanja vidnosti prispevka je z <strong>datumi objave</strong> . Prispevek ni viden kot rezultat iskanja pred datumom objave, <em>četudi je njegov status <strong>objavljen</strong></em> . Ta mehanizem preprečuje, da bi bil prispevek viden v delu portala, šabloni ali poizvedbi, čeprav je sicer dostopen prek neposrednega spletnega naslova."
 
+#. Default: "An item's status (also called its review state) determines who can see it. Another way to control the visibility of an item is with its <strong>Publishing Date</strong>. An item is not publicly searchable before its publishing date. This will prevent the item from showing up in portlets and folder listings, although the item will still be available if accessed directly via its URL."
+#: ./skins/plone_forms/content_status_history.cpt:52
+msgid "description_publishing_process_short"
+msgstr ""
+
 #. Default: "Because you are logged in via HTTP authentication (i.e. the Zope Management Interface), the only way to log out is to quit your web browser."
-#: ./skins/plone_login/logged_out.pt:27
+#: ./skins/plone_login/logged_out.cpt:75
 msgid "description_quit_to_log_out"
 msgstr "Ker ste prijavljeni preko HTTP avtentikacije (npr. v ZMI), je edini način odjave ta, da zapustite vaš brskalnik."
 
@@ -2287,27 +2322,27 @@ msgid "description_received_password"
 msgstr "Ko boste dobili vaše geslo, se lahko prijavite ${login_in_here}."
 
 #. Default: "All recently modified items, latest first."
-#: ./skins/plone_templates/recently_modified.pt:21
+#: ./skins/plone_templates/recently_modified.pt:25
 msgid "description_recently_modified"
 msgstr "Vsi pred kratkim spremenjeni prispevki, najprej najbolj sveži."
 
 #. Default: "All published items, latest first."
-#: ./skins/plone_templates/recently_published.pt:21
+#: ./skins/plone_templates/recently_published.pt:25
 msgid "description_recently_published"
 msgstr "Vsi objavljeni prispevki, najbolj sveži na vrhu."
 
 #. Default: "Each item has a Short Name and a Title, which you can change by entering the new details below."
-#: ./skins/plone_forms/folder_rename_form.cpt:17
+#: ./skins/plone_forms/folder_rename_form.cpt:21
 msgid "description_rename_item"
 msgstr "Vsak prispevek ima Ime in Naslov, katerega lahko spremenite z drugačnimi podrobnostmi spodaj."
 
 #. Default: "Roles are collections of permissions. The most common role is the Member role, which is any member of the portal. You can define additional roles, but you normally only do that when you need to create a new discrete unit of permissions that you can combine to make up a Group."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:238
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:240
 msgid "description_roles_management"
 msgstr "Vloge so zbirke dovoljenj. Najpogostejša vloga je vloga Člana, ki jo ima vsak član portala. Lahko definirate tudi dodatne vloge, a navadno to storite samo zato, da ustvarite novo dovoljenje, ki jo skombinirate z novo skupino."
 
 #. Default: "Currently, if you want to add a new role, you must use the Zope Management Interface, as adding roles is considered a development task."
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:247
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:249
 msgid "description_roles_zmi"
 msgstr "Trenutno je za dodajanje nove vloge potrebno uporabiti vmesnik za upravljanje Zope, saj se dodajanje vlog šteje kot razvojna naloga."
 
@@ -2317,22 +2352,22 @@ msgid "description_search_setup"
 msgstr "Nastavitve iskanja po spletišču."
 
 #. Default: "Search string:"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:69
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:68
 msgid "description_search_string"
 msgstr "Iskalni niz:"
 
 #. Default: "Search for the users or groups you want to locate (blank search returns all), and select the ones you want to add."
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:21
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:25
 msgid "description_search_usersandgroups"
 msgstr "Iščite uporabnike ali skupine, ki jih želite (prazen niz vrne vse) in izberite tiste, ki jih želite dodati."
 
 #. Default: "Please select item which will be displayed as the default page of the folder."
-#: ./skins/plone_forms/select_default_page.cpt:14
+#: ./skins/plone_forms/select_default_page.cpt:18
 msgid "description_select_default_page"
 msgstr "Prosim izberite prispevek, ki bo objavljen kot privzeta stran te mape."
 
 #. Default: "Please select which template should be used as the default view of the folder."
-#: ./skins/plone_forms/select_default_view.cpt:14
+#: ./skins/plone_forms/select_default_view.cpt:18
 msgid "description_select_default_view"
 msgstr "Prosim izberite, katera šablona naj bo v rabi kot privzeti pogled v mapo."
 
@@ -2346,28 +2381,33 @@ msgstr "Izberite vrsto poteka dela, ki jo želite za različne vrste vsebin."
 msgid "description_send_page_to"
 msgstr "Vnesite poštni naslov prijatelja skupaj z naslovom strani."
 
+#. Default: "Fill in the email address of your friend, and we will send an email that contains a link to this page."
+#: ./skins/plone_forms/sendto_form.cpt:23
+msgid "description_send_page_url_to"
+msgstr ""
+
 #. Default: "Your password has been mailed. It should arrive in your mailbox shortly."
 #: ./skins/plone_forms/mail_password_response.pt:12
 msgid "description_sent_password"
 msgstr "Vaše geslo je bilo poslano. Moralo bi vsak čas prispeti v vaš poštni nabiralnik."
 
 #. Default: "You may restrict which content types are available in this folder, either by manually selecting them from the list below, by relying on the site default, or by using the settings from the parent folder. You can also select a subset of the available types to be immediately available in the \"Add\" menu. Any additional allowed types will be available from a \"More...\" menu item, taking you to a new page where all enabled types will be available for selection."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:16
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:57
 msgid "description_set_folder_type_restrictions"
 msgstr "Lahko omejite vrste prispevkov, ki so na voljo v tej mapi bodisi, da jih ročno izberete iz spodnjega seznama, bodisi da se oprete na privzete nastavitve portala, bodisi uporabite nastavitve nadrejene mape. Lahko izberete tudi podmnožico tipov, ki so takoj na voljo z menujem \"Dodaj\". Dodatni dovoljeni tipi bodo na voljo v menuju \"Več\", ki vas vodi na novo stran, kjer bodo na voljo na izbiro vsi izbrani tipi."
 
 #. Default: "You can share the rights for both entire folders and single items. These users have privileges here:"
-#: ./skins/plone_forms/folder_localrole_form.pt:55
+#: ./skins/plone_deprecated/folder_localrole_form.pt:52
 msgid "description_share_folders_items_current_shares"
 msgstr "Lahko si delite pravice za mape (vključno z vsebino) in posamezne prispevke. Ti uporabniki imajo naslednje pravice:"
 
 #. Default: "Sharing is an easy way to allow others access to collaborate with you on your content. To share this item, search for the person's name or email address in the form below, and assign them an appropriate role. The most common use is to give people Manager permissions, which means they have full control of this item and its contents (if any)."
-#: ./skins/plone_forms/folder_localrole_form.pt:365
+#: ./skins/plone_deprecated/folder_localrole_form.pt:345
 msgid "description_sharing_item"
 msgstr "Porazdeljevanje pravic je preprost način dovoljevanja drugim, da oblikujejo vsebine. Za dodeljevanje pravic na prispevku poiščite ime osebe ali poštni naslov v obrazcu spodaj in mu dodelite vlogo. Najpogostejši način je, da drugemu dodelimo pravico Skrbnik, kar pomeni, da ima ta potem polno kontrolo prispevka in njegove vsebine (če že obstaja)."
 
 #. Default: "To access this part of the site, you need to log in with your user name and password."
-#: ./skins/plone_login/failsafe_login_form.cpt:21
+#: ./skins/plone_login/failsafe_login_form.cpt:24
 msgid "description_sign_in"
 msgstr "Da bi dostopali do tega dela spletišča, se morate prijaviti z uporabniškim imenom in geslom."
 
@@ -2382,7 +2422,7 @@ msgid "description_site_error_does_not_exist"
 msgstr "Zahtevani prispevek na tem spletišču bodisi ne obstaja ali pa ga ne morem objaviti."
 
 #. Default: "Please double check the web address or use the search function on this page to find what you are looking for."
-#: ./skins/plone_templates/default_error_message.pt:29
+#: ./skins/plone_templates/default_error_message.pt:39
 msgid "description_site_error_double_check_or_search"
 msgstr "Prosim ponovno preverite spletni naslov ali uporabite iskanje, da bi našli zahtevano spletno stran."
 
@@ -2391,13 +2431,18 @@ msgstr "Prosim ponovno preverite spletni naslov ali uporabite iskanje, da bi na�
 msgid "description_site_error_mail_admin"
 msgstr "Če veste, da želite pravilni naslov spletne strani, a se spletišče odziva z napako, prosim pošljite sporočilo na ${site_admin}."
 
+#. Default: "If you are certain you have the correct web address but are encountering an error, please contact the ${site_admin}."
+#: ./skins/plone_templates/default_error_message.pt:45
+msgid "description_site_error_mail_site_admin"
+msgstr ""
+
 #. Default: "Thank you."
-#: ./skins/plone_templates/default_error_message.pt:41
+#: ./skins/plone_templates/default_error_message.pt:51
 msgid "description_site_error_thank_you"
 msgstr "Hvala."
 
 #. Default: "An overview of the available content on this site. Keep the pointer still over an item for a few seconds to get its description."
-#: ./skins/plone_templates/sitemap.pt:16
+#: ./skins/plone_templates/sitemap.pt:20
 msgid "description_site_map"
 msgstr "Povzetek vsebine tega spletišča. Postavite kurzor nekaj sekund nad prispevkom, da se prikaže opis."
 
@@ -2422,22 +2467,22 @@ msgid "description_still_failure_reason2"
 msgstr "Vaš računalnik je priključen za vdorobranom ali posredniškim strežnikom, ki preprečuje pošiljanje piškotkov do vašega brskalnika. Če je tako, se morate obrniti na skrbnika mreže oz. sistemov, da reši problem."
 
 #. Default: "Match all"
-#: ./skins/plone_forms/search_form.pt:116
+#: ./skins/plone_forms/search_form.pt:111
 msgid "description_subject_and"
 msgstr "Povsem ustreza"
 
 #. Default: "Match any"
-#: ./skins/plone_forms/search_form.pt:103
+#: ./skins/plone_forms/search_form.pt:100
 msgid "description_subject_or"
 msgstr "Ustreza kateremkoli"
 
 #. Default: "Syndication has been disabled by site administrator."
-#: ./skins/plone_forms/synPropertiesForm.cpt:200
+#: ./skins/plone_forms/synPropertiesForm.cpt:191
 msgid "description_syndication_disabled"
 msgstr "Skrbnik spletišča je izklopil sindiciranje."
 
 #. Default: "Syndication enables you to syndicate this folder so it can be synchronized from other web sites."
-#: ./skins/plone_forms/synPropertiesForm.cpt:14
+#: ./skins/plone_forms/synPropertiesForm.cpt:18
 msgid "description_syndication_properties"
 msgstr "Sindiciranje vam omogoča, da je vsebina te mape usklajena z ostalimi spletišči."
 
@@ -2447,42 +2492,42 @@ msgid "description_syndication_setup"
 msgstr "Tu lahko nastavljate nekatere nastavitve glede privzetega načina sindiciranja celotnega spletišča."
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: ./skins/plone_templates/footer.pt:29
+#: ./skins/plone_templates/footer.pt:32
 msgid "description_trademark"
 msgstr "Plone<sup>&reg;</sup> in Plonov logotip sta registrirani blagovni znamki ${plonefoundation}."
 
 #. Default: "This applications transactional feature allows you to easily undo changes made to the applications settings or data. You can revert the application to a \"snapshot\" of its state at a previous point in time."
-#: ./skins/plone_forms/undo_form.pt:27
+#: ./skins/plone_forms/undo_form.pt:31
 msgid "description_undo_action"
 msgstr "Lastnost upravljanja transakcij dovoljuje preprosto razveljavljanje sprememb pri nastavitvah ali podatkih. Možno se je vrniti na stanje ob \"snapshot\" torej ob vnaprej določenem času."
 
 #. Default: "Select one or more transactions below and then click on the \"Undo\" button to undo the transactions. Note that even though a transaction is shown below, you will not be able to undo it if later transactions modified objects that were modified by the transaction."
-#: ./skins/plone_forms/undo_form.pt:33
+#: ./skins/plone_forms/undo_form.pt:37
 msgid "description_undo_action_select"
 msgstr "Izberite eno ali več transakcij spodaj in kliknite na gumb \"Razveljavi\" za razveljavitev transakcije. Upoštevajte, da ne morete razveljaviti transakcij, ki so sicer navedene spodaj, a so bili prispevki že spremenjeni s kasnejšo transakcijo."
 
 #. Default: "Please use the form below to change your password."
-#: ./skins/plone_login/login_password.cpt:33
+#: ./skins/plone_login/login_password.cpt:37
 msgid "description_use_form_to_change_password"
 msgstr "Prosim uporabite spodnji obrazec za spremembo gesla."
 
 #. Default: "Click the user's name to see and change the details of a specific user. Click the envelope icon to send a mail to the user. You can also edit the e-mail addresses, and add/remove users."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:56
+#: ./skins/plone_prefs/prefs_users_overview.cpt:63
 msgid "description_user_management"
 msgstr "Kliknite na uporabnikovo ime in spremenite podrobnosti o uporabniku. Kliknite na ikono ovojnice za pošiljanje pošte. Lahko tudi urejate poštne naslove in dodajate ali brišete uporabnike."
 
 #. Default: "This area allows you to set your preferences."
-#: ./skins/plone_prefs/plone_memberprefs_panel.pt:18
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:22
 msgid "description_user_panel"
 msgstr "To področje omogoča nastavitve preferenc vašega delovnega okolja."
 
 #. Default: "We have used ${xhtml} 1.0 and ${css} that conforms to specification, as laid out by the ${w3c} because we believe that usability and accessibility must have a solid foundation. If anything on this web site does not validate correctly, please contact the ${site_admin}, and not the Plone Team."
-#: ./skins/plone_templates/accessibility-info.pt:161
+#: ./skins/plone_templates/accessibility-info.pt:159
 msgid "description_validation"
 msgstr "Uporabili smo ${xhtml} 1.0 in ${css} ki ustreza specifikaciji  ${w3c} , ker verjamemo, da morata biti uporabnost in dostopnost na solidnih temeljih. Če se karkoli na tem spletišču ne prikazuje pravilno, prosim, da se obrnete na skrbnika ${site_admin} in ne na razvojno skupino sistema Plone."
 
 #. Default: "We have also endeavoured to achieve AA accessibility as measured against version 1.0 of the ${wcag}. We are aware however, that a number of the checkpoints of the ${wcag2} are subjective - and although we are sure that we have met them squarely, there may be instances where interpretation may vary."
-#: ./skins/plone_templates/accessibility-info.pt:174
+#: ./skins/plone_templates/accessibility-info.pt:172
 msgid "description_wcag_aa_rating"
 msgstr "Prizadevali smo si za dostopnost po AA kot je zahtevana z verzijo 1.0 ${wcag} . Zavedamo se, da je veliko kriterijev  ${wcag2} subjektivnih a kljub temu menimo, da smo jih zadovoljili, čeprav so lahko mnenja o tem različna."
 
@@ -2502,12 +2547,12 @@ msgid "description_workflow_one_step"
 msgstr "Če želite takojšnjo javno objavo, brez recenziranja, morate uporabiti način Objava v enem koraku."
 
 #. Default: "You have been registered."
-#: ./skins/plone_login/registered.pt:21
+#: ./skins/plone_login/registered.pt:24
 msgid "description_you_are_registered"
 msgstr "Bili ste včlanjeni."
 
 #. Default: "Click the button to log in immediately."
-#: ./skins/plone_login/registered.pt:37
+#: ./skins/plone_login/registered.pt:40
 msgid "description_you_can_log_on_now"
 msgstr "Kliknite gumb za takojšnjo prijavo."
 
@@ -2523,138 +2568,143 @@ msgstr "e-pošta"
 msgid "enable_cookies_message"
 msgstr "Piškotki niso omogočeni. Pred prijavo morate ${enable_cookies}"
 
+#. Default: "Cookies are not enabled. You must enable cookies before you can log in."
+#: ./skins/plone_deprecated/portlet_login.pt:72
+msgid "enable_cookies_message_before_login"
+msgstr ""
+
 #. Default: "There were Errors during install, check Transcript"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:32
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:36
 msgid "error_installed_product"
 msgstr "Bile so napake ob namestitvi. Prosim preverite Transcript"
 
 #. Default: "to"
-#: ./skins/plone_templates/events_listing.pt:61
+#: ./skins/plone_templates/events_listing.pt:64
 msgid "event_and"
 msgstr "za"
 
 #. Default: "from"
-#: ./skins/plone_content/event_view.pt:72
+#: ./skins/plone_content/event_view.pt:92
 msgid "event_from"
 msgstr "od"
 
 #. Default: "More information about this event..."
-#: ./skins/plone_content/event_view.pt:131
+#: ./skins/plone_content/event_view.pt:190
 msgid "event_more_information"
 msgstr "Več informacij o tem dogodku..."
 
 #. Default: "to"
-#: ./skins/plone_content/event_view.pt:49
+#: ./skins/plone_content/event_view.pt:63
 msgid "event_to"
 msgstr "do"
 
 #. Default: "What"
-#: ./skins/plone_content/event_view.pt:35
+#: ./skins/plone_content/event_view.pt:39
 msgid "event_what"
 msgstr "Kaj"
 
 #. Default: "When"
-#: ./skins/plone_content/event_view.pt:41
+#: ./skins/plone_content/event_view.pt:49
 msgid "event_when"
 msgstr "Kdaj"
 
 #. Default: "Where"
-#: ./skins/plone_content/event_view.pt:81
+#: ./skins/plone_content/event_view.pt:101
 msgid "event_where"
 msgstr "Kje"
 
 #. Default: "More..."
-#: ./skins/plone_templates/global_contentmenu.pt:130
+#: ./skins/plone_deprecated/global_contentmenu.pt:132
 msgid "folder_add_more"
 msgstr "Več..."
 
 #. Default: "Restrict..."
-#: ./skins/plone_templates/global_contentmenu.pt:139
+#: ./skins/plone_deprecated/global_contentmenu.pt:141
 msgid "folder_add_settings"
 msgstr "Omejitve..."
 
 #. Default: "Click to configure what type of items can be added here..."
-#: ./skins/plone_forms/folder_factories.pt:25
+#: ./skins/plone_forms/folder_factories.pt:36
 msgid "folder_add_settings_long"
 msgstr "Kliknite za nastavitve tipov prispevkov, ki jih lahko dodate tu..."
 
 #. Default: "Up one level"
-#: ./skins/plone_content/folder_listing.pt:19
+#: ./skins/plone_deprecated/old_folder_contents.pt:45
 msgid "go_to_parent_url"
 msgstr "En nivo navzgor"
 
 #. Default: "All content created by ${user}..."
-#: ./skins/plone_content/author.cpt:266
+#: ./skins/plone_content/author.cpt:270
 msgid "go_to_search_author_content"
 msgstr "Vsi prispevki uporabnika ${user}..."
 
 #. Default: "Access keys"
-#: ./skins/plone_templates/accessibility-info.pt:50
+#: ./skins/plone_templates/accessibility-info.pt:54
 msgid "heading_access_keys"
 msgstr "Dostopne tipke"
 
 #. Default: "Using access keys in different web browsers"
-#: ./skins/plone_templates/accessibility-info.pt:80
+#: ./skins/plone_templates/accessibility-info.pt:78
 msgid "heading_access_keys_usage"
 msgstr "Uporaba dostopnih tipk v drugih brskalnikih"
 
 #. Default: "Accessibility"
-#: ./skins/plone_templates/accessibility-info.pt:15
+#: ./skins/plone_templates/accessibility-info.pt:18
 msgid "heading_accessibility_info"
 msgstr "Dostopnost"
 
 #. Default: "Accessibility Statement"
-#: ./skins/plone_templates/accessibility-info.pt:137
+#: ./skins/plone_templates/accessibility-info.pt:135
 msgid "heading_accessibility_statement"
 msgstr "Izjava o dostopnosti"
 
 #. Default: "Actions"
-#: ./skins/plone_templates/global_contentviews.pt:42
+#: ./skins/plone_templates/global_contentviews.pt:44
 msgid "heading_actions"
 msgstr "Akcije"
 
 #. Default: "Add new item"
-#: ./skins/plone_forms/folder_factories.pt:17
+#: ./skins/plone_forms/folder_factories.pt:27
 msgid "heading_add_new_item"
 msgstr "Dodaj nov prispevek"
 
 #. Default: "Add sharing permissions to users"
-#: ./skins/plone_forms/folder_localrole_form.pt:233
+#: ./skins/plone_deprecated/folder_localrole_form.pt:221
 msgid "heading_add_sharing_permissions"
 msgstr "Dodaj dovoljenja za skupno rabo uporabnikom"
 
 #. Default: "Add event to calendar"
-#: ./skins/plone_content/event_view.pt:106
+#: ./skins/plone_content/event_view.pt:157
 msgid "heading_add_to_calendar"
 msgstr "Dodaj dogodek v koledar"
 
 #. Default: "Add/Remove Products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:13
+#: ./skins/plone_prefs/prefs_install_products_form.pt:16
 msgid "heading_addremove_products"
 msgstr "Dodaj/Odstrani izdelke"
 
 #. Default: "Advanced search for content"
-#: ./skins/plone_forms/search_form.pt:11
+#: ./skins/plone_forms/search_form.pt:14
 msgid "heading_advanced_search"
 msgstr "Napredno iskanje po vsebini"
 
 #. Default: "Advanced settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:601
+#: ./skins/plone_deprecated/folder_localrole_form.pt:563
 msgid "heading_advanced_settings"
 msgstr "Napredne nastavitve"
 
 #. Default: "Latest content created by this user"
-#: ./skins/plone_content/author.cpt:225
+#: ./skins/plone_content/author.cpt:229
 msgid "heading_author_content"
 msgstr "Najbolj sveže vsebine tega člana"
 
 #. Default: "Available access keys"
-#: ./skins/plone_templates/accessibility-info.pt:63
+#: ./skins/plone_templates/accessibility-info.pt:61
 msgid "heading_available_access_keys"
 msgstr "Dostopne tipke na voljo"
 
 #. Default: "Broken products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:193
+#: ./skins/plone_prefs/prefs_install_products_form.pt:200
 msgid "heading_broken_products"
 msgstr "Pokvarjeni izdelki"
 
@@ -2664,14 +2714,19 @@ msgid "heading_change_ownership"
 msgstr "Zamenjaj lastništvo"
 
 #. Default: "Change password for ${user}"
-#: ./skins/plone_prefs/password_form.pt:14
+#: ./skins/plone_prefs/password_form.pt:18
 msgid "heading_change_password_for"
 msgstr "Zamenjaj geslo za ${user}"
 
 #. Default: "Comment Preview"
-#: ./skins/plone_forms/discussion_reply_preview.pt:11
+#: ./skins/plone_forms/discussion_reply_preview.pt:13
 msgid "heading_comment_preview"
 msgstr "Pregled komentarja"
+
+#. Default: "Contact form"
+#: ./skins/plone_templates/contact-info.cpt:17
+msgid "heading_contact_form"
+msgstr ""
 
 #. Default: "Contact information"
 #: ./skins/plone_templates/contact-info.cpt:14
@@ -2679,32 +2734,32 @@ msgid "heading_contact_information"
 msgstr "Informacija za stike"
 
 #. Default: "Site Setup"
-#: ./skins/plone_portlets/portlet_prefs.pt:14
+#: ./skins/plone_prefs/plone_control_panel.pt:21
 msgid "heading_control_panel"
 msgstr "Namestitev programa Plone"
 
 #. Default: "Create a Group"
-#: ./skins/plone_prefs/prefs_group_details.pt:53
+#: ./skins/plone_prefs/prefs_group_details.pt:62
 msgid "heading_create_group"
 msgstr "Ustvari skupino"
 
 #. Default: "Current sharing permissions for ${folder}"
-#: ./skins/plone_forms/folder_localrole_form.pt:35
+#: ./skins/plone_deprecated/folder_localrole_form.pt:32
 msgid "heading_currently_assigned_shares"
 msgstr "Trenutna dovoljenja za skupno rabo ${folder}"
 
 #. Default: "Document Actions"
-#: ./skins/plone_content/document_actions.pt:11
+#: ./skins/plone_deprecated/document_actions.pt:14
 msgid "heading_document_actions"
 msgstr "Akcije dokumenta"
 
 #. Default: "Edit Group Properties for ${groupname}"
-#: ./skins/plone_prefs/prefs_group_details.pt:80
+#: ./skins/plone_prefs/prefs_group_details.pt:91
 msgid "heading_edit_groupproperties"
 msgstr "Uredi lastnosti skupine ${groupname}"
 
 #. Default: "Edit ${itemtype}"
-#: ./skins/plone_content/folder_edit_form.cpt:17
+#: ./skins/plone_content/folder_edit_form.cpt:20
 msgid "heading_edit_item"
 msgstr ""
 
@@ -2714,17 +2769,17 @@ msgid "heading_enable_cookies"
 msgstr "Kako omogočiti piškotke"
 
 #. Default: "Error log"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:13
+#: ./skins/plone_prefs/prefs_error_log_form.pt:16
 msgid "heading_error_log"
 msgstr "Dnevnik napak"
 
 #. Default: "Exception Details"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:16
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:19
 msgid "heading_exception_details"
 msgstr "Podrobnosti izjeme"
 
 #. Default: "File contents"
-#: ./skins/plone_content/file_view.pt:69
+#: ./skins/plone_content/file_view.pt:70
 msgid "heading_file_contents"
 msgstr "Vsebina datoteke"
 
@@ -2734,32 +2789,32 @@ msgid "heading_full_review_list"
 msgstr "Polni seznam za recenzijo"
 
 #. Default: "Group Members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:56
+#: ./skins/plone_prefs/prefs_group_members.cpt:65
 msgid "heading_group_members"
 msgstr "Člani skupine"
 
 #. Default: "Members of the ${groupname} group"
-#: ./skins/plone_prefs/prefs_group_members.cpt:73
+#: ./skins/plone_prefs/prefs_group_members.cpt:84
 msgid "heading_group_members_of"
 msgstr "Člani skupine ${groupname}"
 
 #. Default: "Group Memberships for ${username}"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:50
+#: ./skins/plone_prefs/prefs_user_memberships.pt:56
 msgid "heading_group_memberships_for"
 msgstr "Članstvo v skupinah za ${username}"
 
 #. Default: "Add sharing permissions to groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:440
+#: ./skins/plone_deprecated/folder_localrole_form.pt:414
 msgid "heading_group_shares"
 msgstr "Dodaj dovoljenja za skupno rabo skupinam"
 
 #. Default: "Current group members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:98
+#: ./skins/plone_prefs/prefs_group_members.cpt:109
 msgid "heading_groupmembers_current"
 msgstr "Trenutni člani skupine"
 
 #. Default: "Groups Overview"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:51
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:58
 msgid "heading_groups_overview"
 msgstr "Pregled skupin"
 
@@ -2779,12 +2834,12 @@ msgid "heading_ie_version_6x"
 msgstr "Verzija 6.x"
 
 #. Default: "Install log for ${productname}"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:11
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:15
 msgid "heading_install_log_for"
 msgstr "Dnevnik namestitve za ${productname}"
 
 #. Default: "Transcript"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:111
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:115
 msgid "heading_installed_transcript"
 msgstr "Transcript"
 
@@ -2814,12 +2869,12 @@ msgid "heading_member_listing"
 msgstr "Seznam članov"
 
 #. Default: "Search for users"
-#: ./skins/plone_forms/member_search_form.pt:10
+#: ./skins/plone_forms/member_search_form.pt:13
 msgid "heading_member_search"
 msgstr "Išči člane"
 
 #. Default: "Current Group Memberships"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:81
+#: ./skins/plone_prefs/prefs_user_memberships.pt:88
 msgid "heading_memberships_current"
 msgstr "Trenutno članstvo v skupinah"
 
@@ -2834,12 +2889,12 @@ msgid "heading_mozilla"
 msgstr "Mozilla"
 
 #. Default: "Personal Preferences"
-#: ./skins/plone_prefs/personalize_form.cpt:46
+#: ./skins/plone_prefs/personalize_form.cpt:50
 msgid "heading_my_preferences"
 msgstr "Osebne preference"
 
 #. Default: "Navigation Settings"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:15
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:18
 msgid "heading_navigation_setup"
 msgstr "Nastavitve navigacije"
 
@@ -2859,14 +2914,19 @@ msgid "heading_netscape_version_6x"
 msgstr "Verzija 6.x"
 
 #. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt:45
+#: ./skins/plone_forms/ownership_form.cpt:47
 msgid "heading_new_owner"
 msgstr "Novi lastnik"
 
 #. Default: "Insufficient Privileges"
-#: ./skins/plone_login/insufficient_privileges.pt:10
+#: ./skins/plone_login/insufficient_privileges.pt:13
 msgid "heading_no_privileges"
 msgstr "Nezadostne pravice"
+
+#. Default: "You might have been looking for..."
+#: ./skins/plone_templates/default_error_message.pt:64
+msgid "heading_not_found_suggestions"
+msgstr ""
 
 #. Default: "Opera"
 #: ./skins/plone_login/enabling_cookies.pt:14
@@ -2874,12 +2934,13 @@ msgid "heading_opera"
 msgstr "Opera"
 
 #. Default: "Personal tools"
-#: ./skins/plone_templates/global_personalbar.pt:13
+#: ./skins/plone_deprecated/global_personalbar.pt:16
 msgid "heading_personal_tools"
 msgstr "Osebna orodja"
 
-#. Default: "Plone version overview"
-#: ./skins/plone_prefs/plone_control_panel.pt:54
+#. Default: "Plone Version Overview"
+#: ./skins/plone_prefs/plone_control_panel.pt:110
+#, fuzzy
 msgid "heading_plone_version_overview"
 msgstr "Pregled te verzije sistema Plone"
 
@@ -2894,59 +2955,64 @@ msgid "heading_portal_setup"
 msgstr "Nastavitev portala"
 
 #. Default: "User Properties for ${username}"
-#: ./skins/plone_prefs/prefs_user_details.cpt:54
+#: ./skins/plone_prefs/prefs_user_details.cpt:58
 msgid "heading_prefs_user_details"
 msgstr "Lastnosti uporabnika ${username}"
 
 #. Default: "Description of ${productname}"
-#: ./skins/plone_prefs/prefs_install_product_readme.pt:17
+#: ./skins/plone_prefs/prefs_install_product_readme.pt:21
 msgid "heading_product_readme"
 msgstr "Opis izdelka ${productname}"
 
 #. Default: "Publishing process"
-#: ./skins/plone_forms/content_status_history.cpt:46
+#: ./skins/plone_forms/content_status_history.cpt:49
 msgid "heading_publishing_process"
 msgstr "Proces objavljanja"
 
 #. Default: "Quit your web browser to log out"
-#: ./skins/plone_login/logged_out.pt:25
+#: ./skins/plone_login/logged_out.cpt:72
 msgid "heading_quit_to_log_out"
 msgstr "Zapustite vaš brskalnik, da bi se odjavili."
 
 #. Default: "Modified items"
-#: ./skins/plone_templates/recently_modified.pt:17
+#: ./skins/plone_templates/recently_modified.pt:20
 msgid "heading_recently_modified"
 msgstr "Spremenjeni prispevki"
 
 #. Default: "Published items"
-#: ./skins/plone_templates/recently_published.pt:17
+#: ./skins/plone_templates/recently_published.pt:20
 msgid "heading_recently_published"
 msgstr "Objavljeni prispevki"
 
 #. Default: "Registration Form"
-#: ./skins/plone_login/join_form.cpt:16
+#: ./skins/plone_login/join_form.cpt:21
 msgid "heading_registration_form"
 msgstr "Obrazec za včlanitev"
 
 #. Default: "Rename item"
-#: ./skins/plone_forms/folder_rename_form.cpt:15
+#: ./skins/plone_forms/folder_rename_form.cpt:18
 msgid "heading_rename_item"
 msgstr "Preimenuj prispevek"
 
 #. Default: "REQUEST"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:68
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:72
 msgid "heading_request"
 msgstr "Zahtevek"
 
 #. Default: "Returned results"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:68
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:67
 msgid "heading_returned_results"
 msgstr "Vrnjeni rezultati"
 
 #. Default: "Roles Management"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:236
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:237
 msgid "heading_roles_management"
 msgstr "Upravljanje z vlogami"
+
+#. Default: "Search for groups"
+#: ./skins/plone_prefs/prefs_user_memberships.pt:68
+msgid "heading_search_groups"
+msgstr ""
 
 #. Default: "Search for new groups"
 #: ./skins/plone_prefs/prefs_user_memberships.pt:62
@@ -2954,12 +3020,12 @@ msgid "heading_search_newgroups"
 msgstr "Išči nove skupine"
 
 #. Default: "Search for new group members"
-#: ./skins/plone_prefs/prefs_group_members.cpt:178
+#: ./skins/plone_prefs/prefs_group_members.cpt:189
 msgid "heading_search_newmembers"
 msgstr "Išči nove člane skupine"
 
 #. Default: "Search results"
-#: ./skins/plone_forms/folder_localrole_form.pt:238
+#: ./skins/plone_deprecated/folder_localrole_form.pt:226
 msgid "heading_search_results"
 msgstr "Rezultati iskanja"
 
@@ -2969,22 +3035,22 @@ msgid "heading_search_setup"
 msgstr "Nastavitve iskanja"
 
 #. Default: "Search for Users and Groups"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:19
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:22
 msgid "heading_search_usersandgroups"
 msgstr "Išči uporabnike in skupine"
 
 #. Default: "Sections"
-#: ./skins/plone_templates/global_sections.pt:12
+#: ./skins/plone_deprecated/global_sections.pt:15
 msgid "heading_sections"
 msgstr "Sekcije"
 
 #. Default: "Select default page"
-#: ./skins/plone_forms/select_default_page.cpt:12
+#: ./skins/plone_forms/select_default_page.cpt:15
 msgid "heading_select_default_page"
 msgstr "Izberi privzeto stran"
 
 #. Default: "Select default view"
-#: ./skins/plone_forms/select_default_view.cpt:12
+#: ./skins/plone_forms/select_default_view.cpt:15
 msgid "heading_select_default_view"
 msgstr "Izberi privzeti vpogled"
 
@@ -2994,12 +3060,13 @@ msgid "heading_select_workflow"
 msgstr "Izberi zaporedje delovnih aktivnosti"
 
 #. Default: "Site Administrator has been contacted."
-#: ./skins/plone_templates/send_feedback_confirm.cpt:15
+#: ./skins/plone_templates/send_feedback_confirm.cpt:18
 msgid "heading_send_feedback_confirm"
 msgstr "Skrbnik spletišča je bil obveščen."
 
-#. Default: "Send this page to somebody"
-#: ./skins/plone_forms/sendto_form.cpt:17
+#. Default: "Send this page to someone"
+#: ./skins/plone_forms/sendto_form.cpt:20
+#, fuzzy
 msgid "heading_send_page_to"
 msgstr "Pošlji to stran nekomu"
 
@@ -3008,23 +3075,28 @@ msgstr "Pošlji to stran nekomu"
 msgid "heading_sent_password"
 msgstr "Geslo je bilo poslano"
 
+#. Default: "Restrict what types of content can be added"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:52
+msgid "heading_set_content_type_restrictions"
+msgstr ""
+
 #. Default: "Restrict addable types"
 #: ./skins/plone_forms/folder_constraintypes_form.cpt:12
 msgid "heading_set_folder_type_restrictions"
 msgstr "Omeji dodatne tipe"
 
 #. Default: "Please log in"
-#: ./skins/plone_login/failsafe_login_form.cpt:4
+#: ./skins/plone_login/failsafe_login_form.cpt:7
 msgid "heading_sign_in"
 msgstr "Prosim prijavite se"
 
 #. Default: "Sign-in failure"
-#: ./skins/plone_login/login_failed.pt:12
+#: ./skins/plone_login/login_failed.pt:15
 msgid "heading_sign_in_failure_auth"
 msgstr "Napaka ob prijavi"
 
 #. Default: "You are now logged out"
-#: ./skins/plone_login/logged_out.pt:12
+#: ./skins/plone_login/logged_out.cpt:29
 msgid "heading_signed_out"
 msgstr "Ste odjavljeni"
 
@@ -3038,13 +3110,23 @@ msgstr "Napaka spletišča"
 msgid "heading_site_error_apologies"
 msgstr "Oprostite..."
 
+#. Default: "We're sorry, but there seems to be an error..."
+#: ./skins/plone_templates/default_error_message.pt:130
+msgid "heading_site_error_sorry"
+msgstr ""
+
+#. Default: "We're sorry, but that page doesn't exist..."
+#: ./skins/plone_templates/default_error_message.pt:34
+msgid "heading_site_there_seems_to_be_an_error"
+msgstr ""
+
 #. Default: "Skin Setup"
 #: ./skins/plone_prefs/prefs_portalskin_form.cpt:14
 msgid "heading_skin_setup"
 msgstr "Nastavitve videza"
 
 #. Default: "Syndication Properties"
-#: ./skins/plone_forms/synPropertiesForm.cpt:12
+#: ./skins/plone_forms/synPropertiesForm.cpt:15
 msgid "heading_syndication_properties"
 msgstr "Nastavitev sindiciranja"
 
@@ -3054,47 +3136,47 @@ msgid "heading_syndication_setup"
 msgstr "Nastavitve sindiciranja celotnega spletišča"
 
 #. Default: "Undo actions"
-#: ./skins/plone_forms/undo_form.pt:25
+#: ./skins/plone_forms/undo_form.pt:28
 msgid "heading_undo_actions"
 msgstr "Razveljavi akcije"
 
 #. Default: "My Preferences"
-#: ./skins/plone_prefs/plone_memberprefs_panel.pt:16
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:19
 msgid "heading_user_panel"
 msgstr "Moje preference"
 
 #. Default: "Users Overview"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:47
+#: ./skins/plone_prefs/prefs_users_overview.cpt:53
 msgid "heading_users_overview"
 msgstr "Pregled uporabnikov"
 
 #. Default: "Validation"
-#: ./skins/plone_templates/accessibility-info.pt:145
+#: ./skins/plone_templates/accessibility-info.pt:143
 msgid "heading_validation"
 msgstr "Overovljanje"
 
 #. Default: "Views"
-#: ./skins/plone_templates/global_contentviews.pt:13
+#: ./skins/plone_templates/global_contentviews.pt:15
 msgid "heading_views"
 msgstr "Pogledi"
 
 #. Default: "Welcome!"
-#: ./skins/plone_login/login_password.cpt:19
+#: ./skins/plone_login/login_password.cpt:22
 msgid "heading_welcome"
 msgstr "Dobrodošli!"
 
 #. Default: "Welcome to ${sitename}"
-#: ./skins/plone_templates/index_html.pt:11
+#: ./skins/plone_templates/index_html.pt:14
 msgid "heading_welcome_to"
 msgstr "Dobrodošli na ${sitename}"
 
 #. Default: "You are now logged in"
-#: ./skins/plone_login/login_success.pt:25
+#: ./skins/plone_login/login_success.pt:28
 msgid "heading_you_are_now_logged_in"
 msgstr "Ste prijavljeni"
 
 #. Default: "Please select how you would like to control which content types are addable in this folder."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:54
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:91
 msgid "help_add_restriction_mode"
 msgstr "Prosim izberite, kako bi upravljali tipe vsebin, ki jih je možno dodajati v to mapo."
 
@@ -3109,7 +3191,7 @@ msgid "help_allowRolesToAddKeywords"
 msgstr "Uporabniki z eno od izbranih vlog imajo dovoljenje za dodajanje ključnih besed na spletišče."
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
-#: ./skins/plone_prefs/personalize_form.cpt:196
+#: ./skins/plone_prefs/personalize_form.cpt:202
 msgid "help_biography"
 msgstr "Kratek pregled kaj ste in kaj delate. To bo prikazano na strani avtorja. Povezava na to stran bo v vseh vaših prispevkih."
 
@@ -3119,17 +3201,17 @@ msgid "help_boolean_criteria_bool"
 msgstr "True ali false"
 
 #. Default: "Case sensitive, make sure caps lock is not enabled."
-#: ./skins/plone_login/failsafe_login_form.cpt:107
+#: ./skins/plone_login/failsafe_login_form.cpt:116
 msgid "help_capslock_password"
 msgstr "Občutljivo na VELIKE/male črke. Preverite, ali je tipka Caps lock izključena."
 
 #. Default: "Changes the ownership of the current object."
-#: ./skins/plone_forms/ownership_form.cpt:41
+#: ./skins/plone_forms/ownership_form.cpt:43
 msgid "help_change_ownership"
 msgstr "Spremeni lastništvo trenutnega predemeta."
 
 #. Default: "Select the new state for the selected items."
-#: ./skins/plone_forms/content_status_history.cpt:183
+#: ./skins/plone_forms/content_status_history.cpt:167
 msgid "help_change_status"
 msgstr "Izberi nov status za izbrane prispevke."
 
@@ -3139,17 +3221,17 @@ msgid "help_choose_a_date"
 msgstr "Izberite datum"
 
 #. Default: "A comment about this link."
-#: ./skins/plone_forms/sendto_form.cpt:89
+#: ./skins/plone_forms/sendto_form.cpt:92
 msgid "help_comment_to_link"
 msgstr "Komentar o tej povezavi."
 
 #. Default: "Re-enter the password. Make sure the passwords are identical."
-#: ./skins/plone_login/join_form.cpt:174
+#: ./skins/plone_login/join_form.cpt:173
 msgid "help_confirm_password"
 msgstr "Prosim ponovite vnos gesla. Poskrbite, da sta gesli enaki."
 
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
-#: ./skins/plone_prefs/personalize_form.cpt:245
+#: ./skins/plone_prefs/personalize_form.cpt:248
 msgid "help_content_editor"
 msgstr "Izberite urejevalnik vsebine, ki bi ga radi uporabljali. Upoštevajte, da imajo urejevalniki besedil lahko posebne zahteve glede brskalnikov."
 
@@ -3194,7 +3276,7 @@ msgid "help_current_folder_only"
 msgstr "Če je izbrano, bo ves čas drevo navigacije kazalo samo trenutno mapo in podrejene mape."
 
 #. Default: "Enter your current password."
-#: ./skins/plone_prefs/password_form.pt:35
+#: ./skins/plone_prefs/password_form.pt:40
 msgid "help_current_password"
 msgstr "Prosim vnesite trenutno geslo."
 
@@ -3229,22 +3311,23 @@ msgid "help_default_skin"
 msgstr "Izberite privzeti videz portala Plone."
 
 #. Default: "A short summary of the content"
-#: ./skins/plone_content/folder_edit_form.cpt:105
+#: ./skins/plone_content/folder_edit_form.cpt:104
 msgid "help_description"
 msgstr "Kratek opis prispevka."
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
-#: ./skins/plone_prefs/personalize_form.cpt:335
+#: ./skins/plone_prefs/personalize_form.cpt:333
 msgid "help_display_names"
 msgstr "Določi ali so kratka imena (ID) spremenljiva ob urejanju prispevkov. Če kratka imena niso prikazana, jih sistem generira avtomatično."
 
-#. Default: "The date when the item will be available (of course it needs to be published too). If no date is selected the item will be effective immediately."
-#: ./skins/plone_forms/content_status_history.cpt:111
+#. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
+#: ./skins/plone_forms/content_status_history.cpt:100
+#, fuzzy
 msgid "help_effective_date"
 msgstr "Datum, ko naj bo prispevek na voljo (seveda mora biti objavljen). Če datum ni vnesen, bo prispevek na voljo takoj."
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
-#: ./skins/plone_login/join_form.cpt:112
+#: ./skins/plone_login/join_form.cpt:115
 msgid "help_email_creation"
 msgstr "Vnesite poštni naslov. Ta je nujen za primer, da se geslo izgubi. Spoštujemo zasebnosti in poštnega naslova ne bomo predali tretji osebi ali ga sicer razkrili."
 
@@ -3254,42 +3337,43 @@ msgid "help_exclude_from_nav"
 msgstr "Če je odkljukan, ta prispevek ni prikazan v drevesu navigacije"
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
-#: ./skins/plone_forms/content_status_history.cpt:137
+#: ./skins/plone_forms/content_status_history.cpt:124
 msgid "help_expiration_date"
 msgstr "Datum, ko bo prispevek pretekel. Na ta dan bo prispevek nedostopen za ostale. Če datuma ni, prispevek ne bo nikoli potekel."
 
 #. Default: "If you are unsure of which format to use, just select Plain Text and type the document as you usually do."
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:21
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:20
 msgid "help_format_wysiwyg"
 msgstr "Če ne veste dobro kateri format izbrati, izberite Enostavno besedilo in preprosto natipkajte dokument."
 
 #. Default: "Enter full name, eg. John Smith."
-#: ./skins/plone_login/join_form.cpt:48
+#: ./skins/plone_login/join_form.cpt:55
 msgid "help_full_name_creation"
 msgstr "Vnesite polno ime npr. Janez Novak."
 
 #. Default: "By default, all items created at the root level will add to the global section navigation. You can turn this off if you prefer manually constructing this part of the navigation."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:54
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:65
 msgid "help_generated_tabs"
 msgstr "Privzeto bodo vse mape na korenskem nivoju imele avtomatično generirano navigacijsko drevo. To lahko izklopite, če želite izdelati navigacijsko drevo ročno."
 
 #. Default: "A unique identifier for the group. Can not be changed after creation."
-#: ./skins/plone_prefs/prefs_group_details.pt:64
+#: ./skins/plone_prefs/prefs_group_details.pt:74
 msgid "help_groupname"
 msgstr "Enolična identifikacija skupine. Ko je ustvarjena, je ne morete več spremeniti."
 
 #. Default: "The URL for your external home page, if you have one."
-#: ./skins/plone_prefs/personalize_form.cpt:221
+#: ./skins/plone_prefs/personalize_form.cpt:226
 msgid "help_homepage"
 msgstr "Spletni naslov vaše zunanje domače spletne strani, če jo imate."
 
-#. Default: "Of the types selected above, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected above will be addable via a separate form accessible from the same menu."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:137
+#. Default: "Of the types selected below, certain items may be made available through the standard \"Add\" drop-down menu. Any further types selected below will be addable via a separate form accessible from the same menu."
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:148
+#, fuzzy
 msgid "help_immediately_addable_types"
 msgstr "Od izbranih tipov zgoraj so nekateri lahko na voljo v standardnem menuju \"Dodaj\". Dodatni tipi so lahko na voljo za dodajanje prek obrazca v istem menuju."
 
 #. Default: "If checked, this will attempt to modify the status of all content in any selected folders and their subfolders."
-#: ./skins/plone_forms/content_status_history.cpt:94
+#: ./skins/plone_forms/content_status_history.cpt:90
 msgid "help_include_contained_objects"
 msgstr "Če je odkljukano, bo Plone poskušal spremeniti status vseh vsebin v izbranih mapah in podmapah."
 
@@ -3309,7 +3393,7 @@ msgid "help_limit_number"
 msgstr "Če je odkljukano, se bo spodaj prikazalo samo Število prispevkov."
 
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: ./skins/plone_prefs/personalize_form.cpt:313
+#: ./skins/plone_prefs/personalize_form.cpt:312
 msgid "help_listed_search"
 msgstr "Določite ali se to uporabniško ime nahaja med najdenimi pri iskanju uporabnikov tega spletišču."
 
@@ -3318,28 +3402,29 @@ msgstr "Določite ali se to uporabniško ime nahaja med najdenimi pri iskanju up
 msgid "help_livesearch"
 msgstr "Omogoči živo iskanje (kot npr. Google) za prikaz zadetkov, če vaš brskalnik podpira JavaScript."
 
-#. Default: "Select the content types that will be addable inside this folder."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:108
+#. Default: "Select the content types that will be addable to this folder using the 'more ...' link."
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:192
+#, fuzzy
 msgid "help_locally_allowed_types"
 msgstr "Izberite tipe vsebin, ki jih lahko dodajamo v to mapo."
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
-#: ./skins/plone_prefs/personalize_form.cpt:139
+#: ./skins/plone_prefs/personalize_form.cpt:149
 msgid "help_location"
 msgstr "Vaš kraj - mesto ali država - ali lokacija pisarne, kjer ste."
 
 #. Default: "Login names are case sensitive, make sure the caps lock key is not enabled."
-#: ./skins/plone_login/failsafe_login_form.cpt:81
+#: ./skins/plone_login/failsafe_login_form.cpt:92
 msgid "help_login_name_caps"
 msgstr "Uporabniška imena so občutljiva ne VELIKE/male črke. Zagotovite, da je tipka Caps lock izklopljena."
 
 #. Default: "Appearance of the site."
-#: ./skins/plone_prefs/personalize_form.cpt:351
+#: ./skins/plone_prefs/personalize_form.cpt:349
 msgid "help_look"
 msgstr "Izgled tega spletišča."
 
 #. Default: "Please enter the message you want to send."
-#: ./skins/plone_templates/contact-info.cpt:123
+#: ./skins/plone_templates/contact-info.cpt:124
 msgid "help_message"
 msgstr "Prosim vnesite sporočilo, ki ga želite poslati."
 
@@ -3374,7 +3459,7 @@ msgid "help_navigationtypes"
 msgstr "Tipi vsebin, ki naj bodo prikazani v drevesu navigacije in načrtu spletišča."
 
 #. Default: "Enter your new password. Minimum 5 characters."
-#: ./skins/plone_login/login_password.cpt:62
+#: ./skins/plone_login/login_password.cpt:67
 msgid "help_new_password"
 msgstr "Vnesite novo geslo. Minimalna dolžina je 5 znakov."
 
@@ -3389,7 +3474,7 @@ msgid "help_no_selectable_default_pages"
 msgstr "V tej mapi ni prispevkov, ki bi bili izbrani za privzet pogled v to mapo."
 
 #. Default: "Minimum 5 characters."
-#: ./skins/plone_login/join_form.cpt:144
+#: ./skins/plone_login/join_form.cpt:145
 msgid "help_password_creation"
 msgstr "Minimalna dolžina je 5 znakov."
 
@@ -3399,7 +3484,7 @@ msgid "help_password_policy"
 msgstr "Določite ali lahko uporabnik izbere začetno geslo. Če geslo izbere uporabnik je bolj verjetno, da bo izbral neprimernega. Če se to ne sklada z varnostno politiko, izberite \"Generiraj\"."
 
 #. Default: "If you have forgotten your password, ${click_here}."
-#: ./skins/plone_login/failsafe_login_form.cpt:113
+#: ./skins/plone_login/failsafe_login_form.cpt:122
 msgid "help_password_retrieval"
 msgstr "Če ste pozabili geslo, ${click_here} ."
 
@@ -3434,27 +3519,27 @@ msgid "help_portal_type_criteria_value"
 msgstr "En od registiranih tipov portala."
 
 #. Default: "To add or change the portrait: click the \"Browse\" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall."
-#: ./skins/plone_prefs/personalize_form.cpt:386
+#: ./skins/plone_prefs/personalize_form.cpt:382
 msgid "help_portrait"
 msgstr "Dodate ali spremenite svojo sliko tako, da kliknete gumb \"Brskaj\" in izberete svojo sliko. Priporočena velikost slike je: širina 75 točk in višina 100 točk."
 
 #. Default: "Your preferred language."
-#: ./skins/plone_prefs/personalize_form.cpt:166
+#: ./skins/plone_prefs/personalize_form.cpt:174
 msgid "help_preferred_language"
 msgstr "Vaš privzeti jezik."
 
 #. Default: "Will be added to the publishing history. If multiple items are selected, this comment will be attached to all of them."
-#: ./skins/plone_forms/content_status_history.cpt:165
+#: ./skins/plone_forms/content_status_history.cpt:151
 msgid "help_publishing_comments"
 msgstr "Bo dodano v zgodovino objav. Če je izbranih več prispevkov, bo ta komentar dodan k vsakemu od njih."
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
-#: ./skins/plone_login/failsafe_login_form.cpt:146
+#: ./skins/plone_login/failsafe_login_form.cpt:151
 msgid "help_remember_my_name"
 msgstr "Odkljukajte, če želite avtomatični predlog uporabniškega imena ob naslednji prijavi."
 
 #. Default: "Return items created by a particular person."
-#: ./skins/plone_forms/search_form.pt:224
+#: ./skins/plone_forms/search_form.pt:209
 msgid "help_search_author"
 msgstr "Vrne prispevke, ki ga je ustvarila določena oseba."
 
@@ -3463,28 +3548,35 @@ msgstr "Vrne prispevke, ki ga je ustvarila določena oseba."
 msgid "help_search_before_specified_time"
 msgstr "Vrne člane, ki se ŠE NISO prijavili od danega časa."
 
+#. Default: "Return items matching some or all of these Categories. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
+#: ./skins/plone_forms/search_form.pt:70
+msgid "help_search_categories"
+msgstr ""
+
 #. Default: "Return items matching this description. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>."
-#: ./skins/plone_forms/search_form.pt:124
+#: ./skins/plone_forms/search_form.pt:119
 msgid "help_search_description"
 msgstr "Vrne prispevke, ki ustrezajo opisu. Več besed lahko uporabimo, če jih sestavimo z <strong>AND</strong> in <strong>OR</strong> ."
 
-#. Default: "Return users with email addresses containing this value."
-#: ./skins/plone_forms/member_search_form.pt:63
+#. Default: "Find users whose email-addresses contain"
+#: ./skins/plone_forms/member_search_form.pt:49
+#, fuzzy
 msgid "help_search_email"
 msgstr "Vrne člane s poštnimi naslovi, ki vsebujejo ta niz."
 
 #. Default: "Return users with full names containing this value."
-#: ./skins/plone_forms/member_search_form.pt:46
+#: ./skins/plone_forms/member_search_form.pt:64
 msgid "help_search_fullname"
 msgstr "Vrne vse uporabnike katerih polno ime vsebuje to vrednost."
 
-#. Default: "Return users in the selected group."
-#: ./skins/plone_forms/member_search_form.pt:123
+#. Default: "Find users in the selected group."
+#: ./skins/plone_forms/member_search_form.pt:84
+#, fuzzy
 msgid "help_search_group"
 msgstr "Vrne člane iz izbrane skupine."
 
 #. Default: "Return items of a specific type."
-#: ./skins/plone_forms/search_form.pt:172
+#: ./skins/plone_forms/search_form.pt:163
 msgid "help_search_item_type"
 msgstr "Vrne prispevke želenega tipa"
 
@@ -3498,38 +3590,40 @@ msgstr "Vrne prispevke, ki ustrezajo ključnim besedam. Več besed vnesete s pri
 msgid "help_search_last_logged_in"
 msgstr "Vrne člane, ki so se prijavili včeraj, prejšnji teden itd."
 
-#. Default: "Return users with login names containing this value."
-#: ./skins/plone_forms/member_search_form.pt:29
+#. Default: "Find users whose login-names contain"
+#: ./skins/plone_forms/member_search_form.pt:34
+#, fuzzy
 msgid "help_search_name"
 msgstr "Vrne člane z uporabniškimi imeni, ki vsebujejo ta niz."
 
 #. Default: "Return items added since you were last logged on, the last week, etc."
-#: ./skins/plone_forms/search_form.pt:142
+#: ./skins/plone_forms/search_form.pt:135
 msgid "help_search_new_items_since"
 msgstr "Vrne dodane prispevke od zadnje prijave, zadnjega tedna, itd."
 
 #. Default: "Search for users."
-#: ./skins/plone_forms/ownership_form.cpt:186
+#: ./skins/plone_forms/ownership_form.cpt:189
 msgid "help_search_new_owner"
 msgstr "Išči uporabnike"
 
 #. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
-#: ./skins/plone_forms/search_form.pt:251
+#: ./skins/plone_forms/search_form.pt:232
 msgid "help_search_review_status"
 msgstr "Kot recenzent lahko iščete po prispevkih glede na njihovo stanje pregleda. Če želite omejiti rezultate samo na prispevke v določenih stanjih, jih izberite iz tega seznama."
 
-#. Default: "Return users with all of the selected roles."
-#: ./skins/plone_forms/member_search_form.pt:144
+#. Default: "Find users with all of the selected roles."
+#: ./skins/plone_forms/member_search_form.pt:105
+#, fuzzy
 msgid "help_search_roles"
 msgstr "Vrne člane z vsemi izbranimi vlogami."
 
 #. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
-#: ./skins/plone_forms/search_form.pt:33
+#: ./skins/plone_forms/search_form.pt:38
 msgid "help_search_text"
 msgstr "Za enostavno iskanje po besedilu tu vstavite iskano besedo. Več besed lahko iščete tako, da jih skombinirate z operatorjema <strong>AND</strong> in <strong>OR</strong> . Besedilo v tem polju bomo primerjali s prispevki in sicer z njihovo vsebino, naslovom in opisom."
 
 #. Default: "Return items matching this title."
-#: ./skins/plone_forms/search_form.pt:53
+#: ./skins/plone_forms/search_form.pt:56
 msgid "help_search_title"
 msgstr "Vrne prispevke, ki ustrezajo temu naslovu."
 
@@ -3544,22 +3638,22 @@ msgid "help_selection_criteria_value"
 msgstr "Obstajajoče vrednosti"
 
 #. Default: "Your email address."
-#: ./skins/plone_forms/sendto_form.cpt:70
+#: ./skins/plone_forms/sendto_form.cpt:75
 msgid "help_send_from"
 msgstr "Vaš poštni naslov."
 
 #. Default: "The e-mail address to send this link to."
-#: ./skins/plone_forms/sendto_form.cpt:44
+#: ./skins/plone_forms/sendto_form.cpt:51
 msgid "help_send_to_mail"
 msgstr "Poštni naslov osebe kamor želite poslati to povezavo."
 
 #. Default: "Please enter your e-mail address"
-#: ./skins/plone_templates/contact-info.cpt:66
+#: ./skins/plone_templates/contact-info.cpt:69
 msgid "help_sender_from_address"
 msgstr "Prosim vnesite vaš naslov elektronske pošte"
 
 #. Default: "Please enter your full name"
-#: ./skins/plone_templates/contact-info.cpt:41
+#: ./skins/plone_templates/contact-info.cpt:45
 msgid "help_sender_fullname"
 msgstr "Prosim vnesite vaše polno ime"
 
@@ -3579,14 +3673,19 @@ msgid "help_setup_visible_ids"
 msgstr "Prikaže in dovoli uporabnikom spreminjati \"Kratko ime\" kot oznako vsebine iz obrazca za vnos prispevka. Če je omogočeno, lahko uporabniki to omogočijo v svojih preferencah."
 
 #. Default: "Short name is the part that shows up in the URL of the item."
-#: ./skins/plone_forms/folder_rename_form.cpt:63
+#: ./skins/plone_forms/folder_rename_form.cpt:68
 msgid "help_short_name_url"
 msgstr "Kratko ime je del spletnega naslova prispevka."
 
 #. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: ./skins/plone_content/folder_edit_form.cpt:47
+#: ./skins/plone_content/folder_edit_form.cpt:50
 msgid "help_shortname"
 msgstr "Kratko ime je del spletnega naslova prispevka. Da je dostopen, ne sme vsebovati presledkov, velikih črk, podčrtajev, šumnikov ali drugih posebnih znakov."
+
+#. Default: "The content types that should be shown in the site map."
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:85
+msgid "help_sitemaptypes"
+msgstr ""
 
 #. Default: "If checked, each user can select a skin from his preferences panel."
 #: ./skins/plone_prefs/prefs_portalskin_form.cpt:70
@@ -3619,12 +3718,12 @@ msgid "help_string_criteria_value"
 msgstr "Niz"
 
 #. Default: "Please enter the subject of the message you want to send."
-#: ./skins/plone_templates/contact-info.cpt:98
+#: ./skins/plone_templates/contact-info.cpt:100
 msgid "help_subject"
 msgstr "Prosim vnesite predmet sporočila, ki ga želite poslati."
 
 #. Default: "Changes all the contained objects if selected."
-#: ./skins/plone_forms/ownership_form.cpt:63
+#: ./skins/plone_forms/ownership_form.cpt:65
 msgid "help_subobjects"
 msgstr "Sprememeni vse vsebovane predmete, če izberete ta način."
 
@@ -3639,7 +3738,7 @@ msgid "help_syndication_frequency"
 msgstr "Upravlja s frekvenco osvežitev. Na primer, če želite vsebine uskladiti vsak drugi teden izberite \"weekly\" zgoraj in \"2\" ."
 
 #. Default: "Maximum number of items that will be syndicated."
-#: ./skins/plone_forms/synPropertiesForm.cpt:165
+#: ./skins/plone_forms/synPropertiesForm.cpt:160
 msgid "help_syndication_max_items"
 msgstr "Maksimalno število prispevkov, ki se bodo sindicirano usklajeno objavljali."
 
@@ -3649,12 +3748,12 @@ msgid "help_syndication_maxitems"
 msgstr "Maksimalno število prispevkov, ki se bodo sindicirano usklajeno objavljali."
 
 #. Default: "This is the date the updater starts counting from. So if you want to update weekly every Tuesday, make sure this starts on a Tuesday."
-#: ./skins/plone_forms/synPropertiesForm.cpt:140
+#: ./skins/plone_forms/synPropertiesForm.cpt:135
 msgid "help_syndication_update_base"
 msgstr "Datum, ko osveževalnik prične delovati. Če želite osvežitve npr. vsak teden v torek, se prepričajte, da je osveževalnik zares pričel delovati v torek."
 
 #. Default: "Controls the frequency of the updates. For example, if you want it to update every second week, select \"weekly\" above, and \"2\" here."
-#: ./skins/plone_forms/synPropertiesForm.cpt:112
+#: ./skins/plone_forms/synPropertiesForm.cpt:109
 msgid "help_syndication_update_frequency"
 msgstr "Upravlja s frekvenco osvežitev. Na primer, če želite vsebine osvežiti vsak drugi teden izberite \"tedensko\" in \"2\" ."
 
@@ -3675,17 +3774,17 @@ msgid "help_url"
 msgstr "Dodajte http:// za povzave izven tega portala."
 
 #. Default: "Determines if the roles given to users and groups from higher levels are in effect in this context. Use this to block people who have local roles in higher-level folders from accessing this folder."
-#: ./skins/plone_forms/folder_localrole_form.pt:625
+#: ./skins/plone_deprecated/folder_localrole_form.pt:587
 msgid "help_use_acquisition"
 msgstr "Določa ali so vloge uporabnikov ali skupin v veljavi tudi v tem kontekstu. Uporablja se za blokiranje dostopa oseb v to mapo, če imajo lokalne vloge v nadrejenih mapah."
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
-#: ./skins/plone_login/join_form.cpt:78
+#: ./skins/plone_login/join_form.cpt:83
 msgid "help_user_name_creation_casesensitive"
 msgstr "Vnesite uporabniško ime npr. 'jnovak'. Ne uporabljajte presledkov in posebnih znakov. Uporabniška imena in gesla so občutljiva na VELIKE/male črke. Pazite na tipko Caps lock. Uporabniško ime se uporablja za prijavo."
 
 #. Default: "The workflow states that should be shown in the navigation tree and the site map."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:287
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:132
 msgid "help_wf_states"
 msgstr "Stanje delovnih tokov naj bo prikazano v drevesih navigacije in načrtih spletišča."
 
@@ -3696,7 +3795,7 @@ msgid "hide"
 msgstr "skrij"
 
 #. Default: "HTML"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:46
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:41
 msgid "html"
 msgstr "HTML"
 
@@ -3711,27 +3810,32 @@ msgid "iCalendar export"
 msgstr "izvoz za ICalendar"
 
 #. Default: "Inherited Role(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:105
+#: ./skins/plone_deprecated/folder_localrole_form.pt:100
 msgid "label_acquired_roles"
 msgstr "Podedovane vloge"
 
 #. Default: "(inactive)"
-#: ./skins/plone_forms/folder_localrole_form.pt:106
+#: ./skins/plone_deprecated/folder_localrole_form.pt:101
 msgid "label_acquired_roles_inactive"
 msgstr "(neaktivno)"
 
 #. Default: "Actions"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:62
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:66
 msgid "label_actions"
 msgstr "Akcije"
 
 #. Default: "Actions"
-#: ./skins/plone_templates/global_contentmenu.pt:403
+#: ./skins/plone_deprecated/global_contentmenu.pt:405
 msgid "label_actions_menu"
 msgstr "Akcije"
 
+#. Default: "Add"
+#: ./skins/plone_forms/folder_factories.pt:82
+msgid "label_add"
+msgstr ""
+
 #. Default: "Add Comment"
-#: ./skins/plone_forms/discussion_reply_preview.pt:54
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:25
 msgid "label_add_comment"
 msgstr "Dodaj komentar"
 
@@ -3741,22 +3845,22 @@ msgid "label_add_item"
 msgstr "Izberi prispevek za dodajanje"
 
 #. Default: "Add New Group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:84
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:92
 msgid "label_add_new_group"
 msgstr "Dodaj novo skupino"
 
 #. Default: "Add item"
-#: ./skins/plone_templates/global_contentmenu.pt:97
+#: ./skins/plone_deprecated/global_contentmenu.pt:99
 msgid "label_add_new_item"
 msgstr "Dodaj prispevek"
 
 #. Default: "Add to folder"
-#: ./skins/plone_templates/global_contentmenu.pt:104
+#: ./skins/plone_deprecated/global_contentmenu.pt:106
 msgid "label_add_new_item_in_folder"
 msgstr "Dodaj v mapo"
 
 #. Default: "Add New User"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:80
+#: ./skins/plone_prefs/prefs_users_overview.cpt:87
 msgid "label_add_new_user"
 msgstr "Dodaj novega uporabnka"
 
@@ -3766,47 +3870,47 @@ msgid "label_add_restriction_mode"
 msgstr "Način"
 
 #. Default: "iCal"
-#: ./skins/plone_content/event_view.pt:119
+#: ./skins/plone_content/event_view.pt:170
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
-#: ./skins/plone_content/event_view.pt:113
+#: ./skins/plone_content/event_view.pt:164
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
 #. Default: "Add ${type}"
-#: ./skins/plone_templates/global_contentmenu.pt:166
+#: ./skins/plone_deprecated/global_contentmenu.pt:168
 msgid "label_add_type"
 msgstr "Dodaj ${type}"
 
 #. Default: "Add ${type} to folder"
-#: ./skins/plone_templates/global_contentmenu.pt:170
+#: ./skins/plone_deprecated/global_contentmenu.pt:172
 msgid "label_add_type_to_folder"
 msgstr "Dodaj ${type} v mapo"
 
 #. Default: "Add user to selected groups"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:69
+#: ./skins/plone_prefs/prefs_user_memberships.pt:77
 msgid "label_add_user_to_group"
 msgstr "Dodaj uporabnika v izbrane skupine"
 
 #. Default: "Add selected groups and users to this group"
-#: ./skins/plone_prefs/prefs_group_members.cpt:280
+#: ./skins/plone_prefs/prefs_group_members.cpt:285
 msgid "label_add_users_to_group"
 msgstr "Dodaj izbrane uporabnike v to skupino"
 
 #. Default: "Advanced..."
-#: ./skins/plone_templates/global_contentmenu.pt:60
+#: ./skins/plone_deprecated/global_contentmenu.pt:62
 msgid "label_advanced"
 msgstr "Napredno..."
 
 #. Default: "Advanced Search..."
-#: ./skins/plone_templates/global_searchbox.pt:45
+#: ./skins/plone_deprecated/global_searchbox.pt:57
 msgid "label_advanced_search"
 msgstr "Napredno iskanje..."
 
 #. Default: "Affected content"
-#: ./skins/plone_forms/content_status_history.cpt:79
+#: ./skins/plone_forms/content_status_history.cpt:70
 msgid "label_affected_content"
 msgstr "Povzročene spremembe vsebine"
 
@@ -3831,12 +3935,12 @@ msgid "label_allow_members_to_create_password"
 msgstr "Dovoli članom, da si izberejo začetno geslo"
 
 #. Default: "Anonymous User"
-#: ./skins/plone_forms/discussion_reply_form.cpt:45
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:64
 msgid "label_anonymous_user"
 msgstr "Anonimni uporabnik"
 
 #. Default: "Any Author"
-#: ./skins/plone_forms/search_form.pt:234
+#: ./skins/plone_forms/search_form.pt:217
 msgid "label_any_author"
 msgstr "Katerikoli avtor"
 
@@ -3846,57 +3950,57 @@ msgid "label_any_browser"
 msgstr "Uporabno v kateremkoli brskalniku"
 
 #. Default: "Apply Changes"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:225
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:228
 msgid "label_apply_changes"
 msgstr "Potrdi spremembe"
 
 #. Default: "Apply Settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:634
+#: ./skins/plone_deprecated/folder_localrole_form.pt:596
 msgid "label_apply_settings"
 msgstr "Potrdi nastavitve"
 
 #. Default: "Assign Local Role to Selected User(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:344
+#: ./skins/plone_deprecated/folder_localrole_form.pt:326
 msgid "label_assign_local_role_to_users"
 msgstr "Dodali lokalno vlogo izbranim uporabnikom"
 
 #. Default: "Assign Local Role to Selected Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:543
+#: ./skins/plone_deprecated/folder_localrole_form.pt:511
 msgid "label_assign_role_to_groups"
 msgstr "Dodeli lokalno vlogo izbranim skupinam"
 
 #. Default: "Assign Selected Role(s) to Selected User(s)/Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:211
+#: ./skins/plone_deprecated/folder_localrole_form.pt:203
 msgid "label_assign_roles_to_users_groups"
 msgstr "Dodeli izbrane vloge izbranim uporabnikom oz. skupinam"
 
 #. Default: "Author"
-#: ./skins/plone_forms/search_form.pt:222
+#: ./skins/plone_forms/search_form.pt:207
 msgid "label_author"
 msgstr "Avtor"
 
 #. Default: "Author's external home page..."
-#: ./skins/plone_content/author.cpt:119
+#: ./skins/plone_content/author.cpt:128
 msgid "label_author_external_home_page"
 msgstr "Avtorjeva zunanja domača stran..."
 
 #. Default: "Author's home page in this site..."
-#: ./skins/plone_content/author.cpt:114
+#: ./skins/plone_content/author.cpt:123
 msgid "label_author_internal_home_page"
 msgstr "Avtorjeva domača stran na tem spletišču..."
 
 #. Default: "Back to Add/Remove Products"
-#: ./skins/plone_prefs/prefs_install_product_readme.pt:24
+#: ./skins/plone_prefs/prefs_install_product_readme.pt:28
 msgid "label_back_to_addremove_products"
 msgstr "Vrni se na Dodaj/Odstrani izdelek"
 
 #. Default: "Back to Error Log"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:18
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:22
 msgid "label_back_to_errorlog"
 msgstr "Nazaj na Dnevnik napak"
 
 #. Default: "Back to site"
-#: ./skins/plone_content/image_view_fullscreen.pt:45
+#: ./skins/plone_content/image_view_fullscreen.pt:48
 msgid "label_back_to_site"
 msgstr "Nazaj na spletišče"
 
@@ -3906,7 +4010,7 @@ msgid "label_before_specified_time"
 msgstr "Niste prijavljeni od danega časa"
 
 #. Default: "Biography"
-#: ./skins/plone_prefs/personalize_form.cpt:194
+#: ./skins/plone_prefs/personalize_form.cpt:200
 msgid "label_biography"
 msgstr "Biografija"
 
@@ -3920,8 +4024,8 @@ msgstr "Telo besedila"
 msgid "label_boolean_criteria_bool"
 msgstr "Vrednost"
 
-#. Default: "by ${author} -"
-#: ./skins/plone_content/document_byline.pt:18
+#. Default: "by ${author}"
+#: ./skins/plone_content/folder_listing.pt:122
 #, fuzzy
 msgid "label_by_author"
 msgstr "Avtor ${author}"
@@ -3932,47 +4036,52 @@ msgid "label_calendar"
 msgstr "Koledar"
 
 #. Default: "Cancel"
-#: ./skins/plone_content/folder_edit_form.cpt:131
+#: ./skins/plone_content/folder_edit_form.cpt:126
 msgid "label_cancel"
 msgstr "Prekliči"
 
+#. Default: "Categories"
+#: ./skins/plone_forms/search_form.pt:68
+msgid "label_categories"
+msgstr ""
+
 #. Default: "Change Comment"
-#: ./skins/plone_forms/discussion_reply_preview.pt:44
+#: ./skins/plone_forms/discussion_reply_preview.pt:47
 msgid "label_change_comment"
 msgstr "Spremeni komentar"
 
 #. Default: "Change content item<br />as default view..."
-#: ./skins/plone_templates/global_contentmenu.pt:269
+#: ./skins/plone_deprecated/global_contentmenu.pt:271
 msgid "label_change_item"
 msgstr "Spremeni prispevek<br/> kot privzeti pogled..."
 
 #. Default: "Change user properties."
-#: ./skins/plone_prefs/prefs_user_details.cpt:66
+#: ./skins/plone_prefs/prefs_user_details.cpt:70
 msgid "label_change_member_properties"
 msgstr "Sprememba lastnosti člana."
 
 #. Default: "Change ownership"
-#: ./skins/plone_forms/folder_localrole_form.pt:648
+#: ./skins/plone_deprecated/folder_localrole_form.pt:608
 msgid "label_change_ownership"
 msgstr "Sprememba lastništva"
 
 #. Default: "Change Password"
-#: ./skins/plone_login/login_password.cpt:100
+#: ./skins/plone_login/login_password.cpt:101
 msgid "label_change_password"
 msgstr "Spremeni geslo"
 
 #. Default: "Change State"
-#: ./skins/plone_forms/content_status_history.cpt:182
+#: ./skins/plone_forms/content_status_history.cpt:166
 msgid "label_change_status"
 msgstr "Spremeni stanje"
 
 #. Default: "Choose a content item..."
-#: ./skins/plone_forms/select_default_view.cpt:59
+#: ./skins/plone_forms/select_default_view.cpt:54
 msgid "label_choose_content_item"
 msgstr "Izberi predmet vsebine..."
 
 #. Default: "Select a content item<br />as default view..."
-#: ./skins/plone_templates/global_contentmenu.pt:251
+#: ./skins/plone_deprecated/global_contentmenu.pt:253
 msgid "label_choose_item"
 msgstr "Izberite prispevek <br/> kot privzeti pogled..."
 
@@ -3982,47 +4091,47 @@ msgid "label_choose_language"
 msgstr "Izberite jezik"
 
 #. Default: "Display"
-#: ./skins/plone_templates/global_contentmenu.pt:204
+#: ./skins/plone_deprecated/global_contentmenu.pt:206
 msgid "label_choose_template"
 msgstr "Prikaži"
 
 #. Default: "Clear Displayed Entries"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:53
+#: ./skins/plone_prefs/prefs_error_log_form.pt:57
 msgid "label_clear_displayed_entries"
 msgstr "Očisti prikazane vnose"
 
 #. Default: "click here to retrieve it"
-#: ./skins/plone_login/failsafe_login_form.cpt:114
+#: ./skins/plone_login/failsafe_login_form.cpt:123
 msgid "label_click_here_to_retrieve"
 msgstr "kliknite tu, da ga spet pridobite"
 
 #. Default: "Click here to get the file"
-#: ./skins/plone_content/file_view.pt:35
+#: ./skins/plone_content/file_view.pt:36
 msgid "label_click_to_get_file"
 msgstr "Kliknite tu, da dobite datoteko"
 
 #. Default: "Click to view full-size image..."
-#: ./skins/plone_content/image_view.pt:37
+#: ./skins/plone_content/image_view.pt:38
 msgid "label_click_to_view_full_image"
 msgstr "Kliknite za polno velikost slike..."
 
 #. Default: "Comment"
-#: ./skins/plone_forms/discussion_reply_form.cpt:146
+#: ./skins/plone_forms/discussion_reply_form.cpt:141
 msgid "label_comment"
 msgstr "Komentar"
 
 #. Default: "Posted by"
-#: ./skins/plone_forms/discussion_reply_form.cpt:42
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:61
 msgid "label_comment_by"
 msgstr "Objavil"
 
 #. Default: "at"
-#: ./skins/plone_forms/discussion_reply_form.cpt:47
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:66
 msgid "label_commented_at"
 msgstr "pri"
 
 #. Default: "Comments"
-#: ./skins/plone_forms/content_status_history.cpt:162
+#: ./skins/plone_forms/content_status_history.cpt:148
 msgid "label_comments"
 msgstr "Komentarji"
 
@@ -4037,9 +4146,19 @@ msgid "label_compare"
 msgstr "Primerjaj"
 
 #. Default: "Confirm password"
-#: ./skins/plone_login/join_form.cpt:167
+#: ./skins/plone_login/join_form.cpt:166
 msgid "label_confirm_password"
 msgstr "Potrdi geslo"
+
+#. Default: "Allow the standard set of addable types"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:116
+msgid "label_constraintypes_allow_standard"
+msgstr ""
+
+#. Default: "Specify manually"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:127
+msgid "label_constraintypes_specify_manually"
+msgstr ""
 
 #. Default: "Contact E-mail"
 #: widget label of StringWidget - description ""
@@ -4057,12 +4176,12 @@ msgid "label_contact_phone"
 msgstr "Telefon"
 
 #. Default: "containing"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:49
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:52
 msgid "label_containing"
 msgstr ", ki vsebuje"
 
 #. Default: "Content editor"
-#: ./skins/plone_prefs/personalize_form.cpt:243
+#: ./skins/plone_prefs/personalize_form.cpt:246
 msgid "label_content_editor"
 msgstr "Urejevalnik vsebine"
 
@@ -4077,7 +4196,7 @@ msgid "label_cookie_persistence"
 msgstr "Poskrbite, da bo piškotek za določanje videza shranjen za nedoločen čas."
 
 #. Default: "Copy exceptions to the event log"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:136
+#: ./skins/plone_prefs/prefs_error_log_form.pt:140
 msgid "label_copy_exceptions"
 msgstr "Prekopiraj izjeme v dnevnik dogodkov"
 
@@ -4113,7 +4232,7 @@ msgid "label_css"
 msgstr "Veljaven CSS"
 
 #. Default: "(current)"
-#: ./skins/plone_forms/select_default_view.cpt:51
+#: ./skins/plone_forms/select_default_view.cpt:46
 msgid "label_current"
 msgstr "(trenutni)"
 
@@ -4123,17 +4242,17 @@ msgid "label_current_folder_only"
 msgstr "Prikaži samo vsebino trenutne mape."
 
 #. Default: "Folder display"
-#: ./skins/plone_templates/global_contentmenu.pt:217
+#: ./skins/plone_deprecated/global_contentmenu.pt:219
 msgid "label_current_folder_views"
 msgstr "Prikaz mape"
 
 #. Default: "Item display"
-#: ./skins/plone_templates/global_contentmenu.pt:283
+#: ./skins/plone_deprecated/global_contentmenu.pt:285
 msgid "label_current_item_views"
 msgstr "Prikaz prispevka"
 
 #. Default: "Current password"
-#: ./skins/plone_prefs/password_form.pt:33
+#: ./skins/plone_prefs/password_form.pt:38
 msgid "label_current_password"
 msgstr "Trenutno geslo"
 
@@ -4168,27 +4287,27 @@ msgid "label_default_skin"
 msgstr "Privzeti videz"
 
 #. Default: "Delete Portrait"
-#: ./skins/plone_prefs/personalize_form.cpt:411
+#: ./skins/plone_prefs/personalize_form.cpt:403
 msgid "label_delete_portrait"
 msgstr "Briši portret"
 
 #. Default: "Delete Selected Role(s) and User(s)/Group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:219
+#: ./skins/plone_deprecated/folder_localrole_form.pt:209
 msgid "label_delete_roles_users_groups"
 msgstr "Briši izbrane vloge in izbrane uporabnike oz. skupine"
 
 #. Default: "Description"
-#: ./skins/plone_content/folder_edit_form.cpt:103
+#: ./skins/plone_content/folder_edit_form.cpt:102
 msgid "label_description"
 msgstr "Opis"
 
 #. Default: "Disable Syndication"
-#: ./skins/plone_forms/synPropertiesForm.cpt:28
+#: ./skins/plone_forms/synPropertiesForm.cpt:32
 msgid "label_disable_syndication"
 msgstr "Izključi sindiciranje"
 
 #. Default: "Display"
-#: ./skins/plone_templates/global_contentmenu.pt:195
+#: ./skins/plone_deprecated/global_contentmenu.pt:197
 msgid "label_disabled_display_menu"
 msgstr "Prikaži"
 
@@ -4208,27 +4327,28 @@ msgid "label_discussion_enabled"
 msgstr "Omogočeno"
 
 #. Default: "Edit"
-#: ./skins/plone_content/author.cpt:53
+#: ./skins/plone_content/author.cpt:62
 msgid "label_edit"
 msgstr "Uredi"
 
 #. Default: "Allow editing of Short Names"
-#: ./skins/plone_prefs/personalize_form.cpt:332
+#: ./skins/plone_prefs/personalize_form.cpt:330
 msgid "label_edit_short_names"
 msgstr "Dovoli urejanje kratkih imen"
 
-#. Default: "Effective Date"
-#: ./skins/plone_forms/content_status_history.cpt:110
+#. Default: "Publishing Date"
+#: ./skins/plone_forms/content_status_history.cpt:99
+#, fuzzy
 msgid "label_effective_date"
 msgstr "Efektivni datum"
 
 #. Default: "E-mail"
-#: ./skins/plone_forms/member_search_form.pt:60
+#: ./skins/plone_forms/member_search_form.pt:46
 msgid "label_email"
 msgstr "E-pošta"
 
 #. Default: "Email Address"
-#: ./skins/plone_forms/folder_localrole_form.pt:401
+#: ./skins/plone_deprecated/folder_localrole_form.pt:379
 msgid "label_email_address"
 msgstr "Poštni naslov"
 
@@ -4238,12 +4358,12 @@ msgid "label_enable_cookies"
 msgstr "omogoči piškotke"
 
 #. Default: "Enable Syndication"
-#: ./skins/plone_forms/synPropertiesForm.cpt:49
+#: ./skins/plone_forms/synPropertiesForm.cpt:51
 msgid "label_enable_syndication"
 msgstr "Omogoči sindiciranje"
 
 #. Default: "Error"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:27
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:31
 msgid "label_error"
 msgstr "Napaka"
 
@@ -4258,12 +4378,12 @@ msgid "label_error_time"
 msgstr "Zahteva podana ob"
 
 #. Default: "Error Type"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:210
+#: ./skins/plone_prefs/prefs_install_products_form.pt:217
 msgid "label_error_type"
 msgstr "Tip napake"
 
 #. Default: "Error Value"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:212
+#: ./skins/plone_prefs/prefs_install_products_form.pt:219
 msgid "label_error_value"
 msgstr "Številka napake"
 
@@ -4278,7 +4398,7 @@ msgid "label_event_attendees"
 msgstr "Udeleženci"
 
 #. Default: "(${location}, from ${start} to ${end})"
-#: ./skins/plone_content/folder_listing.pt:99
+#: ./skins/plone_content/folder_listing.pt:109
 msgid "label_event_byline"
 msgstr "(${location}, od ${start} do ${end})"
 
@@ -4303,17 +4423,17 @@ msgid "label_event_type"
 msgstr "Tipi dogodkov"
 
 #. Default: "Exception"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:74
+#: ./skins/plone_prefs/prefs_error_log_form.pt:78
 msgid "label_exception"
 msgstr "Izjema"
 
 #. Default: "Exception Type"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:47
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:51
 msgid "label_exception_type"
 msgstr "Tip izjeme"
 
 #. Default: "Exception Value"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:51
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:55
 msgid "label_exception_value"
 msgstr "Vrednosti izjeme"
 
@@ -4324,7 +4444,7 @@ msgid "label_exclude_from_nav"
 msgstr "Izključi iz navigacije"
 
 #. Default: "Expiration Date"
-#: ./skins/plone_forms/content_status_history.cpt:136
+#: ./skins/plone_forms/content_status_history.cpt:123
 msgid "label_expiration_date"
 msgstr "Datum konca objave"
 
@@ -4339,27 +4459,27 @@ msgid "label_file"
 msgstr "Datoteka"
 
 #. Default: "File type"
-#: ./skins/plone_content/file_view.pt:57
+#: ./skins/plone_content/file_view.pt:58
 msgid "label_file_type"
 msgstr "Tip datoteke"
 
 #. Default: "Find a group here"
-#: ./skins/plone_prefs/prefs_group_members.cpt:67
+#: ./skins/plone_prefs/prefs_group_members.cpt:77
 msgid "label_find_group"
 msgstr "Tu poišči skupino"
 
 #. Default: "Format"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:19
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:18
 msgid "label_format"
 msgstr "Format"
 
 #. Default: "Full Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:286
+#: ./skins/plone_deprecated/folder_localrole_form.pt:272
 msgid "label_full_name"
 msgstr "Polno ime"
 
 #. Default: "Full Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:395
+#: ./skins/plone_deprecated/folder_localrole_form.pt:373
 msgid "label_fullname"
 msgstr "Polno ime"
 
@@ -4369,52 +4489,52 @@ msgid "label_generate_and_email_passwords"
 msgstr "Generiraj in pošlji po pošti članu njegovo začetno geslo"
 
 #. Default: "Automatically generate tabs"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:49
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:60
 msgid "label_generated_tabs_enable"
 msgstr "Avtomatsko generiraj zavihke"
 
 #. Default: "GNU GPL license"
-#: ./skins/plone_templates/footer.pt:37
+#: ./skins/plone_templates/footer.pt:39
 msgid "label_gnu_gpl_licence"
 msgstr "Licenca GNU GPL"
 
 #. Default: "Group"
-#: ./skins/plone_forms/folder_localrole_form.pt:147
+#: ./skins/plone_deprecated/folder_localrole_form.pt:140
 msgid "label_group"
 msgstr "Skupina"
 
 #. Default: "Group Members"
-#: ./skins/plone_prefs/prefs_group_details.pt:27
+#: ./skins/plone_prefs/prefs_group_details.pt:31
 msgid "label_group_members"
 msgstr "Člani skupine"
 
 #. Default: "Group Memberships"
-#: ./skins/plone_prefs/prefs_user_details.cpt:32
+#: ./skins/plone_prefs/prefs_user_details.cpt:35
 msgid "label_group_memberships"
 msgstr "Članstvo skupine"
 
 #. Default: "Group Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:404
+#: ./skins/plone_deprecated/folder_localrole_form.pt:382
 msgid "label_group_name"
 msgstr "Ime skupine"
 
 #. Default: "Group Properties"
-#: ./skins/plone_prefs/prefs_group_details.pt:32
+#: ./skins/plone_prefs/prefs_group_details.pt:36
 msgid "label_group_properties"
 msgstr "Lastnosti skupine"
 
 #. Default: "Group Search"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:103
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:109
 msgid "label_group_search"
 msgstr "Iskanje grup"
 
 #. Default: "Groups"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:33
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:35
 msgid "label_groups"
 msgstr "Skupine"
 
 #. Default: "here"
-#: ./skins/plone_forms/folder_localrole_form.pt:655
+#: ./skins/plone_deprecated/folder_localrole_form.pt:615
 msgid "label_here"
 msgstr "tukaj"
 
@@ -4429,37 +4549,37 @@ msgid "label_history"
 msgstr "Zgodovina"
 
 #. Default: "Home"
-#: ./skins/plone_content/image_view_fullscreen.pt:50
+#: ./skins/plone_content/image_view_fullscreen.pt:53
 msgid "label_home"
 msgstr "Domov"
 
 #. Default: "Home page"
-#: ./skins/plone_prefs/personalize_form.cpt:219
+#: ./skins/plone_prefs/personalize_form.cpt:224
 msgid "label_homepage"
 msgstr "Domača stran"
 
 #. Default: "Internet Explorer 4.5 (Mac)"
-#: ./skins/plone_templates/accessibility-info.pt:125
+#: ./skins/plone_templates/accessibility-info.pt:123
 msgid "label_ie4_mac"
 msgstr "Internet Explorer 4.5 (Mac)"
 
 #. Default: "Internet Explorer 4 (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:113
+#: ./skins/plone_templates/accessibility-info.pt:111
 msgid "label_ie4_win"
 msgstr "Internet Explorer 4 (Windows)"
 
 #. Default: "Internet Explorer 5+ (Mac)"
-#: ./skins/plone_templates/accessibility-info.pt:119
+#: ./skins/plone_templates/accessibility-info.pt:117
 msgid "label_ie5_mac"
 msgstr "Internet Explorer 5+ (Mac)"
 
 #. Default: "Internet Explorer 5+ (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:83
+#: ./skins/plone_templates/accessibility-info.pt:81
 msgid "label_ie5_win"
 msgstr "Internet Explorer 5+ (Windows)"
 
 #. Default: "Ignored exception types"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:143
+#: ./skins/plone_prefs/prefs_error_log_form.pt:147
 msgid "label_ignored_exception"
 msgstr "Tipi izjem, ki jih zanemarimo"
 
@@ -4474,12 +4594,13 @@ msgid "label_image_caption"
 msgstr "Opis slike"
 
 #. Default: "Preferred types"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:132
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:143
 msgid "label_immediately_addable_types"
 msgstr "Najbolj zaželeni tipi"
 
-#. Default: "Include folder items"
-#: ./skins/plone_forms/content_status_history.cpt:90
+#. Default: "Include contained items"
+#: ./skins/plone_forms/content_status_history.cpt:86
+#, fuzzy
 msgid "label_include_contained_objects"
 msgstr "Vstavi tudi prispevke v mapi"
 
@@ -4494,7 +4615,7 @@ msgid "label_inherit_criteria"
 msgstr "Podeduj kriterije"
 
 #. Default: "Install"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:93
+#: ./skins/plone_prefs/prefs_install_products_form.pt:100
 msgid "label_install"
 msgstr "Namesti"
 
@@ -4504,27 +4625,27 @@ msgid "label_item_count"
 msgstr "Število prispevkov"
 
 #. Default: "Item: ${contentitem}"
-#: ./skins/plone_templates/global_contentmenu.pt:263
+#: ./skins/plone_deprecated/global_contentmenu.pt:265
 msgid "label_item_selected"
 msgstr "Prispevek: ${contentitem}"
 
 #. Default: "Item type"
-#: ./skins/plone_forms/search_form.pt:170
+#: ./skins/plone_forms/search_form.pt:161
 msgid "label_item_type"
 msgstr "Tip prispevka"
 
 #. Default: "Keywords"
-#: ./skins/plone_forms/search_form.pt:67
+#: widget label of KeywordWidget - description ""
 msgid "label_keywords"
 msgstr "Ključne besede"
 
 #. Default: "Konqueror (Linux)"
-#: ./skins/plone_templates/accessibility-info.pt:107
+#: ./skins/plone_templates/accessibility-info.pt:105
 msgid "label_konqueror_linux"
 msgstr "Konqueror (Linux)"
 
 #. Default: "Language"
-#: ./skins/plone_prefs/personalize_form.cpt:164
+#: ./skins/plone_prefs/personalize_form.cpt:172
 msgid "label_language"
 msgstr "Jezik"
 
@@ -4540,7 +4661,7 @@ msgid "label_limit_number"
 msgstr "Omeji število zadetkov iskanja"
 
 #. Default: "Listed in searches"
-#: ./skins/plone_prefs/personalize_form.cpt:311
+#: ./skins/plone_prefs/personalize_form.cpt:310
 msgid "label_listed_status"
 msgstr "Vsebovan v iskanjih"
 
@@ -4550,32 +4671,32 @@ msgid "label_livesearch_enable"
 msgstr "Omogoči živo iskanje"
 
 #. Default: "Local Role(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:108
+#: ./skins/plone_deprecated/folder_localrole_form.pt:103
 msgid "label_local_roles"
 msgstr "Lokalne vloge"
 
 #. Default: "Addable types"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:103
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:187
 msgid "label_locally_allowed_types"
 msgstr "Tipi vsebin, ki jih je možno dodajati"
 
 #. Default: "Role to assign"
-#: ./skins/plone_forms/folder_localrole_form.pt:323
+#: ./skins/plone_deprecated/folder_localrole_form.pt:307
 msgid "label_localrole_to_assign"
 msgstr "Vloga, ki jo bomo dodelili"
 
 #. Default: "Roles to assign to selected user(s)/group(s)"
-#: ./skins/plone_forms/folder_localrole_form.pt:187
+#: ./skins/plone_deprecated/folder_localrole_form.pt:180
 msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Vloge, ki jo bomo dodelili izbranim uporabnikom/skupinam"
 
 #. Default: "Location"
-#: ./skins/plone_prefs/personalize_form.cpt:137
+#: ./skins/plone_prefs/personalize_form.cpt:147
 msgid "label_location"
 msgstr "Lokacija"
 
 #. Default: "Log in"
-#: ./skins/plone_login/failsafe_login_form.cpt:155
+#: ./skins/plone_deprecated/portlet_login.pt:81
 msgid "label_log_in"
 msgstr "Prijava"
 
@@ -4585,47 +4706,47 @@ msgid "label_log_in_here"
 msgstr "prijava tu"
 
 #. Default: "Continue"
-#: ./skins/plone_login/login_success.pt:60
+#: ./skins/plone_login/login_success.pt:63
 msgid "label_login_continue"
 msgstr "Nadaljevanje"
 
 #. Default: "Continue to the ${portal_title} home page"
-#: ./skins/plone_login/login_success.pt:71
+#: ./skins/plone_login/login_success.pt:74
 msgid "label_login_continue_to_home_page"
 msgstr "Nadaljevanje na strani ${portal_title}"
 
 #. Default: "Login Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:398
+#: ./skins/plone_deprecated/folder_localrole_form.pt:376
 msgid "label_login_name"
 msgstr "Ime uporabnika"
 
 #. Default: "Log in to add comments"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:34
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:37
 msgid "label_login_to_add_comments"
 msgstr "Prijava za dodajanje komentarjev"
 
 #. Default: "Log in to send feedback"
-#: ./skins/plone_content/author.cpt:129
+#: ./skins/plone_content/author.cpt:138
 msgid "label_login_to_send_feedback"
 msgstr "Prijava za povratno sporočilo"
 
 #. Default: "Look"
-#: ./skins/plone_prefs/personalize_form.cpt:349
+#: ./skins/plone_prefs/personalize_form.cpt:347
 msgid "label_look"
 msgstr "Videz"
 
 #. Default: "Send a mail with the password"
-#: ./skins/plone_login/join_form.cpt:203
+#: ./skins/plone_login/join_form.cpt:198
 msgid "label_mail_password"
 msgstr "Pošlji sporočilo z geslom"
 
 #. Default: "Main Language:"
-#: ./skins/plone_content/author.cpt:94
+#: ./skins/plone_content/author.cpt:103
 msgid "label_main_language"
 msgstr "Glavni jezik"
 
 #. Default: "Message"
-#: ./skins/plone_content/author.cpt:180
+#: ./skins/plone_content/author.cpt:188
 msgid "label_message"
 msgstr "Sporočilo"
 
@@ -4635,12 +4756,12 @@ msgid "label_modification_date"
 msgstr "Datum spremembe"
 
 #. Default: "Firefox, Mozilla and Netscape 7+ (Mac OS X)"
-#: ./skins/plone_templates/accessibility-info.pt:95
+#: ./skins/plone_templates/accessibility-info.pt:93
 msgid "label_mozilla_mac"
 msgstr "Firefox, Mozilla in Netscape 7+ (Mac OS X)"
 
 #. Default: "Firefox, Mozilla and Netscape 7+ (Windows)"
-#: ./skins/plone_templates/accessibility-info.pt:89
+#: ./skins/plone_templates/accessibility-info.pt:87
 msgid "label_mozilla_win"
 msgstr "Firefox, Mozilla in Netscape 7+ (Windows)"
 
@@ -4650,7 +4771,7 @@ msgid "label_my_user_name_is"
 msgstr "Moje uporabniško ime je"
 
 #. Default: "Name"
-#: ./skins/plone_forms/discussion_reply_form.cpt:90
+#: ./skins/plone_deprecated/folder_localrole_form.pt:95
 msgid "label_name"
 msgstr "Ime"
 
@@ -4675,47 +4796,47 @@ msgid "label_navigation_tree_depth"
 msgstr "Globina drevesa navigacije"
 
 #. Default: "Displayed content types"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:235
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:81
 msgid "label_navigation_types"
 msgstr "Prikazani tipi vsebin"
 
 #. Default: "Filter on workflow state"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:280
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:125
 msgid "label_navtree_wf_enable"
 msgstr "Filter na stanju delovnih tokov"
 
 #. Default: "Netscape 6 and earlier (All platforms)"
-#: ./skins/plone_templates/accessibility-info.pt:130
+#: ./skins/plone_templates/accessibility-info.pt:128
 msgid "label_netscape6_all"
 msgstr "Netscape 6 in novejši (vse platforme)"
 
 #. Default: "New items since"
-#: ./skins/plone_forms/search_form.pt:140
+#: ./skins/plone_forms/search_form.pt:133
 msgid "label_new_items_since"
 msgstr "Novi prispevki od"
 
 #. Default: "New owner"
-#: ./skins/plone_forms/ownership_form.cpt:35
+#: ./skins/plone_forms/ownership_form.cpt:37
 msgid "label_new_owner"
 msgstr "Novi lastnik"
 
 #. Default: "Search for new owner"
-#: ./skins/plone_forms/ownership_form.cpt:177
+#: ./skins/plone_forms/ownership_form.cpt:180
 msgid "label_new_owner_search"
 msgstr "Išči novega lastnika"
 
 #. Default: "New password"
-#: ./skins/plone_login/login_password.cpt:59
+#: ./skins/plone_login/login_password.cpt:64
 msgid "label_new_password"
 msgstr "Novo geslo"
 
 #. Default: "New Short Name"
-#: ./skins/plone_forms/folder_rename_form.cpt:58
+#: ./skins/plone_forms/folder_rename_form.cpt:63
 msgid "label_new_short_name"
 msgstr "Novo kratko ime"
 
 #. Default: "New Title"
-#: ./skins/plone_forms/folder_rename_form.cpt:94
+#: ./skins/plone_forms/folder_rename_form.cpt:97
 msgid "label_new_title"
 msgstr "Nov naslov"
 
@@ -4726,27 +4847,32 @@ msgid "label_news_image"
 msgstr "Slika"
 
 #. Default: "No change"
-#: ./skins/plone_forms/content_status_history.cpt:215
+#: ./skins/plone_forms/content_status_history.cpt:198
 msgid "label_no_change"
 msgstr "Ni sprememb"
 
 #. Default: "No group was specified."
-#: ./skins/plone_prefs/prefs_group_members.cpt:64
+#: ./skins/plone_prefs/prefs_group_members.cpt:74
 msgid "label_no_group_specified"
 msgstr "Ni določena skupina."
 
 #. Default: "No Preference Panels available."
-#: ./skins/plone_portlets/portlet_prefs.pt:39
+#: ./skins/plone_prefs/plone_memberprefs_panel.pt:48
 msgid "label_no_panels_available"
 msgstr "Ni na voljo panoja za preference."
 
+#. Default: "No preference panels available."
+#: ./skins/plone_prefs/plone_control_panel.pt:96
+msgid "label_no_prefs_panels_available"
+msgstr ""
+
 #. Default: "No matching results found."
-#: ./skins/plone_scripts/livesearch_reply.py:77
+#: ./skins/plone_scripts/livesearch_reply.py:81
 msgid "label_no_results_found"
 msgstr "Ni zadetkov"
 
 #. Default: "Number of exceptions to keep"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:116
+#: ./skins/plone_prefs/prefs_error_log_form.pt:120
 msgid "label_number_exceptions"
 msgstr "Število hranjenih izjem"
 
@@ -4761,27 +4887,27 @@ msgid "label_one_step_workflow"
 msgstr "Zaporedje objavljanja V enem samem koraku"
 
 #. Default: "or"
-#: ./skins/plone_forms/select_default_view.cpt:58
+#: ./skins/plone_forms/select_default_view.cpt:53
 msgid "label_or"
 msgstr "ali"
 
 #. Default: "Basic HTML textarea editor (works in all browsers)"
-#: ./skins/plone_prefs/personalize_form.cpt:264
+#: ./skins/plone_prefs/personalize_form.cpt:265
 msgid "label_ordinary_content_editor"
 msgstr "Običajni urejevalnik besedil v obrazcu (deluje v vseh brskalnikih)"
 
 #. Default: "This product has been upgraded, click here to reinstall. Filesystem version is ${version}"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:160
+#: ./skins/plone_prefs/prefs_install_products_form.pt:167
 msgid "label_outdated_product_reinstall"
 msgstr "Ta izdelek je bil nadgrajen, kliknite tu za ponovno namestitev. Verzija podatkovnega sistema je  ${version}"
 
 #. Default: "Password"
-#: ./skins/plone_forms/discussion_reply_form.cpt:104
+#: ./skins/plone_deprecated/portlet_login.pt:60
 msgid "label_password"
 msgstr "Geslo"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
-#: ./skins/plone_login/join_form.cpt:209
+#: ./skins/plone_login/join_form.cpt:204
 msgid "label_password_change_mail"
 msgstr "Generiran bo naslov, ki ga boste prejeli po elektronski pošti. Ko boste prišli na sporočeni URL, boste na tej strani lahko spremenili geslo in dokončali postopek prijave."
 
@@ -4801,17 +4927,17 @@ msgid "label_path_criteria_value"
 msgstr "Mape"
 
 #. Default: "Perform Search"
-#: ./skins/plone_forms/folder_localrole_form.pt:426
+#: ./skins/plone_deprecated/folder_localrole_form.pt:402
 msgid "label_perform_search"
 msgstr "Izvedi iskanje"
 
 #. Default: "Plone<sup>&reg;</sup> CMS - Open Source Content Management System"
-#: ./skins/plone_templates/footer.pt:10
+#: ./skins/plone_templates/footer.pt:13
 msgid "label_plone_cms"
 msgstr "Plone<sup>&reg;</sup> - odprtokodni sistem za upravljanje z vsebinami"
 
 #. Default: "Plone Foundation"
-#: ./skins/plone_templates/footer.pt:19
+#: ./skins/plone_templates/footer.pt:22
 msgid "label_plone_foundation"
 msgstr "Plone Foundation"
 
@@ -4831,7 +4957,7 @@ msgid "label_portal_from_name"
 msgstr "Ime pošiljatelja portala"
 
 #. Default: "Portal Objects"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:74
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:78
 msgid "label_portal_objects"
 msgstr "Predmeti portala"
 
@@ -4846,22 +4972,23 @@ msgid "label_portal_type_criteria_value"
 msgstr "Vrednost"
 
 #. Default: "Portlets"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:98
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:102
 msgid "label_portlets"
 msgstr "Portleti"
 
 #. Default: "Portrait"
-#: ./skins/plone_prefs/personalize_form.cpt:375
+#: ./skins/plone_prefs/personalize_form.cpt:371
 msgid "label_portrait"
 msgstr "Portret"
 
-#. Default: "Powered by Plone CMS, the Open Source Content Management System"
-#: ./skins/plone_templates/colophon.pt:23
+#. Default: "Powered by Plone"
+#: ./skins/plone_templates/colophon.pt:31
+#, fuzzy
 msgid "label_powered_by_plone"
 msgstr "Poganja Plone, odprtokodni sistem za upravljanje vsebin"
 
 #. Default: "Published"
-#: ./skins/plone_templates/events_listing.pt:77
+#: ./skins/plone_templates/events_listing.pt:80
 msgid "label_published"
 msgstr "Objavljeno"
 
@@ -4871,67 +4998,67 @@ msgid "label_publishing_effective"
 msgstr "efektivno"
 
 #. Default: "Quick search"
-#: ./skins/plone_prefs/prefs_group_members.cpt:186
+#: ./skins/plone_prefs/prefs_group_members.cpt:197
 msgid "label_quick_search"
 msgstr "Hitro iskanje"
 
 #. Default: "Refresh"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:48
+#: ./skins/plone_prefs/prefs_error_log_form.pt:52
 msgid "label_refresh"
 msgstr "Osveži"
 
 #. Default: "Register"
-#: ./skins/plone_login/join_form.cpt:217
+#: ./skins/plone_login/join_form.cpt:212
 msgid "label_register"
 msgstr "Včlani se"
 
 #. Default: "Related content"
-#: ./skins/plone_content/document_relateditems.pt:13
+#: ./skins/plone_content/document_relateditems.pt:16
 msgid "label_related_items"
 msgstr "Povezani prispevki"
 
 #. Default: "[${percentage}%]"
-#: ./skins/plone_forms/search.pt:79
+#: ./skins/plone_forms/search.pt:84
 msgid "label_relevance_percentage"
 msgstr "[${percentage}%]"
 
 #. Default: "Remember my name."
-#: ./skins/plone_login/failsafe_login_form.cpt:144
+#: ./skins/plone_login/failsafe_login_form.cpt:149
 msgid "label_remember_my_name"
 msgstr "Zapomni si moje ime."
 
 #. Default: "Remove"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:89
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:92
 msgid "label_remove"
 msgstr "Odstrani"
 
 #. Default: "Remove selected groups"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:113
+#: ./skins/plone_prefs/prefs_user_memberships.pt:122
 msgid "label_remove_selected_groups"
 msgstr "Odstrani izbrane skupine"
 
 #. Default: "Remove selected groups / users"
-#: ./skins/plone_prefs/prefs_group_members.cpt:171
+#: ./skins/plone_prefs/prefs_group_members.cpt:182
 msgid "label_remove_selected_users"
 msgstr "Osdtrani izbrane uporabnike"
 
 #. Default: "Rename All"
-#: ./skins/plone_forms/folder_rename_form.cpt:124
+#: ./skins/plone_forms/folder_rename_form.cpt:125
 msgid "label_rename_all"
 msgstr "Preimenuj vse"
 
 #. Default: "Reply"
-#: ./skins/plone_templates/viewThreadsAtBottom.pt:77
+#: ./skins/plone_deprecated/viewThreadsAtBottom.pt:80
 msgid "label_reply"
 msgstr "Odgovori"
 
 #. Default: "Request URL"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:43
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:47
 msgid "label_request_url"
 msgstr "Zahtevaj URL"
 
 #. Default: "(Required)"
-#: ./skins/plone_content/author.cpt:163
+#: ./skins/plone_content/author.cpt:172
 msgid "label_required"
 msgstr "(Obvezno)"
 
@@ -4946,52 +5073,52 @@ msgid "label_rev_later"
 msgstr "Kasnejše revizije"
 
 #. Default: "Review status"
-#: ./skins/plone_forms/search_form.pt:249
+#: ./skins/plone_forms/search_form.pt:230
 msgid "label_review_status"
 msgstr "Stanje recenzije"
 
 #. Default: "Role(s)"
-#: ./skins/plone_forms/member_search_form.pt:141
+#: ./skins/plone_forms/member_search_form.pt:102
 msgid "label_roles"
 msgstr "Vloge"
 
 #. Default: "RSS Feed"
-#: ./skins/plone_forms/search.pt:50
+#: ./skins/plone_forms/search.pt:55
 msgid "label_rss_feed"
 msgstr "Polnenje RSS"
 
 #. Default: "Safari and Omniweb (Mac OS X)"
-#: ./skins/plone_templates/accessibility-info.pt:101
+#: ./skins/plone_templates/accessibility-info.pt:99
 msgid "label_safari_mac"
 msgstr "Safari in Omniweb (Mac OS X)"
 
 #. Default: "Save"
-#: ./skins/plone_content/folder_edit_form.cpt:124
+#: ./skins/plone_content/folder_edit_form.cpt:121
 msgid "label_save"
 msgstr "Shrani"
 
 #. Default: "Search"
-#: ./skins/plone_forms/member_search_form.pt:170
+#: ./skins/plone_deprecated/global_searchbox.pt:33
 msgid "label_search"
 msgstr "Išči"
 
 #. Default: "Search by"
-#: ./skins/plone_forms/folder_localrole_form.pt:387
+#: ./skins/plone_deprecated/folder_localrole_form.pt:367
 msgid "label_search_by"
 msgstr "Iskano od"
 
 #. Default: "Show all"
-#: ./skins/plone_prefs/prefs_group_members.cpt:203
+#: ./skins/plone_prefs/prefs_group_members.cpt:210
 msgid "label_search_large"
 msgstr "Prikaži vse"
 
 #. Default: "Search Term"
-#: ./skins/plone_forms/folder_localrole_form.pt:412
+#: ./skins/plone_deprecated/folder_localrole_form.pt:390
 msgid "label_search_term"
 msgstr "Ključna fraza iskanja"
 
 #. Default: "Search Text"
-#: ./skins/plone_forms/search_form.pt:31
+#: ./skins/plone_forms/search_form.pt:36
 msgid "label_search_text"
 msgstr "Ključna beseda iskanja"
 
@@ -4999,6 +5126,11 @@ msgstr "Ključna beseda iskanja"
 #: ./skins/plone_prefs/prefs_search_form.cpt:84
 msgid "label_search_types"
 msgstr "Določi tipe, ki naj jih preiščemo"
+
+#. Default: "only in current section"
+#: ./skins/plone_deprecated/global_searchbox.pt:44
+msgid "label_searchbox_currentfolder_only"
+msgstr ""
 
 #. Default: "Section 508"
 #: ./skins/plone_templates/colophon.pt:40
@@ -5011,27 +5143,27 @@ msgid "label_select"
 msgstr "Izberi"
 
 #. Default: "Select all items"
-#: ./skins/plone_prefs/prefs_group_members.cpt:104
+#: ./skins/plone_deprecated/old_folder_contents.pt:98
 msgid "label_select_all_items"
 msgstr "Izberi vse prispevke"
 
 #. Default: "Select a content item..."
-#: ./skins/plone_forms/select_default_view.cpt:68
+#: ./skins/plone_forms/select_default_view.cpt:63
 msgid "label_select_content_item"
 msgstr "Izberi prispevek k vsebini..."
 
 #. Default: "select group ${name}"
-#: ./skins/plone_forms/folder_localrole_form.pt:499
+#: ./skins/plone_deprecated/folder_localrole_form.pt:471
 msgid "label_select_group"
 msgstr "izberi skupino ${name}"
 
 #. Default: "Select user ${user}"
-#: ./skins/plone_forms/folder_localrole_form.pt:297
+#: ./skins/plone_deprecated/folder_localrole_form.pt:283
 msgid "label_select_user"
 msgstr "izberi uporabnika ${user}"
 
 #. Default: "select user/group ${role}"
-#: ./skins/plone_forms/folder_localrole_form.pt:119
+#: ./skins/plone_deprecated/folder_localrole_form.pt:114
 msgid "label_select_usergroup"
 msgstr "izberi vlogo uporabnika/skupine ${role}"
 
@@ -5041,12 +5173,12 @@ msgid "label_selection_criteria_value"
 msgstr "Vrednost"
 
 #. Default: "Send"
-#: ./skins/plone_content/author.cpt:200
+#: ./skins/plone_content/author.cpt:206
 msgid "label_send"
 msgstr "Pošlji"
 
 #. Default: "From"
-#: ./skins/plone_forms/sendto_form.cpt:64
+#: ./skins/plone_forms/sendto_form.cpt:69
 msgid "label_send_from"
 msgstr "Od"
 
@@ -5056,17 +5188,17 @@ msgid "label_send_my_password"
 msgstr "pošlji mi geslo"
 
 #. Default: "Send to"
-#: ./skins/plone_forms/sendto_form.cpt:38
+#: ./skins/plone_forms/sendto_form.cpt:45
 msgid "label_send_to_mail"
 msgstr "Za"
 
 #. Default: "E-Mail"
-#: ./skins/plone_templates/contact-info.cpt:59
+#: ./skins/plone_templates/contact-info.cpt:62
 msgid "label_sender_from_address"
 msgstr "E-pošta"
 
 #. Default: "Name"
-#: ./skins/plone_templates/contact-info.cpt:37
+#: ./skins/plone_templates/contact-info.cpt:41
 msgid "label_sender_fullname"
 msgstr "Ime"
 
@@ -5086,42 +5218,47 @@ msgid "label_setup_visible_ids"
 msgstr "Prikaži \"Kratko ime\" pri vsebini?"
 
 #. Default: "Short Name"
-#: ./skins/plone_content/folder_edit_form.cpt:45
+#: ./skins/plone_content/folder_edit_form.cpt:48
 msgid "label_short_name"
 msgstr "Kratko ime"
 
 #. Default: "Show all..."
-#: ./skins/plone_scripts/livesearch_reply.py:79
+#: ./skins/plone_scripts/livesearch_reply.py:83
 msgid "label_show_all"
 msgstr "Prikaži vse ..."
 
 #. Default: "Show all entries"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:58
+#: ./skins/plone_prefs/prefs_error_log_form.pt:62
 msgid "label_show_all_entries"
 msgstr "Pokaži vse vnose"
 
 #. Default: "Show me"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:30
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:35
 msgid "label_show_me"
 msgstr "Pokaži mi"
 
 #. Default: "Show all"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:122
+#: ./skins/plone_prefs/prefs_users_overview.cpt:127
 msgid "label_showall"
 msgstr "Prikaži vse"
 
 #. Default: "Site Administration"
-#: ./skins/plone_templates/accessibility-info.pt:44
+#: ./skins/plone_templates/accessibility-info.pt:48
 msgid "label_site_admin"
 msgstr "Upravljanje spletišča"
 
+#. Default: "site administration"
+#: ./skins/plone_login/insufficient_privileges.pt:19
+msgid "label_site_administration"
+msgstr ""
+
 #. Default: "Site map"
-#: ./skins/plone_templates/sitemap.pt:14
+#: ./skins/plone_templates/sitemap.pt:17
 msgid "label_site_map"
 msgstr "Načrt spletišča"
 
 #. Default: "Size"
-#: ./skins/plone_content/file_view.pt:42
+#: ./skins/plone_content/file_view.pt:43
 msgid "label_size"
 msgstr "Velikost"
 
@@ -5131,7 +5268,7 @@ msgid "label_skin_flexibility"
 msgstr "Dovoli uporabnikom izbiro videza."
 
 #. Default: "Skins"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:50
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:54
 msgid "label_skins"
 msgstr "Videzi"
 
@@ -5166,12 +5303,12 @@ msgid "label_smtp_userid"
 msgstr "uporabnik ESMTP"
 
 #. Default: "State:"
-#: ./skins/plone_templates/global_contentmenu.pt:20
+#: ./skins/plone_deprecated/global_contentmenu.pt:22
 msgid "label_state"
 msgstr "Stanje"
 
 #. Default: "Status"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:24
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:28
 msgid "label_status"
 msgstr "Stanje"
 
@@ -5181,12 +5318,12 @@ msgid "label_string_criteria_value"
 msgstr "Vrednost"
 
 #. Default: "Subject"
-#: ./skins/plone_content/author.cpt:159
+#: ./skins/plone_content/author.cpt:168
 msgid "label_subject"
 msgstr "Predmet"
 
 #. Default: "Subobjects"
-#: ./skins/plone_forms/ownership_form.cpt:58
+#: ./skins/plone_forms/ownership_form.cpt:60
 msgid "label_subobjects"
 msgstr "Pod-predmeti"
 
@@ -5211,7 +5348,7 @@ msgid "label_syndication_frequency"
 msgstr "Frekvenca osveževanja"
 
 #. Default: "Maximum Items"
-#: ./skins/plone_forms/synPropertiesForm.cpt:158
+#: ./skins/plone_forms/synPropertiesForm.cpt:153
 msgid "label_syndication_max_items"
 msgstr "Maksimalno število prispevkov"
 
@@ -5221,12 +5358,12 @@ msgid "label_syndication_maxitems"
 msgstr "Maksimalno število sindiciranih prispevkov"
 
 #. Default: "Update Base"
-#: ./skins/plone_forms/synPropertiesForm.cpt:138
+#: ./skins/plone_forms/synPropertiesForm.cpt:133
 msgid "label_syndication_update_base"
 msgstr "Osnova osveževanja"
 
 #. Default: "Update Frequency"
-#: ./skins/plone_forms/synPropertiesForm.cpt:109
+#: ./skins/plone_forms/synPropertiesForm.cpt:106
 msgid "label_syndication_update_frequency"
 msgstr "Frekvenca osveževanja"
 
@@ -5241,52 +5378,62 @@ msgid "label_template_mixin"
 msgstr "Poglej šablono"
 
 #. Default: "Time"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:72
+#: ./skins/plone_prefs/prefs_error_log_form.pt:76
 msgid "label_time"
 msgstr "Čas"
 
 #. Default: "Title"
-#: ./skins/plone_content/folder_edit_form.cpt:80
+#: ./skins/plone_content/folder_edit_form.cpt:81
 msgid "label_title"
 msgstr "Naslov"
 
+#. Default: "Up to my dashboard"
+#: ./skins/plone_prefs/password_form.pt:21
+msgid "label_to_dashboard"
+msgstr ""
+
 #. Default: "Select All/None"
-#: ./skins/plone_forms/search_form.pt:186
+#: ./skins/plone_forms/search_form.pt:175
 msgid "label_toggle"
 msgstr "Izberi Vse/Nič"
 
 #. Default: "Display traceback as text"
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:63
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:67
 msgid "label_traceback_as_text"
 msgstr "Prikaži sled nazaj kot besedilo"
 
 #. Default: "Type"
-#: ./skins/plone_forms/folder_localrole_form.pt:101
+#: ./skins/plone_deprecated/folder_localrole_form.pt:96
 msgid "label_type"
 msgstr "Tip"
 
+#. Default: "Type restrictions"
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:86
+msgid "label_type_restrictions"
+msgstr ""
+
 #. Default: "Types"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:38
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:42
 msgid "label_types"
 msgstr "Tipi"
 
 #. Default: "Undo"
-#: ./skins/plone_forms/undo_form.pt:50
+#: ./skins/plone_forms/undo_form.pt:54
 msgid "label_undo"
 msgstr "Prekliči"
 
 #. Default: "Uninstall"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:178
+#: ./skins/plone_prefs/prefs_install_products_form.pt:185
 msgid "label_uninstall"
 msgstr "Odstrani"
 
 #. Default: "Up to Groups Overview"
-#: ./skins/plone_prefs/prefs_group_details.pt:83
+#: ./skins/plone_prefs/prefs_group_details.pt:94
 msgid "label_up_to_groups_overview"
 msgstr "Navzgor na Pregled skupin"
 
 #. Default: "Up to Site Setup"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:15
+#: ./skins/plone_prefs/prefs_error_log_form.pt:19
 msgid "label_up_to_plone_setup"
 msgstr "Navzgor na Namestitev programa Plone"
 
@@ -5296,7 +5443,7 @@ msgid "label_up_to_preferences"
 msgstr "Navzgor na Moje preference"
 
 #. Default: "Up to Users Overview"
-#: ./skins/plone_prefs/prefs_user_details.cpt:59
+#: ./skins/plone_prefs/prefs_user_details.cpt:63
 msgid "label_up_to_usersoverview"
 msgstr "Navzgor na Pregled uporabnikov"
 
@@ -5310,52 +5457,57 @@ msgid "label_url"
 msgstr "URL"
 
 #. Default: "Inherit roles from higher levels"
-#: ./skins/plone_forms/folder_localrole_form.pt:622
+#: ./skins/plone_deprecated/folder_localrole_form.pt:584
 msgid "label_use_acquisition"
 msgstr "Podeduj vloge iz višjih nivojev"
 
 #. Default: "Use Selected..."
-#: ./skins/plone_prefs/prefs_search_macros.pt:121
+#: ./skins/plone_prefs/prefs_search_macros.pt:120
 msgid "label_use_selected"
 msgstr "Uporabi izbrane..."
 
 #. Default: "User"
-#: ./skins/plone_forms/folder_localrole_form.pt:151
+#: ./skins/plone_deprecated/folder_localrole_form.pt:144
 msgid "label_user"
 msgstr "Uporabnik"
 
 #. Default: "User Name"
-#: ./skins/plone_forms/folder_localrole_form.pt:287
+#: ./skins/plone_deprecated/folder_localrole_form.pt:273
 msgid "label_user_name"
 msgstr "Uporabniško ime"
 
 #. Default: "User Properties"
-#: ./skins/plone_prefs/prefs_user_details.cpt:24
+#: ./skins/plone_prefs/prefs_user_details.cpt:27
 msgid "label_user_properties"
 msgstr "Lastnosti uporabnika"
 
 #. Default: "User Search"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:104
+#: ./skins/plone_prefs/prefs_users_overview.cpt:112
 msgid "label_user_search"
 msgstr "Iskanje uporabnikov"
 
+#. Default: "Settings"
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:40
+msgid "label_usergroup_settings"
+msgstr ""
+
 #. Default: "Username"
-#: ./skins/plone_forms/discussion_reply_form.cpt:92
+#: ./skins/plone_forms/discussion_reply_form.cpt:93
 msgid "label_username"
 msgstr "Uporabniško ime"
 
 #. Default: "Users"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:28
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:30
 msgid "label_users"
 msgstr "Uporabniki"
 
 #. Default: "Users and groups"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:36
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:39
 msgid "label_usersandgroups"
 msgstr "Uporabniki in skupine"
 
 #. Default: "View"
-#: ./skins/plone_content/author.cpt:48
+#: ./skins/plone_content/author.cpt:57
 msgid "label_view"
 msgstr "Vpogled"
 
@@ -5390,7 +5542,7 @@ msgid "label_workflow_default_state"
 msgstr "Lahko zamenjate začetne datume za vse dokumente:"
 
 #. Default: "Workflows"
-#: ./skins/plone_prefs/prefs_installed_product_overview.pt:86
+#: ./skins/plone_prefs/prefs_installed_product_overview.pt:90
 msgid "label_workflows"
 msgstr "Delovni tokovi"
 
@@ -5400,52 +5552,52 @@ msgid "label_xhtml"
 msgstr "Veljaven XHTML"
 
 #. Default: "Large"
-#: ./skins/plone_templates/accessibility-info.pt:20
+#: ./skins/plone_templates/accessibility-info.pt:24
 msgid "large_text"
 msgstr "Veliko"
 
 #. Default: "Last log-in"
-#: ./skins/plone_forms/search_form.pt:155
+#: ./skins/plone_forms/search_form.pt:146
 msgid "last_login"
 msgstr "Zadnja prijava"
 
 #. Default: "Account details"
-#: ./skins/plone_login/failsafe_login_form.cpt:60
+#: ./skins/plone_login/failsafe_login_form.cpt:71
 msgid "legend_account_details"
 msgstr "Podrobnosti računa"
 
 #. Default: "Add comment"
-#: ./skins/plone_forms/discussion_reply_form.cpt:67
+#: ./skins/plone_forms/discussion_reply_form.cpt:68
 msgid "legend_add_comment"
 msgstr "Dodaj komentar"
 
 #. Default: "Address info"
-#: ./skins/plone_forms/sendto_form.cpt:32
+#: ./skins/plone_forms/sendto_form.cpt:39
 msgid "legend_address_info"
 msgstr "Informacija o naslovu"
 
 #. Default: "Assigned Roles for ${folder}"
-#: ./skins/plone_forms/folder_localrole_form.pt:80
+#: ./skins/plone_deprecated/folder_localrole_form.pt:77
 msgid "legend_assigned_roles"
 msgstr "Dodeljene vloge ${folder}"
 
 #. Default: "Available Groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:467
+#: ./skins/plone_deprecated/folder_localrole_form.pt:441
 msgid "legend_available_groups"
 msgstr "Skupine na voljo"
 
 #. Default: "Available Users"
-#: ./skins/plone_forms/folder_localrole_form.pt:266
+#: ./skins/plone_deprecated/folder_localrole_form.pt:254
 msgid "legend_available_users"
 msgstr "Člani na voljo"
 
 #. Default: "Change Ownership"
-#: ./skins/plone_forms/ownership_form.cpt:25
+#: ./skins/plone_forms/ownership_form.cpt:26
 msgid "legend_change_ownership"
 msgstr "Zamenjaj lastništvo"
 
 #. Default: "Addable types options"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:46
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:83
 msgid "legend_constraintypes"
 msgstr "Opcije za dodajanje tipov vsebin"
 
@@ -5455,27 +5607,27 @@ msgid "legend_contenttypes"
 msgstr "Tipi vsebine"
 
 #. Default: "Feedback for author"
-#: ./skins/plone_content/author.cpt:154
+#: ./skins/plone_content/author.cpt:163
 msgid "legend_feedback_for_author"
 msgstr "Povratno sporočilo avtorju"
 
 #. Default: "Feedback details"
-#: ./skins/plone_templates/contact-info.cpt:31
+#: ./skins/plone_templates/contact-info.cpt:35
 msgid "legend_feedback_for_contact_info"
 msgstr "Povratno sporočilo na strani stikov"
 
 #. Default: "Group"
-#: ./skins/plone_forms/member_search_form.pt:120
+#: ./skins/plone_forms/member_search_form.pt:81
 msgid "legend_group"
 msgstr "Skupina"
 
 #. Default: "Products available for install"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:40
+#: ./skins/plone_prefs/prefs_install_products_form.pt:44
 msgid "legend_install_products_available"
 msgstr "Izdelki na voljo za namestitev"
 
 #. Default: "Installed products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:107
+#: ./skins/plone_prefs/prefs_install_products_form.pt:114
 msgid "legend_installed_products"
 msgstr "Nameščeni izdelki"
 
@@ -5485,22 +5637,22 @@ msgid "legend_items_available"
 msgstr "Prispevki na voljo"
 
 #. Default: "LiveSearch &#8595;"
-#: ./skins/plone_scripts/livesearch_reply.py:76
+#: ./skins/plone_scripts/livesearch_reply.py:80
 msgid "legend_livesearch"
 msgstr "Živo iskanje &#8595;"
 
 #. Default: "Log details"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:113
+#: ./skins/plone_prefs/prefs_error_log_form.pt:117
 msgid "legend_logdetails"
 msgstr "Podrobnosti dnevnika"
 
 #. Default: "Exception Log (most recent first)"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:41
+#: ./skins/plone_prefs/prefs_error_log_form.pt:45
 msgid "legend_logexception"
 msgstr "Dnevnik izjem (najbolj sveži vnosi na začetku)"
 
 #. Default: "No exceptions logged."
-#: ./skins/plone_prefs/prefs_error_log_form.pt:43
+#: ./skins/plone_prefs/prefs_error_log_form.pt:47
 msgid "legend_lognoexceptions"
 msgstr "Izjeme niso beležene."
 
@@ -5510,32 +5662,33 @@ msgid "legend_mailhost_details"
 msgstr "Podrobnosti o odhodnem poštnem strežniku (SMTP)"
 
 #. Default: "User Details"
-#: ./skins/plone_prefs/prefs_user_details.cpt:86
+#: ./skins/plone_prefs/prefs_user_details.cpt:90
 msgid "legend_member_details"
 msgstr "Podrobnosti o članu"
 
 #. Default: "User Search Criteria"
-#: ./skins/plone_forms/member_search_form.pt:23
+#: ./skins/plone_forms/member_search_form.pt:28
 msgid "legend_member_search_criteria"
 msgstr "Kriterij iskanja članov"
 
 #. Default: "Navigation details"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:34
+#: ./skins/plone_prefs/prefs_navigation_form.cpt:45
 msgid "legend_navigation_details"
 msgstr "Podrobnosti navigacije"
 
-#. Default: "Note: you are not logged in. You may optionally enter your username and password below. If you don't enter your username and password below, this comment will be posted as the 'Anonymous User'."
-#: ./skins/plone_forms/discussion_reply_form.cpt:81
+#. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
+#: ./skins/plone_forms/discussion_reply_form.cpt:82
+#, fuzzy
 msgid "legend_note_reply_anonymous"
 msgstr "Niste prijavljeni. Spodaj lahko neobvezno vnesete vaše uporabniško ime in geslo. Če ga ne boste, bo ta komentar objavljen kot prispevek Anonimnega uporabnika."
 
 #. Default: "Password Details"
-#: ./skins/plone_login/login_password.cpt:42
+#: ./skins/plone_login/login_password.cpt:47
 msgid "legend_password_details"
 msgstr "Podrobnosti gesla"
 
 #. Default: "Personal Details"
-#: ./skins/plone_login/join_form.cpt:26
+#: ./skins/plone_login/join_form.cpt:33
 msgid "legend_personal_details"
 msgstr "Podrobnosti o osebi"
 
@@ -5560,17 +5713,17 @@ msgid "legend_search_details"
 msgstr "Podrobnosti iskanja"
 
 #. Default: "Search for possible new owner"
-#: ./skins/plone_forms/ownership_form.cpt:159
+#: ./skins/plone_forms/ownership_form.cpt:161
 msgid "legend_search_owners"
 msgstr "Išči morebitnega novega lastnika"
 
 #. Default: "Search Terms"
-#: ./skins/plone_forms/folder_localrole_form.pt:382
+#: ./skins/plone_deprecated/folder_localrole_form.pt:362
 msgid "legend_search_terms"
 msgstr "Pogoji iskanja"
 
 #. Default: "Advanced Settings"
-#: ./skins/plone_forms/folder_localrole_form.pt:610
+#: ./skins/plone_deprecated/folder_localrole_form.pt:572
 msgid "legend_security_settings"
 msgstr "Napredne nastavitve"
 
@@ -5585,17 +5738,17 @@ msgid "legend_user_details"
 msgstr "Podrobnosti o članu"
 
 #. Default: "The link address is:"
-#: ./skins/plone_content/link_view.pt:30
+#: ./skins/plone_content/link_view.pt:31
 msgid "link_address"
 msgstr "Naslov povezave je:"
 
 #. Default: "Group Properties"
-#: ./skins/plone_prefs/prefs_group_details.pt:105
+#: ./skins/plone_prefs/prefs_group_details.pt:116
 msgid "link_group_properties"
 msgstr "Lastnosti skupine"
 
 #. Default: "Install log"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:149
+#: ./skins/plone_prefs/prefs_install_products_form.pt:156
 msgid "link_install_products_log"
 msgstr "Dnevnik nameščanja"
 
@@ -5605,17 +5758,17 @@ msgid "listingheader_action"
 msgstr "Akcija"
 
 #. Default: "Action performed"
-#: ./skins/plone_forms/undo_form.pt:51
+#: ./skins/plone_forms/undo_form.pt:55
 msgid "listingheader_action_performed"
 msgstr "Izvedene aktivnosti"
 
 #. Default: "Affected Item"
-#: ./skins/plone_forms/undo_form.pt:52
+#: ./skins/plone_forms/undo_form.pt:56
 msgid "listingheader_affected_item"
 msgstr "Prispevki, ki so bili kakorkoli spremenjeni"
 
 #. Default: "Author"
-#: ./skins/plone_content/folder_tabular_view.pt:58
+#: ./skins/plone_content/folder_tabular_view.pt:66
 msgid "listingheader_author"
 msgstr "Avtor"
 
@@ -5630,42 +5783,42 @@ msgid "listingheader_date_and_time"
 msgstr "Datum in čas"
 
 #. Default: "Description"
-#: ./skins/plone_forms/folder_localrole_form.pt:487
+#: ./skins/plone_deprecated/folder_localrole_form.pt:459
 msgid "listingheader_description"
 msgstr "Opis"
 
 #. Default: "E-mail Address"
-#: ./skins/plone_prefs/prefs_group_members.cpt:116
+#: ./skins/plone_prefs/prefs_group_members.cpt:127
 msgid "listingheader_email_address"
 msgstr "Naslov elektronske pošte"
 
 #. Default: "Group name"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:136
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:138
 msgid "listingheader_group_name"
 msgstr "Ime skupine"
 
 #. Default: "Remove Group"
-#: ./skins/plone_prefs/prefs_user_memberships.pt:86
+#: ./skins/plone_prefs/prefs_user_memberships.pt:93
 msgid "listingheader_group_remove"
 msgstr "Odstrani skupino"
 
 #. Default: "Group/User name"
-#: ./skins/plone_prefs/prefs_group_members.cpt:115
+#: ./skins/plone_prefs/prefs_group_members.cpt:126
 msgid "listingheader_group_user_name"
 msgstr "Ime skupine oz. uporabnika"
 
 #. Default: "Modified"
-#: ./skins/plone_content/folder_tabular_view.pt:63
+#: ./skins/plone_content/folder_tabular_view.pt:71
 msgid "listingheader_modified"
 msgstr "Spremenjeno"
 
 #. Default: "Name"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:80
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:79
 msgid "listingheader_name"
 msgstr "Ime"
 
 #. Default: "Order"
-#: ./skins/plone_templates/folder_contents.pt:165
+#: ./skins/plone_deprecated/old_folder_contents.pt:124
 msgid "listingheader_order"
 msgstr "Vrstni red"
 
@@ -5675,72 +5828,72 @@ msgid "listingheader_performed_by"
 msgstr "Izvedel"
 
 #. Default: "Remove Group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:147
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:149
 msgid "listingheader_remove_group"
 msgstr "Odstrani skupino"
 
 #. Default: "Remove user"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:139
+#: ./skins/plone_prefs/prefs_users_overview.cpt:143
 msgid "listingheader_remove_user"
 msgstr "Odstrani uporabnika"
 
 #. Default: "Reset Password"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:138
+#: ./skins/plone_prefs/prefs_users_overview.cpt:142
 msgid "listingheader_reset_password"
 msgstr "Ponastavi geslo"
 
 #. Default: "Roles"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:141
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:143
 msgid "listingheader_roles"
 msgstr "Vloge"
 
 #. Default: "Size"
-#: ./skins/plone_templates/folder_contents.pt:155
+#: ./skins/plone_deprecated/old_folder_contents.pt:114
 msgid "listingheader_size"
 msgstr "Velikost"
 
 #. Default: "State"
-#: ./skins/plone_templates/folder_contents.pt:161
+#: ./skins/plone_deprecated/old_folder_contents.pt:120
 msgid "listingheader_status"
 msgstr "Stanje"
 
 #. Default: "Title"
-#: ./skins/plone_content/folder_tabular_view.pt:55
+#: ./skins/plone_content/folder_tabular_view.pt:63
 msgid "listingheader_title"
 msgstr "Naslov"
 
 #. Default: "Type"
-#: ./skins/plone_content/folder_tabular_view.pt:60
+#: ./skins/plone_content/folder_tabular_view.pt:68
 msgid "listingheader_type"
 msgstr "Tip"
 
 #. Default: "User name"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:134
+#: ./skins/plone_prefs/prefs_users_overview.cpt:138
 msgid "listingheader_user_name"
 msgstr "Uporabniško ime"
 
 #. Default: "<strong>Attention!</strong> You are setting the sharing permissions for this folder's default page. If you want to set the permissions for its containing folder, click ${link}"
-#: ./skins/plone_forms/folder_localrole_form.pt:64
+#: ./skins/plone_deprecated/folder_localrole_form.pt:61
 msgid "local_role_warning_default_page"
 msgstr "<strong>Pozor!</strong> Dovoljujete skupne dostope za privzeto stran te mape. Če želite dovoliti skupne dostope v mapo kliknite ${link}."
 
 #. Default: "here"
-#: ./skins/plone_forms/folder_localrole_form.pt:47
+#: ./skins/plone_deprecated/folder_localrole_form.pt:44
 msgid "local_role_warning_link"
 msgstr "tukaj"
 
 #. Default: "<strong>Attention!</strong> You are setting the sharing permissions for a ${type}. If you want to set the permissions for its container, click ${link}."
-#: ./skins/plone_forms/folder_localrole_form.pt:46
+#: ./skins/plone_deprecated/folder_localrole_form.pt:43
 msgid "local_role_warning_type"
 msgstr "<strong>Pozor!</strong> Dovoljujete skupne dostope za tip ${type} . Če želite dovoliti skupne dostope v mapo, ki ga vsebuje kliknite  ${link} ."
 
 #. Default: "While cookie authentication is disabled, cookie-based login is not available."
-#: ./skins/plone_login/failsafe_login_form.cpt:47
+#: ./skins/plone_login/failsafe_login_form.cpt:58
 msgid "login_form_disabled"
 msgstr "Dokler je prepoznavanje prek piškotkov onemogočeno, ni možna prijava prek piškotkov."
 
 #. Default: "Cookie authentication is disabled. Login portlet not available."
-#: ./skins/plone_portlets/portlet_login.pt:128
+#: ./skins/plone_deprecated/portlet_login.pt:123
 msgid "login_portlet_disabled"
 msgstr "Prijava prek piškotkov je onemogočena. Ni portleta za prijavo."
 
@@ -5765,7 +5918,7 @@ msgid "mailtemplate_registered_portal_membership_info"
 msgstr "Informacija o članstvu na portalu"
 
 #. Default: "A mail has now been sent to the site administrator regarding your questions and/or comments."
-#: ./skins/plone_templates/send_feedback_confirm.cpt:19
+#: ./skins/plone_templates/send_feedback_confirm.cpt:23
 msgid "message_send_feedback_confirm"
 msgstr "Skrbniku spletišča smo poslali pošto z vašimi vprašanji ali komentarji."
 
@@ -5919,7 +6072,7 @@ msgid "no"
 msgstr "Ne"
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
-#: ./skins/plone_content/document_view.pt:28
+#: ./skins/plone_content/document_view.pt:31
 msgid "no_body_text"
 msgstr "Ta prispevek nima nič besedila vsebine. Kliknite na zavihek uredi in ga spremenite."
 
@@ -5929,17 +6082,17 @@ msgid "no_comments"
 msgstr "Brez komentarjev."
 
 #. Default: "(No file has been uploaded yet)"
-#: ./skins/plone_content/file_view.pt:51
+#: ./skins/plone_content/file_view.pt:52
 msgid "no_file_uploaded"
 msgstr "(Nobene datoteke še ni bilo naložene)"
 
 #. Default: "No groups were found using your search criteria."
-#: ./skins/plone_forms/folder_localrole_form.pt:452
+#: ./skins/plone_deprecated/folder_localrole_form.pt:426
 msgid "no_groups_found"
 msgstr "Ne najdem nobenih grup z vašimi kriteriji iskanja."
 
 #. Default: "(No image has been uploaded yet)"
-#: ./skins/plone_content/image_view.pt:50
+#: ./skins/plone_content/image_view.pt:51
 msgid "no_image_uploaded"
 msgstr "(Nobene slike še ni bilo naložene)"
 
@@ -5949,7 +6102,7 @@ msgid "no_members_found"
 msgstr "Ne najdem nobenega uporabnika z vašimi kriteriji iskanja."
 
 #. Default: "No events have been posted."
-#: ./skins/plone_templates/events_listing.pt:113
+#: ./skins/plone_templates/events_listing.pt:116
 msgid "no_new_events"
 msgstr "Objavljeno še ni nobenega dogodka"
 
@@ -5958,12 +6111,17 @@ msgstr "Objavljeno še ni nobenega dogodka"
 msgid "no_new_news"
 msgstr "Nobenih novic še ni bilo objavljenih."
 
+#. Default: "No users were found using your search criteria."
+#: ./skins/plone_deprecated/folder_localrole_form.pt:230
+msgid "no_users_found"
+msgstr ""
+
 #: prefs_user_group_search_form.pt
 msgid "none specified"
 msgstr "nobenega določenega"
 
 #. Default: "Normal"
-#: ./skins/plone_templates/accessibility-info.pt:24
+#: ./skins/plone_templates/accessibility-info.pt:28
 msgid "normal_text"
 msgstr "Normalno"
 
@@ -5973,12 +6131,12 @@ msgid "pending"
 msgstr "v delu"
 
 #. Default: "Plain Text"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:57
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:50
 msgid "plain_text"
 msgstr "Enostavno besedilo"
 
 #. Default: "Posted by"
-#: ./skins/plone_templates/events_listing.pt:66
+#: ./skins/plone_templates/events_listing.pt:69
 msgid "posted_by"
 msgstr "Objavil"
 
@@ -6001,12 +6159,12 @@ msgid "published"
 msgstr "objavljeno"
 
 #. Default: "Read More..."
-#: ./skins/plone_content/folder_summary_view.pt:147
+#: ./skins/plone_content/folder_summary_view.pt:155
 msgid "read_more"
 msgstr "Beri naprej..."
 
 #. Default: "Cookie authentication has been disabled."
-#: ./skins/plone_login/registered.pt:10
+#: ./skins/plone_login/registered.pt:12
 msgid "registered_disabled"
 msgstr "Prijava s pomočjo piškotkov je bila onemogočena."
 
@@ -6016,17 +6174,17 @@ msgid "reject"
 msgstr "zavrni"
 
 #. Default: "Please log out or exit your browser when you're done."
-#: ./skins/plone_login/failsafe_login_form.cpt:165
+#: ./skins/plone_login/failsafe_login_form.cpt:168
 msgid "remember_to_log_out"
 msgstr "Prosim, odjavite se ali zaprite brskalnik, ko boste končali z delom."
 
 #. Default: "You are not allowed to modify the id of this item."
-#: ./skins/plone_forms/folder_rename_form.cpt:67
+#: ./skins/plone_forms/folder_rename_form.cpt:72
 msgid "rename_item_not_allowed"
 msgstr "Nimate pravice spreminjati identifikacije tega prispevka."
 
 #. Default: "by ${author}, ${date}"
-#: ./skins/plone_forms/search.pt:86
+#: ./skins/plone_forms/search.pt:91
 msgid "results_by_author"
 msgstr "avtor ${author} , ${date}"
 
@@ -6037,17 +6195,17 @@ msgid "retract"
 msgstr "umakni"
 
 #. Default: "Any Group"
-#: ./skins/plone_forms/member_search_form.pt:128
+#: ./skins/plone_forms/member_search_form.pt:89
 msgid "search_any_group"
 msgstr "Katerakoli skupina"
 
 #. Default: "Did you not find what you were looking for? Try the ${advanced_search} for more precise search options."
-#: ./skins/plone_forms/search.pt:33
+#: ./skins/plone_forms/search.pt:38
 msgid "search_results_advanced"
 msgstr "Niste našli, kar ste iskali? Poskusite ${advanced_search} za bolj natančen način iskanja."
 
 #. Default: "Advanced Search"
-#: ./skins/plone_forms/search.pt:34
+#: ./skins/plone_forms/search.pt:39
 msgid "search_results_advanced_link"
 msgstr "Napredno iskanje"
 
@@ -6063,17 +6221,17 @@ msgid "show"
 msgstr "pokaži"
 
 #. Default: "You are receiving this mail because ${fullname} ${from_address} is sending feedback about the site administered by you at ${url}. The message sent was: ${message}"
-#: ./skins/plone_templates/site_feedback_template.pt:12
+#: ./skins/plone_templates/site_feedback_template.pt:13
 msgid "site_feedback_mailtemplate_body"
 msgstr "To poštno sporočilo dobivate, ker ${fullname} ( ${from_address} ) pošilja odziv glede plonovega portala za katerega skrbite na ${url} . Vsebina sporočila je: ${message}"
 
 #. Default: "Small"
-#: ./skins/plone_templates/accessibility-info.pt:28
+#: ./skins/plone_templates/accessibility-info.pt:32
 msgid "small_text"
 msgstr "Majhno"
 
 #. Default: "Structured Text"
-#: ./skins/plone_wysiwyg/wysiwyg_support.pt:35
+#: ./skins/plone_wysiwyg/wysiwyg_support.pt:32
 msgid "structured_text"
 msgstr "Strukturirano besedilo"
 
@@ -6083,42 +6241,42 @@ msgid "submit"
 msgstr "predloži"
 
 #. Default: "Affected content"
-#: ./skins/plone_forms/content_status_history.cpt:81
+#: ./skins/plone_forms/content_status_history.cpt:72
 msgid "summary_affected_content"
 msgstr "spremenjena vsebina"
 
 #. Default: "Currently assigned local roles"
-#: ./skins/plone_forms/folder_localrole_form.pt:86
+#: ./skins/plone_deprecated/folder_localrole_form.pt:83
 msgid "summary_assigned_roles"
 msgstr "Trenutno dodeljene lokalne vloge"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: ./skins/plone_content/author.cpt:230
+#: ./skins/plone_content/author.cpt:234
 msgid "summary_author_content_list"
 msgstr "Seznam vsebin, ki jih je napisal avtor, zbran po tipu vsebin"
 
 #. Default: "Available groups"
-#: ./skins/plone_forms/folder_localrole_form.pt:473
+#: ./skins/plone_deprecated/folder_localrole_form.pt:447
 msgid "summary_available_groups"
 msgstr "Skupine na voljo"
 
 #. Default: "Calendar"
-#: ./skins/plone_portlets/portlet_calendar.pt:38
+#: ./skins/plone_deprecated/portlet_calendar.pt:38
 msgid "summary_calendar"
 msgstr "Koledar"
 
 #. Default: "Content listing"
-#: ./skins/plone_content/folder_tabular_view.pt:50
+#: ./skins/plone_content/folder_tabular_view.pt:58
 msgid "summary_content_listing"
 msgstr "Seznam vsebin"
 
 #. Default: "Event details"
-#: ./skins/plone_content/event_view.pt:30
+#: ./skins/plone_content/event_view.pt:33
 msgid "summary_event_details"
 msgstr "Podrobnosti dogodka"
 
 #. Default: "Exception Log (most recent first)"
-#: ./skins/plone_prefs/prefs_error_log_form.pt:65
+#: ./skins/plone_prefs/prefs_error_log_form.pt:69
 msgid "summary_exception_log"
 msgstr "Dnevnik izjem (najbolj sveži vnosi na začetku)"
 
@@ -6128,7 +6286,7 @@ msgid "summary_history"
 msgstr "Zgodovina"
 
 #. Default: "Roles to assign"
-#: ./skins/plone_forms/folder_localrole_form.pt:194
+#: ./skins/plone_deprecated/folder_localrole_form.pt:187
 msgid "summary_localroles_to_assign"
 msgstr "Vloge za dodeljevanje"
 
@@ -6138,22 +6296,22 @@ msgid "summary_review_history"
 msgstr "Pregled zgodovine"
 
 #. Default: "Select roles for each group"
-#: ./skins/plone_prefs/prefs_groups_overview.cpt:96
+#: ./skins/plone_prefs/prefs_groups_overview.cpt:102
 msgid "summary_roles_for_groups"
 msgstr "Izberite vloge za vsako skupino"
 
 #. Default: "Search results"
-#: ./skins/plone_forms/folder_localrole_form.pt:273
+#: ./skins/plone_deprecated/folder_localrole_form.pt:261
 msgid "summary_search_results"
 msgstr "Rezultati iskanja"
 
 #. Default: "Home"
-#: ./skins/plone_portlets/portlet_navigation.pt:41
+#: ./skins/plone_deprecated/global_pathbar.pt:16
 msgid "tabs_home"
 msgstr "Domov"
 
 #. Default: "This Product is broken"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:83
+#: ./skins/plone_prefs/prefs_install_products_form.pt:90
 msgid "text_broken_product"
 msgstr "Ta izdelek je pokvarjen"
 
@@ -6163,17 +6321,17 @@ msgid "text_conforms_to_standards"
 msgstr "To spletišče ustreza naslednjim standardom:"
 
 #. Default: "Contributors: ${name}"
-#: ./skins/plone_content/document_byline.pt:58
+#: ./skins/plone_deprecated/document_byline.pt:53
 msgid "text_contributors"
 msgstr "Soavtorji: ${name}"
 
 #. Default: "by ${creator}, last updated: ${date}"
-#: ./skins/plone_templates/recently_modified.pt:50
+#: ./skins/plone_templates/recently_modified.pt:56
 msgid "text_creator_date"
 msgstr "Avtor ${creator} , zadnja sprememba: ${date}"
 
 #. Default: "The specified log entry was not found. It may have expired."
-#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:28
+#: ./skins/plone_prefs/prefs_error_log_showEntry.pt:32
 msgid "text_errlog_notfound"
 msgstr "Želen vnos v dnevniku ni bil najden. Morda je že pretekel."
 
@@ -6193,7 +6351,7 @@ msgid "text_form_resubmit_message"
 msgstr "Ste že kliknili gumb Submit. Ali zares želite ponovno poslati ta obrazec?"
 
 #. Default: "Group"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:114
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:113
 msgid "text_group"
 msgstr "Skupina"
 
@@ -6253,7 +6411,7 @@ msgid "text_ie6_cookies_step3"
 msgstr "Premaknite drsnik na Medium in kliknite OK"
 
 #. Default: "Location: ${location}"
-#: ./skins/plone_content/author.cpt:85
+#: ./skins/plone_content/author.cpt:94
 msgid "text_location"
 msgstr "Lokacija: ${location}"
 
@@ -6312,48 +6470,54 @@ msgstr "Izberite \"Cookies\" pod \"Privacy & Security\""
 msgid "text_netscape6_cookies_step4"
 msgstr "Izberite \"Enable cookies for the originating web site only\" ali \"Enable all cookies\" in kliknite \"OK\""
 
+#. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the <a href=\"${DYNAMIC_CONTENT}\">Mail control panel</a> to fix this."
+#: ./skins/plone_prefs/plone_control_panel.pt:42
+msgid "text_no_mailhost_configured"
+msgstr ""
+
 #. Default: "No items have been published."
-#: ./skins/plone_templates/recently_published.pt:76
+#: ./skins/plone_templates/recently_published.pt:80
 msgid "text_no_new_items"
 msgstr "Ni objavljenega prispevka."
 
 #. Default: "No items have been modified."
-#: ./skins/plone_templates/recently_modified.pt:72
+#: ./skins/plone_templates/recently_modified.pt:78
 msgid "text_no_new_modified_items"
 msgstr "Nobenega prispevka nismo spremenili."
 
 #. Default: "Warning: PIL is not installed properly, image scaling will not work."
-#: ./skins/plone_prefs/plone_control_panel.pt:65
+#: ./skins/plone_prefs/plone_control_panel.pt:52
 msgid "text_no_pil_installed"
 msgstr "Opozorilo: PIL ni pravilno nameščen, prilagajanje velikosti slik ne bo delovalo."
 
 #. Default: "Enter a group or user name to search for or click 'Show All'."
-#: ./skins/plone_prefs/prefs_group_members.cpt:269
+#: ./skins/plone_prefs/prefs_group_members.cpt:274
 msgid "text_no_searchstring"
 msgstr "Vnesite iskano ime grupe ali uporabnika ali kliknite 'Prikaži vse'."
 
 #. Default: "Enter a group or user name to search for."
-#: ./skins/plone_prefs/prefs_group_members.cpt:266
+#: ./skins/plone_prefs/prefs_group_members.cpt:271
 msgid "text_no_searchstring_large"
 msgstr "Vnesite iskano ime grupe ali uporabnika-"
 
-#. Default: "No user by that name"
-#: ./skins/plone_content/author.cpt:30
+#. Default: "No user by that name."
+#: ./skins/plone_content/author.cpt:36
+#, fuzzy
 msgid "text_no_user_by_name"
 msgstr "Ne najdem uporabnika s tem imenom"
 
 #. Default: "Enter a username to search for"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:213
+#: ./skins/plone_prefs/prefs_users_overview.cpt:218
 msgid "text_no_user_searchstring"
 msgstr "Vtipkajte uporabniško ime, ki ga iščete."
 
 #. Default: "Enter a username to search for, or click 'Show All'"
-#: ./skins/plone_prefs/prefs_users_overview.cpt:219
+#: ./skins/plone_prefs/prefs_users_overview.cpt:224
 msgid "text_no_user_searchstring_largesite"
 msgstr "Vtipkajte uporabniško ime, ki ga iščete ali kliknite 'Prikaži vse'."
 
 #. Default: "No matches"
-#: ./skins/plone_prefs/prefs_group_members.cpt:263
+#: ./skins/plone_prefs/prefs_group_members.cpt:268
 msgid "text_nomatches"
 msgstr "Ni zadetkov"
 
@@ -6368,62 +6532,62 @@ msgid "text_opera_cookies_step2"
 msgstr "Kliknite \"Enable cookies\""
 
 #. Default: "Product Description"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:73
+#: ./skins/plone_prefs/prefs_install_products_form.pt:80
 msgid "text_product_description"
 msgstr "Opis izdelka"
 
 #. Default: "This Product has been removed from the file system."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:168
+#: ./skins/plone_prefs/prefs_install_products_form.pt:175
 msgid "text_product_unavailable"
 msgstr "Ta izdelek je bil odstranjen in njegove datoteke zbrisane."
 
 #. Default: "Search Site"
-#: ./skins/plone_templates/global_searchbox.pt:15
+#: ./skins/plone_deprecated/global_searchbox.pt:18
 msgid "text_search"
 msgstr "Išči po spletišču"
 
 #. Default: "Text size:"
-#: ./skins/plone_templates/accessibility-info.pt:17
+#: ./skins/plone_templates/accessibility-info.pt:21
 msgid "text_size"
 msgstr "Velikost besedila"
 
 #. Default: "User"
-#: ./skins/plone_prefs/prefs_user_group_search_form.pt:112
+#: ./skins/plone_prefs/prefs_user_group_search_form.pt:111
 msgid "text_user"
 msgstr "Uporabnik"
 
 #. Default: "This user does not belong to any group."
-#: ./skins/plone_prefs/prefs_user_memberships.pt:112
+#: ./skins/plone_prefs/prefs_user_memberships.pt:119
 msgid "text_user_not_in_any_group"
 msgstr "Ta uporabnik ni član nobene skupine."
 
 #. Default: "Ever"
-#: ./skins/plone_forms/member_search_form.pt:97
+#: ./skins/plone_forms/search_form.pt:153
 msgid "time_ever"
 msgstr "Kadarkoli"
 
 #. Default: "- expired"
-#: ./skins/plone_content/document_byline.pt:40
+#: ./skins/plone_deprecated/document_byline.pt:43
 msgid "time_expired"
 msgstr "- preteklo"
 
 #. Default: "Last month"
-#: ./skins/plone_forms/member_search_form.pt:96
+#: ./skins/plone_forms/search_form.pt:152
 msgid "time_last_month"
 msgstr "Prejšnji mesec"
 
 #. Default: "Last week"
-#: ./skins/plone_forms/member_search_form.pt:95
+#: ./skins/plone_forms/search_form.pt:151
 msgid "time_last_week"
 msgstr "Prejšnji teden"
 
 #. Default: ":"
-#: ./skins/plone_templates/calendar_macros.pt:151
+#: ./skins/plone_templates/calendar_macros.pt:133
 msgid "time_separator"
 msgstr ":"
 
 #. Default: "Yesterday"
-#: ./skins/plone_forms/member_search_form.pt:94
+#: ./skins/plone_forms/search_form.pt:150
 msgid "time_yesterday"
 msgstr "Včeraj"
 
@@ -6433,27 +6597,27 @@ msgid "title"
 msgstr "naslov"
 
 #. Default: "Actions for the current content item"
-#: ./skins/plone_templates/global_contentmenu.pt:403
+#: ./skins/plone_deprecated/global_contentmenu.pt:405
 msgid "title_actions_menu"
 msgstr "Akcije"
 
 #. Default: "Add new items in the same folder as this item"
-#: ./skins/plone_templates/global_contentmenu.pt:104
+#: ./skins/plone_deprecated/global_contentmenu.pt:106
 msgid "title_add_new_items_inside_folder"
 msgstr "Dodaj nove prispevke v isto mapo, kjer je že ta"
 
 #. Default: "Add new items inside this item"
-#: ./skins/plone_templates/global_contentmenu.pt:97
+#: ./skins/plone_deprecated/global_contentmenu.pt:99
 msgid "title_add_new_items_inside_item"
 msgstr "Dodaj nove prispevke znotraj tega"
 
 #. Default: "Add this item to your iCal calendar"
-#: ./skins/plone_content/event_view.pt:114
+#: ./skins/plone_content/event_view.pt:165
 msgid "title_add_to_ical"
 msgstr "Dodaj ta prispevek v koledar iCal"
 
 #. Default: "Add this item to your vCal calendar"
-#: ./skins/plone_content/event_view.pt:108
+#: ./skins/plone_content/event_view.pt:159
 msgid "title_add_to_vcal"
 msgstr "Dodaj ta prispevek v koledar vCal"
 
@@ -6473,42 +6637,42 @@ msgid "title_built_with_css"
 msgstr "To Plonovo spletišče uporablja veljavni CSS."
 
 #. Default: "This Plone site was built using Plone CMS, the Open Source Content Management System. Click for more information."
-#: ./skins/plone_templates/colophon.pt:23
+#: ./skins/plone_templates/colophon.pt:31
 msgid "title_built_with_plone"
 msgstr "Izdelano s sistemom Plone za upravljanje spletnih vsebin. Kliknite za več informacij."
 
 #. Default: "Change default page"
-#: ./skins/plone_templates/global_contentmenu.pt:345
+#: ./skins/plone_deprecated/global_contentmenu.pt:347
 msgid "title_change_default_page"
 msgstr "Spremeni privzeto stran"
 
 #. Default: "Change the item used as default view in this folder"
-#: ./skins/plone_forms/select_default_view.cpt:68
+#: ./skins/plone_deprecated/global_contentmenu.pt:271
 msgid "title_change_default_view_item"
 msgstr "Spremeni prispevek, ki je uporabljen kot privzeti vpogled v to mapo."
 
 #. Default: "Change the state of this item"
-#: ./skins/plone_templates/global_contentmenu.pt:33
+#: ./skins/plone_deprecated/global_contentmenu.pt:35
 msgid "title_change_state_of_item"
 msgstr "Spremeni stanje tega prispevka"
 
 #. Default: "Select the view mode for this folder, or set a content item as its default view."
-#: ./skins/plone_templates/global_contentmenu.pt:204
+#: ./skins/plone_deprecated/global_contentmenu.pt:206
 msgid "title_choose_default_view"
 msgstr "Izberi privzeti vpogled"
 
 #. Default: "Configure which content types can be added here"
-#: ./skins/plone_forms/folder_factories.pt:25
+#: ./skins/plone_deprecated/global_contentmenu.pt:138
 msgid "title_configure_addable_content_types"
 msgstr "Nastavi, katere tipe vsebin lahko dodamo sem."
 
 #. Default: "Copyright"
-#: ./skins/plone_templates/footer.pt:13
+#: ./skins/plone_templates/footer.pt:16
 msgid "title_copyright"
 msgstr "Copyright"
 
 #. Default: "Cascading Style Sheets"
-#: ./skins/plone_templates/accessibility-info.pt:152
+#: ./skins/plone_templates/accessibility-info.pt:150
 msgid "title_css"
 msgstr "Kaskadne slogovne strani (CSS)"
 
@@ -6518,7 +6682,7 @@ msgid "title_frontpage"
 msgstr "Izhodiščna stran"
 
 #. Default: "Large Text"
-#: ./skins/plone_templates/accessibility-info.pt:20
+#: ./skins/plone_templates/accessibility-info.pt:24
 msgid "title_large_text"
 msgstr "Veliko besedilo"
 
@@ -6528,52 +6692,52 @@ msgid "title_member_personal_folder"
 msgstr "Prispevki člana ${member}"
 
 #. Default: "Move item down"
-#: ./skins/plone_templates/folder_contents.pt:269
+#: ./skins/plone_deprecated/old_folder_contents.pt:230
 msgid "title_move_item_down"
 msgstr "Premakni prispevek navzdol"
 
 #. Default: "Move item up"
-#: ./skins/plone_templates/folder_contents.pt:262
+#: ./skins/plone_deprecated/old_folder_contents.pt:223
 msgid "title_move_item_up"
 msgstr "Premakni prispevek navzgor"
 
 #. Default: "Next month"
-#: ./skins/plone_portlets/portlet_calendar.pt:65
+#: ./skins/plone_deprecated/portlet_calendar.pt:65
 msgid "title_next_month"
 msgstr "Naslednji mesec"
 
 #. Default: "Normal Text"
-#: ./skins/plone_templates/accessibility-info.pt:24
+#: ./skins/plone_templates/accessibility-info.pt:28
 msgid "title_normal_text"
 msgstr "Normalno besedilo"
 
 #. Default: "Previous month"
-#: ./skins/plone_portlets/portlet_calendar.pt:43
+#: ./skins/plone_deprecated/portlet_calendar.pt:43
 msgid "title_previous_month"
 msgstr "Prejšnji mesec"
 
 #. Default: "Relevance"
-#: ./skins/plone_forms/search.pt:74
+#: ./skins/plone_forms/search.pt:79
 msgid "title_relevance"
 msgstr "Pomembnost"
 
 #. Default: "Delete or rename the index_html item to gain full control over how this folder is displayed."
-#: ./skins/plone_templates/global_contentmenu.pt:195
+#: ./skins/plone_deprecated/global_contentmenu.pt:197
 msgid "title_remove_index_html_for_display_control"
 msgstr "Briši ali preimenuj index_html, da bi dobili polno kontrolo, kako je prikazana ta mapa."
 
 #. Default: "Required"
-#: ./skins/plone_content/author.cpt:163
+#: ./skins/plone_content/author.cpt:172
 msgid "title_required"
 msgstr "Obvezno"
 
 #. Default: "RSS feed of these search results"
-#: ./skins/plone_forms/search.pt:50
+#: ./skins/plone_forms/search.pt:55
 msgid "title_rss_feed"
 msgstr "Polnenje RSS s temi rezultati iskanja"
 
 #. Default: "Search Site"
-#: ./skins/plone_templates/global_searchbox.pt:19
+#: ./skins/plone_deprecated/global_searchbox.pt:22
 msgid "title_search_site"
 msgstr "Preišči spletišče"
 
@@ -6588,17 +6752,17 @@ msgid "title_section_508"
 msgstr "Spletišče ustreza prip. dostopnosti ameriške vlade sekcije 508."
 
 #. Default: "Select an item to be used as default view in this folder"
-#: ./skins/plone_forms/select_default_view.cpt:59
+#: ./skins/plone_deprecated/global_contentmenu.pt:253
 msgid "title_select_default_page"
 msgstr "Izberi prispevek, ki bo uporabljen kot privzeti vpogled v to mapo"
 
 #. Default: "Send a mail to this user"
-#: ./skins/plone_prefs/prefs_group_members.cpt:156
+#: ./skins/plone_prefs/prefs_group_members.cpt:167
 msgid "title_send_mail_to_user"
 msgstr "Pošlji sporočilo temu uporabniku"
 
 #. Default: "Show all available content types"
-#: ./skins/plone_templates/global_contentmenu.pt:127
+#: ./skins/plone_deprecated/global_contentmenu.pt:129
 msgid "title_show_all_content_types"
 msgstr "Pokaži vse tipe vsebin, ki so na voljo"
 
@@ -6608,7 +6772,7 @@ msgid "title_sitemap"
 msgstr "Načrt spletišča"
 
 #. Default: "Small Text"
-#: ./skins/plone_templates/accessibility-info.pt:28
+#: ./skins/plone_templates/accessibility-info.pt:32
 msgid "title_small_text"
 msgstr "Majhno besedilo"
 
@@ -6623,12 +6787,12 @@ msgid "title_valid_xhtml"
 msgstr "To Plonovo spletišče uporablja veljaven XHTML."
 
 #. Default: "World Wide Web Consortium"
-#: ./skins/plone_templates/accessibility-info.pt:156
+#: ./skins/plone_templates/accessibility-info.pt:154
 msgid "title_w3c"
 msgstr "World Wide Web Consortium"
 
 #. Default: "Web Content Accessibility Guidelines"
-#: ./skins/plone_templates/accessibility-info.pt:39
+#: ./skins/plone_templates/accessibility-info.pt:43
 msgid "title_wcag"
 msgstr "Spletišče ustreza priporočilom dostopnosti spletnih strani W3C-WAI."
 
@@ -6638,12 +6802,12 @@ msgid "title_wcag_conformance"
 msgstr "To Plonovo spletišče ustreza priporočilom W3C-WAI Web Content Accessibility Guidelines."
 
 #. Default: "eXtensible Hyper Text Markup Language"
-#: ./skins/plone_templates/accessibility-info.pt:149
+#: ./skins/plone_templates/accessibility-info.pt:147
 msgid "title_xhtml"
 msgstr "To Plonovo spletišče ustreza standardu XHTML."
 
 #. Default: "Note that roles listed here apply directly to a user. They do not reflect additional roles users may have due to group memberships."
-#: ./skins/plone_prefs/prefs_users_overview.cpt:62
+#: ./skins/plone_prefs/prefs_users_overview.cpt:69
 msgid "user_role_note"
 msgstr "Tu navedene vloge so neposredno dodeljene uporabniku. Uporabnik ima lahko še dodatne vloge, ki so mu dodeljene kot članu kake skupine, a tu niso vidne."
 
@@ -6783,7 +6947,7 @@ msgid "weekday_wed_short"
 msgstr "Sr"
 
 #. Default: "Policy"
-#: ./skins/plone_templates/global_contentmenu.pt:69
+#: ./skins/plone_deprecated/global_contentmenu.pt:71
 msgid "workflow_policy"
 msgstr "Politika"
 
@@ -6793,7 +6957,7 @@ msgid "yes"
 msgstr "Da"
 
 #. Default: "You are here:"
-#: ./skins/plone_templates/global_pathbar.pt:11
+#: ./skins/plone_deprecated/global_pathbar.pt:14
 msgid "you_are_here"
 msgstr "Nahajate se tu:"
 
