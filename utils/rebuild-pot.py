@@ -104,9 +104,16 @@ def rebuild(product, folder=''):
     if product == 'plone':
         cmd += '--merge2 %s ' % generatedpot
     if product == 'plone':
-        cmd += '--exclude="rss_template.pt metadata_edit_form.cpt metadirectives.py" '
+        ignores = ('rss_template.pt',
+                   'metadata_edit_form.cpt',
+                   'metadirectives.py',
+                   'Discussion_Item.xml',
+                  )
+        cmd += '--exclude="%s" ' % ' '.join(ignores)
     if product == 'plone':
         cmd += '%s %s > %s 2>&1' % (folder, folder2, log)
+        # For debugging
+        # cmd += '%s %s' % (folder, folder2)
     else:
         cmd += '%s > %s 2>&1' % (folder, log)
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
