@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2007-05-20 21:03+0000\n"
+"POT-Creation-Date: 2007-05-20 22:03+0000\n"
 "PO-Revision-Date: 2007-05-14 13:49+0200\n"
 "Last-Translator: H. Turgut Uyar <uyar@itu.edu.tr>\n"
 "Language-Team: Türkçe <tr@li.org>\n"
@@ -946,6 +946,10 @@ msgstr ""
 msgid "ExternalEdit"
 msgstr ""
 
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Externally visible"
+msgstr ""
+
 #. Default: "Favorite"
 #: ./profiles/default/types/Favorite.xml
 msgid "Favorite"
@@ -1149,6 +1153,18 @@ msgstr "Tamsayı değer ya da aralık"
 #: ./profiles/default/portal_atct.xml
 msgid "Internal Security"
 msgstr "İç Güvenlik"
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Internal draft"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Internally published"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
+msgid "Internally visible"
+msgstr ""
 
 #: ./profiles/default/portal_atct.xml
 msgid "Is this item visible in the site navigation"
@@ -1358,8 +1374,9 @@ msgid "Maintenance"
 msgstr ""
 
 #. Default: "Make private"
-#: workflow action defined in folder_workflow - title Member makes content private new state private
-#: workflow action defined in plone_workflow - title Member makes content private new state private
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Make private"
 msgstr "Özel hale getir"
 
@@ -1401,27 +1418,46 @@ msgid "Member Preferences"
 msgstr "Üye Ayarları"
 
 #. Default: "Member makes content private"
-#: workflow transition defined in folder_workflow - id hide new state private
-#: workflow transition defined in plone_workflow - id hide new state private
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
 msgid "Member makes content private"
 msgstr "Üye içeriği özel hale getirir"
 
 #. Default: "Member makes content visible"
-#: workflow transition defined in folder_workflow - id show new state visible
-#: workflow transition defined in plone_workflow - id show new state visible
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
 msgid "Member makes content visible"
 msgstr "Üye içeriği görünür hale getirir"
 
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
+msgid "Member makes content visible to other internal users"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Member promotes content to internal draft"
+msgstr ""
+
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Member promotes content to public draft"
+msgstr ""
+
 #. Default: "Member requests publishing"
-#: workflow transition defined in plone_workflow - id submit new state pending
+#: ./profiles/default/workflows/community_workflow/definition.xml
 msgid "Member requests publishing"
 msgstr "Üye içeriğin yayımlanması ister"
 
 #. Default: "Member retracts submission"
-#: workflow transition defined in folder_workflow - id retract new state visible
-#: workflow transition defined in plone_workflow - id retract new state visible
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "Üye yayımlama isteğini geri çeker"
+
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+#: ./profiles/default/workflows/simple_publication_workflow/definition.xml
+msgid "Member submits content for publication"
+msgstr ""
 
 #: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/actions/logger.py:35
 msgid "Message"
@@ -1621,6 +1657,12 @@ msgstr "Yol Ölçütü"
 msgid "Pending"
 msgstr "Beklemede"
 
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Pending review"
+msgstr ""
+
 #: ./skins/plone_scripts/object_copy.cpy:22
 msgid "Permission denied to copy ${title}."
 msgstr "${title} için kopyalama izni yok."
@@ -1796,14 +1838,25 @@ msgid "Print this page"
 msgstr "Bu sayfayı yazdır"
 
 #. Default: "Private"
-#: workflow state defined in folder_workflow - id private
-#: workflow state defined in plone_workflow - id private
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Private"
 msgstr "Özel"
 
 #. Default: "Profile"
 #: /opt/plone30/src/plone.app.layout/plone/app/layout/dashboard/dashboard.pt:66
 msgid "Profile"
+msgstr ""
+
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
+msgid "Promote to Draft"
+msgstr ""
+
+#: ./profiles/default/workflows/folder_workflow/definition.xml
+msgid "Promote to public draft"
 msgstr ""
 
 #. Default: "Properties"
@@ -1821,15 +1874,31 @@ msgstr ""
 msgid "Public Draft"
 msgstr "Açık Taslak"
 
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
+msgid "Public draft"
+msgstr ""
+
 #. Default: "Publish"
-#: workflow action defined in folder_workflow - title Reviewer publishes content new state published
-#: workflow action defined in plone_workflow - title Reviewer publishes content new state published
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Publish"
 msgstr "Yayımla"
 
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Publish externally"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Publish internally"
+msgstr ""
+
 #. Default: "Published"
-#: workflow state defined in folder_workflow - id published
-#: workflow state defined in plone_workflow - id published
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Published"
 msgstr "Yayımlanmış"
 
@@ -1918,8 +1987,9 @@ msgid "Restrict to current user"
 msgstr "Yalnızca şu anki kullanıcıya kısıtla"
 
 #. Default: "Retract"
-#: workflow action defined in folder_workflow - title Member retracts submission new state visible
-#: workflow action defined in plone_workflow - title Member retracts submission new state visible
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Retract"
 msgstr "Çek"
 
@@ -1927,16 +1997,33 @@ msgstr "Çek"
 msgid "Review list"
 msgstr ""
 
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Reviewer makes content available externally"
+msgstr ""
+
 #. Default: "Reviewer publishes content"
-#: workflow transition defined in folder_workflow - id publish new state published
-#: workflow transition defined in plone_workflow - id publish new state published
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/plone_workflow/definition.xml
 msgid "Reviewer publishes content"
 msgstr "Hakem içeriği yayımlar"
 
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Reviewer publishes content to internal users"
+msgstr ""
+
 #. Default: "Reviewer rejects submission"
-#: workflow transition defined in plone_workflow - id reject new state visible
+#: ./profiles/default/workflows/community_workflow/definition.xml
 msgid "Reviewer rejects submission"
 msgstr "Hakem yayımlama isteğini reddeder"
+
+#: ./profiles/default/workflows/simple_publication_workflow/definition.xml
+msgid "Reviewer send content back for re-drafting"
+msgstr ""
+
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Reviewer sends content back for re-drafting"
+msgstr ""
 
 #: ./skins/plone_deprecated/folder_localrole_set.py:14
 msgid "Role Acquisition is now turned off."
@@ -2052,6 +2139,12 @@ msgstr ""
 msgid "Selection Criterion"
 msgstr "Seçim Ölçütü"
 
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Send back"
+msgstr ""
+
 #: ./migrations/v3_0/profiles/beta1_beta2/actions.xml
 #: ./profiles/default/actions.xml
 msgid "Send this"
@@ -2094,6 +2187,11 @@ msgstr ""
 
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/skins.py:48
 msgid "Show content type icons"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Show internally"
 msgstr ""
 
 #: ./skins/plone_prefs/prefs_error_log_update.py:12
@@ -2231,6 +2329,12 @@ msgstr ""
 #: workflow action defined in plone_workflow - title Member requests publishing new state pending
 msgid "Submit"
 msgstr "Gönder"
+
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Submit for publication"
+msgstr ""
 
 #. Default: "Subtopics"
 #: type action defined on Smart Folder

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2007-05-20 21:03+0000\n"
+"POT-Creation-Date: 2007-05-20 22:03+0000\n"
 "PO-Revision-Date: 2005-09-13 10:00+0800\n"
 "Last-Translator: Arthur Chan (ccube) <arthur@soqhome.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -1000,6 +1000,10 @@ msgstr ""
 msgid "ExternalEdit"
 msgstr "外部編輯"
 
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Externally visible"
+msgstr ""
+
 # portal type title of type with description:
 #. Default: "Favorite"
 #: ./profiles/default/types/Favorite.xml
@@ -1221,6 +1225,18 @@ msgstr "整數值或範圍"
 #: ./profiles/default/portal_atct.xml
 msgid "Internal Security"
 msgstr "內部安全"
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Internal draft"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Internally published"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
+msgid "Internally visible"
+msgstr ""
 
 #: ./profiles/default/portal_atct.xml
 msgid "Is this item visible in the site navigation"
@@ -1446,8 +1462,9 @@ msgstr ""
 # new state:
 # workflow action defined in folder_workflow, title:
 #. Default: "Make private"
-#: workflow action defined in folder_workflow - title Member makes content private new state private
-#: workflow action defined in plone_workflow - title Member makes content private new state private
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Make private"
 msgstr "設為私有"
 
@@ -1496,8 +1513,9 @@ msgstr "成員偏好"
 # new state:
 # workflow transition defined in folder_workflow, id:
 #. Default: "Member makes content private"
-#: workflow transition defined in folder_workflow - id hide new state private
-#: workflow transition defined in plone_workflow - id hide new state private
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
 msgid "Member makes content private"
 msgstr "成員設定內容為私有"
 
@@ -1505,15 +1523,27 @@ msgstr "成員設定內容為私有"
 # new state:
 # workflow transition defined in folder_workflow, id:
 #. Default: "Member makes content visible"
-#: workflow transition defined in folder_workflow - id show new state visible
-#: workflow transition defined in plone_workflow - id show new state visible
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
 msgid "Member makes content visible"
 msgstr "成員設定內容為可視"
+
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
+msgid "Member makes content visible to other internal users"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Member promotes content to internal draft"
+msgstr ""
+
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Member promotes content to public draft"
+msgstr ""
 
 # workflow transition defined in plone_workflow, id:
 # new state:
 #. Default: "Member requests publishing"
-#: workflow transition defined in plone_workflow - id submit new state pending
+#: ./profiles/default/workflows/community_workflow/definition.xml
 msgid "Member requests publishing"
 msgstr "成員要求發佈"
 
@@ -1521,10 +1551,16 @@ msgstr "成員要求發佈"
 # new state:
 # workflow transition defined in folder_workflow, id:
 #. Default: "Member retracts submission"
-#: workflow transition defined in folder_workflow - id retract new state visible
-#: workflow transition defined in plone_workflow - id retract new state visible
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "成員收回提交"
+
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+#: ./profiles/default/workflows/simple_publication_workflow/definition.xml
+msgid "Member submits content for publication"
+msgstr ""
 
 #: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/actions/logger.py:35
 msgid "Message"
@@ -1735,6 +1771,12 @@ msgstr "路徑條件"
 msgid "Pending"
 msgstr "待審"
 
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Pending review"
+msgstr ""
+
 #: ./skins/plone_scripts/object_copy.cpy:22
 msgid "Permission denied to copy ${title}."
 msgstr "沒有複製 ${title} 權限."
@@ -1921,14 +1963,25 @@ msgstr "印出此頁"
 # workflow state defined in plone_workflow, id:
 # workflow state defined in folder_workflow, id:
 #. Default: "Private"
-#: workflow state defined in folder_workflow - id private
-#: workflow state defined in plone_workflow - id private
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Private"
 msgstr "私有"
 
 #. Default: "Profile"
 #: /opt/plone30/src/plone.app.layout/plone/app/layout/dashboard/dashboard.pt:66
 msgid "Profile"
+msgstr ""
+
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
+msgid "Promote to Draft"
+msgstr ""
+
+#: ./profiles/default/workflows/folder_workflow/definition.xml
+msgid "Promote to public draft"
 msgstr ""
 
 #. Default: "Properties"
@@ -1948,20 +2001,36 @@ msgstr ""
 msgid "Public Draft"
 msgstr "公開草稿"
 
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
+msgid "Public draft"
+msgstr ""
+
 # workflow action defined in plone_workflow, title:
 # new state:
 # workflow action defined in folder_workflow, title:
 #. Default: "Publish"
-#: workflow action defined in folder_workflow - title Reviewer publishes content new state published
-#: workflow action defined in plone_workflow - title Reviewer publishes content new state published
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Publish"
 msgstr "發佈"
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Publish externally"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Publish internally"
+msgstr ""
 
 # workflow state defined in plone_workflow, id:
 # workflow state defined in folder_workflow, id:
 #. Default: "Published"
-#: workflow state defined in folder_workflow - id published
-#: workflow state defined in plone_workflow - id published
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Published"
 msgstr "已發佈"
 
@@ -2060,8 +2129,9 @@ msgstr "只限目前用者"
 # new state:
 # workflow action defined in folder_workflow, title:
 #. Default: "Retract"
-#: workflow action defined in folder_workflow - title Member retracts submission new state visible
-#: workflow action defined in plone_workflow - title Member retracts submission new state visible
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/folder_workflow/definition.xml
 msgid "Retract"
 msgstr "收回"
 
@@ -2069,21 +2139,38 @@ msgstr "收回"
 msgid "Review list"
 msgstr ""
 
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Reviewer makes content available externally"
+msgstr ""
+
 # workflow transition defined in plone_workflow, id:
 # new state:
 # workflow transition defined in folder_workflow, id:
 #. Default: "Reviewer publishes content"
-#: workflow transition defined in folder_workflow - id publish new state published
-#: workflow transition defined in plone_workflow - id publish new state published
+#: ./profiles/default/workflows/community_folder_workflow/definition.xml
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/plone_workflow/definition.xml
 msgid "Reviewer publishes content"
 msgstr "評審員發佈內容"
+
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Reviewer publishes content to internal users"
+msgstr ""
 
 # workflow transition defined in plone_workflow, id:
 # new state:
 #. Default: "Reviewer rejects submission"
-#: workflow transition defined in plone_workflow - id reject new state visible
+#: ./profiles/default/workflows/community_workflow/definition.xml
 msgid "Reviewer rejects submission"
 msgstr "評審員駁回提交"
+
+#: ./profiles/default/workflows/simple_publication_workflow/definition.xml
+msgid "Reviewer send content back for re-drafting"
+msgstr ""
+
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Reviewer sends content back for re-drafting"
+msgstr ""
 
 #: ./skins/plone_deprecated/folder_localrole_set.py:14
 msgid "Role Acquisition is now turned off."
@@ -2211,6 +2298,12 @@ msgstr ""
 msgid "Selection Criterion"
 msgstr "選擇條件"
 
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Send back"
+msgstr ""
+
 #: ./migrations/v3_0/profiles/beta1_beta2/actions.xml
 #: ./profiles/default/actions.xml
 msgid "Send this"
@@ -2257,6 +2350,11 @@ msgstr ""
 
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/skins.py:48
 msgid "Show content type icons"
+msgstr ""
+
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+msgid "Show internally"
 msgstr ""
 
 #: ./skins/plone_prefs/prefs_error_log_update.py:12
@@ -2408,6 +2506,12 @@ msgstr ""
 #: workflow action defined in plone_workflow - title Member requests publishing new state pending
 msgid "Submit"
 msgstr "提交"
+
+#: ./profiles/default/workflows/community_workflow/definition.xml
+#: ./profiles/default/workflows/intranet_workflow/definition.xml
+#: ./profiles/default/workflows/plone_workflow/definition.xml
+msgid "Submit for publication"
+msgstr ""
 
 #. Default: "Subtopics"
 #: type action defined on Smart Folder
