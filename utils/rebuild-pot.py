@@ -47,6 +47,7 @@ def rebuild(product, folder=''):
     folder2 = ''
     if product == 'plone':
         packages = (
+            'archetypes.kss',
             'plone.contentrules',
             'plone.fieldsets',
             'plone.i18n',
