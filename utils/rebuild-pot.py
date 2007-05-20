@@ -44,6 +44,41 @@ def rebuild(product, folder=''):
         print 'Manual pot missing for the given product: %s.' % manualpot
         sys.exit(3)
 
+    folder2 = ''
+    if product == 'plone':
+        packages = (
+            'plone.contentrules',
+            'plone.fieldsets',
+            'plone.i18n',
+            'plone.locking',
+            'plone.memoize',
+            'plone.openid',
+            'plone.portlets',
+            'plone.session',
+            'plone.intelligenttext',
+            'plone.app.contentmenu',
+            'plone.app.content',
+            'plone.app.contentrules',
+            'plone.app.controlpanel',
+            'plone.app.customerize',
+            'plone.app.form',
+            'plone.app.i18n',
+            'plone.app.iterate',
+            'plone.app.kss',
+            'plone.app.layout',
+            'plone.app.linkintegrity',
+            'plone.app.portlets',
+            'plone.app.redirector',
+            'plone.app.viewletmanager',
+            'plone.app.vocabularies',
+            'plone.app.workflow',
+            'plone.app.openid',
+        )
+
+        src = os.path.join(__INSTANCE_HOME, 'src')
+        for package in packages:
+            folder2 += ' %s' % os.path.join(src, package)
+
     foldererror = False
     if not os.path.isdir(folder):
         if folder == '':
@@ -68,8 +103,11 @@ def rebuild(product, folder=''):
     if product == 'plone':
         cmd += '--merge2 %s ' % generatedpot
     if product == 'plone':
-        cmd += '--exclude="rss_template.pt metadata_edit_form.cpt" '
-    cmd += '%s > %s 2>&1' % (folder, log)
+        cmd += '--exclude="rss_template.pt metadata_edit_form.cpt metadirectives.py" '
+    if product == 'plone':
+        cmd += '%s %s > %s 2>&1' % (folder, folder2, log)
+    else:
+        cmd += '%s > %s 2>&1' % (folder, log)
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
     os.system(cmd)
 
