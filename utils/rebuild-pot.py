@@ -75,10 +75,16 @@ def rebuild(product, folder=''):
             'plone.app.workflow',
             'plone.app.openid',
         )
+        add_products = (
+            'CMFDiffTool',
+        )
 
         src = os.path.join(__INSTANCE_HOME, 'src')
         for package in packages:
             folder2 += ' %s' % os.path.join(src, package)
+        src = os.path.join(__INSTANCE_HOME, 'products')
+        for p in add_products:
+            folder2 += ' %s' % os.path.join(src, p)
 
     foldererror = False
     if not os.path.isdir(folder):
