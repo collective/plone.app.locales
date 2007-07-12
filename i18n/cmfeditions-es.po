@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CMFEditions\n"
-"POT-Creation-Date: 2007-05-02 06:52+0000\n"
+"POT-Creation-Date: 2007-07-12 23:17+0000\n"
 "PO-Revision-Date: 2007-07-01 03:00+0000\n"
 "Last-Translator: Alberto Serrano <alb.serrano@gmail.com>\n"
 "Language-Team: Español <zope-es@aditel.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Domain: cmfeditions\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 
+#: ./profiles/default/actions.xml
+msgid "History"
+msgstr ""
+
 #. Default: "Working Copy"
 #: ./skins/CMFEditions/versions_history_form.pt:62
 msgid "Working Copy"
@@ -27,13 +31,14 @@ msgstr "Copia de Trabajo"
 msgid "box_last_modified"
 msgstr "Última modificación"
 
-#. Default: "Save as a new version"
-#: ./skins/CMFEditions/versions_history_form.pt:182
+#. Default: "Save a new revision"
+#: ./skins/CMFEditions/versions_history_form.pt:184
+#, fuzzy
 msgid "button_save_as_new_version"
 msgstr "Guardar como nueva versión"
 
 #. Default: "You can have different settings for each content type. Content can be automatically versioned, and you can also opt to create a version when you revert a revision."
-#: ./skins/CMFEditions/versioning_config_form.pt:39
+#: ./skins/CMFEditions/versioning_config_form.pt:31
 msgid "description_version_settings"
 msgstr "Puede tener diferentes configuraciones para cada tipo de contenido. El contenido puede ser versionado automáticamente, o también puede optar por crear una versión cuando vuelva a una revisión determinada."
 
@@ -47,10 +52,21 @@ msgstr "Selecciónelo para crear una versión del contenido actual"
 msgid "help_version_comment"
 msgstr "Introduzca un comentario que describa los cambios que ha realizado"
 
-#. Default: "At any moment you can save the content you just edited as a new version. Enter below a comment to identify the version and hit the \"Save as new version\" button."
-#: ./skins/CMFEditions/versions_history_form.pt:172
+#. Default: "At any moment you can save the content you just edited as a new revision. Enter below a comment to identify the version and hit the \"Save as new revision\" button."
+#: ./skins/CMFEditions/versions_history_form.pt:174
+#, fuzzy
 msgid "help_versioncomment"
 msgstr "En cualquier momento, puede guardar el contenido que acaba de editar como una nueva versión. Introduzca a continuación un comentario para identificar la versión y haga clic en el botón \"Guardar como nueva versión\"."
+
+#. Default: "Compare to current revision"
+#: ./skins/CMFEditions/versions_history_form.pt:129
+msgid "label_compare_current"
+msgstr ""
+
+#. Default: "Compare to previous revision"
+#: ./skins/CMFEditions/versions_history_form.pt:137
+msgid "label_compare_previous"
+msgstr ""
 
 #. Default: "(+) Added"
 #: ./skins/CMFEditions/diff_legend.pt:8
@@ -83,22 +99,23 @@ msgid "label_diff_tag_deleted"
 msgstr "Etiqueta Eliminada"
 
 #. Default: "Versioning Enabled?"
-#: ./skins/CMFEditions/versioning_config_form.pt:70
+#: ./skins/CMFEditions/versioning_config_form.pt:67
 msgid "label_enable_versioning"
 msgstr "¿Versionado Habilitado?"
 
 #. Default: "Item Type"
-#: ./skins/CMFEditions/versioning_config_form.pt:69
+#: ./skins/CMFEditions/versioning_config_form.pt:66
 msgid "label_item_type"
 msgstr "Tipo de Ítem"
 
 #. Default: "New version"
-#: ./skins/CMFEditions/versions_history_form.pt:169
+#: ./skins/CMFEditions/versions_history_form.pt:171
 msgid "label_newversion"
 msgstr "Nueva versión"
 
-#. Default: "Preview of Version ${version_id}"
-#: ./skins/CMFEditions/versions_history_form.pt:197
+#. Default: "Preview of Revision ${version_id}"
+#: ./skins/CMFEditions/versions_history_form.pt:199
+#, fuzzy
 msgid "label_preview_version"
 msgstr "Vista preliminar de Versión ${version_id}"
 
@@ -113,7 +130,7 @@ msgid "label_preview_version_link"
 msgstr "(vista preliminar)"
 
 #. Default: "Revert to this revision"
-#: ./skins/CMFEditions/versions_history_form.pt:145
+#: ./skins/CMFEditions/versions_history_form.pt:147
 msgid "label_revert"
 msgstr "Volver a esta revisión"
 
@@ -122,13 +139,14 @@ msgstr "Volver a esta revisión"
 msgid "label_save_new_version"
 msgstr "Guardar como nueva versión"
 
-#. Default: "show versions"
+#. Default: "show revisions"
 #: ./skins/CMFEditions/versions_history.pt:29
+#, fuzzy
 msgid "label_show_version"
 msgstr "mostrar versiones"
 
 #. Default: "Versioning Settings"
-#: ./skins/CMFEditions/versioning_config_form.pt:37
+#: ./skins/CMFEditions/versioning_config_form.pt:29
 msgid "label_title_vers_config"
 msgstr "Configuración de Versionado"
 
@@ -138,22 +156,22 @@ msgid "label_version_comment"
 msgstr "Nota sobre el cambio"
 
 #. Default: "Versionable content types"
-#: ./skins/CMFEditions/versioning_config_form.pt:50
+#: ./skins/CMFEditions/versioning_config_form.pt:43
 msgid "label_versionable_content_types"
 msgstr "Tipos de contenido versionable"
 
 #. Default: "Show all types"
-#: ./skins/CMFEditions/versioning_config_form.pt:53
+#: ./skins/CMFEditions/versioning_config_form.pt:48
 msgid "label_versioning_config_show_all"
 msgstr "Mostrar todos los tipos"
 
 #. Default: "Show only searchable types"
-#: ./skins/CMFEditions/versioning_config_form.pt:57
+#: ./skins/CMFEditions/versioning_config_form.pt:52
 msgid "label_versioning_config_show_friendly"
 msgstr "Mostrar sólo tipos buscables"
 
 #. Default: "Policies"
-#: ./skins/CMFEditions/versioning_config_form.pt:71
+#: ./skins/CMFEditions/versioning_config_form.pt:68
 msgid "label_versioning_policies"
 msgstr "Políticas"
 
@@ -177,8 +195,9 @@ msgstr "Comentario"
 msgid "listingheader_date_and_time"
 msgstr "Fecha y hora"
 
-#. Default: "Version"
+#. Default: "Revision"
 #: ./skins/CMFEditions/versions_history.pt:17
+#, fuzzy
 msgid "listingheader_key"
 msgstr "Versión"
 
@@ -192,8 +211,9 @@ msgstr "Realizado por"
 msgid "summary_versions_history"
 msgstr "Historial de Versiones"
 
-#. Default: "Versions of \"${title}\""
+#. Default: "Revisions of \"${title}\""
 #: ./skins/CMFEditions/versions_history_form.pt:15
+#, fuzzy
 msgid "versions_of_title"
 msgstr "Versiones de \"${title}\""
 
