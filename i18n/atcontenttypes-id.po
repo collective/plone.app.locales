@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ATContentTypes\n"
-"POT-Creation-Date: 2007-05-12 10:34+0000\n"
+"POT-Creation-Date: 2007-07-15 12:14+0000\n"
 "PO-Revision-Date: 2005-03-31 17:24+0700\n"
 "Last-Translator: Rizal M <rizal@gen.net.id>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -75,7 +75,7 @@ msgstr ""
 msgid "Between"
 msgstr ""
 
-#: ./skins/plone_prefs/prefs_group_edit.py:28
+#: ./skins/ATContentTypes/criterion_save.cpy:32
 msgid "Changes saved."
 msgstr ""
 
@@ -142,7 +142,7 @@ msgid "Reverse"
 msgstr ""
 
 #. Default: "Rotate 180"
-#: action_icon id icon_rotate_180.png - category plone
+#: ./lib/imagetransform.py:64
 msgid "Rotate 180"
 msgstr ""
 
@@ -281,13 +281,28 @@ msgid "description_no_criteria_in_criteria_form"
 msgstr ""
 
 #. Default: "There are currently no criteria on which to search. Please add them using the 'criteria' tab."
-#: ./skins/ATContentTypes/atct_topic_view.pt:135
+#: ./skins/ATContentTypes/atct_topic_view.pt:139
 msgid "description_no_criteria_in_topic"
 msgstr ""
 
 #. Default: "There are currently no results for this search."
-#: ./skins/ATContentTypes/atct_topic_view.pt:128
+#: ./skins/ATContentTypes/atct_topic_view.pt:132
 msgid "description_no_items_in_topic"
+msgstr ""
+
+#. Default: "End date must be after start date."
+#: ./content/event.py:317
+msgid "error_end_must_be_after_start_date"
+msgstr ""
+
+#. Default: "End date is not valid."
+#: ./content/event.py:299
+msgid "error_invalid_end_date"
+msgstr ""
+
+#. Default: "Start date is not valid."
+#: ./content/event.py:307
+msgid "error_invalid_start_date"
 msgstr ""
 
 #. Default: "Collection Settings"
@@ -296,7 +311,7 @@ msgid "heading_collection_settings"
 msgstr ""
 
 #. Default: "Contained Collections:"
-#: ./skins/ATContentTypes/atct_topic_view.pt:153
+#: ./skins/ATContentTypes/atct_topic_view.pt:157
 msgid "heading_contained_collections"
 msgstr ""
 
@@ -321,12 +336,12 @@ msgid "heading_smart_folder_settings"
 msgstr ""
 
 #. Default: "True or false"
-#: widget description of BooleanWidget for label Value
+#: ./criteria/boolean.py:52
 msgid "help_boolean_criteria_bool"
 msgstr ""
 
-#. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: widget description of StringWidget for label Field name
+#. Default: "List Available Fields"
+#: ./skins/ATContentTypes/criterion_edit_form.cpt:140
 msgid "help_criteria_field_name"
 msgstr ""
 
@@ -341,12 +356,12 @@ msgid "help_criteria_values"
 msgstr ""
 
 #. Default: "Columns in the table are controlled by 'Table Columns' below."
-#: widget description of BooleanWidget for label Display as Table
+#: ./content/topic.py:139
 msgid "help_custom_view"
 msgstr ""
 
 #. Default: "Select which fields to display when 'Display as Table' is checked."
-#: widget description of InAndOutWidget for label Table Columns
+#: ./content/topic.py:153
 msgid "help_custom_view_fields"
 msgstr ""
 
@@ -366,12 +381,12 @@ msgid "help_date_criteria_value"
 msgstr ""
 
 #. Default: "The ending of the date range to search."
-#: widget description of CalendarWidget for label End Date
+#: ./criteria/daterange.py:66
 msgid "help_date_range_criteria_end"
 msgstr ""
 
 #. Default: "The beginning of the date range to search"
-#: widget description of CalendarWidget for label Start Date
+#: ./criteria/daterange.py:55
 msgid "help_date_range_criteria_start"
 msgstr ""
 
@@ -396,12 +411,12 @@ msgid "help_enable_table_of_contents_description"
 msgstr ""
 
 #. Default: "If selected, this item will not appear in the navigation tree"
-#: widget description of BooleanWidget for label Exclude from navigation
+#: ./content/schemata.py:44
 msgid "help_exclude_from_nav"
 msgstr ""
 
 #. Default: "Narrow down the search results from the parent Collection(s) by using the criteria from this Collection."
-#: ./content/topic.py:101
+#: ./content/topic.py:102
 msgid "help_inherit_collection_criteria"
 msgstr ""
 
@@ -421,7 +436,7 @@ msgid "help_int_criteria_value2"
 msgstr ""
 
 #. Default: "If selected, only the 'Number of Items' indicated below will be displayed."
-#: widget description of BooleanWidget for label Limit Search Results
+#: ./content/topic.py:117
 msgid "help_limit_number"
 msgstr ""
 
@@ -436,17 +451,17 @@ msgid "help_list_criteria_value"
 msgstr ""
 
 #. Default: "Will be shown in the news listing, and in the news item itself. Image will be scaled to a sensible size."
-#: widget description of ImageWidget for label Image
+#: ./content/newsitem.py:92
 msgid "help_news_image"
 msgstr ""
 
 #. Default: "Folders to search in."
-#: widget description of ReferenceBrowserWidget for label Folders
+#: ./criteria/path.py:59
 msgid "help_path_criteria_value"
 msgstr ""
 
 #. Default: "One of the available content types."
-#: widget description of MultiSelectionWidget for label Value
+#: ./criteria/portaltype.py:42
 msgid "help_portal_type_criteria_value"
 msgstr ""
 
@@ -456,7 +471,7 @@ msgid "help_select_transformation_method"
 msgstr ""
 
 #. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: ./skins/plone_content/folder_edit_form.cpt:47
+#: ./criteria/schemata.py:43
 msgid "help_shortname"
 msgstr ""
 
@@ -466,7 +481,7 @@ msgid "help_sort_reverse"
 msgstr ""
 
 #. Default: "A string value."
-#: widget description of StringWidget for label Value
+#: ./criteria/simplestring.py:52
 msgid "help_string_criteria_value"
 msgstr ""
 
@@ -475,9 +490,8 @@ msgstr ""
 msgid "help_upload_url"
 msgstr ""
 
-#. Default: "Add http:// to link outside the site."
-#: widget description of StringWidget for label URL
-#: widget description of StringWidget for label Event URL
+#. Default: "Web address with more info about the event. Add http:// for external links."
+#: ./content/event.py:132
 msgid "help_url"
 msgstr ""
 
@@ -507,12 +521,12 @@ msgid "label_back_to_album"
 msgstr ""
 
 #. Default: "Body Text"
-#: widget label of RichWidget - description ""
+#: ./content/document.py:70
 msgid "label_body_text"
 msgstr ""
 
 #. Default: "Value"
-#: widget label of BooleanWidget - description "True or false"
+#: ./criteria/boolean.py:51
 msgid "label_boolean_criteria_bool"
 msgstr ""
 
@@ -537,17 +551,17 @@ msgid "label_constrain_preferred_types"
 msgstr ""
 
 #. Default: "Contact E-mail"
-#: widget label of StringWidget - description ""
+#: ./content/event.py:156
 msgid "label_contact_email"
 msgstr ""
 
 #. Default: "Contact Name"
-#: widget label of StringWidget - description ""
+#: ./content/event.py:145
 msgid "label_contact_name"
 msgstr ""
 
 #. Default: "Contact Phone"
-#: widget label of StringWidget - description ""
+#: ./content/event.py:166
 msgid "label_contact_phone"
 msgstr ""
 
@@ -557,7 +571,7 @@ msgid "label_contrain_types_mode"
 msgstr ""
 
 #. Default: "Field name"
-#: widget label of StringWidget - description "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
+#: ./skins/ATContentTypes/criterion_edit_form.cpt:138
 msgid "label_criteria_field_name"
 msgstr ""
 
@@ -572,12 +586,12 @@ msgid "label_criteria_values"
 msgstr ""
 
 #. Default: "Display as Table"
-#: widget label of BooleanWidget - description "Columns in the table are controlled by 'Table Columns' below."
+#: ./content/topic.py:138
 msgid "label_custom_view"
 msgstr ""
 
 #. Default: "Table Columns"
-#: widget label of InAndOutWidget - description "Select which fields to display when 'Display as Table' is checked."
+#: ./content/topic.py:152
 msgid "label_custom_view_fields"
 msgstr ""
 
@@ -597,52 +611,52 @@ msgid "label_date_criteria_value"
 msgstr ""
 
 #. Default: "End Date"
-#: widget label of CalendarWidget - description "The ending of the date range to search."
+#: ./criteria/daterange.py:65
 msgid "label_date_range_criteria_end"
 msgstr ""
 
 #. Default: "Start Date"
-#: widget label of CalendarWidget - description "The beginning of the date range to search"
+#: ./criteria/daterange.py:54
 msgid "label_date_range_criteria_start"
 msgstr ""
 
 #. Default: "Download PDF"
-#: ./skins/ATContentTypes/atct_topic_view.pt:35
+#: ./skins/ATContentTypes/atct_topic_view.pt:39
 msgid "label_download_as_pdf"
 msgstr ""
 
 #. Default: "Event body text"
-#: widget label of RichWidget - description ""
+#: ./content/event.py:101
 msgid "label_event_announcement"
 msgstr ""
 
 #. Default: "Attendees"
-#: widget label of LinesWidget - description ""
+#: ./content/event.py:111
 msgid "label_event_attendees"
 msgstr ""
 
 #. Default: "Event Ends"
-#: widget label of CalendarWidget - description ""
+#: ./content/event.py:90
 msgid "label_event_end"
 msgstr ""
 
 #. Default: "Event Location"
-#: widget label of StringWidget - description ""
+#: ./content/event.py:67
 msgid "label_event_location"
 msgstr ""
 
 #. Default: "Event Starts"
-#: widget label of CalendarWidget - description ""
+#: ./content/event.py:78
 msgid "label_event_start"
 msgstr ""
 
 #. Default: "Event Type(s)"
-#: widget label of KeywordWidget - description ""
+#: ./content/event.py:122
 msgid "label_event_type"
 msgstr ""
 
 #. Default: "Exclude from navigation"
-#: widget label of BooleanWidget - description "If selected, this item will not appear in the navigation tree"
+#: ./content/schemata.py:45
 msgid "label_exclude_from_nav"
 msgstr ""
 
@@ -652,7 +666,7 @@ msgid "label_execute"
 msgstr ""
 
 #. Default: "File"
-#: widget label of FileWidget - description ""
+#: ./content/file.py:74
 msgid "label_file"
 msgstr ""
 
@@ -662,17 +676,17 @@ msgid "label_help_text"
 msgstr ""
 
 #. Default: "Image"
-#: widget label of ImageWidget - description ""
+#: ./content/image.py:81
 msgid "label_image"
 msgstr ""
 
 #. Default: "Image Caption"
-#: widget label of StringWidget - description ""
+#: ./content/newsitem.py:101
 msgid "label_image_caption"
 msgstr ""
 
 #. Default: "Inherit Criteria"
-#: widget label of BooleanWidget - description "Narrow down the search results from the parent Smart Folder(s) by using the criteria from this Smart Folder."
+#: ./content/topic.py:101
 msgid "label_inherit_criteria"
 msgstr ""
 
@@ -692,13 +706,13 @@ msgid "label_int_criteria_value2"
 msgstr ""
 
 #. Default: "Number of Items"
-#: widget label of IntegerWidget - description ""
+#: ./content/topic.py:128
 msgid "label_item_count"
 msgstr ""
 
 # ATTopic
 #. Default: "Limit Search Results"
-#: widget label of BooleanWidget - description "If selected, only the 'Number of Items' indicated below will be displayed."
+#: ./content/topic.py:116
 msgid "label_limit_number"
 msgstr ""
 
@@ -713,7 +727,7 @@ msgid "label_list_criteria_value"
 msgstr ""
 
 #. Default: "Image"
-#: widget label of ImageWidget - description "Will be shown in the news listing, and in the news item itself. Image will be scaled to a sensible size."
+#: ./content/newsitem.py:93
 msgid "label_news_image"
 msgstr ""
 
@@ -728,17 +742,17 @@ msgid "label_original_size"
 msgstr ""
 
 #. Default: "Search Sub-Folders"
-#: widget label of BooleanWidget - description ""
+#: ./criteria/path.py:71
 msgid "label_path_criteria_recurse"
 msgstr ""
 
 #. Default: "Folders"
-#: widget label of ReferenceBrowserWidget - description "Folders to search in."
+#: ./criteria/path.py:58
 msgid "label_path_criteria_value"
 msgstr ""
 
-#. Default: "Related content"
-#: ./skins/plone_content/document_relateditems.pt:13
+#. Default: "Related Items"
+#: ./content/schemata.py:72
 msgid "label_related_items"
 msgstr ""
 
@@ -748,7 +762,7 @@ msgid "label_select_method"
 msgstr ""
 
 #. Default: "Short Name"
-#: ./skins/plone_content/folder_edit_form.cpt:45
+#: ./criteria/schemata.py:42
 msgid "label_short_name"
 msgstr ""
 
@@ -758,7 +772,7 @@ msgid "label_sort_reverse"
 msgstr ""
 
 #. Default: "Value"
-#: widget label of StringWidget - description "A string value."
+#: ./criteria/simplestring.py:51
 msgid "label_string_criteria_value"
 msgstr ""
 
@@ -782,10 +796,8 @@ msgstr ""
 msgid "label_upload_url"
 msgstr ""
 
-#. Default: "URL"
-#: widget label of StringWidget - description "Add http://
-#: to link outside the site."
-#: widget label of StringWidget - description "Web address with more info about the event. Add http://
+#. Default: "Event URL"
+#: ./content/event.py:135
 msgid "label_url"
 msgstr ""
 
