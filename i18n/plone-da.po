@@ -3053,11 +3053,11 @@ msgstr "URL for RSS feed"
 
 #: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/actions/copy.py:114
 msgid "Unable to copy ${name} as part of content rule 'copy' action: ${error}"
-msgstr "${name} kan ikke kopieres som del af 'kopihandling' for indholdsregel"
+msgstr "${name} kan ikke kopieres som del af 'kopihandling' for indholdsregel: ${error}"
 
 #: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/actions/delete.py:64
 msgid "Unable to move ${name} as part of content rule 'move' action: ${error}"
-msgstr "${name} kan ikke flyttes som del af 'flyttehandling' for indholdsregel"
+msgstr "${name} kan ikke flyttes som del af 'flyttehandling' for indholdsregel: ${error}"
 
 #: ./skins/plone_form_scripts/send_feedback.cpy:77
 msgid "Unable to send mail: ${exception}"
@@ -5202,13 +5202,9 @@ msgid "heading_create_group"
 msgstr "Opret gruppe"
 
 #. Default: "Current sharing permissions for ${folder}"
-#. <h1 i18n:translate="heading_currently_assigned_shares">
-#. Current sharing permissions for
-#. ${folder}
-#. </h1>
 #: ./skins/plone_deprecated/folder_localrole_form.pt:32
 msgid "heading_currently_assigned_shares"
-msgstr "Tildel rettigheder for brugere"
+msgstr "Tildel rettigheder for ${folder}"
 
 #. Default: "${user_name}'s dashboard"
 #: /opt/plone30/src/plone.app.layout/plone/app/layout/dashboard/dashboard.pt:91
@@ -5305,14 +5301,10 @@ msgstr "Medlemmer af gruppe"
 msgid "heading_group_members_of"
 msgstr "Medlemmer af gruppen: ${groupname}."
 
-#. <h1 i18n:translate="heading_group_memberships_for">
-#. Group Memberships for
-#. ${username}
-#. </h1>
 #. Default: "Group Memberships for ${userid}"
 #: ./skins/plone_prefs/prefs_user_memberships.pt:58
 msgid "heading_group_memberships_for"
-msgstr "${username} er medlem af følgende grupper"
+msgstr "${userid} er medlem af følgende grupper"
 
 #. Default: "Add sharing permissions to groups"
 #. <h1 i18n:translate="heading_group_shares">
@@ -10528,8 +10520,10 @@ msgstr "Adgangskode: ${password} Forespørgelse lavet af IP ${ip_address} klokke
 msgid "mailtemplate_membership_reminder"
 msgstr "Påmindelse om medlemskab"
 
+# ${log_in_here} is missing in the translated string
 #. Default: "You have been registered as a member of ${portal_name}, which allows you to personalize your view of the website and participate in the community. Description: ${description} Visit us at ${portal_url} Your login name and password are: Login name: ${username} Password: ${password} Log in here: ${log_in_here}"
 #: ./skins/plone_templates/registered_notify_template.pt:26
+#, fuzzy
 msgid "mailtemplate_registered_body"
 msgstr "Du er blevet registreret som medlem af ${portal_name}, hvilket giver dig adgang til at bidrage med indhold. Beskrivelse: ${description} Besøg sitet ${portal_url} Dit brugernavn og adgangskode er: Brugernavn : ${username} Adgangskode : ${password}"
 
@@ -10951,7 +10945,7 @@ msgstr "avanceret søgning"
 #: ./skins/plone_templates/sendto_template.pt:21
 msgid "sendto_mailtemplate_body"
 msgstr ""
-"Dette link er er sendt til dig fra ${portal_url}. Du modtager denne e-mail fordi nogen har læst en side på ${portal_title} og ment at måske ville interessere dig. Det er sendt fra ${from_address} med følgende kommentar: \"${comment\" ${document_title} ${document_description} ${document_url}\n"
+"Dette link er er sendt til dig fra ${portal_url}. Du modtager denne e-mail fordi nogen har læst en side på ${portal_title} og ment at måske ville interessere dig. Det er sendt fra ${from_address} med følgende kommentar:\n"
 "==============\n"
 "${comment}\n"
 "==============\n"
@@ -11365,7 +11359,7 @@ msgstr "Dette site har ikke et gyldigt email setup, så du kan ikke bruge kontak
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: ./skins/plone_prefs/plone_control_panel.pt:42
 msgid "text_no_mailhost_configured"
-msgstr "Du har ikke angivet en mail host eller en 'Fra' adresse på sitet, forskellige funktioner deriblandt kontaktformularer, mailmeddelelser og nulstilling af adgangskode vil ikke fungerer. Gå til <a href=\"${DYNAMIC_CONTENT}\">Mailkontrolpanelet</a> for at ordne dette."
+msgstr "Du har ikke angivet en mail host eller en 'Fra' adresse på sitet, forskellige funktioner deriblandt kontaktformularer, mailmeddelelser og nulstilling af adgangskode vil ikke fungerer. Gå til ${label_mail_control_panel_link} for at ordne dette."
 
 #. Default: "Mail control panel"
 #: ./skins/plone_prefs/plone_control_panel.pt:43
