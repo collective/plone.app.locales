@@ -5,4 +5,48 @@ This product contains the translation files for Plone, Archetypes,
 ATContentTypes, ATReferenceBrowserWidget, CMFPlacefulWorkflow,
 PasswordResetTool, PloneLanguageTool, LinguaPlone and Kupu.
 
-This PloneTranslations version is suitable for both Plone 2.5 and Plone 3.0.
+This PloneTranslations version is suitable for both Plone 2.5 and
+Plone 3.0.
+
+----------
+
+When translating into your favorite language, you should keep a few
+things in mind. First of all, check whether there exists a policy for
+your language, for instance with respect to preferred translations of
+specific words. This is essential to maintain some consistency. Please
+check on:
+
+    http://plone.org/development/teams/i18n/language-specific-terms
+
+Also, read the guidelines for translators on:
+
+    http://plone.org/development/teams/i18n
+
+
+Then: use tools. There is numerous tools available for making
+translations, and keeping your translation files (po files) in sync
+with the translation catalog (pot file).
+
+i18ndude is one useful tool for syncing. To sync the pot and po file
+for instance, do:
+
+    i18ndude sync --pot <pot filename> <po file> [po file2 ...]
+
+
+For most Linux distro's the 'gettext' package will provide numerous
+translation tools. Most important is however the command to check integrity
+of your po file:
+
+   msgfmt -c -v <po file>
+
+Make sure to run this command before checking in your files into SVN.
+
+To make the actual translation, you might use either of PoEdit, Emacs,
+Vim, KBabel, etc.
+
+Make sure to check the po headers for consistency. All po editors will
+need some configuration as to the project settings, your personal
+settings, etc. Check the po file before you start for at least:
+project name, language team, language code and language name.
+
+Finally, run a spell-check before you commit!
