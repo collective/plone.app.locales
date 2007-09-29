@@ -34,8 +34,6 @@ def rebuild(product, folder=''):
     log = 'rebuild-%s-pot.log' % product
 
     domain = product
-    if product == 'archetypes':
-        domain = 'plone'
 
     os.chdir('..')
     os.chdir('i18n')
@@ -76,6 +74,7 @@ def rebuild(product, folder=''):
             'plone.app.openid',
         )
         add_products = (
+            'Archetypes',
             'CMFDiffTool',
         )
 

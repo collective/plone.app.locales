@@ -1,7 +1,6 @@
 import os
 
-PRODUCTS = {'at'    : {'name': 'archetypes', 'path': 'Archetypes'},
-            'atct'  : {'name': 'atcontenttypes', 'path': 'ATContentTypes'},
+PRODUCTS = {'atct'  : {'name': 'atcontenttypes', 'path': 'ATContentTypes'},
             'atrbw' : {'name': 'atreferencebrowserwidget', 'path': 'ATReferenceBrowserWidget'},
             'lp'    : {'name': 'linguaplone', 'path': 'LinguaPlone'},
             'plone' : {'name': 'plone', 'path': 'CMFPlone'},
