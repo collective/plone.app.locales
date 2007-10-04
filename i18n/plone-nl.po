@@ -17,7 +17,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone-nl\n"
-"POT-Creation-Date: 2007-09-29 14:02+0000\n"
+"POT-Creation-Date: 2007-10-04 19:45+0000\n"
 "PO-Revision-Date: 2007-08-16 00:30+0200\n"
 "Last-Translator: Maurits van Rees <m.van.rees@zestsoftware.nl>\n"
 "Language-Team: Dutch <plone-nl@lists.plone.org>\n"
@@ -73,7 +73,7 @@ msgstr "${title} geknipt."
 msgid "${title} has been added to your Favorites."
 msgstr "${title} is toegevoegd aan uw favorieten."
 
-#: ./skins/plone_form_scripts/delete_confirmation.cpy:30
+#: ./skins/plone_form_scripts/delete_confirmation.cpy:33
 msgid "${title} has been deleted."
 msgstr "${title} is verwijderd."
 
@@ -81,7 +81,7 @@ msgstr "${title} is verwijderd."
 msgid "${title} is locked and cannot be cut."
 msgstr "${title} is vergrendeld en kan niet worden geknipt."
 
-#: ./skins/plone_form_scripts/delete_confirmation.cpy:26
+#: ./skins/plone_form_scripts/delete_confirmation.cpy:29
 msgid "${title} is locked and cannot be deleted."
 msgstr "${title} is vergrendeld en kan niet worden verwijderd."
 
@@ -107,10 +107,10 @@ msgstr "- Een intranet publicatie proces waar inhoud alleen toegankelijk is als 
 msgid "- Essentially a workflow with no transitions, but has a Published state, so portlets and applications that expect that state will continue to work."
 msgstr "- In essentie een publicatie proces zonder transities, maar met een status Gepubliceerd, zodat portlets en applicaties die deze status verwachten, blijven werken."
 
-#. Default: "- Normally used with the Intranet/Extranet workflow on folder types. - Only has two states: Private and Internally Visible."
+#. Default: "- Normally used with the Intranet/Extranet workflow on folder types. - Only has two states: Private and Internal Draft."
 #: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
-msgid "- Normally used with the Intranet/Extranet workflow on folder types. - Only has two states: Private and Internally Visible."
-msgstr "- Normaal gesproken gebruikt met het Intranet/Extranet publicatie proces voor folder types. - Heeft maar twee statussen: Privé en Intern Zichtbaar"
+msgid "- Normally used with the Intranet/Extranet workflow on folder types. - Only has two states: Private and Internal Draft."
+msgstr ""
 
 #. Default: "- Simple workflow that is useful for basic web sites. - Things start out as private, and can either be submitted for review, or published directly. - The creator of a content item can edit the item even after it is published."
 #: ./profiles/default/workflows/simple_publication_workflow/definition.xml
@@ -296,7 +296,7 @@ msgid "Action moved up."
 msgstr "Actie naar boven verplaatst"
 
 #. Default: "Add"
-#: ./skins/archetypes/widgets/addable_support.pt:75
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/addable_support.pt:75
 msgid "Add"
 msgstr "Toevoegen"
 
@@ -318,11 +318,7 @@ msgstr "Voeg ontent type conditie toe"
 msgid "Add Copy Action"
 msgstr "Voeg kopie actie toe"
 
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/actions/move.py:171
-msgid "Add Edit Action"
-msgstr "Voeg bewerkactie toe"
-
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/events.py:106
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/events.py:102
 msgid "Add Events Portlet"
 msgstr "Voeg gebeurtenissen portlet toe"
 
@@ -346,11 +342,11 @@ msgstr "Voeg e-mailactie toe"
 msgid "Add Move Action"
 msgstr "Voeg verpaatsactie toe"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:237
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:240
 msgid "Add Navigation Portlet"
 msgstr "Voeg navigatie porlet toe"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/news.py:87
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/news.py:83
 msgid "Add News Portlet"
 msgstr "Voeg nieuws portlet toe"
 
@@ -878,7 +874,7 @@ msgstr "Content type conditie bewerken"
 msgid "Edit Copy Action"
 msgstr "Kopie actie bewerken"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/events.py:114
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/events.py:110
 msgid "Edit Events Portlet"
 msgstr "Evenementen portlet bewerken"
 
@@ -898,11 +894,15 @@ msgstr "Logboek actie bewerken"
 msgid "Edit Mail Action"
 msgstr "E-Mailactie bewerken"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:249
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/actions/move.py:171
+msgid "Edit Move Action"
+msgstr ""
+
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:253
 msgid "Edit Navigation Portlet"
 msgstr "Navigatie portlet bewerken"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/news.py:95
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/news.py:91
 msgid "Edit News Portlet"
 msgstr "Nieuws portlet bewerken"
 
@@ -942,11 +942,11 @@ msgstr "Workflow transitie conditie bewerken"
 msgid "Edit an existing rule."
 msgstr "Een bestaande regel bewerken"
 
-# Action icon title for External Editor
-#. Default: "Edit this file in an external application (Requires Zope ExternalEditor installed)"
+#. Default: "Edit with external application"
+#: ./migrations/v3_0/profiles/rc2_final/actions.xml
 #: ./profiles/default/actions.xml
-msgid "Edit this file in an external application (Requires Zope ExternalEditor installed)"
-msgstr "Bewerk dit bestand in een externe applicatie (Zope ExternalEditor moet geïnstalleerd zijn)"
+msgid "Edit with external application"
+msgstr ""
 
 #. Default: "Effective Date"
 #: ./profiles/default/portal_atct.xml
@@ -1036,7 +1036,7 @@ msgstr "Gebeurtenis"
 msgid "Event changes saved."
 msgstr "Wijzigingen in Gebeurtenis zijn opgeslagen."
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/events.py:44
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/events.py:43
 msgid "Events"
 msgstr "Evenementen"
 
@@ -1169,8 +1169,8 @@ msgid "Folder-like"
 msgstr "Map-achtig"
 
 #: /opt/plone30/src/plone.app.controlpanel/build/lib/plone/app/controlpanel/site.py:72
-msgid "For enabling web statistics support for e.g. Google Analytics. Look at http://plone.org for snippets which you can paste here. Do not paste Google Analytics code here directly; it will not work."
-msgstr "Voor het activeren van web statistieken ondersteuning zoals Google Analytics. Kijk op http://plone.org voor snippets welke hier kunnen worden geplakt. Plaats de Google Analytics code niet direct hier; dit zal niet werken."
+msgid "For enabling web statistics support from external providers (for e.g. Google Analytics). Paste the code snippets provided. It will be included in the rendered HTML as entered near the end of the page."
+msgstr ""
 
 #. Default: "Friendly Date Criteria"
 #: ./profiles/default/types/ATDateCriteria.xml
@@ -1287,6 +1287,10 @@ msgstr "Invoer is verplicht maar niet opgegeven."
 msgid "Input must be an integer."
 msgstr "Invoer dient een geheel getal te zijn."
 
+#: /opt/plone30/src/archetypes.kss/archetypes/kss/fields_versioning.py:35
+msgid "Instant edited field(s) ${fields}"
+msgstr ""
+
 #. Default: "Integer value or range"
 #: criterion description of criterion ATSimpleIntCriterion
 msgid "Integer value or range"
@@ -1298,6 +1302,7 @@ msgid "Internal Security"
 msgstr "Interne Veiligheid"
 
 #. Default: "Internal draft"
+#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: ./profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Internal draft"
 msgstr "Intern concept"
@@ -1306,11 +1311,6 @@ msgstr "Intern concept"
 #: ./profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Internally published"
 msgstr "Intern gepubliceerd"
-
-#. Default: "Internally visible"
-#: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
-msgid "Internally visible"
-msgstr "Intern zichtbaar"
 
 #. Default: "Intranet Workflow for Folders"
 #: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
@@ -1652,7 +1652,7 @@ msgid "Modify portlet"
 msgstr "Portlet bewerken"
 
 #. Default: "Move down"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:167
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:176
 msgid "Move down"
 msgstr "Naar beneden"
 
@@ -1661,7 +1661,7 @@ msgid "Move to folder ${folder}"
 msgstr "Verplaatsen naar map ${folder}"
 
 #. Default: "Move up"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:161
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:170
 msgid "Move up"
 msgstr "Naar boven"
 
@@ -1679,7 +1679,7 @@ msgstr "Mijn favorieten"
 msgid "Nasty tags"
 msgstr "Gevaarlijke tags"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:104
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:106
 msgid "Navigation"
 msgstr "Navigatie"
 
@@ -1704,7 +1704,7 @@ msgstr "Geen oude naam opgegeven."
 msgid "Never show icons"
 msgstr "Nooit iconen tonen"
 
-#: ./skins/archetypes/add_reference.cpy:16
+#: /opt/plone30/products/Archetypes/skins/archetypes/add_reference.cpy:16
 msgid "New reference created."
 msgstr "Nieuwe verwijzing aangemaakt"
 
@@ -1714,7 +1714,7 @@ msgstr "Nieuwe verwijzing aangemaakt"
 msgid "New..."
 msgstr "Nieuw..."
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/news.py:43
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/news.py:42
 msgid "News"
 msgstr "Nieuws"
 
@@ -1739,7 +1739,7 @@ msgstr "Niets gewijzigd."
 msgid "No changes made."
 msgstr "Geen wijzigingen"
 
-#: /opt/plone30/src/plone.app.controlpanel/build/lib/plone/app/controlpanel/types.py:331
+#: /opt/plone30/src/plone.app.controlpanel/build/lib/plone/app/controlpanel/types.py:335
 msgid "No workflow"
 msgstr "Geen workflow"
 
@@ -1960,6 +1960,10 @@ msgstr "Plone Configuratie"
 msgid "Plone Site"
 msgstr "Plone Website"
 
+#: /opt/plone30/src/plone.app.controlpanel/build/lib/plone/app/controlpanel/filter.py:261
+msgid "Plone filters HTML tags that are considered security risks. Be aware of the implications before making changes below. By default only tags defined in XHTML are permitted. In particular, to allow 'embed' as a tag you must both remove it from 'Nasty tags' and add it to 'Custom tags'. Although the form will update immediately to show any changes you make, your changes are not saved until you press the 'Save' button."
+msgstr ""
+
 #: /opt/plone30/src/plone.app.controlpanel/build/lib/plone/app/controlpanel/mail.py:71
 msgid "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address on the site-wide contact form."
 msgstr "Plone verstuurt e-mail met dit adres als afzender. Het wordt tevens gebruikt als geadresseerde van het contactformulier."
@@ -2166,6 +2170,10 @@ msgstr "Verwijzingen"
 #: ./profiles/default/actions.xml
 msgid "Register"
 msgstr "Registreren"
+
+#: ./skins/plone_prefs/prefs_reinstallProducts.py:22
+msgid "Reinstalled ${product}"
+msgstr ""
 
 #. Default: "Reject"
 #: workflow action defined in plone_workflow - title Reviewer rejects submission new state visible
@@ -2435,7 +2443,7 @@ msgstr "Verkorte Naam"
 msgid "Show 'Short Name' on content?"
 msgstr "'Verkorte naam' tonen?"
 
-#: /opt/plone30/src/plone.app.contentmenu/plone/app/contentmenu/menu.py:512
+#: /opt/plone30/src/plone.app.contentmenu/plone/app/contentmenu/menu.py:522
 msgid "Show all available content types"
 msgstr "Toon alle beschikbare content types"
 
@@ -2625,7 +2633,7 @@ msgstr "Samenvattingsweergave"
 msgid "Syndication"
 msgstr "XML publicatie"
 
-#: ./skins/plone_form_scripts/disableSyndication.cpy:15
+#: ./skins/plone_form_scripts/disableSyndication.cpy:16
 msgid "Syndication disabled"
 msgstr "XML publicatie uitgeschakeld"
 
@@ -2633,7 +2641,7 @@ msgstr "XML publicatie uitgeschakeld"
 msgid "Syndication enabled"
 msgstr "XML publicatie ingeschakeld"
 
-#: ./skins/plone_form_scripts/disableSyndication.cpy:17
+#: ./skins/plone_form_scripts/disableSyndication.cpy:18
 msgid "Syndication not allowed"
 msgstr "XML publicatie niet toegestaan"
 
@@ -2885,7 +2893,7 @@ msgstr "Dit veld is verplicht, vul a.u.b. iets in."
 msgid "This file is not text. To upload binary files create File content."
 msgstr "Dit is geen tekstbestand. MSWord documenten dient u als type 'bestand' toe te voegen."
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:238
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:241
 msgid "This portlet display a navigation tree."
 msgstr "Dit portlet geeft een navigatieboom weer."
 
@@ -2897,7 +2905,7 @@ msgstr "Dit portlet geeft een lijst van documenten weer die wachten op herzienin
 msgid "This portlet displays an RSS feed."
 msgstr "Dit portlet geeft een RSS feed weer."
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/news.py:88
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/news.py:84
 msgid "This portlet displays recent News Items."
 msgstr "Dit portlet geeft recente Nieuwsberichten weer."
 
@@ -2905,7 +2913,7 @@ msgstr "Dit portlet geeft recente Nieuwsberichten weer."
 msgid "This portlet displays recently modified content."
 msgstr "Dit portlet geeft recent gewijzigde items weer."
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/events.py:107
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/events.py:103
 msgid "This portlet lists upcoming Events."
 msgstr "Dit portlet geeft aankomende Gebeurtenissen weer."
 
@@ -3003,6 +3011,10 @@ msgstr "Niet toegestaan om de items te plakken."
 msgid "Undo"
 msgstr "Ongedaan maken"
 
+#: /opt/plone30/src/plone.app.linkintegrity/plone/app/linkintegrity/browser/update.py:24
+msgid "Update cancelled."
+msgstr ""
+
 #: ./skins/plone_prefs/prefs_portal_properties_set.py:18
 msgid "Updated."
 msgstr "Instellingen opgeslagen."
@@ -3096,7 +3108,7 @@ msgstr "In behandeling door redacteuren, niet bewerkbaar door de eigenaar."
 msgid "Warning"
 msgstr "Waarschuwing"
 
-#: ./skins/plone_login/login_next.cpy:49
+#: ./skins/plone_login/login_next.cpy:48
 msgid "Welcome! You are now logged in."
 msgstr "Welkom! U bent nu ingelogd."
 
@@ -3150,6 +3162,10 @@ msgstr "U heeft onvoldoende rechten om deze link te versturen."
 #: /opt/plone30/src/plone.app.controlpanel/build/lib/plone/app/controlpanel/language.py:101
 msgid "You cannot disable country-specific language variants, please choose a different default language first."
 msgstr "U kunt landspecifieke taalvarianten niet uitschakelen; kies alstublieft eerst een andere standaardtaal."
+
+#: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/language.py:78
+msgid "You cannot disable country-specific language variants, please choose a different site language first."
+msgstr ""
 
 #: ./skins/plone_form_scripts/validate_folder_constraintypes.vpy:21
 msgid "You cannot have a type as secondary type without having it allowed. You have selected ${types}."
@@ -3267,7 +3283,7 @@ msgid "accesskey_skip_to_content"
 msgstr "<code>2</code> - Ga naar de inhoud"
 
 #. Default: "There are legacy portlets defined here. Click the button to convert them to new-style portlets."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:43
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:47
 msgid "action_convert_legacy_portlets"
 msgstr "Er zijn verouderde portlets gedefinieerd. Click op de button om ze te converteren naar nieuwe stijl portlets."
 
@@ -3282,7 +3298,7 @@ msgid "alert_really_delete_folder"
 msgstr "Wilt u deze map en alle inhoud echt verwijderen?"
 
 #. Default: "<any>"
-#: ./ArchetypeTool.py:876
+#: /opt/plone30/products/Archetypes/ArchetypeTool.py:876
 msgid "at_search_any"
 msgstr "<elke>"
 
@@ -3336,7 +3352,7 @@ msgid "box_external_links"
 msgstr "Externe links"
 
 #. Default: "Forgot your password?"
-#: ./skins/plone_deprecated/portlet_login.pt:97
+#: ./skins/plone_deprecated/portlet_login.pt:94
 msgid "box_forgot_password_option"
 msgstr "Wachtwoord vergeten?"
 
@@ -3381,7 +3397,7 @@ msgid "box_navigation"
 msgstr "Navigatie"
 
 #. Default: "New user?"
-#: ./skins/plone_deprecated/portlet_login.pt:106
+#: ./skins/plone_deprecated/portlet_login.pt:103
 msgid "box_new_user_option"
 msgstr "Nieuwe gebruiker?"
 
@@ -3451,22 +3467,22 @@ msgid "constraintypes_mode_enable"
 msgstr "Selecteer handmatig"
 
 #. Default: "Attendees"
-#: ./skins/plone_content/event_view.pt:162
+#: ./skins/plone_content/event_view.pt:152
 msgid "contact_attendees"
 msgstr "Deelnemers"
 
 #. Default: "Contact Email"
-#: ./skins/plone_content/event_view.pt:142
+#: ./skins/plone_content/event_view.pt:136
 msgid "contact_email"
 msgstr "Contact e-mailadres"
 
 #. Default: "Contact Name"
-#: ./skins/plone_content/event_view.pt:129
+#: ./skins/plone_content/event_view.pt:127
 msgid "contact_name"
 msgstr "Naam"
 
 #. Default: "Contact Phone"
-#: ./skins/plone_content/event_view.pt:150
+#: ./skins/plone_content/event_view.pt:144
 msgid "contact_phone"
 msgstr "Telefoonnummer"
 
@@ -3476,7 +3492,7 @@ msgid "contentrules_add_action"
 msgstr "Voeg actie toe"
 
 #. Default: "Assign rule here"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:96
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:105
 msgid "contentrules_add_assignment"
 msgstr "Voeg hier een regel toe"
 
@@ -3491,7 +3507,7 @@ msgid "contentrules_control_panel"
 msgstr "Content regels configuratie scherm"
 
 #. Default: "Use the ${controlpanel_link} to create new rules or delete or modify existing ones."
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:49
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:54
 msgid "contentrules_controlpanel_link"
 msgstr "Gebruik het ${controlpanel_link} voor het aanmaken, wijzigen of verwijderen van regels."
 
@@ -3551,12 +3567,12 @@ msgid "decription_no_members_assigned"
 msgstr "Aan deze groep zijn geen gebruikers toegevoegd."
 
 #. Default: "Delete current file"
-#: ./skins/archetypes/widgets/file.pt:74
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/file.pt:77
 msgid "delete_file"
 msgstr "Huidige bestand verwijderen"
 
 #. Default: "Delete current image"
-#: ./skins/archetypes/widgets/image.pt:82
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/image.pt:83
 msgid "delete_image"
 msgstr "Huidige afbeelding verwijderen"
 
@@ -3666,7 +3682,7 @@ msgid "description_addremove_products"
 msgstr "Hier kunt u Plone producten beheren (Add-ons), u kunt producten verwijderen of toevoegen uit de onderstaande lijst door middel van het plaatsen van vinkjes."
 
 #. Default: "This search form enables you to find content on the site by specifying one or more search terms. <br /> Remember that you can use the quick search anytime, it's normally good enough, this search form is just if you want to be more specific."
-#: ./skins/plone_forms/search_form.pt:17
+#: ./skins/plone_forms/search_form.pt:19
 msgid "description_advanced_search"
 msgstr "Met dit zoekformulier kan met één of meer zoektermen gezocht worden binnen deze website.<br /> Normaal gesproken is \"snel zoeken\" voldoende. Dit zoekformulier is bedoeld voor specifiekere zoekopdrachten."
 
@@ -3686,7 +3702,7 @@ msgid "description_available_access_keys"
 msgstr "Binnen deze website zijn sneltoetsen beschikbaar die gebaseerd zijn op de internationale aanbevelingen voor sneltoetsen. Deze zijn:"
 
 #. Default: "Some products were found to have errors when compiling the install file."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:202
+#: ./skins/plone_prefs/prefs_install_products_form.pt:210
 msgid "description_broken_products"
 msgstr "Eén of meerdere extra producten bevatten fouten in het installatie bestand."
 
@@ -3730,13 +3746,18 @@ msgstr "Vul a.u.b. een beschrijvende titel in voor de regel."
 msgid "description_contentrules_assigned"
 msgstr "De volgende content regels zijn actief voor dit ${type_name}."
 
+#. Default: "There are currently no active content rules in this ${type_name}."
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:49
+msgid "description_contentrules_assigned_norules"
+msgstr ""
+
 #. Default: "This rule is assigned to the following locations."
 #: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:209
 msgid "description_contentrules_rule_assignments"
 msgstr "Deze regels is gekoppeld aan de volgende locaties."
 
 #. Default: "Note that content type portlets are normally rendered below context portlets."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:35
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:36
 msgid "description_contenttype_portlets_below"
 msgstr "Let erop dat content typen portlets onder context portlets worden weergegeven."
 
@@ -3771,7 +3792,7 @@ msgid "description_edit_groupproperties"
 msgstr "Groepen zijn verzamelingen van gebruikers, vergelijkbaar met afdelingen in organisaties. Hier kunt u groepen gebruikers rechten toekennen die gelden voor de hele website. Voor het toekennen van rechten op een bepaalde map kunt u gebruik maken van het tabblad \"delen\" van de betreffende map."
 
 #. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
-#: ./skins/archetypes/metadata_macros.pt:35
+#: /opt/plone30/products/Archetypes/skins/archetypes/metadata_macros.pt:35
 msgid "description_edit_properties"
 msgstr "Deze informatie, ook wel <em>metadata</em> genoemd, is de verzameling informatie die gebruikt wordt om een item te categoriseren, ingangs- en vervaldatum, taal en trefwoorden mee te geven."
 
@@ -3786,7 +3807,7 @@ msgid "description_enable_cookies_for_login"
 msgstr "Let op: Als u niet ingelogd blijft na het verlaten van deze pagina, dan dient u ${enable_cookies} in uw browser."
 
 #. Default: "Note: If you do not remain logged in after leaving this page, it is because you need to enable cookies in your browser."
-#: ./skins/plone_login/login_success.pt:87
+#: ./skins/plone_login/login_success.pt:63
 msgid "description_enable_cookies_to_stay_logged_in"
 msgstr "Let op: Als u niet ingelogd blijft na het verlaten van deze pagina, dan dient u cookies in te schakelen in uw browser."
 
@@ -3840,11 +3861,6 @@ msgstr "Er is geen historie beschikbaar voor dit content type."
 msgid "description_include_error_in_admin_message"
 msgstr "Indien u dit moet rapporteren aan de ${site_admin}, voeg dan a.u.b. dit nummer toe aan uw bericht."
 
-#. Default: "You can take fuller advantage of the features of this site if you enable JavaScript in your browser."
-#: ./skins/plone_login/login_success.pt:82
-msgid "description_javascript_advantage"
-msgstr "U kunt nog meer voordeel hebben van geavanceerde mogelijkheden, indien u JavaScript inschakelt in uw browser."
-
 #. Default: "Settings related to interface languages and content translations."
 #: /opt/plone30/src/plone.app.controlpanel/build/lib/plone/app/controlpanel/language.py:119
 msgid "description_language_settings"
@@ -3866,7 +3882,7 @@ msgid "description_logged_in"
 msgstr "Dit is de eerste keer dat u inlogt op ${here}."
 
 #. Default: "Notice that the top right bar has changed. It now contains several personalized items. Use these items to control your settings and your personal area. They will remain as long as you are logged in."
-#: ./skins/plone_login/login_success.pt:32
+#: ./skins/plone_login/login_success.pt:31
 msgid "description_logged_in_explain"
 msgstr "Merk op dat de rechter bovenbalk is veranderd. Deze bevat nu verschillende gepersonaliseerde items. Deze blijven daar staan zolang u ingelogd bent en geven u de mogelijkheid uw instellingen en persoonlijke ruimte te beheren."
 
@@ -3896,12 +3912,12 @@ msgid "description_mail_setup"
 msgstr "E-mailinstellingen voor Plone."
 
 #. Default: "The left and right portlet slots will now display only those portlets assigned to this content type. Use the up, down, delete and edit links to manage user portlets. Use the drop-down list to add new portlets."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:29
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:30
 msgid "description_manage_contenttype_portlets"
 msgstr "De linker en rechter portlet slots tonen nu alleen de aan de content type gekoppelde portlets. Gebruik de omhoog, omlaag, verwijderen en bewerken links om de portlets te beheren. Gebruik de keuzelijst om een nieuwe portlet toe te voegen."
 
 #. Default: "The portlet columns will now display only those portlets explicitly assigned in this context. Use the buttons on each portlet to move them up or down, delete or edit them. To add a new portlet, use the drop-down list at the top of the column."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:27
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:31
 msgid "description_manage_contextual_portlets"
 msgstr "De portlet kolommen tonen nu alleen de expliciet aan de context gekoppelde portlets. Gebruik knoppen op elke portlet om deze omhoog of omlaag te bewegen, te verwijderen of te bewerken. Gebruik de keuzelijst bovenaan de kolom om een nieuwe portlet toe te voegen."
 
@@ -3944,21 +3960,6 @@ msgstr "Hiermee kunt u bepalen hoe de navigatie wordt opgebouwd in de website."
 #: ./skins/plone_prefs/prefs_navigation_form.cpt:32
 msgid "description_navigation_setup_navtree"
 msgstr "Om de wijze waarop de navigatieboom wordt weergegeven in te stellen dient u naar \"Beheer portlets\" te gaan op het hoogste niveau van de site (of daar waar de navigatieboom is toegevoegd) en daar de instellingen te wijzigen."
-
-#. Default: "You might want to head over to ${your_folder} and add some content, or ${set_up_your_preferences}."
-#: ./skins/plone_login/login_success.pt:49
-msgid "description_newbie_pointers"
-msgstr "U kunt om te beginnen naar ${your_folder} gaan en daar inhoud toevoegen, of ${set_up_your_preferences}"
-
-#. Default: "set up your Preferences"
-#: ./skins/plone_login/login_success.pt:50
-msgid "description_newbie_pointers_preferences_link"
-msgstr "uw \"Persoonlijke instellingen\" wijzigen"
-
-#. Default: "your folder"
-#: ./skins/plone_login/login_success.pt:42
-msgid "description_newbie_pointers_yourfolder_link"
-msgstr "uw map"
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
 #: ./skins/plone_login/failsafe_login_form.cpt:34
@@ -4036,7 +4037,7 @@ msgid "description_portal_properties"
 msgstr "Hier kunt u de eigenschappen van de website aanpassen."
 
 #. Default: "If you wish to block or unblock certain categories of portlets, you can do so using the drop-down boxes."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:34
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:38
 msgid "description_portlets_block_unblock"
 msgstr "Indien u sommige categorieën portlets wilt blokkeren of deblokkeren, dan kunt u dit doen met de uitklaplijsten lijsten."
 
@@ -4185,6 +4186,11 @@ msgstr "Indien u er zeker van bent dat u het webadres goed heeft, maar toch een 
 msgid "description_site_error_thank_you"
 msgstr "Bedankt."
 
+#. Default: "The language used for the content and the UI of this site."
+#: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/language.py:35
+msgid "description_site_language"
+msgstr ""
+
 #. Default: "An overview of the available content on this site. Keep the pointer still over an item for a few seconds to get its description."
 #: ./skins/plone_templates/sitemap.pt:22
 msgid "description_site_map"
@@ -4211,12 +4217,12 @@ msgid "description_still_failure_reason2"
 msgstr "Uw computer staat misschien achter een firewall die het versturen van cookies naar de browser verhindert. Vraag in dit geval uw systeembeheerder of dit probleem kan worden opgelost."
 
 #. Default: "Match all"
-#: ./skins/plone_forms/search_form.pt:112
+#: ./skins/plone_forms/search_form.pt:114
 msgid "description_subject_and"
 msgstr "Alle woorden"
 
 #. Default: "Match any"
-#: ./skins/plone_forms/search_form.pt:101
+#: ./skins/plone_forms/search_form.pt:103
 msgid "description_subject_or"
 msgstr "Eén van de woorden"
 
@@ -4322,7 +4328,7 @@ msgid "enable_cookies_message"
 msgstr "Cookies zijn niet ingeschakeld. Voordat u kunt inloggen, dient u  ${enable_cookies} in te schakelen."
 
 #. Default: "Cookies are not enabled. You must enable cookies before you can log in."
-#: ./skins/plone_deprecated/portlet_login.pt:72
+#: ./skins/plone_deprecated/portlet_login.pt:70
 msgid "enable_cookies_message_before_login"
 msgstr "Cookies zijn niet ingeschakeld. Om in te kunnen loggen moet u eerst cookies inschakelen."
 
@@ -4332,12 +4338,12 @@ msgid "error_installed_product"
 msgstr "Tijdens de installatie zijn fouten opgetreden, controleer het logboek"
 
 #. Default: "${name} is required, please correct."
-#: ./Field.py:349
+#: /opt/plone30/products/Archetypes/Field.py:349
 msgid "error_required"
 msgstr "${name} is vereist, gelieve te corrigeren."
 
 #. Default: "Value ${val} is not allowed for vocabulary of element ${label}."
-#: ./Field.py:393
+#: /opt/plone30/products/Archetypes/Field.py:393
 msgid "error_vocabulary"
 msgstr "Waarde ${val} is niet toegestaan voor woordenlijst van element ${label}"
 
@@ -4347,32 +4353,32 @@ msgid "event_and"
 msgstr "en"
 
 #. Default: "from"
-#: ./skins/plone_content/event_view.pt:85
+#: ./skins/plone_content/event_view.pt:87
 msgid "event_from"
 msgstr "van"
 
 #. Default: "More information about this event…"
-#: ./skins/plone_content/event_view.pt:206
+#: ./skins/plone_content/event_view.pt:186
 msgid "event_more_information"
 msgstr "Meer informatie over deze gebeurtenis"
 
 #. Default: "to"
-#: ./skins/plone_content/event_view.pt:65
+#: ./skins/plone_content/event_view.pt:67
 msgid "event_to"
 msgstr "tot"
 
 #. Default: "What"
-#: ./skins/plone_content/event_view.pt:39
+#: ./skins/plone_content/event_view.pt:43
 msgid "event_what"
 msgstr "Wat"
 
 #. Default: "When"
-#: ./skins/plone_content/event_view.pt:49
+#: ./skins/plone_content/event_view.pt:51
 msgid "event_when"
 msgstr "Wanneer"
 
 #. Default: "Where"
-#: ./skins/plone_content/event_view.pt:117
+#: ./skins/plone_content/event_view.pt:119
 msgid "event_where"
 msgstr "Waar"
 
@@ -4442,7 +4448,7 @@ msgid "heading_actions"
 msgstr "Acties"
 
 #. Default: "Add ${itemtype}"
-#: ./skins/archetypes/edit_macros.pt:16
+#: /opt/plone30/products/Archetypes/skins/archetypes/edit_macros.pt:16
 msgid "heading_add_item"
 msgstr "Voeg ${itemtype} toe"
 
@@ -4457,7 +4463,7 @@ msgid "heading_add_sharing_permissions"
 msgstr "Rechten delen met een gebruiker"
 
 #. Default: "Add event to calendar"
-#: ./skins/plone_content/event_view.pt:173
+#: ./skins/plone_content/event_view.pt:160
 msgid "heading_add_to_calendar"
 msgstr "Voeg gebeurtenis toe aan agenda"
 
@@ -4467,7 +4473,7 @@ msgid "heading_addremove_products"
 msgstr "Producten verwijderen/toevoegen"
 
 #. Default: "Advanced search for content"
-#: ./skins/plone_forms/search_form.pt:14
+#: ./skins/plone_forms/search_form.pt:16
 msgid "heading_advanced_search"
 msgstr "Uitgebreide zoekopdracht naar inhoud"
 
@@ -4492,7 +4498,7 @@ msgid "heading_available_access_keys"
 msgstr "Beschikbare sneltoetsen"
 
 #. Default: "Broken products"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:200
+#: ./skins/plone_prefs/prefs_install_products_form.pt:208
 msgid "heading_broken_products"
 msgstr "Ongeldige producten"
 
@@ -4587,7 +4593,7 @@ msgid "heading_exception_details"
 msgstr "Details foutmelding"
 
 #. Default: "File contents"
-#: ./skins/plone_content/file_view.pt:70
+#: ./skins/plone_content/file_view.pt:44
 msgid "heading_file_contents"
 msgstr "Bestandsinhoud"
 
@@ -4782,7 +4788,7 @@ msgid "heading_portal_setup"
 msgstr "Plone configuratie"
 
 #. Default: "Portlets assigned here"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:37
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:39
 msgid "heading_portlets_assigned_here"
 msgstr "Hier gekoppelde portlets"
 
@@ -4941,6 +4947,11 @@ msgstr "Onze excuses..."
 msgid "heading_site_error_sorry"
 msgstr "Het spijt ons, maar het lijkt erop dat er iets is fout gegaan..."
 
+#. Default: "Site language"
+#: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/language.py:33
+msgid "heading_site_language"
+msgstr ""
+
 #. Default: "We're sorry, but that page doesn't exist…"
 #: ./skins/plone_templates/default_error_message.pt:34
 msgid "heading_site_there_seems_to_be_an_error"
@@ -5037,7 +5048,7 @@ msgid "help_allow_combined_language_codes"
 msgstr "Voorbeeld: pt-br (Braziliaans-Portugees), en-us (Amerikaans-Engels) enz."
 
 #. Default: "If selected, users can add comments to this item."
-#: ./ExtensibleMetadata.py:66
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:66
 msgid "help_allow_comments"
 msgstr "Indien aangevinkt kunnen gebruikers commentaar toevoegen."
 
@@ -5057,7 +5068,7 @@ msgid "help_capslock_password"
 msgstr "Wachtwoorden zijn hoofdlettergevoelig, let erop dat CAPS-LOCK niet aanstaat."
 
 #. Default: "Also known as keywords, tags or labels, these help you categorize your content."
-#: ./ExtensibleMetadata.py:78
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:78
 msgid "help_categories"
 msgstr "Ook bekend als trefwoorden, tags of labels, helpen deze u om inhoud te categoriseren."
 
@@ -5097,7 +5108,7 @@ msgid "help_content_ext_editor"
 msgstr "Indien aangevinkt, komt er op iedere pagina een icoon beschikbaar waarmee u teksten kunt aanpassen met behulp van uw favoriete externe editor in plaats van de editor beschikbaar via de website (bijv. Kupu, Epoz). Hiervoor heeft u een extra programma nodig, genaamd ExternalEditor. Indien u meer informatie of hulp wenst bij de installatie daarvan, kunt u contact opnemen met uw websitebeheerder."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: widget description of LinesWidget for label Contributors
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:112
 msgid "help_contributors"
 msgstr "De namen van personen die bijgedragen hebben aan dit item. Elke persoon moet op een aparte regel staan."
 
@@ -5106,18 +5117,20 @@ msgstr "De namen van personen die bijgedragen hebben aan dit item. Elke persoon 
 msgid "help_cookie_persistence"
 msgstr "Indien aangevinkt, wordt het \"skin\"-cookie zonder vervaldatum bewaard."
 
-#. Default: "The copyrights on this item."
-#: widget description of TextAreaWidget for label Copyrights
+#. Default: "Copyright statement or other rights information on this item."
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:168
+#, fuzzy
 msgid "help_copyrights"
 msgstr "Auteursrechten van dit item."
 
 #. Default: "Date this object was created"
-#: widget description of CalendarWidget for label Creation Date
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:187
 msgid "help_creation_date"
 msgstr "Datum waarop dit item is gemaakt"
 
-#. Default: "Persons responsible for creating the content of  this item. Please enter a list of user names, one per line. The principal creator should come first."
-#: widget description of LinesWidget for label Creators
+#. Default: "Persons responsible for creating the content of this item. Please enter a list of user names, one per line. The principal creator should come first."
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:123
+#, fuzzy
 msgid "help_creators"
 msgstr "Geef hier de gebruikers op die verantwoordelijk zijn voor de inhoud van dit item door middel van het invoeren van de gebruikersnamen, één per regel. De eindverantwoordelijke vermeldt u als eerste."
 
@@ -5127,7 +5140,7 @@ msgid "help_criteria_field_name"
 msgstr "Gebruik geen spaties, speciale tekens of hoofdletters. De verkorte naam maakt onderdeel uit van het internet adres."
 
 #. Default: "If selected, the navigation tree will only show the current folder and its children at all times."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:69
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:71
 msgid "help_current_folder_only"
 msgstr "Indien aangevinkt zullen alleen de huidige map en sub items getoond worden in de navigatie."
 
@@ -5236,8 +5249,9 @@ msgstr "Indien geselecteerd, zal de status van alle items in deze en  onderligge
 msgid "help_include_top"
 msgstr "Standaard wordt een 'Home' link gemaakt die naar het begin van uw site wijst. U kunt dit uitzetten wanneer u deze link liever niet wilt tonen."
 
-#. Default: "Whether or not to show the top, or 'home' node in the navigation tree."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:60
+#. Default: "Whether or not to show the top, or 'root', node in the navigation tree. This is affected by the 'Start level' setting."
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:61
+#, fuzzy
 msgid "help_include_top_node"
 msgstr "Of het bovenste niveau ofwel 'home' getoond wordt in de navigatie portlet"
 
@@ -5267,7 +5281,7 @@ msgid "help_livesearch"
 msgstr "Schakelt de LiveSearch feature in, waarmee u direct resultaten kunt bekijken indien de browser Javascript ondersteund"
 
 #. Default: "Select which types should be available in the 'More…' submenu <em>instead</em> of in the main pulldown. This is useful to indicate that these are not the preferred types in this location, but are allowed if you really need them."
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:174
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:175
 msgid "help_locally_allowed_types"
 msgstr "Selecteer welke typen er beschikbaar moeten zijn in het 'Meer...' submenu <em>in plaats van</em> in de hoofd keuzelijst. Dit is handig voor het aangeven van typen die niet de voorkeur genieten op deze plek, maar welke zijn toegestaan als u ze toch nodig heeft."
 
@@ -5277,7 +5291,7 @@ msgid "help_location"
 msgstr "Uw woonplaats - stad en land - of als u vanuit een bedrijf werkt, waar uw kantoor is gevestigd."
 
 #. Default: "The geographical location associated with the item, if applicable."
-#: ./ExtensibleMetadata.py:103
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:103
 msgid "help_location_dc"
 msgstr ""
 
@@ -5297,7 +5311,7 @@ msgid "help_message"
 msgstr "Voer hier de boodschap in die u wilt verzenden."
 
 #. Default: "Date this content was modified last"
-#: widget description of CalendarWidget for label Modification Date
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:203
 msgid "help_modification_date"
 msgstr "Datum waarop dit item voor het laatst is gewijzigd"
 
@@ -5306,23 +5320,24 @@ msgstr "Datum waarop dit item voor het laatst is gewijzigd"
 msgid "help_navigation_portlet_title"
 msgstr "Wijzig de Engelstalige titel van de Navigatie portlet. Dit heeft geen effect op andere talen."
 
-#. Default: "A path that specifies the base folder where the navigation tree, sitemap, breadcrumbs and tabs will be rooted. Use '/' for the portal root, and '/folder1' to start at 'folder1'."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:49
+#. Default: "You may search for and choose a folder to act as the root of the navigation tree. Leave blank to use the Plone site root."
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:52
+#, fuzzy
 msgid "help_navigation_root"
 msgstr "Een pad dat de basismap opgeeft waar de navigatie, sitemap, kruimelpad en de secties beginnen. gebruik '/' voor de root van de site of '/map1' om te starten in 'map1'."
 
 #. Default: "An integer value that specifies the number of folder levels below the site root that must be exceeded before the navigation tree will display. 0 means that the navigation tree should be displayed everywhere including pages in the root of the site. 1 means the tree only shows up inside folders located in the root and downwards, never showing at the top level."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:78
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:80
 msgid "help_navigation_start_level"
 msgstr "Een geheel getal dat het aantal niveaus onder de root van de site instelt vanaf waar de navigatie boom wordt weergegeven. 0 betekent de navigatie boom altijd getoond moet worden, inclusief pagina's in de root van de site. 1 betekent dat de boom alleen submappen toont in de root van de site."
 
 #. Default: "The title of the navigation tree. Leave blank for the default, translated title."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:41
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:44
 msgid "help_navigation_title"
 msgstr "De titel van de navigatie portlet. Leeg laten voor de standaard vertaalde titel."
 
 #. Default: "How many folders should be included before the navigation tree stops. 0 means no limit. 1 only includes the root folder."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:93
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:95
 msgid "help_navigation_tree_depth"
 msgstr "Een geheel getal waarmee het aantal niveaus onder de root van de site wordt aangegeven. 0 betekent geen limit. 1 betekent: alleen mappen op het hoogte niveau tonen."
 
@@ -5422,7 +5437,7 @@ msgid "help_remember_my_name"
 msgstr "De keuze  'Mijn naam onthouden' maakt een cookie aan met de gebruikersnaam. Bij een volgende login zal de gebruikersnaam reeds ingevuld zijn."
 
 #. Default: "Return items created by a particular person."
-#: ./skins/plone_forms/search_form.pt:210
+#: ./skins/plone_forms/search_form.pt:212
 msgid "help_search_author"
 msgstr "Zoek items gemaakt door een specifiek persoon."
 
@@ -5432,12 +5447,12 @@ msgid "help_search_before_specified_time"
 msgstr "Toont gebruikers die NIET meer hebben ingelogd sinds de aangegeven datum en tijd zoals bovenstaand opgegeven."
 
 #. Default: "Return items matching some or all of these Categories. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
-#: ./skins/plone_forms/search_form.pt:71
+#: ./skins/plone_forms/search_form.pt:73
 msgid "help_search_categories"
 msgstr "Toont items welke deels of geheel overeen komen met deze categorieën. Meerdere woorden kunnen worden geselecteerd door de toets <strong>Ctrl</strong> (of <strong>Apple</strong> toets op de Mac) in te drukken terwijl u kernwoorden aanklikt."
 
 #. Default: "Return items matching this description. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>."
-#: ./skins/plone_forms/search_form.pt:120
+#: ./skins/plone_forms/search_form.pt:122
 msgid "help_search_description"
 msgstr "Zoek items die aan deze beschrijving voldoen. Combinaties kunnen worden gevonden door woorden met <strong>AND</strong> en/of <strong>OR</strong> te verbinden."
 
@@ -5457,7 +5472,7 @@ msgid "help_search_group"
 msgstr "Zoek naar gebruikers in de geselecteerde groep."
 
 #. Default: "Return items of a specific type."
-#: ./skins/plone_forms/search_form.pt:164
+#: ./skins/plone_forms/search_form.pt:166
 msgid "help_search_item_type"
 msgstr "Zoek items van een specifiek type."
 
@@ -5477,7 +5492,7 @@ msgid "help_search_name"
 msgstr "Zoek gebruikers waarvan de loginnamen deze waarde bevatten."
 
 #. Default: "Return items added since you were last logged on, the last week, etc."
-#: ./skins/plone_forms/search_form.pt:136
+#: ./skins/plone_forms/search_form.pt:138
 msgid "help_search_new_items_since"
 msgstr "Zoek items die zijn toegevoegd sinds de vorige login."
 
@@ -5487,7 +5502,7 @@ msgid "help_search_new_owner"
 msgstr "Zoeken naar gebruikers."
 
 #. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
-#: ./skins/plone_forms/search_form.pt:233
+#: ./skins/plone_forms/search_form.pt:235
 msgid "help_search_review_status"
 msgstr "U kunt zoeken naar items met een bepaalde status. Kies een status uit de lijst, als de zoekopdracht beperkt moet blijven tot een bepaalde status. Indien u geen status opgeeft, worden alle items - ongeacht hun status - getoond."
 
@@ -5497,12 +5512,12 @@ msgid "help_search_roles"
 msgstr "Zoek gebruikers met alle geselecteerde rollen."
 
 #. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
-#: ./skins/plone_forms/search_form.pt:38
+#: ./skins/plone_forms/search_form.pt:40
 msgid "help_search_text"
 msgstr "Vul hier de zoekterm in voor zoeken in tekst. Combinaties kunnen worden gevonden door woorden met <strong>AND</strong> en/of <strong>OR</strong> te verbinden. De tekst in dit veld zal worden gezocht in de inhoud, titel en beschrijving van items."
 
 #. Default: "Return items matching this title."
-#: ./skins/plone_forms/search_form.pt:57
+#: ./skins/plone_forms/search_form.pt:59
 msgid "help_search_title"
 msgstr "Zoek items die voldoen aan deze titel."
 
@@ -5512,12 +5527,12 @@ msgid "help_searchtypes"
 msgstr "Definieer de content types die doorzocht dienen te worden bij het gebruik van de zoekfunctie. Let op dat nieuw geïnstalleerde content types automatisch doorzocht worden, tenzij u deze hier expliciet uitzet."
 
 #. Default: "Select what content type you wish to create."
-#: ./skins/archetypes/widgets/addable_support.pt:45
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/addable_support.pt:45
 msgid "help_select_content_to_create"
 msgstr "Selecteer welk type inhoud u wil aanmaken."
 
 #. Default: "Select where you want to create that."
-#: ./skins/archetypes/widgets/addable_support.pt:61
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/addable_support.pt:61
 msgid "help_select_where_to_create"
 msgstr "Selecteer waar u dat wil aanmaken."
 
@@ -5662,7 +5677,7 @@ msgid "help_syndication_update_period"
 msgstr "Bepaalt hoe vaak een kanaal dient te worden ververst."
 
 #. Default: "Choose a template that will be used for viewing this item."
-#: widget description of SelectionWidget for label View template
+#: /opt/plone30/products/Archetypes/TemplateMixin.py:23
 msgid "help_template_mixin"
 msgstr "Kies een sjabloon dat gebruikt wordt voor het weergeven van dit item."
 
@@ -5783,18 +5798,23 @@ msgstr "Nieuwe gebruiker toevoegen"
 msgid "label_add_portlet"
 msgstr "Portlet toevoegen"
 
+#. Default: "Add portlet…"
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:14
+msgid "label_add_portlet_ellipsis"
+msgstr ""
+
 #. Default: "Mode"
 #: ./skins/plone_forms/folder_constraintypes_form.cpt:49
 msgid "label_add_restriction_mode"
 msgstr "Modus"
 
 #. Default: "iCal"
-#: ./skins/plone_content/event_view.pt:186
+#: ./skins/plone_content/event_view.pt:173
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
-#: ./skins/plone_content/event_view.pt:180
+#: ./skins/plone_content/event_view.pt:167
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -5865,7 +5885,7 @@ msgid "label_allow_combined_language_codes"
 msgstr "Toon land specifieke taalvarianten"
 
 #. Default: "Allow comments"
-#: ./ExtensibleMetadata.py:64
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:64
 msgid "label_allow_comments"
 msgstr "Commentaar toestaan"
 
@@ -5885,7 +5905,7 @@ msgid "label_anonymous_user"
 msgstr "Anonieme gebruiker"
 
 #. Default: "Any Author"
-#: ./skins/plone_forms/search_form.pt:218
+#: ./skins/plone_forms/search_form.pt:220
 msgid "label_any_author"
 msgstr "Alle auteurs"
 
@@ -5900,7 +5920,7 @@ msgid "label_apply_changes"
 msgstr "Wijzigingen toepassen"
 
 #. Default: "Apply to current folder only"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:207
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:228
 msgid "label_apply_current_folder"
 msgstr "Alleen voor de huidige map"
 
@@ -5910,7 +5930,7 @@ msgid "label_apply_settings"
 msgstr "Instellingen bewaren"
 
 #. Default: "Apply to subfolders"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:202
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:223
 msgid "label_apply_to_subfolders"
 msgstr "Voor deze map, inclusief sub items"
 
@@ -5930,12 +5950,12 @@ msgid "label_assign_roles_to_users_groups"
 msgstr "Ken geselecteerde rollen aan de geselecteerde gebruiker(s)/groep(en)"
 
 #. Default: "at"
-#: ./Field.py:1837
+#: /opt/plone30/products/Archetypes/Field.py:1837
 msgid "label_at"
 msgstr "in"
 
 #. Default: "Author"
-#: ./skins/plone_forms/search_form.pt:208
+#: ./skins/plone_forms/search_form.pt:210
 msgid "label_author"
 msgstr "Auteur"
 
@@ -6030,7 +6050,7 @@ msgid "label_cancel"
 msgstr "Annuleren"
 
 #. Default: "Categories"
-#: ./skins/plone_forms/search_form.pt:69
+#: ./skins/plone_forms/search_form.pt:71
 msgid "label_categories"
 msgstr "Categorieën"
 
@@ -6045,7 +6065,7 @@ msgid "label_change_comment"
 msgstr "Opmerking"
 
 #. Default: "Change content item as default view..."
-#: /opt/plone30/src/plone.app.contentmenu/plone/app/contentmenu/menu.py:300
+#: /opt/plone30/src/plone.app.contentmenu/plone/app/contentmenu/menu.py:304
 msgid "label_change_default_item"
 msgstr "Wijzig content item als standaard weergave..."
 
@@ -6075,7 +6095,7 @@ msgid "label_change_status"
 msgstr "Status wijzigen"
 
 #. Default: "${count} characters remaining"
-#: ./skins/archetypes/widgets/textarea.pt:50
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/textarea.pt:50
 msgid "label_characters_remaining"
 msgstr "${count} tekens resterend"
 
@@ -6114,13 +6134,8 @@ msgstr "Vergeet selectie"
 msgid "label_click_here_to_retrieve"
 msgstr "Klik hier"
 
-#. Default: "Click here to get the file"
-#: ./skins/plone_content/file_view.pt:36
-msgid "label_click_to_get_file"
-msgstr "Klik hier voor het bestand"
-
 #. Default: "Click to view full-size image…"
-#: ./skins/plone_content/image_view.pt:38
+#: ./skins/plone_content/image_view.pt:42
 msgid "label_click_to_view_full_image"
 msgstr "Klik voor de volledige weergave van de afbeelding..."
 
@@ -6195,27 +6210,27 @@ msgid "label_content_editor"
 msgstr "Tekstverwerker"
 
 #. Default: "Add content rule"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:146
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:152
 msgid "label_contentrule_add"
 msgstr "Content regel toevoegen"
 
 #. Default: "Active"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:65
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:70
 msgid "label_contentrules_active"
 msgstr "Actief"
 
 #. Default: "Active content rules in this ${content_type}"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:123
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:132
 msgid "label_contentrules_active_assignments"
 msgstr "Actieve content regels in deze  ${content_type}"
 
 #. Default: "Enabled here"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:132
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:141
 msgid "label_contentrules_assignment_enabled"
 msgstr "Hier ingeschakeld"
 
 #. Default: "Content rules from parent folders"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:62
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:67
 msgid "label_contentrules_from_parent"
 msgstr "Content regels van bovenliggende mappen"
 
@@ -6235,17 +6250,17 @@ msgid "label_contentrules_rule_listing"
 msgstr "content regels"
 
 #. Default: "Applies to subfolders"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:129
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:138
 msgid "label_contentrules_subfolders"
 msgstr "Geldt voor submappen"
 
 #. Default: "Contributors"
-#: widget label of LinesWidget - description "The names of people that have contributed to this item. Each contributor should be on a separate line."
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:111
 msgid "label_contributors"
 msgstr "Mede-auteurs"
 
 #. Default: "Convert portlets"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:51
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:55
 msgid "label_convert_portlets"
 msgstr "Portlets converteren"
 
@@ -6264,18 +6279,19 @@ msgstr "Kopieer foutmeldingen naar het logboek"
 msgid "label_copy_to_present"
 msgstr "Naar huidige versie kopiëren"
 
-#. Default: "Copyrights"
-#: widget label of TextAreaWidget - description "The copyrights on this item."
+#. Default: "Rights"
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:167
+#, fuzzy
 msgid "label_copyrights"
 msgstr "Auteursrechten"
 
 #. Default: "Creation Date"
-#: widget label of CalendarWidget - description "Date this object was created"
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:186
 msgid "label_creation_date"
 msgstr "Aanmaakdatum"
 
 #. Default: "Creators"
-#: widget label of LinesWidget - description "Persons responsible for creating the content of  this item. Please enter a list of user names, one per line. The principal creator should come first."
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:122
 msgid "label_creators"
 msgstr "Auteurs"
 
@@ -6295,7 +6311,7 @@ msgid "label_current"
 msgstr "(huidig)"
 
 #. Default: "Only show the contents of the current folder."
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:67
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:69
 msgid "label_current_folder_only"
 msgstr "Alleen inhoud tonen van de huidige map."
 
@@ -6305,7 +6321,7 @@ msgid "label_current_folder_views"
 msgstr "Mapweergave"
 
 #. Default: "Current image"
-#: ./skins/archetypes/widgets/image.pt:37
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/image.pt:37
 msgid "label_current_image"
 msgstr "Huidige afbeelding"
 
@@ -6370,7 +6386,7 @@ msgid "label_default_workflow_title"
 msgstr "Standaard workflow (${title})"
 
 #. Default: "Delete"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:141
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:147
 msgid "label_delete"
 msgstr "Verwijderen"
 
@@ -6390,7 +6406,7 @@ msgid "label_description"
 msgstr "Beschrijving"
 
 #. Default: "Disable"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:139
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:145
 msgid "label_disable"
 msgstr "Uitschakelen"
 
@@ -6425,12 +6441,12 @@ msgid "label_edit"
 msgstr "Bewerken"
 
 #. Default: "You are editing the default view of a container. If you wanted to edit the container itself, ${go_here}."
-#: ./skins/archetypes/edit_macros.pt:41
+#: /opt/plone30/products/Archetypes/skins/archetypes/edit_macros.pt:41
 msgid "label_edit_default_view_container"
 msgstr "U wijzigt de standaard weergave van een map. Wanneer u de map zelf wilt wijzigen, ${go_here}."
 
 #. Default: "go here"
-#: ./skins/archetypes/edit_macros.pt:41
+#: /opt/plone30/products/Archetypes/skins/archetypes/edit_macros.pt:41
 msgid "label_edit_default_view_container_go_here"
 msgstr "klik hier"
 
@@ -6455,7 +6471,7 @@ msgid "label_email_address"
 msgstr "E-mailadres"
 
 #. Default: "Enable"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:137
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:143
 msgid "label_enable"
 msgstr "Inschakelen"
 
@@ -6485,12 +6501,12 @@ msgid "label_error_time"
 msgstr "Verzoek gedaan om"
 
 #. Default: "Error Type"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:217
+#: ./skins/plone_prefs/prefs_install_products_form.pt:225
 msgid "label_error_type"
 msgstr "Fouttype"
 
 #. Default: "Error Value"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:219
+#: ./skins/plone_prefs/prefs_install_products_form.pt:227
 msgid "label_error_value"
 msgstr "Foutwaarde"
 
@@ -6550,7 +6566,7 @@ msgid "label_exclude_from_nav"
 msgstr "Sluit uit van navigatie"
 
 #. Default: "Existing categories"
-#: ./skins/archetypes/widgets/keyword.pt:53
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/keyword.pt:53
 msgid "label_existing_categories"
 msgstr "Bestaande categorieën"
 
@@ -6573,11 +6589,6 @@ msgstr "Extern bewerken inschakelen"
 #: widget label of FileWidget - description ""
 msgid "label_file"
 msgstr "Bestand"
-
-#. Default: "File type"
-#: ./skins/plone_content/file_view.pt:58
-msgid "label_file_type"
-msgstr "Bestandstype"
 
 #. Default: "filed under:"
 #: ./skins/plone_forms/search.pt:142
@@ -6680,7 +6691,7 @@ msgid "label_historical_unavailable"
 msgstr "Geschiedenis niet beschikbaar"
 
 #. Default: "History"
-#: ./skins/plone_content/review_history.pt:7
+#: ./skins/plone_deprecated/review_history.pt:7
 msgid "label_history"
 msgstr "Geschiedenis"
 
@@ -6750,7 +6761,7 @@ msgid "label_include_top_enable"
 msgstr "Top / Home link tonen"
 
 #. Default: "Include top node"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:59
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:60
 msgid "label_include_top_node"
 msgstr "Top niveau tonen"
 
@@ -6780,7 +6791,7 @@ msgid "label_item_selected"
 msgstr "Item: ${contentitem}"
 
 #. Default: "Item type"
-#: ./skins/plone_forms/search_form.pt:162
+#: ./skins/plone_forms/search_form.pt:164
 msgid "label_item_type"
 msgstr "Type item"
 
@@ -6831,7 +6842,7 @@ msgid "label_local_roles"
 msgstr "Lokale rol(len)"
 
 #. Default: "Secondary types"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:169
+#: ./skins/plone_forms/folder_constraintypes_form.cpt:170
 msgid "label_locally_allowed_types"
 msgstr "Secondaire typen"
 
@@ -6851,7 +6862,7 @@ msgid "label_location"
 msgstr "Locatie:"
 
 #. Default: "Log in"
-#: ./skins/plone_deprecated/portlet_login.pt:81
+#: ./skins/plone_deprecated/portlet_login.pt:79
 msgid "label_log_in"
 msgstr "Inloggen"
 
@@ -6861,12 +6872,12 @@ msgid "label_log_in_here"
 msgstr "hier inloggen"
 
 #. Default: "Continue"
-#: ./skins/plone_login/login_success.pt:63
+#: ./skins/plone_login/login_success.pt:44
 msgid "label_login_continue"
 msgstr "Doorgaan"
 
 #. Default: "Continue to the ${portal_title} home page"
-#: ./skins/plone_login/login_success.pt:74
+#: ./skins/plone_login/login_success.pt:55
 msgid "label_login_continue_to_home_page"
 msgstr "Doorgaan naar de home page van${portal_title}"
 
@@ -6907,7 +6918,7 @@ msgid "label_message"
 msgstr "Bericht"
 
 #. Default: "Modification Date"
-#: widget label of CalendarWidget - description "Date this content was modified last"
+#: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:201
 msgid "label_modification_date"
 msgstr "Wijzigingsdatum"
 
@@ -6941,8 +6952,9 @@ msgstr "Navigatie portlet titel"
 msgid "label_navigation_root"
 msgstr "Navigatie root"
 
-#. Default: "Root path"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:48
+#. Default: "Root node"
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:51
+#, fuzzy
 msgid "label_navigation_root_path"
 msgstr "Root pad"
 
@@ -6952,17 +6964,17 @@ msgid "label_navigation_start_level"
 msgstr "Navigatie start niveau"
 
 #. Default: "Start level"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:77
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:79
 msgid "label_navigation_startlevel"
 msgstr "Start niveau"
 
 #. Default: "Title"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:40
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:43
 msgid "label_navigation_title"
 msgstr "Titel navigatie portlet"
 
 #. Default: "Navigation tree depth"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:91
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:93
 msgid "label_navigation_tree_depth"
 msgstr "Navigatie diepte"
 
@@ -6982,12 +6994,12 @@ msgid "label_netscape6_all"
 msgstr "Netscape 6 en eerder (alle besturingssystemen)"
 
 #. Default: "New categories"
-#: ./skins/archetypes/widgets/keyword.pt:35
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/keyword.pt:35
 msgid "label_new_categories"
 msgstr "Nieuwe categorieën"
 
 #. Default: "New items since"
-#: ./skins/plone_forms/search_form.pt:134
+#: ./skins/plone_forms/search_form.pt:136
 msgid "label_new_items_since"
 msgstr "Nieuwe items sinds"
 
@@ -7027,7 +7039,7 @@ msgid "label_news_image"
 msgstr "Afbeelding"
 
 #. Default: "Next"
-#: ./skins/archetypes/edit_macros.pt:203
+#: /opt/plone30/products/Archetypes/skins/archetypes/edit_macros.pt:210
 msgid "label_next"
 msgstr "Volgende"
 
@@ -7047,7 +7059,7 @@ msgid "label_no_prefs_panels_available"
 msgstr "Geen panels beschikbaar."
 
 #. Default: "<no reference>"
-#: ./Field.py:1884
+#: /opt/plone30/products/Archetypes/Field.py:1884
 msgid "label_no_reference"
 msgstr "<geen verwijzing>"
 
@@ -7096,8 +7108,9 @@ msgstr "of"
 msgid "label_ordinary_content_editor"
 msgstr "Geen (werkt in alle browsers)"
 
-#. Default: "This product has been upgraded, click here to reinstall. Filesystem version is ${version}"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:167
+#. Default: "This product has been upgraded. Filesystem version is ${version}. Reinstall: ${reinstall_button}"
+#: ./skins/plone_prefs/prefs_install_products_form.pt:168
+#, fuzzy
 msgid "label_outdated_product_reinstall"
 msgstr "Er is een nieuwere versie (${version}) van dit product beschikbaar, klik hier om opnieuw te installeren"
 
@@ -7107,7 +7120,7 @@ msgid "label_parent"
 msgstr "Bovenliggende item"
 
 #. Default: "Password"
-#: ./skins/plone_deprecated/portlet_login.pt:60
+#: ./skins/plone_deprecated/portlet_login.pt:59
 msgid "label_password"
 msgstr "Wachtwoord"
 
@@ -7207,7 +7220,7 @@ msgid "label_powered_by_plone"
 msgstr "Powered by Plone"
 
 #. Default: "Previous"
-#: /opt/plone30/products/CMFDiffTool/skins/ChangeSet/at_changeset.pt:54
+#: /opt/plone30/products/Archetypes/skins/archetypes/edit_macros.pt:202
 msgid "label_previous"
 msgstr "Vorige"
 
@@ -7217,7 +7230,7 @@ msgid "label_published"
 msgstr "gepubliceerd"
 
 #. Default: "effective"
-#: ./skins/plone_content/review_history.pt:50
+#: ./skins/plone_deprecated/review_history.pt:50
 msgid "label_publishing_effective"
 msgstr "Ingangsdatum"
 
@@ -7297,7 +7310,7 @@ msgid "label_rev_later"
 msgstr "Latere revisies"
 
 #. Default: "Review status"
-#: ./skins/plone_forms/search_form.pt:231
+#: ./skins/plone_forms/search_form.pt:233
 msgid "label_review_status"
 msgstr "Revisiestatus"
 
@@ -7382,7 +7395,7 @@ msgid "label_search_term"
 msgstr "Zoekterm"
 
 #. Default: "Search Text"
-#: ./skins/plone_forms/search_form.pt:36
+#: ./skins/plone_forms/search_form.pt:38
 msgid "label_search_text"
 msgstr "Zoeken op tekst"
 
@@ -7542,7 +7555,7 @@ msgid "label_site_map"
 msgstr "Site map"
 
 #. Default: "Size"
-#: ./skins/plone_content/file_view.pt:43
+#: ./skins/plone_content/image_view.pt:48
 msgid "label_size"
 msgstr "Grootte"
 
@@ -7656,18 +7669,19 @@ msgstr "Frequentie bijwerken"
 msgid "label_syndication_updateperiod"
 msgstr "Verversingsperiode bijwerken"
 
-#. Default: "Table of Contents"
+#. Default: "Contents"
 #: /opt/plone30/src/plone.app.layout/plone/app/layout/viewlets/toc.pt:4
+#, fuzzy
 msgid "label_tableofcontents"
 msgstr "Inhoudsopgave"
 
 #. Default: "View template"
-#: widget label of SelectionWidget - description "Choose a template that will be used for viewing this item."
+#: /opt/plone30/products/Archetypes/TemplateMixin.py:21
 msgid "label_template_mixin"
 msgstr "Geef sjabloon weer"
 
 #. Default: "Text Format"
-#: ./skins/archetypes/widgets/visual.pt:35
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/visual.pt:35
 msgid "label_text_format"
 msgstr "Tekst formaat"
 
@@ -7687,7 +7701,7 @@ msgid "label_to_dashboard"
 msgstr "Naar mijn dashboard"
 
 #. Default: "Select All/None"
-#: ./skins/plone_forms/search_form.pt:176
+#: ./skins/plone_forms/search_form.pt:178
 msgid "label_toggle"
 msgstr "In- of uitschakelen"
 
@@ -7712,7 +7726,7 @@ msgid "label_types"
 msgstr "Types"
 
 #. Default: "Unassign"
-#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:212
+#: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:233
 msgid "label_unassign"
 msgstr "Niet toegekend"
 
@@ -7722,7 +7736,7 @@ msgid "label_undo"
 msgstr "Ongedaan maken"
 
 #. Default: "Uninstall"
-#: ./skins/plone_prefs/prefs_install_products_form.pt:185
+#: ./skins/plone_prefs/prefs_install_products_form.pt:193
 msgid "label_uninstall"
 msgstr "Deïnstalleren"
 
@@ -7829,12 +7843,12 @@ msgid "label_wcag"
 msgstr "WCAG"
 
 #. Default: "What"
-#: ./skins/archetypes/widgets/addable_support.pt:44
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/addable_support.pt:44
 msgid "label_what"
 msgstr "Wat"
 
 #. Default: "Where"
-#: ./skins/archetypes/widgets/addable_support.pt:60
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/addable_support.pt:60
 msgid "label_where"
 msgstr "Waar"
 
@@ -7869,7 +7883,7 @@ msgid "large_text"
 msgstr "Groot"
 
 #. Default: "Last log-in"
-#: ./skins/plone_forms/search_form.pt:147
+#: ./skins/plone_forms/search_form.pt:149
 msgid "last_login"
 msgstr "Laatste login"
 
@@ -7894,7 +7908,7 @@ msgid "legend_add_comment"
 msgstr "Details van opmerking"
 
 #. Default: "Add new"
-#: ./skins/archetypes/widgets/addable_support.pt:42
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/addable_support.pt:42
 msgid "legend_add_new"
 msgstr "Voeg nieuwe toe"
 
@@ -8059,7 +8073,7 @@ msgid "legend_user_details"
 msgstr "Details van lid"
 
 #. Default: "The link address is:"
-#: ./skins/plone_content/link_view.pt:31
+#: ./skins/plone_content/link_view.pt:35
 msgid "link_address"
 msgstr "Het linkadres is:"
 
@@ -8088,13 +8102,28 @@ msgstr "Door dit item te verwijderen, zullen links in de onderstaande lijst met 
 msgid "linkintegrity_is_referenced"
 msgstr "Er wordt naar dit ${portal_type} gelinkt vanuit de volgende items:"
 
+#. Default: "Link integrity information updated for ${count} item(s)."
+#: /opt/plone30/src/plone.app.linkintegrity/plone/app/linkintegrity/browser/update.py:18
+msgid "linkintegrity_update_info"
+msgstr ""
+
+#. Default: "Clicking the below button will cause link integrity information to be updated.  This might take a while, especially for bigger sites..."
+#: /opt/plone30/src/plone.app.linkintegrity/plone/app/linkintegrity/browser/update.pt:18
+msgid "linkintegrity_update_instructions"
+msgstr ""
+
+#. Default: "Update link integrity information"
+#: /opt/plone30/src/plone.app.linkintegrity/plone/app/linkintegrity/browser/update.pt:15
+msgid "linkintegrity_update_title"
+msgstr ""
+
 #. Default: "One or more of the items you are attempting to delete may cause links in your site to break."
 #: /opt/plone30/src/plone.app.linkintegrity/plone/app/linkintegrity/browser/confirmation.pt:19
 msgid "linkintegrity_warning"
 msgstr "Eén of meer items die u wilt verwijderen, kunnen gebroken links veroorzaken in uw site."
 
 #. Default: "Action"
-#: ./skins/plone_content/review_history.pt:17
+#: ./skins/plone_deprecated/review_history.pt:17
 msgid "listingheader_action"
 msgstr "Actie"
 
@@ -8114,12 +8143,12 @@ msgid "listingheader_author"
 msgstr "Auteur"
 
 #. Default: "Comment"
-#: ./skins/plone_content/review_history.pt:20
+#: ./skins/plone_deprecated/review_history.pt:20
 msgid "listingheader_comment"
 msgstr "Opmerking"
 
 #. Default: "Date and Time"
-#: ./skins/plone_content/review_history.pt:19
+#: ./skins/plone_deprecated/review_history.pt:19
 msgid "listingheader_date_and_time"
 msgstr "Datum en tijd"
 
@@ -8164,7 +8193,7 @@ msgid "listingheader_order"
 msgstr "Volgorde"
 
 #. Default: "Performed by"
-#: ./skins/plone_content/review_history.pt:18
+#: ./skins/plone_deprecated/review_history.pt:18
 msgid "listingheader_performed_by"
 msgstr "Uitgevoerd door"
 
@@ -8234,7 +8263,7 @@ msgid "login_form_disabled"
 msgstr "Cookie gebaseerde login is niet mogelijk, als cookies zijn uitgeschakeld."
 
 #. Default: "Cookie authentication is disabled. Login portlet not available."
-#: ./skins/plone_deprecated/portlet_login.pt:123
+#: ./skins/plone_deprecated/portlet_login.pt:120
 msgid "login_portlet_disabled"
 msgstr "Cookie authenticatie is uitgeschakeld. De loginbox is niet beschikbaar."
 
@@ -8276,22 +8305,22 @@ msgid "manage_portlets_link"
 msgstr "Portlets beheren"
 
 #. Default: "Add New Item operation was cancelled."
-#: ./skins/archetypes/go_back.cpy:29
+#: /opt/plone30/products/Archetypes/skins/archetypes/go_back.cpy:29
 msgid "message_add_new_item_cancelled"
 msgstr "Toevoegen van een nieuw item is geannuleerd."
 
 #. Default: "Edit cancelled."
-#: ./skins/archetypes/go_back.cpy:39
+#: /opt/plone30/products/Archetypes/skins/archetypes/go_back.cpy:39
 msgid "message_edit_item_cancelled"
 msgstr "Bewerking is geannuleerd."
 
 #. Default: "Reference added."
-#: ./skins/archetypes/content_edit_impl.py:74
+#: /opt/plone30/products/Archetypes/skins/archetypes/content_edit_impl.py:74
 msgid "message_reference_added"
 msgstr "Verwijzing toegevoegd"
 
 #. Default: "Reference edited."
-#: ./skins/archetypes/content_edit_impl.py:77
+#: /opt/plone30/products/Archetypes/skins/archetypes/content_edit_impl.py:77
 msgid "message_reference_edited"
 msgstr "Verwijzing bewerkt"
 
@@ -8427,19 +8456,14 @@ msgid "no"
 msgstr "Nee"
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
-#: ./skins/plone_content/document_view.pt:31
+#: ./skins/plone_content/document_view.pt:35
 msgid "no_body_text"
 msgstr "Dit item moet nog geschreven worden. Klik op het tabblad 'bewerken' om het te schrijven."
 
 #. Default: "No comments."
-#: ./skins/plone_content/review_history.pt:60
+#: ./skins/plone_deprecated/review_history.pt:60
 msgid "no_comments"
 msgstr "Geen opmerkingen."
-
-#. Default: "(No file has been uploaded yet)"
-#: ./skins/plone_content/file_view.pt:52
-msgid "no_file_uploaded"
-msgstr "(Er is nog geen bestand ge-upload)"
 
 #. Default: "No groups were found using your search criteria."
 #: ./skins/plone_deprecated/folder_localrole_form.pt:426
@@ -8447,7 +8471,7 @@ msgid "no_groups_found"
 msgstr "Geen groepen gevonden die aan de opgegeven criteria voldoen."
 
 #. Default: "(No image has been uploaded yet)"
-#: ./skins/plone_content/image_view.pt:51
+#: ./skins/plone_content/image_view.pt:55
 msgid "no_image_uploaded"
 msgstr "(Er is nog geen bestand ge-upload)"
 
@@ -8477,12 +8501,12 @@ msgid "no_users_found"
 msgstr "Geen gebruikers gevonden"
 
 #. Default: "Keep existing file"
-#: ./skins/archetypes/widgets/file.pt:59
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/file.pt:62
 msgid "nochange_file"
 msgstr "Niet wijzigen"
 
 #. Default: "Keep existing image"
-#: ./skins/archetypes/widgets/image.pt:69
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/image.pt:69
 msgid "nochange_image"
 msgstr "Niet wijzigen"
 
@@ -8501,7 +8525,7 @@ msgid "openid_intro"
 msgstr "Indien u nog geen OpenID heeft, kunt u zich aanmelden bij ${openid_myopenid}."
 
 #. Default: "or upload a file (existing content will be replaced)"
-#: ./skins/archetypes/widgets/rich.pt:46
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/rich.pt:46
 msgid "or_upload_a_file"
 msgstr "of upload een bestand - dient in platte tekst formaat te zijn en is niet geschikt voor Word documenten. Reeds toegevoegde inhoud wordt overschreven."
 
@@ -8590,7 +8614,7 @@ msgid "retract"
 msgstr "terugtrekken"
 
 #. Default: "Return"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:22
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:23
 msgid "return_to_view"
 msgstr "Terug"
 
@@ -8694,7 +8718,7 @@ msgid "summary_content_listing"
 msgstr "Inhoud weergave"
 
 #. Default: "Event details"
-#: ./skins/plone_content/event_view.pt:33
+#: ./skins/plone_content/event_view.pt:37
 msgid "summary_event_details"
 msgstr "Details van gebeurtenis"
 
@@ -8714,7 +8738,7 @@ msgid "summary_localroles_to_assign"
 msgstr "Toe te kennen rollen"
 
 #. Default: "Review History"
-#: ./skins/plone_content/review_history.pt:10
+#: ./skins/plone_deprecated/review_history.pt:10
 msgid "summary_review_history"
 msgstr "Revisie Geschiedenis"
 
@@ -8974,7 +8998,7 @@ msgid "text_product_description"
 msgstr "Productbeschrijving"
 
 #. Default: "This Product has been removed from the file system."
-#: ./skins/plone_prefs/prefs_install_products_form.pt:175
+#: ./skins/plone_prefs/prefs_install_products_form.pt:183
 msgid "text_product_unavailable"
 msgstr "Dit product is verwijderd uit de productenmap"
 
@@ -9009,7 +9033,7 @@ msgid "text_zope_server_uptime"
 msgstr "Zope Server uptime: ${time}"
 
 #. Default: "Ever"
-#: ./skins/plone_forms/search_form.pt:154
+#: ./skins/plone_forms/search_form.pt:156
 msgid "time_ever"
 msgstr "Ooit"
 
@@ -9019,12 +9043,12 @@ msgid "time_expired"
 msgstr "- vervallen"
 
 #. Default: "Last month"
-#: ./skins/plone_forms/search_form.pt:153
+#: ./skins/plone_forms/search_form.pt:155
 msgid "time_last_month"
 msgstr "Vorige maand"
 
 #. Default: "Last week"
-#: ./skins/plone_forms/search_form.pt:152
+#: ./skins/plone_forms/search_form.pt:154
 msgid "time_last_week"
 msgstr "Vorige week"
 
@@ -9034,7 +9058,7 @@ msgid "time_separator"
 msgstr ":"
 
 #. Default: "Yesterday"
-#: ./skins/plone_forms/search_form.pt:151
+#: ./skins/plone_forms/search_form.pt:153
 msgid "time_yesterday"
 msgstr "Gisteren"
 
@@ -9059,12 +9083,12 @@ msgid "title_add_new_items_inside_item"
 msgstr "Voeg nieuwe items toe in dit item"
 
 #. Default: "Add this item to your iCal calendar"
-#: ./skins/plone_content/event_view.pt:181
+#: ./skins/plone_content/event_view.pt:168
 msgid "title_add_to_ical"
 msgstr "Voeg dit item toe in de iCal Kalender"
 
 #. Default: "Add this item to your vCal calendar"
-#: ./skins/plone_content/event_view.pt:175
+#: ./skins/plone_content/event_view.pt:162
 msgid "title_add_to_vcal"
 msgstr "Voeg dit item toe in de vCal Kalender"
 
@@ -9169,7 +9193,7 @@ msgid "title_large_text"
 msgstr "Grote Tekst"
 
 #. Default: "Legacy portlets"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:41
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:45
 msgid "title_legacy_portlets"
 msgstr "Verouderde portlets"
 
@@ -9178,13 +9202,15 @@ msgstr "Verouderde portlets"
 msgid "title_manage_contentrules"
 msgstr "Content regels"
 
-#. Default: "Manage content type portlets for ${contenttype_name}"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:19
+#. Default: "${contenttype_icon} Manage content type portlets for ${contenttype_name}"
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:20
+#, fuzzy
 msgid "title_manage_contenttype_portlets"
 msgstr "Content type portlets beheren voor ${contenttype_name}"
 
-#. Default: "Manage portlets"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:17
+#. Default: "${context_icon} Manage portlets for \"${context_title}\""
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:21
+#, fuzzy
 msgid "title_manage_contextual_portlets"
 msgstr "Portlet beheren"
 
@@ -9264,7 +9290,7 @@ msgid "title_select_default_page"
 msgstr "Selecteer het item dat u standaard weergegeven wilt hebben in deze map"
 
 #. Default: "Select an item to be used as default view in this folder..."
-#: /opt/plone30/src/plone.app.contentmenu/plone/app/contentmenu/menu.py:352
+#: /opt/plone30/src/plone.app.contentmenu/plone/app/contentmenu/menu.py:356
 msgid "title_select_default_view_item"
 msgstr "Selecteer een item dat als standaardweergave dient voor deze map..."
 
@@ -9384,12 +9410,12 @@ msgid "types_controlpanel_warn_remap"
 msgstr "Het aanpassen van de workflow van een content type duurt enige tijd. Als een gevolg kan de gehele site merkbaar trager worden tijdens het bijwerken naar deze nieuwe instelling."
 
 #. Default: "Replace with new file:"
-#: ./skins/archetypes/widgets/file.pt:90
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/file.pt:93
 msgid "upload_file"
 msgstr "Vervangen door nieuw bestand:"
 
 #. Default: "Replace with new image:"
-#: ./skins/archetypes/widgets/image.pt:93
+#: /opt/plone30/products/Archetypes/skins/archetypes/widgets/image.pt:95
 msgid "upload_image"
 msgstr "Vervangen door nieuwe afbeelding:"
 
