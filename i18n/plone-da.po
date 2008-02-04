@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2007-11-24 14:02+0000\n"
+"POT-Creation-Date: 2008-02-04 17:51+0000\n"
 "PO-Revision-Date: 2007-12-11 01:53+0100\n"
 "Last-Translator: sune <sune@headnet.dk>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -30,11 +30,11 @@ msgstr "${count} objekt(er) kopieret."
 msgid "${count} item(s) cut."
 msgstr "${count} objekt(er) klippet."
 
-#: ./skins/plone_scripts/folder_rename.cpy:58
+#: ./skins/plone_scripts/folder_rename.cpy:47
 msgid "${count} item(s) renamed."
 msgstr "${count} objekt(er) omdøbt."
 
-#: ./skins/plone_scripts/folder_delete.cpy:59
+#: ./skins/plone_scripts/folder_delete.cpy:37
 msgid "${items} could not be deleted."
 msgstr "${items} kunne ikke slettes."
 
@@ -101,8 +101,9 @@ msgstr "Et intranetworkflow hvor indhold kun er tilgængeligt hvis du er logget 
 msgid "- Essentially a workflow with no transitions, but has a Published state, so portlets and applications that expect that state will continue to work."
 msgstr "En arbejdsgang uden overgange, men status Publiceret er der, så portletter og applikationer, som forventer denne status fortsat vil virke."
 
-#. Default: "- Normally used with the Intranet/Ekstranet workflow on folder types. - Only has two states: Private and Internal Draft."
+#. Default: "- Normally used with the Intranet/Extranet workflow on folder types. - Only has two states: Private and Internal Draft."
 #: ./profiles/default/workflows/intranet_folder_workflow/definition.xml
+#, fuzzy
 msgid "- Normally used with the Intranet/Extranet workflow on folder types. - Only has two states: Private and Internal Draft."
 msgstr "Normalt anvendt til intranet / extranet workflows på mappebaseret typer"
 
@@ -309,14 +310,6 @@ msgstr "Handling flyttet op"
 msgid "Add"
 msgstr "Tilføj"
 
-#. Default: "Add ${type}"
-#. Used if only one type is available as in smart folders
-#. Used as dynamically generated button label
-#: ./plone_forms/folder_factories.pt
-#: ./plone_templates/folder_contents.pt
-msgid "Add ${type}"
-msgstr "Tilføj ${type}"
-
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/classic.py:54
 msgid "Add Classic Portlet"
 msgstr "Tilføj Classic Portlet"
@@ -365,7 +358,7 @@ msgstr "Tilføj Nyhedsportlet"
 msgid "Add Notify Action"
 msgstr "Tilføj Beskedhandling"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:290
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:292
 msgid "Add RSS Portlet"
 msgstr "Tilføj RSS Portlet"
 
@@ -459,7 +452,7 @@ msgstr "Tillad alle at se 'om' information"
 msgid "Allows users to register themselves on the site. If not selected, only site managers can add new users."
 msgstr "Tillader brugere selv at registrere sig på sitet. Hvis ikke valgt, er det kun administratorer, der kan tilføje nye brugere"
 
-#: /opt/plone30/src/plone.app.layout/plone/app/layout/presentation/presentation.py:96
+#: /opt/plone30/src/plone.app.layout/plone/app/layout/presentation/presentation.py:99
 msgid "Also available in presentation mode…"
 msgstr "Er også tilgængelig i præsentationsform"
 
@@ -601,6 +594,10 @@ msgstr "Skift adgangskode"
 msgid "Change State"
 msgstr "Skift status"
 
+#: /opt/plone30/src/archetypes.kss/archetypes/kss/fields_versioning.py:56
+msgid "Changes Saved. Versioning for this file has been disabled because it is too large."
+msgstr ""
+
 #: ./skins/plone_prefs/prefs_user_manage.cpy:49
 msgid "Changes applied."
 msgstr "Ændringer tilføjet"
@@ -702,12 +699,6 @@ msgstr "Konfigurer regel"
 msgid "Contact"
 msgstr "Kontakt"
 
-#. Default: "Contained Smart Folders:"
-#. Used as title of the folder_contents form
-#: ./ATContentTypes/atct_topic_subtopics.pt
-msgid "Contained Smart Folders:"
-msgstr "Inkluderede Dynamiske lister"
-
 #. Default: "Content Rules"
 #: ./profiles/default/actionicons.xml
 #: ./profiles/default/controlpanel.xml
@@ -753,10 +744,6 @@ msgstr "Kopier til mappe ${folder}"
 #: ./skins/plone_prefs/prefs_group_edit.py:19
 msgid "Could not add group ${name}, perhaps a user or group with this name already exists."
 msgstr "Kunne ikke tilføje gruppen ${name}, måske eksisterer der allerede en bruger eller en gruppe med dette navn"
-
-#: ./skins/plone_prefs/prefs_navigation_form_validate.vpy:27
-msgid "Could not find ${root}"
-msgstr "Kunne ikke finde ${root}"
 
 #: ./skins/plone_form_scripts/send_feedback.cpy:51
 msgid "Could not find a valid email address"
@@ -966,7 +953,7 @@ msgstr "Rediger nyhedsportlet"
 msgid "Edit Notify Action"
 msgstr "Rediger beskedhandling"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:301
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:303
 msgid "Edit RSS Portlet"
 msgstr "Rediger RSS Portlet"
 
@@ -1166,7 +1153,7 @@ msgstr "Synligt eksternt"
 msgid "Favorite"
 msgstr "Favorit"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:201
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:202
 msgid "Feed reload timeout"
 msgstr "Opdateringsinterval"
 
@@ -1381,11 +1368,7 @@ msgstr "Begivenheder bruges til at planlægge møder, aftaler og lignende."
 msgid "Input is required but not given."
 msgstr "Du skal udfylde feltet."
 
-#: ./skins/plone_prefs/prefs_navigation_form_validate.vpy:19
-msgid "Input must be an integer."
-msgstr "Værdi skal være heltal (integer)"
-
-#: /opt/plone30/src/archetypes.kss/archetypes/kss/fields_versioning.py:35
+#: /opt/plone30/src/archetypes.kss/archetypes/kss/fields_versioning.py:43
 msgid "Instant edited field(s) ${fields}"
 msgstr "Direkte redigerede felt(er) ${fields}"
 
@@ -1447,7 +1430,7 @@ msgstr "Status er ændret"
 msgid "Item's position has changed."
 msgstr "Indholdsobjektets placering ændret"
 
-#: ./skins/plone_scripts/folder_delete.cpy:54
+#: ./skins/plone_scripts/folder_delete.cpy:34
 msgid "Item(s) deleted."
 msgstr "Indholdsobjekt(er) slettet."
 
@@ -1520,7 +1503,7 @@ msgstr "Link"
 msgid "Link changes saved."
 msgstr "Ændringer til linket er blevet gemt."
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:197
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:198
 msgid "Link of the RSS feed to display."
 msgstr "Link til det RSS feed der skal vises"
 
@@ -1577,7 +1560,7 @@ msgstr "Logbesked ${message}"
 msgid "Log out"
 msgstr "Log ud"
 
-#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.py:175
+#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.py:177
 msgid "Logged-in users"
 msgstr "Brugere, der er logget ind"
 
@@ -1609,10 +1592,6 @@ msgstr "Makro"
 #: ./profiles/default/controlpanel.xml
 msgid "Mail"
 msgstr "Mail"
-
-#: ./skins/plone_prefs/prefs_mailhost_set.cpy:18
-msgid "Mail Host Updated"
-msgstr "Mailhost opdateret"
 
 # Control Panel Item
 #. Default: "Mail Settings"
@@ -2072,7 +2051,7 @@ msgstr "Vælg et eller flere indholdsobjekter, som du vil kopiere."
 msgid "Please select one or more items to cut."
 msgstr "Vælg et eller flere indholdsobjekter, som ønskes klippet væk."
 
-#: ./skins/plone_scripts/folder_delete.cpy:28
+#: ./skins/plone_scripts/folder_delete.cpy:21
 msgid "Please select one or more items to delete."
 msgstr "Vælg et eller flere indholdsobjekter, som skal slettes."
 
@@ -2133,14 +2112,6 @@ msgstr "Indstillinger for sitet"
 #: ./profiles/default/types/ATPortalTypeCriterion.xml
 msgid "Portal Types Criterion"
 msgstr "Indholdstype-kriterium"
-
-#: ./skins/plone_form_scripts/reconfig.cpy:33
-msgid "Portal reconfigured."
-msgstr "Sitets indstillinger opdateret."
-
-#: ./skins/plone_prefs/prefs_portalskin_set.cpy:29
-msgid "Portal skin updated"
-msgstr "Sitets udseende opdateret"
 
 #: ./skins/plone_prefs/prefs_portrait_delete.py:19
 msgid "Portrait deleted."
@@ -2526,7 +2497,7 @@ msgid "Search Text"
 msgstr "Søge-tekst"
 
 #. Default: "Search for user or group"
-#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:43
+#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:44
 msgid "Search for user or group"
 msgstr "Søg efter bruger eller gruppe"
 
@@ -2537,10 +2508,6 @@ msgstr "Søgeindstillinger"
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/search.py:93
 msgid "Search settings for this site."
 msgstr "Søgeindstillinger for dette site"
-
-#: ./skins/plone_prefs/prefs_search_set.cpy:36
-msgid "Search settings updated."
-msgstr "Søgeindstillinger er nu opdateret."
 
 #. Default: "Security"
 #: ./profiles/default/controlpanel.xml
@@ -2671,7 +2638,7 @@ msgstr "ID"
 msgid "Show 'Short Name' on content?"
 msgstr "Vis id på indhold?"
 
-#: /opt/plone30/src/plone.app.contentmenu/plone/app/contentmenu/menu.py:522
+#: /opt/plone30/src/plone.app.contentmenu/plone/app/contentmenu/menu.py:530
 msgid "Show all available content types"
 msgstr "Vis alle tilgængelige indholdstyper"
 
@@ -2905,10 +2872,6 @@ msgstr "Syndikering slået til"
 msgid "Syndication not allowed"
 msgstr "Syndikering ikke tilladt"
 
-#: ./skins/plone_prefs/prefs_syndication_set.py:23
-msgid "Syndication properties updated"
-msgstr "Indstillinger for syndikeret er nu opdateret"
-
 #: ./skins/plone_form_scripts/editSynProperties.cpy:25
 msgid "Syndication properties updated."
 msgstr "Indstillinger for syndikering er opdateret."
@@ -3001,7 +2964,7 @@ msgstr "Begivenheden som udløser denne regel"
 msgid "The file extension to check for"
 msgstr "Filendelsen, som skal kontrolleres"
 
-#: ./skins/plone_scripts/folder_rename.cpy:60
+#: ./skins/plone_scripts/folder_rename.cpy:51
 msgid "The following item(s) could not be renamed: ${items}."
 msgstr "Disse indholdsobjekter kunne ikke omdøbes: ${items}."
 
@@ -3180,7 +3143,7 @@ msgstr "Denne portlet viser et navigationstræ"
 msgid "This portlet displays a queue of documents awaiting review."
 msgstr "Denne portlet viser en kø af dokumenter, der afventer godkendelse"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:291
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:293
 msgid "This portlet displays an RSS feed."
 msgstr "Denne portlet viser et RSS feed"
 
@@ -3215,7 +3178,7 @@ msgstr "Dette brugernavn er optaget. Vælg venligst et andet."
 msgid "Thumbnail view"
 msgstr "Store ikoner"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:202
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:203
 msgid "Time in minutes after which the feed should be reloaded."
 msgstr "Tid i minutter, der skal gå mellem at feedet bliver genindlæst"
 
@@ -3271,7 +3234,7 @@ msgstr "Typer"
 msgid "Types Settings"
 msgstr "Indstillinger for typer"
 
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:196
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/rss.py:197
 msgid "URL of RSS feed"
 msgstr "URL for RSS feed"
 
@@ -3305,10 +3268,6 @@ msgstr "Lås op"
 #: /opt/plone30/src/plone.app.linkintegrity/plone/app/linkintegrity/browser/update.py:24
 msgid "Update cancelled."
 msgstr "Opdatering annulleret"
-
-#: ./skins/plone_prefs/prefs_portal_properties_set.py:18
-msgid "Updated."
-msgstr "Opdateret."
 
 #. Default: "Use folders to put content in categories."
 #. type title: TempFolder
@@ -3473,10 +3432,6 @@ msgstr "Du kan slukke for lande-specifikke sprogvarianter - vælg et andet sprog
 msgid "You cannot have a type as secondary type without having it allowed. You have selected ${types}."
 msgstr "Du kan ikke have en type som sekundær type, uden at den er tilladt. Du har valgt ${types}."
 
-#: ./skins/plone_form_scripts/validate_folder_constraintypes.vpy:19
-msgid "You cannot select a preferred type that is not also in the list of addable types. You have selected ${types}."
-msgstr "Du kan ikke vælge en foretrukken indholdstype, som ikke er i listen over tilladte typer. Du har valgt ${types}."
-
 #: ./skins/plone_form_scripts/validate_emailaddr.vpy:16
 msgid "You entered an invalid email address."
 msgstr "Du har indtastet en ugyldig e-mailadresse"
@@ -3493,11 +3448,11 @@ msgstr "Du bliver nødt til at slå cookies til, før du kan logge på"
 msgid "You must provide content names"
 msgstr "Du skal navngive indholdet"
 
-#: ./skins/plone_scripts/folder_publish.cpy:24
+#: ./skins/plone_scripts/folder_publish.cpy:20
 msgid "You must select a publishing action."
 msgstr "Du skal ændre indholdsobjektets status"
 
-#: ./skins/plone_scripts/folder_publish.cpy:27
+#: ./skins/plone_scripts/folder_publish.cpy:23
 msgid "You must select content to change."
 msgstr "Du skal vælge det indholdsobjekt, du vil redigere."
 
@@ -3512,10 +3467,6 @@ msgstr "Du skal uploade en fil"
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/maintenance.py:27
 msgid "You should pack your database regularly. This number indicates how many days of undo history you want to keep. It is unrelated to versioning, so even if you pack the database, the history of the content changes will be kept. Recommended value is 7 days."
 msgstr "Du bør rydde op i din database regelmæssigt. Dette tal angiver hvor mange dage du vil gemme objekter til fortrydelse. Det har ikke forbindelse til versionering, så selv om du rydder op i databasen, vil historien for indholdsændringerne blive bevaret. Anbefalet værdi er 7 dage."
-
-#: ./skins/plone_form_scripts/content_status_modify.cpy:80
-msgid "Your content's status has been modified."
-msgstr "Status for indholdet er nu ændret."
 
 #: ./skins/plone_form_scripts/validate_link_edit.vpy:21
 msgid "Your link changes have been saved."
@@ -3909,22 +3860,6 @@ msgstr "Du har ikke de fornødne rettigheder til at ændre titlen på dette obje
 msgid "constraintypes_mode_acquire"
 msgstr "Brug indstillinger fra overliggende mappe"
 
-#. <label for="mode_disable" i18n:translate="constraintypes_mode_disable">
-#. Use portal default
-#. </label>
-#. Default: "Use site default"
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:82
-msgid "constraintypes_mode_disable"
-msgstr "Brug sitets prædefinerede indstillinger"
-
-#. Default: "Select manually"
-#. <label for="mode_enable" i18n:translate="constraintypes_mode_enable">
-#. Select manually
-#. </label>
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:95
-msgid "constraintypes_mode_enable"
-msgstr "Vælg manuelt"
-
 #. Default: "Attendees"
 #. <th i18n:translate="contact_attendees">
 #. Attendees
@@ -4032,7 +3967,7 @@ msgstr "${d}/${m} ${Y}"
 #. /
 #. </span>
 #. <span i18n:translate="date_separator">
-#: ./skins/plone_templates/calendar_macros.pt:63
+#: ./skins/plone_templates/calendar_macros.pt:78
 msgid "date_separator"
 msgstr "/"
 
@@ -4087,11 +4022,6 @@ msgstr "Følgende indstillinger, påvirker regler globalt"
 #: ./skins/plone_templates/accessibility-info.pt:56
 msgid "description_access_keys"
 msgstr "Access keys gør det muligt at benytte tastaturet til at navigere på sitet"
-
-#. Default: "In-depth information about access keys can be found at ${wcag}."
-#: ./skins/plone_templates/accessibility-info.pt:58
-msgid "description_access_keys_more_info"
-msgstr "Du kan finde mere information om access keys her: ${wcag} ."
 
 #. Default: "This site uses the ${plone} and has been designed to be completely accessible and usable, working in accordance with the Web Content Accessibility Guidelines (${wcag} v1.0). If there is anything on this site — accessibility or validation related — that is not according to the standard, please contact the ${site_admin}, and not the Plone Team."
 #: ./skins/plone_templates/accessibility-info.pt:47
@@ -4293,15 +4223,6 @@ msgstr "Skift ejerskab for ${type} ved at klikke ${link_to_ownership_form}"
 msgid "description_comment_preview"
 msgstr "Din kommentar vil se således ud, når den er tilføjet."
 
-#. Default: "If you want to contact the site administration, fill in the form below."
-#. <p class="documentDescription" i18n:translate="description_contact_info_feedback">
-#. If you want to contact the site administration, fill in the form
-#. below.
-#. </p>
-#: ./skins/plone_templates/contact-info.cpt:18
-msgid "description_contact_info_feedback"
-msgstr "Hvis du ønsker at kontakte sitets administrator, skal du udfylde denne formular"
-
 #. Default: "Fill in this form to contact the site owners."
 #: ./skins/plone_templates/contact-info.cpt:34
 msgid "description_contact_site_owner"
@@ -4380,16 +4301,6 @@ msgstr "Grupper er samlinger af brugere, der har noget til fælles - ligesom afd
 #: /opt/plone30/products/Archetypes/skins/archetypes/metadata_macros.pt:35
 msgid "description_edit_properties"
 msgstr "Denne side indeholder <em>metadata</em>, der er tilknyttet dette indholdsobjekt. Desuden findes funktioner til indstilling af publicerings- og udløbstidspunkt samt kommentarfunktion."
-
-#. Default: "If your user name and password are correct, the problem may be that your browser is not configured to ${link}."
-#: ./skins/plone_login/login_failed.pt:25
-msgid "description_enable_cookies"
-msgstr "Hvis dit brugernavn og adgangskode er korrekt kan problemet være at din browser ikke er konfigureret til ${link} ."
-
-#. Default: "Note: If you do not remain logged in after leaving this page, it is because you need to ${enable_cookies} in your browser."
-#: ./skins/plone_login/login_success.pt:87
-msgid "description_enable_cookies_for_login"
-msgstr "Bemærk: Hvis du ikke er logget ind efter at have besøgt denne side, er det fordi du skal ${enable_cookies} i din browser."
 
 #. Default: "Note: If you do not remain logged in after leaving this page, it is because you need to enable cookies in your browser."
 #: ./skins/plone_login/login_success.pt:63
@@ -4505,36 +4416,10 @@ msgstr "Det er første gang, du har logget ind hos ${here}."
 msgid "description_logged_in_explain"
 msgstr "Du vil se, at bjælken øverst til højre har ændret sig. Der er nu tilføjet en række personlige links. Disse links vil være der så længe, du er logget ind og for eksempel give dig adgang til at redigere dine indstillinger og indhold i din mappe."
 
-#. Default: "<p>We hope you enjoyed using our services. We look forward to seeing you again.</p> <p>Best Regards from the ${portal_title} team. </p>"
-#: ./skins/plone_login/logged_out.pt:18
-msgid "description_logged_out"
-msgstr "<p>Vi håber, du fandt vores site nyttigt og interessant, og at du vil besøge sitet igen.</p><p>Venlig hilsen ${portal_title}.</p>"
-
-#. Default: "accept cookies"
-#. <a href="enabling_cookies" i18n:translate="description_login_fail_enable_cookies">
-#. accept cookies
-#. </a>
-#: ./skins/plone_login/login_failed.pt:26
-msgid "description_login_fail_enable_cookies"
-msgstr "acceptere cookies"
-
 #. Default: "You can log in again below."
 #: ./skins/plone_login/logged_out.cpt:32
 msgid "description_loginagain"
 msgstr "Du kan logge ind igen nedenfor"
-
-#. Default: "Enter your user name below, click <strong>Send me my password</strong>, and your password will be mailed to you if you gave a valid e-mail address when you registered. If this will not work for you (for example, if you forgot your user name or didn't enter your e-mail address) send a request to ${email_address}."
-#: ./skins/plone_forms/mail_password_form.pt:17
-msgid "description_lost_password"
-msgstr "Indtast dit brugernavn og klik på <strong>Send mig min adgangskode</strong>. Hvis du har angivet en korrekt e-mailadresse, da du registrerede dig, sender vi dig din adgangskode. Hvis dette ikke fungerer (du kan have glemt dit brugernavn eller glemt at udfylde din e-mailadresse), så send en besked til ${email_address}."
-
-#. Default: "Mail setup for Plone."
-#. <p i18n:translate="description_mail_setup">
-#. Mail setup for Plone.
-#. </p>
-#: ./skins/plone_prefs/prefs_mailhost_form.cpt:23
-msgid "description_mail_setup"
-msgstr "Konfigurering af sitets mailopsætning"
 
 #. Default: "The left and right portlet slots will now display only those portlets assigned to this content type. Use the up, down, delete and edit links to manage user portlets. Use the drop-down list to add new portlets."
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:30
@@ -4550,26 +4435,6 @@ msgstr "Portletkolonnerne viser nu kun de portlets, som specifikt er tildelt i d
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:61
 msgid "description_manage_group_portlets"
 msgstr "Venstre og højre portlet spalte viser nu kun de portlets, som er tildelt denne gruppe. rug op, ned, slet og rediger linksene for at redigere portlets. Brug rullemenuen for at tilføje nye portlets"
-
-#. "Home page area that contains the items created and collected by ${member}"
-#. Default: "Home page area that contains the items created and collected by ${member}"
-#: MembershipTool.py
-msgid "description_member_folder"
-msgstr "Personlig mappe for ${member}"
-
-#. <p i18n:translate="description_member_listing">
-#. A list of the visible members.
-#. </p>
-#. Default: "A list of the visible users."
-#: ./skins/plone_deprecated/roster.pt:22
-msgid "description_member_listing"
-msgstr "Oversigt over registrerede brugere, der har valgt at være synlige for andre brugere."
-
-#. Default: "contains personal workarea items for ${member}"
-#. desc
-#: MembershipTool.py
-msgid "description_member_personal_folder"
-msgstr "Personlig mappe for ${member}"
 
 #. <p i18n:translate="description_member_search">
 #. This search form enables you to find members by specifying one or more
@@ -4635,15 +4500,6 @@ msgstr "Dette indholdsobjekt understøtter ikke sammenligning."
 msgid "description_no_items_in_folder"
 msgstr "Denne mappe er tom."
 
-#. Default: "You do not have sufficient privileges to view this page. If you believe you are receiving this message in error, please send an e-mail to"
-#. <p i18n:translate="description_no_privileges">
-#. You do not have sufficient privileges to view this page.  If you believe
-#. you are receiving this message in error, please send an e-mail to
-#. </p>
-#: ./skins/plone_login/insufficient_privileges.pt:12
-msgid "description_no_privileges"
-msgstr "Du har ikke de fornødne rettigheder til at se denne side. Hvis du mener, at denne besked er en fejl, så send venligst en mail til "
-
 #. Default: "You do not have sufficient privileges to view this page. If you believe you are receiving this message in error, contact the ${site_admin}."
 #: ./skins/plone_login/insufficient_privileges.pt:19
 msgid "description_no_privileges_for_page"
@@ -4691,22 +4547,6 @@ msgstr "Bemærk at eller flere af dine PAS brugerplugins ikke tillader listning 
 msgid "description_password_reset_or_registered"
 msgstr "Du vil om kort tid modtage e-mail med et link, der ved aktivering, vil give dig mulighed for at bestemme din adgangskode. Når du modtager denne e-mail, så følg linket for at afslutte din tilmelding. Bemærk, at processen skal fuldføres inden ${time} hours. Hvis du ikke når det kan du via \"Glemt adgangskode\"- linket lave en anmodning om adgangskode.\""
 
-#. <p i18n:translate="description_plone_setup">
-#. Portal-wide settings.
-#. </p>
-#. Default: "Site-wide settings."
-#: ./skins/plone_prefs/reconfig_form.cpt:23
-msgid "description_plone_setup"
-msgstr "Her kan du konfigurere indstillinger for hele sitet."
-
-#. Default: "This is a list of properties you can set for your site."
-#. <p i18n:translate="description_portal_properties">
-#. This is a list of properties you can set for your site.
-#. </p>
-#: ./skins/plone_prefs/prefs_portal_properties_list.pt:23
-msgid "description_portal_properties"
-msgstr "Indstillinger for sitet"
-
 #. Default: "If you wish to block or unblock certain categories of portlets, you can do so using the drop-down boxes."
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:38
 msgid "description_portlets_block_unblock"
@@ -4722,11 +4562,6 @@ msgstr "For at dine produkter skal vises her skal du putte dem i mappen ${locati
 msgid "description_production_mode"
 msgstr "Dit site kører i \"production mode\". Dette er den anbefalede tilstand for et Plone-site i drift, men det betyder at visse ændringer først vil slå igennem når Plone genstartes."
 
-#. Default: "An item's status (also called its review state) determines who can see it. A <strong>private</strong> item can only be viewed by its Owner and by the site management. Only <strong>published</strong> items are available to the general user base and anonymous visitors. To make an item published, it has to be reviewed by one of the site's Reviewers. You can request that an item be reviewed by <strong>submitting it for review</strong>. <br /> Another way to control the visibility of an item is with its <strong>effective date</strong>. An item is not publicly searchable before its effective date, <em>even if its status is <strong>published</strong></em>. This will prevent the item from showing up in portlets (or any other templates fed by catalog queries), although the item will still be available if accessed directly via URL."
-#: ./skins/plone_forms/content_status_history.cpt:48
-msgid "description_publishing_process"
-msgstr "Hvem der kan se indhold afhænger af indholdsobjektets status. <strong>Privat</strong> indhold kan kun ses af Ejer og Administrator. Almindelige brugere og ikke-registrerede (anonyme) besøgende kan kun se det <strong>publicerede</strong> indhold. Før indhold kan publiceres, skal det godkendes af en bruger med ret til at publicere. Du kan sende dit indhold til godkendelse ved at klikke på <strong>send til godkendelse</strong>.<br />En anden måde at styre synligheden af indhold er med <strong>publiceringsdatoen</strong>. Indhold er ikke offentligt tilgængeligt (synligt) før publiceringsdatoen, <em> også selvom status er <strong>Publiceret</strong></em>.</p>"
-
 #. Default: "An item's status (also called its review state) determines who can see it. Another way to control the visibility of an item is with its <strong>Publishing Date</strong>. An item is not publicly searchable before its publishing date. This will prevent the item from showing up in portlets and folder listings, although the item will still be available if accessed directly via its URL."
 #: ./skins/plone_forms/content_status_history.cpt:52
 msgid "description_publishing_process_short"
@@ -4736,11 +4571,6 @@ msgstr "Hvem der kan se indhold afhænger af indholdsobjektets status. <strong>P
 #: ./skins/plone_login/logged_out.cpt:75
 msgid "description_quit_to_log_out"
 msgstr "Du er logget på med HTTP autentifikation. Derfor kan du kun logge ud ved at lukke din browser."
-
-#. Default: "When you receive your password, you can ${login_in_here}."
-#: ./skins/plone_forms/mail_password_response.pt:19
-msgid "description_received_password"
-msgstr "Når du har modtaget din adgangskode kan du ${login_in_here}."
 
 #. Default: "All recently modified items, latest first."
 #. <div class="documentDescription" i18n:translate="description_recently_modified">
@@ -4765,14 +4595,6 @@ msgstr "Alle publicerede indholdsobjekter. Seneste øverst."
 #: ./skins/plone_forms/folder_rename_form.cpt:21
 msgid "description_rename_item"
 msgstr "Alle indholdsobjekter har en ID og en titel, som kan redigeres i nedenstående felter."
-
-#. Default: "Search settings for Site."
-#. <p class="documentDescription" i18n:translate="description_search_setup">
-#. Search settings for Site.
-#. </p>
-#: ./skins/plone_prefs/prefs_search_form.cpt:37
-msgid "description_search_setup"
-msgstr "Søgeindstillinger for sitet."
 
 #. Default: "Search string:"
 #. <span i18n:translate="description_search_string" tal:omit-tag="">
@@ -4809,38 +4631,10 @@ msgstr "Vælg hvilket indholdsobjekt, som skal vises når der klikkes på denne 
 msgid "description_select_default_view"
 msgstr "Vælg hvilken skabelon, der som udgangspunkt skal anvendes til visning af mappens indhold"
 
-#. Default: "Select the type of workflow you want for each different content type."
-#. <p i18n:translate="description_select_workflow">
-#. Select the type of workflow you want for each different content type.
-#. </p>
-#: ./skins/plone_prefs/prefs_workflow_advanced.pt:40
-msgid "description_select_workflow"
-msgstr "Vælg den arbejdsgang (workflow), du ønsker for de forskellige indholdstyper."
-
-#. Default: "Fill in the email address of your friend to send an email with the address."
-#. <div class="documentDescription" i18n:translate="description_send_page_to">
-#. Fill in the email address of your friend to send an email with the address.
-#. </div>
-#: ./skins/plone_forms/sendto_form.cpt:19
-msgid "description_send_page_to"
-msgstr "Indtast e-mailadressen på den person, du vil sende en mail med et link til siden."
-
 #. Default: "Fill in the email address of your friend, and we will send an email that contains a link to this page."
 #: ./skins/plone_forms/sendto_form.cpt:23
 msgid "description_send_page_url_to"
 msgstr "Udfyld feltet med din vens e-mail adresse, og vi vil sende en e-mail som indeholder et link til denne side"
-
-#. <div i18n:translate="description_sent_password">
-#. <p>
-#. Your password has been mailed.
-#. <br/>
-#. It should arrive in your mailbox momentarily.
-#. </p>
-#. </div>
-#. Default: "Your password has been mailed. It should arrive in your mailbox shortly."
-#: ./skins/plone_forms/mail_password_response.pt:12
-msgid "description_sent_password"
-msgstr "Din adgangskode er nu sendt.<br /> Du skulle gerne modtage den om et øjeblik."
 
 #. Default: "You can share the rights for both entire folders and single items. These users have privileges here:"
 #. <p i18n:translate="description_share_folders_items_current_shares">
@@ -4852,7 +4646,7 @@ msgid "description_share_folders_items_current_shares"
 msgstr "Du kan dele rettigheder til denne mappe med andre brugere og/eller grupper. Disse brugere har rettigheder her:"
 
 #. Default: "You can control who can view and edit your item using the list below."
-#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:32
+#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:33
 msgid "description_sharing_control"
 msgstr "Du kan kontrollere hvem der kan se og redigere dit indholdsobjekt ved at bruge listen herunder."
 
@@ -4882,23 +4676,6 @@ msgstr "For at få adgang til denne del af sitet, skal du logge ind med brugerna
 msgid "description_site_admin_see_full_error"
 msgstr "Da du er administrator, kan du ${link_full_error_msg}"
 
-#. Default: "This site encountered an error trying to fulfill your request. The errors were:"
-#. <p i18n:translate="description_site_error">
-#. This site encountered an error trying to fulfill your request.
-#. The errors were:
-#. </p>
-#: ./skins/plone_templates/default_error_message.pt:55
-msgid "description_site_error"
-msgstr "Det opstod en fejl. Fejlen var:"
-
-#. Default: "The item you requested does not exist on this server or cannot be served."
-#. <p i18n:translate="description_site_error_does_not_exist">
-#. The item you requested does not exist on this server or cannot be served.
-#. </p>
-#: ./skins/plone_templates/default_error_message.pt:25
-msgid "description_site_error_does_not_exist"
-msgstr "Det indhold, du forsøgte at få fat i, eksisterer ikke eller kan ikke vises."
-
 #. Default: "Please double check the web address or use the search function on this page to find what you are looking for."
 #. <p i18n:translate="description_site_error_double_check_or_search">
 #. Please double check the web address or use the search function on this page to find what you are looking for.
@@ -4906,11 +4683,6 @@ msgstr "Det indhold, du forsøgte at få fat i, eksisterer ikke eller kan ikke v
 #: ./skins/plone_templates/default_error_message.pt:39
 msgid "description_site_error_double_check_or_search"
 msgstr "Dobbeltcheck adressen, du brugte for at komme hertil, eller brug søgefunktionen for at finde det, du leder efter."
-
-#. Default: "If you know you have the correct web address but are encountering an error, please contact the ${site_admin}."
-#: ./skins/plone_templates/default_error_message.pt:35
-msgid "description_site_error_mail_admin"
-msgstr "Hvis du er helt sikker på, at adressen er rigtig og får en fejl alligevel, så send venligst en e-mail til ${site_admin}."
 
 #. Default: "If you are certain you have the correct web address but are encountering an error, please contact the ${site_admin}."
 #: ./skins/plone_templates/default_error_message.pt:45
@@ -4938,14 +4710,6 @@ msgstr "Sproget, der er valgt for indhold og brugergrænseflade for dette site."
 #: ./skins/plone_templates/sitemap.pt:22
 msgid "description_site_map"
 msgstr "En oversigt over indhold på sitet. Beskrivelsen tilknyttet det enkelte indholdsobjekt vises kun, hvis du holder musen over en titel i et par sekunder."
-
-#. Default: "Settings that affect the portal's look and template usage."
-#. <p i18n:translate="description_skin_setup">
-#. Settings that affect the portal's look and template usage.
-#. </p>
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:23
-msgid "description_skin_setup"
-msgstr "Indstillinger, som påvirker sitets udseende og brug af skabeloner."
 
 #. Default: "If you are still reaching this page after correctly configuring your browser, here are some possible reasons:"
 #. <p i18n:translate="description_still_failure">
@@ -5010,14 +4774,6 @@ msgstr "Syndikering er slået fra."
 #: ./skins/plone_forms/synPropertiesForm.cpt:18
 msgid "description_syndication_properties"
 msgstr "Syndikering gør det mulig at distribuere indholdet i denne mappe, således at indholdet kan synkroniseres med andre sites."
-
-#. Default: "Here you configure some of the settings that affect sitewide default syndication."
-#. <p i18n:translate="description_syndication_setup">
-#. Here you configure some of the settings that affect sitewide default syndication.
-#. </p>
-#: ./skins/plone_prefs/prefs_syndication_form.pt:19
-msgid "description_syndication_setup"
-msgstr "Her kan du sætte standard-indstillinger for hele sitets brug af syndikering."
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
 #: ./skins/plone_deprecated/footer.pt:31
@@ -5087,11 +4843,6 @@ msgstr "Plones kode overholder ${xhtml} 1.0 og ${css} specifikationerne som de d
 msgid "description_wcag_aa_rating"
 msgstr "Plone tilstræber at overholde WCAG-AA tilgængelighedsstandarden (${wcag}). Vi er bekendt med at flere af kriterierne inkluderet i ${wcag2} er åbne for fortolkning, så derfor kan der være enkelte tilfælde, hvor ikke alle mener at vores implementering er korrekt."
 
-#. Default: "This item is in use by someone else and cannot be modified"
-#: ./skins/archetypes/edit_macros.pt:47
-msgid "description_webdav_locked"
-msgstr "Dette indholdsobjekt er i brug hos en anden Bruger og kan ikke blive redigeret"
-
 #. Default: "This item was locked by ${author} ${time} ago."
 #: /opt/plone30/src/plone.locking/plone/locking/browser/info.pt:17
 msgid "description_webdav_locked_by_author_on_time"
@@ -5101,32 +4852,6 @@ msgstr "Dette indholdsobjekt er låst af ${author} ${time} ago."
 #: /opt/plone30/src/plone.locking/plone/locking/browser/info.pt:34
 msgid "description_webdav_locked_steal"
 msgstr "Hvis du er sikker på at dette indholdsobjekt ikke længere er i brug, kan du trykke på objektets ${unlock_button}. Derefter skal det redigeres."
-
-#. Default: "Workflows let you manage the publication process in your site. Plone ships with 4 common workflows:"
-#. <p i18n:translate="description_workflow_common">
-#. Workflows let you manage the publication process in your site. Plone ships with 4 common workflows:
-#. </p>
-#: ./skins/plone_prefs/prefs_workflow_basic.pt:43
-msgid "description_workflow_common"
-msgstr "Med arbejdsgange (workflows) kan du styre publiceringsprocessen på dit site."
-
-#. Default: "if you want to have all the contents immediately available for everyone, but you also want to have a review process you should use this!"
-#. <p i18n:translate="description_workflow_community">
-#. if you want to have all the contents immediately available for everyone,
-#. but you also want to have a review process you should use this!
-#. </p>
-#: ./skins/plone_prefs/prefs_workflow_basic.pt:85
-msgid "description_workflow_community"
-msgstr "Hvis du ønsker, at alt indholdet skal være tilgængelige for alle personer, og du også ønsker at indhold skal godkendes, bør du bruge denne arbejdsgang."
-
-#. Default: "if you want to have all the contents immediately available for everyone, without having any review process you should use this One step publication."
-#. <p i18n:translate="description_workflow_one_step">
-#. if you want to have all the contents immediately available for everyone,
-#. without having any review process you should use this One step publication.
-#. </p>
-#: ./skins/plone_prefs/prefs_workflow_basic.pt:57
-msgid "description_workflow_one_step"
-msgstr "Hvis du ønsker, at alt indhold skal være tilgængeligt for alle, uden at nogen skal godkende indholdet, så skal du anvende denne One step publicering."
 
 #. <p i18n:translate="description_you_are_registered">
 #. You have been registered as a member.
@@ -5175,12 +4900,12 @@ msgid "error_installed_product"
 msgstr "Der var problemer med at installere et eller flere produkterne. Check fejlrapport i kontrolpanelet."
 
 #. Default: "${name} is required, please correct."
-#: /opt/plone30/products/Archetypes/Field.py:349
+#: /opt/plone30/products/Archetypes/Field.py:350
 msgid "error_required"
 msgstr "${name} mangler, ret venligst"
 
 #. Default: "Value ${val} is not allowed for vocabulary of element ${label}."
-#: /opt/plone30/products/Archetypes/Field.py:393
+#: /opt/plone30/products/Archetypes/Field.py:394
 #, fuzzy
 msgid "error_vocabulary"
 msgstr "Værdien ${val} er ikke tilladt"
@@ -5444,14 +5169,6 @@ msgstr "Forhåndsvis kommentar"
 msgid "heading_contact_form"
 msgstr "Kontaktformular"
 
-#. Default: "Contact information"
-#. <h1 i18n:translate="heading_contact_information">
-#. Contact information
-#. </h1>
-#: ./skins/plone_templates/contact-info.cpt:14
-msgid "heading_contact_information"
-msgstr "Kontaktinformation"
-
 #. Default: "Content views"
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-dashboard.pt:33
 msgid "heading_content_views"
@@ -5511,14 +5228,6 @@ msgstr "Rediger indstillinger for gruppen: ${groupname}"
 #: ./skins/plone_content/folder_edit_form.cpt:20
 msgid "heading_edit_item"
 msgstr "Rediger ${itemtype}"
-
-#. Default: "How to Enable Cookies"
-#. <h1 i18n:translate="heading_enable_cookies">
-#. How to Enable Cookies
-#. </h1>
-#: ./skins/plone_login/enabling_cookies.pt:9
-msgid "heading_enable_cookies"
-msgstr "Hvordan slås cookies til"
 
 #. Default: "Error log"
 #. <h1 i18n:translate="heading_error_log">
@@ -5599,30 +5308,6 @@ msgstr "Nuværende medlemmer af gruppen"
 msgid "heading_groups_overview"
 msgstr "Administration af grupper"
 
-#. Default: "Version 4.x"
-#. <h4 i18n:translate="heading_ie_version_4x">
-#. Version 4.x
-#. </h4>
-#: ./skins/plone_login/enabling_cookies.pt:38
-msgid "heading_ie_version_4x"
-msgstr "Fejl der relaterer til brug af Internet Explorer 4.x"
-
-#. Default: "Version 5.x"
-#. <h4 i18n:translate="heading_ie_version_5x">
-#. Version 5.x
-#. </h4>
-#: ./skins/plone_login/enabling_cookies.pt:29
-msgid "heading_ie_version_5x"
-msgstr "Fejl der relaterer til brug af Internet Explorer 5.x"
-
-#. Default: "Version 6.x"
-#. <h4 i18n:translate="heading_ie_version_6x">
-#. Version 6.x
-#. </h4>
-#: ./skins/plone_login/enabling_cookies.pt:20
-msgid "heading_ie_version_6x"
-msgstr "Fejl der relaterer til brug af Internet Explorer 6.x"
-
 #. Default: "Install log for ${productname}"
 #. <h1 i18n:translate="heading_install_log_for">
 #. Install log for
@@ -5639,16 +5324,6 @@ msgstr "Installationsrapport for ${productname}"
 #: ./skins/plone_prefs/prefs_installed_product_overview.pt:115
 msgid "heading_installed_transcript"
 msgstr "Produktets fejlmeddelelser"
-
-#. Default: "Internet Explorer"
-#. <a href="" i18n:translate="heading_internet_explorer" tal:attributes="href string:${request/URL}#ie">
-#. Internet Explorer
-#. </a>
-#. <h3 i18n:translate="heading_internet_explorer" id="ie">
-#. </h3>
-#: ./skins/plone_login/enabling_cookies.pt:12
-msgid "heading_internet_explorer"
-msgstr "Fejl der relaterer til brug af Internet Explorer"
 
 #. Default: "Language"
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/widgets.py:185
@@ -5670,38 +5345,6 @@ msgstr "Kode"
 msgid "heading_language_settings"
 msgstr "Sprogindstillinger"
 
-#. Default: "Link to"
-#. <span i18n:translate="heading_link_to">
-#. Link to
-#. </span>
-#: ./skins/plone_content/favorite_view.pt:14
-msgid "heading_link_to"
-msgstr "Link til"
-
-#. Default: "Lost Password"
-#. <h1 i18n:translate="heading_lost_password">
-#. Lost Password
-#. </h1>
-#: ./skins/plone_forms/mail_password_form.pt:9
-msgid "heading_lost_password"
-msgstr "Glemt adgangskode"
-
-#. Default: "Mail Setup"
-#. <h1 i18n:translate="heading_mail_setup">
-#. Mail Setup
-#. </h1>
-#: ./skins/plone_prefs/prefs_mailhost_form.cpt:14
-msgid "heading_mail_setup"
-msgstr "Indstilling af e-mail"
-
-#. <h1 i18n:translate="heading_member_listing">
-#. Member Listing
-#. </h1>
-#. Default: "User Listing"
-#: ./skins/plone_deprecated/roster.pt:20
-msgid "heading_member_listing"
-msgstr "Administration af brugere"
-
 #. <h1 i18n:translate="heading_member_search">
 #. Search for members
 #. </h1>
@@ -5718,24 +5361,6 @@ msgstr "Søg efter brugere"
 msgid "heading_memberships_current"
 msgstr "Tilknytning til gruppe"
 
-#. Default: "Version 1.x"
-#. <h4 i18n:translate="heading_moz_version_1x">
-#. Version 1.x
-#. </h4>
-#: ./skins/plone_login/enabling_cookies.pt:49
-msgid "heading_moz_version_1x"
-msgstr "Mozilla vers. 1.x"
-
-#. Default: "Mozilla"
-#. <a href="" i18n:translate="heading_mozilla" tal:attributes="href string:${request/URL}#mozilla">
-#. Mozilla
-#. </a>
-#. <h3 i18n:translate="heading_mozilla" id="mozilla">
-#. </h3>
-#: ./skins/plone_login/enabling_cookies.pt:13
-msgid "heading_mozilla"
-msgstr "Mozilla"
-
 #. Default: "Personal Preferences"
 #. <h1 i18n:translate="heading_my_preferences">
 #. Personal Preferences
@@ -5751,32 +5376,6 @@ msgstr "Mine indstillinger"
 #: ./skins/plone_prefs/prefs_navigation_form.cpt:18
 msgid "heading_navigation_setup"
 msgstr "Indstillinger for menunavigationen"
-
-#. Default: "Netscape Navigator"
-#. <a href="" i18n:translate="heading_netscape_navigator" tal:attributes="href string:${request/URL}#netscape">
-#. Netscape Navigator
-#. </a>
-#. <h3 i18n:translate="heading_netscape_navigator" id="netscape">
-#. </h3>
-#: ./skins/plone_login/enabling_cookies.pt:15
-msgid "heading_netscape_navigator"
-msgstr "Netscape Navigator"
-
-#. Default: "Version 4.x"
-#. <h4 i18n:translate="heading_netscape_version_4x">
-#. Version 4.x
-#. </h4>
-#: ./skins/plone_login/enabling_cookies.pt:76
-msgid "heading_netscape_version_4x"
-msgstr "Netscape vers. 4.x"
-
-#. Default: "Version 6.x"
-#. <h4 i18n:translate="heading_netscape_version_6x">
-#. Version 6.x
-#. </h4>
-#: ./skins/plone_login/enabling_cookies.pt:67
-msgid "heading_netscape_version_6x"
-msgstr "Netscape vers. 6.x"
 
 #. Default: "New owner"
 #: ./skins/plone_forms/ownership_form.cpt:47
@@ -5796,16 +5395,6 @@ msgstr "Utilstrækkelige rettigheder"
 msgid "heading_not_found_suggestions"
 msgstr "Du har måske søgt efter..."
 
-#. Default: "Opera"
-#. <a href="" i18n:translate="heading_opera" tal:attributes="href string:${request/URL}#opera">
-#. Opera
-#. </a>
-#. <h3 i18n:translate="heading_opera" id="opera">
-#. </h3>
-#: ./skins/plone_login/enabling_cookies.pt:14
-msgid "heading_opera"
-msgstr "Opera"
-
 #. Default: "Personal tools"
 #. <h5 class="hiddenStructure" i18n:translate="heading_personal_tools">
 #. Personal tools
@@ -5821,22 +5410,6 @@ msgstr "Mine værktøjer"
 #: ./skins/plone_prefs/plone_control_panel.pt:115
 msgid "heading_plone_version_overview"
 msgstr "Oversigt over Plone version"
-
-#. Default: "Properties Panel"
-#. <h1 i18n:translate="heading_portal_properties">
-#. Properties Panel
-#. </h1>
-#: ./skins/plone_prefs/prefs_portal_properties_list.pt:14
-msgid "heading_portal_properties"
-msgstr "Rediger portalens indstillinger"
-
-#. <h1 i18n:translate="heading_portal_setup">
-#. Portal Setup
-#. </h1>
-#. Default: "Site Setup"
-#: ./skins/plone_prefs/reconfig_form.cpt:14
-msgid "heading_portal_setup"
-msgstr "Indstil site"
 
 #. Default: "Portlets assigned here"
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:39
@@ -5932,14 +5505,6 @@ msgstr "Søgeresultater"
 msgid "heading_search_groups"
 msgstr "Søg efter grupper"
 
-#. Default: "Search for new groups"
-#. <h2 i18n:translate="heading_search_newgroups">
-#. Search for new groups
-#. </h2>
-#: ./skins/plone_prefs/prefs_user_memberships.pt:62
-msgid "heading_search_newgroups"
-msgstr "Søg efter nye grupper"
-
 #. Default: "Search for new group members"
 #. <h2 i18n:translate="heading_search_newmembers">
 #. Search for new group members
@@ -5955,14 +5520,6 @@ msgstr "Tilføj brugere til gruppen"
 #: ./skins/plone_deprecated/folder_localrole_form.pt:226
 msgid "heading_search_results"
 msgstr "Søgeresultat"
-
-#. Default: "Search Settings"
-#. <h1 i18n:translate="heading_search_setup">
-#. Search Settings
-#. </h1>
-#: ./skins/plone_prefs/prefs_search_form.cpt:28
-msgid "heading_search_setup"
-msgstr "Indstillinger for søgefunktion"
 
 #. Default: "Search for Users and Groups"
 #. <h1 i18n:translate="heading_search_usersandgroups">
@@ -5996,14 +5553,6 @@ msgstr "Vælg forside"
 msgid "heading_select_default_view"
 msgstr "Vælg forside"
 
-#. Default: "Select workflow"
-#. <h1 i18n:translate="heading_select_workflow">
-#. Select workflow
-#. </h1>
-#: ./skins/plone_prefs/prefs_workflow_advanced.pt:38
-msgid "heading_select_workflow"
-msgstr "Vælg arbejdsgang (workflow)"
-
 #. Default: "Site Administrator has been contacted."
 #: ./skins/plone_templates/send_feedback_confirm.cpt:18
 msgid "heading_send_feedback_confirm"
@@ -6017,26 +5566,10 @@ msgstr "Sitets administrator er blevet kontaktet."
 msgid "heading_send_page_to"
 msgstr "Send denne side"
 
-#. Default: "Password sent"
-#. <h1 i18n:translate="heading_sent_password">
-#. Password sent
-#. </h1>
-#: ./skins/plone_forms/mail_password_response.pt:9
-msgid "heading_sent_password"
-msgstr "Adgangskode sendt"
-
 #. Default: "Restrict what types of content can be added"
 #: ./skins/plone_forms/folder_constraintypes_form.cpt:52
 msgid "heading_set_content_type_restrictions"
 msgstr "Begræns hvilke typer af indhold, der kan tilføjes"
-
-#. Default: "Restrict addable types"
-#. <h1 i18n:translate="heading_set_folder_type_restrictions">
-#. Restrict addable types
-#. </h1>
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:12
-msgid "heading_set_folder_type_restrictions"
-msgstr "Begræns hvilken indholdstyper, der kan tilføjes"
 
 #. Default: "Please log in"
 #. <h1 i18n:translate="heading_sign_in">
@@ -6054,22 +5587,6 @@ msgstr "Log ind"
 msgid "heading_signed_out"
 msgstr "Du er nu logget ud"
 
-#. Default: "Site error"
-#. <h1 i18n:translate="heading_site_error">
-#. Site error
-#. </h1>
-#: ./skins/plone_templates/default_error_message.pt:53
-msgid "heading_site_error"
-msgstr "Fejl på sitet"
-
-#. Default: "Our apologies..."
-#. <h1 i18n:translate="heading_site_error_apologies">
-#. Our apologies...
-#. </h1>
-#: ./skins/plone_templates/default_error_message.pt:23
-msgid "heading_site_error_apologies"
-msgstr "Vi beklager..."
-
 #. Default: "We're sorry, but there seems to be an error…"
 #: ./skins/plone_templates/default_error_message.pt:131
 msgid "heading_site_error_sorry"
@@ -6085,14 +5602,6 @@ msgstr "Sprog for sitet"
 msgid "heading_site_there_seems_to_be_an_error"
 msgstr "Vi beklager, men siden eksisterer ikke"
 
-#. Default: "Skin Setup"
-#. <h1 i18n:translate="heading_skin_setup">
-#. Skin Setup
-#. </h1>
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:14
-msgid "heading_skin_setup"
-msgstr "Indstil udseende"
-
 #. Default: "Syndication Properties"
 #. <h1 i18n:translate="heading_syndication_properties">
 #. Syndication Properties
@@ -6100,14 +5609,6 @@ msgstr "Indstil udseende"
 #: ./skins/plone_forms/synPropertiesForm.cpt:15
 msgid "heading_syndication_properties"
 msgstr "Indstillinger for syndikering"
-
-#. Default: "Sitewide Syndication Setup"
-#. <h1 i18n:translate="heading_syndication_setup">
-#. Sitewide Syndication Setup
-#. </h1>
-#: ./skins/plone_prefs/prefs_syndication_form.pt:15
-msgid "heading_syndication_setup"
-msgstr "Syndikerings-indstillinger for hele sitet"
 
 #. Default: "Type Settings"
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/types.pt:16
@@ -6198,16 +5699,6 @@ msgstr "Zope Server"
 msgid "help_add_restriction_mode"
 msgstr "Vælg hvordan du vil kontrollere hvilken indholdstyper, der kan tilføjes i denne mappe."
 
-#. Default: "Determines if an anonymous user will be allowed to view the authorship information for objects and folders."
-#: ./skins/plone_prefs/reconfig_form.cpt:331
-msgid "help_allowAnonymousViewAbout"
-msgstr "Vælger om en anonym bruger har rettigheder til at aflæse ejerskab af indholdsobjekter."
-
-#. Default: "Users with one of the roles selected here are allowed to add keywords to the site."
-#: ./skins/plone_prefs/reconfig_form.cpt:372
-msgid "help_allowRolesToAddKeywords"
-msgstr "Brugere tilknyttet en af nedenstående roller, har rettigheder til at tilføje nye emneord."
-
 #. Default: "Examples: pt-br (Brazilian Portuguese), en-us (American English) etc."
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/language.py:26
 msgid "help_allow_combined_language_codes"
@@ -6223,7 +5714,7 @@ msgstr "Hvis valgt, kan brugere tilføje kommentarer til dette indholdsobjekt."
 #. A short overview of who you are and what you do. Will be displayed
 #. on the your author page, linked from the items you create.
 #. </div>
-#: ./skins/plone_prefs/personalize_form.cpt:203
+#: ./skins/plone_prefs/personalize_form.cpt:195
 msgid "help_biography"
 msgstr "En kort beskrivelse om hvem du er og hvad du laver vil blive vist på din 'forfatter'-side. Der linkes til denne side fra de indholdsobjekter du har oprettet."
 
@@ -6293,7 +5784,7 @@ msgstr "Indtast adgangskoden igen. Adgangskoderne skal være identiske."
 #. Note that content editors often have specific browser
 #. requirements.
 #. </div>
-#: ./skins/plone_prefs/personalize_form.cpt:249
+#: ./skins/plone_prefs/personalize_form.cpt:241
 msgid "help_content_editor"
 msgstr "Vælg den editor, du vil bruge til at redigere indholdet. Nogle editorer virker kun i en bestemt browsertype."
 
@@ -6307,7 +5798,7 @@ msgstr "Vælg den editor, du vil bruge til at redigere indholdet. Nogle editorer
 #. browser-based editors. This requires an additional application
 #. called ExternalEditor installed client-side.
 #. Ask your administrator for more information if needed.
-#: ./skins/plone_prefs/personalize_form.cpt:292
+#: ./skins/plone_prefs/personalize_form.cpt:284
 msgid "help_content_ext_editor"
 msgstr "Hvis checkboxen er afkrydset vil der på hver side blive vist et ikon du kan benytte hvis du ønsker at redigere en side med andre værktøjer' end de indbyggede. Dette kræver, at et program kaldet ExternalEditor er installeret på din lokale maskine. Spørg din Plone leverandør hvis du ønsker yderligere oplysninger."
 
@@ -6319,14 +5810,6 @@ msgstr "Hvis checkboxen er afkrydset vil der på hver side blive vist et ikon du
 #: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:112
 msgid "help_contributors"
 msgstr "Navne på de personer, der har bidraget til indholdet. Navnet på hver bidragsyder indtastes på en seperat linje."
-
-#. Default: "If checked, the skin cookie will never expire."
-#. <div class="formHelp" i18n:translate="help_cookie_persistence">
-#. If checked, the skin cookie will never expire.
-#. </div>
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:88
-msgid "help_cookie_persistence"
-msgstr "Indstiller en 'cookie', til at valget af sitets udseende er permanent (indtil andet udseende vælges)."
 
 #. <div class="formHelp" i18n:translate="help_copyrights">
 #. The copyrights on this item.
@@ -6393,22 +5876,6 @@ msgstr "Slutdato for den tidsperiode der skal søges indenfor."
 msgid "help_date_range_criteria_start"
 msgstr "Startdato for søgning"
 
-#. Default: "Specify the default language setting for newly created items."
-#. <div class="formHelp" i18n:translate="help_default_language">
-#. Specify the default language setting for newly created items.
-#. </div>
-#: ./skins/plone_prefs/reconfig_form.cpt:141
-msgid "help_default_language"
-msgstr "Angiv, hvilket sprog, indholdet er på."
-
-#. <div class="formHelp" i18n:translate="help_default_skin">
-#. Select the default skin for the Plone portal.
-#. </div>
-#. Default: "Select the default skin for the Plone site."
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:42
-msgid "help_default_skin"
-msgstr "Vælg sitets udseende (Skin)."
-
 #. <div class="formHelp" i18n:translate="help_description">
 #. A brief description of the item.
 #. </div>
@@ -6423,7 +5890,7 @@ msgstr "Indtast en kort beskrivelse af indholdet"
 #. changable when editing items. If Short Names
 #. are not displayed, they will be generated automatically.
 #. </div>
-#: ./skins/plone_prefs/personalize_form.cpt:335
+#: ./skins/plone_prefs/personalize_form.cpt:327
 msgid "help_display_names"
 msgstr "Definerer om ID'er kan omdøbes når indholdsobjekter redigeres. Hvis ID'er ikke er bliver vist vil de blive dannet automatisk."
 
@@ -6503,7 +5970,7 @@ msgid "help_groupname"
 msgstr "Gruppens ID. Kan ikke ændres efter oprettelse."
 
 #. Default: "The URL for your external home page, if you have one."
-#: ./skins/plone_prefs/personalize_form.cpt:227
+#: ./skins/plone_prefs/personalize_form.cpt:219
 msgid "help_homepage"
 msgstr "URL til ekstern hjemmeside, hvis du har en."
 
@@ -6527,11 +5994,6 @@ msgstr "Af de indholdstyper, der er valgt ovenfor, vil nogen være tilgængelige
 msgid "help_include_contained_objects"
 msgstr "Hvis valgt vil alt underliggende indhold og mapper blive publiceret - hvis det er muligt."
 
-#. Default: "By default, a 'Home' link is generated that points to the root of your site.  You can turn this off if you prefer not to display it."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:101
-msgid "help_include_top"
-msgstr "Som standard bliver der genereret et 'forside'-link som peger på roden af dit site. Du kan slå dette fra, hvis du foretrækker, ikke at vise det"
-
 #. Default: "Whether or not to show the top, or 'root', node in the navigation tree. This is affected by the 'Start level' setting."
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:61
 #, fuzzy
@@ -6550,7 +6012,7 @@ msgid "help_inherit_criteria"
 msgstr "Ved afkrydsning, bliver kriterier nedarvet."
 
 #. Default: "By default, permissions from the container of this item are inherited. If you disable this, only the explicitly defined sharing permissions will be valid. In the overview, the symbol ${image_confirm_icon} indicates an inherited value. Similarly, the symbol ${image_link_icon} indicates a global role, which is managed by the site administrator."
-#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:139
+#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:140
 msgid "help_inherit_local_roles"
 msgstr "Som standard, vil rettigheder fra dette objekts mappe blive nedarvet. Hvis du slår dette fra, vil kun de eksplicit definerede rettigheder for deling være gældende. I oversigten indikerer symbolet ${image_confirm_icon} en nedarvet værdi. På samme måde indikere symbolet ${image_link_icon} en global rolle, som bliver tildelt af administrator"
 
@@ -6564,18 +6026,9 @@ msgstr "Hvis valgt vil kun det 'Antal af objekter' vist nedenfor, blive vist. "
 #. Determines if your user name is listed in member searches done on this site.
 #. </div>
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: ./skins/plone_prefs/personalize_form.cpt:314
+#: ./skins/plone_prefs/personalize_form.cpt:306
 msgid "help_listed_search"
 msgstr "Vælg, om du vil være synlig på brugeroversigten."
-
-#. <div class="formHelp" i18n:translate="help_livesearch" id="livesearch_help">
-#. Enable the LiveSearch feature (like Google) to see live
-#. results if the Browser supports the JavaScript.
-#. </div>
-#. Default: "Enables the LiveSearch feature, which shows live results if the browser supports Javascript."
-#: ./skins/plone_prefs/prefs_search_form.cpt:68
-msgid "help_livesearch"
-msgstr "Hvis den aktuelle browser supporterer JavaScripts vil 'LiveSearch' komme med søgeresultater under indtastning af søgeord."
 
 #. <div class="formHelp" i18n:translate="help_locally_allowed_types">
 #. Select the content types that will be addable inside
@@ -6591,7 +6044,7 @@ msgstr "Vælg hvilke indholdstyper, der skal kunne tilføjes i denne mappe."
 #. Your location - either city and country - or in a company setting,
 #. where your office is located.
 #. </div>
-#: ./skins/plone_prefs/personalize_form.cpt:150
+#: ./skins/plone_prefs/personalize_form.cpt:142
 msgid "help_location"
 msgstr "Skriv, hvor du bor eller, hvor din arbejdsplads befinder sig (by og/eller land)"
 
@@ -6612,7 +6065,7 @@ msgstr "Brugernavne er følsomme for brug af STORE og små bogstaver. Kontroller
 #. <div class="formHelp" i18n:translate="help_look">
 #. Appearance of the site.
 #. </div>
-#: ./skins/plone_prefs/personalize_form.cpt:351
+#: ./skins/plone_prefs/personalize_form.cpt:343
 msgid "help_look"
 msgstr "Her kan du vælge sitets udseende."
 
@@ -6629,11 +6082,6 @@ msgstr "Indtast besked, du ønsker at sende."
 #: /opt/plone30/products/Archetypes/ExtensibleMetadata.py:203
 msgid "help_modification_date"
 msgstr "Dato for sidste ændring af dette indholdsobjekt"
-
-#. Default: "Change the English title of the navigation tree portlet. Note that this won't affect the title in other languages."
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:71
-msgid "help_navigation_portlet_title"
-msgstr "Skift den engelske titel på menunavigationsportletten. Bemærk at det ikke vil påvirke titlen ved brug af andre sprog."
 
 #. Default: "You may search for and choose a folder to act as the root of the navigation tree. Leave blank to use the Plone site root."
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:52
@@ -6655,14 +6103,6 @@ msgstr "Navigationstræets titel. Lad den stå tom for at få standardoversætte
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:95
 msgid "help_navigation_tree_depth"
 msgstr "Et heltal, der angiver, hvor mange mappeniveauer under rodmappen, som skal inkluderes i menunavigationens træsstruktur. 0 betyder ingen begrænsning. 1 betyder at kun rodmappen inkluderes."
-
-#. Default: "The content types that should be shown in the navigation tree and the site map."
-#. <div class="formHelp" i18n:translate="help_navigationtypes" id="navigationtypes_help">
-#. The content types that should be shown in the navigation tree and the site map.
-#. </div>
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:239
-msgid "help_navigationtypes"
-msgstr "Indholdstyper, der skal inkluderes i menunavigation og sitemap"
 
 #. Default: "Enter your new password. Minimum 5 characters."
 #. <div class="formHelp" i18n:translate="help_new_password">
@@ -6705,16 +6145,6 @@ msgstr "Angiv venligst din OpenID URL nedenfor, for at logge ind"
 msgid "help_password_creation"
 msgstr "Indtast din nye adgangskode. Minimum 5 tegn. Bemærk: Brug kun tegnene a-z, A-Z, 0-9, _ (understreg), - (bindestreg) og ingen mellemrum."
 
-#. Default: "Determines if users can choose their initial password. If the password is selected by the user, it's easier for the user to create a bogus account. If this is a concern, choose \"Generate\"."
-#. <div class="formHelp" i18n:translate="help_password_policy">
-#. Determines if users can choose their initial password. If the password
-#. is selected by the user, it's easier for the user to create
-#. a bogus account. If this is a concern, choose &quot;Generate&quot;.
-#. </div>
-#: ./skins/plone_prefs/reconfig_form.cpt:167
-msgid "help_password_policy"
-msgstr "Angiver, hvorvidt brugere selv kan vælge deres adgangskode."
-
 #. Default: "If you have forgotten your password, ${click_here}."
 #: ./skins/plone_login/failsafe_login_form.cpt:122
 msgid "help_password_retrieval"
@@ -6725,41 +6155,6 @@ msgstr "Glemt adgangskode ?, ${click_here} ."
 #: widget description of ReferenceBrowserWidget for label Folders
 msgid "help_path_criteria_value"
 msgstr "Mapper, der skal søges i."
-
-#. <div class="formHelp" i18n:translate="help_portal_description">
-#. The portal description is available in syndicated
-#. content and elsewhere. Keep it brief.
-#. </div>
-#. Default: "The site description is available in syndicated content and elsewhere. Keep it brief."
-#: ./skins/plone_prefs/reconfig_form.cpt:71
-msgid "help_portal_description"
-msgstr "Denne beskrivelse anvendes i syndikeret indhold. Beskrivelsen bør være så kort som mulig."
-
-#. <div class="formHelp" i18n:translate="help_portal_from_address">
-#. Plone generates e-mail using this address
-#. as the e-mail return address.
-#. </div>
-#. Default: "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address on the site-wide contact form."
-#: ./skins/plone_prefs/reconfig_form.cpt:119
-msgid "help_portal_from_address"
-msgstr "Når Plone genererer en e-mail, anvendes denne adresse som afsenderadresse."
-
-#. Default: "Plone generates e-mail using this name as the e-mail sender."
-#. <div class="formHelp" i18n:translate="help_portal_from_name">
-#. Plone generates e-mail using this name
-#. as the e-mail sender.
-#. </div>
-#: ./skins/plone_prefs/reconfig_form.cpt:92
-msgid "help_portal_from_name"
-msgstr "Når Plone genererer en e-mail, anvendes dette navn som afsender."
-
-#. <div class="formHelp" i18n:translate="help_portal_title">
-#. The title of your Plone portal.
-#. </div>
-#. Default: "The title of your Plone site."
-#: ./skins/plone_prefs/reconfig_form.cpt:49
-msgid "help_portal_title"
-msgstr "Dette er titlen på dit Plone-site."
 
 #. of MultiSelectionWidget, for label: Value
 #. Default: "One of the available content types."
@@ -6773,7 +6168,7 @@ msgstr "En af de installerede indholdstyper"
 #. select a picture of yourself. Recommended image size is 75
 #. pixels wide by 100 pixels tall.
 #. </div>
-#: ./skins/plone_prefs/personalize_form.cpt:384
+#: ./skins/plone_prefs/personalize_form.cpt:376
 msgid "help_portrait"
 msgstr "Hvis du vil tilføje et portrætbillede til din brugerkonto, så klik på 'Gennemse/Browse' og vælg et billede. Anbefalet størrelse er 75 pixels i bredden og 100 pixels i højden."
 
@@ -6781,7 +6176,7 @@ msgstr "Hvis du vil tilføje et portrætbillede til din brugerkonto, så klik p�
 #. <div class="formHelp" i18n:translate="help_preferred_language">
 #. Your preferred language.
 #. </div>
-#: ./skins/plone_prefs/personalize_form.cpt:175
+#: ./skins/plone_prefs/personalize_form.cpt:167
 msgid "help_preferred_language"
 msgstr "Dit fortrukne sprog"
 
@@ -6811,14 +6206,6 @@ msgstr "Hvis du afkrydser \"Husk mit brugernavn\", vil der på din computer bliv
 msgid "help_search_author"
 msgstr "Viser indholdsobjekter oprettet af en udvalgt bruger."
 
-#. <div class="formHelp" i18n:translate="help_search_before_specified_time">
-#. Return members who have NOT logged in since the time specified above.
-#. </div>
-#. Default: "Return users who have NOT logged in since the time specified above."
-#: ./skins/plone_forms/member_search_form.pt:111
-msgid "help_search_before_specified_time"
-msgstr "Vis hvilken brugere der IKKE har været logget ind siden det angivne tidspunkt."
-
 #. Default: "Return items matching some or all of these Categories. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
 #: ./skins/plone_forms/search_form.pt:73
 msgid "help_search_categories"
@@ -6842,14 +6229,6 @@ msgstr "Vis kun brugere med e-mailadresser, som indeholder den indtastede værdi
 msgid "help_search_fullname"
 msgstr "Søger blandt brugere, hvis fulde navn matcher indtastet værdi"
 
-#. <div class="formHelp" i18n:translate="help_search_group">
-#. Return members in the selected group.
-#. </div>
-#. Default: "Find users in the selected group."
-#: ./skins/plone_forms/member_search_form.pt:84
-msgid "help_search_group"
-msgstr "Vis brugere i den valgte gruppe"
-
 #. Default: "Return items of a specific type."
 #. <div class="formHelp" i18n:translate="help_search_item_type">
 #. Return items of a specific type.
@@ -6857,30 +6236,6 @@ msgstr "Vis brugere i den valgte gruppe"
 #: ./skins/plone_forms/search_form.pt:166
 msgid "help_search_item_type"
 msgstr "Returnere kun indholdsobjekter oprettet med de valgte indholdstyper."
-
-#. Default: "Return items matching some or all of these keywords. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
-#. <div class="formHelp" i18n:translate="help_search_keywords">
-#. Return items matching some or all of these keywords.
-#. Multiple words may be found by pressing
-#. <strong>
-#. Ctrl
-#. </strong>
-#. (or
-#. Apple
-#. key on Mac) while clicking the
-#. keywords.
-#. </div>
-#: ./skins/plone_forms/search_form.pt:69
-msgid "help_search_keywords"
-msgstr "Søger i indholdsobjekter, der har et eller flere af de valgte emneord tilknyttet. Du kan vælge flere ord ved at holde 'Ctrl'-knappen nede, mens du med venstre museklik vælger flere emneord."
-
-#. <div class="formHelp" i18n:translate="help_search_last_logged_in">
-#. Return members who have logged in since yesterday, last week, etc.
-#. </div>
-#. Default: "Return users who have logged in since yesterday, last week, etc."
-#: ./skins/plone_forms/member_search_form.pt:81
-msgid "help_search_last_logged_in"
-msgstr "Vis kun brugere, som har været logget ind i den valgte tidsperiode."
 
 #. <div class="formHelp" i18n:translate="help_search_name">
 #. Return members with login names containing this value.
@@ -6917,7 +6272,7 @@ msgstr "Hvis du har rettigheder til at publicere indhold (redaktør/administrato
 #. Return members with all of the selected roles.
 #. </div>
 #. Default: "Find users with all of the selected roles."
-#: ./skins/plone_forms/member_search_form.pt:105
+#: ./skins/plone_forms/member_search_form.pt:83
 msgid "help_search_roles"
 msgstr "Find brugere med de valgte roller."
 
@@ -6933,17 +6288,6 @@ msgstr "Ord i dette tekstfelt anvendes til en simpel tekstsøgning. Man søger e
 #: ./skins/plone_forms/search_form.pt:59
 msgid "help_search_title"
 msgstr "Vis de indholdsobjekter, hvis titel indeholder den indtastede værdi."
-
-#. Default: "Define the types that should searched when you use the searchbox. Note that if new content types are installed, they will be enabled for search by default unless explicitly turned off here or by the relevant installer."
-#. <div class="formHelp" i18n:translate="help_searchtypes" id="seachtypes_help">
-#. Define the types that should searched when you use the searchbox.
-#. Note that if new content types are installed, they will be enabled
-#. for search by default unless explicitly turned off here or by the
-#. relevant installer.
-#. </div>
-#: ./skins/plone_prefs/prefs_search_form.cpt:85
-msgid "help_searchtypes"
-msgstr "Angiv hvilken indholdstyper, der skal inkluderes i søgeresultat når søgeboksen anvendes. Bemærk at nye indholdstyper automatisk er søgbare, med mindre at andet er defineret i forbindelse med installationen af disse."
 
 #. Default: "Select what content type you wish to create."
 #: /opt/plone30/products/Archetypes/skins/archetypes/widgets/addable_support.pt:45
@@ -6993,35 +6337,13 @@ msgstr "Indtast e-mailadresse"
 msgid "help_sender_fullname"
 msgstr "Indtast fuldt navn"
 
-#. <div class="formHelp" i18n:translate="help_setup_ext_editor">
-#. Determines if the external editor feature is enabled.
-#. This feature requires a special client-side application installed.
-#. </div>
-#. Default: "Determines if the external editor feature is enabled. This feature requires a special client-side application installed. The users also have to enable this in their preferences."
-#: ./skins/plone_prefs/reconfig_form.cpt:248
-msgid "help_setup_ext_editor"
-msgstr "Vælg, om du vil benytte funktionen External Editor. External Editor gør det muligt at redigere indhold i dine favoritprogrammer, f.eks. Photoshop og Dreamweaver. Det kræver en installation af et program på den computer, der benyttes, og installation af et ekstra produkt på Ploneserveren."
-
-#. Default: "Determines if your Plone is optimized for small or large sites. In environments with a lot of users and/or groups it can be very slow or impossible to build a list all users or groups. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for users/groups instead of listing all of them."
-#: ./skins/plone_prefs/reconfig_form.cpt:205
-msgid "help_setup_many_users"
-msgstr "Vælg om dit Plone site skal optimeres til en stor mængde indhold og mange brugere. På sites med mange brugere og/eller grupper kan det være meget tungt eller ligefrem umuligt at lave en liste over alle brugere eller grupper. Denne funktion optimere brugerfladen, ved at give dig mulighed for at søge efter brugere/grupper i stedet for at liste dem alle."
-
-#. <div class="formHelp" i18n:translate="help_setup_visible_ids">
-#. Display and allow users to edit the &quot;Short name&quot; content identifiers, which form the URL of content.
-#. </div>
-#. Default: "Display and allow users to edit the \"Short name\" content identifiers, which form the URL part of a content item's address. Once enabled, users will then be able to enable this option in their preferences."
-#: ./skins/plone_prefs/reconfig_form.cpt:290
-msgid "help_setup_visible_ids"
-msgstr "Gør det muligt brugere at se og redigere indholdsobjekters \"ID'er\". ID'er er en del indholdsobjektets URL. Brugere skal også tilvælge funktionen under 'Personlige indstillinger'. "
-
 #. Default: "go here"
-#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:25
+#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:26
 msgid "help_sharing_go_here"
 msgstr "Gå hertil"
 
 #. Default: "You are adjusting the sharing privileges for a default view in a container. To adjust them for the entire container, ${go_here}."
-#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:25
+#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:26
 msgid "help_sharing_page_default_page"
 msgstr "Du er ved at justere på delerettigheder for en standardvisning i en mappe. for at justere dem for hele mappen, ${go_here}."
 
@@ -7043,15 +6365,6 @@ msgstr "Indtast en kort ID. ID'en bliver en del af indholdsobjektets web-adresse
 #: ./skins/plone_prefs/prefs_navigation_form.cpt:112
 msgid "help_sitemaptypes"
 msgstr "De indholdstyper, der skal vises i sitemap"
-
-#. Default: "If checked, each user can select a skin from his preferences panel."
-#. <div class="formHelp" i18n:translate="help_skin_flexibility">
-#. If checked, each user can select a skin from his
-#. preferences panel.
-#. </div>
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:70
-msgid "help_skin_flexibility"
-msgstr "Funktion, der gør det muligt for den enkelte bruger at vælge udseende (såfremt flere forskellige 'skins' er installeret)."
 
 #. Default: "The password for the ESMTP user account."
 #. <div class="formHelp" i18n:translate="help_smtp_pass">
@@ -7111,23 +6424,6 @@ msgstr "Indtast emne for meddelelse"
 msgid "help_subobjects"
 msgstr "Hvis denne funktion er valgt, ændres også ejerskab til alle indholdsobjekter, der er placeret i de underliggende mapper."
 
-#. Default: "Update base date (dummy description)."
-#. <div class="formHelp" i18n:translate="help_syndication_base">
-#. Update base date (dummy description).
-#. </div>
-#: ./skins/plone_prefs/prefs_syndication_form.pt:84
-msgid "help_syndication_base"
-msgstr "Dato, der definerer udgangspunktet for, hvornår RSS-kanalen bliver opdateret."
-
-#. Default: "Controls the frequency of the updates. For example, if you want it to update every second week, select \"weekly\" above, and \"2\" here."
-#. <div class="formHelp" i18n:translate="help_syndication_frequency">
-#. Controls the frequency of the updates. For example, if you want it to
-#. update every second week, select &quot;weekly&quot; above, and &quot;2&quot; here.
-#. </div>
-#: ./skins/plone_prefs/prefs_syndication_form.pt:60
-msgid "help_syndication_frequency"
-msgstr "Bestemmer hvor tit RSS-kanalens indhold opdateres."
-
 #. Default: "Maximum number of items that will be syndicated."
 #. <div class="formHelp" i18n:translate="help_syndication_max_items">
 #. Maximum number of items that will be syndicated.
@@ -7135,14 +6431,6 @@ msgstr "Bestemmer hvor tit RSS-kanalens indhold opdateres."
 #: ./skins/plone_forms/synPropertiesForm.cpt:160
 msgid "help_syndication_max_items"
 msgstr "Det maksimale antal indholdselementer i syndikeringen (RSS-kanalen)"
-
-#. Default: "Max Syndicated Items."
-#. <div class="formHelp" i18n:translate="help_syndication_maxitems">
-#. Max Syndicated Items.
-#. </div>
-#: ./skins/plone_prefs/prefs_syndication_form.pt:107
-msgid "help_syndication_maxitems"
-msgstr "Det maksimale antal indholdobjekter i syndikeringen"
 
 #. Default: "This is the date the updater starts counting from. So if you want to update weekly every Tuesday, make sure this starts on a Tuesday."
 #. <div class="formHelp" i18n:translate="help_syndication_update_base">
@@ -7303,14 +6591,6 @@ msgstr "Tilføj"
 msgid "label_add_comment"
 msgstr "Tilføj kommentar"
 
-#. Default: "Select an item to add"
-#. <span class="hiddenLabel" i18n:translate="label_add_item">
-#. Select an item to add
-#. </span>
-#: ./skins/plone_templates/folder_contents.pt:87
-msgid "label_add_item"
-msgstr "Vælg indholdsobjekt, som skal tilføjes"
-
 #. Default: "Add New Group"
 #. <input class="standalone add" i18n:attributes="value label_add_new_group;" name="form.button.AddGroup" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add New Group"/>
 #: ./skins/plone_prefs/prefs_groups_overview.cpt:92
@@ -7348,14 +6628,6 @@ msgstr "Tilføj portlet"
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:14
 msgid "label_add_portlet_ellipsis"
 msgstr "Tilføj portlet"
-
-#. Default: "Mode"
-#. <label for="enableAddRestrictions" i18n:translate="label_add_restriction_mode">
-#. Mode
-#. </label>
-#: ./skins/plone_forms/folder_constraintypes_form.cpt:49
-msgid "label_add_restriction_mode"
-msgstr "Modus"
 
 #. <span i18n:translate="label_add_to_ical">
 #. iCal (Mac OS X)
@@ -7444,16 +6716,6 @@ msgstr "Alle ${number} indholdsobjekter i denne mappe er valgt. ${link_clear_sel
 msgid "label_all_items_on_page_selected"
 msgstr "Alle ${number} indholdsobjekter på denne side er valgt. ${link_select_items}"
 
-#. Default: "Allow Anonymous Users To View About Information"
-#: ./skins/plone_prefs/reconfig_form.cpt:329
-msgid "label_allowAnonymousViewAbout"
-msgstr "Tillad anonyme brugere at se 'om'-information"
-
-#. Default: "Roles allowed to add keywords"
-#: ./skins/plone_prefs/reconfig_form.cpt:370
-msgid "label_allowRolesToAddKeywords"
-msgstr "Roller med rettigheder til at tilføje emneord"
-
 #. Default: "Show country-specific language variants"
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/language.py:24
 msgid "label_allow_combined_language_codes"
@@ -7471,14 +6733,6 @@ msgstr "Tillad kommentarer"
 #: widget label of SelectionWidget - description ""
 msgid "label_allow_discussion"
 msgstr "Tillad kommentarer"
-
-#. <label for="validate_email_off" i18n:translate="label_allow_members_to_create_password">
-#. Allow members to select their initial password
-#. </label>
-#. Default: "Allow users to select their initial password"
-#: ./skins/plone_prefs/reconfig_form.cpt:195
-msgid "label_allow_members_to_create_password"
-msgstr "Tillad brugere selv at vælge deres adgangskode"
 
 #. Default: "an anonymous user"
 #: /opt/plone30/src/plone.locking/plone/locking/browser/locking.py:88
@@ -7500,14 +6754,6 @@ msgstr "Anonym bruger"
 #: ./skins/plone_forms/search_form.pt:220
 msgid "label_any_author"
 msgstr "Alle forfattere"
-
-#. Default: "Usable in any browser"
-#. <a class="colophonIcon" href="http://plone.org/browsersupport" i18n:attributes="title title_any_browser;" i18n:translate="label_any_browser" tal:attributes="style string:background-image: url(${portal_url}/colophon_anybrowser.png);;" title="This Plone site is usable in any web browser.">
-#. Usable in any browser
-#. </a>
-#: ./skins/plone_templates/colophon.pt:76
-msgid "label_any_browser"
-msgstr "Kan bruges med alle webbrowsere"
 
 #. Default: "Apply Changes"
 #. <input class="context" i18n:attributes="value label_apply_changes;" name="form.button.Modify" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="groups" type="submit" value="Apply Changes"/>
@@ -7551,7 +6797,7 @@ msgid "label_assign_roles_to_users_groups"
 msgstr "Tildel valgte rolle(r) til valgte bruger(e)/gruppe(r)"
 
 #. Default: "at"
-#: /opt/plone30/products/Archetypes/Field.py:1837
+#: /opt/plone30/products/Archetypes/Field.py:1839
 msgid "label_at"
 msgstr "i"
 
@@ -7603,19 +6849,11 @@ msgstr "Tilbage til fejlrapport"
 msgid "label_back_to_site"
 msgstr "Tilbage til sitet"
 
-#. Default: "Not logged in since specified time"
-#. <label i18n:translate="label_before_specified_time">
-#. Not logged in since specified time
-#. </label>
-#: ./skins/plone_forms/member_search_form.pt:108
-msgid "label_before_specified_time"
-msgstr "Har ikke været logget ind i den specificerede periode"
-
 #. Default: "Biography"
 #. <label for="description" i18n:translate="label_biography">
 #. Biography
 #. </label>
-#: ./skins/plone_prefs/personalize_form.cpt:201
+#: ./skins/plone_prefs/personalize_form.cpt:193
 msgid "label_biography"
 msgstr "Biografi"
 
@@ -7775,14 +7013,6 @@ msgstr "Vælg et indholdsobjekt"
 msgid "label_choose_item"
 msgstr "Vælg forside for denne mappe"
 
-#. Default: "Choose Language"
-#. <option i18n:translate="label_choose_language" value="">
-#. Choose Language
-#. </option>
-#: ./skins/plone_prefs/reconfig_form.cpt:152
-msgid "label_choose_language"
-msgstr "Vælg sprog"
-
 #. Default: "Display"
 #. <a href="#" i18n:attributes="title title_choose_default_view;" i18n:translate="label_choose_template" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
 #. Display
@@ -7852,14 +7082,6 @@ msgstr "den"
 msgid "label_comments"
 msgstr "Kommentarer"
 
-#. Default: "Community workflow"
-#. <label for="one_step_workflow" i18n:translate="label_community_workflow">
-#. Community workflow
-#. </label>
-#: ./skins/plone_prefs/prefs_workflow_basic.pt:84
-msgid "label_community_workflow"
-msgstr "Arbejdsgang til fællesskaber (communities)"
-
 #. Default: "Compare"
 #. <input class="context" i18n:attributes="value label_compare;" name="manage_historicalComparison:method" type="submit" value="Compare"/>
 #: ./skins/plone_forms/history_form.pt:45
@@ -7916,7 +7138,7 @@ msgstr "indeholdende"
 #. <label for="wysiwyg_editor" i18n:translate="label_content_editor">
 #. Content editor
 #. </label>
-#: ./skins/plone_prefs/personalize_form.cpt:247
+#: ./skins/plone_prefs/personalize_form.cpt:239
 msgid "label_content_editor"
 msgstr "Redigeringsmetode"
 
@@ -7974,14 +7196,6 @@ msgstr "Bidragsydere"
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:55
 msgid "label_convert_portlets"
 msgstr "Konverter portlets"
-
-#. Default: "Make skin cookie persist indefinitely"
-#. <label for="cb_cookie" i18n:translate="label_cookie_persistence">
-#. Make skin cookie persist indefinitely
-#. </label>
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:86
-msgid "label_cookie_persistence"
-msgstr "Gør valg af udseende permanent, indtil andet vælges."
 
 #. Default: "Copy exceptions to the event log"
 #. <label for="cb_copy_to_zlog" i18n:translate="label_copy_exceptions">
@@ -8111,22 +7325,6 @@ msgstr "Slutdato"
 msgid "label_date_range_criteria_start"
 msgstr "Startdato"
 
-#. Default: "Default Language"
-#. <label i18n:translate="label_default_language">
-#. Default Language
-#. </label>
-#: ./skins/plone_prefs/reconfig_form.cpt:138
-msgid "label_default_language"
-msgstr "Standardsprog"
-
-#. Default: "Default skin"
-#. <label i18n:translate="label_default_skin">
-#. Default skin
-#. </label>
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:39
-msgid "label_default_skin"
-msgstr "Standardudseende"
-
 #. Default: "(Default)"
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/types.pt:48
 msgid "label_default_type"
@@ -8146,7 +7344,7 @@ msgstr "Slet"
 #. <label for="pdelete" i18n:translate="label_delete_portrait">
 #. Delete Portrait
 #. </label>
-#: ./skins/plone_prefs/personalize_form.cpt:405
+#: ./skins/plone_prefs/personalize_form.cpt:397
 msgid "label_delete_portrait"
 msgstr "Slet portrætbillede"
 
@@ -8228,7 +7426,7 @@ msgstr "Gå hertil"
 #. <label for="cb_invisible_ids" i18n:translate="label_edit_short_names">
 #. Allow editing of Short Names
 #. </label>
-#: ./skins/plone_prefs/personalize_form.cpt:332
+#: ./skins/plone_prefs/personalize_form.cpt:324
 msgid "label_edit_short_names"
 msgstr "Tillad redigering af ID'er"
 
@@ -8285,22 +7483,6 @@ msgstr "Slå syndikering til"
 #: ./skins/plone_prefs/prefs_installed_product_overview.pt:31
 msgid "label_error"
 msgstr "Fejl"
-
-#. Default: "Error Message"
-#. <dt i18n:translate="label_error_message">
-#. Error Message
-#. </dt>
-#: ./skins/plone_templates/default_error_message.pt:70
-msgid "label_error_message"
-msgstr "Fejlmeddelelse"
-
-#. Default: "Request made at"
-#. <dt i18n:translate="label_error_time">
-#. Request made at
-#. </dt>
-#: ./skins/plone_templates/default_error_message.pt:89
-msgid "label_error_time"
-msgstr "Tidspunkt for fejlmeddelse"
 
 #. Default: "Error Type"
 #. <dt i18n:translate="label_error_type">
@@ -8394,11 +7576,6 @@ msgstr "Ekskluder fra menunavigation"
 msgid "label_existing_categories"
 msgstr "Eksisterende kategorier"
 
-#. Default: "Existing keywords"
-#: ./skins/archetypes/widgets/keyword.pt:45
-msgid "label_existing_keywords"
-msgstr "Eksisterende emneord"
-
 #. Default: "Expiration Date"
 #. <label i18n:translate="label_expiration_date">
 #. Expiration Date
@@ -8412,7 +7589,7 @@ msgstr "Udløbsdato"
 #. <label for="cb_ext_editor" i18n:translate="label_ext_editor">
 #. Enable external editing
 #. </label>
-#: ./skins/plone_prefs/personalize_form.cpt:290
+#: ./skins/plone_prefs/personalize_form.cpt:282
 msgid "label_ext_editor"
 msgstr "Tænd for External Editor"
 
@@ -8467,14 +7644,6 @@ msgstr "Fornavn og efternavn"
 #: ./skins/plone_forms/member_search_form.pt:61
 msgid "label_fullname"
 msgstr "Fulde navn"
-
-#. <label for="validate_email_on" i18n:translate="label_generate_and_email_passwords">
-#. Generate and e-mail member's initial password
-#. </label>
-#. Default: "Generate and e-mail user's initial password"
-#: ./skins/plone_prefs/reconfig_form.cpt:182
-msgid "label_generate_and_email_passwords"
-msgstr "Opret brugernes adgangskode automatisk og send den med e-mail. Adgangskoden kan senere ændres af brugeren."
 
 #. Default: "Automatically generate tabs"
 #. <label i18n:translate="label_generated_tabs_enable">
@@ -8589,7 +7758,7 @@ msgid "label_home"
 msgstr "Forside"
 
 #. Default: "Home page"
-#: ./skins/plone_prefs/personalize_form.cpt:225
+#: ./skins/plone_prefs/personalize_form.cpt:217
 msgid "label_homepage"
 msgstr "Egen forside"
 
@@ -8666,11 +7835,6 @@ msgstr "Fortrukne indholdstyper"
 msgid "label_include_contained_objects"
 msgstr "Medtag indeholdte objekter"
 
-#. Default: "Include top level navigation link"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:96
-msgid "label_include_top_enable"
-msgstr "Medtag link til topniveau"
-
 #. Default: "Include top node"
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:60
 msgid "label_include_top_node"
@@ -8685,7 +7849,7 @@ msgid "label_inherit_criteria"
 msgstr "Skal den Dynamiske liste indstillingerne (kriterier) nedarves?"
 
 #. Default: "Inherit permissions from higher levels"
-#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:128
+#: /opt/plone30/src/plone.app.workflow/plone/app/workflow/browser/sharing.pt:129
 msgid "label_inherit_local_roles"
 msgstr "Nedarv rettigheder fra højere niveauer"
 
@@ -8746,17 +7910,9 @@ msgid "label_language_settings_link"
 msgstr "Sprogindstillinger"
 
 #. Default: "Languages"
-#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/language.py:17
+#: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/language.py:18
 msgid "label_languages"
 msgstr "Sprog"
-
-#. Default: "Last logged in"
-#. <label i18n:translate="label_last_logged_in">
-#. Last logged in
-#. </label>
-#: ./skins/plone_forms/member_search_form.pt:78
-msgid "label_last_logged_in"
-msgstr "Sidst logget ind"
 
 # ATTopic
 #. Default: "Limit Search Results"
@@ -8769,17 +7925,9 @@ msgstr "Begræns søgeresultat"
 #. <label for="cb_listed" i18n:translate="label_listed_status">
 #. Listed in searches
 #. </label>
-#: ./skins/plone_prefs/personalize_form.cpt:312
+#: ./skins/plone_prefs/personalize_form.cpt:304
 msgid "label_listed_status"
 msgstr "Status på brugeroversigt"
-
-#. Default: "Enable LiveSearch"
-#. <label for="enable_livesearch" i18n:translate="label_livesearch_enable">
-#. Enable LiveSearch
-#. </label>
-#: ./skins/plone_prefs/prefs_search_form.cpt:65
-msgid "label_livesearch_enable"
-msgstr "Tænd for 'LiveSearch'"
 
 #. Default: "Local Role(s)"
 #. <th i18n:translate="label_local_roles" nowrap="nowrap">
@@ -8815,7 +7963,7 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Roller, der skal tildeles til valgte bruger(e)/grupper(r)"
 
 #. Default: "Location"
-#: ./skins/plone_prefs/personalize_form.cpt:148
+#: ./skins/plone_prefs/personalize_form.cpt:140
 msgid "label_location"
 msgstr "Sted"
 
@@ -8831,11 +7979,6 @@ msgstr "Låst"
 #: ./skins/plone_deprecated/portlet_login.pt:79
 msgid "label_log_in"
 msgstr "Log ind"
-
-#. Default: "log in here"
-#: ./skins/plone_forms/mail_password_response.pt:22
-msgid "label_log_in_here"
-msgstr "Log ind her"
 
 #. Default: "Continue"
 #: ./skins/plone_login/login_success.pt:44
@@ -8873,7 +8016,7 @@ msgstr "Log ind for at kommentere"
 #. <label for="portal_skin" i18n:translate="label_look">
 #. Look
 #. </label>
-#: ./skins/plone_prefs/personalize_form.cpt:349
+#: ./skins/plone_prefs/personalize_form.cpt:341
 msgid "label_look"
 msgstr "Udseende"
 
@@ -8923,14 +8066,6 @@ msgstr "Firefox, Mozilla and Netscape 7+ (Mac OS X)"
 msgid "label_mozilla_win"
 msgstr "Firefox, Mozilla and Netscape 7+ (Windows)"
 
-#. Default: "My user name is"
-#. <label for="userid" i18n:translate="label_my_user_name_is">
-#. My user name is
-#. </label>
-#: ./skins/plone_forms/mail_password_form.pt:30
-msgid "label_my_user_name_is"
-msgstr "Mit brugernavn er"
-
 #. Default: "Name"
 #. <th i18n:translate="label_name">
 #. Name
@@ -8942,25 +8077,10 @@ msgstr "Mit brugernavn er"
 msgid "label_name"
 msgstr "Navn"
 
-#. Default: "Navigation tree portlet title"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:66
-msgid "label_navigation_portlet_title"
-msgstr "Titel til menunavigationsportlet"
-
-#. Default: "Navigation tree root"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:112
-msgid "label_navigation_root"
-msgstr "Menunavigationens rodmappe"
-
 #. Default: "Root node"
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:51
 msgid "label_navigation_root_path"
 msgstr "Sti til rod for sitet"
-
-#. Default: "Navigation tree start level"
-#: ./skins/plone_prefs/prefs_navigation_form.cpt:162
-msgid "label_navigation_start_level"
-msgstr "Menunavigationens startniveau"
 
 #. Default: "Start level"
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/portlets/navigation.py:79
@@ -9013,11 +8133,6 @@ msgstr "Nye kategorier"
 #: ./skins/plone_forms/search_form.pt:136
 msgid "label_new_items_since"
 msgstr "Nye indholdsobjekter siden"
-
-#. Default: "New keywords"
-#: ./skins/archetypes/widgets/keyword.pt:25
-msgid "label_new_keywords"
-msgstr "Nye emneord"
 
 #. Default: "New owner"
 #. <label i18n:translate="label_new_owner">
@@ -9087,12 +8202,12 @@ msgid "label_no_prefs_panels_available"
 msgstr "Der er ingen indstillinger tilgængelige"
 
 #. Default: "<no reference>"
-#: /opt/plone30/products/Archetypes/Field.py:1884
+#: /opt/plone30/products/Archetypes/Field.py:1886
 msgid "label_no_reference"
 msgstr "<ingen reference>"
 
 #. Default: "No matching results found."
-#: ./skins/plone_scripts/livesearch_reply.py:81
+#: ./skins/plone_scripts/livesearch_reply.py:82
 msgid "label_no_results_found"
 msgstr "Ingen resultater"
 
@@ -9120,14 +8235,6 @@ msgstr "Antal fejlmeddelser, der skal gemmes."
 msgid "label_ok"
 msgstr "Ok"
 
-#. Default: "One step publication workflow"
-#. <label for="one_step_workflow" i18n:translate="label_one_step_workflow">
-#. One step publication workflow
-#. </label>
-#: ./skins/plone_prefs/prefs_workflow_basic.pt:56
-msgid "label_one_step_workflow"
-msgstr "Simpel arbejdsgang med to stadier (Privat/Publiceret)"
-
 #. Default: "Log in"
 #: /opt/plone30/src/plone.app.openid/plone/app/openid/portlets/login.pt:40
 msgid "label_openid_log_in"
@@ -9147,7 +8254,7 @@ msgstr "eller"
 #. </option>
 #. <option i18n:translate="label_ordinary_content_editor" tal:attributes="value editor;                                             selected python:test(editor==wysiwyg_editor, 'selected', None);" tal:condition="python:editor == 'None'" value="None">
 #. Basic HTML textarea editor (works in all browsers)
-#: ./skins/plone_prefs/personalize_form.cpt:267
+#: ./skins/plone_prefs/personalize_form.cpt:259
 msgid "label_ordinary_content_editor"
 msgstr "Redigering af indhold via formularer (virker i alle browsere)"
 
@@ -9181,14 +8288,6 @@ msgstr "Adgangskode"
 #: ./skins/plone_login/join_form.cpt:217
 msgid "label_password_change_mail"
 msgstr "En URL vil blive dannet og e-mailet til dig; følg linket for at komme til en side hvor du kan ændre din adgangskode og afslutte registreringen."
-
-#. Default: "Password policy"
-#. <label i18n:translate="label_password_policy">
-#. Password policy
-#. </label>
-#: ./skins/plone_prefs/reconfig_form.cpt:165
-msgid "label_password_policy"
-msgstr "Regler for adgangskoder"
 
 #. Default: "Search Sub-Folders"
 #. of BooleanWidget, description:
@@ -9224,30 +8323,6 @@ msgstr "Plone<sup>&reg;</sup> CMS - Open Source Content Management System"
 msgid "label_plone_foundation"
 msgstr "Plone Foundation"
 
-#. Default: "Portal description"
-#. <label i18n:translate="label_portal_description">
-#. Portal description
-#. </label>
-#: ./skins/plone_prefs/reconfig_form.cpt:68
-msgid "label_portal_description"
-msgstr "Beskrivelse af sitet"
-
-#. <label i18n:translate="label_portal_from_address">
-#. Portal 'From' address
-#. </label>
-#. Default: "Site 'From' address"
-#: ./skins/plone_prefs/reconfig_form.cpt:113
-msgid "label_portal_from_address"
-msgstr "Sitets 'afsenderadresse'"
-
-#. <label i18n:translate="label_portal_from_name">
-#. Portal 'From' name
-#. </label>
-#. Default: "Site 'From' name"
-#: ./skins/plone_prefs/reconfig_form.cpt:89
-msgid "label_portal_from_name"
-msgstr "Sitets 'fra'-navn"
-
 #. Default: "Portal Objects"
 #. <dt i18n:translate="label_portal_objects">
 #. Portal Objects
@@ -9255,14 +8330,6 @@ msgstr "Sitets 'fra'-navn"
 #: ./skins/plone_prefs/prefs_installed_product_overview.pt:78
 msgid "label_portal_objects"
 msgstr "Site objekter"
-
-#. <label i18n:translate="label_portal_title">
-#. Portal title
-#. </label>
-#. Default: "Site title"
-#: ./skins/plone_prefs/reconfig_form.cpt:42
-msgid "label_portal_title"
-msgstr "Sitets titel"
 
 #. Default: "Value"
 #. of MultiSelectionWidget, description: One of the registered portal types.
@@ -9297,7 +8364,7 @@ msgstr "Parent portlets"
 #. <label for="portrait" i18n:translate="label_portrait">
 #. Portrait
 #. </label>
-#: ./skins/plone_prefs/personalize_form.cpt:373
+#: ./skins/plone_prefs/personalize_form.cpt:365
 msgid "label_portrait"
 msgstr "Portrætbillede"
 
@@ -9452,7 +8519,7 @@ msgstr "Revisionsstatus"
 #. <label i18n:translate="label_roles">
 #. Role(s)
 #. </label>
-#: ./skins/plone_forms/member_search_form.pt:102
+#: ./skins/plone_forms/member_search_form.pt:80
 msgid "label_roles"
 msgstr "Rolle(r):"
 
@@ -9554,14 +8621,6 @@ msgstr "Søgekriterier"
 msgid "label_search_text"
 msgstr "Søgetekst"
 
-#. Default: "Define the types to be searched"
-#. <label i18n:translate="label_search_types">
-#. Define the types to be searched
-#. </label>
-#: ./skins/plone_prefs/prefs_search_form.cpt:84
-msgid "label_search_types"
-msgstr "Angiv hvilken indholdstyper, der skal medtages i søgning"
-
 #. Default: "only in current section"
 #: ./skins/plone_deprecated/global_searchbox.pt:44
 msgid "label_searchbox_currentfolder_only"
@@ -9579,15 +8638,6 @@ msgstr "Søgeresultater"
 #: /opt/plone30/src/plone.app.layout/plone/app/layout/viewlets/colophon.pt:42
 msgid "label_section_508"
 msgstr "Paragraf 508"
-
-#. Default: "Select"
-#. <option i18n:translate="label_select" value="current">
-#. Select
-#. </option>
-#. <option i18n:translate="label_select" value="Select">
-#: ./skins/plone_prefs/prefs_workflow_basic.pt:66
-msgid "label_select"
-msgstr "Vælg"
 
 #. Default: "Select: ${label_link_all}"
 #: /opt/plone30/src/plone.app.content/plone/app/content/browser/foldercontents_table.pt:32
@@ -9662,12 +8712,6 @@ msgstr "Send"
 msgid "label_send_from"
 msgstr "Fra"
 
-#. Default: "Send me my password"
-#. <input class="context" i18n:attributes="value label_send_my_password;" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Send me my password"/>
-#: ./skins/plone_forms/mail_password_form.pt:45
-msgid "label_send_my_password"
-msgstr "Send mig min adgangskode"
-
 #. Default: "Send to"
 #. <label for="send_to_address" i18n:translate="label_send_to_mail">
 #. Send to
@@ -9692,27 +8736,6 @@ msgstr "E-mailadresse"
 msgid "label_sender_fullname"
 msgstr "ID"
 
-#. Default: "Enable External Editor Feature"
-#. <label i18n:translate="label_setup_ext_editor">
-#. Enable External Editor Feature
-#. </label>
-#: ./skins/plone_prefs/reconfig_form.cpt:246
-msgid "label_setup_ext_editor"
-msgstr "Anvend External Editor"
-
-#. Default: "Many users/groups"
-#: ./skins/plone_prefs/reconfig_form.cpt:203
-msgid "label_setup_many_users"
-msgstr "Mange brugere/grupper"
-
-#. Default: "Show \"Short Name\" on Content?"
-#. <label i18n:translate="label_setup_visible_ids">
-#. Show &quot;Short Name&quot; on Content?
-#. </label>
-#: ./skins/plone_prefs/reconfig_form.cpt:286
-msgid "label_setup_visible_ids"
-msgstr "Vis indholdsobjekters ID"
-
 #. Default: "Short Name"
 #. <label for="id" i18n:translate="label_short_name">
 #. Short Name
@@ -9727,7 +8750,7 @@ msgid "label_show"
 msgstr "Vis"
 
 #. Default: "Show all…"
-#: ./skins/plone_scripts/livesearch_reply.py:83
+#: ./skins/plone_scripts/livesearch_reply.py:84
 msgid "label_show_all"
 msgstr "Vis alle..."
 
@@ -9780,14 +8803,6 @@ msgstr "Sitemap"
 #: ./skins/plone_content/image_view.pt:48
 msgid "label_size"
 msgstr "Størrelse:"
-
-#. Default: "Allow users to select skins"
-#. <label for="cb_allow_any" i18n:translate="label_skin_flexibility">
-#. Allow users to select skins
-#. </label>
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:68
-msgid "label_skin_flexibility"
-msgstr "Tillad brugere at vælge udseende"
 
 #. Default: "Skins"
 #. <dt i18n:translate="label_skins">
@@ -9888,14 +8903,6 @@ msgstr "Emne"
 msgid "label_subobjects"
 msgstr "Underliggende indholdsobjekter"
 
-#. Default: "Update base"
-#. <label i18n:translate="label_syndication_base">
-#. Update base
-#. </label>
-#: ./skins/plone_prefs/prefs_syndication_form.pt:81
-msgid "label_syndication_base"
-msgstr "Udgangspunkt for opdatering"
-
 #. Default: "Channel Description"
 #. <dt i18n:translate="label_syndication_channel_description">
 #. Channel Description
@@ -9912,28 +8919,12 @@ msgstr "Beskrivelse af syndikeringskanal"
 msgid "label_syndication_channel_title"
 msgstr "Syndikeringskanalens titel"
 
-#. Default: "Update frequency"
-#. <label i18n:translate="label_syndication_frequency">
-#. Update frequency
-#. </label>
-#: ./skins/plone_prefs/prefs_syndication_form.pt:57
-msgid "label_syndication_frequency"
-msgstr "Opdateringsfrekvens"
-
 #. Default: "Maximum Items"
 #. <label i18n:translate="label_syndication_max_items">
 #. Maximum Items
 #. </label>
 #: ./skins/plone_forms/synPropertiesForm.cpt:153
 msgid "label_syndication_max_items"
-msgstr "Det maksimale antal indholdsobjekter i syndikeringen"
-
-#. Default: "Max Syndicated Items"
-#. <label i18n:translate="label_syndication_maxitems">
-#. Max Syndicated Items
-#. </label>
-#: ./skins/plone_prefs/prefs_syndication_form.pt:104
-msgid "label_syndication_maxitems"
 msgstr "Det maksimale antal indholdsobjekter i syndikeringen"
 
 #. Default: "Update Base"
@@ -10076,14 +9067,6 @@ msgstr "Til gruppeoversigt"
 msgid "label_up_to_plone_setup"
 msgstr "Til kontrolpanel"
 
-#. Default: "Up to My Preferences"
-#. <a class="link-parent" href="" i18n:translate="label_up_to_preferences" tal:attributes="href string: $portal_url/plone_memberprefs_panel">
-#. Up to My Preferences
-#. </a>
-#: ./skins/plone_prefs/password_form.pt:17
-msgid "label_up_to_preferences"
-msgstr "Til personlige indstillinger"
-
 #. Default: "Up to Users Overview"
 #. <a class="link-parent" href="" i18n:translate="label_up_to_usersoverview" tal:attributes="href string: $portal_url/prefs_users_overview">
 #. Up to Users Overview
@@ -10194,22 +9177,6 @@ msgstr "Brugere og grupper"
 msgid "label_view"
 msgstr "Visning"
 
-#. <span i18n:translate="label_visible_members">
-#. Visible Members
-#. </span>
-#. Default: "Visible Users"
-#: ./skins/plone_deprecated/roster.pt:31
-msgid "label_visible_members"
-msgstr "Synlige brugere"
-
-#. Default: "W3C Accessibility Guidelines"
-#. <a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey" i18n:translate="label_w3c_accessibility_guide">
-#. W3C Accessibility Guidelines
-#. </a>
-#: ./skins/plone_templates/accessibility-info.pt:59
-msgid "label_w3c_accessibility_guide"
-msgstr "W3C's retningslinjer for tilgængelighed"
-
 #. Default: "WCAG"
 #. <a class="colophonIcon" href="http://www.w3.org/WAI/WCAG1AA-Conformance" i18n:attributes="title title_wcag;" i18n:translate="label_wcag" tal:attributes="style string:background-image: url(${portal_url}/colophon_wai-aa.gif);;" title="This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.">
 #. WCAG
@@ -10227,31 +9194,6 @@ msgstr "Hvad"
 #: /opt/plone30/products/Archetypes/skins/archetypes/widgets/addable_support.pt:60
 msgid "label_where"
 msgstr "Hvor"
-
-#. Default: "Advanced"
-#. <a href="prefs_workflow_advanced" i18n:translate="label_workflow_advanced">
-#. Advanced
-#. </a>
-#: ./skins/plone_prefs/prefs_workflow_advanced.pt:23
-msgid "label_workflow_advanced"
-msgstr "Avanceret"
-
-#. Default: "Default Workflow Configuration"
-#. <a href="prefs_workflow_basic" i18n:translate="label_workflow_default">
-#. Default Workflow Configuration
-#. </a>
-#. Default workflow configuration
-#: ./skins/plone_prefs/prefs_workflow_advanced.pt:19
-msgid "label_workflow_default"
-msgstr "Oprindelig indstillinger for arbejdsgange"
-
-#. Default: "You can also change the starting state of all documents:"
-#. <span i18n:translate="label_workflow_default_state">
-#. You can also change the starting state of all documents:
-#. </span>
-#: ./skins/plone_prefs/prefs_workflow_basic.pt:60
-msgid "label_workflow_default_state"
-msgstr "Du kan også ændre den status, som alle indholdsobjekter er tildelt ved oprettelss:"
 
 #. Default: "Workflows"
 #. <dt i18n:translate="label_workflows">
@@ -10354,14 +9296,6 @@ msgstr "Tilgængelige brugere"
 msgid "legend_change_ownership"
 msgstr "Skift ejerskab"
 
-#. Default: "Content types"
-#. <legend i18n:translate="legend_contenttypes">
-#. Content types
-#. </legend>
-#: ./skins/plone_prefs/prefs_workflow_advanced.pt:51
-msgid "legend_contenttypes"
-msgstr "Indholdstyper"
-
 #. Default: "Feedback for author"
 #. <legend i18n:translate="legend_feedback_for_author">
 #. Feedback for author
@@ -10377,14 +9311,6 @@ msgstr "Skriv til forfatter"
 #: ./skins/plone_templates/contact-info.cpt:47
 msgid "legend_feedback_for_contact_info"
 msgstr "Kommentar"
-
-#. Default: "Group"
-#. <label i18n:translate="legend_group">
-#. Group
-#. </label>
-#: ./skins/plone_forms/member_search_form.pt:81
-msgid "legend_group"
-msgstr "Gruppe"
 
 #. Default: "Products available for install"
 #. <legend i18n:translate="legend_install_products_available">
@@ -10402,16 +9328,8 @@ msgstr "Produkter klar til installation."
 msgid "legend_installed_products"
 msgstr "Installerede produkter"
 
-#. Default: "Items Available"
-#. <legend i18n:translate="legend_items_available">
-#. Items Available
-#. </legend>
-#: ./skins/plone_forms/folder_factories.pt:42
-msgid "legend_items_available"
-msgstr "Tilgængelige indholdstyper"
-
 #. Default: "LiveSearch &#8595;"
-#: ./skins/plone_scripts/livesearch_reply.py:80
+#: ./skins/plone_scripts/livesearch_reply.py:81
 msgid "legend_livesearch"
 msgstr "LiveSearch &#8595;"
 
@@ -10438,14 +9356,6 @@ msgstr "Liste over fejlmeddelser (seneste øverst)."
 #: ./skins/plone_prefs/prefs_error_log_form.pt:47
 msgid "legend_lognoexceptions"
 msgstr "Ingen fejlmeddelser"
-
-#. Default: "Outgoing Mail Server (SMTP) Details"
-#. <legend i18n:translate="legend_mailhost_details">
-#. Outgoing Mail Server (SMTP) Details
-#. </legend>
-#: ./skins/plone_prefs/prefs_mailhost_form.cpt:34
-msgid "legend_mailhost_details"
-msgstr "Informationer om mail-host"
 
 #. <legend i18n:translate="legend_member_search_criteria">
 #. Member Search Criteria
@@ -10494,38 +9404,6 @@ msgstr "Information om adgangskode"
 msgid "legend_personal_details"
 msgstr "Information om bruger"
 
-#. Default: "Plone Details"
-#. <legend i18n:translate="legend_plone_details">
-#. Plone Details
-#. </legend>
-#: ./skins/plone_prefs/prefs_portal_properties.pt:39
-msgid "legend_plone_details"
-msgstr "Indstilling af Plone"
-
-#. <legend i18n:translate="legend_portalskin_details">
-#. PortalSkin Details
-#. </legend>
-#. Default: "Site Skin Details"
-#: ./skins/plone_prefs/prefs_portalskin_form.cpt:35
-msgid "legend_portalskin_details"
-msgstr "Information om sitets udseende"
-
-#. Default: "Publishing Details"
-#. <legend i18n:translate="legend_publishing_details">
-#. Publishing Details
-#. </legend>
-#: ./skins/plone_forms/content_status_history.cpt:76
-msgid "legend_publishing_details"
-msgstr "Information om publicering"
-
-#. Default: "Search details"
-#. <legend i18n:translate="legend_search_details">
-#. Search details
-#. </legend>
-#: ./skins/plone_prefs/prefs_search_form.cpt:48
-msgid "legend_search_details"
-msgstr "Indstillinger for søgning"
-
 #. Default: "Search for possible new owner"
 #: ./skins/plone_forms/ownership_form.cpt:161
 msgid "legend_search_owners"
@@ -10554,14 +9432,6 @@ msgstr "Avancerede indstillinger"
 #: ./skins/plone_forms/synPropertiesForm.cpt:79
 msgid "legend_syndication_details"
 msgstr "Information om syndikering"
-
-#. <legend i18n:translate="legend_user_details">
-#. Member Details
-#. </legend>
-#. Default: "User Details"
-#: ./skins/plone_forms/mail_password_form.pt:27
-msgid "legend_user_details"
-msgstr "Information om bruger"
 
 #. Default: "The link address is:"
 #. <span i18n:translate="link_address">
@@ -10857,42 +9727,6 @@ msgstr "Når cookie verificering er slået fra, er det ikke muligt at cookie-bas
 msgid "login_portlet_disabled"
 msgstr "Cookie verificering er slået fra. Login portlet ikke tilgængelig."
 
-#. Default: "Password: ${password} Request made by IP ${ip_address} at ${timestamp}"
-#. <div i18n:domain="plone" i18n:translate="mailtemplate_membership_body" tal:omit-tag="">
-#. Password:
-#. ${password}
-#. Request made by IP
-#. ${ip_address}
-#. at
-#. ${timestamp}
-#. </div>
-#: ./skins/plone_templates/mail_password_template.pt:14
-msgid "mailtemplate_membership_body"
-msgstr "Adgangskode: ${password} Forespørgelse lavet af IP ${ip_address} klokken ${timestamp}"
-
-#. Default: "Membership reminder"
-#. <span i18n:domain="plone" i18n:translate="mailtemplate_membership_reminder" tal:omit-tag="">
-#. Membership reminder
-#. </span>
-#: ./skins/plone_templates/mail_password_template.pt:8
-msgid "mailtemplate_membership_reminder"
-msgstr "Påmindelse om medlemskab"
-
-# ${log_in_here} is missing in the translated string
-#. Default: "You have been registered as a member of ${portal_name}, which allows you to personalize your view of the website and participate in the community. Description: ${description} Visit us at ${portal_url} Your login name and password are: Login name: ${username} Password: ${password} Log in here: ${log_in_here}"
-#: ./skins/plone_templates/registered_notify_template.pt:26
-#, fuzzy
-msgid "mailtemplate_registered_body"
-msgstr "Du er blevet registreret som medlem af ${portal_name}, hvilket giver dig adgang til at bidrage med indhold. Beskrivelse: ${description} Besøg sitet ${portal_url} Dit brugernavn og adgangskode er: Brugernavn : ${username} Adgangskode : ${password}"
-
-#. Default: "Portal Membership Information"
-#. <span i18n:domain="plone" i18n:translate="mailtemplate_registered_portal_membership_info" tal:omit-tag="">
-#. Portal Membership Information
-#. </span>
-#: ./skins/plone_templates/registered_notify_template.pt:5
-msgid "mailtemplate_registered_portal_membership_info"
-msgstr "Information om medlemsskab"
-
 #. Default: "Manage portlets"
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/column.pt:9
 msgid "manage_portlets_link"
@@ -11067,15 +9901,6 @@ msgstr "september"
 msgid "month_sep_abbr"
 msgstr "sep"
 
-#. Default: "No"
-#. <label for="cb_noext_editor" i18n:translate="no">
-#. No
-#. </label>
-#. <label for="cb_novisible_ids" i18n:translate="no">
-#: ./skins/plone_prefs/reconfig_form.cpt:238
-msgid "no"
-msgstr "Nej"
-
 #. Default: "This item does not have any body text, click the edit tab to change it."
 #. <p class="discreet" i18n:translate="no_body_text" tal:condition="python: not text and is_editable">
 #. This item does not have any body text, click the edit tab to change it.
@@ -11111,17 +9936,6 @@ msgstr "(Der er endnu ikke uploadet et billede)"
 msgid "no_join_without_configured_mail"
 msgstr "Der er endnu ikke konfigureret emailindstillinger på dette site. Der kan ikke oprettes en konto, før email er blevet konfigureret"
 
-#. <p i18n:translate="no_members_found">
-#. No members were found using your
-#. <strong>
-#. Search Criteria
-#. </strong>
-#. </p>
-#. Default: "No members were found using your search criteria."
-#: ./skins/plone_forms/folder_localrole_form.pt:242
-msgid "no_members_found"
-msgstr "Ingen brugere matchede dine søgekriterier."
-
 #. Default: "No events have been posted."
 #. <p i18n:translate="no_new_events" tal:condition="not: results">
 #. No events have been posted.
@@ -11129,14 +9943,6 @@ msgstr "Ingen brugere matchede dine søgekriterier."
 #: ./skins/plone_templates/events_listing.pt:116
 msgid "no_new_events"
 msgstr "Ingen begivenheder oprettet"
-
-#. Default: "No news has been posted."
-#. <p i18n:translate="no_new_news" tal:condition="not: results">
-#. No news has been posted.
-#. </p>
-#: ./skins/plone_templates/news_listing.pt:104
-msgid "no_new_news"
-msgstr "Ingen nye indholdsobjekter publiceret."
 
 #. Default: "No users were found using your search criteria."
 #: ./skins/plone_deprecated/folder_localrole_form.pt:230
@@ -11298,14 +10104,6 @@ msgstr "Gå tilbage"
 #: /opt/plone30/src/plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:50
 msgid "rules-enable-globally"
 msgstr "Slå til globalt"
-
-#. Default: "Any Group"
-#. <option i18n:translate="search_any_group" value="">
-#. Any Group
-#. </option>
-#: ./skins/plone_forms/member_search_form.pt:89
-msgid "search_any_group"
-msgstr "Alle grupper"
 
 #. <p i18n:translate="search_results_advanced">
 #. Did you not find what you were looking for? Try the
@@ -11488,14 +10286,6 @@ msgstr "Forside"
 msgid "text_broken_product"
 msgstr "Produktet er ikke rigtigt installeret"
 
-#. Default: "This site conforms to the following standards:"
-#. <p class="discreet" i18n:translate="text_conforms_to_standards">
-#. This site conforms to the following standards:
-#. </p>
-#: ./skins/plone_templates/colophon.pt:33
-msgid "text_conforms_to_standards"
-msgstr "Dette site overholder følgende standarder"
-
 #. Default: "Contributors: ${name}"
 #: ./skins/plone_deprecated/document_byline.pt:53
 msgid "text_contributors"
@@ -11513,14 +10303,6 @@ msgstr "af ${creator} , opdateret: ${date}"
 #: ./skins/plone_prefs/prefs_error_log_showEntry.pt:36
 msgid "text_errlog_notfound"
 msgstr "Den pågældende meddelse i rapporten blev ikke fundet."
-
-#. Default: "404 Not Found"
-#. <code i18n:translate="text_error_not_found">
-#. 404 Not Found
-#. </code>
-#: ./skins/plone_templates/default_error_message.pt:45
-msgid "text_error_not_found"
-msgstr "Fejl 404 - Siden blev ikke fundet"
 
 #. Default: "There was an error while rendering the portlet."
 #: /opt/plone30/src/plone.app.portlets/plone/app/portlets/browser/templates/error_message.pt:12
@@ -11549,186 +10331,10 @@ msgstr "Du har allerede klikket på 'indsend'-knappen. Ãnsker du at indsende 
 msgid "text_group"
 msgstr "Gruppe"
 
-#. Default: "Click View on the menu at the top of your browser and select Internet Options"
-#. <li i18n:translate="text_ie4_cookies_step1">
-#. Click View on the menu at the top of your browser and select Internet Options
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:41
-msgid "text_ie4_cookies_step1"
-msgstr "Klik Vis i menuen på din browser og vælg Indstillinger"
-
-#. Default: "Click the Security tab at the top of the screen"
-#. <li i18n:translate="text_ie4_cookies_step2">
-#. Click the Security tab at the top of the screen
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:42
-msgid "text_ie4_cookies_step2"
-msgstr "Klik på fanebladet Sikkerhed"
-
-#. Default: "Click Custom Level and scroll down to the Cookies section"
-#. <li i18n:translate="text_ie4_cookies_step3">
-#. Click Custom Level and scroll down to the Cookies section
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:43
-msgid "text_ie4_cookies_step3"
-msgstr "Klik Custom indstillinger"
-
-#. Default: "Select \"Always accept cookies\" or \"Prompt before accepting cookies\" and click OK"
-#. <li i18n:translate="text_ie4_cookies_step4">
-#. Select &quot;Always accept cookies&quot; or &quot;Prompt before accepting cookies&quot; and click OK
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:44
-msgid "text_ie4_cookies_step4"
-msgstr "Klik \"Tillad altid cookies\" eller \"Spørg før cookies installeres\" og klik OK"
-
-#. Default: "Click Tools on the menu at the top of your browser and select Internet Options"
-#. <li i18n:translate="text_ie5_cookies_step1">
-#. Click Tools on the menu at the top of your browser and select Internet Options
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:32
-msgid "text_ie5_cookies_step1"
-msgstr "Klik på menupunktet Funktioner i toppen af browseren og vælg Internetindstillinger."
-
-#. Default: "Click the Security tab at the top of the screen"
-#. <li i18n:translate="text_ie5_cookies_step2">
-#. Click the Security tab at the top of the screen
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:33
-msgid "text_ie5_cookies_step2"
-msgstr "Klik på fanebladet Sikkerhed"
-
-#. Default: "Click Custom Level and scroll down to the Cookies section"
-#. <li i18n:translate="text_ie5_cookies_step3">
-#. Click Custom Level and scroll down to the Cookies section
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:34
-msgid "text_ie5_cookies_step3"
-msgstr "Klik på brugerdefineret niveau og rul ned til Vedvarende brugerdata."
-
-#. Default: "Set \"Allow per-session cookies\" to Enable and click OK"
-#. <li i18n:translate="text_ie5_cookies_step4">
-#. Set &quot;Allow per-session cookies&quot; to Enable and click OK
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:35
-msgid "text_ie5_cookies_step4"
-msgstr "Vælg Aktiver og klik OK."
-
-#. Default: "Click Tools on the menu at the top of your browser and select Internet Options"
-#. <li i18n:translate="text_ie6_cookies_step1">
-#. Click Tools on the menu at the top of your browser and select Internet Options
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:23
-msgid "text_ie6_cookies_step1"
-msgstr "Klik på menupunktet Funktioner i toppen af browseren og vælg Internetindstillinger."
-
-#. Default: "Click the Privacy tab at the top of the screen"
-#. <li i18n:translate="text_ie6_cookies_step2">
-#. Click the Privacy tab at the top of the screen
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:24
-msgid "text_ie6_cookies_step2"
-msgstr "Klik på fanebladet Beskyttelse af personlige oplysninger."
-
-#. Default: "Move the slider to Medium and click OK"
-#. <li i18n:translate="text_ie6_cookies_step3">
-#. Move the slider to Medium and click OK
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:25
-msgid "text_ie6_cookies_step3"
-msgstr "Kør skyder til Medium og klik OK."
-
 #. Default: "Location: ${location}"
 #: ./skins/plone_content/author.cpt:98
 msgid "text_location"
 msgstr "Sted: ${location}"
-
-#. Default: "Click Edit on the menu at the top of your browser and select Preferences"
-#. <li i18n:translate="text_moz_cookies_step1">
-#. Click Edit on the menu at the top of your browser and select Preferences
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:52
-msgid "text_moz_cookies_step1"
-msgstr "Klik på Rediger i menu i toppen af din browser og vælg indstillinger"
-
-#. Default: "Find \"Privacy & Security\" in the menu on the left. If there is a [+] to the left of \"Privacy & Security\", click it."
-#. <li i18n:translate="text_moz_cookies_step2">
-#. Find &quot;Privacy &amp; Security&quot; in the menu on the left.  If there is a [+] to the left of &quot;Privacy &amp; Security&quot;, click it.
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:53
-msgid "text_moz_cookies_step2"
-msgstr "Find \"Privatliv & Sikkerhed\" i menuen til venstre. Hvis der er et [+] til venstre for \"Privatliv & Sikkerhed\", så klik på det."
-
-#. Default: "Select \"Cookies\"."
-#. <li i18n:translate="text_moz_cookies_step3">
-#. Select &quot;Cookies&quot;.
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:54
-msgid "text_moz_cookies_step3"
-msgstr "Vælg \"Cookies\"."
-
-#. Default: "Select \"Enable cookies for the originating web site only\" or \"Enable all cookies\" and click \"OK\""
-#. <li i18n:translate="text_moz_cookies_step4">
-#. Select &quot;Enable cookies for the originating web site only&quot; or &quot;Enable all cookies&quot; and click &quot;OK&quot;
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:55
-msgid "text_moz_cookies_step4"
-msgstr "Vælg \"Slå cookies til kun for denne webside\" eller \"Slå cookies til alle steder\" og klik \"OK\""
-
-#. Default: "Click Edit on the menu at the top of your browser and select Preferences"
-#. <li i18n:translate="text_netscape4_cookies_step1">
-#. Click Edit on the menu at the top of your browser and select Preferences
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:79
-msgid "text_netscape4_cookies_step1"
-msgstr "Klik rediger på menuen i toppen af din browser og vælg Indstillinger"
-
-#. Default: "Select \"Advanced\""
-#. <li i18n:translate="text_netscape4_cookies_step2">
-#. Select &quot;Advanced&quot;
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:80
-msgid "text_netscape4_cookies_step2"
-msgstr "Vælg \"Avanceret\""
-
-#. Default: "Select \"Accept all cookies\" or \"Accept only cookies that get sent back to the originating server\" and click OK"
-#. <li i18n:translate="text_netscape4_cookies_step3">
-#. Select &quot;Accept all cookies&quot; or &quot;Accept only cookies that get sent back to the originating server&quot; and click OK
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:81
-msgid "text_netscape4_cookies_step3"
-msgstr "Vælg \"Accepter alle cookies\" eller \"Accepter kun cookies, som bliver sendt tilbage til serveren, hvor de kom fra\" og klik OK"
-
-#. Default: "Click Edit on the menu at the top of your browser and select Preferences"
-#. <li i18n:translate="text_netscape6_cookies_step1">
-#. Click Edit on the menu at the top of your browser and select Preferences
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:70
-msgid "text_netscape6_cookies_step1"
-msgstr "Klik Rediger i menuen i toppen af din browser og vælg Indstillinger"
-
-#. Default: "Find \"Privacy & Security\" in the menu on the left. If there is a triangle pointing to the right next to Privacy & Security, click it."
-#. <li i18n:translate="text_netscape6_cookies_step2">
-#. Find &quot;Privacy &amp; Security&quot; in the menu on the left.  If there is a triangle pointing to the right next to Privacy &amp; Security, click it.
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:71
-msgid "text_netscape6_cookies_step2"
-msgstr "Find \"Privatliv & Sikkerhed\" i menuen til venstre. Hvis der er en trekant, der peger til højre ved siden af Privatliv & Sikkerhed, så klik på den."
-
-#. Default: "Select \"Cookies\" under \"Privacy & Security\""
-#. <li i18n:translate="text_netscape6_cookies_step3">
-#. Select &quot;Cookies&quot; under &quot;Privacy &amp; Security&quot;
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:72
-msgid "text_netscape6_cookies_step3"
-msgstr "Vælg \"Cookies\" under \"Privatliv & Sikkerhed\""
-
-#. Default: "Select \"Enable cookies for the originating web site only\" or \"Enable all cookies\" and click \"OK\""
-#. <li i18n:translate="text_netscape6_cookies_step4">
-#. Select &quot;Enable cookies for the originating web site only&quot; or &quot;Enable all cookies&quot; and click &quot;OK&quot;
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:73
-msgid "text_netscape6_cookies_step4"
-msgstr "Vælg \"Slå cookies til kun for denne webside\" eller \"Slå cookies til alle steder\" og klik \"OK\""
 
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
 #: ./skins/plone_content/author.cpt:156
@@ -11815,22 +10421,6 @@ msgstr "Ingen resultater"
 #: /opt/plone30/src/plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:199
 msgid "text_not_allowed_manage_server"
 msgstr "Du har ikke rettigheder til at administrerer Zope."
-
-#. Default: "Press F12"
-#. <li i18n:translate="text_opera_cookies_step1">
-#. Press F12
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:61
-msgid "text_opera_cookies_step1"
-msgstr "Tryk på F12"
-
-#. Default: "Click \"Enable cookies\""
-#. <li i18n:translate="text_opera_cookies_step2">
-#. Click &quot;Enable cookies&quot;
-#. </li>
-#: ./skins/plone_login/enabling_cookies.pt:62
-msgid "text_opera_cookies_step2"
-msgstr "Click \"Enable cookies\""
 
 #. Default: "Product Description"
 #. <span i18n:translate="text_product_description">
@@ -11924,7 +10514,7 @@ msgstr "Sidste uge"
 #. <span i18n:translate="time_separator" tal:condition="show_hm">
 #. :
 #. </span>
-#: ./skins/plone_templates/calendar_macros.pt:133
+#: ./skins/plone_templates/calendar_macros.pt:149
 msgid "time_separator"
 msgstr ":"
 
@@ -11970,12 +10560,6 @@ msgstr "Tilføj denne begivenhed til din iCal kalender"
 #: ./skins/plone_content/event_view.pt:162
 msgid "title_add_to_vcal"
 msgstr "Tilføj denne begivenhed til din vCal kalender"
-
-#. Default: "This Plone site is usable in any web browser."
-#. <a class="colophonIcon" href="http://plone.org/browsersupport" i18n:attributes="title title_any_browser;" i18n:translate="label_any_browser" tal:attributes="style string:background-image: url(${portal_url}/colophon_anybrowser.png);;" title="This Plone site is usable in any web browser.">
-#: ./skins/plone_templates/colophon.pt:76
-msgid "title_any_browser"
-msgstr "Dette Plone site kan bruges med alle webbrowsere"
 
 #. Default: "Author information"
 #: /opt/plone30/src/plone.app.layout/plone/app/layout/links/author.pt:3
@@ -12110,12 +10694,6 @@ msgstr "Administrer portlets"
 msgid "title_manage_group_portlets"
 msgstr "Administrer gruppeportlets for ${group_name}"
 
-#. Default: "Personal Items for ${member}"
-#. title
-#: MembershipTool.py
-msgid "title_member_personal_folder"
-msgstr "${member}'s personlige indhold"
-
 #. Default: "Move item down"
 #. <a href="" i18n:attributes="title title_move_item_down;" tal:attributes="href string:$here_url/folder_position?position=down&amp;id=$item_id&amp;template_id=${template/getId}" title="Move item down">
 #: ./skins/plone_deprecated/old_folder_contents.pt:227
@@ -12169,11 +10747,6 @@ msgstr "Søgeresultat i RSS-format"
 #: ./skins/plone_deprecated/global_searchbox.pt:22
 msgid "title_search_site"
 msgstr "Søgning"
-
-#. Default: "Search this site"
-#: ./skins/plone_templates/header.pt:78
-msgid "title_search_this_site"
-msgstr "Søg på dette site"
 
 #. Default: "Search Site"
 #: ./skins/plone_forms/search.pt:36
@@ -12500,15 +11073,6 @@ msgstr "ons"
 #: ./skins/plone_deprecated/global_contentmenu.pt:71
 msgid "workflow_policy"
 msgstr "Regler"
-
-#. Default: "Yes"
-#. <label for="cb_ext_editor" i18n:translate="yes">
-#. Yes
-#. </label>
-#. <label for="cb_visible_ids" i18n:translate="yes">
-#: ./skins/plone_prefs/reconfig_form.cpt:224
-msgid "yes"
-msgstr "Ja"
 
 #. Default: "You are here:"
 #. <span i18n:translate="you_are_here" id="breadcrumbs-you-are-here">
