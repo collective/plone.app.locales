@@ -53,6 +53,8 @@ def rebuild(product, folder=''):
             'plone.memoize',
             'plone.openid',
             'plone.portlets',
+            'plone.portlet.collection',
+            'plone.portlet.static',
             'plone.session',
             'plone.intelligenttext',
             'plone.app.contentmenu',
@@ -72,6 +74,8 @@ def rebuild(product, folder=''):
             'plone.app.vocabularies',
             'plone.app.workflow',
             'plone.app.openid',
+            'Products.Archetypes',
+            'Products.CMFDiffTool',
         )
         add_products = (
             'Archetypes',
@@ -80,24 +84,36 @@ def rebuild(product, folder=''):
 
         src = os.path.join(__INSTANCE_HOME, 'src')
         for package in packages:
-            folder2 += ' %s' % os.path.join(src, package)
+            p = os.path.join(src, package)
+            if os.path.isdir(p):
+                folder2 += ' %s' % p
         src = os.path.join(__INSTANCE_HOME, 'products')
-        for p in add_products:
-            folder2 += ' %s' % os.path.join(src, p)
+        for prod in add_products:
+            p = os.path.join(src, prod)
+            if os.path.isdir(p):
+                folder2 += ' %s' % p
 
     foldererror = False
-    if not os.path.isdir(folder):
-        if folder == '':
-            folder = os.path.join(__INSTANCE_HOME, 'Products')
-            if os.path.isdir(folder):
-                folder = os.path.join(folder, getProductPath(product))
-            else:
-                foldererror = True
+    if not os.path.isdir(folder) and folder == '':
+        folder = os.path.join(__INSTANCE_HOME, 'Products')
+        if os.path.isdir(folder):
+            folder = os.path.join(folder, getProductPath(product))
+            if not os.path.isdir(folder):
+                # Try the src folder instead
+                base = os.path.basename(folder)
+                src = os.path.join(__INSTANCE_HOME, 'src')
+                package = os.path.join(src, 'Products.%s' % base)
+                if os.path.isdir(package):
+                    folder = package
+                else:
+                    foldererror = True
         else:
             foldererror = True
+    else:
+        foldererror = True
 
     if foldererror:
-        print 'Product directory (%s) could not be found.' % folder
+        print 'Directory (%s) could not be found.' % folder
         sys.exit(4)
 
     # Remove the original file
@@ -116,9 +132,9 @@ def rebuild(product, folder=''):
                   )
         cmd += '--exclude="%s" ' % ' '.join(ignores)
     if product == 'plone':
-        cmd += '%s %s > %s 2>&1' % (folder, folder2, log)
+        # cmd += '%s %s > %s 2>&1' % (folder, folder2, log)
         # For debugging
-        # cmd += '%s %s' % (folder, folder2)
+        cmd += '%s %s' % (folder, folder2)
     else:
         cmd += '%s > %s 2>&1' % (folder, log)
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
