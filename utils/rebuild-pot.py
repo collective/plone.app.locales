@@ -7,10 +7,6 @@
    set your INSTANCE_HOME correctly it will automagically use the right version.
 
    So 'rebuilt-pot.py atrbw' is a valid shorthand.
-   
-   At release time, there is also an easy alias 'rebuild-pot.py all' which will
-   rebuilt all pot files for all products. You can only use it, if you have
-   specified your INSTANCE_HOME.
 """
 
 import os, sys, string
@@ -121,7 +117,7 @@ def rebuild(product, folder=''):
         os.remove(pot)
 
     print 'Using %s to build new pot.\n' % folder
-    cmd = __I18NDUDE + (' rebuild-pot --pot %s2 --create %s --merge %s ') % (pot, domain, manualpot)
+    cmd = __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s ') % (pot, domain, manualpot)
     if product == 'plone':
         cmd += '--merge2 %s ' % generatedpot
     if product == 'plone':
@@ -140,28 +136,10 @@ def rebuild(product, folder=''):
     print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
     os.system(cmd)
 
-    step2 = pot
-    if WIN32:
-        step2 = pot + '3'
-
-    # Make paths relative to products skins dir
-    os.system('sed "s,%s,\.,g" %s2 > %s' % (string.replace(folder, '\\', '\\\\'), pot, step2))
-    os.remove('%s2' % pot)
-
-    if WIN32:
-        # Make directory separator unix like
-        os.system('sed "/^#:.*/s,\\\\,/,g" %s3 > %s' % (pot, pot))
-        os.remove('%s3' % pot)
-
 def main():
     if len(sys.argv) < 2:
         print 'You have to specify an option.'
         sys.exit(1)
-
-    option = sys.argv[1]
-    if option == 'all':
-        print 'Not yet implemented.'
-        sys.exit(2)
 
     if len(sys.argv) == 2:
         rebuild(sys.argv[1])
