@@ -27,8 +27,10 @@ def rebuild(product, folder=''):
     pot = product + '.pot'
     manualpot = '%s-manual.pot' % product
     generatedpot = '%s-generated.pot' % product
-    log = 'rebuild-%s-pot.log' % product
+    if '/' in product:
+        product = product.split('/')[0]
 
+    log = 'rebuild-%s-pot.log' % product
     domain = product
 
     os.chdir('..')
@@ -125,6 +127,13 @@ def rebuild(product, folder=''):
                    'metadata_edit_form.cpt',
                    'metadirectives.py',
                    'Discussion_Item.xml',
+                  )
+        cmd += '--exclude="%s" ' % ' '.join(ignores)
+    if product == 'kupu':
+        ignores = ('mmbase',
+                   'widgeteer',
+                   'kupu_kjax_support.xml.pt',
+                   'kupu_migration.xml.pt',
                   )
         cmd += '--exclude="%s" ' % ' '.join(ignores)
     if product == 'plone':

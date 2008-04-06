@@ -8,17 +8,28 @@ PRODUCTS = {'atct'  : {'name': 'atcontenttypes', 'path': 'ATContentTypes'},
             'prt'   : {'name': 'passwordresettool', 'path': 'PasswordResetTool'},
             'cmfpw' : {'name': 'cmfplacefulworkflow', 'path': 'CMFPlacefulWorkflow'},
             'cmfe'  : {'name': 'cmfeditions', 'path': 'CMFEditions'},
+            'kupu'  : {'name': 'kupu/kupu', 'path': 'kupu'},
+            'kupuconfig'  : {'name': 'kupu/kupuconfig', 'path': 'kupu'},
+            'kupupox'  : {'name': 'kupu/kupupox', 'path': 'kupu'},
            }
 
 PRODUCTNAMES = [PRODUCTS[abbr]['name'] for abbr in PRODUCTS]
 
 def getPoFiles(product, all=False):
     """ Returns all product*.po files in the current folder """
-    files = os.listdir(os.curdir)
+    path = os.curdir
+    folder = ''
+    if '/' in product:
+        folder, product = product.split('/')
+        path = os.path.join(os.curdir, folder)
+
+    files = os.listdir(path)
     if all:
         files = [file for file in files if file.startswith('%s-' % product) and file.endswith('.po')]
     else:
         files = [file for file in files if file.startswith('%s-' % product) and file.endswith('.po') and file != '%s-en.po' % product]
+    if folder:
+        files  = [folder + '/' + f for f in files]
     return files
 
 
