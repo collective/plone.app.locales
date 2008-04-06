@@ -28,7 +28,7 @@ def rebuild(product, folder=''):
     manualpot = '%s-manual.pot' % product
     generatedpot = '%s-generated.pot' % product
     if '/' in product:
-        product = product.split('/')[0]
+        product = product.split('/')[1]
 
     log = 'rebuild-%s-pot.log' % product
     domain = product
@@ -129,7 +129,7 @@ def rebuild(product, folder=''):
                    'Discussion_Item.xml',
                   )
         cmd += '--exclude="%s" ' % ' '.join(ignores)
-    if product == 'kupu':
+    if product.startswith('kupu'):
         ignores = ('mmbase',
                    'widgeteer',
                    'kupu_kjax_support.xml.pt',
