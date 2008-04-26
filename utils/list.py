@@ -25,7 +25,7 @@ def main():
         products = (getLongProductName(option), )
 
     if products:
-        os.system(__I18NDUDE + (' combinedchart -o plone.gif --title "Plone 3.0" --products %s') % (' '.join(products)))
+        os.system(__I18NDUDE + (' list --products %s') % (' '.join(products)))
 
 if __name__ == '__main__':
     main()
