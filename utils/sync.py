@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
    Usage: sync.py [<product> | <language-code>]
 """

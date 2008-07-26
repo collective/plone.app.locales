@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
    Usage: create.py <target-product> <source-product>
 

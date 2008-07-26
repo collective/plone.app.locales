@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
    Usage: setdomain.py <product> <domain>
 """

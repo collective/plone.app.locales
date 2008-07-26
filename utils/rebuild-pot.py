@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
    Usage: rebuild-pot.py <product> <path to products dir>
 

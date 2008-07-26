@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-
 """
-   Usage: chart.py
+   Usage: list.py
 """
 
 import os, sys

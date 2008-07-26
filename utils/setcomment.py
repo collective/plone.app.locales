@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
    Usage: setcomment.py <product> <comment>
 """

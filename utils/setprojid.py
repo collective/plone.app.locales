@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
    Usage: setprojid.py <product> <projectid>
 """

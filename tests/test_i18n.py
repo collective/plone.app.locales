@@ -1,8 +1,5 @@
 import os, sys
 
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
-
 from Testing import ZopeTestCase
 from Products.i18ntestcase import PotTestCase, PoTestCase
 from Products.i18ntestcase.I18NTestCase import getPoFiles, getPotFiles, getProductFromPath
@@ -55,7 +52,3 @@ for product in products:
         for test in tests:
             suite.addTest(unittest.makeSuite(test))
         return suite
-
-if __name__ == '__main__':
-    framework()
-

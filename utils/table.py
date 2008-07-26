@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
    Usage: table.py
 """

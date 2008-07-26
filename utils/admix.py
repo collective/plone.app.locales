@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
    Usage: admix.py <target-product> <source-product>
 """
