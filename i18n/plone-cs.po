@@ -25,7 +25,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone\n"
-"POT-Creation-Date: 2008-07-07 19:46+0000\n"
+"POT-Creation-Date: 2009-02-22 08:33+0000\n"
 "PO-Revision-Date: 2008-04-12 14:57+0100\n"
 "Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
 "Language-Team: Vlada Macek\n"
@@ -39,15 +39,35 @@ msgstr ""
 "Domain: plone\n"
 "X-Generator: KBabel 1.11.1\n"
 
+#: plone.locking/plone/locking/browser/locking.py:126
+msgid "$d day and $h hours"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:128
+msgid "$d days and $h hours"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:121
+msgid "$h hour and $m minutes"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:123
+msgid "$h hours and $m minutes"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:119
+msgid "$m minutes"
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:33
 msgid "${count} item(s) copied."
 msgstr "Počet zkopírovaných položek: ${count}"
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:32
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:37
 msgid "${count} item(s) cut."
 msgstr "Počet vyjmutých položek: ${count}"
 
-#: CMFPlone/skins/plone_scripts/folder_rename.cpy:47
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:48
 msgid "${count} item(s) renamed."
 msgstr "Počet přejmenovaných položek: ${count}"
 
@@ -56,7 +76,7 @@ msgid "${items} could not be deleted."
 msgstr "Nelze smazat: ${items}"
 
 #. Default: "${monthname} ${year}"
-#: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:56
+#: CMFPlone/skins/plone_templates/calendar_macros.pt:231
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
@@ -133,6 +153,10 @@ msgstr "- Používá se ve spojení s komunitním pracovním postupem. - Nemá s
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "- Users can create content that is immediately publicly accessible. - Content can be submitted for publication by the content's creator or a Manager, which is typically done to promote events or news to the front page. - Reviewers can publish or reject content, content owners can retract their submissions. - While the content is awaiting review it is readable by anybody. - If content is published, it can only be retracted by a Manager."
 msgstr "- Uživatelé mohou vytvořit obsah, který je okamžitě veřejně přístupný. - Obsah může být postoupen ke zveřejnění tvůrcem obsahu nebo správcem,  jak je obvykle používáno pro zveřejnění událostí nebo novinek na hlavní stránce. - Posuzovatelé mohou zveřejnit nebo zamítnout obsah, vlastníci obsahu mohou jimi zveřejněný obsah stáhnout. - Obsah čekající na posouzení je čitelný kýmkoliv. - Pokud je obsah zveřejněn, může být stažen správcem."
+
+#: plone.locking/plone/locking/browser/locking.py:117
+msgid "1 minute"
+msgstr ""
 
 #. Default: "A boolean criterion"
 #: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
@@ -367,7 +391,7 @@ msgstr "Přidat portlet RSS"
 msgid "Add Recent Portlet"
 msgstr "Přidat portlet \"Poslední novinky\""
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:60
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:84
 msgid "Add Review Portlet"
 msgstr "Přidat portlet Revize"
 
@@ -441,11 +465,11 @@ msgstr "Všechna pravidla podle obsahu"
 msgid "All items publicly available on a certain date"
 msgstr "Všechny položky zveřejněné k určitému datu"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:39
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:41
 msgid "Allow anyone to view 'about' information"
 msgstr "Povolit aby kdokoli mohl vidět informace \"O uživateli\""
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:17
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:19
 msgid "Allows users to register themselves on the site. If not selected, only site managers can add new users."
 msgstr "Povolit uživatelům registrovat se do portálu. Pokud není tato možnost vybrána, mohou přidávat nové uživatele pouze správci portálu."
 
@@ -550,7 +574,7 @@ msgid "Calendar settings"
 msgstr "Nastavení kalendáře"
 
 #. Default: "Can only be seen and edited by the owner."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Can only be seen and edited by the owner."
@@ -606,19 +630,23 @@ msgstr "Úpravy zrušeny"
 msgid "Changes made."
 msgstr "Změny byly provedeny."
 
-#: CMFPlone/skins/plone_prefs/prefs_group_edit.py:28
+#: Archetypes/skins/archetypes/content_edit_impl.py:30
 msgid "Changes saved."
 msgstr "Změny byly uloženy."
 
 #. Default: "Check in"
-#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
+#: plone.app.iterate/plone/app/iterate/browser/checkin.pt:38
 msgid "Check in"
 msgstr "Dokončit úpravy"
 
 #. Default: "Check out"
-#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
+#: plone.app.iterate/plone/app/iterate/browser/checkout.pt:54
 msgid "Check out"
 msgstr "Zahájit úpravy"
+
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:45
+msgid "Check this to enable inline editing on the site."
+msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/browser/checkout.py:82
 msgid "Check-out created"
@@ -657,9 +685,9 @@ msgid "Collection Settings"
 msgstr "Nastavení rešerše"
 
 #. Default: "Comment about the last transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "Poznámky k poslední změně pracovního postupu"
 
@@ -836,11 +864,11 @@ msgstr "Popis"
 msgid "Details link"
 msgstr "Podrobnosti"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:53
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:59
 msgid "Determines if the external editor feature is enabled. This feature requires a special client-side application installed. The users also have to enable this in their preferences."
 msgstr "Určuje, zda je zapnuta funkce externího editoru. Tato funkce vyžaduje instalaci speciální klientské aplikace. Uživatelé si tuto funkci musí rovněž zapnout ve svém osobním nastavení."
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:46
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:52
 msgid "Determines if the users should get warnings when they delete or move content that is linked from inside the site."
 msgstr "Určuje, zda uživatelé budou varováni, pokud odstraňují či přemisťují obsah, který je odkazován z některé stránky v portálu."
 
@@ -889,8 +917,8 @@ msgid "Each type chosen will have a wiki enabled primary text area. At least one
 msgstr "Každý vybraný typ bude mít v primárním textovém poli zapnuté wiki. Pro zapnutí wiki prostředí musí být vybrán minimálně jeden typ."
 
 #. Default: "Edit"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "Edit"
 msgstr "Úpravy"
@@ -998,7 +1026,7 @@ msgstr "Datum účinnosti"
 msgid "Effective Range"
 msgstr "Rozsah platnosti"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:26
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:27
 msgid "Email recipients"
 msgstr "Adresáti e-mailu"
 
@@ -1006,11 +1034,11 @@ msgstr "Adresáti e-mailu"
 msgid "Email report to ${recipients}"
 msgstr "Odeslat oznámení těmto příjemcům: ${recipients}"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:22
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:23
 msgid "Email source"
 msgstr "Zdroj e-mailu"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:52
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:58
 msgid "Enable External Editor feature"
 msgstr "Povolit Externí editor"
 
@@ -1018,15 +1046,19 @@ msgstr "Povolit Externí editor"
 msgid "Enable LiveSearch"
 msgstr "Povolit při vyhledávání Plovoucí výsledky"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:32
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:34
 msgid "Enable User Folders"
 msgstr "Povolit individuální složky uživatelů"
 
 #: plone.app.controlpanel/plone/app/controlpanel/site.py:44
+msgid "Enable inline editing"
+msgstr ""
+
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:50
 msgid "Enable link integrity checks"
 msgstr "Zapnout kontrolu integrity odkazů"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:16
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:18
 msgid "Enable self-registration"
 msgstr "Povolit samostatnou registraci uživatelů"
 
@@ -1048,7 +1080,7 @@ msgid "Entries cleared"
 msgstr "Položky byly zrušeny."
 
 #. Default: "Error"
-#: CMFPlone/skins/plone_content/author.cpt:36
+#: CMFPlone/skins/plone_login/logged_out.cpt:55
 msgid "Error"
 msgstr "Chyba"
 
@@ -1094,18 +1126,18 @@ msgstr "Provést změnu stavu  ${transition}"
 msgid "Expiration Date"
 msgstr "Datum vypršení"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:61
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:67
 msgid "Expose sitemap.xml.gz in the portal root"
 msgstr "Zobrazit sitemap.xml.gz v kořenové složce portálu"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:62
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:68
 msgid "Exposes your content as a file according to the sitemaps.org standard. You can submit this to compliant search engines like Google, Yahoo and Microsoft. It allows these search engines to more intelligently crawl your site."
 msgstr "Váš obsah bude zobrazen jako soubor dle standardů sitemaps.org. Tento obsah poté můžete přidat do vyhovujících vyhledávačů jako Google, Yahoo a Microsoft. Takto umožníte těmto vyhledavačům pracovat s vaším portálem inteligentněji."
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/Document.xml
-#: CMFPlone/profiles/default/types/Event.xml
+#: CMFPlone/profiles/default/types/File.xml
 #: CMFPlone/profiles/default/types/Favorite.xml
+#: CMFPlone/profiles/default/types/Event.xml
 msgid "External Edit"
 msgstr "Vnější editace"
 
@@ -1212,7 +1244,7 @@ msgstr "Zobrazení složky"
 msgid "Folder-like"
 msgstr "Typu složka"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:72
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:78
 msgid "For enabling web statistics support from external providers (for e.g. Google Analytics). Paste the code snippets provided. It will be included in the rendered HTML as entered near the end of the page."
 msgstr "Pro inicializaci podpory webových statistik od externích poskytovatelů (např. Google Analytics). Vložte příslušnou část kódu. Tento kód bude zahrnut do vygenerovaného HTML kódu."
 
@@ -1251,9 +1283,9 @@ msgid "Hide portlet"
 msgstr ""
 
 #. Default: "History"
-#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
 #: CMFPlone/profiles/default/types/News_Item.xml
+#: CMFPlone/profiles/default/types/Document.xml
 msgid "History"
 msgstr "Historie"
 
@@ -1261,6 +1293,10 @@ msgstr "Historie"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Home"
 msgstr "Úvod"
+
+#: plone.app.iterate/plone/app/iterate/containers.py:45
+msgid "Home folder"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:22
 msgid "How many items to list."
@@ -1304,22 +1340,22 @@ msgstr ""
 msgid "If given, the header and footer will link to this URL."
 msgstr "Je-li vyplněno, pak bude hlavička a patička portletu odkazovat na zde uvedou adresu."
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:41
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:43
 msgid "If not selected only logged-in users will be able to view information about who created an item and when it was modified."
 msgstr "Pokud tato možnost není vybrána, pouze přihlášení uživatelé mohou vidět informace, kdo vytvořil položku a kdy byla tato položka upravena."
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:25
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:27
 msgid "If not selected, passwords will be autogenerated and mailed to users, which verifies that they have entered a valid email address."
 msgstr "Pokud není tato možnost vybrána, hesla budou generována automaticky a zasílána uživatelům, kteří uvedli platnou e-mailovou adresu."
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:33
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:35
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Pokud je vybrána tato možnost, bude po přihlášení uživatelům vytvořena domovská složka, ve které mohou uživbatelé vytvářet obsah."
 
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 msgstr "Pokud jste položku předali k posouzení omylem nebo pokud chcete provést dodatečné úpravy, tato akce vrátí tento krok zpět."
 
@@ -1333,7 +1369,7 @@ msgid "Image changes saved."
 msgstr "Změny obrázku byly uloženy."
 
 #. Default: "Info"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:80
 msgid "Info"
 msgstr "Info"
 
@@ -1417,7 +1453,7 @@ msgstr "Položky byly vloženy."
 msgid "Items in which workflow state to show."
 msgstr "Zobrazit položky v tomto stavu pracovního postupu"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:71
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:77
 msgid "JavaScript for web statistics support"
 msgstr "JavaScript pro podporu webových statistik"
 
@@ -1453,7 +1489,7 @@ msgstr "Jazyk"
 msgid "Language Settings"
 msgstr "Nastavení jazyka"
 
-#: CMFPlone/Portal.py:135
+#: Archetypes/ExtensibleMetadata.py:323
 msgid "Language neutral (site default)"
 msgstr "Nezávislé na jazyku (výchozí pro portál)"
 
@@ -1462,7 +1498,7 @@ msgstr "Nezávislé na jazyku (výchozí pro portál)"
 msgid "Large Folder"
 msgstr "Velká složka"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:23
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:25
 msgid "Let users select their own passwords"
 msgstr "Povolit uživatelům vybrat si počáteční heslo"
 
@@ -1539,7 +1575,7 @@ msgstr "Zpráva protokolu ${message}"
 msgid "Log out"
 msgstr "Odhlásit se"
 
-#: plone.app.workflow/plone/app/workflow/browser/sharing.py:222
+#: plone.app.workflow/plone/app/workflow/browser/sharing.py:231
 msgid "Logged-in users"
 msgstr "Přihlášení uživatelé"
 
@@ -1578,23 +1614,15 @@ msgstr "Mail"
 msgid "Mail Settings"
 msgstr "Nastavení pošty"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:154
-msgid "Mail sender"
-msgstr "Odesílatel"
-
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:89
 msgid "Mail sent."
 msgstr "E-mailová zpráva byla odeslána."
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:150
-msgid "Mail server"
-msgstr "Mail server"
-
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:161
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:145
 msgid "Mail settings"
 msgstr "Nastavení e-mailu"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:162
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:146
 msgid "Mail settings for this site."
 msgstr "Nastavení e-mailu pro tento portál"
 
@@ -1603,7 +1631,7 @@ msgid "Maintenance"
 msgstr "Údržba"
 
 #. Default: "Make private"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Make private"
@@ -1621,7 +1649,7 @@ msgid "Makes the folder visible internally."
 msgstr "Zpřístupní tuto položku jako interní."
 
 #. Default: "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
@@ -1675,9 +1703,9 @@ msgid "Member Preferences"
 msgstr "Uživatelské nastavení"
 
 #. Default: "Member makes content private"
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Member makes content private"
 msgstr "Uživatel provádí znepřístupnění položky"
 
@@ -1697,8 +1725,8 @@ msgid "Member promotes content to public draft"
 msgstr "Člen může označit obsah jako veřejný koncept"
 
 #. Default: "Member retracts submission"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "Uživatel stahuje žádost"
@@ -1741,7 +1769,7 @@ msgid "Move up"
 msgstr "Přesunout nahoru"
 
 #. Default: "My Folder"
-#: CMFPlone/profiles/default/actions.xml
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:127
 msgid "My Folder"
 msgstr "Moje složka"
 
@@ -1814,7 +1842,7 @@ msgstr "Nebyly provedeny žádné změny."
 msgid "No changes made."
 msgstr "Žádné změny nebyly provedeny"
 
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:336
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:370
 msgid "No workflow"
 msgstr "Žádný pracovní postup"
 
@@ -1834,9 +1862,13 @@ msgstr "Vynechat okraj portletu"
 msgid "One or more items not copyable."
 msgstr "Jednu nebo více položek není možné kopírovat."
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:23
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:24
 msgid "One or more items not moveable."
 msgstr "Jednu nebo více položek není možné přesunout."
+
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:32
+msgid "One or more selected items is locked."
+msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:27
 msgid "One or more selected items is no longer available."
@@ -1846,7 +1878,7 @@ msgstr "Alespoň jedna vybraná položka již není k dispozici."
 msgid "Only for users who are logged in"
 msgstr "Pouze pro přihlášené uživatele"
 
-#: plone.app.openid/plone/app/openid/portlets/login.py:17
+#: plone.app.openid/plone/app/openid/portlets/login.py:18
 msgid "OpenID login"
 msgstr "Přihlášení pomocí OpenID"
 
@@ -1875,6 +1907,10 @@ msgstr "Databáze zkomprimována"
 #: CMFPlone/profiles/default/types/Document.xml
 msgid "Page"
 msgstr "Stránka"
+
+#: plone.app.iterate/plone/app/iterate/containers.py:64
+msgid "Parent folder"
+msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/plone_change_password.py:14
 msgid "Password change was canceled."
@@ -1921,8 +1957,8 @@ msgid "Pending"
 msgstr "Ke zveřejnění"
 
 #. Default: "Pending review"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Pending review"
 msgstr "Čeká na posouzení"
@@ -1955,7 +1991,7 @@ msgstr "Osobní nastavení"
 msgid "Placeful Workflow"
 msgstr "Pracovní postup (umístitelný)"
 
-#: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:18
+#: Archetypes/skins/archetypes/validate_base.vpy:19
 msgid "Please correct the indicated errors."
 msgstr "Je třeba opravit vyznačené chyby."
 
@@ -2003,7 +2039,7 @@ msgstr "Vyberte položku, která se má použít."
 msgid "Please select one or more items to copy."
 msgstr "Vyberte jednu nebo více položek ke zkopírování."
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:37
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:42
 msgid "Please select one or more items to cut."
 msgstr "Vyberte jednu nebo více položek k vyjmutí."
 
@@ -2046,11 +2082,11 @@ msgstr "Portál Plone"
 msgid "Plone filters HTML tags that are considered security risks. Be aware of the implications before making changes below. By default only tags defined in XHTML are permitted. In particular, to allow 'embed' as a tag you must both remove it from 'Nasty tags' and add it to 'Custom tags'. Although the form will update immediately to show any changes you make, your changes are not saved until you press the 'Save' button."
 msgstr "Plone filtruje HTML značky, které jsou z bezpečnostního hlediska za riskantní. Před provedením změn niže zvažte všechny jejich možné důsledky. Jako výchozí jsou povoleny pouze značky definované v XHTML. Například pro povolení značky 'embed' musíte nejprve tuto značku odstranit z sekce 'Škodlivé značky' a přidat ji do sekce 'Uživatelské značky'. Ačkoliv k aktualizaci formuláře dojde okamžitě a zobrazí Vámi provedené změny, tyto změny budou fyzicky uloženy teprve po stisknutí tlačítka 'Uložit'."
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:71
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:69
 msgid "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address on the site-wide contact form."
 msgstr "Plone generuje e-maily za použití této adresy jako zpáteční adresy. Tato adresa je také použita jako cílová adresa v kontantním formuláři portálu."
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:64
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:62
 msgid "Plone generates e-mail using this name as the e-mail sender."
 msgstr "Plone generuje e-maily s použitím tohoto jména jako jména odesílatele e-mailu."
 
@@ -2083,9 +2119,9 @@ msgid "Preferences"
 msgstr "Nastavení"
 
 #. Default: "Previous transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Previous transition"
 msgstr "Předchozí změna stavu"
 
@@ -2107,20 +2143,20 @@ msgid "Print this page"
 msgstr "Vytisknout stránku"
 
 #. Default: "Private"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Private"
 msgstr "Nepřístupné"
 
 #. Default: "Profile"
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:66
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:72
 msgid "Profile"
 msgstr "Profil"
 
 #. Default: "Promote to Draft"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Promote to Draft"
 msgstr "Povýšit na Koncept"
 
@@ -2150,9 +2186,9 @@ msgid "Properties"
 msgstr "Vlastnosti"
 
 #. Default: "Provides access to workflow history"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Provides access to workflow history"
 msgstr "Umožňuje přístup k historii pracovního postupu"
 
@@ -2163,14 +2199,14 @@ msgid "Public Draft"
 msgstr "Přístupné"
 
 #. Default: "Public draft"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Public draft"
 msgstr "Veřejný koncept"
 
 #. Default: "Publish"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Publish"
 msgstr "Zveřejnit"
@@ -2186,9 +2222,9 @@ msgid "Publish internally"
 msgstr "Zveřejnit interně"
 
 #. Default: "Published"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Published"
 msgstr "Zveřejněno"
 
@@ -2198,9 +2234,9 @@ msgid "Published and visible to intranet users, not editable by the owner."
 msgstr "Zveřejněno a přístupné pro uživatele intranetu, neupravitelné vlastníkem."
 
 #. Default: "Publishing the item makes it visible to other users."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Publishing the item makes it visible to other users."
 msgstr "Zveřejněním se položka stane přístupnou pro ostatní uživatele."
 
@@ -2244,8 +2280,8 @@ msgid "Reference Criterion"
 msgstr "Podmínka reference"
 
 #. Default: "References"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "References"
 msgstr "Reference"
@@ -2300,6 +2336,10 @@ msgstr "Přejmenovat"
 msgid "Rename items"
 msgstr "Přejmenovat položky"
 
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:41
+msgid "Renamed '${oldid}' to '${newid}'."
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/deleteDiscussion.py:27
 msgid "Reply deleted."
 msgstr "Reakce byla odstraněna."
@@ -2315,13 +2355,13 @@ msgid "Restrict to current user"
 msgstr "Omezit na aktuálního uživatele"
 
 #. Default: "Retract"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Retract"
 msgstr "Stáhnout"
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:24
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:26
 msgid "Review list"
 msgstr "Seznam položek ke schválení"
 
@@ -2355,8 +2395,8 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr "Reviewer send content back for re-drafting"
 
 #. Default: "Reviewer tasks"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Reviewer tasks"
 msgstr "Úlohy posuzovatele"
 
@@ -2429,11 +2469,11 @@ msgstr "Bezpečnost"
 msgid "Security Settings"
 msgstr "Nastavení zabezpečení"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:127
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:154
 msgid "Security settings"
 msgstr "Bezpečnostní nastavení"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:128
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:155
 msgid "Security settings for this site."
 msgstr "Bezpečnostní nastavení pro tento portál"
 
@@ -2482,8 +2522,8 @@ msgid "Selection Criterion"
 msgstr "Podmínka výběru"
 
 #. Default: "Send back"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Send back"
 msgstr "Odeslat zpět"
@@ -2506,13 +2546,13 @@ msgid "Send-to"
 msgstr "Adresát"
 
 #. Default: "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
 msgstr "Odesláním položky zpět bude tato položka namísto zveřejnění vrácena svému autorovi. Měli byste uvést důvod, proč tato položka nebyla zveřejněna."
 
-#: plone.app.controlpanel/plone/app/controlpanel/skins.py:125
+#: plone.app.controlpanel/plone/app/controlpanel/skins.py:140
 msgid "Settings that affect the site's look and feel."
 msgstr "Nastavení, která mohou ovlivnit vzhled a zobrazení portálu."
 
@@ -2532,7 +2572,7 @@ msgstr "Krátký název"
 msgid "Show 'Short Name' on content?"
 msgstr "Zobrazovat krátké názvy položek obsahu?"
 
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:536
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:537
 msgid "Show all available content types"
 msgstr "Zobrazit všechny dostupné typy obsahu"
 
@@ -2588,11 +2628,11 @@ msgstr "Pracovní postup s jedním stavem pracovního postupu"
 msgid "Site"
 msgstr "Portál"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:70
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:68
 msgid "Site 'From' address"
 msgstr "Adresa \"odesilatele\" pro tento portál"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:63
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:61
 msgid "Site 'From' name"
 msgstr "Jméno \"odesilatele\" pro tento portál"
 
@@ -2611,7 +2651,7 @@ msgstr "Nastavení portálu"
 msgid "Site description"
 msgstr "Popis portálu"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:140
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:147
 msgid "Site settings"
 msgstr "Nastavení portálu"
 
@@ -2619,7 +2659,7 @@ msgstr "Nastavení portálu"
 msgid "Site title"
 msgstr "Nadpis portálu"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:141
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:148
 msgid "Site-wide settings."
 msgstr "Nastavení přes celý portál"
 
@@ -2696,11 +2736,11 @@ msgstr "Odstraňované značky"
 msgid "Subfolders"
 msgstr "Podsložky"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:19
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:20
 msgid "Subject"
 msgstr "Předmět"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:20
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:21
 msgid "Subject of the message"
 msgstr "Předmět zprávy"
 
@@ -2710,8 +2750,8 @@ msgid "Submit"
 msgstr "Ke zveřejnění"
 
 #. Default: "Submit for publication"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Submit for publication"
 msgstr "Předat ke zveřejnění"
@@ -2802,7 +2842,7 @@ msgid "Text to be shown in the footer"
 msgstr "Text patičky portletu"
 
 #. Default: "The ID of the user who performed the last transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "The ID of the user who performed the last transition"
@@ -2817,11 +2857,11 @@ msgstr "Identifikátor uživatele, který provedl předchozí změnu stavu"
 msgid "The content type to check for."
 msgstr "Typy obsahu, které mají být ověřeny."
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:23
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:24
 msgid "The email address that sends the email. If no email is provided here, it will use the portal from address."
 msgstr "E-mailová adresa odesílatele e-mailu. Pokud nebude uvedena žádná adresa, bude použita jako adresa odesílatele e-mailová adresa portálu."
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:27
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:28
 msgid "The email where you want to send this message. To send it to different email addresses, just separate them with ,"
 msgstr "E-mailová adresa, na kterou chcete odeslat tuto zprávu. Pokud chcete zprávu odeslat i na jinou e-mailovou adresu, oddělte adresy znakem: ,"
 
@@ -2838,7 +2878,7 @@ msgstr "Událost může spustit toto pravidlo"
 msgid "The file extension to check for"
 msgstr "Přípony souborů, které mají být ověřeny."
 
-#: CMFPlone/skins/plone_scripts/folder_rename.cpy:51
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:52
 msgid "The following item(s) could not be renamed: ${items}."
 msgstr "Následující položky nemohly být aktualizovány: ${items}."
 
@@ -2948,7 +2988,11 @@ msgstr "Název pravidla"
 msgid "The url of a Link item"
 msgstr "Adresa URL položky \"Odkaz\""
 
-#: plone.app.controlpanel/plone/app/controlpanel/skins.py:124
+#: CMFPlone/skins/plone_form_scripts/validate_synPropertiesForm.vpy:28
+msgid "The value of this field must be 1 or greater."
+msgstr ""
+
+#: plone.app.controlpanel/plone/app/controlpanel/skins.py:139
 msgid "Theme settings"
 msgstr "Nastavení motivu"
 
@@ -2958,7 +3002,7 @@ msgid "Themes"
 msgstr "Motivy"
 
 #. Default: "There are more search results, narrow your search."
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:69
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:74
 msgid "There are more search results, narrow your search."
 msgstr "Bylo nazeleno více výsledků. Prosím upřesněte vyhledávání."
 
@@ -3010,7 +3054,7 @@ msgstr "Tento portlet zobrazuje položky z rešerše."
 msgid "This portlet display a navigation tree."
 msgstr "Tento portlet zobrazuje navigační strom."
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:61
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:85
 msgid "This portlet displays a queue of documents awaiting review."
 msgstr "Tento portlet zobrazuje frontu dokumentů, které čekají na posouzení."
 
@@ -3097,9 +3141,9 @@ msgstr "Spouštěcí událost:  ${name}"
 msgid "Triggering event"
 msgstr "Spouštění události"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:32
-msgid "Type in here the message that you want to mail. Some defined content can be replaced: ${title} will be replaced by the title of the newly created item. ${url} will be replaced by the URL of the newly created item."
-msgstr "Zde zadejte text e-mailu, který chcete odeslat. Některý předdefinovaný obsah může být nahrazen. Název ${title} bude nahrazen názvem nově vytvořené položky. Adresa ${url} bude nahrazena adresou URL nově vytvořené položky."
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:33
+msgid "Type in here the message that you want to mail. Some defined content can be replaced: ${title} will be replaced by the title of the item. ${url} will be replaced by the URL of the item."
+msgstr ""
 
 #. Default: "Types"
 #: CMFPlone/profiles/default/controlpanel.xml
@@ -3178,8 +3222,8 @@ msgid "Users and Groups Administration"
 msgstr "Správa uživatelů a skupin"
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "View"
 msgstr "Zobrazení"
@@ -3204,8 +3248,8 @@ msgid "Visible to all intranet users."
 msgstr "Obsah viditelný pro všechny uživatele intranetu."
 
 #. Default: "Visible to everyone, but not approved by the reviewers."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
 msgstr "Obsah viditelný pro všechny, ale neschválený posuzovateli."
 
@@ -3215,8 +3259,8 @@ msgid "Visible to everyone, editable by the owner."
 msgstr "Obsah viditelný pro všechny, upravitelný vlastníkem."
 
 #. Default: "Visible to everyone, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, not editable by the owner."
 msgstr "Obsah viditelný pro všechny, neupravitelný vlastníkem."
@@ -3227,8 +3271,8 @@ msgid "Visible to people outside the intranet, not editable by the owner."
 msgstr "Obsah viditelný uživateli mimo intranet, neupravitelný vlastníkem."
 
 #. Default: "Waiting to be reviewed, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Waiting to be reviewed, not editable by the owner."
 msgstr "Obsah čekající na posouzení, needitovatelný vlastníkem."
@@ -3243,9 +3287,9 @@ msgid "Welcome! You are now logged in."
 msgstr "Vítejte! Přihlášení proběhlo úspěšně."
 
 #. Default: "When the previous transition was performed"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "When the previous transition was performed"
 msgstr "Čas, kdy byla provedena poslední změna stavu"
 
@@ -3446,8 +3490,9 @@ msgstr "Následujících ${number} položek"
 msgid "batch_previous_x_items"
 msgstr "Předchozích ${number} položek"
 
-#. Default: "${number} items matching your criteria."
-#: CMFPlone/skins/plone_forms/member_search_results.pt:26
+#. Default: "${number} items matching your search terms"
+#: CMFPlone/skins/plone_forms/search.pt:69
+#, fuzzy
 msgid "batch_x_items_matching_your_criteria"
 msgstr "Počet odpovídajících položek: ${number}"
 
@@ -3472,7 +3517,7 @@ msgid "box_external_links"
 msgstr "Vnější odkazy"
 
 #. Default: "Forgot your password?"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:94
+#: CMFPlone/skins/plone_login/login_form.cpt:80
 msgid "box_forgot_password_option"
 msgstr "Nepamatujete si své heslo?"
 
@@ -3487,7 +3532,7 @@ msgid "box_languages"
 msgstr "Jazyky"
 
 #. Default: "last modified"
-#: CMFPlone/skins/plone_content/folder_listing.pt:139
+#: CMFPlone/skins/plone_content/folder_listing.pt:142
 msgid "box_last_modified"
 msgstr "Poslední změna:"
 
@@ -3587,22 +3632,17 @@ msgid "constraintypes_mode_acquire"
 msgstr "Použít nastavení nadřazené složky"
 
 #. Default: "Attendees"
-#: CMFPlone/skins/plone_content/event_view.pt:152
+#: CMFPlone/skins/plone_content/event_view.pt:143
 msgid "contact_attendees"
 msgstr "Účastníci"
 
-#. Default: "Contact Email"
-#: CMFPlone/skins/plone_content/event_view.pt:136
-msgid "contact_email"
-msgstr "Kontaktní e-mailová adresa"
-
 #. Default: "Contact Name"
-#: CMFPlone/skins/plone_content/event_view.pt:127
+#: CMFPlone/skins/plone_content/event_view.pt:123
 msgid "contact_name"
 msgstr "Jméno"
 
 #. Default: "Contact Phone"
-#: CMFPlone/skins/plone_content/event_view.pt:144
+#: CMFPlone/skins/plone_content/event_view.pt:135
 msgid "contact_phone"
 msgstr "Kontaktní telefon"
 
@@ -3732,57 +3772,12 @@ msgid "description_accessibility_info"
 msgstr "Tento portál používá software ${plone} a byl navržen tak, aby byl plně přístupný a použitelný podle doporučení Web Content Accessibility Guidelines (${wcag} v1.0). Pokud zde naleznete cokoli neodpovídajícího zmíněným standardům, napište na adresu ${site_admin} (nikoli tvůrcům softwaru Plone)."
 
 #. Default: "We have undertaken to use our knowledge and understanding of the ways in which different people access the Internet, to develop a web site that is clear and simple for everybody to use."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:137
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:80
 msgid "description_accessibility_statement"
 msgstr "Využíváme naše znalosti a chápání způsobů práce různých lidí s Internetem k tomu, abychom vyvinuli webový portál, který může každý bez potíží používat."
 
-#. Default: "Access keys are not supported, please use a different browser."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:124
-msgid "description_accesskey_ie4_mac"
-msgstr "Klávesové zkratky nejsou podporovány, pro jejich zprovoznění použijte jiný prohlížeč."
-
-#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:112
-msgid "description_accesskey_ie4_win"
-msgstr "Podržte stisknutou klávesu <code>Alt</code> a k tomu stiskněte klávesu s číslem nebo písmenem vybrané klávesové zkratky."
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:118
-msgid "description_accesskey_ie5_mac"
-msgstr "Podržte stisknutou klávesu <code>Ctrl</code> a k tomu stiskněte klávesu s číslem nebo písmenem vybrané klávesové zkratky."
-
-#. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:82
-msgid "description_accesskey_ie5_win"
-msgstr "Podržte stisknutou klávesu <code>Alt</code>, k tomu stiskněte klávesu s číslem nebo písmenem vybrané klávesové zkratky, klávesy uvolněte a stiskněte klávesu <code>Enter</code>."
-
-#. Default: "Press and release the <code>Ctrl</code> key, then press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:106
-msgid "description_accesskey_konqueror_linux"
-msgstr "Podržte stisknutou klávesu <code>Ctrl</code> a pak stiskněte klávesu s číslem nebo písmenem vybrané klávesové zkratky."
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:94
-msgid "description_accesskey_mozilla_mac"
-msgstr "Podržte stisknutou klávesu <code>Ctrl</code> a k tomu stiskněte klávesu s číslem nebo písmenem vybrané klávesové zkratky."
-
-#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:88
-msgid "description_accesskey_mozilla_win"
-msgstr "Podržte stisknutou klávesu <code>Alt</code> a k tomu stiskněte klávesu s číslem nebo písmenem vybrané klávesové zkratky."
-
-#. Default: "Access keys are not supported, please use a different browser."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:129
-msgid "description_accesskey_netscape6_all"
-msgstr "Klávesové zkratky nejsou podporovány, pro jejich zprovoznění použijte jiný prohlížeč."
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:100
-msgid "description_accesskey_safari_mac"
-msgstr "Podržte stisknutou klávesu <code>Ctrl</code> a k tomu stiskněte klávesu s číslem nebo písmenem vybrané klávesové zkratky."
-
 #. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:69
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:70
 msgid "description_add_comment"
 msgstr "Vyplněním tohoto formuláře přidáte poznámku. Používejte pouze prostý text."
 
@@ -3802,7 +3797,7 @@ msgid "description_advanced_search"
 msgstr "Tento vyhledávací formulář umožňuje najít položky portálu zadáním jednoho nebo více termínů. <br/> Poznámka: Kdykoli je možné použít rychlé vyhledávání, neboť většinou postačuje. Tento formulář lze použít v případě, že si přejete vyhledávání upřesnit. "
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: CMFPlone/skins/plone_content/author.cpt:165
+#: CMFPlone/skins/plone_content/author.cpt:170
 msgid "description_author_feedback"
 msgstr "Pokud chcete kontaktovat autora této položky, vyplňte formulář níže."
 
@@ -3891,11 +3886,6 @@ msgstr "Mějte na paměti, že portlety typů obsahu se standardně zobrazují p
 msgid "description_control_panel"
 msgstr "Nastavení portálu a přídavných produktů"
 
-#. Default: "Configuration area for Plone and installed add-ons."
-#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:18
-msgid "description_controlpanel"
-msgstr ""
-
 #. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
 #: CMFPlone/skins/plone_deprecated/footer.pt:22
 msgid "description_copyright"
@@ -3917,7 +3907,7 @@ msgid "description_edit_groupproperties"
 msgstr "Skupiny jsou logická seskupení uživatelů, například podle jejich oddělení nebo funkcí. Není zde přímá vazba na globální oprávnění. K tomu se používají role, které se pak přidělují skupinám."
 
 #. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
-#: Archetypes/skins/archetypes/metadata_macros.pt:35
+#: Archetypes/skins/archetypes/metadata_macros.pt:32
 msgid "description_edit_properties"
 msgstr "Následující údaje, které se také nazývají <em>metainformace nebo metadata</em>, jsou souborem informací, které se používají ke kategorizaci objektů, přiřazení data účinnosti či vypršení platnosti, klíčových slov a nastavení jazyka."
 
@@ -3927,7 +3917,7 @@ msgid "description_enable_cookies_to_stay_logged_in"
 msgstr "Poznámka: Pokud budete po odejití z této stránky odhlášeni, stalo se tak z důvodu, že musíte nejprve zapnout příjem souborů cookies ve vašem prohlížeči."
 
 #. Default: "The error has been logged as entry number ${entryid}."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:140
+#: CMFPlone/skins/plone_templates/default_error_message.pt:144
 msgid "description_error_has_been_logged"
 msgstr "Chyba byla zaprotokolována jako záznam číslo ${entryid}."
 
@@ -3942,7 +3932,7 @@ msgid "description_error_rerference_link"
 msgstr "Další informace o těchto chybových stavech naleznete v referenční dokumentaci na stránkách plone.org."
 
 #. Default: "see the full error message"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:157
+#: CMFPlone/skins/plone_templates/default_error_message.pt:161
 msgid "description_full_error_link"
 msgstr "zobrazit celý text chybového hlášení"
 
@@ -3972,7 +3962,7 @@ msgid "description_historical_unavailable"
 msgstr "Tato třída nepodporuje historické rozhraní. The content must mix-in OFS.History.Historical."
 
 #. Default: "If you need to report this to the ${site_admin}, please include this entry number in your message."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:146
+#: CMFPlone/skins/plone_templates/default_error_message.pt:150
 msgid "description_include_error_in_admin_message"
 msgstr "Pokud potřebujete tuto chybu ohlásit na adresu ${site_admin}, nezapomeňte do své zprávy uvést číslo tohoto záznamu."
 
@@ -4027,7 +4017,7 @@ msgid "description_member_search"
 msgstr "Zde je možné vyhledávat uživatele zadáním jedné nebo více podmínek."
 
 #. Default: "Your personal settings."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:61
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:65
 msgid "description_my_preferences"
 msgstr "Osobní nastavení"
 
@@ -4042,12 +4032,12 @@ msgid "description_navigation_setup_navtree"
 msgstr "Mějte na paměti, že pro nastavení toho, jak bude zobrazován strom navigace, musíte přejít do sekce \"Spravovat portlety\" v kořenové složce portálu (nebo i kdykoliv je v portálu přidán portlet Navigace) a změnit jeho nastavení přímo."
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:34
+#: CMFPlone/skins/plone_login/logged_out.cpt:41
 msgid "description_no_account"
 msgstr "Pokud zde nemáte svůj účet a chcete se stát uživatelem tohoto portálu, přejděte na ${registration_form}."
 
 #. Default: "registration form"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:35
+#: CMFPlone/skins/plone_login/logged_out.cpt:42
 msgid "description_no_account_registration_linktext"
 msgstr "Registrační formulář"
 
@@ -4057,7 +4047,7 @@ msgid "description_no_comparison_support"
 msgstr "Tato položka nepodporuje porovnávání."
 
 #. Default: "There are currently no items in this folder."
-#: CMFPlone/skins/plone_content/folder_listing.pt:176
+#: CMFPlone/skins/plone_content/folder_listing.pt:179
 msgid "description_no_items_in_folder"
 msgstr "V této složce nyní nejsou žádné položky."
 
@@ -4067,7 +4057,7 @@ msgid "description_no_privileges_for_page"
 msgstr "Pro zobrazení této stránky nemáte dostatečná oprávnění. Pokud jste přesvědčeni, že se vám tato zpráva zobrazila omylem, obraťte se na ${site_admin}."
 
 #. Default: "No results were found."
-#: CMFPlone/skins/plone_forms/member_search_results.pt:67
+#: CMFPlone/skins/plone_forms/search.pt:85
 msgid "description_no_results_found"
 msgstr "Žádné výsledky hledání."
 
@@ -4077,12 +4067,12 @@ msgid "description_no_visible_items_add_paste"
 msgstr "Tato složka neobsahuje žádné zobrazitelné položky. Chcete-li nějaké přidat, použijte příslušné tlačítko nebo pomocí funkce Vložit vložte položky odjinud."
 
 #. Default: "This type has no workflow. The visibilty of items of this type is determined by the folder they are in."
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:214
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:248
 msgid "description_no_workflow"
 msgstr "Tento typ nemá nastaven žádný pracovní postup. Přístupnost položek tohoto typu je určována dle složky, ve které jsou uloženy."
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
-#: CMFPlone/skins/plone_login/login_failed.cpt:27
+#: CMFPlone/skins/plone_login/login_failed.cpt:32
 msgid "description_not_accept_cookies"
 msgstr "Pokud je vaše uživatelské jméno a heslo správně, problém může být způsoben tím, že nemáte nastavený prohlížeč pro příjem souborů cookies."
 
@@ -4187,22 +4177,22 @@ msgid "description_sign_in"
 msgstr "K přístupu k této oblasti portálu je nutné se přihlásit uživatelským jménem a heslem."
 
 #. Default: "Since you are a site administrator, you can ${link_full_error_msg}"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:156
+#: CMFPlone/skins/plone_templates/default_error_message.pt:160
 msgid "description_site_admin_see_full_error"
 msgstr "Jako správce portálu můžete ${link_full_error_msg}"
 
 #. Default: "Please double check the web address or use the search function on this page to find what you are looking for."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:39
+#: CMFPlone/skins/plone_templates/default_error_message.pt:40
 msgid "description_site_error_double_check_or_search"
 msgstr "Zkontrolujte laskavě znovu zadanou webovou adresu. Je také možné použít k nalezení požadovaných informací funkce vyhledávání."
 
 #. Default: "If you are certain you have the correct web address but are encountering an error, please contact the ${site_admin}."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:45
+#: CMFPlone/skins/plone_templates/default_error_message.pt:46
 msgid "description_site_error_mail_site_admin"
 msgstr "Pokud jste si jisti, že máte správnou webovou adresu, ale přesto došlo k chybě, kontaktujte ${site_admin}."
 
 #. Default: "Thank you."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:51
+#: CMFPlone/skins/plone_templates/default_error_message.pt:52
 msgid "description_site_error_thank_you"
 msgstr "Děkujeme."
 
@@ -4222,17 +4212,17 @@ msgid "description_static_portlet"
 msgstr ""
 
 #. Default: "If you are still reaching this page after correctly configuring your browser, here are some possible reasons:"
-#: CMFPlone/skins/plone_login/login_failed.cpt:32
+#: CMFPlone/skins/plone_login/login_failed.cpt:37
 msgid "description_still_failure"
 msgstr "Pokud se tato stránka zobrazuje i po správném nastavení prohlížeče, může to mít následující důvody:"
 
 #. Default: "You may be running web filtering software that disables cookies. If so, you will need to configure the software so that it enables you to accept cookies from ${url}"
-#: CMFPlone/skins/plone_login/login_failed.cpt:42
+#: CMFPlone/skins/plone_login/login_failed.cpt:47
 msgid "description_still_failure_reason1"
 msgstr "Můžete používat software filtrující obsah webu, který zároveň zakazuje soubory cookie. V takovém případě je potřeba tento software nastavit tak, aby vám povolil přijímat soubory cookie z adresy ${url}."
 
 #. Default: "Your computer may be behind a firewall or proxy server that prevents cookies from being sent to or from your browser. If so, you will need to ask your systems administrator if the problem can be fixed."
-#: CMFPlone/skins/plone_login/login_failed.cpt:44
+#: CMFPlone/skins/plone_login/login_failed.cpt:49
 msgid "description_still_failure_reason2"
 msgstr "Váš počítač se může nacházet za branou firewall nebo serverem proxy. Tyto síťové prvky mohou zabraňovat přijetí nebo odeslání souborů cookie. V takovém případě je potřeba se obrátit na správce vašeho systému a informovat se, zda je možné situaci napravit."
 
@@ -4292,12 +4282,12 @@ msgid "description_user_panel"
 msgstr "Tato oblast umožňuje provádět osobní nastavení."
 
 #. Default: "We have used ${xhtml} 1.0 and ${css} that conforms to specification, as laid out by the ${w3c} because we believe that usability and accessibility must have a solid foundation. If anything on this web site does not validate correctly, please contact the ${site_admin}, and not the Plone Team."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:159
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:102
 msgid "description_validation"
 msgstr "Věříme, že použitelnost a přístupnost musí mít solidní základy, proto byly použity standardy ${xhtml} 1.0 a ${css} odpovídající specifikaci podle konzorcia ${w3c}. Pokud naleznete v portálu cokoli neodpovídající zmíněným standardům, napište na adresu ${site_admin} (nikoli tvůrcům portálu Plone)."
 
 #. Default: "We have also endeavoured to achieve AA accessibility as measured against version 1.0 of the ${wcag}. We are aware however, that a number of the checkpoints of the ${wcag2} are subjective — and although we are sure that we have met them squarely, there may be instances where interpretation may vary."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:172
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:115
 msgid "description_wcag_aa_rating"
 msgstr "Také jsme se snažili dosáhnout přístupnosti třídy AA ve vztahu k verzi 1.0 doporučení ${wcag}. Jsme si nicméně vědomi toho, že některé body doporučení ${wcag2} mohou být chápány subjektivně a i když jsme provedli podle našeho názoru přímou implementaci, v některých případech se mohou výklady různit."
 
@@ -4334,7 +4324,7 @@ msgid "enable_cookies_message"
 msgstr "Soubory cookie nejsou povoleny. Před přihlášením je třeba  ${enable_cookies}."
 
 #. Default: "Cookies are not enabled. You must enable cookies before you can log in."
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:70
+#: CMFPlone/skins/plone_login/logged_out.cpt:58
 msgid "enable_cookies_message_before_login"
 msgstr "Nemáte povolený příjem souborů cookies ve vašem prohlížeči. Abyste se mohli přihlásit, musíte si zapnout příjem cookies."
 
@@ -4344,12 +4334,12 @@ msgid "error_installed_product"
 msgstr "Během instalace došlo k chybám, zkontrolujte opis."
 
 #. Default: "${name} is required, please correct."
-#: Archetypes/Field.py:354
+#: Archetypes/Field.py:355
 msgid "error_required"
 msgstr "Vyplnění pole ${name} je povinné, zadejte požadovaný údaj."
 
 #. Default: "Values ${val} are not allowed for vocabulary of element ${label}."
-#: Archetypes/Field.py:399
+#: Archetypes/Field.py:400
 #, fuzzy
 msgid "error_vocabulary"
 msgstr "Není možné použít hodnotu ${val} jako hodnotu pole ${label}."
@@ -4360,17 +4350,17 @@ msgid "event_and"
 msgstr "až"
 
 #. Default: "from"
-#: CMFPlone/skins/plone_content/event_view.pt:87
+#: CMFPlone/skins/plone_content/event_view.pt:83
 msgid "event_from"
 msgstr "od"
 
 #. Default: "More information about this event…"
-#: CMFPlone/skins/plone_content/event_view.pt:186
+#: CMFPlone/skins/plone_content/event_view.pt:177
 msgid "event_more_information"
 msgstr "Více informací o této události..."
 
 #. Default: "to"
-#: CMFPlone/skins/plone_content/event_view.pt:67
+#: CMFPlone/skins/plone_content/event_view.pt:65
 msgid "event_to"
 msgstr "do"
 
@@ -4385,7 +4375,7 @@ msgid "event_when"
 msgstr "Čas"
 
 #. Default: "Where"
-#: CMFPlone/skins/plone_content/event_view.pt:119
+#: CMFPlone/skins/plone_content/event_view.pt:113
 msgid "event_where"
 msgstr "Místo"
 
@@ -4425,7 +4415,7 @@ msgid "go_to_parent_url"
 msgstr "O úroveň výš"
 
 #. Default: "All content created by ${user}…"
-#: CMFPlone/skins/plone_content/author.cpt:286
+#: CMFPlone/skins/plone_content/author.cpt:291
 msgid "go_to_search_author_content"
 msgstr "Všechny položky vytvořené uživatelem ${user}..."
 
@@ -4434,18 +4424,13 @@ msgstr "Všechny položky vytvořené uživatelem ${user}..."
 msgid "heading_access_keys"
 msgstr "Klávesové zkratky"
 
-#. Default: "Using access keys in different web browsers"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:78
-msgid "heading_access_keys_usage"
-msgstr "Klávesové zkratky v různých prohlížečích"
-
 #. Default: "Accessibility"
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:18
 msgid "heading_accessibility_info"
 msgstr "Přístupnost"
 
 #. Default: "Accessibility Statement"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:135
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:78
 msgid "heading_accessibility_statement"
 msgstr "Prohlášení o přístupnosti"
 
@@ -4470,7 +4455,7 @@ msgid "heading_add_sharing_permissions"
 msgstr "Přidat uživatelům oprávnění ke sdílení"
 
 #. Default: "Add event to calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:160
+#: CMFPlone/skins/plone_content/event_view.pt:151
 msgid "heading_add_to_calendar"
 msgstr "Přidat událost do kalendáře"
 
@@ -4495,7 +4480,7 @@ msgid "heading_allowed_languages"
 msgstr "Povolené jazyky"
 
 #. Default: "Latest content created by this user"
-#: CMFPlone/skins/plone_content/author.cpt:245
+#: CMFPlone/skins/plone_content/author.cpt:250
 msgid "heading_author_content"
 msgstr "Poslední položky vytvořené tímto uživatelem"
 
@@ -4550,7 +4535,7 @@ msgid "heading_currently_assigned_shares"
 msgstr "Aktuální oprávnění ke sdílení položky ${folder}"
 
 #. Default: "${user_name}'s dashboard"
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:91
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:97
 msgid "heading_dashboard"
 msgstr "Přehledová stránka uživatele ${user_name}"
 
@@ -4624,6 +4609,11 @@ msgstr "Aktuální členové skupiny"
 msgid "heading_groups_overview"
 msgstr "Přehled skupin"
 
+#. Default: "Inherited portlets"
+#: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:66
+msgid "heading_inherited_portlets"
+msgstr ""
+
 #. Default: "Install log for ${productname}"
 #: CMFPlone/skins/plone_prefs/prefs_installed_product_overview.pt:15
 msgid "heading_install_log_for"
@@ -4660,12 +4650,12 @@ msgid "heading_member_search"
 msgstr "Vyhledání uživatelů"
 
 #. Default: "Current Group Memberships"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:91
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:93
 msgid "heading_memberships_current"
 msgstr "Aktuální členství ve skupinách"
 
 #. Default: "Personal Preferences"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:51
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:54
 msgid "heading_my_preferences"
 msgstr "Osobní nastavení"
 
@@ -4685,7 +4675,7 @@ msgid "heading_no_privileges"
 msgstr "Nedostatečné oprávnění"
 
 #. Default: "You might have been looking for…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:64
+#: CMFPlone/skins/plone_templates/default_error_message.pt:65
 msgid "heading_not_found_suggestions"
 msgstr "Možná se pokoušíte vyhledat..."
 
@@ -4770,7 +4760,7 @@ msgid "heading_search_newmembers"
 msgstr "Vyhledání nových členů skupin"
 
 #. Default: "Search results"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:226
+#: CMFPlone/skins/plone_forms/search.pt:63
 msgid "heading_search_results"
 msgstr "Výsledky hledání"
 
@@ -4810,7 +4800,7 @@ msgid "heading_set_content_type_restrictions"
 msgstr "Omezit typy obsahu, které mohou být přidávány"
 
 #. Default: "Please log in"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:7
+#: CMFPlone/skins/plone_login/login_form.cpt:76
 msgid "heading_sign_in"
 msgstr "Přihlaste se"
 
@@ -4820,7 +4810,7 @@ msgid "heading_signed_out"
 msgstr "Proběhlo vaše odhlášení z portálu."
 
 #. Default: "We're sorry, but there seems to be an error…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:131
+#: CMFPlone/skins/plone_templates/default_error_message.pt:135
 msgid "heading_site_error_sorry"
 msgstr "Omlouváme se, ale zřejmě došlo k chybě..."
 
@@ -4830,7 +4820,7 @@ msgid "heading_site_language"
 msgstr "Jazyk portálu"
 
 #. Default: "We're sorry, but that page doesn't exist…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:34
+#: CMFPlone/skins/plone_templates/default_error_message.pt:35
 msgid "heading_site_there_seems_to_be_an_error"
 msgstr "Litujeme, ale tato stránka neexistuje..."
 
@@ -4865,7 +4855,7 @@ msgid "heading_users_overview"
 msgstr "Přehled uživatelů"
 
 #. Default: "Validation"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:143
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:86
 msgid "heading_validation"
 msgstr "Ověření platnosti"
 
@@ -4880,7 +4870,7 @@ msgid "heading_views"
 msgstr "Zobrazení"
 
 #. Default: "Welcome!"
-#: CMFPlone/skins/plone_login/login_password.cpt:22
+#: CMFPlone/skins/plone_login/registered.pt:19
 msgid "heading_welcome"
 msgstr "Vítejte!"
 
@@ -4910,12 +4900,12 @@ msgid "help_allow_combined_language_codes"
 msgstr "Příklady: pt-br (brazilská portugalština), en-us (americká angličtina), atd."
 
 #. Default: "If selected, users can add comments to this item."
-#: Archetypes/ExtensibleMetadata.py:66
+#: Archetypes/ExtensibleMetadata.py:70
 msgid "help_allow_comments"
 msgstr "Pokud je vybrána tato možnost, mohou uživatelé přidávat komentáře k této položce."
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:195
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:199
 msgid "help_biography"
 msgstr "Krátké představení vaší osoby a toho, čím se zabýváte. Bude zobrazeno na vaší autorské stránce, na kterou povede odkaz z vámi vytvářených položek."
 
@@ -4930,7 +4920,7 @@ msgid "help_capslock_password"
 msgstr "Malá a velká písmena se rozlišují. Ujistěte se, že nemáte zapnutý přepínač Caps Lock."
 
 #. Default: "Also known as keywords, tags or labels, these help you categorize your content."
-#: Archetypes/ExtensibleMetadata.py:78
+#: Archetypes/ExtensibleMetadata.py:82
 msgid "help_categories"
 msgstr "Kategorie, které můžete znát i jako klíčová slova, jmenovky nebo značky, vám pomohou kategorizovat obsah portálu."
 
@@ -4970,32 +4960,32 @@ msgid "help_confirm_password"
 msgstr "Zadejte své heslo znovu. Obě hesla se musejí shodovat."
 
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:241
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:245
 msgid "help_content_editor"
 msgstr "Vyberte si editor položek, který chcete použít. Tyto editory často mívají určité požadavky na webový prohlížeč."
 
 #. Default: "When checked, an icon will be made visible on each page which allows you to edit content with your favorite editor instead of using browser-based editors. This requires an additional application called ExternalEditor installed client-side. Ask your administrator for more information if needed."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:284
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:288
 msgid "help_content_ext_editor"
 msgstr "V případě zaškrtnutí bude na všech stránkách zobrazována ikona, díky které bude možné editovat položky pomocí vybraného vnějšího editoru místo obvyklého pole v prohlížeči. K tomu je potřeba na straně klienta nainstalovat zvláštní aplikaci \"ExternalEditor\". Potřebujete-li pomoci, zeptejte se svého správce."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: Archetypes/ExtensibleMetadata.py:112
+#: Archetypes/ExtensibleMetadata.py:116
 msgid "help_contributors"
 msgstr "Jména lidí, kteří k této položce přispěli. Každého přispěvatele uveďte na zvláštním řádku."
 
 #. Default: "Copyright statement or other rights information on this item."
-#: Archetypes/ExtensibleMetadata.py:168
+#: Archetypes/ExtensibleMetadata.py:172
 msgid "help_copyrights"
 msgstr "Ustanovení autorských práv nebo jiné informace o právech k této položce."
 
 #. Default: "Date this object was created"
-#: Archetypes/ExtensibleMetadata.py:187
+#: Archetypes/ExtensibleMetadata.py:191
 msgid "help_creation_date"
 msgstr "Datum, kdy byla položka vytvořena"
 
 #. Default: "Persons responsible for creating the content of this item. Please enter a list of user names, one per line. The principal creator should come first."
-#: Archetypes/ExtensibleMetadata.py:123
+#: Archetypes/ExtensibleMetadata.py:127
 msgid "help_creators"
 msgstr "Uživatelé odpovědní za vytvoření obsahu této položky. Zadejte, prosím, seznam uživatelských jmen, na každý řádek jedno. Hlavní tvůrce by měl být uveden jako první."
 
@@ -5040,7 +5030,7 @@ msgid "help_description"
 msgstr "Stručný popis obsahu položky"
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:327
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:331
 msgid "help_display_names"
 msgstr "Určuje, jestli bude během úprav položek možné měnit krátké názvy (neboli ID). Pokud nejsou krátké názvy zobrazeny, budou generovány automaticky."
 
@@ -5085,7 +5075,7 @@ msgid "help_groupname"
 msgstr "Jedinečný identifikátor skupiny, který nemůže být po vytvoření změněn."
 
 #. Default: "The URL for your external home page, if you have one."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:219
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:223
 msgid "help_homepage"
 msgstr "Adresa URL vašich stránek mimo tento portál, máte-li takové."
 
@@ -5110,7 +5100,7 @@ msgid "help_inherit_criteria"
 msgstr "Hledání z nadřízené rešerše můžete spřesnit použitím podmínek této rešerše."
 
 #. Default: "By default, permissions from the container of this item are inherited. If you disable this, only the explicitly defined sharing permissions will be valid. In the overview, the symbol ${image_confirm_icon} indicates an inherited value. Similarly, the symbol ${image_link_icon} indicates a global role, which is managed by the site administrator."
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:155
 msgid "help_inherit_local_roles"
 msgstr "Standardně jsou děděna oprávnění ze složky nadřazené této položce. Pokud tuto volbu vypnete, budou platná pouze explicitně definovaná oprávnění ke sdílení. Symbol ${image_confirm_icon} v přehledu označuje zděděnou hodnotu. Podobně symbol ${image_link_icon} označuje globální roli, kterou spravuje administrátor portálu."
 
@@ -5120,7 +5110,7 @@ msgid "help_limit_number"
 msgstr "Je-li vybráno, bude zobrazen pouze údaj \"Počet položek\" naznačený níže."
 
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:306
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:310
 msgid "help_listed_search"
 msgstr "Vyberte, zda má být váš uživatel vypisován při vyhledávání uživatelů portálu."
 
@@ -5130,12 +5120,12 @@ msgid "help_locally_allowed_types"
 msgstr "Vyberte, které typy položek budou dostupné v podmenu 'Další…' <em>namísto</em> jejich zobrazení v hlavním rozbalovacím menu. Tato možnost je užitečná, protože ačkoliv tyto typy položek nejsou v tomto umístění preferovány, jsou dostupné ve chvíli, kdy je skutečně potřebujete."
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:142
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:146
 msgid "help_location"
 msgstr "Místo, kde se nacházíte -- buď město či země -- nebo část společnosti, ve které se nachází vaše kancelář."
 
 #. Default: "The geographical location associated with the item, if applicable."
-#: Archetypes/ExtensibleMetadata.py:103
+#: Archetypes/ExtensibleMetadata.py:107
 msgid "help_location_dc"
 msgstr "Zeměpisné umístění související s položkou, pokud je možné tuto hodnotu nastavit."
 
@@ -5145,17 +5135,17 @@ msgid "help_login_name_caps"
 msgstr "V uživatelských jménech se rozlišují malá a velká písmena. Ujistěte se, že nemáte zapnutý přepínač Caps Lock."
 
 #. Default: "Appearance of the site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:343
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:347
 msgid "help_look"
 msgstr "Vzhled portálu."
 
 #. Default: "Please enter the message you want to send."
-#: CMFPlone/skins/plone_templates/contact-info.cpt:136
+#: CMFPlone/skins/plone_templates/contact-info.cpt:138
 msgid "help_message"
 msgstr "Zadejte zprávu k odeslání."
 
 #. Default: "Date this content was modified last"
-#: Archetypes/ExtensibleMetadata.py:203
+#: Archetypes/ExtensibleMetadata.py:207
 msgid "help_modification_date"
 msgstr "Datum poslední úpravy položky."
 
@@ -5179,8 +5169,13 @@ msgstr "Název navigačního stromu. Pro zobrazení výchozího přeloženého n
 msgid "help_navigation_tree_depth"
 msgstr "Celé číslo určující počet úrovní pod kořenem, které mají být zahrnuty do navigačního stromu. Nula znamená žádné omezení, 1 zobrazí pouze kořenovou složku."
 
+#. Default: "The content types that should be shown in the navigation and site map."
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:112
+msgid "help_navigationtypes"
+msgstr ""
+
 #. Default: "Enter your new password. Minimum 5 characters."
-#: CMFPlone/skins/plone_login/login_password.cpt:67
+#: CMFPlone/skins/plone_login/login_password.cpt:68
 msgid "help_new_password"
 msgstr "Zadejte své nové heslo o minimální délce 5 znaků."
 
@@ -5210,7 +5205,7 @@ msgid "help_password_creation"
 msgstr "Minimální délka je 5 znaků."
 
 #. Default: "If you have forgotten your password, ${click_here}."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:122
+#: CMFPlone/skins/plone_login/login_form.cpt:85
 msgid "help_password_retrieval"
 msgstr "Pokud si své heslo nepamatujete, ${click_here}."
 
@@ -5225,12 +5220,12 @@ msgid "help_portal_type_criteria_value"
 msgstr "Jeden z registrovaných typů v portálu."
 
 #. Default: "To add or change the portrait: click the \"Browse\" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:376
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:380
 msgid "help_portrait"
 msgstr "Chcete-li přidat nebo změnit podobiznu, klepněte na následující tlačítko a vyberte svůj obrázek. Doporučená velikost je 75 bodů na šířku a 100 bodů na výšku."
 
 #. Default: "Your preferred language."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:167
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:171
 msgid "help_preferred_language"
 msgstr "Upřednostňovaný jazyk."
 
@@ -5240,7 +5235,7 @@ msgid "help_publishing_comments"
 msgstr "Bude přidáno do historie zveřejňování. Pokud se mění stav více položek najednou, bude tento popis připojen ke každé z nich."
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:151
+#: CMFPlone/skins/plone_login/login_form.cpt:149
 msgid "help_remember_my_name"
 msgstr "Chcete-li mít své uživatelské jméno při přihlašování automaticky vyplněno, zaškrtněte toto políčko."
 
@@ -5335,12 +5330,12 @@ msgid "help_send_to_mail"
 msgstr "E-mailová adresa, na kterou má být zaslána zpráva s odkazem na tuto stránku."
 
 #. Default: "Please enter your e-mail address"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:81
+#: CMFPlone/skins/plone_templates/contact-info.cpt:87
 msgid "help_sender_from_address"
 msgstr "Zadejte svou e-mailovou adresu."
 
 #. Default: "Please enter your full name"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:57
+#: CMFPlone/skins/plone_templates/contact-info.cpt:60
 msgid "help_sender_fullname"
 msgstr "Zadejte své plné jméno."
 
@@ -5364,28 +5359,23 @@ msgstr "Krátký název je údaj zobrazovaný v adrese URL dané položky."
 msgid "help_shortname"
 msgstr "Neměl by obsahovat mezery, podtržítka nebo střídat velká písmena s malými. Krátký název je součástí webové adresy položky."
 
-#. Default: "The content types that should be shown in the site map."
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:112
-msgid "help_sitemaptypes"
-msgstr "Typy obsahu, které budou zobrazeny v mapě portálu."
-
 #. Default: "The password for the ESMTP user account."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:54
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:55
 msgid "help_smtp_pass"
 msgstr "Heslo pro daný účet."
 
 #. Default: "The port of your local SMTP (outgoing e-mail) server. Usually '25'."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:37
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:38
 msgid "help_smtp_port"
 msgstr "Číslo portu služby SMTP pro odesílání pošty. Obvykle \"25\"."
 
 #. Default: "The address of your local SMTP (outgoing e-mail) server. Usually 'localhost', unless you use an external server to send e-mail."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:27
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:28
 msgid "help_smtp_server"
 msgstr "Adresa serveru se službou SMTP pro odesílání pošty. Obvykle \"localhost\", pokud pro odesílání pošty nepoužíváte nějaký vnější server."
 
 #. Default: "Username for authentication to your e-mail server. Not required unless you are using ESMTP."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:45
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:46
 msgid "help_smtp_userid"
 msgstr "Jméno pro přihlášení k serveru elektronické pošty. Není nutné je zadávat, pokud nepoužíváte protokol ESMTP."
 
@@ -5395,7 +5385,7 @@ msgid "help_string_criteria_value"
 msgstr "Řetězcová hodnota."
 
 #. Default: "Please enter the subject of the message you want to send."
-#: CMFPlone/skins/plone_templates/contact-info.cpt:112
+#: CMFPlone/skins/plone_templates/contact-info.cpt:114
 msgid "help_subject"
 msgstr "Zadejte předmět posílané zprávy."
 
@@ -5446,7 +5436,7 @@ msgid "help_user_name_creation_casesensitive"
 msgstr "Zadejte požadované uživatelské jméno, obvykle nějak takto: \"kjedlicka\". Nejsou povoleny mezery, háčky a čárky ani zvláštní znaky. Stejně jako v heslu i zde se rozlišují malá a velká písmena. Ujistěte se, že nemáte zapnutý přepínač Caps Lock. Toto je jméno, pomocí kterého se budete přihlašovat."
 
 #. Default: "The workflow states that should be shown in the navigation tree and the site map."
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:159
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:160
 msgid "help_wf_states"
 msgstr "Stavy pracovního postupu, které mají být zobrazovány v navigačním stromě a v mapě portálu."
 
@@ -5477,7 +5467,7 @@ msgid "if_all_conditions_met"
 msgstr "Pokud jsou splněny následující podmínky:"
 
 #. Default: "Your dashboard is currently empty. Click the <em>edit</em> tab to assign some personal portlets."
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:97
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:103
 msgid "info_empty_dashboard"
 msgstr "Vaše přehledová stránka je aktuálně prázdná. Klikněte na <em>upravit</em> pro přidělení osobních portletů."
 
@@ -5512,7 +5502,7 @@ msgid "label_add"
 msgstr "Přidat"
 
 #. Default: "Add Comment"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:25
+#: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:55
 msgid "label_add_comment"
 msgstr "Přidat poznámku"
 
@@ -5547,12 +5537,12 @@ msgid "label_add_portlet_ellipsis"
 msgstr "Přidat portlet..."
 
 #. Default: "iCal"
-#: CMFPlone/skins/plone_content/event_view.pt:173
+#: CMFPlone/skins/plone_content/event_view.pt:164
 msgid "label_add_to_ical"
 msgstr "iCal (Mac OS X)"
 
 #. Default: "vCal"
-#: CMFPlone/skins/plone_content/event_view.pt:167
+#: CMFPlone/skins/plone_content/event_view.pt:158
 msgid "label_add_to_vcal"
 msgstr "vKalendář (Windows, Linux)"
 
@@ -5573,7 +5563,7 @@ msgid "label_add_user_to_group"
 msgstr "Přidat uživatele do vybraných skupin"
 
 #. Default: "Add selected groups and users to this group"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:288
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:299
 msgid "label_add_users_to_group"
 msgstr "Přidat do této skupiny vybrané skupiny či uživatele"
 
@@ -5593,7 +5583,7 @@ msgid "label_affected_content"
 msgstr "Ovlivněné položky"
 
 #. Default: "All"
-#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:32
+#: plone.app.content/plone/app/content/browser/table.pt:38
 msgid "label_all"
 msgstr "Vše"
 
@@ -5613,7 +5603,7 @@ msgid "label_allow_combined_language_codes"
 msgstr "Zobrazit jazykové varianty specifické pro jednotlivé země"
 
 #. Default: "Allow comments"
-#: Archetypes/ExtensibleMetadata.py:64
+#: Archetypes/ExtensibleMetadata.py:68
 msgid "label_allow_comments"
 msgstr "Povolit komentáře"
 
@@ -5623,12 +5613,12 @@ msgid "label_allow_discussion"
 msgstr "Povolit poznámky k této položce"
 
 #. Default: "an anonymous user"
-#: plone.locking/plone/locking/browser/locking.py:88
+#: plone.locking/plone/locking/browser/locking.py:91
 msgid "label_an_anonymous_user"
 msgstr "anonymní uživatel"
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:64
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:46
 msgid "label_anonymous_user"
 msgstr "Anonym"
 
@@ -5638,7 +5628,7 @@ msgid "label_any_author"
 msgstr "Libovolný autor"
 
 #. Default: "Apply Changes"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:228
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:236
 msgid "label_apply_changes"
 msgstr "Použít změny"
 
@@ -5673,7 +5663,7 @@ msgid "label_assign_roles_to_users_groups"
 msgstr "Přiřadit vybrané role vybraným uživatelům či skupinám"
 
 #. Default: "at"
-#: Archetypes/Field.py:1846
+#: Archetypes/Field.py:1909
 msgid "label_at"
 msgstr "v/ve"
 
@@ -5683,12 +5673,12 @@ msgid "label_author"
 msgstr "Autor"
 
 #. Default: "Author's external home page…"
-#: CMFPlone/skins/plone_content/author.cpt:132
+#: CMFPlone/skins/plone_content/author.cpt:137
 msgid "label_author_external_home_page"
 msgstr "Autorova externí domovská stránka..."
 
 #. Default: "Author's home page in this site…"
-#: CMFPlone/skins/plone_content/author.cpt:127
+#: CMFPlone/skins/plone_content/author.cpt:132
 msgid "label_author_internal_home_page"
 msgstr "Autorova domovská stránka v tomto portálu..."
 
@@ -5708,7 +5698,7 @@ msgid "label_back_to_site"
 msgstr "Zpět na portál"
 
 #. Default: "Biography"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:193
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:197
 msgid "label_biography"
 msgstr "Životopis"
 
@@ -5723,12 +5713,12 @@ msgid "label_boolean_criteria_bool"
 msgstr "Hodnota"
 
 #. Default: "Browse"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:62
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:67
 msgid "label_browse"
 msgstr "Procházet"
 
 #. Default: "by ${author}"
-#: CMFPlone/skins/plone_content/folder_listing.pt:126
+#: CMFPlone/skins/plone_content/folder_listing.pt:129
 msgid "label_by_author"
 msgstr "Autor: ${author}"
 
@@ -5763,7 +5753,7 @@ msgid "label_calendar"
 msgstr "Kalendář"
 
 #. Default: "Cancel"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:126
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:416
 msgid "label_cancel"
 msgstr "Storno"
 
@@ -5783,7 +5773,7 @@ msgid "label_change_comment"
 msgstr "Změnit poznámku"
 
 #. Default: "Change content item as default view..."
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:304
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:305
 msgid "label_change_default_item"
 msgstr "Změnit položku obsahu pro výchozí zobrazení..."
 
@@ -5803,7 +5793,7 @@ msgid "label_change_ownership"
 msgstr "Změnit vlastnictví"
 
 #. Default: "Change Password"
-#: CMFPlone/skins/plone_login/login_password.cpt:101
+#: CMFPlone/skins/plone_login/login_password.cpt:102
 msgid "label_change_password"
 msgstr "Změnit heslo"
 
@@ -5853,7 +5843,7 @@ msgid "label_clear_selection"
 msgstr "Vyčistit výběr"
 
 #. Default: "click here to retrieve it"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:123
+#: CMFPlone/skins/plone_login/login_form.cpt:86
 msgid "label_click_here_to_retrieve"
 msgstr "Klepněte sem k získání hesla"
 
@@ -5863,17 +5853,17 @@ msgid "label_click_to_view_full_image"
 msgstr "Klikněte pro zobrazení obrázku v plné velikosti..."
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:141
+#: CMFPlone/skins/plone_forms/sendto_form.cpt:90
 msgid "label_comment"
 msgstr "Poznámka"
 
 #. Default: "Posted by"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:61
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:43
 msgid "label_comment_by"
 msgstr "Autor:"
 
 #. Default: "at"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:66
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:48
 msgid "label_commented_at"
 msgstr ", čas:"
 
@@ -5923,7 +5913,7 @@ msgid "label_containing"
 msgstr ", v jejichž jméně se nachází text"
 
 #. Default: "Content editor"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:239
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:243
 msgid "label_content_editor"
 msgstr "Editor"
 
@@ -5973,7 +5963,7 @@ msgid "label_contentrules_subfolders"
 msgstr "Použít na podřízené složky"
 
 #. Default: "Contributors"
-#: Archetypes/ExtensibleMetadata.py:111
+#: Archetypes/ExtensibleMetadata.py:115
 msgid "label_contributors"
 msgstr "Přispěvatelé:"
 
@@ -5993,17 +5983,17 @@ msgid "label_copy_to_present"
 msgstr "Převzít do současné verze"
 
 #. Default: "Rights"
-#: Archetypes/ExtensibleMetadata.py:167
+#: Archetypes/ExtensibleMetadata.py:171
 msgid "label_copyrights"
 msgstr "Práva"
 
 #. Default: "Creation Date"
-#: Archetypes/ExtensibleMetadata.py:186
+#: Archetypes/ExtensibleMetadata.py:190
 msgid "label_creation_date"
 msgstr "Datum vytvoření"
 
 #. Default: "Creators"
-#: Archetypes/ExtensibleMetadata.py:122
+#: Archetypes/ExtensibleMetadata.py:126
 msgid "label_creators"
 msgstr "Autoři"
 
@@ -6048,7 +6038,7 @@ msgid "label_current_password"
 msgstr "Současné heslo"
 
 #. Default: "Current selection"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:16
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:17
 msgid "label_currentselection"
 msgstr "Aktuální výběr"
 
@@ -6063,7 +6053,7 @@ msgid "label_custom_view_fields"
 msgstr "Sloupce tabulky"
 
 #. Default: "Dashboard"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-dashboard.pt:38
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:38
 msgid "label_dashboard"
 msgstr "Přehledová stránka"
 
@@ -6083,7 +6073,7 @@ msgid "label_default_type"
 msgstr "(Výchozí)"
 
 #. Default: "Default workflow (${title})"
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:205
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:239
 msgid "label_default_workflow_title"
 msgstr "Výchozí pracovní postup (${title})"
 
@@ -6093,7 +6083,7 @@ msgid "label_delete"
 msgstr "Smazat"
 
 #. Default: "Delete Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:397
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:401
 msgid "label_delete_portrait"
 msgstr "Odstranit podobiznu"
 
@@ -6138,7 +6128,7 @@ msgid "label_discussion_enabled"
 msgstr "Povolit"
 
 #. Default: "Edit"
-#: CMFPlone/skins/plone_content/author.cpt:66
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:36
 msgid "label_edit"
 msgstr "Upravit"
 
@@ -6153,7 +6143,7 @@ msgid "label_edit_default_view_container_go_here"
 msgstr "přejít sem"
 
 #. Default: "Allow editing of Short Names"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:324
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:328
 msgid "label_edit_short_names"
 msgstr "Umožnit změny krátkých názvů"
 
@@ -6163,7 +6153,7 @@ msgid "label_effective_date"
 msgstr "Datum účinnosti"
 
 #. Default: "E-mail"
-#: CMFPlone/skins/plone_forms/member_search_form.pt:46
+#: CMFPlone/skins/plone_login/join_form.cpt:121
 msgid "label_email"
 msgstr "E-mailová adresa"
 
@@ -6212,8 +6202,9 @@ msgstr "Text k události"
 msgid "label_event_attendees"
 msgstr "Návštěvníci"
 
-#. Default: "(${location}, from ${start} to ${end})"
-#: CMFPlone/skins/plone_content/folder_listing.pt:113
+#. Default: "(${location}${DYNAMIC_CONTENT}from ${start} to ${end})"
+#: CMFPlone/skins/plone_content/folder_listing.pt:116
+#, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location}, od ${start} do ${end} )"
 
@@ -6268,7 +6259,7 @@ msgid "label_expiration_date"
 msgstr "Datum ukončení platnosti"
 
 #. Default: "Enable external editing"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:282
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:286
 msgid "label_ext_editor"
 msgstr "Povolit externí editor"
 
@@ -6278,7 +6269,7 @@ msgid "label_file"
 msgstr "Soubor"
 
 #. Default: "filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:142
+#: CMFPlone/skins/plone_forms/search.pt:141
 msgid "label_filed_under"
 msgstr "Kategorie:"
 
@@ -6303,7 +6294,7 @@ msgid "label_format"
 msgstr "Formát"
 
 #. Default: "Full Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:272
+#: CMFPlone/skins/plone_login/join_form.cpt:65
 msgid "label_full_name"
 msgstr "Jméno a příjmení"
 
@@ -6328,12 +6319,12 @@ msgid "label_group"
 msgstr "Skupina"
 
 #. Default: "Group Members"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:34
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:40
 msgid "label_group_members"
 msgstr "Členové skupiny"
 
 #. Default: "Group Memberships"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:33
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:36
 msgid "label_group_memberships"
 msgstr "Členství ve skupinách"
 
@@ -6343,17 +6334,17 @@ msgid "label_group_name"
 msgstr "Jméno skupiny"
 
 #. Default: "Group Portlets"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:44
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:50
 msgid "label_group_portlets"
 msgstr "Portlety skupin"
 
 #. Default: "Group Properties"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:39
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:45
 msgid "label_group_properties"
 msgstr "Vlastnosti skupiny"
 
 #. Default: "Group Search"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:109
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:117
 msgid "label_group_search"
 msgstr "Vyhledávání skupin"
 
@@ -6383,7 +6374,7 @@ msgid "label_home"
 msgstr "Titulní strana"
 
 #. Default: "Home page"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:217
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:221
 msgid "label_homepage"
 msgstr "Webová stránka"
 
@@ -6391,26 +6382,6 @@ msgstr "Webová stránka"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:25
 msgid "label_identity_url"
 msgstr "URL OpenID"
-
-#. Default: "Internet Explorer 4.5 (Mac)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:123
-msgid "label_ie4_mac"
-msgstr "Internet Explorer 4.5 (Macintosh)"
-
-#. Default: "Internet Explorer 4 (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:111
-msgid "label_ie4_win"
-msgstr "Internet Explorer 4 (Windows)"
-
-#. Default: "Internet Explorer 5+ (Mac)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:117
-msgid "label_ie5_mac"
-msgstr "Internet Explorer 5+ (Macintosh)"
-
-#. Default: "Internet Explorer 5+ (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:81
-msgid "label_ie5_win"
-msgstr "Internet Explorer 5+ (Windows)"
 
 #. Default: "Ignored exception types"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:147
@@ -6448,7 +6419,7 @@ msgid "label_inherit_criteria"
 msgstr "Dědit podmínky"
 
 #. Default: "Inherit permissions from higher levels"
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:133
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
 msgid "label_inherit_local_roles"
 msgstr "Dědit oprávnění z vyšších úrovní"
 
@@ -6477,13 +6448,8 @@ msgstr "Typ položky"
 msgid "label_keywords"
 msgstr "Klíčová slova"
 
-#. Default: "Konqueror (Linux)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:105
-msgid "label_konqueror_linux"
-msgstr "Konqueror (Linux)"
-
 #. Default: "Language"
-#: CMFPlone/skins/plone_deprecated/portlet_languages.pt:17
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:169
 msgid "label_language"
 msgstr "Jazyk"
 
@@ -6504,7 +6470,7 @@ msgid "label_limit_number"
 msgstr "Omezit výsledky vyhledávání"
 
 #. Default: "Listed in searches"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:304
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:308
 msgid "label_listed_status"
 msgstr "Zobrazit při vyhledávání"
 
@@ -6529,7 +6495,7 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Role, které mají být přiřazeny vybraným uživatelům či skupinám"
 
 #. Default: "Location"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:140
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:144
 msgid "label_location"
 msgstr "Umístění:"
 
@@ -6539,7 +6505,7 @@ msgid "label_locked"
 msgstr "Odemčeno"
 
 #. Default: "Log in"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:79
+#: CMFPlone/skins/plone_login/registered.pt:86
 msgid "label_log_in"
 msgstr "Přihlásit se"
 
@@ -6554,7 +6520,7 @@ msgid "label_login_continue_to_home_page"
 msgstr "Pokračovat k titulní stránce portálu ${portal_title}"
 
 #. Default: "Login Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:376
+#: CMFPlone/skins/plone_login/login_form.cpt:106
 msgid "label_login_name"
 msgstr "Jméno uživatele"
 
@@ -6564,12 +6530,12 @@ msgid "label_login_to_add_comments"
 msgstr "Pro přidávání poznámek je nutné se přihlásit."
 
 #. Default: "Log in to send feedback"
-#: CMFPlone/skins/plone_content/author.cpt:142
+#: CMFPlone/skins/plone_content/author.cpt:147
 msgid "label_login_to_send_feedback"
 msgstr "Reakce budete moci posílat po přihlášení"
 
 #. Default: "Look"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:341
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:345
 msgid "label_look"
 msgstr "Vzhled"
 
@@ -6579,32 +6545,22 @@ msgid "label_mail_password"
 msgstr "Odeslat heslo e-mailem"
 
 #. Default: "Main Language:"
-#: CMFPlone/skins/plone_content/author.cpt:107
+#: CMFPlone/skins/plone_content/author.cpt:112
 msgid "label_main_language"
 msgstr "Hlavní jazyk:"
 
 #. Default: "Message"
-#: CMFPlone/skins/plone_content/author.cpt:203
+#: CMFPlone/skins/plone_templates/contact-info.cpt:131
 msgid "label_message"
 msgstr "Zpráva"
 
 #. Default: "Modification Date"
-#: Archetypes/ExtensibleMetadata.py:201
+#: Archetypes/ExtensibleMetadata.py:205
 msgid "label_modification_date"
 msgstr "Datum úpravy"
 
-#. Default: "Firefox, Mozilla and Netscape 7+ (Mac OS X)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:93
-msgid "label_mozilla_mac"
-msgstr "Firefox, Mozilla a Netscape 7+ (Mac OS X)"
-
-#. Default: "Firefox, Mozilla and Netscape 7+ (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:87
-msgid "label_mozilla_win"
-msgstr "Firefox, Mozilla a Netscape 7+ (Windows)"
-
 #. Default: "Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:95
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:71
 msgid "label_name"
 msgstr "Jméno"
 
@@ -6634,14 +6590,9 @@ msgid "label_navigation_types"
 msgstr "Zobrazované typy položek"
 
 #. Default: "Filter on workflow state"
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:152
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:153
 msgid "label_navtree_wf_enable"
 msgstr "Filtr stavů pracovního postupu"
-
-#. Default: "Netscape 6 and earlier (All platforms)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:128
-msgid "label_netscape6_all"
-msgstr "Netscape 6 a dřívější (všechny platformy)"
 
 #. Default: "New categories"
 #: Archetypes/skins/archetypes/widgets/keyword.pt:36
@@ -6664,7 +6615,7 @@ msgid "label_new_owner_search"
 msgstr "Vyhledání nového vlastníka"
 
 #. Default: "New password"
-#: CMFPlone/skins/plone_login/login_password.cpt:64
+#: CMFPlone/skins/plone_login/login_password.cpt:65
 msgid "label_new_password"
 msgstr "Nové heslo"
 
@@ -6684,7 +6635,7 @@ msgid "label_news_image"
 msgstr "Obrázek"
 
 #. Default: "Next"
-#: Archetypes/skins/archetypes/edit_macros.pt:215
+#: Archetypes/skins/archetypes/edit_macros.pt:217
 msgid "label_next"
 msgstr "Další"
 
@@ -6714,17 +6665,17 @@ msgid "label_no_prefs_panels_available"
 msgstr "Nejsou k dispozici žádné panely nastavení."
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1893
+#: Archetypes/Field.py:1956
 msgid "label_no_reference"
 msgstr "<žádné reference>"
 
 #. Default: "No matching results found."
-#: CMFPlone/skins/plone_scripts/livesearch_reply.py:82
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:83
 msgid "label_no_results_found"
 msgstr "Nebyly nalezeny odpovídající položky."
 
 #. Default: "No workflow"
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:211
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:245
 msgid "label_no_workflow"
 msgstr "Žádný pracovní postup"
 
@@ -6754,7 +6705,7 @@ msgid "label_or"
 msgstr "nebo"
 
 #. Default: "Basic HTML textarea editor (works in all browsers)"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:259
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:263
 msgid "label_ordinary_content_editor"
 msgstr "Běžný formulářový editor (funguje ve všech prohlížečích)"
 
@@ -6764,12 +6715,12 @@ msgid "label_outdated_product_reinstall"
 msgstr "Tento produkt byl aktualizován. Verze souborového systému je ${version}. Reinstalovat: ${reinstall_button}"
 
 #. Default: "Parent"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:53
 msgid "label_parent"
 msgstr "Nadřízená(ý)"
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:59
+#: CMFPlone/skins/plone_login/join_form.cpt:151
 msgid "label_password"
 msgstr "Heslo"
 
@@ -6789,7 +6740,7 @@ msgid "label_path_criteria_value"
 msgstr "Složky"
 
 #. Default: "Perform Search"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:402
+#: CMFPlone/skins/plone_forms/ownership_form.cpt:208
 msgid "label_perform_search"
 msgstr "vyhledat"
 
@@ -6834,7 +6785,7 @@ msgid "label_portlets_parent_folders"
 msgstr "Nadřazené portlety"
 
 #. Default: "Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:365
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:369
 msgid "label_portrait"
 msgstr "Podobizna"
 
@@ -6844,7 +6795,7 @@ msgid "label_powered_by_plone"
 msgstr "Využívá software Plone - systém správy obsahu (CMS) s otevřeným zdrojovým kódem."
 
 #. Default: "Previous"
-#: Archetypes/skins/archetypes/edit_macros.pt:207
+#: Archetypes/skins/archetypes/edit_macros.pt:209
 msgid "label_previous"
 msgstr "Předchozí"
 
@@ -6889,12 +6840,12 @@ msgid "label_related_items"
 msgstr "Příbuzné položky"
 
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:159
+#: CMFPlone/skins/plone_forms/search.pt:158
 msgid "label_relevance_percentage"
 msgstr "Shoda: [${percentage}%]"
 
 #. Default: "Remember my name."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:149
+#: CMFPlone/skins/plone_login/login_form.cpt:147
 msgid "label_remember_my_name"
 msgstr "Zapamatovat si jméno uživatele"
 
@@ -6904,7 +6855,7 @@ msgid "label_remove"
 msgstr "Odebrat"
 
 #. Default: "Remove selected groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:123
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:124
 msgid "label_remove_selected_groups"
 msgstr "Odebrat vybrané skupiny"
 
@@ -6929,7 +6880,7 @@ msgid "label_request_url"
 msgstr "Adresa URL požadavku"
 
 #. Default: "(Required)"
-#: CMFPlone/skins/plone_content/author.cpt:187
+#: CMFPlone/skins/plone_templates/contact-info.cpt:83
 msgid "label_required"
 msgstr "(Povinné)"
 
@@ -6968,13 +6919,8 @@ msgstr "Zapnuto"
 msgid "label_rule_event_trigger"
 msgstr "Spouštěcí impuls události: ${trigger}"
 
-#. Default: "Safari and Omniweb (Mac OS X)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:99
-msgid "label_safari_mac"
-msgstr "Safari a Omniweb (Mac OS X)"
-
 #. Default: "Save"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:121
+#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:158
 msgid "label_save"
 msgstr "Uložit"
 
@@ -7014,7 +6960,7 @@ msgid "label_schema_settings"
 msgstr "Nastavení"
 
 #. Default: "Search"
-#: CMFPlone/skins/plone_deprecated/global_searchbox.pt:33
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:208
 msgid "label_search"
 msgstr "Vyhledat"
 
@@ -7044,7 +6990,7 @@ msgid "label_searchbox_currentfolder_only"
 msgstr "pouze v aktuální sekci"
 
 #. Default: "Search results"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:43
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
 msgid "label_searchresults"
 msgstr "Výsledky vyhledávání"
 
@@ -7064,7 +7010,7 @@ msgid "label_select_all"
 msgstr "Vybrat: ${label_link_all}"
 
 #. Default: "Select all items"
-#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:95
+#: CMFPlone/skins/plone_templates/test_rendering.pt:361
 msgid "label_select_all_items"
 msgstr "Vybrat všechny položky"
 
@@ -7099,7 +7045,7 @@ msgid "label_selection_criteria_value"
 msgstr "Hodnota"
 
 #. Default: "Send"
-#: CMFPlone/skins/plone_content/author.cpt:221
+#: CMFPlone/skins/plone_templates/contact-info.cpt:154
 msgid "label_send"
 msgstr "Odeslat"
 
@@ -7114,12 +7060,12 @@ msgid "label_send_to_mail"
 msgstr "Adresát"
 
 #. Default: "E-Mail"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:74
+#: CMFPlone/skins/plone_templates/contact-info.cpt:80
 msgid "label_sender_from_address"
 msgstr "E-mailová adresa"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:53
+#: CMFPlone/skins/plone_templates/contact-info.cpt:56
 msgid "label_sender_fullname"
 msgstr "Jméno"
 
@@ -7194,22 +7140,22 @@ msgid "label_skiptonavigation"
 msgstr "Přejít na navigaci"
 
 #. Default: "ESMTP password"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:52
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:53
 msgid "label_smtp_pass"
 msgstr "Heslo k serveru ESMTP"
 
 #. Default: "SMTP port"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:35
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:36
 msgid "label_smtp_port"
 msgstr "Port SMTP"
 
 #. Default: "SMTP server"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:25
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:26
 msgid "label_smtp_server"
 msgstr "Server SMTP"
 
 #. Default: "ESMTP username"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:43
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:44
 msgid "label_smtp_userid"
 msgstr "Uživatelské jméno k serveru ESMTP"
 
@@ -7229,7 +7175,7 @@ msgid "label_string_criteria_value"
 msgstr "Hodnota"
 
 #. Default: "Subject"
-#: CMFPlone/skins/plone_content/author.cpt:183
+#: CMFPlone/skins/plone_templates/contact-info.cpt:107
 msgid "label_subject"
 msgstr "Předmět"
 
@@ -7294,7 +7240,7 @@ msgid "label_title"
 msgstr "Nadpis"
 
 #. Default: "Up to my dashboard"
-#: CMFPlone/skins/plone_prefs/password_form.pt:21
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:57
 msgid "label_to_dashboard"
 msgstr "Umístit na moji přehledovou stránku"
 
@@ -7339,7 +7285,7 @@ msgid "label_uninstall"
 msgstr "Odinstalovat"
 
 #. Default: "Up to Groups Overview"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:97
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:70
 msgid "label_up_to_groups_overview"
 msgstr "Nahoru na stránku Přehled skupin"
 
@@ -7349,12 +7295,12 @@ msgid "label_up_to_plone_setup"
 msgstr "Nahoru na stránku Nastavení portálu"
 
 #. Default: "Up to Users Overview"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:61
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:63
 msgid "label_up_to_usersoverview"
 msgstr "Nahoru na stránku Přehled uživatelů"
 
 #. Default: "Update"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:79
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:84
 msgid "label_update"
 msgstr "Aktualizovat"
 
@@ -7381,12 +7327,12 @@ msgid "label_user"
 msgstr "Uživatel"
 
 #. Default: "User Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:273
+#: CMFPlone/skins/plone_login/join_form.cpt:89
 msgid "label_user_name"
 msgstr "Jméno uživatele"
 
 #. Default: "User Properties"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:25
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:30
 msgid "label_user_properties"
 msgstr "Vlastnosti uživatele"
 
@@ -7401,7 +7347,7 @@ msgid "label_usergroup_settings"
 msgstr "Nastavení"
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:94
 msgid "label_username"
 msgstr "Uživatelské jméno"
 
@@ -7416,7 +7362,7 @@ msgid "label_usersandgroups"
 msgstr "Uživatelé a skupiny"
 
 #. Default: "View"
-#: CMFPlone/skins/plone_content/author.cpt:59
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:29
 msgid "label_view"
 msgstr "Zobrazit"
 
@@ -7481,7 +7427,7 @@ msgid "legend_account_details"
 msgstr "Údaje o účtu"
 
 #. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:68
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:69
 msgid "legend_add_comment"
 msgstr "Údaje o poznámce"
 
@@ -7521,7 +7467,7 @@ msgid "legend_details"
 msgstr "Detaily"
 
 #. Default: "Feedback for author"
-#: CMFPlone/skins/plone_content/author.cpt:178
+#: CMFPlone/skins/plone_content/author.cpt:183
 msgid "legend_feedback_for_author"
 msgstr "Reakce pro autora"
 
@@ -7541,7 +7487,7 @@ msgid "legend_installed_products"
 msgstr "Instalované produkty"
 
 #. Default: "LiveSearch &#8595;"
-#: CMFPlone/skins/plone_scripts/livesearch_reply.py:81
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:82
 msgid "legend_livesearch"
 msgstr "Plovoucí výsledky &#8595;"
 
@@ -7571,7 +7517,7 @@ msgid "legend_navigation_details"
 msgstr "Podrobnosti navigace"
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:82
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:83
 msgid "legend_note_reply_anonymous"
 msgstr "Upozornění: Nyní nejste přihlášen(a). Do následujících polí můžete zadat své uživatelské jméno a heslo. Pokud je nezadáte, bude tato poznámka mít anonymního autora."
 
@@ -7596,7 +7542,7 @@ msgid "legend_search_owners"
 msgstr "Vyhledání možného nového vlastníka"
 
 #. Default: "Search Terms"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:362
+#: CMFPlone/skins/plone_forms/search_form.pt:35
 msgid "legend_search_terms"
 msgstr "Vyhledávání"
 
@@ -7711,7 +7657,7 @@ msgid "listingheader_affected_item"
 msgstr "Ovlivněná položka"
 
 #. Default: "Author"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:68
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:67
 msgid "listingheader_author"
 msgstr "Autor"
 
@@ -7721,7 +7667,7 @@ msgid "listingheader_comment"
 msgstr "Poznámka"
 
 #. Default: "Date and Time"
-#: CMFPlone/skins/plone_deprecated/review_history.pt:19
+#: CMFPlone/skins/plone_forms/undo_form.pt:58
 msgid "listingheader_date_and_time"
 msgstr "Datum a čas"
 
@@ -7736,12 +7682,12 @@ msgid "listingheader_email_address"
 msgstr "E-mailová adresa"
 
 #. Default: "Group name"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:138
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:146
 msgid "listingheader_group_name"
 msgstr "Jméno skupiny"
 
 #. Default: "Remove Group"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:96
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:98
 msgid "listingheader_group_remove"
 msgstr "Odebrat skupinu"
 
@@ -7751,7 +7697,7 @@ msgid "listingheader_group_user_name"
 msgstr "Jméno skupiny/uživatele"
 
 #. Default: "Modified"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:73
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:72
 msgid "listingheader_modified"
 msgstr "Čas změny"
 
@@ -7766,12 +7712,12 @@ msgid "listingheader_order"
 msgstr "Pořadí"
 
 #. Default: "Performed by"
-#: CMFPlone/skins/plone_deprecated/review_history.pt:18
+#: CMFPlone/skins/plone_forms/undo_form.pt:57
 msgid "listingheader_performed_by"
 msgstr "Autor"
 
 #. Default: "Remove Group"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:149
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:157
 msgid "listingheader_remove_group"
 msgstr "Odebrat skupinu"
 
@@ -7786,7 +7732,7 @@ msgid "listingheader_reset_password"
 msgstr "Obnovit heslo"
 
 #. Default: "Roles"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:143
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:151
 msgid "listingheader_roles"
 msgstr "Role"
 
@@ -7801,12 +7747,12 @@ msgid "listingheader_status"
 msgstr "Stav"
 
 #. Default: "Title"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:65
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:64
 msgid "listingheader_title"
 msgstr "Nadpis"
 
 #. Default: "Type"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:70
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:81
 msgid "listingheader_type"
 msgstr "Typ"
 
@@ -7830,8 +7776,9 @@ msgstr "sem"
 msgid "local_role_warning_type"
 msgstr "<strong>Pozor!</strong> Právě nastavujete oprávnění ke sdílení položky typu ${type}. Pokud ve skutečnosti chcete nastavit oprávnění složky, klepněte ${link}."
 
-#. Default: "While cookie authentication is disabled, cookie-based login is not available."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:58
+#. Default: "Since cookie authentication is disabled, cookie-based login is not available."
+#: CMFPlone/skins/plone_login/logged_out.cpt:63
+#, fuzzy
 msgid "login_form_disabled"
 msgstr "Přihlašování pomocí souborů cookie není k dispozici, pokud je ověřování soubory cookie zakázáno."
 
@@ -7906,7 +7853,7 @@ msgid "no_new_events"
 msgstr "Nebyly zadány žádné události."
 
 #. Default: "No users were found using your search criteria."
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:230
+#: CMFPlone/skins/plone_forms/ownership_form.cpt:172
 msgid "no_users_found"
 msgstr "Pomocí vašich podmínek pro vyhledávání nebyli nalezeni žádní uživatelé."
 
@@ -7987,8 +7934,9 @@ msgstr "Zveřejnění"
 msgid "published"
 msgstr "zveřejněno"
 
-#. Default: "Read More…"
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:159
+#. Default: "Read More"
+#: CMFPlone/skins/plone_templates/events_listing.pt:88
+#, fuzzy
 msgid "read_more"
 msgstr "Více..."
 
@@ -8013,7 +7961,7 @@ msgid "rename_item_not_allowed"
 msgstr "Nemáte povoleno měnit krátký název této položky."
 
 #. Default: "by ${author}, ${date}"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:84
+#: CMFPlone/skins/plone_templates/default_error_message.pt:87
 msgid "results_by_author"
 msgstr "Autor: ${author}, čas: ${date}"
 
@@ -8024,7 +7972,7 @@ msgid "retract"
 msgstr "Stažení"
 
 #. Default: "Return"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:23
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:24
 msgid "return_to_view"
 msgstr "Návrat"
 
@@ -8107,7 +8055,7 @@ msgid "summary_assigned_roles"
 msgstr "Právě přiřazené místní role"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: CMFPlone/skins/plone_content/author.cpt:250
+#: CMFPlone/skins/plone_content/author.cpt:255
 msgid "summary_author_content_list"
 msgstr "Uvádí položky vytvořené autorem seskupené podle jejich typu."
 
@@ -8122,7 +8070,7 @@ msgid "summary_calendar"
 msgstr "Kalendář"
 
 #. Default: "Content listing"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:60
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:59
 msgid "summary_content_listing"
 msgstr "Výpis položek"
 
@@ -8152,7 +8100,7 @@ msgid "summary_review_history"
 msgstr "Historie revizí"
 
 #. Default: "Select roles for each group"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:102
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:110
 msgid "summary_roles_for_groups"
 msgstr "Výběr rolí pro všechny skupiny"
 
@@ -8222,12 +8170,12 @@ msgid "text_group"
 msgstr "Skupina"
 
 #. Default: "Location: ${location}"
-#: CMFPlone/skins/plone_content/author.cpt:98
+#: CMFPlone/skins/plone_content/author.cpt:103
 msgid "text_location"
 msgstr "Umístění: ${location}"
 
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
-#: CMFPlone/skins/plone_content/author.cpt:156
+#: CMFPlone/skins/plone_templates/contact-info.cpt:25
 msgid "text_no_email_setup"
 msgstr "Nastavení pošty v tomto portálu jsou neplatná, proto nemůžete použít žádný z kontaktních formulářů."
 
@@ -8257,17 +8205,17 @@ msgid "text_no_pil_installed"
 msgstr "Změna velikosti obrázků není možná, protože knihovna PIL není nainstalována správně."
 
 #. Default: "Enter a group or user name to search for or click 'Show All'."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:277
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:282
 msgid "text_no_searchstring"
 msgstr "Zadejte hledanou skupinu či uživatelské jméno nebo klepněte na tlačítko 'Zobrazit vše'."
 
 #. Default: "Enter a group or user name to search for."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:274
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:276
 msgid "text_no_searchstring_large"
 msgstr "Zadejte hledanou skupinu či uživatelské jméno."
 
 #. Default: "No user by that name."
-#: CMFPlone/skins/plone_content/author.cpt:39
+#: CMFPlone/skins/plone_content/author.cpt:41
 msgid "text_no_user_by_name"
 msgstr "Takové jméno nemá žádný uživatel."
 
@@ -8317,7 +8265,7 @@ msgid "text_user"
 msgstr "Uživatel"
 
 #. Default: "This user does not belong to any group."
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:122
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:123
 msgid "text_user_not_in_any_group"
 msgstr "Uživatel nepatří do žádné skupiny."
 
@@ -8352,7 +8300,7 @@ msgid "time_last_week"
 msgstr "Minulý týden"
 
 #. Default: ":"
-#: CMFPlone/skins/plone_templates/calendar_macros.pt:149
+#: CMFPlone/skins/plone_templates/calendar_macros.pt:146
 msgid "time_separator"
 msgstr ":"
 
@@ -8386,13 +8334,15 @@ msgstr "Přidat nové položky do této položky"
 msgid "title_add_static_portlet"
 msgstr ""
 
-#. Default: "Add this item to your iCal calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:168
+#. Default: "Download this event in iCal format"
+#: CMFPlone/skins/plone_content/event_view.pt:159
+#, fuzzy
 msgid "title_add_to_ical"
 msgstr "Přidat tuto položku do osobního kalendáře iCal"
 
-#. Default: "Add this item to your vCal calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:162
+#. Default: "Download this event in vCal format"
+#: CMFPlone/skins/plone_content/event_view.pt:153
+#, fuzzy
 msgid "title_add_to_vcal"
 msgstr "Přidat tuto položku do osobního kalendáře vKalendář"
 
@@ -8412,22 +8362,22 @@ msgid "title_built_with_plone"
 msgstr "Tento portál byl vytvořen pomocí systému správy obsahu Plone. Další informace získáte klepnutím zde."
 
 #. Default: "Can add"
-#: plone.app.workflow/plone/app/workflow/localroles.py:24
+#: plone.app.workflow/plone/app/workflow/localroles.py:29
 msgid "title_can_add"
 msgstr "Mohou přidávat"
 
 #. Default: "Can edit"
-#: plone.app.workflow/plone/app/workflow/localroles.py:18
+#: plone.app.workflow/plone/app/workflow/localroles.py:23
 msgid "title_can_edit"
 msgstr "Mohou upravovat"
 
 #. Default: "Can review"
-#: plone.app.workflow/plone/app/workflow/localroles.py:30
+#: plone.app.workflow/plone/app/workflow/localroles.py:35
 msgid "title_can_review"
 msgstr "Mohou posuzovat"
 
 #. Default: "Can view"
-#: plone.app.workflow/plone/app/workflow/localroles.py:12
+#: plone.app.workflow/plone/app/workflow/localroles.py:17
 msgid "title_can_view"
 msgstr "Mohou zobrazit"
 
@@ -8442,7 +8392,7 @@ msgid "title_change_default_page"
 msgstr "Změnit výchozí stránku"
 
 #. Default: "Change the item used as default view in this folder"
-#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
+#: CMFPlone/skins/plone_forms/select_default_view.cpt:63
 msgid "title_change_default_view_item"
 msgstr "Změnit položkou použitou pro výchozí zobrazení této složky"
 
@@ -8482,7 +8432,7 @@ msgid "title_copyright"
 msgstr "Copyright"
 
 #. Default: "Cascading Style Sheets"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:150
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:93
 msgid "title_css"
 msgstr "Styly CSS"
 
@@ -8577,7 +8527,7 @@ msgid "title_remove_index_html_for_display_control"
 msgstr "Pokud odstraníte nebo přejmenujete položku index_html, získáte možnost ovlivnit způsob zobrazení této složky."
 
 #. Default: "Required"
-#: CMFPlone/skins/plone_content/author.cpt:187
+#: CMFPlone/skins/plone_templates/contact-info.cpt:83
 msgid "title_required"
 msgstr "Povinné"
 
@@ -8602,12 +8552,12 @@ msgid "title_section_508"
 msgstr "Portál Plone odpovídá požadavkům oddílu 508 směrnice vlády USA o dostupnosti pro postižené."
 
 #. Default: "Select an item to be used as default view in this folder"
-#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
+#: CMFPlone/skins/plone_forms/select_default_view.cpt:54
 msgid "title_select_default_page"
 msgstr "Vyberte položku, která bude použita pro výchozí zobrazení této složky"
 
 #. Default: "Select an item to be used as default view in this folder..."
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:356
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:357
 msgid "title_select_default_view_item"
 msgstr "Vyberte položku, která bude použita pro výchozí zobrazení této složky..."
 
@@ -8647,7 +8597,7 @@ msgid "title_valid_xhtml"
 msgstr "Portál Plone používá platný kód XHTML."
 
 #. Default: "World Wide Web Consortium"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:154
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:97
 msgid "title_w3c"
 msgstr "Konzorcium W3C"
 
@@ -8662,7 +8612,7 @@ msgid "title_wcag_conformance"
 msgstr "Portál Plone odpovídá požadavkům směrnice konsorcia W3C-WAI o dostupnosti obsahu sítě WWW pro postižené."
 
 #. Default: "eXtensible Hyper Text Markup Language"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:147
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:90
 msgid "title_xhtml"
 msgstr "Portál Plone používá standard XHTML."
 
@@ -8677,57 +8627,57 @@ msgid "types_controlpanel_allow_discussion"
 msgstr "Povolit komentáře"
 
 #. Default: "Current workflow:"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:127
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:132
 msgid "types_controlpanel_current_workflow"
 msgstr "Aktuální pracovní postup:"
 
 #. Default: "Manage portlets assigned to this content type"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:117
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:122
 msgid "types_controlpanel_manage_portlets"
 msgstr "Spravovat portlety přiřazené k tomuto typu obsahu"
 
 #. Default: "New State"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:199
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:204
 msgid "types_controlpanel_new_state"
 msgstr "Nový stav"
 
 #. Default: "New workflow:"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:140
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:145
 msgid "types_controlpanel_new_workflow"
 msgstr "Nový pracovní postup:"
 
 #. Default: "No Workflow"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:154
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:159
 msgid "types_controlpanel_no_workflow"
 msgstr "Žádný pracovní postup"
 
 #. Default: "Old State"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:198
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:203
 msgid "types_controlpanel_old_state"
 msgstr "Původní stav"
 
 #. Default: "Visible in searches"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:110
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:101
 msgid "types_controlpanel_searchable"
 msgstr "Viditelné ve výsledcích vyhledávání"
 
 #. Default: "State Mapping"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:184
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:189
 msgid "types_controlpanel_state_mapping"
 msgstr "Mapování stavu"
 
 #. Default: "When changing workflows, you have to select a state equivalent in the new workflow."
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:188
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:193
 msgid "types_controlpanel_state_mapping_help"
 msgstr "Při změně pracovního postupu musíte vybrat ekvivalentní stav původního pracovního postupu v novém pracovním postupu."
 
-#. Default: "Versioned"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:100
-msgid "types_controlpanel_versionable"
-msgstr "Verzování"
+#. Default: "Versioning policy:"
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:108
+msgid "types_controlpanel_versionpolicy"
+msgstr ""
 
 #. Default: "Changing the workflow of a type will take a while, and may slow down the site significantly while the content is updated to the new setting."
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:232
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:237
 msgid "types_controlpanel_warn_remap"
 msgstr "Změna pracovního postupu typu může trvat nějaký čas a může značně zpomalit portál během aktualizace obsahu na parametry nových nastavení."
 
@@ -8756,6 +8706,21 @@ msgstr "vKalendář"
 msgid "vCalendar export"
 msgstr "Export vKalendáře"
 
+#. Default: "Automatic"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:37
+msgid "versioning_automatic"
+msgstr ""
+
+#. Default: "Manual"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:32
+msgid "versioning_manual"
+msgstr ""
+
+#. Default: "No versioning"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:27
+msgid "versioning_off"
+msgstr ""
+
 #. Default: "View changes"
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:26
 msgid "view_changes"
@@ -8772,8 +8737,9 @@ msgstr "přístupné"
 msgid "warning_contentrules_disabled"
 msgstr "Pravidla pro obsah jsou vypnuta pro celý portál. Žádná přiřazená pravidla nebudou aplikována, dokud nebudou pravidla pro celý portál znovu zapnuta. Pro jejich zapnutí použijte ${controlpanel_link}."
 
-#. Default: "Policy"
+#. Default: "Local Policy"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:71
+#, fuzzy
 msgid "workflow_policy"
 msgstr "Zásady"
 

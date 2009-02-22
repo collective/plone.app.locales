@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2008-07-07 19:46+0000\n"
+"POT-Creation-Date: 2009-02-22 08:33+0000\n"
 "PO-Revision-Date: 2007-08-13 16:36+0200\n"
 "Last-Translator: Jan Ulrich Hasecke <jan.ulrich@hasecke.com>\n"
 "Language-Team: Esperanto <plone-i18n@lists.sourceforge.net>\n"
@@ -17,15 +17,35 @@ msgstr ""
 "Domain: plone\n"
 "X-Generator: KBabel 1.0.2\n"
 
+#: plone.locking/plone/locking/browser/locking.py:126
+msgid "$d day and $h hours"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:128
+msgid "$d days and $h hours"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:121
+msgid "$h hour and $m minutes"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:123
+msgid "$h hours and $m minutes"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:119
+msgid "$m minutes"
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:33
 msgid "${count} item(s) copied."
 msgstr "${count} ero(j) kopiita(j)."
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:32
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:37
 msgid "${count} item(s) cut."
 msgstr "${count} ero(j) eltondita(j)"
 
-#: CMFPlone/skins/plone_scripts/folder_rename.cpy:47
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:48
 msgid "${count} item(s) renamed."
 msgstr "${count} ero(j) renomita(j)."
 
@@ -34,7 +54,7 @@ msgid "${items} could not be deleted."
 msgstr "${items} ne povis esti forigita(j)"
 
 #. Default: "${monthname} ${year}"
-#: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:56
+#: CMFPlone/skins/plone_templates/calendar_macros.pt:231
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
@@ -111,6 +131,10 @@ msgstr "- Uzita kune kun komunuma laborfluo. - Ne havas staton \"proponita\". - 
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "- Users can create content that is immediately publicly accessible. - Content can be submitted for publication by the content's creator or a Manager, which is typically done to promote events or news to the front page. - Reviewers can publish or reject content, content owners can retract their submissions. - While the content is awaiting review it is readable by anybody. - If content is published, it can only be retracted by a Manager."
 msgstr "Uzuloj povas krei enhavon, kiu tuj estas publike akirebla. - Kreinto kaj administranto povas proponi publikigi enhavon, kiu estas tipe farita por vidigi novaĵojn kaj terminojn je la frontopaĝo. - Redaktoroj povas publikigi aŭ rifuzi enhavon, posedantoj de enhavo povas repreni proponitajn erojn. - Kiam enhavo atendas je revizo, ĝi estas videbla al ĉiuj. - Se enhavo estas publikita, nur administranto povas repreni ĝin."
+
+#: plone.locking/plone/locking/browser/locking.py:117
+msgid "1 minute"
+msgstr ""
 
 #. Default: "A boolean criterion"
 #: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
@@ -346,7 +370,7 @@ msgstr "Aldonu RSS-kesteton"
 msgid "Add Recent Portlet"
 msgstr "Aldonu ĵusan kesteton"
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:60
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:84
 msgid "Add Review Portlet"
 msgstr "Aldonu revizokesteton"
 
@@ -420,11 +444,11 @@ msgstr "Ĉiuj reguloj"
 msgid "All items publicly available on a certain date"
 msgstr "Ĉiuj eroj publike haveblaj je indikita dato."
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:39
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:41
 msgid "Allow anyone to view 'about' information"
 msgstr "Permesu al ĉiu vidi la \"pri\"-informojn"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:17
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:19
 msgid "Allows users to register themselves on the site. If not selected, only site managers can add new users."
 msgstr "Permesas uzulo mem registri je la retejo. Se ne selektita, nur la administranto povas aldoni novajn uzulojn."
 
@@ -529,7 +553,7 @@ msgid "Calendar settings"
 msgstr "Kalendara agordo"
 
 #. Default: "Can only be seen and edited by the owner."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Can only be seen and edited by the owner."
@@ -585,19 +609,23 @@ msgstr "Ŝanĝoj interrompitaj."
 msgid "Changes made."
 msgstr "Ŝanĝoj faritaj."
 
-#: CMFPlone/skins/plone_prefs/prefs_group_edit.py:28
+#: Archetypes/skins/archetypes/content_edit_impl.py:30
 msgid "Changes saved."
 msgstr "Ŝanĝoj savitaj"
 
 #. Default: "Check in"
-#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
+#: plone.app.iterate/plone/app/iterate/browser/checkin.pt:38
 msgid "Check in"
 msgstr "Enregistri"
 
 #. Default: "Check out"
-#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
+#: plone.app.iterate/plone/app/iterate/browser/checkout.pt:54
 msgid "Check out"
 msgstr "Elregistri"
+
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:45
+msgid "Check this to enable inline editing on the site."
+msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/browser/checkout.py:82
 msgid "Check-out created"
@@ -636,9 +664,9 @@ msgid "Collection Settings"
 msgstr "Kolektaĵa agordo"
 
 #. Default: "Comment about the last transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "Komento pri la lasta transiro"
 
@@ -815,11 +843,11 @@ msgstr "Priskribo"
 msgid "Details link"
 msgstr ""
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:53
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:59
 msgid "Determines if the external editor feature is enabled. This feature requires a special client-side application installed. The users also have to enable this in their preferences."
 msgstr "Ebligas la eksternan redaktilon. Por ke tio funkcis, necesas speciala klienta programo. La uzuloj devas enŝalti tion en iliaj preferoj."
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:46
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:52
 msgid "Determines if the users should get warnings when they delete or move content that is linked from inside the site."
 msgstr "Decidas, ĉu la uzulo ricevas averton, se li volas forpreni aŭ movi enhavon al kiu io ligas de interne de la reto."
 
@@ -868,8 +896,8 @@ msgid "Each type chosen will have a wiki enabled primary text area. At least one
 msgstr "Ĉiu elektita tipo havos viki-simila tekstkampon. Almenaŭ unu tipo selektendas por ebligi la vikian sintenon."
 
 #. Default: "Edit"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "Edit"
 msgstr "Redakti"
@@ -977,7 +1005,7 @@ msgstr "Dato de efektivigo"
 msgid "Effective Range"
 msgstr "Spaco de efektivigo"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:26
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:27
 msgid "Email recipients"
 msgstr "Retpoŝtaj adresatoj"
 
@@ -985,11 +1013,11 @@ msgstr "Retpoŝtaj adresatoj"
 msgid "Email report to ${recipients}"
 msgstr "Retpoŝtu raporton al  ${recipients}"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:22
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:23
 msgid "Email source"
 msgstr "Retpoŝta fonto"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:52
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:58
 msgid "Enable External Editor feature"
 msgstr "Ebligi eksternan redaktilon"
 
@@ -997,15 +1025,19 @@ msgstr "Ebligi eksternan redaktilon"
 msgid "Enable LiveSearch"
 msgstr "Ebligu vivserĉon"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:32
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:34
 msgid "Enable User Folders"
 msgstr "Ebligu uzulaj dosierujoj"
 
 #: plone.app.controlpanel/plone/app/controlpanel/site.py:44
+msgid "Enable inline editing"
+msgstr ""
+
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:50
 msgid "Enable link integrity checks"
 msgstr "Ebligu provado de sendifekteco de ligoj"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:16
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:18
 msgid "Enable self-registration"
 msgstr "Ebligu memregistrado"
 
@@ -1027,7 +1059,7 @@ msgid "Entries cleared"
 msgstr "Eroj nuligitaj"
 
 #. Default: "Error"
-#: CMFPlone/skins/plone_content/author.cpt:36
+#: CMFPlone/skins/plone_login/logged_out.cpt:55
 msgid "Error"
 msgstr "Eraro"
 
@@ -1073,18 +1105,18 @@ msgstr "Eku transiron ${transition}"
 msgid "Expiration Date"
 msgstr "Dato de malvalidiĝo."
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:61
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:67
 msgid "Expose sitemap.xml.gz in the portal root"
 msgstr "Eksponi sitemap.xml en la reteja radiko"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:62
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:68
 msgid "Exposes your content as a file according to the sitemaps.org standard. You can submit this to compliant search engines like Google, Yahoo and Microsoft. It allows these search engines to more intelligently crawl your site."
 msgstr "Eksponas vian enhavon en dosiero, kiu kongruas kun la normoj de sitemaps.org. Vi povas sendi tion al serĉmaŝinoj kiel Google, Yahoo kaj Microsoft. Tio ebligas la serĉmaŝinojn pli diligente traserĉi vian retejon. "
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/Document.xml
-#: CMFPlone/profiles/default/types/Event.xml
+#: CMFPlone/profiles/default/types/File.xml
 #: CMFPlone/profiles/default/types/Favorite.xml
+#: CMFPlone/profiles/default/types/Event.xml
 msgid "External Edit"
 msgstr "Ekstera redakto"
 
@@ -1191,7 +1223,7 @@ msgstr "Vido de dosierujo"
 msgid "Folder-like"
 msgstr "Dosierujeca"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:72
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:78
 msgid "For enabling web statistics support from external providers (for e.g. Google Analytics). Paste the code snippets provided. It will be included in the rendered HTML as entered near the end of the page."
 msgstr ""
 
@@ -1230,9 +1262,9 @@ msgid "Hide portlet"
 msgstr ""
 
 #. Default: "History"
-#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
 #: CMFPlone/profiles/default/types/News_Item.xml
+#: CMFPlone/profiles/default/types/Document.xml
 msgid "History"
 msgstr "Historio"
 
@@ -1240,6 +1272,10 @@ msgstr "Historio"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Home"
 msgstr "Hejmo"
+
+#: plone.app.iterate/plone/app/iterate/containers.py:45
+msgid "Home folder"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:22
 msgid "How many items to list."
@@ -1283,22 +1319,22 @@ msgstr ""
 msgid "If given, the header and footer will link to this URL."
 msgstr ""
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:41
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:43
 msgid "If not selected only logged-in users will be able to view information about who created an item and when it was modified."
 msgstr "Se ne elektita nur ensalutitaj uzuloj povas vidi la informojn, kiu kreas la eron kaj kiam ĝi estis modifita."
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:25
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:27
 msgid "If not selected, passwords will be autogenerated and mailed to users, which verifies that they have entered a valid email address."
 msgstr "Se ne elektita, pasvorto estos aŭtomate kreita kaj sendita al uzulo, kio kontrolas, ke ili enmetis validan retpoŝtan adreson."
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:33
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:35
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Se selektita, hejmdosierujoj por la enhavo de uzuloj estas kreita, se ili ensalutas por la unua fojo."
 
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 msgstr "Se vi erare proponis eron aŭ volas plu redakti, tio reprenas ĝin. "
 
@@ -1312,7 +1348,7 @@ msgid "Image changes saved."
 msgstr "Ŝanĝoj de bildo konservitaj. "
 
 #. Default: "Info"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:80
 msgid "Info"
 msgstr "Informo"
 
@@ -1396,7 +1432,7 @@ msgstr "Ero(j) enmetita(j)"
 msgid "Items in which workflow state to show."
 msgstr "Nur montru erojn en tiu stato."
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:71
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:77
 msgid "JavaScript for web statistics support"
 msgstr "JavaScript por subteno de reteja statistiko"
 
@@ -1432,7 +1468,7 @@ msgstr "Lingvo"
 msgid "Language Settings"
 msgstr "Lingvaj agordoj"
 
-#: CMFPlone/Portal.py:135
+#: Archetypes/ExtensibleMetadata.py:323
 msgid "Language neutral (site default)"
 msgstr "Lingve neŭtrala (reteja aprioraĵo)"
 
@@ -1441,7 +1477,7 @@ msgstr "Lingve neŭtrala (reteja aprioraĵo)"
 msgid "Large Folder"
 msgstr "Granda Dosierujo"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:23
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:25
 msgid "Let users select their own passwords"
 msgstr "Uzuloj selektu mem pasvortojn"
 
@@ -1518,7 +1554,7 @@ msgstr "Protokol mesaĝo ${message}"
 msgid "Log out"
 msgstr "Adiaŭi"
 
-#: plone.app.workflow/plone/app/workflow/browser/sharing.py:222
+#: plone.app.workflow/plone/app/workflow/browser/sharing.py:231
 msgid "Logged-in users"
 msgstr "Ensalutitaj uzuloj"
 
@@ -1557,23 +1593,15 @@ msgstr "Retadreso"
 msgid "Mail Settings"
 msgstr "Retpoŝtaj agordoj"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:154
-msgid "Mail sender"
-msgstr "Retpoŝta adresato"
-
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:89
 msgid "Mail sent."
 msgstr "Retpoŝto sendita"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:150
-msgid "Mail server"
-msgstr "Retpoŝto servilo"
-
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:161
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:145
 msgid "Mail settings"
 msgstr "Retpoŝta agordo"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:162
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:146
 msgid "Mail settings for this site."
 msgstr "Retpoŝta agordo por tiu retejo."
 
@@ -1582,7 +1610,7 @@ msgid "Maintenance"
 msgstr "Vartado"
 
 #. Default: "Make private"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Make private"
@@ -1600,7 +1628,7 @@ msgid "Makes the folder visible internally."
 msgstr "Videbligas  la dosierujon interne."
 
 #. Default: "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
@@ -1654,9 +1682,9 @@ msgid "Member Preferences"
 msgstr "Preferoj de membro"
 
 #. Default: "Member makes content private"
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Member makes content private"
 msgstr "Membro privatigas enhavon."
 
@@ -1676,8 +1704,8 @@ msgid "Member promotes content to public draft"
 msgstr "Membro faras enhavon publikan skizon"
 
 #. Default: "Member retracts submission"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "Membro reprenas proponon"
@@ -1720,7 +1748,7 @@ msgid "Move up"
 msgstr "Movu supren"
 
 #. Default: "My Folder"
-#: CMFPlone/profiles/default/actions.xml
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:127
 msgid "My Folder"
 msgstr "Mia dosierujo"
 
@@ -1793,7 +1821,7 @@ msgstr "Neniuj ŝanĝoj faritaj."
 msgid "No changes made."
 msgstr "Neniaj ŝanĝoj faritaj"
 
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:336
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:370
 msgid "No workflow"
 msgstr "Nenia laborfluo"
 
@@ -1813,9 +1841,13 @@ msgstr ""
 msgid "One or more items not copyable."
 msgstr "Unu aŭ pluraj eroj ne kopiebla(j)."
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:23
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:24
 msgid "One or more items not moveable."
 msgstr "Unu aŭ pluraj eroj ne kopiebla(j)."
+
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:32
+msgid "One or more selected items is locked."
+msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:27
 msgid "One or more selected items is no longer available."
@@ -1825,7 +1857,7 @@ msgstr "Unu aŭ pluraj elektitaj eroj ne plu havebla(j)."
 msgid "Only for users who are logged in"
 msgstr "Nur por uzuloj, kiuj estas ensalutitaj"
 
-#: plone.app.openid/plone/app/openid/portlets/login.py:17
+#: plone.app.openid/plone/app/openid/portlets/login.py:18
 msgid "OpenID login"
 msgstr "OpenID ensaluto"
 
@@ -1854,6 +1886,10 @@ msgstr "Datumbazo pakita."
 #: CMFPlone/profiles/default/types/Document.xml
 msgid "Page"
 msgstr "Paĝo"
+
+#: plone.app.iterate/plone/app/iterate/containers.py:64
+msgid "Parent folder"
+msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/plone_change_password.py:14
 msgid "Password change was canceled."
@@ -1900,8 +1936,8 @@ msgid "Pending"
 msgstr "Atendas"
 
 #. Default: "Pending review"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Pending review"
 msgstr "Farendaj revizoj"
@@ -1934,7 +1970,7 @@ msgstr "Personaj preferoj."
 msgid "Placeful Workflow"
 msgstr "Lokeca laborfluo"
 
-#: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:18
+#: Archetypes/skins/archetypes/validate_base.vpy:19
 msgid "Please correct the indicated errors."
 msgstr "Bonvolu korektu la indikitajn erarojn"
 
@@ -1982,7 +2018,7 @@ msgstr "Elektu eron por uzi"
 msgid "Please select one or more items to copy."
 msgstr "Bonvolu elekti unu aŭ plurajn erojn por kopii."
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:37
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:42
 msgid "Please select one or more items to cut."
 msgstr "Bonvolu elekti unu aŭ plurajn erojn por eltondi."
 
@@ -2025,11 +2061,11 @@ msgstr "Plone-retejo"
 msgid "Plone filters HTML tags that are considered security risks. Be aware of the implications before making changes below. By default only tags defined in XHTML are permitted. In particular, to allow 'embed' as a tag you must both remove it from 'Nasty tags' and add it to 'Custom tags'. Although the form will update immediately to show any changes you make, your changes are not saved until you press the 'Save' button."
 msgstr ""
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:71
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:69
 msgid "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address on the site-wide contact form."
 msgstr "Plone elsendas retpoŝton uzante tiun adreson kiel sendintoadreso. Ĝi estas ankaŭ la adreso por la reteja kontaktformularo."
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:64
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:62
 msgid "Plone generates e-mail using this name as the e-mail sender."
 msgstr "Plone elsendas retpoŝton uzante tiun nomon kiel sendintonomo."
 
@@ -2062,9 +2098,9 @@ msgid "Preferences"
 msgstr "Agordo"
 
 #. Default: "Previous transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Previous transition"
 msgstr "Antaŭa transiro"
 
@@ -2086,20 +2122,20 @@ msgid "Print this page"
 msgstr "Printi ĉi tiun paĝon"
 
 #. Default: "Private"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Private"
 msgstr "Privata"
 
 #. Default: "Profile"
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:66
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:72
 msgid "Profile"
 msgstr "Profilo"
 
 #. Default: "Promote to Draft"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Promote to Draft"
 msgstr "Promocii al Skizo"
 
@@ -2129,9 +2165,9 @@ msgid "Properties"
 msgstr "Ecoj"
 
 #. Default: "Provides access to workflow history"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Provides access to workflow history"
 msgstr "Donas akiron al laborflua historio"
 
@@ -2142,14 +2178,14 @@ msgid "Public Draft"
 msgstr "Publika skizo"
 
 #. Default: "Public draft"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Public draft"
 msgstr "Publika skizo"
 
 #. Default: "Publish"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Publish"
 msgstr "Publikigi"
@@ -2165,9 +2201,9 @@ msgid "Publish internally"
 msgstr "Interne publikita"
 
 #. Default: "Published"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Published"
 msgstr "Publikigita"
 
@@ -2177,9 +2213,9 @@ msgid "Published and visible to intranet users, not editable by the owner."
 msgstr "Publikita kaj videbla nur por intraret-uzuloj, posedanto ne povas redakti."
 
 #. Default: "Publishing the item makes it visible to other users."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Publishing the item makes it visible to other users."
 msgstr "Publikigi eron videbligas ĝin al aliaj uzuloj."
 
@@ -2223,8 +2259,8 @@ msgid "Reference Criterion"
 msgstr "Kriterio de referenco"
 
 #. Default: "References"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "References"
 msgstr "Referencoj"
@@ -2279,6 +2315,10 @@ msgstr "Renomi"
 msgid "Rename items"
 msgstr "Renomi eron"
 
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:41
+msgid "Renamed '${oldid}' to '${newid}'."
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/deleteDiscussion.py:27
 msgid "Reply deleted."
 msgstr "Respondo forigita."
@@ -2294,13 +2334,13 @@ msgid "Restrict to current user"
 msgstr "Limigu al la nuna uzulo."
 
 #. Default: "Retract"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Retract"
 msgstr "Retiru"
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:24
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:26
 msgid "Review list"
 msgstr "Revizolisto"
 
@@ -2334,8 +2374,8 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr "Redaktoroj resendas enhavon, por plua prilaboro"
 
 #. Default: "Reviewer tasks"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Reviewer tasks"
 msgstr "Revizaj taskoj"
 
@@ -2408,11 +2448,11 @@ msgstr "Sekureco"
 msgid "Security Settings"
 msgstr "Agordo de sekureco"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:127
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:154
 msgid "Security settings"
 msgstr "Agordo de sekureco"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:128
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:155
 msgid "Security settings for this site."
 msgstr "Agordoj de sekureco por tiu retejo."
 
@@ -2461,8 +2501,8 @@ msgid "Selection Criterion"
 msgstr "Elektokriterio."
 
 #. Default: "Send back"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Send back"
 msgstr "Sendu reen"
@@ -2485,13 +2525,13 @@ msgid "Send-to"
 msgstr "Sendu-al"
 
 #. Default: "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
 msgstr "Sendi eron reen signifas, ke la originala aŭtoro ricevas la eron kaj ke ĝi ne estas publikita. Vi donu kialon, kial vi ne publikigis la eron."
 
-#: plone.app.controlpanel/plone/app/controlpanel/skins.py:125
+#: plone.app.controlpanel/plone/app/controlpanel/skins.py:140
 msgid "Settings that affect the site's look and feel."
 msgstr "Agordoj, kiuj ŝanĝas la aspekton de la retejo."
 
@@ -2511,7 +2551,7 @@ msgstr "Mallonga nomo"
 msgid "Show 'Short Name' on content?"
 msgstr "Montru la \"malongan nomon\"?"
 
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:536
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:537
 msgid "Show all available content types"
 msgstr "Montru ĉiuj eblaj enhavotipojn"
 
@@ -2567,11 +2607,11 @@ msgstr "Unustata laborfluo"
 msgid "Site"
 msgstr "Retejo"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:70
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:68
 msgid "Site 'From' address"
 msgstr "Sendintoadreso de retejo"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:63
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:61
 msgid "Site 'From' name"
 msgstr "Sendintonomo de retejo"
 
@@ -2590,7 +2630,7 @@ msgstr "Reteja agordo"
 msgid "Site description"
 msgstr "Priskribo de retejo"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:140
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:147
 msgid "Site settings"
 msgstr "Agordoj de retejo"
 
@@ -2598,7 +2638,7 @@ msgstr "Agordoj de retejo"
 msgid "Site title"
 msgstr "Titolo de retejo"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:141
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:148
 msgid "Site-wide settings."
 msgstr "Agordoj, kiuj koncernas la tutan retejon."
 
@@ -2675,11 +2715,11 @@ msgstr "Forprenitaj etikedoj"
 msgid "Subfolders"
 msgstr "Subdosierujoj."
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:19
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:20
 msgid "Subject"
 msgstr "Koncerno"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:20
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:21
 msgid "Subject of the message"
 msgstr "Koncerno de la meŝago"
 
@@ -2689,8 +2729,8 @@ msgid "Submit"
 msgstr "Proponi"
 
 #. Default: "Submit for publication"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Submit for publication"
 msgstr "Proponi por publikado"
@@ -2781,7 +2821,7 @@ msgid "Text to be shown in the footer"
 msgstr ""
 
 #. Default: "The ID of the user who performed the last transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "The ID of the user who performed the last transition"
@@ -2796,11 +2836,11 @@ msgstr "La identigilo de uzulo, kiu ekis la antaŭa transiro"
 msgid "The content type to check for."
 msgstr "Tipoj de ero, por serĉado."
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:23
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:24
 msgid "The email address that sends the email. If no email is provided here, it will use the portal from address."
 msgstr "La retpoŝa adreso, kiu sendas la retpoŝton. Se neniu adreso estas donita ĉi tie, la portala adreso estas uzita."
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:27
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:28
 msgid "The email where you want to send this message. To send it to different email addresses, just separate them with ,"
 msgstr "La retpoŝta adreso, al kiu vi volas sendi la mesaĝon. Se vi volas sendi al diversaj adresoj, nur dividu ilin per ,"
 
@@ -2817,7 +2857,7 @@ msgstr "La evento, kiu povas eki la regulon"
 msgid "The file extension to check for"
 msgstr "La serĉenda dosierfinaĵo "
 
-#: CMFPlone/skins/plone_scripts/folder_rename.cpy:51
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:52
 msgid "The following item(s) could not be renamed: ${items}."
 msgstr "La jena(j) ero(j) ne povis esti renomita(j): ${items}"
 
@@ -2927,7 +2967,11 @@ msgstr "La titolo de la regulo"
 msgid "The url of a Link item"
 msgstr "La retadreso de liga ero"
 
-#: plone.app.controlpanel/plone/app/controlpanel/skins.py:124
+#: CMFPlone/skins/plone_form_scripts/validate_synPropertiesForm.vpy:28
+msgid "The value of this field must be 1 or greater."
+msgstr ""
+
+#: plone.app.controlpanel/plone/app/controlpanel/skins.py:139
 msgid "Theme settings"
 msgstr "Agordo de etoso"
 
@@ -2937,7 +2981,7 @@ msgid "Themes"
 msgstr "Etosoj"
 
 #. Default: "There are more search results, narrow your search."
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:69
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:74
 msgid "There are more search results, narrow your search."
 msgstr "Ekzistas pli da rezultoj, mallarĝigu vian serĉon."
 
@@ -2989,7 +3033,7 @@ msgstr ""
 msgid "This portlet display a navigation tree."
 msgstr "Tiuj kesteto montras navigadon."
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:61
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:85
 msgid "This portlet displays a queue of documents awaiting review."
 msgstr "Tiu kesteto montras la vicon de eroj, kiuj atendas revizon."
 
@@ -3076,9 +3120,9 @@ msgstr "Ekilo: ${name}"
 msgid "Triggering event"
 msgstr "Ekila evento"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:32
-msgid "Type in here the message that you want to mail. Some defined content can be replaced: ${title} will be replaced by the title of the newly created item. ${url} will be replaced by the URL of the newly created item."
-msgstr "Entajpu ĉi tie mesaĝon, kiun vi volas forsendi. Uzu la variabloj ${title} por la titolo de la nova ero kaj ${url} por la retadreso de la nova ero."
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:33
+msgid "Type in here the message that you want to mail. Some defined content can be replaced: ${title} will be replaced by the title of the item. ${url} will be replaced by the URL of the item."
+msgstr ""
 
 #. Default: "Types"
 #: CMFPlone/profiles/default/controlpanel.xml
@@ -3157,8 +3201,8 @@ msgid "Users and Groups Administration"
 msgstr "Administrado de uzuloj kaj grupoj."
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "View"
 msgstr "Montru"
@@ -3183,8 +3227,8 @@ msgid "Visible to all intranet users."
 msgstr "Videbla por ĉiuj intraretaj uzuloj."
 
 #. Default: "Visible to everyone, but not approved by the reviewers."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
 msgstr "Videbla por ĉiuj, sed ne aprobita de redaktoroj."
 
@@ -3194,8 +3238,8 @@ msgid "Visible to everyone, editable by the owner."
 msgstr "Videbla por ĉiuj, redaktebla per la posedanto."
 
 #. Default: "Visible to everyone, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, not editable by the owner."
 msgstr "Videbla por ĉiuj, ne redaktebla per la posedanto."
@@ -3206,8 +3250,8 @@ msgid "Visible to people outside the intranet, not editable by the owner."
 msgstr "Videbla por homoj ekster la intrareto, ne redaktebla per la posedanto."
 
 #. Default: "Waiting to be reviewed, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Waiting to be reviewed, not editable by the owner."
 msgstr "Atendas revizon, ne redaktebla per la posedanto."
@@ -3222,9 +3266,9 @@ msgid "Welcome! You are now logged in."
 msgstr "Bonvenon! Vi sukcese salutis."
 
 #. Default: "When the previous transition was performed"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "When the previous transition was performed"
 msgstr "Kiam la antaŭaj transiroj okazis."
 
@@ -3427,8 +3471,9 @@ msgstr "${number} pliaj eroj"
 msgid "batch_previous_x_items"
 msgstr "${number} pli novaj eroj"
 
-#. Default: "${number} items matching your criteria."
-#: CMFPlone/skins/plone_forms/member_search_results.pt:26
+#. Default: "${number} items matching your search terms"
+#: CMFPlone/skins/plone_forms/search.pt:69
+#, fuzzy
 msgid "batch_x_items_matching_your_criteria"
 msgstr "${number} eroj kongruas kun viaj serĉkriterioj"
 
@@ -3453,7 +3498,7 @@ msgid "box_external_links"
 msgstr "Eksteraj ligoj"
 
 #. Default: "Forgot your password?"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:94
+#: CMFPlone/skins/plone_login/login_form.cpt:80
 msgid "box_forgot_password_option"
 msgstr "Ĉu vi forgesis vian pasvorton?"
 
@@ -3469,7 +3514,7 @@ msgid "box_languages"
 msgstr ""
 
 #. Default: "last modified"
-#: CMFPlone/skins/plone_content/folder_listing.pt:139
+#: CMFPlone/skins/plone_content/folder_listing.pt:142
 msgid "box_last_modified"
 msgstr "Laste modifita:"
 
@@ -3574,22 +3619,17 @@ msgid "constraintypes_mode_acquire"
 msgstr "Heredu la agordon de supre"
 
 #. Default: "Attendees"
-#: CMFPlone/skins/plone_content/event_view.pt:152
+#: CMFPlone/skins/plone_content/event_view.pt:143
 msgid "contact_attendees"
 msgstr "Atentatoj"
 
-#. Default: "Contact Email"
-#: CMFPlone/skins/plone_content/event_view.pt:136
-msgid "contact_email"
-msgstr "Kontakta retadreso"
-
 #. Default: "Contact Name"
-#: CMFPlone/skins/plone_content/event_view.pt:127
+#: CMFPlone/skins/plone_content/event_view.pt:123
 msgid "contact_name"
 msgstr "Nomo"
 
 #. Default: "Contact Phone"
-#: CMFPlone/skins/plone_content/event_view.pt:144
+#: CMFPlone/skins/plone_content/event_view.pt:135
 msgid "contact_phone"
 msgstr "Kontakta telefono"
 
@@ -3720,57 +3760,12 @@ msgid "description_accessibility_info"
 msgstr "Ĉi tiu retejo uzas ${plone} kaj estis planita por esti komplete alirebla kaj uzebla laŭ la gvidlinioj pri alireblecoo de retaj enhavoj ( ${wcag} v1.0). Se io ajn en ĉi tiu retejo rilate al alirebleco aŭ valideco ne sekvas la normon, bonvolu kontakti ${site_admin}, ne la teamon de Plone."
 
 #. Default: "We have undertaken to use our knowledge and understanding of the ways in which different people access the Internet, to develop a web site that is clear and simple for everybody to use."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:137
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:80
 msgid "description_accessibility_statement"
 msgstr "Ni klopodis uzi nian scion kaj komprenon pri tio, kiel diversaj homoj uzas la reton, por krei retejon kiu estas klara kaj simpla por ĉiuj."
 
-#. Default: "Access keys are not supported, please use a different browser."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:124
-msgid "description_accesskey_ie4_mac"
-msgstr "Fulmoklavoj ne subtenataj, bonvolu uzi alian retumilon."
-
-#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:112
-msgid "description_accesskey_ie4_win"
-msgstr "Presu la <code>Ctrl</code>-butonon kaj alklaku la numeron aŭ literon de la fulmoklavo."
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:118
-msgid "description_accesskey_ie5_mac"
-msgstr "Presu la <code>Ctrl</code>-butonon kaj alklaku la numeron aŭ literon de la fulmoklavo.<"
-
-#. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:82
-msgid "description_accesskey_ie5_win"
-msgstr "Presu la <code>Alt</code>-butonon kaj alklaku la numeron aŭ literon de la fulmoklavo, ĉesu presi ambaŭ butonojn kaj alklaku <code>ENTER</code>."
-
-#. Default: "Press and release the <code>Ctrl</code> key, then press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:106
-msgid "description_accesskey_konqueror_linux"
-msgstr "Presu kaj ĉesu presi la <code>Ctrl</code>-butonon kaj poste alklaku la numeron aŭ literon de la fulmoklavo."
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:94
-msgid "description_accesskey_mozilla_mac"
-msgstr "Presu la <code>Ctrl</code>-butonon kaj alklaku la numeron aŭ literon de la fulmoklavo."
-
-#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:88
-msgid "description_accesskey_mozilla_win"
-msgstr "Presu la <code>Alt</code>-butonon kaj alklaku la numeron aŭ literon de la fulmoklavo."
-
-#. Default: "Access keys are not supported, please use a different browser."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:129
-msgid "description_accesskey_netscape6_all"
-msgstr "Fulmoklavoj ne subtenataj, bonvolu uzi alian retumilon."
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:100
-msgid "description_accesskey_safari_mac"
-msgstr "Presu la <code>Ctrl</code>/butonon kaj alklaku la numeron aŭ literon de la fulmoklavon."
-
 #. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:69
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:70
 msgid "description_add_comment"
 msgstr "Per tiu formularo vi povas aldoni komenton. Se antaŭ la forsendo vi volas kontroli, kiel la komento aspektos, alklaku 'Antaŭvidi komenton'"
 
@@ -3790,7 +3785,7 @@ msgid "description_advanced_search"
 msgstr "Tiu serĉformularo ebligas vin serĉi erojn specifigante per unu aŭ pluraj serĉterminoj.<br /> Rememoru, ke vi ankaŭ povas uzi la rapidan serĉon ĉi-supre, kio kutime sufiĉas. Nur se vi serĉas ion tre specifan, necesas uzi tiun ĉi serĉ-formularon."
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: CMFPlone/skins/plone_content/author.cpt:165
+#: CMFPlone/skins/plone_content/author.cpt:170
 msgid "description_author_feedback"
 msgstr "Se vi volas kontakti la aŭtoron, plenigu la ĉi-suban formularon."
 
@@ -3879,11 +3874,6 @@ msgstr ""
 msgid "description_control_panel"
 msgstr "Agordejo por Plone kaj aldonaj produktoj"
 
-#. Default: "Configuration area for Plone and installed add-ons."
-#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:18
-msgid "description_controlpanel"
-msgstr ""
-
 #. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
 #: CMFPlone/skins/plone_deprecated/footer.pt:22
 #, fuzzy
@@ -3907,7 +3897,7 @@ msgid "description_edit_groupproperties"
 msgstr "Grupoj estas logika kolekto de uzantoj, kiel sekcio kaj laborgrupo. Ili ne tuj havas specialajn rajtojn je globala nivelo. Por tio oni uzas rolon, kiun oni asignas al la koncerna grupo."
 
 #. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
-#: Archetypes/skins/archetypes/metadata_macros.pt:35
+#: Archetypes/skins/archetypes/metadata_macros.pt:32
 msgid "description_edit_properties"
 msgstr "Tiuj informoj, nomiataj <em>metadatumoj</em>, estas datumaro uzata por kategoriigi objekton, por asigni al ĝi efektivigodaton aŭ estingodaton, kaj por defini lingvon kaj ŝlosilvortojn.<br /> Modifu la metadataumjn registrojn per la ĉi suba formularo. Notu, ke metadatoj estas tre multkapablaj. Per ili vi povas fari multnombrajn kategoriigojn. Plenigu la formularon klare kaj koncize, kaj lasu malplenaj la erojn, pri kiuj vi nenion scias."
 
@@ -3917,7 +3907,7 @@ msgid "description_enable_cookies_to_stay_logged_in"
 msgstr ""
 
 #. Default: "The error has been logged as entry number ${entryid}."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:140
+#: CMFPlone/skins/plone_templates/default_error_message.pt:144
 msgid "description_error_has_been_logged"
 msgstr ""
 
@@ -3932,7 +3922,7 @@ msgid "description_error_rerference_link"
 msgstr "Legu la eraro-referencon sur plone.org por havi pli da informoj pri tiu eraro."
 
 #. Default: "see the full error message"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:157
+#: CMFPlone/skins/plone_templates/default_error_message.pt:161
 msgid "description_full_error_link"
 msgstr ""
 
@@ -3962,7 +3952,7 @@ msgid "description_historical_unavailable"
 msgstr "Tiu klaso ne subtenas historian interfacon. La enhavo devas miksi en OFS.History.Historical"
 
 #. Default: "If you need to report this to the ${site_admin}, please include this entry number in your message."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:146
+#: CMFPlone/skins/plone_templates/default_error_message.pt:150
 msgid "description_include_error_in_admin_message"
 msgstr ""
 
@@ -4017,7 +4007,7 @@ msgid "description_member_search"
 msgstr "Tiu serĉformularo ebligas al vi trovi membrojn, specifigante unu aŭ plurajn serĉkriteriojn"
 
 #. Default: "Your personal settings."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:61
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:65
 msgid "description_my_preferences"
 msgstr "Viaj personaj agordoj."
 
@@ -4032,12 +4022,12 @@ msgid "description_navigation_setup_navtree"
 msgstr ""
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:34
+#: CMFPlone/skins/plone_login/logged_out.cpt:41
 msgid "description_no_account"
 msgstr "Se vi ankoraŭ ne membriĝis, uzu la ${registration_form}, por fariĝi membro."
 
 #. Default: "registration form"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:35
+#: CMFPlone/skins/plone_login/logged_out.cpt:42
 msgid "description_no_account_registration_linktext"
 msgstr "Membriĝoformularon"
 
@@ -4047,7 +4037,7 @@ msgid "description_no_comparison_support"
 msgstr "Tiu objekto ne subtenas komparadon."
 
 #. Default: "There are currently no items in this folder."
-#: CMFPlone/skins/plone_content/folder_listing.pt:176
+#: CMFPlone/skins/plone_content/folder_listing.pt:179
 msgid "description_no_items_in_folder"
 msgstr "Momente nenio en tiu ĉi dosierujo."
 
@@ -4057,7 +4047,7 @@ msgid "description_no_privileges_for_page"
 msgstr ""
 
 #. Default: "No results were found."
-#: CMFPlone/skins/plone_forms/member_search_results.pt:67
+#: CMFPlone/skins/plone_forms/search.pt:85
 msgid "description_no_results_found"
 msgstr "Nenio trovita"
 
@@ -4067,12 +4057,12 @@ msgid "description_no_visible_items_add_paste"
 msgstr "En tiu dosierujo ne estas videblaj eroj. Por aldoni enhavon, alklaku butonon aŭ kopiu enhavon de alie ĉi tien."
 
 #. Default: "This type has no workflow. The visibilty of items of this type is determined by the folder they are in."
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:214
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:248
 msgid "description_no_workflow"
 msgstr ""
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
-#: CMFPlone/skins/plone_login/login_failed.cpt:27
+#: CMFPlone/skins/plone_login/login_failed.cpt:32
 msgid "description_not_accept_cookies"
 msgstr ""
 
@@ -4177,22 +4167,22 @@ msgid "description_sign_in"
 msgstr "Por eniri tiun parton, vi devas saluti per via uzulnomo kaj via pasvorto."
 
 #. Default: "Since you are a site administrator, you can ${link_full_error_msg}"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:156
+#: CMFPlone/skins/plone_templates/default_error_message.pt:160
 msgid "description_site_admin_see_full_error"
 msgstr ""
 
 #. Default: "Please double check the web address or use the search function on this page to find what you are looking for."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:39
+#: CMFPlone/skins/plone_templates/default_error_message.pt:40
 msgid "description_site_error_double_check_or_search"
 msgstr "Bonvolu kontroli ankoraŭfoje la TTT-adreson aŭ uzu la serĉfunkcion sur ĉi tiu paĝo, por trovi tion kion vi serĉas. "
 
 #. Default: "If you are certain you have the correct web address but are encountering an error, please contact the ${site_admin}."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:45
+#: CMFPlone/skins/plone_templates/default_error_message.pt:46
 msgid "description_site_error_mail_site_admin"
 msgstr ""
 
 #. Default: "Thank you."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:51
+#: CMFPlone/skins/plone_templates/default_error_message.pt:52
 msgid "description_site_error_thank_you"
 msgstr "Dankon."
 
@@ -4212,17 +4202,17 @@ msgid "description_static_portlet"
 msgstr ""
 
 #. Default: "If you are still reaching this page after correctly configuring your browser, here are some possible reasons:"
-#: CMFPlone/skins/plone_login/login_failed.cpt:32
+#: CMFPlone/skins/plone_login/login_failed.cpt:37
 msgid "description_still_failure"
 msgstr "Se vi daŭre venadas ĉi tien, kvankam vi ĝuste agordis vian TTT-legilon, ĉi tie estas kelkaj eblaj kaŭzoj:"
 
 #. Default: "You may be running web filtering software that disables cookies. If so, you will need to configure the software so that it enables you to accept cookies from ${url}"
-#: CMFPlone/skins/plone_login/login_failed.cpt:42
+#: CMFPlone/skins/plone_login/login_failed.cpt:47
 msgid "description_still_failure_reason1"
 msgstr "Vi eble uzas retfiltran programon, kiu malebligas kuketojn. Se jes, vi devas agordi la programon tiel, ke ĝi ebligas al vi akcepti kuketojn de  ${url}."
 
 #. Default: "Your computer may be behind a firewall or proxy server that prevents cookies from being sent to or from your browser. If so, you will need to ask your systems administrator if the problem can be fixed."
-#: CMFPlone/skins/plone_login/login_failed.cpt:44
+#: CMFPlone/skins/plone_login/login_failed.cpt:49
 msgid "description_still_failure_reason2"
 msgstr "Via komputilo povas esti malantaŭ fajroŝirmilo aŭ prokura servilo, kiu malebligas la sendadon de kuketoj al aŭ de via TTT-legilo. Se jes, vi devas demandi vian administriston, ĉu la problemo estas solvebla."
 
@@ -4282,12 +4272,12 @@ msgid "description_user_panel"
 msgstr "Ĉi tie vi povas fari viajn agordojn."
 
 #. Default: "We have used ${xhtml} 1.0 and ${css} that conforms to specification, as laid out by the ${w3c} because we believe that usability and accessibility must have a solid foundation. If anything on this web site does not validate correctly, please contact the ${site_admin}, and not the Plone Team."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:159
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:102
 msgid "description_validation"
 msgstr "Ni uzis ${xhtml} 1.0 kaj ${css} kiuj konformas al gvidlinioj indikitaj de ${w3c}, ĉar ni kredas ke uzeblo kaj alireblo devas havi firman fundamenton. Se io en ĉi tiu retejo ne bone trapasas validigon, bonvolu kontakti ${site_admin} kaj ne la teamon de Plone."
 
 #. Default: "We have also endeavoured to achieve AA accessibility as measured against version 1.0 of the ${wcag}. We are aware however, that a number of the checkpoints of the ${wcag2} are subjective — and although we are sure that we have met them squarely, there may be instances where interpretation may vary."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:172
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:115
 #, fuzzy
 msgid "description_wcag_aa_rating"
 msgstr "Ni krome klopodis atingi alireblon de la klaso AA, mezurite rilate al la versio 1.0 de la ${wcag}. Ni tamen konscias, ke multaj el la kontrolpunktoj de ${wcag2} estas subjektivaj, kaj kvankam ni certas ke ni bone trafis ilin, en kelkaj kazoj la interpretoj povas varii."
@@ -4325,7 +4315,7 @@ msgid "enable_cookies_message"
 msgstr "Kuketoj ne estas ebligitaj. Vi devas ${enable_cookies} antaŭ ol vi povos saluti."
 
 #. Default: "Cookies are not enabled. You must enable cookies before you can log in."
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:70
+#: CMFPlone/skins/plone_login/logged_out.cpt:58
 msgid "enable_cookies_message_before_login"
 msgstr ""
 
@@ -4335,12 +4325,12 @@ msgid "error_installed_product"
 msgstr "Okazis eraroj dum la instalo, kontrolu protokolon."
 
 #. Default: "${name} is required, please correct."
-#: Archetypes/Field.py:354
+#: Archetypes/Field.py:355
 msgid "error_required"
 msgstr "${name} necesas, bonvolu korekti."
 
 #. Default: "Values ${val} are not allowed for vocabulary of element ${label}."
-#: Archetypes/Field.py:399
+#: Archetypes/Field.py:400
 #, fuzzy
 msgid "error_vocabulary"
 msgstr "La valoro ${val} ne eblas en vortaro de elemento ${label}."
@@ -4351,18 +4341,18 @@ msgid "event_and"
 msgstr "ĝis"
 
 #. Default: "from"
-#: CMFPlone/skins/plone_content/event_view.pt:87
+#: CMFPlone/skins/plone_content/event_view.pt:83
 msgid "event_from"
 msgstr "de"
 
 #. Default: "More information about this event…"
-#: CMFPlone/skins/plone_content/event_view.pt:186
+#: CMFPlone/skins/plone_content/event_view.pt:177
 #, fuzzy
 msgid "event_more_information"
 msgstr "Pli da informo pri tiu evento..."
 
 #. Default: "to"
-#: CMFPlone/skins/plone_content/event_view.pt:67
+#: CMFPlone/skins/plone_content/event_view.pt:65
 msgid "event_to"
 msgstr "ĝis"
 
@@ -4377,7 +4367,7 @@ msgid "event_when"
 msgstr "Kiam"
 
 #. Default: "Where"
-#: CMFPlone/skins/plone_content/event_view.pt:119
+#: CMFPlone/skins/plone_content/event_view.pt:113
 msgid "event_where"
 msgstr "Kie"
 
@@ -4420,7 +4410,7 @@ msgid "go_to_parent_url"
 msgstr "Supren unu nivelon"
 
 #. Default: "All content created by ${user}…"
-#: CMFPlone/skins/plone_content/author.cpt:286
+#: CMFPlone/skins/plone_content/author.cpt:291
 #, fuzzy
 msgid "go_to_search_author_content"
 msgstr "Ĉiuj enhaveroj kreitaj de ${user}..."
@@ -4430,18 +4420,13 @@ msgstr "Ĉiuj enhaveroj kreitaj de ${user}..."
 msgid "heading_access_keys"
 msgstr "Fulmoklavoj"
 
-#. Default: "Using access keys in different web browsers"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:78
-msgid "heading_access_keys_usage"
-msgstr "Uzado de fulmoklavon en diversaj retumiloj."
-
 #. Default: "Accessibility"
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:18
 msgid "heading_accessibility_info"
 msgstr "Alireblo"
 
 #. Default: "Accessibility Statement"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:135
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:78
 msgid "heading_accessibility_statement"
 msgstr "Deklaro pri alireblo"
 
@@ -4466,7 +4451,7 @@ msgid "heading_add_sharing_permissions"
 msgstr "Aldonu kunposedajn rajtojn al uzuloj."
 
 #. Default: "Add event to calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:160
+#: CMFPlone/skins/plone_content/event_view.pt:151
 msgid "heading_add_to_calendar"
 msgstr "Aldonu eventon en la kalendaron."
 
@@ -4491,7 +4476,7 @@ msgid "heading_allowed_languages"
 msgstr ""
 
 #. Default: "Latest content created by this user"
-#: CMFPlone/skins/plone_content/author.cpt:245
+#: CMFPlone/skins/plone_content/author.cpt:250
 msgid "heading_author_content"
 msgstr "La plej lasta enhavo kreita de ĉi tiu uzulo"
 
@@ -4546,7 +4531,7 @@ msgid "heading_currently_assigned_shares"
 msgstr "Aktualaj kunposedaj rajtoj de ${folder}"
 
 #. Default: "${user_name}'s dashboard"
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:91
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:97
 msgid "heading_dashboard"
 msgstr ""
 
@@ -4621,6 +4606,11 @@ msgstr "Aktualaj grupmembroj"
 msgid "heading_groups_overview"
 msgstr "Superrigardo pri grupoj"
 
+#. Default: "Inherited portlets"
+#: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:66
+msgid "heading_inherited_portlets"
+msgstr ""
+
 #. Default: "Install log for ${productname}"
 #: CMFPlone/skins/plone_prefs/prefs_installed_product_overview.pt:15
 msgid "heading_install_log_for"
@@ -4657,12 +4647,12 @@ msgid "heading_member_search"
 msgstr "Serĉi membrojn"
 
 #. Default: "Current Group Memberships"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:91
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:93
 msgid "heading_memberships_current"
 msgstr "Aktualaj grupmembrecoj"
 
 #. Default: "Personal Preferences"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:51
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:54
 msgid "heading_my_preferences"
 msgstr "Miaj agordoj"
 
@@ -4682,7 +4672,7 @@ msgid "heading_no_privileges"
 msgstr "Nesufiĉaj rajtoj"
 
 #. Default: "You might have been looking for…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:64
+#: CMFPlone/skins/plone_templates/default_error_message.pt:65
 msgid "heading_not_found_suggestions"
 msgstr ""
 
@@ -4768,7 +4758,7 @@ msgid "heading_search_newmembers"
 msgstr "Serĉi novajn grupmembrojn"
 
 #. Default: "Search results"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:226
+#: CMFPlone/skins/plone_forms/search.pt:63
 msgid "heading_search_results"
 msgstr "Serĉrezultoj"
 
@@ -4809,7 +4799,7 @@ msgid "heading_set_content_type_restrictions"
 msgstr ""
 
 #. Default: "Please log in"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:7
+#: CMFPlone/skins/plone_login/login_form.cpt:76
 msgid "heading_sign_in"
 msgstr "Bonvolu saluti"
 
@@ -4819,7 +4809,7 @@ msgid "heading_signed_out"
 msgstr "Vi adiaŭis"
 
 #. Default: "We're sorry, but there seems to be an error…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:131
+#: CMFPlone/skins/plone_templates/default_error_message.pt:135
 msgid "heading_site_error_sorry"
 msgstr ""
 
@@ -4829,7 +4819,7 @@ msgid "heading_site_language"
 msgstr ""
 
 #. Default: "We're sorry, but that page doesn't exist…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:34
+#: CMFPlone/skins/plone_templates/default_error_message.pt:35
 msgid "heading_site_there_seems_to_be_an_error"
 msgstr ""
 
@@ -4864,7 +4854,7 @@ msgid "heading_users_overview"
 msgstr "Superrigardo pri uzuloj"
 
 #. Default: "Validation"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:143
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:86
 msgid "heading_validation"
 msgstr "Validigo"
 
@@ -4879,7 +4869,7 @@ msgid "heading_views"
 msgstr "Vidoj"
 
 #. Default: "Welcome!"
-#: CMFPlone/skins/plone_login/login_password.cpt:22
+#: CMFPlone/skins/plone_login/registered.pt:19
 msgid "heading_welcome"
 msgstr "Bonvenon!"
 
@@ -4910,12 +4900,12 @@ msgid "help_allow_combined_language_codes"
 msgstr ""
 
 #. Default: "If selected, users can add comments to this item."
-#: Archetypes/ExtensibleMetadata.py:66
+#: Archetypes/ExtensibleMetadata.py:70
 msgid "help_allow_comments"
 msgstr "Se elektita, uzantoj povas komenti tiun eron."
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:195
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:199
 msgid "help_biography"
 msgstr "Mallonga superrigardo pri tio, kiu vi estas kaj kion vi faras. Ĝi estos montrata en via aŭtora paĝo,  al kiu ligas la eroj kreitaj de vi."
 
@@ -4930,7 +4920,7 @@ msgid "help_capslock_password"
 msgstr "Uskleco gravas, certigu ke la majuskliga baskulo ne estas ŝaltita."
 
 #. Default: "Also known as keywords, tags or labels, these help you categorize your content."
-#: Archetypes/ExtensibleMetadata.py:78
+#: Archetypes/ExtensibleMetadata.py:82
 msgid "help_categories"
 msgstr "Ankaŭ nomitaj ŝlosilvortoj, tiuj helpas vin kategoriigi vian enhavon."
 
@@ -4970,33 +4960,33 @@ msgid "help_confirm_password"
 msgstr "Enskribu denove la pasvorton. Atentu ke la pasvortoj estu la samaj."
 
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:241
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:245
 msgid "help_content_editor"
 msgstr "Elektu la tekstoredaktilon, kiun vi volas uzi por redakti la enhavon pli facile. La redaktiloj ofte postulas specialajn kapablojn de la retumiloj."
 
 #. Default: "When checked, an icon will be made visible on each page which allows you to edit content with your favorite editor instead of using browser-based editors. This requires an additional application called ExternalEditor installed client-side. Ask your administrator for more information if needed."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:284
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:288
 msgid "help_content_ext_editor"
 msgstr "Kiam krucita, sur ĉiu paĝo aperos bildeto kiu permesos al vi redakti enhavon per via ŝatata redaktilo anstataŭ redaktiloj kiuj funkcias ene de la retumilo. Petu pli da informoj de via administranto se necese."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: Archetypes/ExtensibleMetadata.py:112
+#: Archetypes/ExtensibleMetadata.py:116
 msgid "help_contributors"
 msgstr "La nomoj de la personoj, kiuj kontribuis al la ero. Ĉiu kontribuanto en propra linio."
 
 #. Default: "Copyright statement or other rights information on this item."
-#: Archetypes/ExtensibleMetadata.py:168
+#: Archetypes/ExtensibleMetadata.py:172
 #, fuzzy
 msgid "help_copyrights"
 msgstr "Kopirajtaj informoj de la ero."
 
 #. Default: "Date this object was created"
-#: Archetypes/ExtensibleMetadata.py:187
+#: Archetypes/ExtensibleMetadata.py:191
 msgid "help_creation_date"
 msgstr "La kreodato de ĉi tiu ero."
 
 #. Default: "Persons responsible for creating the content of this item. Please enter a list of user names, one per line. The principal creator should come first."
-#: Archetypes/ExtensibleMetadata.py:123
+#: Archetypes/ExtensibleMetadata.py:127
 #, fuzzy
 msgid "help_creators"
 msgstr "Personoj respondecaj pri la kreado de la enhavo de ĉi tiu ero. Bonvolu skribi liston de uzulnomoj, unu sur ĉiu linio. La ĉefa kreinto devus esti la unua."
@@ -5042,7 +5032,7 @@ msgid "help_description"
 msgstr "Mallonga priskribo de la enhavo."
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:327
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:331
 msgid "help_display_names"
 msgstr "Decidas, ĉu Mallongaj Nomoj (konataj ankaŭ kiel ID-oj) estas ŝanĝeblaj kiam oni redaktas erojn. Se Mallongaj Nomoj ne estas montrataj, ili estos kreitaj aŭtomate."
 
@@ -5088,7 +5078,7 @@ msgid "help_groupname"
 msgstr "Tio estas unika identigilo por la grupo. Ĝi ne estas ŝanĝebla post kreado."
 
 #. Default: "The URL for your external home page, if you have one."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:219
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:223
 msgid "help_homepage"
 msgstr "La URL de via ekstera hejmpaĝo, se vi havas tian."
 
@@ -5114,7 +5104,7 @@ msgid "help_inherit_criteria"
 msgstr "Filtru la serĉrezultojn el la supra Inteligenta Dosierujo, uzante la kriteriojn de ĉi tiu Inteligenta Dosierujo."
 
 #. Default: "By default, permissions from the container of this item are inherited. If you disable this, only the explicitly defined sharing permissions will be valid. In the overview, the symbol ${image_confirm_icon} indicates an inherited value. Similarly, the symbol ${image_link_icon} indicates a global role, which is managed by the site administrator."
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:155
 msgid "help_inherit_local_roles"
 msgstr ""
 
@@ -5124,7 +5114,7 @@ msgid "help_limit_number"
 msgstr "Se elektita, nur la 'Kvanto de eroj' indikitaj ĉi-sube estos montrata."
 
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:306
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:310
 msgid "help_listed_search"
 msgstr "Difinas ĉu via nomo estus listigita kiam oni serĉas uzulojn en ĉi tiu retejo."
 
@@ -5135,12 +5125,12 @@ msgid "help_locally_allowed_types"
 msgstr "Elektu la enhavtipojn kiuj estu aldoneblaj ene de ĉi tiu dosierujo."
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:142
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:146
 msgid "help_location"
 msgstr "Via loko - aŭ urbo kaj lando, aŭ, en entreprena kadro, kie situas via oficejo"
 
 #. Default: "The geographical location associated with the item, if applicable."
-#: Archetypes/ExtensibleMetadata.py:103
+#: Archetypes/ExtensibleMetadata.py:107
 msgid "help_location_dc"
 msgstr ""
 
@@ -5150,17 +5140,17 @@ msgid "help_login_name_caps"
 msgstr "Uzul-nomoj kaj pasvortoj povas enhavi majusklojn kaj minuskojn. Certigu ke la majuskliga baskulo ne estas ŝaltita."
 
 #. Default: "Appearance of the site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:343
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:347
 msgid "help_look"
 msgstr "Ĉi tie vi elektas la aspekton de la TTT-ejo. Diversaj stiloj haveblas. "
 
 #. Default: "Please enter the message you want to send."
-#: CMFPlone/skins/plone_templates/contact-info.cpt:136
+#: CMFPlone/skins/plone_templates/contact-info.cpt:138
 msgid "help_message"
 msgstr "Bonvolu skribi la mesaĝon kiun vi volas sendi."
 
 #. Default: "Date this content was modified last"
-#: Archetypes/ExtensibleMetadata.py:203
+#: Archetypes/ExtensibleMetadata.py:207
 msgid "help_modification_date"
 msgstr "La dato kiam ĉi tiu enhavo laste estis modifita."
 
@@ -5184,8 +5174,13 @@ msgstr ""
 msgid "help_navigation_tree_depth"
 msgstr ""
 
+#. Default: "The content types that should be shown in the navigation and site map."
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:112
+msgid "help_navigationtypes"
+msgstr ""
+
 #. Default: "Enter your new password. Minimum 5 characters."
-#: CMFPlone/skins/plone_login/login_password.cpt:67
+#: CMFPlone/skins/plone_login/login_password.cpt:68
 msgid "help_new_password"
 msgstr "Enskribu novan pasvorton. Minimume 5 signoj."
 
@@ -5215,7 +5210,7 @@ msgid "help_password_creation"
 msgstr "Minimume 5 signoj."
 
 #. Default: "If you have forgotten your password, ${click_here}."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:122
+#: CMFPlone/skins/plone_login/login_form.cpt:85
 msgid "help_password_retrieval"
 msgstr "Se vi forgesis vian pasvorton, ${click_here}"
 
@@ -5230,12 +5225,12 @@ msgid "help_portal_type_criteria_value"
 msgstr "Unu el la haveblaj enhavotipoj."
 
 #. Default: "To add or change the portrait: click the \"Browse\" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:376
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:380
 msgid "help_portrait"
 msgstr "Por aldoni aŭ ŝanĝi portreton, alklaku la <strong>Traserĉu</strong>-butonon kaj elektu bildon de vi mem. Rekomendindas larĝo de 75 bilderoj kaj alto de 100 bilderoj."
 
 #. Default: "Your preferred language."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:167
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:171
 msgid "help_preferred_language"
 msgstr "Via preferata lingvo"
 
@@ -5245,7 +5240,7 @@ msgid "help_publishing_comments"
 msgstr "Estos aldonita al la publikiga historio.Se pluraj eroj estas elektitaj, la komento estos aldonata al ili ĉiuj."
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:151
+#: CMFPlone/skins/plone_login/login_form.cpt:149
 msgid "help_remember_my_name"
 msgstr "Krucu ĉi tion, se vi volas ke via nomo estu skribita aŭtomate kiam vi revenos por saluti."
 
@@ -5343,12 +5338,12 @@ msgid "help_send_to_mail"
 msgstr "La retadreso kien vi volas sendi la ligon."
 
 #. Default: "Please enter your e-mail address"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:81
+#: CMFPlone/skins/plone_templates/contact-info.cpt:87
 msgid "help_sender_from_address"
 msgstr "Bonvolu skribi vian retpoŝtan adreson."
 
 #. Default: "Please enter your full name"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:57
+#: CMFPlone/skins/plone_templates/contact-info.cpt:60
 msgid "help_sender_fullname"
 msgstr "Bonvolu skribi vian plenan nomon."
 
@@ -5372,30 +5367,25 @@ msgstr "Mallonga nomo estas la parto kiu aperos en la URL de la ero."
 msgid "help_shortname"
 msgstr "Ne enhavu spacojn, substrekojn aŭ miksitajn majusklajn kaj minusklajn literojn. Tiu estos parto de la URL de la ero."
 
-#. Default: "The content types that should be shown in the site map."
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:112
-msgid "help_sitemaptypes"
-msgstr ""
-
 #. Default: "The password for the ESMTP user account."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:54
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:55
 msgid "help_smtp_pass"
 msgstr "Pasvorto por la ESMTP-konto"
 
 #. Default: "The port of your local SMTP (outgoing e-mail) server. Usually '25'."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:37
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:38
 #, fuzzy
 msgid "help_smtp_port"
 msgstr "La pordo de via loka SMTP-servilo por eliranta retpoŝto. Ĝenerale ĝi estas \"25\"."
 
 #. Default: "The address of your local SMTP (outgoing e-mail) server. Usually 'localhost', unless you use an external server to send e-mail."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:27
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:28
 #, fuzzy
 msgid "help_smtp_server"
 msgstr "La adreso de via loka SMTP-servilo por eliranta retpoŝto. Ĝenerale ĝi estas \"localhost\", se vi ne uzas eksteran servilon por sendi retpoŝton."
 
 #. Default: "Username for authentication to your e-mail server. Not required unless you are using ESMTP."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:45
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:46
 msgid "help_smtp_userid"
 msgstr "Uzulnomo por la salutado al via retpoŝta servilo. Ne bezonata, krom se vi uzsas ESMTP."
 
@@ -5405,7 +5395,7 @@ msgid "help_string_criteria_value"
 msgstr "Seria valoro"
 
 #. Default: "Please enter the subject of the message you want to send."
-#: CMFPlone/skins/plone_templates/contact-info.cpt:112
+#: CMFPlone/skins/plone_templates/contact-info.cpt:114
 msgid "help_subject"
 msgstr "Bonvolu skribi la titolon de la mesaĝo kiun vi volas sendi."
 
@@ -5456,7 +5446,7 @@ msgid "help_user_name_creation_casesensitive"
 msgstr "Enskribu la uzulonomon laŭvole. Ĝenerale tiu estas io simila al \"llzamenhof\". Ne uzu spacetojn aŭ specialajn signojn. Tio estas la nomo, per kiu vi salutos."
 
 #. Default: "The workflow states that should be shown in the navigation tree and the site map."
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:159
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:160
 msgid "help_wf_states"
 msgstr "La statoj de laborfluo kiuj estu montrataj en la navigada arbo kaj  la reteja mapo."
 
@@ -5487,7 +5477,7 @@ msgid "if_all_conditions_met"
 msgstr ""
 
 #. Default: "Your dashboard is currently empty. Click the <em>edit</em> tab to assign some personal portlets."
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:97
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:103
 msgid "info_empty_dashboard"
 msgstr ""
 
@@ -5522,7 +5512,7 @@ msgid "label_add"
 msgstr ""
 
 #. Default: "Add Comment"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:25
+#: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:55
 msgid "label_add_comment"
 msgstr "Komenti"
 
@@ -5557,12 +5547,12 @@ msgid "label_add_portlet_ellipsis"
 msgstr ""
 
 #. Default: "iCal"
-#: CMFPlone/skins/plone_content/event_view.pt:173
+#: CMFPlone/skins/plone_content/event_view.pt:164
 msgid "label_add_to_ical"
 msgstr ""
 
 #. Default: "vCal"
-#: CMFPlone/skins/plone_content/event_view.pt:167
+#: CMFPlone/skins/plone_content/event_view.pt:158
 msgid "label_add_to_vcal"
 msgstr ""
 
@@ -5583,7 +5573,7 @@ msgid "label_add_user_to_group"
 msgstr "Aldonu uzulon al elekita(j) grupo(j)"
 
 #. Default: "Add selected groups and users to this group"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:288
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:299
 msgid "label_add_users_to_group"
 msgstr "Aldonu elektitajn grupojn kaj uzantojn al tiu ĉi grupo"
 
@@ -5605,7 +5595,7 @@ msgid "label_affected_content"
 msgstr "Koncernitaj eroj"
 
 #. Default: "All"
-#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:32
+#: plone.app.content/plone/app/content/browser/table.pt:38
 msgid "label_all"
 msgstr ""
 
@@ -5625,7 +5615,7 @@ msgid "label_allow_combined_language_codes"
 msgstr ""
 
 #. Default: "Allow comments"
-#: Archetypes/ExtensibleMetadata.py:64
+#: Archetypes/ExtensibleMetadata.py:68
 msgid "label_allow_comments"
 msgstr "Permesi komentojn"
 
@@ -5635,12 +5625,12 @@ msgid "label_allow_discussion"
 msgstr "Permesu diskutadon"
 
 #. Default: "an anonymous user"
-#: plone.locking/plone/locking/browser/locking.py:88
+#: plone.locking/plone/locking/browser/locking.py:91
 msgid "label_an_anonymous_user"
 msgstr ""
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:64
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:46
 msgid "label_anonymous_user"
 msgstr "Anonima uzulo"
 
@@ -5650,7 +5640,7 @@ msgid "label_any_author"
 msgstr "Ĉiu aŭtoro"
 
 #. Default: "Apply Changes"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:228
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:236
 msgid "label_apply_changes"
 msgstr "Apliku ŝanĝojn"
 
@@ -5685,7 +5675,7 @@ msgid "label_assign_roles_to_users_groups"
 msgstr "Asigni elektitan rolon al elektita uzulo/grupo"
 
 #. Default: "at"
-#: Archetypes/Field.py:1846
+#: Archetypes/Field.py:1909
 msgid "label_at"
 msgstr "ĉe"
 
@@ -5695,13 +5685,13 @@ msgid "label_author"
 msgstr "Aŭtoro"
 
 #. Default: "Author's external home page…"
-#: CMFPlone/skins/plone_content/author.cpt:132
+#: CMFPlone/skins/plone_content/author.cpt:137
 #, fuzzy
 msgid "label_author_external_home_page"
 msgstr "Ekstera hejmpaĝo de la aŭtoro..."
 
 #. Default: "Author's home page in this site…"
-#: CMFPlone/skins/plone_content/author.cpt:127
+#: CMFPlone/skins/plone_content/author.cpt:132
 #, fuzzy
 msgid "label_author_internal_home_page"
 msgstr "La hejmpaĝo de la aŭtoro en ĉi tiu retejo..."
@@ -5722,7 +5712,7 @@ msgid "label_back_to_site"
 msgstr "Reen al la retejo"
 
 #. Default: "Biography"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:193
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:197
 msgid "label_biography"
 msgstr "Biografio"
 
@@ -5737,12 +5727,12 @@ msgid "label_boolean_criteria_bool"
 msgstr "Valoro"
 
 #. Default: "Browse"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:62
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:67
 msgid "label_browse"
 msgstr ""
 
 #. Default: "by ${author}"
-#: CMFPlone/skins/plone_content/folder_listing.pt:126
+#: CMFPlone/skins/plone_content/folder_listing.pt:129
 #, fuzzy
 msgid "label_by_author"
 msgstr "de ${author}"
@@ -5778,7 +5768,7 @@ msgid "label_calendar"
 msgstr "Kalendaro"
 
 #. Default: "Cancel"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:126
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:416
 msgid "label_cancel"
 msgstr "Ĉesigu"
 
@@ -5798,7 +5788,7 @@ msgid "label_change_comment"
 msgstr "Ŝanĝi komenton"
 
 #. Default: "Change content item as default view..."
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:304
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:305
 msgid "label_change_default_item"
 msgstr ""
 
@@ -5819,7 +5809,7 @@ msgid "label_change_ownership"
 msgstr "Ŝanĝi posedanton."
 
 #. Default: "Change Password"
-#: CMFPlone/skins/plone_login/login_password.cpt:101
+#: CMFPlone/skins/plone_login/login_password.cpt:102
 msgid "label_change_password"
 msgstr "Ŝanĝi pasvorton"
 
@@ -5871,7 +5861,7 @@ msgid "label_clear_selection"
 msgstr ""
 
 #. Default: "click here to retrieve it"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:123
+#: CMFPlone/skins/plone_login/login_form.cpt:86
 msgid "label_click_here_to_retrieve"
 msgstr "klaku ĉi tie por ricevi ĝin"
 
@@ -5882,17 +5872,17 @@ msgid "label_click_to_view_full_image"
 msgstr "Klaku por vidi plengrandan bildon..."
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:141
+#: CMFPlone/skins/plone_forms/sendto_form.cpt:90
 msgid "label_comment"
 msgstr "Komento"
 
 #. Default: "Posted by"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:61
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:43
 msgid "label_comment_by"
 msgstr "Afiŝita de"
 
 #. Default: "at"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:66
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:48
 msgid "label_commented_at"
 msgstr "je"
 
@@ -5942,7 +5932,7 @@ msgid "label_containing"
 msgstr "kiu enhavas"
 
 #. Default: "Content editor"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:239
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:243
 msgid "label_content_editor"
 msgstr "Redaktilo por enhavo"
 
@@ -5992,7 +5982,7 @@ msgid "label_contentrules_subfolders"
 msgstr ""
 
 #. Default: "Contributors"
-#: Archetypes/ExtensibleMetadata.py:111
+#: Archetypes/ExtensibleMetadata.py:115
 msgid "label_contributors"
 msgstr "Kontribuintoj"
 
@@ -6012,18 +6002,18 @@ msgid "label_copy_to_present"
 msgstr "Aktualigu"
 
 #. Default: "Rights"
-#: Archetypes/ExtensibleMetadata.py:167
+#: Archetypes/ExtensibleMetadata.py:171
 #, fuzzy
 msgid "label_copyrights"
 msgstr "Kopirajtoj"
 
 #. Default: "Creation Date"
-#: Archetypes/ExtensibleMetadata.py:186
+#: Archetypes/ExtensibleMetadata.py:190
 msgid "label_creation_date"
 msgstr "Dato de kreo"
 
 #. Default: "Creators"
-#: Archetypes/ExtensibleMetadata.py:122
+#: Archetypes/ExtensibleMetadata.py:126
 msgid "label_creators"
 msgstr "Kreintoj"
 
@@ -6068,7 +6058,7 @@ msgid "label_current_password"
 msgstr "Nuna pasvorto"
 
 #. Default: "Current selection"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:16
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:17
 msgid "label_currentselection"
 msgstr ""
 
@@ -6083,7 +6073,7 @@ msgid "label_custom_view_fields"
 msgstr "Tabel-kolumnoj"
 
 #. Default: "Dashboard"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-dashboard.pt:38
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:38
 msgid "label_dashboard"
 msgstr ""
 
@@ -6103,7 +6093,7 @@ msgid "label_default_type"
 msgstr ""
 
 #. Default: "Default workflow (${title})"
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:205
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:239
 msgid "label_default_workflow_title"
 msgstr ""
 
@@ -6113,7 +6103,7 @@ msgid "label_delete"
 msgstr ""
 
 #. Default: "Delete Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:397
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:401
 msgid "label_delete_portrait"
 msgstr "Forĵeti portreton"
 
@@ -6158,7 +6148,7 @@ msgid "label_discussion_enabled"
 msgstr "Ebligita"
 
 #. Default: "Edit"
-#: CMFPlone/skins/plone_content/author.cpt:66
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:36
 msgid "label_edit"
 msgstr "Redaktu"
 
@@ -6173,7 +6163,7 @@ msgid "label_edit_default_view_container_go_here"
 msgstr "iru ĉi tien"
 
 #. Default: "Allow editing of Short Names"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:324
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:328
 msgid "label_edit_short_names"
 msgstr "Permesu redaktadon de Mallongaj Nomoj"
 
@@ -6184,7 +6174,7 @@ msgid "label_effective_date"
 msgstr "Dato de efektivigo"
 
 #. Default: "E-mail"
-#: CMFPlone/skins/plone_forms/member_search_form.pt:46
+#: CMFPlone/skins/plone_login/join_form.cpt:121
 msgid "label_email"
 msgstr "Retpoŝto"
 
@@ -6233,8 +6223,9 @@ msgstr "Ĉefteksto de evento"
 msgid "label_event_attendees"
 msgstr "Atentatoj"
 
-#. Default: "(${location}, from ${start} to ${end})"
-#: CMFPlone/skins/plone_content/folder_listing.pt:113
+#. Default: "(${location}${DYNAMIC_CONTENT}from ${start} to ${end})"
+#: CMFPlone/skins/plone_content/folder_listing.pt:116
+#, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location}, de ${start} ĝis ${end} )"
 
@@ -6289,7 +6280,7 @@ msgid "label_expiration_date"
 msgstr "Dato de eksvalidiĝo"
 
 #. Default: "Enable external editing"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:282
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:286
 msgid "label_ext_editor"
 msgstr "Ebligu eksteran redaktadon"
 
@@ -6299,7 +6290,7 @@ msgid "label_file"
 msgstr "Dosiero"
 
 #. Default: "filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:142
+#: CMFPlone/skins/plone_forms/search.pt:141
 msgid "label_filed_under"
 msgstr ""
 
@@ -6324,7 +6315,7 @@ msgid "label_format"
 msgstr "Formato"
 
 #. Default: "Full Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:272
+#: CMFPlone/skins/plone_login/join_form.cpt:65
 msgid "label_full_name"
 msgstr "Tuta nomo"
 
@@ -6349,12 +6340,12 @@ msgid "label_group"
 msgstr "Grupo"
 
 #. Default: "Group Members"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:34
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:40
 msgid "label_group_members"
 msgstr "Grupmembroj"
 
 #. Default: "Group Memberships"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:33
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:36
 msgid "label_group_memberships"
 msgstr "Grupaj membrecoj"
 
@@ -6364,17 +6355,17 @@ msgid "label_group_name"
 msgstr "Nomo de grupo"
 
 #. Default: "Group Portlets"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:44
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:50
 msgid "label_group_portlets"
 msgstr ""
 
 #. Default: "Group Properties"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:39
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:45
 msgid "label_group_properties"
 msgstr "Ecoj de grupo"
 
 #. Default: "Group Search"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:109
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:117
 msgid "label_group_search"
 msgstr ""
 
@@ -6404,33 +6395,13 @@ msgid "label_home"
 msgstr "Hejmo"
 
 #. Default: "Home page"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:217
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:221
 msgid "label_homepage"
 msgstr "Hejmpaĝo"
 
 #. Default: "OpenID URL"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:25
 msgid "label_identity_url"
-msgstr ""
-
-#. Default: "Internet Explorer 4.5 (Mac)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:123
-msgid "label_ie4_mac"
-msgstr ""
-
-#. Default: "Internet Explorer 4 (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:111
-msgid "label_ie4_win"
-msgstr ""
-
-#. Default: "Internet Explorer 5+ (Mac)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:117
-msgid "label_ie5_mac"
-msgstr ""
-
-#. Default: "Internet Explorer 5+ (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:81
-msgid "label_ie5_win"
 msgstr ""
 
 #. Default: "Ignored exception types"
@@ -6471,7 +6442,7 @@ msgid "label_inherit_criteria"
 msgstr "Heredigu kriterion"
 
 #. Default: "Inherit permissions from higher levels"
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:133
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
 msgid "label_inherit_local_roles"
 msgstr ""
 
@@ -6500,13 +6471,8 @@ msgstr "Tipo de ero"
 msgid "label_keywords"
 msgstr "Ŝlosilvortoj"
 
-#. Default: "Konqueror (Linux)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:105
-msgid "label_konqueror_linux"
-msgstr ""
-
 #. Default: "Language"
-#: CMFPlone/skins/plone_deprecated/portlet_languages.pt:17
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:169
 msgid "label_language"
 msgstr "Lingvo"
 
@@ -6527,7 +6493,7 @@ msgid "label_limit_number"
 msgstr "Limigu serĉ-rezultojn"
 
 #. Default: "Listed in searches"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:304
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:308
 msgid "label_listed_status"
 msgstr "Listigita en serĉoj"
 
@@ -6553,7 +6519,7 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Roloj por asigni al viaj elektitaj uzuloj/grupoj."
 
 #. Default: "Location"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:140
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:144
 msgid "label_location"
 msgstr "Loko"
 
@@ -6563,7 +6529,7 @@ msgid "label_locked"
 msgstr ""
 
 #. Default: "Log in"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:79
+#: CMFPlone/skins/plone_login/registered.pt:86
 msgid "label_log_in"
 msgstr "Saluti"
 
@@ -6578,7 +6544,7 @@ msgid "label_login_continue_to_home_page"
 msgstr "Pluiru al la hejmpaĝo de ${portal_title}"
 
 #. Default: "Login Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:376
+#: CMFPlone/skins/plone_login/login_form.cpt:106
 msgid "label_login_name"
 msgstr "Uzul-nomo"
 
@@ -6588,12 +6554,12 @@ msgid "label_login_to_add_comments"
 msgstr "Salutu por aldoni komenton"
 
 #. Default: "Log in to send feedback"
-#: CMFPlone/skins/plone_content/author.cpt:142
+#: CMFPlone/skins/plone_content/author.cpt:147
 msgid "label_login_to_send_feedback"
 msgstr "Salutu por skribi al la aŭtoro"
 
 #. Default: "Look"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:341
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:345
 msgid "label_look"
 msgstr "Aspekto"
 
@@ -6603,32 +6569,22 @@ msgid "label_mail_password"
 msgstr "Sendi pasvorton retpoŝte"
 
 #. Default: "Main Language:"
-#: CMFPlone/skins/plone_content/author.cpt:107
+#: CMFPlone/skins/plone_content/author.cpt:112
 msgid "label_main_language"
 msgstr "Ĉefa lingvo"
 
 #. Default: "Message"
-#: CMFPlone/skins/plone_content/author.cpt:203
+#: CMFPlone/skins/plone_templates/contact-info.cpt:131
 msgid "label_message"
 msgstr "Mesaĝo"
 
 #. Default: "Modification Date"
-#: Archetypes/ExtensibleMetadata.py:201
+#: Archetypes/ExtensibleMetadata.py:205
 msgid "label_modification_date"
 msgstr "Dato de modifo"
 
-#. Default: "Firefox, Mozilla and Netscape 7+ (Mac OS X)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:93
-msgid "label_mozilla_mac"
-msgstr ""
-
-#. Default: "Firefox, Mozilla and Netscape 7+ (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:87
-msgid "label_mozilla_win"
-msgstr ""
-
 #. Default: "Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:95
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:71
 msgid "label_name"
 msgstr "Nomo"
 
@@ -6658,14 +6614,9 @@ msgid "label_navigation_types"
 msgstr "Montrataj enhav-tipoj"
 
 #. Default: "Filter on workflow state"
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:152
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:153
 msgid "label_navtree_wf_enable"
 msgstr "Filtra stato de laborfluo"
-
-#. Default: "Netscape 6 and earlier (All platforms)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:128
-msgid "label_netscape6_all"
-msgstr "Netscape 6 kaj pli fruaj (ĉiuj operaciumoj)"
 
 #. Default: "New categories"
 #: Archetypes/skins/archetypes/widgets/keyword.pt:36
@@ -6688,7 +6639,7 @@ msgid "label_new_owner_search"
 msgstr ""
 
 #. Default: "New password"
-#: CMFPlone/skins/plone_login/login_password.cpt:64
+#: CMFPlone/skins/plone_login/login_password.cpt:65
 msgid "label_new_password"
 msgstr "Nova pasvorto"
 
@@ -6708,7 +6659,7 @@ msgid "label_news_image"
 msgstr "Bildo"
 
 #. Default: "Next"
-#: Archetypes/skins/archetypes/edit_macros.pt:215
+#: Archetypes/skins/archetypes/edit_macros.pt:217
 msgid "label_next"
 msgstr "Sekva"
 
@@ -6738,17 +6689,17 @@ msgid "label_no_prefs_panels_available"
 msgstr ""
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1893
+#: Archetypes/Field.py:1956
 msgid "label_no_reference"
 msgstr "<neniaj referencoj>"
 
 #. Default: "No matching results found."
-#: CMFPlone/skins/plone_scripts/livesearch_reply.py:82
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:83
 msgid "label_no_results_found"
 msgstr ""
 
 #. Default: "No workflow"
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:211
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:245
 msgid "label_no_workflow"
 msgstr ""
 
@@ -6778,7 +6729,7 @@ msgid "label_or"
 msgstr "aŭ"
 
 #. Default: "Basic HTML textarea editor (works in all browsers)"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:259
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:263
 msgid "label_ordinary_content_editor"
 msgstr "Baza HTML tekstareala redaktilo (funkcias kun ĉiuj TTT-legiloj)"
 
@@ -6789,12 +6740,12 @@ msgid "label_outdated_product_reinstall"
 msgstr "Tiu produkto estas malaktuala, alklaku ĉi tie por reinstali. La versio en la dosiersistemo estas ${version}."
 
 #. Default: "Parent"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:53
 msgid "label_parent"
 msgstr ""
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:59
+#: CMFPlone/skins/plone_login/join_form.cpt:151
 msgid "label_password"
 msgstr "Pasvorto"
 
@@ -6814,7 +6765,7 @@ msgid "label_path_criteria_value"
 msgstr "Dosierujoj"
 
 #. Default: "Perform Search"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:402
+#: CMFPlone/skins/plone_forms/ownership_form.cpt:208
 msgid "label_perform_search"
 msgstr "Serĉu"
 
@@ -6860,7 +6811,7 @@ msgid "label_portlets_parent_folders"
 msgstr ""
 
 #. Default: "Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:365
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:369
 msgid "label_portrait"
 msgstr "Portreto"
 
@@ -6871,7 +6822,7 @@ msgid "label_powered_by_plone"
 msgstr "Funkcias per Plone, la libera enhavadministra sistemo"
 
 #. Default: "Previous"
-#: Archetypes/skins/archetypes/edit_macros.pt:207
+#: Archetypes/skins/archetypes/edit_macros.pt:209
 msgid "label_previous"
 msgstr ""
 
@@ -6916,13 +6867,13 @@ msgid "label_related_items"
 msgstr "Rilata enhavo"
 
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:159
+#: CMFPlone/skins/plone_forms/search.pt:158
 #, fuzzy
 msgid "label_relevance_percentage"
 msgstr "[${percentage} %]"
 
 #. Default: "Remember my name."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:149
+#: CMFPlone/skins/plone_login/login_form.cpt:147
 msgid "label_remember_my_name"
 msgstr "Memoru mian nomon"
 
@@ -6932,7 +6883,7 @@ msgid "label_remove"
 msgstr "Forĵetu"
 
 #. Default: "Remove selected groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:123
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:124
 msgid "label_remove_selected_groups"
 msgstr "Formeti elektitan grupon"
 
@@ -6957,7 +6908,7 @@ msgid "label_request_url"
 msgstr "Petu URL-on"
 
 #. Default: "(Required)"
-#: CMFPlone/skins/plone_content/author.cpt:187
+#: CMFPlone/skins/plone_templates/contact-info.cpt:83
 msgid "label_required"
 msgstr "(Bezonata)"
 
@@ -6996,13 +6947,8 @@ msgstr ""
 msgid "label_rule_event_trigger"
 msgstr ""
 
-#. Default: "Safari and Omniweb (Mac OS X)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:99
-msgid "label_safari_mac"
-msgstr "Safari kaj Omniweb (Mac OS X)"
-
 #. Default: "Save"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:121
+#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:158
 msgid "label_save"
 msgstr "Konservu"
 
@@ -7042,7 +6988,7 @@ msgid "label_schema_settings"
 msgstr ""
 
 #. Default: "Search"
-#: CMFPlone/skins/plone_deprecated/global_searchbox.pt:33
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:208
 msgid "label_search"
 msgstr "Serĉu"
 
@@ -7072,7 +7018,7 @@ msgid "label_searchbox_currentfolder_only"
 msgstr ""
 
 #. Default: "Search results"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:43
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
 msgid "label_searchresults"
 msgstr ""
 
@@ -7092,7 +7038,7 @@ msgid "label_select_all"
 msgstr ""
 
 #. Default: "Select all items"
-#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:95
+#: CMFPlone/skins/plone_templates/test_rendering.pt:361
 msgid "label_select_all_items"
 msgstr "Elekti ĉiujn erojn"
 
@@ -7128,7 +7074,7 @@ msgid "label_selection_criteria_value"
 msgstr "Valoro"
 
 #. Default: "Send"
-#: CMFPlone/skins/plone_content/author.cpt:221
+#: CMFPlone/skins/plone_templates/contact-info.cpt:154
 msgid "label_send"
 msgstr "Sendu"
 
@@ -7143,12 +7089,12 @@ msgid "label_send_to_mail"
 msgstr "Sendu al (retadreso)"
 
 #. Default: "E-Mail"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:74
+#: CMFPlone/skins/plone_templates/contact-info.cpt:80
 msgid "label_sender_from_address"
 msgstr "Retpoŝto"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:53
+#: CMFPlone/skins/plone_templates/contact-info.cpt:56
 msgid "label_sender_fullname"
 msgstr "Nomo"
 
@@ -7224,22 +7170,22 @@ msgid "label_skiptonavigation"
 msgstr "Rekte al navigado"
 
 #. Default: "ESMTP password"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:52
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:53
 msgid "label_smtp_pass"
 msgstr "ESMTP-pasvorto"
 
 #. Default: "SMTP port"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:35
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:36
 msgid "label_smtp_port"
 msgstr "SMTP-pordo"
 
 #. Default: "SMTP server"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:25
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:26
 msgid "label_smtp_server"
 msgstr "SMTP-servilo"
 
 #. Default: "ESMTP username"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:43
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:44
 msgid "label_smtp_userid"
 msgstr "ESMTP-uzulnomo"
 
@@ -7259,7 +7205,7 @@ msgid "label_string_criteria_value"
 msgstr ""
 
 #. Default: "Subject"
-#: CMFPlone/skins/plone_content/author.cpt:183
+#: CMFPlone/skins/plone_templates/contact-info.cpt:107
 msgid "label_subject"
 msgstr "Temo"
 
@@ -7324,7 +7270,7 @@ msgid "label_title"
 msgstr "Titolo"
 
 #. Default: "Up to my dashboard"
-#: CMFPlone/skins/plone_prefs/password_form.pt:21
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:57
 msgid "label_to_dashboard"
 msgstr ""
 
@@ -7369,7 +7315,7 @@ msgid "label_uninstall"
 msgstr "Malinstali"
 
 #. Default: "Up to Groups Overview"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:97
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:70
 msgid "label_up_to_groups_overview"
 msgstr "Supren al superrigardo pri grupoj"
 
@@ -7379,12 +7325,12 @@ msgid "label_up_to_plone_setup"
 msgstr "Supren al reteja agordo"
 
 #. Default: "Up to Users Overview"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:61
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:63
 msgid "label_up_to_usersoverview"
 msgstr "Supren al superrigardo pri uzuloj"
 
 #. Default: "Update"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:79
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:84
 msgid "label_update"
 msgstr ""
 
@@ -7411,12 +7357,12 @@ msgid "label_user"
 msgstr "Uzulo"
 
 #. Default: "User Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:273
+#: CMFPlone/skins/plone_login/join_form.cpt:89
 msgid "label_user_name"
 msgstr "Uzul-nomo"
 
 #. Default: "User Properties"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:25
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:30
 msgid "label_user_properties"
 msgstr "Ecoj de uzulo"
 
@@ -7431,7 +7377,7 @@ msgid "label_usergroup_settings"
 msgstr ""
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:94
 msgid "label_username"
 msgstr "Uzul-nomo"
 
@@ -7446,7 +7392,7 @@ msgid "label_usersandgroups"
 msgstr "Uzuloj kaj grupoj"
 
 #. Default: "View"
-#: CMFPlone/skins/plone_content/author.cpt:59
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:29
 msgid "label_view"
 msgstr "Vido"
 
@@ -7511,7 +7457,7 @@ msgid "legend_account_details"
 msgstr "Detaloj de la konto"
 
 #. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:68
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:69
 msgid "legend_add_comment"
 msgstr "Detaloj de la komento"
 
@@ -7551,7 +7497,7 @@ msgid "legend_details"
 msgstr ""
 
 #. Default: "Feedback for author"
-#: CMFPlone/skins/plone_content/author.cpt:178
+#: CMFPlone/skins/plone_content/author.cpt:183
 msgid "legend_feedback_for_author"
 msgstr "Komento al la aŭtoro"
 
@@ -7571,7 +7517,7 @@ msgid "legend_installed_products"
 msgstr "Instalitaj produktoj"
 
 #. Default: "LiveSearch &#8595;"
-#: CMFPlone/skins/plone_scripts/livesearch_reply.py:81
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:82
 msgid "legend_livesearch"
 msgstr ""
 
@@ -7601,7 +7547,7 @@ msgid "legend_navigation_details"
 msgstr "Detaloj de navigado."
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:82
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:83
 #, fuzzy
 msgid "legend_note_reply_anonymous"
 msgstr "Atentu: vi ne salutis. Se vi volas, vi povas skribi vian uzulnomon kaj vian pasvorton ĉi-sube. Se vi tion ne faras, la komento estos sendita anonime."
@@ -7627,7 +7573,7 @@ msgid "legend_search_owners"
 msgstr ""
 
 #. Default: "Search Terms"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:362
+#: CMFPlone/skins/plone_forms/search_form.pt:35
 msgid "legend_search_terms"
 msgstr "Serĉterminoj"
 
@@ -7742,7 +7688,7 @@ msgid "listingheader_affected_item"
 msgstr "Koncernita ero"
 
 #. Default: "Author"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:68
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:67
 msgid "listingheader_author"
 msgstr "Aŭtoro"
 
@@ -7752,7 +7698,7 @@ msgid "listingheader_comment"
 msgstr "Komento"
 
 #. Default: "Date and Time"
-#: CMFPlone/skins/plone_deprecated/review_history.pt:19
+#: CMFPlone/skins/plone_forms/undo_form.pt:58
 msgid "listingheader_date_and_time"
 msgstr "Dato kaj Tempo"
 
@@ -7767,12 +7713,12 @@ msgid "listingheader_email_address"
 msgstr "Retpoŝta adreso"
 
 #. Default: "Group name"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:138
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:146
 msgid "listingheader_group_name"
 msgstr "Nomo de grupo"
 
 #. Default: "Remove Group"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:96
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:98
 msgid "listingheader_group_remove"
 msgstr "Forĵeti grupon"
 
@@ -7782,7 +7728,7 @@ msgid "listingheader_group_user_name"
 msgstr "Nomo de grupo/uzulo"
 
 #. Default: "Modified"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:73
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:72
 msgid "listingheader_modified"
 msgstr "Modifita"
 
@@ -7797,12 +7743,12 @@ msgid "listingheader_order"
 msgstr "Ordo"
 
 #. Default: "Performed by"
-#: CMFPlone/skins/plone_deprecated/review_history.pt:18
+#: CMFPlone/skins/plone_forms/undo_form.pt:57
 msgid "listingheader_performed_by"
 msgstr "Farita de"
 
 #. Default: "Remove Group"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:149
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:157
 msgid "listingheader_remove_group"
 msgstr "Forigi grupon"
 
@@ -7817,7 +7763,7 @@ msgid "listingheader_reset_password"
 msgstr "Remeti pasvorton"
 
 #. Default: "Roles"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:143
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:151
 msgid "listingheader_roles"
 msgstr "Roloj"
 
@@ -7832,12 +7778,12 @@ msgid "listingheader_status"
 msgstr "Stato"
 
 #. Default: "Title"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:65
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:64
 msgid "listingheader_title"
 msgstr "Titolo"
 
 #. Default: "Type"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:70
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:81
 msgid "listingheader_type"
 msgstr "Tipo"
 
@@ -7862,8 +7808,9 @@ msgstr ""
 msgid "local_role_warning_type"
 msgstr "<strong>Atenton!</strong> Vi ŝanĝas la uz-permesojn de la apriora paĝo de la dosierujo. Se vi volas ŝanĝi la permesojn por la dosierujo, kiu ĝin enhavas, klaku ${link}"
 
-#. Default: "While cookie authentication is disabled, cookie-based login is not available."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:58
+#. Default: "Since cookie authentication is disabled, cookie-based login is not available."
+#: CMFPlone/skins/plone_login/logged_out.cpt:63
+#, fuzzy
 msgid "login_form_disabled"
 msgstr "Se aŭtentikigado per kuketoj estas maŝaltita, perkuketa saluto ne eblas."
 
@@ -7938,7 +7885,7 @@ msgid "no_new_events"
 msgstr "Ne estas eventoj"
 
 #. Default: "No users were found using your search criteria."
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:230
+#: CMFPlone/skins/plone_forms/ownership_form.cpt:172
 msgid "no_users_found"
 msgstr ""
 
@@ -8019,8 +7966,8 @@ msgstr "publikigu"
 msgid "published"
 msgstr "publikigita"
 
-#. Default: "Read More…"
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:159
+#. Default: "Read More"
+#: CMFPlone/skins/plone_templates/events_listing.pt:88
 #, fuzzy
 msgid "read_more"
 msgstr "Legu pli..."
@@ -8046,7 +7993,7 @@ msgid "rename_item_not_allowed"
 msgstr "Vi ne rajtas ŝanĝi la nomon de tiu ero."
 
 #. Default: "by ${author}, ${date}"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:84
+#: CMFPlone/skins/plone_templates/default_error_message.pt:87
 msgid "results_by_author"
 msgstr "de ${author}, ${date}"
 
@@ -8057,7 +8004,7 @@ msgid "retract"
 msgstr "Retiru"
 
 #. Default: "Return"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:23
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:24
 msgid "return_to_view"
 msgstr ""
 
@@ -8129,7 +8076,7 @@ msgid "summary_assigned_roles"
 msgstr "Momente asignitaj lokal roloj"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: CMFPlone/skins/plone_content/author.cpt:250
+#: CMFPlone/skins/plone_content/author.cpt:255
 msgid "summary_author_content_list"
 msgstr "Listigas enhavon skribitan de iu aŭtoro, grupigite laŭ enhavotipo"
 
@@ -8144,7 +8091,7 @@ msgid "summary_calendar"
 msgstr "Kalendaro"
 
 #. Default: "Content listing"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:60
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:59
 msgid "summary_content_listing"
 msgstr "Listo de enhavo"
 
@@ -8174,7 +8121,7 @@ msgid "summary_review_history"
 msgstr "Revizia Historio"
 
 #. Default: "Select roles for each group"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:102
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:110
 msgid "summary_roles_for_groups"
 msgstr "Elektu rolon por ĉiu grupo"
 
@@ -8246,12 +8193,12 @@ msgid "text_group"
 msgstr "Grupo"
 
 #. Default: "Location: ${location}"
-#: CMFPlone/skins/plone_content/author.cpt:98
+#: CMFPlone/skins/plone_content/author.cpt:103
 msgid "text_location"
 msgstr "Loko: ${location}"
 
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
-#: CMFPlone/skins/plone_content/author.cpt:156
+#: CMFPlone/skins/plone_templates/contact-info.cpt:25
 msgid "text_no_email_setup"
 msgstr ""
 
@@ -8281,17 +8228,17 @@ msgid "text_no_pil_installed"
 msgstr "Averto: PIL ne estas bone instalita, sekve ne funkcios la ŝanĝado de bildogrando."
 
 #. Default: "Enter a group or user name to search for or click 'Show All'."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:277
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:282
 msgid "text_no_searchstring"
 msgstr "Enskribu grup- aŭ uzulonomon, kiu estu serĉata, aŭ alklaku 'Montru ĉiujn"
 
 #. Default: "Enter a group or user name to search for."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:274
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:276
 msgid "text_no_searchstring_large"
 msgstr ""
 
 #. Default: "No user by that name."
-#: CMFPlone/skins/plone_content/author.cpt:39
+#: CMFPlone/skins/plone_content/author.cpt:41
 #, fuzzy
 msgid "text_no_user_by_name"
 msgstr "Ne ekzistas uzulo kun tiu nomo."
@@ -8342,7 +8289,7 @@ msgid "text_user"
 msgstr "Uzulo"
 
 #. Default: "This user does not belong to any group."
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:122
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:123
 msgid "text_user_not_in_any_group"
 msgstr "Ĉi tiu uzulo apartenas al neniu grupo"
 
@@ -8378,7 +8325,7 @@ msgid "time_last_week"
 msgstr "Lasta semajno"
 
 #. Default: ":"
-#: CMFPlone/skins/plone_templates/calendar_macros.pt:149
+#: CMFPlone/skins/plone_templates/calendar_macros.pt:146
 msgid "time_separator"
 msgstr ":"
 
@@ -8412,13 +8359,15 @@ msgstr "Aldonu novajn erojn ene de ĉi tiu ero"
 msgid "title_add_static_portlet"
 msgstr ""
 
-#. Default: "Add this item to your iCal calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:168
+#. Default: "Download this event in iCal format"
+#: CMFPlone/skins/plone_content/event_view.pt:159
+#, fuzzy
 msgid "title_add_to_ical"
 msgstr "Aldonu ĉi tiun eron al via iCal-kalendaro."
 
-#. Default: "Add this item to your vCal calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:162
+#. Default: "Download this event in vCal format"
+#: CMFPlone/skins/plone_content/event_view.pt:153
+#, fuzzy
 msgid "title_add_to_vcal"
 msgstr "Aldonu ĉi tiun eron al via vCal-kalendaro"
 
@@ -8439,22 +8388,22 @@ msgid "title_built_with_plone"
 msgstr "Ĉi tiu retejo estis konstruita per la libera enhav-administra sistemo Plone. Alklaku por pliaj informoj."
 
 #. Default: "Can add"
-#: plone.app.workflow/plone/app/workflow/localroles.py:24
+#: plone.app.workflow/plone/app/workflow/localroles.py:29
 msgid "title_can_add"
 msgstr ""
 
 #. Default: "Can edit"
-#: plone.app.workflow/plone/app/workflow/localroles.py:18
+#: plone.app.workflow/plone/app/workflow/localroles.py:23
 msgid "title_can_edit"
 msgstr ""
 
 #. Default: "Can review"
-#: plone.app.workflow/plone/app/workflow/localroles.py:30
+#: plone.app.workflow/plone/app/workflow/localroles.py:35
 msgid "title_can_review"
 msgstr ""
 
 #. Default: "Can view"
-#: plone.app.workflow/plone/app/workflow/localroles.py:12
+#: plone.app.workflow/plone/app/workflow/localroles.py:17
 msgid "title_can_view"
 msgstr ""
 
@@ -8469,7 +8418,7 @@ msgid "title_change_default_page"
 msgstr "Ŝanĝu la aprioran paĝon"
 
 #. Default: "Change the item used as default view in this folder"
-#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
+#: CMFPlone/skins/plone_forms/select_default_view.cpt:63
 msgid "title_change_default_view_item"
 msgstr "Ŝanĝu la eron, kiu estas la apriora vido en ĉi tiu dosierujo"
 
@@ -8509,7 +8458,7 @@ msgid "title_copyright"
 msgstr "Kopirajto"
 
 #. Default: "Cascading Style Sheets"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:150
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:93
 msgid "title_css"
 msgstr "Cascading Style Sheets"
 
@@ -8604,7 +8553,7 @@ msgid "title_remove_index_html_for_display_control"
 msgstr "Forĵetu aŭ renomu la index_html-eron, por ke vi povu plene regi, kiel ĉi tiu dosierujo estu montrata"
 
 #. Default: "Required"
-#: CMFPlone/skins/plone_content/author.cpt:187
+#: CMFPlone/skins/plone_templates/contact-info.cpt:83
 msgid "title_required"
 msgstr "Bezonata"
 
@@ -8631,12 +8580,12 @@ msgid "title_section_508"
 msgstr "Tiu ĉi Plone-retejo konformas al la usonaj registaraj gvidlinioj (t.n. Section 508) pri alireblo por handikapitoj."
 
 #. Default: "Select an item to be used as default view in this folder"
-#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
+#: CMFPlone/skins/plone_forms/select_default_view.cpt:54
 msgid "title_select_default_page"
 msgstr "Elektu eron kiel aprioran vidon de ĉi tiu dosierujo."
 
 #. Default: "Select an item to be used as default view in this folder..."
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:356
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:357
 msgid "title_select_default_view_item"
 msgstr ""
 
@@ -8677,7 +8626,7 @@ msgid "title_valid_xhtml"
 msgstr "Ĉi tiu Plone-retejo konsistas el valida XHTML"
 
 #. Default: "World Wide Web Consortium"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:154
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:97
 msgid "title_w3c"
 msgstr "World Wide Web-konsorcio"
 
@@ -8693,7 +8642,7 @@ msgid "title_wcag_conformance"
 msgstr "Tiu ĉi Plone-retejo konformas kun la gvidlinioj W3C-WAI pri alireblo de retaj enhavoj por handikapitoj."
 
 #. Default: "eXtensible Hyper Text Markup Language"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:147
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:90
 msgid "title_xhtml"
 msgstr ""
 
@@ -8708,57 +8657,57 @@ msgid "types_controlpanel_allow_discussion"
 msgstr ""
 
 #. Default: "Current workflow:"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:127
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:132
 msgid "types_controlpanel_current_workflow"
 msgstr ""
 
 #. Default: "Manage portlets assigned to this content type"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:117
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:122
 msgid "types_controlpanel_manage_portlets"
 msgstr ""
 
 #. Default: "New State"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:199
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:204
 msgid "types_controlpanel_new_state"
 msgstr ""
 
 #. Default: "New workflow:"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:140
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:145
 msgid "types_controlpanel_new_workflow"
 msgstr ""
 
 #. Default: "No Workflow"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:154
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:159
 msgid "types_controlpanel_no_workflow"
 msgstr ""
 
 #. Default: "Old State"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:198
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:203
 msgid "types_controlpanel_old_state"
 msgstr ""
 
 #. Default: "Visible in searches"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:110
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:101
 msgid "types_controlpanel_searchable"
 msgstr ""
 
 #. Default: "State Mapping"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:184
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:189
 msgid "types_controlpanel_state_mapping"
 msgstr ""
 
 #. Default: "When changing workflows, you have to select a state equivalent in the new workflow."
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:188
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:193
 msgid "types_controlpanel_state_mapping_help"
 msgstr ""
 
-#. Default: "Versioned"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:100
-msgid "types_controlpanel_versionable"
+#. Default: "Versioning policy:"
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:108
+msgid "types_controlpanel_versionpolicy"
 msgstr ""
 
 #. Default: "Changing the workflow of a type will take a while, and may slow down the site significantly while the content is updated to the new setting."
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:232
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:237
 msgid "types_controlpanel_warn_remap"
 msgstr ""
 
@@ -8787,6 +8736,21 @@ msgstr ""
 msgid "vCalendar export"
 msgstr ""
 
+#. Default: "Automatic"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:37
+msgid "versioning_automatic"
+msgstr ""
+
+#. Default: "Manual"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:32
+msgid "versioning_manual"
+msgstr ""
+
+#. Default: "No versioning"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:27
+msgid "versioning_off"
+msgstr ""
+
 #. Default: "View changes"
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:26
 msgid "view_changes"
@@ -8803,8 +8767,9 @@ msgstr "videbla"
 msgid "warning_contentrules_disabled"
 msgstr ""
 
-#. Default: "Policy"
+#. Default: "Local Policy"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:71
+#, fuzzy
 msgid "workflow_policy"
 msgstr "Politiko"
 

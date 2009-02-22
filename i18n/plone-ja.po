@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2008-07-07 19:46+0000\n"
+"POT-Creation-Date: 2009-02-22 08:33+0000\n"
 "PO-Revision-Date: 2008-07-16 20:06+0900\n"
 "Last-Translator: Retsu <tyam@mac.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -30,15 +30,35 @@ msgstr ""
 "Domain: plone\n"
 "X-Is-Fallback-For: ja-jp\n"
 
+#: plone.locking/plone/locking/browser/locking.py:126
+msgid "$d day and $h hours"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:128
+msgid "$d days and $h hours"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:121
+msgid "$h hour and $m minutes"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:123
+msgid "$h hours and $m minutes"
+msgstr ""
+
+#: plone.locking/plone/locking/browser/locking.py:119
+msgid "$m minutes"
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:33
 msgid "${count} item(s) copied."
 msgstr "${count}項目がコピーされました。"
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:32
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:37
 msgid "${count} item(s) cut."
 msgstr "${count}項目がカットされました。"
 
-#: CMFPlone/skins/plone_scripts/folder_rename.cpy:47
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:48
 msgid "${count} item(s) renamed."
 msgstr "${count}項目の名前が変更されました。"
 
@@ -47,7 +67,7 @@ msgid "${items} could not be deleted."
 msgstr "${items}は削除できませんでした。"
 
 #. Default: "${monthname} ${year}"
-#: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:56
+#: CMFPlone/skins/plone_templates/calendar_macros.pt:231
 msgid "${monthname} ${year}"
 msgstr "${year}年 ${monthname}"
 
@@ -124,6 +144,10 @@ msgstr "- コミュニティワークフローと関連して使われます。 
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "- Users can create content that is immediately publicly accessible. - Content can be submitted for publication by the content's creator or a Manager, which is typically done to promote events or news to the front page. - Reviewers can publish or reject content, content owners can retract their submissions. - While the content is awaiting review it is readable by anybody. - If content is published, it can only be retracted by a Manager."
 msgstr "ユーザは即座にアクセスできるコンテンツを作る事ができます。コンテンツの作成者または管理者はコンテンツを公開するために提出することができます。典型的な例として、イベントやニュースをフロントページに掲載する場合です。審査員はコンテンツを公開したり却下することができ、コンテンツ所有者は提出したものを撤回することができます。コンテンツはレビューを待っている間、誰でも読む事ができます。コンテンツの公開後は、管理者による撤回しかできません。"
+
+#: plone.locking/plone/locking/browser/locking.py:117
+msgid "1 minute"
+msgstr ""
 
 #. Default: "A boolean criterion"
 #: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
@@ -358,7 +382,7 @@ msgstr "RSSポートレットを追加"
 msgid "Add Recent Portlet"
 msgstr "「最近の変更」ポートレットを追加"
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:60
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:84
 msgid "Add Review Portlet"
 msgstr "「審査リスト」ポートレットを追加"
 
@@ -432,11 +456,11 @@ msgstr "すべてのコンテンツに対するルール"
 msgid "All items publicly available on a certain date"
 msgstr "ある日に入手可能な項目すべて"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:39
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:41
 msgid "Allow anyone to view 'about' information"
 msgstr "「このサイトについて」を誰でも見られるようにする"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:17
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:19
 msgid "Allows users to register themselves on the site. If not selected, only site managers can add new users."
 msgstr "ユーザが自分でサイトにアカウントを登録することを許可します。チェックされていなければ、サイト管理者だけが新しいユーザを追加することができます。"
 
@@ -541,7 +565,7 @@ msgid "Calendar settings"
 msgstr "カレンダー設定"
 
 #. Default: "Can only be seen and edited by the owner."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Can only be seen and edited by the owner."
@@ -597,19 +621,23 @@ msgstr "変更は取り消されました。"
 msgid "Changes made."
 msgstr "変更されました。"
 
-#: CMFPlone/skins/plone_prefs/prefs_group_edit.py:28
+#: Archetypes/skins/archetypes/content_edit_impl.py:30
 msgid "Changes saved."
 msgstr "変更が保存されました。"
 
 #. Default: "Check in"
-#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
+#: plone.app.iterate/plone/app/iterate/browser/checkin.pt:38
 msgid "Check in"
 msgstr "チェックインする"
 
 #. Default: "Check out"
-#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
+#: plone.app.iterate/plone/app/iterate/browser/checkout.pt:54
 msgid "Check out"
 msgstr "チェックアウトする"
+
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:45
+msgid "Check this to enable inline editing on the site."
+msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/browser/checkout.py:82
 msgid "Check-out created"
@@ -648,9 +676,9 @@ msgid "Collection Settings"
 msgstr "コレクションの設定"
 
 #. Default: "Comment about the last transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "最後に状態を変更した時のコメント"
 
@@ -827,11 +855,11 @@ msgstr "説明"
 msgid "Details link"
 msgstr "詳細リンク"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:53
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:59
 msgid "Determines if the external editor feature is enabled. This feature requires a special client-side application installed. The users also have to enable this in their preferences."
 msgstr "外部エディタを利用するかどうか指定します。この機能を使うには、クライアント側に特別なアプリケーションがインストールされている必要があります。また、ユーザはブラウザの設定で外部エディタを使うように指定しておく必要があります。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:46
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:52
 msgid "Determines if the users should get warnings when they delete or move content that is linked from inside the site."
 msgstr "サイト内でリンクされているコンテンツを削除または移動するとき、ユーザに警告を出すかどうか指定します。"
 
@@ -880,8 +908,8 @@ msgid "Each type chosen will have a wiki enabled primary text area. At least one
 msgstr "ここで選択されたコンテンツタイプにはwiki記法が使えるテキストエリアがあります。wiki記法を使えるようにするには、少なくとも1つのコンテンツタイプを選択する必要があります。"
 
 #. Default: "Edit"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "Edit"
 msgstr "編集"
@@ -989,7 +1017,7 @@ msgstr "発行日"
 msgid "Effective Range"
 msgstr "発行期間"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:26
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:27
 msgid "Email recipients"
 msgstr "電子メールの宛先"
 
@@ -997,11 +1025,11 @@ msgstr "電子メールの宛先"
 msgid "Email report to ${recipients}"
 msgstr "${recipients}に電子メールで知らせる"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:22
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:23
 msgid "Email source"
 msgstr "メール送信元"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:52
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:58
 msgid "Enable External Editor feature"
 msgstr "外部エディタを利用可能にする"
 
@@ -1009,15 +1037,19 @@ msgstr "外部エディタを利用可能にする"
 msgid "Enable LiveSearch"
 msgstr "ライブサーチを可能にする"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:32
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:34
 msgid "Enable User Folders"
 msgstr "ユーザフォルダを利用可能にする"
 
 #: plone.app.controlpanel/plone/app/controlpanel/site.py:44
+msgid "Enable inline editing"
+msgstr ""
+
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:50
 msgid "Enable link integrity checks"
 msgstr "リンクの整合性に関するチェックを行う"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:16
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:18
 msgid "Enable self-registration"
 msgstr "ユーザ登録をユーザ自身が行えるようにする"
 
@@ -1039,7 +1071,7 @@ msgid "Entries cleared"
 msgstr "項目はクリアされました"
 
 #. Default: "Error"
-#: CMFPlone/skins/plone_content/author.cpt:36
+#: CMFPlone/skins/plone_login/logged_out.cpt:55
 msgid "Error"
 msgstr "エラー"
 
@@ -1085,18 +1117,18 @@ msgstr "${transition}を行う"
 msgid "Expiration Date"
 msgstr "満了日"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:61
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:67
 msgid "Expose sitemap.xml.gz in the portal root"
 msgstr "ポータルのルートにsitemap.xml.gzを置く"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:62
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:68
 msgid "Exposes your content as a file according to the sitemaps.org standard. You can submit this to compliant search engines like Google, Yahoo and Microsoft. It allows these search engines to more intelligently crawl your site."
 msgstr "sitemaps.org標準に従ってサイトマップファイルを置きます。標準に準拠したGoogleやYahoo、Microsoftなどの検索エンジンに提出することができ、検索エンジンがより高度なやり方でサイトの情報を抽出することができます。"
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/Document.xml
-#: CMFPlone/profiles/default/types/Event.xml
+#: CMFPlone/profiles/default/types/File.xml
 #: CMFPlone/profiles/default/types/Favorite.xml
+#: CMFPlone/profiles/default/types/Event.xml
 msgid "External Edit"
 msgstr "外部編集"
 
@@ -1203,7 +1235,7 @@ msgstr "フォルダ表示"
 msgid "Folder-like"
 msgstr "フォルダ型"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:72
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:78
 msgid "For enabling web statistics support from external providers (for e.g. Google Analytics). Paste the code snippets provided. It will be included in the rendered HTML as entered near the end of the page."
 msgstr "外部のウェブアクセス解析サービス（例：Google Analytics）を利用するときに提供されたコードを貼り付けてください。HTMLが生成される際にページの最後に追加されます。"
 
@@ -1242,9 +1274,9 @@ msgid "Hide portlet"
 msgstr "ポートレットを隠す"
 
 #. Default: "History"
-#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
 #: CMFPlone/profiles/default/types/News_Item.xml
+#: CMFPlone/profiles/default/types/Document.xml
 msgid "History"
 msgstr "履歴"
 
@@ -1252,6 +1284,10 @@ msgstr "履歴"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Home"
 msgstr "ホーム"
+
+#: plone.app.iterate/plone/app/iterate/containers.py:45
+msgid "Home folder"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:22
 msgid "How many items to list."
@@ -1295,22 +1331,22 @@ msgstr ""
 msgid "If given, the header and footer will link to this URL."
 msgstr "もし与えられれば、ヘッダーとフッターはこのURLにリンクします"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:41
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:43
 msgid "If not selected only logged-in users will be able to view information about who created an item and when it was modified."
 msgstr "選択されていないとき、ログインしているユーザだけが、誰が項目を作成したのか、いつ更新されたのかという情報を見ることができます。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:25
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:27
 msgid "If not selected, passwords will be autogenerated and mailed to users, which verifies that they have entered a valid email address."
 msgstr "選択されていないとき、ユーザが正しいメールアドレスを入力したことを確認するために、パスワードが自動生成され、ユーザにメールで送られます。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:33
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:35
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "選択されていれば、ユーザのログイン時にホームフォルダが作成され、ユーザ独自のコンテンツをそこに保存することができます。"
 
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 msgstr "この項目を誤って提出してしまったり、追加で編集したい場合に元に戻します。"
 
@@ -1324,7 +1360,7 @@ msgid "Image changes saved."
 msgstr "画像の変更が保存されました。"
 
 #. Default: "Info"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:80
 msgid "Info"
 msgstr "お知らせ"
 
@@ -1408,7 +1444,7 @@ msgstr "項目がペーストされました。"
 msgid "Items in which workflow state to show."
 msgstr "どのワークフロー状態を見せたらよいかの項目"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:71
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:77
 msgid "JavaScript for web statistics support"
 msgstr "ウェブ統計をサポートするJavaScript"
 
@@ -1444,7 +1480,7 @@ msgstr "言語"
 msgid "Language Settings"
 msgstr "言語設定"
 
-#: CMFPlone/Portal.py:135
+#: Archetypes/ExtensibleMetadata.py:323
 msgid "Language neutral (site default)"
 msgstr "言語非依存（サイトデフォルト）"
 
@@ -1453,7 +1489,7 @@ msgstr "言語非依存（サイトデフォルト）"
 msgid "Large Folder"
 msgstr "ラージフォルダ"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:23
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:25
 msgid "Let users select their own passwords"
 msgstr "ユーザにパスワードを設定させる"
 
@@ -1530,7 +1566,7 @@ msgstr "${message}を記録"
 msgid "Log out"
 msgstr "ログアウト"
 
-#: plone.app.workflow/plone/app/workflow/browser/sharing.py:222
+#: plone.app.workflow/plone/app/workflow/browser/sharing.py:231
 msgid "Logged-in users"
 msgstr "ログインしているユーザ"
 
@@ -1569,23 +1605,15 @@ msgstr "メール"
 msgid "Mail Settings"
 msgstr "メールの設定"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:154
-msgid "Mail sender"
-msgstr "メール送信者"
-
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:89
 msgid "Mail sent."
 msgstr "メールが送信されました。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:150
-msgid "Mail server"
-msgstr "メールサーバ"
-
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:161
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:145
 msgid "Mail settings"
 msgstr "メール設定"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:162
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:146
 msgid "Mail settings for this site."
 msgstr "このサイトのメール設定"
 
@@ -1594,7 +1622,7 @@ msgid "Maintenance"
 msgstr "メンテナンス"
 
 #. Default: "Make private"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Make private"
@@ -1612,7 +1640,7 @@ msgid "Makes the folder visible internally."
 msgstr "フォルダを内部的に可視状態にします。"
 
 #. Default: "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
@@ -1666,9 +1694,9 @@ msgid "Member Preferences"
 msgstr "メンバーの個人設定"
 
 #. Default: "Member makes content private"
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Member makes content private"
 msgstr "メンバーはコンテンツを非公開にします。"
 
@@ -1688,8 +1716,8 @@ msgid "Member promotes content to public draft"
 msgstr "メンバーはコンテンツを公開ドラフトに格上げします。"
 
 #. Default: "Member retracts submission"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "メンバーは提出したものを撤回します。"
@@ -1732,7 +1760,7 @@ msgid "Move up"
 msgstr "上へ移動"
 
 #. Default: "My Folder"
-#: CMFPlone/profiles/default/actions.xml
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:127
 msgid "My Folder"
 msgstr "マイフォルダ"
 
@@ -1805,7 +1833,7 @@ msgstr "何も変更されませんでした。"
 msgid "No changes made."
 msgstr "何も変更されませんでした。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:336
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:370
 msgid "No workflow"
 msgstr "ワークフローがありません"
 
@@ -1825,9 +1853,13 @@ msgstr "ポートレット境界線を省略する"
 msgid "One or more items not copyable."
 msgstr "1つ以上の項目がコピーできません。"
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:23
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:24
 msgid "One or more items not moveable."
 msgstr "1つ以上の項目が移動できません。"
+
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:32
+msgid "One or more selected items is locked."
+msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:27
 msgid "One or more selected items is no longer available."
@@ -1837,7 +1869,7 @@ msgstr "1つ以上の選択された項目が利用できません。"
 msgid "Only for users who are logged in"
 msgstr "ログインユーザ限定"
 
-#: plone.app.openid/plone/app/openid/portlets/login.py:17
+#: plone.app.openid/plone/app/openid/portlets/login.py:18
 msgid "OpenID login"
 msgstr "OpenIDログイン"
 
@@ -1866,6 +1898,10 @@ msgstr "データベースを整理しました。"
 #: CMFPlone/profiles/default/types/Document.xml
 msgid "Page"
 msgstr "ページ"
+
+#: plone.app.iterate/plone/app/iterate/containers.py:64
+msgid "Parent folder"
+msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/plone_change_password.py:14
 msgid "Password change was canceled."
@@ -1912,8 +1948,8 @@ msgid "Pending"
 msgstr "保留"
 
 #. Default: "Pending review"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Pending review"
 msgstr "審査を保留する"
@@ -1946,7 +1982,7 @@ msgstr "個人別設定"
 msgid "Placeful Workflow"
 msgstr "プレースフルワークフロー"
 
-#: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:18
+#: Archetypes/skins/archetypes/validate_base.vpy:19
 msgid "Please correct the indicated errors."
 msgstr "指摘されたエラーを修正してください。"
 
@@ -1994,7 +2030,7 @@ msgstr "使用する項目を選んでください。"
 msgid "Please select one or more items to copy."
 msgstr "コピーする項目を一つ以上選んでください。"
 
-#: CMFPlone/skins/plone_scripts/folder_cut.cpy:37
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:42
 msgid "Please select one or more items to cut."
 msgstr "カットする項目を一つ以上選んでください。"
 
@@ -2037,11 +2073,11 @@ msgstr "Ploneサイト"
 msgid "Plone filters HTML tags that are considered security risks. Be aware of the implications before making changes below. By default only tags defined in XHTML are permitted. In particular, to allow 'embed' as a tag you must both remove it from 'Nasty tags' and add it to 'Custom tags'. Although the form will update immediately to show any changes you make, your changes are not saved until you press the 'Save' button."
 msgstr "セキュリティリスクがあると考えられるHTMLタグをPloneはフィルタリングします。以下の変更を実施する前にその結果について注意する必要があります。デフォルトではXHTMLで定義されたタグだけしか許されていません。特に'embed'タグを許可する場合、それは危険なタグから取り除き、独自タグに追加する必要があります。画面のフォーム上では変更が即座に反映されますが、実際には「保存」ボタンを押すまでは変更が反映されません。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:71
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:69
 msgid "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address on the site-wide contact form."
 msgstr "Ploneはこのメールアドレスを返信用に設定します。また、これはサイトへの連絡用メールアドレスでもあります。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:64
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:62
 msgid "Plone generates e-mail using this name as the e-mail sender."
 msgstr "Ploneは送信元のアドレスとして、このメールアドレスを使います。"
 
@@ -2074,9 +2110,9 @@ msgid "Preferences"
 msgstr "個人設定"
 
 #. Default: "Previous transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Previous transition"
 msgstr "以前の状態変更"
 
@@ -2098,20 +2134,20 @@ msgid "Print this page"
 msgstr "このページを印刷する"
 
 #. Default: "Private"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Private"
 msgstr "非公開"
 
 #. Default: "Profile"
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:66
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:72
 msgid "Profile"
 msgstr "プロフィール"
 
 #. Default: "Promote to Draft"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Promote to Draft"
 msgstr "ドラフトにする"
 
@@ -2141,9 +2177,9 @@ msgid "Properties"
 msgstr "プロパティ"
 
 #. Default: "Provides access to workflow history"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Provides access to workflow history"
 msgstr "ワークフロー履歴を参照"
 
@@ -2154,14 +2190,14 @@ msgid "Public Draft"
 msgstr "公開ドラフト"
 
 #. Default: "Public draft"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Public draft"
 msgstr "公開ドラフト"
 
 #. Default: "Publish"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Publish"
 msgstr "公開する"
@@ -2177,9 +2213,9 @@ msgid "Publish internally"
 msgstr "内部に公開する"
 
 #. Default: "Published"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Published"
 msgstr "公開中"
 
@@ -2189,9 +2225,9 @@ msgid "Published and visible to intranet users, not editable by the owner."
 msgstr "イントラネットユーザに発行され可視状態となり、所有者は編集できません。"
 
 #. Default: "Publishing the item makes it visible to other users."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Publishing the item makes it visible to other users."
 msgstr "項目を発行して、他のユーザーが閲覧できるようにします。"
 
@@ -2235,8 +2271,8 @@ msgid "Reference Criterion"
 msgstr "参照の条件"
 
 #. Default: "References"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "References"
 msgstr "参照"
@@ -2291,6 +2327,10 @@ msgstr "名前を変更"
 msgid "Rename items"
 msgstr "項目の名前を変更する。"
 
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:41
+msgid "Renamed '${oldid}' to '${newid}'."
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/deleteDiscussion.py:27
 msgid "Reply deleted."
 msgstr "返信は削除されました。"
@@ -2306,13 +2346,13 @@ msgid "Restrict to current user"
 msgstr "現在のユーザに限る"
 
 #. Default: "Retract"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Retract"
 msgstr "撤回"
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:24
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:26
 msgid "Review list"
 msgstr "審査中リスト"
 
@@ -2346,8 +2386,8 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr "審査員がコンテンツをドラフトに戻します。"
 
 #. Default: "Reviewer tasks"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Reviewer tasks"
 msgstr "審査員の作業"
 
@@ -2420,11 +2460,11 @@ msgstr "セキュリティ"
 msgid "Security Settings"
 msgstr "セキュリティ設定"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:127
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:154
 msgid "Security settings"
 msgstr "セキュリティ設定"
 
-#: plone.app.controlpanel/plone/app/controlpanel/security.py:128
+#: plone.app.controlpanel/plone/app/controlpanel/security.py:155
 msgid "Security settings for this site."
 msgstr "このサイトのセキュリティ設定"
 
@@ -2473,8 +2513,8 @@ msgid "Selection Criterion"
 msgstr "選択条件"
 
 #. Default: "Send back"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Send back"
 msgstr "差し戻す"
@@ -2497,13 +2537,13 @@ msgid "Send-to"
 msgstr "送付先"
 
 #. Default: "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
 msgstr "項目を発行しないで作成者に差し戻します。なぜ発行されなかったのか理由を書き添えたほうがよいでしょう。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/skins.py:125
+#: plone.app.controlpanel/plone/app/controlpanel/skins.py:140
 msgid "Settings that affect the site's look and feel."
 msgstr "サイトの見栄えに関する設定"
 
@@ -2523,7 +2563,7 @@ msgstr "ショートネーム"
 msgid "Show 'Short Name' on content?"
 msgstr "コンテンツの「ショートネーム」を表示しますか?"
 
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:536
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:537
 msgid "Show all available content types"
 msgstr "すべての利用可能なコンテンツタイプを表示する"
 
@@ -2579,11 +2619,11 @@ msgstr "単一状態ワークフロー"
 msgid "Site"
 msgstr "サイト"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:70
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:68
 msgid "Site 'From' address"
 msgstr "サイトからのメールの差出人アドレス"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:63
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:61
 msgid "Site 'From' name"
 msgstr "サイトからのメールの差出人名"
 
@@ -2602,7 +2642,7 @@ msgstr "サイト設定"
 msgid "Site description"
 msgstr "サイトの説明"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:140
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:147
 msgid "Site settings"
 msgstr "サイト設定"
 
@@ -2610,7 +2650,7 @@ msgstr "サイト設定"
 msgid "Site title"
 msgstr "サイト名称"
 
-#: plone.app.controlpanel/plone/app/controlpanel/site.py:141
+#: plone.app.controlpanel/plone/app/controlpanel/site.py:148
 msgid "Site-wide settings."
 msgstr "サイト全体に関する設定"
 
@@ -2687,11 +2727,11 @@ msgstr "取り除かれるタグ"
 msgid "Subfolders"
 msgstr "サブフォルダ"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:19
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:20
 msgid "Subject"
 msgstr "件名"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:20
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:21
 msgid "Subject of the message"
 msgstr "メッセージの件名"
 
@@ -2701,8 +2741,8 @@ msgid "Submit"
 msgstr "提出する"
 
 #. Default: "Submit for publication"
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Submit for publication"
 msgstr "公開するために提出する"
@@ -2793,7 +2833,7 @@ msgid "Text to be shown in the footer"
 msgstr "フッター内に表示されるテキスト"
 
 #. Default: "The ID of the user who performed the last transition"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "The ID of the user who performed the last transition"
@@ -2808,11 +2848,11 @@ msgstr "直前に状態変更を実施したユーザのID"
 msgid "The content type to check for."
 msgstr "チェックするべきコンテンツタイプ"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:23
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:24
 msgid "The email address that sends the email. If no email is provided here, it will use the portal from address."
 msgstr "メール送信時に使う差出人アドレス。何も入力しなければ、ポータルの差出人アドレスが使われます。"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:27
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:28
 msgid "The email where you want to send this message. To send it to different email addresses, just separate them with ,"
 msgstr "メールの送信先アドレス。複数のアドレスに送信したいときは、コンマ(,)で区切って並べます。"
 
@@ -2829,7 +2869,7 @@ msgstr "このルールのトリガーとなり得るイベント"
 msgid "The file extension to check for"
 msgstr "チェックするべきファイル拡張子"
 
-#: CMFPlone/skins/plone_scripts/folder_rename.cpy:51
+#: CMFPlone/skins/plone_scripts/folder_rename.cpy:52
 msgid "The following item(s) could not be renamed: ${items}."
 msgstr "次の項目は名前の変更ができませんでした: ${items}"
 
@@ -2939,7 +2979,11 @@ msgstr "ルールの名称"
 msgid "The url of a Link item"
 msgstr "リンク項目のURL"
 
-#: plone.app.controlpanel/plone/app/controlpanel/skins.py:124
+#: CMFPlone/skins/plone_form_scripts/validate_synPropertiesForm.vpy:28
+msgid "The value of this field must be 1 or greater."
+msgstr ""
+
+#: plone.app.controlpanel/plone/app/controlpanel/skins.py:139
 msgid "Theme settings"
 msgstr "スキンの設定"
 
@@ -2949,7 +2993,7 @@ msgid "Themes"
 msgstr "スキン"
 
 #. Default: "There are more search results, narrow your search."
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:69
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:74
 msgid "There are more search results, narrow your search."
 msgstr "検索結果が多すぎます。条件を絞ってください。"
 
@@ -3001,7 +3045,7 @@ msgstr "このポートレットはコレクションからの項目リストを
 msgid "This portlet display a navigation tree."
 msgstr "このポートレットはナビゲーションツリーを表示します。"
 
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:61
+#: plone.app.portlets/plone/app/portlets/portlets/review.py:85
 msgid "This portlet displays a queue of documents awaiting review."
 msgstr "このポートレットは審査待ちコンテンツの一覧を示します。"
 
@@ -3088,9 +3132,9 @@ msgstr "トリガー: ${name}"
 msgid "Triggering event"
 msgstr "トリガーとするイベント"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:32
-msgid "Type in here the message that you want to mail. Some defined content can be replaced: ${title} will be replaced by the title of the newly created item. ${url} will be replaced by the URL of the newly created item."
-msgstr "送りたいメールの内容をここに入力してください。定義済のコンテンツは置き換えられます。例えば、${title}は新しく作成された項目のタイトルに、${url}はURLに置き換えられます。"
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:33
+msgid "Type in here the message that you want to mail. Some defined content can be replaced: ${title} will be replaced by the title of the item. ${url} will be replaced by the URL of the item."
+msgstr ""
 
 #. Default: "Types"
 #: CMFPlone/profiles/default/controlpanel.xml
@@ -3169,8 +3213,8 @@ msgid "Users and Groups Administration"
 msgstr "ユーザとグループの管理"
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
-#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATSortCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateCriteria.xml
 msgid "View"
 msgstr "表示"
@@ -3195,8 +3239,8 @@ msgid "Visible to all intranet users."
 msgstr "全てのイントラネットユーザが閲覧可能。"
 
 #. Default: "Visible to everyone, but not approved by the reviewers."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
 msgstr "審査員の承認はないが、誰にでも閲覧可能。"
 
@@ -3206,8 +3250,8 @@ msgid "Visible to everyone, editable by the owner."
 msgstr "誰にでも閲覧可能。所有者は編集可能。"
 
 #. Default: "Visible to everyone, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, not editable by the owner."
 msgstr "誰にでも閲覧可能。所有者は編集不可。"
@@ -3218,8 +3262,8 @@ msgid "Visible to people outside the intranet, not editable by the owner."
 msgstr "イントラネットの外側の人も閲覧可能。所有者は編集不可。"
 
 #. Default: "Waiting to be reviewed, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Waiting to be reviewed, not editable by the owner."
 msgstr "審査待ち。所有者は編集不可。"
@@ -3234,9 +3278,9 @@ msgid "Welcome! You are now logged in."
 msgstr "ようこそ！ ログインされました。"
 
 #. Default: "When the previous transition was performed"
-#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "When the previous transition was performed"
 msgstr "直前の状態変更が実施された時"
 
@@ -3431,8 +3475,9 @@ msgstr "次の ${number} 項目"
 msgid "batch_previous_x_items"
 msgstr "前の ${number} 項目"
 
-#. Default: "${number} items matching your criteria."
-#: CMFPlone/skins/plone_forms/member_search_results.pt:26
+#. Default: "${number} items matching your search terms"
+#: CMFPlone/skins/plone_forms/search.pt:69
+#, fuzzy
 msgid "batch_x_items_matching_your_criteria"
 msgstr "${number} 個の項目が検索条件に該当しました。"
 
@@ -3457,7 +3502,7 @@ msgid "box_external_links"
 msgstr "外部リンク"
 
 #. Default: "Forgot your password?"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:94
+#: CMFPlone/skins/plone_login/login_form.cpt:80
 msgid "box_forgot_password_option"
 msgstr "パスワードを忘れた？"
 
@@ -3472,7 +3517,7 @@ msgid "box_languages"
 msgstr "言語"
 
 #. Default: "last modified"
-#: CMFPlone/skins/plone_content/folder_listing.pt:139
+#: CMFPlone/skins/plone_content/folder_listing.pt:142
 msgid "box_last_modified"
 msgstr "最終変更日時"
 
@@ -3572,22 +3617,17 @@ msgid "constraintypes_mode_acquire"
 msgstr "親フォルダの設定を使用"
 
 #. Default: "Attendees"
-#: CMFPlone/skins/plone_content/event_view.pt:152
+#: CMFPlone/skins/plone_content/event_view.pt:143
 msgid "contact_attendees"
 msgstr "参加者"
 
-#. Default: "Contact Email"
-#: CMFPlone/skins/plone_content/event_view.pt:136
-msgid "contact_email"
-msgstr "連絡先Eメール"
-
 #. Default: "Contact Name"
-#: CMFPlone/skins/plone_content/event_view.pt:127
+#: CMFPlone/skins/plone_content/event_view.pt:123
 msgid "contact_name"
 msgstr "連絡先名称"
 
 #. Default: "Contact Phone"
-#: CMFPlone/skins/plone_content/event_view.pt:144
+#: CMFPlone/skins/plone_content/event_view.pt:135
 msgid "contact_phone"
 msgstr "連絡先電話番号"
 
@@ -3717,57 +3757,12 @@ msgid "description_accessibility_info"
 msgstr "このサイトは ${plone} を使用しており、ウェブコンテンツアクセシビリティガイドライン( ${wcag} v1.0)に準拠して動作するよう設計されています。このサイトに関して - アクセシビリティやバリデーションに関して - 標準に則していない部分がある場合には、Ploneチームではなく ${site_admin} に連絡ください。"
 
 #. Default: "We have undertaken to use our knowledge and understanding of the ways in which different people access the Internet, to develop a web site that is clear and simple for everybody to use."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:137
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:80
 msgid "description_accessibility_statement"
 msgstr "誰もが明快で簡単に使えるウェブサイトを開発するために、インターネットを利用する「異なる」人々の知識と理解を生かしました。"
 
-#. Default: "Access keys are not supported, please use a different browser."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:124
-msgid "description_accesskey_ie4_mac"
-msgstr "アクセスキーはサポートされていません。他のブラウザを使ってください。"
-
-#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:112
-msgid "description_accesskey_ie4_win"
-msgstr "<code>Alt</code>キーと同時に、アクセスキーの数字か文字を押します。"
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:118
-msgid "description_accesskey_ie5_mac"
-msgstr "<code>Ctrl</code>キーと同時に、アクセスキーの数字か文字を押します。"
-
-#. Default: "Hold down the <code>Alt</code> key, press the number or letter of the access key, release both keys then press <code>ENTER</code>."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:82
-msgid "description_accesskey_ie5_win"
-msgstr "<code>Alt</code>キーと同時に、アクセスキーの数字か文字を押し、次に<code>ENTER</code>を押します。"
-
-#. Default: "Press and release the <code>Ctrl</code> key, then press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:106
-msgid "description_accesskey_konqueror_linux"
-msgstr "<code>Ctrl</code>キーを一度押してから、アクセスキーの数字か文字を押します。"
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:94
-msgid "description_accesskey_mozilla_mac"
-msgstr "<code>Ctrl</code>キーと同時に、アクセスキーの数字か文字を押します。"
-
-#. Default: "Hold down the <code>Alt</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:88
-msgid "description_accesskey_mozilla_win"
-msgstr "<code>Alt</code>キーと同時に、アクセスキーの数字か文字を押します。"
-
-#. Default: "Access keys are not supported, please use a different browser."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:129
-msgid "description_accesskey_netscape6_all"
-msgstr "アクセスキーはサポートされていません　他のブラウザを使ってください。"
-
-#. Default: "Hold down the <code>Ctrl</code> key and press the number or letter of the access key."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:100
-msgid "description_accesskey_safari_mac"
-msgstr "<code>Ctrl</code>キーと同時に、アクセスキーの数字か文字を押します。"
-
 #. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:69
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:70
 msgid "description_add_comment"
 msgstr "下のフォームに記入してコメントを追加できます。平文テキスト形式。"
 
@@ -3787,7 +3782,7 @@ msgid "description_advanced_search"
 msgstr "この検索フォームでは複数の条件を指定してコンテンツを探せます。<br/>いつでも使えるクイック検索で大抵の場合は十分間に合うでしょう。この検索フォームはさらに限定的に絞り込みむためのものです。"
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: CMFPlone/skins/plone_content/author.cpt:165
+#: CMFPlone/skins/plone_content/author.cpt:170
 msgid "description_author_feedback"
 msgstr "この作成者に連絡をとるには下のフォームに書き込んでください。"
 
@@ -3876,11 +3871,6 @@ msgstr "コンテンツタイプのポートレットは、通常、コンテキ
 msgid "description_control_panel"
 msgstr "Ploneとアドオンプロダクトの構成設定エリア"
 
-#. Default: "Configuration area for Plone and installed add-ons."
-#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:18
-msgid "description_controlpanel"
-msgstr "Ploneとインストール済アドオンのコンフィグをする所"
-
 #. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
 #: CMFPlone/skins/plone_deprecated/footer.pt:22
 msgid "description_copyright"
@@ -3902,7 +3892,7 @@ msgid "description_edit_groupproperties"
 msgstr "グループとは課や事業部といったユーザの論理的な集合です。大局的に言うと権限とは直接の関連はありません。通常は権限はロールと関連を持ち、グループはロールと関連を持つ事で間接的に権限と関連を持ちます。"
 
 #. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
-#: Archetypes/skins/archetypes/metadata_macros.pt:35
+#: Archetypes/skins/archetypes/metadata_macros.pt:32
 msgid "description_edit_properties"
 msgstr "この情報は<em>メタデータ</em>とも呼ばれるもので、オブジェクトの分類に用いられる情報の集まり、つまり発行日時や満了日時、言語、キーワード等のことです。"
 
@@ -3912,7 +3902,7 @@ msgid "description_enable_cookies_to_stay_logged_in"
 msgstr "注意：このページから移動した後にログイン状態が続いていなければ、それはブラウザでクッキーを有効にしていないからです。"
 
 #. Default: "The error has been logged as entry number ${entryid}."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:140
+#: CMFPlone/skins/plone_templates/default_error_message.pt:144
 msgid "description_error_has_been_logged"
 msgstr "エラーが、エラー番号${entryid}で記録されました。"
 
@@ -3927,7 +3917,7 @@ msgid "description_error_rerference_link"
 msgstr "これらのエラーについて詳しく知りたい場合は、plone.orgのエラーリファレンスを参照してください。(英文)"
 
 #. Default: "see the full error message"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:157
+#: CMFPlone/skins/plone_templates/default_error_message.pt:161
 msgid "description_full_error_link"
 msgstr "完全なエラーメッセージを見てください。"
 
@@ -3957,7 +3947,7 @@ msgid "description_historical_unavailable"
 msgstr "このクラスは歴史的インターフェースをサポートしません。コンテンツはThe  OFS.History.Historicalの混在です。"
 
 #. Default: "If you need to report this to the ${site_admin}, please include this entry number in your message."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:146
+#: CMFPlone/skins/plone_templates/default_error_message.pt:150
 msgid "description_include_error_in_admin_message"
 msgstr "これを${site_admin}に報告する必要があれば、メッセージの中にこのエラー番号を書いておいてください。"
 
@@ -4012,7 +4002,7 @@ msgid "description_member_search"
 msgstr "このフォームを使って複数の条件でメンバーを検索することができます。"
 
 #. Default: "Your personal settings."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:61
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:65
 msgid "description_my_preferences"
 msgstr "個人別の設定"
 
@@ -4027,12 +4017,12 @@ msgid "description_navigation_setup_navtree"
 msgstr "ナビゲーションツリーをどのように表示するかを決めるには、ポータルのトップ(あるいはナビゲーションツリーを追加した場所)にある「ポートレット管理」のリンクをたどり、設定を直接変更します。"
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:34
+#: CMFPlone/skins/plone_login/logged_out.cpt:41
 msgid "description_no_account"
 msgstr "アカウントを持っていない場合は、${registration_form}にてメンバー登録をしてください。"
 
 #. Default: "registration form"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:35
+#: CMFPlone/skins/plone_login/logged_out.cpt:42
 msgid "description_no_account_registration_linktext"
 msgstr "登録フォーム"
 
@@ -4042,7 +4032,7 @@ msgid "description_no_comparison_support"
 msgstr "このオブジェクトには比較機能がありません。"
 
 #. Default: "There are currently no items in this folder."
-#: CMFPlone/skins/plone_content/folder_listing.pt:176
+#: CMFPlone/skins/plone_content/folder_listing.pt:179
 msgid "description_no_items_in_folder"
 msgstr "現在このフォルダ内には項目がありません。"
 
@@ -4052,7 +4042,7 @@ msgid "description_no_privileges_for_page"
 msgstr "このページにはアクセス制限があります。もし、このエラーについて覚えがなければ、${site_admin}に連絡してください。"
 
 #. Default: "No results were found."
-#: CMFPlone/skins/plone_forms/member_search_results.pt:67
+#: CMFPlone/skins/plone_forms/search.pt:85
 msgid "description_no_results_found"
 msgstr "該当する結果が見つかりません。"
 
@@ -4062,12 +4052,12 @@ msgid "description_no_visible_items_add_paste"
 msgstr "このフォルダには表示可能な項目がありません。コンテンツを追加するには、追加ボタンを押すか、他から項目をペーストします。"
 
 #. Default: "This type has no workflow. The visibilty of items of this type is determined by the folder they are in."
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:214
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:248
 msgid "description_no_workflow"
 msgstr "このコンテンツタイプにはワークフローがありません。項目の可視性はこのコンテンツを含むフォルダに依存します。"
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
-#: CMFPlone/skins/plone_login/login_failed.cpt:27
+#: CMFPlone/skins/plone_login/login_failed.cpt:32
 msgid "description_not_accept_cookies"
 msgstr "ユーザ名とパスワードが正しければ、問題は、ブラウザがクッキーを受け付けないように設定されているせいかもしれません。"
 
@@ -4172,22 +4162,22 @@ msgid "description_sign_in"
 msgstr "サイトのこの部分にアクセスするには、ユーザ名とパスワードでログインする必要があります。"
 
 #. Default: "Since you are a site administrator, you can ${link_full_error_msg}"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:156
+#: CMFPlone/skins/plone_templates/default_error_message.pt:160
 msgid "description_site_admin_see_full_error"
 msgstr "あなたはポータルの管理者なので、${link_full_error_msg}できます。"
 
 #. Default: "Please double check the web address or use the search function on this page to find what you are looking for."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:39
+#: CMFPlone/skins/plone_templates/default_error_message.pt:40
 msgid "description_site_error_double_check_or_search"
 msgstr "URLを再確認してください。あるいは検索機能を使ってお探しのコンテンツを見つけてください。"
 
 #. Default: "If you are certain you have the correct web address but are encountering an error, please contact the ${site_admin}."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:45
+#: CMFPlone/skins/plone_templates/default_error_message.pt:46
 msgid "description_site_error_mail_site_admin"
 msgstr "入力したURLがたしかに正しいがエラーで表示されないという場合は、${site_admin}に連絡してください。"
 
 #. Default: "Thank you."
-#: CMFPlone/skins/plone_templates/default_error_message.pt:51
+#: CMFPlone/skins/plone_templates/default_error_message.pt:52
 msgid "description_site_error_thank_you"
 msgstr "ご協力ありがとうございます。"
 
@@ -4207,17 +4197,17 @@ msgid "description_static_portlet"
 msgstr "静的HTMLテキストを表示できるポートレット"
 
 #. Default: "If you are still reaching this page after correctly configuring your browser, here are some possible reasons:"
-#: CMFPlone/skins/plone_login/login_failed.cpt:32
+#: CMFPlone/skins/plone_login/login_failed.cpt:37
 msgid "description_still_failure"
 msgstr "ブラウザの設定が正しいのにこのページが表示される場合には、以下の可能性をチェックしてみてください:"
 
 #. Default: "You may be running web filtering software that disables cookies. If so, you will need to configure the software so that it enables you to accept cookies from ${url}"
-#: CMFPlone/skins/plone_login/login_failed.cpt:42
+#: CMFPlone/skins/plone_login/login_failed.cpt:47
 msgid "description_still_failure_reason1"
 msgstr "クッキーを使えなくするウェブフィルターソフトを使っていませんか？　もしそうなら、${url} からのクッキーを受け入れるよう、そのソフトウェアを設定し直してください。"
 
 #. Default: "Your computer may be behind a firewall or proxy server that prevents cookies from being sent to or from your browser. If so, you will need to ask your systems administrator if the problem can be fixed."
-#: CMFPlone/skins/plone_login/login_failed.cpt:44
+#: CMFPlone/skins/plone_login/login_failed.cpt:49
 msgid "description_still_failure_reason2"
 msgstr "ご利用のコンピュータがファイアーウォール又はプロキシの向こう側にあるため、クッキーの送受信ができなくなっている場合が考えられます。その場合はシステム管理者にお問い合わせください。"
 
@@ -4277,12 +4267,12 @@ msgid "description_user_panel"
 msgstr "ここでは環境の個人設定ができます。"
 
 #. Default: "We have used ${xhtml} 1.0 and ${css} that conforms to specification, as laid out by the ${w3c} because we believe that usability and accessibility must have a solid foundation. If anything on this web site does not validate correctly, please contact the ${site_admin}, and not the Plone Team."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:159
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:102
 msgid "description_validation"
 msgstr "私たちはユーザビリティとアクセシビリティは確かな基盤の上に構築されるべきものと考え、 ${w3c} の仕様どおりに ${xhtml} 1.0 と ${css} を使用しています。このサイトに関して何か正しくない部分があった場合、Ploneチームではなく、 ${site_admin} までご連絡ください。"
 
 #. Default: "We have also endeavoured to achieve AA accessibility as measured against version 1.0 of the ${wcag}. We are aware however, that a number of the checkpoints of the ${wcag2} are subjective — and although we are sure that we have met them squarely, there may be instances where interpretation may vary."
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:172
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:115
 msgid "description_wcag_aa_rating"
 msgstr " ${wcag} のバージョン1.0に則して評価されるAAアクセシビリティに関しても私たちは努力しました。 ${wcag2} のいくつかの評価項目は主観的であり、個々の部分では解釈が異なることがあるかもしれませんが、やはり正しく準拠しているものと私たちは考えています。"
 
@@ -4319,7 +4309,7 @@ msgid "enable_cookies_message"
 msgstr "クッキーが有効ではありません　ログインする前に${enable_cookies}をしてください"
 
 #. Default: "Cookies are not enabled. You must enable cookies before you can log in."
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:70
+#: CMFPlone/skins/plone_login/logged_out.cpt:58
 msgid "enable_cookies_message_before_login"
 msgstr "クッキーが有効ではありません。ログインする前に、ブラウザの設定で、クッキーを利用できるようにしてください。"
 
@@ -4329,12 +4319,12 @@ msgid "error_installed_product"
 msgstr "インストール時にエラーが発生しました。メッセージをチェックしてください。"
 
 #. Default: "${name} is required, please correct."
-#: Archetypes/Field.py:354
+#: Archetypes/Field.py:355
 msgid "error_required"
 msgstr "${name} が必要です。修正してください。."
 
 #. Default: "Values ${val} are not allowed for vocabulary of element ${label}."
-#: Archetypes/Field.py:399
+#: Archetypes/Field.py:400
 msgid "error_vocabulary"
 msgstr "値 ${val} は要素 ${label} の語彙として許されていません。"
 
@@ -4344,17 +4334,17 @@ msgid "event_and"
 msgstr "終了:"
 
 #. Default: "from"
-#: CMFPlone/skins/plone_content/event_view.pt:87
+#: CMFPlone/skins/plone_content/event_view.pt:83
 msgid "event_from"
 msgstr "開始:"
 
 #. Default: "More information about this event…"
-#: CMFPlone/skins/plone_content/event_view.pt:186
+#: CMFPlone/skins/plone_content/event_view.pt:177
 msgid "event_more_information"
 msgstr "このイベントの詳細情報..."
 
 #. Default: "to"
-#: CMFPlone/skins/plone_content/event_view.pt:67
+#: CMFPlone/skins/plone_content/event_view.pt:65
 msgid "event_to"
 msgstr "終了:"
 
@@ -4369,7 +4359,7 @@ msgid "event_when"
 msgstr "日時"
 
 #. Default: "Where"
-#: CMFPlone/skins/plone_content/event_view.pt:119
+#: CMFPlone/skins/plone_content/event_view.pt:113
 msgid "event_where"
 msgstr "場所"
 
@@ -4409,7 +4399,7 @@ msgid "go_to_parent_url"
 msgstr "一つ上に移動"
 
 #. Default: "All content created by ${user}…"
-#: CMFPlone/skins/plone_content/author.cpt:286
+#: CMFPlone/skins/plone_content/author.cpt:291
 msgid "go_to_search_author_content"
 msgstr "${user}が作成したコンテンツすべて..."
 
@@ -4418,18 +4408,13 @@ msgstr "${user}が作成したコンテンツすべて..."
 msgid "heading_access_keys"
 msgstr "アクセスキー"
 
-#. Default: "Using access keys in different web browsers"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:78
-msgid "heading_access_keys_usage"
-msgstr "様々なブラウザでアクセスキーが使えます"
-
 #. Default: "Accessibility"
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:18
 msgid "heading_accessibility_info"
 msgstr "アクセシビリティ"
 
 #. Default: "Accessibility Statement"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:135
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:78
 msgid "heading_accessibility_statement"
 msgstr "アクセシビリティについて"
 
@@ -4454,7 +4439,7 @@ msgid "heading_add_sharing_permissions"
 msgstr "ユーザへ共有権限を追加"
 
 #. Default: "Add event to calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:160
+#: CMFPlone/skins/plone_content/event_view.pt:151
 msgid "heading_add_to_calendar"
 msgstr "イベントをカレンダーへ追加"
 
@@ -4479,7 +4464,7 @@ msgid "heading_allowed_languages"
 msgstr "使用できる言語"
 
 #. Default: "Latest content created by this user"
-#: CMFPlone/skins/plone_content/author.cpt:245
+#: CMFPlone/skins/plone_content/author.cpt:250
 msgid "heading_author_content"
 msgstr "このユーザが作成した最新のコンテンツ"
 
@@ -4534,7 +4519,7 @@ msgid "heading_currently_assigned_shares"
 msgstr "${folder}フォルダの現在の共有状況"
 
 #. Default: "${user_name}'s dashboard"
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:91
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:97
 msgid "heading_dashboard"
 msgstr "${user_name}のダッシュボード"
 
@@ -4608,6 +4593,11 @@ msgstr "現在のグループのメンバー"
 msgid "heading_groups_overview"
 msgstr "グループの概要"
 
+#. Default: "Inherited portlets"
+#: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:66
+msgid "heading_inherited_portlets"
+msgstr ""
+
 #. Default: "Install log for ${productname}"
 #: CMFPlone/skins/plone_prefs/prefs_installed_product_overview.pt:15
 msgid "heading_install_log_for"
@@ -4644,12 +4634,12 @@ msgid "heading_member_search"
 msgstr "メンバーを検索"
 
 #. Default: "Current Group Memberships"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:91
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:93
 msgid "heading_memberships_current"
 msgstr "現在のグループへの所属状況"
 
 #. Default: "Personal Preferences"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:51
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:54
 msgid "heading_my_preferences"
 msgstr "個人設定"
 
@@ -4669,7 +4659,7 @@ msgid "heading_no_privileges"
 msgstr "権限が不十分です。"
 
 #. Default: "You might have been looking for…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:64
+#: CMFPlone/skins/plone_templates/default_error_message.pt:65
 msgid "heading_not_found_suggestions"
 msgstr "お探しのものはおそらく..."
 
@@ -4754,7 +4744,7 @@ msgid "heading_search_newmembers"
 msgstr "新しいグループメンバーを検索"
 
 #. Default: "Search results"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:226
+#: CMFPlone/skins/plone_forms/search.pt:63
 msgid "heading_search_results"
 msgstr "検索結果"
 
@@ -4794,7 +4784,7 @@ msgid "heading_set_content_type_restrictions"
 msgstr "追加できるコンテンツタイプの制限"
 
 #. Default: "Please log in"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:7
+#: CMFPlone/skins/plone_login/login_form.cpt:76
 msgid "heading_sign_in"
 msgstr "ログインしてください。"
 
@@ -4804,7 +4794,7 @@ msgid "heading_signed_out"
 msgstr "ログアウトしました。"
 
 #. Default: "We're sorry, but there seems to be an error…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:131
+#: CMFPlone/skins/plone_templates/default_error_message.pt:135
 msgid "heading_site_error_sorry"
 msgstr "残念ですが、エラーがあったようです…"
 
@@ -4814,7 +4804,7 @@ msgid "heading_site_language"
 msgstr "サイト言語"
 
 #. Default: "We're sorry, but that page doesn't exist…"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:34
+#: CMFPlone/skins/plone_templates/default_error_message.pt:35
 msgid "heading_site_there_seems_to_be_an_error"
 msgstr "残念ですが、そのページは存在しません…"
 
@@ -4849,7 +4839,7 @@ msgid "heading_users_overview"
 msgstr "ユーザの概要"
 
 #. Default: "Validation"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:143
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:86
 msgid "heading_validation"
 msgstr "有効性について"
 
@@ -4864,7 +4854,7 @@ msgid "heading_views"
 msgstr "表示"
 
 #. Default: "Welcome!"
-#: CMFPlone/skins/plone_login/login_password.cpt:22
+#: CMFPlone/skins/plone_login/registered.pt:19
 msgid "heading_welcome"
 msgstr "ようこそ！"
 
@@ -4894,12 +4884,12 @@ msgid "help_allow_combined_language_codes"
 msgstr "例: pt-br (ブラジルのポルトガル語), en-us (アメリカ英語) など"
 
 #. Default: "If selected, users can add comments to this item."
-#: Archetypes/ExtensibleMetadata.py:66
+#: Archetypes/ExtensibleMetadata.py:70
 msgid "help_allow_comments"
 msgstr "選択すると、ユーザがこの項目にコメントを追加できるようになります。"
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:195
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:199
 msgid "help_biography"
 msgstr "あなたが誰で何をしているかを短く要約します。あなたが作ったページからリンクが張ってあるあなたの作成者ページに表示されます。"
 
@@ -4914,7 +4904,7 @@ msgid "help_capslock_password"
 msgstr "大文字、小文字は区別されています。Caps Lockキーの状態に注意してください。"
 
 #. Default: "Also known as keywords, tags or labels, these help you categorize your content."
-#: Archetypes/ExtensibleMetadata.py:78
+#: Archetypes/ExtensibleMetadata.py:82
 msgid "help_categories"
 msgstr "コンテンツをカテゴリー分類するのに役立つ、キーワード、タグ、ラベルとしても知られています。"
 
@@ -4954,32 +4944,32 @@ msgid "help_confirm_password"
 msgstr "もう一度パスワードを入力します。完全に一致しなければなりません。"
 
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:241
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:245
 msgid "help_content_editor"
 msgstr "コンテンツの編集に使いたいエディタを選びます。コンテンツエディタはしばしば特定のブラウザを必要とします。"
 
 #. Default: "When checked, an icon will be made visible on each page which allows you to edit content with your favorite editor instead of using browser-based editors. This requires an additional application called ExternalEditor installed client-side. Ask your administrator for more information if needed."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:284
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:288
 msgid "help_content_ext_editor"
 msgstr "チェックマークが付いている場合、各ページに鉛筆アイコンが表示されます。そのアイコンをクリックするとブラウザ上のエディタではなくて自分の好みのエディタを使ってコンテンツを編集することができます。そのためにはExternalEditorと呼ばれるプラグインをPC側にインストールする必要があります。詳しくは管理者に尋ねてください。"
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: Archetypes/ExtensibleMetadata.py:112
+#: Archetypes/ExtensibleMetadata.py:116
 msgid "help_contributors"
 msgstr "この項目に協力した人たちの名前です。一行につき一名づつの名前を入力します。"
 
 #. Default: "Copyright statement or other rights information on this item."
-#: Archetypes/ExtensibleMetadata.py:168
+#: Archetypes/ExtensibleMetadata.py:172
 msgid "help_copyrights"
 msgstr "この項目の著作権情報または他の権利情報"
 
 #. Default: "Date this object was created"
-#: Archetypes/ExtensibleMetadata.py:187
+#: Archetypes/ExtensibleMetadata.py:191
 msgid "help_creation_date"
 msgstr "この項目が作成された日時"
 
 #. Default: "Persons responsible for creating the content of this item. Please enter a list of user names, one per line. The principal creator should come first."
-#: Archetypes/ExtensibleMetadata.py:123
+#: Archetypes/ExtensibleMetadata.py:127
 msgid "help_creators"
 msgstr "この項目の中身を作った作成者たち。１行に１名ずつ、ユーザ名のリストを入力します。主導的な作成者の名前を最初に記入します。"
 
@@ -5024,7 +5014,7 @@ msgid "help_description"
 msgstr "コンテンツの短い要約"
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:327
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:331
 msgid "help_display_names"
 msgstr "項目を編集する際に、ショートネームが変更できるか決定します。もしもショートネームが入力されない場合は自動的に生成されます。"
 
@@ -5069,7 +5059,7 @@ msgid "help_groupname"
 msgstr "グループの ID です。作成後に変更できません。"
 
 #. Default: "The URL for your external home page, if you have one."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:219
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:223
 msgid "help_homepage"
 msgstr "もしあれば、外部にあるホームページのURL。"
 
@@ -5094,7 +5084,7 @@ msgid "help_inherit_criteria"
 msgstr "上位のスマートフォルダの検索結果をこのスマートフォルダの条件を使ってより狭めます。"
 
 #. Default: "By default, permissions from the container of this item are inherited. If you disable this, only the explicitly defined sharing permissions will be valid. In the overview, the symbol ${image_confirm_icon} indicates an inherited value. Similarly, the symbol ${image_link_icon} indicates a global role, which is managed by the site administrator."
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:155
 msgid "help_inherit_local_roles"
 msgstr "デフォルトでは、この項目を含むフォルダ(または項目)のセキュリティ設定が引き継がれます。これを無効にすると、この項目に対して明示的に設定された許可条件が有効になります。概要画面で${image_confirm_icon}が表示されているのが、引き継がれた値です。同様に、${image_link_icon}はグローバルロールを表します。これはサイト管理者が設定するものです。"
 
@@ -5104,7 +5094,7 @@ msgid "help_limit_number"
 msgstr "これが選ばれていると、下に記された「項目の数」だけしか表示されません。"
 
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:306
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:310
 msgid "help_listed_search"
 msgstr "自分の名前をメンバー検索リストに載せるか否かを選びます。"
 
@@ -5114,12 +5104,12 @@ msgid "help_locally_allowed_types"
 msgstr "'メインのプルダウンメニュー<em>ではなく</em> 'More…' を選択した際に使用できるコンテンツタイプを選択します。「この場所では好ましくないコンテンツタイプであるが、それでも他のタイプを追加することを許可する」ということを示す際に指定します。"
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:142
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:146
 msgid "help_location"
 msgstr "場所　ー都市名や国名ー　あるいは会社で使用する時などは事務所の所在地"
 
 #. Default: "The geographical location associated with the item, if applicable."
-#: Archetypes/ExtensibleMetadata.py:103
+#: Archetypes/ExtensibleMetadata.py:107
 msgid "help_location_dc"
 msgstr "該当するのであれば、この項目についての地理的な場所"
 
@@ -5129,17 +5119,17 @@ msgid "help_login_name_caps"
 msgstr "大文字、小文字は区別されています。Caps Lockキーの状態に注意してください。"
 
 #. Default: "Appearance of the site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:343
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:347
 msgid "help_look"
 msgstr "サイトの外観"
 
 #. Default: "Please enter the message you want to send."
-#: CMFPlone/skins/plone_templates/contact-info.cpt:136
+#: CMFPlone/skins/plone_templates/contact-info.cpt:138
 msgid "help_message"
 msgstr "送りたいメッセージを入力してください。"
 
 #. Default: "Date this content was modified last"
-#: Archetypes/ExtensibleMetadata.py:203
+#: Archetypes/ExtensibleMetadata.py:207
 msgid "help_modification_date"
 msgstr "このコンテンツが最後に変更された日時"
 
@@ -5163,8 +5153,13 @@ msgstr "ナビゲーションツリーのタイトル。デフォルトは空欄
 msgid "help_navigation_tree_depth"
 msgstr "ここではナビゲーションツリーに含まれるルートからの階層を数値で入力します。0 は制限なしです。1 を指定するとルートに含まれるものだけを表示します。"
 
+#. Default: "The content types that should be shown in the navigation and site map."
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:112
+msgid "help_navigationtypes"
+msgstr ""
+
 #. Default: "Enter your new password. Minimum 5 characters."
-#: CMFPlone/skins/plone_login/login_password.cpt:67
+#: CMFPlone/skins/plone_login/login_password.cpt:68
 msgid "help_new_password"
 msgstr "新しいパスワードを入力します。最低５文字は必要です。"
 
@@ -5194,7 +5189,7 @@ msgid "help_password_creation"
 msgstr "最低５文字は必要です。"
 
 #. Default: "If you have forgotten your password, ${click_here}."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:122
+#: CMFPlone/skins/plone_login/login_form.cpt:85
 msgid "help_password_retrieval"
 msgstr "パスワードがわからなくなった場合は、${click_here} 。"
 
@@ -5209,12 +5204,12 @@ msgid "help_portal_type_criteria_value"
 msgstr "登録されたポータルタイプの一つ"
 
 #. Default: "To add or change the portrait: click the \"Browse\" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:376
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:380
 msgid "help_portrait"
 msgstr "顔写真を追加したり変更するには<strong>ブラウズ</strong>ボタンをクリックして写真を選びます。推奨サイズは幅75ピクセル、高さ100ピクセルです。<br/>"
 
 #. Default: "Your preferred language."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:167
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:171
 msgid "help_preferred_language"
 msgstr "選択言語"
 
@@ -5224,7 +5219,7 @@ msgid "help_publishing_comments"
 msgstr "公開履歴に追加されます。複数の項目を選んでいる場合、このコメントがそのすべての項目に付加されます。"
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:151
+#: CMFPlone/skins/plone_login/login_form.cpt:149
 msgid "help_remember_my_name"
 msgstr "次にログインする時、ユーザ名が自動入力されるようにするにはここをチェックします。"
 
@@ -5319,12 +5314,12 @@ msgid "help_send_to_mail"
 msgstr "メール受取人のアドレス（受信人）"
 
 #. Default: "Please enter your e-mail address"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:81
+#: CMFPlone/skins/plone_templates/contact-info.cpt:87
 msgid "help_sender_from_address"
 msgstr "Ｅメールアドレスを入力してください。"
 
 #. Default: "Please enter your full name"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:57
+#: CMFPlone/skins/plone_templates/contact-info.cpt:60
 msgid "help_sender_fullname"
 msgstr "氏名を入力してください。"
 
@@ -5348,28 +5343,23 @@ msgstr "ショートネームはこの項目のURLの中に現れ、URLの一部
 msgid "help_shortname"
 msgstr "空白、下線を含んだり大文字小文字を混在させてはいけません。ショートネームは項目のURLの一部となります。"
 
-#. Default: "The content types that should be shown in the site map."
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:112
-msgid "help_sitemaptypes"
-msgstr "サイトマップに表示するコンテンツタイプを指定します。"
-
 #. Default: "The password for the ESMTP user account."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:54
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:55
 msgid "help_smtp_pass"
 msgstr "ESMTPユーザアカウントのパスワードです。"
 
 #. Default: "The port of your local SMTP (outgoing e-mail) server. Usually '25'."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:37
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:38
 msgid "help_smtp_port"
 msgstr "ローカルSMTPサーバ（メール送信）のポート番号です。通常は'25'です。"
 
 #. Default: "The address of your local SMTP (outgoing e-mail) server. Usually 'localhost', unless you use an external server to send e-mail."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:27
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:28
 msgid "help_smtp_server"
 msgstr "SMTPサーバ(メール送信用サーバ)のアドレスです。メールの送信に外部のサーバを利用する場合以外は、通常は'localhost'を使用します。"
 
 #. Default: "Username for authentication to your e-mail server. Not required unless you are using ESMTP."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:45
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:46
 msgid "help_smtp_userid"
 msgstr "Ｅメール送信サーバが認証に使うユーザ名です。ESMTPを使っていなければ必要ありません。"
 
@@ -5379,7 +5369,7 @@ msgid "help_string_criteria_value"
 msgstr "文字列"
 
 #. Default: "Please enter the subject of the message you want to send."
-#: CMFPlone/skins/plone_templates/contact-info.cpt:112
+#: CMFPlone/skins/plone_templates/contact-info.cpt:114
 msgid "help_subject"
 msgstr "メッセージの件名を入力してください。"
 
@@ -5430,7 +5420,7 @@ msgid "help_user_name_creation_casesensitive"
 msgstr "ログインに使うユーザ名を入力してください(例: ksuzuki)。スペースや特殊文字は使えません。大文字と小文字は区別されますのでCaps Lockキーに注意してください。"
 
 #. Default: "The workflow states that should be shown in the navigation tree and the site map."
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:159
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:160
 msgid "help_wf_states"
 msgstr "ナビゲーションツリーとサイトマップに表示されるワークフローステート"
 
@@ -5461,7 +5451,7 @@ msgid "if_all_conditions_met"
 msgstr "すべての条件を満たす場合"
 
 #. Default: "Your dashboard is currently empty. Click the <em>edit</em> tab to assign some personal portlets."
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:97
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:103
 msgid "info_empty_dashboard"
 msgstr "ダッシュボードは現在からっぽです。<em>編集</em>タブをクリックして個人用ポートレットを割り当てましょう。"
 
@@ -5496,7 +5486,7 @@ msgid "label_add"
 msgstr "追加"
 
 #. Default: "Add Comment"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:25
+#: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:55
 msgid "label_add_comment"
 msgstr "コメントを追加"
 
@@ -5531,12 +5521,12 @@ msgid "label_add_portlet_ellipsis"
 msgstr "ポートレットを追加…"
 
 #. Default: "iCal"
-#: CMFPlone/skins/plone_content/event_view.pt:173
+#: CMFPlone/skins/plone_content/event_view.pt:164
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
-#: CMFPlone/skins/plone_content/event_view.pt:167
+#: CMFPlone/skins/plone_content/event_view.pt:158
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -5557,7 +5547,7 @@ msgid "label_add_user_to_group"
 msgstr "ユーザを選んだグループに追加"
 
 #. Default: "Add selected groups and users to this group"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:288
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:299
 msgid "label_add_users_to_group"
 msgstr "選んだユーザやグループをこのグループに追加"
 
@@ -5577,7 +5567,7 @@ msgid "label_affected_content"
 msgstr "影響を受けるコンテンツ"
 
 #. Default: "All"
-#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:32
+#: plone.app.content/plone/app/content/browser/table.pt:38
 msgid "label_all"
 msgstr "すべて"
 
@@ -5597,7 +5587,7 @@ msgid "label_allow_combined_language_codes"
 msgstr "国を指定した言語種別を表示する（例：英語と米語）"
 
 #. Default: "Allow comments"
-#: Archetypes/ExtensibleMetadata.py:64
+#: Archetypes/ExtensibleMetadata.py:68
 msgid "label_allow_comments"
 msgstr "コメントを許可する"
 
@@ -5607,12 +5597,12 @@ msgid "label_allow_discussion"
 msgstr "この項目での議論を許可する"
 
 #. Default: "an anonymous user"
-#: plone.locking/plone/locking/browser/locking.py:88
+#: plone.locking/plone/locking/browser/locking.py:91
 msgid "label_an_anonymous_user"
 msgstr "無名ユーザ"
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:64
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:46
 msgid "label_anonymous_user"
 msgstr "無名ユーザ"
 
@@ -5622,7 +5612,7 @@ msgid "label_any_author"
 msgstr "どの作者でも"
 
 #. Default: "Apply Changes"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:228
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:236
 msgid "label_apply_changes"
 msgstr "変更する"
 
@@ -5657,7 +5647,7 @@ msgid "label_assign_roles_to_users_groups"
 msgstr "ロールをユーザ／グループに割り当てる"
 
 #. Default: "at"
-#: Archetypes/Field.py:1846
+#: Archetypes/Field.py:1909
 msgid "label_at"
 msgstr "at"
 
@@ -5667,12 +5657,12 @@ msgid "label_author"
 msgstr "作成者"
 
 #. Default: "Author's external home page…"
-#: CMFPlone/skins/plone_content/author.cpt:132
+#: CMFPlone/skins/plone_content/author.cpt:137
 msgid "label_author_external_home_page"
 msgstr "外部にある作成者のホームページ..."
 
 #. Default: "Author's home page in this site…"
-#: CMFPlone/skins/plone_content/author.cpt:127
+#: CMFPlone/skins/plone_content/author.cpt:132
 msgid "label_author_internal_home_page"
 msgstr "このサイト内にある作成者のホームページ..."
 
@@ -5692,7 +5682,7 @@ msgid "label_back_to_site"
 msgstr "サイトへ戻る"
 
 #. Default: "Biography"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:193
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:197
 msgid "label_biography"
 msgstr "略歴"
 
@@ -5707,12 +5697,12 @@ msgid "label_boolean_criteria_bool"
 msgstr "値"
 
 #. Default: "Browse"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:62
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:67
 msgid "label_browse"
 msgstr "閲覧"
 
 #. Default: "by ${author}"
-#: CMFPlone/skins/plone_content/folder_listing.pt:126
+#: CMFPlone/skins/plone_content/folder_listing.pt:129
 msgid "label_by_author"
 msgstr "作成者 ${author}"
 
@@ -5747,7 +5737,7 @@ msgid "label_calendar"
 msgstr "カレンダー"
 
 #. Default: "Cancel"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:126
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:416
 msgid "label_cancel"
 msgstr "取り消し"
 
@@ -5767,7 +5757,7 @@ msgid "label_change_comment"
 msgstr "コメントを変更"
 
 #. Default: "Change content item as default view..."
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:304
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:305
 msgid "label_change_default_item"
 msgstr "デフォルトビューの項目を変更..."
 
@@ -5787,7 +5777,7 @@ msgid "label_change_ownership"
 msgstr "所有権を変更"
 
 #. Default: "Change Password"
-#: CMFPlone/skins/plone_login/login_password.cpt:101
+#: CMFPlone/skins/plone_login/login_password.cpt:102
 msgid "label_change_password"
 msgstr "パスワードを変更"
 
@@ -5837,7 +5827,7 @@ msgid "label_clear_selection"
 msgstr "選択を解除"
 
 #. Default: "click here to retrieve it"
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:123
+#: CMFPlone/skins/plone_login/login_form.cpt:86
 msgid "label_click_here_to_retrieve"
 msgstr "調べるためにクリック"
 
@@ -5847,17 +5837,17 @@ msgid "label_click_to_view_full_image"
 msgstr "クリックしてフルサイズ画像を見る"
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:141
+#: CMFPlone/skins/plone_forms/sendto_form.cpt:90
 msgid "label_comment"
 msgstr "コメント"
 
 #. Default: "Posted by"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:61
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:43
 msgid "label_comment_by"
 msgstr "投稿者"
 
 #. Default: "at"
-#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:66
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:48
 msgid "label_commented_at"
 msgstr "投稿日時:"
 
@@ -5907,7 +5897,7 @@ msgid "label_containing"
 msgstr "次の語を含む"
 
 #. Default: "Content editor"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:239
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:243
 msgid "label_content_editor"
 msgstr "コンテンツエディタ"
 
@@ -5957,7 +5947,7 @@ msgid "label_contentrules_subfolders"
 msgstr "サブフォルダに適用する"
 
 #. Default: "Contributors"
-#: Archetypes/ExtensibleMetadata.py:111
+#: Archetypes/ExtensibleMetadata.py:115
 msgid "label_contributors"
 msgstr "協力者:"
 
@@ -5977,17 +5967,17 @@ msgid "label_copy_to_present"
 msgstr "現在のものへコピー"
 
 #. Default: "Rights"
-#: Archetypes/ExtensibleMetadata.py:167
+#: Archetypes/ExtensibleMetadata.py:171
 msgid "label_copyrights"
 msgstr "権利"
 
 #. Default: "Creation Date"
-#: Archetypes/ExtensibleMetadata.py:186
+#: Archetypes/ExtensibleMetadata.py:190
 msgid "label_creation_date"
 msgstr "作成日時"
 
 #. Default: "Creators"
-#: Archetypes/ExtensibleMetadata.py:122
+#: Archetypes/ExtensibleMetadata.py:126
 msgid "label_creators"
 msgstr "作成者"
 
@@ -6032,7 +6022,7 @@ msgid "label_current_password"
 msgstr "現在のパスワード"
 
 #. Default: "Current selection"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:16
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:17
 msgid "label_currentselection"
 msgstr "現在の選択内容"
 
@@ -6047,7 +6037,7 @@ msgid "label_custom_view_fields"
 msgstr "表の列項目"
 
 #. Default: "Dashboard"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-dashboard.pt:38
+#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:38
 msgid "label_dashboard"
 msgstr "ダッシュボード"
 
@@ -6067,7 +6057,7 @@ msgid "label_default_type"
 msgstr "(デフォルト)"
 
 #. Default: "Default workflow (${title})"
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:205
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:239
 msgid "label_default_workflow_title"
 msgstr "デフォルトのワークフロー (${title})"
 
@@ -6077,7 +6067,7 @@ msgid "label_delete"
 msgstr "削除"
 
 #. Default: "Delete Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:397
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:401
 msgid "label_delete_portrait"
 msgstr "顔写真を削除"
 
@@ -6122,7 +6112,7 @@ msgid "label_discussion_enabled"
 msgstr "許可する"
 
 #. Default: "Edit"
-#: CMFPlone/skins/plone_content/author.cpt:66
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:36
 msgid "label_edit"
 msgstr "編集"
 
@@ -6137,7 +6127,7 @@ msgid "label_edit_default_view_container_go_here"
 msgstr "こちら"
 
 #. Default: "Allow editing of Short Names"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:324
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:328
 msgid "label_edit_short_names"
 msgstr "ショートネームの変更を許可する"
 
@@ -6147,7 +6137,7 @@ msgid "label_effective_date"
 msgstr "発行日時"
 
 #. Default: "E-mail"
-#: CMFPlone/skins/plone_forms/member_search_form.pt:46
+#: CMFPlone/skins/plone_login/join_form.cpt:121
 msgid "label_email"
 msgstr "Ｅメール"
 
@@ -6196,8 +6186,9 @@ msgstr "イベントの本文"
 msgid "label_event_attendees"
 msgstr "参加できる方"
 
-#. Default: "(${location}, from ${start} to ${end})"
-#: CMFPlone/skins/plone_content/folder_listing.pt:113
+#. Default: "(${location}${DYNAMIC_CONTENT}from ${start} to ${end})"
+#: CMFPlone/skins/plone_content/folder_listing.pt:116
+#, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location}, ${start} から ${end} まで )"
 
@@ -6252,7 +6243,7 @@ msgid "label_expiration_date"
 msgstr "終了日時"
 
 #. Default: "Enable external editing"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:282
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:286
 msgid "label_ext_editor"
 msgstr "外部編集を可能にする"
 
@@ -6262,7 +6253,7 @@ msgid "label_file"
 msgstr "ファイル"
 
 #. Default: "filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:142
+#: CMFPlone/skins/plone_forms/search.pt:141
 msgid "label_filed_under"
 msgstr "カテゴリー:"
 
@@ -6287,7 +6278,7 @@ msgid "label_format"
 msgstr "フォーマット"
 
 #. Default: "Full Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:272
+#: CMFPlone/skins/plone_login/join_form.cpt:65
 msgid "label_full_name"
 msgstr "氏名"
 
@@ -6312,12 +6303,12 @@ msgid "label_group"
 msgstr "グループ"
 
 #. Default: "Group Members"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:34
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:40
 msgid "label_group_members"
 msgstr "グループのメンバー"
 
 #. Default: "Group Memberships"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:33
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:36
 msgid "label_group_memberships"
 msgstr "グループの所属状況"
 
@@ -6327,17 +6318,17 @@ msgid "label_group_name"
 msgstr "グループ名"
 
 #. Default: "Group Portlets"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:44
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:50
 msgid "label_group_portlets"
 msgstr "グループのポートレット"
 
 #. Default: "Group Properties"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:39
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:45
 msgid "label_group_properties"
 msgstr "グループのプロパティ"
 
 #. Default: "Group Search"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:109
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:117
 msgid "label_group_search"
 msgstr "グループ検索"
 
@@ -6367,7 +6358,7 @@ msgid "label_home"
 msgstr "ホーム"
 
 #. Default: "Home page"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:217
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:221
 msgid "label_homepage"
 msgstr "ホームページ"
 
@@ -6375,26 +6366,6 @@ msgstr "ホームページ"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:25
 msgid "label_identity_url"
 msgstr "OpenID URL"
-
-#. Default: "Internet Explorer 4.5 (Mac)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:123
-msgid "label_ie4_mac"
-msgstr "Internet Explorer 4.5 (Mac)"
-
-#. Default: "Internet Explorer 4 (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:111
-msgid "label_ie4_win"
-msgstr "Internet Explorer 4 (Windows)"
-
-#. Default: "Internet Explorer 5+ (Mac)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:117
-msgid "label_ie5_mac"
-msgstr "Internet Explorer 5+ (Mac)"
-
-#. Default: "Internet Explorer 5+ (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:81
-msgid "label_ie5_win"
-msgstr "Internet Explorer 5+ (Windows)"
 
 #. Default: "Ignored exception types"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:147
@@ -6432,7 +6403,7 @@ msgid "label_inherit_criteria"
 msgstr "条件の継承"
 
 #. Default: "Inherit permissions from higher levels"
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:133
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
 msgid "label_inherit_local_roles"
 msgstr "上位レベルからパーミッションを引き継ぐ"
 
@@ -6461,13 +6432,8 @@ msgstr "項目の種類"
 msgid "label_keywords"
 msgstr "キーワード"
 
-#. Default: "Konqueror (Linux)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:105
-msgid "label_konqueror_linux"
-msgstr "Konqueror (Linux)"
-
 #. Default: "Language"
-#: CMFPlone/skins/plone_deprecated/portlet_languages.pt:17
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:169
 msgid "label_language"
 msgstr "言語"
 
@@ -6488,7 +6454,7 @@ msgid "label_limit_number"
 msgstr "検索結果の数を制限"
 
 #. Default: "Listed in searches"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:304
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:308
 msgid "label_listed_status"
 msgstr "検索リストへの記載"
 
@@ -6513,7 +6479,7 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "選択されたユーザやグループに割り当てるロール"
 
 #. Default: "Location"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:140
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:144
 msgid "label_location"
 msgstr "場所："
 
@@ -6523,7 +6489,7 @@ msgid "label_locked"
 msgstr "ロック済"
 
 #. Default: "Log in"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:79
+#: CMFPlone/skins/plone_login/registered.pt:86
 msgid "label_log_in"
 msgstr "ログイン"
 
@@ -6538,7 +6504,7 @@ msgid "label_login_continue_to_home_page"
 msgstr "${portal_title}ホームページに続ける"
 
 #. Default: "Login Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:376
+#: CMFPlone/skins/plone_login/login_form.cpt:106
 msgid "label_login_name"
 msgstr "ユーザ名"
 
@@ -6548,12 +6514,12 @@ msgid "label_login_to_add_comments"
 msgstr "コメントを追加するためにログイン"
 
 #. Default: "Log in to send feedback"
-#: CMFPlone/skins/plone_content/author.cpt:142
+#: CMFPlone/skins/plone_content/author.cpt:147
 msgid "label_login_to_send_feedback"
 msgstr "フィードバックを送るためにログイン"
 
 #. Default: "Look"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:341
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:345
 msgid "label_look"
 msgstr "外観"
 
@@ -6563,32 +6529,22 @@ msgid "label_mail_password"
 msgstr "パスワードをメールで送る。"
 
 #. Default: "Main Language:"
-#: CMFPlone/skins/plone_content/author.cpt:107
+#: CMFPlone/skins/plone_content/author.cpt:112
 msgid "label_main_language"
 msgstr "主たる言語"
 
 #. Default: "Message"
-#: CMFPlone/skins/plone_content/author.cpt:203
+#: CMFPlone/skins/plone_templates/contact-info.cpt:131
 msgid "label_message"
 msgstr "メッセージ"
 
 #. Default: "Modification Date"
-#: Archetypes/ExtensibleMetadata.py:201
+#: Archetypes/ExtensibleMetadata.py:205
 msgid "label_modification_date"
 msgstr "変更日時"
 
-#. Default: "Firefox, Mozilla and Netscape 7+ (Mac OS X)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:93
-msgid "label_mozilla_mac"
-msgstr "Firefox, Mozilla and Netscape 7+ (Mac OS X)"
-
-#. Default: "Firefox, Mozilla and Netscape 7+ (Windows)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:87
-msgid "label_mozilla_win"
-msgstr "Firefox, Mozilla and Netscape 7+ (Windows)"
-
 #. Default: "Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:95
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:71
 msgid "label_name"
 msgstr "名前"
 
@@ -6618,14 +6574,9 @@ msgid "label_navigation_types"
 msgstr "表示するコンテンツタイプ"
 
 #. Default: "Filter on workflow state"
-#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:152
+#: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:153
 msgid "label_navtree_wf_enable"
 msgstr "状態の指定による絞り込み"
-
-#. Default: "Netscape 6 and earlier (All platforms)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:128
-msgid "label_netscape6_all"
-msgstr "Netscape 6 と、それ以前(すべてのプラットフォーム)"
 
 #. Default: "New categories"
 #: Archetypes/skins/archetypes/widgets/keyword.pt:36
@@ -6648,7 +6599,7 @@ msgid "label_new_owner_search"
 msgstr "新しい所有者を探す"
 
 #. Default: "New password"
-#: CMFPlone/skins/plone_login/login_password.cpt:64
+#: CMFPlone/skins/plone_login/login_password.cpt:65
 msgid "label_new_password"
 msgstr "新しいパスワード"
 
@@ -6668,7 +6619,7 @@ msgid "label_news_image"
 msgstr "画像"
 
 #. Default: "Next"
-#: Archetypes/skins/archetypes/edit_macros.pt:215
+#: Archetypes/skins/archetypes/edit_macros.pt:217
 msgid "label_next"
 msgstr "次"
 
@@ -6698,17 +6649,17 @@ msgid "label_no_prefs_panels_available"
 msgstr "個人設定パネルがありません。"
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1893
+#: Archetypes/Field.py:1956
 msgid "label_no_reference"
 msgstr "＜参照なし＞"
 
 #. Default: "No matching results found."
-#: CMFPlone/skins/plone_scripts/livesearch_reply.py:82
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:83
 msgid "label_no_results_found"
 msgstr "該当する結果が見つかりません。"
 
 #. Default: "No workflow"
-#: plone.app.controlpanel/plone/app/controlpanel/types.py:211
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:245
 msgid "label_no_workflow"
 msgstr "ワークフローなし"
 
@@ -6738,7 +6689,7 @@ msgid "label_or"
 msgstr "または"
 
 #. Default: "Basic HTML textarea editor (works in all browsers)"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:259
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:263
 msgid "label_ordinary_content_editor"
 msgstr "通常のフォームを使ったエディタ(どのブラウザでも動く)"
 
@@ -6748,12 +6699,12 @@ msgid "label_outdated_product_reinstall"
 msgstr "このプロダクトは改訂版が出ています。ファイルシステムバージョンは ${version}. 再インストール: ${reinstall_button}"
 
 #. Default: "Parent"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:53
 msgid "label_parent"
 msgstr "親"
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_deprecated/portlet_login.pt:59
+#: CMFPlone/skins/plone_login/join_form.cpt:151
 msgid "label_password"
 msgstr "パスワード"
 
@@ -6773,7 +6724,7 @@ msgid "label_path_criteria_value"
 msgstr "フォルダ"
 
 #. Default: "Perform Search"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:402
+#: CMFPlone/skins/plone_forms/ownership_form.cpt:208
 msgid "label_perform_search"
 msgstr "検索する"
 
@@ -6818,7 +6769,7 @@ msgid "label_portlets_parent_folders"
 msgstr "親フォルダポートレット"
 
 #. Default: "Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:365
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:369
 msgid "label_portrait"
 msgstr "顔写真"
 
@@ -6828,7 +6779,7 @@ msgid "label_powered_by_plone"
 msgstr "Powered by Plone"
 
 #. Default: "Previous"
-#: Archetypes/skins/archetypes/edit_macros.pt:207
+#: Archetypes/skins/archetypes/edit_macros.pt:209
 msgid "label_previous"
 msgstr "前"
 
@@ -6873,12 +6824,12 @@ msgid "label_related_items"
 msgstr "関連コンテンツ"
 
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:159
+#: CMFPlone/skins/plone_forms/search.pt:158
 msgid "label_relevance_percentage"
 msgstr "関連性: ${percentage}%"
 
 #. Default: "Remember my name."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:149
+#: CMFPlone/skins/plone_login/login_form.cpt:147
 msgid "label_remember_my_name"
 msgstr "ユーザ名を記憶する"
 
@@ -6888,7 +6839,7 @@ msgid "label_remove"
 msgstr "削除"
 
 #. Default: "Remove selected groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:123
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:124
 msgid "label_remove_selected_groups"
 msgstr "選ばれたグループを削除する"
 
@@ -6913,7 +6864,7 @@ msgid "label_request_url"
 msgstr "要求URL"
 
 #. Default: "(Required)"
-#: CMFPlone/skins/plone_content/author.cpt:187
+#: CMFPlone/skins/plone_templates/contact-info.cpt:83
 msgid "label_required"
 msgstr "(必須)"
 
@@ -6952,13 +6903,8 @@ msgstr "有効なもの"
 msgid "label_rule_event_trigger"
 msgstr "イベントトリガー; ${trigger}"
 
-#. Default: "Safari and Omniweb (Mac OS X)"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:99
-msgid "label_safari_mac"
-msgstr "SafariおよびOmniweb (Mac OS X)"
-
 #. Default: "Save"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:121
+#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:158
 msgid "label_save"
 msgstr "保存"
 
@@ -6998,7 +6944,7 @@ msgid "label_schema_settings"
 msgstr "その他"
 
 #. Default: "Search"
-#: CMFPlone/skins/plone_deprecated/global_searchbox.pt:33
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:208
 msgid "label_search"
 msgstr "検索"
 
@@ -7028,7 +6974,7 @@ msgid "label_searchbox_currentfolder_only"
 msgstr "現在のセクション内のみ"
 
 #. Default: "Search results"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:43
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
 msgid "label_searchresults"
 msgstr "検索結果"
 
@@ -7048,7 +6994,7 @@ msgid "label_select_all"
 msgstr "選択: ${label_link_all}"
 
 #. Default: "Select all items"
-#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:95
+#: CMFPlone/skins/plone_templates/test_rendering.pt:361
 msgid "label_select_all_items"
 msgstr "すべての項目を選ぶ"
 
@@ -7083,7 +7029,7 @@ msgid "label_selection_criteria_value"
 msgstr "値"
 
 #. Default: "Send"
-#: CMFPlone/skins/plone_content/author.cpt:221
+#: CMFPlone/skins/plone_templates/contact-info.cpt:154
 msgid "label_send"
 msgstr "送る"
 
@@ -7098,12 +7044,12 @@ msgid "label_send_to_mail"
 msgstr "宛先 (メールアドレス)"
 
 #. Default: "E-Mail"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:74
+#: CMFPlone/skins/plone_templates/contact-info.cpt:80
 msgid "label_sender_from_address"
 msgstr "E-Mail"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:53
+#: CMFPlone/skins/plone_templates/contact-info.cpt:56
 msgid "label_sender_fullname"
 msgstr "氏名"
 
@@ -7178,22 +7124,22 @@ msgid "label_skiptonavigation"
 msgstr "ナビゲーションへ移動"
 
 #. Default: "ESMTP password"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:52
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:53
 msgid "label_smtp_pass"
 msgstr "ESMTPパスワード"
 
 #. Default: "SMTP port"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:35
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:36
 msgid "label_smtp_port"
 msgstr "SMTPポート"
 
 #. Default: "SMTP server"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:25
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:26
 msgid "label_smtp_server"
 msgstr "SMTPサーバ"
 
 #. Default: "ESMTP username"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:43
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:44
 msgid "label_smtp_userid"
 msgstr "ESMTPユーザ名"
 
@@ -7213,7 +7159,7 @@ msgid "label_string_criteria_value"
 msgstr "値"
 
 #. Default: "Subject"
-#: CMFPlone/skins/plone_content/author.cpt:183
+#: CMFPlone/skins/plone_templates/contact-info.cpt:107
 msgid "label_subject"
 msgstr "件名"
 
@@ -7278,7 +7224,7 @@ msgid "label_title"
 msgstr "タイトル"
 
 #. Default: "Up to my dashboard"
-#: CMFPlone/skins/plone_prefs/password_form.pt:21
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:57
 msgid "label_to_dashboard"
 msgstr "ダッシュボードに移動"
 
@@ -7323,7 +7269,7 @@ msgid "label_uninstall"
 msgstr "アンインストール"
 
 #. Default: "Up to Groups Overview"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:97
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:70
 msgid "label_up_to_groups_overview"
 msgstr "グループの概要へ移動"
 
@@ -7333,12 +7279,12 @@ msgid "label_up_to_plone_setup"
 msgstr "サイト設定へ移動"
 
 #. Default: "Up to Users Overview"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:61
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:63
 msgid "label_up_to_usersoverview"
 msgstr "ユーザの概要へ移動"
 
 #. Default: "Update"
-#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:79
+#: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:84
 msgid "label_update"
 msgstr "更新"
 
@@ -7365,12 +7311,12 @@ msgid "label_user"
 msgstr "ユーザ"
 
 #. Default: "User Name"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:273
+#: CMFPlone/skins/plone_login/join_form.cpt:89
 msgid "label_user_name"
 msgstr "ユーザ名"
 
 #. Default: "User Properties"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:25
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:30
 msgid "label_user_properties"
 msgstr "ユーザのプロパティ"
 
@@ -7385,7 +7331,7 @@ msgid "label_usergroup_settings"
 msgstr "設定"
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:94
 msgid "label_username"
 msgstr "ユーザ名"
 
@@ -7400,7 +7346,7 @@ msgid "label_usersandgroups"
 msgstr "ユーザとグループ"
 
 #. Default: "View"
-#: CMFPlone/skins/plone_content/author.cpt:59
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:29
 msgid "label_view"
 msgstr "ビュー"
 
@@ -7465,7 +7411,7 @@ msgid "legend_account_details"
 msgstr "アカウントの詳細"
 
 #. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:68
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:69
 msgid "legend_add_comment"
 msgstr "コメントを追加"
 
@@ -7505,7 +7451,7 @@ msgid "legend_details"
 msgstr "詳細"
 
 #. Default: "Feedback for author"
-#: CMFPlone/skins/plone_content/author.cpt:178
+#: CMFPlone/skins/plone_content/author.cpt:183
 msgid "legend_feedback_for_author"
 msgstr "作成者へのフィードバック"
 
@@ -7525,7 +7471,7 @@ msgid "legend_installed_products"
 msgstr "インストール済みのプロダクト"
 
 #. Default: "LiveSearch &#8595;"
-#: CMFPlone/skins/plone_scripts/livesearch_reply.py:81
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:82
 msgid "legend_livesearch"
 msgstr "ライブ検索 &#8595;"
 
@@ -7555,7 +7501,7 @@ msgid "legend_navigation_details"
 msgstr "ナビゲーションの詳細"
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:82
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:83
 msgid "legend_note_reply_anonymous"
 msgstr "注: まだログインしていません。ユーザ名とパスワードを入力してコメントをあなたの名前で公開できます。もし何も入力しない場合は無名ユーザとしての投稿となります。"
 
@@ -7580,7 +7526,7 @@ msgid "legend_search_owners"
 msgstr "可能性のある新しい所有者を探す"
 
 #. Default: "Search Terms"
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:362
+#: CMFPlone/skins/plone_forms/search_form.pt:35
 msgid "legend_search_terms"
 msgstr "検索する文字列"
 
@@ -7695,7 +7641,7 @@ msgid "listingheader_affected_item"
 msgstr "影響を受けた項目"
 
 #. Default: "Author"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:68
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:67
 msgid "listingheader_author"
 msgstr "作成者"
 
@@ -7705,7 +7651,7 @@ msgid "listingheader_comment"
 msgstr "コメント"
 
 #. Default: "Date and Time"
-#: CMFPlone/skins/plone_deprecated/review_history.pt:19
+#: CMFPlone/skins/plone_forms/undo_form.pt:58
 msgid "listingheader_date_and_time"
 msgstr "日時"
 
@@ -7720,12 +7666,12 @@ msgid "listingheader_email_address"
 msgstr "Ｅメールアドレス"
 
 #. Default: "Group name"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:138
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:146
 msgid "listingheader_group_name"
 msgstr "グループ名"
 
 #. Default: "Remove Group"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:96
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:98
 msgid "listingheader_group_remove"
 msgstr "グループを削除"
 
@@ -7735,7 +7681,7 @@ msgid "listingheader_group_user_name"
 msgstr "グループ名/ユーザ名"
 
 #. Default: "Modified"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:73
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:72
 msgid "listingheader_modified"
 msgstr "変更日時"
 
@@ -7750,12 +7696,12 @@ msgid "listingheader_order"
 msgstr "順序"
 
 #. Default: "Performed by"
-#: CMFPlone/skins/plone_deprecated/review_history.pt:18
+#: CMFPlone/skins/plone_forms/undo_form.pt:57
 msgid "listingheader_performed_by"
 msgstr "実行者"
 
 #. Default: "Remove Group"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:149
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:157
 msgid "listingheader_remove_group"
 msgstr "グループを削除"
 
@@ -7770,7 +7716,7 @@ msgid "listingheader_reset_password"
 msgstr "パスワードをリセット"
 
 #. Default: "Roles"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:143
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:151
 msgid "listingheader_roles"
 msgstr "ロール"
 
@@ -7785,12 +7731,12 @@ msgid "listingheader_status"
 msgstr "状態"
 
 #. Default: "Title"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:65
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:64
 msgid "listingheader_title"
 msgstr "タイトル"
 
 #. Default: "Type"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:70
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:81
 msgid "listingheader_type"
 msgstr "種類"
 
@@ -7814,8 +7760,9 @@ msgstr "ここ"
 msgid "local_role_warning_type"
 msgstr "<strong>注意！</strong> ${type}の共有権限を設定しようとしています。その親フォルダの共有権限を設定したいのであれば ${link} をクリックします。"
 
-#. Default: "While cookie authentication is disabled, cookie-based login is not available."
-#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:58
+#. Default: "Since cookie authentication is disabled, cookie-based login is not available."
+#: CMFPlone/skins/plone_login/logged_out.cpt:63
+#, fuzzy
 msgid "login_form_disabled"
 msgstr "クッキー認証が無効になっていると、クッキーを使ったログインができません。"
 
@@ -7890,7 +7837,7 @@ msgid "no_new_events"
 msgstr "新しいイベントがありません。"
 
 #. Default: "No users were found using your search criteria."
-#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:230
+#: CMFPlone/skins/plone_forms/ownership_form.cpt:172
 msgid "no_users_found"
 msgstr "条件に該当するユーザが見つかりませんでした。"
 
@@ -7971,8 +7918,9 @@ msgstr "公開"
 msgid "published"
 msgstr "公開"
 
-#. Default: "Read More…"
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:159
+#. Default: "Read More"
+#: CMFPlone/skins/plone_templates/events_listing.pt:88
+#, fuzzy
 msgid "read_more"
 msgstr "もっと読む…"
 
@@ -7997,7 +7945,7 @@ msgid "rename_item_not_allowed"
 msgstr "この項目のショートネームを変更することはできません。"
 
 #. Default: "by ${author}, ${date}"
-#: CMFPlone/skins/plone_templates/default_error_message.pt:84
+#: CMFPlone/skins/plone_templates/default_error_message.pt:87
 msgid "results_by_author"
 msgstr "作成者: ${author} 最終変更日時: ${date}"
 
@@ -8008,7 +7956,7 @@ msgid "retract"
 msgstr "撤回"
 
 #. Default: "Return"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:23
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:24
 msgid "return_to_view"
 msgstr "戻る"
 
@@ -8079,7 +8027,7 @@ msgid "summary_assigned_roles"
 msgstr "現在割り当てられているロール"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: CMFPlone/skins/plone_content/author.cpt:250
+#: CMFPlone/skins/plone_content/author.cpt:255
 msgid "summary_author_content_list"
 msgstr "この作成者のコンテンツをタイプ別に一覧表示する。"
 
@@ -8094,7 +8042,7 @@ msgid "summary_calendar"
 msgstr "カレンダー"
 
 #. Default: "Content listing"
-#: CMFPlone/skins/plone_content/folder_tabular_view.pt:60
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:59
 msgid "summary_content_listing"
 msgstr "コンテンツ一覧"
 
@@ -8124,7 +8072,7 @@ msgid "summary_review_history"
 msgstr "審査履歴"
 
 #. Default: "Select roles for each group"
-#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:102
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:110
 msgid "summary_roles_for_groups"
 msgstr "グループごとに役割を選びます。"
 
@@ -8194,12 +8142,12 @@ msgid "text_group"
 msgstr "グループ"
 
 #. Default: "Location: ${location}"
-#: CMFPlone/skins/plone_content/author.cpt:98
+#: CMFPlone/skins/plone_content/author.cpt:103
 msgid "text_location"
 msgstr "場所: ${location}"
 
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
-#: CMFPlone/skins/plone_content/author.cpt:156
+#: CMFPlone/skins/plone_templates/contact-info.cpt:25
 msgid "text_no_email_setup"
 msgstr "このサイトはメールの設定が行われていません。そのため、連絡フォームを使用することはできません。"
 
@@ -8229,17 +8177,17 @@ msgid "text_no_pil_installed"
 msgstr "警告：PILが正しくインストールされていません。画像の拡大縮小ができません。"
 
 #. Default: "Enter a group or user name to search for or click 'Show All'."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:277
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:282
 msgid "text_no_searchstring"
 msgstr "検索するグループかユーザ名を入力するか、「すべて表示」をクリックします。"
 
 #. Default: "Enter a group or user name to search for."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:274
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:276
 msgid "text_no_searchstring_large"
 msgstr "検索するグループあるいはユーザ名を入力する。"
 
 #. Default: "No user by that name."
-#: CMFPlone/skins/plone_content/author.cpt:39
+#: CMFPlone/skins/plone_content/author.cpt:41
 msgid "text_no_user_by_name"
 msgstr "その名前のユーザはいません。"
 
@@ -8289,7 +8237,7 @@ msgid "text_user"
 msgstr "ユーザ"
 
 #. Default: "This user does not belong to any group."
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:122
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:123
 msgid "text_user_not_in_any_group"
 msgstr "このユーザはどのグループにも属していません。"
 
@@ -8324,7 +8272,7 @@ msgid "time_last_week"
 msgstr "先週"
 
 #. Default: ":"
-#: CMFPlone/skins/plone_templates/calendar_macros.pt:149
+#: CMFPlone/skins/plone_templates/calendar_macros.pt:146
 msgid "time_separator"
 msgstr ":"
 
@@ -8358,13 +8306,15 @@ msgstr "この項目の中に新規項目を追加"
 msgid "title_add_static_portlet"
 msgstr "静的テキストポートレットを追加"
 
-#. Default: "Add this item to your iCal calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:168
+#. Default: "Download this event in iCal format"
+#: CMFPlone/skins/plone_content/event_view.pt:159
+#, fuzzy
 msgid "title_add_to_ical"
 msgstr "あなたのiCalカレンダーにこの項目を追加します。"
 
-#. Default: "Add this item to your vCal calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:162
+#. Default: "Download this event in vCal format"
+#: CMFPlone/skins/plone_content/event_view.pt:153
+#, fuzzy
 msgid "title_add_to_vcal"
 msgstr "あなたのvCalカレンダーにこの項目を追加します。"
 
@@ -8384,22 +8334,22 @@ msgid "title_built_with_plone"
 msgstr "このサイトはPlone CMS - オープンソースコンテンツ管理システムで作られました。詳細はこちら。"
 
 #. Default: "Can add"
-#: plone.app.workflow/plone/app/workflow/localroles.py:24
+#: plone.app.workflow/plone/app/workflow/localroles.py:29
 msgid "title_can_add"
 msgstr "追加可能"
 
 #. Default: "Can edit"
-#: plone.app.workflow/plone/app/workflow/localroles.py:18
+#: plone.app.workflow/plone/app/workflow/localroles.py:23
 msgid "title_can_edit"
 msgstr "編集可能"
 
 #. Default: "Can review"
-#: plone.app.workflow/plone/app/workflow/localroles.py:30
+#: plone.app.workflow/plone/app/workflow/localroles.py:35
 msgid "title_can_review"
 msgstr "レビュー可能"
 
 #. Default: "Can view"
-#: plone.app.workflow/plone/app/workflow/localroles.py:12
+#: plone.app.workflow/plone/app/workflow/localroles.py:17
 msgid "title_can_view"
 msgstr "閲覧可能"
 
@@ -8414,7 +8364,7 @@ msgid "title_change_default_page"
 msgstr "デフォルトページを変更"
 
 #. Default: "Change the item used as default view in this folder"
-#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
+#: CMFPlone/skins/plone_forms/select_default_view.cpt:63
 msgid "title_change_default_view_item"
 msgstr "このフォルダの中でデフォルト表示に使われる項目を変更。"
 
@@ -8454,7 +8404,7 @@ msgid "title_copyright"
 msgstr "著作権"
 
 #. Default: "Cascading Style Sheets"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:150
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:93
 msgid "title_css"
 msgstr "CSS (Cascading Style Sheets)"
 
@@ -8549,7 +8499,7 @@ msgid "title_remove_index_html_for_display_control"
 msgstr "このフォルダの見え方を指定できるようにindex_html項目を削除するか名前を変更する。"
 
 #. Default: "Required"
-#: CMFPlone/skins/plone_content/author.cpt:187
+#: CMFPlone/skins/plone_templates/contact-info.cpt:83
 msgid "title_required"
 msgstr "必須"
 
@@ -8574,12 +8524,12 @@ msgid "title_section_508"
 msgstr "このサイトは合衆国政府Section508アクセシビリティガイドラインに準拠しています。"
 
 #. Default: "Select an item to be used as default view in this folder"
-#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
+#: CMFPlone/skins/plone_forms/select_default_view.cpt:54
 msgid "title_select_default_page"
 msgstr "このフォルダのデフォルト表示に使われる項目を選びます"
 
 #. Default: "Select an item to be used as default view in this folder..."
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:356
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:357
 msgid "title_select_default_view_item"
 msgstr "このフォルダのデフォルトビューとして使用する項目を選択..."
 
@@ -8619,7 +8569,7 @@ msgid "title_valid_xhtml"
 msgstr "このサイトはXHTML標準に準拠しています。"
 
 #. Default: "World Wide Web Consortium"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:154
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:97
 msgid "title_w3c"
 msgstr "World Wide Web Consortium"
 
@@ -8634,7 +8584,7 @@ msgid "title_wcag_conformance"
 msgstr "このサイトはW3C-WAI Webコンテンツアクセシビリティガイドラインに準拠しています。"
 
 #. Default: "eXtensible Hyper Text Markup Language"
-#: CMFPlone/skins/plone_templates/accessibility-info.pt:147
+#: CMFPlone/skins/plone_templates/accessibility-info.pt:90
 msgid "title_xhtml"
 msgstr "eXtensible Hyper Text Markup Language"
 
@@ -8649,57 +8599,57 @@ msgid "types_controlpanel_allow_discussion"
 msgstr "コメントを許可する"
 
 #. Default: "Current workflow:"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:127
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:132
 msgid "types_controlpanel_current_workflow"
 msgstr "現在のワークフロー"
 
 #. Default: "Manage portlets assigned to this content type"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:117
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:122
 msgid "types_controlpanel_manage_portlets"
 msgstr "このコンテンツタイプに割り当てられているポートレットの管理"
 
 #. Default: "New State"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:199
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:204
 msgid "types_controlpanel_new_state"
 msgstr "新しい状態"
 
 #. Default: "New workflow:"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:140
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:145
 msgid "types_controlpanel_new_workflow"
 msgstr "新ワークフロー"
 
 #. Default: "No Workflow"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:154
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:159
 msgid "types_controlpanel_no_workflow"
 msgstr "ワークフローなし"
 
 #. Default: "Old State"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:198
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:203
 msgid "types_controlpanel_old_state"
 msgstr "旧ワークフロー"
 
 #. Default: "Visible in searches"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:110
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:101
 msgid "types_controlpanel_searchable"
 msgstr "検索結果に表示する"
 
 #. Default: "State Mapping"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:184
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:189
 msgid "types_controlpanel_state_mapping"
 msgstr "状態のマッピング"
 
 #. Default: "When changing workflows, you have to select a state equivalent in the new workflow."
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:188
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:193
 msgid "types_controlpanel_state_mapping_help"
 msgstr "ワークフローを変更する際には、新しいワークフローに対応する状態を選択する必要があります。"
 
-#. Default: "Versioned"
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:100
-msgid "types_controlpanel_versionable"
-msgstr "バージョン管理下"
+#. Default: "Versioning policy:"
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:108
+msgid "types_controlpanel_versionpolicy"
+msgstr ""
 
 #. Default: "Changing the workflow of a type will take a while, and may slow down the site significantly while the content is updated to the new setting."
-#: plone.app.controlpanel/plone/app/controlpanel/types.pt:232
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:237
 msgid "types_controlpanel_warn_remap"
 msgstr "ワークフローの割当を変更するには時間がかかります。その間、このサイトの動作速度が著しく低下する可能性があります。"
 
@@ -8728,6 +8678,21 @@ msgstr "vCalendar"
 msgid "vCalendar export"
 msgstr "vCalendar形式で書き出す。"
 
+#. Default: "Automatic"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:37
+msgid "versioning_automatic"
+msgstr ""
+
+#. Default: "Manual"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:32
+msgid "versioning_manual"
+msgstr ""
+
+#. Default: "No versioning"
+#: plone.app.controlpanel/plone/app/controlpanel/types.py:27
+msgid "versioning_off"
+msgstr ""
+
 #. Default: "View changes"
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:26
 msgid "view_changes"
@@ -8744,8 +8709,9 @@ msgstr "ビジブル"
 msgid "warning_contentrules_disabled"
 msgstr "コンテンツルールが全体で無効化されています。再度有効化するまで、割り当てられているルールは実行されません。${controlpanel_link}で有効化してください。"
 
-#. Default: "Policy"
+#. Default: "Local Policy"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:71
+#, fuzzy
 msgid "workflow_policy"
 msgstr "ポリシー"
 
