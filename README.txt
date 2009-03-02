@@ -4,8 +4,8 @@ PloneTranslations
 This package contains the translation files for Plone Core and the
 LinguaPlone add-on product.
 
-This PloneTranslations version is suitable for both Plone 3.0 and
-Plone 3.1.
+This PloneTranslations version is suitable for Plone 3.2 and
+Plone 3.3.
 
 Information for translators
 ---------------------------
