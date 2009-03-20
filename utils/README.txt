@@ -1,24 +1,29 @@
-# This is how I synchronize po files [vincentfretin]
-#
-# Plone 3.3 adds 4 new translatable strings compared to Plone 3.2. And remove 3 strings if you count r25302 (https://dev.plone.org/plone/changeset/25302).
+# This is how I synchronize po files for Plone 3.2 and 3.3 [vincentfretin]
 
 mkdir -p ~/svn
 cd ~/svn
-svn co http://svn.plone.org/svn/plone/buildouts/plone-coredev/branches/3.2/ buildout-plone-3.2
-cd buildout-plone-3.2
+svn co https://svn.plone.org/svn/plone/plonenext/3.3/ plonenext3.3i18n
+cd plonenext3.3i18n
+# The rebuild-pot.py script search a Products directory, let it be happy
 mkdir Products
 cd src
-svn export http://svn.plone.org/svn/plone/plonenext/3.3/etc/sources EXTERNALS.txt
-svn propset svn:externals -F EXTERNALS.txt  .
+svn propset svn:externals -F ../etc/sources  .
 svn up
+# Products.CMFPlone egg was renamed to Plone, the search algorithm in rebuild-pot.py script needs to be updated.
+# For now I do a symlink
 ln -s Plone Products.CMFPlone
 
+# to keep 3 strings for Plone 3.2 (https://dev.plone.org/plone/changeset/25302)
 cd Plone/Products/CMFPlone
 svn merge -r25302:25301 .
 cd -
 
+# to keep the History string for Plone 3.2
+cd Products.CMFEditions/Products/CMFEditions/profiles/default
+svn export https://svn.plone.org/svn/collective/Products.CMFEditions/branches/1.1/Products/CMFEditions/profiles/default/actions.xml
+
 cd plone.app.locales/plone/app/locales/utils
-export INSTANCE_HOME=~/svn/buildout-plone-3.2/
+export INSTANCE_HOME=~/svn/plonenext3.3i18n/
 
 python rebuild-pot.py plone
 python sync.py plone
@@ -28,9 +33,6 @@ python sync.py atcontenttypes
 
 python rebuild-pot.py atrbw
 python sync.py atreferencebrowserwidget
-
-#python rebuild-pot.py plt
-#python sync.py plonelanguagetool
 
 python rebuild-pot.py prt
 python sync.py passwordresettool
