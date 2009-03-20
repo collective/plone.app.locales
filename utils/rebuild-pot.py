@@ -72,6 +72,7 @@ def rebuild(product, folder=''):
             'plone.app.openid',
             'Products.Archetypes',
             'Products.CMFDiffTool',
+            'Products.validation',
         )
         add_products = (
             'Archetypes',
