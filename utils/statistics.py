@@ -4,6 +4,8 @@ cd ..
 LANG=en; for po in `find . -name "*.po" |grep -v "kupupox"` ; do echo -n "$po:";msgfmt -o /dev/null --statistics $po 2>&1; done > /tmp/results.txt
 cd utils
 python statistics.py /tmp/results.txt
+or if you want only your language to be displayed, here french:
+python statistics.py /tmp/results.txt fr
 
 """
 
@@ -14,7 +16,6 @@ DOMAINS = ("atcontenttypes",
            "atreferencebrowserwidget",
            "linguaplone",
            "plone",
-#           "plonelanguagetool",
            "passwordresettool",
            "cmfplacefulworkflow",
            "cmfeditions",
@@ -61,6 +62,9 @@ result_file.close()
 print "Number of languages: %d" % len(stats)
 print "Legend: translated (percentage) / fuzzy / untranslated = total"
 
+if len(sys.argv) > 2:
+    lg = sys.argv[2]
+    stats = {lg:stats[lg]}
 
 for language, domains in stats.items():
     total = [0,0,0]
