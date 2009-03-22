@@ -62,11 +62,13 @@ result_file.close()
 print "Number of languages: %d" % len(stats)
 print "Legend: translated (percentage) / fuzzy / untranslated = total"
 
+lg = None
 if len(sys.argv) > 2:
     lg = sys.argv[2]
-    stats = {lg:stats[lg]}
 
 for language, domains in stats.items():
+    if lg != language:
+        continue
     total = [0,0,0]
     details = ''
     for domain in DOMAINS:
