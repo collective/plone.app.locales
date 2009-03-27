@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone-fi\n"
-"POT-Creation-Date: 2009-03-20 22:23+0000\n"
+"POT-Creation-Date: 2009-03-27 12:19+0000\n"
 "PO-Revision-Date: 2007-12-15 19:27+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <en@li.org>\n"
@@ -1294,6 +1294,10 @@ msgstr "HTML-suodattimen asetukset"
 msgid "Icon"
 msgstr "Kuvake"
 
+#: validation/validators/IdValidator.py:36
+msgid "Id $id is already in use"
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/skins.py:55
 msgid "If disabled the content icons in folder listings and portlets won't be visible."
 msgstr "Sisältökuvakkeita ei näytetä sovelmissa tai kansioiden sisällysluetteloissa, jos tämä toiminto on sammutettu."
@@ -2425,11 +2429,11 @@ msgstr "Hakuteksti"
 msgid "Search for user or group"
 msgstr "Hae käyttäjää tai ryhmää"
 
-#: plone.app.controlpanel/plone/app/controlpanel/search.py:92
+#: plone.app.controlpanel/plone/app/controlpanel/search.py:94
 msgid "Search settings"
 msgstr "Hakuasetukset"
 
-#: plone.app.controlpanel/plone/app/controlpanel/search.py:93
+#: plone.app.controlpanel/plone/app/controlpanel/search.py:95
 msgid "Search settings for this site."
 msgstr "Sivuston hakuasetukset"
 
@@ -2663,6 +2667,10 @@ msgstr "Kokoelman näkymä"
 #: CMFPlone/profiles/default/types/ATSortCriterion.xml
 msgid "Sort Criterion"
 msgstr "Järjestysehto"
+
+#: validation/validators/IdValidator.py:29
+msgid "Spaces are not allowed in ids"
+msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:39
 msgid "Specify the maximum number of items to show in the portlet. Leave this blank to show all items."
@@ -3193,6 +3201,38 @@ msgstr "Käyttäjät ja ryhmät"
 msgid "Users and Groups Administration"
 msgstr "Jäsenten ja ryhmien hallinta"
 
+#: validation/validators/RegexValidator.py:42
+msgid "Validation failed($name): $value of type $type, expected 'string'"
+msgstr ""
+
+#: validation/validators/RegexValidator.py:56
+msgid "Validation failed($name): '$value' $errmsg"
+msgstr ""
+
+#: validation/validators/EmptyValidator.py:42
+msgid "Validation failed($name): '$value' is not empty."
+msgstr ""
+
+#: validation/validators/RangeValidator.py:36
+msgid "Validation failed($name): '$value' out of range($min, $max)"
+msgstr ""
+
+#: validation/validators/SupplValidators.py:90
+msgid "Validation failed($name): could not convert $value to a date."
+msgstr ""
+
+#: validation/validators/RangeValidator.py:30
+msgid "Validation failed($name): could not convert '$value' to number"
+msgstr ""
+
+#: validation/validators/SupplValidators.py:83
+msgid "Validation failed($name): value is empty ($value)."
+msgstr ""
+
+#: validation/validators/SupplValidators.py:65
+msgid "Validation failed($name: Uploaded data is too large: ${size}MB (max ${max}MB)"
+msgstr ""
+
 #. Default: "View"
 #: CMFPlone/profiles/default/types/ATSortCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
@@ -3507,7 +3547,7 @@ msgid "box_languages"
 msgstr "Kielivalinnat"
 
 #. Default: "last modified"
-#: CMFPlone/skins/plone_content/folder_listing.pt:128
+#: CMFPlone/skins/plone_content/folder_listing.pt:137
 msgid "box_last_modified"
 msgstr "Viimeisin muutos"
 
@@ -3620,6 +3660,10 @@ msgstr "Yhteyshenkilön nimi"
 #: CMFPlone/skins/plone_content/event_view.pt:135
 msgid "contact_phone"
 msgstr "Yhteyshenkilön puhelinnumero"
+
+#: validation/validators/BaseValidators.py:23
+msgid "contains unprintable characters"
+msgstr ""
 
 #. Default: "Add action"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:186
@@ -4022,7 +4066,7 @@ msgid "description_no_comparison_support"
 msgstr "Tätä sisältöä ei voi verrata muuhun sisältöön."
 
 #. Default: "There are currently no items in this folder."
-#: CMFPlone/skins/plone_content/folder_listing.pt:165
+#: CMFPlone/skins/plone_content/folder_listing.pt:174
 msgid "description_no_items_in_folder"
 msgstr "Tämä kansio on tyhjä."
 
@@ -5425,8 +5469,8 @@ msgstr "Työnkulun tilat, jotka tulisi näyttää navigointipuussa ja sivukartas
 msgid "hide"
 msgstr "piilota"
 
-#. Default: "${action} by ${actor_with_home} ${actor_without_home} on ${time} (x: ${DYNAMIC_CONTENT})"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:54
+#. Default: "${action} by ${actor} on ${time}"
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:55
 msgid "history_action"
 msgstr ""
 
@@ -5459,6 +5503,38 @@ msgstr "Hallintapaneelisi on tällä hetkellä tyhjä. Napsauta <em>muokkaa</em>
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:90
 msgid "info_openid"
 msgstr "Mikä on OpenID?"
+
+#: validation/validators/BaseValidators.py:19
+msgid "is not a decimal number."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:40
+msgid "is not a valid email address."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:31
+msgid "is not a valid international phone number."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:37
+msgid "is not a valid url."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:28
+msgid "is not a valid us phone number."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:34
+msgid "is not a valid zip code."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:25
+msgid "is not a well formed SSN."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:21
+msgid "is not an integer."
+msgstr ""
 
 #. Default: "Inherited Role(s)"
 #: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:100
@@ -5702,7 +5778,7 @@ msgid "label_browse"
 msgstr "Selaa"
 
 #. Default: "by ${author}"
-#: CMFPlone/skins/plone_content/folder_listing.pt:115
+#: CMFPlone/skins/plone_content/folder_listing.pt:124
 msgid "label_by_author"
 msgstr "tekijä: ${author}"
 
@@ -6186,11 +6262,16 @@ msgstr "Tapahtuman leipäteksti"
 msgid "label_event_attendees"
 msgstr "Osallistujat"
 
-#. Default: "(${location}${DYNAMIC_CONTENT}from ${start} to ${end})"
-#: CMFPlone/skins/plone_content/folder_listing.pt:102
+#. Default: "(${location}, from ${start} to ${end})"
+#: CMFPlone/skins/plone_content/folder_listing.pt:99
 #, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location}, ${start} - ${end} )"
+
+#. Default: "(from ${start} to ${end})"
+#: CMFPlone/skins/plone_content/folder_listing.pt:111
+msgid "label_event_byline_without_location"
+msgstr ""
 
 #. Default: "Event Ends"
 #: widget label of CalendarWidget - description ""
@@ -8266,6 +8347,10 @@ msgstr "<strong>Nykyinen tietokannan koko:</strong> ${size}"
 msgid "text_zope_server_uptime"
 msgstr "Zope-palvelin on ollut päällä: ${time}"
 
+#: validation/validators/BaseValidators.py:46
+msgid "this name is not a valid identifier"
+msgstr ""
+
 #. Default: "Ever"
 #: CMFPlone/skins/plone_forms/search_form.pt:156
 msgid "time_ever"
@@ -8712,6 +8797,10 @@ msgstr "vCalendar"
 #: CMFPlone/profiles/default/actionicons.xml
 msgid "vCalendar export"
 msgstr "vCalendar-vienti"
+
+#: validation/validators/ExpressionValidator.py:93
+msgid "validation failed, expr was:$expr"
+msgstr ""
 
 #. Default: "Automatic"
 #: plone.app.controlpanel/plone/app/controlpanel/types.py:37

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-03-20 22:23+0000\n"
+"POT-Creation-Date: 2009-03-27 12:19+0000\n"
 "PO-Revision-Date: 2009-03-24 18:10+0200\n"
 "Last-Translator: H. Turgut Uyar <uyar@itu.edu.tr>\n"
 "Language-Team: H. Turgut Uyar <uyar@itu.edu.tr>\n"
@@ -1295,6 +1295,10 @@ msgstr "Html Ayıklama Ayarları"
 msgid "Icon"
 msgstr "İkon"
 
+#: validation/validators/IdValidator.py:36
+msgid "Id $id is already in use"
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/skins.py:55
 msgid "If disabled the content icons in folder listings and portlets won't be visible."
 msgstr "Bu seçenek etkin değilse klasör listelerinde ve portletlerde içerik ikonları gösterilmez."
@@ -2435,11 +2439,11 @@ msgstr "Arama Metni"
 msgid "Search for user or group"
 msgstr "Kullanıcı ya da grup ara"
 
-#: plone.app.controlpanel/plone/app/controlpanel/search.py:92
+#: plone.app.controlpanel/plone/app/controlpanel/search.py:94
 msgid "Search settings"
 msgstr "Arama ayarları"
 
-#: plone.app.controlpanel/plone/app/controlpanel/search.py:93
+#: plone.app.controlpanel/plone/app/controlpanel/search.py:95
 msgid "Search settings for this site."
 msgstr "Bu sitenin arama ayarları."
 
@@ -2677,6 +2681,10 @@ msgstr "Akıllı Klasör Görünümü"
 #: CMFPlone/profiles/default/types/ATSortCriterion.xml
 msgid "Sort Criterion"
 msgstr "Sıralama Ölçütü"
+
+#: validation/validators/IdValidator.py:29
+msgid "Spaces are not allowed in ids"
+msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:39
 msgid "Specify the maximum number of items to show in the portlet. Leave this blank to show all items."
@@ -3209,6 +3217,38 @@ msgstr "Kullanıcılar ve Gruplar"
 msgid "Users and Groups Administration"
 msgstr "Kullanıcı ve Grup Yönetimi"
 
+#: validation/validators/RegexValidator.py:42
+msgid "Validation failed($name): $value of type $type, expected 'string'"
+msgstr ""
+
+#: validation/validators/RegexValidator.py:56
+msgid "Validation failed($name): '$value' $errmsg"
+msgstr ""
+
+#: validation/validators/EmptyValidator.py:42
+msgid "Validation failed($name): '$value' is not empty."
+msgstr ""
+
+#: validation/validators/RangeValidator.py:36
+msgid "Validation failed($name): '$value' out of range($min, $max)"
+msgstr ""
+
+#: validation/validators/SupplValidators.py:90
+msgid "Validation failed($name): could not convert $value to a date."
+msgstr ""
+
+#: validation/validators/RangeValidator.py:30
+msgid "Validation failed($name): could not convert '$value' to number"
+msgstr ""
+
+#: validation/validators/SupplValidators.py:83
+msgid "Validation failed($name): value is empty ($value)."
+msgstr ""
+
+#: validation/validators/SupplValidators.py:65
+msgid "Validation failed($name: Uploaded data is too large: ${size}MB (max ${max}MB)"
+msgstr ""
+
 #. Default: "View"
 #: CMFPlone/profiles/default/types/ATSortCriterion.xml
 #: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
@@ -3517,7 +3557,7 @@ msgid "box_languages"
 msgstr "Diller"
 
 #. Default: "last modified"
-#: CMFPlone/skins/plone_content/folder_listing.pt:128
+#: CMFPlone/skins/plone_content/folder_listing.pt:137
 msgid "box_last_modified"
 msgstr "son değişiklik:"
 
@@ -3630,6 +3670,10 @@ msgstr "İletişim Kişisi"
 #: CMFPlone/skins/plone_content/event_view.pt:135
 msgid "contact_phone"
 msgstr "İletişim Telefonu"
+
+#: validation/validators/BaseValidators.py:23
+msgid "contains unprintable characters"
+msgstr ""
 
 #. Default: "Add action"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:186
@@ -4032,7 +4076,7 @@ msgid "description_no_comparison_support"
 msgstr "Bu nesne üzerinde karşılaştırma işlemi yapılamaz."
 
 #. Default: "There are currently no items in this folder."
-#: CMFPlone/skins/plone_content/folder_listing.pt:165
+#: CMFPlone/skins/plone_content/folder_listing.pt:174
 msgid "description_no_items_in_folder"
 msgstr "Bu klasörde şu anda hiçbir nesne yok."
 
@@ -5433,8 +5477,9 @@ msgstr "Gezi ağacında ve site haritasında gösterilmesi istenen işakışı d
 msgid "hide"
 msgstr "gizle"
 
-#. Default: "${action} by ${actor_with_home} ${actor_without_home} on ${time} (x: ${DYNAMIC_CONTENT})"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:54
+#. Default: "${action} by ${actor} on ${time}"
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:55
+#, fuzzy
 msgid "history_action"
 msgstr "${time} tarihinde ${action} işlemini yapan ${actor_with_home} ${actor_without_home}: ${DYNAMIC_CONTENT}"
 
@@ -5467,6 +5512,38 @@ msgstr "Paneliniz şu anda boş. <em>düzenle</em> sekmesine basarak kişisel po
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:90
 msgid "info_openid"
 msgstr "OpenID Nedir?"
+
+#: validation/validators/BaseValidators.py:19
+msgid "is not a decimal number."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:40
+msgid "is not a valid email address."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:31
+msgid "is not a valid international phone number."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:37
+msgid "is not a valid url."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:28
+msgid "is not a valid us phone number."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:34
+msgid "is not a valid zip code."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:25
+msgid "is not a well formed SSN."
+msgstr ""
+
+#: validation/validators/BaseValidators.py:21
+msgid "is not an integer."
+msgstr ""
 
 #. Default: "Inherited Role(s)"
 #: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:100
@@ -5710,7 +5787,7 @@ msgid "label_browse"
 msgstr "Göz at"
 
 #. Default: "by ${author}"
-#: CMFPlone/skins/plone_content/folder_listing.pt:115
+#: CMFPlone/skins/plone_content/folder_listing.pt:124
 msgid "label_by_author"
 msgstr "yaratan: ${author}"
 
@@ -6194,10 +6271,16 @@ msgstr "Etkinlik gövde metni"
 msgid "label_event_attendees"
 msgstr "Katılanlar"
 
-#. Default: "(${location}${DYNAMIC_CONTENT}from ${start} to ${end})"
-#: CMFPlone/skins/plone_content/folder_listing.pt:102
+#. Default: "(${location}, from ${start} to ${end})"
+#: CMFPlone/skins/plone_content/folder_listing.pt:99
+#, fuzzy
 msgid "label_event_byline"
 msgstr "(${location}${DYNAMIC_CONTENT}başlangıç: ${start} - bitiş: ${end})"
+
+#. Default: "(from ${start} to ${end})"
+#: CMFPlone/skins/plone_content/folder_listing.pt:111
+msgid "label_event_byline_without_location"
+msgstr ""
 
 #. Default: "Event Ends"
 #: widget label of CalendarWidget - description ""
@@ -8261,6 +8344,10 @@ msgstr "<strong>Veritabanının şu anki boyu:</strong> ${size}"
 msgid "text_zope_server_uptime"
 msgstr "Zope sunucusunun çalışma süresi: ${time}"
 
+#: validation/validators/BaseValidators.py:46
+msgid "this name is not a valid identifier"
+msgstr ""
+
 #. Default: "Ever"
 #: CMFPlone/skins/plone_forms/search_form.pt:156
 msgid "time_ever"
@@ -8705,6 +8792,10 @@ msgstr "vCalendar"
 #: CMFPlone/profiles/default/actionicons.xml
 msgid "vCalendar export"
 msgstr "vCalendar formatında yazma"
+
+#: validation/validators/ExpressionValidator.py:93
+msgid "validation failed, expr was:$expr"
+msgstr ""
 
 #. Default: "Automatic"
 #: plone.app.controlpanel/plone/app/controlpanel/types.py:37
