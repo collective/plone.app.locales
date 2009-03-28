@@ -13,15 +13,6 @@ svn up
 # For now I do a symlink
 ln -s Plone Products.CMFPlone
 
-# to keep 3 strings for Plone 3.2 (https://dev.plone.org/plone/changeset/25302)
-cd Plone/Products/CMFPlone
-svn merge -r25302:25301 .
-cd -
-
-# to keep the History string for Plone 3.2
-cd Products.CMFEditions/Products/CMFEditions/profiles/default
-svn export https://svn.plone.org/svn/collective/Products.CMFEditions/branches/1.1/Products/CMFEditions/profiles/default/actions.xml
-
 cd plone.app.locales/plone/app/locales/utils
 export INSTANCE_HOME=~/svn/plonenext3.3i18n/
 
