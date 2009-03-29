@@ -67,7 +67,7 @@ if len(sys.argv) > 2:
     lg = sys.argv[2]
 
 for language, domains in stats.items():
-    if lg != language:
+    if lg is not None and lg != language:
         continue
     total = [0,0,0]
     details = ''
