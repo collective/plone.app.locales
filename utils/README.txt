@@ -4,6 +4,11 @@ mkdir -p ~/svn
 cd ~/svn
 svn co https://svn.plone.org/svn/plone/plonenext/3.3/ plonenext3.3i18n
 cd plonenext3.3i18n
+
+# If you plan to synchronize LinguaPlone po files,
+# you need to add the following line in etc/sources:
+# Products.LinguaPlone                  https://svn.plone.org/svn/plone/Products.LinguaPlone/trunk/
+
 # The rebuild-pot.py script search a Products directory, let it be happy
 mkdir Products
 cd src
