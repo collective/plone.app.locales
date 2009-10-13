@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-07-08 09:35+0000\n"
+"POT-Creation-Date: 2009-10-13 16:57+0000\n"
 "PO-Revision-Date: 2008-08-11 19:53+0800\n"
 "Last-Translator: adam tang(315ok.org) <yuejun.tang@gmail.com>\n"
 "Language-Team: 315ok.org <yuejun.tang@gmail.com>\n"
@@ -54,7 +54,9 @@ msgid "${items} could not be deleted."
 msgstr "条目${items}个不能删除。"
 
 #. Default: "${monthname} ${year}"
+#: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:56
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:231
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:29
 msgid "${monthname} ${year}"
 msgstr "${year}年 ${monthname}"
 
@@ -79,6 +81,7 @@ msgid "${title} has been added to your Favorites."
 msgstr "${title} 已经加入到您的查询集中"
 
 #: CMFPlone/skins/plone_form_scripts/delete_confirmation.cpy:37
+#: CMFPlone/skins/plone_scripts/object_delete.cpy:39
 msgid "${title} has been deleted."
 msgstr "${title} 已经被删除"
 
@@ -87,6 +90,7 @@ msgid "${title} is locked and cannot be cut."
 msgstr "${title}被锁并且不能被剪切。"
 
 #: CMFPlone/skins/plone_form_scripts/delete_confirmation.cpy:33
+#: CMFPlone/skins/plone_scripts/object_delete.cpy:30
 msgid "${title} is locked and cannot be deleted."
 msgstr "${title}被锁并且不能被删除。"
 
@@ -170,6 +174,7 @@ msgstr "适合存放大量内容的文件夹"
 
 # Description for Folder type
 #. Default: "A folder which can contain other items."
+#: CMFPlone/profiles/default/types/Folder.xml
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:30
 msgid "A folder which can contain other items."
 msgstr "一个能够包含其他的条目的文件夹。"
@@ -231,6 +236,54 @@ msgstr "类型条件使规则仅应用于确定的内容类型。"
 #: CMFPlone/profiles/default/types/ATPortalTypeCriterion.xml
 msgid "A portal_types criterion"
 msgstr "网站内容类型条件"
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can receive and render an RSS feed."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a calendar."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a classic template-based portlet"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent events"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent news"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recently changed items."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing on the review queue."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a log-in box"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a navigation tree"
+msgstr ""
+
+#: plone.app.openid/plone/app/openid/profiles/default/portlets.xml
+msgid "A portlet which can render an OpenID log-in box"
+msgstr ""
+
+#: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
+msgid "A portlet which displays the results of a collection query"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which shows a search box."
+msgstr ""
 
 #. Default: "A reference criterion"
 #: CMFPlone/profiles/default/types/ATReferenceCriterion.xml
@@ -349,7 +402,7 @@ msgstr "添加邮寄操作"
 msgid "Add Move Action"
 msgstr "添加移动操作"
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:214
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:217
 msgid "Add Navigation Portlet"
 msgstr "添加导航面板"
 
@@ -513,6 +566,7 @@ msgid "An item's workflow state (e.g.published)"
 msgstr "条目的工作流状态（如：已发布）"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:37
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:39
 msgid "As a path relative to the portal root."
 msgstr "相对于站点根目录的路径。"
 
@@ -538,6 +592,7 @@ msgstr "布尔(真/假)"
 msgid "Boolean Criterion"
 msgstr "布尔条件"
 
+#: CMFPlone/profiles/default/controlpanel.xml
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr "日历"
@@ -547,14 +602,18 @@ msgstr "日历"
 msgid "Calendar Settings"
 msgstr "日历设置"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Calendar portlet"
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/calendar.py:51
 msgid "Calendar settings"
 msgstr "日历设置"
 
 #. Default: "Can only be seen and edited by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Can only be seen and edited by the owner."
 msgstr "对于所有者仅可以查看和编辑。"
 
@@ -601,24 +660,31 @@ msgid "Changes applied."
 msgstr "更改已经生效。"
 
 #: plone.app.controlpanel/plone/app/controlpanel/form.py:49
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:110
 msgid "Changes canceled."
 msgstr "更改被取消。"
 
 #: CMFPlone/skins/plone_form_scripts/file_edit.cpy:49
+#: CMFPlone/skins/plone_form_scripts/setConstrainTypes.cpy:40
+#: CMFPlone/skins/plone_prefs/prefs_error_log_setProperties.py:16, ...
 msgid "Changes made."
 msgstr "更改成功。"
 
 #: Archetypes/skins/archetypes/content_edit_impl.py:30
+#: Archetypes/skins/archetypes/validate_base.vpy:23
+#: Archetypes/skins/archetypes/validate_integrity.cpy:24, ...
 msgid "Changes saved."
 msgstr "更改已经保存。"
 
 #. Default: "Check in"
 #: plone.app.iterate/plone/app/iterate/browser/checkin.pt:38
+#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
 msgid "Check in"
 msgstr "登入"
 
 #. Default: "Check out"
 #: plone.app.iterate/plone/app/iterate/browser/checkout.pt:54
+#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
 msgid "Check out"
 msgstr "签出"
 
@@ -642,8 +708,13 @@ msgstr "签出已取消"
 msgid "Choose which types will have wiki behavior."
 msgstr "选择哪些类型可支持Wiki行为"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Classic portlet"
+msgstr ""
+
 #. Default: "Clear cache"
 #: plone.app.controlpanel/plone/app/controlpanel/ram.pt:42
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:89
 msgid "Clear cache"
 msgstr "清掉绶存"
 
@@ -662,10 +733,14 @@ msgstr "查询集"
 msgid "Collection Settings"
 msgstr "查询集设置"
 
+#: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
+msgid "Collection portlet"
+msgstr ""
+
 #. Default: "Comment about the last transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Comment about the last transition"
 msgstr "评论关于最近的翻译"
 
@@ -696,6 +771,8 @@ msgid "Condition moved up."
 msgstr "查询集被移上"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:138
+#: plone.app.contentrules/plone/app/contentrules/actions/logger.py:85
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:113, ...
 msgid "Configure element"
 msgstr "配置元素"
 
@@ -745,6 +822,7 @@ msgid "Copy"
 msgstr "复制"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:16
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:17
 msgid "Copy or cut one or more items to paste."
 msgstr "复制和剪切应该或者多个条目，以便粘贴。"
 
@@ -826,6 +904,8 @@ msgid "Define the types to be shown in the site and searched"
 msgstr "定义哪些类型在站点中可显示和可被搜索到"
 
 #. Default: "Delete"
+#: CMFPlone/profiles/default/actionicons.xml
+#: CMFPlone/profiles/default/actions.xml
 #: CMFPlone/skins/plone_forms/delete_confirmation_page.cpt:43
 msgid "Delete"
 msgstr "删除"
@@ -834,6 +914,7 @@ msgstr "删除"
 msgid "Delete object"
 msgstr "删除对象"
 
+#: CMFPlone/profiles/default/portal_atct.xml
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:102
 msgid "Description"
 msgstr "描述"
@@ -863,6 +944,7 @@ msgid "Disabling locking here will only affect users editing content through the
 msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:28
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:28
 msgid "Disallowed to paste item(s)."
 msgstr "不允许粘贴条目。"
 
@@ -899,7 +981,9 @@ msgid "Each type chosen will have a wiki enabled primary text area. At least one
 msgstr "每个类型将有一个支持wiki的主编辑区。要开启wiki，至少需要选择一个类型。"
 
 #. Default: "Edit"
-#: plone.app.layout/plone/app/layout/viewlets/content.py:198
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "Edit"
 msgstr "编辑"
 
@@ -943,7 +1027,7 @@ msgstr "编辑邮件操作"
 msgid "Edit Move Action"
 msgstr "编辑移动操作"
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:228
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:231
 msgid "Edit Navigation Portlet"
 msgstr "编辑导航面板"
 
@@ -1027,6 +1111,7 @@ msgid "Enable External Editor feature"
 msgstr "开启外部编辑器功能"
 
 #: plone.app.controlpanel/plone/app/controlpanel/search.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/search.py:21
 msgid "Enable LiveSearch"
 msgstr "开启实况搜索"
 
@@ -1055,6 +1140,7 @@ msgid "Enabled"
 msgstr "激活的"
 
 #: plone.app.controlpanel/plone/app/controlpanel/search.py:23
+#: plone.app.portlets/plone/app/portlets/portlets/search.py:22
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "激活实况搜索功能，如果浏览器支持JavaScript，将动态地显示结果。"
 
@@ -1068,7 +1154,9 @@ msgid "Entries cleared"
 msgstr "各项已经清空。"
 
 #. Default: "Error"
-#: CMFPlone/skins/plone_login/logged_out.cpt:38
+#: CMFPlone/skins/plone_content/author.cpt:41
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:49
+#: CMFPlone/skins/plone_login/logged_out.cpt:38, ...
 msgid "Error"
 msgstr "错误"
 
@@ -1098,6 +1186,7 @@ msgstr "事件更改已经保存。"
 
 # portal-tab
 # portal-tab
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:44
 msgid "Events"
 msgstr "事件"
@@ -1125,9 +1214,9 @@ msgid "Exposes your content as a file according to the sitemaps.org standard. Yo
 msgstr "从站点生成一个符合sitemaps.org标准的站点地图文件，该文件有助于搜索引擎更智能地搜索你的站点。"
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/File.xml
-#: CMFPlone/profiles/default/types/Favorite.xml
+#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
+#: CMFPlone/profiles/default/types/Favorite.xml, ...
 msgid "External Edit"
 msgstr "外部编辑"
 
@@ -1205,6 +1294,7 @@ msgid "Flip vertical"
 msgstr "纵向翻转"
 
 #. Default: "Folder"
+#: CMFPlone/profiles/default/types/Folder.xml
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:21
 msgid "Folder"
 msgstr "文件夹"
@@ -1273,9 +1363,9 @@ msgid "Hide portlet"
 msgstr "隐藏面板"
 
 #. Default: "History"
+#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
 #: CMFPlone/profiles/default/types/News_Item.xml
-#: CMFPlone/profiles/default/types/Document.xml
 msgid "History"
 msgstr "历史"
 
@@ -1289,6 +1379,8 @@ msgid "Home folder"
 msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20, ...
 msgid "How many items to list."
 msgstr "列表中的多少条目"
 
@@ -1347,9 +1439,9 @@ msgid "If selected, home folders where users can create content will be created 
 msgstr "如果被选择，用户在他们登录时会创建可创建内容的个人文件夹。"
 
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 msgstr "如果你错误地提交了内容或想额外的编辑，这将使它返回。"
 
@@ -1363,7 +1455,9 @@ msgid "Image changes saved."
 msgstr "图片更改已经保存"
 
 #. Default: "Info"
+#: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:19
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:80, ...
 msgid "Info"
 msgstr "信息"
 
@@ -1428,6 +1522,7 @@ msgid "Item Type (internal)"
 msgstr "条目类型（内部）"
 
 #: CMFPlone/skins/plone_form_scripts/content_status_modify.cpy:80
+#: CMFPlone/skins/plone_scripts/folder_publish.cpy:33
 msgid "Item state changed."
 msgstr "条目状态被改变"
 
@@ -1440,10 +1535,12 @@ msgid "Item(s) deleted."
 msgstr "条目已经删除。"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:23
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:23
 msgid "Item(s) pasted."
 msgstr "条目已粘贴。"
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Items in which workflow state to show."
 msgstr "条目在哪个工作流状态下可显示。"
 
@@ -1483,7 +1580,8 @@ msgstr "语言"
 msgid "Language Settings"
 msgstr "语言设置"
 
-#: Archetypes/ExtensibleMetadata.py:323
+#: Archetypes/ExtensibleMetadata.py:324
+#: CMFPlone/Portal.py:135
 msgid "Language neutral (site default)"
 msgstr "语言无关(站点默认)"
 
@@ -1533,6 +1631,7 @@ msgid "Local Roles"
 msgstr "本地角色"
 
 #: CMFPlone/skins/plone_deprecated/folder_localrole_add.py:20
+#: CMFPlone/skins/plone_deprecated/folder_localrole_edit.py:26
 msgid "Local roles changed."
 msgstr "本地角色已经改变。"
 
@@ -1581,11 +1680,16 @@ msgstr "日志项名"
 msgid "Logging level"
 msgstr "日志级别"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Login"
+msgstr ""
+
 #: CMFPlone/skins/plone_login/login_next.cpy:22
 msgid "Login failed"
 msgstr "登录失败"
 
 #: CMFPlone/skins/plone_login/logged_in.cpy:19
+#: CMFPlone/skins/plone_login/login_form_validate.vpy:47
 msgid "Login failed. Both login name and password are case sensitive, check that caps lock is not enabled."
 msgstr "登录失败。登录用户名和密码区分大小写，请检查系统大写锁定未开启。"
 
@@ -1609,6 +1713,8 @@ msgid "Mail Settings"
 msgstr "邮件设置"
 
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:89
+#: CMFPlone/skins/plone_form_scripts/send_feedback_site.cpy:67
+#: CMFPlone/skins/plone_form_scripts/sendto.cpy:67
 msgid "Mail sent."
 msgstr "邮件已经发送。"
 
@@ -1620,14 +1726,16 @@ msgstr "邮件设置"
 msgid "Mail settings for this site."
 msgstr "设置站点的邮件服务"
 
+#: CMFPlone/profiles/default/actionicons.xml
+#: CMFPlone/profiles/default/controlpanel.xml
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:65
 msgid "Maintenance"
 msgstr "维护"
 
 #. Default: "Make private"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Make private"
 msgstr "变为保密"
 
@@ -1643,9 +1751,9 @@ msgid "Makes the folder visible internally."
 msgstr "使文件夹可见"
 
 #. Default: "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
 msgstr "使内容保密，这意味着这个内容除了所有人和管理员以外任何人不可见。"
 
@@ -1697,9 +1805,9 @@ msgid "Member Preferences"
 msgstr "成员选项"
 
 #. Default: "Member makes content private"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Member makes content private"
 msgstr "成员让内容保密"
 
@@ -1719,8 +1827,8 @@ msgid "Member promotes content to public draft"
 msgstr "用户使变为内容公开草案"
 
 #. Default: "Member retracts submission"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "成员收回提交"
@@ -1732,6 +1840,8 @@ msgid "Member submits content for publication"
 msgstr "成员提交内容待发布"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:37
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:32
+#: plone.app.contentrules/plone/app/contentrules/actions/notify.py:23
 msgid "Message"
 msgstr "消息"
 
@@ -1777,6 +1887,8 @@ msgid "Nasty tags"
 msgstr "恶意的标签"
 
 #. Default: "Navigation"
+#: CMFPlone/profiles/default/controlpanel.xml
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:101
 msgid "Navigation"
 msgstr "导航"
@@ -1807,13 +1919,14 @@ msgid "New reference created."
 msgstr "新的相关内容被创建"
 
 #. Default: "New..."
-#: type action defined on TempFolder
 #: type action defined on Smart Folder
+#: type action defined on TempFolder
 msgid "New..."
 msgstr "新建..."
 
 # portal-tab
 # portal-tab
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:43
 msgid "News"
 msgstr "新闻"
@@ -1836,6 +1949,8 @@ msgid "No changes done."
 msgstr "没有进行更改。"
 
 #: CMFPlone/skins/plone_prefs/prefs_group_edit.py:14
+#: plone.app.controlpanel/plone/app/controlpanel/form.py:43
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:104
 msgid "No changes made."
 msgstr "没有更改"
 
@@ -1848,6 +1963,8 @@ msgid "Notify with message ${message}"
 msgstr "通过消息${message}通知"
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:21
+#: plone.app.portlets/plone/app/portlets/portlets/recent.py:19, ...
 msgid "Number of items to display"
 msgstr "显示条目的数目"
 
@@ -1868,12 +1985,17 @@ msgid "One or more selected items is locked."
 msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:27
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:28
 msgid "One or more selected items is no longer available."
 msgstr "一个或者多个条目不存在。"
 
 #: plone.app.controlpanel/plone/app/controlpanel/skins.py:20
 msgid "Only for users who are logged in"
 msgstr "仅对登录的用户"
+
+#: plone.app.openid/plone/app/openid/profiles/default/portlets.xml
+msgid "OpenID Login"
+msgstr ""
 
 #: plone.app.openid/plone/app/openid/portlets/login.py:17
 msgid "OpenID login"
@@ -1893,6 +2015,7 @@ msgstr "所有权已经改变"
 
 #. Default: "Pack database now"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:162
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:69
 msgid "Pack database now"
 msgstr "马上挤压数据库"
 
@@ -1940,6 +2063,7 @@ msgid "Paste"
 msgstr "粘贴"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:32
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:32
 msgid "Paste could not find clipboard content."
 msgstr "粘贴的时候，剪切板中没有找到任何内容。"
 
@@ -1954,8 +2078,8 @@ msgid "Pending"
 msgstr "待审"
 
 #. Default: "Pending review"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Pending review"
 msgstr "待审"
@@ -1989,10 +2113,13 @@ msgid "Placeful Workflow"
 msgstr "位置相关的工作流"
 
 #: Archetypes/skins/archetypes/validate_base.vpy:19
+#: Archetypes/skins/archetypes/validate_integrity.cpy:20
+#: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:18, ...
 msgid "Please correct the indicated errors."
 msgstr "请更正所指错误。"
 
 #: CMFPlone/skins/plone_form_scripts/validate_feedback.vpy:18
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:26
 msgid "Please enter a message"
 msgstr "请输入消息"
 
@@ -2001,10 +2128,13 @@ msgid "Please enter a name."
 msgstr "请输入一个名字。"
 
 #: CMFPlone/skins/plone_form_scripts/validate_feedback.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:23
 msgid "Please enter a subject."
 msgstr "请输入标题。"
 
 #: CMFPlone/skins/plone_form_scripts/validate_effective_expiry_date.vpy:21
+#: CMFPlone/skins/plone_form_scripts/validate_start_end_date.vpy:30
+#: CMFPlone/skins/plone_form_scripts/validate_synPropertiesForm.vpy:19
 msgid "Please enter a valid date and time."
 msgstr "请输入一个有效的日期和时间。"
 
@@ -2061,6 +2191,7 @@ msgid "Please submit a valid email address."
 msgstr "请提交一个有效的邮件地址。"
 
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:15
 msgid "Please submit an email address."
 msgstr "请提交一个邮件地址。"
 
@@ -2103,6 +2234,7 @@ msgid "Portlet footer"
 msgstr "页面脚注"
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:28
+#: plone.portlet.static/plone/portlet/static/static.py:27
 msgid "Portlet header"
 msgstr "页面头部"
 
@@ -2116,9 +2248,9 @@ msgid "Preferences"
 msgstr "选项"
 
 #. Default: "Previous transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Previous transition"
 msgstr "上一级的转换"
 
@@ -2140,9 +2272,9 @@ msgid "Print this page"
 msgstr "打印本页面"
 
 #. Default: "Private"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Private"
 msgstr "保密"
 
@@ -2152,8 +2284,8 @@ msgid "Profile"
 msgstr "剖面"
 
 #. Default: "Promote to Draft"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Promote to Draft"
 msgstr "变为草案"
 
@@ -2183,9 +2315,9 @@ msgid "Properties"
 msgstr "属性"
 
 #. Default: "Provides access to workflow history"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Provides access to workflow history"
 msgstr "规定可以查看工作流历史"
 
@@ -2196,14 +2328,14 @@ msgid "Public Draft"
 msgstr "公开草案"
 
 #. Default: "Public draft"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Public draft"
 msgstr "公开草案"
 
 #. Default: "Publish"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Publish"
 msgstr "发布"
@@ -2219,9 +2351,9 @@ msgid "Publish internally"
 msgstr "内部发布"
 
 #. Default: "Published"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Published"
 msgstr "已发布"
 
@@ -2231,9 +2363,9 @@ msgid "Published and visible to intranet users, not editable by the owner."
 msgstr "发布并且使内网用户可见，但所有者将不能编辑它。"
 
 #. Default: "Publishing the item makes it visible to other users."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Publishing the item makes it visible to other users."
 msgstr "发布这个内容使对其它用户可见。"
 
@@ -2252,6 +2384,10 @@ msgstr "提交你的内容到审核队列中，审核通过后，即可在站点
 msgid "RAM Cache Settings"
 msgstr "RAM绶存设置"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "RSS Feed"
+msgstr ""
+
 #. Default: "RSS feed"
 #: CMFPlone/migrations/v3_0/profiles/beta1_beta2/actions.xml
 #: CMFPlone/profiles/default/actions.xml
@@ -2267,6 +2403,7 @@ msgstr "这个列表的RSS广播"
 msgid "Reader"
 msgstr "读者"
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:32
 msgid "Recent items"
 msgstr "最近更新条目"
@@ -2277,9 +2414,9 @@ msgid "Reference Criterion"
 msgstr "引用条件"
 
 #. Default: "References"
-#: CMFPlone/profiles/default/types/ATSortCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateCriteria.xml
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "References"
 msgstr "引用"
 
@@ -2318,7 +2455,7 @@ msgstr "相对日期"
 msgid "Remote Url"
 msgstr "绝对Url地址"
 
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/remove.py:48
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/remove.py:60
 msgid "Removal cancelled."
 msgstr "移动取消"
 
@@ -2328,8 +2465,8 @@ msgid "Rename"
 msgstr "改名"
 
 #. Default: "Rename items"
-#: type action defined on TempFolder
 #: type action defined on Smart Folder
+#: type action defined on TempFolder
 msgid "Rename items"
 msgstr "改名"
 
@@ -2343,6 +2480,7 @@ msgstr "评注已经删除."
 
 #. Default: "Restart"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:79
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:97
 msgid "Restart"
 msgstr "重启"
 
@@ -2352,12 +2490,13 @@ msgid "Restrict to current user"
 msgstr "限制为当前用户"
 
 #. Default: "Retract"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Retract"
 msgstr "收回"
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/review.py:26
 msgid "Review list"
 msgstr "审批清单"
@@ -2392,8 +2531,8 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr "审批人打回内容重新回到草案状态"
 
 #. Default: "Reviewer tasks"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Reviewer tasks"
 msgstr "审批者的任务"
 
@@ -2429,6 +2568,8 @@ msgstr "逆时针旋转"
 msgid "Rules"
 msgstr "规则"
 
+#: CMFPlone/profiles/default/controlpanel.xml
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:36
 msgid "Search"
 msgstr "搜索"
@@ -2519,8 +2660,8 @@ msgid "Selection Criterion"
 msgstr "选择条件"
 
 #. Default: "Send back"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Send back"
 msgstr "打回"
@@ -2543,8 +2684,8 @@ msgid "Send-to"
 msgstr "发送"
 
 #. Default: "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
 msgstr "将内容打回给提交者，注明没有给予发布的原因。"
@@ -2597,6 +2738,7 @@ msgstr "显示所有的条目"
 
 #. Default: "Shut down"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:72
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:85
 msgid "Shut down"
 msgstr "关闭"
 
@@ -2751,8 +2893,8 @@ msgid "Submit"
 msgstr "提交"
 
 #. Default: "Submit for publication"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Submit for publication"
 msgstr "提交发布"
@@ -2784,6 +2926,7 @@ msgid "Syndication enabled"
 msgstr "内容聚合已经开启"
 
 #: CMFPlone/skins/plone_form_scripts/disableSyndication.cpy:18
+#: CMFPlone/skins/plone_form_scripts/enableSyndication.cpy:18
 msgid "Syndication not allowed"
 msgstr "内容聚合没有开启。"
 
@@ -2803,10 +2946,12 @@ msgid "Target collection"
 msgstr "标记集合"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:36
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:38
 msgid "Target folder"
 msgstr "目标文件夹"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:79
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:81
 msgid "Target folder ${target} does not exist."
 msgstr "目标文件夹${target}不存在"
 
@@ -2843,9 +2988,9 @@ msgid "Text to be shown in the footer"
 msgstr "显示在页脚的文本"
 
 #. Default: "The ID of the user who performed the last transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "The ID of the user who performed the last transition"
 msgstr "用户上一次转换执行的ID"
 
@@ -2899,6 +3044,7 @@ msgid "The location of an item in the site (path)"
 msgstr "条目在网站中的位置(路径)"
 
 #: CMFPlone/skins/plone_login/join_form_validate.vpy:48
+#: CMFPlone/skins/plone_login/register.cpy:32
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "您选择的登录名已被使用或者不合法，请另选一个"
 
@@ -3004,6 +3150,7 @@ msgstr "皮肤"
 
 #. Default: "There are more search results, narrow your search."
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:74
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:71
 msgid "There are more search results, narrow your search."
 msgstr "很多的搜索结果，请缩小搜索范围。"
 
@@ -3040,6 +3187,8 @@ msgid "These tags, and their content are completely blocked when a page is saved
 msgstr "保存时，这些标签和内容将被删除。"
 
 #: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_link_edit.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_newsitem_edit.vpy:15, ...
 msgid "This field is required, please provide some information."
 msgstr "这里必须输入，请提供一些信息"
 
@@ -3051,7 +3200,7 @@ msgstr "这个文件不是纯文本。如果要上载二进制文件，请创建
 msgid "This portlet display a listing of items from a Collection."
 msgstr "这个面板显示来自一个集合的内容。"
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:215
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:218
 msgid "This portlet display a navigation tree."
 msgstr "这个面板显示导航树。"
 
@@ -3107,7 +3256,9 @@ msgid "Time in minutes after which the feed should be reloaded."
 msgstr "几分钟后聚合内容将被装载。"
 
 #. Default: "Title"
+#: CMFPlone/profiles/default/portal_atct.xml
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:186
+#: plone.contentrules/plone/contentrules/rule/interfaces.py:98
 msgid "Title"
 msgstr "标题"
 
@@ -3116,6 +3267,7 @@ msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:29
+#: plone.portlet.static/plone/portlet/static/static.py:28
 msgid "Title of the rendered portlet"
 msgstr "呈现面板的标题"
 
@@ -3173,14 +3325,18 @@ msgid "Unable to copy ${name} as part of content rule 'copy' action: ${error}"
 msgstr "不可以拷贝${name}作为作为规则“拷贝”操作:${error}的一部分。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/delete.py:64
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:139
 msgid "Unable to move ${name} as part of content rule 'move' action: ${error}"
 msgstr "作为内容规则的移动操作，不能移动${name}，错误：${error}"
 
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:77
+#: CMFPlone/skins/plone_form_scripts/send_feedback_site.cpy:56
+#: CMFPlone/skins/plone_form_scripts/sendto.cpy:59
 msgid "Unable to send mail: ${exception}"
 msgstr "无法发送邮件：${exception}"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:30
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:30
 msgid "Unauthorized to paste item(s)."
 msgstr "无权粘贴条目。"
 
@@ -3263,13 +3419,14 @@ msgid "Validation failed($name: Uploaded data is too large: ${size}MB (max ${max
 msgstr ""
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/ATSortCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateCriteria.xml
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "View"
 msgstr "查看"
 
 #: CMFPlone/skins/plone_form_scripts/saveDefaultPage.cpy:26
+#: CMFPlone/skins/plone_form_scripts/selectViewTemplate.cpy:14
 msgid "View changed."
 msgstr "视图已经更换。"
 
@@ -3289,8 +3446,8 @@ msgid "Visible to all intranet users."
 msgstr "对于所有内网用户可见。"
 
 #. Default: "Visible to everyone, but not approved by the reviewers."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
 msgstr "对于任何人可见，但这没经过审批员审核。"
 
@@ -3300,8 +3457,8 @@ msgid "Visible to everyone, editable by the owner."
 msgstr "对于任何人可见，可被所有者编辑。"
 
 #. Default: "Visible to everyone, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, not editable by the owner."
 msgstr "对于任何人可见，不能被所有者编辑。"
@@ -3312,14 +3469,16 @@ msgid "Visible to people outside the intranet, not editable by the owner."
 msgstr "对于内网以外的人员可见，不能被所有者编辑。"
 
 #. Default: "Waiting to be reviewed, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Waiting to be reviewed, not editable by the owner."
 msgstr "等待审批，不能被所有者编辑。"
 
 #. Default: "Warning"
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:35
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:24
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/confirmation.pt:18
 msgid "Warning"
 msgstr "警告"
 
@@ -3328,9 +3487,9 @@ msgid "Welcome! You are now logged in."
 msgstr "欢迎！您已经登录。"
 
 #. Default: "When the previous transition was performed"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "When the previous transition was performed"
 msgstr "当上一级的转换被执行"
 
@@ -3343,6 +3502,7 @@ msgid "Whether or not the rule is currently enabled"
 msgstr "是否启用当前规则？"
 
 #: CMFPlone/skins/plone_form_scripts/plone_change_password.py:37
+#: CMFPlone/skins/plone_login/login_change_password.cpy:19
 msgid "While changing your password an AttributeError occurred. This is usually caused by your user being defined outside the portal."
 msgstr "当更改你的密码的时候，发生了AttributeError错误。这通常是因为你的用户在网站外定义导致。"
 
@@ -3355,6 +3515,7 @@ msgid "Workflow Policies"
 msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:27
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:26
 msgid "Workflow state"
 msgstr "工作流状态"
 
@@ -3387,14 +3548,18 @@ msgid "You cannot have a type as secondary type without having it allowed. You h
 msgstr "如果类型不是许可的，你不能让一个类型成为次要类型. 你选择了 ${types}."
 
 #: CMFPlone/skins/plone_form_scripts/validate_emailaddr.vpy:16
+#: CMFPlone/skins/plone_form_scripts/validate_pas_emailaddr.vpy:20
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:20
 msgid "You entered an invalid email address."
 msgstr "你输入了一个无效的邮件地址。"
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_edit.vpy:17
+#: CMFPlone/skins/plone_form_scripts/validate_metadata_edit.vpy:17
 msgid "You have been registered."
 msgstr "您已经注册成功"
 
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:21
+#: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
 msgstr "你必须在登录前允许使用cookies."
 
@@ -3415,6 +3580,7 @@ msgid "You must sign in first."
 msgstr "您必须先登录。"
 
 #: CMFPlone/skins/plone_form_scripts/validate_file_edit.vpy:27
+#: CMFPlone/skins/plone_form_scripts/validate_image_edit.vpy:27
 msgid "You must upload a file"
 msgstr "您必须上载一个文件。"
 
@@ -3528,16 +3694,19 @@ msgstr "回到安装/卸载产品"
 
 #. Default: "Next ${number} items"
 #: CMFPlone/skins/plone_templates/batch_macros.pt:40
+#: plone.app.content/plone/app/content/browser/batching.pt:26
 msgid "batch_next_x_items"
 msgstr "后${number}项"
 
 #. Default: "Previous ${number} items"
 #: CMFPlone/skins/plone_templates/batch_macros.pt:27
+#: plone.app.content/plone/app/content/browser/batching.pt:14
 msgid "batch_previous_x_items"
 msgstr "前${number}项"
 
 #. Default: "${number} items matching your search terms"
-#: CMFPlone/skins/plone_forms/search.pt:69
+#: CMFPlone/skins/plone_forms/member_search_results.pt:26
+#: CMFPlone/skins/plone_forms/search.pt:71
 #, fuzzy
 msgid "batch_x_items_matching_your_criteria"
 msgstr "符合条件的共有${number}项:"
@@ -3554,6 +3723,7 @@ msgstr "错误"
 
 #. Default: "Upcoming Events"
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:16
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:9
 msgid "box_events"
 msgstr "近期事件"
 
@@ -3563,12 +3733,15 @@ msgid "box_external_links"
 msgstr "外部链接"
 
 #. Default: "Forgot your password?"
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:94
 #: CMFPlone/skins/plone_login/login_form.cpt:142
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:137, ...
 msgid "box_forgot_password_option"
 msgstr "忘记了密码?"
 
 #. Default: "Full review list…"
 #: CMFPlone/skins/plone_deprecated/portlet_review.pt:48
+#: plone.app.portlets/plone/app/portlets/portlets/review.pt:40
 msgid "box_full_review_list"
 msgstr "完整的评审清单"
 
@@ -3579,6 +3752,8 @@ msgstr "语言"
 
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:137
+#: CMFPlone/skins/plone_deprecated/document_byline.pt:35
+#: CMFPlone/skins/plone_forms/search.pt:132, ...
 msgid "box_last_modified"
 msgstr "上次修改时间:"
 
@@ -3589,16 +3764,19 @@ msgstr "本地资料"
 
 #. Default: "More news…"
 #: CMFPlone/skins/plone_deprecated/portlet_news.pt:47
+#: plone.app.portlets/plone/app/portlets/portlets/news.pt:41
 msgid "box_more_news_link"
 msgstr "更多新闻..."
 
 #. Default: "All recent changes…"
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:58
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:49
 msgid "box_more_recently_changed"
 msgstr "全部最近更新..."
 
 #. Default: "More…"
 #: CMFPlone/skins/plone_portlets/portlet_favorites.pt:45
+#: plone.app.portlets/plone/app/portlets/portlets/rss.pt:40
 msgid "box_morelink"
 msgstr "更多..."
 
@@ -3609,31 +3787,37 @@ msgstr "我的收藏"
 
 #. Default: "Navigation"
 #: CMFPlone/skins/plone_deprecated/portlet_navigation.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.pt:7
 msgid "box_navigation"
 msgstr "导航"
 
 #. Default: "New user?"
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:103
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:92
 msgid "box_new_user_option"
 msgstr "新用户?"
 
 #. Default: "News"
 #: CMFPlone/skins/plone_deprecated/portlet_news.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/news.pt:9
 msgid "box_news"
 msgstr "新闻"
 
 #. Default: "Previous events…"
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:54
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:51
 msgid "box_previous_events"
 msgstr "先前的事件..."
 
 #. Default: "Recent Changes"
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:9
 msgid "box_recent_changes"
 msgstr "近期更改"
 
 #. Default: "No items changed yet."
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:51
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:42
 msgid "box_recent_no_items"
 msgstr "还没有更改的条目."
 
@@ -3644,21 +3828,26 @@ msgstr "相关内容"
 
 #. Default: "Review List"
 #: CMFPlone/skins/plone_deprecated/portlet_review.pt:14
+#: plone.app.portlets/plone/app/portlets/portlets/review.pt:9
 msgid "box_review_list"
 msgstr "审批清单"
 
 #. Default: "Search"
 #: plone.app.portlets/plone/app/portlets/portlets/search.pt:9
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:53
 msgid "box_search"
 msgstr "搜索"
 
 #. Default: "Log in"
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:24
+#: plone.app.openid/plone/app/openid/portlets/login.pt:7
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:9
 msgid "box_sign_in"
 msgstr "登录"
 
 #. Default: "Upcoming events…"
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:61
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:58
 msgid "box_upcoming_events"
 msgstr "将来的事件..."
 
@@ -3833,6 +4022,7 @@ msgstr "你可以填写下表，增加一个评注。点击“预览评注”，
 
 #. Default: "Select the type of item you want to add to your folder."
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:29
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:22
 msgid "description_add_new_item"
 msgstr "选择您要添加到文件夹的条目类型"
 
@@ -3847,7 +4037,7 @@ msgid "description_advanced_search"
 msgstr "在此搜索页面上，您可以指定一个或多个搜索条件，在站点上找到您需要的内容。<br />注意，您随时可使用“快速搜索”（右上方），通常它可以满足您的需要。如果您需要更特特殊的搜索，才使用本页面。"
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: CMFPlone/skins/plone_content/author.cpt:172
+#: CMFPlone/skins/plone_content/author.cpt:175
 msgid "description_author_feedback"
 msgstr "通过填写下面的表格，你可把您的反馈意见发送给作者."
 
@@ -3934,11 +4124,13 @@ msgstr "注意，内容类型相关的面板通常在上下文面板下方显示
 
 #. Default: "Configuration area for Plone and add-on Products."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:24
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:18
 msgid "description_control_panel"
 msgstr "Plone和附加产品的配置区域。"
 
 #. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
 #: CMFPlone/skins/plone_deprecated/footer.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:16
 msgid "description_copyright"
 msgstr "${plonecms} 的版权${copyright} 2000- ${current_year} 由 ${plonefoundation} 等所有。"
 
@@ -3949,6 +4141,7 @@ msgstr "当前的用户是 ${name}."
 
 #. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' — then restart the server process."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:138
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:113
 msgid "description_debug_mode"
 msgstr "注意：您正在 “调试模式” 下运行。这个模式用于处于开发状态的站点。这样，很多设置的修改可以直接生效，但是你的站点会慢很多。如果要关闭调试模式，请编辑zope.conf文件，设置 “debug-mode off”，并重新启动服务器进程。"
 
@@ -4024,6 +4217,7 @@ msgstr "语言设置"
 
 #. Default: "Distributed under the ${license}."
 #: CMFPlone/skins/plone_deprecated/footer.pt:37
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:31
 msgid "description_license"
 msgstr "使用 ${license} 发布。"
 
@@ -4044,6 +4238,7 @@ msgstr "您将注意到，右上方的横栏改变了，它现在包含几个个
 
 #. Default: "You can log in again below."
 #: CMFPlone/skins/plone_login/logged_out.cpt:32
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:43
 msgid "description_loginagain"
 msgstr "您可以在下方继续登录。"
 
@@ -4068,7 +4263,7 @@ msgid "description_member_search"
 msgstr "输入一个或者多个搜索条件，您可以在这里中查找网站成员."
 
 #. Default: "Your personal settings."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:66
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:67
 msgid "description_my_preferences"
 msgstr "我的设置"
 
@@ -4083,12 +4278,16 @@ msgid "description_navigation_setup_navtree"
 msgstr "注意控制导航树如何显示，您需要到站点的根目录（或任何位置）的“管理面板”完成添加一个导航树，直接改变设置。"
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:34
 #: CMFPlone/skins/plone_login/login_form.cpt:162
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:124
 msgid "description_no_account"
 msgstr "如果您在这里还没有账号，请转到${registration_form}，成为网站成员."
 
 #. Default: "registration form"
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:35
 #: CMFPlone/skins/plone_login/login_form.cpt:163
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:125
 msgid "description_no_account_registration_linktext"
 msgstr "注册表单"
 
@@ -4099,6 +4298,8 @@ msgstr "这个对象不提供比较功能。"
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:174
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:169
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:154
 msgid "description_no_items_in_folder"
 msgstr "这个文件夹中，当前没有任何内容。"
 
@@ -4108,12 +4309,15 @@ msgid "description_no_privileges_for_page"
 msgstr "您没有足够地权限来访问这个页面。如果您相信接收到错误的消息，请联系${site_admin}"
 
 #. Default: "No results were found."
-#: CMFPlone/skins/plone_forms/search.pt:86
+#: CMFPlone/skins/plone_forms/member_search_results.pt:67
+#: CMFPlone/skins/plone_forms/search.pt:88
 msgid "description_no_results_found"
 msgstr "没有发现任何结果"
 
 #. Default: "This folder has no visible items. To add content, press the add button, or paste content from another location."
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:59
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:12
+#: plone.app.content/plone/app/content/browser/table.pt:18
 msgid "description_no_visible_items_add_paste"
 msgstr "这个文件夹没有可见的内容。欲添加内容，您可以点击添加按钮，或者从其他地方粘贴一个内容。"
 
@@ -4124,6 +4328,7 @@ msgstr "没有应用工作流"
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
 #: CMFPlone/skins/plone_login/login_failed.cpt:32
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:35
 msgid "description_not_accept_cookies"
 msgstr "如果您的用户名和密码正确，这可能是您的浏览器设定成拒绝接受Cookies。"
 
@@ -4154,6 +4359,7 @@ msgstr "如果要让新的产品在这里显示，请将他们放入文件系统
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' — then restart the server process."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:127
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:102
 msgid "description_production_mode"
 msgstr "您正在 “产品模式” 下运行。这个适合Plone实际站点的运行，但是可能很多设置的修改，需要重新启动服务器进程或者刷新产品后才能生效。如果这是一个开发实例，而且你希望开启调试模式，编辑 zope.conf 文件，设置 “debug-mode on” 并重新启动服务器进程。"
 
@@ -4164,6 +4370,7 @@ msgstr "内容的状态决定谁可以查看它。另一种方法是控制可见
 
 #. Default: "Because you are logged in via HTTP authentication (i.e. the Zope Management Interface), the only way to log out is to quit your web browser."
 #: CMFPlone/skins/plone_login/logged_out.cpt:58
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:54
 msgid "description_quit_to_log_out"
 msgstr "由于您已经使用了HTTP认证方式登录（也就是Zope管理界面），您登出的唯一方式是退出浏览器。"
 
@@ -4258,22 +4465,26 @@ msgid "description_site_map"
 msgstr "网站内容的概览。将鼠标停放到条目上数秒，可查看其描述信息。"
 
 #. Default: "A portlet which can display static HTML text."
+#: plone.portlet.static/plone/portlet/static/profiles/default/portlets.xml
 #: plone.portlet.static/plone/portlet/static/static.py:134
 msgid "description_static_portlet"
 msgstr "一个显示静态文本的面板"
 
 #. Default: "If you are still reaching this page after correctly configuring your browser, here are some possible reasons:"
 #: CMFPlone/skins/plone_login/login_failed.cpt:37
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:40
 msgid "description_still_failure"
 msgstr "在正确配置您的浏览器后如果您仍然不能进入这个页面，下面是可能的原因："
 
 #. Default: "You may be running web filtering software that disables cookies. If so, you will need to configure the software so that it enables you to accept cookies from ${url}"
 #: CMFPlone/skins/plone_login/login_failed.cpt:47
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:50
 msgid "description_still_failure_reason1"
 msgstr "您可能正在运行禁止cookies的网站过虑软件。如果这样，您将需要配置您的软件，让他允许接受来自${url}的cookies"
 
 #. Default: "Your computer may be behind a firewall or proxy server that prevents cookies from being sent to or from your browser. If so, you will need to ask your systems administrator if the problem can be fixed."
 #: CMFPlone/skins/plone_login/login_failed.cpt:49
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:52
 msgid "description_still_failure_reason2"
 msgstr "您的计算机位于一个防火墙服务器或者代理服务器的后面，他禁止发送到或来自您的浏览器的cookies。如果这样，您将需要请求您的系统管理员，看这个问题是否能够解决。"
 
@@ -4299,6 +4510,7 @@ msgstr "聚合功能允许您通过RSS发布这个文件夹的内容，可被其
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
 #: CMFPlone/skins/plone_deprecated/footer.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "description_trademark"
 msgstr "Plone<sup>&reg;</sup>和Plone标识是 ${plonefoundation} 的注册商标。"
 
@@ -4379,7 +4591,9 @@ msgid "enable_cookies_message"
 msgstr "Cookies没有开启。您必须在您登录前${enable_cookies}。"
 
 #. Default: "Cookies are not enabled. You must enable cookies before you can log in."
-#: CMFPlone/skins/plone_login/logged_out.cpt:41
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:70
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:52
+#: CMFPlone/skins/plone_login/logged_out.cpt:41, ...
 msgid "enable_cookies_message_before_login"
 msgstr "Cookies没有开启。您必须在登录前开启Cookies 。"
 
@@ -4440,16 +4654,19 @@ msgstr "样式"
 
 #. Default: "More…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:132
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:536
 msgid "folder_add_more"
 msgstr "更多..."
 
 #. Default: "Restrict…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:141
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:549
 msgid "folder_add_settings"
 msgstr "限制..."
 
 #. Default: "Click to configure what type of items can be added here…"
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:36
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:28
 msgid "folder_add_settings_long"
 msgstr "点击此处, 设置可在这里添加的条目。"
 
@@ -4465,11 +4682,12 @@ msgstr "返回到规则管理"
 
 #. Default: "Up one level"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:42
+#: plone.app.content/plone/app/content/browser/foldercontents.pt:35
 msgid "go_to_parent_url"
 msgstr "到上一层"
 
 #. Default: "All content created by ${user}…"
-#: CMFPlone/skins/plone_content/author.cpt:280
+#: CMFPlone/skins/plone_content/author.cpt:283
 msgid "go_to_search_author_content"
 msgstr "查看所有由 ${user} 创建的内容..."
 
@@ -4490,6 +4708,7 @@ msgstr "可访问性声名"
 
 #. Default: "Actions"
 #: CMFPlone/skins/plone_deprecated/global_contentviews.pt:44
+#: plone.app.layout/plone/app/layout/viewlets/contentactions.pt:8
 msgid "heading_actions"
 msgstr "操作"
 
@@ -4500,6 +4719,7 @@ msgstr "添加${itemtype}"
 
 #. Default: "Add new item"
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:27
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:20
 msgid "heading_add_new_item"
 msgstr "添加新内容"
 
@@ -4534,7 +4754,7 @@ msgid "heading_allowed_languages"
 msgstr "允许的语言"
 
 #. Default: "Latest content created by this user"
-#: CMFPlone/skins/plone_content/author.cpt:252
+#: CMFPlone/skins/plone_content/author.cpt:255
 msgid "heading_author_content"
 msgstr "此用户最近创建的内容"
 
@@ -4575,6 +4795,8 @@ msgstr "内容显示"
 
 #. Default: "Site Setup"
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:21
+#: CMFPlone/skins/plone_prefs/portlet_prefs.pt:19
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:15
 msgid "heading_control_panel"
 msgstr "Plone设置"
 
@@ -4585,6 +4807,7 @@ msgstr "创建一个组"
 
 #. Default: "Current sharing permissions for ${folder}"
 #: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:32
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:16
 msgid "heading_currently_assigned_shares"
 msgstr "“${folder}”的当前共享权限"
 
@@ -4600,6 +4823,7 @@ msgstr "版本${object1}与版本${object2}间的不同"
 
 #. Default: "Document Actions"
 #: CMFPlone/skins/plone_deprecated/document_actions.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/document_actions.pt:6
 msgid "heading_document_actions"
 msgstr "文档操作"
 
@@ -4609,6 +4833,8 @@ msgid "heading_edit_groupproperties"
 msgstr "编辑“${groupname}”的组属性"
 
 #. Default: "Edit ${itemtype}"
+#: Archetypes/skins/archetypes/edit_macros.pt:26
+#: Archetypes/skins/archetypes/metadata_macros.pt:18
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:20
 msgid "heading_edit_item"
 msgstr "编辑${itemtype}"
@@ -4709,7 +4935,7 @@ msgid "heading_memberships_current"
 msgstr "当前的组员关系"
 
 #. Default: "Personal Preferences"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:55
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:56
 msgid "heading_my_preferences"
 msgstr "个人选项"
 
@@ -4740,6 +4966,7 @@ msgstr "您可以查找..."
 
 #. Default: "Personal tools"
 #: CMFPlone/skins/plone_deprecated/global_personalbar.pt:16
+#: plone.app.layout/plone/app/layout/viewlets/personal_bar.pt:4
 msgid "heading_personal_tools"
 msgstr "个人工具"
 
@@ -4770,6 +4997,7 @@ msgstr "发布过程"
 
 #. Default: "Quit your web browser to log out"
 #: CMFPlone/skins/plone_login/logged_out.cpt:55
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:51
 msgid "heading_quit_to_log_out"
 msgstr "退出浏览器以登出网站"
 
@@ -4819,7 +5047,9 @@ msgid "heading_search_newmembers"
 msgstr "搜索新组员"
 
 #. Default: "Search results"
-#: CMFPlone/skins/plone_forms/search.pt:63
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:226
+#: CMFPlone/skins/plone_forms/member_search_results.pt:19
+#: CMFPlone/skins/plone_forms/search.pt:65
 msgid "heading_search_results"
 msgstr "搜索结果"
 
@@ -4830,6 +5060,7 @@ msgstr "搜索用户和组"
 
 #. Default: "Sections"
 #: CMFPlone/skins/plone_deprecated/global_sections.pt:15
+#: plone.app.layout/plone/app/layout/viewlets/sections.pt:3
 msgid "heading_sections"
 msgstr "频道"
 
@@ -4859,12 +5090,14 @@ msgid "heading_set_content_type_restrictions"
 msgstr "限制哪种内容类型可以添加"
 
 #. Default: "Please log in"
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:7
 #: CMFPlone/skins/plone_login/login_form.cpt:58
 msgid "heading_sign_in"
 msgstr "请登录"
 
 #. Default: "You are now logged out"
 #: CMFPlone/skins/plone_login/logged_out.cpt:29
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:40
 msgid "heading_signed_out"
 msgstr "您现在已经登出"
 
@@ -4927,10 +5160,12 @@ msgstr "版本概览"
 
 #. Default: "Views"
 #: CMFPlone/skins/plone_deprecated/global_contentviews.pt:15
+#: plone.app.layout/plone/app/layout/viewlets/contentviews.pt:8
 msgid "heading_views"
 msgstr "视图"
 
 #. Default: "Welcome!"
+#: CMFPlone/skins/plone_login/login_password.cpt:22
 #: CMFPlone/skins/plone_login/registered.pt:19
 msgid "heading_welcome"
 msgstr "欢迎！"
@@ -4966,7 +5201,7 @@ msgid "help_allow_comments"
 msgstr "如果选中，用户可以添加评注到这个内容中。"
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:200
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:201
 msgid "help_biography"
 msgstr "一段简短描述，介绍你是谁、做什么。这将在你的作者页面中显示，和你创建的条目链接在一起。"
 
@@ -4991,7 +5226,7 @@ msgid "help_change_ownership"
 msgstr "改变当前对象的所有权"
 
 #. Default: "Select the new state for the selected items."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:167
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:166
 msgid "help_change_status"
 msgstr "选择所选内容的新状态。"
 
@@ -5017,16 +5252,18 @@ msgstr "对此链接的评价"
 
 #. Default: "Re-enter the password. Make sure the passwords are identical."
 #: CMFPlone/skins/plone_login/join_form.cpt:180
+#: CMFPlone/skins/plone_login/login_password.cpt:88
+#: CMFPlone/skins/plone_prefs/password_form.pt:67
 msgid "help_confirm_password"
 msgstr "再次输入密码，确保密码是相同的。"
 
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:246
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:247
 msgid "help_content_editor"
 msgstr "选择您喜欢的的编辑器，以便您能更方便的编辑内容。注意，内容编辑器通常只能在指定的浏览器下使用。"
 
 #. Default: "When checked, an icon will be made visible on each page which allows you to edit content with your favorite editor instead of using browser-based editors. This requires an additional application called ExternalEditor installed client-side. Ask your administrator for more information if needed."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:289
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:290
 msgid "help_content_ext_editor"
 msgstr "当选中时，每个页面上会显示一个图标，点击可激活您自己本机常用的编辑器，而不是使用基于浏览器的编辑器来编辑该内容。这需要在客户端安装一个叫做外部编辑器的附加软件。如需要，可向管理员询问更多信息。"
 
@@ -5036,12 +5273,12 @@ msgid "help_contributors"
 msgstr "贡献人员的名字。每个贡献者应该独占一行。"
 
 #. Default: "Copyright statement or other rights information on this item."
-#: Archetypes/ExtensibleMetadata.py:172
+#: Archetypes/ExtensibleMetadata.py:173
 msgid "help_copyrights"
 msgstr "本内容的版权信息"
 
 #. Default: "Date this object was created"
-#: Archetypes/ExtensibleMetadata.py:191
+#: Archetypes/ExtensibleMetadata.py:192
 msgid "help_creation_date"
 msgstr "对象创建的时间"
 
@@ -5086,17 +5323,19 @@ msgid "help_date_range_criteria_start"
 msgstr "搜索的开始时间范围"
 
 #. Default: "A short summary of the content"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:104
+#: Archetypes/ExtensibleMetadata.py:96
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:105
 msgid "help_description"
 msgstr "内容的一个简短描述"
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:332
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:333
 msgid "help_display_names"
 msgstr "决定英文代号（也叫做ID）在编辑时是否可更改。如果英文代号不显示，他们将自动生成。"
 
 #. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:100
+#: Archetypes/ExtensibleMetadata.py:140
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:99
 msgid "help_effective_date"
 msgstr "文档可被获得的日期（当然，他必须先发布了）。如果没有设置生效日期，该文档会立即生效。"
 
@@ -5111,7 +5350,8 @@ msgid "help_exclude_from_nav"
 msgstr "如果选中，此条目不会在导航树中显示"
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:124
+#: Archetypes/ExtensibleMetadata.py:151
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:123
 msgid "help_expiration_date"
 msgstr "内容失效的日期。到时内容将自动对其他人变成不可见。如果不设置，它将永不失效。"
 
@@ -5137,17 +5377,17 @@ msgid "help_groupname"
 msgstr "组的唯一标识，创建后不能更改。请使用英文字母。"
 
 #. Default: "The URL for your external home page, if you have one."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:224
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:225
 msgid "help_homepage"
 msgstr "您个人的外部主页URL(如没有，保持为空)。"
 
 #. Default: "Controls what types are addable in this location."
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:133
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:131
 msgid "help_immediately_addable_types"
 msgstr "在上面选中的类型中，某些类型可在标准的\"添加\"下拉菜单中选择。上面所选的更多类型可在此菜单上选择一个单独的表单添加。"
 
 #. Default: "If checked, this will attempt to modify the status of all content in any selected folders and their subfolders."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:90
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:89
 msgid "help_include_contained_objects"
 msgstr "如果选中，这将会尝试修改所选文件夹、及其子文件夹中全部内容的状态。"
 
@@ -5162,7 +5402,7 @@ msgid "help_inherit_criteria"
 msgstr "通过设置这个查询集的条件，限制上级查询集的查询结果"
 
 #. Default: "By default, permissions from the container of this item are inherited. If you disable this, only the explicitly defined sharing permissions will be valid. In the overview, the symbol ${image_confirm_icon} indicates an inherited value. Similarly, the symbol ${image_link_icon} indicates a global role, which is managed by the site administrator."
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:155
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:156
 msgid "help_inherit_local_roles"
 msgstr "确认项目的权限从父容器继承，你可以取消继承，自定义权限。总体来说，${image_confirm_icon}这个符号指明一个继承的值，类似的，${image_link_icon}这个符号指明一个由站点管理员管理的全局角色。"
 
@@ -5172,17 +5412,17 @@ msgid "help_limit_number"
 msgstr "如果选中，将仅仅显示下面设置的“条目数量”"
 
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:311
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:312
 msgid "help_listed_search"
 msgstr "网站的成员搜索功能中，是否能够找到你的名字。"
 
 #. Default: "Select which types should be available in the 'More…' submenu <em>instead</em> of in the main pulldown. This is useful to indicate that these are not the preferred types in this location, but are allowed if you really need them."
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:175
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:174
 msgid "help_locally_allowed_types"
 msgstr "选择在这个文件夹中使用“更多”链接添加的内容类型。"
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:147
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:148
 msgid "help_location"
 msgstr "您的位置 － 城市或者国家 － 或者公司中您办公室的位置"
 
@@ -5197,7 +5437,7 @@ msgid "help_login_name_caps"
 msgstr "用户名须区分大小写，请确认键盘大写锁没有开启。"
 
 #. Default: "Appearance of the site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:348
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:349
 msgid "help_look"
 msgstr "网站的外观。"
 
@@ -5207,7 +5447,7 @@ msgid "help_message"
 msgstr "请输入需要发送的消息。"
 
 #. Default: "Date this content was modified last"
-#: Archetypes/ExtensibleMetadata.py:207
+#: Archetypes/ExtensibleMetadata.py:208
 msgid "help_modification_date"
 msgstr "上次内容被修改的时间"
 
@@ -5238,6 +5478,7 @@ msgstr ""
 
 #. Default: "Enter your new password. Minimum 5 characters."
 #: CMFPlone/skins/plone_login/login_password.cpt:68
+#: CMFPlone/skins/plone_prefs/password_form.pt:53
 msgid "help_new_password"
 msgstr "输入您的新密码。最少5个字母。"
 
@@ -5267,7 +5508,9 @@ msgid "help_password_creation"
 msgstr "最少5个字母。"
 
 #. Default: "If you have forgotten your password, ${click_here}."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:122
 #: CMFPlone/skins/plone_login/login_form.cpt:147
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:142
 msgid "help_password_retrieval"
 msgstr "如果您忘记密码，${click_here}。"
 
@@ -5282,32 +5525,34 @@ msgid "help_portal_type_criteria_value"
 msgstr "注册的网站内容类型之一。"
 
 #. Default: "To add or change the portrait: click the \"Browse\" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:381
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:382
 msgid "help_portrait"
 msgstr "欲增加或改变像片，请点击“浏览”按钮，选择你自己的照片。推荐的图片大小是宽75象素，高100象素。"
 
 #. Default: "Your preferred language."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:172
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:173
 msgid "help_preferred_language"
 msgstr "您的首选语言。"
 
 #. Default: "Will be added to the publishing history. If multiple items are selected, this comment will be attached to all of them."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:151
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:150
 msgid "help_publishing_comments"
 msgstr "将追加到发布历史中。如果选择了多个内容，则每个都会被添加这个评注。"
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:151
 #: CMFPlone/skins/plone_login/login_form.cpt:119
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:216
 msgid "help_remember_my_name"
 msgstr "此项设置将让你下次你登录时，自动填写你的用户名。"
 
 #. Default: "Return items created by a particular person."
-#: CMFPlone/skins/plone_forms/search_form.pt:209
+#: CMFPlone/skins/plone_forms/search_form.pt:208
 msgid "help_search_author"
 msgstr "返回某个人创建的内容。"
 
 #. Default: "Return items matching some or all of these Categories. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
-#: CMFPlone/skins/plone_forms/search_form.pt:70
+#: CMFPlone/skins/plone_forms/search_form.pt:72
 msgid "help_search_categories"
 msgstr "返回满足部分或者全部分类的条目。如果需要多选，在点击关键字的时候可按下 <strong>Ctrl</strong> 键 (或者 Mac 机器上的 <strong>Apple</strong> 键)。"
 
@@ -5347,7 +5592,7 @@ msgid "help_search_new_owner"
 msgstr "搜索用户"
 
 #. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
-#: CMFPlone/skins/plone_forms/search_form.pt:232
+#: CMFPlone/skins/plone_forms/search_form.pt:231
 msgid "help_search_review_status"
 msgstr "你可以根据状态查找内容。如果你希望只搜索处于某些状态的内容，请在这个列表中选择。"
 
@@ -5357,12 +5602,12 @@ msgid "help_search_roles"
 msgstr "找到所有选择角色的用户。"
 
 #. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
-#: CMFPlone/skins/plone_forms/search_form.pt:37
+#: CMFPlone/skins/plone_forms/search_form.pt:36
 msgid "help_search_text"
 msgstr "举一个文本搜索的例子，在这里输入您的搜索条件。结合<strong>AND</strong>和<strong>OR</strong>与诺干个单词可一起搜索。字段中的搜索文本将匹配条目中的内容、标题和描述。"
 
 #. Default: "Return items matching this title."
-#: CMFPlone/skins/plone_forms/search_form.pt:56
+#: CMFPlone/skins/plone_forms/search_form.pt:55
 msgid "help_search_title"
 msgstr "返回条目匹配此标题。"
 
@@ -5417,7 +5662,8 @@ msgid "help_short_name_url"
 msgstr "英文代号是该条目URL地址的一部分"
 
 #. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:50
+#: Archetypes/BaseObject.py:93
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:51
 msgid "help_shortname"
 msgstr "不应该包括空格、大小写混合、下划线的英文字符。英文代号是内容该条目网站地址的一部分。"
 
@@ -5482,8 +5728,8 @@ msgid "help_template_mixin"
 msgstr "选择一个用于查看此条目的模板。"
 
 #. Default: "Add http:// to link outside the site."
-#: widget description of StringWidget for label URL
 #: widget description of StringWidget for label Event URL
+#: widget description of StringWidget for label URL
 msgid "help_url"
 msgstr "填写事件相关的网站页面地址。对外网的链接需要添加http://"
 
@@ -5509,7 +5755,7 @@ msgid "hide"
 msgstr "隐藏"
 
 #. Default: "${action} by ${actor} on ${time}"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:46
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:51
 msgid "history_action"
 msgstr ""
 
@@ -5592,16 +5838,21 @@ msgstr "操作项"
 
 #. Default: "Actions"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:405
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:49
 msgid "label_actions_menu"
 msgstr "操作"
 
 #. Default: "Add"
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:82
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:59
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:114, ...
 msgid "label_add"
 msgstr "添加"
 
 #. Default: "Add Comment"
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:25
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:55
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
 msgid "label_add_comment"
 msgstr "添加评注"
 
@@ -5612,6 +5863,7 @@ msgstr "添加新组"
 
 #. Default: "Add item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:99
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:414
 msgid "label_add_new_item"
 msgstr "添加新内容"
 
@@ -5648,6 +5900,7 @@ msgstr "vCal"
 # When only one type can be added
 #. Default: "Add ${type}"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:168
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:424
 msgid "label_add_type"
 msgstr "添加${type}"
 
@@ -5668,20 +5921,24 @@ msgstr "将选中的用户和组添加到这个组"
 
 #. Default: "Advanced…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:62
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:690
 msgid "label_advanced"
 msgstr "高级"
 
 #. Default: "Advanced Search…"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:57
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:84
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:48, ...
 msgid "label_advanced_search"
 msgstr "高级搜索"
 
 #. Default: "Affected content"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:70
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:69
 msgid "label_affected_content"
 msgstr "受影响的内容"
 
 #. Default: "All"
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:32
 #: plone.app.content/plone/app/content/browser/table.pt:38
 msgid "label_all"
 msgstr "所有"
@@ -5717,17 +5974,21 @@ msgid "label_an_anonymous_user"
 msgstr "匿名用户"
 
 #. Default: "Anonymous User"
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:64
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:46
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:53, ...
 msgid "label_anonymous_user"
 msgstr "匿名用户"
 
 #. Default: "Any Author"
-#: CMFPlone/skins/plone_forms/search_form.pt:217
+#: CMFPlone/skins/plone_forms/search_form.pt:216
 msgid "label_any_author"
 msgstr "任意作者"
 
 #. Default: "Apply Changes"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:247
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:237
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:258
 msgid "label_apply_changes"
 msgstr "保存变更"
 
@@ -5767,17 +6028,17 @@ msgid "label_at"
 msgstr "在"
 
 #. Default: "Author"
-#: CMFPlone/skins/plone_forms/search_form.pt:207
+#: CMFPlone/skins/plone_forms/search_form.pt:206
 msgid "label_author"
 msgstr "作者"
 
 #. Default: "Author's external home page…"
-#: CMFPlone/skins/plone_content/author.cpt:139
+#: CMFPlone/skins/plone_content/author.cpt:140
 msgid "label_author_external_home_page"
 msgstr "作者的外部主页"
 
 #. Default: "Author's home page in this site…"
-#: CMFPlone/skins/plone_content/author.cpt:134
+#: CMFPlone/skins/plone_content/author.cpt:135
 msgid "label_author_internal_home_page"
 msgstr "本站中作者的主页"
 
@@ -5797,7 +6058,7 @@ msgid "label_back_to_site"
 msgstr "回到网站"
 
 #. Default: "Biography"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:198
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:199
 msgid "label_biography"
 msgstr "自我介绍"
 
@@ -5813,11 +6074,14 @@ msgstr "值"
 
 #. Default: "Browse"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:67
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:63
 msgid "label_browse"
 msgstr "浏览"
 
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:124
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:126
+#: CMFPlone/skins/plone_deprecated/document_byline.pt:21, ...
 msgid "label_by_author"
 msgstr "作者：${author}"
 
@@ -5852,12 +6116,15 @@ msgid "label_calendar"
 msgstr "日历"
 
 #. Default: "Cancel"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:417
+#: Archetypes/skins/archetypes/edit_macros.pt:233
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:127
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:239, ...
 msgid "label_cancel"
 msgstr "取消"
 
 #. Default: "Categories"
-#: CMFPlone/skins/plone_forms/search_form.pt:68
+#: Archetypes/ExtensibleMetadata.py:81
+#: CMFPlone/skins/plone_forms/search_form.pt:70
 msgid "label_categories"
 msgstr "分类"
 
@@ -5878,6 +6145,7 @@ msgstr "更改条目作为默认视图..."
 
 #. Default: "Change content item<br />as default view…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:382
 msgid "label_change_item"
 msgstr "更换作为默认视图<br/>的条目"
 
@@ -5893,11 +6161,12 @@ msgstr "更改所有者"
 
 #. Default: "Change Password"
 #: CMFPlone/skins/plone_login/login_password.cpt:102
+#: CMFPlone/skins/plone_prefs/password_form.pt:79
 msgid "label_change_password"
 msgstr "改变密码"
 
 #. Default: "Change State"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:166
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:165
 msgid "label_change_status"
 msgstr "改变状态"
 
@@ -5923,11 +6192,13 @@ msgstr "选择一个内容条目"
 
 #. Default: "Select a content item<br />as default view…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:356
 msgid "label_choose_item"
 msgstr "选择一个条目<br />作为默认视图"
 
 #. Default: "Display"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:206
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:120
 msgid "label_choose_template"
 msgstr "显示"
 
@@ -5942,7 +6213,9 @@ msgid "label_clear_selection"
 msgstr "清空选择"
 
 #. Default: "we can send you a new one"
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:123
 #: CMFPlone/skins/plone_login/login_form.cpt:148
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:143
 #, fuzzy
 msgid "label_click_here_to_retrieve"
 msgstr "请点击这里找回"
@@ -5953,32 +6226,40 @@ msgid "label_click_to_view_full_image"
 msgstr "点击查看完整大小的图片"
 
 #. Default: "Comment"
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:142
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:90
 msgid "label_comment"
 msgstr "评价"
 
 #. Default: "Posted by"
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:61
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:43
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:50
 msgid "label_comment_by"
 msgstr "张贴人："
 
 #. Default: "at"
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:66
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:48
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:55
 msgid "label_commented_at"
 msgstr "于"
 
 #. Default: "Comments"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:148
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:147
 msgid "label_comments"
 msgstr "评注"
 
 #. Default: "Compare"
 #: CMFPlone/skins/plone_forms/history_form.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:72
 msgid "label_compare"
 msgstr "比较"
 
 #. Default: "Confirm password"
 #: CMFPlone/skins/plone_login/join_form.cpt:173
+#: CMFPlone/skins/plone_login/login_password.cpt:85
+#: CMFPlone/skins/plone_prefs/password_form.pt:65
 msgid "label_confirm_password"
 msgstr "确认密码"
 
@@ -6013,7 +6294,7 @@ msgid "label_containing"
 msgstr "包含"
 
 #. Default: "Content editor"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:244
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:245
 msgid "label_content_editor"
 msgstr "内容编辑器"
 
@@ -6049,6 +6330,7 @@ msgstr "分配"
 
 #. Default: "enabled"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:112
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:144
 msgid "label_contentrules_rule_enabled"
 msgstr "开启"
 
@@ -6083,12 +6365,12 @@ msgid "label_copy_to_present"
 msgstr "复制到当前"
 
 #. Default: "Rights"
-#: Archetypes/ExtensibleMetadata.py:171
+#: Archetypes/ExtensibleMetadata.py:172
 msgid "label_copyrights"
 msgstr "版权"
 
 #. Default: "Creation Date"
-#: Archetypes/ExtensibleMetadata.py:190
+#: Archetypes/ExtensibleMetadata.py:191
 msgid "label_creation_date"
 msgstr "创建时间"
 
@@ -6119,6 +6401,7 @@ msgstr "当前文件夹作为导航树根结点。"
 
 #. Default: "Folder display"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:219
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:275
 msgid "label_current_folder_views"
 msgstr "文件夹显示"
 
@@ -6129,6 +6412,7 @@ msgstr "当前图片"
 
 #. Default: "Item display"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:285
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:322
 msgid "label_current_item_views"
 msgstr "条目显示"
 
@@ -6139,6 +6423,7 @@ msgstr "当前密码"
 
 #. Default: "Current selection"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:17
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:10
 msgid "label_currentselection"
 msgstr "当前选择"
 
@@ -6154,6 +6439,7 @@ msgstr "表格列"
 
 #. Default: "Dashboard"
 #: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:38
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-dashboard.pt:41
 msgid "label_dashboard"
 msgstr "个人主页"
 
@@ -6183,7 +6469,7 @@ msgid "label_delete"
 msgstr "删除"
 
 #. Default: "Delete Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:402
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:403
 msgid "label_delete_portrait"
 msgstr "删除像片"
 
@@ -6193,12 +6479,15 @@ msgid "label_delete_roles_users_groups"
 msgstr "删除选中的角色和用户/组"
 
 #. Default: "Description"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:102
+#: Archetypes/ExtensibleMetadata.py:95
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:103
+#: CMFPlone/skins/plone_forms/search_form.pt:117, ...
 msgid "label_description"
 msgstr "描述"
 
 #. Default: "Disable"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:145
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:218
 msgid "label_disable"
 msgstr "屏蔽"
 
@@ -6228,7 +6517,9 @@ msgid "label_discussion_enabled"
 msgstr "开放"
 
 #. Default: "Edit"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:34
+#: CMFPlone/skins/plone_content/author.cpt:70
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:35
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:83, ...
 msgid "label_edit"
 msgstr "编辑"
 
@@ -6243,17 +6534,20 @@ msgid "label_edit_default_view_container_go_here"
 msgstr "往这里"
 
 #. Default: "Allow editing of Short Names"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:329
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:330
 msgid "label_edit_short_names"
 msgstr "允许编辑英文代号"
 
 #. Default: "Publishing Date"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:99
+#: Archetypes/ExtensibleMetadata.py:139
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:98
 msgid "label_effective_date"
 msgstr "发布日期"
 
 #. Default: "E-mail"
+#: CMFPlone/skins/plone_forms/member_search_form.pt:46
 #: CMFPlone/skins/plone_login/join_form.cpt:115
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:118
 msgid "label_email"
 msgstr "电子邮件"
 
@@ -6264,6 +6558,7 @@ msgstr "邮件地址"
 
 #. Default: "Enable"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:143
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:213
 msgid "label_enable"
 msgstr "开启"
 
@@ -6304,11 +6599,13 @@ msgstr "事件参与人"
 
 #. Default: "(${location}, from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:99
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:103
 msgid "label_event_byline"
 msgstr "( ${location}, 从 ${start} 到 ${end} )"
 
 #. Default: "(from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:111
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:115
 msgid "label_event_byline_without_location"
 msgstr ""
 
@@ -6358,12 +6655,13 @@ msgid "label_existing_categories"
 msgstr "存在的分类"
 
 #. Default: "Expiration Date"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:123
+#: Archetypes/ExtensibleMetadata.py:150
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:122
 msgid "label_expiration_date"
 msgstr "失效日期"
 
 #. Default: "Enable external editing"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:287
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:288
 msgid "label_ext_editor"
 msgstr "开启外部编辑功能"
 
@@ -6373,7 +6671,8 @@ msgid "label_file"
 msgstr "文件"
 
 #. Default: "filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:142
+#: CMFPlone/skins/plone_forms/search.pt:144
+#: plone.app.layout/plone/app/layout/viewlets/keywords.pt:8
 msgid "label_filed_under"
 msgstr "标签（关键词）："
 
@@ -6393,12 +6692,15 @@ msgid "label_find_group"
 msgstr "在此查找一个组"
 
 #. Default: "Format"
+#: Archetypes/skins/archetypes/widgets/textarea.pt:99
 #: CMFPlone/skins/plone_wysiwyg/wysiwyg_support.pt:22
 msgid "label_format"
 msgstr "格式"
 
 #. Default: "Full Name"
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:272
 #: CMFPlone/skins/plone_login/join_form.cpt:59
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:98
 msgid "label_full_name"
 msgstr "姓名"
 
@@ -6414,6 +6716,7 @@ msgstr "自动生成标签"
 
 #. Default: "GNU GPL license"
 #: CMFPlone/skins/plone_deprecated/footer.pt:38
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
 msgid "label_gnu_gpl_licence"
 msgstr "GNU GPL 许可"
 
@@ -6423,11 +6726,14 @@ msgid "label_group"
 msgstr "组"
 
 #. Default: "Group Members"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:34
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:40
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:27
 msgid "label_group_members"
 msgstr "组成员"
 
 #. Default: "Group Memberships"
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:33
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:36
 msgid "label_group_memberships"
 msgstr "组员身份"
@@ -6438,12 +6744,16 @@ msgid "label_group_name"
 msgstr "组名"
 
 #. Default: "Group Portlets"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:44
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:50
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:37
 msgid "label_group_portlets"
 msgstr "组面板"
 
 #. Default: "Group Properties"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:39
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:45
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:32
 msgid "label_group_properties"
 msgstr "组属性"
 
@@ -6454,6 +6764,8 @@ msgstr "组搜索"
 
 #. Default: "Groups"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:38
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:42
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:31
 msgid "label_groups"
 msgstr "组"
 
@@ -6469,6 +6781,8 @@ msgstr "无法得到历史"
 
 #. Default: "History"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:10
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:8
 msgid "label_history"
 msgstr "历史"
 
@@ -6478,12 +6792,13 @@ msgid "label_home"
 msgstr "首页"
 
 #. Default: "Home page"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:222
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:223
 msgid "label_homepage"
 msgstr "主页"
 
 #. Default: "OpenID URL"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:25
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:63
 msgid "label_identity_url"
 msgstr "OpenID URL"
 
@@ -6503,12 +6818,12 @@ msgid "label_image_caption"
 msgstr "图片标题"
 
 #. Default: "Allowed types"
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:128
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:127
 msgid "label_immediately_addable_types"
 msgstr "优选类型"
 
 #. Default: "Include contained items"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:86
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:85
 msgid "label_include_contained_objects"
 msgstr "包括文件夹内的内容"
 
@@ -6523,7 +6838,7 @@ msgid "label_inherit_criteria"
 msgstr "继承条件"
 
 #. Default: "Inherit permissions from higher levels"
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:145
 msgid "label_inherit_local_roles"
 msgstr "从更高一级继承权限"
 
@@ -6539,6 +6854,7 @@ msgstr "条目数量"
 
 #. Default: "Item: ${contentitem}"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:265
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:295
 msgid "label_item_selected"
 msgstr "条目：${contentitem}"
 
@@ -6553,7 +6869,9 @@ msgid "label_keywords"
 msgstr "关键字"
 
 #. Default: "Language"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:170
+#: Archetypes/ExtensibleMetadata.py:164
+#: CMFPlone/skins/plone_deprecated/portlet_languages.pt:17
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:171
 msgid "label_language"
 msgstr "语言"
 
@@ -6574,7 +6892,7 @@ msgid "label_limit_number"
 msgstr "查询结果限制"
 
 #. Default: "Listed in searches"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:309
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:310
 msgid "label_listed_status"
 msgstr "搜索时列入"
 
@@ -6599,17 +6917,21 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "分配到所选用户/组的角色"
 
 #. Default: "Location"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:145
+#: Archetypes/ExtensibleMetadata.py:106
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:146
 msgid "label_location"
 msgstr "位置："
 
 #. Default: "Locked"
+#: plone.app.iterate/plone/app/iterate/browser/info_baseline.pt:5
 #: plone.locking/plone/locking/browser/info.pt:8
 msgid "label_locked"
 msgstr "锁定"
 
 #. Default: "Log in"
-#: CMFPlone/skins/plone_login/registered.pt:86
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:79
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:160
+#: CMFPlone/skins/plone_login/login_form.cpt:128, ...
 msgid "label_log_in"
 msgstr "登录"
 
@@ -6624,22 +6946,25 @@ msgid "label_login_continue_to_home_page"
 msgstr "继续进入 ${portal_title} 主页"
 
 #. Default: "Login Name"
-#: CMFPlone/skins/plone_login/login_form.cpt:76
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:376
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:46
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:89, ...
 msgid "label_login_name"
 msgstr "登录名"
 
 #. Default: "Log in to add comments"
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:37
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:25
 msgid "label_login_to_add_comments"
 msgstr "登录后添加评注"
 
 #. Default: "Log in to send feedback"
-#: CMFPlone/skins/plone_content/author.cpt:149
+#: CMFPlone/skins/plone_content/author.cpt:151
 msgid "label_login_to_send_feedback"
 msgstr "登录后发送反馈信息"
 
 #. Default: "Look"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:346
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:347
 msgid "label_look"
 msgstr "外观"
 
@@ -6649,22 +6974,25 @@ msgid "label_mail_password"
 msgstr "邮寄密码?"
 
 #. Default: "Main Language:"
-#: CMFPlone/skins/plone_content/author.cpt:114
+#: CMFPlone/skins/plone_content/author.cpt:115
 msgid "label_main_language"
 msgstr "主要语言："
 
 #. Default: "Message"
+#: CMFPlone/skins/plone_content/author.cpt:213
 #: CMFPlone/skins/plone_templates/contact-info.cpt:131
 msgid "label_message"
 msgstr "消息"
 
 #. Default: "Modification Date"
-#: Archetypes/ExtensibleMetadata.py:205
+#: Archetypes/ExtensibleMetadata.py:206
 msgid "label_modification_date"
 msgstr "修改时间"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:71
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:95
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:92
+#: CMFPlone/skins/plone_forms/member_search_form.pt:31, ...
 msgid "label_name"
 msgstr "名字"
 
@@ -6720,6 +7048,7 @@ msgstr "搜索新的所有者"
 
 #. Default: "New password"
 #: CMFPlone/skins/plone_login/login_password.cpt:65
+#: CMFPlone/skins/plone_prefs/password_form.pt:51
 msgid "label_new_password"
 msgstr "新的密码"
 
@@ -6739,7 +7068,7 @@ msgid "label_news_image"
 msgstr "图片"
 
 #. Default: "Next"
-#: Archetypes/skins/archetypes/edit_macros.pt:217
+#: Archetypes/skins/archetypes/edit_macros.pt:218
 msgid "label_next"
 msgstr "下一页"
 
@@ -6754,7 +7083,7 @@ msgid "label_next_item_arrow"
 msgstr "下一个"
 
 #. Default: "No change"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:198
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:197
 msgid "label_no_change"
 msgstr "没有改变"
 
@@ -6765,6 +7094,8 @@ msgstr "没有指明组"
 
 #. Default: "No preference panels available."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:99
+#: CMFPlone/skins/plone_prefs/plone_memberprefs_panel.pt:48
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:84
 msgid "label_no_prefs_panels_available"
 msgstr "没有偏好设置"
 
@@ -6800,6 +7131,7 @@ msgstr "确认"
 
 #. Default: "Log in"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:40
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:84
 msgid "label_openid_log_in"
 msgstr "登录"
 
@@ -6809,7 +7141,7 @@ msgid "label_or"
 msgstr "或"
 
 #. Default: "Basic HTML textarea editor (works in all browsers)"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:264
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:265
 msgid "label_ordinary_content_editor"
 msgstr "普通的HTML文本框编辑器 (所有的浏览器都支持)"
 
@@ -6820,11 +7152,14 @@ msgstr "此产品已经被升级，点击此处重新安装。文件系统版本
 
 #. Default: "Parent"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:53
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:45
 msgid "label_parent"
 msgstr "父级"
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_login/join_form.cpt:145
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:59
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:112, ...
 msgid "label_password"
 msgstr "密码"
 
@@ -6844,17 +7179,20 @@ msgid "label_path_criteria_value"
 msgstr "文件夹"
 
 #. Default: "Perform Search"
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:402
 #: CMFPlone/skins/plone_forms/ownership_form.cpt:208
 msgid "label_perform_search"
 msgstr "执行搜索"
 
 #. Default: "Plone<sup>&reg;</sup> CMS — Open Source Content Management System"
 #: CMFPlone/skins/plone_deprecated/footer.pt:13
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:7
 msgid "label_plone_cms"
 msgstr "Plone<sup>&reg;</sup>开放源代码内容管理系统(CMS)"
 
 #. Default: "Plone Foundation"
 #: CMFPlone/skins/plone_deprecated/footer.pt:23
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:17
 msgid "label_plone_foundation"
 msgstr "Plone基金会"
 
@@ -6889,17 +7227,19 @@ msgid "label_portlets_parent_folders"
 msgstr "父面板"
 
 #. Default: "Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:370
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:371
 msgid "label_portrait"
 msgstr "像片"
 
 #. Default: "Powered by Plone"
 #: CMFPlone/skins/plone_deprecated/colophon.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/colophon.pt:21
 msgid "label_powered_by_plone"
 msgstr "使用Plone开源内容管理系统(CMS)构建"
 
 #. Default: "Previous"
-#: Archetypes/skins/archetypes/edit_macros.pt:209
+#: Archetypes/skins/archetypes/edit_macros.pt:210
+#: CMFDiffTool/skins/ChangeSet/at_changeset.pt:54
 msgid "label_previous"
 msgstr "之前的"
 
@@ -6956,11 +7296,14 @@ msgstr "发布"
 
 #. Default: "effective"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:50
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:54
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:50
 msgid "label_publishing_effective"
 msgstr "有效的"
 
 #. Default: "Quick search"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:200
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:32
 msgid "label_quick_search"
 msgstr "快速搜索"
 
@@ -6980,17 +7323,21 @@ msgid "label_related_items"
 msgstr "相关内容"
 
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:159
+#: CMFPlone/skins/plone_forms/search.pt:161
 msgid "label_relevance_percentage"
 msgstr "[${percentage}%]"
 
 #. Default: "Remember my name."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:149
 #: CMFPlone/skins/plone_login/login_form.cpt:117
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:214
 msgid "label_remember_my_name"
 msgstr "记住我的名字"
 
 #. Default: "Remove"
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:92
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:90
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:86
 msgid "label_remove"
 msgstr "删除"
 
@@ -7011,6 +7358,7 @@ msgstr "全部改名"
 
 #. Default: "Reply"
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:80
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:72
 msgid "label_reply"
 msgstr "回复"
 
@@ -7020,7 +7368,9 @@ msgid "label_request_url"
 msgstr "请求URL"
 
 #. Default: "(Required)"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:83
+#: Archetypes/skins/archetypes/widgets/field.pt:85
+#: CMFPlone/skins/plone_content/author.cpt:197
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:84, ...
 msgid "label_required"
 msgstr "（必填）"
 
@@ -7035,7 +7385,7 @@ msgid "label_rev_later"
 msgstr "以后的版本"
 
 #. Default: "Review status"
-#: CMFPlone/skins/plone_forms/search_form.pt:230
+#: CMFPlone/skins/plone_forms/search_form.pt:229
 msgid "label_review_status"
 msgstr "内容状态"
 
@@ -7060,7 +7410,9 @@ msgid "label_rule_event_trigger"
 msgstr "事件触发器：${trigger}"
 
 #. Default: "Save"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:158
+#: Archetypes/skins/archetypes/base_metadata.cpt:94
+#: Archetypes/skins/archetypes/edit_macros.pt:226
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:122, ...
 msgid "label_save"
 msgstr "保存"
 
@@ -7100,7 +7452,9 @@ msgid "label_schema_settings"
 msgstr "设置"
 
 #. Default: "Search"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:208
+#: CMFPlone/skins/plone_deprecated/global_searchbox.pt:33
+#: CMFPlone/skins/plone_forms/member_search_form.pt:105
+#: CMFPlone/skins/plone_forms/search.pt:45, ...
 msgid "label_search"
 msgstr "搜索"
 
@@ -7120,17 +7474,19 @@ msgid "label_search_term"
 msgstr "搜索条件"
 
 #. Default: "Search Text"
-#: CMFPlone/skins/plone_forms/search_form.pt:35
+#: CMFPlone/skins/plone_forms/search_form.pt:34
 msgid "label_search_text"
 msgstr "搜索词"
 
 #. Default: "only in current section"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:44
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:35
 msgid "label_searchbox_currentfolder_only"
 msgstr "仅在本栏目"
 
 #. Default: "Search results"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:40
 msgid "label_searchresults"
 msgstr "搜索结果"
 
@@ -7150,7 +7506,9 @@ msgid "label_select_all"
 msgstr "选择：${label_link_all}"
 
 #. Default: "Select all items"
-#: CMFPlone/skins/plone_templates/test_rendering.pt:361
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:95
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:118
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:53, ...
 msgid "label_select_all_items"
 msgstr "选择全部的条目"
 
@@ -7185,6 +7543,8 @@ msgid "label_selection_criteria_value"
 msgstr "值"
 
 #. Default: "Send"
+#: CMFPlone/skins/plone_content/author.cpt:231
+#: CMFPlone/skins/plone_forms/sendto_form.cpt:107
 #: CMFPlone/skins/plone_templates/contact-info.cpt:154
 msgid "label_send"
 msgstr "发送"
@@ -7210,7 +7570,8 @@ msgid "label_sender_fullname"
 msgstr "名字"
 
 #. Default: "Short Name"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:48
+#: Archetypes/BaseObject.py:92
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:49
 msgid "label_short_name"
 msgstr "英文代号"
 
@@ -7220,6 +7581,7 @@ msgid "label_show"
 msgstr "显示"
 
 #. Default: "Show all items"
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:85
 #: plone.app.content/plone/app/content/browser/table.pt:167
 msgid "label_show_all"
 msgstr "全部显示"
@@ -7241,11 +7603,13 @@ msgstr "显示我"
 
 #. Default: "Show all"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:139
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:126
 msgid "label_showall"
 msgstr "全部显示"
 
 #. Default: "Site Administration"
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:48
+#: CMFPlone/skins/plone_templates/default_error_message.pt:47
 msgid "label_site_admin"
 msgstr "网站管理员"
 
@@ -7301,6 +7665,7 @@ msgstr "ESMTP用户名"
 
 #. Default: "State:"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:22
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:566
 msgid "label_state"
 msgstr "状态:"
 
@@ -7315,6 +7680,8 @@ msgid "label_string_criteria_value"
 msgstr "字符串值"
 
 #. Default: "Subject"
+#: CMFPlone/skins/plone_content/author.cpt:193
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:122
 #: CMFPlone/skins/plone_templates/contact-info.cpt:107
 msgid "label_subject"
 msgstr "标题"
@@ -7371,16 +7738,20 @@ msgstr "文本格式"
 
 #. Default: "Time"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:76
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:46
 msgid "label_time"
 msgstr "时间"
 
 #. Default: "Title"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:81
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:82
+#: CMFPlone/skins/plone_forms/search_form.pt:53
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:33, ...
 msgid "label_title"
 msgstr "标题"
 
 #. Default: "Up to my dashboard"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:58
+#: CMFPlone/skins/plone_prefs/password_form.pt:21
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:59
 msgid "label_to_dashboard"
 msgstr "返回我的面板页"
 
@@ -7400,7 +7771,7 @@ msgid "label_type"
 msgstr "类型"
 
 #. Default: "Type restrictions"
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:72
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:73
 msgid "label_type_restrictions"
 msgstr "类型约束"
 
@@ -7425,29 +7796,34 @@ msgid "label_uninstall"
 msgstr "卸载"
 
 #. Default: "Up to Groups Overview"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:97
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:70
 msgid "label_up_to_groups_overview"
 msgstr "回到“组概览”"
 
 #. Default: "Up to Site Setup"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:19
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:64
+#: CMFPlone/skins/plone_prefs/prefs_install_products_form.pt:20, ...
 msgid "label_up_to_plone_setup"
 msgstr "回到Plone设置"
 
 #. Default: "Up to Users Overview"
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:61
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:63
 msgid "label_up_to_usersoverview"
 msgstr "回到用户概览"
 
 #. Default: "Update"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:84
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:81
 msgid "label_update"
 msgstr "更新"
 
 #. Default: "URL"
-#: widget label of StringWidget - description "Add http://
+#: for external links."
 #: to link outside the site."
-#: widget label of StringWidget - description "Web address with more info about the event. Add http://
+#: widget label of StringWidget - description "", ...
 msgid "label_url"
 msgstr "链接页面URL"
 
@@ -7458,6 +7834,7 @@ msgstr "从上层文件夹继承角色"
 
 #. Default: "Use Selected..."
 #: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:121
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:133
 msgid "label_use_selected"
 msgstr "使用所选..."
 
@@ -7467,11 +7844,14 @@ msgid "label_user"
 msgstr "用户"
 
 #. Default: "User Name"
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:273
 #: CMFPlone/skins/plone_login/join_form.cpt:83
+#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:77, ...
 msgid "label_user_name"
 msgstr "用户名"
 
 #. Default: "User Properties"
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:25
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:30
 msgid "label_user_properties"
 msgstr "用户属性"
@@ -7483,6 +7863,7 @@ msgstr "查找用户"
 
 #. Default: "Settings"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:43
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:36
 msgid "label_usergroup_settings"
 msgstr "设置"
 
@@ -7493,6 +7874,8 @@ msgstr "用户名"
 
 #. Default: "Users"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:33
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:41
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:26
 msgid "label_users"
 msgstr "用户"
 
@@ -7502,7 +7885,8 @@ msgid "label_usersandgroups"
 msgstr "用户和组"
 
 #. Default: "View"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:27
+#: CMFPlone/skins/plone_content/author.cpt:63
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:28
 msgid "label_view"
 msgstr "查看"
 
@@ -7607,7 +7991,7 @@ msgid "legend_details"
 msgstr "详情"
 
 #. Default: "Feedback for author"
-#: CMFPlone/skins/plone_content/author.cpt:185
+#: CMFPlone/skins/plone_content/author.cpt:188
 msgid "legend_feedback_for_author"
 msgstr "给作者反馈"
 
@@ -7668,11 +8052,12 @@ msgstr "OpenID登录"
 
 #. Default: "Password Details"
 #: CMFPlone/skins/plone_login/login_password.cpt:47
+#: CMFPlone/skins/plone_prefs/password_form.pt:34
 msgid "legend_password_details"
 msgstr "密码详细信息"
 
 #. Default: "Personal Details"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:86
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:87
 msgid "legend_personal_details"
 msgstr "个人详信息"
 
@@ -7783,6 +8168,7 @@ msgstr "确认所有"
 
 #. Default: "Action"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:17
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:15
 msgid "listingheader_action"
 msgstr "操作"
 
@@ -7803,11 +8189,14 @@ msgstr "作者"
 
 #. Default: "Comment"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:20
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:18
 msgid "listingheader_comment"
 msgstr "评注"
 
 #. Default: "Date and Time"
+#: CMFPlone/skins/plone_deprecated/review_history.pt:19
 #: CMFPlone/skins/plone_forms/undo_form.pt:58
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:17
 msgid "listingheader_date_and_time"
 msgstr "日期和时间"
 
@@ -7818,11 +8207,13 @@ msgstr "描述"
 
 #. Default: "E-mail Address"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:130
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:138
 msgid "listingheader_email_address"
 msgstr "电子邮件地址"
 
 #. Default: "Group name"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:157
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:97
 msgid "listingheader_group_name"
 msgstr "组名"
 
@@ -7833,11 +8224,14 @@ msgstr "删除组"
 
 #. Default: "Group/User name"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:129
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:64
 msgid "listingheader_group_user_name"
 msgstr "组名/用户名"
 
 #. Default: "Modified"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:72
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:114
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:82, ...
 msgid "listingheader_modified"
 msgstr "修改时间"
 
@@ -7848,11 +8242,15 @@ msgstr "名字"
 
 #. Default: "Order"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:121
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:90
+#: plone.app.content/plone/app/content/browser/table.pt:80
 msgid "listingheader_order"
 msgstr "顺序"
 
 #. Default: "Performed by"
+#: CMFPlone/skins/plone_deprecated/review_history.pt:18
 #: CMFPlone/skins/plone_forms/undo_form.pt:57
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:16
 msgid "listingheader_performed_by"
 msgstr "执行人"
 
@@ -7873,25 +8271,33 @@ msgstr "重置密码"
 
 #. Default: "Roles"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:162
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:139
 msgid "listingheader_roles"
 msgstr "角色"
 
 #. Default: "Size"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:111
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:79
+#: plone.app.content/plone/app/content/browser/table.pt:69
 msgid "listingheader_size"
 msgstr "大小"
 
 #. Default: "State"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:117
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:85
+#: plone.app.content/plone/app/content/browser/table.pt:75
 msgid "listingheader_status"
 msgstr "状态"
 
 #. Default: "Title"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:64
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:458
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:107, ...
 msgid "listingheader_title"
 msgstr "标题"
 
 #. Default: "Type"
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:69
 #: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:81
 msgid "listingheader_type"
 msgstr "类型"
@@ -7917,13 +8323,16 @@ msgid "local_role_warning_type"
 msgstr "<strong>注意！</strong> 您正在为一个 ${type} 设置共享权限。如果你希望为所在容器设置权限，点击 ${link}"
 
 #. Default: "Since cookie authentication is disabled, cookie-based login is not available."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:58
 #: CMFPlone/skins/plone_login/logged_out.cpt:46
+#: CMFPlone/skins/plone_login/login_form.cpt:44, ...
 #, fuzzy
 msgid "login_form_disabled"
 msgstr "当cookie认证机制被禁止时，您无法使用基于cookie的登录。"
 
 #. Default: "Cookie authentication is disabled. Login portlet not available."
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:120
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:108
 msgid "login_portlet_disabled"
 msgstr "cookie认证被禁止。不能和使用登录面板。"
 
@@ -7969,11 +8378,13 @@ msgstr "更多url"
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
 #: CMFPlone/skins/plone_content/document_view.pt:35
+#: CMFPlone/skins/plone_content/newsitem_view.pt:50
 msgid "no_body_text"
 msgstr "这个文档还没有正文，点击编辑标签开始编写。"
 
 #. Default: "No comments."
 #: CMFPlone/skins/plone_deprecated/review_history.pt:60
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:60
 msgid "no_comments"
 msgstr "没有评注。"
 
@@ -7998,6 +8409,7 @@ msgid "no_new_events"
 msgstr "没有张贴任何事件。"
 
 #. Default: "No users were found using your search criteria."
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:230
 #: CMFPlone/skins/plone_forms/ownership_form.cpt:172
 msgid "no_users_found"
 msgstr "没有用户建立使用您的搜索条件。"
@@ -8080,6 +8492,7 @@ msgid "published"
 msgstr "发布"
 
 #. Default: "Read More…"
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:152
 #: CMFPlone/skins/plone_templates/events_listing.pt:90
 #, fuzzy
 msgid "read_more"
@@ -8117,6 +8530,7 @@ msgid "retract"
 msgstr "收回"
 
 #. Default: "Return"
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:23
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:24
 msgid "return_to_view"
 msgstr "返回"
@@ -8127,12 +8541,12 @@ msgid "rules-enable-globally"
 msgstr "全局开启"
 
 #. Default: "Did you not find what you were looking for? Try the ${advanced_search} to refine your search."
-#: CMFPlone/skins/plone_forms/search.pt:52
+#: CMFPlone/skins/plone_forms/search.pt:54
 msgid "search_results_advanced"
 msgstr "您没有找到您希望查找的内容？请使用${advanced_search}进行更精确的搜索。"
 
 #. Default: "Advanced Search"
-#: CMFPlone/skins/plone_forms/search.pt:53
+#: CMFPlone/skins/plone_forms/search.pt:55
 msgid "search_results_advanced_link"
 msgstr "高级搜索"
 
@@ -8195,17 +8609,18 @@ msgid "submit"
 msgstr "提交"
 
 #. Default: "Affected content"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:72
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:71
 msgid "summary_affected_content"
 msgstr "受影响的内容"
 
 #. Default: "Currently assigned local roles"
 #: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:83
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:62
 msgid "summary_assigned_roles"
 msgstr "当前分配的本地角色"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: CMFPlone/skins/plone_content/author.cpt:257
+#: CMFPlone/skins/plone_content/author.cpt:260
 msgid "summary_author_content_list"
 msgstr "按内容类型列举某作者的完成的内容"
 
@@ -8216,11 +8631,14 @@ msgstr "可用的组"
 
 #. Default: "Calendar"
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:38
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:47
 msgid "summary_calendar"
 msgstr "日历"
 
 #. Default: "Content listing"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:59
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:87
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:24, ...
 msgid "summary_content_listing"
 msgstr "内容列表"
 
@@ -8246,6 +8664,7 @@ msgstr "可分配的角色"
 
 #. Default: "Review History"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:10
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:11
 msgid "summary_review_history"
 msgstr "审批历史"
 
@@ -8276,6 +8695,8 @@ msgstr "选择所有项目"
 
 #. Default: "Home"
 #: CMFPlone/skins/plone_deprecated/global_pathbar.pt:16
+#: CMFPlone/skins/plone_deprecated/portlet_navigation.pt:40
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6, ...
 msgid "tabs_home"
 msgstr "首页"
 
@@ -8286,11 +8707,13 @@ msgstr "此产品是坏的"
 
 #. Default: "Contributors: ${name}"
 #: CMFPlone/skins/plone_deprecated/document_byline.pt:53
+#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:46
 msgid "text_contributors"
 msgstr "贡献人：${name}"
 
 #. Default: "by ${creator}, last updated: ${date}"
 #: CMFPlone/skins/plone_templates/recently_modified.pt:57
+#: CMFPlone/skins/plone_templates/recently_published.pt:54
 msgid "text_creator_date"
 msgstr " ${creator} 作, 最近更改于: ${date}"
 
@@ -8320,22 +8743,25 @@ msgid "text_group"
 msgstr "组"
 
 #. Default: "Location: ${location}"
-#: CMFPlone/skins/plone_content/author.cpt:105
+#: CMFPlone/skins/plone_content/author.cpt:106
 msgid "text_location"
 msgstr "位置：${location}"
 
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
+#: CMFPlone/skins/plone_content/author.cpt:166
 #: CMFPlone/skins/plone_templates/contact-info.cpt:25
 msgid "text_no_email_setup"
 msgstr "这个站点没有设置有效的邮件地址，所以您不能使用任何联系表单。"
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:42
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:31
 msgid "text_no_mailhost_configured"
 msgstr "您没有配置邮件主机或站点的寄信人地址，那样的话，联系表单，邮件通知和密码重置将不会工作。到${label_mail_control_panel_link}去修改。"
 
 #. Default: "Mail control panel"
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:43
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:32
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "邮件控制面板"
 
@@ -8351,6 +8777,7 @@ msgstr "没有修改的条目。"
 
 #. Default: "Warning: PIL is not installed properly, image scaling will not work."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:57
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:46
 msgid "text_no_pil_installed"
 msgstr "注意: PIL还没有正确安装，图片缩放将不能正常工作。"
 
@@ -8365,7 +8792,7 @@ msgid "text_no_searchstring_large"
 msgstr "输入需要搜索的组或用户名。"
 
 #. Default: "No user by that name."
-#: CMFPlone/skins/plone_content/author.cpt:43
+#: CMFPlone/skins/plone_content/author.cpt:44
 msgid "text_no_user_by_name"
 msgstr "没有这个名字的用户"
 
@@ -8381,11 +8808,14 @@ msgstr "输入需要搜索的用户名，或者点击“全部显示”"
 
 #. Default: "No matches"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:271
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:235
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:111, ...
 msgid "text_nomatches"
 msgstr "没有匹配项"
 
 #. Default: "You are not allowed to manage the Zope server."
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:203
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:73
 msgid "text_not_allowed_manage_server"
 msgstr "你不被允许管理服务器。"
 
@@ -8401,6 +8831,7 @@ msgstr "这个产品已经从文件系统中删除了。"
 
 #. Default: "Search Site"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:18
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:9
 msgid "text_search"
 msgstr "搜索"
 
@@ -8440,6 +8871,8 @@ msgstr "任何时候"
 
 #. Default: "— expired"
 #: CMFPlone/skins/plone_deprecated/document_byline.pt:43
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:194
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:134, ...
 msgid "time_expired"
 msgstr "  过期"
 
@@ -8470,6 +8903,7 @@ msgstr "标题"
 
 #. Default: "Actions for the current content item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:405
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:50
 msgid "title_actions_menu"
 msgstr "当前内容项的操作"
 
@@ -8480,6 +8914,7 @@ msgstr "在和此内容相同的文件夹内添加新的内容"
 
 #. Default: "Add new items inside this item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:99
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:434
 msgid "title_add_new_items_inside_item"
 msgstr "在此内容内添加新的内容"
 
@@ -8512,6 +8947,7 @@ msgstr "这个Plone站点使用有效的CSS。"
 
 #. Default: "This Plone site was built using Plone CMS, the Open Source Content Management System. Click for more information."
 #: CMFPlone/skins/plone_deprecated/colophon.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/colophon.pt:21
 msgid "title_built_with_plone"
 msgstr "本站使用Plone内容管理系统(CMS)构建，点击这里得到更多信息"
 
@@ -8546,12 +8982,15 @@ msgid "title_change_default_page"
 msgstr "改变默认页面"
 
 #. Default: "Change the item used as default view in this folder"
+#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
 #: CMFPlone/skins/plone_forms/select_default_view.cpt:63
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:306
 msgid "title_change_default_view_item"
 msgstr "更改用作本文件夹默认视图的条目"
 
 #. Default: "Change the state of this item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:35
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:588
 msgid "title_change_state_of_item"
 msgstr "改变此条目的状态"
 
@@ -8567,21 +9006,24 @@ msgstr "签出${object_title}"
 
 #. Default: "Select the view mode for this folder, or set a content item as its default view."
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:206
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:138
 msgid "title_choose_default_view"
 msgstr "选择这个文件夹的视图模式，或者选择一个内容项作为默认视图"
 
 #. Default: "Compare with previous revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:63
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:68
 msgid "title_compare_previous_revision"
 msgstr ""
 
 #. Default: "Compare with current revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:59
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:64
 msgid "title_compare_revision"
 msgstr ""
 
 #. Default: "Configure which content types can be added here"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:138
+#: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:36
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:28, ...
 msgid "title_configure_addable_content_types"
 msgstr "设置哪些内容类型可在这里添加"
 
@@ -8592,6 +9034,7 @@ msgstr "${context}的内容规则"
 
 #. Default: "Copyright"
 #: CMFPlone/skins/plone_deprecated/footer.pt:16
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:10
 msgid "title_copyright"
 msgstr "版权"
 
@@ -8652,11 +9095,15 @@ msgstr "管理${group_name}用户组的面板"
 
 #. Default: "Move item down"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:227
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:164
+#: plone.app.content/plone/app/content/browser/table.pt:154
 msgid "title_move_item_down"
 msgstr "下移条目"
 
 #. Default: "Move item up"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:220
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:157
+#: plone.app.content/plone/app/content/browser/table.pt:147
 msgid "title_move_item_up"
 msgstr "上移条目"
 
@@ -8667,6 +9114,7 @@ msgstr "去到下一项目"
 
 #. Default: "Next month"
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:65
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:34
 msgid "title_next_month"
 msgstr "下月"
 
@@ -8682,36 +9130,42 @@ msgstr "去到前一项目"
 
 #. Default: "Previous month"
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:43
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:15
 msgid "title_previous_month"
 msgstr "上月"
 
 #. Default: "Delete or rename the index_html item to gain full control over how this folder is displayed."
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:197
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:136
 msgid "title_remove_index_html_for_display_control"
 msgstr "删除或者改名index_html内容，以完全控制文件夹的显示方式."
 
 #. Default: "Required"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:83
+#: Archetypes/skins/archetypes/widgets/field.pt:85
+#: CMFPlone/skins/plone_content/author.cpt:197
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:84, ...
 msgid "title_required"
 msgstr "需填"
 
 #. Default: "Revert to this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:29
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:31
 msgid "title_revert_revision"
 msgstr ""
 
 #. Default: "Subscribe to an always-updated feed of these search terms"
-#: CMFPlone/skins/plone_forms/search.pt:77
+#: CMFPlone/skins/plone_forms/search.pt:79
 msgid "title_rss_feed"
 msgstr "这个搜索结果的RSS广播"
 
 #. Default: "Search Site"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:12
 msgid "title_search_site"
 msgstr "网站搜索"
 
 #. Default: "Search Site"
-#: CMFPlone/skins/plone_forms/search.pt:36
+#: CMFPlone/skins/plone_forms/search.pt:37
+#: plone.app.portlets/plone/app/portlets/portlets/search.pt:20
 msgid "title_search_title"
 msgstr "搜索站点"
 
@@ -8721,6 +9175,7 @@ msgid "title_section_508"
 msgstr "这个Plone网站符合《美国政府可达性指南第508条》"
 
 #. Default: "Select an item to be used as default view in this folder"
+#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
 #: CMFPlone/skins/plone_forms/select_default_view.cpt:54
 msgid "title_select_default_page"
 msgstr "选择在这个文件夹下作为默认视图的条目"
@@ -8732,6 +9187,7 @@ msgstr "选择一个条目作为这个文件夹的默认视图"
 
 #. Default: "Send a mail to this user"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:170
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:168
 msgid "title_send_mail_to_user"
 msgstr "发送一封邮件到此用户"
 
@@ -8751,6 +9207,7 @@ msgid "title_small_text"
 msgstr "小字体"
 
 #. Default: "Static text portlet"
+#: plone.portlet.static/plone/portlet/static/profiles/default/portlets.xml
 #: plone.portlet.static/plone/portlet/static/static.py:71
 msgid "title_static_portlet"
 msgstr "静态面板标题"
@@ -8766,7 +9223,7 @@ msgid "title_valid_xhtml"
 msgstr "这个网站是合法的XHTML。"
 
 #. Default: "View this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:56
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:61
 msgid "title_view_revision"
 msgstr ""
 
@@ -8922,6 +9379,7 @@ msgstr "内容规则对全局失效。没有分配规则直到它们重新激活
 
 #. Default: "Local Policy"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:71
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:700
 #, fuzzy
 msgid "workflow_policy"
 msgstr "策略..."
@@ -8933,6 +9391,7 @@ msgstr "工作拷贝信息"
 
 #. Default: "You are here:"
 #: CMFPlone/skins/plone_deprecated/global_pathbar.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:4
 msgid "you_are_here"
 msgstr "您位于:"
 

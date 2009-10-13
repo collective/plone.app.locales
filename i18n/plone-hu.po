@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-07-08 09:35+0000\n"
+"POT-Creation-Date: 2009-10-13 16:57+0000\n"
 "PO-Revision-Date: 2009-02-01 19:49+0100\n"
 "Last-Translator: József Jároli <jaroli@yahoo.com>\n"
 "Language-Team: Hungarian Plone Translators <translators@plone.hu>\n"
@@ -60,7 +60,9 @@ msgid "${items} could not be deleted."
 msgstr "${items} elemet nem lehetett törölni."
 
 #. Default: "${monthname} ${year}"
+#: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:56
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:231
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:29
 msgid "${monthname} ${year}"
 msgstr "${year}. ${monthname}"
 
@@ -85,6 +87,7 @@ msgid "${title} has been added to your Favorites."
 msgstr "${title} hozzáadva a Kedvencekhez."
 
 #: CMFPlone/skins/plone_form_scripts/delete_confirmation.cpy:37
+#: CMFPlone/skins/plone_scripts/object_delete.cpy:39
 msgid "${title} has been deleted."
 msgstr "${title} törölve."
 
@@ -93,6 +96,7 @@ msgid "${title} is locked and cannot be cut."
 msgstr "${title} lezárva, ezért nem lehet kivágni."
 
 #: CMFPlone/skins/plone_form_scripts/delete_confirmation.cpy:33
+#: CMFPlone/skins/plone_scripts/object_delete.cpy:30
 msgid "${title} is locked and cannot be deleted."
 msgstr "${title} lezárva, ezért nem lehet törölni."
 
@@ -176,6 +180,7 @@ msgstr "Nagyszámú elem tárolására képes mappa"
 
 # Description for Folder type
 #. Default: "A folder which can contain other items."
+#: CMFPlone/profiles/default/types/Folder.xml
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:30
 msgid "A folder which can contain other items."
 msgstr "Mappa, amely további elemeket tartalmazhat"
@@ -237,6 +242,54 @@ msgstr "A portáltípus-feltétel csak a megadott tartalomtípusok esetére szű
 #: CMFPlone/profiles/default/types/ATPortalTypeCriterion.xml
 msgid "A portal_types criterion"
 msgstr "Portal_types kritérium"
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can receive and render an RSS feed."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a calendar."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a classic template-based portlet"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent events"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent news"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recently changed items."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing on the review queue."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a log-in box"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a navigation tree"
+msgstr ""
+
+#: plone.app.openid/plone/app/openid/profiles/default/portlets.xml
+msgid "A portlet which can render an OpenID log-in box"
+msgstr ""
+
+#: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
+msgid "A portlet which displays the results of a collection query"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which shows a search box."
+msgstr ""
 
 #. Default: "A reference criterion"
 #: CMFPlone/profiles/default/types/ATReferenceCriterion.xml
@@ -355,7 +408,7 @@ msgstr "Levélküldés művelet hozzáadása"
 msgid "Add Move Action"
 msgstr "Mozgatás művelet hozzáadása"
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:214
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:217
 msgid "Add Navigation Portlet"
 msgstr "Navigációs portlet hozzáadása"
 
@@ -519,6 +572,7 @@ msgid "An item's workflow state (e.g.published)"
 msgstr "Az elem munkafolyamat szerinti állapota (pl. publikált)"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:37
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:39
 msgid "As a path relative to the portal root."
 msgstr "A portál gyökérkönyvtárához viszonyított relatív útvonal."
 
@@ -544,6 +598,7 @@ msgstr "Logikai (igaz/hamis)"
 msgid "Boolean Criterion"
 msgstr "Logikai kritérium"
 
+#: CMFPlone/profiles/default/controlpanel.xml
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr "Naptár"
@@ -553,14 +608,18 @@ msgstr "Naptár"
 msgid "Calendar Settings"
 msgstr "Naptárbeállítások"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Calendar portlet"
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/calendar.py:51
 msgid "Calendar settings"
 msgstr "Naptárbeállítások"
 
 #. Default: "Can only be seen and edited by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Can only be seen and edited by the owner."
 msgstr "Csak a tulajdonosa láthatja és szerkesztheti"
 
@@ -609,24 +668,31 @@ msgid "Changes applied."
 msgstr "Változtatások alkalmazva."
 
 #: plone.app.controlpanel/plone/app/controlpanel/form.py:49
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:110
 msgid "Changes canceled."
 msgstr "A változtatások visszavonva."
 
 #: CMFPlone/skins/plone_form_scripts/file_edit.cpy:49
+#: CMFPlone/skins/plone_form_scripts/setConstrainTypes.cpy:40
+#: CMFPlone/skins/plone_prefs/prefs_error_log_setProperties.py:16, ...
 msgid "Changes made."
 msgstr "Módosítva."
 
 #: Archetypes/skins/archetypes/content_edit_impl.py:30
+#: Archetypes/skins/archetypes/validate_base.vpy:23
+#: Archetypes/skins/archetypes/validate_integrity.cpy:24, ...
 msgid "Changes saved."
 msgstr "Változtatások elmentve."
 
 #. Default: "Check in"
 #: plone.app.iterate/plone/app/iterate/browser/checkin.pt:38
+#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
 msgid "Check in"
 msgstr "Bejelentkezés"
 
 #. Default: "Check out"
 #: plone.app.iterate/plone/app/iterate/browser/checkout.pt:54
+#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
 msgid "Check out"
 msgstr "Kijelentkezés"
 
@@ -650,8 +716,13 @@ msgstr ""
 msgid "Choose which types will have wiki behavior."
 msgstr "Válassza ki, hogy mely típusokhoz társuljon wiki működés."
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Classic portlet"
+msgstr ""
+
 #. Default: "Clear cache"
 #: plone.app.controlpanel/plone/app/controlpanel/ram.pt:42
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:89
 msgid "Clear cache"
 msgstr "Cache ürítése"
 
@@ -670,10 +741,14 @@ msgstr "Gyűjtemény"
 msgid "Collection Settings"
 msgstr "Gyűjtemény beállításai"
 
+#: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
+msgid "Collection portlet"
+msgstr ""
+
 #. Default: "Comment about the last transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Comment about the last transition"
 msgstr "A legutóbbi tranzakcióval kapcsolatos megjegyzés"
 
@@ -704,6 +779,8 @@ msgid "Condition moved up."
 msgstr "A feltételt feljebb soroltuk"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:138
+#: plone.app.contentrules/plone/app/contentrules/actions/logger.py:85
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:113, ...
 msgid "Configure element"
 msgstr "Az elem beállítása"
 
@@ -753,6 +830,7 @@ msgid "Copy"
 msgstr "Másol"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:16
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:17
 msgid "Copy or cut one or more items to paste."
 msgstr "Kérem, válasszon egy vagy több elemet a kivágáshoz."
 
@@ -834,6 +912,8 @@ msgid "Define the types to be shown in the site and searched"
 msgstr "A megtekinthető és kereshető típusok meghatározása"
 
 #. Default: "Delete"
+#: CMFPlone/profiles/default/actionicons.xml
+#: CMFPlone/profiles/default/actions.xml
 #: CMFPlone/skins/plone_forms/delete_confirmation_page.cpt:43
 msgid "Delete"
 msgstr "Töröl"
@@ -842,6 +922,7 @@ msgstr "Töröl"
 msgid "Delete object"
 msgstr "Objektum törlése"
 
+#: CMFPlone/profiles/default/portal_atct.xml
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:102
 msgid "Description"
 msgstr "Leírás"
@@ -871,6 +952,7 @@ msgid "Disabling locking here will only affect users editing content through the
 msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:28
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:28
 msgid "Disallowed to paste item(s)."
 msgstr "Az elemek beillesztése nem engedélyezett."
 
@@ -907,7 +989,9 @@ msgid "Each type chosen will have a wiki enabled primary text area. At least one
 msgstr "Minden kiválasztott típusnál lesz wiki-képes elsődleges szövegmező. Legalább egy típust ki kell választani a wiki jelleg bekapcsolásához."
 
 #. Default: "Edit"
-#: plone.app.layout/plone/app/layout/viewlets/content.py:198
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "Edit"
 msgstr "Szerkeszt"
 
@@ -951,7 +1035,7 @@ msgstr "Levél művelet szerkesztése"
 msgid "Edit Move Action"
 msgstr "Áthelyezés művelet szerkesztése"
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:228
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:231
 msgid "Edit Navigation Portlet"
 msgstr "Navigáció portlet szerkesztése"
 
@@ -1035,6 +1119,7 @@ msgid "Enable External Editor feature"
 msgstr "Külső szerkesztőprogram használatának engedélyezése"
 
 #: plone.app.controlpanel/plone/app/controlpanel/search.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/search.py:21
 msgid "Enable LiveSearch"
 msgstr "LiveSearch (azonnali keresés) engedélyezése"
 
@@ -1063,6 +1148,7 @@ msgid "Enabled"
 msgstr "Engedélyezett"
 
 #: plone.app.controlpanel/plone/app/controlpanel/search.py:23
+#: plone.app.portlets/plone/app/portlets/portlets/search.py:22
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "A LiveSearch (azonnali keresés) funkció engedélyezése, amellyel a találatok azonnal megjelenítődnek, ha a böngszőprogram támogatja a JavaScriptek futtatását."
 
@@ -1076,7 +1162,9 @@ msgid "Entries cleared"
 msgstr "Bejegyzések törölve"
 
 #. Default: "Error"
-#: CMFPlone/skins/plone_login/logged_out.cpt:38
+#: CMFPlone/skins/plone_content/author.cpt:41
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:49
+#: CMFPlone/skins/plone_login/logged_out.cpt:38, ...
 msgid "Error"
 msgstr "Hiba"
 
@@ -1104,6 +1192,7 @@ msgstr "Esemény elem"
 msgid "Event changes saved."
 msgstr "Esemény elem módosításai elmentve."
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:44
 msgid "Events"
 msgstr "Események"
@@ -1132,9 +1221,9 @@ msgid "Exposes your content as a file according to the sitemaps.org standard. Yo
 msgstr "A tartalom megjelenítése fájlként a sitemaps.org szabvány szerint. Ezt elküldheti a kompatibilis keresőmotoroknak mint például a Google, Yahoo és a Microsoft. Ezzel engedélyezi a keresőmotoroknak, hogy inteligensebben tárják fel a portál tartalmát."
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/File.xml
-#: CMFPlone/profiles/default/types/Favorite.xml
+#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
+#: CMFPlone/profiles/default/types/Favorite.xml, ...
 msgid "External Edit"
 msgstr "Külső szerkesztő"
 
@@ -1212,6 +1301,7 @@ msgid "Flip vertical"
 msgstr "Függőleges tükrözés"
 
 #. Default: "Folder"
+#: CMFPlone/profiles/default/types/Folder.xml
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:21
 msgid "Folder"
 msgstr "Mappa"
@@ -1280,9 +1370,9 @@ msgid "Hide portlet"
 msgstr ""
 
 #. Default: "History"
+#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
 #: CMFPlone/profiles/default/types/News_Item.xml
-#: CMFPlone/profiles/default/types/Document.xml
 msgid "History"
 msgstr "Előzmények"
 
@@ -1296,6 +1386,8 @@ msgid "Home folder"
 msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20, ...
 msgid "How many items to list."
 msgstr "Hány tételt listázzon ki."
 
@@ -1354,9 +1446,9 @@ msgid "If selected, home folders where users can create content will be created 
 msgstr "Ha bejelöli, akkor létrejönnek a regisztrált felhasználók saját mappái, ahova bejelentkezés után tartalmakat tölthetnek fel."
 
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 msgstr "Ha véletlenül küldte el az elemet, vagy még módosítani kívánja, ezzel visszatérhet a szerkesztéshez."
 
@@ -1370,7 +1462,9 @@ msgid "Image changes saved."
 msgstr "Kép módosításai elmentve."
 
 #. Default: "Info"
+#: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:19
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:80, ...
 msgid "Info"
 msgstr "Információ"
 
@@ -1435,6 +1529,7 @@ msgid "Item Type (internal)"
 msgstr "Elemtípus (belső)"
 
 #: CMFPlone/skins/plone_form_scripts/content_status_modify.cpy:80
+#: CMFPlone/skins/plone_scripts/folder_publish.cpy:33
 msgid "Item state changed."
 msgstr "Az elem állapota megváltozott."
 
@@ -1447,10 +1542,12 @@ msgid "Item(s) deleted."
 msgstr "Elem(ek) sikeresen törölve."
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:23
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:23
 msgid "Item(s) pasted."
 msgstr "Elem(ek) sikeresen beillesztve."
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Items in which workflow state to show."
 msgstr "Elemek, amelyeken mutatjuk a munkafolyamatot."
 
@@ -1491,7 +1588,8 @@ msgstr "Nyelv"
 msgid "Language Settings"
 msgstr "Nyelv beállításai"
 
-#: Archetypes/ExtensibleMetadata.py:323
+#: Archetypes/ExtensibleMetadata.py:324
+#: CMFPlone/Portal.py:135
 msgid "Language neutral (site default)"
 msgstr "Meghatározatlan nyelv (a portál alapértelmezett nyelve)"
 
@@ -1541,6 +1639,7 @@ msgid "Local Roles"
 msgstr "Helyi szerepkörök"
 
 #: CMFPlone/skins/plone_deprecated/folder_localrole_add.py:20
+#: CMFPlone/skins/plone_deprecated/folder_localrole_edit.py:26
 msgid "Local roles changed."
 msgstr "A helyi szerepkörök módosítva."
 
@@ -1589,11 +1688,16 @@ msgstr "Naplózó (logger) neve"
 msgid "Logging level"
 msgstr "Naplózási szint"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Login"
+msgstr ""
+
 #: CMFPlone/skins/plone_login/login_next.cpy:22
 msgid "Login failed"
 msgstr "Sikertelen bejelentkezés"
 
 #: CMFPlone/skins/plone_login/logged_in.cpy:19
+#: CMFPlone/skins/plone_login/login_form_validate.vpy:47
 msgid "Login failed. Both login name and password are case sensitive, check that caps lock is not enabled."
 msgstr "A bejelentkezés nem sikerült. Mind a bejelentkezési névben, mind a jelszóban ügyeljen a kis- és nagybetűk használatára. Ellenőrízze, hogy a Caps Lock billentyű nincs bekapcsolva."
 
@@ -1617,6 +1721,8 @@ msgid "Mail Settings"
 msgstr "Levelezés beállításai"
 
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:89
+#: CMFPlone/skins/plone_form_scripts/send_feedback_site.cpy:67
+#: CMFPlone/skins/plone_form_scripts/sendto.cpy:67
 msgid "Mail sent."
 msgstr "Levél elküldve."
 
@@ -1628,14 +1734,16 @@ msgstr "Levelezés beállításai"
 msgid "Mail settings for this site."
 msgstr "A portál levelezés beállításai"
 
+#: CMFPlone/profiles/default/actionicons.xml
+#: CMFPlone/profiles/default/controlpanel.xml
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:65
 msgid "Maintenance"
 msgstr "Karbantartás"
 
 #. Default: "Make private"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Make private"
 msgstr "Priváttá tesz"
 
@@ -1651,9 +1759,9 @@ msgid "Makes the folder visible internally."
 msgstr "A mappát belsőleg láthatóvá teszi."
 
 #. Default: "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
 msgstr "Ha egy elemet priváttá tesz, ez azt jelenti, hogy senki nem láthatja, csak a tuladonosa és a portál adminisztrátora."
 
@@ -1705,9 +1813,9 @@ msgid "Member Preferences"
 msgstr "Felhasználók környezeti beállításai"
 
 #. Default: "Member makes content private"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Member makes content private"
 msgstr "Felhasználó a tartalmat privátra módosítja"
 
@@ -1727,8 +1835,8 @@ msgid "Member promotes content to public draft"
 msgstr "A tag publikus vázlatra módosítja az elem állapotát."
 
 #. Default: "Member retracts submission"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "Felhasználó visszavonja a publikálási kérelmet"
@@ -1740,6 +1848,8 @@ msgid "Member submits content for publication"
 msgstr "A tag elküldi a tartalmat publikálásra"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:37
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:32
+#: plone.app.contentrules/plone/app/contentrules/actions/notify.py:23
 msgid "Message"
 msgstr "Üzenet"
 
@@ -1784,6 +1894,8 @@ msgstr "Kedvenceim"
 msgid "Nasty tags"
 msgstr "Kizárandó címkék (tags)"
 
+#: CMFPlone/profiles/default/controlpanel.xml
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:101
 msgid "Navigation"
 msgstr "Navigáció"
@@ -1815,11 +1927,12 @@ msgid "New reference created."
 msgstr "Új referencia létrehozva."
 
 #. Default: "New..."
-#: type action defined on TempFolder
 #: type action defined on Smart Folder
+#: type action defined on TempFolder
 msgid "New..."
 msgstr "Új..."
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:43
 msgid "News"
 msgstr "Hírek"
@@ -1842,6 +1955,8 @@ msgid "No changes done."
 msgstr "Nem történt változtatás."
 
 #: CMFPlone/skins/plone_prefs/prefs_group_edit.py:14
+#: plone.app.controlpanel/plone/app/controlpanel/form.py:43
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:104
 msgid "No changes made."
 msgstr "Nem történt változás."
 
@@ -1854,6 +1969,8 @@ msgid "Notify with message ${message}"
 msgstr "Értesítés ezzel az üzenettel: ${message}"
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:21
+#: plone.app.portlets/plone/app/portlets/portlets/recent.py:19, ...
 msgid "Number of items to display"
 msgstr "Megjelenítendő elemek száma"
 
@@ -1874,12 +1991,17 @@ msgid "One or more selected items is locked."
 msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:27
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:28
 msgid "One or more selected items is no longer available."
 msgstr "Egy vagy több kijelölt elem már nem elérhető."
 
 #: plone.app.controlpanel/plone/app/controlpanel/skins.py:20
 msgid "Only for users who are logged in"
 msgstr "Csak bejelentkezett felhasználók számára"
+
+#: plone.app.openid/plone/app/openid/profiles/default/portlets.xml
+msgid "OpenID Login"
+msgstr ""
 
 #: plone.app.openid/plone/app/openid/portlets/login.py:17
 msgid "OpenID login"
@@ -1899,6 +2021,7 @@ msgstr "Tulajdonjog módosítva."
 
 #. Default: "Pack database now"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:162
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:69
 msgid "Pack database now"
 msgstr "Tömörítse az adatbázist"
 
@@ -1946,6 +2069,7 @@ msgid "Paste"
 msgstr "Beilleszt"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:32
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:32
 msgid "Paste could not find clipboard content."
 msgstr "Nem találtam a vágólap tartalmát."
 
@@ -1960,8 +2084,8 @@ msgid "Pending"
 msgstr "Függőben"
 
 #. Default: "Pending review"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Pending review"
 msgstr "Függőben, áttekintés alatt"
@@ -1995,10 +2119,13 @@ msgid "Placeful Workflow"
 msgstr "Helyhez kötődő munkafolyamat"
 
 #: Archetypes/skins/archetypes/validate_base.vpy:19
+#: Archetypes/skins/archetypes/validate_integrity.cpy:20
+#: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:18, ...
 msgid "Please correct the indicated errors."
 msgstr "Kérem, javítsa ki a jelzett hibákat."
 
 #: CMFPlone/skins/plone_form_scripts/validate_feedback.vpy:18
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:26
 msgid "Please enter a message"
 msgstr "Kérem, írja be üzenetét."
 
@@ -2007,10 +2134,13 @@ msgid "Please enter a name."
 msgstr "Kérem, adjon meg egy nevet."
 
 #: CMFPlone/skins/plone_form_scripts/validate_feedback.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:23
 msgid "Please enter a subject."
 msgstr "Kérem, adja meg a témát."
 
 #: CMFPlone/skins/plone_form_scripts/validate_effective_expiry_date.vpy:21
+#: CMFPlone/skins/plone_form_scripts/validate_start_end_date.vpy:30
+#: CMFPlone/skins/plone_form_scripts/validate_synPropertiesForm.vpy:19
 msgid "Please enter a valid date and time."
 msgstr "Kérem, adjon meg érvényes dátumot és időt."
 
@@ -2067,6 +2197,7 @@ msgid "Please submit a valid email address."
 msgstr "Kérem, adjon meg érvényes e-mail címet."
 
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:15
 msgid "Please submit an email address."
 msgstr "Kérem, adjon meg egy e-mail címet."
 
@@ -2109,6 +2240,7 @@ msgid "Portlet footer"
 msgstr "Portlet lábléc"
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:28
+#: plone.portlet.static/plone/portlet/static/static.py:27
 msgid "Portlet header"
 msgstr "Portlet fejléc"
 
@@ -2122,9 +2254,9 @@ msgid "Preferences"
 msgstr "Beállítások"
 
 #. Default: "Previous transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Previous transition"
 msgstr "Előző átmenet / állapot megváltoztatása"
 
@@ -2146,9 +2278,9 @@ msgid "Print this page"
 msgstr "Oldal nyomtatása"
 
 #. Default: "Private"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Private"
 msgstr "Privát"
 
@@ -2158,8 +2290,8 @@ msgid "Profile"
 msgstr "Profil"
 
 #. Default: "Promote to Draft"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Promote to Draft"
 msgstr "Állapot változtatása 'vázlat'-ra"
 
@@ -2189,9 +2321,9 @@ msgid "Properties"
 msgstr "Tulajdonságok"
 
 #. Default: "Provides access to workflow history"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Provides access to workflow history"
 msgstr "Hozzáférést biztosít a munkafolyamat-történethez"
 
@@ -2202,14 +2334,14 @@ msgid "Public Draft"
 msgstr "Publikus vázlat"
 
 #. Default: "Public draft"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Public draft"
 msgstr "Publikus vázlat"
 
 #. Default: "Publish"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Publish"
 msgstr "Publikál"
@@ -2225,9 +2357,9 @@ msgid "Publish internally"
 msgstr "Belsőleg publikál"
 
 #. Default: "Published"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Published"
 msgstr "Publikált"
 
@@ -2237,9 +2369,9 @@ msgid "Published and visible to intranet users, not editable by the owner."
 msgstr "Publikált és az intranet felhasználói számára látható, a tulajdonos nem szerkesztheti."
 
 #. Default: "Publishing the item makes it visible to other users."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Publishing the item makes it visible to other users."
 msgstr "Az elem publikálása más felhasználók által láthatóvá teszik az elemet."
 
@@ -2258,6 +2390,10 @@ msgstr "Az Ön által létrehozott tartalomelem korrektúra-listára kerül, aho
 msgid "RAM Cache Settings"
 msgstr "RAM cache beállítások"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "RSS Feed"
+msgstr ""
+
 #. Default: "RSS feed"
 #: CMFPlone/migrations/v3_0/profiles/beta1_beta2/actions.xml
 #: CMFPlone/profiles/default/actions.xml
@@ -2273,6 +2409,7 @@ msgstr "RSS-táp ennek a mappának a tartalmáról"
 msgid "Reader"
 msgstr "Olvasó"
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:32
 msgid "Recent items"
 msgstr "Legújabb tételek"
@@ -2283,9 +2420,9 @@ msgid "Reference Criterion"
 msgstr "Hivatkozás kritérium"
 
 #. Default: "References"
-#: CMFPlone/profiles/default/types/ATSortCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateCriteria.xml
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "References"
 msgstr "Hivatkozások"
 
@@ -2324,7 +2461,7 @@ msgstr "Relatív dátum"
 msgid "Remote Url"
 msgstr "Távoli Url"
 
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/remove.py:48
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/remove.py:60
 msgid "Removal cancelled."
 msgstr "Az eltávolítás visszavonva."
 
@@ -2334,8 +2471,8 @@ msgid "Rename"
 msgstr "Átnevez"
 
 #. Default: "Rename items"
-#: type action defined on TempFolder
 #: type action defined on Smart Folder
+#: type action defined on TempFolder
 msgid "Rename items"
 msgstr "Elemek átnevezése"
 
@@ -2349,6 +2486,7 @@ msgstr "Válasz törölve."
 
 #. Default: "Restart"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:79
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:97
 msgid "Restart"
 msgstr "Újraindítás"
 
@@ -2358,12 +2496,13 @@ msgid "Restrict to current user"
 msgstr "Korlátoz az aktuális felhasználóra"
 
 #. Default: "Retract"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Retract"
 msgstr "Visszavon"
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/review.py:26
 msgid "Review list"
 msgstr "Korrektúra lista"
@@ -2398,8 +2537,8 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr "A korrektor visszaküldi a tartalmat újraszerkesztésre"
 
 #. Default: "Reviewer tasks"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Reviewer tasks"
 msgstr "A korrektor feladatai"
 
@@ -2435,6 +2574,8 @@ msgstr "Elforgat óra járásával egyező irányban"
 msgid "Rules"
 msgstr "Szabályok"
 
+#: CMFPlone/profiles/default/controlpanel.xml
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:36
 msgid "Search"
 msgstr "Keresés"
@@ -2525,8 +2666,8 @@ msgid "Selection Criterion"
 msgstr "Kiválasztási kritérium"
 
 #. Default: "Send back"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Send back"
 msgstr "Visszaküldés"
@@ -2549,8 +2690,8 @@ msgid "Send-to"
 msgstr "Küldés"
 
 #. Default: "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
 msgstr "Az elem publikálás helyett visszaküldésre kerül az elem eredeti szerzője számára. Lehetőleg indokolja meg, hogy miért nem publikálta az elemet."
@@ -2604,6 +2745,7 @@ msgstr "Az összes bejegyzés megjelenítése"
 
 #. Default: "Shut down"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:72
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:85
 msgid "Shut down"
 msgstr "Leállítás"
 
@@ -2758,8 +2900,8 @@ msgid "Submit"
 msgstr "Elküld"
 
 #. Default: "Submit for publication"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Submit for publication"
 msgstr "Publikálásra elküld"
@@ -2792,6 +2934,7 @@ msgid "Syndication enabled"
 msgstr "Szindikálás engedélyezve."
 
 #: CMFPlone/skins/plone_form_scripts/disableSyndication.cpy:18
+#: CMFPlone/skins/plone_form_scripts/enableSyndication.cpy:18
 msgid "Syndication not allowed"
 msgstr "Szindikálás nem engedélyezett."
 
@@ -2811,10 +2954,12 @@ msgid "Target collection"
 msgstr "Célgyűjtemény"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:36
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:38
 msgid "Target folder"
 msgstr "Célmappa"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:79
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:81
 msgid "Target folder ${target} does not exist."
 msgstr "A(z) ${target} mappa nem létezik."
 
@@ -2851,9 +2996,9 @@ msgid "Text to be shown in the footer"
 msgstr "A láblécben megjelenítendő szöveg"
 
 #. Default: "The ID of the user who performed the last transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "The ID of the user who performed the last transition"
 msgstr "Az átmenetet, állapotváltoztatást végrehajtó felhasználó azonosítója"
 
@@ -2907,6 +3052,7 @@ msgid "The location of an item in the site (path)"
 msgstr "Az elem elérési útvonala a portálon"
 
 #: CMFPlone/skins/plone_login/join_form_validate.vpy:48
+#: CMFPlone/skins/plone_login/register.cpy:32
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "A választott felhasználói név már más által használt vagy nem érvényes. Kérem, válasszon újat."
 
@@ -3012,6 +3158,7 @@ msgstr "Témák"
 
 #. Default: "There are more search results, narrow your search."
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:74
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:71
 msgid "There are more search results, narrow your search."
 msgstr "További találatok is vannak, szűkítse a keresési feltételeket."
 
@@ -3048,6 +3195,8 @@ msgid "These tags, and their content are completely blocked when a page is saved
 msgstr "Ezek a tagok és a kapcsolódó tartalmak mentéskor teljesen elvesznek."
 
 #: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_link_edit.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_newsitem_edit.vpy:15, ...
 msgid "This field is required, please provide some information."
 msgstr "Kérem, töltse ki ezt a mezőt."
 
@@ -3059,7 +3208,7 @@ msgstr "Ez nem szöveges fájl. Bináris fájl feltöltéséhez válassza a Fáj
 msgid "This portlet display a listing of items from a Collection."
 msgstr "Ez a portlet egy Gyűjtemény tételeinek listáját mutatja."
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:215
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:218
 msgid "This portlet display a navigation tree."
 msgstr "Ez a portlet a navigációs fát mutatja."
 
@@ -3115,7 +3264,9 @@ msgid "Time in minutes after which the feed should be reloaded."
 msgstr "A hírcsatorna újrabetöltésének időköze percben megadva."
 
 #. Default: "Title"
+#: CMFPlone/profiles/default/portal_atct.xml
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:186
+#: plone.contentrules/plone/contentrules/rule/interfaces.py:98
 msgid "Title"
 msgstr "Cím"
 
@@ -3124,6 +3275,7 @@ msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:29
+#: plone.portlet.static/plone/portlet/static/static.py:28
 msgid "Title of the rendered portlet"
 msgstr "A megjelenítendő portlet címe"
 
@@ -3181,14 +3333,18 @@ msgid "Unable to copy ${name} as part of content rule 'copy' action: ${error}"
 msgstr "Nem lehet átmásolni a ${name}-t mint a 'másolás' művelet tartalom szabály részét: ${error}"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/delete.py:64
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:139
 msgid "Unable to move ${name} as part of content rule 'move' action: ${error}"
 msgstr "Nem lehet áthelyezni a ${name}-t mint az áthelyezés művelet tartalom szabály részét: ${error}"
 
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:77
+#: CMFPlone/skins/plone_form_scripts/send_feedback_site.cpy:56
+#: CMFPlone/skins/plone_form_scripts/sendto.cpy:59
 msgid "Unable to send mail: ${exception}"
 msgstr "A levelet nem lehet elküldeni: ${exception}"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:30
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:30
 msgid "Unauthorized to paste item(s)."
 msgstr "Nincs megfelelő jogosultsága az elem beillesztéséhez."
 
@@ -3271,13 +3427,14 @@ msgid "Validation failed($name: Uploaded data is too large: ${size}MB (max ${max
 msgstr ""
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/ATSortCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateCriteria.xml
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "View"
 msgstr "Nézet"
 
 #: CMFPlone/skins/plone_form_scripts/saveDefaultPage.cpy:26
+#: CMFPlone/skins/plone_form_scripts/selectViewTemplate.cpy:14
 msgid "View changed."
 msgstr "A nézet megváltozott."
 
@@ -3297,8 +3454,8 @@ msgid "Visible to all intranet users."
 msgstr "Minden intranet felhasználó láthatja."
 
 #. Default: "Visible to everyone, but not approved by the reviewers."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
 msgstr "Mindenki láthatja, de a korrektor még nem fogadta el."
 
@@ -3308,8 +3465,8 @@ msgid "Visible to everyone, editable by the owner."
 msgstr "Mindenki láthatja, a tulajdonosa szerkesztheti."
 
 #. Default: "Visible to everyone, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, not editable by the owner."
 msgstr "Mindenki láthatja, a tulajdonosa sem szerkesztheti."
@@ -3320,14 +3477,16 @@ msgid "Visible to people outside the intranet, not editable by the owner."
 msgstr "Kivülről (az extraneten) is látható mindenki számára, a tulajdonos nem szerkesztheti."
 
 #. Default: "Waiting to be reviewed, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Waiting to be reviewed, not editable by the owner."
 msgstr "Felülvizsgálatra vár, a tulajdonos nem szerkesztheti."
 
 #. Default: "Warning"
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:35
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:24
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/confirmation.pt:18
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
@@ -3336,9 +3495,9 @@ msgid "Welcome! You are now logged in."
 msgstr "Üdvözöljük. Sikeresen bejelentkezett. "
 
 #. Default: "When the previous transition was performed"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "When the previous transition was performed"
 msgstr "Mikor volt az előző állapot-változtatás végrehajtva"
 
@@ -3351,6 +3510,7 @@ msgid "Whether or not the rule is currently enabled"
 msgstr "Engedélyezi vagy sem a szabályt"
 
 #: CMFPlone/skins/plone_form_scripts/plone_change_password.py:37
+#: CMFPlone/skins/plone_login/login_change_password.cpy:19
 msgid "While changing your password an AttributeError occurred. This is usually caused by your user being defined outside the portal."
 msgstr "A jelszavának megváltoztatásakor AttributeError (hiba) történt. Ezt általábán olyan felhasználó okozhatja, akit a portálon kivül definiáltak."
 
@@ -3363,6 +3523,7 @@ msgid "Workflow Policies"
 msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:27
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:26
 msgid "Workflow state"
 msgstr "Munkafolyamat állapota"
 
@@ -3395,14 +3556,18 @@ msgid "You cannot have a type as secondary type without having it allowed. You h
 msgstr "Nem választhat egy típust másodlagos típusként, mielőtt nem engedélyezte azt. A ${types} jelölte ki."
 
 #: CMFPlone/skins/plone_form_scripts/validate_emailaddr.vpy:16
+#: CMFPlone/skins/plone_form_scripts/validate_pas_emailaddr.vpy:20
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:20
 msgid "You entered an invalid email address."
 msgstr "Érvénytelen e-mail címet adott meg."
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_edit.vpy:17
+#: CMFPlone/skins/plone_form_scripts/validate_metadata_edit.vpy:17
 msgid "You have been registered."
 msgstr "Sikeresen regisztrálva."
 
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:21
+#: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
 msgstr "Engedélyeznie kell a sütiket (cookies), hogy be tudjon jelentkezni."
 
@@ -3423,6 +3588,7 @@ msgid "You must sign in first."
 msgstr "Először be kell jelentkeznie oldalunkra."
 
 #: CMFPlone/skins/plone_form_scripts/validate_file_edit.vpy:27
+#: CMFPlone/skins/plone_form_scripts/validate_image_edit.vpy:27
 msgid "You must upload a file"
 msgstr "Töltsön fel egy fájlt!"
 
@@ -3538,16 +3704,19 @@ msgstr "Vissza a Kiegészítő programok hozzáadása/eltávolítása menühöz.
 
 #. Default: "Next ${number} items"
 #: CMFPlone/skins/plone_templates/batch_macros.pt:40
+#: plone.app.content/plone/app/content/browser/batching.pt:26
 msgid "batch_next_x_items"
 msgstr "Következő ${number} elem"
 
 #. Default: "Previous ${number} items"
 #: CMFPlone/skins/plone_templates/batch_macros.pt:27
+#: plone.app.content/plone/app/content/browser/batching.pt:14
 msgid "batch_previous_x_items"
 msgstr "Előző ${number} elem"
 
 #. Default: "${number} items matching your search terms"
-#: CMFPlone/skins/plone_forms/search.pt:69
+#: CMFPlone/skins/plone_forms/member_search_results.pt:26
+#: CMFPlone/skins/plone_forms/search.pt:71
 #, fuzzy
 msgid "batch_x_items_matching_your_criteria"
 msgstr "${number} elem felelt meg a feltételnek."
@@ -3564,6 +3733,7 @@ msgstr "Hiba"
 
 #. Default: "Upcoming Events"
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:16
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:9
 msgid "box_events"
 msgstr "Közelgő események"
 
@@ -3573,12 +3743,15 @@ msgid "box_external_links"
 msgstr "Külső hivatkozások"
 
 #. Default: "Forgot your password?"
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:94
 #: CMFPlone/skins/plone_login/login_form.cpt:142
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:137, ...
 msgid "box_forgot_password_option"
 msgstr "Elfelejtett jelszó?"
 
 #. Default: "Full review list…"
 #: CMFPlone/skins/plone_deprecated/portlet_review.pt:48
+#: plone.app.portlets/plone/app/portlets/portlets/review.pt:40
 #, fuzzy
 msgid "box_full_review_list"
 msgstr "Teljes felülvizsgálati jegyzőkönyv"
@@ -3590,6 +3763,8 @@ msgstr "Nyelvek"
 
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:137
+#: CMFPlone/skins/plone_deprecated/document_byline.pt:35
+#: CMFPlone/skins/plone_forms/search.pt:132, ...
 msgid "box_last_modified"
 msgstr "Utoljára módosítva:"
 
@@ -3600,16 +3775,19 @@ msgstr "Helyi hivatkozások"
 
 #. Default: "More news…"
 #: CMFPlone/skins/plone_deprecated/portlet_news.pt:47
+#: plone.app.portlets/plone/app/portlets/portlets/news.pt:41
 msgid "box_more_news_link"
 msgstr "Még több hír"
 
 #. Default: "All recent changes…"
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:58
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:49
 msgid "box_more_recently_changed"
 msgstr "Az összes újkeletű változtatás"
 
 #. Default: "More…"
 #: CMFPlone/skins/plone_portlets/portlet_favorites.pt:45
+#: plone.app.portlets/plone/app/portlets/portlets/rss.pt:40
 #, fuzzy
 msgid "box_morelink"
 msgstr "További kedvencek..."
@@ -3621,31 +3799,37 @@ msgstr "Kedvenceim"
 
 #. Default: "Navigation"
 #: CMFPlone/skins/plone_deprecated/portlet_navigation.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.pt:7
 msgid "box_navigation"
 msgstr "Navigáció"
 
 #. Default: "New user?"
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:103
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:92
 msgid "box_new_user_option"
 msgstr "Új felhasználó?"
 
 #. Default: "News"
 #: CMFPlone/skins/plone_deprecated/portlet_news.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/news.pt:9
 msgid "box_news"
 msgstr "Hírek"
 
 #. Default: "Previous events…"
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:54
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:51
 msgid "box_previous_events"
 msgstr "Korábbi események"
 
 #. Default: "Recent Changes"
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:9
 msgid "box_recent_changes"
 msgstr "Legutolsó változtatások"
 
 #. Default: "No items changed yet."
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:51
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:42
 msgid "box_recent_no_items"
 msgstr "Nincsenek módosított elemek."
 
@@ -3656,21 +3840,26 @@ msgstr "Kapcsolódó elemek"
 
 #. Default: "Review List"
 #: CMFPlone/skins/plone_deprecated/portlet_review.pt:14
+#: plone.app.portlets/plone/app/portlets/portlets/review.pt:9
 msgid "box_review_list"
 msgstr "Korrigálandó"
 
 #. Default: "Search"
 #: plone.app.portlets/plone/app/portlets/portlets/search.pt:9
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:53
 msgid "box_search"
 msgstr "Keresés"
 
 #. Default: "Log in"
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:24
+#: plone.app.openid/plone/app/openid/portlets/login.pt:7
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:9
 msgid "box_sign_in"
 msgstr "Bejelentkezés"
 
 #. Default: "Upcoming events…"
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:61
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:58
 msgid "box_upcoming_events"
 msgstr "Közelgő események"
 
@@ -3846,6 +4035,7 @@ msgstr "Az alábbi űrlap kitöltésével bejegyezheti hozzászólását az olda
 
 #. Default: "Select the type of item you want to add to your folder."
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:29
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:22
 msgid "description_add_new_item"
 msgstr "Válassza ki a létrehozandó elem típusát."
 
@@ -3861,7 +4051,7 @@ msgid "description_advanced_search"
 msgstr "Ez a keresőűrlap lehetővé teszi a kapott találatok egy vagy több feltétel megadásával történő szűkítését. <br/> Ne feledje, hogy bármikor használhatja a gyorskeresőt, ez a legtöbb esetben megfelelő. Ez az űrlap akkor hasznos, ha finomítani szeretné keresését."
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: CMFPlone/skins/plone_content/author.cpt:172
+#: CMFPlone/skins/plone_content/author.cpt:175
 msgid "description_author_feedback"
 msgstr "Ha fel kívánja venni a kapcsolatot a szerzővel, töltse ki az alábbi űrlapot."
 
@@ -3947,11 +4137,13 @@ msgstr ""
 
 #. Default: "Configuration area for Plone and add-on Products."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:24
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:18
 msgid "description_control_panel"
 msgstr "A Plone és kiegészítői beállítására szolgáló oldalak."
 
 #. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
 #: CMFPlone/skins/plone_deprecated/footer.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:16
 msgid "description_copyright"
 msgstr "A ${plonecms} jogvédett: Copyright  2000-${current_year}. Jogtulajdonosok: ${plonefoundation} és mások."
 
@@ -3962,6 +4154,7 @@ msgstr "A jelenlegi tulajdonos: ${name}."
 
 #. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' — then restart the server process."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:138
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:113
 msgid "description_debug_mode"
 msgstr "Megjegyzés: Jelenleg a Plone \"debug\" módban működik. Ez a fejlesztés alatt álló portálok számára megfelelő. Ebben a módban a beállítások változtatása azonnal láthatóak, de a portál lassabban működik. A \"debug\" mód leállításához szerkessze a zope.conf állományát és írja bele, hogy \"debug-mode off\", majd indítsa újra a zope kiszolgálót."
 
@@ -4037,6 +4230,7 @@ msgstr "A tartalom fordításával és a felület nyelvi beállításai."
 
 #. Default: "Distributed under the ${license}."
 #: CMFPlone/skins/plone_deprecated/footer.pt:37
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:31
 msgid "description_license"
 msgstr "Terjesztve a ${license} szerint."
 
@@ -4057,6 +4251,7 @@ msgstr "Figyelje meg, hogy a jobb felső színes sáv megváltozott, és számos
 
 #. Default: "You can log in again below."
 #: CMFPlone/skins/plone_login/logged_out.cpt:32
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:43
 msgid "description_loginagain"
 msgstr "Újra bejelentkezhet az alábbi űrlapon."
 
@@ -4081,7 +4276,7 @@ msgid "description_member_search"
 msgstr "Az űrlap segítségével regisztrált felhasználóink között kereshet egy vagy több keresési feltétel megadásával."
 
 #. Default: "Your personal settings."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:66
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:67
 msgid "description_my_preferences"
 msgstr "Az Ön személyes beállításai"
 
@@ -4096,12 +4291,16 @@ msgid "description_navigation_setup_navtree"
 msgstr ""
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:34
 #: CMFPlone/skins/plone_login/login_form.cpt:162
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:124
 msgid "description_no_account"
 msgstr "Ha még nem regisztrálta magát oldalunkon, látogassa meg a regisztrációs oldalt, hogy felhasználóink között köszönthessük: ${registration_form}"
 
 #. Default: "registration form"
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:35
 #: CMFPlone/skins/plone_login/login_form.cpt:163
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:125
 msgid "description_no_account_registration_linktext"
 msgstr "regisztrációs űrlap"
 
@@ -4112,6 +4311,8 @@ msgstr "Ez az objektum nem vethető össze másikkal."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:174
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:169
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:154
 msgid "description_no_items_in_folder"
 msgstr "Jelenleg nincs megjeleníthető elem a mappában."
 
@@ -4121,12 +4322,15 @@ msgid "description_no_privileges_for_page"
 msgstr "Nem rendelkezik elegendő jogosultsággal az oldal megtekintéséhez. Ha azt gondolja, hogy tévesen kapta ezt az üzenetet, forduljon a ${site_admin}hez."
 
 #. Default: "No results were found."
-#: CMFPlone/skins/plone_forms/search.pt:86
+#: CMFPlone/skins/plone_forms/member_search_results.pt:67
+#: CMFPlone/skins/plone_forms/search.pt:88
 msgid "description_no_results_found"
 msgstr "Nincs találat."
 
 #. Default: "This folder has no visible items. To add content, press the add button, or paste content from another location."
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:59
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:12
+#: plone.app.content/plone/app/content/browser/table.pt:18
 msgid "description_no_visible_items_add_paste"
 msgstr "Nincs látható elem a mappában. Új tartalom hozzáadásához válassza ki az \"új elem hozzáadása\" menüből a tartalom típusát, vagy a szúrjon be máshonnan kimásolt tartalmat a \"műveletek\" menüvel."
 
@@ -4137,6 +4341,7 @@ msgstr ""
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
 #: CMFPlone/skins/plone_login/login_failed.cpt:32
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:35
 msgid "description_not_accept_cookies"
 msgstr "Ha pontosan adta meg a felhasználó nevét és jelszavát, a probléma az lehet, hogy a böngészője nem fogad el sütiket (cookies)."
 
@@ -4167,6 +4372,7 @@ msgstr "Ha azt szeretné, hogy újabb kiegészítők jelenjenek meg itt, akkor t
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' — then restart the server process."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:127
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:102
 msgid "description_production_mode"
 msgstr ""
 
@@ -4177,6 +4383,7 @@ msgstr ""
 
 #. Default: "Because you are logged in via HTTP authentication (i.e. the Zope Management Interface), the only way to log out is to quit your web browser."
 #: CMFPlone/skins/plone_login/logged_out.cpt:58
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:54
 #, fuzzy
 msgid "description_quit_to_log_out"
 msgstr "Csak úgy tud kijelentkezni, ha bezárja a böngészőt."
@@ -4272,22 +4479,26 @@ msgid "description_site_map"
 msgstr "Ez áttekintés a honlapon található összes tartalomról. Tartsa az egérmutatót bármelyik elem fölött néhány másodpercig, hogy megjelenítse a leírását."
 
 #. Default: "A portlet which can display static HTML text."
+#: plone.portlet.static/plone/portlet/static/profiles/default/portlets.xml
 #: plone.portlet.static/plone/portlet/static/static.py:134
 msgid "description_static_portlet"
 msgstr ""
 
 #. Default: "If you are still reaching this page after correctly configuring your browser, here are some possible reasons:"
 #: CMFPlone/skins/plone_login/login_failed.cpt:37
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:40
 msgid "description_still_failure"
 msgstr "Ha a böngésző beállításai helyesek, mégis ezt az oldalt látja, akkor a lehetséges okok a következők lehetnek:"
 
 #. Default: "You may be running web filtering software that disables cookies. If so, you will need to configure the software so that it enables you to accept cookies from ${url}"
 #: CMFPlone/skins/plone_login/login_failed.cpt:47
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:50
 msgid "description_still_failure_reason1"
 msgstr "Lehetséges, hogy webszűrő program fut az Ön gépén, ami letiltja a sütiket (cookies). Ha igen, akkor szükségszerű ennek konfigurálása, annak érdekében, hogy engedélyezze sütik (cookies) fogadását az alábbi webhelyről ${url}."
 
 #. Default: "Your computer may be behind a firewall or proxy server that prevents cookies from being sent to or from your browser. If so, you will need to ask your systems administrator if the problem can be fixed."
 #: CMFPlone/skins/plone_login/login_failed.cpt:49
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:52
 msgid "description_still_failure_reason2"
 msgstr "Lehetséges, hogy a számítógépe tűzfallal védett vagy proxyszerveren keresztül kapcsolódik a hálozatra, amely megakadályozza a sütik (cookies) küldését és fogadását. Kérdezze rendszergazdáját a probléma megoldásának lehetséges módjairól."
 
@@ -4313,6 +4524,7 @@ msgstr "A szindikáció lehetővé teszi, hogy a mappa más weboldalakról szár
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
 #: CMFPlone/skins/plone_deprecated/footer.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "description_trademark"
 msgstr "A Plone<sup>&reg;</sup> és a Plone logó a ${plonefoundation} bejegyzett védjegyei."
 
@@ -4393,7 +4605,9 @@ msgid "enable_cookies_message"
 msgstr "Nem engedélyezettek a sütik (cookies). Mielőtt bejelentkezik, ${enable_cookies} engedélyeznie kell a böngészőben a sütik fogadását."
 
 #. Default: "Cookies are not enabled. You must enable cookies before you can log in."
-#: CMFPlone/skins/plone_login/logged_out.cpt:41
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:70
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:52
+#: CMFPlone/skins/plone_login/logged_out.cpt:41, ...
 msgid "enable_cookies_message_before_login"
 msgstr "Nem engedélyezettek a sütik (cookies). Mielőtt bejelentkezik, engedélyeznie kell a böngészőben a sütik fogadását."
 
@@ -4456,18 +4670,21 @@ msgstr "Stílusok"
 
 #. Default: "More…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:132
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:536
 #, fuzzy
 msgid "folder_add_more"
 msgstr "Egyéb"
 
 #. Default: "Restrict…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:141
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:549
 #, fuzzy
 msgid "folder_add_settings"
 msgstr "Korlátoz"
 
 #. Default: "Click to configure what type of items can be added here…"
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:36
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:28
 #, fuzzy
 msgid "folder_add_settings_long"
 msgstr "Kattintson ide, hogy beállíthassa, milyen típusú elemeket lehet itt létrehozni!"
@@ -4484,11 +4701,12 @@ msgstr "Fel a szabályok kezeléséhez"
 
 #. Default: "Up one level"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:42
+#: plone.app.content/plone/app/content/browser/foldercontents.pt:35
 msgid "go_to_parent_url"
 msgstr "Egy szintet fel"
 
 #. Default: "All content created by ${user}…"
-#: CMFPlone/skins/plone_content/author.cpt:280
+#: CMFPlone/skins/plone_content/author.cpt:283
 #, fuzzy
 msgid "go_to_search_author_content"
 msgstr "Minden tartalmat ${user} készített"
@@ -4511,6 +4729,7 @@ msgstr "Hozzáférhetőség"
 
 #. Default: "Actions"
 #: CMFPlone/skins/plone_deprecated/global_contentviews.pt:44
+#: plone.app.layout/plone/app/layout/viewlets/contentactions.pt:8
 msgid "heading_actions"
 msgstr "Szerkesztés / műveletek"
 
@@ -4521,6 +4740,7 @@ msgstr "${itemtype} hozzáadása"
 
 #. Default: "Add new item"
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:27
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:20
 msgid "heading_add_new_item"
 msgstr "Új elem hozzáadása"
 
@@ -4555,7 +4775,7 @@ msgid "heading_allowed_languages"
 msgstr "Engedélyezett nyelvek"
 
 #. Default: "Latest content created by this user"
-#: CMFPlone/skins/plone_content/author.cpt:252
+#: CMFPlone/skins/plone_content/author.cpt:255
 msgid "heading_author_content"
 msgstr "A legfrissebb tartalmat ez a felhasználó hozta létre"
 
@@ -4597,6 +4817,8 @@ msgstr "Tartalom nézetek"
 
 #. Default: "Site Setup"
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:21
+#: CMFPlone/skins/plone_prefs/portlet_prefs.pt:19
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:15
 msgid "heading_control_panel"
 msgstr "Plone beállítása"
 
@@ -4607,6 +4829,7 @@ msgstr "Felhasználói csoport létrehozása"
 
 #. Default: "Current sharing permissions for ${folder}"
 #: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:32
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:16
 msgid "heading_currently_assigned_shares"
 msgstr "A(z) ${folder} elem jelenlegi hozzáférési jogosultságai"
 
@@ -4622,6 +4845,7 @@ msgstr "${object1} és ${object2} elemek közötti különbségek"
 
 #. Default: "Document Actions"
 #: CMFPlone/skins/plone_deprecated/document_actions.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/document_actions.pt:6
 msgid "heading_document_actions"
 msgstr "Dokumentummal kapcsolatos tevékenységek"
 
@@ -4631,6 +4855,8 @@ msgid "heading_edit_groupproperties"
 msgstr "${groupname} felhasználói csoport tulajdonságainak szerkesztése"
 
 #. Default: "Edit ${itemtype}"
+#: Archetypes/skins/archetypes/edit_macros.pt:26
+#: Archetypes/skins/archetypes/metadata_macros.pt:18
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:20
 msgid "heading_edit_item"
 msgstr "A(z) ${itemtype} szerkesztése"
@@ -4732,7 +4958,7 @@ msgid "heading_memberships_current"
 msgstr "Jelenlegi felhasználói csoporttagságok"
 
 #. Default: "Personal Preferences"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:55
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:56
 msgid "heading_my_preferences"
 msgstr "Személyes beállítások"
 
@@ -4763,6 +4989,7 @@ msgstr "Lehet, hogy erre szeretne keresni ..."
 
 #. Default: "Personal tools"
 #: CMFPlone/skins/plone_deprecated/global_personalbar.pt:16
+#: plone.app.layout/plone/app/layout/viewlets/personal_bar.pt:4
 msgid "heading_personal_tools"
 msgstr "Személyes eszközök"
 
@@ -4794,6 +5021,7 @@ msgstr "Publikációs folyamat"
 
 #. Default: "Quit your web browser to log out"
 #: CMFPlone/skins/plone_login/logged_out.cpt:55
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:51
 msgid "heading_quit_to_log_out"
 msgstr "Zárja be böngészőjét a kijelentkezéshez!"
 
@@ -4843,7 +5071,9 @@ msgid "heading_search_newmembers"
 msgstr "Felhasználói csoportok új tagjainak keresése"
 
 #. Default: "Search results"
-#: CMFPlone/skins/plone_forms/search.pt:63
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:226
+#: CMFPlone/skins/plone_forms/member_search_results.pt:19
+#: CMFPlone/skins/plone_forms/search.pt:65
 msgid "heading_search_results"
 msgstr "Keresés eredménye"
 
@@ -4854,6 +5084,7 @@ msgstr "Felhasználók és felhasználói csoportok keresése"
 
 #. Default: "Sections"
 #: CMFPlone/skins/plone_deprecated/global_sections.pt:15
+#: plone.app.layout/plone/app/layout/viewlets/sections.pt:3
 msgid "heading_sections"
 msgstr "Bekezdések"
 
@@ -4883,12 +5114,14 @@ msgid "heading_set_content_type_restrictions"
 msgstr "Engedélyezze, hogy mely tartalomtípusokat lehessen itt hozzáadni"
 
 #. Default: "Please log in"
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:7
 #: CMFPlone/skins/plone_login/login_form.cpt:58
 msgid "heading_sign_in"
 msgstr "Kérem, jelentkezzen be."
 
 #. Default: "You are now logged out"
 #: CMFPlone/skins/plone_login/logged_out.cpt:29
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:40
 msgid "heading_signed_out"
 msgstr "Sikeresen kijelentkezett."
 
@@ -4951,10 +5184,12 @@ msgstr ""
 
 #. Default: "Views"
 #: CMFPlone/skins/plone_deprecated/global_contentviews.pt:15
+#: plone.app.layout/plone/app/layout/viewlets/contentviews.pt:8
 msgid "heading_views"
 msgstr "Nézetek"
 
 #. Default: "Welcome!"
+#: CMFPlone/skins/plone_login/login_password.cpt:22
 #: CMFPlone/skins/plone_login/registered.pt:19
 msgid "heading_welcome"
 msgstr "Üdvözöljük!"
@@ -4991,7 +5226,7 @@ msgid "help_allow_comments"
 msgstr "Ha kipipálva, akkor a felhasználók hozzászólhatnak ehhez az elemhez."
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on the your author page, linked from the items you create."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:200
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:201
 msgid "help_biography"
 msgstr "Rövid összefoglalás arról, hogy Ön ki és mivel foglalkozik. Ez az információ a szerzői lapon fog megjelenni, és minden olyen tartalomról lesz ide hivatkozás, amit Ön készít."
 
@@ -5016,7 +5251,7 @@ msgid "help_change_ownership"
 msgstr "Az aktuális objektum tulajdonosának megváltoztatása."
 
 #. Default: "Select the new state for the selected items."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:167
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:166
 msgid "help_change_status"
 msgstr "Válassza ki a kijelölt elem új állapotát!"
 
@@ -5042,16 +5277,18 @@ msgstr "A linkhez fűzött megjegyzés."
 
 #. Default: "Re-enter the password. Make sure the passwords are identical."
 #: CMFPlone/skins/plone_login/join_form.cpt:180
+#: CMFPlone/skins/plone_login/login_password.cpt:88
+#: CMFPlone/skins/plone_prefs/password_form.pt:67
 msgid "help_confirm_password"
 msgstr "Írja be újra a jelszót! Figyeljen arra, hogy azonos legyen az előzővel!"
 
 #. Default: "Select the content editor that you would like to use. Note that content editors often have specific browser requirements."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:246
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:247
 msgid "help_content_editor"
 msgstr "Válassza ki a tartalom szerkesztőt, amelyet használni szeretne! Fontos tudni, hogy a tartalomszerkesztők használatához gyakran a böngésző speciális beállítása szükséges."
 
 #. Default: "When checked, an icon will be made visible on each page which allows you to edit content with your favorite editor instead of using browser-based editors. This requires an additional application called ExternalEditor installed client-side. Ask your administrator for more information if needed."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:289
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:290
 msgid "help_content_ext_editor"
 msgstr "Ha ezt bejelöli, akkor egy ikon jelenik meg minden oldalon, ami lehetővé teszi, hogy a tartalmat a kedvenc szerkesztő programjával módosítsa, a böngészőn alapuló szerkesztő helyett. Ehhez egy további alkalmazásra van szükség, amit ExternalEditor-nak hívnak, és a kliens oldalra kell telepíteni. Ha több információra van szüksége, kérdezze róla a rendszergazdát."
 
@@ -5061,13 +5298,13 @@ msgid "help_contributors"
 msgstr "A dokumentum elkészítésében együttműködő személyek nevei. Soronként kérem egy munkatársat írjon."
 
 #. Default: "Copyright statement or other rights information on this item."
-#: Archetypes/ExtensibleMetadata.py:172
+#: Archetypes/ExtensibleMetadata.py:173
 #, fuzzy
 msgid "help_copyrights"
 msgstr "Az elemmel kapcsolatos szerzői vagy egyéb jogi nyilatkozatok."
 
 #. Default: "Date this object was created"
-#: Archetypes/ExtensibleMetadata.py:191
+#: Archetypes/ExtensibleMetadata.py:192
 msgid "help_creation_date"
 msgstr "Az objektum létrehozásának dátuma"
 
@@ -5113,17 +5350,19 @@ msgid "help_date_range_criteria_start"
 msgstr "A keresésben megadott dátum intervallum eleje."
 
 #. Default: "A short summary of the content"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:104
+#: Archetypes/ExtensibleMetadata.py:96
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:105
 msgid "help_description"
 msgstr "Az elem rövid leírása."
 
 #. Default: "Determines if Short Names (also known as IDs) are changable when editing items. If Short Names are not displayed, they will be generated automatically."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:332
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:333
 msgid "help_display_names"
 msgstr "Meghatározza, hogy a rövid neveket (más néven ID-ket)  meg lehet-e változtatni az elemek szerkesztése közben. Ha a rövid nevek nincsenek kijelezve, akkor automatikusan generálva lesznek."
 
 #. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:100
+#: Archetypes/ExtensibleMetadata.py:140
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:99
 msgid "help_effective_date"
 msgstr "Itt állíthatja be azt az időpontot, amikor szeretné megjelentetni az elemet. Ahhoz, hogy ekkor meg is jelenjen, szükséges, hogy publikált állapotú legyen. Ha nem állít be időpontot, az elem automatikusan megjelenik."
 
@@ -5138,7 +5377,8 @@ msgid "help_exclude_from_nav"
 msgstr "Ha ezt bejelöli, akkor az elem nem fog megjelenni a navigációs fában."
 
 #. Default: "The date when the item expires. This will automatically make the item invisible for others at the given date. If no date is chosen, it will never expire."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:124
+#: Archetypes/ExtensibleMetadata.py:151
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:123
 msgid "help_expiration_date"
 msgstr "Beállíthatja az időpontot, amikor az elem érvényessége lejár. Ettől az időponttól az elem automatikusan láthatatlanná válik mások számára. Ha nem állít be időpontot, az elem érvényessége soha nem jár le."
 
@@ -5163,18 +5403,18 @@ msgid "help_groupname"
 msgstr "A felhasználói csoport egyedi azonosítója. Létrehozása után nem változtatható meg."
 
 #. Default: "The URL for your external home page, if you have one."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:224
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:225
 msgid "help_homepage"
 msgstr "Külső honlapjának címe:"
 
 #. Default: "Controls what types are addable in this location."
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:133
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:131
 #, fuzzy
 msgid "help_immediately_addable_types"
 msgstr "A fentebb megadott típusok közül többet hozzá lehet rendelni a \"Hozzáad\" lenyíló menühöz. Az összes többi típus egy külön űrlap segítségével adható hozzá, ugyanazt a lenyíló menüt használva."
 
 #. Default: "If checked, this will attempt to modify the status of all content in any selected folders and their subfolders."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:90
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:89
 msgid "help_include_contained_objects"
 msgstr "Ha be van jelölve, akkor a Plone megpróbálja módosítani az összes tartalom státuszát minden kiválasztott mappában és azok almappáiban."
 
@@ -5190,7 +5430,7 @@ msgid "help_inherit_criteria"
 msgstr "A kritériumok örökölhetőségét állítja be. Például, ha meghatározta, hogy csak az utóbbi három napban publikált elemek jelenjenek meg az aktuális altéma elemet tartalmazó téma elem nézetében, akkor az altéma automatikusan örökölheti ezt a feltételt."
 
 #. Default: "By default, permissions from the container of this item are inherited. If you disable this, only the explicitly defined sharing permissions will be valid. In the overview, the symbol ${image_confirm_icon} indicates an inherited value. Similarly, the symbol ${image_link_icon} indicates a global role, which is managed by the site administrator."
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:155
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:156
 #, fuzzy
 msgid "help_inherit_local_roles"
 msgstr "Alapértelmezésben ennek az elemnek a tárolójától (pl. mappájától) öröklődőttek. Ha ezt letiltja, akkor csak a beállított megosztási engedélyek lesznek érvényben. ... ?"
@@ -5201,18 +5441,18 @@ msgid "help_limit_number"
 msgstr "Ha ki van választva, akkor csak az alul kimutatott 'Elemek száma' lesz megjelenítve."
 
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:311
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:312
 msgid "help_listed_search"
 msgstr "Meghatározza, hogy az Ön felhasználói neve megjelenik-e az ezen a portálon végzett keresés során."
 
 #. Default: "Select which types should be available in the 'More…' submenu <em>instead</em> of in the main pulldown. This is useful to indicate that these are not the preferred types in this location, but are allowed if you really need them."
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:175
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:174
 #, fuzzy
 msgid "help_locally_allowed_types"
 msgstr "Válassza ki azokat a típusokat, amiket ehhez a mappához hozzá lehet adni!"
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:147
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:148
 msgid "help_location"
 msgstr "Az Ön helyzete - ország és város, vagy a vállalaton belül az az iroda, ahol napközben tartózkodik."
 
@@ -5227,7 +5467,7 @@ msgid "help_login_name_caps"
 msgstr "A felhasználói azonosítók esetén a kisbetűk mást jelentenek, mint a nagybetűk (kisbetű/nagybetű-érzékenység). Győződjön meg arról, hogy nincsen benyomva a Caps Lock billentyű!"
 
 #. Default: "Appearance of the site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:348
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:349
 msgid "help_look"
 msgstr "Az oldal megjelenése."
 
@@ -5237,7 +5477,7 @@ msgid "help_message"
 msgstr "Kérem, írja be az elküldendő üzenet szövegét."
 
 #. Default: "Date this content was modified last"
-#: Archetypes/ExtensibleMetadata.py:207
+#: Archetypes/ExtensibleMetadata.py:208
 msgid "help_modification_date"
 msgstr "A tartalom utolsó módosításának dátuma"
 
@@ -5268,6 +5508,7 @@ msgstr ""
 
 #. Default: "Enter your new password. Minimum 5 characters."
 #: CMFPlone/skins/plone_login/login_password.cpt:68
+#: CMFPlone/skins/plone_prefs/password_form.pt:53
 msgid "help_new_password"
 msgstr "Adja meg új jelszavát! Legalább 5 karakter legyen."
 
@@ -5297,7 +5538,9 @@ msgid "help_password_creation"
 msgstr "Legalább 5 karakter legyen."
 
 #. Default: "If you have forgotten your password, ${click_here}."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:122
 #: CMFPlone/skins/plone_login/login_form.cpt:147
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:142
 msgid "help_password_retrieval"
 msgstr "Ha elfelejtette a jelszavát: ${click_here}."
 
@@ -5312,32 +5555,34 @@ msgid "help_portal_type_criteria_value"
 msgstr "A lehetséges tartalomtípusok egyike."
 
 #. Default: "To add or change the portrait: click the \"Browse\" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:381
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:382
 msgid "help_portrait"
 msgstr "Portré hozzáadásához vagy megváltoztatásához kattintson a \"Böngészés\" gombra és válasszon ki egy képet. Az ajánlott képméret 75 pixel széles és 100 pixel magas."
 
 #. Default: "Your preferred language."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:172
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:173
 msgid "help_preferred_language"
 msgstr "Az Ön nyelve."
 
 #. Default: "Will be added to the publishing history. If multiple items are selected, this comment will be attached to all of them."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:151
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:150
 msgid "help_publishing_comments"
 msgstr "A megjegyzés hozzáadódik a publikálási történethez. Több elem kiválasztásakor a megjegyzés hozzáadódik az összes kiválasztott elemhez."
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:151
 #: CMFPlone/skins/plone_login/login_form.cpt:119
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:216
 msgid "help_remember_my_name"
 msgstr "Jelölje be, ha azt szeretné, hogy következő látogatásai alkalmával böngészője automatikusan kitöltse felhasználói nevét."
 
 #. Default: "Return items created by a particular person."
-#: CMFPlone/skins/plone_forms/search_form.pt:209
+#: CMFPlone/skins/plone_forms/search_form.pt:208
 msgid "help_search_author"
 msgstr "Meghatározott felhasználó által létrehozott elemek megjelenítése."
 
 #. Default: "Return items matching some or all of these Categories. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
-#: CMFPlone/skins/plone_forms/search_form.pt:70
+#: CMFPlone/skins/plone_forms/search_form.pt:72
 msgid "help_search_categories"
 msgstr ""
 
@@ -5377,7 +5622,7 @@ msgid "help_search_new_owner"
 msgstr "Felhasználók keresése"
 
 #. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
-#: CMFPlone/skins/plone_forms/search_form.pt:232
+#: CMFPlone/skins/plone_forms/search_form.pt:231
 msgid "help_search_review_status"
 msgstr "Szerkesztőként rákereshet az egyes elemekre azok publikálási állapota alapján. Ha szeretné a keresést bizonyos publikálási állapot szerint szűkiteni, válasszon a listából."
 
@@ -5387,12 +5632,12 @@ msgid "help_search_roles"
 msgstr "Felhasználók keresése a kiválasztott szerepek alapján."
 
 #. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
-#: CMFPlone/skins/plone_forms/search_form.pt:37
+#: CMFPlone/skins/plone_forms/search_form.pt:36
 msgid "help_search_text"
 msgstr "Egyszerű szöveges kereséshez adja meg a kifejezést itt. Egyszerre több szóra is rá lehet keresni az <strong>AND</strong> (ÉS) és a <strong>OR</strong> (VAGY) logikai operátorokkal. Az elemek tartalmában, címében és rövid leírásában lehet így keresni."
 
 #. Default: "Return items matching this title."
-#: CMFPlone/skins/plone_forms/search_form.pt:56
+#: CMFPlone/skins/plone_forms/search_form.pt:55
 msgid "help_search_title"
 msgstr "A keresőkifejezést címében tartalmazó elemek megjelenítése."
 
@@ -5447,7 +5692,8 @@ msgid "help_short_name_url"
 msgstr "A rövid azonosító része az elem webcímének. Nem tartalmazhat szóközt, nagybetűt, aláhúzást vagy bármilyen más speciális karaktert."
 
 #. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:50
+#: Archetypes/BaseObject.py:93
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:51
 msgid "help_shortname"
 msgstr "A rövid azonosító része az elem webcímének. Nem tartalmazhat szóközt, nagybetűt, aláhúzást vagy bármilyen más speciális karaktert."
 
@@ -5514,8 +5760,8 @@ msgid "help_template_mixin"
 msgstr "Válassza ki a sablont, amit az elem megjelenítéséhez akar használni!"
 
 #. Default: "Add http:// to link outside the site."
-#: widget description of StringWidget for label URL
 #: widget description of StringWidget for label Event URL
+#: widget description of StringWidget for label URL
 msgid "help_url"
 msgstr "Hozzáad egy 'http://' protokol leírást, hogy a portálon kívüli hivatkozást tudjon létrehozni."
 
@@ -5542,7 +5788,7 @@ msgid "hide"
 msgstr "elrejt"
 
 #. Default: "${action} by ${actor} on ${time}"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:46
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:51
 msgid "history_action"
 msgstr ""
 
@@ -5625,16 +5871,21 @@ msgstr "Műveletek"
 
 #. Default: "Actions"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:405
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:49
 msgid "label_actions_menu"
 msgstr "Műveletek"
 
 #. Default: "Add"
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:82
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:59
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:114, ...
 msgid "label_add"
 msgstr "Hozzáad"
 
 #. Default: "Add Comment"
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:25
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:55
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
 msgid "label_add_comment"
 msgstr "Hozzászólás"
 
@@ -5645,6 +5896,7 @@ msgstr "Új csoport hozzáadása"
 
 #. Default: "Add item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:99
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:414
 msgid "label_add_new_item"
 msgstr "Új elem hozzáadása"
 
@@ -5681,6 +5933,7 @@ msgstr "vCal"
 # When only one type can be added
 #. Default: "Add ${type}"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:168
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:424
 msgid "label_add_type"
 msgstr "${type} hozzáadása"
 
@@ -5701,21 +5954,25 @@ msgstr "A kijelölt felhasználó(k) hozzáadása ehhez a csoporthoz"
 
 #. Default: "Advanced…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:62
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:690
 #, fuzzy
 msgid "label_advanced"
 msgstr "Haladó…"
 
 #. Default: "Advanced Search…"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:57
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:84
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:48, ...
 msgid "label_advanced_search"
 msgstr "Haladó keresés"
 
 #. Default: "Affected content"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:70
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:69
 msgid "label_affected_content"
 msgstr "Érintett tartalom"
 
 #. Default: "All"
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:32
 #: plone.app.content/plone/app/content/browser/table.pt:38
 #, fuzzy
 msgid "label_all"
@@ -5752,17 +6009,21 @@ msgid "label_an_anonymous_user"
 msgstr "névtelen / anonim felhasználó"
 
 #. Default: "Anonymous User"
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:64
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:46
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:53, ...
 msgid "label_anonymous_user"
 msgstr "Névtelen felhasználó"
 
 #. Default: "Any Author"
-#: CMFPlone/skins/plone_forms/search_form.pt:217
+#: CMFPlone/skins/plone_forms/search_form.pt:216
 msgid "label_any_author"
 msgstr "Bármely szerző"
 
 #. Default: "Apply Changes"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:247
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:237
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:258
 msgid "label_apply_changes"
 msgstr "Változtatások elfogadása"
 
@@ -5802,18 +6063,18 @@ msgid "label_at"
 msgstr "–"
 
 #. Default: "Author"
-#: CMFPlone/skins/plone_forms/search_form.pt:207
+#: CMFPlone/skins/plone_forms/search_form.pt:206
 msgid "label_author"
 msgstr "Szerző"
 
 #. Default: "Author's external home page…"
-#: CMFPlone/skins/plone_content/author.cpt:139
+#: CMFPlone/skins/plone_content/author.cpt:140
 #, fuzzy
 msgid "label_author_external_home_page"
 msgstr "A szerző külső honlapja"
 
 #. Default: "Author's home page in this site…"
-#: CMFPlone/skins/plone_content/author.cpt:134
+#: CMFPlone/skins/plone_content/author.cpt:135
 #, fuzzy
 msgid "label_author_internal_home_page"
 msgstr "A szerző honlapja ezen a portálon"
@@ -5834,7 +6095,7 @@ msgid "label_back_to_site"
 msgstr "Vissza a portálhoz"
 
 #. Default: "Biography"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:198
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:199
 msgid "label_biography"
 msgstr "Életrajz"
 
@@ -5850,11 +6111,14 @@ msgstr "Érték"
 
 #. Default: "Browse"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:67
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:63
 msgid "label_browse"
 msgstr ""
 
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:124
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:126
+#: CMFPlone/skins/plone_deprecated/document_byline.pt:21, ...
 msgid "label_by_author"
 msgstr "Készítette: ${author}"
 
@@ -5890,12 +6154,15 @@ msgid "label_calendar"
 msgstr "Naptár"
 
 #. Default: "Cancel"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:417
+#: Archetypes/skins/archetypes/edit_macros.pt:233
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:127
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:239, ...
 msgid "label_cancel"
 msgstr "Mégsem"
 
 #. Default: "Categories"
-#: CMFPlone/skins/plone_forms/search_form.pt:68
+#: Archetypes/ExtensibleMetadata.py:81
+#: CMFPlone/skins/plone_forms/search_form.pt:70
 msgid "label_categories"
 msgstr "Kategóriák"
 
@@ -5917,6 +6184,7 @@ msgstr "Az alapértelmezett megjelenítés változtatása a kiválasztott elemre
 
 #. Default: "Change content item<br />as default view…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:382
 #, fuzzy
 msgid "label_change_item"
 msgstr "Alapértelmezett nézet <br/> elemmé tesz"
@@ -5933,11 +6201,12 @@ msgstr "Tulajdonosváltás"
 
 #. Default: "Change Password"
 #: CMFPlone/skins/plone_login/login_password.cpt:102
+#: CMFPlone/skins/plone_prefs/password_form.pt:79
 msgid "label_change_password"
 msgstr "Jelszó módosítása"
 
 #. Default: "Change State"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:166
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:165
 msgid "label_change_status"
 msgstr "Állapot változtatása"
 
@@ -5963,11 +6232,13 @@ msgstr "Válasszon egy elemet..."
 
 #. Default: "Select a content item<br />as default view…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:356
 msgid "label_choose_item"
 msgstr "Válasszon egy elemet<br/>az alapértelmezett nézethez..."
 
 #. Default: "Display"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:206
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:120
 msgid "label_choose_template"
 msgstr "Megjelenít"
 
@@ -5982,7 +6253,9 @@ msgid "label_clear_selection"
 msgstr "A kijelölt rész törlése"
 
 #. Default: "we can send you a new one"
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:123
 #: CMFPlone/skins/plone_login/login_form.cpt:148
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:143
 #, fuzzy
 msgid "label_click_here_to_retrieve"
 msgstr "a visszaszerzéshez kattintson ide"
@@ -5993,32 +6266,40 @@ msgid "label_click_to_view_full_image"
 msgstr "Kattintson ide a teljes méretű képhez..."
 
 #. Default: "Comment"
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:142
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:90
 msgid "label_comment"
 msgstr "Megjegyzés"
 
 #. Default: "Posted by"
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:61
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:43
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:50
 msgid "label_comment_by"
 msgstr "Elküldte"
 
 #. Default: "at"
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:66
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:48
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:55
 msgid "label_commented_at"
 msgstr "idő"
 
 #. Default: "Comments"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:148
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:147
 msgid "label_comments"
 msgstr "Hozzászólások"
 
 #. Default: "Compare"
 #: CMFPlone/skins/plone_forms/history_form.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:72
 msgid "label_compare"
 msgstr "Összehasonlít"
 
 #. Default: "Confirm password"
 #: CMFPlone/skins/plone_login/join_form.cpt:173
+#: CMFPlone/skins/plone_login/login_password.cpt:85
+#: CMFPlone/skins/plone_prefs/password_form.pt:65
 msgid "label_confirm_password"
 msgstr "Jelszó ismétlése"
 
@@ -6053,7 +6334,7 @@ msgid "label_containing"
 msgstr "tartalmaz"
 
 #. Default: "Content editor"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:244
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:245
 msgid "label_content_editor"
 msgstr "Tartalomszerkesztő"
 
@@ -6089,6 +6370,7 @@ msgstr "Beosztások"
 
 #. Default: "enabled"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:112
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:144
 msgid "label_contentrules_rule_enabled"
 msgstr "engedélyezve"
 
@@ -6123,12 +6405,12 @@ msgid "label_copy_to_present"
 msgstr "Jelenlegire rámásol"
 
 #. Default: "Rights"
-#: Archetypes/ExtensibleMetadata.py:171
+#: Archetypes/ExtensibleMetadata.py:172
 msgid "label_copyrights"
 msgstr "Jogok"
 
 #. Default: "Creation Date"
-#: Archetypes/ExtensibleMetadata.py:190
+#: Archetypes/ExtensibleMetadata.py:191
 msgid "label_creation_date"
 msgstr "Létrehozás dátuma"
 
@@ -6159,6 +6441,7 @@ msgstr "Csak a jelenlegi mappa tartalmát mutatja."
 
 #. Default: "Folder display"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:219
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:275
 msgid "label_current_folder_views"
 msgstr "Mappa megjelenése"
 
@@ -6169,6 +6452,7 @@ msgstr "Aktuális kép"
 
 #. Default: "Item display"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:285
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:322
 msgid "label_current_item_views"
 msgstr "Elem megjelenése"
 
@@ -6179,6 +6463,7 @@ msgstr "Jelenlegi jelszó"
 
 #. Default: "Current selection"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:17
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:10
 msgid "label_currentselection"
 msgstr "Jelenlegi kiválasztás"
 
@@ -6194,6 +6479,7 @@ msgstr "Táblázat oszlopok"
 
 #. Default: "Dashboard"
 #: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:38
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-dashboard.pt:41
 msgid "label_dashboard"
 msgstr "Műszerfal"
 
@@ -6223,7 +6509,7 @@ msgid "label_delete"
 msgstr "Törlés"
 
 #. Default: "Delete Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:402
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:403
 msgid "label_delete_portrait"
 msgstr "Portré törlése"
 
@@ -6233,12 +6519,15 @@ msgid "label_delete_roles_users_groups"
 msgstr "Kitörli a kiválasztott szerepkör(ök)et és felhasználó(ka)t/csoporto(ka)t"
 
 #. Default: "Description"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:102
+#: Archetypes/ExtensibleMetadata.py:95
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:103
+#: CMFPlone/skins/plone_forms/search_form.pt:117, ...
 msgid "label_description"
 msgstr "Leírás"
 
 #. Default: "Disable"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:145
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:218
 msgid "label_disable"
 msgstr "Letiltás"
 
@@ -6268,7 +6557,9 @@ msgid "label_discussion_enabled"
 msgstr "Engedélyezett"
 
 #. Default: "Edit"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:34
+#: CMFPlone/skins/plone_content/author.cpt:70
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:35
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:83, ...
 msgid "label_edit"
 msgstr "Szerkeszt"
 
@@ -6283,17 +6574,20 @@ msgid "label_edit_default_view_container_go_here"
 msgstr "kattintson ide"
 
 #. Default: "Allow editing of Short Names"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:329
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:330
 msgid "label_edit_short_names"
 msgstr "Rövid nevek szerkesztésének engedélyezése"
 
 #. Default: "Publishing Date"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:99
+#: Archetypes/ExtensibleMetadata.py:139
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:98
 msgid "label_effective_date"
 msgstr "Közzététel időpontja"
 
 #. Default: "E-mail"
+#: CMFPlone/skins/plone_forms/member_search_form.pt:46
 #: CMFPlone/skins/plone_login/join_form.cpt:115
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:118
 msgid "label_email"
 msgstr "E-mail"
 
@@ -6304,6 +6598,7 @@ msgstr "E-mail cím"
 
 #. Default: "Enable"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:143
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:213
 msgid "label_enable"
 msgstr "Engedélyezés"
 
@@ -6344,12 +6639,14 @@ msgstr "Jelenlevők"
 
 #. Default: "(${location}, from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:99
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:103
 #, fuzzy
 msgid "label_event_byline"
 msgstr "(${location}, kezdet: ${start}, vég: ${end})"
 
 #. Default: "(from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:111
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:115
 msgid "label_event_byline_without_location"
 msgstr ""
 
@@ -6399,12 +6696,13 @@ msgid "label_existing_categories"
 msgstr "Létező kategóriák"
 
 #. Default: "Expiration Date"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:123
+#: Archetypes/ExtensibleMetadata.py:150
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:122
 msgid "label_expiration_date"
 msgstr "Lejárat időpontja"
 
 #. Default: "Enable external editing"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:287
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:288
 msgid "label_ext_editor"
 msgstr "Külső szerkesztő használatának engedélyezése"
 
@@ -6414,7 +6712,8 @@ msgid "label_file"
 msgstr "Fájl"
 
 #. Default: "filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:142
+#: CMFPlone/skins/plone_forms/search.pt:144
+#: plone.app.layout/plone/app/layout/viewlets/keywords.pt:8
 msgid "label_filed_under"
 msgstr "Felvéve:"
 
@@ -6434,12 +6733,15 @@ msgid "label_find_group"
 msgstr "Felhasználói csoport keresése"
 
 #. Default: "Format"
+#: Archetypes/skins/archetypes/widgets/textarea.pt:99
 #: CMFPlone/skins/plone_wysiwyg/wysiwyg_support.pt:22
 msgid "label_format"
 msgstr "Formátum"
 
 #. Default: "Full Name"
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:272
 #: CMFPlone/skins/plone_login/join_form.cpt:59
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:98
 msgid "label_full_name"
 msgstr "Teljes név"
 
@@ -6455,6 +6757,7 @@ msgstr "Fülek automatikus generálása"
 
 #. Default: "GNU GPL license"
 #: CMFPlone/skins/plone_deprecated/footer.pt:38
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
 msgid "label_gnu_gpl_licence"
 msgstr "GNU GPL licenc"
 
@@ -6464,11 +6767,14 @@ msgid "label_group"
 msgstr "Felhasználói csoport"
 
 #. Default: "Group Members"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:34
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:40
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:27
 msgid "label_group_members"
 msgstr "Felhasználói csoport tagjai"
 
 #. Default: "Group Memberships"
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:33
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:36
 msgid "label_group_memberships"
 msgstr "Csoporttagságok"
@@ -6479,12 +6785,16 @@ msgid "label_group_name"
 msgstr "Csoportnév"
 
 #. Default: "Group Portlets"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:44
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:50
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:37
 msgid "label_group_portlets"
 msgstr ""
 
 #. Default: "Group Properties"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:39
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:45
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:32
 msgid "label_group_properties"
 msgstr "Felhasználói csoport tulajdonságai"
 
@@ -6495,6 +6805,8 @@ msgstr "Csoportok keresése"
 
 #. Default: "Groups"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:38
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:42
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:31
 msgid "label_groups"
 msgstr "Felhasználói csoportok"
 
@@ -6510,6 +6822,8 @@ msgstr "Előzmények nem elérhetőek."
 
 #. Default: "History"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:10
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:8
 msgid "label_history"
 msgstr "Előzmények"
 
@@ -6519,12 +6833,13 @@ msgid "label_home"
 msgstr "Nyitólap"
 
 #. Default: "Home page"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:222
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:223
 msgid "label_homepage"
 msgstr "Honlap"
 
 #. Default: "OpenID URL"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:25
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:63
 msgid "label_identity_url"
 msgstr "OpenID URL"
 
@@ -6544,12 +6859,12 @@ msgid "label_image_caption"
 msgstr "Képaláírás"
 
 #. Default: "Allowed types"
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:128
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:127
 msgid "label_immediately_addable_types"
 msgstr "Engedélyezett típusok"
 
 #. Default: "Include contained items"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:86
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:85
 msgid "label_include_contained_objects"
 msgstr "Tartalmazott objektumokat is"
 
@@ -6564,7 +6879,7 @@ msgid "label_inherit_criteria"
 msgstr "Kritériumok öröklése"
 
 #. Default: "Inherit permissions from higher levels"
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:145
 msgid "label_inherit_local_roles"
 msgstr "A magasabb szintek engedélyeinek öröklése"
 
@@ -6580,6 +6895,7 @@ msgstr "Elemek száma"
 
 #. Default: "Item: ${contentitem}"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:265
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:295
 msgid "label_item_selected"
 msgstr "Elem: ${contentitem}"
 
@@ -6594,7 +6910,9 @@ msgid "label_keywords"
 msgstr "Kulcsszavak"
 
 #. Default: "Language"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:170
+#: Archetypes/ExtensibleMetadata.py:164
+#: CMFPlone/skins/plone_deprecated/portlet_languages.pt:17
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:171
 msgid "label_language"
 msgstr "Nyelv"
 
@@ -6615,7 +6933,7 @@ msgid "label_limit_number"
 msgstr "A keresés eredményének szűkítése"
 
 #. Default: "Listed in searches"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:309
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:310
 msgid "label_listed_status"
 msgstr "Keresés esetén megjelenítve"
 
@@ -6640,17 +6958,21 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "A kiválasztott felhasználó(k)hoz/csoport(ok)hoz rendelendő szerepkörök"
 
 #. Default: "Location"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:145
+#: Archetypes/ExtensibleMetadata.py:106
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:146
 msgid "label_location"
 msgstr "Helyszín:"
 
 #. Default: "Locked"
+#: plone.app.iterate/plone/app/iterate/browser/info_baseline.pt:5
 #: plone.locking/plone/locking/browser/info.pt:8
 msgid "label_locked"
 msgstr "Lezárt"
 
 #. Default: "Log in"
-#: CMFPlone/skins/plone_login/registered.pt:86
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:79
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:160
+#: CMFPlone/skins/plone_login/login_form.cpt:128, ...
 msgid "label_log_in"
 msgstr "Bejelentkezés"
 
@@ -6665,22 +6987,25 @@ msgid "label_login_continue_to_home_page"
 msgstr "Tovább a ${portal_title} honlapjára"
 
 #. Default: "Login Name"
-#: CMFPlone/skins/plone_login/login_form.cpt:76
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:376
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:46
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:89, ...
 msgid "label_login_name"
 msgstr "Azonosító"
 
 #. Default: "Log in to add comments"
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:37
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:25
 msgid "label_login_to_add_comments"
 msgstr "Be kell jelentkeznie ahhoz, hogy hozzá tudjon szólni az oldalhoz."
 
 #. Default: "Log in to send feedback"
-#: CMFPlone/skins/plone_content/author.cpt:149
+#: CMFPlone/skins/plone_content/author.cpt:151
 msgid "label_login_to_send_feedback"
 msgstr "Visszajelzés küldéséhez jelentkezzen be!"
 
 #. Default: "Look"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:346
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:347
 msgid "label_look"
 msgstr "Felhasználói felület kinézete"
 
@@ -6690,22 +7015,25 @@ msgid "label_mail_password"
 msgstr "Jelszó küldése e-mailben"
 
 #. Default: "Main Language:"
-#: CMFPlone/skins/plone_content/author.cpt:114
+#: CMFPlone/skins/plone_content/author.cpt:115
 msgid "label_main_language"
 msgstr "Fő nyelv:"
 
 #. Default: "Message"
+#: CMFPlone/skins/plone_content/author.cpt:213
 #: CMFPlone/skins/plone_templates/contact-info.cpt:131
 msgid "label_message"
 msgstr "Üzenet"
 
 #. Default: "Modification Date"
-#: Archetypes/ExtensibleMetadata.py:205
+#: Archetypes/ExtensibleMetadata.py:206
 msgid "label_modification_date"
 msgstr "Módosítás dátuma"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:71
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:95
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:92
+#: CMFPlone/skins/plone_forms/member_search_form.pt:31, ...
 msgid "label_name"
 msgstr "Név"
 
@@ -6761,6 +7089,7 @@ msgstr "Új tulajdonos keresése"
 
 #. Default: "New password"
 #: CMFPlone/skins/plone_login/login_password.cpt:65
+#: CMFPlone/skins/plone_prefs/password_form.pt:51
 msgid "label_new_password"
 msgstr "Új jelszó"
 
@@ -6780,7 +7109,7 @@ msgid "label_news_image"
 msgstr "Kép"
 
 #. Default: "Next"
-#: Archetypes/skins/archetypes/edit_macros.pt:217
+#: Archetypes/skins/archetypes/edit_macros.pt:218
 msgid "label_next"
 msgstr "Következő"
 
@@ -6795,7 +7124,7 @@ msgid "label_next_item_arrow"
 msgstr "Jobbra nyíl"
 
 #. Default: "No change"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:198
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:197
 msgid "label_no_change"
 msgstr "Nincs változás"
 
@@ -6806,6 +7135,8 @@ msgstr "Nincs megadva felhasználói csoport."
 
 #. Default: "No preference panels available."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:99
+#: CMFPlone/skins/plone_prefs/plone_memberprefs_panel.pt:48
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:84
 msgid "label_no_prefs_panels_available"
 msgstr ""
 
@@ -6841,6 +7172,7 @@ msgstr "Rendben"
 
 #. Default: "Log in"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:40
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:84
 msgid "label_openid_log_in"
 msgstr "Bejelentkezés"
 
@@ -6850,7 +7182,7 @@ msgid "label_or"
 msgstr "vagy"
 
 #. Default: "Basic HTML textarea editor (works in all browsers)"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:264
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:265
 msgid "label_ordinary_content_editor"
 msgstr "Egyszerű HTML  szerkesztő (minden böngészővel működik)"
 
@@ -6861,11 +7193,14 @@ msgstr "A kiegészítő program frissítve lett. Programverzió a fájlrendszere
 
 #. Default: "Parent"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:53
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:45
 msgid "label_parent"
 msgstr ""
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_login/join_form.cpt:145
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:59
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:112, ...
 msgid "label_password"
 msgstr "Jelszó"
 
@@ -6885,17 +7220,20 @@ msgid "label_path_criteria_value"
 msgstr "Mappák"
 
 #. Default: "Perform Search"
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:402
 #: CMFPlone/skins/plone_forms/ownership_form.cpt:208
 msgid "label_perform_search"
 msgstr "Keresés végrehajtása"
 
 #. Default: "Plone<sup>&reg;</sup> CMS — Open Source Content Management System"
 #: CMFPlone/skins/plone_deprecated/footer.pt:13
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:7
 msgid "label_plone_cms"
 msgstr "Plone<sup>&reg;</sup> nyílt forrású tartalomkezelő rendszer (CMS)"
 
 #. Default: "Plone Foundation"
 #: CMFPlone/skins/plone_deprecated/footer.pt:23
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:17
 msgid "label_plone_foundation"
 msgstr "Plone Alapítvány"
 
@@ -6930,17 +7268,19 @@ msgid "label_portlets_parent_folders"
 msgstr ""
 
 #. Default: "Portrait"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:370
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:371
 msgid "label_portrait"
 msgstr "Arckép"
 
 #. Default: "Powered by Plone"
 #: CMFPlone/skins/plone_deprecated/colophon.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/colophon.pt:21
 msgid "label_powered_by_plone"
 msgstr "Plone alapokon"
 
 #. Default: "Previous"
-#: Archetypes/skins/archetypes/edit_macros.pt:209
+#: Archetypes/skins/archetypes/edit_macros.pt:210
+#: CMFDiffTool/skins/ChangeSet/at_changeset.pt:54
 msgid "label_previous"
 msgstr "Előző"
 
@@ -6996,11 +7336,14 @@ msgstr "Publikálva"
 
 #. Default: "effective"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:50
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:54
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:50
 msgid "label_publishing_effective"
 msgstr "esedékesség"
 
 #. Default: "Quick search"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:200
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:32
 msgid "label_quick_search"
 msgstr "Gyorskeresés"
 
@@ -7020,17 +7363,21 @@ msgid "label_related_items"
 msgstr "Kapcsolódó elemek"
 
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:159
+#: CMFPlone/skins/plone_forms/search.pt:161
 msgid "label_relevance_percentage"
 msgstr "Relevancia: ${percentage}%"
 
 #. Default: "Remember my name."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:149
 #: CMFPlone/skins/plone_login/login_form.cpt:117
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:214
 msgid "label_remember_my_name"
 msgstr "Jegyezze meg a nevem."
 
 #. Default: "Remove"
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:92
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:90
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:86
 msgid "label_remove"
 msgstr "Eltávolítás"
 
@@ -7051,6 +7398,7 @@ msgstr "Összes átnevezése"
 
 #. Default: "Reply"
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:80
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:72
 msgid "label_reply"
 msgstr "Válasz"
 
@@ -7060,7 +7408,9 @@ msgid "label_request_url"
 msgstr "Kérés URL"
 
 #. Default: "(Required)"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:83
+#: Archetypes/skins/archetypes/widgets/field.pt:85
+#: CMFPlone/skins/plone_content/author.cpt:197
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:84, ...
 msgid "label_required"
 msgstr "(Szükséges)"
 
@@ -7075,7 +7425,7 @@ msgid "label_rev_later"
 msgstr "Későbbi korrekciók"
 
 #. Default: "Review status"
-#: CMFPlone/skins/plone_forms/search_form.pt:230
+#: CMFPlone/skins/plone_forms/search_form.pt:229
 msgid "label_review_status"
 msgstr "Publikálási állapot"
 
@@ -7100,7 +7450,9 @@ msgid "label_rule_event_trigger"
 msgstr ""
 
 #. Default: "Save"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:158
+#: Archetypes/skins/archetypes/base_metadata.cpt:94
+#: Archetypes/skins/archetypes/edit_macros.pt:226
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:122, ...
 msgid "label_save"
 msgstr "Mentés"
 
@@ -7140,7 +7492,9 @@ msgid "label_schema_settings"
 msgstr "Beállítások"
 
 #. Default: "Search"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:208
+#: CMFPlone/skins/plone_deprecated/global_searchbox.pt:33
+#: CMFPlone/skins/plone_forms/member_search_form.pt:105
+#: CMFPlone/skins/plone_forms/search.pt:45, ...
 msgid "label_search"
 msgstr "Keresés"
 
@@ -7160,17 +7514,19 @@ msgid "label_search_term"
 msgstr "Kereső kifejezés"
 
 #. Default: "Search Text"
-#: CMFPlone/skins/plone_forms/search_form.pt:35
+#: CMFPlone/skins/plone_forms/search_form.pt:34
 msgid "label_search_text"
 msgstr "Keresendő szöveg"
 
 #. Default: "only in current section"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:44
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:35
 msgid "label_searchbox_currentfolder_only"
 msgstr "Csak az aktuális részben"
 
 #. Default: "Search results"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:40
 msgid "label_searchresults"
 msgstr "Keresés eredménye"
 
@@ -7190,7 +7546,9 @@ msgid "label_select_all"
 msgstr "Kijelölés: ${label_link_all}"
 
 #. Default: "Select all items"
-#: CMFPlone/skins/plone_templates/test_rendering.pt:361
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:95
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:118
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:53, ...
 msgid "label_select_all_items"
 msgstr "Összes elem kiválasztása"
 
@@ -7225,6 +7583,8 @@ msgid "label_selection_criteria_value"
 msgstr "Érték"
 
 #. Default: "Send"
+#: CMFPlone/skins/plone_content/author.cpt:231
+#: CMFPlone/skins/plone_forms/sendto_form.cpt:107
 #: CMFPlone/skins/plone_templates/contact-info.cpt:154
 msgid "label_send"
 msgstr "Küldés"
@@ -7250,7 +7610,8 @@ msgid "label_sender_fullname"
 msgstr "Név"
 
 #. Default: "Short Name"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:48
+#: Archetypes/BaseObject.py:92
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:49
 msgid "label_short_name"
 msgstr "Rövid azonosító"
 
@@ -7260,6 +7621,7 @@ msgid "label_show"
 msgstr "Megjelenítés"
 
 #. Default: "Show all items"
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:85
 #: plone.app.content/plone/app/content/browser/table.pt:167
 msgid "label_show_all"
 msgstr "Minden elem megjelenítése"
@@ -7281,11 +7643,13 @@ msgstr "Megjelenítés"
 
 #. Default: "Show all"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:139
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:126
 msgid "label_showall"
 msgstr "Mindet mutat"
 
 #. Default: "Site Administration"
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:48
+#: CMFPlone/skins/plone_templates/default_error_message.pt:47
 msgid "label_site_admin"
 msgstr "Portál szerkesztősége"
 
@@ -7341,6 +7705,7 @@ msgstr "ESMTP felhasználói név"
 
 #. Default: "State:"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:22
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:566
 msgid "label_state"
 msgstr "Állapot:"
 
@@ -7355,6 +7720,8 @@ msgid "label_string_criteria_value"
 msgstr "Érték"
 
 #. Default: "Subject"
+#: CMFPlone/skins/plone_content/author.cpt:193
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:122
 #: CMFPlone/skins/plone_templates/contact-info.cpt:107
 msgid "label_subject"
 msgstr "Tárgy"
@@ -7411,16 +7778,20 @@ msgstr "Szövegformátum"
 
 #. Default: "Time"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:76
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:46
 msgid "label_time"
 msgstr "Idő"
 
 #. Default: "Title"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:81
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:82
+#: CMFPlone/skins/plone_forms/search_form.pt:53
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:33, ...
 msgid "label_title"
 msgstr "Cím"
 
 #. Default: "Up to my dashboard"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:58
+#: CMFPlone/skins/plone_prefs/password_form.pt:21
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:59
 msgid "label_to_dashboard"
 msgstr "Fel a műszerfalhoz"
 
@@ -7440,7 +7811,7 @@ msgid "label_type"
 msgstr "Típus"
 
 #. Default: "Type restrictions"
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:72
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:73
 msgid "label_type_restrictions"
 msgstr "Típuskorlátozások"
 
@@ -7465,29 +7836,34 @@ msgid "label_uninstall"
 msgstr "Telepített összetevő eltávolítása"
 
 #. Default: "Up to Groups Overview"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:97
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:70
 msgid "label_up_to_groups_overview"
 msgstr "Fel a felhasználói csoportok áttekintéséhez"
 
 #. Default: "Up to Site Setup"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:19
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:64
+#: CMFPlone/skins/plone_prefs/prefs_install_products_form.pt:20, ...
 msgid "label_up_to_plone_setup"
 msgstr "Fel a Plone beállítása menühöz"
 
 #. Default: "Up to Users Overview"
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:61
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:63
 msgid "label_up_to_usersoverview"
 msgstr "Fel a felhasználók áttekintéséhez"
 
 #. Default: "Update"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:84
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:81
 msgid "label_update"
 msgstr ""
 
 #. Default: "URL"
-#: widget label of StringWidget - description "Add http://
+#: for external links."
 #: to link outside the site."
-#: widget label of StringWidget - description "Web address with more info about the event. Add http://
+#: widget label of StringWidget - description "", ...
 msgid "label_url"
 msgstr "URL"
 
@@ -7498,6 +7874,7 @@ msgstr "Szerepkörök öröklése magasabb szintekről"
 
 #. Default: "Use Selected..."
 #: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:121
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:133
 msgid "label_use_selected"
 msgstr "Használja a kiválasztott..."
 
@@ -7507,11 +7884,14 @@ msgid "label_user"
 msgstr "Felhasználó"
 
 #. Default: "User Name"
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:273
 #: CMFPlone/skins/plone_login/join_form.cpt:83
+#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:77, ...
 msgid "label_user_name"
 msgstr "Azonosító"
 
 #. Default: "User Properties"
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:25
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:30
 msgid "label_user_properties"
 msgstr "A felhasználó tulajdonságai"
@@ -7523,6 +7903,7 @@ msgstr "Felhasználó keresése"
 
 #. Default: "Settings"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:43
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:36
 msgid "label_usergroup_settings"
 msgstr "Beállítások"
 
@@ -7533,6 +7914,8 @@ msgstr "Azonosító"
 
 #. Default: "Users"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:33
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:41
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:26
 msgid "label_users"
 msgstr "Felhasználók"
 
@@ -7542,7 +7925,8 @@ msgid "label_usersandgroups"
 msgstr "Felhasználók és felhasználói csoportok"
 
 #. Default: "View"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:27
+#: CMFPlone/skins/plone_content/author.cpt:63
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:28
 msgid "label_view"
 msgstr "Nézet"
 
@@ -7647,7 +8031,7 @@ msgid "legend_details"
 msgstr "Részletek"
 
 #. Default: "Feedback for author"
-#: CMFPlone/skins/plone_content/author.cpt:185
+#: CMFPlone/skins/plone_content/author.cpt:188
 msgid "legend_feedback_for_author"
 msgstr "Visszajelzés a szerzőnek"
 
@@ -7708,11 +8092,12 @@ msgstr "Bejelentkezés OpenID-vel"
 
 #. Default: "Password Details"
 #: CMFPlone/skins/plone_login/login_password.cpt:47
+#: CMFPlone/skins/plone_prefs/password_form.pt:34
 msgid "legend_password_details"
 msgstr "Jelszó részletei"
 
 #. Default: "Personal Details"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:86
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:87
 msgid "legend_personal_details"
 msgstr "Személyes adatok"
 
@@ -7823,6 +8208,7 @@ msgstr "Igen mindre"
 
 #. Default: "Action"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:17
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:15
 msgid "listingheader_action"
 msgstr "Változtatás"
 
@@ -7843,11 +8229,14 @@ msgstr "Szerző"
 
 #. Default: "Comment"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:20
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:18
 msgid "listingheader_comment"
 msgstr "Megjegyzés"
 
 #. Default: "Date and Time"
+#: CMFPlone/skins/plone_deprecated/review_history.pt:19
 #: CMFPlone/skins/plone_forms/undo_form.pt:58
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:17
 msgid "listingheader_date_and_time"
 msgstr "Dátum és időpont"
 
@@ -7858,11 +8247,13 @@ msgstr "Leírás"
 
 #. Default: "E-mail Address"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:130
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:138
 msgid "listingheader_email_address"
 msgstr "E-mail cím"
 
 #. Default: "Group name"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:157
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:97
 msgid "listingheader_group_name"
 msgstr "Felhasználói csoportnév"
 
@@ -7873,11 +8264,14 @@ msgstr "Csoport eltávolítása"
 
 #. Default: "Group/User name"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:129
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:64
 msgid "listingheader_group_user_name"
 msgstr "Csoport/felhasználó név"
 
 #. Default: "Modified"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:72
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:114
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:82, ...
 msgid "listingheader_modified"
 msgstr "Módosítva"
 
@@ -7888,11 +8282,15 @@ msgstr "Név"
 
 #. Default: "Order"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:121
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:90
+#: plone.app.content/plone/app/content/browser/table.pt:80
 msgid "listingheader_order"
 msgstr "Rendezés"
 
 #. Default: "Performed by"
+#: CMFPlone/skins/plone_deprecated/review_history.pt:18
 #: CMFPlone/skins/plone_forms/undo_form.pt:57
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:16
 msgid "listingheader_performed_by"
 msgstr "Végrehajtotta"
 
@@ -7913,25 +8311,33 @@ msgstr "Jelszó visszaállítása"
 
 #. Default: "Roles"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:162
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:139
 msgid "listingheader_roles"
 msgstr "Szerepkörök"
 
 #. Default: "Size"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:111
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:79
+#: plone.app.content/plone/app/content/browser/table.pt:69
 msgid "listingheader_size"
 msgstr "Méret"
 
 #. Default: "State"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:117
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:85
+#: plone.app.content/plone/app/content/browser/table.pt:75
 msgid "listingheader_status"
 msgstr "Állapot"
 
 #. Default: "Title"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:64
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:458
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:107, ...
 msgid "listingheader_title"
 msgstr "Cím"
 
 #. Default: "Type"
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:69
 #: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:81
 msgid "listingheader_type"
 msgstr "Típus"
@@ -7957,13 +8363,16 @@ msgid "local_role_warning_type"
 msgstr "<strong>Figyelem!</strong> Ön egy ${type} megosztását akarja beállítani. Ha a konténer jogosultságait akarja beállítani, kattintson ${link}."
 
 #. Default: "Since cookie authentication is disabled, cookie-based login is not available."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:58
 #: CMFPlone/skins/plone_login/logged_out.cpt:46
+#: CMFPlone/skins/plone_login/login_form.cpt:44, ...
 #, fuzzy
 msgid "login_form_disabled"
 msgstr "A sütin (cookie) alapuló bejelentkezés nem működik, mivel a sütik segítségével történő azonosítás le van tiltva."
 
 #. Default: "Cookie authentication is disabled. Login portlet not available."
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:120
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:108
 msgid "login_portlet_disabled"
 msgstr "A sütin (cookie) alapuló azonosítás letiltva. A belépésre szolgáló oldalsó doboz letiltva."
 
@@ -8009,11 +8418,13 @@ msgstr "Tovább…"
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
 #: CMFPlone/skins/plone_content/document_view.pt:35
+#: CMFPlone/skins/plone_content/newsitem_view.pt:50
 msgid "no_body_text"
 msgstr "Ez a dokumentum még nem készült el, a módosításhoz kattintson a szerkeszt gombra."
 
 #. Default: "No comments."
 #: CMFPlone/skins/plone_deprecated/review_history.pt:60
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:60
 msgid "no_comments"
 msgstr "Nincs megjegyzés."
 
@@ -8038,6 +8449,7 @@ msgid "no_new_events"
 msgstr "Nincs új eseményről híradás elküldve."
 
 #. Default: "No users were found using your search criteria."
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:230
 #: CMFPlone/skins/plone_forms/ownership_form.cpt:172
 msgid "no_users_found"
 msgstr "Nem felel meg egy felhasználó sem a keresési feltételnek."
@@ -8120,6 +8532,7 @@ msgid "published"
 msgstr "publikálva"
 
 #. Default: "Read More…"
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:152
 #: CMFPlone/skins/plone_templates/events_listing.pt:90
 #, fuzzy
 msgid "read_more"
@@ -8157,6 +8570,7 @@ msgid "retract"
 msgstr "visszavon"
 
 #. Default: "Return"
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:23
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:24
 msgid "return_to_view"
 msgstr "Vissza"
@@ -8167,12 +8581,12 @@ msgid "rules-enable-globally"
 msgstr "Globális engedélyezés"
 
 #. Default: "Did you not find what you were looking for? Try the ${advanced_search} to refine your search."
-#: CMFPlone/skins/plone_forms/search.pt:52
+#: CMFPlone/skins/plone_forms/search.pt:54
 msgid "search_results_advanced"
 msgstr "Nem találta meg a keresett szöveget? A ${advanced_search} pontosabb keresést eredményez."
 
 #. Default: "Advanced Search"
-#: CMFPlone/skins/plone_forms/search.pt:53
+#: CMFPlone/skins/plone_forms/search.pt:55
 msgid "search_results_advanced_link"
 msgstr "Összetett keresés"
 
@@ -8218,17 +8632,18 @@ msgid "submit"
 msgstr "küldés"
 
 #. Default: "Affected content"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:72
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:71
 msgid "summary_affected_content"
 msgstr "Érintett tartalom"
 
 #. Default: "Currently assigned local roles"
 #: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:83
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:62
 msgid "summary_assigned_roles"
 msgstr "Aktuálisan hozzárendelt lokális szerepkörök"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: CMFPlone/skins/plone_content/author.cpt:257
+#: CMFPlone/skins/plone_content/author.cpt:260
 msgid "summary_author_content_list"
 msgstr "Listázza egy adott szerző által létrehozott tartalmakat típus szerint csoportosítva"
 
@@ -8239,11 +8654,14 @@ msgstr "Létező csoportok"
 
 #. Default: "Calendar"
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:38
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:47
 msgid "summary_calendar"
 msgstr "Naptár"
 
 #. Default: "Content listing"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:59
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:87
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:24, ...
 msgid "summary_content_listing"
 msgstr "Tartalom listázása"
 
@@ -8269,6 +8687,7 @@ msgstr "Hozzárendelésre kijelölt szerepkörök"
 
 #. Default: "Review History"
 #: CMFPlone/skins/plone_deprecated/review_history.pt:10
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:11
 msgid "summary_review_history"
 msgstr "Előzmények áttekintése"
 
@@ -8299,6 +8718,8 @@ msgstr "Az összes elem (${count}) kiválasztása ebben a mappában."
 
 #. Default: "Home"
 #: CMFPlone/skins/plone_deprecated/global_pathbar.pt:16
+#: CMFPlone/skins/plone_deprecated/portlet_navigation.pt:40
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6, ...
 msgid "tabs_home"
 msgstr "Főoldal"
 
@@ -8309,11 +8730,13 @@ msgstr "Ez a kiegészítő nem működik"
 
 #. Default: "Contributors: ${name}"
 #: CMFPlone/skins/plone_deprecated/document_byline.pt:53
+#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:46
 msgid "text_contributors"
 msgstr "A dokumentum elkészítésében együttműködtek: ${name}."
 
 #. Default: "by ${creator}, last updated: ${date}"
 #: CMFPlone/skins/plone_templates/recently_modified.pt:57
+#: CMFPlone/skins/plone_templates/recently_published.pt:54
 msgid "text_creator_date"
 msgstr "Készítette: ${creator}, utolsó frissítés: ${date}"
 
@@ -8343,22 +8766,25 @@ msgid "text_group"
 msgstr "Felhasználói csoport"
 
 #. Default: "Location: ${location}"
-#: CMFPlone/skins/plone_content/author.cpt:105
+#: CMFPlone/skins/plone_content/author.cpt:106
 msgid "text_location"
 msgstr "Földrajzi hely: ${location}"
 
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
+#: CMFPlone/skins/plone_content/author.cpt:166
 #: CMFPlone/skins/plone_templates/contact-info.cpt:25
 msgid "text_no_email_setup"
 msgstr ""
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:42
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:31
 msgid "text_no_mailhost_configured"
 msgstr ""
 
 #. Default: "Mail control panel"
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:43
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:32
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr ""
 
@@ -8374,6 +8800,7 @@ msgstr "Nincs módosított elem."
 
 #. Default: "Warning: PIL is not installed properly, image scaling will not work."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:57
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:46
 msgid "text_no_pil_installed"
 msgstr "Figyelem: a PIL nincsen megfelelően telepítve, a képek átméretezése nem fog működni."
 
@@ -8388,7 +8815,7 @@ msgid "text_no_searchstring_large"
 msgstr "Adja meg a keresendő csoport vagy felhasználó nevét!"
 
 #. Default: "No user by that name."
-#: CMFPlone/skins/plone_content/author.cpt:43
+#: CMFPlone/skins/plone_content/author.cpt:44
 msgid "text_no_user_by_name"
 msgstr "Nincs ilyen nevű felhasználó."
 
@@ -8404,11 +8831,14 @@ msgstr "Írja be a keresendő felhasználó nevét, vagy kattintson a  'Mindet m
 
 #. Default: "No matches"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:271
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:235
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:111, ...
 msgid "text_nomatches"
 msgstr "Nincs találat"
 
 #. Default: "You are not allowed to manage the Zope server."
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:203
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:73
 msgid "text_not_allowed_manage_server"
 msgstr "Nincs engedélye a Zope szerver kezeléséhez."
 
@@ -8424,6 +8854,7 @@ msgstr "Ezt a terméket eltávolítottak a fájlrendszerből."
 
 #. Default: "Search Site"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:18
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:9
 msgid "text_search"
 msgstr "Keresés"
 
@@ -8463,6 +8894,8 @@ msgstr "bármikor"
 
 #. Default: "— expired"
 #: CMFPlone/skins/plone_deprecated/document_byline.pt:43
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:194
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:134, ...
 msgid "time_expired"
 msgstr "— lejárt"
 
@@ -8493,6 +8926,7 @@ msgstr "cím"
 
 #. Default: "Actions for the current content item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:405
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:50
 msgid "title_actions_menu"
 msgstr "Műveletek"
 
@@ -8503,6 +8937,7 @@ msgstr "Új elemeket ad hozzá ahhoz a mappához, amiben ez az elem is találhat
 
 #. Default: "Add new items inside this item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:99
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:434
 msgid "title_add_new_items_inside_item"
 msgstr "Új elemeket helyez el az aktuális elemben"
 
@@ -8535,6 +8970,7 @@ msgstr "Ez a honlap érvényes CSS-sel készült."
 
 #. Default: "This Plone site was built using Plone CMS, the Open Source Content Management System. Click for more information."
 #: CMFPlone/skins/plone_deprecated/colophon.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/colophon.pt:21
 msgid "title_built_with_plone"
 msgstr "Ez az oldal a Plone Tartalomkezelő Rendszer segítségével készült. Kattintson ide a részletekért."
 
@@ -8569,12 +9005,15 @@ msgid "title_change_default_page"
 msgstr "Alapértelmezett lap megváltoztatása"
 
 #. Default: "Change the item used as default view in this folder"
+#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
 #: CMFPlone/skins/plone_forms/select_default_view.cpt:63
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:306
 msgid "title_change_default_view_item"
 msgstr "Kicseréli a mappa alapértelmezett megjelenítését végző elemét"
 
 #. Default: "Change the state of this item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:35
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:588
 msgid "title_change_state_of_item"
 msgstr "Az elem állapotának megváltoztatása"
 
@@ -8590,21 +9029,24 @@ msgstr ""
 
 #. Default: "Select the view mode for this folder, or set a content item as its default view."
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:206
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:138
 msgid "title_choose_default_view"
 msgstr "Válasszon alapértelmezett nézetet e mappára vonatkozóan, vagy határozza meg azt a tartalomelemet, mely az alapértelmezett nézete legyen!"
 
 #. Default: "Compare with previous revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:63
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:68
 msgid "title_compare_previous_revision"
 msgstr ""
 
 #. Default: "Compare with current revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:59
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:64
 msgid "title_compare_revision"
 msgstr ""
 
 #. Default: "Configure which content types can be added here"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:138
+#: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:36
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:28, ...
 msgid "title_configure_addable_content_types"
 msgstr "Beállítja, hogy ide milyen típusú tartalmat lehet hozzáadni"
 
@@ -8615,6 +9057,7 @@ msgstr "${context} elemhez rendelt tartalomszabályok"
 
 #. Default: "Copyright"
 #: CMFPlone/skins/plone_deprecated/footer.pt:16
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:10
 msgid "title_copyright"
 msgstr "Szerzői jog által védve"
 
@@ -8675,11 +9118,15 @@ msgstr "${group_name} csoporthoz rendelt portletek kezelése"
 
 #. Default: "Move item down"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:227
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:164
+#: plone.app.content/plone/app/content/browser/table.pt:154
 msgid "title_move_item_down"
 msgstr "Elem mozgatása lefelé"
 
 #. Default: "Move item up"
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:220
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:157
+#: plone.app.content/plone/app/content/browser/table.pt:147
 msgid "title_move_item_up"
 msgstr "Elem mozgatása felfelé"
 
@@ -8690,6 +9137,7 @@ msgstr "Ugrás a következő elemre"
 
 #. Default: "Next month"
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:65
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:34
 msgid "title_next_month"
 msgstr "Következő hónap"
 
@@ -8705,36 +9153,42 @@ msgstr "Ugrás az előző elemre"
 
 #. Default: "Previous month"
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:43
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:15
 msgid "title_previous_month"
 msgstr "Előző hónap"
 
 #. Default: "Delete or rename the index_html item to gain full control over how this folder is displayed."
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:197
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:136
 msgid "title_remove_index_html_for_display_control"
 msgstr "Törölje ki vagy nevezze át az index_html elemet, hogy teljes hozzáférése legyen a mappa megjelenítési tulajdonságaihoz!"
 
 #. Default: "Required"
-#: CMFPlone/skins/plone_templates/contact-info.cpt:83
+#: Archetypes/skins/archetypes/widgets/field.pt:85
+#: CMFPlone/skins/plone_content/author.cpt:197
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:84, ...
 msgid "title_required"
 msgstr "Kötelező"
 
 #. Default: "Revert to this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:29
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:31
 msgid "title_revert_revision"
 msgstr ""
 
 #. Default: "Subscribe to an always-updated feed of these search terms"
-#: CMFPlone/skins/plone_forms/search.pt:77
+#: CMFPlone/skins/plone_forms/search.pt:79
 msgid "title_rss_feed"
 msgstr "Feliratkozás a fenti keresőkifejezés alapján automatikusan frissített RSS csatornára. "
 
 #. Default: "Search Site"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:12
 msgid "title_search_site"
 msgstr "Keresés a portálon"
 
 #. Default: "Search Site"
-#: CMFPlone/skins/plone_forms/search.pt:36
+#: CMFPlone/skins/plone_forms/search.pt:37
+#: plone.app.portlets/plone/app/portlets/portlets/search.pt:20
 msgid "title_search_title"
 msgstr "Keresés a portálon"
 
@@ -8744,6 +9198,7 @@ msgid "title_section_508"
 msgstr "Ez a Plone-nal készített oldal megfelel az Amerikai Egyesült Államok kormánya által létrehozott Akadálymentességi Irányelvek 508-as paragrafusában foglaltaknak.\" "
 
 #. Default: "Select an item to be used as default view in this folder"
+#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
 #: CMFPlone/skins/plone_forms/select_default_view.cpt:54
 msgid "title_select_default_page"
 msgstr "Válassza ki azt az elemet, ami ebben a mappában alapértelmezett megjelenítő elemként fog funkcionálni!"
@@ -8755,6 +9210,7 @@ msgstr "Válasszon ki egy elemet, hogy alapértelmezett nézetként jelenjék me
 
 #. Default: "Send a mail to this user"
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:170
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:168
 msgid "title_send_mail_to_user"
 msgstr "Levél küldése ennek a felhasználónak"
 
@@ -8774,6 +9230,7 @@ msgid "title_small_text"
 msgstr "Kicsi szöveg"
 
 #. Default: "Static text portlet"
+#: plone.portlet.static/plone/portlet/static/profiles/default/portlets.xml
 #: plone.portlet.static/plone/portlet/static/static.py:71
 msgid "title_static_portlet"
 msgstr "Statikus szöveg portlet"
@@ -8789,7 +9246,7 @@ msgid "title_valid_xhtml"
 msgstr "Ez a Plone-nal készült oldal szabványos XHTML formátumú."
 
 #. Default: "View this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:56
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:61
 msgid "title_view_revision"
 msgstr ""
 
@@ -8945,6 +9402,7 @@ msgstr "Tartalomszabályok globálisan letiltva. A hozzárendelt szabályok nem 
 
 #. Default: "Local Policy"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:71
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:700
 #, fuzzy
 msgid "workflow_policy"
 msgstr "Munkafolyamat szabályozása"
@@ -8956,6 +9414,7 @@ msgstr "Ezt az elemet jelenleg ${creator} szerkeszti: ${working_copy}, létrehoz
 
 #. Default: "You are here:"
 #: CMFPlone/skins/plone_deprecated/global_pathbar.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:4
 msgid "you_are_here"
 msgstr "Ön itt áll:"
 

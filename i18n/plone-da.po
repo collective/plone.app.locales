@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-07-08 09:35+0000\n"
+"POT-Creation-Date: 2009-10-13 16:57+0000\n"
 "PO-Revision-Date: 2007-12-11 01:53+0100\n"
 "Last-Translator: sune <sune@headnet.dk>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -65,7 +65,9 @@ msgstr "${items} kunne ikke slettes."
 #. ${monthname}
 #. ${year}
 #. </span>
+#: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:56
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:231
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:29
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
@@ -90,6 +92,7 @@ msgid "${title} has been added to your Favorites."
 msgstr "${title} er blevet tilføjet dine favoritter."
 
 #: CMFPlone/skins/plone_form_scripts/delete_confirmation.cpy:37
+#: CMFPlone/skins/plone_scripts/object_delete.cpy:39
 msgid "${title} has been deleted."
 msgstr "${title} er blevet slettet."
 
@@ -98,6 +101,7 @@ msgid "${title} is locked and cannot be cut."
 msgstr "${title} er låst og kan ikke klippes"
 
 #: CMFPlone/skins/plone_form_scripts/delete_confirmation.cpy:33
+#: CMFPlone/skins/plone_scripts/object_delete.cpy:30
 msgid "${title} is locked and cannot be deleted."
 msgstr "${title} er låst og kan ikke slettes"
 
@@ -187,6 +191,7 @@ msgstr "En mappe, der er velegnet til at indeholde et stort antal indholdsobjekt
 # Description for Folder type
 #. Default: "A folder which can contain other items."
 #. type title: Folder
+#: CMFPlone/profiles/default/types/Folder.xml
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:30
 msgid "A folder which can contain other items."
 msgstr "Mapper kan indholde indholdsobjekter, eksempelvis websider og andre mapper."
@@ -251,6 +256,54 @@ msgstr "En betinglese på indholdstype betyder at reglen kun gælder for visse i
 #: CMFPlone/profiles/default/types/ATPortalTypeCriterion.xml
 msgid "A portal_types criterion"
 msgstr "Betingelse på indholdstype"
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can receive and render an RSS feed."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a calendar."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a classic template-based portlet"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent events"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent news"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recently changed items."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a listing on the review queue."
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a log-in box"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which can render a navigation tree"
+msgstr ""
+
+#: plone.app.openid/plone/app/openid/profiles/default/portlets.xml
+msgid "A portlet which can render an OpenID log-in box"
+msgstr ""
+
+#: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
+msgid "A portlet which displays the results of a collection query"
+msgstr ""
+
+#: CMFPlone/profiles/default/portlets.xml
+msgid "A portlet which shows a search box."
+msgstr ""
 
 #. Default: "A reference criterion"
 #. type title: Reference Criterion
@@ -376,7 +429,7 @@ msgstr "Tilføj Mailhandling"
 msgid "Add Move Action"
 msgstr "Tilføj Flythandling"
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:214
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:217
 msgid "Add Navigation Portlet"
 msgstr "Tilføj Navigationsportlet"
 
@@ -550,6 +603,7 @@ msgid "An item's workflow state (e.g.published)"
 msgstr "Et indholdsobjekts workflow status"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:37
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:39
 msgid "As a path relative to the portal root."
 msgstr "Som en sti relativ til sitets rod"
 
@@ -577,6 +631,7 @@ msgstr "Boolsk (sandt/falsk)"
 msgid "Boolean Criterion"
 msgstr "Boolsk kriterium"
 
+#: CMFPlone/profiles/default/controlpanel.xml
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr "Kalender"
@@ -586,14 +641,18 @@ msgstr "Kalender"
 msgid "Calendar Settings"
 msgstr "Kalenderindstillinger"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Calendar portlet"
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/calendar.py:51
 msgid "Calendar settings"
 msgstr "Kalenderindstillinger"
 
 #. Default: "Can only be seen and edited by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Can only be seen and edited by the owner."
 msgstr "Kan kun ses og redigeres af ejeren"
 
@@ -642,24 +701,31 @@ msgid "Changes applied."
 msgstr "Ændringer tilføjet"
 
 #: plone.app.controlpanel/plone/app/controlpanel/form.py:49
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:110
 msgid "Changes canceled."
 msgstr "Ændringer annulleret"
 
 #: CMFPlone/skins/plone_form_scripts/file_edit.cpy:49
+#: CMFPlone/skins/plone_form_scripts/setConstrainTypes.cpy:40
+#: CMFPlone/skins/plone_prefs/prefs_error_log_setProperties.py:16, ...
 msgid "Changes made."
 msgstr "Ændringer udført."
 
 #: Archetypes/skins/archetypes/content_edit_impl.py:30
+#: Archetypes/skins/archetypes/validate_base.vpy:23
+#: Archetypes/skins/archetypes/validate_integrity.cpy:24, ...
 msgid "Changes saved."
 msgstr "Ændringer gemt"
 
 #. Default: "Check in"
 #: plone.app.iterate/plone/app/iterate/browser/checkin.pt:38
+#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
 msgid "Check in"
 msgstr "Check in"
 
 #. Default: "Check out"
 #: plone.app.iterate/plone/app/iterate/browser/checkout.pt:54
+#: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
 msgid "Check out"
 msgstr "Check out"
 
@@ -683,8 +749,13 @@ msgstr "Check-up afbrudt"
 msgid "Choose which types will have wiki behavior."
 msgstr "Vælg hvilke typer, der skal have wikiopførsel"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Classic portlet"
+msgstr ""
+
 #. Default: "Clear cache"
 #: plone.app.controlpanel/plone/app/controlpanel/ram.pt:42
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:89
 msgid "Clear cache"
 msgstr "Tøm cachen"
 
@@ -703,10 +774,14 @@ msgstr "Dynamisk liste"
 msgid "Collection Settings"
 msgstr "Indstillinger for dynamisk liste"
 
+#: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
+msgid "Collection portlet"
+msgstr ""
+
 #. Default: "Comment about the last transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Comment about the last transition"
 msgstr "Kommentar til sidste statusskift"
 
@@ -737,6 +812,8 @@ msgid "Condition moved up."
 msgstr "Betingelse flyttet op"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:138
+#: plone.app.contentrules/plone/app/contentrules/actions/logger.py:85
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:113, ...
 msgid "Configure element"
 msgstr "Konfigurer element"
 
@@ -789,6 +866,7 @@ msgid "Copy"
 msgstr "Kopier"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:16
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:17
 msgid "Copy or cut one or more items to paste."
 msgstr "Kopier eller klik en eller flere indholdsobjekter, som skal indsættes et andet sted."
 
@@ -878,6 +956,8 @@ msgstr "Angiv hvilke typer, der skal vises på sitet og være søgbare"
 
 #. Default: "Delete"
 #. defined in portal_actions
+#: CMFPlone/profiles/default/actionicons.xml
+#: CMFPlone/profiles/default/actions.xml
 #: CMFPlone/skins/plone_forms/delete_confirmation_page.cpt:43
 msgid "Delete"
 msgstr "Slet"
@@ -886,6 +966,7 @@ msgstr "Slet"
 msgid "Delete object"
 msgstr "Slet objekt"
 
+#: CMFPlone/profiles/default/portal_atct.xml
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:102
 msgid "Description"
 msgstr "Beskrivelse"
@@ -915,6 +996,7 @@ msgid "Disabling locking here will only affect users editing content through the
 msgstr "Hvis du slår låsnin fra her, vil det kun få betydning for redigering gennem Plone web-interface. Indholder, der bliver redigeret gennem webdav, vil stadig blive låst."
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:28
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:28
 msgid "Disallowed to paste item(s)."
 msgstr "Du har ikke rettigheder til at indsætte indholdet."
 
@@ -967,7 +1049,9 @@ msgstr "Mindst en type skal vælges for slå Wiki-opførsel til"
 #. defined on Plone Site
 #. defined on TempFolder
 #. defined on Smart Folder
-#: plone.app.layout/plone/app/layout/viewlets/content.py:198
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "Edit"
 msgstr "Rediger"
 
@@ -1011,7 +1095,7 @@ msgstr "Rediger mailhandling"
 msgid "Edit Move Action"
 msgstr "Rediger flyt handling"
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:228
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:231
 msgid "Edit Navigation Portlet"
 msgstr "Rediger navigationsportlet"
 
@@ -1097,6 +1181,7 @@ msgid "Enable External Editor feature"
 msgstr "Slå Ekstern Editor til"
 
 #: plone.app.controlpanel/plone/app/controlpanel/search.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/search.py:21
 msgid "Enable LiveSearch"
 msgstr "Slå LiveSearch til"
 
@@ -1125,6 +1210,7 @@ msgid "Enabled"
 msgstr "Slået til"
 
 #: plone.app.controlpanel/plone/app/controlpanel/search.py:23
+#: plone.app.portlets/plone/app/portlets/portlets/search.py:22
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "Slår LiveSearch til, hvilket viser søgeresultater løbende, mens man skriver hvis browseren understøtter JavaScript."
 
@@ -1139,7 +1225,9 @@ msgid "Entries cleared"
 msgstr "Fejlrapporter slettet"
 
 #. Default: "Error"
-#: CMFPlone/skins/plone_login/logged_out.cpt:38
+#: CMFPlone/skins/plone_content/author.cpt:41
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:49
+#: CMFPlone/skins/plone_login/logged_out.cpt:38, ...
 msgid "Error"
 msgstr "Fejl"
 
@@ -1169,6 +1257,7 @@ msgstr "Begivenhed"
 msgid "Event changes saved."
 msgstr "Ændringer til begivenheden er blevet gemt."
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:44
 msgid "Events"
 msgstr "Begivenheder"
@@ -1208,9 +1297,9 @@ msgstr "Viser dit indhold som en fil ifølge sitemaps.org standarden. Du kan sen
 #. defined on News Item
 #. defined on Plone Site
 #. defined on TempFolder
-#: CMFPlone/profiles/default/types/File.xml
-#: CMFPlone/profiles/default/types/Favorite.xml
+#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
+#: CMFPlone/profiles/default/types/Favorite.xml, ...
 msgid "External Edit"
 msgstr "External Edit"
 
@@ -1297,6 +1386,7 @@ msgstr "Spejlvendt vertikalt"
 
 #. Default: "Folder"
 #. type description: A folder which can contain other items.
+#: CMFPlone/profiles/default/types/Folder.xml
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:21
 msgid "Folder"
 msgstr "Mappe"
@@ -1375,9 +1465,9 @@ msgstr "Skjul portlet"
 #. defined on Page
 #. defined on Event
 #. defined on News Item
+#: CMFPlone/profiles/default/types/Document.xml
 #: CMFPlone/profiles/default/types/Event.xml
 #: CMFPlone/profiles/default/types/News_Item.xml
-#: CMFPlone/profiles/default/types/Document.xml
 msgid "History"
 msgstr "Historik"
 
@@ -1392,6 +1482,8 @@ msgid "Home folder"
 msgstr "Egen mappe"
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20, ...
 msgid "How many items to list."
 msgstr "Hvor mange indholdsobjekter der skal listes"
 
@@ -1450,9 +1542,9 @@ msgid "If selected, home folders where users can create content will be created 
 msgstr "Hvis valgt, vil der blive oprettet en personlig mappe, når brugeren logger ind."
 
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 msgstr "Hvis du har sendt objektet ved en fejl eller vil lave yderligere rettelser, vil dette trække det tilbage."
 
@@ -1467,7 +1559,9 @@ msgid "Image changes saved."
 msgstr "Ændringer til billedet er blevet gemt."
 
 #. Default: "Info"
+#: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:19
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:80, ...
 msgid "Info"
 msgstr "Information"
 
@@ -1537,6 +1631,7 @@ msgid "Item Type (internal)"
 msgstr "Indholdstype (intern)"
 
 #: CMFPlone/skins/plone_form_scripts/content_status_modify.cpy:80
+#: CMFPlone/skins/plone_scripts/folder_publish.cpy:33
 msgid "Item state changed."
 msgstr "Status er ændret"
 
@@ -1549,10 +1644,12 @@ msgid "Item(s) deleted."
 msgstr "Indholdsobjekt(er) slettet."
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:23
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:23
 msgid "Item(s) pasted."
 msgstr "Objekt(er) indsat"
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Items in which workflow state to show."
 msgstr "Hvilken status indholdsobjekter skal have for at blive vist."
 
@@ -1594,7 +1691,8 @@ msgstr "Sprog"
 msgid "Language Settings"
 msgstr "Sprogindstillinger"
 
-#: Archetypes/ExtensibleMetadata.py:323
+#: Archetypes/ExtensibleMetadata.py:324
+#: CMFPlone/Portal.py:135
 msgid "Language neutral (site default)"
 msgstr "Neutralt sprog (forvalgt)"
 
@@ -1649,6 +1747,7 @@ msgid "Local Roles"
 msgstr "Lokale rettigheder"
 
 #: CMFPlone/skins/plone_deprecated/folder_localrole_add.py:20
+#: CMFPlone/skins/plone_deprecated/folder_localrole_edit.py:26
 msgid "Local roles changed."
 msgstr "Lokale rettigheder ændret."
 
@@ -1700,11 +1799,16 @@ msgstr "Logger navn"
 msgid "Logging level"
 msgstr "Logging niveau"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "Login"
+msgstr ""
+
 #: CMFPlone/skins/plone_login/login_next.cpy:22
 msgid "Login failed"
 msgstr "Det lykkedes ikke at logge ind."
 
 #: CMFPlone/skins/plone_login/logged_in.cpy:19
+#: CMFPlone/skins/plone_login/login_form_validate.vpy:47
 msgid "Login failed. Both login name and password are case sensitive, check that caps lock is not enabled."
 msgstr "Login mislykkedes. Både loginnavn og adgangskode er følsomme overfor store bogstaver. Kontroller at Caps lock ikke er aktiveret."
 
@@ -1729,6 +1833,8 @@ msgid "Mail Settings"
 msgstr "Indstilling af e-mail"
 
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:89
+#: CMFPlone/skins/plone_form_scripts/send_feedback_site.cpy:67
+#: CMFPlone/skins/plone_form_scripts/sendto.cpy:67
 msgid "Mail sent."
 msgstr "E-mail sendt."
 
@@ -1740,6 +1846,8 @@ msgstr "Mailindstillinger"
 msgid "Mail settings for this site."
 msgstr "Mailindstillinger for dette site"
 
+#: CMFPlone/profiles/default/actionicons.xml
+#: CMFPlone/profiles/default/controlpanel.xml
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:65
 msgid "Maintenance"
 msgstr "Vedligeholdelse"
@@ -1748,9 +1856,9 @@ msgstr "Vedligeholdelse"
 #. defined in plone_workflow, title: Member makes content private
 #. new state: private
 #. defined in folder_workflow, title: Member makes content private
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Make private"
 msgstr "Gør privat"
 
@@ -1769,9 +1877,9 @@ msgid "Makes the folder visible internally."
 msgstr "Gør mappen synlig internt"
 
 #. Default: "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Making an item private means that it will not be visible to anyone but the owner and the site administrator."
 msgstr "Nar et objekt gøres privat, vil det ikke være synlig for nogen, udover ejeren og sitets administrator."
 
@@ -1828,9 +1936,9 @@ msgstr "Brugerindstillinger"
 #. defined in plone_workflow, id: hide
 #. new state: private
 #. defined in folder_workflow, id: hide
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Member makes content private"
 msgstr "Bruger gør indhold privat"
 
@@ -1853,8 +1961,8 @@ msgstr "Bruger ændrer indholdets status til offentligt udkast"
 #. defined in plone_workflow, id: retract
 #. new state: visible
 #. defined in folder_workflow, id: retract
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "Bruger trækker anmodning tilbage"
@@ -1866,6 +1974,8 @@ msgid "Member submits content for publication"
 msgstr "Bruger sender indhold til publicering"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:37
+#: plone.app.contentrules/plone/app/contentrules/actions/mail.py:32
+#: plone.app.contentrules/plone/app/contentrules/actions/notify.py:23
 msgid "Message"
 msgstr "Besked"
 
@@ -1912,6 +2022,8 @@ msgstr "Mine favoritter"
 msgid "Nasty tags"
 msgstr "Uønskede tags"
 
+#: CMFPlone/profiles/default/controlpanel.xml
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:101
 msgid "Navigation"
 msgstr "Navigationen"
@@ -1945,11 +2057,12 @@ msgstr "Ny reference"
 #. Default: "New..."
 #. defined on TempFolder
 #. defined on Smart Folder
-#: type action defined on TempFolder
 #: type action defined on Smart Folder
+#: type action defined on TempFolder
 msgid "New..."
 msgstr "Ny..."
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:43
 msgid "News"
 msgstr "Nyheder"
@@ -1973,6 +2086,8 @@ msgid "No changes done."
 msgstr "Ingen ændringer gennemført."
 
 #: CMFPlone/skins/plone_prefs/prefs_group_edit.py:14
+#: plone.app.controlpanel/plone/app/controlpanel/form.py:43
+#: plone.app.controlpanel/plone/app/controlpanel/ram.py:104
 msgid "No changes made."
 msgstr "Ingen ændringer foretaget"
 
@@ -1985,6 +2100,8 @@ msgid "Notify with message ${message}"
 msgstr "Giv følgende besked: ${message}"
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:22
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:21
+#: plone.app.portlets/plone/app/portlets/portlets/recent.py:19, ...
 msgid "Number of items to display"
 msgstr "Antallet af objekter, der skal vises"
 
@@ -2005,12 +2122,17 @@ msgid "One or more selected items is locked."
 msgstr "Et eller flere elementer er låst."
 
 #: CMFPlone/skins/plone_scripts/folder_copy.cpy:27
+#: CMFPlone/skins/plone_scripts/folder_cut.cpy:28
 msgid "One or more selected items is no longer available."
 msgstr "Et eller flere objekter er ikke længere tilgængelige"
 
 #: plone.app.controlpanel/plone/app/controlpanel/skins.py:20
 msgid "Only for users who are logged in"
 msgstr "Kun for brugere, der er logget ind."
+
+#: plone.app.openid/plone/app/openid/profiles/default/portlets.xml
+msgid "OpenID Login"
+msgstr ""
 
 #: plone.app.openid/plone/app/openid/portlets/login.py:17
 msgid "OpenID login"
@@ -2031,6 +2153,7 @@ msgstr "Ejerskab ændret."
 
 #. Default: "Pack database now"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:162
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:69
 msgid "Pack database now"
 msgstr "Ryd op i databasen nu"
 
@@ -2080,6 +2203,7 @@ msgid "Paste"
 msgstr "Indsæt"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:32
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:32
 msgid "Paste could not find clipboard content."
 msgstr "Indsæt kunne ikke finde indhold i udklipsholder."
 
@@ -2096,8 +2220,8 @@ msgid "Pending"
 msgstr "Afventende"
 
 #. Default: "Pending review"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Pending review"
 msgstr "Afventer godkendelse"
@@ -2132,10 +2256,13 @@ msgid "Placeful Workflow"
 msgstr "Placeringsbestemt workflow"
 
 #: Archetypes/skins/archetypes/validate_base.vpy:19
+#: Archetypes/skins/archetypes/validate_integrity.cpy:20
+#: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:18, ...
 msgid "Please correct the indicated errors."
 msgstr "Vær venlig at rette markerede fejl."
 
 #: CMFPlone/skins/plone_form_scripts/validate_feedback.vpy:18
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:26
 msgid "Please enter a message"
 msgstr "Skriv venligst en besked."
 
@@ -2144,10 +2271,13 @@ msgid "Please enter a name."
 msgstr "Indtast et navn"
 
 #: CMFPlone/skins/plone_form_scripts/validate_feedback.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:23
 msgid "Please enter a subject."
 msgstr "Skriv venligst et emne."
 
 #: CMFPlone/skins/plone_form_scripts/validate_effective_expiry_date.vpy:21
+#: CMFPlone/skins/plone_form_scripts/validate_start_end_date.vpy:30
+#: CMFPlone/skins/plone_form_scripts/validate_synPropertiesForm.vpy:19
 msgid "Please enter a valid date and time."
 msgstr "Indtast en gyldig dato og tid."
 
@@ -2204,6 +2334,7 @@ msgid "Please submit a valid email address."
 msgstr "Skriv venligst en gyldig e-mail-adresse."
 
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:15
 msgid "Please submit an email address."
 msgstr "Skriv venligst en e-mailadresse."
 
@@ -2250,6 +2381,7 @@ msgid "Portlet footer"
 msgstr "Portlet footer"
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:28
+#: plone.portlet.static/plone/portlet/static/static.py:27
 msgid "Portlet header"
 msgstr "Portlet header"
 
@@ -2264,9 +2396,9 @@ msgid "Preferences"
 msgstr "Indstillinger"
 
 #. Default: "Previous transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Previous transition"
 msgstr "Sidste statusskift"
 
@@ -2292,9 +2424,9 @@ msgstr "Udskriv denne side"
 #. Default: "Private"
 #. defined in plone_workflow, id: private
 #. defined in folder_workflow, id: private
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Private"
 msgstr "Privat"
 
@@ -2304,8 +2436,8 @@ msgid "Profile"
 msgstr "Profil"
 
 #. Default: "Promote to Draft"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Promote to Draft"
 msgstr "Forfrem til udkast"
 
@@ -2345,9 +2477,9 @@ msgid "Properties"
 msgstr "Egenskaber"
 
 #. Default: "Provides access to workflow history"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "Provides access to workflow history"
 msgstr "Giver adgang to historikken for statusskift"
 
@@ -2360,8 +2492,8 @@ msgid "Public Draft"
 msgstr "Udkast"
 
 #. Default: "Public draft"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Public draft"
 msgstr "Udkast"
 
@@ -2369,8 +2501,8 @@ msgstr "Udkast"
 #. defined in plone_workflow, title: Reviewer publishes content
 #. new state: published
 #. defined in folder_workflow, title: Reviewer publishes content
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Publish"
 msgstr "Publicer"
@@ -2388,9 +2520,9 @@ msgstr "Publicer internt"
 #. Default: "Published"
 #. defined in plone_workflow, id: published
 #. defined in folder_workflow, id: published
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Published"
 msgstr "Publiceret"
 
@@ -2400,9 +2532,9 @@ msgid "Published and visible to intranet users, not editable by the owner."
 msgstr "Publiceret og synlig for intranetbrugere, kan ikke redigeres af ejeren."
 
 #. Default: "Publishing the item makes it visible to other users."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Publishing the item makes it visible to other users."
 msgstr "Ved at publicere objektet gør man det synligt for andre brugere."
 
@@ -2421,6 +2553,10 @@ msgstr "Lægger dit objekt i en Afventende kø, så det kan publiceres på sitet
 msgid "RAM Cache Settings"
 msgstr "Indstillinger for Cache RAM"
 
+#: CMFPlone/profiles/default/portlets.xml
+msgid "RSS Feed"
+msgstr ""
+
 #. Default: "RSS feed"
 #: CMFPlone/migrations/v3_0/profiles/beta1_beta2/actions.xml
 #: CMFPlone/profiles/default/actions.xml
@@ -2437,6 +2573,7 @@ msgstr "Indholdet af oversigt som RSS"
 msgid "Reader"
 msgstr "Læser"
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:32
 msgid "Recent items"
 msgstr "Seneste indholdsobjekter"
@@ -2457,9 +2594,9 @@ msgstr "Reference-kriterium"
 #. defined on Link
 #. defined on News Item
 #. defined on Smart Folder
-#: CMFPlone/profiles/default/types/ATSortCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateCriteria.xml
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "References"
 msgstr "Referencer"
 
@@ -2502,7 +2639,7 @@ msgstr "Relativ dato"
 msgid "Remote Url"
 msgstr "Ekstern Url"
 
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/remove.py:48
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/remove.py:60
 msgid "Removal cancelled."
 msgstr "Sletning annulleret"
 
@@ -2513,8 +2650,8 @@ msgid "Rename"
 msgstr "Omdøb"
 
 #. Default: "Rename items"
-#: type action defined on TempFolder
 #: type action defined on Smart Folder
+#: type action defined on TempFolder
 msgid "Rename items"
 msgstr "Omdøb objekter"
 
@@ -2528,6 +2665,7 @@ msgstr "Svar slettet."
 
 #. Default: "Restart"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:79
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:97
 msgid "Restart"
 msgstr "Genstart"
 
@@ -2541,12 +2679,13 @@ msgstr "Kun for nuværende bruger"
 #. defined in plone_workflow, title: Member retracts submission
 #. new state: visible
 #. defined in folder_workflow, title: Member retracts submission
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml, ...
 msgid "Retract"
 msgstr "Træk tilbage"
 
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/review.py:26
 msgid "Review list"
 msgstr "Godkendelsesliste"
@@ -2584,8 +2723,8 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr "Redaktør returnerer indhold med ønske om ændringer"
 
 #. Default: "Reviewer tasks"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Reviewer tasks"
 msgstr "Redaktør opgaver"
 
@@ -2624,6 +2763,8 @@ msgstr "Roter (med uret)"
 msgid "Rules"
 msgstr "Regler"
 
+#: CMFPlone/profiles/default/controlpanel.xml
+#: CMFPlone/profiles/default/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:36
 msgid "Search"
 msgstr "Søg"
@@ -2720,8 +2861,8 @@ msgid "Selection Criterion"
 msgstr "Udvælgelses-kriterium"
 
 #. Default: "Send back"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Send back"
 msgstr "Send tilbage"
@@ -2746,8 +2887,8 @@ msgid "Send-to"
 msgstr "Send til"
 
 #. Default: "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Sending the item back will return the item to the original author instead of publishing it. You should preferably include a reason for why it was not published."
 msgstr "Hvis objektet afvises, vil det blive sendt tilbage til den oprindelige forfatter i stedet for at blive publiceret. Det anbefales at du angiver en grund til, hvorfor det ikke er blevet publiceret."
@@ -2814,6 +2955,7 @@ msgstr "Vis alt"
 
 #. Default: "Shut down"
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:72
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:85
 msgid "Shut down"
 msgstr "Luk ned"
 
@@ -2996,8 +3138,8 @@ msgid "Submit"
 msgstr "Anmod om publicering"
 
 #. Default: "Submit for publication"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Submit for publication"
 msgstr "Send til publicering"
@@ -3033,6 +3175,7 @@ msgid "Syndication enabled"
 msgstr "Syndikering slået til"
 
 #: CMFPlone/skins/plone_form_scripts/disableSyndication.cpy:18
+#: CMFPlone/skins/plone_form_scripts/enableSyndication.cpy:18
 msgid "Syndication not allowed"
 msgstr "Syndikering ikke tilladt"
 
@@ -3055,10 +3198,12 @@ msgid "Target collection"
 msgstr "Vælg dynamisk liste"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:36
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:38
 msgid "Target folder"
 msgstr "Mappen, der skal flyttes til"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:79
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:81
 msgid "Target folder ${target} does not exist."
 msgstr "Mappen ${target} eksisterer ikke."
 
@@ -3099,9 +3244,9 @@ msgid "Text to be shown in the footer"
 msgstr "Tekst, der skal vises i footeren"
 
 #. Default: "The ID of the user who performed the last transition"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "The ID of the user who performed the last transition"
 msgstr "ID'et på den bruger, som lavede det sidste statusskift"
 
@@ -3157,6 +3302,7 @@ msgid "The location of an item in the site (path)"
 msgstr "Placering for et indholdsobjekt (sti/URL)"
 
 #: CMFPlone/skins/plone_login/join_form_validate.vpy:48
+#: CMFPlone/skins/plone_login/register.cpy:32
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "Brugernavnet, du har valgt, er allerede i brug eller også er det ikke tilladt. Vælg venligst et andet brugernavn."
 
@@ -3272,6 +3418,7 @@ msgstr "Temaer"
 
 #. Default: "There are more search results, narrow your search."
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:74
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:71
 msgid "There are more search results, narrow your search."
 msgstr "Der er flere søgeresultater, prøv at indsnævre din søgning"
 
@@ -3308,6 +3455,8 @@ msgid "These tags, and their content are completely blocked when a page is saved
 msgstr "Disse tags og deres indhold bliver blokeret når en side bliver gemt"
 
 #: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_link_edit.vpy:15
+#: CMFPlone/skins/plone_form_scripts/validate_newsitem_edit.vpy:15, ...
 msgid "This field is required, please provide some information."
 msgstr "Dette felt skal udfyldes."
 
@@ -3319,7 +3468,7 @@ msgstr "Dette er ikke en tekstfil. Hvis du vil uploade en binær fil, må du opr
 msgid "This portlet display a listing of items from a Collection."
 msgstr "Denne portlet viser en liste med indholdsobjekter fra en Dynamisk liste"
 
-#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:215
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.py:218
 msgid "This portlet display a navigation tree."
 msgstr "Denne portlet viser et navigationstræ"
 
@@ -3378,7 +3527,9 @@ msgstr "Tid i minutter, der skal gå mellem at feedet bliver genindlæst"
 #. index friendly name of index: sortable_title
 #. index id with index friendly name: Title
 #. index friendly name of index: Title
+#: CMFPlone/profiles/default/portal_atct.xml
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:186
+#: plone.contentrules/plone/contentrules/rule/interfaces.py:98
 msgid "Title"
 msgstr "Titel"
 
@@ -3387,6 +3538,7 @@ msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr "Titel på portlet. Hvis feltet ikke udfyldes, vil feedets titel blive brugt."
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:29
+#: plone.portlet.static/plone/portlet/static/static.py:28
 msgid "Title of the rendered portlet"
 msgstr "Titel på den renderede portlet"
 
@@ -3447,14 +3599,18 @@ msgid "Unable to copy ${name} as part of content rule 'copy' action: ${error}"
 msgstr "${name} kan ikke kopieres som del af 'kopihandling' for indholdsregel: ${error}"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/delete.py:64
+#: plone.app.contentrules/plone/app/contentrules/actions/move.py:139
 msgid "Unable to move ${name} as part of content rule 'move' action: ${error}"
 msgstr "${name} kan ikke flyttes som del af 'flyttehandling' for indholdsregel: ${error}"
 
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:77
+#: CMFPlone/skins/plone_form_scripts/send_feedback_site.cpy:56
+#: CMFPlone/skins/plone_form_scripts/sendto.cpy:59
 msgid "Unable to send mail: ${exception}"
 msgstr "E-mail kan ikke sendes: ${exception}"
 
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:30
+#: CMFPlone/skins/plone_scripts/object_paste.cpy:30
 msgid "Unauthorized to paste item(s)."
 msgstr "Du har ikke rettigheder til at indsætte indholdet her."
 
@@ -3553,13 +3709,14 @@ msgstr "Validation failed($name: Uploaded data is too large: ${size}MB (max ${ma
 #. defined on Plone Site
 #. defined on TempFolder
 #. defined on Smart Folder
-#: CMFPlone/profiles/default/types/ATSortCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateRangeCriterion.xml
-#: CMFPlone/profiles/default/types/ATDateCriteria.xml
+#: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
+#: CMFPlone/profiles/default/types/ATCurrentAuthorCriterion.xml
+#: CMFPlone/profiles/default/types/ATDateCriteria.xml, ...
 msgid "View"
 msgstr "Vis"
 
 #: CMFPlone/skins/plone_form_scripts/saveDefaultPage.cpy:26
+#: CMFPlone/skins/plone_form_scripts/selectViewTemplate.cpy:14
 msgid "View changed."
 msgstr "Skabelon ændret."
 
@@ -3579,8 +3736,8 @@ msgid "Visible to all intranet users."
 msgstr "Synligt for alle intranetbrugere."
 
 #. Default: "Visible to everyone, but not approved by the reviewers."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
 msgstr "Synligt for alle, men ikke godkendt af redaktører."
 
@@ -3590,8 +3747,8 @@ msgid "Visible to everyone, editable by the owner."
 msgstr "Synligt for alle, kan redigeres af ejeren."
 
 #. Default: "Visible to everyone, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, not editable by the owner."
 msgstr "Synligt for alle, kan ikke redigeres af ejeren."
@@ -3602,14 +3759,16 @@ msgid "Visible to people outside the intranet, not editable by the owner."
 msgstr "Synligt for folk udenfor intranettet, kan ikke redigeres af ejeren."
 
 #. Default: "Waiting to be reviewed, not editable by the owner."
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Waiting to be reviewed, not editable by the owner."
 msgstr "Afventer godkendelse, kan ikke redigeres af ejeren."
 
 #. Default: "Warning"
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:35
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:24
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/confirmation.pt:18
 msgid "Warning"
 msgstr "Advarsel"
 
@@ -3618,9 +3777,9 @@ msgid "Welcome! You are now logged in."
 msgstr "Velkommen! Du er nu logget ind"
 
 #. Default: "When the previous transition was performed"
-#: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
-#: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
+#: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml, ...
 msgid "When the previous transition was performed"
 msgstr "Tidspunkt for forrige statusskift"
 
@@ -3633,6 +3792,7 @@ msgid "Whether or not the rule is currently enabled"
 msgstr "Hvorvidt reglen er slået til"
 
 #: CMFPlone/skins/plone_form_scripts/plone_change_password.py:37
+#: CMFPlone/skins/plone_login/login_change_password.cpy:19
 msgid "While changing your password an AttributeError occurred. This is usually caused by your user being defined outside the portal."
 msgstr "Der opstod en fejl, men din adgangskode blev ændret. De skyldes som regel, at din bruger er oprettet uden for Plone."
 
@@ -3645,6 +3805,7 @@ msgid "Workflow Policies"
 msgstr "Politikker for arbejdsgang"
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:27
+#: plone.app.portlets/plone/app/portlets/portlets/news.py:26
 msgid "Workflow state"
 msgstr "Status"
 
@@ -3677,14 +3838,18 @@ msgid "You cannot have a type as secondary type without having it allowed. You h
 msgstr "Du kan ikke have en type som sekundær type, uden at den er tilladt. Du har valgt ${types}."
 
 #: CMFPlone/skins/plone_form_scripts/validate_emailaddr.vpy:16
+#: CMFPlone/skins/plone_form_scripts/validate_pas_emailaddr.vpy:20
+#: CMFPlone/skins/plone_form_scripts/validate_site_feedback.vpy:20
 msgid "You entered an invalid email address."
 msgstr "Du har indtastet en ugyldig e-mailadresse"
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_edit.vpy:17
+#: CMFPlone/skins/plone_form_scripts/validate_metadata_edit.vpy:17
 msgid "You have been registered."
 msgstr "Du er blevet registreret"
 
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:21
+#: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
 msgstr "Du bliver nødt til at slå cookies til, før du kan logge på"
 
@@ -3705,6 +3870,7 @@ msgid "You must sign in first."
 msgstr "Du skal logge på først."
 
 #: CMFPlone/skins/plone_form_scripts/validate_file_edit.vpy:27
+#: CMFPlone/skins/plone_form_scripts/validate_image_edit.vpy:27
 msgid "You must upload a file"
 msgstr "Du skal uploade en fil"
 
@@ -3880,6 +4046,7 @@ msgstr "Til tilføj/fjern produkter"
 #. items
 #. </span>
 #: CMFPlone/skins/plone_templates/batch_macros.pt:40
+#: plone.app.content/plone/app/content/browser/batching.pt:26
 msgid "batch_next_x_items"
 msgstr "Til de ${number} næste"
 
@@ -3890,6 +4057,7 @@ msgstr "Til de ${number} næste"
 #. items
 #. </span>
 #: CMFPlone/skins/plone_templates/batch_macros.pt:27
+#: plone.app.content/plone/app/content/browser/batching.pt:14
 msgid "batch_previous_x_items"
 msgstr "Til de ${number} forrige"
 
@@ -3898,7 +4066,8 @@ msgstr "Til de ${number} forrige"
 #. items matching your criteria.
 #. </span>
 #. Default: "${number} items matching your search terms"
-#: CMFPlone/skins/plone_forms/search.pt:69
+#: CMFPlone/skins/plone_forms/member_search_results.pt:26
+#: CMFPlone/skins/plone_forms/search.pt:71
 #, fuzzy
 msgid "batch_x_items_matching_your_criteria"
 msgstr "Fandt ${number} indholdsobjekter, som opfyldte dine kriterier."
@@ -3921,6 +4090,7 @@ msgstr "Fejl"
 #. Upcoming Events
 #. </a>
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:16
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:9
 msgid "box_events"
 msgstr "Begivenheder"
 
@@ -3936,7 +4106,9 @@ msgstr "Eksterne links"
 #. <span i18n:translate="box_forgot_password_option" tal:omit-tag="">
 #. Forgot your password?
 #. </span>
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:94
 #: CMFPlone/skins/plone_login/login_form.cpt:142
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:137, ...
 msgid "box_forgot_password_option"
 msgstr "Glemt adgangskode?"
 
@@ -3945,6 +4117,7 @@ msgstr "Glemt adgangskode?"
 #. </a>
 #. Default: "Full review list…"
 #: CMFPlone/skins/plone_deprecated/portlet_review.pt:48
+#: plone.app.portlets/plone/app/portlets/portlets/review.pt:40
 msgid "box_full_review_list"
 msgstr "Alt indhold til gennemsyn..."
 
@@ -3960,6 +4133,8 @@ msgstr "Sprog"
 #. <span i18n:translate="box_last_modified">
 #. </span>
 #: CMFPlone/skins/plone_content/folder_listing.pt:137
+#: CMFPlone/skins/plone_deprecated/document_byline.pt:35
+#: CMFPlone/skins/plone_forms/search.pt:132, ...
 msgid "box_last_modified"
 msgstr "Sidst opdateret"
 
@@ -3977,6 +4152,7 @@ msgstr "Lokalt indhold"
 #. <a href="" i18n:translate="box_more_news_link" tal:attributes="href string:${utool}/news_listing" tal:condition="python:'news' not in portal.contentIds()">
 #. Default: "More news…"
 #: CMFPlone/skins/plone_deprecated/portlet_news.pt:47
+#: plone.app.portlets/plone/app/portlets/portlets/news.pt:41
 msgid "box_more_news_link"
 msgstr "Flere nyheder"
 
@@ -3985,6 +4161,7 @@ msgstr "Flere nyheder"
 #. </a>
 #. Default: "All recent changes…"
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:58
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:49
 msgid "box_more_recently_changed"
 msgstr "Alle seneste ændringer"
 
@@ -3993,6 +4170,7 @@ msgstr "Alle seneste ændringer"
 #. </a>
 #. Default: "More…"
 #: CMFPlone/skins/plone_portlets/portlet_favorites.pt:45
+#: plone.app.portlets/plone/app/portlets/portlets/rss.pt:40
 msgid "box_morelink"
 msgstr "Se flere..."
 
@@ -4009,6 +4187,7 @@ msgstr "Mine favoritter"
 #. Navigation
 #. </a>
 #: CMFPlone/skins/plone_deprecated/portlet_navigation.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/navigation.pt:7
 msgid "box_navigation"
 msgstr "Menu"
 
@@ -4017,6 +4196,7 @@ msgstr "Menu"
 #. New user?
 #. </span>
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:103
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:92
 msgid "box_new_user_option"
 msgstr "Ny bruger?"
 
@@ -4026,11 +4206,13 @@ msgstr "Ny bruger?"
 #. </a>
 #. <a href="#" i18n:translate="box_news" tal:attributes="href string:${utool}/news_listing" tal:condition="python:'news' not in portal.contentIds()">
 #: CMFPlone/skins/plone_deprecated/portlet_news.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/news.pt:9
 msgid "box_news"
 msgstr "Nyheder"
 
 #. Default: "Previous events…"
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:54
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:51
 msgid "box_previous_events"
 msgstr "Tidligere begivenheder"
 
@@ -4039,6 +4221,7 @@ msgstr "Tidligere begivenheder"
 #. Recent Changes
 #. </a>
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:15
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:9
 msgid "box_recent_changes"
 msgstr "Seneste ændringer"
 
@@ -4047,6 +4230,7 @@ msgstr "Seneste ændringer"
 #. No items changed yet.
 #. </dd>
 #: CMFPlone/skins/plone_deprecated/portlet_recent.pt:51
+#: plone.app.portlets/plone/app/portlets/portlets/recent.pt:42
 msgid "box_recent_no_items"
 msgstr "Endnu ingen ændrede indholdsobjekter"
 
@@ -4063,11 +4247,13 @@ msgstr "Relateret indhold"
 #. Review List
 #. </dt>
 #: CMFPlone/skins/plone_deprecated/portlet_review.pt:14
+#: plone.app.portlets/plone/app/portlets/portlets/review.pt:9
 msgid "box_review_list"
 msgstr "Til gennemsyn"
 
 #. Default: "Search"
 #: plone.app.portlets/plone/app/portlets/portlets/search.pt:9
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:53
 msgid "box_search"
 msgstr "Søg"
 
@@ -4077,6 +4263,8 @@ msgstr "Søg"
 #. </a>
 #. <a href="#" i18n:translate="box_sign_in">
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:24
+#: plone.app.openid/plone/app/openid/portlets/login.pt:7
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:9
 msgid "box_sign_in"
 msgstr "Log ind"
 
@@ -4086,6 +4274,7 @@ msgstr "Log ind"
 #. <a href="" i18n:translate="box_upcoming_events" tal:attributes="href string:${utool}/events_listing" tal:condition="python:'events' not in portal.contentIds()">
 #. Default: "Upcoming events…"
 #: CMFPlone/skins/plone_deprecated/portlet_events.pt:61
+#: plone.app.portlets/plone/app/portlets/portlets/events.pt:58
 msgid "box_upcoming_events"
 msgstr "Kommende begivenheder"
 
@@ -4297,6 +4486,7 @@ msgstr "Du kan tilføje en kommentar ved at udfylde nedenstående felter."
 #. Select the type of item you want to add to your folder.
 #. </p>
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:29
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:22
 msgid "description_add_new_item"
 msgstr "Vælg hvilken type indhold, du vil tilføje."
 
@@ -4326,7 +4516,7 @@ msgstr "Den avancerede søgning giver dig mulighed for at kombinere flere søgek
 #. If you want to contact this author, fill in the form
 #. below.
 #. </p>
-#: CMFPlone/skins/plone_content/author.cpt:172
+#: CMFPlone/skins/plone_content/author.cpt:175
 msgid "description_author_feedback"
 msgstr "Hvis du vil kontake denne forfatter, så udfyld venligst formularen nedenfor."
 
@@ -4434,6 +4624,7 @@ msgstr "Bemærk at indholdstype portlets normalt er rangeret under kontekst port
 #. Configuration area for Plone and add-on Products.
 #. </div>
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:24
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:18
 msgid "description_control_panel"
 msgstr "Indstilling af Plone og ekstra produkter (moduler)."
 
@@ -4450,6 +4641,7 @@ msgstr "Indstilling af Plone og ekstra produkter (moduler)."
 #. </span>
 #. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
 #: CMFPlone/skins/plone_deprecated/footer.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:16
 msgid "description_copyright"
 msgstr " ${plonecms} er et registreret varemærke ${copyright} 2000- ${current_year} ejet af ${plonefoundation}."
 
@@ -4460,6 +4652,7 @@ msgstr "Den nuværende ejer er ${name}."
 
 #. Default: "Note: You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, edit your zope.conf file to say 'debug-mode off' — then restart the server process."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:138
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:113
 msgid "description_debug_mode"
 msgstr "Du kører i \"debug mode\". Denne funktion er beregnet for sites, der er under udvikling. Debug mode gør at mange konfigurationsændringer vil slå igennem øjeblikkeligt, men til gengæld kører sitet langsommere. Du kan slå debug mode fra ved at rette i din zope.conf så den siger 'debug-mode off' og genstarte serverprocessen."
 
@@ -4565,6 +4758,7 @@ msgstr "Indstillinger relateret til brugerfladesprog og indholdsoversættelser"
 
 #. Default: "Distributed under the ${license}."
 #: CMFPlone/skins/plone_deprecated/footer.pt:37
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:31
 msgid "description_license"
 msgstr "Distribueret under ${license}"
 
@@ -4594,6 +4788,7 @@ msgstr "Du vil se, at bjælken øverst til højre har ændret sig. Der er nu til
 
 #. Default: "You can log in again below."
 #: CMFPlone/skins/plone_login/logged_out.cpt:32
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:43
 msgid "description_loginagain"
 msgstr "Du kan logge ind igen nedenfor"
 
@@ -4625,7 +4820,7 @@ msgstr "Med denne søgeformular kan du finde brugere, der opfylder et eller fler
 #. <p i18n:translate="description_my_preferences">
 #. Your personal settings.
 #. </p>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:66
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:67
 msgid "description_my_preferences"
 msgstr "Dine personlige indstillinger"
 
@@ -4648,7 +4843,9 @@ msgstr "Bemærk, for at kontrollere hvordan navigationstræet bliver vist, skal 
 #. to become a member.
 #. </p>
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:34
 #: CMFPlone/skins/plone_login/login_form.cpt:162
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:124
 msgid "description_no_account"
 msgstr "Hvis du ikke allerede har en brugerkonto her, så gå til ${registration_form} for at oprette en brugerkonto."
 
@@ -4656,7 +4853,9 @@ msgstr "Hvis du ikke allerede har en brugerkonto her, så gå til ${registration
 #. <a href="" i18n:translate="description_no_account_registration_linktext" tal:attributes="href join" tal:define="join python:join.pop();                    join join;                    join python:join+test(join.find('?')==-1, '?', '&amp;')+ztutils.make_query(came_from=came_from);">
 #. registration form
 #. </a>
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:35
 #: CMFPlone/skins/plone_login/login_form.cpt:163
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:125
 msgid "description_no_account_registration_linktext"
 msgstr "oprettelsesformularen"
 
@@ -4673,6 +4872,8 @@ msgstr "Dette indholdsobjekt understøtter ikke sammenligning."
 #. There are currently no items in this folder.
 #. </p>
 #: CMFPlone/skins/plone_content/folder_listing.pt:174
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:169
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:154
 msgid "description_no_items_in_folder"
 msgstr "Denne mappe er tom."
 
@@ -4685,7 +4886,8 @@ msgstr "Du har ikke de fornødne rettigheder til at se denne side. Hvis du mener
 #. <strong i18n:translate="description_no_results_found">
 #. No results were found.
 #. </strong>
-#: CMFPlone/skins/plone_forms/search.pt:86
+#: CMFPlone/skins/plone_forms/member_search_results.pt:67
+#: CMFPlone/skins/plone_forms/search.pt:88
 msgid "description_no_results_found"
 msgstr "Din søgning gav ikke noget resultat."
 
@@ -4695,6 +4897,8 @@ msgstr "Din søgning gav ikke noget resultat."
 #. add button, or paste content from another location.
 #. </p>
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:59
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:12
+#: plone.app.content/plone/app/content/browser/table.pt:18
 msgid "description_no_visible_items_add_paste"
 msgstr "Denne mappe har ikke nogen synlige indholdsobjekter. Klik på 'Tilføj indhold' for at tilføje indholdsobjekter eller indkopier indholdsobjekter fra en anden mappe."
 
@@ -4705,6 +4909,7 @@ msgstr "Denne type har ikke nogen arbejdsgang. Synligheden af objekter af denne 
 
 #. Default: "If your user name and password are correct, the problem may be that your browser is not configured to accept cookies."
 #: CMFPlone/skins/plone_login/login_failed.cpt:32
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:35
 msgid "description_not_accept_cookies"
 msgstr "Hvis dit brugernavn og adgangskode er korrekt kan problemet være at din browser ikke er konfigureret til at acceptere cookies."
 
@@ -4735,6 +4940,7 @@ msgstr "For at dine produkter skal vises her skal du putte dem i mappen ${locati
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, edit your zope.conf file to say 'debug-mode on' — then restart the server process."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:127
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:102
 msgid "description_production_mode"
 msgstr "Dit site kører i \"production mode\". Dette er den anbefalede tilstand for et Plone-site i drift, men det betyder at visse ændringer først vil slå igennem når Plone genstartes."
 
@@ -4745,6 +4951,7 @@ msgstr "Hvem der kan se indhold afhænger af indholdsobjektets status. <strong>P
 
 #. Default: "Because you are logged in via HTTP authentication (i.e. the Zope Management Interface), the only way to log out is to quit your web browser."
 #: CMFPlone/skins/plone_login/logged_out.cpt:58
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:54
 msgid "description_quit_to_log_out"
 msgstr "Du er logget på med HTTP autentifikation. Derfor kan du kun logge ud ved at lukke din browser."
 
@@ -4888,6 +5095,7 @@ msgid "description_site_map"
 msgstr "En oversigt over indhold på sitet. Beskrivelsen tilknyttet det enkelte indholdsobjekt vises kun, hvis du holder musen over en titel i et par sekunder."
 
 #. Default: "A portlet which can display static HTML text."
+#: plone.portlet.static/plone/portlet/static/profiles/default/portlets.xml
 #: plone.portlet.static/plone/portlet/static/static.py:134
 msgid "description_static_portlet"
 msgstr "En portlet som viser statisk HTML."
@@ -4898,6 +5106,7 @@ msgstr "En portlet som viser statisk HTML."
 #. your browser, here are some possible reasons:
 #. </p>
 #: CMFPlone/skins/plone_login/login_failed.cpt:37
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:40
 msgid "description_still_failure"
 msgstr "Hvis du stadig kommer til denne side, efter at du mener at have sat din browser korrekt op, kan du prøve følgende muligheder: "
 
@@ -4909,6 +5118,7 @@ msgstr "Hvis du stadig kommer til denne side, efter at du mener at have sat din 
 #. ${url}
 #. </li>
 #: CMFPlone/skins/plone_login/login_failed.cpt:47
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:50
 msgid "description_still_failure_reason1"
 msgstr "Det er muligt, at du kører filtreringssoftware - f.eks en firewall, der slår cookies fra. Hvis det er tilfældet, skal du sætte dette software op, så det gør dig i stand til at acceptere cookies fra ${url}. "
 
@@ -4920,6 +5130,7 @@ msgstr "Det er muligt, at du kører filtreringssoftware - f.eks en firewall, der
 #. problem can be fixed.
 #. </li>
 #: CMFPlone/skins/plone_login/login_failed.cpt:49
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_failed.cpt:52
 msgid "description_still_failure_reason2"
 msgstr "Din computer er muligvis bag en firewall eller en proxyserver, der forhindrer cookies i at blive sendt til eller fra din browser. Hvis det er tilfældet, bliver du nødt til spørge din systemadministrator, om problemet kan løses. "
 
@@ -4958,6 +5169,7 @@ msgstr "Syndikering gør det mulig at distribuere indholdet i denne mappe, såle
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
 #: CMFPlone/skins/plone_deprecated/footer.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "description_trademark"
 msgstr "Plone<sup>&reg;</sup> og Plones logo er varemærker der tilhører ${plonefoundation}."
 
@@ -5072,7 +5284,9 @@ msgid "enable_cookies_message"
 msgstr "'Cookies' er er slået fra i din browser. Du skal ${enable_cookies} før du kan logge ind."
 
 #. Default: "Cookies are not enabled. You must enable cookies before you can log in."
-#: CMFPlone/skins/plone_login/logged_out.cpt:41
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:70
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:52
+#: CMFPlone/skins/plone_login/logged_out.cpt:41, ...
 msgid "enable_cookies_message_before_login"
 msgstr "Cookies er ikke slået til. Du skal slå cookies til for at du kan logge ind"
 
@@ -5161,6 +5375,7 @@ msgstr "styles"
 #. </tal:title>
 #. Default: "More…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:132
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:536
 msgid "folder_add_more"
 msgstr "Flere"
 
@@ -5169,11 +5384,13 @@ msgstr "Flere"
 #. </tal:title>
 #. Default: "Restrict…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:141
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:549
 msgid "folder_add_settings"
 msgstr "Begræns indhold..."
 
 #. Default: "Click to configure what type of items can be added here…"
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:36
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:28
 msgid "folder_add_settings_long"
 msgstr "Klik for at indstille, hvilke indholdstyper, der kan tilføjes her."
 
@@ -5193,6 +5410,7 @@ msgstr "Op til administration af regler"
 #. </a>
 #. <a class="link-parent" href="" i18n:translate="go_to_parent_url" tal:attributes="href parent_url" tal:condition="parent_url" tal:define="parent_url python:here.navigationParent(here, template_id)">
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:42
+#: plone.app.content/plone/app/content/browser/foldercontents.pt:35
 msgid "go_to_parent_url"
 msgstr "Et niveau op"
 
@@ -5201,7 +5419,7 @@ msgstr "Et niveau op"
 #. ${user}
 #. </a>
 #. Default: "All content created by ${user}…"
-#: CMFPlone/skins/plone_content/author.cpt:280
+#: CMFPlone/skins/plone_content/author.cpt:283
 msgid "go_to_search_author_content"
 msgstr "Alt indhold oprettet af ${user}"
 
@@ -5234,6 +5452,7 @@ msgstr "Erklæring vedr. tilgængelighed"
 #. Actions
 #. </h5>
 #: CMFPlone/skins/plone_deprecated/global_contentviews.pt:44
+#: plone.app.layout/plone/app/layout/viewlets/contentactions.pt:8
 msgid "heading_actions"
 msgstr "Handlinger"
 
@@ -5247,6 +5466,7 @@ msgstr "Tilføj ${itemtype}"
 #. Add new item
 #. </h1>
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:27
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:20
 msgid "heading_add_new_item"
 msgstr "Tilføj indhold"
 
@@ -5296,7 +5516,7 @@ msgstr "Tilladte sprog"
 #. <h2 i18n:translate="heading_author_content">
 #. Latest content created by this user
 #. </h2>
-#: CMFPlone/skins/plone_content/author.cpt:252
+#: CMFPlone/skins/plone_content/author.cpt:255
 msgid "heading_author_content"
 msgstr "Seneste indhold, denne bruger har oprettet"
 
@@ -5358,6 +5578,8 @@ msgstr "Indholsvisninger"
 #. <h1 i18n:translate="heading_control_panel">
 #. </h1>
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:21
+#: CMFPlone/skins/plone_prefs/portlet_prefs.pt:19
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:15
 msgid "heading_control_panel"
 msgstr "Kontrolpanel"
 
@@ -5371,6 +5593,7 @@ msgstr "Opret gruppe"
 
 #. Default: "Current sharing permissions for ${folder}"
 #: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:32
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:16
 msgid "heading_currently_assigned_shares"
 msgstr "Tildel rettigheder for ${folder}"
 
@@ -5389,6 +5612,7 @@ msgstr "Forskel mellem ${object1} og ${object2}"
 #. Document Actions
 #. </h5>
 #: CMFPlone/skins/plone_deprecated/document_actions.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/document_actions.pt:6
 msgid "heading_document_actions"
 msgstr "Handlinger tilknyttet webside"
 
@@ -5402,6 +5626,8 @@ msgid "heading_edit_groupproperties"
 msgstr "Rediger indstillinger for gruppen: ${groupname}"
 
 #. Default: "Edit ${itemtype}"
+#: Archetypes/skins/archetypes/edit_macros.pt:26
+#: Archetypes/skins/archetypes/metadata_macros.pt:18
 #: CMFPlone/skins/plone_content/folder_edit_form.cpt:20
 msgid "heading_edit_item"
 msgstr "Rediger ${itemtype}"
@@ -5547,7 +5773,7 @@ msgstr "Tilknytning til gruppe"
 #. <h1 i18n:translate="heading_my_preferences">
 #. Personal Preferences
 #. </h1>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:55
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:56
 msgid "heading_my_preferences"
 msgstr "Mine indstillinger"
 
@@ -5587,6 +5813,7 @@ msgstr "Du har måske søgt efter..."
 #. Personal tools
 #. </h5>
 #: CMFPlone/skins/plone_deprecated/global_personalbar.pt:16
+#: plone.app.layout/plone/app/layout/viewlets/personal_bar.pt:4
 msgid "heading_personal_tools"
 msgstr "Mine værktøjer"
 
@@ -5631,6 +5858,7 @@ msgstr "Publicering"
 
 #. Default: "Quit your web browser to log out"
 #: CMFPlone/skins/plone_login/logged_out.cpt:55
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:51
 msgid "heading_quit_to_log_out"
 msgstr "Luk din browsersession for at logge ud."
 
@@ -5704,7 +5932,9 @@ msgstr "Tilføj brugere til gruppen"
 #. <h1 i18n:translate="heading_search_results">
 #. Search results
 #. </h1>
-#: CMFPlone/skins/plone_forms/search.pt:63
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:226
+#: CMFPlone/skins/plone_forms/member_search_results.pt:19
+#: CMFPlone/skins/plone_forms/search.pt:65
 msgid "heading_search_results"
 msgstr "Søgeresultat"
 
@@ -5721,6 +5951,7 @@ msgstr "Søg efter brugere og grupper"
 #. Sections
 #. </h5>
 #: CMFPlone/skins/plone_deprecated/global_sections.pt:15
+#: plone.app.layout/plone/app/layout/viewlets/sections.pt:3
 msgid "heading_sections"
 msgstr "Sektion"
 
@@ -5762,6 +5993,7 @@ msgstr "Begræns hvilke typer af indhold, der kan tilføjes"
 #. <h1 i18n:translate="heading_sign_in">
 #. Please log in
 #. </h1>
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:7
 #: CMFPlone/skins/plone_login/login_form.cpt:58
 msgid "heading_sign_in"
 msgstr "Log ind"
@@ -5771,6 +6003,7 @@ msgstr "Log ind"
 #. You are now logged out
 #. </h1>
 #: CMFPlone/skins/plone_login/logged_out.cpt:29
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:40
 msgid "heading_signed_out"
 msgstr "Du er nu logget ud"
 
@@ -5851,6 +6084,7 @@ msgstr "Versioner"
 #. Views
 #. </h5>
 #: CMFPlone/skins/plone_deprecated/global_contentviews.pt:15
+#: plone.app.layout/plone/app/layout/viewlets/contentviews.pt:8
 msgid "heading_views"
 msgstr "Handlinger"
 
@@ -5858,6 +6092,7 @@ msgstr "Handlinger"
 #. <h1 i18n:translate="heading_welcome">
 #. Welcome!
 #. </h1>
+#: CMFPlone/skins/plone_login/login_password.cpt:22
 #: CMFPlone/skins/plone_login/registered.pt:19
 msgid "heading_welcome"
 msgstr "Velkommen"
@@ -5908,7 +6143,7 @@ msgstr "Hvis valgt, kan brugere tilføje kommentarer til dette indholdsobjekt."
 #. A short overview of who you are and what you do. Will be displayed
 #. on the your author page, linked from the items you create.
 #. </div>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:200
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:201
 msgid "help_biography"
 msgstr "En kort beskrivelse om hvem du er og hvad du laver vil blive vist på din 'forfatter'-side. Der linkes til denne side fra de indholdsobjekter du har oprettet."
 
@@ -5943,7 +6178,7 @@ msgstr "Skift ejerskab for det valgte indholdsobjekt"
 #. <div class="formHelp" i18n:translate="help_change_status">
 #. Select the new state for the selected items.
 #. </div>
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:167
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:166
 msgid "help_change_status"
 msgstr "Vælg ny status for de valgte indholdsobjekter."
 
@@ -5979,6 +6214,8 @@ msgstr "Kommentar til link."
 #. </div>
 #. Re-enter the password. Make sure the passwords are identical.
 #: CMFPlone/skins/plone_login/join_form.cpt:180
+#: CMFPlone/skins/plone_login/login_password.cpt:88
+#: CMFPlone/skins/plone_prefs/password_form.pt:67
 msgid "help_confirm_password"
 msgstr "Indtast adgangskoden igen. Adgangskoderne skal være identiske."
 
@@ -5988,7 +6225,7 @@ msgstr "Indtast adgangskoden igen. Adgangskoderne skal være identiske."
 #. Note that content editors often have specific browser
 #. requirements.
 #. </div>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:246
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:247
 msgid "help_content_editor"
 msgstr "Vælg den editor, du vil bruge til at redigere indholdet. Nogle editorer virker kun i en bestemt browsertype."
 
@@ -6002,7 +6239,7 @@ msgstr "Vælg den editor, du vil bruge til at redigere indholdet. Nogle editorer
 #. browser-based editors. This requires an additional application
 #. called ExternalEditor installed client-side.
 #. Ask your administrator for more information if needed.
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:289
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:290
 msgid "help_content_ext_editor"
 msgstr "Hvis checkboxen er afkrydset vil der på hver side blive vist et ikon du kan benytte hvis du ønsker at redigere en side med andre værktøjer' end de indbyggede. Dette kræver, at et program kaldet ExternalEditor er installeret på din lokale maskine. Spørg din Plone leverandør hvis du ønsker yderligere oplysninger."
 
@@ -6019,13 +6256,13 @@ msgstr "Navne på de personer, der har bidraget til indholdet. Navnet på hver b
 #. The copyrights on this item.
 #. </div>
 #. Default: "Copyright statement or other rights information on this item."
-#: Archetypes/ExtensibleMetadata.py:172
+#: Archetypes/ExtensibleMetadata.py:173
 msgid "help_copyrights"
 msgstr "Rettighedshavere for dette indholdsobjekt"
 
 #. Default: "Date this object was created"
 #. of CalendarWidget, for label: Creation Date
-#: Archetypes/ExtensibleMetadata.py:191
+#: Archetypes/ExtensibleMetadata.py:192
 msgid "help_creation_date"
 msgstr "Dato hvor dette indholdsobjekt blev oprettet"
 
@@ -6084,7 +6321,8 @@ msgstr "Startdato for søgning"
 #. A brief description of the item.
 #. </div>
 #. Default: "A short summary of the content"
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:104
+#: Archetypes/ExtensibleMetadata.py:96
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:105
 msgid "help_description"
 msgstr "Indtast en kort beskrivelse af indholdet"
 
@@ -6094,7 +6332,7 @@ msgstr "Indtast en kort beskrivelse af indholdet"
 #. changable when editing items. If Short Names
 #. are not displayed, they will be generated automatically.
 #. </div>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:332
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:333
 msgid "help_display_names"
 msgstr "Definerer om ID'er kan omdøbes når indholdsobjekter redigeres. Hvis ID'er ikke er bliver vist vil de blive dannet automatisk."
 
@@ -6108,7 +6346,8 @@ msgstr "Definerer om ID'er kan omdøbes når indholdsobjekter redigeres. Hvis ID
 #. If no date is selected the item will be
 #. effective immediately.
 #. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:100
+#: Archetypes/ExtensibleMetadata.py:140
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:99
 msgid "help_effective_date"
 msgstr "Her kan du angive indholdsobjektetets publiceringsdato. Ved at udfylde dette felt kan du kontrollere fra hvilken dato, indholdsobjektet skal være synligt. Hvis der ikke er valgt nogen dato, vil indholdet være synligt med det samme."
 
@@ -6134,7 +6373,8 @@ msgstr "Hvis valgt, vil dette indholdsobjekt ikke blive vist i menunavigationen"
 #. make the item invisible for others at the given date.
 #. If no date is chosen, it will never expire.
 #. </div>
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:124
+#: Archetypes/ExtensibleMetadata.py:151
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:123
 msgid "help_expiration_date"
 msgstr "Datoen hvor indholdsobjektet ikke længere er tilgængeligt for andre. Hvis intet er angivet, forbliver indholdsobjektet synligt for altid."
 
@@ -6174,7 +6414,7 @@ msgid "help_groupname"
 msgstr "Gruppens ID. Kan ikke ændres efter oprettelse."
 
 #. Default: "The URL for your external home page, if you have one."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:224
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:225
 msgid "help_homepage"
 msgstr "URL til ekstern hjemmeside, hvis du har en."
 
@@ -6185,7 +6425,7 @@ msgstr "URL til ekstern hjemmeside, hvis du har en."
 #. via a separate form accessible from the same menu.
 #. </div>
 #. Default: "Controls what types are addable in this location."
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:133
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:131
 msgid "help_immediately_addable_types"
 msgstr "Af de indholdstyper, der er valgt ovenfor, vil nogen være tilgængelige via 'Tilføj'-dropdown-menuen. Andre valgte indholdstyper kan tilføjes via en særskilt side som kan vælges fra samme dropdown-menu."
 
@@ -6194,7 +6434,7 @@ msgstr "Af de indholdstyper, der er valgt ovenfor, vil nogen være tilgængelige
 #. in any selected folders and their subfolders.
 #. </div>
 #. Default: "If checked, this will attempt to modify the status of all content in any selected folders and their subfolders."
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:90
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:89
 msgid "help_include_contained_objects"
 msgstr "Hvis valgt vil alt underliggende indhold og mapper blive publiceret - hvis det er muligt."
 
@@ -6216,7 +6456,7 @@ msgid "help_inherit_criteria"
 msgstr "Ved afkrydsning, bliver kriterier nedarvet."
 
 #. Default: "By default, permissions from the container of this item are inherited. If you disable this, only the explicitly defined sharing permissions will be valid. In the overview, the symbol ${image_confirm_icon} indicates an inherited value. Similarly, the symbol ${image_link_icon} indicates a global role, which is managed by the site administrator."
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:155
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:156
 msgid "help_inherit_local_roles"
 msgstr "Som standard, vil rettigheder fra dette objekts mappe blive nedarvet. Hvis du slår dette fra, vil kun de eksplicit definerede rettigheder for deling være gældende. I oversigten indikerer symbolet ${image_confirm_icon} en nedarvet værdi. På samme måde indikere symbolet ${image_link_icon} en global rolle, som bliver tildelt af administrator"
 
@@ -6230,7 +6470,7 @@ msgstr "Hvis valgt vil kun det 'Antal af objekter' vist nedenfor, blive vist. "
 #. Determines if your user name is listed in member searches done on this site.
 #. </div>
 #. Default: "Determines if your user name is listed in user searches done on this site."
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:311
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:312
 msgid "help_listed_search"
 msgstr "Vælg, om du vil være synlig på brugeroversigten."
 
@@ -6239,7 +6479,7 @@ msgstr "Vælg, om du vil være synlig på brugeroversigten."
 #. this folder.
 #. </div>
 #. Default: "Select which types should be available in the 'More…' submenu <em>instead</em> of in the main pulldown. This is useful to indicate that these are not the preferred types in this location, but are allowed if you really need them."
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:175
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:174
 msgid "help_locally_allowed_types"
 msgstr "Vælg hvilke indholdstyper, der skal kunne tilføjes i denne mappe."
 
@@ -6248,7 +6488,7 @@ msgstr "Vælg hvilke indholdstyper, der skal kunne tilføjes i denne mappe."
 #. Your location - either city and country - or in a company setting,
 #. where your office is located.
 #. </div>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:147
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:148
 msgid "help_location"
 msgstr "Skriv, hvor du bor eller, hvor din arbejdsplads befinder sig (by og/eller land)"
 
@@ -6269,7 +6509,7 @@ msgstr "Brugernavne er følsomme for brug af STORE og små bogstaver. Kontroller
 #. <div class="formHelp" i18n:translate="help_look">
 #. Appearance of the site.
 #. </div>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:348
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:349
 msgid "help_look"
 msgstr "Her kan du vælge sitets udseende."
 
@@ -6283,7 +6523,7 @@ msgstr "Indtast besked, du ønsker at sende."
 
 #. Default: "Date this content was modified last"
 #. of CalendarWidget, for label: Modification Date
-#: Archetypes/ExtensibleMetadata.py:207
+#: Archetypes/ExtensibleMetadata.py:208
 msgid "help_modification_date"
 msgstr "Dato for sidste ændring af dette indholdsobjekt"
 
@@ -6318,6 +6558,7 @@ msgstr "De indholdstyper, som skal optræde i navigation og sitemap"
 #. Enter your new password. Minimum 5 characters.
 #. </div>
 #: CMFPlone/skins/plone_login/login_password.cpt:68
+#: CMFPlone/skins/plone_prefs/password_form.pt:53
 msgid "help_new_password"
 msgstr "Indtast din nye adgangskode. Minimum 5 tegn. Bemærk: Brug kun tegnene a-z, A-Z, 0-9, _ (understreg), - (bindestreg) og ingen mellemrum."
 
@@ -6355,7 +6596,9 @@ msgid "help_password_creation"
 msgstr "Indtast din nye adgangskode. Minimum 5 tegn. Bemærk: Brug kun tegnene a-z, A-Z, 0-9, _ (understreg), - (bindestreg) og ingen mellemrum."
 
 #. Default: "If you have forgotten your password, ${click_here}."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:122
 #: CMFPlone/skins/plone_login/login_form.cpt:147
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:142
 msgid "help_password_retrieval"
 msgstr "Glemt adgangskode ?, ${click_here} ."
 
@@ -6377,7 +6620,7 @@ msgstr "En af de installerede indholdstyper"
 #. select a picture of yourself. Recommended image size is 75
 #. pixels wide by 100 pixels tall.
 #. </div>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:381
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:382
 msgid "help_portrait"
 msgstr "Hvis du vil tilføje et portrætbillede til din brugerkonto, så klik på 'Gennemse/Browse' og vælg et billede. Anbefalet størrelse er 75 pixels i bredden og 100 pixels i højden."
 
@@ -6385,7 +6628,7 @@ msgstr "Hvis du vil tilføje et portrætbillede til din brugerkonto, så klik p�
 #. <div class="formHelp" i18n:translate="help_preferred_language">
 #. Your preferred language.
 #. </div>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:172
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:173
 msgid "help_preferred_language"
 msgstr "Dit fortrukne sprog"
 
@@ -6395,7 +6638,7 @@ msgstr "Dit fortrukne sprog"
 #. items are selected, this comment will be attached to all
 #. of them.
 #. </div>
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:151
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:150
 msgid "help_publishing_comments"
 msgstr "Indtast evt. en kommentar til publiceringshistorikken. Hvis flere elementer er valgt, vil denne kommentar blive tilføjet alle indholdsobjekternes historik."
 
@@ -6403,7 +6646,9 @@ msgstr "Indtast evt. en kommentar til publiceringshistorikken. Hvis flere elemen
 #. <div class="formHelp" i18n:translate="help_remember_my_name">
 #. Check this to have your user name filled in automatically when you log in later.
 #. </div>
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:151
 #: CMFPlone/skins/plone_login/login_form.cpt:119
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:216
 msgid "help_remember_my_name"
 msgstr "Hvis du afkrydser \"Husk mit brugernavn\", vil der på din computer blive gemt i en 'cookie' med dit brugernavn. Næste gang, du besøger sitet, vil feltet med dit brugernavn blive udfyldt automatisk."
 
@@ -6411,12 +6656,12 @@ msgstr "Hvis du afkrydser \"Husk mit brugernavn\", vil der på din computer bliv
 #. <div class="formHelp" i18n:translate="help_search_author">
 #. Return items created by a particular person.
 #. </div>
-#: CMFPlone/skins/plone_forms/search_form.pt:209
+#: CMFPlone/skins/plone_forms/search_form.pt:208
 msgid "help_search_author"
 msgstr "Viser indholdsobjekter oprettet af en udvalgt bruger."
 
 #. Default: "Return items matching some or all of these Categories. Multiple words may be found by pressing <strong>Ctrl</strong> (or <strong>Apple</strong> key on Mac) while clicking the keywords."
-#: CMFPlone/skins/plone_forms/search_form.pt:70
+#: CMFPlone/skins/plone_forms/search_form.pt:72
 msgid "help_search_categories"
 msgstr "Søger i indholdsobjekter der har et eller flere af de valgte emneord tilknyttet. Du kan vælge flere ord ved at holde 'Ctrl'-knappen nede, mens du med venstre museklik vælger flere emneord'"
 
@@ -6473,7 +6718,7 @@ msgstr "Søg efter brugere"
 #. in certain states, select them from this list.
 #. </div>
 #. Default: "You may search for items based on their review state. If you wish to constrain results to items in certain states, select them from this list."
-#: CMFPlone/skins/plone_forms/search_form.pt:232
+#: CMFPlone/skins/plone_forms/search_form.pt:231
 msgid "help_search_review_status"
 msgstr "Hvis du har rettigheder til at publicere indhold (redaktør/administrator), kan du begrænse din søgning til indholdsobjekter, der har en bestemt status. "
 
@@ -6486,7 +6731,7 @@ msgid "help_search_roles"
 msgstr "Find brugere med de valgte roller."
 
 #. Default: "For a simple text search, enter your search term here. Multiple words may be found by combining them with <strong>AND</strong> and <strong>OR</strong>. The text in this field will be matched with items' contents, title and description."
-#: CMFPlone/skins/plone_forms/search_form.pt:37
+#: CMFPlone/skins/plone_forms/search_form.pt:36
 msgid "help_search_text"
 msgstr "Ord i dette tekstfelt anvendes til en simpel tekstsøgning. Man søger efter flere forskellige ord ved at kombinere dem med AND og OR. Teksten i dette felt vil blive matchet med indholdsobjekternes titel, indhold og beskrivelse."
 
@@ -6494,7 +6739,7 @@ msgstr "Ord i dette tekstfelt anvendes til en simpel tekstsøgning. Man søger e
 #. <div class="formHelp" i18n:translate="help_search_title">
 #. Return items matching this title.
 #. </div>
-#: CMFPlone/skins/plone_forms/search_form.pt:56
+#: CMFPlone/skins/plone_forms/search_form.pt:55
 msgid "help_search_title"
 msgstr "Vis de indholdsobjekter, hvis titel indeholder den indtastede værdi."
 
@@ -6566,7 +6811,8 @@ msgstr "ID er en del af indholdsobjektets URL."
 #. Should not contain spaces, upper case, underscores or other special characters.
 #. </div>
 #. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:50
+#: Archetypes/BaseObject.py:93
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:51
 msgid "help_shortname"
 msgstr "Indtast en kort ID. ID'en bliver en del af indholdsobjektets web-adresse og bør være kort, beskrivende og ikke indeholde mellemrum, danske eller STORE bogstaver. Eksempel: 'aars-rapport-2002'"
 
@@ -6673,8 +6919,8 @@ msgstr "Vælg en skabelon, der skal anvendes til visning af dette indholdsobjekt
 #. of StringWidget, for label: URL
 #. of StringWidget, for label: Event URL
 #. Default: "Add http:// to link outside the site."
-#: widget description of StringWidget for label URL
 #: widget description of StringWidget for label Event URL
+#: widget description of StringWidget for label URL
 msgid "help_url"
 msgstr "Tilføj ' http://' hvis linket er eksternt"
 
@@ -6717,7 +6963,7 @@ msgid "hide"
 msgstr "skjul"
 
 #. Default: "${action} by ${actor} on ${time}"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:46
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:51
 msgid "history_action"
 msgstr "${action} af ${actor} den ${time}"
 
@@ -6817,18 +7063,23 @@ msgstr "Handlinger"
 #. Actions
 #. </a>
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:405
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:49
 msgid "label_actions_menu"
 msgstr "Handlinger"
 
 #. Default: "Add"
 #: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:82
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:59
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:114, ...
 msgid "label_add"
 msgstr "Tilføj"
 
 #. Default: "Add Comment"
 #. <input class="standalone" i18n:attributes="value label_add_comment;" name="discussion_reply:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add Comment"/>
 #. <input class="standalone" i18n:attributes="value label_add_comment;" style="margin-bottom: 1.25em;" type="submit" value="Add Comment"/>
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:25
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:55
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
 msgid "label_add_comment"
 msgstr "Tilføj kommentar"
 
@@ -6843,6 +7094,7 @@ msgstr "Oprettelse af ny gruppe"
 #. Add item
 #. </a>
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:99
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:414
 msgid "label_add_new_item"
 msgstr "Tilføj indhold"
 
@@ -6893,6 +7145,7 @@ msgstr "vCal (Windows, Linux)"
 #. ${type}
 #. </span>
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:168
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:424
 msgid "label_add_type"
 msgstr "Tilføj ${type}"
 
@@ -6923,6 +7176,7 @@ msgstr "Tilføj de valgte brugere og grupper til denne gruppe"
 #. </a>
 #. Default: "Advanced…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:62
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:690
 msgid "label_advanced"
 msgstr "Avanceret"
 
@@ -6931,6 +7185,8 @@ msgstr "Avanceret"
 #. </a>
 #. Default: "Advanced Search…"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:57
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:84
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:48, ...
 msgid "label_advanced_search"
 msgstr "Avanceret søgning"
 
@@ -6938,11 +7194,12 @@ msgstr "Avanceret søgning"
 #. <label for="" i18n:translate="label_affected_content">
 #. Affected content
 #. </label>
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:70
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:69
 msgid "label_affected_content"
 msgstr "Indhold ændret"
 
 #. Default: "All"
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:32
 #: plone.app.content/plone/app/content/browser/table.pt:38
 msgid "label_all"
 msgstr "Alle"
@@ -6984,7 +7241,9 @@ msgstr "en anonym bruger"
 #. <span i18n:translate="label_anonymous_user" tal:condition="anonymous_creator">
 #. Anonymous User
 #. </span>
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:64
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:46
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:53, ...
 msgid "label_anonymous_user"
 msgstr "Anonym bruger"
 
@@ -6992,7 +7251,7 @@ msgstr "Anonym bruger"
 #. <option i18n:translate="label_any_author" value="">
 #. Any Author
 #. </option>
-#: CMFPlone/skins/plone_forms/search_form.pt:217
+#: CMFPlone/skins/plone_forms/search_form.pt:216
 msgid "label_any_author"
 msgstr "Alle forfattere"
 
@@ -7000,6 +7259,8 @@ msgstr "Alle forfattere"
 #. <input class="context" i18n:attributes="value label_apply_changes;" name="form.button.Modify" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="groups" type="submit" value="Apply Changes"/>
 #. <input class="context" i18n:attributes="value label_apply_changes;" name="form.button.Modify" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="batch" type="submit" value="Apply Changes"/>
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:247
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:237
+#: plone.app.controlpanel/plone/app/controlpanel/types.pt:258
 msgid "label_apply_changes"
 msgstr "Gem ændringer"
 
@@ -7046,7 +7307,7 @@ msgstr "i"
 #. <label for="Creator" i18n:translate="label_author">
 #. Author
 #. </label>
-#: CMFPlone/skins/plone_forms/search_form.pt:207
+#: CMFPlone/skins/plone_forms/search_form.pt:206
 msgid "label_author"
 msgstr "Forfatter"
 
@@ -7054,7 +7315,7 @@ msgstr "Forfatter"
 #. Author's external home page
 #. </a>
 #. Default: "Author's external home page…"
-#: CMFPlone/skins/plone_content/author.cpt:139
+#: CMFPlone/skins/plone_content/author.cpt:140
 msgid "label_author_external_home_page"
 msgstr "Forfatters eksterne webside"
 
@@ -7062,7 +7323,7 @@ msgstr "Forfatters eksterne webside"
 #. Author's home page in this site
 #. </a>
 #. Default: "Author's home page in this site…"
-#: CMFPlone/skins/plone_content/author.cpt:134
+#: CMFPlone/skins/plone_content/author.cpt:135
 msgid "label_author_internal_home_page"
 msgstr "Forfatters webside på dette site"
 
@@ -7094,7 +7355,7 @@ msgstr "Tilbage til sitet"
 #. <label for="description" i18n:translate="label_biography">
 #. Biography
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:198
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:199
 msgid "label_biography"
 msgstr "Biografi"
 
@@ -7112,6 +7373,7 @@ msgstr "Værdi"
 
 #. Default: "Browse"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:67
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:63
 msgid "label_browse"
 msgstr "Gennemse"
 
@@ -7121,6 +7383,8 @@ msgstr "Gennemse"
 #. </span>
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:124
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:126
+#: CMFPlone/skins/plone_deprecated/document_byline.pt:21, ...
 msgid "label_by_author"
 msgstr "af ${author}"
 
@@ -7161,12 +7425,15 @@ msgstr "Kalender"
 #. <input class="standalone" i18n:attributes="value label_cancel;" name="form.button.Cancel" tal:attributes="tabindex tabindex/next;" type="submit" value="Cancel"/>
 #. <input class="standalone" i18n:attributes="value label_cancel;" name="form.button.Cancel" tabindex="" tal:attributes="tabindex tabindex/next" type="submit" value="Cancel"/>
 #. <input class="standalone" i18n:attributes="value label_cancel;" name="form.button.Cancel" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Cancel"/>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:417
+#: Archetypes/skins/archetypes/edit_macros.pt:233
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:127
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:239, ...
 msgid "label_cancel"
 msgstr "Annuller"
 
 #. Default: "Categories"
-#: CMFPlone/skins/plone_forms/search_form.pt:68
+#: Archetypes/ExtensibleMetadata.py:81
+#: CMFPlone/skins/plone_forms/search_form.pt:70
 msgid "label_categories"
 msgstr "Emneord"
 
@@ -7195,6 +7462,7 @@ msgstr "Skift indholdsobjekt, der skal vises som standard"
 #. <a href="#" i18n:attributes="title title_change_default_page;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change default page">
 #. Default: "Change content item<br />as default view…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:382
 msgid "label_change_item"
 msgstr "Vælg ny mappeforside"
 
@@ -7218,6 +7486,7 @@ msgstr "Skift ejerskab"
 #. <input class="standalone" i18n:attributes="value label_change_password;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Change Password"/>
 #. <input class="context" i18n:attributes="value label_change_password;" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Change Password"/>
 #: CMFPlone/skins/plone_login/login_password.cpt:102
+#: CMFPlone/skins/plone_prefs/password_form.pt:79
 msgid "label_change_password"
 msgstr "Skift adgangskode"
 
@@ -7225,7 +7494,7 @@ msgstr "Skift adgangskode"
 #. <label i18n:translate="label_change_status">
 #. Change State
 #. </label>
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:166
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:165
 msgid "label_change_status"
 msgstr "Skift status"
 
@@ -7261,6 +7530,7 @@ msgstr "Vælg et indholdsobjekt"
 #. <a href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_choose_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
 #. Default: "Select a content item<br />as default view…"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:356
 msgid "label_choose_item"
 msgstr "Vælg forside for denne mappe"
 
@@ -7269,6 +7539,7 @@ msgstr "Vælg forside for denne mappe"
 #. Display
 #. </a>
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:206
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:120
 msgid "label_choose_template"
 msgstr "Visning"
 
@@ -7288,7 +7559,9 @@ msgstr "Fortryd valgte"
 #. </a>
 #. <a href="mail_password_form" i18n:translate="label_click_here_to_retrieve">
 #. Default: "we can send you a new one"
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:123
 #: CMFPlone/skins/plone_login/login_form.cpt:148
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:143
 #, fuzzy
 msgid "label_click_here_to_retrieve"
 msgstr "Klik her for at få det tilsendt"
@@ -7306,6 +7579,7 @@ msgstr "Klik for at se billedet i fuld størrelse"
 #. Comment
 #. </label>
 #. <label for="text" i18n:translate="label_comment">
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:142
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:90
 msgid "label_comment"
 msgstr "Kommentar"
@@ -7314,7 +7588,9 @@ msgstr "Kommentar"
 #. <span i18n:translate="label_comment_by">
 #. Posted by
 #. </span>
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:61
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:43
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:50
 msgid "label_comment_by"
 msgstr "Skrevet af"
 
@@ -7322,7 +7598,9 @@ msgstr "Skrevet af"
 #. <span i18n:translate="label_commented_at">
 #. at
 #. </span>
+#: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:66
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:48
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:55
 msgid "label_commented_at"
 msgstr "den"
 
@@ -7330,13 +7608,14 @@ msgstr "den"
 #. <label i18n:translate="label_comments">
 #. Comments
 #. </label>
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:148
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:147
 msgid "label_comments"
 msgstr "Kommentarer"
 
 #. Default: "Compare"
 #. <input class="context" i18n:attributes="value label_compare;" name="manage_historicalComparison:method" type="submit" value="Compare"/>
 #: CMFPlone/skins/plone_forms/history_form.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:72
 msgid "label_compare"
 msgstr "Sammenlign"
 
@@ -7347,6 +7626,8 @@ msgstr "Sammenlign"
 #. <label for="password_confirm" i18n:translate="label_confirm_password">
 #. Confirm password
 #: CMFPlone/skins/plone_login/join_form.cpt:173
+#: CMFPlone/skins/plone_login/login_password.cpt:85
+#: CMFPlone/skins/plone_prefs/password_form.pt:65
 msgid "label_confirm_password"
 msgstr "Bekræft adgangskode"
 
@@ -7390,7 +7671,7 @@ msgstr "indeholdende"
 #. <label for="wysiwyg_editor" i18n:translate="label_content_editor">
 #. Content editor
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:244
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:245
 msgid "label_content_editor"
 msgstr "Redigeringsmetode"
 
@@ -7426,6 +7707,7 @@ msgstr "Tildelinger"
 
 #. Default: "enabled"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:112
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:144
 msgid "label_contentrules_rule_enabled"
 msgstr "Slået til"
 
@@ -7467,14 +7749,14 @@ msgstr "Kopier til nuværende"
 #. Copyrights
 #. </label>
 #. Default: "Rights"
-#: Archetypes/ExtensibleMetadata.py:171
+#: Archetypes/ExtensibleMetadata.py:172
 #, fuzzy
 msgid "label_copyrights"
 msgstr "Ophavsretshavere"
 
 #. Default: "Creation Date"
 #. of CalendarWidget, description: Date this object was created
-#: Archetypes/ExtensibleMetadata.py:190
+#: Archetypes/ExtensibleMetadata.py:191
 msgid "label_creation_date"
 msgstr "Oprettelsesdato"
 
@@ -7519,6 +7801,7 @@ msgstr "Vis kun indholdet i denne mappe"
 #. Folder display
 #. </div>
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:219
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:275
 msgid "label_current_folder_views"
 msgstr "Mappevisning"
 
@@ -7532,6 +7815,7 @@ msgstr "Nuværende billede"
 #. Item display
 #. </div>
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:285
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:322
 msgid "label_current_item_views"
 msgstr "Objektvisning"
 
@@ -7545,6 +7829,7 @@ msgstr "Nuværende adgangskode"
 
 #. Default: "Current selection"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:17
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:10
 msgid "label_currentselection"
 msgstr "Nuværende udvalgte"
 
@@ -7562,6 +7847,7 @@ msgstr "Tabel kolonner"
 
 #. Default: "Dashboard"
 #: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:38
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-dashboard.pt:41
 msgid "label_dashboard"
 msgstr "Panel"
 
@@ -7596,7 +7882,7 @@ msgstr "Slet"
 #. <label for="pdelete" i18n:translate="label_delete_portrait">
 #. Delete Portrait
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:402
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:403
 msgid "label_delete_portrait"
 msgstr "Slet portrætbillede"
 
@@ -7611,12 +7897,15 @@ msgstr "Slet valgte rolle(r) og bruger(e)/gruppe(r)"
 #. Description
 #. </label>
 #. <label for="Description" i18n:translate="label_description">
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:102
+#: Archetypes/ExtensibleMetadata.py:95
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:103
+#: CMFPlone/skins/plone_forms/search_form.pt:117, ...
 msgid "label_description"
 msgstr "Beskrivelse"
 
 #. Default: "Disable"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:145
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:218
 msgid "label_disable"
 msgstr "Slå fra"
 
@@ -7660,7 +7949,9 @@ msgid "label_discussion_enabled"
 msgstr "Aktiveret"
 
 #. Default: "Edit"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:34
+#: CMFPlone/skins/plone_content/author.cpt:70
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:35
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:83, ...
 msgid "label_edit"
 msgstr "Rediger"
 
@@ -7678,7 +7969,7 @@ msgstr "Gå hertil"
 #. <label for="cb_invisible_ids" i18n:translate="label_edit_short_names">
 #. Allow editing of Short Names
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:329
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:330
 msgid "label_edit_short_names"
 msgstr "Tillad redigering af ID'er"
 
@@ -7687,7 +7978,8 @@ msgstr "Tillad redigering af ID'er"
 #. </label>
 #. <label for="effective_date" i18n:translate="label_effective_date">
 #. Default: "Publishing Date"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:99
+#: Archetypes/ExtensibleMetadata.py:139
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:98
 msgid "label_effective_date"
 msgstr "Publiceringsdato"
 
@@ -7696,7 +7988,9 @@ msgstr "Publiceringsdato"
 #. E-mail
 #. </label>
 #. <label i18n:translate="label_email">
+#: CMFPlone/skins/plone_forms/member_search_form.pt:46
 #: CMFPlone/skins/plone_login/join_form.cpt:115
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:118
 msgid "label_email"
 msgstr "E-mail"
 
@@ -7712,6 +8006,7 @@ msgstr "E-mailadresse"
 
 #. Default: "Enable"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:143
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:213
 msgid "label_enable"
 msgstr "Slå til"
 
@@ -7766,12 +8061,14 @@ msgstr "Deltagere"
 
 #. Default: "(${location}, from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:99
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:103
 #, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location}, fra ${start} til ${end} )"
 
 #. Default: "(from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:111
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:115
 msgid "label_event_byline_without_location"
 msgstr "(fra ${start} til ${end})"
 
@@ -7839,7 +8136,8 @@ msgstr "Eksisterende kategorier"
 #. Expiration Date
 #. </label>
 #. <label for="expiration_date" i18n:translate="label_expiration_date">
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:123
+#: Archetypes/ExtensibleMetadata.py:150
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:122
 msgid "label_expiration_date"
 msgstr "Udløbsdato"
 
@@ -7847,7 +8145,7 @@ msgstr "Udløbsdato"
 #. <label for="cb_ext_editor" i18n:translate="label_ext_editor">
 #. Enable external editing
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:287
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:288
 msgid "label_ext_editor"
 msgstr "Tænd for External Editor"
 
@@ -7858,7 +8156,8 @@ msgid "label_file"
 msgstr "Fil"
 
 #. Default: "filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:142
+#: CMFPlone/skins/plone_forms/search.pt:144
+#: plone.app.layout/plone/app/layout/viewlets/keywords.pt:8
 msgid "label_filed_under"
 msgstr "Arkiveret under"
 
@@ -7884,6 +8183,7 @@ msgstr "Find en gruppe"
 #. <label for="text_format" i18n:translate="label_format">
 #. Format
 #. </label>
+#: Archetypes/skins/archetypes/widgets/textarea.pt:99
 #: CMFPlone/skins/plone_wysiwyg/wysiwyg_support.pt:22
 msgid "label_format"
 msgstr "Format"
@@ -7894,7 +8194,9 @@ msgstr "Format"
 #. <label i18n:translate="label_full_name">
 #. Full Name
 #. Default: "Full Name"
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:272
 #: CMFPlone/skins/plone_login/join_form.cpt:59
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:98
 msgid "label_full_name"
 msgstr "Fornavn og efternavn"
 
@@ -7916,6 +8218,7 @@ msgstr "Automatisk oprettede faneblade"
 #. GNU GPL license
 #. </a>
 #: CMFPlone/skins/plone_deprecated/footer.pt:38
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
 msgid "label_gnu_gpl_licence"
 msgstr "GNU GPL licens"
 
@@ -7932,7 +8235,9 @@ msgstr "Gruppe"
 #. Group Members
 #. </a>
 #. <a href="" i18n:translate="label_group_members" tal:attributes="href string:${here/absolute_url}/prefs_group_members?groupname=${groupname}">
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:34
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:40
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:27
 msgid "label_group_members"
 msgstr "Gruppemedlemmer"
 
@@ -7941,6 +8246,7 @@ msgstr "Gruppemedlemmer"
 #. Group Memberships
 #. </a>
 #. <a href="" i18n:translate="label_group_memberships" tal:attributes="href string:${template/id}?userid=${userid}">
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:33
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:36
 msgid "label_group_memberships"
 msgstr "Medlemskab af grupper"
@@ -7954,7 +8260,9 @@ msgid "label_group_name"
 msgstr "Gruppenavn"
 
 #. Default: "Group Portlets"
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:44
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:50
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:37
 msgid "label_group_portlets"
 msgstr "grupper portletter"
 
@@ -7963,7 +8271,9 @@ msgstr "grupper portletter"
 #. Group Properties
 #. </a>
 #. <a href="" i18n:translate="label_group_properties" tal:attributes="href string:${here/absolute_url}/${template/id}?groupname=${groupname}">
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:39
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:45
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:32
 msgid "label_group_properties"
 msgstr "Indstillinger for gruppe"
 
@@ -7980,6 +8290,8 @@ msgstr "Søg efter gruppe"
 #. </a>
 #. <a href="prefs_groups_overview" i18n:translate="label_groups">
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:38
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:42
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:31
 msgid "label_groups"
 msgstr "Gruppe"
 
@@ -8004,6 +8316,8 @@ msgstr "Historik er ikke tilgængelig"
 #. History
 #. </dt>
 #: CMFPlone/skins/plone_deprecated/review_history.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:10
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:8
 msgid "label_history"
 msgstr "Historik"
 
@@ -8016,12 +8330,13 @@ msgid "label_home"
 msgstr "Forside"
 
 #. Default: "Home page"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:222
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:223
 msgid "label_homepage"
 msgstr "Egen forside"
 
 #. Default: "OpenID URL"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:25
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:63
 msgid "label_identity_url"
 msgstr "OpenID URL"
 
@@ -8049,7 +8364,7 @@ msgstr "Billedtekst"
 #. Preferred types
 #. </label>
 #. Default: "Allowed types"
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:128
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:127
 msgid "label_immediately_addable_types"
 msgstr "Fortrukne indholdstyper"
 
@@ -8057,7 +8372,7 @@ msgstr "Fortrukne indholdstyper"
 #. Include folder items
 #. </label>
 #. Default: "Include contained items"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:86
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:85
 msgid "label_include_contained_objects"
 msgstr "Medtag indeholdte objekter"
 
@@ -8075,7 +8390,7 @@ msgid "label_inherit_criteria"
 msgstr "Skal den Dynamiske liste indstillingerne (kriterier) nedarves?"
 
 #. Default: "Inherit permissions from higher levels"
-#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:144
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:145
 msgid "label_inherit_local_roles"
 msgstr "Nedarv rettigheder fra højere niveauer"
 
@@ -8097,6 +8412,7 @@ msgstr "Antal indholdsobjekter"
 #. ${contentitem}
 #. </span>
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:265
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:295
 msgid "label_item_selected"
 msgstr "Indholdsobjekt: ${contentitem}"
 
@@ -8121,7 +8437,9 @@ msgstr "Emneord"
 #. <label for="language" i18n:translate="label_language">
 #. Language
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:170
+#: Archetypes/ExtensibleMetadata.py:164
+#: CMFPlone/skins/plone_deprecated/portlet_languages.pt:17
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:171
 msgid "label_language"
 msgstr "Sprog"
 
@@ -8146,7 +8464,7 @@ msgstr "Begræns søgeresultat"
 #. <label for="cb_listed" i18n:translate="label_listed_status">
 #. Listed in searches
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:309
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:310
 msgid "label_listed_status"
 msgstr "Status på brugeroversigt"
 
@@ -8184,11 +8502,13 @@ msgid "label_localroles_to_assign_to_selected_users"
 msgstr "Roller, der skal tildeles til valgte bruger(e)/grupper(r)"
 
 #. Default: "Location"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:145
+#: Archetypes/ExtensibleMetadata.py:106
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:146
 msgid "label_location"
 msgstr "Sted"
 
 #. Default: "Locked"
+#: plone.app.iterate/plone/app/iterate/browser/info_baseline.pt:5
 #: plone.locking/plone/locking/browser/info.pt:8
 msgid "label_locked"
 msgstr "Låst"
@@ -8197,7 +8517,9 @@ msgstr "Låst"
 #. <input class="standalone" i18n:attributes="value label_log_in;" tal:attributes="onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
 #. <input class="context" i18n:attributes="value label_log_in;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;                             onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
 #. <input alt="Log in" class="context" i18n:attributes="value label_log_in; alt label_log_in;" name="submit" tal:attributes="tabindex tabindex/next;                                   onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');" type="submit" value="Log in"/>
-#: CMFPlone/skins/plone_login/registered.pt:86
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:79
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:160
+#: CMFPlone/skins/plone_login/login_form.cpt:128, ...
 msgid "label_log_in"
 msgstr "Log ind"
 
@@ -8217,19 +8539,22 @@ msgstr "Fortsæt til ${portal_title} forside"
 #. </label>
 #. <input alt="Login Name" i18n:attributes="alt label_login_name;" onclick="showCookieMessage('cookies_message')" size="10" tal:attributes="name ac_name; id ac_name;                                        value python:request.get(ac_name, '');                                        tabindex tabindex/next" type="text"/>
 #. <label i18n:translate="label_login_name" tal:attributes="for ac_name">
-#: CMFPlone/skins/plone_login/login_form.cpt:76
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:376
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:46
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:89, ...
 msgid "label_login_name"
 msgstr "Brugernavn"
 
 #. Default: "Log in to add comments"
 #. <input class="standalone" i18n:attributes="value label_login_to_add_comments;" style="margin-bottom: 1.25em;" type="submit" value="Log in to add comments"/>
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:37
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:25
 msgid "label_login_to_add_comments"
 msgstr "Log ind for at tilføje kommentar"
 
 #. Default: "Log in to send feedback"
 #. <input class="standalone" i18n:attributes="value label_login_to_send_feedback;" type="submit" value="Log in to send feedback"/>
-#: CMFPlone/skins/plone_content/author.cpt:149
+#: CMFPlone/skins/plone_content/author.cpt:151
 msgid "label_login_to_send_feedback"
 msgstr "Log ind for at kommentere"
 
@@ -8237,7 +8562,7 @@ msgstr "Log ind for at kommentere"
 #. <label for="portal_skin" i18n:translate="label_look">
 #. Look
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:346
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:347
 msgid "label_look"
 msgstr "Udseende"
 
@@ -8253,7 +8578,7 @@ msgstr "Send kodeord?"
 #. <span i18n:translate="label_main_language">
 #. Main Language:
 #. </span>
-#: CMFPlone/skins/plone_content/author.cpt:114
+#: CMFPlone/skins/plone_content/author.cpt:115
 msgid "label_main_language"
 msgstr "Hovedsprog"
 
@@ -8261,13 +8586,14 @@ msgstr "Hovedsprog"
 #. <label for="message" i18n:translate="label_message">
 #. Message
 #. </label>
+#: CMFPlone/skins/plone_content/author.cpt:213
 #: CMFPlone/skins/plone_templates/contact-info.cpt:131
 msgid "label_message"
 msgstr "Besked"
 
 #. Default: "Modification Date"
 #. of CalendarWidget, description: Date this content was modified last
-#: Archetypes/ExtensibleMetadata.py:205
+#: Archetypes/ExtensibleMetadata.py:206
 msgid "label_modification_date"
 msgstr "Sidst ændret"
 
@@ -8278,7 +8604,9 @@ msgstr "Sidst ændret"
 #. <label for="username" i18n:translate="label_name">
 #. </label>
 #. <input alt="Username" i18n:attributes="title label_name; alt label_username;" id="username" name="username" size="40" tabindex="" tal:attributes="tabindex tabindex/next;" title="Name" value=""/>
-#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:71
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:95
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:92
+#: CMFPlone/skins/plone_forms/member_search_form.pt:31, ...
 msgid "label_name"
 msgstr "Navn"
 
@@ -8350,6 +8678,7 @@ msgstr "Søg efter ny ejer"
 #. </label>
 #. <label for="password" i18n:translate="label_new_password">
 #: CMFPlone/skins/plone_login/login_password.cpt:65
+#: CMFPlone/skins/plone_prefs/password_form.pt:51
 msgid "label_new_password"
 msgstr "Ny adgangskode"
 
@@ -8376,7 +8705,7 @@ msgid "label_news_image"
 msgstr "Billede"
 
 #. Default: "Next"
-#: Archetypes/skins/archetypes/edit_macros.pt:217
+#: Archetypes/skins/archetypes/edit_macros.pt:218
 msgid "label_next"
 msgstr "Næste"
 
@@ -8391,7 +8720,7 @@ msgid "label_next_item_arrow"
 msgstr "Højrepil"
 
 #. Default: "No change"
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:198
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:197
 msgid "label_no_change"
 msgstr "Ingen ændring"
 
@@ -8405,6 +8734,8 @@ msgstr "Ingen gruppe valgt"
 
 #. Default: "No preference panels available."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:99
+#: CMFPlone/skins/plone_prefs/plone_memberprefs_panel.pt:48
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:84
 msgid "label_no_prefs_panels_available"
 msgstr "Der er ingen indstillinger tilgængelige"
 
@@ -8444,6 +8775,7 @@ msgstr "Ok"
 
 #. Default: "Log in"
 #: plone.app.openid/plone/app/openid/portlets/login.pt:40
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:84
 msgid "label_openid_log_in"
 msgstr "Log ind"
 
@@ -8461,7 +8793,7 @@ msgstr "eller"
 #. </option>
 #. <option i18n:translate="label_ordinary_content_editor" tal:attributes="value editor;                                             selected python:test(editor==wysiwyg_editor, 'selected', None);" tal:condition="python:editor == 'None'" value="None">
 #. Basic HTML textarea editor (works in all browsers)
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:264
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:265
 msgid "label_ordinary_content_editor"
 msgstr "Redigering af indhold via formularer (virker i alle browsere)"
 
@@ -8478,6 +8810,7 @@ msgstr "Produktet skal opdateres - klik her for at installere igen. Filsystem ve
 
 #. Default: "Parent"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:53
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:45
 msgid "label_parent"
 msgstr "Overliggende"
 
@@ -8487,7 +8820,9 @@ msgstr "Overliggende"
 #. </label>
 #. <input alt="Password" i18n:attributes="title label_password; alt label_password;" id="password" name="password" size="40" tabindex="" tal:attributes="tabindex tabindex/next;" title="Password" type="password" value=""/>
 #. <label i18n:translate="label_password" tal:attributes="for ac_password">
-#: CMFPlone/skins/plone_login/join_form.cpt:145
+#: CMFPlone/skins/plone_deprecated/portlet_login.pt:59
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:112, ...
 msgid "label_password"
 msgstr "Adgangskode"
 
@@ -8510,6 +8845,7 @@ msgstr "Mapper"
 
 #. Default: "Perform Search"
 #. <input class="context" i18n:attributes="value label_perform_search;" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Perform Search"/>
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:402
 #: CMFPlone/skins/plone_forms/ownership_form.cpt:208
 msgid "label_perform_search"
 msgstr "Søg"
@@ -8519,6 +8855,7 @@ msgstr "Søg"
 #. </a>
 #. Default: "Plone<sup>&reg;</sup> CMS — Open Source Content Management System"
 #: CMFPlone/skins/plone_deprecated/footer.pt:13
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:7
 msgid "label_plone_cms"
 msgstr "Plone<sup>&reg;</sup> CMS - Open Source Content Management System"
 
@@ -8527,6 +8864,7 @@ msgstr "Plone<sup>&reg;</sup> CMS - Open Source Content Management System"
 #. Plone Foundation
 #. </a>
 #: CMFPlone/skins/plone_deprecated/footer.pt:23
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:17
 msgid "label_plone_foundation"
 msgstr "Plone Foundation"
 
@@ -8571,7 +8909,7 @@ msgstr "Nedarvede portlets"
 #. <label for="portrait" i18n:translate="label_portrait">
 #. Portrait
 #. </label>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:370
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:371
 msgid "label_portrait"
 msgstr "Portrætbillede"
 
@@ -8581,11 +8919,13 @@ msgstr "Portrætbillede"
 #. <a class="colophonIcon" href="http://plone.org" i18n:attributes="title title_built_with_plone;" i18n:translate="label_powered_by_plone" tal:attributes="style string:background-image: url(${portal_url}/plone_powered.gif);;" title="This Plone site was built using the Plone Content Management System. Click for more information.">
 #. Default: "Powered by Plone"
 #: CMFPlone/skins/plone_deprecated/colophon.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/colophon.pt:21
 msgid "label_powered_by_plone"
 msgstr "Baseret på Plone"
 
 #. Default: "Previous"
-#: Archetypes/skins/archetypes/edit_macros.pt:209
+#: Archetypes/skins/archetypes/edit_macros.pt:210
+#: CMFDiffTool/skins/ChangeSet/at_changeset.pt:54
 msgid "label_previous"
 msgstr "Forrige"
 
@@ -8647,6 +8987,8 @@ msgstr "Publiceret"
 #. effective
 #. </span>
 #: CMFPlone/skins/plone_deprecated/review_history.pt:50
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:54
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:50
 msgid "label_publishing_effective"
 msgstr "Publiceres"
 
@@ -8655,6 +8997,7 @@ msgstr "Publiceres"
 #. Quick search
 #. </span>
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:200
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:32
 msgid "label_quick_search"
 msgstr "Hurtig søgning"
 
@@ -8684,7 +9027,7 @@ msgstr "Relateret indhold"
 #. %]
 #. </span>
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:159
+#: CMFPlone/skins/plone_forms/search.pt:161
 msgid "label_relevance_percentage"
 msgstr "[ ${percentage} %]"
 
@@ -8692,7 +9035,9 @@ msgstr "[ ${percentage} %]"
 #. <label for="cb_remember" i18n:translate="label_remember_my_name">
 #. Remember my name.
 #. </label>
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:149
 #: CMFPlone/skins/plone_login/login_form.cpt:117
+#: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:214
 msgid "label_remember_my_name"
 msgstr "Husk mit brugernavn."
 
@@ -8700,6 +9045,8 @@ msgstr "Husk mit brugernavn."
 #. <input class="destructive" i18n:attributes="value label_remove;" type="submit" value="Remove"/>
 #. <input class="context" i18n:attributes="value label_remove;" name="topic_deleteCriteria:action" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Remove"/>
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:92
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:90
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:86
 msgid "label_remove"
 msgstr "Slet"
 
@@ -8724,6 +9071,7 @@ msgstr "Omdøb"
 #. Default: "Reply"
 #. <input class="standalone" i18n:attributes="value label_reply;" type="submit" value="Reply"/>
 #: CMFPlone/skins/plone_deprecated/viewThreadsAtBottom.pt:80
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:72
 msgid "label_reply"
 msgstr "Besvar"
 
@@ -8739,7 +9087,9 @@ msgstr "Indtast URL"
 #. <span class="fieldRequired" i18n:attributes="title title_required;" i18n:translate="label_required" title="Required">
 #. (Required)
 #. </span>
-#: CMFPlone/skins/plone_templates/contact-info.cpt:83
+#: Archetypes/skins/archetypes/widgets/field.pt:85
+#: CMFPlone/skins/plone_content/author.cpt:197
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:84, ...
 msgid "label_required"
 msgstr "(Påkrævet)"
 
@@ -8763,7 +9113,7 @@ msgstr "Senere versioner"
 #. <label for="review_state" i18n:translate="label_review_status">
 #. Review status
 #. </label>
-#: CMFPlone/skins/plone_forms/search_form.pt:230
+#: CMFPlone/skins/plone_forms/search_form.pt:229
 msgid "label_review_status"
 msgstr "Revisionsstatus"
 
@@ -8794,7 +9144,9 @@ msgstr "Udløser: ${trigger}"
 #. <input class="context" i18n:attributes="value label_save;" name="form.button.Save" tabindex="" tal:attributes="tabindex tabindex/next;                                    disabled python:test(isLocked, 'disabled', None);" type="submit" value="Save"/>
 #. <input class="context" i18n:attributes="value label_save;" name="form.button.Save" tabindex="5" type="submit" value="Save"/>
 #. <input class="context" i18n:attributes="value label_save;" name="topic_editCriteria:action" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Save"/>
-#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:158
+#: Archetypes/skins/archetypes/base_metadata.cpt:94
+#: Archetypes/skins/archetypes/edit_macros.pt:226
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:122, ...
 msgid "label_save"
 msgstr "Gem"
 
@@ -8837,7 +9189,9 @@ msgstr "Indstillinger"
 #. <input class="searchButton" i18n:attributes="value label_search;" name="prefs_user_group_search_form" tabindex="" tal:attributes="name string:${template/id}:method;                              tabindex tabindex/next;" type="submit" value="Search"/>
 #. <input class="searchButton" i18n:attributes="value label_search;" name="form.button.Search" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Search"/>
 #. <input class="context" i18n:attributes="value label_search;" name="submit" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Search"/>
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:208
+#: CMFPlone/skins/plone_deprecated/global_searchbox.pt:33
+#: CMFPlone/skins/plone_forms/member_search_form.pt:105
+#: CMFPlone/skins/plone_forms/search.pt:45, ...
 msgid "label_search"
 msgstr "Søg"
 
@@ -8866,17 +9220,19 @@ msgstr "Søgekriterier"
 #. <label for="SearchableText" i18n:translate="label_search_text">
 #. Search Text
 #. </label>
-#: CMFPlone/skins/plone_forms/search_form.pt:35
+#: CMFPlone/skins/plone_forms/search_form.pt:34
 msgid "label_search_text"
 msgstr "Søgetekst"
 
 #. Default: "only in current section"
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:44
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:35
 msgid "label_searchbox_currentfolder_only"
 msgstr "Kun i denne sektion"
 
 #. Default: "Search results"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:48
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:40
 msgid "label_searchresults"
 msgstr "Søgeresultater"
 
@@ -8902,7 +9258,9 @@ msgstr "Vælg: ${label_link_all}"
 #. <input alt="Select all items" class="noborder" i18n:attributes="title label_select_all_items; alt label_select_all_items;" name="selectButton" onClick="toggleSelect(this, 'delete:list');" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
 #. <input alt="Select all items" class="noborder" i18n:attributes="title label_select_all_items; alt label_select_all_items;" name="selectButton" onClick="toggleSelect(this, 'add:list');" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
 #. <input alt="Select all items" class="noborder" i18n:attributes="title label_select_all_items; alt label_select_all_items;" name="selectButton" onClick="toggleSelect(this,'paths:list');" src="select_all_icon.gif" tal:attributes="src string:$portal_url/select_all_icon.gif" title="Select all items" type="checkbox"/>
-#: CMFPlone/skins/plone_templates/test_rendering.pt:361
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:95
+#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:118
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:53, ...
 msgid "label_select_all_items"
 msgstr "Vælg alle"
 
@@ -8954,6 +9312,8 @@ msgstr "Værdi"
 
 #. Default: "Send"
 #. <input class="context" i18n:attributes="value label_send;" name="form.button.Send" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Send"/>
+#: CMFPlone/skins/plone_content/author.cpt:231
+#: CMFPlone/skins/plone_forms/sendto_form.cpt:107
 #: CMFPlone/skins/plone_templates/contact-info.cpt:154
 msgid "label_send"
 msgstr "Send"
@@ -8994,7 +9354,8 @@ msgstr "Navn"
 #. <label for="id" i18n:translate="label_short_name">
 #. Short Name
 #. </label>
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:48
+#: Archetypes/BaseObject.py:92
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:49
 msgid "label_short_name"
 msgstr "ID"
 
@@ -9004,6 +9365,7 @@ msgid "label_show"
 msgstr "Vis"
 
 #. Default: "Show all items"
+#: CMFPlone/skins/plone_scripts/livesearch_reply.py:85
 #: plone.app.content/plone/app/content/browser/table.pt:167
 msgid "label_show_all"
 msgstr "Vis alle..."
@@ -9030,6 +9392,7 @@ msgstr "Vis"
 #. Default: "Show all"
 #. <input class="searchButton" i18n:attributes="value label_showall;" name="form.button.FindAll" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Show all"/>
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:139
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:126
 msgid "label_showall"
 msgstr "Vis alle"
 
@@ -9039,6 +9402,7 @@ msgstr "Vis alle"
 #. </a>
 #. <a href="/contact-info" i18n:translate="label_site_admin" tal:attributes="href string:${portal_url}/contact-info">
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:48
+#: CMFPlone/skins/plone_templates/default_error_message.pt:47
 msgid "label_site_admin"
 msgstr "Administration af site"
 
@@ -9128,6 +9492,7 @@ msgstr "ESMTP brugernavn"
 #. <span i18n:translate="label_state">
 #. </span>
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:22
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:566
 msgid "label_state"
 msgstr "Status:"
 
@@ -9150,6 +9515,8 @@ msgstr "Værdi"
 #. Subject
 #. </label>
 #. <label for="subject" i18n:translate="label_subject">
+#: CMFPlone/skins/plone_content/author.cpt:193
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:122
 #: CMFPlone/skins/plone_templates/contact-info.cpt:107
 msgid "label_subject"
 msgstr "Emne"
@@ -9235,6 +9602,7 @@ msgstr "Tekstformat"
 #. <th i18n:translate="label_time">
 #. </th>
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:76
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:46
 msgid "label_time"
 msgstr "Tid"
 
@@ -9243,12 +9611,15 @@ msgstr "Tid"
 #. Title
 #. </label>
 #. <label for="Title" i18n:translate="label_title">
-#: CMFPlone/skins/plone_content/folder_edit_form.cpt:81
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:82
+#: CMFPlone/skins/plone_forms/search_form.pt:53
+#: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:33, ...
 msgid "label_title"
 msgstr "Titel"
 
 #. Default: "Up to my dashboard"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:58
+#: CMFPlone/skins/plone_prefs/password_form.pt:21
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:59
 msgid "label_to_dashboard"
 msgstr "Op til mit panel"
 
@@ -9278,7 +9649,7 @@ msgid "label_type"
 msgstr "Type"
 
 #. Default: "Type restrictions"
-#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:72
+#: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:73
 msgid "label_type_restrictions"
 msgstr "Typerestriktioner"
 
@@ -9314,6 +9685,7 @@ msgstr "Afinstaller"
 #. <a class="link-parent" href="" i18n:translate="label_up_to_groups_overview" tal:attributes="href string: $portal_url/prefs_groups_overview">
 #. Up to Groups Overview
 #. </a>
+#: CMFPlone/skins/plone_prefs/prefs_group_details.pt:97
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:70
 msgid "label_up_to_groups_overview"
 msgstr "Til gruppeoversigt"
@@ -9323,6 +9695,8 @@ msgstr "Til gruppeoversigt"
 #. Up to Site Setup
 #. </a>
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:19
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:64
+#: CMFPlone/skins/plone_prefs/prefs_install_products_form.pt:20, ...
 msgid "label_up_to_plone_setup"
 msgstr "Til kontrolpanel"
 
@@ -9330,12 +9704,14 @@ msgstr "Til kontrolpanel"
 #. <a class="link-parent" href="" i18n:translate="label_up_to_usersoverview" tal:attributes="href string: $portal_url/prefs_users_overview">
 #. Up to Users Overview
 #. </a>
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:61
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:63
 msgid "label_up_to_usersoverview"
 msgstr "Til brugeroversigt"
 
 #. Default: "Update"
 #: plone.app.form/plone/app/form/widgets/ubermultiselectionwidget.pt:84
+#: plone.app.form/plone/app/form/widgets/uberselectionwidget.pt:81
 msgid "label_update"
 msgstr "Opdater"
 
@@ -9343,9 +9719,9 @@ msgstr "Opdater"
 #. of StringWidget, description: Add http:// to link outside the portal.
 #. of StringWidget, description: Web address with more info about the event. Add http:// for external links.
 #. of StringWidget, description:
-#: widget label of StringWidget - description "Add http://
+#: for external links."
 #: to link outside the site."
-#: widget label of StringWidget - description "Web address with more info about the event. Add http://
+#: widget label of StringWidget - description "", ...
 msgid "label_url"
 msgstr "URL"
 
@@ -9361,6 +9737,7 @@ msgstr "Nedarv roller fra overliggende mapper"
 #. <input class="context" i18n:attributes="value label_use_selected;" name="addingaction" tabindex="" tal:attributes="tabindex tabindex/next;" tal:condition="batch" type="submit" value="Use Selected..."/>
 #. <input class="context" i18n:attributes="value label_use_selected;" name="prefs_user_manage:method" tabindex="" tal:attributes="tabindex tabindex/next;                         name string:${request/takeaction}:method" tal:condition="request/takeaction | nothing" type="submit" value="Use Selected..."/>
 #: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:121
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:133
 msgid "label_use_selected"
 msgstr "Brug de valgte..."
 
@@ -9380,7 +9757,9 @@ msgstr "Bruger"
 #. </option>
 #. <label i18n:translate="label_user_name">
 #. </label>
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:273
 #: CMFPlone/skins/plone_login/join_form.cpt:83
+#: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:77, ...
 msgid "label_user_name"
 msgstr "Brugernavn"
 
@@ -9389,6 +9768,7 @@ msgstr "Brugernavn"
 #. User Properties
 #. </a>
 #. <a href="" i18n:translate="label_user_properties" tal:attributes="href string: prefs_user_details?userid=${userid}">
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:25
 #: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:30
 msgid "label_user_properties"
 msgstr "Indstillinger for brugerkonto"
@@ -9403,6 +9783,7 @@ msgstr "Søg efter bruger"
 
 #. Default: "Settings"
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:43
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:36
 msgid "label_usergroup_settings"
 msgstr "Indstillinger"
 
@@ -9420,6 +9801,8 @@ msgstr "Brugernavn"
 #. </a>
 #. <a href="" i18n:translate="label_users" tal:attributes="href template/getId">
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:33
+#: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:41
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:26
 msgid "label_users"
 msgstr "Brugere"
 
@@ -9432,7 +9815,8 @@ msgid "label_usersandgroups"
 msgstr "Brugere og grupper"
 
 #. Default: "View"
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:27
+#: CMFPlone/skins/plone_content/author.cpt:63
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:28
 msgid "label_view"
 msgstr "Visning"
 
@@ -9574,7 +9958,7 @@ msgstr "Detaljer"
 #. <legend i18n:translate="legend_feedback_for_author">
 #. Feedback for author
 #. </legend>
-#: CMFPlone/skins/plone_content/author.cpt:185
+#: CMFPlone/skins/plone_content/author.cpt:188
 msgid "legend_feedback_for_author"
 msgstr "Skriv til forfatter"
 
@@ -9667,6 +10051,7 @@ msgstr "OpenID login"
 #. Password Details
 #. </legend>
 #: CMFPlone/skins/plone_login/login_password.cpt:47
+#: CMFPlone/skins/plone_prefs/password_form.pt:34
 msgid "legend_password_details"
 msgstr "Information om adgangskode"
 
@@ -9674,7 +10059,7 @@ msgstr "Information om adgangskode"
 #. <legend i18n:translate="legend_personal_details">
 #. Personal Details
 #. </legend>
-#: CMFPlone/skins/plone_prefs/personalize_form.cpt:86
+#: CMFPlone/skins/plone_prefs/personalize_form.cpt:87
 msgid "legend_personal_details"
 msgstr "Information om bruger"
 
@@ -9806,6 +10191,7 @@ msgstr "Ja til alt"
 #. Action
 #. </th>
 #: CMFPlone/skins/plone_deprecated/review_history.pt:17
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:15
 msgid "listingheader_action"
 msgstr "Handling"
 
@@ -9838,11 +10224,14 @@ msgstr "Forfatter"
 #. Comment
 #. </th>
 #: CMFPlone/skins/plone_deprecated/review_history.pt:20
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:18
 msgid "listingheader_comment"
 msgstr "Kommentar"
 
 #. Default: "Date and Time"
+#: CMFPlone/skins/plone_deprecated/review_history.pt:19
 #: CMFPlone/skins/plone_forms/undo_form.pt:58
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:17
 msgid "listingheader_date_and_time"
 msgstr "Dato og tidspunkt"
 
@@ -9860,6 +10249,7 @@ msgstr "Beskrivelse"
 #. </th>
 #. <th i18n:translate="listingheader_email_address" rowspan="2">
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:130
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:138
 msgid "listingheader_email_address"
 msgstr "E-mailadresse"
 
@@ -9869,6 +10259,7 @@ msgstr "E-mailadresse"
 #. </th>
 #. <th i18n:translate="listingheader_group_name" rowspan="2">
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:157
+#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:97
 msgid "listingheader_group_name"
 msgstr "Gruppenavn"
 
@@ -9885,6 +10276,7 @@ msgstr "Slet gruppe"
 #. Group/User name
 #. </th>
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:129
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:64
 msgid "listingheader_group_user_name"
 msgstr "Gruppe-/brugernavn"
 
@@ -9893,6 +10285,8 @@ msgstr "Gruppe-/brugernavn"
 #. Modified
 #. </tal:modified>
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:72
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:114
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:82, ...
 msgid "listingheader_modified"
 msgstr "Opdateret"
 
@@ -9909,11 +10303,15 @@ msgstr "Navn"
 #. Order
 #. </tal:order>
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:121
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:90
+#: plone.app.content/plone/app/content/browser/table.pt:80
 msgid "listingheader_order"
 msgstr "Rækkefølge"
 
 #. Default: "Performed by"
+#: CMFPlone/skins/plone_deprecated/review_history.pt:18
 #: CMFPlone/skins/plone_forms/undo_form.pt:57
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:16
 msgid "listingheader_performed_by"
 msgstr "Udført af"
 
@@ -9946,6 +10344,7 @@ msgstr "Nulstil adgangskode"
 #. Roles
 #. </th>
 #: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:162
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:139
 msgid "listingheader_roles"
 msgstr "Roller"
 
@@ -9954,6 +10353,8 @@ msgstr "Roller"
 #. Size
 #. </tal:size>
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:111
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:79
+#: plone.app.content/plone/app/content/browser/table.pt:69
 msgid "listingheader_size"
 msgstr "Størrelse"
 
@@ -9962,6 +10363,8 @@ msgstr "Størrelse"
 #. State
 #. </tal:state>
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:117
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:85
+#: plone.app.content/plone/app/content/browser/table.pt:75
 msgid "listingheader_status"
 msgstr "Status"
 
@@ -9972,6 +10375,8 @@ msgstr "Status"
 #. <tal:title i18n:translate="listingheader_title">
 #. </tal:title>
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:64
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:458
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:107, ...
 msgid "listingheader_title"
 msgstr "Titel"
 
@@ -9981,6 +10386,7 @@ msgstr "Titel"
 #. </th>
 #. <tal:title i18n:translate="listingheader_type">
 #. </tal:title>
+#: CMFPlone/skins/plone_content/folder_tabular_view.pt:69
 #: CMFPlone/skins/plone_prefs/prefs_user_group_search_form.pt:81
 msgid "listingheader_type"
 msgstr "Type"
@@ -10023,7 +10429,9 @@ msgstr "<strong>Bemærk</strong> Du er ved tildele rettigheder til en ${type}. H
 #. While cookie authentication is disabled, cookie-based login is not available.
 #. </div>
 #. Default: "Since cookie authentication is disabled, cookie-based login is not available."
+#: CMFPlone/skins/plone_login/failsafe_login_form.cpt:58
 #: CMFPlone/skins/plone_login/logged_out.cpt:46
+#: CMFPlone/skins/plone_login/login_form.cpt:44, ...
 #, fuzzy
 msgid "login_form_disabled"
 msgstr "Når cookie verificering er slået fra, er det ikke muligt at cookie-baseret login."
@@ -10034,6 +10442,7 @@ msgstr "Når cookie verificering er slået fra, er det ikke muligt at cookie-bas
 #. Login portlet not available.
 #. </dd>
 #: CMFPlone/skins/plone_deprecated/portlet_login.pt:120
+#: plone.app.portlets/plone/app/portlets/portlets/login.pt:108
 msgid "login_portlet_disabled"
 msgstr "Cookie verificering er slået fra. Login portlet ikke tilgængelig."
 
@@ -10083,6 +10492,7 @@ msgstr "Mere..."
 #. </p>
 #. <p class="discreet" i18n:translate="no_body_text" tal:condition="python: not len_text and is_editable">
 #: CMFPlone/skins/plone_content/document_view.pt:35
+#: CMFPlone/skins/plone_content/newsitem_view.pt:50
 msgid "no_body_text"
 msgstr "Indeholder ingen brødtekst, klik 'Rediger' for at tilføje indhold."
 
@@ -10091,6 +10501,7 @@ msgstr "Indeholder ingen brødtekst, klik 'Rediger' for at tilføje indhold."
 #. No comments.
 #. </span>
 #: CMFPlone/skins/plone_deprecated/review_history.pt:60
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:60
 msgid "no_comments"
 msgstr "Ingen kommentarer."
 
@@ -10121,6 +10532,7 @@ msgid "no_new_events"
 msgstr "Ingen begivenheder oprettet"
 
 #. Default: "No users were found using your search criteria."
+#: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:230
 #: CMFPlone/skins/plone_forms/ownership_form.cpt:172
 msgid "no_users_found"
 msgstr "Der blev ikke fundet nogen brugere med dine søgekriterier"
@@ -10221,6 +10633,7 @@ msgid "published"
 msgstr "Publiceret"
 
 #. Default: "Read More…"
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:152
 #: CMFPlone/skins/plone_templates/events_listing.pt:90
 msgid "read_more"
 msgstr "Læs mere"
@@ -10271,6 +10684,7 @@ msgid "retract"
 msgstr "træk tilbage"
 
 #. Default: "Return"
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:23
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:24
 msgid "return_to_view"
 msgstr "Gå tilbage"
@@ -10286,7 +10700,7 @@ msgstr "Slå til globalt"
 #. for more precise search options.
 #. </p>
 #. Default: "Did you not find what you were looking for? Try the ${advanced_search} to refine your search."
-#: CMFPlone/skins/plone_forms/search.pt:52
+#: CMFPlone/skins/plone_forms/search.pt:54
 msgid "search_results_advanced"
 msgstr "Prøv ${advanced_search}, for en mere præcis søgning."
 
@@ -10294,7 +10708,7 @@ msgstr "Prøv ${advanced_search}, for en mere præcis søgning."
 #. <a href="" i18n:translate="search_results_advanced_link" tal:attributes="href string:$portal_url/search_form">
 #. Advanced Search
 #. </a>
-#: CMFPlone/skins/plone_forms/search.pt:53
+#: CMFPlone/skins/plone_forms/search.pt:55
 msgid "search_results_advanced_link"
 msgstr "avanceret søgning"
 
@@ -10363,19 +10777,20 @@ msgstr "send ind"
 
 #. Default: "Affected content"
 #. <table i18n:attributes="summary summary_affected_content;" metal:use-macro="here/folder_contents/macros/folder_listing" summary="Affected content">
-#: CMFPlone/skins/plone_forms/content_status_history.cpt:72
+#: CMFPlone/skins/plone_forms/content_status_history.cpt:71
 msgid "summary_affected_content"
 msgstr "Modificeret indhold"
 
 #. Default: "Currently assigned local roles"
 #. <table class="listing" i18n:attributes="summary summary_assigned_roles;" summary="Currently assigned local roles" tal:define="showPortraits python:1">
 #: CMFPlone/skins/plone_deprecated/folder_localrole_form.pt:83
+#: plone.app.workflow/plone/app/workflow/browser/sharing.pt:62
 msgid "summary_assigned_roles"
 msgstr "Nuværende tildelte lokale rettigheder"
 
 #. Default: "Lists content written by an author grouped by content type"
 #. <table class="listing" i18n:attributes="summary summary_author_content_list;" summary="Lists content written by an author grouped by content type">
-#: CMFPlone/skins/plone_content/author.cpt:257
+#: CMFPlone/skins/plone_content/author.cpt:260
 msgid "summary_author_content_list"
 msgstr "Oversigt over indhold skrevet af en forfatter og kategoriseret efter indholdstype"
 
@@ -10388,6 +10803,7 @@ msgstr "Tilgængelige grupper"
 #. Default: "Calendar"
 #. <table class="ploneCalendar" i18n:attributes="summary summary_calendar;" id="thePloneCalendar" summary="Calendar">
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:38
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:47
 msgid "summary_calendar"
 msgstr "Kalender"
 
@@ -10395,6 +10811,8 @@ msgstr "Kalender"
 #. <table class="listing" i18n:attributes="summary summary_content_listing;" id="sortable" summary="Content listing">
 #. <table class="listing" i18n:attributes="summary summary_content_listing;" summary="Content listing">
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:59
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:87
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:24, ...
 msgid "summary_content_listing"
 msgstr "Oversigt over indhold"
 
@@ -10425,6 +10843,7 @@ msgstr "Roller, der kan tildeles"
 #. Default: "Review History"
 #. <table class="listing nosort" i18n:attributes="summary summary_review_history;" summary="Review History" tal:condition="review_history" tal:define="review_history python:wtool.getInfoFor(here, 'review_history', []);                                 review_history python:[review for review in review_history if review.get('action','')]">
 #: CMFPlone/skins/plone_deprecated/review_history.pt:10
+#: plone.app.layout/plone/app/layout/viewlets/review_history.pt:11
 msgid "summary_review_history"
 msgstr "Historik"
 
@@ -10462,6 +10881,8 @@ msgstr "Vælg alle ${count} objekter i denne mappe."
 #. <span i18n:translate="tabs_home" tal:omit-tag="">
 #. </span>
 #: CMFPlone/skins/plone_deprecated/global_pathbar.pt:16
+#: CMFPlone/skins/plone_deprecated/portlet_navigation.pt:40
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6, ...
 msgid "tabs_home"
 msgstr "Forside"
 
@@ -10475,11 +10896,13 @@ msgstr "Produktet er ikke rigtigt installeret"
 
 #. Default: "Contributors: ${name}"
 #: CMFPlone/skins/plone_deprecated/document_byline.pt:53
+#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:46
 msgid "text_contributors"
 msgstr "Af: ${name}"
 
 #. Default: "by ${creator}, last updated: ${date}"
 #: CMFPlone/skins/plone_templates/recently_modified.pt:57
+#: CMFPlone/skins/plone_templates/recently_published.pt:54
 msgid "text_creator_date"
 msgstr "af ${creator} , opdateret: ${date}"
 
@@ -10519,22 +10942,25 @@ msgid "text_group"
 msgstr "Gruppe"
 
 #. Default: "Location: ${location}"
-#: CMFPlone/skins/plone_content/author.cpt:105
+#: CMFPlone/skins/plone_content/author.cpt:106
 msgid "text_location"
 msgstr "Sted: ${location}"
 
 #. Default: "This site doesn't have a valid email setup, so you cannot use any contact forms."
+#: CMFPlone/skins/plone_content/author.cpt:166
 #: CMFPlone/skins/plone_templates/contact-info.cpt:25
 msgid "text_no_email_setup"
 msgstr "Dette site har ikke et gyldigt email setup, så du kan ikke bruge kontaktformularene"
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:42
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:31
 msgid "text_no_mailhost_configured"
 msgstr "Du har ikke angivet en mail host eller en 'Fra' adresse på sitet, forskellige funktioner deriblandt kontaktformularer, mailmeddelelser og nulstilling af adgangskode vil ikke fungerer. Gå til ${label_mail_control_panel_link} for at ordne dette."
 
 #. Default: "Mail control panel"
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:43
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:32
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "Mail kontrolpanel"
 
@@ -10556,6 +10982,7 @@ msgstr "Ingen indholdsobjekter er blevet ændret."
 
 #. Default: "Warning: PIL is not installed properly, image scaling will not work."
 #: CMFPlone/skins/plone_prefs/plone_control_panel.pt:57
+#: plone.app.controlpanel/plone/app/controlpanel/overview.pt:46
 msgid "text_no_pil_installed"
 msgstr "Advarsel: Python image library (PIL) er ikke korrekt installeret. Skalering af billeder vil ikke virke."
 
@@ -10579,7 +11006,7 @@ msgstr "Indtast navnet på den gruppe eller bruger du søger efter"
 #. No user by that name
 #. </div>
 #. Default: "No user by that name."
-#: CMFPlone/skins/plone_content/author.cpt:43
+#: CMFPlone/skins/plone_content/author.cpt:44
 msgid "text_no_user_by_name"
 msgstr "Brugernavn findes ikke"
 
@@ -10601,11 +11028,14 @@ msgstr "Indtast et brugernavn du søger efter eller klik på 'Vis alle'"
 #. <td i18n:translate="text_nomatches" style="text-align:center;">
 #. </td>
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:271
+#: CMFPlone/skins/plone_prefs/prefs_groups_overview.cpt:235
+#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:111, ...
 msgid "text_nomatches"
 msgstr "Ingen resultater"
 
 #. Default: "You are not allowed to manage the Zope server."
 #: plone.app.controlpanel/plone/app/controlpanel/maintenance.pt:203
+#: plone.app.controlpanel/plone/app/controlpanel/maintenance.py:73
 msgid "text_not_allowed_manage_server"
 msgstr "Du har ikke rettigheder til at administrerer Zope."
 
@@ -10630,6 +11060,7 @@ msgstr "flyttet fra produktmappe på filsystemet."
 #. Search Site
 #. </label>
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:18
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:9
 msgid "text_search"
 msgstr "Søg"
 
@@ -10682,6 +11113,8 @@ msgstr "Altid"
 #. <span class="state-expired" i18n:translate="time_expired" tal:condition="python:portal.isExpired(here)">
 #. Default: "— expired"
 #: CMFPlone/skins/plone_deprecated/document_byline.pt:43
+#: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:194
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:134, ...
 msgid "time_expired"
 msgstr "udløbet"
 
@@ -10725,6 +11158,7 @@ msgstr "Titel"
 #. <a href="#" i18n:attributes="title title_actions_menu;" i18n:translate="label_actions_menu" tal:attributes="href string:${parent_folder/absolute_url}/folder_contents;" title="Actions">
 #. Default: "Actions for the current content item"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:405
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:50
 msgid "title_actions_menu"
 msgstr "Handlinger for dette indholdsobjekt"
 
@@ -10737,6 +11171,7 @@ msgstr "Tilføj nye indholdsobjekter i den samme mappe som det objekt er placere
 #. Default: "Add new items inside this item"
 #. <a href="folder_factories" i18n:attributes="title title_add_new_items_inside_item;" i18n:translate="label_add_new_item" tal:attributes="href string:${addContext/absolute_url}/folder_factories;" tal:condition="useSelf" title="Add new items inside this item">
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:99
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:434
 msgid "title_add_new_items_inside_item"
 msgstr "Tilføj nye indholdsobjekter indeholdt i dette objekt"
 
@@ -10772,6 +11207,7 @@ msgstr "Dette Plone site er bygget med validerbar CSS."
 
 #. Default: "This Plone site was built using Plone CMS, the Open Source Content Management System. Click for more information."
 #: CMFPlone/skins/plone_deprecated/colophon.pt:31
+#: plone.app.layout/plone/app/layout/viewlets/colophon.pt:21
 msgid "title_built_with_plone"
 msgstr "Dette site er baseret på Plone Content Management System. Klik for mere information."
 
@@ -10810,13 +11246,16 @@ msgstr "Skift forvalgt side"
 #. Default: "Change the item used as default view in this folder"
 #. <a href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_change_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
 #. <a class="selected" href="#" i18n:attributes="title title_change_default_view_item;" i18n:translate="label_select_content_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Change the item used as default view in this folder">
+#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:271
 #: CMFPlone/skins/plone_forms/select_default_view.cpt:63
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:306
 msgid "title_change_default_view_item"
 msgstr "Skift indholdsobjektet, der anvendes som forside (index_html) i denne mappe"
 
 #. Default: "Change the state of this item"
 #. <a href="content_status_history" i18n:attributes="title title_change_state_of_item;" tal:attributes="href string:$here_url/content_status_history;" title="Change the state of this item">
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:35
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:588
 msgid "title_change_state_of_item"
 msgstr "Skift status for indholdsobjekt"
 
@@ -10833,22 +11272,25 @@ msgstr "Check out ${object_title}"
 #. <a href="#" i18n:attributes="title title_choose_default_view;" i18n:translate="label_choose_template" tal:attributes="href string:$here_url/select_default_view;" tal:condition="not:dimMenu" title="Choose default view">
 #. Default: "Select the view mode for this folder, or set a content item as its default view."
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:206
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:138
 msgid "title_choose_default_view"
 msgstr "Vælg visningsform for denne mappe, eller vælg et indholdsobjekt som standardvisning"
 
 #. Default: "Compare with previous revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:63
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:68
 msgid "title_compare_previous_revision"
 msgstr "Sammenlign med tidligere revision"
 
 #. Default: "Compare with current revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:59
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:64
 msgid "title_compare_revision"
 msgstr "Sammenlign med gældende revision"
 
 #. Default: "Configure which content types can be added here"
 #. <a class="folderAddSettings" href="#" i18n:attributes="title title_configure_addable_content_types;" tal:attributes="href string:${addContext/absolute_url}/folder_constraintypes_form;" title="Configure which content types can be added here">
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:138
+#: CMFPlone/skins/plone_deprecated/old_folder_factories.pt:36
+#: plone.app.content/plone/app/content/browser/folderfactories.pt:28, ...
 msgid "title_configure_addable_content_types"
 msgstr "Angiv hvilken indholdstyper, som kan blive tilføjet her"
 
@@ -10860,6 +11302,7 @@ msgstr "Regler for indhold for ${context}"
 #. Default: "Copyright"
 #. <acronym i18n:attributes="title title_copyright;" i18n:name="copyright" title="Copyright"/>
 #: CMFPlone/skins/plone_deprecated/footer.pt:16
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:10
 msgid "title_copyright"
 msgstr "Copyright"
 
@@ -10923,12 +11366,16 @@ msgstr "Administrer gruppeportlets for ${group_name}"
 #. Default: "Move item down"
 #. <a href="" i18n:attributes="title title_move_item_down;" tal:attributes="href string:$here_url/folder_position?position=down&amp;id=$item_id&amp;template_id=${template/getId}" title="Move item down">
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:227
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:164
+#: plone.app.content/plone/app/content/browser/table.pt:154
 msgid "title_move_item_down"
 msgstr "Flyt indholdsobjekt ned"
 
 #. Default: "Move item up"
 #. <a href="" i18n:attributes="title title_move_item_up;" tal:attributes="href string:$here_url/folder_position?position=up&amp;id=$item_id&amp;template_id=${template/getId}" title="Move item up">
 #: CMFPlone/skins/plone_deprecated/old_folder_contents.pt:220
+#: plone.app.content/plone/app/content/browser/foldercontents_table.pt:157
+#: plone.app.content/plone/app/content/browser/table.pt:147
 msgid "title_move_item_up"
 msgstr "Flyt indholdsobjekt op"
 
@@ -10940,6 +11387,7 @@ msgstr "Gå til næste indholdsobjekt"
 #. Default: "Next month"
 #. <a href="#" i18n:attributes="title title_next_month;" rel="nofollow" tal:attributes="href python:'%s/%s?%s&amp;month:int=%d&amp;year:int=%d&amp;orig_query=%s' % (anchor_url, anchor_method, query_string, nextMonthTime.month(),nextMonthTime.year(),url_quote(query_string))" tal:condition="python: yearmonth &lt; (nextYearMax.year(), nextYearMax.month())" title="Next month"/>
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:65
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:34
 msgid "title_next_month"
 msgstr "Næste måned"
 
@@ -10957,40 +11405,46 @@ msgstr "Gå til forrige indholdsobjekt"
 #. Default: "Previous month"
 #. <a href="#" i18n:attributes="title title_previous_month;" rel="nofollow" tal:attributes="href python:'%s/%s?%s&amp;month:int=%d&amp;year:int=%d&amp;orig_query=%s' % (anchor_url, anchor_method, query_string, prevMonthTime.month(),prevMonthTime.year(),url_quote(query_string))" tal:condition="python: yearmonth &gt; (prevYearMin.year(), prevYearMin.month())" title="Previous month"/>
 #: CMFPlone/skins/plone_deprecated/portlet_calendar.pt:43
+#: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:15
 msgid "title_previous_month"
 msgstr "Forrige måned"
 
 #. Default: "Delete or rename the index_html item to gain full control over how this folder is displayed."
 #. <span class="actionMenuDisabled" i18n:attributes="title title_remove_index_html_for_display_control;" i18n:translate="label_disabled_display_menu" tal:condition="dimMenu" title="Delete or rename the index_html item to gain full control over how this folder is displayed.">
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:197
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:136
 msgid "title_remove_index_html_for_display_control"
 msgstr "Slet eller omdøb forsiden (index_html) hvis du ønsker en ny forside for denne mappe."
 
 #. Default: "Required"
 #. <span class="fieldRequired" i18n:attributes="title title_required;" i18n:translate="label_required" title="Required">
-#: CMFPlone/skins/plone_templates/contact-info.cpt:83
+#: Archetypes/skins/archetypes/widgets/field.pt:85
+#: CMFPlone/skins/plone_content/author.cpt:197
+#: CMFPlone/skins/plone_content/folder_edit_form.cpt:84, ...
 msgid "title_required"
 msgstr "Påkrævet"
 
 #. Default: "Revert to this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:29
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:31
 msgid "title_revert_revision"
 msgstr "Rul tilbage til denne revision"
 
 #. <img alt="RSS Feed" i18n:attributes="title title_rss_feed; alt label_rss_feed;" src="rss.gif" tal:attributes="src string:$portal_url/rss.gif" title="RSS feed of these search results"/>
 #. Default: "Subscribe to an always-updated feed of these search terms"
-#: CMFPlone/skins/plone_forms/search.pt:77
+#: CMFPlone/skins/plone_forms/search.pt:79
 msgid "title_rss_feed"
 msgstr "Søgeresultat i RSS-format"
 
 #. Default: "Search Site"
 #. <input accesskey="4" class="visibility:visible" i18n:attributes="title title_search_site;" id="searchGadget" name="SearchableText" size="15" tabindex="" tal:attributes="value request/SearchableText|nothing;                                tabindex tabindex/next" title="Search Site" type="text" value=""/>
 #: CMFPlone/skins/plone_deprecated/global_searchbox.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:12
 msgid "title_search_site"
 msgstr "Søgning"
 
 #. Default: "Search Site"
-#: CMFPlone/skins/plone_forms/search.pt:36
+#: CMFPlone/skins/plone_forms/search.pt:37
+#: plone.app.portlets/plone/app/portlets/portlets/search.pt:20
 msgid "title_search_title"
 msgstr "Søg på sitet"
 
@@ -11003,6 +11457,7 @@ msgstr "Dette Plone site overholder Afsnit 508, USA's statsadministrations stand
 #. Default: "Select an item to be used as default view in this folder"
 #. <a href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_choose_item" tal:attributes="href string:${here/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
 #. <a href="#" i18n:attributes="title title_select_default_page;" i18n:translate="label_choose_item" tal:attributes="href string:${parent_folder/absolute_url}/select_default_page;" title="Select an item to be used as default view in this folder">
+#: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:253
 #: CMFPlone/skins/plone_forms/select_default_view.cpt:54
 msgid "title_select_default_page"
 msgstr "Vælg et indholdsobjekt, der skal anvendes som forside (index_html) for denne mappe"
@@ -11016,6 +11471,7 @@ msgstr "Vælg et indholdsobjekt, der skal vises som standard i denne mappe"
 #. <a href="#" i18n:attributes="title title_send_mail_to_user;" tal:attributes="href string:mailto:${email}" tal:condition="email" title="Send a mail to this user">
 #. <a class="link-plain" href="#" i18n:attributes="title title_send_mail_to_user;" tal:attributes="href string:mailto:${email}" title="Send a mail to this user">
 #: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:170
+#: CMFPlone/skins/plone_prefs/prefs_users_overview.cpt:168
 msgid "title_send_mail_to_user"
 msgstr "Send en mail til valgt Bruger"
 
@@ -11037,6 +11493,7 @@ msgid "title_small_text"
 msgstr "Lille tekst"
 
 #. Default: "Static text portlet"
+#: plone.portlet.static/plone/portlet/static/profiles/default/portlets.xml
 #: plone.portlet.static/plone/portlet/static/static.py:71
 msgid "title_static_portlet"
 msgstr "Statisk tekst portlet"
@@ -11052,7 +11509,7 @@ msgid "title_valid_xhtml"
 msgstr "Dette Plonesite bruger valideret XHTML."
 
 #. Default: "View this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:56
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:61
 msgid "title_view_revision"
 msgstr "Se denne version"
 
@@ -11218,6 +11675,7 @@ msgstr "Regler for indhold bliver slået fra globalt. Ingen tildelte regler vil 
 
 #. Default: "Local Policy"
 #: CMFPlone/skins/plone_deprecated/global_contentmenu.pt:71
+#: plone.app.contentmenu/plone/app/contentmenu/menu.py:700
 #, fuzzy
 msgid "workflow_policy"
 msgstr "Regler"
@@ -11233,6 +11691,7 @@ msgstr "Dette indholdsobjekt bliver redigeret af ${creator} i ${working_copy} op
 #. are here:
 #. </span>
 #: CMFPlone/skins/plone_deprecated/global_pathbar.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:4
 msgid "you_are_here"
 msgstr "Du er her:"
 
