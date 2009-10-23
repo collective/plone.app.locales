@@ -1,9 +1,11 @@
+Preparing Plone 3.3 buildout
+============================
 # This is how I synchronize po files for Plone 3.2 and 3.3 [vincentfretin]
 
-mkdir -p ~/svn
+mkdir ~/svn
 cd ~/svn
-svn co https://svn.plone.org/svn/plone/plonenext/3.3/ plonenext3.3i18n
-cd plonenext3.3i18n
+svn co https://svn.plone.org/svn/plone/plonenext/3.3/ plone3.3
+cd plone3.3
 
 # If you plan to synchronize LinguaPlone po files,
 # you need to add the following line in etc/sources:
@@ -19,8 +21,26 @@ svn up
 ln -s Plone Products.CMFPlone
 
 cd plone.app.locales/plone/app/locales/utils
-export INSTANCE_HOME=~/svn/plonenext3.3i18n/
+export INSTANCE_HOME=~/svn/plone3.3/
 
+
+Preparing Plone 4 buildout
+==========================
+mkdir ~/svn
+cd ~/svn
+svn co https://svn.plone.org/svn/plone/plone-coredev/branches/4.0/ plone4
+cd plone4
+python bootstrap.py
+bin/buildout -c i18n.cfg
+mkdir Products
+cd src
+ln -s Plone Products.CMFPlone
+cd plone.app.locales/plone/app/locales/utils
+export INSTANCE_HOME=~/svn/plone4
+
+
+Updating translations
+=====================
 python rebuild-pot.py plone
 python sync.py plone
 
