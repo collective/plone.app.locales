@@ -66,6 +66,7 @@ def rebuild(product, folder=''):
             'plone.app.linkintegrity',
             'plone.app.portlets',
             'plone.app.redirector',
+            'plone.app.users',
             'plone.app.viewletmanager',
             'plone.app.vocabularies',
             'plone.app.workflow',
