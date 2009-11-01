@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone-sl\n"
-"POT-Creation-Date: 2009-11-01 13:50+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2009-02-27 17:37+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: <sl@li.org>\n"
@@ -840,6 +840,10 @@ msgstr "Nisem mogel dodati skupine ${name}, morda uporabnik ali skupina s tem im
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:51
 msgid "Could not find a valid email address"
 msgstr "Nisem našel veljavnega poštnega naslova."
+
+#: plone.app.users/plone/app/users/browser/joinform.py:357
+msgid "Couldn't send mail"
+msgstr ""
 
 #: CMFPlone/browser/templates/plone-addsite.pt:177
 msgid "Create Plone Site"
@@ -2056,10 +2060,12 @@ msgid "Password incorrect."
 msgstr "Geslo je bilo napačno."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:18
+#: plone.app.users/plone/app/users/browser/joinform.py:246
 msgid "Passwords do not match."
 msgstr "Gesli se ne ujemata."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:20
+#: plone.app.users/plone/app/users/browser/joinform.py:261
 msgid "Passwords must contain at least 5 letters."
 msgstr "Geslo mora vsebovati vsaj 5 črk."
 
@@ -2419,6 +2425,14 @@ msgstr "Kriterij referenc"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Register"
 msgstr "Registriraj"
+
+#: plone.app.users/plone/app/users/registration.py:50
+msgid "Registration settings"
+msgstr ""
+
+#: plone.app.users/plone/app/users/registration.py:51
+msgid "Registration settings for this site."
+msgstr ""
 
 #. Default: "Reject"
 #: workflow action defined in plone_workflow - title Reviewer rejects submission new state visible
@@ -3069,6 +3083,7 @@ msgstr "Lokacija prispevka na portalu (pot)"
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:54
 #: CMFPlone/skins/plone_deprecated/register.cpy:32
+#: plone.app.users/plone/app/users/browser/joinform.py:299
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "Izbrano ime uporabnika je že uporabljeno ali neveljavno. Prosim izberite drugega."
 
@@ -3275,6 +3290,7 @@ msgid "This shows up in the title bar of browsers, in syndication feeds, etc."
 msgstr "Ta se pokaže v naslovni vrstici brskalnikov, v polnenju sindiciranih spletišč itd."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:22
+#: plone.app.users/plone/app/users/browser/joinform.py:289
 msgid "This username is reserved. Please choose a different name."
 msgstr "To uporabniško ime je rezervirano. Prosim uporabite drugo ime."
 
@@ -3619,6 +3635,10 @@ msgstr ""
 #: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
 msgstr "Morate omogočiti piškotke, da se lahko prijavite."
+
+#: plone.app.users/plone/app/users/browser/joinform.py:310
+msgid "You must enter a valid email address."
+msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_rename.vpy:21
 msgid "You must provide content names"
@@ -4976,6 +4996,7 @@ msgstr "Objavljeni prispevki"
 
 #. Default: "Registration Form"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:28
+#: plone.app.users/plone/app/users/browser/joinform.py:126
 msgid "heading_registration_form"
 msgstr "Obrazec za včlanitev"
 
@@ -5101,6 +5122,7 @@ msgstr "Moje preference"
 
 #. Default: "User/Groups Settings"
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:52
+#: plone.app.users/plone/app/users/memberregistration.pt:52
 msgid "heading_usergroup_settings"
 msgstr ""
 
@@ -5303,11 +5325,13 @@ msgstr "Datum, ko naj bo prispevek na objavljen. Če datum ni vnesen, bo prispev
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:124
+#: plone.app.users/plone/app/users/browser/joinform.py:75
 msgid "help_email_creation"
 msgstr "Vnesite poštni naslov. Ta je nujen za primer, da se geslo izgubi. Spoštujemo zasebnosti in poštnega naslova ne bomo predali tretji osebi ali ga sicer razkrili."
 
 #. Default: "Enter an email address. This will be your login name. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:131
+#: plone.app.users/plone/app/users/browser/joinform.py:88
 msgid "help_email_creation_for_login"
 msgstr ""
 
@@ -5330,6 +5354,7 @@ msgstr "Če ne veste dobro kateri format izbrati, izberite Enostavno besedilo in
 
 #. Default: "Enter full name, e.g. John Smith."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:63
+#: plone.app.users/plone/app/users/browser/joinform.py:62
 msgid "help_full_name_creation"
 msgstr "Vnesite polno ime npr. Janez Novak."
 
@@ -5345,6 +5370,7 @@ msgstr "Enolična identifikacija skupine. Ko je ustvarjena, je ne morete več sp
 
 #. Default: "The URL for your external home page, if you have one."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:231
+#: plone.app.users/plone/app/users/userdataschema.py:41
 msgid "help_homepage"
 msgstr "Spletni naslov vaše zunanje domače spletne strani, če jo imate."
 
@@ -5385,6 +5411,7 @@ msgstr "Izberite zvrsti vsebin, ki so na voljo v roletnem menuju 'Več...' <em>n
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:154
+#: plone.app.users/plone/app/users/userdataschema.py:48
 msgid "help_location"
 msgstr "Vaš kraj - mesto ali država - ali lokacija pisarne, kjer ste."
 
@@ -5471,6 +5498,7 @@ msgstr "Prosimo vnesite vaš naslov OpenID za prijavo."
 
 #. Default: "Minimum 5 characters."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:162
+#: plone.app.users/plone/app/users/browser/joinform.py:43
 msgid "help_password_creation"
 msgstr "Minimalna dolžina je 5 znakov."
 
@@ -5712,6 +5740,7 @@ msgstr "Dodajte http:// za povzave izven tega portala."
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:92
+#: plone.app.users/plone/app/users/browser/joinform.py:33
 msgid "help_user_name_creation_casesensitive"
 msgstr "Vnesite uporabniško ime npr. 'jnovak'. Ne uporabljajte presledkov in posebnih znakov. Uporabniška imena in gesla so občutljiva na VELIKE/male črke. Pazite na tipko Caps lock. Uporabniško ime se uporablja za prijavo."
 
@@ -6608,6 +6637,7 @@ msgstr "Format"
 #. Default: "Full Name"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:60
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:104
+#: plone.app.users/plone/app/users/userdataschema.py:30
 msgid "label_full_name"
 msgstr "Polno ime"
 
@@ -6690,6 +6720,7 @@ msgstr "Domov"
 
 #. Default: "Home page"
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:229
+#: plone.app.users/plone/app/users/userdataschema.py:40
 msgid "label_homepage"
 msgstr "Domača stran"
 
@@ -6789,6 +6820,7 @@ msgstr "Sekundarne zvrsti vsebin"
 #. Default: "Location"
 #: Archetypes/ExtensibleMetadata.py:104
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:152
+#: plone.app.users/plone/app/users/userdataschema.py:47
 msgid "label_location"
 msgstr "Lokacija"
 
@@ -6839,6 +6871,7 @@ msgstr "Videz"
 
 #. Default: "Send a mail with the password"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:215
+#: plone.app.users/plone/app/users/browser/joinform.py:54
 msgid "label_mail_password"
 msgstr "Pošlji sporočilo z geslom"
 
@@ -7037,6 +7070,7 @@ msgstr "Geslo"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:221
+#: plone.app.users/plone/app/users/browser/joinform.py:111
 msgid "label_password_change_mail"
 msgstr "Generiran bo naslov, ki ga boste prejeli po elektronski pošti. Ko boste prišli na sporočeni URL, boste na tej strani lahko spremenili geslo in dokončali postopek prijave."
 
@@ -7179,6 +7213,7 @@ msgstr "Osveži"
 
 #. Default: "Register"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:229
+#: plone.app.users/plone/app/users/browser/joinform.py:317
 msgid "label_register"
 msgstr "Včlani se"
 
@@ -8389,11 +8424,13 @@ msgstr "Majhno"
 
 #. Default: "Failed to create your account: we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:51
+#: plone.app.users/plone/app/users/browser/joinform.py:362
 msgid "status_fatal_password_mail"
 msgstr "Tvorba vašega računa ni uspela: ni nam uspelo poslati gesla na vaš poštni naslov ${address}"
 
 #. Default: "You account has been created, but we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:57
+#: plone.app.users/plone/app/users/browser/joinform.py:370
 msgid "status_nonfatal_password_mail"
 msgstr "Tvorba vašega računa je sicer uspela, a nismo uspeli poslati gesla na vaš poštni naslov ${address}"
 

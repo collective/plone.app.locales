@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-11-01 13:50+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2009-10-14 22:16+0100\n"
 "Last-Translator: Lidia Esparraguera <lidia@2tweb.com>\n"
 "Language-Team: Català <plone-cat@lists.plone.org>\n"
@@ -852,6 +852,10 @@ msgstr "No s'ha pogut afegir el grup ${name}, potser ja existeix un usuari o un 
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:51
 msgid "Could not find a valid email address"
 msgstr "No s'ha trobat cap adreça de correu vàlida"
+
+#: plone.app.users/plone/app/users/browser/joinform.py:357
+msgid "Couldn't send mail"
+msgstr ""
 
 #: CMFPlone/browser/templates/plone-addsite.pt:177
 msgid "Create Plone Site"
@@ -2064,10 +2068,12 @@ msgid "Password incorrect."
 msgstr "La contrasenya és incorrecta."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:18
+#: plone.app.users/plone/app/users/browser/joinform.py:246
 msgid "Passwords do not match."
 msgstr "Les contrasenyes no coincideixen."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:20
+#: plone.app.users/plone/app/users/browser/joinform.py:261
 msgid "Passwords must contain at least 5 letters."
 msgstr "Les contransenyes han de tenir almenys 5 lletres."
 
@@ -2431,6 +2437,14 @@ msgstr "Criteria de referència"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Register"
 msgstr "Registra"
+
+#: plone.app.users/plone/app/users/registration.py:50
+msgid "Registration settings"
+msgstr ""
+
+#: plone.app.users/plone/app/users/registration.py:51
+msgid "Registration settings for this site."
+msgstr ""
 
 #. Default: "Reject"
 #: workflow action defined in plone_workflow - title Reviewer rejects submission new state visible
@@ -3084,6 +3098,7 @@ msgstr "La ubicació d'un element en el portal (un camí)"
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:54
 #: CMFPlone/skins/plone_deprecated/register.cpy:32
+#: plone.app.users/plone/app/users/browser/joinform.py:299
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "El nom d'usuari que heu escollit ja es troba en ús per algú altre o bé no és vàlid. Si us plau, feu una altra elecció."
 
@@ -3290,6 +3305,7 @@ msgid "This shows up in the title bar of browsers, in syndication feeds, etc."
 msgstr "Aixó es mostra en la barra de títol dels navegadors, en els canals de sindicació, etc."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:22
+#: plone.app.users/plone/app/users/browser/joinform.py:289
 msgid "This username is reserved. Please choose a different name."
 msgstr "Aquest nom d'usuari està reservat. Escolliu-ne un altre."
 
@@ -3635,6 +3651,10 @@ msgstr ""
 #: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
 msgstr "Heu d'habilitar les galetes per poder identificar-vos."
+
+#: plone.app.users/plone/app/users/browser/joinform.py:310
+msgid "You must enter a valid email address."
+msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_rename.vpy:21
 msgid "You must provide content names"
@@ -4992,6 +5012,7 @@ msgstr "Elements publicats"
 
 #. Default: "Registration Form"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:28
+#: plone.app.users/plone/app/users/browser/joinform.py:126
 msgid "heading_registration_form"
 msgstr "Formulari de registre"
 
@@ -5115,6 +5136,7 @@ msgstr "Les meves preferències"
 
 #. Default: "User/Groups Settings"
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:52
+#: plone.app.users/plone/app/users/memberregistration.pt:52
 msgid "heading_usergroup_settings"
 msgstr ""
 
@@ -5317,11 +5339,13 @@ msgstr "La data en què es publicarà l'element. Si no s'indica cap data es publ
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:124
+#: plone.app.users/plone/app/users/browser/joinform.py:75
 msgid "help_email_creation"
 msgstr "Introduïu la vostra adreça de correu. Serà necessària en cas que oblideu la contrasenya. Per respecte a la vostra privacitat aquesta adreça no serà facilitada a tercers ni mostrada enlloc sense el vostre consentiment."
 
 #. Default: "Enter an email address. This will be your login name. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:131
+#: plone.app.users/plone/app/users/browser/joinform.py:88
 msgid "help_email_creation_for_login"
 msgstr ""
 
@@ -5344,6 +5368,7 @@ msgstr "Si no esteu segur de quin format heu d'utilitzar, seleccioneu Text simpl
 
 #. Default: "Enter full name, e.g. John Smith."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:63
+#: plone.app.users/plone/app/users/browser/joinform.py:62
 msgid "help_full_name_creation"
 msgstr "Introduïu el nom complet, per exemple: Víctor Sauler i Portal."
 
@@ -5359,6 +5384,7 @@ msgstr "Un identificador únic per al grup. No es pot modificar un cop creat."
 
 #. Default: "The URL for your external home page, if you have one."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:231
+#: plone.app.users/plone/app/users/userdataschema.py:41
 msgid "help_homepage"
 msgstr "L'URL de la vostra pàgina d'inici externa, si en teniu."
 
@@ -5399,6 +5425,7 @@ msgstr "Seleccioneu quins tipus estaran disponibles al submenú 'Més…' <em>en
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:154
+#: plone.app.users/plone/app/users/userdataschema.py:48
 msgid "help_location"
 msgstr "La vostra localització - ja sigui la ciutat i el país - o, en cas de tractar-se d'una empresa, el lloc on es troba la vostra oficina."
 
@@ -5485,6 +5512,7 @@ msgstr "Escribiu l'URL del vostre OpenID per a iniciar la sessió."
 
 #. Default: "Minimum 5 characters."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:162
+#: plone.app.users/plone/app/users/browser/joinform.py:43
 msgid "help_password_creation"
 msgstr "5 caràcters com a mínim."
 
@@ -5726,6 +5754,7 @@ msgstr "Afegiu http:// si voleu enllaçar fora del portal."
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:92
+#: plone.app.users/plone/app/users/browser/joinform.py:33
 msgid "help_user_name_creation_casesensitive"
 msgstr "Introduïu un nom d'usuari, normalment del tipus <em>jpujol</em>. No utilitzeu espais o caràcters especials. Els noms d'usuari i les contrasenyes diferencien majúscules i minúscules. Verifiqueu que la tecla de majúscules no estigui activada. Aquest és el nom que utilitzareu per a connectar-vos."
 
@@ -6620,6 +6649,7 @@ msgstr "Format"
 #. Default: "Full Name"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:60
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:104
+#: plone.app.users/plone/app/users/userdataschema.py:30
 msgid "label_full_name"
 msgstr "Nom complet"
 
@@ -6702,6 +6732,7 @@ msgstr "Inici"
 
 #. Default: "Home page"
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:229
+#: plone.app.users/plone/app/users/userdataschema.py:40
 msgid "label_homepage"
 msgstr "Pàgina d'inici"
 
@@ -6801,6 +6832,7 @@ msgstr "Tipus secundaris"
 #. Default: "Location"
 #: Archetypes/ExtensibleMetadata.py:104
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:152
+#: plone.app.users/plone/app/users/userdataschema.py:47
 msgid "label_location"
 msgstr "Ubicació"
 
@@ -6851,6 +6883,7 @@ msgstr "Aparença"
 
 #. Default: "Send a mail with the password"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:215
+#: plone.app.users/plone/app/users/browser/joinform.py:54
 msgid "label_mail_password"
 msgstr "Envia missatge de correu amb la contrasenya"
 
@@ -7048,6 +7081,7 @@ msgstr "Contrasenya"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:221
+#: plone.app.users/plone/app/users/browser/joinform.py:111
 msgid "label_password_change_mail"
 msgstr "Es generarà un URL que s'enviarà per correu electrònic a la vostra adreça. Seguiu l'enllaç per anar a la pàgina on podreu canviar la vostra contrasenya i completar el procés de registre."
 
@@ -7190,6 +7224,7 @@ msgstr "Refresca"
 
 #. Default: "Register"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:229
+#: plone.app.users/plone/app/users/browser/joinform.py:317
 msgid "label_register"
 msgstr "Registre"
 
@@ -8398,11 +8433,13 @@ msgstr "Petit"
 
 #. Default: "Failed to create your account: we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:51
+#: plone.app.users/plone/app/users/browser/joinform.py:362
 msgid "status_fatal_password_mail"
 msgstr "S'ha produït un error en crear el vostre compte: no s'ha pogut enviar la vostra contrasenya a la vostra adreça de correu electrònic: ${address}"
 
 #. Default: "You account has been created, but we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:57
+#: plone.app.users/plone/app/users/browser/joinform.py:370
 msgid "status_nonfatal_password_mail"
 msgstr "S'ha creat el vostre compte, però no s'ha pogut enviar la vostra contrasenya a la vostra adreça de correu electrònic: ${address}"
 

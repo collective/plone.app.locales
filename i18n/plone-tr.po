@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-11-01 13:50+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2009-05-07 17:47+0200\n"
 "Last-Translator: H. Turgut Uyar <uyar@itu.edu.tr>\n"
 "Language-Team: H. Turgut Uyar <uyar@itu.edu.tr>\n"
@@ -842,6 +842,10 @@ msgstr "${name} grubu eklenemedi; bu isimde bir kullanıcı ya da grup zaten var
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:51
 msgid "Could not find a valid email address"
 msgstr "Geçerli bir e-posta adresi bulunamadı"
+
+#: plone.app.users/plone/app/users/browser/joinform.py:357
+msgid "Couldn't send mail"
+msgstr ""
 
 #: CMFPlone/browser/templates/plone-addsite.pt:177
 msgid "Create Plone Site"
@@ -2054,10 +2058,12 @@ msgid "Password incorrect."
 msgstr "Parola yanlış."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:18
+#: plone.app.users/plone/app/users/browser/joinform.py:246
 msgid "Passwords do not match."
 msgstr "Parolalar birbirini tutmuyor."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:20
+#: plone.app.users/plone/app/users/browser/joinform.py:261
 msgid "Passwords must contain at least 5 letters."
 msgstr "Parolalarda en az 5 simge bulunmalı."
 
@@ -2421,6 +2427,14 @@ msgstr "Başvuru Ölçütleri"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Register"
 msgstr "Kayıt ol"
+
+#: plone.app.users/plone/app/users/registration.py:50
+msgid "Registration settings"
+msgstr ""
+
+#: plone.app.users/plone/app/users/registration.py:51
+msgid "Registration settings for this site."
+msgstr ""
 
 #. Default: "Reject"
 #: workflow action defined in plone_workflow - title Reviewer rejects submission new state visible
@@ -3074,6 +3088,7 @@ msgstr "Bir nesnenin portaldaki konumu (yolu)"
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:54
 #: CMFPlone/skins/plone_deprecated/register.cpy:32
+#: plone.app.users/plone/app/users/browser/joinform.py:299
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "Seçtiğiniz kullanıcı ismi ya kullanılıyor ya da geçersiz. Lütfen başka bir isim seçin."
 
@@ -3280,6 +3295,7 @@ msgid "This shows up in the title bar of browsers, in syndication feeds, etc."
 msgstr "Bu bilgi tarayıcının başlık satırında, dışarıya aktarılan içerik beslemelerinde vs. gösterilir."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:22
+#: plone.app.users/plone/app/users/browser/joinform.py:289
 msgid "This username is reserved. Please choose a different name."
 msgstr "Bu kullanıcı ismi ayrılmış. Lütfen başka bir isim seçin."
 
@@ -3624,6 +3640,10 @@ msgstr ""
 #: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
 msgstr "Siteye girebilmek için önce çerezlere izin vermelisiniz."
+
+#: plone.app.users/plone/app/users/browser/joinform.py:310
+msgid "You must enter a valid email address."
+msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_rename.vpy:21
 msgid "You must provide content names"
@@ -4980,6 +5000,7 @@ msgstr "Yayımlanmış nesneler"
 
 #. Default: "Registration Form"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:28
+#: plone.app.users/plone/app/users/browser/joinform.py:126
 msgid "heading_registration_form"
 msgstr "Kayıt Formu"
 
@@ -5103,6 +5124,7 @@ msgstr "Tercihlerim"
 
 #. Default: "User/Groups Settings"
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:52
+#: plone.app.users/plone/app/users/memberregistration.pt:52
 msgid "heading_usergroup_settings"
 msgstr ""
 
@@ -5305,11 +5327,13 @@ msgstr "Belgenin yayımlanacağı tarih. Tarih belirtilmezse belge derhal yayım
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:124
+#: plone.app.users/plone/app/users/browser/joinform.py:75
 msgid "help_email_creation"
 msgstr "E-posta adresinizi yazın. Bu adres parolanızı unutmanız durumunda gerekecektir. Kişisel bilgilerinize saygılı olduğumuzdan adresiniz üçüncü şahıslara verilmeyecek ya da herhangi bir şekilde ilan edilmeyecektir."
 
 #. Default: "Enter an email address. This will be your login name. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:131
+#: plone.app.users/plone/app/users/browser/joinform.py:88
 msgid "help_email_creation_for_login"
 msgstr ""
 
@@ -5332,6 +5356,7 @@ msgstr "Hangi formatı seçeceğinizi bilemiyorsanız, Düz Metin seçeneğini s
 
 #. Default: "Enter full name, e.g. John Smith."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:63
+#: plone.app.users/plone/app/users/browser/joinform.py:62
 msgid "help_full_name_creation"
 msgstr "Buraya tam isminizi yazın (örneğin Ali Özer)."
 
@@ -5347,6 +5372,7 @@ msgstr "Grup için özel bir kimlik. Yaratıldıktan sonra değiştirilemez."
 
 #. Default: "The URL for your external home page, if you have one."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:231
+#: plone.app.users/plone/app/users/userdataschema.py:41
 msgid "help_homepage"
 msgstr "Başka bir sitedeki kişisel sayfanızın URL adresi (varsa)."
 
@@ -5387,6 +5413,7 @@ msgstr "Bu klasöre ana listedekiler <em>yerine</em> 'hepsi…' seçeneği kulla
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:154
+#: plone.app.users/plone/app/users/userdataschema.py:48
 msgid "help_location"
 msgstr "Coğrafi konumunuz - şehir ya da ülke - ya da bir şirketteyseniz ofisinizin nerede olduğu."
 
@@ -5473,6 +5500,7 @@ msgstr "Siteye girmek için lütfen aşağıya OpenID URL adresinizi yazın."
 
 #. Default: "Minimum 5 characters."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:162
+#: plone.app.users/plone/app/users/browser/joinform.py:43
 msgid "help_password_creation"
 msgstr "En az 5 simge."
 
@@ -5714,6 +5742,7 @@ msgstr "Site dışına bağlantı vermek için adresin başına http:// koyun."
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:92
+#: plone.app.users/plone/app/users/browser/joinform.py:33
 msgid "help_user_name_creation_casesensitive"
 msgstr "Almak istediğiniz kullanıcı ismini yazın ('aozer' gibi). İçinde boşluk ya da noktalama işareti geçmemelidir. Kullanıcı isimleri ve parolalarda büyük-küçük harf ayrımı vardır; caps lock tuşunun basılı olmamasına dikkat edin. Siteye girmek için bu ismi kullanacaksınız."
 
@@ -6608,6 +6637,7 @@ msgstr "Format"
 #. Default: "Full Name"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:60
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:104
+#: plone.app.users/plone/app/users/userdataschema.py:30
 msgid "label_full_name"
 msgstr "Tam İsim"
 
@@ -6690,6 +6720,7 @@ msgstr "Ana Sayfa"
 
 #. Default: "Home page"
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:229
+#: plone.app.users/plone/app/users/userdataschema.py:40
 msgid "label_homepage"
 msgstr "Ana sayfa"
 
@@ -6789,6 +6820,7 @@ msgstr "İkincil tipler"
 #. Default: "Location"
 #: Archetypes/ExtensibleMetadata.py:104
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:152
+#: plone.app.users/plone/app/users/userdataschema.py:47
 msgid "label_location"
 msgstr "Konum"
 
@@ -6839,6 +6871,7 @@ msgstr "Görünüm"
 
 #. Default: "Send a mail with the password"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:215
+#: plone.app.users/plone/app/users/browser/joinform.py:54
 msgid "label_mail_password"
 msgstr "Parolayı e-postayla gönder"
 
@@ -7036,6 +7069,7 @@ msgstr "Parola"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:221
+#: plone.app.users/plone/app/users/browser/joinform.py:111
 msgid "label_password_change_mail"
 msgstr "Bir URL adresi üretilerek size e-postayla gönderilecek. Bu adreste belirtilen sayfaya gidip parolanızı değiştirerek kayıt olma sürecinizi tamamlayabilirsiniz."
 
@@ -7178,6 +7212,7 @@ msgstr "Tazele"
 
 #. Default: "Register"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:229
+#: plone.app.users/plone/app/users/browser/joinform.py:317
 msgid "label_register"
 msgstr "Üye Ol"
 
@@ -8386,11 +8421,13 @@ msgstr "Küçük"
 
 #. Default: "Failed to create your account: we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:51
+#: plone.app.users/plone/app/users/browser/joinform.py:362
 msgid "status_fatal_password_mail"
 msgstr "Hesabınız yaratılamadı: parolanızı e-posta adresinize gönderemedik: ${address}"
 
 #. Default: "You account has been created, but we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:57
+#: plone.app.users/plone/app/users/browser/joinform.py:370
 msgid "status_nonfatal_password_mail"
 msgstr "Hesabınız yaratıldı ama parolanızı e-posta adresinize gönderemedik: ${address}"
 

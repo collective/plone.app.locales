@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-11-01 13:50+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2008-08-11 19:53+0800\n"
 "Last-Translator: adam tang(315ok.org) <yuejun.tang@gmail.com>\n"
 "Language-Team: 315ok.org <yuejun.tang@gmail.com>\n"
@@ -843,6 +843,10 @@ msgstr "不能添加${name}用户组，可能因为一个用户或组的名字�
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:51
 msgid "Could not find a valid email address"
 msgstr "无法找到一个有效的邮件地址。"
+
+#: plone.app.users/plone/app/users/browser/joinform.py:357
+msgid "Couldn't send mail"
+msgstr ""
 
 #: CMFPlone/browser/templates/plone-addsite.pt:177
 msgid "Create Plone Site"
@@ -2060,10 +2064,12 @@ msgid "Password incorrect."
 msgstr "密码不正确。"
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:18
+#: plone.app.users/plone/app/users/browser/joinform.py:246
 msgid "Passwords do not match."
 msgstr "密码不匹配"
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:20
+#: plone.app.users/plone/app/users/browser/joinform.py:261
 msgid "Passwords must contain at least 5 letters."
 msgstr "密码必须包含最少5个字母"
 
@@ -2427,6 +2433,14 @@ msgstr "引用条件"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Register"
 msgstr "注册"
+
+#: plone.app.users/plone/app/users/registration.py:50
+msgid "Registration settings"
+msgstr ""
+
+#: plone.app.users/plone/app/users/registration.py:51
+msgid "Registration settings for this site."
+msgstr ""
 
 #. Default: "Reject"
 #: workflow action defined in plone_workflow - title Reviewer rejects submission new state visible
@@ -3080,6 +3094,7 @@ msgstr "条目在网站中的位置(路径)"
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:54
 #: CMFPlone/skins/plone_deprecated/register.cpy:32
+#: plone.app.users/plone/app/users/browser/joinform.py:299
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "您选择的登录名已被使用或者不合法，请另选一个"
 
@@ -3286,6 +3301,7 @@ msgid "This shows up in the title bar of browsers, in syndication feeds, etc."
 msgstr "这显示在浏览器的标题栏，在聚合内容中，等等。"
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:22
+#: plone.app.users/plone/app/users/browser/joinform.py:289
 msgid "This username is reserved. Please choose a different name."
 msgstr "这个用户名被保留了。请选择一个不同的名字。"
 
@@ -3630,6 +3646,10 @@ msgstr ""
 #: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
 msgstr "你必须在登录前允许使用cookies."
+
+#: plone.app.users/plone/app/users/browser/joinform.py:310
+msgid "You must enter a valid email address."
+msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_rename.vpy:21
 msgid "You must provide content names"
@@ -4989,6 +5009,7 @@ msgstr "发布的内容"
 
 #. Default: "Registration Form"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:28
+#: plone.app.users/plone/app/users/browser/joinform.py:126
 msgid "heading_registration_form"
 msgstr "请注册"
 
@@ -5114,6 +5135,7 @@ msgstr "我的选项"
 
 #. Default: "User/Groups Settings"
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:52
+#: plone.app.users/plone/app/users/memberregistration.pt:52
 msgid "heading_usergroup_settings"
 msgstr ""
 
@@ -5316,11 +5338,13 @@ msgstr "文档可被获得的日期（当然，他必须先发布了）。如果
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:124
+#: plone.app.users/plone/app/users/browser/joinform.py:75
 msgid "help_email_creation"
 msgstr "输入您的电子邮件地址。当您忘记了自己的密码时可用他取回。我们将尊重您的隐私，不会把邮件地址交给任何第三方。"
 
 #. Default: "Enter an email address. This will be your login name. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:131
+#: plone.app.users/plone/app/users/browser/joinform.py:88
 msgid "help_email_creation_for_login"
 msgstr ""
 
@@ -5343,6 +5367,7 @@ msgstr "如果您不确定选择哪个格式，可选择纯文本，这个格式
 
 #. Default: "Enter full name, e.g. John Smith."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:63
+#: plone.app.users/plone/app/users/browser/joinform.py:62
 #, fuzzy
 msgid "help_full_name_creation"
 msgstr "输入您的全名，如：张三"
@@ -5359,6 +5384,7 @@ msgstr "组的唯一标识，创建后不能更改。请使用英文字母。"
 
 #. Default: "The URL for your external home page, if you have one."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:231
+#: plone.app.users/plone/app/users/userdataschema.py:41
 msgid "help_homepage"
 msgstr "您个人的外部主页URL(如没有，保持为空)。"
 
@@ -5399,6 +5425,7 @@ msgstr "选择在这个文件夹中使用“更多”链接添加的内容类型
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:154
+#: plone.app.users/plone/app/users/userdataschema.py:48
 msgid "help_location"
 msgstr "您的位置 － 城市或者国家 － 或者公司中您办公室的位置"
 
@@ -5485,6 +5512,7 @@ msgstr "请在下面输入您的OpenID链接地址，以便登录。"
 
 #. Default: "Minimum 5 characters."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:162
+#: plone.app.users/plone/app/users/browser/joinform.py:43
 msgid "help_password_creation"
 msgstr "最少5个字母。"
 
@@ -5726,6 +5754,7 @@ msgstr "填写事件相关的网站页面地址。对外网的链接需要添加
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:92
+#: plone.app.users/plone/app/users/browser/joinform.py:33
 msgid "help_user_name_creation_casesensitive"
 msgstr "输入您想要的用户名，如“jsmith”。不要用空格、中文、或者其他特殊字符。用户名和密码都是大小写敏感的，请确认键盘的大写锁没有开启。用户名是您登录使用的名字。"
 
@@ -6621,6 +6650,7 @@ msgstr "格式"
 #. Default: "Full Name"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:60
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:104
+#: plone.app.users/plone/app/users/userdataschema.py:30
 msgid "label_full_name"
 msgstr "姓名"
 
@@ -6703,6 +6733,7 @@ msgstr "首页"
 
 #. Default: "Home page"
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:229
+#: plone.app.users/plone/app/users/userdataschema.py:40
 msgid "label_homepage"
 msgstr "主页"
 
@@ -6802,6 +6833,7 @@ msgstr "可添加类型"
 #. Default: "Location"
 #: Archetypes/ExtensibleMetadata.py:104
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:152
+#: plone.app.users/plone/app/users/userdataschema.py:47
 msgid "label_location"
 msgstr "位置："
 
@@ -6852,6 +6884,7 @@ msgstr "外观"
 
 #. Default: "Send a mail with the password"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:215
+#: plone.app.users/plone/app/users/browser/joinform.py:54
 msgid "label_mail_password"
 msgstr "邮寄密码?"
 
@@ -7049,6 +7082,7 @@ msgstr "密码"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:221
+#: plone.app.users/plone/app/users/browser/joinform.py:111
 msgid "label_password_change_mail"
 msgstr "URL将产生并邮寄给你；通过链接可访问到可改变密码和完成注册过程的页面。"
 
@@ -7191,6 +7225,7 @@ msgstr "刷新"
 
 #. Default: "Register"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:229
+#: plone.app.users/plone/app/users/browser/joinform.py:317
 msgid "label_register"
 msgstr "注册"
 
@@ -8418,11 +8453,13 @@ msgstr "小字体"
 
 #. Default: "Failed to create your account: we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:51
+#: plone.app.users/plone/app/users/browser/joinform.py:362
 msgid "status_fatal_password_mail"
 msgstr "创建您的账号失败：我们不能发送密码到您的邮箱地址：${address}"
 
 #. Default: "You account has been created, but we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:57
+#: plone.app.users/plone/app/users/browser/joinform.py:370
 msgid "status_nonfatal_password_mail"
 msgstr "您的账号已被创建，但我们不能发送密码到您的邮箱地址：${address}"
 

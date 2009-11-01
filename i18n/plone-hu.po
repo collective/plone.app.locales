@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-11-01 13:50+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2009-02-01 19:49+0100\n"
 "Last-Translator: József Jároli <jaroli@yahoo.com>\n"
 "Language-Team: Hungarian Plone Translators <translators@plone.hu>\n"
@@ -851,6 +851,10 @@ msgstr "Nem lehet létrehozni a ${name} nevű csoportot, már lehet, hogy létez
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:51
 msgid "Could not find a valid email address"
 msgstr "Nem írt be érvényes email-címet."
+
+#: plone.app.users/plone/app/users/browser/joinform.py:357
+msgid "Couldn't send mail"
+msgstr ""
 
 #: CMFPlone/browser/templates/plone-addsite.pt:177
 msgid "Create Plone Site"
@@ -2065,10 +2069,12 @@ msgid "Password incorrect."
 msgstr "A jelszó nem megfelelő."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:18
+#: plone.app.users/plone/app/users/browser/joinform.py:246
 msgid "Passwords do not match."
 msgstr "A megadott jelszavak nem egyeznek meg."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:20
+#: plone.app.users/plone/app/users/browser/joinform.py:261
 msgid "Passwords must contain at least 5 letters."
 msgstr "A jelszónak legalább 5 betűből kell állnia."
 
@@ -2432,6 +2438,14 @@ msgstr "Hivatkozás kritérium"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Register"
 msgstr "Regisztráció"
+
+#: plone.app.users/plone/app/users/registration.py:50
+msgid "Registration settings"
+msgstr ""
+
+#: plone.app.users/plone/app/users/registration.py:51
+msgid "Registration settings for this site."
+msgstr ""
 
 #. Default: "Reject"
 #: workflow action defined in plone_workflow - title Reviewer rejects submission new state visible
@@ -3087,6 +3101,7 @@ msgstr "Az elem elérési útvonala a portálon"
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:54
 #: CMFPlone/skins/plone_deprecated/register.cpy:32
+#: plone.app.users/plone/app/users/browser/joinform.py:299
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "A választott felhasználói név már más által használt vagy nem érvényes. Kérem, válasszon újat."
 
@@ -3293,6 +3308,7 @@ msgid "This shows up in the title bar of browsers, in syndication feeds, etc."
 msgstr "Ez jelenik meg a böngésző címsorában, a szindikált hírcsatornákon, stb."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:22
+#: plone.app.users/plone/app/users/browser/joinform.py:289
 msgid "This username is reserved. Please choose a different name."
 msgstr "Ez a felhasználói név fenttartott. Kérem, válasszon másik nevet."
 
@@ -3637,6 +3653,10 @@ msgstr ""
 #: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
 msgstr "Engedélyeznie kell a sütiket (cookies), hogy be tudjon jelentkezni."
+
+#: plone.app.users/plone/app/users/browser/joinform.py:310
+msgid "You must enter a valid email address."
+msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_rename.vpy:21
 msgid "You must provide content names"
@@ -5015,6 +5035,7 @@ msgstr "Publikált elemek"
 
 #. Default: "Registration Form"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:28
+#: plone.app.users/plone/app/users/browser/joinform.py:126
 msgid "heading_registration_form"
 msgstr "Regisztrációs űrlap"
 
@@ -5140,6 +5161,7 @@ msgstr "Saját beállításaim"
 
 #. Default: "User/Groups Settings"
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:52
+#: plone.app.users/plone/app/users/memberregistration.pt:52
 msgid "heading_usergroup_settings"
 msgstr ""
 
@@ -5345,11 +5367,13 @@ msgstr "Itt állíthatja be azt az időpontot, amikor szeretné megjelentetni az
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:124
+#: plone.app.users/plone/app/users/browser/joinform.py:75
 msgid "help_email_creation"
 msgstr "Írja be az e-mail címét! Szükséges arra az esetre, ha elfelejtené a jelszavát. E-mail címét nem adjuk ki harmadik félnek."
 
 #. Default: "Enter an email address. This will be your login name. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:131
+#: plone.app.users/plone/app/users/browser/joinform.py:88
 msgid "help_email_creation_for_login"
 msgstr ""
 
@@ -5372,6 +5396,7 @@ msgstr "Ha nem biztos abban, hogy melyik formátumot kell használni, válassza 
 
 #. Default: "Enter full name, e.g. John Smith."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:63
+#: plone.app.users/plone/app/users/browser/joinform.py:62
 msgid "help_full_name_creation"
 msgstr "Írja be a teljes nevét ékezetekkel, mint pl. Horváth Gábor."
 
@@ -5387,6 +5412,7 @@ msgstr "A felhasználói csoport egyedi azonosítója. Létrehozása után nem v
 
 #. Default: "The URL for your external home page, if you have one."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:231
+#: plone.app.users/plone/app/users/userdataschema.py:41
 msgid "help_homepage"
 msgstr "Külső honlapjának címe:"
 
@@ -5431,6 +5457,7 @@ msgstr "Válassza ki azokat a típusokat, amiket ehhez a mappához hozzá lehet 
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:154
+#: plone.app.users/plone/app/users/userdataschema.py:48
 msgid "help_location"
 msgstr "Az Ön helyzete - ország és város, vagy a vállalaton belül az az iroda, ahol napközben tartózkodik."
 
@@ -5517,6 +5544,7 @@ msgstr "Kérjük, írja be az OpenID-je címét (URL-jét) alább, hogy be tudjo
 
 #. Default: "Minimum 5 characters."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:162
+#: plone.app.users/plone/app/users/browser/joinform.py:43
 msgid "help_password_creation"
 msgstr "Legalább 5 karakter legyen."
 
@@ -5760,6 +5788,7 @@ msgstr "Hozzáad egy 'http://' protokol leírást, hogy a portálon kívüli hiv
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:92
+#: plone.app.users/plone/app/users/browser/joinform.py:33
 msgid "help_user_name_creation_casesensitive"
 msgstr "Adja meg felhasználói azonosítóját, mint pl 'ghorvath'. Nem tartalmazhat szóközt, ékezetes betűket és egyéb speciális karaktereket. A felhasználói azonosítók és jelszavak kisbetű/nagybetű érzékenyek; győződjön meg róla, hogy nincsen benyomva a Caps Lock billentyű. Ezzel a felhasználói azonosítóval tud belépni az oldalra."
 
@@ -6661,6 +6690,7 @@ msgstr "Formátum"
 #. Default: "Full Name"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:60
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:104
+#: plone.app.users/plone/app/users/userdataschema.py:30
 msgid "label_full_name"
 msgstr "Teljes név"
 
@@ -6743,6 +6773,7 @@ msgstr "Nyitólap"
 
 #. Default: "Home page"
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:229
+#: plone.app.users/plone/app/users/userdataschema.py:40
 msgid "label_homepage"
 msgstr "Honlap"
 
@@ -6842,6 +6873,7 @@ msgstr "Másodlagos típusok"
 #. Default: "Location"
 #: Archetypes/ExtensibleMetadata.py:104
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:152
+#: plone.app.users/plone/app/users/userdataschema.py:47
 msgid "label_location"
 msgstr "Helyszín:"
 
@@ -6892,6 +6924,7 @@ msgstr "Felhasználói felület kinézete"
 
 #. Default: "Send a mail with the password"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:215
+#: plone.app.users/plone/app/users/browser/joinform.py:54
 msgid "label_mail_password"
 msgstr "Jelszó küldése e-mailben"
 
@@ -7089,6 +7122,7 @@ msgstr "Jelszó"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:221
+#: plone.app.users/plone/app/users/browser/joinform.py:111
 msgid "label_password_change_mail"
 msgstr ""
 
@@ -7231,6 +7265,7 @@ msgstr "Frissít"
 
 #. Default: "Register"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:229
+#: plone.app.users/plone/app/users/browser/joinform.py:317
 msgid "label_register"
 msgstr "Regisztráció"
 
@@ -8441,11 +8476,13 @@ msgstr "Kicsi"
 
 #. Default: "Failed to create your account: we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:51
+#: plone.app.users/plone/app/users/browser/joinform.py:362
 msgid "status_fatal_password_mail"
 msgstr ""
 
 #. Default: "You account has been created, but we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:57
+#: plone.app.users/plone/app/users/browser/joinform.py:370
 msgid "status_nonfatal_password_mail"
 msgstr ""
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2009-11-01 13:50+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2006-03-09 17:00+0900\n"
 "Last-Translator: Seo Sanghyeon <tinuviel@sparcs.kaist.ac.kr>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -844,6 +844,10 @@ msgstr ""
 #: CMFPlone/skins/plone_form_scripts/send_feedback.cpy:51
 msgid "Could not find a valid email address"
 msgstr "적합한 이메일 주소를 찾을 수 없습니다"
+
+#: plone.app.users/plone/app/users/browser/joinform.py:357
+msgid "Couldn't send mail"
+msgstr ""
 
 #: CMFPlone/browser/templates/plone-addsite.pt:177
 msgid "Create Plone Site"
@@ -2056,10 +2060,12 @@ msgid "Password incorrect."
 msgstr "비밀번호가 정확하지 않습니다."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:18
+#: plone.app.users/plone/app/users/browser/joinform.py:246
 msgid "Passwords do not match."
 msgstr "비밀번호가 일치하지 않습니다."
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:20
+#: plone.app.users/plone/app/users/browser/joinform.py:261
 msgid "Passwords must contain at least 5 letters."
 msgstr "비밀번호는 적어도 5글자 이상을 포함하고 있어야합니다."
 
@@ -2422,6 +2428,14 @@ msgstr ""
 #. Default: "Register"
 #: CMFPlone/profiles/default/actions.xml
 msgid "Register"
+msgstr ""
+
+#: plone.app.users/plone/app/users/registration.py:50
+msgid "Registration settings"
+msgstr ""
+
+#: plone.app.users/plone/app/users/registration.py:51
+msgid "Registration settings for this site."
 msgstr ""
 
 #. Default: "Reject"
@@ -3076,6 +3090,7 @@ msgstr ""
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:54
 #: CMFPlone/skins/plone_deprecated/register.cpy:32
+#: plone.app.users/plone/app/users/browser/joinform.py:299
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "선택하신 ID는 이미 사용중이거나 올바르지 않습니다. 다른 ID를 선택해 주세요."
 
@@ -3282,6 +3297,7 @@ msgid "This shows up in the title bar of browsers, in syndication feeds, etc."
 msgstr ""
 
 #: CMFPlone/skins/plone_deprecated/join_form_validate.vpy:22
+#: plone.app.users/plone/app/users/browser/joinform.py:289
 msgid "This username is reserved. Please choose a different name."
 msgstr "이 유저 ID는 다른 사람이 쓰고 있습니다. 다른 ID를 입력해주세요."
 
@@ -3625,6 +3641,10 @@ msgstr ""
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:22
 #: CMFPlone/skins/plone_login/login_password_validate.vpy:17
 msgid "You must enable cookies before you can log in."
+msgstr ""
+
+#: plone.app.users/plone/app/users/browser/joinform.py:310
+msgid "You must enter a valid email address."
 msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_rename.vpy:21
@@ -5007,6 +5027,7 @@ msgstr "코멘트 미리보기"
 
 #. Default: "Registration Form"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:28
+#: plone.app.users/plone/app/users/browser/joinform.py:126
 msgid "heading_registration_form"
 msgstr "회원 등록"
 
@@ -5136,6 +5157,7 @@ msgstr "다른 사람에게 현재 페이지 보내기"
 
 #. Default: "User/Groups Settings"
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:52
+#: plone.app.users/plone/app/users/memberregistration.pt:52
 msgid "heading_usergroup_settings"
 msgstr ""
 
@@ -5343,11 +5365,13 @@ msgstr "일반에 공개될 경우 문서의 실제 공개 일시를 지정할 �
 
 #. Default: "Enter an email address. This is necessary in case the password is lost. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:124
+#: plone.app.users/plone/app/users/browser/joinform.py:75
 msgid "help_email_creation"
 msgstr "이메일 주소를 입력하세요. 비밀번호 분실 등의 경우 사용됩니다. 본 사이트는 개인정보보호지침을 준수하며 제 3 자에게 이메일 주소를 알려주지 않습니다."
 
 #. Default: "Enter an email address. This will be your login name. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:131
+#: plone.app.users/plone/app/users/browser/joinform.py:88
 msgid "help_email_creation_for_login"
 msgstr ""
 
@@ -5370,6 +5394,7 @@ msgstr ""
 
 #. Default: "Enter full name, e.g. John Smith."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:63
+#: plone.app.users/plone/app/users/browser/joinform.py:62
 msgid "help_full_name_creation"
 msgstr "성을 포함해 완전한 이름을 입력하세요."
 
@@ -5385,6 +5410,7 @@ msgstr "그룹에 대한 독특한 식별자. 생성 후에 수정될 수 없습
 
 #. Default: "The URL for your external home page, if you have one."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:231
+#: plone.app.users/plone/app/users/userdataschema.py:41
 msgid "help_homepage"
 msgstr ""
 
@@ -5426,6 +5452,7 @@ msgstr ""
 
 #. Default: "Your location - either city and country - or in a company setting, where your office is located."
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:154
+#: plone.app.users/plone/app/users/userdataschema.py:48
 msgid "help_location"
 msgstr ""
 
@@ -5512,6 +5539,7 @@ msgstr ""
 
 #. Default: "Minimum 5 characters."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:162
+#: plone.app.users/plone/app/users/browser/joinform.py:43
 msgid "help_password_creation"
 msgstr "새 비밀번호를 입력하세요. 다섯 글자 이상이어야 합니다."
 
@@ -5765,6 +5793,7 @@ msgstr ""
 
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:92
+#: plone.app.users/plone/app/users/browser/joinform.py:33
 msgid "help_user_name_creation_casesensitive"
 msgstr "사용자 ID를 입력하세요. 공백이나 특수문자는 사용할 수 없습니다. ID와 비밀번호는 대소문자를 구분합니다. Caps Lock 키가 눌려있는지 확인하세요. 바로 이 ID를 사용해 사이트에 로그인하게 됩니다."
 
@@ -6670,6 +6699,7 @@ msgstr "형식"
 #. Default: "Full Name"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:60
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:104
+#: plone.app.users/plone/app/users/userdataschema.py:30
 msgid "label_full_name"
 msgstr "이름"
 
@@ -6756,6 +6786,7 @@ msgstr ""
 
 #. Default: "Home page"
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:229
+#: plone.app.users/plone/app/users/userdataschema.py:40
 msgid "label_homepage"
 msgstr ""
 
@@ -6856,6 +6887,7 @@ msgstr ""
 #. Default: "Location"
 #: Archetypes/ExtensibleMetadata.py:104
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:152
+#: plone.app.users/plone/app/users/userdataschema.py:47
 msgid "label_location"
 msgstr "위치"
 
@@ -6906,6 +6938,7 @@ msgstr "스킨"
 
 #. Default: "Send a mail with the password"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:215
+#: plone.app.users/plone/app/users/browser/joinform.py:54
 msgid "label_mail_password"
 msgstr "비밀번호 메일 발송"
 
@@ -7105,6 +7138,7 @@ msgstr "비밀번호"
 
 #. Default: "A URL will be generated and e-mailed to you; follow the link to reach a page where you can change your password and complete the registration process."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:221
+#: plone.app.users/plone/app/users/browser/joinform.py:111
 msgid "label_password_change_mail"
 msgstr ""
 
@@ -7250,6 +7284,7 @@ msgstr "새로 고침"
 
 #. Default: "Register"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:229
+#: plone.app.users/plone/app/users/browser/joinform.py:317
 msgid "label_register"
 msgstr "회원등록"
 
@@ -8477,11 +8512,13 @@ msgstr ""
 
 #. Default: "Failed to create your account: we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:51
+#: plone.app.users/plone/app/users/browser/joinform.py:362
 msgid "status_fatal_password_mail"
 msgstr ""
 
 #. Default: "You account has been created, but we were unable to send your password to your email address: ${address}"
 #: CMFPlone/skins/plone_deprecated/register.cpy:57
+#: plone.app.users/plone/app/users/browser/joinform.py:370
 msgid "status_nonfatal_password_mail"
 msgstr ""
 
