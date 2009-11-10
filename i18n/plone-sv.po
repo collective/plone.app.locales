@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2009-11-10 20:38+0100\n"
+"PO-Revision-Date: 2009-11-10 23:24+0100\n"
 "Last-Translator: Karl Johan Kleist <karl.johan@kleist-it-consulting.de>\n"
 "Language-Team:  <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -518,7 +518,7 @@ msgstr "Tillåt alla att se \"om\"-information"
 
 #: plone.app.controlpanel/plone/app/controlpanel/security.py:60
 msgid "Allows new  users to login with their email address instead of specifying a separate login name. (Existing users must go to the personalize_form once and save it before this setting has effect for them. Or use the @@migrate-to-emaillogin page as a site admin)"
-msgstr ""
+msgstr "Användare som skapas hädanefter loggar in med sin e-postadress. (Existerande användare gör detta först efter att ha sparat sina \"Personliga inställningar\". En administratör kan även använda \"@@migrate-to-emaillogin\" för att mass-migrera alla användare till att logga in med sin e-postadress.)"
 
 #: plone.app.controlpanel/plone/app/controlpanel/security.py:28
 msgid "Allows users to register themselves on the site. If not selected, only site managers can add new users."
@@ -3466,7 +3466,7 @@ msgstr "Uppgraderade ${product}"
 
 #: plone.app.controlpanel/plone/app/controlpanel/security.py:59
 msgid "Use email address as login name"
-msgstr ""
+msgstr "Nya användare loggar in med e-postadress"
 
 #. Default: "Use folders to put content in categories."
 #: CMFPlone/profiles/default/types/TempFolder.xml
@@ -3682,7 +3682,7 @@ msgstr "Du måste aktivera \"cookies\" innan du kan logga in."
 
 #: plone.app.users/plone/app/users/browser/joinform.py:310
 msgid "You must enter a valid email address."
-msgstr ""
+msgstr "Du måste ange en giltig e-postadress."
 
 #: CMFPlone/skins/plone_form_scripts/validate_folder_rename.vpy:21
 msgid "You must provide content names"
@@ -5165,6 +5165,7 @@ msgstr "Ångra åtgärder"
 msgid "heading_user_panel"
 msgstr "Mina inställningar"
 
+# not used?
 #. Default: "User/Groups Settings"
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:52
 #: plone.app.users/plone/app/users/memberregistration.pt:52
@@ -5228,6 +5229,7 @@ msgstr "Exempel: pt-br (brasiliansk portugisiska), en-us (amerikansk engelska)"
 msgid "help_allow_comments"
 msgstr "Användare kan kommentera denna post."
 
+# not used?
 #. Default: "If an item has been excluded from navigation should it be shown in navigation when viewing content contained within it or within a subfolder."
 #: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:118
 msgid "help_allparents_enable"
@@ -5371,13 +5373,13 @@ msgstr "Det datum då innehållet blir publicerat. Anger du inget datum publicer
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:124
 #: plone.app.users/plone/app/users/browser/joinform.py:75
 msgid "help_email_creation"
-msgstr "Fyll i e-postadress. Detta är nödvändigt om lösenordet glöms. Vi respekterar ditt privatliv och kommer inte att ge adressen till någon tredje part eller avslöja den någonstans."
+msgstr "Denna behövs för det fall du skulle förlora ditt lösenord."
 
 #. Default: "Enter an email address. This will be your login name. We respect your privacy, and will not give the address away to any third parties or expose it anywhere."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:131
 #: plone.app.users/plone/app/users/browser/joinform.py:88
 msgid "help_email_creation_for_login"
-msgstr ""
+msgstr "Denna adress använder du för att logga in."
 
 #. Default: "If selected, this item will not appear in the navigation tree"
 #: widget description of BooleanWidget for label Exclude from navigation
@@ -5479,10 +5481,11 @@ msgstr "Webbplatsens utseende."
 msgid "help_message"
 msgstr "Fyll i meddelandet du vill skicka."
 
+# @@migrate-to-emaillogin
 #. Default: "The email login setting in the ${link} only affects new users. Existing users keep their current login name until they change their email address. Here you can update the login name of those users."
 #: plone.app.controlpanel/plone/app/controlpanel/emaillogin.pt:20
 msgid "help_migrate_email_login"
-msgstr ""
+msgstr "Inställningen för inloggning med e-postadress på ${link} påverkar bara nytillkommande användare. Existerande användare fortsätter logga in med sitt användarnamn tills de sparar sina \"Personliga Inställningar\". Här kan du modifiera dessa existerande användarkonton, så att även de använder e-postadressen för inloggning."
 
 #. Default: "Date this content was modified last"
 #: Archetypes/ExtensibleMetadata.py:206
@@ -5546,7 +5549,7 @@ msgstr "Fyll i din OpenID URL nedtill för att logga in."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:162
 #: plone.app.users/plone/app/users/browser/joinform.py:43
 msgid "help_password_creation"
-msgstr "Minst fem tecken långt."
+msgstr "Minst fem tecken långt. Lösenordet är skiftlägeskänsligt, se till att skiftlåset ('Caps Lock'-tangenten) inte är på."
 
 #. Default: "If you have forgotten your password, ${click_here}."
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:122
@@ -5793,7 +5796,7 @@ msgstr "Lägg till http:// för att länka utanför portalen."
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:92
 #: plone.app.users/plone/app/users/browser/joinform.py:33
 msgid "help_user_name_creation_casesensitive"
-msgstr "Namn som används för att logga in, t.ex. \"eva\". Inga blanksteg eller specialtecken kan användas. Användarnamn och lösenord är skiftlägeskänsliga, se till att skiftlåset ('Caps Lock'-tangenten) inte är på."
+msgstr "Namn som används för att logga in, t.ex. \"eva\". Inga blanksteg eller specialtecken kan användas. Användarnamnet är skiftlägeskänsligt, se till att skiftlåset ('Caps Lock'-tangenten) inte är på."
 
 #. Default: "The workflow states that should be shown in the navigation tree and the site map."
 #: CMFPlone/skins/plone_prefs/prefs_navigation_form.cpt:186
@@ -6180,7 +6183,7 @@ msgstr "${count} tecken återstår"
 #. Default: "Check for duplicate emails"
 #: plone.app.controlpanel/plone/app/controlpanel/emaillogin.pt:72
 msgid "label_check_duplicate_emails"
-msgstr ""
+msgstr "Kontrollera om flera användare har samma e-postadress"
 
 #. Default: "Check-in Message"
 #: plone.app.iterate/plone/app/iterate/browser/checkin.pt:22
@@ -6539,7 +6542,7 @@ msgstr "Publiceringsdatum"
 #: CMFPlone/skins/plone_forms/member_search_form.pt:47
 #: CMFPlone/skins/plone_login/login_form.cpt:83
 msgid "label_email"
-msgstr "E-post"
+msgstr "E-postadress"
 
 #. Default: "Enable"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:143
@@ -6926,7 +6929,7 @@ msgstr "Utseende"
 #: CMFPlone/skins/plone_deprecated/join_form.cpt:215
 #: plone.app.users/plone/app/users/browser/joinform.py:54
 msgid "label_mail_password"
-msgstr "Skicka lösenord?"
+msgstr "Skicka lösenordet till mig med e-post"
 
 #. Default: "Main Language:"
 #: CMFPlone/skins/plone_content/author.cpt:126
@@ -7498,7 +7501,7 @@ msgstr "Skicka till (e-postadress)"
 #. Default: "E-Mail"
 #: CMFPlone/skins/plone_templates/contact-info.cpt:91
 msgid "label_sender_from_address"
-msgstr "E-post"
+msgstr "E-postadress"
 
 #. Default: "Name"
 #: CMFPlone/skins/plone_templates/contact-info.cpt:64
@@ -7508,7 +7511,7 @@ msgstr "Namn"
 #. Default: "Set email address as login name for all users"
 #: plone.app.controlpanel/plone/app/controlpanel/emaillogin.pt:78
 msgid "label_set_email_address_as_login_name"
-msgstr ""
+msgstr "Aktivera inloggning med e-postadress för alla användare"
 
 #. Default: "Short Name"
 #: Archetypes/BaseObject.py:91
@@ -7635,7 +7638,7 @@ msgstr "Underliggande innehåll"
 #. Default: "Switch login name of all users back to user id instead of email address"
 #: plone.app.controlpanel/plone/app/controlpanel/emaillogin.pt:84
 msgid "label_switch_back_to_user_id"
-msgstr ""
+msgstr "Återgå till inloggning med användarnamn för alla användare"
 
 #. Default: "Channel Description"
 #: CMFPlone/skins/plone_forms/synPropertiesForm.cpt:75
@@ -8281,17 +8284,17 @@ msgstr "Mer..."
 #. Default: "${count} accounts were switched to using their email address as login name."
 #: plone.app.controlpanel/plone/app/controlpanel/emaillogin.pt:49
 msgid "msg_number_switched_to_email"
-msgstr ""
+msgstr "${count} användarkonton förändrades till att använda inloggning med e-postkonto."
 
 #. Default: "${count} accounts were switched back to using their user id as login name."
 #: plone.app.controlpanel/plone/app/controlpanel/emaillogin.pt:56
 msgid "msg_number_switched_to_userid"
-msgstr ""
+msgstr "${count} användarkonton återställdes till att använda användarnamnet för inloggning."
 
 #. Default: "See the log file for details."
 #: plone.app.controlpanel/plone/app/controlpanel/emaillogin.pt:61
 msgid "msg_see_log_for_details"
-msgstr ""
+msgstr "Se loggfilen för detaljer."
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
 #: CMFPlone/skins/plone_content/newsitem_view.pt:51
