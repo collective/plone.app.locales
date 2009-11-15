@@ -60,6 +60,7 @@ def rebuild(product, folder=''):
             'plone.app.customerize',
             'plone.app.form',
             'plone.app.i18n',
+            'plone.app.imaging',
             'plone.app.iterate',
             'plone.app.kss',
             'plone.app.layout',
