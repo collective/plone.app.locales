@@ -39,7 +39,7 @@ Preparing Plone 4 buildout
     svn co https://svn.plone.org/svn/plone/plone-coredev/branches/4.0/ plone4
     cd plone4
     python bootstrap.py
-    bin/buildout -c i18n.cfg
+    bin/buildout -c experimental/i18n.cfg
     mkdir Products
     cd src
     ln -s Plone Products.CMFPlone
