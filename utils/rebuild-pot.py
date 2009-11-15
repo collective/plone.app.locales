@@ -71,6 +71,8 @@ def rebuild(product, folder=''):
             'plone.app.vocabularies',
             'plone.app.workflow',
             'plone.app.openid',
+            'plonetheme.sunburst',
+            'plonetheme.classic',
             'Products.Archetypes',
             'Products.CMFDiffTool',
             'Products.validation',
