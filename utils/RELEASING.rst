@@ -48,9 +48,9 @@ Set the svn:externals and commit::
     svn ci -m"Pinned revision of PloneTranslations"
 
     cd /tmp/3.3.2
-    remove "global-include .registration.cache" from MANIFEST.in
     rm -rf plone/app/locales/i18n/kupu
-    cd plone/app/locales/locales/
+    cd plone/app/locales/locales/ #Plone 3
+    cd plone/app/locales/ # Plone 4
     for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
 
     cd /tmp/3.3.2
