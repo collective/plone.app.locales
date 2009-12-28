@@ -19,7 +19,7 @@ def main():
     # parse command line options
     parser = OptionParser()
     usage = "usage: %prog [options] *arg"
-    version = "%prog 1.0"
+    version = "%prog 1.0.1"
     description = "This will generate serveral reports and CSV files from various PO files.  You can specify language codes as arguments.  To get all available feature, '$ ./pobuddy.py -av all' is the easiest way.  Note thiw will create more than 900 CSV files under ./pobuddyCSV directory.  The 'headers.csv' file has valuable information, too.  Example for local translator, eg. Japanese: '$ ./pobuddy.py -swf ja'  For i18n manager: '$ ./pobuddy.py -av all'  For code developers to get POT CSV file to consider consolidating messages: '$ ./pobuddy.py -swf pot'"
     parser = OptionParser(usage=usage, version=version, description=description)
     parser.add_option("-s", "--status", action="store_true",
@@ -142,7 +142,7 @@ def main():
 
     for ix, lang in enumerate(langs):
         langTable, langWarningTable, langCsvTable = langDupInspector(
-                   poCubic[ix], poWarningCubic[ix], poCsvCubic[ix])
+                   langs, poCubic[ix], poWarningCubic[ix], poCsvCubic[ix])
 
     if verbose:
         print 'DIFFERENT PO MSGSTR FOR SAME MSGID IN DIFFERNT FILES INSPECTED'
@@ -199,7 +199,7 @@ def main():
                     if item in fileHeader:
                         uline.append(fileHeader[item])
                     else:
-                        uline.append('None')
+                        uline.append('none')
                 uline = ['"'+item+'"' for item in uline]
                 uline = u','.join(uline) + u'\n'
                 fo.write(uline)
@@ -211,14 +211,14 @@ def main():
         if statOn:
             printPotStat(potTable)
         if warningOn:
-            printWarning(potWarningTable)
+            printWarning('pot', potWarningTable)
 
     if len(langs) > 0:
         for ix, lang in enumerate(langs):
             if statOn:
                 printStat(poCubic[ix])
             if warningOn:
-                printWarning(poWarningCubic[ix])
+                printWarning(lang, poWarningCubic[ix])
 
         if len(langs) > 1:
             printStat(poSumTable)
@@ -245,32 +245,35 @@ def potDupInspector(potTable, potWarningTable, potCsvTable):
         else:
             if item[4] == preItem[4]:
                 warningMsg = 'DUPLICATED MSGIDs IN DIFFERENT FILES'
-                warningRef = 'MSGID: ' + preitem[4] + ' MSGIDLOC: ' + \
+                warningRef = 'MSGID: ' + preItem[4] + ' MSGIDLOC: ' + \
                               preItem[3] + ' WITH ' + ' MSGIDLOC: ' + item[3]
                 lang = 'pot'
                 fileName = preItem[3]
                 fileName = fileName[:fileName.rfind(':')]
-                lineCount = int(preItem[preItem.rfind(':')+1:])
+                wkMsgLoc = preItem[3]
+                lineCount = int(wkMsgLoc[wkMsgLoc.rfind(':')+1:])
                 warningLine =[lang, fileName, lineCount,
                               warningMsg, warningRef]
                 potWarningTable.append(warningLine)
-                jx = [item[2] for item in potTable].index(fileName)
+                jx = [potList[2] for potList in potTable].index(fileName)
                 potTable[jx][8] = potTable[jx][8] + 1
 
                 warningRef = 'MSGID: ' + item[4] + ' MSGIDLOC: ' + \
-                             item[3] + ' WITH ' + ' MSGIDLOC: ' + preitem[3]
+                             item[3] + ' WITH ' + ' MSGIDLOC: ' + preItem[3]
                 fileName = item[3]
-                lineCount = int(item[item.rfind(':')+1:])
+                fileName = fileName[:fileName.rfind(':')]
+                wsMsgLoc = item[3]
+                lineCount = int(wkMsgLoc[wkMsgLoc.rfind(':')+1:])
                 warningLine = [lang, fileName, lineCount,
                                warningMsg, warningRef]
                 potWarningTable.append(warningLine)
-                jx = [item[2] for item in poTable].index(fileName)
+                jx = [poList[2] for poList in potTable].index(fileName)
                 potTable[jx][8] = potTable[jx][8] + 1
-                item = preItem
+                preItem = item
 
     return potTable, potWarningTable, potCsvTable
 
-def langDupInspector(langTable, langWarningTable, langCsvTable):
+def langDupInspector(langs, langTable, langWarningTable, langCsvTable):
     # detect different msgstr for samed msgId in different file
     wkTable = []
     for ixlang, fileCsvTable in enumerate(langCsvTable):
@@ -324,7 +327,7 @@ def csvWriter(lang, files, csvTable, csvDir):
         uline = u','.join(uline) + u'\n'
         fo.write(uline)
         for csvLine in csvFile:
-            ucsvLine = [unicode(item) for item in csvLine]
+            ucsvLine = ['"'+unicode(item)+'"' for item in csvLine]
             uline = u','.join(ucsvLine) + u'\n'
             fo.write(uline)
         fo.close()
@@ -333,7 +336,7 @@ def csvWriter(lang, files, csvTable, csvDir):
 
 def printGraph(langChart):
     print
-    print 'FILLED-OUT PERCENTAGE PER LANGUAGE'
+    print 'FILLED-OUT RATE PER LANGUAGE'
     print
     title = ('Nr LangC Vaca Fuzz Warn Fil% Chart ("*"=2%)')
     print title
@@ -356,7 +359,7 @@ def printGraph(langChart):
     selected = [item[0] for item in langChart if item[10] < 50]
     print 'BRONZE   (0-49%):', len(selected), ':', ',  '.join(selected)
 
-def printWarning(table):
+def printWarning(lang, table):
     ix = 0
     for line in table:
         for mx in line:
@@ -369,10 +372,10 @@ def printWarning(table):
                       ('*** ' + mx[3] + ' ***'), mx[4]
     if ix == 0:
         print
-        print 'NO WARNING FOUND'
+        print 'NO WARNING FOUND FOR', lang
     else:
         print
-        print 'TOTAL', ix, 'WARNING FOUND'
+        print 'TOTAL', ix, 'WARNING FOUND FOR', lang
 
 def reportStat(potTable, poCubic):    
 
@@ -446,7 +449,7 @@ def printStat(poTable):
         '------- ------- -------')
     print separator
     for mx in poTable:
-        print '%-15s %7d %7d %7d %7d %7d %7d %7d %7d' \
+        print '%-15s %7d %7d %7d %7d %7d %7d %7d %6d%%' \
         % (mx[2][:15],mx[3],mx[4],mx[5],mx[6],mx[7],mx[8],mx[9],mx[10])
 
 def langAnalyzer(lang, files):
@@ -481,10 +484,14 @@ def fileAnalyzer(lang, fileName):
     commentCount = 0
     defaultCount = 0
     langName = ''
-    ulangName = u'""'
-    msgDefault = u'""'
+    ulangName = u''
+    msgDefault = ''
     msgLocations = ''
-    msgComment = u''
+    msgComment = ''
+    msgId = ''
+    msgString = ''
+    msgStringSw = False
+    msgIdSw = False
     headerNames = ['Project-Id-Version',
                    'POT-Creation-Date',
                    'PO-Revision-Date',
@@ -552,11 +559,11 @@ def fileAnalyzer(lang, fileName):
                 try:
                     itemValue = itemValue.decode('utf-8')
                     if itemKey == 'Language-Name':
-                        langName = unicode('"' + itemValue + '"')
+                        langName = unicode(itemValue)
                         ulangName = langName
                 except:
                     if itemKey == 'Language-Name':
-                        langName = '"LangName utf-8 Error"'
+                        langName = 'LangName utf-8 Error"'
                         ulangName = langName
                     warningMsg = 'UNICODE DECODE ERROR'
                     warningRef = 'PO HEADER: ' + str(itemKey) + \
@@ -569,7 +576,6 @@ def fileAnalyzer(lang, fileName):
                         fileWarning.append(warningLine)
                     warningCount = warningCount + 1
                 fileHeader[itemKey] = itemValue
-            continue
 
         # PO BODY INFO COLLECTORS
 
@@ -591,7 +597,7 @@ def fileAnalyzer(lang, fileName):
             continue
 
         if line[:11] == '#. Default:':
-            msgDefault = line[12:-1]
+            msgDefault = line[13:-2]
             defaultCount = defaultCount + 1
             try:
                 msgDefault = msgDefault.decode('utf-8')
@@ -604,7 +610,7 @@ def fileAnalyzer(lang, fileName):
                 else:
                     fileWarning.append(warningLine)
                 warningCount = warningCount + 1
-                msgDefault = u'"default utf-8 Decode Error"'
+                msgDefault = u'default utf-8 Decode Error'
             continue
 
         if line[:2] == '#:':
@@ -622,13 +628,19 @@ def fileAnalyzer(lang, fileName):
         if line[:5] == 'msgid':
             serialCount = serialCount + 1
             msgCount = msgCount + 1
-            msgId = line[6:-1]
-            
+            msgId = line[7:-2]
+
+            if msgId == '':
+                msgIdSw = True
+               
+        if line[:1] == '"' and msgIdSw == True:
+                msgId = msgId[:len(msgId)-1] + line[1:-2]
+     
+        if line[:6] == 'msgstr':
             try:
                 msgId = msgId.decode('utf-8')
             except:
                 umsgId = u'"msgid utf-8 Decode Error"'
-                print 'UNICODE DECODE ERROR IN MSGID:', msgId
                 warningMsg = 'UNICODE DECODE ERROR ON MSGID'
                 warningRef = 'MSGID: ' + msgId
                 warningLine =[lang, fileName, lineCount, warningMsg, warningRef]
@@ -648,60 +660,64 @@ def fileAnalyzer(lang, fileName):
                 else:
                     fileWarning.append(warningLine)
                 warningCount = warningCount + 1
-            continue
+            msgIdSw = False
 
-        if line[:6] == 'msgstr':
-
-            if line[:9] == 'msgstr ""' and msgId == '""':
+            msgString = line[8:-2]
+            if line[:9] == 'msgstr ""' and msgId == '':
                 serialCount = serialCount - 1
-                msgComment = u''
-                umsgDefault = u'""'
-                msgLocations = u''
-                umsgId = u'""'
-                umsgString = u'""'
-        
-            if line[:7] == 'msgstr ' and msgId != '""':
-
-                if line[:9] == 'msgstr ""':
-                    vacancyCount = vacancyCount + 1
-                    msgString = line[7:-1] 
-
-                else:
-                    filledCount = filledCount + 1
-                    msgString = line[7:-1]
-
-                    try:
-                        msgString = msgString.decode('utf-8')
-                    except:
-                        warningMsg = 'UNICODE DECODE ERROR IN MSGSTR'
-                        warningRef = 'MSGSTR: ' + msgString
-                        warningLine =[lang, fileName, lineCount, 
-                                      warningMsg, warningRef]
-                        if fileWarning == [[]]:
-                            fileWarning = [warningLine]
-                        else:
-                            fileWarning.append(warningLine)
-                        warningCount = warningCount + 1
-                        msgString = '"msgstr utf-8 Decode Error"'
-                userialCount = unicode('"' + str(serialCount) + '"')
-                ulang = unicode('"' + lang + '"')
-                umsgId = unicode(msgId)
-                umsgDefault = unicode(msgDefault)
-                umsgString = unicode(msgString)
-                msgIdLoc = fileName + ':' + str(lineCount)
-                umsgIdLoc = unicode('"' + msgIdLoc + '"')
-                umsgLocation = unicode('"' + msgLocations + '"')
-                umsgComment = unicode('"' + msgComment + '"')
-                csvRec = [userialCount, ulang, ulangName, 
-                          umsgIdLoc, umsgId, umsgLocation, umsgDefault, 
-                          umsgString, umsgComment]
-                fileCSV.append(csvRec) 
-
+                msgCount = msgCount -1
                 msgComment = ''
-                msgDefault = '""'
-                msgLocations = u''
-                msgId = u'""'
-                msgString = u'""'
+                msgDefault = ''
+                msgLocations = ''
+                msgId = ''
+                msgString = ''
+                msgStringSw = False
+
+            if msgId != '':
+                msgStringSw = True
+
+        if line[:1] == '"' and msgStringSw == True:
+                msgString = msgString[:len(msgString)-1] + line[1:-2]
+                    
+        if len(line) == 1 and msgId != '':
+            if msgString == '':
+                vacancyCount = vacancyCount + 1
+            else:
+                filledCount = filledCount + 1
+        
+            try:
+                msgString = msgString.decode('utf-8')
+            except:
+                warningMsg = 'UNICODE DECODE ERROR IN MSGSTR'
+                warningRef = 'MSGSTR: ' + msgString
+                warningLine =[lang, fileName, lineCount, 
+                              warningMsg, warningRef]
+                if fileWarning == [[]]:
+                    fileWarning = [warningLine]
+                else:
+                    fileWarning.append(warningLine)
+                warningCount = warningCount + 1
+                msgString = 'msgstr utf-8 Decode Error'
+            userialCount = unicode(str(serialCount))
+            ulang = unicode(lang)
+            umsgId = unicode(msgId)
+            umsgDefault = unicode(msgDefault)
+            umsgString = unicode(msgString)
+            msgIdLoc = fileName + ':' + str(lineCount)
+            umsgIdLoc = unicode(msgIdLoc)
+            umsgLocation = unicode(msgLocations)
+            umsgComment = unicode(msgComment)
+            csvRec = [userialCount, ulang, ulangName, 
+                      umsgIdLoc, umsgId, umsgLocation, umsgDefault, 
+                      umsgString, umsgComment]
+            fileCSV.append(csvRec) 
+
+            msgComment = ''
+            msgDefault = ''
+            msgLocations = ''
+            msgId = ''
+            msgString = ''
+            msgStringSw = False
 
     fileStatLine = [lang, langName, fileName,
                     lineCount, msgCount, filledCount, vacancyCount, fuzzyCount, 
