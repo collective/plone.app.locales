@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 #  poBuddy utility program   $ ./pobuddy -h  for help, tested on OS-X 10.6.
-#  Created by Takeshi Yamamoto (retsu)  tyam@mac.com   2009/December/27
+#  Created by Takeshi Yamamoto (retsu)  tyam AT mac.com   2009/December/27
 #  License: ZPL 2.1 (Zope Public License 2.1)
 
 import sys
@@ -19,7 +19,7 @@ def main():
     # parse command line options
     parser = OptionParser()
     usage = "usage: %prog [options] *arg"
-    version = "%prog 1.0.1"
+    version = "%prog 1.0.2"
     description = "This will generate serveral reports and CSV files from various PO files.  You can specify language codes as arguments.  To get all available feature, '$ ./pobuddy.py -av all' is the easiest way.  Note thiw will create more than 900 CSV files under ./pobuddyCSV directory.  The 'headers.csv' file has valuable information, too.  Example for local translator, eg. Japanese: '$ ./pobuddy.py -swf ja'  For i18n manager: '$ ./pobuddy.py -av all'  For code developers to get POT CSV file to consider consolidating messages: '$ ./pobuddy.py -swf pot'"
     parser = OptionParser(usage=usage, version=version, description=description)
     parser.add_option("-s", "--status", action="store_true",
@@ -43,7 +43,8 @@ def main():
     parser.add_option("-d", "--directory", action="store",
                       type="string", dest="csvDir", default="./pobuddyCSV",
                       metavar="DIRECTORY",
-                      help="specify DIRECTORY for CSV files to be saved. Default is ./pobuddyCSV")
+                      help="specify DIRECTORY for CSV files to be saved." + 
+                           " Default is ./pobuddyCSV")
 
     (options, args) = parser.parse_args()
 
@@ -86,9 +87,9 @@ def main():
                 return
 
     # set scope of translation files for input
-    i18nFiles = ['plone', 'atcontenttypes', 'linguaplone',
+    i18nFiles = ['plone', 'atcontenttypes', 
                  'atreferencebrowserwidget', 'passwordresettool',
-                 'cmfeditions', 'cmfplacefulworkflow',
+                 'cmfeditions', 'cmfplacefulworkflow', 'linguaplone', 
                  'kupu/kupu', 'kupu/kupuconfig', 'kupu/kupupox']
     localesFiles = ['plonefrontpage', 'plonelocales']
 
@@ -153,6 +154,8 @@ def main():
         for poLine in poTable:
             if poLine[2] == u'TOTAL':
                 langChart.append(poLine)
+    langChart = sorted(langChart, key=operator.itemgetter(8),reverse=True)
+    langChart = sorted(langChart, key=operator.itemgetter(9),reverse=True)
     langChart = sorted(langChart, key=operator.itemgetter(10)) 
     langChart.reverse()
 
@@ -223,7 +226,7 @@ def main():
         if len(langs) > 1:
             printStat(poSumTable)
             if graphOn:
-                printGraph(langChart)
+                printGraph(langChart, poWarningCubic, files)
     print 
     if verbose:
         endTime = datetime.datetime.now()
@@ -334,7 +337,7 @@ def csvWriter(lang, files, csvTable, csvDir):
     if verbose:
         print 'CSV FILES WRITTEN FOR:', lang
 
-def printGraph(langChart):
+def printGraph(langChart, poWarningCubic, files):
     print
     print 'FILLED-OUT RATE PER LANGUAGE'
     print
@@ -348,16 +351,35 @@ def printGraph(langChart):
         bar = '*' * (mx[10] / 2)
         print '%2d %-5s %4d %4d %4d %3d%% %-50s' \
         % (i+1, mx[0][:5], mx[7], mx[8], mx[9], mx[10], bar)
+
     print
     selected = [item[0] for item in langChart if item[10] >= 80]
     print 'GOLDEN (80-100%):', len(selected), ':', ', '.join(selected)
+
     print
     selected = [item[0] for item in langChart \
                               if item[10] >= 50 and item[10] < 80]
     print 'SILVER  (50-79%):', len(selected), ':', ', '.join(selected)
+
     print
     selected = [item[0] for item in langChart if item[10] < 50]
     print 'BRONZE   (0-49%):', len(selected), ':', ',  '.join(selected)
+
+    print
+    print 'PO FILE NOT FOUND FOR:' 
+    for file in files:
+        selectedCount = 0
+        selected = []
+        for poWarningTable in poWarningCubic:
+            for poWarningLine in poWarningTable:
+                for item in poWarningLine:
+                    if item[1] == file and item[3] == 'FILE NOT FOUND':
+                        selected.append(item[0])
+                        selectedCount = selectedCount + 1
+        if selectedCount > 0:
+            print
+            print file, ':', len(selected), ':', \
+                                  ', '.join(selected)
 
 def printWarning(lang, table):
     ix = 0
