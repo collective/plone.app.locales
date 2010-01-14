@@ -19,7 +19,7 @@ def main():
     # parse command line options
     parser = OptionParser()
     usage = "usage: %prog [options] *arg"
-    version = "%prog 1.0.2"
+    version = "%prog 1.0.3"
     description = "This will generate serveral reports and CSV files from various PO files.  You can specify language codes as arguments.  To get all available feature, '$ ./pobuddy.py -av all' is the easiest way.  Note thiw will create more than 900 CSV files under ./pobuddyCSV directory.  The 'headers.csv' file has valuable information, too.  Example for local translator, eg. Japanese: '$ ./pobuddy.py -swf ja'  For i18n manager: '$ ./pobuddy.py -av all'  For code developers to get POT CSV file to consider consolidating messages: '$ ./pobuddy.py -swf pot'"
     parser = OptionParser(usage=usage, version=version, description=description)
     parser.add_option("-s", "--status", action="store_true",
@@ -210,7 +210,7 @@ def main():
         if verbose:
             print 'HEADER CSV FILE WRITTEN:', outFile
 
-    if len(langs) == 0 or 'all' in langs  or 'pot' in args or 'en' in args:
+    if len(langs) == 0 or 'all' in args  or 'pot' in args or 'en' in args:
         if statOn:
             printPotStat(potTable)
         if warningOn:
@@ -366,7 +366,7 @@ def printGraph(langChart, poWarningCubic, files):
     print 'BRONZE   (0-49%):', len(selected), ':', ',  '.join(selected)
 
     print
-    print 'PO FILE NOT FOUND FOR:' 
+    print 'PO FILE NOT FOUND:'
     for file in files:
         selectedCount = 0
         selected = []
@@ -377,7 +377,21 @@ def printGraph(langChart, poWarningCubic, files):
                         selected.append(item[0])
                         selectedCount = selectedCount + 1
         if selectedCount > 0:
-            print
+            print file, ':', len(selected), ':', \
+                                  ', '.join(selected)
+    print
+    print 'UNICODE DECODE ERROR:'
+    for file in files:
+        selectedCount = 0
+        selected = []
+        for poWarningTable in poWarningCubic:
+            for poWarningLine in poWarningTable:
+                for item in poWarningLine:
+                    if item[1] == file and item[3] == 'UNICODE DECODE ERROR':
+                        selected.append(item[0])
+                        selectedCount = selectedCount + 1
+        selected = sorted(set(selected), key=selected.index)
+        if selectedCount > 0:
             print file, ':', len(selected), ':', \
                                   ', '.join(selected)
 
@@ -514,6 +528,7 @@ def fileAnalyzer(lang, fileName):
     msgString = ''
     msgStringSw = False
     msgIdSw = False
+    msgDefaultSw = False
     headerNames = ['Project-Id-Version',
                    'POT-Creation-Date',
                    'PO-Revision-Date',
@@ -555,7 +570,7 @@ def fileAnalyzer(lang, fileName):
     except IOError as error:
         fileStatLine = [lang, 'FILE NOT FOUND:', fileName, 0, 0, 0, 0, 0, 1]
         warningMsg = 'FILE NOT FOUND'
-        warningRef = 'FILE NAME: ' + fileName
+        warningRef = inFile
         warningLine = [lang, fileName, 0 , warningMsg, warningRef]
         if fileWarning == [[]]:
             fileWarning = [warningLine]
@@ -583,13 +598,17 @@ def fileAnalyzer(lang, fileName):
                     if itemKey == 'Language-Name':
                         langName = unicode(itemValue)
                         ulangName = langName
-                except:
+                except Exception, em:
                     if itemKey == 'Language-Name':
                         langName = 'LangName utf-8 Error"'
                         ulangName = langName
                     warningMsg = 'UNICODE DECODE ERROR'
-                    warningRef = 'PO HEADER: ' + str(itemKey) + \
-                                 ':' + str(itemValue)
+                    warningRef = 'PO HEADER: ' + line[:-1] + \
+                                 ', EXCEPTION: \'' + em.args[0] + '\'' + \
+                                 ' codec can\'t decode byte ' + em.args[1] + \
+                                 ' in position ' + \
+                                  str(em.args[2]) + '-' + str(em.args[3]) + \
+                                 ': ' + em.args[4]
                     warningLine = [lang, fileName, lineCount, warningMsg,
                                    warningRef]
                     if fileWarning == [[]]:
@@ -602,45 +621,88 @@ def fileAnalyzer(lang, fileName):
         # PO BODY INFO COLLECTORS
 
         if line[:2] == '# ':
-            msgComment = line[2:]
-            commentCount = commentCount + 1
+            wkLine = line[2:]
             try:
-                msgComment = msgComment.decode('utf-8')
-            except:
-                warningMsg = 'UNICODE DECODE ERROR ON COMMENT'
-                warningRef = 'COMMENT: ' + msgComment
-                warningLine =[lang, fileName, lineCount, warningMsg, warningRef]
+                wkLine = wkLine.decode('utf-8')
+            except Exception, em:
+                warningMsg = 'UNICODE DECODE ERROR'
+                warningRef = line[:-1] + \
+                             ', EXCEPTION: \'' + em.args[0] + '\'' + \
+                             ' codec can\'t decode byte ' + em.args[1] + \
+                             ' in position ' + \
+                              str(em.args[2]) + '-' + str(em.args[3]) + \
+                             ': ' + em.args[4]
+                warningLine =[lang, fileName, lineCount, \
+                              warningMsg, warningRef]
                 if fileWarning == [[]]:
                     fileWarning = [warningLine]
                 else:
                     fileWarning.append(warningLine)
                 warningCount = warningCount + 1
-                msgComment = u'comment utf-8 Decode Error'
+                wkLine = u'***UTF-8 DECODE ERROR***'
+            if msgComment == '':
+                msgComment = wkLine
+                commentCount = commentCount + 1
+            else:
+                msgComment = msgComment + '\n' + wkLine
             continue
 
         if line[:11] == '#. Default:':
-            msgDefault = line[13:-2]
+            wkLine = line[13:-2]
             defaultCount = defaultCount + 1
+
+            if wkLine == '':
+                msgDefaultSw = True
+            else:
+                try:
+                     wkLine = wkLine.decode('utf-8')
+                except Exception, em:
+                    warningMsg = 'UNICODE DECODE ERROR'
+                    warningRef = line[:-1] + \
+                                 ', EXCEPTION: \'' + em.args[0] + '\'' + \
+                                 ' codec can\'t decode byte ' + em.args[1] + \
+                                 ' in position ' + \
+                                  str(em.args[2]) + '-' + str(em.args[3]) + \
+                                 ': ' + em.args[4]
+                    warningLine =[lang, fileName, lineCount, \
+                                  warningMsg, warningRef]
+                    if fileWarning == [[]]:
+                        fileWarning = [warningLine]
+                    else:
+                        fileWarning.append(warningLine)
+                    warningCount = warningCount + 1
+                    wkLine = '***UTF-8 DECODE ERROR***'
+            msgDefault = wkLine
+            continue
+
+        if line[:4] == '#. "' and msgDefaultSw == True:
+            wkLine = line[4:-2]
             try:
-                msgDefault = msgDefault.decode('utf-8')
-            except:
-                warningMsg = 'UNICODE DECODE ERROR ON DEFAULT'
-                warningRef = 'DEFAULT: ' + msgDefault
-                warningLine =[lang, fileName, lineCount, warningMsg, warningRef]
+                wkLine = wkLine.decode('utf-8')
+            except Exception, em:
+                warningMsg = 'UNICODE DECODE ERROR'
+                warningRef = line[:-1] + \
+                             ', EXCEPTION: \'' + em.args[0] + '\'' + \
+                             ' codec can\'t decode byte ' + em.args[1] + \
+                             ' in position ' + \
+                              str(em.args[2]) + '-' + str(em.args[3]) + \
+                             ': ' + em.args[4]
+                warningLine =[lang, fileName, lineCount, 
+                              warningMsg, warningRef]
                 if fileWarning == [[]]:
                     fileWarning = [warningLine]
                 else:
                     fileWarning.append(warningLine)
                 warningCount = warningCount + 1
-                msgDefault = u'default utf-8 Decode Error'
-            continue
+                wkLine = '***UTF-8 DECODE ERROR***'
+            msgDefault = msgDefault + wkLine
 
         if line[:2] == '#:':
-            msgLocation = line[3:-1]
+            msgDefaultSw = False
             if msgLocations == u'':
-                msgLocations = msgLocation
+                msgLocations = line[3:-1]
             else:
-                msgLocations = msgLocations + '\n' + msgLocation
+                msgLocations = msgLocations + '\n' + line[3:-1]
             continue
 
         if line[:8] == '#, fuzzy':
@@ -648,40 +710,48 @@ def fileAnalyzer(lang, fileName):
             continue
 
         if line[:5] == 'msgid':
+            msgDefaultSw = False
+            msgCommentSw = False
             serialCount = serialCount + 1
             msgCount = msgCount + 1
+            msgIdLocCount = lineCount
             msgId = line[7:-2]
 
             if msgId == '':
                 msgIdSw = True
                
-        if line[:1] == '"' and msgIdSw == True:
-                msgId = msgId[:len(msgId)-1] + line[1:-2]
-     
+            else:
+                try:
+                    msgId = msgId.decode('utf-8')
+                except Exception, em:
+                    warningMsg = 'UNICODE DECODE ERROR'
+                    warningRef = line[:-1] + \
+                                 ', EXCEPTION: \'' + em.args[0] + '\'' + \
+                                 ' codec can\'t decode byte ' + em.args[1] + \
+                                 ' in position ' + \
+                                  str(em.args[2]) + '-' + str(em.args[3]) + \
+                                 ': ' + em.args[4]
+                    warningLine =[lang, fileName, lineCount, 
+                                  warningMsg, warningRef]
+                    if fileWarning == [[]]:
+                        fileWarning = [warningLine]
+                    else:
+                        fileWarning.append(warningLine)
+                    warningCount = warningCount + 1
+                    msgId = u'***UTF-8 DECODE ERROR***'
+                if lang == 'pot' and len(msgId) > 100:
+                    warningMsg = 'MSGID IS LONGER THAN 100 CHARACTERS'
+                    warningRef = 'MSGID: ' + msgId
+                    warningRef = warningRef + '\n' + 'MSGLOC: ' + msgLocations
+                    warningLine =[lang, fileName, lineCount, 
+                                  warningMsg, warningRef]
+                    if fileWarning == [[]]:
+                        fileWarning = [warningLine]
+                    else:
+                        fileWarning.append(warningLine)
+                    warningCount = warningCount + 1
+
         if line[:6] == 'msgstr':
-            try:
-                msgId = msgId.decode('utf-8')
-            except:
-                umsgId = u'"msgid utf-8 Decode Error"'
-                warningMsg = 'UNICODE DECODE ERROR ON MSGID'
-                warningRef = 'MSGID: ' + msgId
-                warningLine =[lang, fileName, lineCount, warningMsg, warningRef]
-                if fileWarning == [[]]:
-                    fileWarning = [warningLine]
-                else:
-                    fileWarning.append(warningLine)
-                warningCount = warningCount + 1
-                msgId = u'"msgId utf-8 Decode Error"'
-            if lang == 'pot' and len(msgId) > 100:
-                warningMsg = 'MSGID IS LONGER THAN 100 CHARACTERS'
-                warningRef = 'MSGID: ' + msgId
-                warningRef = warningRef + '\n' + 'MSGLOC: ' + msgLocation
-                warningLine =[lang, fileName, lineCount, warningMsg, warningRef]
-                if fileWarning == [[]]:
-                    fileWarning = [warningLine]
-                else:
-                    fileWarning.append(warningLine)
-                warningCount = warningCount + 1
             msgIdSw = False
 
             msgString = line[8:-2]
@@ -695,23 +765,44 @@ def fileAnalyzer(lang, fileName):
                 msgString = ''
                 msgStringSw = False
 
-            if msgId != '':
+            if line[:9] == 'msgstr ""' and msgId != '':
+                msgString = u''
                 msgStringSw = True
 
-        if line[:1] == '"' and msgStringSw == True:
-                msgString = msgString[:len(msgString)-1] + line[1:-2]
-                    
-        if len(line) == 1 and msgId != '':
-            if msgString == '':
-                vacancyCount = vacancyCount + 1
-            else:
-                filledCount = filledCount + 1
-        
+            if line[:9] != 'msgstr ""' and msgId != '':
+                msgStringSw = False
+                wkLine = line[8:-2]
+                try:
+                    msgString = wkLine.decode('utf-8')
+                except Exception, em:
+                    warningMsg = 'UNICODE DECODE ERROR'
+                    warningRef = line[:-1] + \
+                                 ', EXCEPTION: \'' + em.args[0] + '\'' + \
+                                 ' codec can\'t decode byte ' + em.args[1] + \
+                                 ' in position ' + \
+                                  str(em.args[2]) + '-' + str(em.args[3]) + \
+                                 ': ' + em.args[4]
+                    warningLine =[lang, fileName, lineCount, 
+                                  warningMsg, warningRef]
+                    if fileWarning == [[]]:
+                        fileWarning = [warningLine]
+                    else:
+                        fileWarning.append(warningLine)
+                    warningCount = warningCount + 1
+                    msgString = '***UTF-8 DECODE ERROR***'
+
+        if line[:1] == '"':
+            wkLine = line[1:-2]
             try:
-                msgString = msgString.decode('utf-8')
-            except:
-                warningMsg = 'UNICODE DECODE ERROR IN MSGSTR'
-                warningRef = 'MSGSTR: ' + msgString
+                wkLine = wkLine.decode('utf-8')
+            except Exception, em:
+                warningMsg = 'UNICODE DECODE ERROR'
+                warningRef = line[:-1] + \
+                             ', EXCEPTION: \'' + em.args[0] + '\'' + \
+                             ' codec can\'t decode byte ' + em.args[1] + \
+                             ' in position ' + \
+                              str(em.args[2]) + '-' + str(em.args[3]) + \
+                             ': ' + em.args[4]
                 warningLine =[lang, fileName, lineCount, 
                               warningMsg, warningRef]
                 if fileWarning == [[]]:
@@ -719,13 +810,24 @@ def fileAnalyzer(lang, fileName):
                 else:
                     fileWarning.append(warningLine)
                 warningCount = warningCount + 1
-                msgString = 'msgstr utf-8 Decode Error'
+                wkLine = '***UTF-8 DECODE ERROR***'
+            if msgStringSw == True:
+                msgString = msgString + wkLine
+            if msgIdSw == True:
+                msgId = msgId + wkLine
+                    
+        if len(line) == 1 and msgId != '':
+            if msgString == '':
+                vacancyCount = vacancyCount + 1
+            else:
+                filledCount = filledCount + 1
+        
             userialCount = unicode(str(serialCount))
             ulang = unicode(lang)
             umsgId = unicode(msgId)
             umsgDefault = unicode(msgDefault)
             umsgString = unicode(msgString)
-            msgIdLoc = fileName + ':' + str(lineCount)
+            msgIdLoc = fileName + ':' + str(msgIdLocCount)
             umsgIdLoc = unicode(msgIdLoc)
             umsgLocation = unicode(msgLocations)
             umsgComment = unicode(msgComment)
@@ -740,6 +842,8 @@ def fileAnalyzer(lang, fileName):
             msgId = ''
             msgString = ''
             msgStringSw = False
+            msgIdSw = False
+            msgDefaultSw = False
 
     fileStatLine = [lang, langName, fileName,
                     lineCount, msgCount, filledCount, vacancyCount, fuzzyCount, 
