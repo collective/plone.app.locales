@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-01-15 20:11+0000\n"
+"POT-Creation-Date: 2010-02-01 18:29+0000\n"
 "PO-Revision-Date: 2009-12-26 20:47+0800\n"
 "Last-Translator: adam <yuejun.tang@gmail.com>\n"
 "Language-Team: 315ok.org <yuejun.tang@gmail.com>\n"
@@ -100,6 +100,10 @@ msgstr "${title} 不可移动。"
 #: CMFPlone/skins/plone_scripts/createObject.cpy:44
 msgid "${tname} has been created."
 msgstr "${tname}已经创建。"
+
+#: plone.app.vocabularies/plone/app/vocabularies/skins.py:59
+msgid "(Unstyled)"
+msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -678,7 +682,7 @@ msgid "Changes Saved. Versioning for this file has been disabled because it is t
 msgstr "更改已保存。由于文件太大，针对此文件的版本控制已取消。"
 
 #: CMFPlone/skins/plone_deprecated/prefs_user_manage.cpy:49
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:127
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:266
 msgid "Changes applied."
 msgstr "更改已经生效。"
 
@@ -687,9 +691,9 @@ msgstr "更改已经生效。"
 msgid "Changes canceled."
 msgstr "更改被取消。"
 
+#: CMFPlone/skins/plone_deprecated/prefs_group_members_add.cpy:20
 #: CMFPlone/skins/plone_form_scripts/file_edit.cpy:49
 #: CMFPlone/skins/plone_form_scripts/setConstrainTypes.cpy:40
-#: CMFPlone/skins/plone_prefs/prefs_error_log_setProperties.py:16
 msgid "Changes made."
 msgstr "更改成功。"
 
@@ -981,11 +985,11 @@ msgstr "确定外部编辑器功能是否被开启。这个功能需要安装客
 msgid "Determines if the users should get warnings when they delete or move content that is linked from inside the site."
 msgstr "确定当用户在站点中删除或移动内容提示警告。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:25
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:31
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of groups it can be very slow or impossible to build a list all groups. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for groups instead of listing all of them."
 msgstr "确定您的站点是大型或小型站点。当拥有大量用户组它可能变得慢或不可能建立一个全部组列表。这个选项调整用户在Plone中的界面和喜好，它允许您搜索组而不是列出所有组清单。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:35
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:41
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of users it can be very slow or impossible to build a list all users. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for users instead of listing all of them."
 msgstr "确定您的站点是大型或小型站点。当拥有大量用户它可能变得慢或不可能建立一个全部用户的列表。这个选项调整用户在Plone中的界面和喜好，它允许您搜索用户而不是列出所有用户清单。"
 
@@ -1138,7 +1142,7 @@ msgstr "编辑一个现有的规则"
 msgid "Edit with external application"
 msgstr "使用外部应用程序编辑"
 
-#: ./plone.app.layout/plone/app/layout/viewlets/content_history.pt
+#: plone.app.layout/plone/app/layout/viewlets/content.py:228
 msgid "Edited"
 msgstr "已编辑"
 
@@ -1195,6 +1199,10 @@ msgstr "开启链接检查"
 #: plone.app.controlpanel/plone/app/controlpanel/site.py:97
 msgid "Enable locking for through-the-web edits"
 msgstr "WEB编辑方式启用锁定"
+
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:50
+msgid "Enable nested groups?"
+msgstr ""
 
 #: plone.app.controlpanel/plone/app/controlpanel/security.py:28
 msgid "Enable self-registration"
@@ -1401,7 +1409,7 @@ msgstr "组名"
 msgid "Group name required."
 msgstr ""
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:196
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:379
 msgid "Group(s) deleted."
 msgstr "组已经删除。"
 
@@ -1855,11 +1863,11 @@ msgstr "管理成员"
 msgid "Manager"
 msgstr "管理者"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:24
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:30
 msgid "Many groups?"
 msgstr "很多组？"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:34
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:40
 msgid "Many users?"
 msgstr "很多用户？"
 
@@ -2042,17 +2050,13 @@ msgstr "新闻的更改已经保存。"
 msgid "No"
 msgstr "否"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:187
-msgid "No changes done."
-msgstr "没有进行更改。"
-
 #: CMFPlone/skins/plone_prefs/prefs_group_edit.py:15
 #: plone.app.controlpanel/plone/app/controlpanel/form.py:43
 #: plone.app.controlpanel/plone/app/controlpanel/ram.py:103
 msgid "No changes made."
 msgstr "没有更改"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:135
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:274
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr ""
 
@@ -3491,6 +3495,10 @@ msgstr "类型"
 msgid "URL of RSS feed"
 msgstr "RSS聚合地址"
 
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:81
+msgid "Unable to activate PAS plugin "recursive_groups"."
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:72
 msgid "Unable to change state of ${name} as part of content rule 'workflow' action: ${error}"
 msgstr "作为内容规则'workflow'动作的一部分，不能改变${name}的状态，错误：${error}"
@@ -3574,11 +3582,11 @@ msgstr ""
 msgid "User added."
 msgstr "用户已经添加。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:67
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:101
 msgid "User and groups settings for this site."
 msgstr "站点的用户和组设置"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:66
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:100
 msgid "User/Groups settings"
 msgstr "用户/组设置"
 
@@ -3698,6 +3706,10 @@ msgstr "警告"
 #: CMFPlone/skins/plone_login/login_next.cpy:51
 msgid "Welcome! You are now logged in."
 msgstr "欢迎！您已经登录。"
+
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:51
+msgid "When enabled, groups may be nested (contained) inside other groups. Roles directly assigned to a group will propagate to any nested groups."
+msgstr ""
 
 #. Default: "When the previous transition was performed"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
@@ -3980,7 +3992,7 @@ msgstr "语言"
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_forms/search.pt:181
-#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:33
 msgid "box_last_modified"
 msgstr "上次修改时间:"
 
@@ -4076,17 +4088,17 @@ msgid "constraintypes_mode_acquire"
 msgstr "使用父文件夹的设置"
 
 #. Default: "Attendees"
-#: CMFPlone/skins/plone_content/event_view.pt:143
+#: CMFPlone/skins/plone_content/event_view.pt:124
 msgid "contact_attendees"
 msgstr "参与人员"
 
 #. Default: "Contact Name"
-#: CMFPlone/skins/plone_content/event_view.pt:123
+#: CMFPlone/skins/plone_content/event_view.pt:104
 msgid "contact_name"
 msgstr "名字"
 
 #. Default: "Contact Phone"
-#: CMFPlone/skins/plone_content/event_view.pt:135
+#: CMFPlone/skins/plone_content/event_view.pt:116
 msgid "contact_phone"
 msgstr "联系电话"
 
@@ -4154,7 +4166,8 @@ msgid "date_separator"
 msgstr "-"
 
 #. Default: "There is no group or user attached to this group."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:194
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:194
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:173
 msgid "decription_no_members_assigned"
 msgstr "没有用户或组属于这个组"
 
@@ -4229,8 +4242,8 @@ msgid "description_advanced_search"
 msgstr "在此搜索页面上，您可以指定一个或多个搜索条件，在站点上找到您需要的内容。<br />注意，您随时可使用“快速搜索”（右上方），通常它可以满足您的需要。如果您需要更特特殊的搜索，才使用本页面。"
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: CMFPlone/skins/plone_content/author.cpt:168
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:169
+#: CMFPlone/skins/plone_content/author.cpt:181
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:181
 msgid "description_author_feedback"
 msgstr "通过填写下面的表格，你可把您的反馈意见发送给作者."
 
@@ -4310,7 +4323,7 @@ msgid "description_control_panel"
 msgstr "Plone和附加产品的配置区域。"
 
 #. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:18
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:15
 msgid "description_copyright"
 msgstr "${plonecms} 的版权${copyright} 2000- ${current_year} 由 ${plonefoundation} 等所有。"
 
@@ -4362,7 +4375,8 @@ msgid "description_full_error_link"
 msgstr "查看完整的错误消息"
 
 #. Default: "You can add or remove groups and users from this particular group here. Note that this doesn't actually delete the group or user, it is only removed from this group."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:106
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:106
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:92
 msgid "description_group_members_of"
 msgstr "在这里，您能够从这个组中添加或者删除组和用户。注意, 并不是真正的删除了组或者用户，而仅仅是从这个组中删除。"
 
@@ -4373,7 +4387,7 @@ msgstr "注意，组面板通常在上下文面板下方显示。"
 
 #. Default: "Groups are logical collections of users, such as departments and business units. Groups are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:76
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:77
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:82
 msgid "description_groups_management"
 msgstr "组是用户的逻辑集合，如部门和商务小组。他们不直接和某个权限关联，您应该用角色分配权限，然后让组拥有某个角色。"
 
@@ -4393,7 +4407,7 @@ msgid "description_language_settings"
 msgstr "语言设置"
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:30
 msgid "description_license"
 msgstr "使用 ${license} 发布。"
 
@@ -4471,7 +4485,7 @@ msgstr "这个对象不提供比较功能。"
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:188
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:178
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:180
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:161
 msgid "description_no_items_in_folder"
 msgstr "这个文件夹中，当前没有任何内容。"
@@ -4506,7 +4520,7 @@ msgstr "如果您的用户名和密码正确，这可能是您的浏览器设定
 
 #. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:85
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:86
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:87
 msgid "description_pas_group_listing"
 msgstr "注意：部分或者全部PAS用户组源插件不允许罗列用户组，因此，除非进行搜索，你可能不能查看到这些插件中定义的组。"
 
@@ -4675,7 +4689,7 @@ msgid "description_syndication_properties"
 msgstr "聚合功能允许您通过RSS发布这个文件夹的内容，可被其他的网站同步获取。"
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:27
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_trademark"
 msgstr "Plone<sup>&reg;</sup>和Plone标识是 ${plonefoundation} 的注册商标。"
 
@@ -4745,10 +4759,6 @@ msgstr "您已经注册为网站成员了。"
 msgid "description_you_can_log_on_now"
 msgstr "点击按钮，可立即登录。"
 
-#: plone.app.layout/plone/app/layout/viewlets/content.py:207
-msgid "edit"
-msgstr "编辑"
-
 # E-Mail group property
 # E-Mail group property
 #. Default: "E-Mail"
@@ -4784,32 +4794,32 @@ msgid "event_and"
 msgstr "到"
 
 #. Default: "from"
-#: CMFPlone/skins/plone_content/event_view.pt:83
+#: CMFPlone/skins/plone_content/event_view.pt:63
 msgid "event_from"
 msgstr "起始时间"
 
 #. Default: "More information about this event…"
-#: CMFPlone/skins/plone_content/event_view.pt:177
+#: CMFPlone/skins/plone_content/event_view.pt:157
 msgid "event_more_information"
 msgstr "关于此事件的更多信息..."
 
 #. Default: "to"
-#: CMFPlone/skins/plone_content/event_view.pt:66
+#: CMFPlone/skins/plone_content/event_view.pt:46
 msgid "event_to"
 msgstr "结束时间"
 
 #. Default: "What"
-#: CMFPlone/skins/plone_content/event_view.pt:44
+#: CMFPlone/skins/plone_content/event_view.pt:24
 msgid "event_what"
 msgstr "主要内容"
 
 #. Default: "When"
-#: CMFPlone/skins/plone_content/event_view.pt:52
+#: CMFPlone/skins/plone_content/event_view.pt:32
 msgid "event_when"
 msgstr "时间"
 
 #. Default: "Where"
-#: CMFPlone/skins/plone_content/event_view.pt:113
+#: CMFPlone/skins/plone_content/event_view.pt:93
 msgid "event_where"
 msgstr "地点"
 
@@ -4845,8 +4855,8 @@ msgid "go_to_parent_url"
 msgstr "到上一层"
 
 #. Default: "All content created by ${user}…"
-#: CMFPlone/skins/plone_content/author.cpt:276
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:278
+#: CMFPlone/skins/plone_content/author.cpt:289
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:290
 msgid "go_to_search_author_content"
 msgstr "查看所有由 ${user} 创建的内容..."
 
@@ -4881,7 +4891,7 @@ msgid "heading_add_new_item"
 msgstr "添加新内容"
 
 #. Default: "Add event to calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:151
+#: CMFPlone/skins/plone_content/event_view.pt:132
 msgid "heading_add_to_calendar"
 msgstr "把事件添加到日历"
 
@@ -4901,13 +4911,14 @@ msgid "heading_allowed_languages"
 msgstr "允许的语言"
 
 #. Default: "Assign to groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:75
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:75
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:123
 msgid "heading_assign_to_groups"
 msgstr ""
 
 #. Default: "Latest content created by this user"
-#: CMFPlone/skins/plone_content/author.cpt:247
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:249
+#: CMFPlone/skins/plone_content/author.cpt:260
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:261
 msgid "heading_author_content"
 msgstr "此用户最近创建的内容"
 
@@ -5007,28 +5018,32 @@ msgid "heading_full_review_list"
 msgstr "全部的审核清单："
 
 #. Default: "Group Members"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:77
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:77
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:63
 msgid "heading_group_members"
 msgstr "组成员"
 
 #. Default: "Members of the ${groupname} group"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:96
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:96
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:82
 msgid "heading_group_members_of"
 msgstr "“${groupname}”组的成员"
 
 #. Default: "Group Memberships for ${userid}"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:62
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:62
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:67
 msgid "heading_group_memberships_for"
 msgstr "“${userid}”的组员"
 
 #. Default: "Current group members"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:122
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:122
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:103
 msgid "heading_groupmembers_current"
 msgstr "当前的组成员"
 
 #. Default: "Groups Overview"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:66
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:67
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:65
 msgid "heading_groups_overview"
 msgstr "组管理"
 
@@ -5068,7 +5083,8 @@ msgid "heading_member_search"
 msgstr "查找网站成员"
 
 #. Default: "Current Group Memberships"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:99
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:99
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:82
 msgid "heading_memberships_current"
 msgstr "当前的组员关系"
 
@@ -5119,8 +5135,9 @@ msgstr "个人工具"
 msgid "heading_portlets_assigned_here"
 msgstr "在这里配置面板"
 
-#. Default: "User Properties for ${username}"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:59
+#. Default: "User Properties for ${DYNAMIC_CONTENT} (${username})"
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:60
+#, fuzzy
 msgid "heading_prefs_user_details"
 msgstr "${username}的用户属性"
 
@@ -5173,12 +5190,14 @@ msgid "heading_returned_results"
 msgstr "返回结果"
 
 #. Default: "Search for groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:74
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:74
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:122
 msgid "heading_search_groups"
 msgstr "组搜索"
 
 #. Default: "Search for new group members"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:203
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:203
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:182
 msgid "heading_search_newmembers"
 msgstr "搜索新组员"
 
@@ -5927,7 +5946,7 @@ msgid "hide"
 msgstr "隐藏"
 
 #. Default: "${action} by ${actor} on ${time}"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:42
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:41
 msgid "history_action"
 msgstr "由${actor} 在 ${time} ${action}"
 
@@ -6019,7 +6038,7 @@ msgstr "添加评注"
 
 #. Default: "Add New Group"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:100
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:101
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:102
 msgid "label_add_new_group"
 msgstr "添加新组"
 
@@ -6051,12 +6070,12 @@ msgid "label_add_to_groups"
 msgstr ""
 
 #. Default: "iCal"
-#: CMFPlone/skins/plone_content/event_view.pt:164
+#: CMFPlone/skins/plone_content/event_view.pt:145
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
-#: CMFPlone/skins/plone_content/event_view.pt:158
+#: CMFPlone/skins/plone_content/event_view.pt:139
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -6067,12 +6086,14 @@ msgid "label_add_type"
 msgstr "添加${type}"
 
 #. Default: "Add user to selected groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:83
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:83
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:195
 msgid "label_add_user_to_group"
 msgstr "将用户添加到选中的组"
 
 #. Default: "Add selected groups and users to this group"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:310
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:310
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:299
 msgid "label_add_users_to_group"
 msgstr "将选中的用户和组添加到这个组"
 
@@ -6084,7 +6105,7 @@ msgstr "高级"
 
 #. Default: "Advanced Search…"
 #: CMFPlone/skins/plone_scripts/livesearch_reply.py:85
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:48
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:50
 #: plone.app.portlets/plone/app/portlets/portlets/search.pt:43
 msgid "label_advanced_search"
 msgstr "高级搜索"
@@ -6138,7 +6159,7 @@ msgstr "匿名用户"
 #. Default: "Anonymous User"
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:48
 #: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
-#: plone.app.layout/plone/app/layout/viewlets/content.py:151
+#: plone.app.layout/plone/app/layout/viewlets/content.py:163
 msgid "label_anonymous_user"
 msgstr "匿名用户"
 
@@ -6226,7 +6247,7 @@ msgstr "浏览"
 
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:134
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:135
 #: CMFPlone/skins/plone_forms/search.pt:169
 msgid "label_by_author"
 msgstr "作者：${author}"
@@ -6262,7 +6283,7 @@ msgid "label_calendar"
 msgstr "日历"
 
 #. Default: "Cancel"
-#: Archetypes/skins/archetypes/edit_macros.pt:232
+#: Archetypes/skins/archetypes/edit_macros.pt:233
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:362
 #: CMFPlone/skins/plone_forms/delete_confirmation_page.cpt:48
 msgid "label_cancel"
@@ -6295,7 +6316,7 @@ msgid "label_change_item"
 msgstr "更换作为默认视图<br/>的条目"
 
 #. Default: "Change user properties."
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:71
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:72
 msgid "label_change_member_properties"
 msgstr "更改成员属性。"
 
@@ -6365,7 +6386,7 @@ msgid "label_click_here_to_retrieve"
 msgstr "请点击这里找回"
 
 #. Default: "Click to view full-size image…"
-#: CMFPlone/skins/plone_content/image_view.pt:42
+#: CMFPlone/skins/plone_content/image_view.pt:43
 msgid "label_click_to_view_full_image"
 msgstr "点击查看完整大小的图片"
 
@@ -6394,7 +6415,7 @@ msgstr "评注"
 
 #. Default: "Compare"
 #: CMFPlone/skins/plone_forms/history_form.pt:50
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:64
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:63
 msgid "label_compare"
 msgstr "比较"
 
@@ -6739,13 +6760,13 @@ msgstr "事件参与人"
 
 #. Default: "(${location}, from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:106
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:111
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:112
 msgid "label_event_byline"
 msgstr "( ${location}, 从 ${start} 到 ${end} )"
 
 #. Default: "(from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:118
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:123
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:124
 msgid "label_event_byline_without_location"
 msgstr "(从 ${start} 到 ${end})"
 
@@ -6790,7 +6811,7 @@ msgid "label_exclude_from_nav"
 msgstr "从导航中排除"
 
 #. Default: "Existing tags"
-#: Archetypes/skins/archetypes/widgets/keyword.pt:54
+#: Archetypes/skins/archetypes/widgets/keyword.pt:53
 msgid "label_existing_tags"
 msgstr ""
 
@@ -6828,7 +6849,8 @@ msgid "label_filtertags"
 msgstr "标签"
 
 #. Default: "Find a group here"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:89
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:89
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:75
 msgid "label_find_group"
 msgstr "在此查找一个组"
 
@@ -6857,47 +6879,48 @@ msgid "label_generated_tabs_enable"
 msgstr "自动生成标签"
 
 #. Default: "GNU GPL license"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:34
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:31
 msgid "label_gnu_gpl_licence"
 msgstr "GNU GPL 许可"
 
 #. Default: "Group Dashboard"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:58
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:51
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:58
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:44
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:44
 msgid "label_group_dashboard"
 msgstr ""
 
 #. Default: "Group Members"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:43
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:36
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:43
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:29
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:29
 msgid "label_group_members"
 msgstr "组成员"
 
 #. Default: "Group Memberships"
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:40
 #: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:36
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:40
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:44
 msgid "label_group_memberships"
 msgstr "组员身份"
 
 #. Default: "Group Portlets"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:53
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:46
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:53
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:39
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:39
 msgid "label_group_portlets"
 msgstr "组面板"
 
 #. Default: "Group Properties"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:48
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:41
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:48
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:34
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:34
 msgid "label_group_properties"
 msgstr "组属性"
 
 #. Default: "Group Search"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:125
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:127
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:128
 msgid "label_group_search"
 msgstr "组搜索"
 
@@ -7068,6 +7091,12 @@ msgstr "登录名"
 msgid "label_login_to_add_comments"
 msgstr "登录后添加评注"
 
+#. Default: "Log in to send feedback"
+#: CMFPlone/skins/plone_content/author.cpt:169
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:169
+msgid "label_login_to_send_feedback"
+msgstr ""
+
 #. Default: "Look"
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:330
 #: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/personalize_form.cpt:332
@@ -7087,16 +7116,16 @@ msgid "label_main_language"
 msgstr "主要语言："
 
 #. Default: "Member Registration"
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:48
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:46
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:42
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:33
 msgid "label_member_registration"
 msgstr ""
 
 #. Default: "Message"
-#: CMFPlone/skins/plone_content/author.cpt:206
+#: CMFPlone/skins/plone_content/author.cpt:219
 #: CMFPlone/skins/plone_templates/contact-info.cpt:147
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:207
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:219
 msgid "label_message"
 msgstr "消息"
 
@@ -7184,7 +7213,7 @@ msgid "label_news_image"
 msgstr "图片"
 
 #. Default: "Next"
-#: Archetypes/skins/archetypes/edit_macros.pt:217
+#: Archetypes/skins/archetypes/edit_macros.pt:218
 msgid "label_next"
 msgstr "下一页"
 
@@ -7204,7 +7233,8 @@ msgid "label_no_change"
 msgstr "没有改变"
 
 #. Default: "No group was specified."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:86
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:86
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:72
 msgid "label_no_group_specified"
 msgstr "没有指明组"
 
@@ -7295,13 +7325,14 @@ msgstr "文件夹"
 msgid "label_perform_search"
 msgstr "执行搜索"
 
-#. Default: "Plone<sup>&reg;</sup> CMS — Open Source Content Management System"
+#. Default: "Plone<sup>&reg;</sup> Open Source Content Management System"
 #: plone.app.layout/plone/app/layout/viewlets/footer.pt:9
+#, fuzzy
 msgid "label_plone_cms"
 msgstr "Plone<sup>&reg;</sup>开放源代码内容管理系统(CMS)"
 
 #. Default: "Plone Foundation"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:19
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:16
 msgid "label_plone_foundation"
 msgstr "Plone基金会"
 
@@ -7362,7 +7393,7 @@ msgid "label_powered_by_plone"
 msgstr "使用Plone开源内容管理系统(CMS)构建"
 
 #. Default: "Previous"
-#: Archetypes/skins/archetypes/edit_macros.pt:209
+#: Archetypes/skins/archetypes/edit_macros.pt:210
 msgid "label_previous"
 msgstr "之前的"
 
@@ -7402,14 +7433,15 @@ msgid "label_published"
 msgstr "发布"
 
 #. Default: "effective"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:45
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:44
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:50
 msgid "label_publishing_effective"
 msgstr "有效的"
 
 #. Default: "Quick search"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:211
-#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:33
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:211
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:33
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:189
 msgid "label_quick_search"
 msgstr "快速搜索"
 
@@ -7454,13 +7486,15 @@ msgid "label_remove"
 msgstr "删除"
 
 #. Default: "Remove from selected groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:131
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:131
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:115
 #, fuzzy
 msgid "label_remove_selected_groups"
 msgstr "删除选中的组"
 
 #. Default: "Remove selected groups / users"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:196
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:196
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:175
 msgid "label_remove_selected_users"
 msgstr "删除选中的组/用户"
 
@@ -7481,7 +7515,7 @@ msgstr "请求URL"
 
 #. Default: "(Required)"
 #: Archetypes/skins/archetypes/widgets/field.pt:87
-#: CMFPlone/skins/plone_content/author.cpt:190
+#: CMFPlone/skins/plone_content/author.cpt:203
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:128
 msgid "label_required"
 msgstr "（必填）"
@@ -7523,7 +7557,7 @@ msgstr "事件触发器：${trigger}"
 
 #. Default: "Save"
 #: Archetypes/skins/archetypes/base_metadata.cpt:94
-#: Archetypes/skins/archetypes/edit_macros.pt:225
+#: Archetypes/skins/archetypes/edit_macros.pt:226
 #: CMFPlone/skins/plone_deprecated/prefs_navigation_form.cpt:216
 msgid "label_save"
 msgstr "保存"
@@ -7564,9 +7598,9 @@ msgid "label_schema_settings"
 msgstr "设置"
 
 #. Default: "Search"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:219
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:137
-#: CMFPlone/skins/plone_deprecated/prefs_user_group_search_form.pt:60
-#: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:122
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:42
 msgid "label_search"
 msgstr "搜索"
 
@@ -7576,7 +7610,8 @@ msgid "label_search_entry"
 msgstr ""
 
 #. Default: "Show all"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:224
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:224
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:202
 msgid "label_search_large"
 msgstr "全部显示"
 
@@ -7587,7 +7622,7 @@ msgid "label_search_text"
 msgstr "搜索词"
 
 #. Default: "only in current section"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:35
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:37
 msgid "label_searchbox_currentfolder_only"
 msgstr "仅在本栏目"
 
@@ -7608,9 +7643,9 @@ msgid "label_select_all"
 msgstr "选择：${label_link_all}"
 
 #. Default: "Select all items"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:128
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:54
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:81
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:128
-#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:54
 msgid "label_select_all_items"
 msgstr "选择全部的条目"
 
@@ -7630,7 +7665,7 @@ msgid "label_selection_criteria_value"
 msgstr "值"
 
 #. Default: "Send"
-#: CMFPlone/skins/plone_content/author.cpt:224
+#: CMFPlone/skins/plone_content/author.cpt:237
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:108
 #: CMFPlone/skins/plone_templates/contact-info.cpt:172
 msgid "label_send"
@@ -7701,7 +7736,7 @@ msgstr "显示我"
 #. Default: "Show all"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:144
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:129
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:146
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:147
 msgid "label_showall"
 msgstr "全部显示"
 
@@ -7722,7 +7757,7 @@ msgid "label_site_map"
 msgstr "站点地图"
 
 #. Default: "Size"
-#: CMFPlone/skins/plone_content/image_view.pt:48
+#: CMFPlone/skins/plone_content/image_view.pt:49
 msgid "label_size"
 msgstr "大小"
 
@@ -7732,12 +7767,12 @@ msgid "label_skins"
 msgstr "皮肤"
 
 #. Default: "Skip to content."
-#: plone.app.layout/plone/app/layout/viewlets/skip_links.pt:3
+#: plone.app.layout/plone/app/layout/viewlets/skip_links.pt:4
 msgid "label_skiptocontent"
 msgstr "跳至内容"
 
 #. Default: "Skip to navigation"
-#: plone.app.layout/plone/app/layout/viewlets/skip_links.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/skip_links.pt:8
 msgid "label_skiptonavigation"
 msgstr "跳至导航"
 
@@ -7777,7 +7812,7 @@ msgid "label_string_criteria_value"
 msgstr "字符串值"
 
 #. Default: "Subject"
-#: CMFPlone/skins/plone_content/author.cpt:186
+#: CMFPlone/skins/plone_content/author.cpt:199
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:126
 #: CMFPlone/skins/plone_templates/contact-info.cpt:119
 msgid "label_subject"
@@ -7893,9 +7928,9 @@ msgid "label_undo"
 msgstr "撤消"
 
 #. Default: "Up to Groups Overview"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:79
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:106
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:79
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:67
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:65
 msgid "label_up_to_groups_overview"
 msgstr "回到“组概览”"
 
@@ -7907,8 +7942,9 @@ msgid "label_up_to_plone_setup"
 msgstr "回到Plone设置"
 
 #. Default: "Up to Users Overview"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:64
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:67
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:67
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:65
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:72
 msgid "label_up_to_usersoverview"
 msgstr "回到用户概览"
 
@@ -7926,8 +7962,8 @@ msgid "label_url"
 msgstr "链接页面URL"
 
 #. Default: "Use Selected..."
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:123
 #: CMFPlone/skins/plone_deprecated/prefs_user_group_search_form.pt:133
-#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:123
 msgid "label_use_selected"
 msgstr "使用所选..."
 
@@ -7939,8 +7975,9 @@ msgid "label_user_name"
 msgstr "用户名"
 
 #. Default: "User Properties"
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:34
 #: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:28
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:34
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:38
 msgid "label_user_properties"
 msgstr "用户属性"
 
@@ -7953,7 +7990,7 @@ msgstr "查找用户"
 #. Default: "Settings"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:48
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:38
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:43
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:41
 msgid "label_usergroup_settings"
 msgstr "设置"
 
@@ -8067,8 +8104,8 @@ msgid "legend_details"
 msgstr "详情"
 
 #. Default: "Feedback for author"
-#: CMFPlone/skins/plone_content/author.cpt:181
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:182
+#: CMFPlone/skins/plone_content/author.cpt:194
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:194
 msgid "legend_feedback_for_author"
 msgstr "给作者反馈"
 
@@ -8145,7 +8182,7 @@ msgid "legend_syndication_details"
 msgstr "聚合设置详细信息"
 
 #. Default: "The link address is:"
-#: CMFPlone/skins/plone_content/link_view.pt:44
+#: CMFPlone/skins/plone_content/link_view.pt:45
 msgid "link_address"
 msgstr "这个链接地址是："
 
@@ -8251,28 +8288,30 @@ msgid "listingheader_date_and_time"
 msgstr "日期和时间"
 
 #. Default: "E-mail Address"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:140
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:141
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:140
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:146
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:121
 msgid "listingheader_email_address"
 msgstr "电子邮件地址"
 
 #. Default: "Group name"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:162
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:103
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:164
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:103
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:160
 msgid "listingheader_group_name"
 msgstr "组名"
 
 #. Default: "Remove"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:104
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:104
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:87
 #, fuzzy
 msgid "listingheader_group_remove"
 msgstr "删除组"
 
 #. Default: "Group/User name"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:139
-#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:65
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:139
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:65
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:120
 msgid "listingheader_group_user_name"
 msgstr "组名/用户名"
 
@@ -8302,7 +8341,7 @@ msgstr "执行人"
 
 #. Default: "Remove Group"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:173
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:175
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:171
 msgid "listingheader_remove_group"
 msgstr "删除组"
 
@@ -8321,7 +8360,7 @@ msgstr "重置密码"
 #. Default: "Roles"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:167
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:142
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:169
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:165
 msgid "listingheader_roles"
 msgstr "角色"
 
@@ -8387,12 +8426,12 @@ msgid "member_listing_not_allowed"
 msgstr ""
 
 #. Default: "Add New Item operation was cancelled."
-#: Archetypes/skins/archetypes/go_back.cpy:29
+#: Archetypes/skins/archetypes/go_back.cpy:24
 msgid "message_add_new_item_cancelled"
 msgstr "添加新的内容操作被取消。"
 
 #. Default: "Edit cancelled."
-#: Archetypes/skins/archetypes/go_back.cpy:40
+#: Archetypes/skins/archetypes/go_back.cpy:29
 msgid "message_edit_item_cancelled"
 msgstr "编辑取消"
 
@@ -8462,7 +8501,7 @@ msgid "msg_see_log_for_details"
 msgstr ""
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
-#: CMFPlone/skins/plone_content/newsitem_view.pt:51
+#: CMFPlone/skins/plone_content/newsitem_view.pt:53
 msgid "no_body_text"
 msgstr "这个文档还没有正文，点击编辑标签开始编写。"
 
@@ -8472,7 +8511,7 @@ msgid "no_comments"
 msgstr "没有评注。"
 
 #. Default: "(No image has been uploaded yet)"
-#: CMFPlone/skins/plone_content/image_view.pt:55
+#: CMFPlone/skins/plone_content/image_view.pt:56
 msgid "no_image_uploaded"
 msgstr "（还没有上载图片）"
 
@@ -8565,7 +8604,8 @@ msgid "published"
 msgstr "发布"
 
 #. Default: "Read More…"
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:161
+#: CMFPlone/skins/plone_content/folder_full_view_item.pt:58
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:162
 #: CMFPlone/skins/plone_templates/events_listing.pt:91
 msgid "read_more"
 msgstr "查看更多..."
@@ -8701,8 +8741,8 @@ msgid "summary_assigned_roles"
 msgstr "当前分配的本地角色"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: CMFPlone/skins/plone_content/author.cpt:252
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:254
+#: CMFPlone/skins/plone_content/author.cpt:265
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:266
 msgid "summary_author_content_list"
 msgstr "按内容类型列举某作者的完成的内容"
 
@@ -8719,7 +8759,7 @@ msgid "summary_content_listing"
 msgstr "内容列表"
 
 #. Default: "Event details"
-#: CMFPlone/skins/plone_content/event_view.pt:38
+#: CMFPlone/skins/plone_content/event_view.pt:18
 msgid "summary_event_details"
 msgstr "事件详细信息"
 
@@ -8740,7 +8780,7 @@ msgstr "审批历史"
 
 #. Default: "Select roles for each group"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:118
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:119
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:120
 msgid "summary_roles_for_groups"
 msgstr "为各组选择角色"
 
@@ -8765,7 +8805,7 @@ msgid "tableheading_select_all_items"
 msgstr "选择所有项目"
 
 #. Default: "Home"
-#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:9
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.pt:33
 msgid "tabs_home"
 msgstr "首页"
@@ -8777,7 +8817,7 @@ msgid "text_broken_product"
 msgstr "此产品是坏的"
 
 #. Default: "Contributors: ${name}"
-#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:50
+#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:52
 msgid "text_contributors"
 msgstr "贡献人：${name}"
 
@@ -8860,12 +8900,14 @@ msgid "text_no_pil_installed"
 msgstr "注意: PIL还没有正确安装，图片缩放将不能正常工作。"
 
 #. Default: "Enter a group or user name to search for or click 'Show All'."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:293
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:293
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:282
 msgid "text_no_searchstring"
 msgstr "输入需要查找的用户或组名，或者点击“全部显示”."
 
 #. Default: "Enter a group or user name to search for."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:287
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:287
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:276
 msgid "text_no_searchstring_large"
 msgstr "输入需要搜索的组或用户名。"
 
@@ -8888,9 +8930,9 @@ msgid "text_no_user_searchstring_largesite"
 msgstr "输入需要搜索的用户名，或者点击“全部显示”"
 
 #. Default: "No matches"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:282
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:240
-#: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:218
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:282
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:113
 msgid "text_nomatches"
 msgstr "没有匹配项"
 
@@ -8907,7 +8949,7 @@ msgid "text_product_description"
 msgstr "产品描述"
 
 #. Default: "Search Site"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:9
 msgid "text_search"
 msgstr "搜索"
 
@@ -8922,7 +8964,8 @@ msgid "text_user"
 msgstr "用户"
 
 #. Default: "This user does not belong to any group."
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:130
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:130
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:114
 msgid "text_user_not_in_any_group"
 msgstr "这个用户不属于任何组。"
 
@@ -8994,13 +9037,13 @@ msgid "title_add_static_portlet"
 msgstr "添加静态文本面板"
 
 #. Default: "Download this event in iCal format"
-#: CMFPlone/skins/plone_content/event_view.pt:159
+#: CMFPlone/skins/plone_content/event_view.pt:140
 #, fuzzy
 msgid "title_add_to_ical"
 msgstr "将这个条目加入到您的iCal日历"
 
 #. Default: "Download this event in vCal format"
-#: CMFPlone/skins/plone_content/event_view.pt:153
+#: CMFPlone/skins/plone_content/event_view.pt:134
 #, fuzzy
 msgid "title_add_to_vcal"
 msgstr "将这个条目加入到您的vCal日历"
@@ -9010,7 +9053,7 @@ msgstr "将这个条目加入到您的vCal日历"
 msgid "title_author_info"
 msgstr "作者信息"
 
-#. Default: "This site was built using Plone CMS, the Open Source Content Management System. Click for more information."
+#. Default: "This site was built using the Plone Open Source Content Management System. Click for more information."
 #: plone.app.layout/plone/app/layout/viewlets/colophon.pt:8
 #, fuzzy
 msgid "title_built_with_plone"
@@ -9068,12 +9111,12 @@ msgid "title_choose_default_view"
 msgstr "选择这个文件夹的视图模式，或者选择一个内容项作为默认视图"
 
 #. Default: "Compare with previous revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:60
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:59
 msgid "title_compare_previous_revision"
 msgstr "和前一版本比较"
 
 #. Default: "Compare with current revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:55
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:54
 msgid "title_compare_revision"
 msgstr "和当前版本比较"
 
@@ -9208,13 +9251,13 @@ msgstr "删除或者改名index_html内容，以完全控制文件夹的显示�
 
 #. Default: "Required"
 #: Archetypes/skins/archetypes/widgets/field.pt:87
-#: CMFPlone/skins/plone_content/author.cpt:190
+#: CMFPlone/skins/plone_content/author.cpt:203
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:128
 msgid "title_required"
 msgstr "需填"
 
 #. Default: "Revert to this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:24
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:23
 msgid "title_revert_revision"
 msgstr "回退到这个版本"
 
@@ -9224,7 +9267,7 @@ msgid "title_rss_feed"
 msgstr "这个搜索结果的RSS广播"
 
 #. Default: "Search Site"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:12
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:14
 msgid "title_search_site"
 msgstr "网站搜索"
 
@@ -9245,9 +9288,9 @@ msgid "title_select_default_view_item"
 msgstr "选择一个条目作为这个文件夹的默认视图"
 
 #. Default: "Send a mail to this user"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:181
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:171
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:181
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:175
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:160
 msgid "title_send_mail_to_user"
 msgstr "发送一封邮件到此用户"
 
@@ -9277,7 +9320,7 @@ msgid "title_user_registration_fields"
 msgstr ""
 
 #. Default: "View this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:52
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:51
 msgid "title_view_revision"
 msgstr "查看这个版本"
 
@@ -9378,7 +9421,7 @@ msgstr "替换为新图片："
 
 #. Default: "Note that roles listed here apply directly to a user. They do not reflect additional roles users may have due to group memberships."
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:72
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:77
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:79
 msgid "user_role_note"
 msgstr "注意：这里列举用户直接拥有的角色。这里不会反应通过组员关系得到的附加角色。"
 
@@ -9439,7 +9482,7 @@ msgid "working_copy_info"
 msgstr "工作拷贝信息"
 
 #. Default: "You are here:"
-#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:4
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6
 msgid "you_are_here"
 msgstr "您位于:"
 

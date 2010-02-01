@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-01-15 20:11+0000\n"
+"POT-Creation-Date: 2010-02-01 18:29+0000\n"
 "PO-Revision-Date: 2008-03-07 08:30+0100\n"
 "Last-Translator: Radoslaw Stachowiak <rstachowiak@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -102,6 +102,10 @@ msgstr "nie można wyciąć ${title}"
 #: CMFPlone/skins/plone_scripts/createObject.cpy:44
 msgid "${tname} has been created."
 msgstr "${tname} został utworzony"
+
+#: plone.app.vocabularies/plone/app/vocabularies/skins.py:59
+msgid "(Unstyled)"
+msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -680,7 +684,7 @@ msgid "Changes Saved. Versioning for this file has been disabled because it is t
 msgstr "Zapisano zmiany. Wersjonowanie dla tego pliku zostało wyłączone, ponieważ jest on zbyt duży."
 
 #: CMFPlone/skins/plone_deprecated/prefs_user_manage.cpy:49
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:127
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:266
 msgid "Changes applied."
 msgstr "Zastosowano zmiany."
 
@@ -689,9 +693,9 @@ msgstr "Zastosowano zmiany."
 msgid "Changes canceled."
 msgstr "Anulowano zmiany."
 
+#: CMFPlone/skins/plone_deprecated/prefs_group_members_add.cpy:20
 #: CMFPlone/skins/plone_form_scripts/file_edit.cpy:49
 #: CMFPlone/skins/plone_form_scripts/setConstrainTypes.cpy:40
-#: CMFPlone/skins/plone_prefs/prefs_error_log_setProperties.py:16
 msgid "Changes made."
 msgstr "Zmiany wykonane."
 
@@ -983,11 +987,11 @@ msgstr "Określa czy możliwe jest użycie edytora zewnętrznego. Wymaga zainsta
 msgid "Determines if the users should get warnings when they delete or move content that is linked from inside the site."
 msgstr "Określa czy użytkownicy powinni być ostrzegani przed usunięciem lub przesunięciem obiektów, do których prowadzą odnośniki z innej części witryny."
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:25
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:31
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of groups it can be very slow or impossible to build a list all groups. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for groups instead of listing all of them."
 msgstr "Optymalizuje Plone do obsługi małych bądź dużych witryn. W witrynach z wieloma grupami wylistowanie wszystkich grup może być bardzo wolne lub nawet niemożliwe. Ta opcja dostosowuje interfejs i zachowanie Plone, pozwalając na wyszukiwanie grup zamiast ich wylistowania."
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:35
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:41
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of users it can be very slow or impossible to build a list all users. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for users instead of listing all of them."
 msgstr "Optymalizuje Plone do obsługi małych bądź dużych witryn. W witrynach z wieloma użytkownikami wylistowanie wszystkich grup może być bardzo wolne lub nawet niemożliwe. Ta opcja dostosowuje interfejs i zachowanie Plone, pozwalając na wyszukiwanie użytkowników zamiast ich wylistowania."
 
@@ -1140,7 +1144,7 @@ msgstr "Edytuj istniejącą regułę."
 msgid "Edit with external application"
 msgstr "Edytuj przy użyciu zewnętrznej aplikacji"
 
-#: ./plone.app.layout/plone/app/layout/viewlets/content_history.pt
+#: plone.app.layout/plone/app/layout/viewlets/content.py:228
 msgid "Edited"
 msgstr ""
 
@@ -1196,6 +1200,10 @@ msgstr "Włącz sprawdzanie spójności odnośników"
 
 #: plone.app.controlpanel/plone/app/controlpanel/site.py:97
 msgid "Enable locking for through-the-web edits"
+msgstr ""
+
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:50
+msgid "Enable nested groups?"
 msgstr ""
 
 #: plone.app.controlpanel/plone/app/controlpanel/security.py:28
@@ -1402,7 +1410,7 @@ msgstr "Grupa"
 msgid "Group name required."
 msgstr ""
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:196
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:379
 msgid "Group(s) deleted."
 msgstr "Grupa(y) usunięta."
 
@@ -1857,11 +1865,11 @@ msgstr "Zarządzaj użytkownikami"
 msgid "Manager"
 msgstr "Zarządzający"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:24
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:30
 msgid "Many groups?"
 msgstr "Wiele grup?"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:34
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:40
 msgid "Many users?"
 msgstr "Wielu użytkowników?"
 
@@ -2041,17 +2049,13 @@ msgstr "Aktualność została zapisane."
 msgid "No"
 msgstr "Nie"
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:187
-msgid "No changes done."
-msgstr "Niczego nie zmieniono."
-
 #: CMFPlone/skins/plone_prefs/prefs_group_edit.py:15
 #: plone.app.controlpanel/plone/app/controlpanel/form.py:43
 #: plone.app.controlpanel/plone/app/controlpanel/ram.py:103
 msgid "No changes made."
 msgstr "Nie wykonano zmian."
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:135
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:274
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr ""
 
@@ -3491,6 +3495,10 @@ msgstr "Typy treści"
 msgid "URL of RSS feed"
 msgstr "URL łącza RSS"
 
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:81
+msgid "Unable to activate PAS plugin "recursive_groups"."
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:72
 msgid "Unable to change state of ${name} as part of content rule 'workflow' action: ${error}"
 msgstr "Nieudana zmiana stanu elementu ${name} jako wyniki działania reguły obiegu informacji dla akcji: ${error}"
@@ -3574,11 +3582,11 @@ msgstr ""
 msgid "User added."
 msgstr "Dodano użytkownika."
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:67
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:101
 msgid "User and groups settings for this site."
 msgstr "Ustawienia użytkowników i grup dla tej witryny."
 
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:66
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:100
 msgid "User/Groups settings"
 msgstr "Ustawienia użytkowników i grup"
 
@@ -3698,6 +3706,10 @@ msgstr "Ostrzeżenie"
 #: CMFPlone/skins/plone_login/login_next.cpy:51
 msgid "Welcome! You are now logged in."
 msgstr "Witaj! Jesteś teraz zalogowany."
+
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:51
+msgid "When enabled, groups may be nested (contained) inside other groups. Roles directly assigned to a group will propagate to any nested groups."
+msgstr ""
 
 #. Default: "When the previous transition was performed"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
@@ -3980,7 +3992,7 @@ msgstr "Języki"
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_forms/search.pt:181
-#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:33
 msgid "box_last_modified"
 msgstr "Ostatnio zmodyfikowane"
 
@@ -4076,17 +4088,17 @@ msgid "constraintypes_mode_acquire"
 msgstr "Użyj ustawień folderu nadrzędnego"
 
 #. Default: "Attendees"
-#: CMFPlone/skins/plone_content/event_view.pt:143
+#: CMFPlone/skins/plone_content/event_view.pt:124
 msgid "contact_attendees"
 msgstr "Uczestnicy"
 
 #. Default: "Contact Name"
-#: CMFPlone/skins/plone_content/event_view.pt:123
+#: CMFPlone/skins/plone_content/event_view.pt:104
 msgid "contact_name"
 msgstr "Imię i nazwisko"
 
 #. Default: "Contact Phone"
-#: CMFPlone/skins/plone_content/event_view.pt:135
+#: CMFPlone/skins/plone_content/event_view.pt:116
 msgid "contact_phone"
 msgstr "Telefon"
 
@@ -4154,7 +4166,8 @@ msgid "date_separator"
 msgstr "-"
 
 #. Default: "There is no group or user attached to this group."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:194
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:194
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:173
 msgid "decription_no_members_assigned"
 msgstr "Brak użytkowników przypisanych do tej grupy."
 
@@ -4229,8 +4242,8 @@ msgid "description_advanced_search"
 msgstr "Ten formularz wyszukiwania pozwala Ci znaleźć treść określoną jednym lub więcej parametrami.<br /> Pamiętaj że możesz używać szybkiego szukania w dowolnej chwili. Zazwyczaj jest ono wystarczające, zaś ten formularz jest głównie dla szczególnych przypadków."
 
 #. Default: "If you want to contact this author, fill in the form below."
-#: CMFPlone/skins/plone_content/author.cpt:168
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:169
+#: CMFPlone/skins/plone_content/author.cpt:181
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:181
 msgid "description_author_feedback"
 msgstr "Wypełniając poniższy formularz, możesz wysłać e-mail z opinią autorowi."
 
@@ -4310,7 +4323,7 @@ msgid "description_control_panel"
 msgstr "Obszar konfiguracyjny Plone i dodatkowych produktów."
 
 #. Default: "The ${plonecms} is ${copyright} 2000-${current_year} by the ${plonefoundation} et al."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:18
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:15
 msgid "description_copyright"
 msgstr "${plonecms} – Copyright ${copyright} 2000: ${current_year} by ${plonefoundation} et al."
 
@@ -4362,7 +4375,8 @@ msgid "description_full_error_link"
 msgstr "zobaczyć pełen tekst błędu"
 
 #. Default: "You can add or remove groups and users from this particular group here. Note that this doesn't actually delete the group or user, it is only removed from this group."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:106
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:106
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:92
 msgid "description_group_members_of"
 msgstr "Tutaj możesz dodawać i usuwać użytkowników tej konkretnej grupy. Zauważ że nie kasuje to samego użytkownika a tylko usuwa go z grupy."
 
@@ -4373,7 +4387,7 @@ msgstr "Zauważ, że portlety grup są wyświetlane poniżej portletów zdefinio
 
 #. Default: "Groups are logical collections of users, such as departments and business units. Groups are not directly related to permissions on a global level, you normally use Roles for that - and let certain Groups have a particular role."
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:76
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:77
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:82
 msgid "description_groups_management"
 msgstr "Grupy są logicznymi zbiorami użytkowników, tak jak np. komórki organizacyjne lub departamenty. Nie są one bezpośrednio powiązane do praw dostępu na poziomie ogólnym, gdyż do tego zazwyczaj używasz ról, a dopiero danej grupie przypisujesz konkretną rolę."
 
@@ -4393,7 +4407,7 @@ msgid "description_language_settings"
 msgstr "Ustawienia powiązane z językiem interfejsu i tłumaczeniem treści."
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:30
 msgid "description_license"
 msgstr "Na licencji ${license}"
 
@@ -4471,7 +4485,7 @@ msgstr "Ten obiekt nie wspiera funkcji porównywania."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:188
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:178
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:180
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:161
 msgid "description_no_items_in_folder"
 msgstr "W bieżącym folderze brak elementów."
@@ -4506,7 +4520,7 @@ msgstr "Jeśli nazwa konta i hasło są poprawne, być może problemem jest to, 
 
 #. Default: "Note: Some or all of your PAS groups source plugins do not allow listing of groups, so you may not see the groups defined by those plugins unless doing a specific search."
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:85
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:86
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:87
 msgid "description_pas_group_listing"
 msgstr "Uwaga: Cześć lub wszystkie Twoje pluginy dla 'Grup PAS' nie pozwalają na listowanie grup. Możesz więc nie widzieć grup przez nich zdefiniowanych, chyba że wykonasz konkretne zapytanie."
 
@@ -4675,7 +4689,7 @@ msgid "description_syndication_properties"
 msgstr "Udostępnianie umożliwia Ci synchronizacje tego folderu z innymi witrynami w sieci."
 
 #. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:27
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_trademark"
 msgstr "Plone<sup>&reg;</sup> i logo Plone są znakami handlowymi ${plonefoundation}."
 
@@ -4745,10 +4759,6 @@ msgstr "Zostałeś zarejestrowany jako użytkownik."
 msgid "description_you_can_log_on_now"
 msgstr "Kliknij w przycisk aby się zalogować."
 
-#: plone.app.layout/plone/app/layout/viewlets/content.py:207
-msgid "edit"
-msgstr ""
-
 # E-Mail group property
 # E-Mail group property
 #. Default: "E-Mail"
@@ -4784,32 +4794,32 @@ msgid "event_and"
 msgstr "i"
 
 #. Default: "from"
-#: CMFPlone/skins/plone_content/event_view.pt:83
+#: CMFPlone/skins/plone_content/event_view.pt:63
 msgid "event_from"
 msgstr "od"
 
 #. Default: "More information about this event…"
-#: CMFPlone/skins/plone_content/event_view.pt:177
+#: CMFPlone/skins/plone_content/event_view.pt:157
 msgid "event_more_information"
 msgstr "Więcej informacji o tym wydarzeniu..."
 
 #. Default: "to"
-#: CMFPlone/skins/plone_content/event_view.pt:66
+#: CMFPlone/skins/plone_content/event_view.pt:46
 msgid "event_to"
 msgstr "do"
 
 #. Default: "What"
-#: CMFPlone/skins/plone_content/event_view.pt:44
+#: CMFPlone/skins/plone_content/event_view.pt:24
 msgid "event_what"
 msgstr "Co"
 
 #. Default: "When"
-#: CMFPlone/skins/plone_content/event_view.pt:52
+#: CMFPlone/skins/plone_content/event_view.pt:32
 msgid "event_when"
 msgstr "Kiedy"
 
 #. Default: "Where"
-#: CMFPlone/skins/plone_content/event_view.pt:113
+#: CMFPlone/skins/plone_content/event_view.pt:93
 msgid "event_where"
 msgstr "Gdzie"
 
@@ -4845,8 +4855,8 @@ msgid "go_to_parent_url"
 msgstr "W góre o jeden poziom"
 
 #. Default: "All content created by ${user}…"
-#: CMFPlone/skins/plone_content/author.cpt:276
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:278
+#: CMFPlone/skins/plone_content/author.cpt:289
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:290
 msgid "go_to_search_author_content"
 msgstr "Znajdź strony stworzone przez ${user}..."
 
@@ -4881,7 +4891,7 @@ msgid "heading_add_new_item"
 msgstr "Dodaj element"
 
 #. Default: "Add event to calendar"
-#: CMFPlone/skins/plone_content/event_view.pt:151
+#: CMFPlone/skins/plone_content/event_view.pt:132
 msgid "heading_add_to_calendar"
 msgstr "Dodaj wydarzenie do kalendarza"
 
@@ -4901,13 +4911,14 @@ msgid "heading_allowed_languages"
 msgstr "Dostępne języki"
 
 #. Default: "Assign to groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:75
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:75
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:123
 msgid "heading_assign_to_groups"
 msgstr ""
 
 #. Default: "Latest content created by this user"
-#: CMFPlone/skins/plone_content/author.cpt:247
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:249
+#: CMFPlone/skins/plone_content/author.cpt:260
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:261
 msgid "heading_author_content"
 msgstr "Ostatnio dodane przez tego użytkownika"
 
@@ -5008,28 +5019,32 @@ msgid "heading_full_review_list"
 msgstr "Pełna lista do przeglądu:"
 
 #. Default: "Group Members"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:77
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:77
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:63
 msgid "heading_group_members"
 msgstr "Członkowie grupy"
 
 #. Default: "Members of the ${groupname} group"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:96
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:96
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:82
 msgid "heading_group_members_of"
 msgstr "Członkowie grupy ${groupname}"
 
 #. Default: "Group Memberships for ${userid}"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:62
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:62
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:67
 msgid "heading_group_memberships_for"
 msgstr "${userid} jest członkiem grup"
 
 #. Default: "Current group members"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:122
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:122
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:103
 msgid "heading_groupmembers_current"
 msgstr "Członkowie grupy"
 
 #. Default: "Groups Overview"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:66
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:67
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:65
 msgid "heading_groups_overview"
 msgstr "Przegląd grup"
 
@@ -5069,7 +5084,8 @@ msgid "heading_member_search"
 msgstr "Szukaj użytkowników"
 
 #. Default: "Current Group Memberships"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:99
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:99
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:82
 msgid "heading_memberships_current"
 msgstr "Członek grup"
 
@@ -5120,8 +5136,9 @@ msgstr "Narzędzia osobiste"
 msgid "heading_portlets_assigned_here"
 msgstr "Portlety przypisane w tym miejscu"
 
-#. Default: "User Properties for ${username}"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:59
+#. Default: "User Properties for ${DYNAMIC_CONTENT} (${username})"
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:60
+#, fuzzy
 msgid "heading_prefs_user_details"
 msgstr "Właściwości ${username}"
 
@@ -5174,12 +5191,14 @@ msgid "heading_returned_results"
 msgstr "Wyniki wyszukiwania"
 
 #. Default: "Search for groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:74
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:74
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:122
 msgid "heading_search_groups"
 msgstr "Szukaj grup"
 
 #. Default: "Search for new group members"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:203
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:203
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:182
 msgid "heading_search_newmembers"
 msgstr "Szukaj nowych członków grup"
 
@@ -5929,7 +5948,7 @@ msgid "hide"
 msgstr "ukryj"
 
 #. Default: "${action} by ${actor} on ${time}"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:42
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:41
 msgid "history_action"
 msgstr ""
 
@@ -6021,7 +6040,7 @@ msgstr "Dodaj komentarz"
 
 #. Default: "Add New Group"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:100
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:101
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:102
 msgid "label_add_new_group"
 msgstr "Dodaj nową grupę"
 
@@ -6053,12 +6072,12 @@ msgid "label_add_to_groups"
 msgstr ""
 
 #. Default: "iCal"
-#: CMFPlone/skins/plone_content/event_view.pt:164
+#: CMFPlone/skins/plone_content/event_view.pt:145
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
-#: CMFPlone/skins/plone_content/event_view.pt:158
+#: CMFPlone/skins/plone_content/event_view.pt:139
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -6069,12 +6088,14 @@ msgid "label_add_type"
 msgstr "Dodaj ${type}"
 
 #. Default: "Add user to selected groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:83
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:83
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:195
 msgid "label_add_user_to_group"
 msgstr "Dodaj użytkownika do wybranej grupy"
 
 #. Default: "Add selected groups and users to this group"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:310
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:310
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:299
 msgid "label_add_users_to_group"
 msgstr "Dodaj wybranych użytkownik do tej grupy"
 
@@ -6086,7 +6107,7 @@ msgstr "Zaawansowane..."
 
 #. Default: "Advanced Search…"
 #: CMFPlone/skins/plone_scripts/livesearch_reply.py:85
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:48
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:50
 #: plone.app.portlets/plone/app/portlets/portlets/search.pt:43
 msgid "label_advanced_search"
 msgstr "Wyszukiwanie Zaawansowane..."
@@ -6140,7 +6161,7 @@ msgstr "anonimowy użytkownik"
 #. Default: "Anonymous User"
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:48
 #: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
-#: plone.app.layout/plone/app/layout/viewlets/content.py:151
+#: plone.app.layout/plone/app/layout/viewlets/content.py:163
 msgid "label_anonymous_user"
 msgstr "Użytkownik anonimowy"
 
@@ -6228,7 +6249,7 @@ msgstr "Przeglądaj"
 
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:134
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:135
 #: CMFPlone/skins/plone_forms/search.pt:169
 msgid "label_by_author"
 msgstr "przez ${author}"
@@ -6264,7 +6285,7 @@ msgid "label_calendar"
 msgstr "Kalendarz"
 
 #. Default: "Cancel"
-#: Archetypes/skins/archetypes/edit_macros.pt:232
+#: Archetypes/skins/archetypes/edit_macros.pt:233
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:362
 #: CMFPlone/skins/plone_forms/delete_confirmation_page.cpt:48
 msgid "label_cancel"
@@ -6297,7 +6318,7 @@ msgid "label_change_item"
 msgstr "Ustaw element <br/> jako Widok domyślny..."
 
 #. Default: "Change user properties."
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:71
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:72
 msgid "label_change_member_properties"
 msgstr "Zmień właściwości użytkownika."
 
@@ -6368,7 +6389,7 @@ msgid "label_click_here_to_retrieve"
 msgstr "kliknij tu aby je odzyskać"
 
 #. Default: "Click to view full-size image…"
-#: CMFPlone/skins/plone_content/image_view.pt:42
+#: CMFPlone/skins/plone_content/image_view.pt:43
 msgid "label_click_to_view_full_image"
 msgstr "Kliknij aby zobaczyć obraz w pełnym rozmiarze..."
 
@@ -6397,7 +6418,7 @@ msgstr "Komentarze"
 
 #. Default: "Compare"
 #: CMFPlone/skins/plone_forms/history_form.pt:50
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:64
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:63
 msgid "label_compare"
 msgstr "Porównaj"
 
@@ -6743,14 +6764,14 @@ msgstr "Uczestnicy"
 
 #. Default: "(${location}, from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:106
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:111
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:112
 #, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location}, od ${start} do ${end} )"
 
 #. Default: "(from ${start} to ${end})"
 #: CMFPlone/skins/plone_content/folder_listing.pt:118
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:123
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:124
 msgid "label_event_byline_without_location"
 msgstr ""
 
@@ -6795,7 +6816,7 @@ msgid "label_exclude_from_nav"
 msgstr "Wyłącz z nawigacji"
 
 #. Default: "Existing tags"
-#: Archetypes/skins/archetypes/widgets/keyword.pt:54
+#: Archetypes/skins/archetypes/widgets/keyword.pt:53
 msgid "label_existing_tags"
 msgstr ""
 
@@ -6833,7 +6854,8 @@ msgid "label_filtertags"
 msgstr "Tagi"
 
 #. Default: "Find a group here"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:89
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:89
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:75
 msgid "label_find_group"
 msgstr "Znajdź grupę"
 
@@ -6863,47 +6885,48 @@ msgstr "Generuj zakładki automatycznie"
 
 # dystrybuowany na ...
 #. Default: "GNU GPL license"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:34
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:31
 msgid "label_gnu_gpl_licence"
 msgstr "licencji GNU GPL"
 
 #. Default: "Group Dashboard"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:58
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:51
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:58
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:44
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:44
 msgid "label_group_dashboard"
 msgstr ""
 
 #. Default: "Group Members"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:43
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:36
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:43
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:29
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:29
 msgid "label_group_members"
 msgstr "Członkowie grupy"
 
 #. Default: "Group Memberships"
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:40
 #: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:36
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:40
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:44
 msgid "label_group_memberships"
 msgstr "Członek grup"
 
 #. Default: "Group Portlets"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:53
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:46
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:53
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:39
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:39
 msgid "label_group_portlets"
 msgstr "Portlety Grup"
 
 #. Default: "Group Properties"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:48
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:41
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:48
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:34
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:34
 msgid "label_group_properties"
 msgstr "Właściwości grupy"
 
 #. Default: "Group Search"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:125
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:127
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:128
 msgid "label_group_search"
 msgstr "Wyszukowanie grup"
 
@@ -7074,6 +7097,12 @@ msgstr "Nazwa użytkownika"
 msgid "label_login_to_add_comments"
 msgstr "Zaloguj się by dodać komentarz"
 
+#. Default: "Log in to send feedback"
+#: CMFPlone/skins/plone_content/author.cpt:169
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:169
+msgid "label_login_to_send_feedback"
+msgstr ""
+
 #. Default: "Look"
 #: CMFPlone/skins/plone_prefs/personalize_form.cpt:330
 #: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/personalize_form.cpt:332
@@ -7093,16 +7122,16 @@ msgid "label_main_language"
 msgstr "Podstawowy Jezyk:"
 
 #. Default: "Member Registration"
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:48
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:46
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:42
 #: plone.app.controlpanel/plone/app/controlpanel/usergroupssettings.pt:33
 msgid "label_member_registration"
 msgstr ""
 
 #. Default: "Message"
-#: CMFPlone/skins/plone_content/author.cpt:206
+#: CMFPlone/skins/plone_content/author.cpt:219
 #: CMFPlone/skins/plone_templates/contact-info.cpt:147
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:207
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:219
 msgid "label_message"
 msgstr "Wiadomość"
 
@@ -7190,7 +7219,7 @@ msgid "label_news_image"
 msgstr "Obraz"
 
 #. Default: "Next"
-#: Archetypes/skins/archetypes/edit_macros.pt:217
+#: Archetypes/skins/archetypes/edit_macros.pt:218
 msgid "label_next"
 msgstr "Następny"
 
@@ -7211,7 +7240,8 @@ msgid "label_no_change"
 msgstr "Brak zmian"
 
 #. Default: "No group was specified."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:86
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:86
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:72
 msgid "label_no_group_specified"
 msgstr "Nie określono żadnej grupy"
 
@@ -7302,13 +7332,14 @@ msgstr "Foldery"
 msgid "label_perform_search"
 msgstr "Przeszukaj"
 
-#. Default: "Plone<sup>&reg;</sup> CMS — Open Source Content Management System"
+#. Default: "Plone<sup>&reg;</sup> Open Source Content Management System"
 #: plone.app.layout/plone/app/layout/viewlets/footer.pt:9
+#, fuzzy
 msgid "label_plone_cms"
 msgstr "Plone<sup>&reg;</sup> CMS - Open Source Content Management System"
 
 #. Default: "Plone Foundation"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:19
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:16
 msgid "label_plone_foundation"
 msgstr "Plone Foundation"
 
@@ -7369,7 +7400,7 @@ msgid "label_powered_by_plone"
 msgstr "Wykorzystuje Plone"
 
 #. Default: "Previous"
-#: Archetypes/skins/archetypes/edit_macros.pt:209
+#: Archetypes/skins/archetypes/edit_macros.pt:210
 msgid "label_previous"
 msgstr "Poprzedni"
 
@@ -7410,14 +7441,15 @@ msgid "label_published"
 msgstr "Opublikowany"
 
 #. Default: "effective"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:45
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:44
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:50
 msgid "label_publishing_effective"
 msgstr "Obowiązujący"
 
 #. Default: "Quick search"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:211
-#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:33
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:211
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:33
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:189
 msgid "label_quick_search"
 msgstr "Szybkie wyszukiwanie"
 
@@ -7462,13 +7494,15 @@ msgid "label_remove"
 msgstr "Usuń"
 
 #. Default: "Remove from selected groups"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:131
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:131
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:115
 #, fuzzy
 msgid "label_remove_selected_groups"
 msgstr "Usuń wybrane grupy"
 
 #. Default: "Remove selected groups / users"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:196
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:196
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:175
 msgid "label_remove_selected_users"
 msgstr "Usuń wybrane grupy / użytkowników"
 
@@ -7489,7 +7523,7 @@ msgstr "Żądany URL"
 
 #. Default: "(Required)"
 #: Archetypes/skins/archetypes/widgets/field.pt:87
-#: CMFPlone/skins/plone_content/author.cpt:190
+#: CMFPlone/skins/plone_content/author.cpt:203
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:128
 msgid "label_required"
 msgstr "(Wymagane(y))"
@@ -7531,7 +7565,7 @@ msgstr "Zdarzenie wyzwalające: ${trigger}"
 
 #. Default: "Save"
 #: Archetypes/skins/archetypes/base_metadata.cpt:94
-#: Archetypes/skins/archetypes/edit_macros.pt:225
+#: Archetypes/skins/archetypes/edit_macros.pt:226
 #: CMFPlone/skins/plone_deprecated/prefs_navigation_form.cpt:216
 msgid "label_save"
 msgstr "Zapisz"
@@ -7572,9 +7606,9 @@ msgid "label_schema_settings"
 msgstr "Ustawienia"
 
 #. Default: "Search"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:219
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:137
-#: CMFPlone/skins/plone_deprecated/prefs_user_group_search_form.pt:60
-#: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:122
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:42
 msgid "label_search"
 msgstr "Szukaj"
 
@@ -7584,7 +7618,8 @@ msgid "label_search_entry"
 msgstr ""
 
 #. Default: "Show all"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:224
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:224
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:202
 msgid "label_search_large"
 msgstr "Pokaż wszystko"
 
@@ -7595,7 +7630,7 @@ msgid "label_search_text"
 msgstr "Szukaj tekstu"
 
 #. Default: "only in current section"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:35
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:37
 msgid "label_searchbox_currentfolder_only"
 msgstr "tylko w bieżącym dziale"
 
@@ -7616,9 +7651,9 @@ msgid "label_select_all"
 msgstr "Zaznacz: ${label_link_all}"
 
 #. Default: "Select all items"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:128
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:54
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:81
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:128
-#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:54
 msgid "label_select_all_items"
 msgstr "Wybierz wszystkie elementy"
 
@@ -7638,7 +7673,7 @@ msgid "label_selection_criteria_value"
 msgstr "Wartość"
 
 #. Default: "Send"
-#: CMFPlone/skins/plone_content/author.cpt:224
+#: CMFPlone/skins/plone_content/author.cpt:237
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:108
 #: CMFPlone/skins/plone_templates/contact-info.cpt:172
 msgid "label_send"
@@ -7709,7 +7744,7 @@ msgstr "Pokaż mi"
 #. Default: "Show all"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:144
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:129
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:146
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:147
 msgid "label_showall"
 msgstr "Pokaż wszystkich"
 
@@ -7732,7 +7767,7 @@ msgid "label_site_map"
 msgstr "Mapa witryny"
 
 #. Default: "Size"
-#: CMFPlone/skins/plone_content/image_view.pt:48
+#: CMFPlone/skins/plone_content/image_view.pt:49
 msgid "label_size"
 msgstr "Rozmiar"
 
@@ -7742,12 +7777,12 @@ msgid "label_skins"
 msgstr "Style wyglądu"
 
 #. Default: "Skip to content."
-#: plone.app.layout/plone/app/layout/viewlets/skip_links.pt:3
+#: plone.app.layout/plone/app/layout/viewlets/skip_links.pt:4
 msgid "label_skiptocontent"
 msgstr "Przejdź na skróty do treści."
 
 #. Default: "Skip to navigation"
-#: plone.app.layout/plone/app/layout/viewlets/skip_links.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/skip_links.pt:8
 msgid "label_skiptonavigation"
 msgstr "Przejdź do nawigacji"
 
@@ -7787,7 +7822,7 @@ msgid "label_string_criteria_value"
 msgstr "Wartość"
 
 #. Default: "Subject"
-#: CMFPlone/skins/plone_content/author.cpt:186
+#: CMFPlone/skins/plone_content/author.cpt:199
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:126
 #: CMFPlone/skins/plone_templates/contact-info.cpt:119
 msgid "label_subject"
@@ -7903,9 +7938,9 @@ msgid "label_undo"
 msgstr "Cofnij"
 
 #. Default: "Up to Groups Overview"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:79
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:106
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:79
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-group-dashboard.pt:67
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:65
 msgid "label_up_to_groups_overview"
 msgstr "Wróć do przeglądu grup"
 
@@ -7917,8 +7952,9 @@ msgid "label_up_to_plone_setup"
 msgstr "Wróć do ustawień witryny"
 
 #. Default: "Up to Users Overview"
-#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:64
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:67
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:67
+#: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:65
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:72
 msgid "label_up_to_usersoverview"
 msgstr "Wróć do przeglądu użytkowników"
 
@@ -7936,8 +7972,8 @@ msgid "label_url"
 msgstr "URL"
 
 #. Default: "Use Selected..."
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:123
 #: CMFPlone/skins/plone_deprecated/prefs_user_group_search_form.pt:133
-#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:123
 msgid "label_use_selected"
 msgstr "Użyj zaznaczonych..."
 
@@ -7949,8 +7985,9 @@ msgid "label_user_name"
 msgstr "Nazwa użytkownika"
 
 #. Default: "User Properties"
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:34
 #: CMFPlone/skins/plone_prefs/prefs_user_details.cpt:28
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:34
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:38
 msgid "label_user_properties"
 msgstr "Właściwości użytkownika"
 
@@ -7963,7 +8000,7 @@ msgstr "Wyszukiwanie użytkowników"
 #. Default: "Settings"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:48
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:38
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:43
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:41
 msgid "label_usergroup_settings"
 msgstr "Ustawienia"
 
@@ -8077,8 +8114,8 @@ msgid "legend_details"
 msgstr "Szczegóły"
 
 #. Default: "Feedback for author"
-#: CMFPlone/skins/plone_content/author.cpt:181
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:182
+#: CMFPlone/skins/plone_content/author.cpt:194
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:194
 msgid "legend_feedback_for_author"
 msgstr "Wiadomość dla autora"
 
@@ -8155,7 +8192,7 @@ msgid "legend_syndication_details"
 msgstr "Informacje o udostępnianiu"
 
 #. Default: "The link address is:"
-#: CMFPlone/skins/plone_content/link_view.pt:44
+#: CMFPlone/skins/plone_content/link_view.pt:45
 msgid "link_address"
 msgstr "Adres odnośnika:"
 
@@ -8261,28 +8298,30 @@ msgid "listingheader_date_and_time"
 msgstr "Kiedy"
 
 #. Default: "E-mail Address"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:140
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:141
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:140
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:146
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:121
 msgid "listingheader_email_address"
 msgstr "Adres e-mail"
 
 #. Default: "Group name"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:162
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:103
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:164
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:103
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:160
 msgid "listingheader_group_name"
 msgstr "Nazwa grupy"
 
 #. Default: "Remove"
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:104
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:104
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:87
 #, fuzzy
 msgid "listingheader_group_remove"
 msgstr "Usuń grupę"
 
 #. Default: "Group/User name"
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:139
-#: CMFPlone/skins/plone_prefs/prefs_search_macros.pt:65
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:139
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:65
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:120
 msgid "listingheader_group_user_name"
 msgstr "Nazwa Grupy/Użytkownika"
 
@@ -8312,7 +8351,7 @@ msgstr "Przez kogo"
 
 #. Default: "Remove Group"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:173
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:175
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:171
 msgid "listingheader_remove_group"
 msgstr "Usuń grupę"
 
@@ -8331,7 +8370,7 @@ msgstr "Resetuj hasło"
 #. Default: "Roles"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:167
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:142
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:169
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:165
 msgid "listingheader_roles"
 msgstr "Role"
 
@@ -8397,12 +8436,12 @@ msgid "member_listing_not_allowed"
 msgstr ""
 
 #. Default: "Add New Item operation was cancelled."
-#: Archetypes/skins/archetypes/go_back.cpy:29
+#: Archetypes/skins/archetypes/go_back.cpy:24
 msgid "message_add_new_item_cancelled"
 msgstr "Operacja Dodawania Nowego Elementu została anulowana."
 
 #. Default: "Edit cancelled."
-#: Archetypes/skins/archetypes/go_back.cpy:40
+#: Archetypes/skins/archetypes/go_back.cpy:29
 msgid "message_edit_item_cancelled"
 msgstr "Edycja anulowana."
 
@@ -8472,7 +8511,7 @@ msgid "msg_see_log_for_details"
 msgstr ""
 
 #. Default: "This item does not have any body text, click the edit tab to change it."
-#: CMFPlone/skins/plone_content/newsitem_view.pt:51
+#: CMFPlone/skins/plone_content/newsitem_view.pt:53
 msgid "no_body_text"
 msgstr "Ten dokument musi zostać dopiero napisany, kliknij w przycisk Edycja aby to zrobić."
 
@@ -8482,7 +8521,7 @@ msgid "no_comments"
 msgstr "Brak komentarzy."
 
 #. Default: "(No image has been uploaded yet)"
-#: CMFPlone/skins/plone_content/image_view.pt:55
+#: CMFPlone/skins/plone_content/image_view.pt:56
 msgid "no_image_uploaded"
 msgstr "(Żaden obraz nie został jeszcze umieszczony)"
 
@@ -8576,7 +8615,8 @@ msgid "published"
 msgstr "opublikowane"
 
 #. Default: "Read More…"
-#: CMFPlone/skins/plone_content/folder_summary_view.pt:161
+#: CMFPlone/skins/plone_content/folder_full_view_item.pt:58
+#: CMFPlone/skins/plone_content/folder_summary_view.pt:162
 #: CMFPlone/skins/plone_templates/events_listing.pt:91
 #, fuzzy
 msgid "read_more"
@@ -8696,8 +8736,8 @@ msgid "summary_assigned_roles"
 msgstr "Role obecnie przypisane"
 
 #. Default: "Lists content written by an author grouped by content type"
-#: CMFPlone/skins/plone_content/author.cpt:252
-#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:254
+#: CMFPlone/skins/plone_content/author.cpt:265
+#: plonetheme.sunburst/plonetheme/sunburst/skins/sunburst_templates/author.cpt:266
 msgid "summary_author_content_list"
 msgstr "Lista zawartości utworzonej przez użytkownika, zgrupowana według typu zawartości"
 
@@ -8714,7 +8754,7 @@ msgid "summary_content_listing"
 msgstr "Lista zawartości"
 
 #. Default: "Event details"
-#: CMFPlone/skins/plone_content/event_view.pt:38
+#: CMFPlone/skins/plone_content/event_view.pt:18
 msgid "summary_event_details"
 msgstr "Szczegóły wydarzenia"
 
@@ -8735,7 +8775,7 @@ msgstr "Historia statusów"
 
 #. Default: "Select roles for each group"
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:118
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:119
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupsoverview.pt:120
 msgid "summary_roles_for_groups"
 msgstr "Wybierz role dla każdej grupy"
 
@@ -8760,7 +8800,7 @@ msgid "tableheading_select_all_items"
 msgstr "Wybierz wszystkie ${count} elementy w tym folderze."
 
 #. Default: "Home"
-#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:9
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.pt:33
 msgid "tabs_home"
 msgstr "Start"
@@ -8772,7 +8812,7 @@ msgid "text_broken_product"
 msgstr "Ten produkt jest uszkodzony"
 
 #. Default: "Contributors: ${name}"
-#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:50
+#: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:52
 msgid "text_contributors"
 msgstr "Współtwórcy: ${name}"
 
@@ -8856,12 +8896,14 @@ msgid "text_no_pil_installed"
 msgstr "Uwaga, biblioteka PIL nie jest zainstalowana poprawnie, skalowanie obrazków nie będzie działało"
 
 #. Default: "Enter a group or user name to search for or click 'Show All'."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:293
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:293
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:282
 msgid "text_no_searchstring"
 msgstr "Wpisz nazwę szukanej grupy lub użytkownika, lub kliknij 'Pokaż Wszystkich'"
 
 #. Default: "Enter a group or user name to search for."
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:287
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:287
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:276
 msgid "text_no_searchstring_large"
 msgstr "Wpisz nazwę szukanej grupy lub użytkownika."
 
@@ -8884,9 +8926,9 @@ msgid "text_no_user_searchstring_largesite"
 msgstr "Wpisz nazwę szukanego użytkownika, lub kliknij 'Pokaż Wszystkich'"
 
 #. Default: "No matches"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:282
 #: CMFPlone/skins/plone_deprecated/prefs_groups_overview.cpt:240
-#: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:218
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:282
+#: CMFPlone/skins/plone_deprecated/prefs_search_macros.pt:113
 msgid "text_nomatches"
 msgstr "Nie znaleziono..."
 
@@ -8903,7 +8945,7 @@ msgid "text_product_description"
 msgstr "Opis produktu"
 
 #. Default: "Search Site"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:7
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:9
 msgid "text_search"
 msgstr "Szukaj"
 
@@ -8918,7 +8960,8 @@ msgid "text_user"
 msgstr "Użytkownik"
 
 #. Default: "This user does not belong to any group."
-#: CMFPlone/skins/plone_prefs/prefs_user_memberships.pt:130
+#: CMFPlone/skins/plone_deprecated/prefs_user_memberships.pt:130
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usermembership.pt:114
 msgid "text_user_not_in_any_group"
 msgstr "Ten uzytkownik nie należy do żadnej grupy."
 
@@ -8990,13 +9033,13 @@ msgid "title_add_static_portlet"
 msgstr "Dodaj Portlet ze statycznym tekstem"
 
 #. Default: "Download this event in iCal format"
-#: CMFPlone/skins/plone_content/event_view.pt:159
+#: CMFPlone/skins/plone_content/event_view.pt:140
 #, fuzzy
 msgid "title_add_to_ical"
 msgstr "Dodaj ten element do twojego kalendarza iCal"
 
 #. Default: "Download this event in vCal format"
-#: CMFPlone/skins/plone_content/event_view.pt:153
+#: CMFPlone/skins/plone_content/event_view.pt:134
 #, fuzzy
 msgid "title_add_to_vcal"
 msgstr "Dodaj ten element do twojego kalendarza vCal"
@@ -9006,7 +9049,7 @@ msgstr "Dodaj ten element do twojego kalendarza vCal"
 msgid "title_author_info"
 msgstr "Informacje o autorze"
 
-#. Default: "This site was built using Plone CMS, the Open Source Content Management System. Click for more information."
+#. Default: "This site was built using the Plone Open Source Content Management System. Click for more information."
 #: plone.app.layout/plone/app/layout/viewlets/colophon.pt:8
 #, fuzzy
 msgid "title_built_with_plone"
@@ -9064,12 +9107,12 @@ msgid "title_choose_default_view"
 msgstr "Wybierz domyślny widok"
 
 #. Default: "Compare with previous revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:60
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:59
 msgid "title_compare_previous_revision"
 msgstr ""
 
 #. Default: "Compare with current revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:55
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:54
 msgid "title_compare_revision"
 msgstr ""
 
@@ -9205,13 +9248,13 @@ msgstr "Skasuj lub zmień nazwę elementu index_html aby uzyskać pełną kontro
 
 #. Default: "Required"
 #: Archetypes/skins/archetypes/widgets/field.pt:87
-#: CMFPlone/skins/plone_content/author.cpt:190
+#: CMFPlone/skins/plone_content/author.cpt:203
 #: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:128
 msgid "title_required"
 msgstr "Wymagane"
 
 #. Default: "Revert to this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:24
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:23
 msgid "title_revert_revision"
 msgstr ""
 
@@ -9221,7 +9264,7 @@ msgid "title_rss_feed"
 msgstr "Źródło RSS dla znalezionych wyników"
 
 #. Default: "Search Site"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:12
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:14
 msgid "title_search_site"
 msgstr "Szukaj w witrynie"
 
@@ -9243,9 +9286,9 @@ msgid "title_select_default_view_item"
 msgstr "Wybierz element, który zostanie wykorzystany jako widok domyślny tego folderu..."
 
 #. Default: "Send a mail to this user"
+#: CMFPlone/skins/plone_deprecated/prefs_group_members.cpt:181
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:171
-#: CMFPlone/skins/plone_prefs/prefs_group_members.cpt:181
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:175
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_groupmembership.pt:160
 msgid "title_send_mail_to_user"
 msgstr "Wyślij e-mail do użytkownika"
 
@@ -9275,7 +9318,7 @@ msgid "title_user_registration_fields"
 msgstr ""
 
 #. Default: "View this revision"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:52
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:51
 msgid "title_view_revision"
 msgstr ""
 
@@ -9376,7 +9419,7 @@ msgstr "Zmień obraz na inny:"
 
 #. Default: "Note that roles listed here apply directly to a user. They do not reflect additional roles users may have due to group memberships."
 #: CMFPlone/skins/plone_deprecated/prefs_users_overview.cpt:72
-#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:77
+#: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:79
 msgid "user_role_note"
 msgstr "Zwróć uwage że role pokazane tutaj, dotyczą bezpośrednio użytkownika. Nie odzwierciedlają one dodatkowych ról, które użytkownik może posiadać ze względu na członkowstwo w grupach."
 
@@ -9437,7 +9480,7 @@ msgid "working_copy_info"
 msgstr "Ten element jest edytowany przez ${creator} w ${working_copy} od ${created}."
 
 #. Default: "You are here:"
-#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:4
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6
 msgid "you_are_here"
 msgstr "Jesteś w:"
 
