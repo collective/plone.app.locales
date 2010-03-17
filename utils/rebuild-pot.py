@@ -58,6 +58,7 @@ def rebuild(product, folder=''):
             'plone.app.contentrules',
             'plone.app.controlpanel',
             'plone.app.customerize',
+            'plone.app.event',
             'plone.app.form',
             'plone.app.i18n',
             'plone.app.imaging',
