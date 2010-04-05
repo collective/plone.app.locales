@@ -72,15 +72,13 @@ atreferencebrowserwidget
 For Plone 3.3, you can use the rebuild-pot.py script (Products.ATReferenceBrowserWidget)::
 
     python rebuild-pot.py atrbw
+    python sync.py atreferencebrowserwidget
 
 For Plone 4, you can't use the rebuild-pot.py script (archetypes.referencebrowserwidget),
 use directly the following command::
+    
+    bin/i18n atreferencebrowserwidget
 
-    i18ndude rebuild-pot --pot atreferencebrowserwidget.pot --create atreferencebrowserwidget --merge atreferencebrowserwidget-manual.pot $INSTANCE_HOME/src/archetypes.referencebrowserwidget
-
-::
-
-   python sync.py atreferencebrowserwidget
 
 passwordresettool
 -----------------
