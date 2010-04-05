@@ -1,35 +1,3 @@
-Preparing Plone 3.3 buildout
-============================
-The plonenext 3.3 buildout is used to synchronize po files for Plone 3.2 and 3.3::
-
-    mkdir ~/svn
-    cd ~/svn
-    svn co https://svn.plone.org/svn/plone/plonenext/3.3/ plone3.3
-    cd plone3.3
-
-If you plan to synchronize LinguaPlone po files,
-you need to add the following line in etc/sources::
-
-    Products.LinguaPlone                  https://svn.plone.org/svn/plone/Products.LinguaPlone/trunk/
-
-The rebuild-pot.py script search a Products directory, let it be happy::
-
-    mkdir Products
-    cd src
-    svn propset svn:externals -F ../etc/sources  .
-    svn up
-
-Products.CMFPlone egg was renamed to Plone, the search algorithm in rebuild-pot.py script needs to be updated.
-For now we do a symlink::
-
-    ln -s Plone Products.CMFPlone
-
-::
-
-    cd plone.app.locales/plone/app/locales/utils
-    export INSTANCE_HOME=~/svn/plone3.3/
-
-
 Preparing Plone 4 buildout
 ==========================
 ::
@@ -40,6 +8,9 @@ Preparing Plone 4 buildout
     cd plone4
     python bootstrap.py
     bin/buildout -c experimental/i18n.cfg
+
+This is only needed for old rebuild-pot.py script (kupu domains)::
+
     mkdir Products
     cd src
     ln -s Plone Products.CMFPlone
@@ -53,53 +24,37 @@ plone
 -----
 ::
 
-    python rebuild-pot.py plone
-    python sync.py plone
+    bin/i18n plone
 
 atcontenttypes
 --------------
-For Plone 3.3::
-
-    python rebuild-pot.py atct
-    python sync.py atcontenttypes
-
-For Plone 4.0/4.1, in the buildout root::
+::
 
     bin/i18n atcontenttypes
 
 atreferencebrowserwidget
 ------------------------
-For Plone 3.3, you can use the rebuild-pot.py script (Products.ATReferenceBrowserWidget)::
-
-    python rebuild-pot.py atrbw
-    python sync.py atreferencebrowserwidget
-
-For Plone 4, you can't use the rebuild-pot.py script (archetypes.referencebrowserwidget),
-use directly the following command::
+::
     
     bin/i18n atreferencebrowserwidget
-
 
 passwordresettool
 -----------------
 ::
 
-    python rebuild-pot.py prt
-    python sync.py passwordresettool
+    bin/i18n passwordresettool
 
 cmfplacefulworkflow
 -------------------
 ::
 
-    python rebuild-pot.py cmfpw
-    python sync.py cmfplacefulworkflow
+    bin/i18n cmfplacefulworkflow
 
 cmfeditions
 -----------
 ::
 
-    python rebuild-pot.py cmfe
-    python sync.py cmfeditions
+    bin/i18n cmfeditions
 
 kupu
 ----
@@ -118,8 +73,7 @@ linguaplone
 -----------
 ::
 
-    python rebuild-pot.py lp
-    python sync.py linguaplone
+    bin/i18n linguaplone
 
 plonefrontpage
 --------------
