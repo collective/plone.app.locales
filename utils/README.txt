@@ -58,10 +58,14 @@ plone
 
 atcontenttypes
 --------------
-::
+For Plone 3.3::
 
     python rebuild-pot.py atct
     python sync.py atcontenttypes
+
+For Plone 4.0/4.1, in the buildout root::
+
+    bin/i18n atcontenttypes
 
 atreferencebrowserwidget
 ------------------------
