@@ -52,15 +52,14 @@ Set the svn:externals and commit::
 For Plone 4::
 
     rm -rf plone/app/locales/i18n
-    cd plone/app/locales/
 
 For Plone 3::
 
     rm -rf plone/app/locales/i18n/kupu
-    cd plone/app/locales/locales/
 
 Then::
 
+    cd plone/app/locales/locales/
     for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
 
     cd /tmp/3.3.2
