@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-06-21 15:52+0000\n"
+"POT-Creation-Date: 2010-06-30 11:55+0000\n"
 "PO-Revision-Date: 2010-06-27 23:35+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -765,6 +765,10 @@ msgstr "為狀態轉換新增備註"
 #: CMFPlone/skins/plone_form_scripts/discussion_reply.cpy:66
 msgid "Comment added."
 msgstr "留言新增。"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
+msgid "Comment cannot be blank."
+msgstr ""
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1568,7 +1572,7 @@ msgstr "密碼設定值不正確"
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:15
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:87
 msgid "Info"
 msgstr "資訊"
 
@@ -2320,14 +2324,6 @@ msgstr "請選擇刪除一筆或多筆項目。"
 msgid "Please select one or more items to rename."
 msgstr "請選擇一筆或多筆項目以變更名稱。"
 
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
-msgid "Please submit a body."
-msgstr "請提供一個主體內容。"
-
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
-msgid "Please submit a subject."
-msgstr "請提供一個標題。"
-
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:18
 msgid "Please submit a valid email address."
 msgstr "請提供一個有效的電子信箱地址。"
@@ -3041,6 +3037,10 @@ msgstr "子目錄"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:29
 msgid "Subject"
 msgstr "標題"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
+msgid "Subject cannot be blank."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:30
 msgid "Subject of the message"
@@ -4034,7 +4034,7 @@ msgstr "語系"
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:84
-#: CMFPlone/skins/plone_forms/search.pt:185
+#: CMFPlone/skins/plone_forms/search.pt:184
 msgid "box_last_modified"
 msgstr "最近修改"
 
@@ -4118,6 +4118,11 @@ msgstr "選擇 ${title}"
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:21
 msgid "checkout_info"
 msgstr "這是 ${baseline_title} 的作業備份，由 ${creator} 於 ${created} 所建立。"
+
+#. Default: "Comments (${comments})"
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:10
+msgid "comments_header"
+msgstr ""
 
 #. Default: "Use parent folder setting"
 #: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:88
@@ -4268,8 +4273,9 @@ msgstr "本網站使用 ${plone}，並致力提供最佳的操作親和度與可
 msgid "description_accessibility_statement"
 msgstr "我們努力發揮所知，充份研究不同族群使用網路的方法，以開發出一個網站系統，能讓每個人用起來都覺得簡單又清楚。"
 
-#. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#. Default: "Plain text formatting. URLs will be turned into links."
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:157
+#, fuzzy
 msgid "description_add_comment"
 msgstr "你可以填寫下列表單來新增留言。採用純文字格式。"
 
@@ -4447,7 +4453,7 @@ msgid "description_language_settings"
 msgstr "介面語系和內容翻譯的相關設定。"
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_license"
 msgstr "採用 ${license} 散佈。"
 
@@ -4727,11 +4733,6 @@ msgstr "RSS 功能已被網站管理者取消。"
 #: CMFPlone/skins/plone_forms/synPropertiesForm.cpt:19
 msgid "description_syndication_properties"
 msgstr "設定資料夾的內容對外啟用 RSS 功能，以便其他網站蒐集你的資料。"
-
-#. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:26
-msgid "description_trademark"
-msgstr "Plone<sup>&reg;</sup> 和 Plone 標誌為 ${plonefoundation} 註冊商標。"
 
 #. Default: "Workflow, visibility and versioning settings for your content types."
 #: plone.app.controlpanel/plone/app/controlpanel/types.pt:23
@@ -5750,6 +5751,11 @@ msgstr "你的偏好語系。"
 msgid "help_publishing_comments"
 msgstr "將加進發佈歷史記錄中。如果有多個項目被選擇，這附註會同時加到所有項目。"
 
+#. Default: "Enter a relative path e.g.: <br /> '..' for the parent folder <br /> '../..' for the parent's parent <br />'../somefolder' for a sibling folder"
+#: ATContentTypes/criteria/relativepath.py
+msgid "help_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Check this to have your email address filled in automatically when you log in later."
 #: CMFPlone/skins/plone_login/login_form.cpt:137
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:238
@@ -5986,11 +5992,6 @@ msgstr "由 ${actor} ${action} 於 ${time}"
 msgid "html"
 msgstr "HTML"
 
-#. Default: "iCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "iCalendar"
-msgstr "iCalendar"
-
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:72
 msgid "if_all_conditions_met"
@@ -6062,7 +6063,7 @@ msgstr "新增"
 
 #. Default: "Add Comment"
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:19
 msgid "label_add_comment"
 msgstr "加個留言"
 
@@ -6168,8 +6169,7 @@ msgid "label_an_anonymous_user"
 msgstr "一位匿名者"
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:54
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
 #: plone.app.layout/plone/app/layout/viewlets/content.py:158
 msgid "label_anonymous_user"
 msgstr "匿名使用者"
@@ -6197,7 +6197,7 @@ msgid "label_apply_to_subfolders"
 msgstr "套用到子目錄"
 
 #. Default: "at"
-#: Archetypes/Field.py:1950
+#: Archetypes/Field.py:1952
 msgid "label_at"
 msgstr "於"
 
@@ -6256,7 +6256,7 @@ msgstr "瀏覽 "
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:73
-#: CMFPlone/skins/plone_forms/search.pt:173
+#: CMFPlone/skins/plone_forms/search.pt:172
 msgid "label_by_author"
 msgstr "作者 ${author}"
 
@@ -6392,22 +6392,10 @@ msgid "label_click_to_view_full_image"
 msgstr "點選以顯示原大小圖片…"
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:152
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:151
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:91
 msgid "label_comment"
 msgstr "留言"
-
-#. Default: "Posted by"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:51
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:46
-msgid "label_comment_by"
-msgstr "張貼者"
-
-#. Default: "at"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
-msgid "label_commented_at"
-msgstr "在"
 
 #. Default: "Comments"
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:269
@@ -6849,7 +6837,7 @@ msgid "label_file"
 msgstr "檔案"
 
 #. Default: "Filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:197
+#: CMFPlone/skins/plone_forms/search.pt:196
 #: plone.app.layout/plone/app/layout/viewlets/keywords.pt:7
 msgid "label_filed_under"
 msgstr "分類:"
@@ -6894,7 +6882,7 @@ msgid "label_generated_tabs_enable"
 msgstr "自動產生頁籤"
 
 #. Default: "GNU GPL license"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "label_gnu_gpl_licence"
 msgstr "GNU 通用公共授權條款"
 
@@ -7112,7 +7100,7 @@ msgid "label_login_name"
 msgstr "登入帳號"
 
 #. Default: "Log in to add comments"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:32
 msgid "label_login_to_add_comments"
 msgstr "登入後留言"
 
@@ -7165,7 +7153,7 @@ msgid "label_modification_date"
 msgstr "修改日期"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:102
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:99
 #: CMFPlone/skins/plone_forms/member_search_form.pt:33
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:72
 msgid "label_name"
@@ -7277,7 +7265,7 @@ msgid "label_no_prefs_panels_available"
 msgstr "暫無可用的設定項目。"
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1997
+#: Archetypes/Field.py:1999
 msgid "label_no_reference"
 msgstr "<無參照>"
 
@@ -7329,7 +7317,7 @@ msgid "label_parent"
 msgstr "上層"
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:114
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:111
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:111
 #: CMFPlone/skins/plone_login/login_form.cpt:101
 msgid "label_password"
@@ -7341,6 +7329,7 @@ msgid "label_password_change_mail"
 msgstr "將產生一個網址、並以電子郵件寄出；其中的連結將帶領進入一頁面，以變更密碼，然後完成註冊程序。"
 
 #. Default: "Search Sub-Folders"
+#: ATContentTypes/criteria/relativepath.py
 #: widget label of BooleanWidget - description ""
 msgid "label_path_criteria_recurse"
 msgstr "搜尋子目錄"
@@ -7500,8 +7489,13 @@ msgstr "註冊"
 msgid "label_related_items"
 msgstr "相關內容"
 
+#. Default: "Relative path"
+#: ATContentTypes/criteria/relativepath.py
+msgid "label_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:214
+#: CMFPlone/skins/plone_forms/search.pt:213
 msgid "label_relevance_percentage"
 msgstr "關連性: ${percentage}%"
 
@@ -7520,7 +7514,7 @@ msgstr "記住我的名字"
 
 #. Default: "Remove"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:87
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:79
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:89
 msgid "label_remove"
 msgstr "移除"
 
@@ -7542,7 +7536,7 @@ msgid "label_rename_all"
 msgstr "全部改名"
 
 #. Default: "Reply"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:67
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:77
 msgid "label_reply"
 msgstr "回覆"
 
@@ -7554,7 +7548,7 @@ msgstr "請求的 URL"
 #. Default: "(Required)"
 #: CMFPlone/skins/plone_content/author.cpt:191
 #: CMFPlone/skins/plone_deprecated/personalize_form.cpt:108
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:134
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:153
 msgid "label_required"
 msgstr "（必要的）"
 
@@ -7846,7 +7840,6 @@ msgstr "值"
 
 #. Default: "Subject"
 #: CMFPlone/skins/plone_content/author.cpt:187
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:132
 #: CMFPlone/skins/plone_templates/contact-info.cpt:116
 msgid "label_subject"
 msgstr "標題"
@@ -8028,7 +8021,7 @@ msgid "label_usergroup_settings"
 msgstr "設定"
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:101
 msgid "label_username"
 msgstr "使用者名稱"
 
@@ -8115,11 +8108,6 @@ msgstr "全域設定"
 msgid "legend_account_details"
 msgstr "帳號詳細資訊"
 
-#. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:78
-msgid "legend_add_comment"
-msgstr "新增留言"
-
 #. Default: "Add new"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:42
 msgid "legend_add_new"
@@ -8176,7 +8164,7 @@ msgid "legend_navigation_details"
 msgstr "導覽細節"
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
 msgid "legend_note_reply_anonymous"
 msgstr "你尚未登入系統。你可選擇在下面輸入使用者名稱和密碼進入系統。或是不輸入，這份意見將會以 '匿名使用者' 為名稱刊出。"
 
@@ -9451,11 +9439,6 @@ msgstr "此處所列出的角色是直接分派給使用者的，並不包含該
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:68
 msgid "user_roles_note"
 msgstr "此處所設定的角色是直接分派給使用者的，圖案 ${image_link_icon} 代表那個角色是繼承自其他群組的設定。"
-
-#. Default: "vCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "vCalendar"
-msgstr "vCalendar"
 
 #: validation/validators/ExpressionValidator.py:95
 msgid "validation failed, expr was:$expr"

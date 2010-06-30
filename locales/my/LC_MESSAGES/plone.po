@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-06-21 15:52+0000\n"
+"POT-Creation-Date: 2010-06-30 11:55+0000\n"
 "PO-Revision-Date: 2006-12-04 17:15+0530\n"
 "Last-Translator: Aung Kyaw Myo and Wai Yar Latt <<myolay.bit@gmail.com>,  <waiyarlatt@gmail.com>,>\n"
 "Language-Team: BIT [www.burmait.org] <burmait@burmait.org>\n"
@@ -764,6 +764,10 @@ msgstr ""
 #: CMFPlone/skins/plone_form_scripts/discussion_reply.cpy:66
 msgid "Comment added."
 msgstr "မႀတ္ခဵက္ ထည့္သၾင္းလိုက္တယ္။"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
+msgid "Comment cannot be blank."
+msgstr ""
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1568,7 +1572,7 @@ msgstr ""
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:15
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:87
 msgid "Info"
 msgstr ""
 
@@ -2320,14 +2324,6 @@ msgstr "ဖဵက္ပစ္ရန္ တခု ဒၝမဟုတ္ အမဵ
 msgid "Please select one or more items to rename."
 msgstr "အမည္ဴပန္ေပးရန္ တခု ဒၝမဟုတ္ အမဵားကို ေ႟ၾးခဵယ္ပၝ။"
 
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
-msgid "Please submit a body."
-msgstr "စာကိုယ္တခု တင္သၾင္းပၝ"
-
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
-msgid "Please submit a subject."
-msgstr "အေဳကာင္းအရာေခၝင္းစဥ္တခု တင္သၾင္းပၝ"
-
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:18
 msgid "Please submit a valid email address."
 msgstr "လ႖ပ္စစ္စာပိုႚ အဆက္အသၾယ္လိပ္စာ အစစ္အမႀန္တခု တင္သၾင္းပၝ"
@@ -3040,6 +3036,10 @@ msgstr "ဖိုင္တဲၾအခၾဲမဵား"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:29
 msgid "Subject"
+msgstr ""
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
+msgid "Subject cannot be blank."
 msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:30
@@ -4046,7 +4046,7 @@ msgstr ""
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:84
-#: CMFPlone/skins/plone_forms/search.pt:185
+#: CMFPlone/skins/plone_forms/search.pt:184
 msgid "box_last_modified"
 msgstr "ေနာက္ဆံုး ဴပႂဴပင္မၾမ္းမံခဲ့တဲ့ ေနႚစၾဲနဲႚ အခဵိန္"
 
@@ -4134,6 +4134,11 @@ msgstr ""
 #. Default: "This is a working copy of ${baseline_title}, made by ${creator} on ${created}."
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:21
 msgid "checkout_info"
+msgstr ""
+
+#. Default: "Comments (${comments})"
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:10
+msgid "comments_header"
 msgstr ""
 
 #. Default: "Use parent folder setting"
@@ -4286,8 +4291,9 @@ msgstr "ဒီကၾန္ရက္ဟာ ${plone} ကို အသံုးဴ�
 msgid "description_accessibility_statement"
 msgstr "လူတိုင္း အင္တာနက္ကို သံုးလိုႚရရန္ ကဵေနာ္တိုႚ အသိပညာႎႀင့္ နားလည္လၾယ္ေသာ နည္းလမ္းကို သံုးရန္၊ လူတိုင္း သံုးႎုိင္ရန္ ႟ိုး႟ိုးရႀင္းရႀင္ ကၾန္ရက္တခု ဖၾံႚ႓ဖိႂးေစရန္ တာဝန္ခံလိုက္တယ္။"
 
-#. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#. Default: "Plain text formatting. URLs will be turned into links."
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:157
+#, fuzzy
 msgid "description_add_comment"
 msgstr "သင့္ ဴဖည့္စၾက္ခဵင္တဲ့ မႀတ္ခဵက္တခုကို ေအာက္မႀာဴပထားတဲ့ ပံုစံထဲမႀာ ႟ိုး႟ိုးစာသား ပံုစံနဲႚ ေရးပၝ။"
 
@@ -4468,7 +4474,7 @@ msgid "description_language_settings"
 msgstr ""
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_license"
 msgstr "${license} ေအာက္မႀာ ဴဖန္ႚေဝလိုက္တယ္"
 
@@ -4750,12 +4756,6 @@ msgstr "အကဵႂိးတူလုပ္ဴခင္းကို ကၾန�
 #: CMFPlone/skins/plone_forms/synPropertiesForm.cpt:19
 msgid "description_syndication_properties"
 msgstr "ဒီဖုိင္တၾဲကို သင္အကဵႂိးတူလုပ္ရန္ အကဵႂိးတူလုပ္ဴခင္းက ဴဖစ္ႎိုင္တယ္။ ဒၝေဳကာင့္ တဴခားကၾန္ရက္ေတၾမႀ အကဵႂိးတူလုပ္ႎိုင္တယ္။"
-
-#. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:26
-#, fuzzy
-msgid "description_trademark"
-msgstr "Plone <sup>&reg;</sup> ႎႀင့္ Plone logo သည္ ${plonefoundation} ၏  မႀတ္ပံုတင္ထားေသာ အမႀတ္တံဆိပ္မဵား ဴဖစ္တယ္။"
 
 #. Default: "Workflow, visibility and versioning settings for your content types."
 #: plone.app.controlpanel/plone/app/controlpanel/types.pt:23
@@ -5802,6 +5802,11 @@ msgstr "သင့္ရဲႚ ဦးစားေပး ဘာသာစကာ�
 msgid "help_publishing_comments"
 msgstr "ထုတ္လၿင့္တဲ့ သမိုင္းေဳကာင္း ဴဖည့္စၾက္ပၝလိမ့္မယ္။ တကယ္လို သတင္းကိစၤ အေဴမာက္အမဵားကို ေ႟ၾးခဵယ္ထားရင္ ဒီကိစၤနဲႚပတ္သက္တဲ့ မႀတ္ခဵက္ေတၾကို သူတုိႚဆီကို တၾဲထည့္ေပးလိုက္ပၝမယ္"
 
+#. Default: "Enter a relative path e.g.: <br /> '..' for the parent folder <br /> '../..' for the parent's parent <br />'../somefolder' for a sibling folder"
+#: ATContentTypes/criteria/relativepath.py
+msgid "help_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Check this to have your email address filled in automatically when you log in later."
 #: CMFPlone/skins/plone_login/login_form.cpt:137
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:238
@@ -6043,11 +6048,6 @@ msgstr ""
 msgid "html"
 msgstr ""
 
-#. Default: "iCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "iCalendar"
-msgstr ""
-
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:72
 msgid "if_all_conditions_met"
@@ -6119,7 +6119,7 @@ msgstr ""
 
 #. Default: "Add Comment"
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:19
 msgid "label_add_comment"
 msgstr "မႀတ္ခဵက္ ေပးရန္"
 
@@ -6229,8 +6229,7 @@ msgid "label_an_anonymous_user"
 msgstr ""
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:54
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
 #: plone.app.layout/plone/app/layout/viewlets/content.py:158
 msgid "label_anonymous_user"
 msgstr "အမည္မသိ သံုးသူ"
@@ -6258,7 +6257,7 @@ msgid "label_apply_to_subfolders"
 msgstr ""
 
 #. Default: "at"
-#: Archetypes/Field.py:1950
+#: Archetypes/Field.py:1952
 msgid "label_at"
 msgstr ""
 
@@ -6320,7 +6319,7 @@ msgstr ""
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:73
-#: CMFPlone/skins/plone_forms/search.pt:173
+#: CMFPlone/skins/plone_forms/search.pt:172
 #, fuzzy
 msgid "label_by_author"
 msgstr "${author} မႀ"
@@ -6462,22 +6461,10 @@ msgid "label_click_to_view_full_image"
 msgstr "ပံု၏ အရၾယ္အစား အဴပည့္ ဴမင္ကၾင္းကို ႎႀိပ္ရန္"
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:152
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:151
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:91
 msgid "label_comment"
 msgstr "မႀတ္ခဵက္"
-
-#. Default: "Posted by"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:51
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:46
-msgid "label_comment_by"
-msgstr "ပိုႚလၿတ္သူ"
-
-#. Default: "at"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
-msgid "label_commented_at"
-msgstr "၌"
 
 #. Default: "Comments"
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:269
@@ -6924,7 +6911,7 @@ msgid "label_file"
 msgstr "ဖိုင္"
 
 #. Default: "Filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:197
+#: CMFPlone/skins/plone_forms/search.pt:196
 #: plone.app.layout/plone/app/layout/viewlets/keywords.pt:7
 msgid "label_filed_under"
 msgstr ""
@@ -6969,7 +6956,7 @@ msgid "label_generated_tabs_enable"
 msgstr "အလုိအေလဵာက္ tabs ဴဖစ္ေပၞေစတယ္"
 
 #. Default: "GNU GPL license"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "label_gnu_gpl_licence"
 msgstr "GNU GPL လိုင္စင္"
 
@@ -7190,7 +7177,7 @@ msgid "label_login_name"
 msgstr "သံုးသူအမည္"
 
 #. Default: "Log in to add comments"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:32
 msgid "label_login_to_add_comments"
 msgstr "မႀတ္ခဵက္ ဴဖည့္ရန္အတၾက္ ဝင္ရန္"
 
@@ -7244,7 +7231,7 @@ msgid "label_modification_date"
 msgstr "မၾမ္းမံတဲ့ ေနႚရက္"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:102
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:99
 #: CMFPlone/skins/plone_forms/member_search_form.pt:33
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:72
 msgid "label_name"
@@ -7356,7 +7343,7 @@ msgid "label_no_prefs_panels_available"
 msgstr ""
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1997
+#: Archetypes/Field.py:1999
 msgid "label_no_reference"
 msgstr ""
 
@@ -7408,7 +7395,7 @@ msgid "label_parent"
 msgstr ""
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:114
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:111
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:111
 #: CMFPlone/skins/plone_login/login_form.cpt:101
 msgid "label_password"
@@ -7420,6 +7407,7 @@ msgid "label_password_change_mail"
 msgstr ""
 
 #. Default: "Search Sub-Folders"
+#: ATContentTypes/criteria/relativepath.py
 #: widget label of BooleanWidget - description ""
 msgid "label_path_criteria_recurse"
 msgstr "ဖိုင္တၾဲခၾဲေတၾကို ရႀာရန္"
@@ -7579,8 +7567,13 @@ msgstr "မႀတ္ပံုတင္စာရင္း"
 msgid "label_related_items"
 msgstr "ဆက္ႎၿယ္တဲ့ အေဳကာင္းအရာ"
 
+#. Default: "Relative path"
+#: ATContentTypes/criteria/relativepath.py
+msgid "label_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:214
+#: CMFPlone/skins/plone_forms/search.pt:213
 msgid "label_relevance_percentage"
 msgstr ""
 
@@ -7599,7 +7592,7 @@ msgstr "ကဵေနာ္ရဲႚ သံုးသူအမည္ကို မ�
 
 #. Default: "Remove"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:87
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:79
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:89
 msgid "label_remove"
 msgstr "ဖယ္႟ႀားရန္"
 
@@ -7622,7 +7615,7 @@ msgid "label_rename_all"
 msgstr "အားလံုးကို အမည္ဴပန္ေပးရန္"
 
 #. Default: "Reply"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:67
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:77
 msgid "label_reply"
 msgstr "စာဴပန္ရန္"
 
@@ -7634,7 +7627,7 @@ msgstr "ကၾန္ရက္လိပ္စာ ေတာင္းဆိုမ�
 #. Default: "(Required)"
 #: CMFPlone/skins/plone_content/author.cpt:191
 #: CMFPlone/skins/plone_deprecated/personalize_form.cpt:108
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:134
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:153
 msgid "label_required"
 msgstr "(လိုအပ္တဲ့)"
 
@@ -7929,7 +7922,6 @@ msgstr "တန္ဖိုး"
 
 #. Default: "Subject"
 #: CMFPlone/skins/plone_content/author.cpt:187
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:132
 #: CMFPlone/skins/plone_templates/contact-info.cpt:116
 msgid "label_subject"
 msgstr "အေဳကာင္းအရာ"
@@ -8111,7 +8103,7 @@ msgid "label_usergroup_settings"
 msgstr ""
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:101
 msgid "label_username"
 msgstr "သံုးသူအမည္"
 
@@ -8198,11 +8190,6 @@ msgstr ""
 msgid "legend_account_details"
 msgstr "ကိုယ္ပိုင္လိပ္စာ အေသးစိတ္မဵား"
 
-#. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:78
-msgid "legend_add_comment"
-msgstr "မႀတ္ခဵက္နဲႚ ပတ္သက္တဲ့ အေသးစိတ္မဵား"
-
 #. Default: "Add new"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:42
 msgid "legend_add_new"
@@ -8259,7 +8246,7 @@ msgid "legend_navigation_details"
 msgstr "ကူးသန္းဳကည့္႟ႁမႁအတၾက္ အေသးစိတ္အခဵက္အလက္မဵား"
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
 #, fuzzy
 msgid "legend_note_reply_anonymous"
 msgstr "မႀတ္စု။ ။ သင္ ကၾန္ရက္အတၾင္းသိုႚ မဝင္ရေသးပၝ။ ေအာက္မႀာဴပထားတဲ့ သံုးသူအမည္ႎႀင့္ စကားဝႀက္ကို ႟ိုက္သၾင္းပၝ။ ႟ိုက္မသၾင္းလ႖င္ အမည္မေဖာ္ဴပေသာ သံုးသူအဴဖစ္ ဒီမႀတ္ခဵက္တၾင္ ေဖာ္ဴပေပလိမ့္မည္။"
@@ -9546,11 +9533,6 @@ msgstr "သံုးသူသိုႚ တိုက္႟ုိက္အကဵ�
 #. Default: "Note that roles set here apply directly to a user. The symbol ${image_link_icon} indicates a role inherited from membership in a group."
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:68
 msgid "user_roles_note"
-msgstr ""
-
-#. Default: "vCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "vCalendar"
 msgstr ""
 
 #: validation/validators/ExpressionValidator.py:95

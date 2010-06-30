@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone-sl\n"
-"POT-Creation-Date: 2010-06-21 15:52+0000\n"
+"POT-Creation-Date: 2010-06-30 11:55+0000\n"
 "PO-Revision-Date: 2009-02-27 17:37+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: <sl@li.org>\n"
@@ -764,6 +764,10 @@ msgstr "Komentar zadnje spremembe"
 #: CMFPlone/skins/plone_form_scripts/discussion_reply.cpy:66
 msgid "Comment added."
 msgstr "Dodan komentar"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
+msgid "Comment cannot be blank."
+msgstr ""
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1571,7 +1575,7 @@ msgstr ""
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:15
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:87
 msgid "Info"
 msgstr "Info"
 
@@ -2322,14 +2326,6 @@ msgstr "Prosim izberite eno ali več prispevkov za brisanje."
 msgid "Please select one or more items to rename."
 msgstr "Prosim izberite eno ali več prispevkov za preimenovanje."
 
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
-msgid "Please submit a body."
-msgstr "Prosim vnesite telo besedila"
-
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
-msgid "Please submit a subject."
-msgstr "Prosim vnesite predmet."
-
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:18
 msgid "Please submit a valid email address."
 msgstr "Prosim vnesite veljaven poštni naslov."
@@ -3037,6 +3033,10 @@ msgstr "Podmape"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:29
 msgid "Subject"
 msgstr "Predmet"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
+msgid "Subject cannot be blank."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:30
 msgid "Subject of the message"
@@ -4030,7 +4030,7 @@ msgstr "Jeziki"
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:84
-#: CMFPlone/skins/plone_forms/search.pt:185
+#: CMFPlone/skins/plone_forms/search.pt:184
 msgid "box_last_modified"
 msgstr "Zadnja sprememba"
 
@@ -4114,6 +4114,11 @@ msgstr ""
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:21
 msgid "checkout_info"
 msgstr "To je delovni izvod ${baseline_title}, avtorja ${creator} dne ${created}."
+
+#. Default: "Comments (${comments})"
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:10
+msgid "comments_header"
+msgstr ""
 
 #. Default: "Use parent folder setting"
 #: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:88
@@ -4264,8 +4269,9 @@ msgstr "To spletišče uporablja ${plone} , ki je bilo načrtovano tako, da je p
 msgid "description_accessibility_statement"
 msgstr "Za razvoj smo uporabili smo vse znanje in razumevanje uporabe spletnih strani za različne uporabnike, da bi naredili splet, ki je jasen in preposto uporaben za vsakodnevno rabo."
 
-#. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#. Default: "Plain text formatting. URLs will be turned into links."
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:157
+#, fuzzy
 msgid "description_add_comment"
 msgstr "Komentar lahko dodate tako, da izpolnite spodnji obrazec. Uporabljajte enostavno besedilo."
 
@@ -4445,7 +4451,7 @@ msgid "description_language_settings"
 msgstr "Nastavitve ki so vezane na jezike uporabniškega vmesnika in prevode vsebin."
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_license"
 msgstr "Distribuirano z licenco ${license}"
 
@@ -4731,11 +4737,6 @@ msgstr "Skrbnik spletišča je izklopil sindiciranje."
 #: CMFPlone/skins/plone_forms/synPropertiesForm.cpt:19
 msgid "description_syndication_properties"
 msgstr "Sindiciranje vam omogoča, da je vsebina te mape usklajena z ostalimi spletišči."
-
-#. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:26
-msgid "description_trademark"
-msgstr "Plone<sup>&reg;</sup> in Plonov logotip sta registrirani blagovni znamki ${plonefoundation}."
 
 #. Default: "Workflow, visibility and versioning settings for your content types."
 #: plone.app.controlpanel/plone/app/controlpanel/types.pt:23
@@ -5768,6 +5769,11 @@ msgstr "Vaš privzeti jezik."
 msgid "help_publishing_comments"
 msgstr "Bo dodano v zgodovino objav. Če je izbranih več prispevkov, bo ta komentar dodan k vsakemu od njih."
 
+#. Default: "Enter a relative path e.g.: <br /> '..' for the parent folder <br /> '../..' for the parent's parent <br />'../somefolder' for a sibling folder"
+#: ATContentTypes/criteria/relativepath.py
+msgid "help_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Check this to have your email address filled in automatically when you log in later."
 #: CMFPlone/skins/plone_login/login_form.cpt:137
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:238
@@ -6006,11 +6012,6 @@ msgstr ""
 msgid "html"
 msgstr "HTML"
 
-#. Default: "iCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "iCalendar"
-msgstr "ICalendar"
-
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:72
 msgid "if_all_conditions_met"
@@ -6082,7 +6083,7 @@ msgstr "Dodaj"
 
 #. Default: "Add Comment"
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:19
 msgid "label_add_comment"
 msgstr "Dodaj komentar"
 
@@ -6190,8 +6191,7 @@ msgid "label_an_anonymous_user"
 msgstr "anonimni uporabnik"
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:54
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
 #: plone.app.layout/plone/app/layout/viewlets/content.py:158
 msgid "label_anonymous_user"
 msgstr "Anonimni uporabnik"
@@ -6219,7 +6219,7 @@ msgid "label_apply_to_subfolders"
 msgstr "Potrdi za podmape"
 
 #. Default: "at"
-#: Archetypes/Field.py:1950
+#: Archetypes/Field.py:1952
 msgid "label_at"
 msgstr "na"
 
@@ -6279,7 +6279,7 @@ msgstr "Brskaj"
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:73
-#: CMFPlone/skins/plone_forms/search.pt:173
+#: CMFPlone/skins/plone_forms/search.pt:172
 msgid "label_by_author"
 msgstr "Avtor ${author}"
 
@@ -6418,22 +6418,10 @@ msgid "label_click_to_view_full_image"
 msgstr "Kliknite za pogled polne velikosti slike..."
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:152
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:151
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:91
 msgid "label_comment"
 msgstr "Komentar"
-
-#. Default: "Posted by"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:51
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:46
-msgid "label_comment_by"
-msgstr "Objavil"
-
-#. Default: "at"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
-msgid "label_commented_at"
-msgstr "pri"
 
 #. Default: "Comments"
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:269
@@ -6880,7 +6868,7 @@ msgid "label_file"
 msgstr "Datoteka"
 
 #. Default: "Filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:197
+#: CMFPlone/skins/plone_forms/search.pt:196
 #: plone.app.layout/plone/app/layout/viewlets/keywords.pt:7
 msgid "label_filed_under"
 msgstr "shranjeno pod:"
@@ -6925,7 +6913,7 @@ msgid "label_generated_tabs_enable"
 msgstr "Avtomatsko generiraj zavihke"
 
 #. Default: "GNU GPL license"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "label_gnu_gpl_licence"
 msgstr "Licenca GNU GPL"
 
@@ -7143,7 +7131,7 @@ msgid "label_login_name"
 msgstr "Ime uporabnika"
 
 #. Default: "Log in to add comments"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:32
 msgid "label_login_to_add_comments"
 msgstr "Prijava za dodajanje komentarjev"
 
@@ -7197,7 +7185,7 @@ msgid "label_modification_date"
 msgstr "Datum spremembe"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:102
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:99
 #: CMFPlone/skins/plone_forms/member_search_form.pt:33
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:72
 msgid "label_name"
@@ -7310,7 +7298,7 @@ msgid "label_no_prefs_panels_available"
 msgstr "Kontrolnega panela preferenc ni na voljo"
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1997
+#: Archetypes/Field.py:1999
 msgid "label_no_reference"
 msgstr "<ni sklica>"
 
@@ -7362,7 +7350,7 @@ msgid "label_parent"
 msgstr "Nadrejeni"
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:114
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:111
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:111
 #: CMFPlone/skins/plone_login/login_form.cpt:101
 msgid "label_password"
@@ -7374,6 +7362,7 @@ msgid "label_password_change_mail"
 msgstr "Generiran bo naslov, ki ga boste prejeli po elektronski pošti. Ko boste prišli na sporočeni URL, boste na tej strani lahko spremenili geslo in dokončali postopek prijave."
 
 #. Default: "Search Sub-Folders"
+#: ATContentTypes/criteria/relativepath.py
 #: widget label of BooleanWidget - description ""
 msgid "label_path_criteria_recurse"
 msgstr "Preišči podmape"
@@ -7535,8 +7524,13 @@ msgstr "Včlani se"
 msgid "label_related_items"
 msgstr "Povezani prispevki"
 
+#. Default: "Relative path"
+#: ATContentTypes/criteria/relativepath.py
+msgid "label_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:214
+#: CMFPlone/skins/plone_forms/search.pt:213
 msgid "label_relevance_percentage"
 msgstr "Relevantnost: ${percentage}%"
 
@@ -7555,7 +7549,7 @@ msgstr "Zapomni si moje ime."
 
 #. Default: "Remove"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:87
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:79
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:89
 msgid "label_remove"
 msgstr "Odstrani"
 
@@ -7578,7 +7572,7 @@ msgid "label_rename_all"
 msgstr "Preimenuj vse"
 
 #. Default: "Reply"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:67
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:77
 msgid "label_reply"
 msgstr "Odgovori"
 
@@ -7590,7 +7584,7 @@ msgstr "Zahtevaj URL"
 #. Default: "(Required)"
 #: CMFPlone/skins/plone_content/author.cpt:191
 #: CMFPlone/skins/plone_deprecated/personalize_form.cpt:108
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:134
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:153
 msgid "label_required"
 msgstr "(Obvezno)"
 
@@ -7883,7 +7877,6 @@ msgstr "Vrednost"
 
 #. Default: "Subject"
 #: CMFPlone/skins/plone_content/author.cpt:187
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:132
 #: CMFPlone/skins/plone_templates/contact-info.cpt:116
 msgid "label_subject"
 msgstr "Predmet"
@@ -8067,7 +8060,7 @@ msgid "label_usergroup_settings"
 msgstr "Nastavitve"
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:101
 msgid "label_username"
 msgstr "Uporabniško ime"
 
@@ -8154,11 +8147,6 @@ msgstr "Globalne nastavitve"
 msgid "legend_account_details"
 msgstr "Podrobnosti računa"
 
-#. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:78
-msgid "legend_add_comment"
-msgstr "Dodaj komentar"
-
 #. Default: "Add new"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:42
 msgid "legend_add_new"
@@ -8215,7 +8203,7 @@ msgid "legend_navigation_details"
 msgstr "Podrobnosti navigacije"
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
 msgid "legend_note_reply_anonymous"
 msgstr "Niste prijavljeni. Spodaj lahko neobvezno vnesete vaše uporabniško ime in geslo. Če ga ne boste, bo ta komentar objavljen kot prispevek Anonimnega Uporabnika."
 
@@ -9496,11 +9484,6 @@ msgstr "Tu navedene vloge so neposredno dodeljene uporabniku. Uporabnik ima lahk
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:68
 msgid "user_roles_note"
 msgstr ""
-
-#. Default: "vCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "vCalendar"
-msgstr "vCalendar"
 
 #: validation/validators/ExpressionValidator.py:95
 msgid "validation failed, expr was:$expr"

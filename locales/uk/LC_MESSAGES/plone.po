@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-06-21 15:52+0000\n"
+"POT-Creation-Date: 2010-06-30 11:55+0000\n"
 "PO-Revision-Date: 2010-06-24 18:10+0300\n"
 "Last-Translator: Olha <olha.pelishok@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -770,6 +770,10 @@ msgstr "Коментар про останню зміну робочого ст�
 #: CMFPlone/skins/plone_form_scripts/discussion_reply.cpy:66
 msgid "Comment added."
 msgstr "Додано коментар."
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
+msgid "Comment cannot be blank."
+msgstr ""
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1573,7 +1577,7 @@ msgstr "Невірне значення для поточного пароля"
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:15
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:87
 msgid "Info"
 msgstr "Інфо"
 
@@ -2326,14 +2330,6 @@ msgstr "Виберіть один чи більше елементів, які �
 msgid "Please select one or more items to rename."
 msgstr "Виберіть один чи більше елементів, які хочете перейменувати."
 
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
-msgid "Please submit a body."
-msgstr "Будь-ласка, введіть текст."
-
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
-msgid "Please submit a subject."
-msgstr "Будь-ласка, введіть тему."
-
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:18
 msgid "Please submit a valid email address."
 msgstr "Будь-ласка, введіть дійсну електронну адресу."
@@ -3047,6 +3043,10 @@ msgstr "Підтеки"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:29
 msgid "Subject"
 msgstr "Тема"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
+msgid "Subject cannot be blank."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:30
 msgid "Subject of the message"
@@ -4041,7 +4041,7 @@ msgstr "Мови"
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:84
-#: CMFPlone/skins/plone_forms/search.pt:185
+#: CMFPlone/skins/plone_forms/search.pt:184
 msgid "box_last_modified"
 msgstr "Востаннє змінено:"
 
@@ -4125,6 +4125,11 @@ msgstr "Виберіть ${title}\""
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:21
 msgid "checkout_info"
 msgstr "Це робоча копія ${baseline_title} автора${creator} ${created}."
+
+#. Default: "Comments (${comments})"
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:10
+msgid "comments_header"
+msgstr ""
 
 #. Default: "Use parent folder setting"
 #: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:88
@@ -4275,8 +4280,9 @@ msgstr "Даний сайт було створено на основі ${plone}
 msgid "description_accessibility_statement"
 msgstr "Ми використовуєм наші знання та розуміння того, як різні люди користуються інтернетом, для розробки веб сайту, який був би простим і зрозумілим для усіх."
 
-#. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#. Default: "Plain text formatting. URLs will be turned into links."
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:157
+#, fuzzy
 msgid "description_add_comment"
 msgstr "Ви можете додати коментар, заповнивши форму нижче. "
 
@@ -4454,7 +4460,7 @@ msgid "description_language_settings"
 msgstr "Параметри, пов'язані з мовою інтерфейсу і перекладами вмісту."
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_license"
 msgstr "Розповсюджується на умовах ${license}."
 
@@ -4736,11 +4742,6 @@ msgstr "Синдикацію заборонив адміністратор са�
 #: CMFPlone/skins/plone_forms/synPropertiesForm.cpt:19
 msgid "description_syndication_properties"
 msgstr "Синдикація дозволяє вам синдикувати цю теку так, що вона може синхронізуватися з інших веб сайтів."
-
-#. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:26
-msgid "description_trademark"
-msgstr "Plone<sup>&reg;</sup> і логотип Plone є зареєстрованими торговими марками ${plonefoundation}."
 
 #. Default: "Workflow, visibility and versioning settings for your content types."
 #: plone.app.controlpanel/plone/app/controlpanel/types.pt:23
@@ -5762,6 +5763,11 @@ msgstr "Ваша мова."
 msgid "help_publishing_comments"
 msgstr "Введіть короткий опис або коментар. Його буде додано до поля коментарів в історії публікації. Якщо кілька елементів вибрано, то коментар буде надано їм усім."
 
+#. Default: "Enter a relative path e.g.: <br /> '..' for the parent folder <br /> '../..' for the parent's parent <br />'../somefolder' for a sibling folder"
+#: ATContentTypes/criteria/relativepath.py
+msgid "help_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Check this to have your email address filled in automatically when you log in later."
 #: CMFPlone/skins/plone_login/login_form.cpt:137
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:238
@@ -5998,11 +6004,6 @@ msgstr "\"${action} — ${actor} в ${time}"
 msgid "html"
 msgstr "HTML"
 
-#. Default: "iCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "iCalendar"
-msgstr "iCalendar"
-
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:72
 msgid "if_all_conditions_met"
@@ -6074,7 +6075,7 @@ msgstr "Додати"
 
 #. Default: "Add Comment"
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:19
 msgid "label_add_comment"
 msgstr "Додати коментар"
 
@@ -6180,8 +6181,7 @@ msgid "label_an_anonymous_user"
 msgstr "анонім"
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:54
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
 #: plone.app.layout/plone/app/layout/viewlets/content.py:158
 msgid "label_anonymous_user"
 msgstr "Анонімний користувач"
@@ -6209,7 +6209,7 @@ msgid "label_apply_to_subfolders"
 msgstr "Застосувати для підтек"
 
 #. Default: "at"
-#: Archetypes/Field.py:1950
+#: Archetypes/Field.py:1952
 msgid "label_at"
 msgstr "у"
 
@@ -6268,7 +6268,7 @@ msgstr "Огляд"
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:73
-#: CMFPlone/skins/plone_forms/search.pt:173
+#: CMFPlone/skins/plone_forms/search.pt:172
 msgid "label_by_author"
 msgstr "створив(ла) ${author}"
 
@@ -6404,22 +6404,10 @@ msgid "label_click_to_view_full_image"
 msgstr "Клацніть, щоб переглянути зображення у повному розмірі..."
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:152
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:151
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:91
 msgid "label_comment"
 msgstr "Коментар"
-
-#. Default: "Posted by"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:51
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:46
-msgid "label_comment_by"
-msgstr "Надіслав(ла)"
-
-#. Default: "at"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
-msgid "label_commented_at"
-msgstr "від"
 
 #. Default: "Comments"
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:269
@@ -6861,7 +6849,7 @@ msgid "label_file"
 msgstr "Файл"
 
 #. Default: "Filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:197
+#: CMFPlone/skins/plone_forms/search.pt:196
 #: plone.app.layout/plone/app/layout/viewlets/keywords.pt:7
 msgid "label_filed_under"
 msgstr "зберігається у:"
@@ -6906,7 +6894,7 @@ msgid "label_generated_tabs_enable"
 msgstr "Автоматично створювати закладки"
 
 #. Default: "GNU GPL license"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "label_gnu_gpl_licence"
 msgstr "Ліцензії GNU GPL"
 
@@ -7124,7 +7112,7 @@ msgid "label_login_name"
 msgstr "Ім'я користувача"
 
 #. Default: "Log in to add comments"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:32
 msgid "label_login_to_add_comments"
 msgstr "Ввійдіть щоб додати коментарі"
 
@@ -7177,7 +7165,7 @@ msgid "label_modification_date"
 msgstr "Дата зміни"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:102
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:99
 #: CMFPlone/skins/plone_forms/member_search_form.pt:33
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:72
 msgid "label_name"
@@ -7289,7 +7277,7 @@ msgid "label_no_prefs_panels_available"
 msgstr "Відсутня можливість налаштування вподобань."
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1997
+#: Archetypes/Field.py:1999
 msgid "label_no_reference"
 msgstr "<no reference>"
 
@@ -7341,7 +7329,7 @@ msgid "label_parent"
 msgstr "Батьківські"
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:114
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:111
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:111
 #: CMFPlone/skins/plone_login/login_form.cpt:101
 msgid "label_password"
@@ -7353,6 +7341,7 @@ msgid "label_password_change_mail"
 msgstr "URL буде сформовано та надіслано Вам на електронну пошту; перейдіть по посиланню на сторінку, де Ви зможете змінити Ваш пароль і завершити процес реєстрації."
 
 #. Default: "Search Sub-Folders"
+#: ATContentTypes/criteria/relativepath.py
 #: widget label of BooleanWidget - description ""
 msgid "label_path_criteria_recurse"
 msgstr "Пошук у підтках"
@@ -7512,8 +7501,13 @@ msgstr "Зареєструватися"
 msgid "label_related_items"
 msgstr "Пов'язаний вміст"
 
+#. Default: "Relative path"
+#: ATContentTypes/criteria/relativepath.py
+msgid "label_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:214
+#: CMFPlone/skins/plone_forms/search.pt:213
 msgid "label_relevance_percentage"
 msgstr "[збіг: ${percentage}%]"
 
@@ -7532,7 +7526,7 @@ msgstr "Запам'ятати мій псевдонім."
 
 #. Default: "Remove"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:87
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:79
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:89
 msgid "label_remove"
 msgstr "Видалити"
 
@@ -7554,7 +7548,7 @@ msgid "label_rename_all"
 msgstr "Перейменувати все"
 
 #. Default: "Reply"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:67
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:77
 msgid "label_reply"
 msgstr "Відповісти"
 
@@ -7566,7 +7560,7 @@ msgstr "URL запиту"
 #. Default: "(Required)"
 #: CMFPlone/skins/plone_content/author.cpt:191
 #: CMFPlone/skins/plone_deprecated/personalize_form.cpt:108
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:134
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:153
 msgid "label_required"
 msgstr "(обов'язково)"
 
@@ -7859,7 +7853,6 @@ msgstr "Значення"
 
 #. Default: "Subject"
 #: CMFPlone/skins/plone_content/author.cpt:187
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:132
 #: CMFPlone/skins/plone_templates/contact-info.cpt:116
 msgid "label_subject"
 msgstr "Предмет"
@@ -8041,7 +8034,7 @@ msgid "label_usergroup_settings"
 msgstr "Параметри"
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:101
 msgid "label_username"
 msgstr "Псевдонім"
 
@@ -8128,11 +8121,6 @@ msgstr "Параметри сайту"
 msgid "legend_account_details"
 msgstr "Подробиці про рахунок"
 
-#. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:78
-msgid "legend_add_comment"
-msgstr "Додати коментар"
-
 #. Default: "Add new"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:42
 msgid "legend_add_new"
@@ -8189,7 +8177,7 @@ msgid "legend_navigation_details"
 msgstr "Деталі навіґації"
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
 msgid "legend_note_reply_anonymous"
 msgstr "Увага: Ви не ввійшли в систему. Ви можете, при бажанні, ввести Ваш псевдонім та пароль нижче. Якщо ви їх не введете, то коментар буде від імені 'Anonymous User'."
 
@@ -9459,11 +9447,6 @@ msgstr "Зверніть увагу на те, що дані ролі може �
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:68
 msgid "user_roles_note"
 msgstr "Зверніть увагу на те, що встановлена тут роль безпосередньо застосовується до користувача. Символ ${image_link_icon} вказує на те, що роль успадковано від членства в іншій групі."
-
-#. Default: "vCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "vCalendar"
-msgstr "vCalendar"
 
 #: validation/validators/ExpressionValidator.py:95
 msgid "validation failed, expr was:$expr"

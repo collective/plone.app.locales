@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-06-21 15:52+0000\n"
+"POT-Creation-Date: 2010-06-30 11:55+0000\n"
 "PO-Revision-Date: 2010-02-07 20:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: Dansk <kde-i18n-doc@kde.org>\n"
@@ -799,6 +799,10 @@ msgstr "Kommentar til sidste statusskift"
 #: CMFPlone/skins/plone_form_scripts/discussion_reply.cpy:66
 msgid "Comment added."
 msgstr "Kommentar tilføjet"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
+msgid "Comment cannot be blank."
+msgstr ""
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1660,7 +1664,7 @@ msgstr "Ugyldigt password"
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:15
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:87
 msgid "Info"
 msgstr "Information"
 
@@ -2449,14 +2453,6 @@ msgstr "Vælg et eller flere indholdsobjekter, som skal slettes."
 msgid "Please select one or more items to rename."
 msgstr "Vælg et eller flere indholdsobjekter, som skal omdøbes."
 
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
-msgid "Please submit a body."
-msgstr "Vær venlig at udfylde brødteksten."
-
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
-msgid "Please submit a subject."
-msgstr "Skriv venligst et emne."
-
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:18
 msgid "Please submit a valid email address."
 msgstr "Skriv venligst en gyldig e-mail-adresse."
@@ -3243,6 +3239,10 @@ msgstr "Undermapper"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:29
 msgid "Subject"
 msgstr "Emne"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
+msgid "Subject cannot be blank."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:30
 msgid "Subject of the message"
@@ -4369,7 +4369,7 @@ msgstr "Sprog"
 #. </span>
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:84
-#: CMFPlone/skins/plone_forms/search.pt:185
+#: CMFPlone/skins/plone_forms/search.pt:184
 msgid "box_last_modified"
 msgstr "Sidst opdateret"
 
@@ -4490,6 +4490,11 @@ msgstr "Vælg ${title}"
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:21
 msgid "checkout_info"
 msgstr "Dette er en arbejdskopi af ${baseline_title}, lavet af ${creator} den ${created}."
+
+#. Default: "Comments (${comments})"
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:10
+msgid "comments_header"
+msgstr ""
 
 #. Default: "Use parent folder setting"
 #. <label for="mode_acquire" i18n:translate="constraintypes_mode_acquire">
@@ -4668,11 +4673,12 @@ msgstr "Dette site anvender ${plone}, og er designet til at overholde standarder
 msgid "description_accessibility_statement"
 msgstr "Det er tilstræbt at dette site i videst mulige omfang er tilgængeligt og nemt at bruge for alle."
 
-#. Default: "You can add a comment by filling out the form below. Plain text formatting."
 #. <p i18n:translate="description_add_comment">
 #. You can add a comment by filling out the form below. Plain text formatting.
 #. </p>
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#. Default: "Plain text formatting. URLs will be turned into links."
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:157
+#, fuzzy
 msgid "description_add_comment"
 msgstr "Du kan tilføje en kommentar ved at udfylde nedenstående felter."
 
@@ -4922,7 +4928,7 @@ msgid "description_language_settings"
 msgstr "Indstillinger relateret til brugerfladesprog og indholdsoversættelser"
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_license"
 msgstr "Distribueret under ${license}"
 
@@ -5300,11 +5306,6 @@ msgstr "Syndikering er slået fra."
 #: CMFPlone/skins/plone_forms/synPropertiesForm.cpt:19
 msgid "description_syndication_properties"
 msgstr "Syndikering gør det mulig at distribuere indholdet i denne mappe, således at indholdet kan synkroniseres med andre sites."
-
-#. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:26
-msgid "description_trademark"
-msgstr "Plone<sup>&reg;</sup> og Plones logo er varemærker der tilhører ${plonefoundation}."
 
 #. Default: "Workflow, visibility and versioning settings for your content types."
 #: plone.app.controlpanel/plone/app/controlpanel/types.pt:23
@@ -6730,6 +6731,11 @@ msgstr "Dit fortrukne sprog"
 msgid "help_publishing_comments"
 msgstr "Indtast evt. en kommentar til publiceringshistorikken. Hvis flere elementer er valgt, vil denne kommentar blive tilføjet alle indholdsobjekternes historik."
 
+#. Default: "Enter a relative path e.g.: <br /> '..' for the parent folder <br /> '../..' for the parent's parent <br />'../somefolder' for a sibling folder"
+#: ATContentTypes/criteria/relativepath.py
+msgid "help_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Check this to have your email address filled in automatically when you log in later."
 #: CMFPlone/skins/plone_login/login_form.cpt:137
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:238
@@ -7066,12 +7072,6 @@ msgstr "${action} af ${actor} den ${time}"
 msgid "html"
 msgstr "HTML"
 
-#. Default: "iCalendar"
-#. defined on Event
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "iCalendar"
-msgstr "ICalendar"
-
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:72
 msgid "if_all_conditions_met"
@@ -7151,7 +7151,7 @@ msgstr "Tilføj"
 #. <input class="standalone" i18n:attributes="value label_add_comment;" name="discussion_reply:method" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Add Comment"/>
 #. <input class="standalone" i18n:attributes="value label_add_comment;" style="margin-bottom: 1.25em;" type="submit" value="Add Comment"/>
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:19
 msgid "label_add_comment"
 msgstr "Tilføj kommentar"
 
@@ -7285,8 +7285,7 @@ msgstr "en anonym bruger"
 #. <span i18n:translate="label_anonymous_user" tal:condition="anonymous_creator">
 #. Anonymous User
 #. </span>
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:54
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
 #: plone.app.layout/plone/app/layout/viewlets/content.py:158
 msgid "label_anonymous_user"
 msgstr "Anonym bruger"
@@ -7319,7 +7318,7 @@ msgid "label_apply_to_subfolders"
 msgstr "Tildel til undermapper"
 
 #. Default: "at"
-#: Archetypes/Field.py:1950
+#: Archetypes/Field.py:1952
 msgid "label_at"
 msgstr "i"
 
@@ -7405,7 +7404,7 @@ msgstr "Gennemse"
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:73
-#: CMFPlone/skins/plone_forms/search.pt:173
+#: CMFPlone/skins/plone_forms/search.pt:172
 msgid "label_by_author"
 msgstr "Af ${author}"
 
@@ -7588,28 +7587,10 @@ msgstr "Klik for at se billedet i fuld størrelse"
 #. Comment
 #. </label>
 #. <label for="text" i18n:translate="label_comment">
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:152
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:151
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:91
 msgid "label_comment"
 msgstr "Kommentar"
-
-#. Default: "Posted by"
-#. <span i18n:translate="label_comment_by">
-#. Posted by
-#. </span>
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:51
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:46
-msgid "label_comment_by"
-msgstr "Skrevet af"
-
-#. Default: "at"
-#. <span i18n:translate="label_commented_at">
-#. at
-#. </span>
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
-msgid "label_commented_at"
-msgstr "den"
 
 #. Default: "Comments"
 #. <label i18n:translate="label_comments">
@@ -8162,7 +8143,7 @@ msgid "label_file"
 msgstr "Fil"
 
 #. Default: "Filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:197
+#: CMFPlone/skins/plone_forms/search.pt:196
 #: plone.app.layout/plone/app/layout/viewlets/keywords.pt:7
 msgid "label_filed_under"
 msgstr "Arkiveret under"
@@ -8224,7 +8205,7 @@ msgstr "Automatisk oprettede faneblade"
 #. <a href="http://creativecommons.org/licenses/GPL/2.0/" i18n:translate="label_gnu_gpl_licence">
 #. GNU GPL license
 #. </a>
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "label_gnu_gpl_licence"
 msgstr "GNU GPL licens"
 
@@ -8511,7 +8492,7 @@ msgstr "Brugernavn"
 
 #. Default: "Log in to add comments"
 #. <input class="standalone" i18n:attributes="value label_login_to_add_comments;" style="margin-bottom: 1.25em;" type="submit" value="Log in to add comments"/>
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:32
 msgid "label_login_to_add_comments"
 msgstr "Log ind for at tilføje kommentar"
 
@@ -8583,7 +8564,7 @@ msgstr "Sidst ændret"
 #. <label for="username" i18n:translate="label_name">
 #. </label>
 #. <input alt="Username" i18n:attributes="title label_name; alt label_username;" id="username" name="username" size="40" tabindex="" tal:attributes="tabindex tabindex/next;" title="Name" value=""/>
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:102
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:99
 #: CMFPlone/skins/plone_forms/member_search_form.pt:33
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:72
 msgid "label_name"
@@ -8721,7 +8702,7 @@ msgid "label_no_prefs_panels_available"
 msgstr "Der er ingen indstillinger tilgængelige"
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1997
+#: Archetypes/Field.py:1999
 msgid "label_no_reference"
 msgstr "<ingen reference>"
 
@@ -8790,7 +8771,7 @@ msgstr "Overliggende"
 #. </label>
 #. <input alt="Password" i18n:attributes="title label_password; alt label_password;" id="password" name="password" size="40" tabindex="" tal:attributes="tabindex tabindex/next;" title="Password" type="password" value=""/>
 #. <label i18n:translate="label_password" tal:attributes="for ac_password">
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:114
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:111
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:111
 #: CMFPlone/skins/plone_login/login_form.cpt:101
 msgid "label_password"
@@ -8803,6 +8784,7 @@ msgstr "En URL vil blive dannet og e-mailet til dig; følg linket for at komme t
 
 #. Default: "Search Sub-Folders"
 #. of BooleanWidget, description:
+#: ATContentTypes/criteria/relativepath.py
 #: widget label of BooleanWidget - description ""
 msgid "label_path_criteria_recurse"
 msgstr "Søg i undermapper"
@@ -8998,13 +8980,18 @@ msgstr "registrer"
 msgid "label_related_items"
 msgstr "Relateret indhold"
 
+#. Default: "Relative path"
+#: ATContentTypes/criteria/relativepath.py
+msgid "label_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. <span class="discreet" i18n:attributes="title title_relevance;" i18n:translate="label_relevance_percentage" tal:condition="result/data_record_normalized_score_" title="Relevance">
 #. [
 #. ${percentage}
 #. %]
 #. </span>
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:214
+#: CMFPlone/skins/plone_forms/search.pt:213
 msgid "label_relevance_percentage"
 msgstr "[ ${percentage} %]"
 
@@ -9028,7 +9015,7 @@ msgstr "Husk mit brugernavn."
 #. <input class="destructive" i18n:attributes="value label_remove;" type="submit" value="Remove"/>
 #. <input class="context" i18n:attributes="value label_remove;" name="topic_deleteCriteria:action" tabindex="" tal:attributes="tabindex tabindex/next;" type="submit" value="Remove"/>
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:87
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:79
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:89
 msgid "label_remove"
 msgstr "Slet"
 
@@ -9054,7 +9041,7 @@ msgstr "Omdøb"
 
 #. Default: "Reply"
 #. <input class="standalone" i18n:attributes="value label_reply;" type="submit" value="Reply"/>
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:67
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:77
 msgid "label_reply"
 msgstr "Besvar"
 
@@ -9072,7 +9059,7 @@ msgstr "Indtast URL"
 #. </span>
 #: CMFPlone/skins/plone_content/author.cpt:191
 #: CMFPlone/skins/plone_deprecated/personalize_form.cpt:108
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:134
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:153
 msgid "label_required"
 msgstr "(Påkrævet)"
 
@@ -9459,7 +9446,6 @@ msgstr "Værdi"
 #. </label>
 #. <label for="subject" i18n:translate="label_subject">
 #: CMFPlone/skins/plone_content/author.cpt:187
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:132
 #: CMFPlone/skins/plone_templates/contact-info.cpt:116
 msgid "label_subject"
 msgstr "Emne"
@@ -9716,7 +9702,7 @@ msgstr "Indstillinger"
 
 #. Default: "Username"
 #. <input alt="Username" i18n:attributes="title label_name; alt label_username;" id="username" name="username" size="40" tabindex="" tal:attributes="tabindex tabindex/next;" title="Name" value=""/>
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:101
 msgid "label_username"
 msgstr "Brugernavn"
 
@@ -9824,14 +9810,6 @@ msgstr "Globale indstillinger"
 msgid "legend_account_details"
 msgstr "Informationer om din brugerkonto"
 
-#. Default: "Add comment"
-#. <legend i18n:translate="legend_add_comment">
-#. Add comment
-#. </legend>
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:78
-msgid "legend_add_comment"
-msgstr "Kommentar"
-
 #. Default: "Add new"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:42
 msgid "legend_add_new"
@@ -9917,7 +9895,7 @@ msgstr "Indstillinger for menunavigation"
 #. password below, this comment will be posted as the 'Anonymous User'.
 #. </span>
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
 msgid "legend_note_reply_anonymous"
 msgstr "Bemærk: Du er ikke logget ind. Du kan vælge at indtaste dit brugernavn og adgangskode nedenfor. Hvis du ikke indtaster brugernavn og adgangskode, vil kommentaren få 'anonym bruger' som afsender."
 
@@ -11461,12 +11439,6 @@ msgstr "Bemærk at de roller der her er vist er de roller, der direkte er forbun
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:68
 msgid "user_roles_note"
 msgstr "Bemærk, at rollerne, der bliver sat her, bliver tildelt direkte til en bruger. Ikonet ${image_link_icon} indigerer, at rollen er nedarvet fra medlemskab af en gruppe."
-
-#. Default: "vCalendar"
-#. defined on Event
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "vCalendar"
-msgstr "vCalendar"
 
 #: validation/validators/ExpressionValidator.py:95
 msgid "validation failed, expr was:$expr"

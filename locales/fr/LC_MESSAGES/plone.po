@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone-fr\n"
-"POT-Creation-Date: 2010-06-21 15:52+0000\n"
+"POT-Creation-Date: 2010-06-30 11:55+0000\n"
 "PO-Revision-Date: 2010-05-05 00:50+0100\n"
 "Last-Translator: mohamed banaouas <mbana@free.fr>\n"
 "Language-Team: French <plone-fr@lists.plone.org>\n"
@@ -770,6 +770,10 @@ msgstr "Commentaires à propose de la dernière transition"
 #: CMFPlone/skins/plone_form_scripts/discussion_reply.cpy:66
 msgid "Comment added."
 msgstr "Commentaire ajouté."
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
+msgid "Comment cannot be blank."
+msgstr ""
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1573,7 +1577,7 @@ msgstr "Valeur incorrecte pour le mot de passe actuel"
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:15
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:87
 msgid "Info"
 msgstr "Info"
 
@@ -2325,14 +2329,6 @@ msgstr "Veuillez sélectionner un ou plusieurs éléments à supprimer."
 msgid "Please select one or more items to rename."
 msgstr "Veuillez sélectionner un ou plusieurs éléments à renommer."
 
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
-msgid "Please submit a body."
-msgstr "Veuillez saisir le corps du message."
-
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
-msgid "Please submit a subject."
-msgstr "Veuillez saisir un sujet."
-
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:18
 msgid "Please submit a valid email address."
 msgstr "Veuillez saisir une adresse courriel valide."
@@ -3046,6 +3042,10 @@ msgstr "Sous-dossiers"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:29
 msgid "Subject"
 msgstr "Sujet"
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
+msgid "Subject cannot be blank."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:30
 msgid "Subject of the message"
@@ -4039,7 +4039,7 @@ msgstr "Langues"
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:84
-#: CMFPlone/skins/plone_forms/search.pt:185
+#: CMFPlone/skins/plone_forms/search.pt:184
 msgid "box_last_modified"
 msgstr "Dernière modification"
 
@@ -4123,6 +4123,11 @@ msgstr "Sélectionner ${title}"
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:21
 msgid "checkout_info"
 msgstr "Ceci est la copie de travail de ${baseline_title}, créée par ${creator} le ${created}."
+
+#. Default: "Comments (${comments})"
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:10
+msgid "comments_header"
+msgstr ""
 
 #. Default: "Use parent folder setting"
 #: CMFPlone/skins/plone_forms/folder_constraintypes_form.cpt:88
@@ -4273,8 +4278,9 @@ msgstr "Ce site utilise ${plone}, et a été conçu pour être pleinement access
 msgid "description_accessibility_statement"
 msgstr "Nous avons entrepris d'utiliser notre connaissance et notre compréhension de la manière dont les personnes accèdent à Internet afin de développer un site web qui soit clair et simple à utiliser par chacun."
 
-#. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#. Default: "Plain text formatting. URLs will be turned into links."
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:157
+#, fuzzy
 msgid "description_add_comment"
 msgstr "Vous pouvez ajouter un commentaire en remplissant le formulaire ci-dessous. Le format attendu est le texte simple."
 
@@ -4452,7 +4458,7 @@ msgid "description_language_settings"
 msgstr "Paramétrage des langues d'interface et de traduction des contenus."
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_license"
 msgstr "Distribué sous ${license}."
 
@@ -4733,11 +4739,6 @@ msgstr "La syndication a été désactivée par l'administrateur du site."
 #: CMFPlone/skins/plone_forms/synPropertiesForm.cpt:19
 msgid "description_syndication_properties"
 msgstr "L'activation de la syndication sur ce dossier permet à d'autres sites de synchroniser son contenu."
-
-#. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:26
-msgid "description_trademark"
-msgstr "Plone<sup>&reg;</sup> et le logo Plone sont la propriété de la ${plonefoundation}."
 
 #. Default: "Workflow, visibility and versioning settings for your content types."
 #: plone.app.controlpanel/plone/app/controlpanel/types.pt:23
@@ -5754,6 +5755,11 @@ msgstr "Votre langue préférée."
 msgid "help_publishing_comments"
 msgstr "Saisissez un commentaire relatif au changement d'état (une explication par exemple en cas de refus de publication). Il sera ensuite visible dans l'historique du processus documentaire. Si plusieurs éléments sont sélectionnés, le commentaire sera le même pour chacun d'entre eux."
 
+#. Default: "Enter a relative path e.g.: <br /> '..' for the parent folder <br /> '../..' for the parent's parent <br />'../somefolder' for a sibling folder"
+#: ATContentTypes/criteria/relativepath.py
+msgid "help_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Check this to have your email address filled in automatically when you log in later."
 #: CMFPlone/skins/plone_login/login_form.cpt:137
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:238
@@ -5990,11 +5996,6 @@ msgstr "${action} — ${actor} le ${time}"
 msgid "html"
 msgstr "HTML"
 
-#. Default: "iCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "iCalendar"
-msgstr "iCalendar"
-
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:72
 msgid "if_all_conditions_met"
@@ -6066,7 +6067,7 @@ msgstr "Ajouter"
 
 #. Default: "Add Comment"
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:19
 msgid "label_add_comment"
 msgstr "Ajouter un commentaire"
 
@@ -6172,8 +6173,7 @@ msgid "label_an_anonymous_user"
 msgstr "un utilisateur anonyme"
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:54
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
 #: plone.app.layout/plone/app/layout/viewlets/content.py:158
 msgid "label_anonymous_user"
 msgstr "Utilisateur anonyme"
@@ -6201,7 +6201,7 @@ msgid "label_apply_to_subfolders"
 msgstr "Appliquer aux sous-dossiers"
 
 #. Default: "at"
-#: Archetypes/Field.py:1950
+#: Archetypes/Field.py:1952
 msgid "label_at"
 msgstr "à"
 
@@ -6260,7 +6260,7 @@ msgstr "Parcourir"
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:73
-#: CMFPlone/skins/plone_forms/search.pt:173
+#: CMFPlone/skins/plone_forms/search.pt:172
 msgid "label_by_author"
 msgstr "Par ${author}"
 
@@ -6398,22 +6398,10 @@ msgid "label_click_to_view_full_image"
 msgstr "Cliquez pour voir l'image dans sa taille originale…"
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:152
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:151
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:91
 msgid "label_comment"
 msgstr "Commentaire"
-
-#. Default: "Posted by"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:51
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:46
-msgid "label_comment_by"
-msgstr "Posté par"
-
-#. Default: "at"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
-msgid "label_commented_at"
-msgstr "le"
 
 #. Default: "Comments"
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:269
@@ -6855,7 +6843,7 @@ msgid "label_file"
 msgstr "Fichier"
 
 #. Default: "Filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:197
+#: CMFPlone/skins/plone_forms/search.pt:196
 #: plone.app.layout/plone/app/layout/viewlets/keywords.pt:7
 msgid "label_filed_under"
 msgstr "Mots-clés associés :"
@@ -6900,7 +6888,7 @@ msgid "label_generated_tabs_enable"
 msgstr "Générer automatiquement les onglets"
 
 #. Default: "GNU GPL license"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "label_gnu_gpl_licence"
 msgstr "Licence GNU GPL"
 
@@ -7118,7 +7106,7 @@ msgid "label_login_name"
 msgstr "Identifiant"
 
 #. Default: "Log in to add comments"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:32
 msgid "label_login_to_add_comments"
 msgstr "Pour commenter, connectez-vous"
 
@@ -7171,7 +7159,7 @@ msgid "label_modification_date"
 msgstr "Date de modification"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:102
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:99
 #: CMFPlone/skins/plone_forms/member_search_form.pt:33
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:72
 msgid "label_name"
@@ -7283,7 +7271,7 @@ msgid "label_no_prefs_panels_available"
 msgstr "Aucun panneau de préférences disponible."
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1997
+#: Archetypes/Field.py:1999
 msgid "label_no_reference"
 msgstr "<pas de référence>"
 
@@ -7335,7 +7323,7 @@ msgid "label_parent"
 msgstr "Parent"
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:114
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:111
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:111
 #: CMFPlone/skins/plone_login/login_form.cpt:101
 msgid "label_password"
@@ -7347,6 +7335,7 @@ msgid "label_password_change_mail"
 msgstr "Une URL va être générée et vous être envoyée par courriel; suivez le lien pour atteindre la page où vous pourrez modifier votre mot de passe et terminer votre inscription."
 
 #. Default: "Search Sub-Folders"
+#: ATContentTypes/criteria/relativepath.py
 #: widget label of BooleanWidget - description ""
 msgid "label_path_criteria_recurse"
 msgstr "Rechercher dans les sous-dossiers"
@@ -7506,8 +7495,13 @@ msgstr "S'inscrire"
 msgid "label_related_items"
 msgstr "Contenus correlés"
 
+#. Default: "Relative path"
+#: ATContentTypes/criteria/relativepath.py
+msgid "label_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:214
+#: CMFPlone/skins/plone_forms/search.pt:213
 msgid "label_relevance_percentage"
 msgstr "[${percentage} %]"
 
@@ -7526,7 +7520,7 @@ msgstr "Se souvenir de mon nom"
 
 #. Default: "Remove"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:87
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:79
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:89
 msgid "label_remove"
 msgstr "Supprimer"
 
@@ -7548,7 +7542,7 @@ msgid "label_rename_all"
 msgstr "Les renommer tous"
 
 #. Default: "Reply"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:67
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:77
 msgid "label_reply"
 msgstr "Répondre"
 
@@ -7560,7 +7554,7 @@ msgstr "URL de la requête"
 #. Default: "(Required)"
 #: CMFPlone/skins/plone_content/author.cpt:191
 #: CMFPlone/skins/plone_deprecated/personalize_form.cpt:108
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:134
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:153
 msgid "label_required"
 msgstr "(Requis)"
 
@@ -7852,7 +7846,6 @@ msgstr "Valeur"
 
 #. Default: "Subject"
 #: CMFPlone/skins/plone_content/author.cpt:187
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:132
 #: CMFPlone/skins/plone_templates/contact-info.cpt:116
 msgid "label_subject"
 msgstr "Sujet"
@@ -8034,7 +8027,7 @@ msgid "label_usergroup_settings"
 msgstr "Paramètres"
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:101
 msgid "label_username"
 msgstr "Identifiant"
 
@@ -8121,11 +8114,6 @@ msgstr "Réglages globaux"
 msgid "legend_account_details"
 msgstr "Informations sur le compte"
 
-#. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:78
-msgid "legend_add_comment"
-msgstr "Votre commentaire"
-
 #. Default: "Add new"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:42
 msgid "legend_add_new"
@@ -8182,7 +8170,7 @@ msgid "legend_navigation_details"
 msgstr "Détails de la navigation"
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
 msgid "legend_note_reply_anonymous"
 msgstr "Vous n'avez pas ouvert de session. Vous pouvez saisir votre identifiant et votre mot de passe ci-dessous. Si vous ne le faites pas, votre commentaire sera déposé anonymement."
 
@@ -9450,11 +9438,6 @@ msgstr "Notez que ces rôles sont ceux appliqués directement à l'utilisateur. 
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:68
 msgid "user_roles_note"
 msgstr "Notez que les rôles définis ici s'appliquent directement à un utilisateur. Le symbole ${image_link_icon} indique un rôle hérité de son appartenance à un groupe."
-
-#. Default: "vCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "vCalendar"
-msgstr "vCalendar"
 
 #: validation/validators/ExpressionValidator.py:95
 msgid "validation failed, expr was:$expr"

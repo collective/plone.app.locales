@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-06-21 15:52+0000\n"
+"POT-Creation-Date: 2010-06-30 11:55+0000\n"
 "PO-Revision-Date: 2006-06-18 00:24+0330\n"
 "Last-Translator: Mohsen Moeeni <mohsen@plone.ir>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -765,6 +765,10 @@ msgstr ""
 #: CMFPlone/skins/plone_form_scripts/discussion_reply.cpy:66
 msgid "Comment added."
 msgstr "نظر افزوده شد."
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
+msgid "Comment cannot be blank."
+msgstr ""
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1569,7 +1573,7 @@ msgstr ""
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
 #: CMFPlone/skins/plone_content/link_view.pt:15
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:87
 msgid "Info"
 msgstr ""
 
@@ -2322,14 +2326,6 @@ msgstr "لطفا یک یا چند آیتم را جهت حذف انتخاب کن�
 msgid "Please select one or more items to rename."
 msgstr "لطفا یک یا چند آیتم را جهت تغییر نام انتخاب کنید."
 
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:25
-msgid "Please submit a body."
-msgstr "لطفا بدنه را وارد کنید."
-
-#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
-msgid "Please submit a subject."
-msgstr "لطفا موضوع را وارد کنید."
-
 # Please submit an email address.
 #: CMFPlone/skins/plone_form_scripts/validate_sendto.vpy:18
 msgid "Please submit a valid email address."
@@ -3044,6 +3040,10 @@ msgstr "زیرپوشه‌ها"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:29
 msgid "Subject"
+msgstr ""
+
+#: CMFPlone/skins/plone_form_scripts/validate_talkback.vpy:22
+msgid "Subject cannot be blank."
 msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:30
@@ -4053,7 +4053,7 @@ msgstr ""
 #. Default: "last modified"
 #: CMFPlone/skins/plone_content/folder_listing.pt:148
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:84
-#: CMFPlone/skins/plone_forms/search.pt:185
+#: CMFPlone/skins/plone_forms/search.pt:184
 msgid "box_last_modified"
 msgstr "آخرین تغییر"
 
@@ -4141,6 +4141,11 @@ msgstr ""
 #. Default: "This is a working copy of ${baseline_title}, made by ${creator} on ${created}."
 #: plone.app.iterate/plone/app/iterate/browser/info_checkout.pt:21
 msgid "checkout_info"
+msgstr ""
+
+#. Default: "Comments (${comments})"
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:10
+msgid "comments_header"
 msgstr ""
 
 #. Default: "Use parent folder setting"
@@ -4295,8 +4300,9 @@ msgstr "این سایت از ${plone} استفاده می‌کند و طوری �
 msgid "description_accessibility_statement"
 msgstr "ما متعهد شده‌ایم که از دانش و فهم خود در مورد این که افراد مختلف چگونه از اینترنت استفاده می‌کنند، بهره برده تا وبگاهی توسعه دهیم که برای استفاده همگان روشن و ساده باشد."
 
-#. Default: "You can add a comment by filling out the form below. Plain text formatting."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:79
+#. Default: "Plain text formatting. URLs will be turned into links."
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:157
+#, fuzzy
 msgid "description_add_comment"
 msgstr "شما می‌توانید نظر خود را با پر کردن فرم زیر اضافه کنید. قالب‌بندی: متن ساده."
 
@@ -4477,7 +4483,7 @@ msgid "description_language_settings"
 msgstr ""
 
 #. Default: "Distributed under the ${license}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:32
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:24
 msgid "description_license"
 msgstr "توزیع شده تحت ${license}."
 
@@ -4759,12 +4765,6 @@ msgstr "انتشارگری توسط مدیر سایت غیرفعال شده اس
 #: CMFPlone/skins/plone_forms/synPropertiesForm.cpt:19
 msgid "description_syndication_properties"
 msgstr "انتشارگری شما را قادر می‌سازد که این پوشه را syndicate کنید تا بتواند از طریق سایت‌های دیگر بروز شود."
-
-#. Default: "Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the ${plonefoundation}."
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:26
-#, fuzzy
-msgid "description_trademark"
-msgstr "پلون<sup>&reg;</sup> و آرم پلون علامت‌های تجاری ثبت‌شده ${plonefoundation} می‌باشند."
 
 #. Default: "Workflow, visibility and versioning settings for your content types."
 #: plone.app.controlpanel/plone/app/controlpanel/types.pt:23
@@ -5809,6 +5809,11 @@ msgstr "زبان ترجیحی شما"
 msgid "help_publishing_comments"
 msgstr "به تاریخچه انتشار اضافه می‌گردد. اگر چندین آیتم انتخاب شده، این توضیح به همه آنها پیوست خواهد شد."
 
+#. Default: "Enter a relative path e.g.: <br /> '..' for the parent folder <br /> '../..' for the parent's parent <br />'../somefolder' for a sibling folder"
+#: ATContentTypes/criteria/relativepath.py
+msgid "help_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Check this to have your email address filled in automatically when you log in later."
 #: CMFPlone/skins/plone_login/login_form.cpt:137
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:238
@@ -6050,12 +6055,6 @@ msgstr ""
 msgid "html"
 msgstr "HTML"
 
-# english is prefered here.
-#. Default: "iCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "iCalendar"
-msgstr ""
-
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:72
 msgid "if_all_conditions_met"
@@ -6127,7 +6126,7 @@ msgstr ""
 
 #. Default: "Add Comment"
 #: CMFPlone/skins/plone_forms/discussion_reply_preview.pt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:19
 msgid "label_add_comment"
 msgstr "نظر بدهید"
 
@@ -6238,8 +6237,7 @@ msgid "label_an_anonymous_user"
 msgstr ""
 
 #. Default: "Anonymous User"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:54
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:49
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
 #: plone.app.layout/plone/app/layout/viewlets/content.py:158
 msgid "label_anonymous_user"
 msgstr "کاربر ناشناس"
@@ -6267,7 +6265,7 @@ msgid "label_apply_to_subfolders"
 msgstr ""
 
 #. Default: "at"
-#: Archetypes/Field.py:1950
+#: Archetypes/Field.py:1952
 msgid "label_at"
 msgstr ""
 
@@ -6329,7 +6327,7 @@ msgstr ""
 #. Default: "by ${author}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:135
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:73
-#: CMFPlone/skins/plone_forms/search.pt:173
+#: CMFPlone/skins/plone_forms/search.pt:172
 #, fuzzy
 msgid "label_by_author"
 msgstr "نوشته ${author}"
@@ -6471,22 +6469,10 @@ msgid "label_click_to_view_full_image"
 msgstr "برای دیدن تصویر تمام‌اندازه کلیک کنید"
 
 #. Default: "Comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:152
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:151
 #: CMFPlone/skins/plone_forms/sendto_form.cpt:91
 msgid "label_comment"
 msgstr "نظر"
-
-#. Default: "Posted by"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:51
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:46
-msgid "label_comment_by"
-msgstr "فرستاده شده توسط"
-
-#. Default: "at"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:56
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:51
-msgid "label_commented_at"
-msgstr "در"
 
 #. Default: "Comments"
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:269
@@ -6933,7 +6919,7 @@ msgid "label_file"
 msgstr "پرونده"
 
 #. Default: "Filed under:"
-#: CMFPlone/skins/plone_forms/search.pt:197
+#: CMFPlone/skins/plone_forms/search.pt:196
 #: plone.app.layout/plone/app/layout/viewlets/keywords.pt:7
 msgid "label_filed_under"
 msgstr ""
@@ -6978,7 +6964,7 @@ msgid "label_generated_tabs_enable"
 msgstr "تولید خودکار بندک‌ها"
 
 #. Default: "GNU GPL license"
-#: plone.app.layout/plone/app/layout/viewlets/footer.pt:33
+#: plone.app.layout/plone/app/layout/viewlets/footer.pt:25
 msgid "label_gnu_gpl_licence"
 msgstr "پروانه GNU GPL"
 
@@ -7199,7 +7185,7 @@ msgid "label_login_name"
 msgstr "نام کاربری"
 
 #. Default: "Log in to add comments"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:22
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:32
 msgid "label_login_to_add_comments"
 msgstr "ورود جهت نظردهی"
 
@@ -7253,7 +7239,7 @@ msgid "label_modification_date"
 msgstr "تاریخ ویرایش"
 
 #. Default: "Name"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:102
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:99
 #: CMFPlone/skins/plone_forms/member_search_form.pt:33
 #: CMFPlone/skins/plone_prefs/prefs_group_details.pt:72
 msgid "label_name"
@@ -7365,7 +7351,7 @@ msgid "label_no_prefs_panels_available"
 msgstr ""
 
 #. Default: "<no reference>"
-#: Archetypes/Field.py:1997
+#: Archetypes/Field.py:1999
 msgid "label_no_reference"
 msgstr ""
 
@@ -7417,7 +7403,7 @@ msgid "label_parent"
 msgstr ""
 
 #. Default: "Password"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:114
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:111
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:111
 #: CMFPlone/skins/plone_login/login_form.cpt:101
 msgid "label_password"
@@ -7429,6 +7415,7 @@ msgid "label_password_change_mail"
 msgstr ""
 
 #. Default: "Search Sub-Folders"
+#: ATContentTypes/criteria/relativepath.py
 #: widget label of BooleanWidget - description ""
 msgid "label_path_criteria_recurse"
 msgstr "جستجوی زیرپوشه‌ها"
@@ -7590,8 +7577,13 @@ msgstr "ثبت‌نام"
 msgid "label_related_items"
 msgstr "آیتم‌های مربوط"
 
+#. Default: "Relative path"
+#: ATContentTypes/criteria/relativepath.py
+msgid "label_relativepath_criteria_customrelativepath"
+msgstr ""
+
 #. Default: "Relevance: ${percentage}%"
-#: CMFPlone/skins/plone_forms/search.pt:214
+#: CMFPlone/skins/plone_forms/search.pt:213
 #, fuzzy
 msgid "label_relevance_percentage"
 msgstr "[ ${percentage} %]"
@@ -7611,7 +7603,7 @@ msgstr "نام مرا بخاطر بسپار"
 
 #. Default: "Remove"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:87
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:79
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:89
 msgid "label_remove"
 msgstr "حذف"
 
@@ -7634,7 +7626,7 @@ msgid "label_rename_all"
 msgstr "تغییر  همه نام‌ها"
 
 #. Default: "Reply"
-#: plone.app.layout/plone/app/layout/viewlets/comments.pt:67
+#: plone.app.layout/plone/app/layout/viewlets/comments.pt:77
 msgid "label_reply"
 msgstr "پاسخ"
 
@@ -7646,7 +7638,7 @@ msgstr "نشانی درخواست"
 #. Default: "(Required)"
 #: CMFPlone/skins/plone_content/author.cpt:191
 #: CMFPlone/skins/plone_deprecated/personalize_form.cpt:108
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:134
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:153
 msgid "label_required"
 msgstr "(ضروری)"
 
@@ -7941,7 +7933,6 @@ msgstr "مقدار"
 
 #. Default: "Subject"
 #: CMFPlone/skins/plone_content/author.cpt:187
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:132
 #: CMFPlone/skins/plone_templates/contact-info.cpt:116
 msgid "label_subject"
 msgstr "موضوع"
@@ -8123,7 +8114,7 @@ msgid "label_usergroup_settings"
 msgstr ""
 
 #. Default: "Username"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:104
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:101
 msgid "label_username"
 msgstr "نام کاربری"
 
@@ -8210,11 +8201,6 @@ msgstr ""
 msgid "legend_account_details"
 msgstr "جزئیات حساب"
 
-#. Default: "Add comment"
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:78
-msgid "legend_add_comment"
-msgstr "جزئیات نظر"
-
 #. Default: "Add new"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:42
 msgid "legend_add_new"
@@ -8271,7 +8257,7 @@ msgid "legend_navigation_details"
 msgstr "جزئیات جهت‌یابی"
 
 #. Default: "You are not logged in. You may optionally enter your username and password below. If you don't enter anything, this comment will be posted as 'Anonymous User'."
-#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:93
+#: CMFPlone/skins/plone_forms/discussion_reply_form.cpt:90
 #, fuzzy
 msgid "legend_note_reply_anonymous"
 msgstr "توجه: شما هنوز وارد سامانه نشده‌اید. نام‌کاربری و گذرواژه خود را بصورت اختیاری می‌توانید در زیر وارد کنید. چنانچه نام‌کاربری و گذرواژه خود را وارد نکنید، این نظر از طرف «کاربر بی‌نام» فرستاده می‌شود."
@@ -9573,12 +9559,6 @@ msgstr "دقت کنید که نقش‌هایی که در اینجا آمده ن�
 #. Default: "Note that roles set here apply directly to a user. The symbol ${image_link_icon} indicates a role inherited from membership in a group."
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups_usersoverview.pt:68
 msgid "user_roles_note"
-msgstr ""
-
-# english is more preferable here
-#. Default: "vCalendar"
-#: CMFPlone/profiles/default/types/Event.xml
-msgid "vCalendar"
 msgstr ""
 
 #: validation/validators/ExpressionValidator.py:95
