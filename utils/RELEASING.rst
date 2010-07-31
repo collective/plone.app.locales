@@ -19,6 +19,7 @@ or::
 Verify there is no error in the po files::
 
     cd plone/app/locales/locales/
+    svn up
     for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
 
 
@@ -71,7 +72,7 @@ Then::
     cd plone/app/locales/locales/
     for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
 
-    cd /tmp/4.0.0
+    cd -
     python setup.py mregister --strict sdist --formats=zip mupload
 
 Update plone.app.locales version in versions.cfg and etc/versions in
