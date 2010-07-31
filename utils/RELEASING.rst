@@ -5,7 +5,7 @@ Prerelease
 ----------
 Go to plone.app.locales directory::
 
-    cd ~/svn/plonenext/3.3/src/plone.app.locales
+    cd ~/svn/plonenext/4.0.0/src/plone.app.locales
 
 Prepare the release::
 
@@ -16,22 +16,31 @@ or::
 
     prerelease
 
+Verify there is no error in the po files::
+
+    cd plone/app/locales/locales/
+    for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
+
+
 Release
 -------
-Do the release::
+Do the release (for Plone 3.3.x, use branches/3.x instead of trunk)::
 
-    svn cp https://svn.plone.org/svn/plone/plone.app.locales/trunk https://svn.plone.org/svn/plone/plone.app.locales/tags/3.3.2 -m"Tagged, I'll tag externals on next commit"
+    svn cp https://svn.plone.org/svn/plone/plone.app.locales/trunk \
+    https://svn.plone.org/svn/plone/plone.app.locales/tags/4.0.0 -m"Tagged, I'll tag externals on next commit"
     cd /tmp
-    svn co https://svn.plone.org/svn/plone/plone.app.locales/tags/3.3.2
+    svn co https://svn.plone.org/svn/plone/plone.app.locales/tags/4.0.0
 
-We have now to pin PloneTranslations.
+You now have to pin PloneTranslations.
 
 First get the revision::
 
-    cd 3.3.2/plone/app/locales/i18n
+    cd 4.0.0/plone/app/locales/locales
     svn info
 
-And modify the externals accordingly::
+You get "Revision: 88537".
+
+Modify the externals accordingly::
 
     cd ..
     vi EXTERNALS.txt
@@ -47,7 +56,7 @@ Set the svn:externals and commit::
     svn propset svn:externals -F EXTERNALS.txt .
     svn ci -m"Pinned revision of PloneTranslations"
 
-    cd /tmp/3.3.2
+    cd /tmp/4.0.0
 
 For Plone 4::
 
@@ -62,11 +71,13 @@ Then::
     cd plone/app/locales/locales/
     for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
 
-    cd /tmp/3.3.2
+    cd /tmp/4.0.0
     python setup.py mregister --strict sdist --formats=zip mupload
 
-Update plone.app.locales version in versions.cfg and etc/versions in plonenext/3.3 and plonenext/3.2
-For Plone4, it's in plone-coredev/branches/4.0.
+Update plone.app.locales version in versions.cfg and etc/versions in
+plonenext/3.3.
+For Plone 4, update versions.cfg in plone-coredev/branches/4.0 and remove
+plone.app.locales from sources.cfg.
 
 Postrelease
 -----------
