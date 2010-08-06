@@ -25,7 +25,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone\n"
-"POT-Creation-Date: 2010-08-02 13:07+0000\n"
+"POT-Creation-Date: 2010-08-06 17:52+0000\n"
 "PO-Revision-Date: 2010-03-18 20:55+0100\n"
 "Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
 "Language-Team: Vlada Macek\n"
@@ -81,11 +81,11 @@ msgstr "Nelze smazat: ${items}"
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
 
-#: CMFPlone/skins/plone_scripts/check_id.py:66
+#: CMFPlone/skins/plone_scripts/check_id.py:74
 msgid "${name} is not a legal name. The following characters are invalid: ${characters}"
 msgstr "Řetězec ${name} nelze jako název použít, protože obsahuje následující nepovolené znaky: ${characters}"
 
-#: CMFPlone/skins/plone_scripts/check_id.py:59
+#: CMFPlone/skins/plone_scripts/check_id.py:65
 msgid "${name} is reserved."
 msgstr "Název ${name} je rezervován."
 
@@ -180,6 +180,10 @@ msgstr "60"
 #: CMFPlone/skins/plone_forms/search_form.pt:414
 msgid "90"
 msgstr "90"
+
+#: ./plone.app.registry/plone/app/registry/configure.zcml
+msgid "A 'Mozilla about:config' style configuration registry"
+msgstr ""
 
 #. Default: "A boolean criterion"
 #: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
@@ -813,6 +817,10 @@ msgstr "Podmínka přesunuta dolů"
 msgid "Condition moved up."
 msgstr "Podmínka přesunuta nahoru"
 
+#: ./plone.app.registry/plone/app/registry/configure.zcml
+msgid "Configuration registry"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:132
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:83
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:138
@@ -1146,6 +1154,10 @@ msgstr "Upravit podmínku podle změny stavu pracovního postupu"
 #: plone.app.contentrules/plone/app/contentrules/browser/rule.py:36
 msgid "Edit an existing rule."
 msgstr "Upravit existující pravidlo"
+
+#: plone.app.registry/plone/app/registry/browser/edit.py:32
+msgid "Edit record: ${name}"
+msgstr ""
 
 #. Default: "Edit with external application"
 #: CMFPlone/profiles/default/actions.xml
@@ -2295,7 +2307,7 @@ msgstr "Před aktualizací portálu zkontrolujte, že máte aktuální zálohu p
 msgid "Please enter a message"
 msgstr "Vložte zprávu"
 
-#: CMFPlone/skins/plone_scripts/check_id.py:45
+#: CMFPlone/skins/plone_scripts/check_id.py:48
 msgid "Please enter a name."
 msgstr "Zadejte jméno."
 
@@ -3395,7 +3407,7 @@ msgstr "Motivy"
 msgid "There are more search results, narrow your search."
 msgstr "Bylo nazeleno více výsledků. Prosím upřesněte vyhledávání."
 
-#: CMFPlone/skins/plone_scripts/check_id.py:112
+#: CMFPlone/skins/plone_scripts/check_id.py:123
 msgid "There is already an item named ${name} in this folder."
 msgstr "V této složce se již nachází položka nazvaná ${name}."
 
@@ -4684,6 +4696,16 @@ msgstr "Všechny naposledy změněné položky, nejdřív poslední."
 msgid "description_recently_published"
 msgstr "Všechny zveřejněné položky, na prvním místě je nejmladší."
 
+#. Default: "Use the form below to edit the value of this particular record."
+#: plone.app.registry/plone/app/registry/browser/edit_layout.pt:17
+msgid "description_record_edit"
+msgstr ""
+
+#. Default: "The table below shows record currently managed by the configuration registry. Click on a record to edit it."
+#: plone.app.registry/plone/app/registry/browser/records.pt:41
+msgid "description_registry"
+msgstr ""
+
 #. Default: "Each item has a Short Name and a Title, which you can change by entering the new details below."
 #: CMFPlone/skins/plone_forms/folder_rename_form.cpt:21
 msgid "description_rename_item"
@@ -5083,6 +5105,11 @@ msgstr "Aktuální oprávnění ke sdílení položky ${folder}"
 msgid "heading_dashboard"
 msgstr "Přehledová stránka uživatele ${user_name}"
 
+#. Default: "Description"
+#: plone.app.registry/plone/app/registry/browser/records.pt:51
+msgid "heading_description"
+msgstr ""
+
 #. Default: "Document Actions"
 #: plone.app.layout/plone/app/layout/viewlets/document_actions.pt:9
 msgid "heading_document_actions"
@@ -5205,6 +5232,11 @@ msgstr "Migrace mezi používání emailu jako přihlašovacího jména a mezi p
 msgid "heading_my_preferences"
 msgstr "Osobní nastavení"
 
+#. Default: "Name"
+#: plone.app.registry/plone/app/registry/browser/records.pt:49
+msgid "heading_name"
+msgstr ""
+
 #. Default: "Navigation Settings"
 #: CMFPlone/skins/plone_deprecated/prefs_navigation_form.cpt:18
 msgid "heading_navigation_setup"
@@ -5272,6 +5304,11 @@ msgstr "Zveřejněné položky"
 #: plone.app.users/plone/app/users/browser/register.py:445
 msgid "heading_registration_form"
 msgstr "Registrační formulář"
+
+#. Default: "Configuration registry"
+#: plone.app.registry/plone/app/registry/browser/records.pt:39
+msgid "heading_registry"
+msgstr ""
 
 #. Default: "Rename item"
 #: CMFPlone/skins/plone_forms/folder_rename_form.cpt:18
@@ -5373,6 +5410,16 @@ msgstr "Litujeme, ale tato stránka neexistuje..."
 msgid "heading_syndication_properties"
 msgstr "Vlastnosti syndikování"
 
+#. Default: "Title"
+#: plone.app.registry/plone/app/registry/browser/records.pt:50
+msgid "heading_title"
+msgstr ""
+
+#. Default: "Type"
+#: plone.app.registry/plone/app/registry/browser/records.pt:52
+msgid "heading_type"
+msgstr ""
+
 #. Default: "Type Settings"
 #: plone.app.controlpanel/plone/app/controlpanel/types.pt:13
 msgid "heading_type_settings"
@@ -5409,6 +5456,11 @@ msgstr "Přehled uživatelů"
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:85
 msgid "heading_validation"
 msgstr "Ověření platnosti"
+
+#. Default: "Value"
+#: plone.app.registry/plone/app/registry/browser/records.pt:53
+msgid "heading_value"
+msgstr ""
 
 #. Default: "Version Overview"
 #: CMFPlone/browser/templates/plone-upgrade.pt:186
@@ -8504,6 +8556,8 @@ msgstr "Operace přidání nové položky byla stornována."
 
 #. Default: "Edit cancelled."
 #: Archetypes/skins/archetypes/go_back.cpy:29
+#: plone.app.registry/plone/app/registry/browser/controlpanel.py:63
+#: plone.app.registry/plone/app/registry/browser/edit.py:46
 msgid "message_edit_item_cancelled"
 msgstr "Úpravy byly stornovány."
 
