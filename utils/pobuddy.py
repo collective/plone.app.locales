@@ -34,9 +34,8 @@ class paraGetter(object):
         para['localesFiles'] = ['plone', 'atcontenttypes', 
                         'atreferencebrowserwidget', 'passwordresettool',
                         'cmfeditions', 'cmfplacefulworkflow', 'linguaplone', 
-                        'plonefrontpage', 'plonelocales',
-                        'plone.app.caching', 'plone.app.ldap'
-                        ]
+                        'plonefrontpage', 'plonelocales']
+        para['extraFiles'] = ['plone.app.caching', 'plone.app.ldap']
         para['tinyMceFiles'] = ['tinymce', 'plone.tinymce']
 
         # set scope of languages
@@ -73,6 +72,9 @@ class paraGetter(object):
         parser.add_option("-p", "--pot", action="store_true",
                           dest=("potOn"), default=False,
                           help="include POT files")
+        parser.add_option("-e", "--extra", action="store_true",
+                          dest=("extraOn"), default=False,
+                          help="include extra (plone.app.*) po files.")
         parser.add_option("-t", "--tiny", action="store_true",
                           dest=("tinyOn"), default=False,
                           help="include tinyMCE files. Products.TinyMCE required")
@@ -114,6 +116,9 @@ class paraGetter(object):
             else:
                 para['langs'] = [x for x in args if x in para['availLangs']]
                 para['potOn'] = False
+
+        if options.extraOn:
+            para['localesFiles'] = para['localesFiles'] + para['extraFiles']
 
         if options.tinyOn:        
             para['files'] = para['localesFiles'] + para['tinyMceFiles'] + para['i18nFiles']
