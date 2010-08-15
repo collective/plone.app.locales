@@ -7,6 +7,10 @@ python statistics.py /tmp/results.txt
 or if you want only your language to be displayed, here french:
 python statistics.py /tmp/results.txt fr
 
+Number of languages above 70 %:
+python statistics.py /tmp/results.txt > /tmp/res
+grep -e " ([789][0-9]\." -e " (100\." /tmp/res |wc -l
+
 """
 
 import os
