@@ -31,10 +31,14 @@ class paraGetter(object):
         para['poLocalesDir'] = '../locales'
         para['poTinyMceDir'] = '../../Products.TinyMCE/Products/TinyMCE/locales'
         para['i18nFiles'] = ['kupu/kupu', 'kupu/kupuconfig', 'kupu/kupupox']
-        para['localesFiles'] = ['plone', 'atcontenttypes', 
+        para['localesFiles'] = ['plone', 'plone-generated', 'plone-manual',
+                        'atcontenttypes', 
                         'atreferencebrowserwidget', 'passwordresettool',
-                        'cmfeditions', 'cmfplacefulworkflow', 'linguaplone', 
-                        'plonefrontpage', 'plonelocales']
+                        'cmfeditions', 'cmfplacefulworkflow', 
+                        'cmfplacefulworkflow-manual', 'linguaplone', 
+                        'plonefrontpage', 'plonelocales',
+                        'plone.app.caching', 'plone.app.ldap'
+                        ]
         para['tinyMceFiles'] = ['tinymce', 'plone.tinymce', 'plone.tinymce-manual']
 
         # set scope of languages
@@ -754,29 +758,29 @@ class reporter(object):
             print
             print 'LANGUAGE:', table[0][0], table[0][1]
             title = (
-                'FileName          Lines   Items Warning')
+                'FileName                Lines   Items Warning')
             print title
             separator = (
-                '--------------- ------- ------- -------')
+                '--------------------- ------- ------- -------')
             print separator
             for mx in table:
-                print '%-15s %7d %7d %7d' \
-                % (mx[2][:15],mx[3], mx[5],mx[9])
+                print '%-21s %7d %7d %7d' \
+                % (mx[2][:21],mx[3], mx[5],mx[9])
 
     def printStat(self, poTable):
         print
         print 'LANGUAGE:', poTable[0][0], poTable[0][1]
         title = (
-            'FileName          Lines POTItem   Items  Filled Vacancy '
-            '  Fuzzy Warning Filled%')
+            'FileName                Lines POTItem   Items  Filled Vacancy '
+            'Fuzzy  Warn Fill%')
         print title
         separator = (
-            '--------------- ------- ------- ------- ------- ------- '
-            '------- ------- -------')
+            '--------------------- ------- ------- ------- ------- ------- '
+            '----- ----- -----')
         print separator
         for mx in poTable:
-            print '%-15s %7d %7d %7d %7d %7d %7d %7d %6d%%' \
-            % (mx[2][:15],mx[3],mx[4],mx[5],mx[6],mx[7],mx[8],mx[9],mx[10])
+            print '%-21s %7d %7d %7d %7d %7d %5d %5d %4d%%' \
+            % (mx[2][:21],mx[3],mx[4],mx[5],mx[6],mx[7],mx[8],mx[9],mx[10])
             
     def printWarning(self, lang, table):
         ix = 0
