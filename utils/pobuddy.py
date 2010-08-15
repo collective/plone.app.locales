@@ -31,15 +31,13 @@ class paraGetter(object):
         para['poLocalesDir'] = '../locales'
         para['poTinyMceDir'] = '../../Products.TinyMCE/Products/TinyMCE/locales'
         para['i18nFiles'] = ['kupu/kupu', 'kupu/kupuconfig', 'kupu/kupupox']
-        para['localesFiles'] = ['plone', 'plone-generated', 'plone-manual',
-                        'atcontenttypes', 
+        para['localesFiles'] = ['plone', 'atcontenttypes', 
                         'atreferencebrowserwidget', 'passwordresettool',
-                        'cmfeditions', 'cmfplacefulworkflow', 
-                        'cmfplacefulworkflow-manual', 'linguaplone', 
+                        'cmfeditions', 'cmfplacefulworkflow', 'linguaplone', 
                         'plonefrontpage', 'plonelocales',
                         'plone.app.caching', 'plone.app.ldap'
                         ]
-        para['tinyMceFiles'] = ['tinymce', 'plone.tinymce', 'plone.tinymce-manual']
+        para['tinyMceFiles'] = ['tinymce', 'plone.tinymce']
 
         # set scope of languages
         availLangs = os.listdir(para['poLocalesDir'])
