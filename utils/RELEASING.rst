@@ -55,11 +55,14 @@ You should have something like this::
     locales-addons -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/locales-addons
     utils -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/utils
 
-Set the svn:externals and commit::
+Set the svn:externals and remove locales-future::
 
     svn propset svn:externals -F EXTERNALS.txt .
     svn up
     rm -rf locales-future
+
+remove locales-future translations registration in configure.zcml and commit::
+
     svn ci -m"Pinned revision of PloneTranslations"
 
     cd /tmp/4.0.0
