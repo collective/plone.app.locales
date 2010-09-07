@@ -46,15 +46,20 @@ Modify the externals accordingly::
     cd ..
     vi EXTERNALS.txt
 
+and remove locales-future.
+
 You should have something like this::
     
     i18n -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/i18n
     locales -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/locales
+    locales-addons -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/locales-addons
     utils -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/utils
 
 Set the svn:externals and commit::
 
     svn propset svn:externals -F EXTERNALS.txt .
+    svn up
+    rm -rf locales-future
     svn ci -m"Pinned revision of PloneTranslations"
 
     cd /tmp/4.0.0
