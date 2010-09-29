@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
 "POT-Creation-Date: 2010-09-28 18:11+0000\n"
-"PO-Revision-Date: 2010-08-11 14:02+0200\n"
+"PO-Revision-Date: 2010-09-29 08:11+0200\n"
 "Last-Translator: Jan Ulrich Hasecke <jan.ulrich@hasecke.com>\n"
 "Language-Team: Deutsch <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -127,7 +127,7 @@ msgstr "Beim Intranet-Arbeitsablauf sind Inhalte nur sichtbar, wenn man angemeld
 #. Default: "- Essentially a workflow with no transitions, but has a Published state, so portlets and applications that expect that state will continue to work."
 #: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 msgid "- Essentially a workflow with no transitions, but has a Published state, so portlets and applications that expect that state will continue to work."
-msgstr "Im Grunde ein Arbeitsablauf ohne Übergänge, alles ist sofort »veröffentlicht«."
+msgstr "Im Grunde ein Arbeitsablauf ohne Statuswechsel, alles ist sofort »veröffentlicht«."
 
 #. Default: "- Normally used with the Intranet/Extranet workflow on folder types. - Only has two states: Private and Internal Draft."
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
@@ -794,7 +794,7 @@ msgstr "Kommentar"
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
-msgstr "Kommentar zum letzten Übergang"
+msgstr "Kommentar zum letzten Statuswechsel"
 
 #: CMFPlone/skins/plone_form_scripts/discussion_reply.cpy:66
 msgid "Comment added."
@@ -2232,15 +2232,15 @@ msgstr "Anzahl der Artikel"
 
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "Object added to this container"
-msgstr ""
+msgstr "Artikel wurde diesem Ordner hinzugefügt"
 
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "Object modified"
-msgstr ""
+msgstr "Artikel wurde verändert"
 
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "Object removed from this container"
-msgstr ""
+msgstr "Artikel wurde in diesem Ordner gelöscht"
 
 #: plone.portlet.static/plone/portlet/static/static.py:40
 msgid "Omit portlet border"
@@ -2547,7 +2547,7 @@ msgstr "Meine Einstellungen"
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Previous transition"
-msgstr "Vorherige Übergänge"
+msgstr "Vorherige Statuswechsel"
 
 #. Default: "Print this"
 #: CMFPlone/profiles/default/actions.xml
@@ -3335,12 +3335,12 @@ msgstr "Dieser Benutzer hat keine E-Mail-Adresse."
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "The ID of the user who performed the last transition"
-msgstr "Die ID des Benutzers, der den letzten Übergang ausgelöst hat."
+msgstr "Die ID des Benutzers, der den letzten Statuswechsel ausgelöst hat."
 
 #. Default: "The ID of the user who performed the previous transition"
 #: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 msgid "The ID of the user who performed the previous transition"
-msgstr "Die ID des Benutzers, der den vorherigen Übergang ausgelöst hat."
+msgstr "Die ID des Benutzers, der den vorherigen Statuswechsel ausgelöst hat."
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:24
 msgid "The content type to check for."
@@ -3530,7 +3530,7 @@ msgstr "Der Status der Artikel, die in der Navigation oder der Übersicht angeze
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:21
 msgid "The workflow transitions to check for."
-msgstr ""
+msgstr "Der erforderliche Statuswechsel"
 
 #: plone.app.controlpanel/plone/app/controlpanel/skins.py:156
 msgid "Theme settings"
@@ -3967,7 +3967,7 @@ msgstr "Willkommen! Sie sind jetzt angemeldet."
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "When the previous transition was performed"
-msgstr "Wann der letzte Übergang ausgelöst wurde"
+msgstr "Wann der letzte Statuswechsel ausgelöst wurde"
 
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:116
 msgid "Whether or not execution of further rules should stop after this rule is executed"
@@ -4002,7 +4002,7 @@ msgstr "Status"
 
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "Workflow state changed"
-msgstr ""
+msgstr "Status verändert"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/wfstate.py:35
 msgid "Workflow states are: ${states}"
@@ -4014,7 +4014,7 @@ msgstr "Termine mit folgenden Status sollen im Kalender angezeigt werden."
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:20
 msgid "Workflow transition"
-msgstr ""
+msgstr "Statuswechsel"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:35
 msgid "Workflow transitions are: ${transitions}"
@@ -5709,7 +5709,7 @@ msgstr "Hiermit wird der Besitzer des aktuellen Objekts verändert."
 #. Default: "Select the transition to be used for modifying the items state."
 #: CMFPlone/skins/plone_forms/content_status_history.cpt:288
 msgid "help_change_status_action"
-msgstr "Wählen Sie den Übergang, der benutzt werden soll, um den Status des Artikels zu verändern."
+msgstr "Wählen Sie den Statuswechsel, der benutzt werden soll, um den Status des Artikels zu verändern."
 
 #. Default: "Enter a message to be saved alongside the check-in. This should explain what was changed, for audit purposes."
 #: plone.app.iterate/plone/app/iterate/browser/checkin.pt:26
@@ -5752,7 +5752,7 @@ msgstr "Ist dies ausgewählt, erscheint auf jeder Seite eine Option, die Ihnen d
 #. Default: "&e = the triggering event, &c = the context, &c = the user"
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:38
 msgid "help_contentrules_logger_message"
-msgstr ""
+msgstr "&e = das auslösende Ereignis, &c = der Kontext, &u = der Benutzer"
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
 #: Archetypes/ExtensibleMetadata.py:115
@@ -8259,7 +8259,7 @@ msgstr "Aktualisieren"
 #. Default: "Upgrade…"
 #: CMFPlone/browser/templates/plone-overview.pt:54
 msgid "label_upgrade_hellip"
-msgstr ""
+msgstr "Aktualisieren…"
 
 #. Default: "URL"
 #: for external links."
@@ -9121,7 +9121,7 @@ msgstr "Diese Erweiterung wurde nicht richtig installiert."
 #. Default: "Caught &e at &c by &u"
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:40
 msgid "text_contentrules_logger_message"
-msgstr ""
+msgstr "Registrierte &e bei &c von &u"
 
 #. Default: "Contributors: ${name}"
 #: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:58
