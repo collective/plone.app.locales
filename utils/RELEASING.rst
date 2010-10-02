@@ -41,16 +41,21 @@ First get the revision::
 
 You get "Revision: 88537".
 
-Modify the externals accordingly::
+Go back to the parent folder::
 
     cd ..
+
+For Plone 4::
+
+    rm -rf locales-future i18n
+
+Modify the externals accordingly::
+
     vi EXTERNALS.txt
 
-and remove locales-future.
-
-You should have something like this::
+You should have something like this (remove locales-future and i18n for
+Plone 4. Keep i18n for Plone 3)::
     
-    i18n -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/i18n
     locales -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/locales
     locales-addons -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/locales-addons
     utils -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/utils
@@ -59,21 +64,16 @@ Set the svn:externals and remove locales-future::
 
     svn propset svn:externals -F EXTERNALS.txt .
     svn up
-    rm -rf locales-future
+
+For Plone 3::
+
+    rm -rf i18n/kupu
 
 remove locales-future translations registration in configure.zcml and commit::
 
     svn ci -m"Pinned revision of PloneTranslations"
 
     cd /tmp/4.0.0
-
-For Plone 4::
-
-    rm -rf plone/app/locales/i18n
-
-For Plone 3::
-
-    rm -rf plone/app/locales/i18n/kupu
 
 Then::
 
