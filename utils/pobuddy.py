@@ -31,9 +31,9 @@ class paraGetter(object):
         para['poLocalesDir'] = '../locales'
         para['poTinyMceDir'] = '../../Products.TinyMCE/Products/TinyMCE/locales'
         para['i18nFiles'] = ['kupu/kupu', 'kupu/kupuconfig', 'kupu/kupupox']
-        para['localesFiles'] = ['plone', 'atcontenttypes', 
+        para['localesFiles'] = ['plone', 'atcontenttypes',
                         'atreferencebrowserwidget', 'passwordresettool',
-                        'cmfeditions', 'cmfplacefulworkflow', 'linguaplone', 
+                        'cmfeditions', 'cmfplacefulworkflow', 'linguaplone',
                         'plonefrontpage', 'plonelocales']
         para['extraFiles'] = ['plone.app.caching', 'plone.app.ldap']
         para['tinyMceFiles'] = ['tinymce', 'plone.tinymce']
@@ -87,7 +87,7 @@ class paraGetter(object):
         parser.add_option("-d", "--directory", action="store",
                           type="string", dest="csvDir", default="./pobuddyCSV",
                           metavar="DIRECTORY",
-                          help="specify DIRECTORY for CSV files to be saved." + 
+                          help="specify DIRECTORY for CSV files to be saved." +
                                " Default is ./pobuddyCSV")
 
         (options, args) = parser.parse_args()
@@ -120,11 +120,11 @@ class paraGetter(object):
         if options.extraOn:
             para['localesFiles'] = para['localesFiles'] + para['extraFiles']
 
-        if options.tinyOn:        
+        if options.tinyOn:
             para['files'] = para['localesFiles'] + para['tinyMceFiles'] + para['i18nFiles']
         else:
             para['files'] = para['localesFiles'] + para['i18nFiles']
-            
+
         para['headerNames'] = ['Project-Id-Version',
                                'POT-Creation-Date',
                                'PO-Revision-Date',
@@ -146,7 +146,7 @@ class paraGetter(object):
             print 'FILE SCOPE:', para['files']
 
         return para
-        
+
 #**************************************************************************
 
 class analyzer(object):
@@ -222,11 +222,11 @@ class analyzer(object):
         mc['defaultSw'] = False
         mc['idSw'] = False
         mc['stringSw'] = False
-        
+
         inFile = self.getPath(para, lang, fileName)
         if inFile == False:
             sc['warning'] += 1
-         
+
             warningMsg = 'FILE NOT FOUND'
             warningRef = fileName
             warningLine = [lang, fileName, 0 , warningMsg, warningRef]
@@ -251,7 +251,7 @@ class analyzer(object):
         except Exception, em:
             sc['langName'] = 'NOT UTF-8'
             sc['warning'] += 1
-         
+
             warningMsg = 'FILE NOT ENCODED IN UTF-8'
             warningRef = fileName
             warningLine = [lang, fileName, 0 , warningMsg, warningRef]
@@ -259,13 +259,13 @@ class analyzer(object):
 
             if para['verbose']:
                 print 'FILE NOT ENCODED IN UTF-8:', lang, fileName
-                
+
             fin.close()
             fin = codecs.open(inFile, 'r', encoding='utf-8', errors='replace')
 
         lines = fin.readlines()
         for line in lines:
-            
+
             if len(line) == 0:
                 sc, fileWarning, fileCsv = \
                     self.makeRec(para, sc, mc, fileWarning, fileCsv)
@@ -332,7 +332,7 @@ class analyzer(object):
 
                 if mc['id'] == '':
                     mc['idSw'] = True
-                   
+
                 #else:
                     #warningLine, fileWarning, sc = \
                     #         self.unicodeCheck(para, line, fileWarning, sc)
@@ -340,7 +340,7 @@ class analyzer(object):
                     warningMsg = 'MSGID IS LONGER THAN 100 CHARACTERS'
                     warningRef = 'MSGID: ' + mc['id']
                     warningRef = warningRef + '\n' + 'MSGLOC: ' + mc['locations']
-                    warningLine =[lang, fileName, sc['line'], 
+                    warningLine =[lang, fileName, sc['line'],
                                   warningMsg, warningRef]
                     fileWarning.append(warningLine)
                     sc['warning'] += 1
@@ -378,7 +378,7 @@ class analyzer(object):
                     mc['string'] += wkLine
                 if mc['idSw'] == True:
                     mc['id'] += wkLine
-            
+
             if len(line) == 1 and mc['id'] != '':
                 if mc['string'] == '':
                     sc['vacancy'] += 1
@@ -404,23 +404,23 @@ class analyzer(object):
         if fileName == 'plone':
             wkLang = fileHeader['Language-Name']
             para['langNames'][lang] = wkLang
-            #print 
+            #print
         return para, fileStatLine, fileWarning, fileCsv, fileHeader
-    
+
     def makeRec(self, para, sc, mc, fileWarning, fileCsv):
         umsgDefault = mc['default']
         umsgString = mc['string']
         mc['idLoc'] = sc['fileName'] + ':' + mc['idLoc']
-        csvRec = [str(sc['serial']), sc['lang'], sc['langName'], 
-                  mc['idLoc'], mc['id'], mc['locations'], umsgDefault, 
+        csvRec = [str(sc['serial']), sc['lang'], sc['langName'],
+                  mc['idLoc'], mc['id'], mc['locations'], umsgDefault,
                   umsgString, mc['comment']]
-        fileCsv.append(csvRec) 
+        fileCsv.append(csvRec)
         if fileWarning == []:
             fileWarning.append([sc['lang'], sc['fileName'], 0, 'NO WARNING', 'NONE'])
         return sc, fileWarning, fileCsv
 
-    def getPath(self, para, lang, fileName): 
-          
+    def getPath(self, para, lang, fileName):
+
         inFile = fileName
         if lang in para['langs']:
             if fileName in para['i18nFiles']:
@@ -434,7 +434,7 @@ class analyzer(object):
                 else:
                     wklang = lang[:dashLoc] + '_' + \
                              lang[dashLoc+1:].upper()
-                
+
                 if fileName in para['localesFiles']:
                     inFile = para['poLocalesDir'] + '/' + wklang + \
                              '/LC_MESSAGES/' + wkfileName
@@ -513,7 +513,7 @@ class preparator(object):
                     langChart.append(poLine)
         langChart = sorted(langChart, key=operator.itemgetter(8),reverse=True)
         langChart = sorted(langChart, key=operator.itemgetter(9),reverse=True)
-        langChart = sorted(langChart, key=operator.itemgetter(10)) 
+        langChart = sorted(langChart, key=operator.itemgetter(10))
         langChart.reverse()
 
         if para['verbose']:
@@ -524,9 +524,9 @@ class preparator(object):
                  poSumTable, langChart]
         return sData
 
-    def reportStat(self, para, potTable, poCubic):    
+    def reportStat(self, para, potTable, poCubic):
 
-        # calcurate total line and add to poCubic    
+        # calcurate total line and add to poCubic
         for poTable in poCubic:
             poTable.append(self.totalLineMaker(poTable))
 
@@ -634,7 +634,7 @@ class preparator(object):
                     fileName = preItem[3]
                     fileName = fileName[:fileName.rfind(':')]
                     lineCount = int(preItem[preItem.rfind(':')+1])
-                    warningLine =[lang, fileName, lineCount, 
+                    warningLine =[lang, fileName, lineCount,
                                   warningMsg, warningRef]
                     langWarningTable.append(warningLine)
                     jx = [item[2] for item in langTable].index(fileName)
@@ -647,7 +647,7 @@ class preparator(object):
                     fileName = item[3]
                     fileName = fileName[:fileName.rfind(':')]
                     lineCount = int(item[item.rfind(':')+1])
-                    warningLine =[lang, fileName, lineCount, 
+                    warningLine =[lang, fileName, lineCount,
                                   warningMsg, warningRef]
                     langWarningTable.append(warningLine)
                     jx = [item[2] for item in langTable].index(fileName)
@@ -683,7 +683,7 @@ class csvwriter(object):
             uline = ['Language', 'File']
             uline.extend(para['headerNames'])
             uline = ['"'+item+'"' for item in uline]
-            uline = u','.join(uline) + u'\n' 
+            uline = u','.join(uline) + u'\n'
             fo.write(uline)
             for jx, fileHeader in enumerate(potHeaderTable):
                 uline = ['pot', para['files'][jx]]
@@ -713,11 +713,11 @@ class csvwriter(object):
     def csvWrite(self, para, lang, csvTable):
         for jx, csvFile in enumerate(csvTable):
             outFile = para['csvDir'] + '/' + para['files'][jx] + \
-                      '-' + lang + '.csv' 
+                      '-' + lang + '.csv'
             fo = codecs.open(outFile, 'w', 'utf-8')
             uline = ['Serial', 'Language', 'Language Name',
-                     'MessageID Location', 'MessageID', 
-                     'Location Message Used', 'Default', 
+                     'MessageID Location', 'MessageID',
+                     'Location Message Used', 'Default',
                      'Message String', 'Comment']
             uline = ['"'+item+'"' for item in uline]
             uline = u','.join(uline) + u'\n'
@@ -784,10 +784,10 @@ class reporter(object):
         for mx in poTable:
             print '%-21s %7d %7d %7d %7d %7d %5d %5d %4d%%' \
             % (mx[2][:21],mx[3],mx[4],mx[5],mx[6],mx[7],mx[8],mx[9],mx[10])
-            
+
     def printWarning(self, lang, table):
         ix = 0
-        print 
+        print
         for line in table:
             for mx in line:
                 if mx[3] == 'NO WARNING':
@@ -882,7 +882,7 @@ def main():
 
     report = reporter()
     report(para, sData)
-    
+
     endTime = datetime.datetime.now()
     print
     print '**************************** PROCESS ENDS:', \
