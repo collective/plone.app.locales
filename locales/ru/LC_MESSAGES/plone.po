@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-10-30 10:15+0000\n"
+"POT-Creation-Date: 2010-10-30 17:00+0000\n"
 "PO-Revision-Date: 2010-10-21 14:23+0300\n"
 "Last-Translator: Pavel Petlinskiy <golem131@gmail.com>\n"
 "Language-Team: <theo.ukr@gmail.com>\n"
@@ -111,12 +111,20 @@ msgstr "${title} невозможно переместить."
 msgid "${tname} has been created."
 msgstr "${tname} был создан."
 
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
+msgid "(${location}, from ${start} to ${end})"
+msgstr ""
+
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr "(Требуется JavaScript)"
 
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
+msgid "(from ${start} to ${end})"
 msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
@@ -782,8 +790,13 @@ msgstr "Свернуть редко используемые возможнос�
 
 #. Default: "Collection"
 #: CMFPlone/profiles/default/types/Topic.xml
+#: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
 msgid "Collection"
 msgstr "Коллекция"
+
+#: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
+msgid "Collection of searchable information"
+msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
 msgid "Collection portlet"
@@ -873,6 +886,10 @@ msgstr "Правила для содержимого"
 #: plone.stringinterp/plone/stringinterp/adapters.py:83
 msgid "Content Type"
 msgstr "Контент тип"
+
+#: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
+msgid "Content listing"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:23
 msgid "Content type"
@@ -1657,6 +1674,10 @@ msgstr ""
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Отмечая этот пункт вы задаете режим, при котором личная папка пользователя будет создаваться в момент его первого входа в систему."
 
+#: plone.app.collection/plone/app/collection/collection.py:50
+msgid "If selected, only the 'Number of Items' indicated below will be displayed."
+msgstr ""
+
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -1844,6 +1865,10 @@ msgstr ""
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr "Ограничение"
+
+#: plone.app.collection/plone/app/collection/collection.py:49
+msgid "Limit Search Results"
+msgstr ""
 
 #: LinguaPlone/configure.zcml
 msgid "LinguaPlone"
@@ -2234,6 +2259,10 @@ msgstr ""
 #: plone.app.contentrules/plone/app/contentrules/actions/notify.py:43
 msgid "Notify with message ${message}"
 msgstr "Показывать сообщением: ${message}"
+
+#: plone.app.collection/plone/app/collection/collection.py:61
+msgid "Number of Items"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
@@ -2964,6 +2993,10 @@ msgstr "Определите процессы изменений рабочег�
 msgid "Select values from list"
 msgstr "Выберите значения из списка"
 
+#: plone.app.collection/plone/app/collection/collection.py:75
+msgid "Select which fields to display when 'Display as Table' is checked."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/markup.py:81
 msgid "Select which formats are available for users as alternative to the default format. Note that if new formats are installed, they will be enabled for text fields by default unless explicitly turned off here or by the relevant installer."
 msgstr "Определите, какие форматы доступны для пользователей, как альтернативы текущему. Помните, что при установке новых форматов, они активизируются автоматически, если только специально не отключены инсталяционнной программой."
@@ -3282,6 +3315,10 @@ msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:36
 msgid "TALES expression is: ${tales_expression}"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:74
+msgid "Table Columns"
 msgstr ""
 
 #. Default: "Tabular view"
@@ -4795,6 +4832,7 @@ msgstr "Этот объект не обеспечивает поддержку �
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
 msgid "description_no_items_in_folder"
 msgstr "В настоящее время в этой папке нет никаких элементов."
 
@@ -7094,22 +7132,26 @@ msgstr "Участники"
 
 #. Default: "from ${start} to ${end}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:113
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:107
 #, fuzzy
 msgid "label_event_byline"
 msgstr "( ${location}, с ${start} по ${end} )"
 
 #. Default: "— ${location},"
 #: CMFPlone/skins/plone_content/folder_listing.pt:120
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:114
 msgid "label_event_byline_location"
 msgstr ""
 
 #. Default: "${start}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:86
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:80
 msgid "label_event_byline_onlyfrom"
 msgstr ""
 
 #. Default: "${start} from ${starttime} to ${end}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:101
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:95
 msgid "label_event_byline_samedate"
 msgstr ""
 
@@ -8433,6 +8475,10 @@ msgstr "&#151; техническая конфигурация нижнего у
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:24
 msgid "large_text"
 msgstr "Большой"
+
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
+msgid "last modified"
+msgstr ""
 
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197

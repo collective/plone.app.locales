@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-10-30 10:15+0000\n"
+"POT-Creation-Date: 2010-10-30 17:00+0000\n"
 "PO-Revision-Date: 2010-08-06 20:28+0200\n"
 "Last-Translator: H. Turgut Uyar <uyar@itu.edu.tr>\n"
 "Language-Team: H. Turgut Uyar <uyar@itu.edu.tr>\n"
@@ -104,6 +104,10 @@ msgstr "${title} taşınamaz."
 msgid "${tname} has been created."
 msgstr "${tname} yaratıldı."
 
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
+msgid "(${location}, from ${start} to ${end})"
+msgstr ""
+
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr "(JavaScript gerektirir)"
@@ -111,6 +115,10 @@ msgstr "(JavaScript gerektirir)"
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
 msgstr "(stili yok)"
+
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
+msgid "(from ${start} to ${end})"
+msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -775,8 +783,13 @@ msgstr "Nadir kullanılan seçenekleri kapa"
 
 #. Default: "Collection"
 #: CMFPlone/profiles/default/types/Topic.xml
+#: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
 msgid "Collection"
 msgstr "Derleme"
+
+#: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
+msgid "Collection of searchable information"
+msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
 msgid "Collection portlet"
@@ -865,6 +878,10 @@ msgstr "İçerik kuralları"
 
 #: plone.stringinterp/plone/stringinterp/adapters.py:83
 msgid "Content Type"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
+msgid "Content listing"
 msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:23
@@ -1649,6 +1666,10 @@ msgstr "Bu seçenek etkin değilse bir URL adresi üretilip e-postayla gönderil
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Bu seçenek etkinse her kullanıcı için siteye girdiğinde içerik ekleyebileceği bir ev klasörü yaratılır."
 
+#: plone.app.collection/plone/app/collection/collection.py:50
+msgid "If selected, only the 'Number of Items' indicated below will be displayed."
+msgstr ""
+
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -1836,6 +1857,10 @@ msgstr "Siteye bir dosya yüklemenizi sağlar."
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr "Sınır"
+
+#: plone.app.collection/plone/app/collection/collection.py:49
+msgid "Limit Search Results"
+msgstr ""
 
 #: LinguaPlone/configure.zcml
 msgid "LinguaPlone"
@@ -2226,6 +2251,10 @@ msgstr "Hiç"
 #: plone.app.contentrules/plone/app/contentrules/actions/notify.py:43
 msgid "Notify with message ${message}"
 msgstr "${message} iletisiyle haber ver"
+
+#: plone.app.collection/plone/app/collection/collection.py:61
+msgid "Number of Items"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
@@ -2956,6 +2985,10 @@ msgstr "Denenecek işakışı geçişini seçin"
 msgid "Select values from list"
 msgstr "Listeden değerleri seçin"
 
+#: plone.app.collection/plone/app/collection/collection.py:75
+msgid "Select which fields to display when 'Display as Table' is checked."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/markup.py:81
 msgid "Select which formats are available for users as alternative to the default format. Note that if new formats are installed, they will be enabled for text fields by default unless explicitly turned off here or by the relevant installer."
 msgstr "Kullanıcıların varsayılan format dışında kullanabilecekleri format seçeneklerini seçin. Sisteme yeni format seçenekleri kurulursa bunları, burada ya da ilgili kurulum yazılımında engellenmemesi durumunda, kullanıcıların metin alanlarında kullanabileceklerini unutmayın."
@@ -3274,6 +3307,10 @@ msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:36
 msgid "TALES expression is: ${tales_expression}"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:74
+msgid "Table Columns"
 msgstr ""
 
 #. Default: "Tabular view"
@@ -4785,6 +4822,7 @@ msgstr "Bu nesne üzerinde karşılaştırma işlemi yapılamaz."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
 msgid "description_no_items_in_folder"
 msgstr "Bu klasörde şu anda hiçbir öğe yok."
 
@@ -7065,21 +7103,25 @@ msgstr "Katılanlar"
 
 #. Default: "from ${start} to ${end}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:113
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:107
 msgid "label_event_byline"
 msgstr "${start} ile ${end} arasında"
 
 #. Default: "— ${location},"
 #: CMFPlone/skins/plone_content/folder_listing.pt:120
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:114
 msgid "label_event_byline_location"
 msgstr "— ${location},"
 
 #. Default: "${start}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:86
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:80
 msgid "label_event_byline_onlyfrom"
 msgstr ""
 
 #. Default: "${start} from ${starttime} to ${end}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:101
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:95
 msgid "label_event_byline_samedate"
 msgstr ""
 
@@ -8395,6 +8437,10 @@ msgstr ""
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:24
 msgid "large_text"
 msgstr "Büyük"
+
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
+msgid "last modified"
+msgstr ""
 
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197

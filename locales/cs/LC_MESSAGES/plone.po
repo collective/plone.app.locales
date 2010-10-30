@@ -25,7 +25,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone\n"
-"POT-Creation-Date: 2010-10-30 10:15+0000\n"
+"POT-Creation-Date: 2010-10-30 17:00+0000\n"
 "PO-Revision-Date: 2010-09-22 16:59+0100\n"
 "Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
 "Language-Team: Vlada Macek\n"
@@ -127,6 +127,10 @@ msgstr "Položku ${title} nelze přesouvat."
 msgid "${tname} has been created."
 msgstr "Položka ${tname} byla vytvořena."
 
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
+msgid "(${location}, from ${start} to ${end})"
+msgstr ""
+
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr "(Vyžaduje Javascript)"
@@ -134,6 +138,10 @@ msgstr "(Vyžaduje Javascript)"
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
 msgstr "(Bez stylu)"
+
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
+msgid "(from ${start} to ${end})"
+msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -798,8 +806,13 @@ msgstr "Schovat zřídka používané možnosti."
 
 #. Default: "Collection"
 #: CMFPlone/profiles/default/types/Topic.xml
+#: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
 msgid "Collection"
 msgstr "Rešerše"
+
+#: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
+msgid "Collection of searchable information"
+msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/profiles/default/portlets.xml
 msgid "Collection portlet"
@@ -889,6 +902,10 @@ msgstr "Pravidla pro obsah"
 #: plone.stringinterp/plone/stringinterp/adapters.py:83
 msgid "Content Type"
 msgstr "Typ položky"
+
+#: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
+msgid "Content listing"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:23
 msgid "Content type"
@@ -1672,6 +1689,10 @@ msgstr "Není-li zaškrtnuto, bude vygenorována unikátní adresa a odeslána e
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Pokud je vybrána tato možnost, bude po přihlášení uživatelům vytvořena domovská složka, ve které mohou uživbatelé vytvářet obsah."
 
+#: plone.app.collection/plone/app/collection/collection.py:50
+msgid "If selected, only the 'Number of Items' indicated below will be displayed."
+msgstr ""
+
 #. Default: "If you submitted the item by mistake or want to perform additional edits, this will take it back."
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -1859,6 +1880,10 @@ msgstr "Umožňuje uložit soubor do portálu."
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr "Limit"
+
+#: plone.app.collection/plone/app/collection/collection.py:49
+msgid "Limit Search Results"
+msgstr ""
 
 #: LinguaPlone/configure.zcml
 msgid "LinguaPlone"
@@ -2249,6 +2274,10 @@ msgstr "Nic"
 #: plone.app.contentrules/plone/app/contentrules/actions/notify.py:43
 msgid "Notify with message ${message}"
 msgstr "Oznámit zprávou ${message}"
+
+#: plone.app.collection/plone/app/collection/collection.py:61
+msgid "Number of Items"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
@@ -2979,6 +3008,10 @@ msgstr "Zvolte, o jakou změnu stavu se pokusit"
 msgid "Select values from list"
 msgstr "Vyberte hodnoty ze seznamu"
 
+#: plone.app.collection/plone/app/collection/collection.py:75
+msgid "Select which fields to display when 'Display as Table' is checked."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/markup.py:81
 msgid "Select which formats are available for users as alternative to the default format. Note that if new formats are installed, they will be enabled for text fields by default unless explicitly turned off here or by the relevant installer."
 msgstr "Vyberte, jaké formáty budou dostupné pro uživatele jako alternativy pro formáty výchozí. Mějte na paměti, že pokud jsou nainstalovány nové formáty, budou jako výchozí zapnuty pro textová pole, dokud nebudou vypnuty zde nebo pomocí příslušného instalátoru."
@@ -3297,6 +3330,10 @@ msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:36
 msgid "TALES expression is: ${tales_expression}"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:74
+msgid "Table Columns"
 msgstr ""
 
 #. Default: "Tabular view"
@@ -4808,6 +4845,7 @@ msgstr "Tato položka nepodporuje porovnávání."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
 msgid "description_no_items_in_folder"
 msgstr "V této složce nyní nejsou žádné položky."
 
@@ -7087,21 +7125,25 @@ msgstr "Návštěvníci"
 
 #. Default: "from ${start} to ${end}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:113
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:107
 msgid "label_event_byline"
 msgstr "od ${start} do ${end}"
 
 #. Default: "— ${location},"
 #: CMFPlone/skins/plone_content/folder_listing.pt:120
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:114
 msgid "label_event_byline_location"
 msgstr "— ${location},"
 
 #. Default: "${start}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:86
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:80
 msgid "label_event_byline_onlyfrom"
 msgstr "${start}"
 
 #. Default: "${start} from ${starttime} to ${end}"
 #: CMFPlone/skins/plone_content/folder_listing.pt:101
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:95
 msgid "label_event_byline_samedate"
 msgstr "${start} od ${starttime} do ${end}"
 
@@ -8417,6 +8459,10 @@ msgstr "&#151; konfigurace aplikačního serveru."
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:24
 msgid "large_text"
 msgstr "Velké písmo"
+
+#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
+msgid "last modified"
+msgstr ""
 
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197
