@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-09-29 12:28+0000\n"
+"POT-Creation-Date: 2010-10-30 10:15+0000\n"
 "PO-Revision-Date: 2010-10-10 09:53+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -50,7 +50,7 @@ msgstr "${count} 個項目被剪下。"
 msgid "${count} item(s) renamed."
 msgstr "${count} 個項目被改名。"
 
-#: CMFPlone/skins/plone_scripts/folder_delete.cpy:37
+#: CMFPlone/skins/plone_scripts/folder_delete.cpy:65
 msgid "${items} could not be deleted."
 msgstr "${items} 無法被刪除。"
 
@@ -163,6 +163,10 @@ msgstr "90"
 #: ./plone.app.registry/plone/app/registry/configure.zcml
 msgid "A 'Mozilla about:config' style configuration registry"
 msgstr "'Mozilla about:config' 格式的設定檔"
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:65
+msgid "A TALES expression condition makes the rule apply only if TALES expression is not False in context."
+msgstr ""
 
 #. Default: "A boolean criterion"
 #: CMFPlone/profiles/default/types/ATBooleanCriterion.xml
@@ -446,6 +450,10 @@ msgstr "新增規則"
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:58
 msgid "Add Search Portlet"
 msgstr "新增搜尋資訊方框"
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:64
+msgid "Add TALES Expression Condition"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:80
 msgid "Add Workflow Action"
@@ -1018,7 +1026,7 @@ msgstr "定義型別可在網站中顯示、搜尋"
 
 #. Default: "Delete"
 #: CMFPlone/profiles/default/actions.xml
-#: CMFPlone/skins/plone_forms/delete_confirmation_page.cpt:48
+#: CMFPlone/skins/plone_forms/delete_confirmation_page.cpt:49
 msgid "Delete"
 msgstr "刪除"
 
@@ -1191,6 +1199,10 @@ msgstr "編輯規則"
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:67
 msgid "Edit Search Portlet"
 msgstr "編輯搜尋資訊方框"
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:78
+msgid "Edit TALES Expression Condition"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:93
 msgid "Edit Workflow Action"
@@ -1945,11 +1957,11 @@ msgstr "電子郵件"
 msgid "Mail sent."
 msgstr "信件寄出。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:145
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:152
 msgid "Mail settings"
 msgstr "郵件設定"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:146
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:153
 msgid "Mail settings for this site."
 msgstr "網站的郵件設定。"
 
@@ -2496,11 +2508,11 @@ msgstr "Plone 網站"
 msgid "Plone filters HTML tags that are considered security risks. Be aware of the implications before making changes below. By default only tags defined in XHTML are permitted. In particular, to allow 'embed' as a tag you must both remove it from 'Nasty tags' and add it to 'Custom tags'. Although the form will update immediately to show any changes you make, your changes are not saved until you press the 'Save' button."
 msgstr "系統會過濾被認為危險的 HTML 標籤。在進行下列設定之前，請先了解運作原理。由於預設只允許 XHTML 定義的標籤，想要允許使用 'embed' 標籤的話，必須將它從「惡意的標籤」中移除，並且加到「自定的標籤」裡。下列表單如果有變更，即使畫面看起來已經更新了，但還是要點選最下方的「儲存」按鈕後，才讓變更結果在系統裡實際生效。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:69
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:72
 msgid "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address on the site-wide contact form."
 msgstr "Plone 用此名稱做為產生電子郵件的退信地址，也同時用在整個網站連絡表單，送達電子郵件地址。"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:62
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:65
 msgid "Plone generates e-mail using this name as the e-mail sender."
 msgstr "Plone 用此名稱做為產生電子郵件的發送者。"
 
@@ -3067,11 +3079,11 @@ msgstr "單一狀態流程"
 msgid "Site"
 msgstr "網站"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:68
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:71
 msgid "Site 'From' address"
 msgstr "寄件者 'From' 欄位的郵件地址"
 
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:61
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:64
 msgid "Site 'From' name"
 msgstr "寄件者 'From' 欄位的名稱"
 
@@ -3258,6 +3270,14 @@ msgstr "不允許串連"
 msgid "Syndication properties updated."
 msgstr "RSS 屬性值已更新。"
 
+#: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:21
+msgid "TALES expression"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:36
+msgid "TALES expression is: ${tales_expression}"
+msgstr ""
+
 #. Default: "Tabular view"
 #: dynamic view name template folder_tabular_view on type Folder
 #: dynamic view name template folder_tabular_view on type Large Plone Folder
@@ -3334,6 +3354,10 @@ msgstr "最後進行狀態轉換的使用者ID"
 #: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
 msgid "The ID of the user who performed the previous transition"
 msgstr "進行前一個狀態轉換的使用者ID"
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:22
+msgid "The TALES expression to check."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:24
 msgid "The content type to check for."
@@ -3564,9 +3588,17 @@ msgstr "這些 CSS 風格已被允許在風格屬性。"
 msgid "These attributes are stripped from any tag when saving."
 msgstr "當進行儲存時，任何標籤裡的這些屬性值都將被濾除。"
 
+#: plone.app.controlpanel/plone/app/controlpanel/filter.py:77
+msgid "These attributes are stripped from those tags when saving."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/filter.py:94
 msgid "These class names are not allowed in class attributes."
 msgstr "這些類別名稱不允許在類別屬性中使用。"
+
+#: CMFPlone/skins/plone_scripts/folder_delete.cpy:62
+msgid "These items are locked for editing: ${lockeditems}."
+msgstr ""
 
 #: plone.app.controlpanel/plone/app/controlpanel/filter.py:50
 msgid "These tags are stripped when saving or rendering, but any content is preserved."
@@ -4605,7 +4637,7 @@ msgid "description_current_owner"
 msgstr "目前擁有者是 ${name}"
 
 #. Default: "You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, stop the server, set 'debug-mode=off' in your buildout.cfg, re-run bin/buildout and then restart the server process."
-#: CMFPlone/skins/plone_prefs/plone_control_panel.pt:160
+#: CMFPlone/skins/plone_prefs/plone_control_panel.pt:165
 #: plone.app.controlpanel/plone/app/controlpanel/overview.pt:112
 msgid "description_debug_mode"
 msgstr "系統以 \"除錯模式\" 執行中，這是用於網站開發的模式，可讓許多配置的結果立即生效，但會使網站反應變得非常緩慢。要關閉除錯模式，可修改 buildout.cfg 設定 'debug-mode off'，然後執行 bin/buildout 重新啟動伺服器即可。"
@@ -4820,7 +4852,7 @@ msgid "description_portlets_block_unblock"
 msgstr "是否沿用上層的資訊方框設定值，可由下拉選單來指定。各類的資訊方框會顯示在選單之下。"
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, stop the server, set 'debug-mode=on' in your buildout.cfg, re-run bin/buildout and then restart the server process."
-#: CMFPlone/skins/plone_prefs/plone_control_panel.pt:148
+#: CMFPlone/skins/plone_prefs/plone_control_panel.pt:153
 #: plone.app.controlpanel/plone/app/controlpanel/overview.pt:100
 msgid "description_production_mode"
 msgstr "系統以「正式模式」執行中，對於一個正式服務的 Plone 網站，這是較好的模式，但會造成配置的變更結果不會立即生效，除非重新開啟伺服器。如果這是個開發中的網站，也想要啟用除錯模式的話，先停止系統，修改 buildout.cfg 設定 'debug-mode on' 後，執行 bin/buildout 重新啟動伺服器即可。"
@@ -5626,7 +5658,7 @@ msgstr "設定值"
 
 #. Default: "Version Overview"
 #: CMFPlone/browser/templates/plone-upgrade.pt:186
-#: CMFPlone/skins/plone_prefs/plone_control_panel.pt:136
+#: CMFPlone/skins/plone_prefs/plone_control_panel.pt:141
 #: plone.app.controlpanel/plone/app/controlpanel/overview.pt:94
 msgid "heading_version_overview"
 msgstr "版本資訊"
@@ -6174,22 +6206,22 @@ msgid "help_shortname"
 msgstr "簡短名稱是網址的一部分，請不要使用空白、底線或混用大小寫。"
 
 #. Default: "The password for the ESMTP user account."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:55
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:58
 msgid "help_smtp_pass"
 msgstr "給 ESMTP 使用者帳號用的密碼。"
 
 #. Default: "The port of your local SMTP (outgoing e-mail) server. Usually '25'."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:38
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:41
 msgid "help_smtp_port"
 msgstr "內部電子郵件伺服器（SMTP）的埠號（port）。通常是 25。"
 
 #. Default: "The address of your local SMTP (outgoing e-mail) server. Usually 'localhost', unless you use an external server to send e-mail."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:28
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:31
 msgid "help_smtp_server"
 msgstr "內部電子郵件伺服器（SMTP）的位址。通常是 \"localhost\"，除非你使用額外的主機來傳送郵件。"
 
 #. Default: "Username for authentication to your e-mail server. Not required unless you are using ESMTP."
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:46
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:49
 msgid "help_smtp_userid"
 msgstr "電子郵件伺服器進行身份認證的使用者帳號。通常不需要提供，除非使用 ESMTP。"
 
@@ -6412,7 +6444,7 @@ msgstr "進階…"
 
 #. Default: "Advanced Search…"
 #: CMFPlone/skins/plone_scripts/livesearch_reply.py:86
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:50
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:51
 #: plone.app.portlets/plone/app/portlets/portlets/search.pt:44
 msgid "label_advanced_search"
 msgstr "進階搜尋…"
@@ -7537,7 +7569,7 @@ msgid "label_no_group_specified"
 msgstr "沒有選擇任何群組。"
 
 #. Default: "No preference panels available."
-#: CMFPlone/skins/plone_prefs/plone_control_panel.pt:120
+#: CMFPlone/skins/plone_prefs/plone_control_panel.pt:125
 #: CMFPlone/skins/plone_prefs/plone_memberprefs_panel.pt:45
 #: plone.app.controlpanel/plone/app/controlpanel/overview.pt:82
 msgid "label_no_prefs_panels_available"
@@ -7927,7 +7959,7 @@ msgid "label_search_the_site"
 msgstr "搜尋網站"
 
 #. Default: "only in current section"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:37
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:38
 msgid "label_searchbox_currentfolder_only"
 msgstr "只在現行資料夾裡搜尋"
 
@@ -8072,22 +8104,22 @@ msgid "label_skiptonavigation"
 msgstr "略過導覽"
 
 #. Default: "ESMTP password"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:53
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:56
 msgid "label_smtp_pass"
 msgstr "ESMTP 密碼"
 
 #. Default: "SMTP port"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:36
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:39
 msgid "label_smtp_port"
 msgstr "SMTP 埠號"
 
 #. Default: "SMTP server"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:26
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:29
 msgid "label_smtp_server"
 msgstr "SMTP 位址"
 
 #. Default: "ESMTP username"
-#: plone.app.controlpanel/plone/app/controlpanel/mail.py:44
+#: plone.app.controlpanel/plone/app/controlpanel/mail.py:47
 msgid "label_smtp_userid"
 msgstr "ESMTP 使用者帳號"
 
@@ -9244,7 +9276,7 @@ msgid "text_product_description"
 msgstr "擴充模組的摘要說明"
 
 #. Default: "Search Site"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:9
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:11
 msgid "text_search"
 msgstr "搜尋網站"
 
@@ -9562,7 +9594,7 @@ msgid "title_rss_feed"
 msgstr "訂閱 RSS 以讀取搜尋結果"
 
 #. Default: "Search Site"
-#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:14
+#: plone.app.layout/plone/app/layout/viewlets/searchbox.pt:15
 msgid "title_search_site"
 msgstr "搜尋網站"
 
