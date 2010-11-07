@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-10-30 17:00+0000\n"
+"POT-Creation-Date: 2010-11-07 17:40+0000\n"
 "PO-Revision-Date: 2009-07-12 01:25+0100\n"
 "Last-Translator: Rastislav Mucha <rasto@mrm.sk>\n"
 "Language-Team: slovak <www-fzki@uniag.sk>\n"
@@ -56,6 +56,7 @@ msgstr "Neodstrániteľné: ${items}"
 
 #. Default: "${monthname} ${year}"
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:237
+#: plone.app.event/plone/app/event/portlets/calendar.pt:30
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:30
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
@@ -106,20 +107,12 @@ msgstr "Nie je možné presunúť: ${title}"
 msgid "${tname} has been created."
 msgstr "Vytvorený objekt: ${tname}."
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
-msgid "(${location}, from ${start} to ${end})"
-msgstr ""
-
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr ""
 
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
-msgstr ""
-
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
-msgid "(from ${start} to ${end})"
 msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
@@ -387,6 +380,7 @@ msgstr "Pridať"
 msgid "Add Classic Portlet"
 msgstr "Pridať klasický portlet"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:151
 #: plone.portlet.collection/plone/portlet/collection/collection.py:205
 msgid "Add Collection Portlet"
 msgstr "Pridať portlet pre kolekcie"
@@ -399,6 +393,7 @@ msgstr "Pridať podmienku na typ obsahu"
 msgid "Add Copy Action"
 msgstr "Pridať akciu kopírovanie"
 
+#: plone.app.event/plone/app/event/portlets/events.py:111
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:111
 msgid "Add Events Portlet"
 msgstr "Pridať portlet oznamov o udalostiach"
@@ -648,6 +643,7 @@ msgid "By default, any content item in the root of the portal will be shown as a
 msgstr ""
 
 #: CMFPlone/profiles/default/controlpanel.xml
+#: plone.app.event/plone/app/event/portlets/calendar.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr "Kalendár"
@@ -1152,6 +1148,7 @@ msgstr "Upraviť"
 msgid "Edit Classic Portlet"
 msgstr "Editovať klasický portlet"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:168
 #: plone.portlet.collection/plone/portlet/collection/collection.py:221
 msgid "Edit Collection Portlet"
 msgstr "Upraviť portlet pre kolekcie"
@@ -1164,6 +1161,7 @@ msgstr "Editovať podmienku na typ obsahu"
 msgid "Edit Copy Action"
 msgstr "Editovať akciu kopírovanie"
 
+#: plone.app.event/plone/app/event/portlets/events.py:119
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:119
 msgid "Edit Events Portlet"
 msgstr "Editovať portlet udalosti"
@@ -1356,6 +1354,7 @@ msgstr "Chyby"
 
 #. Default: "Event"
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Event"
 msgstr "Udalosť"
 
@@ -1364,11 +1363,13 @@ msgid "Event changes saved."
 msgstr "Oznam o udalosti - zmeny boli uložené."
 
 #: CMFPlone/profiles/default/portlets.xml
+#: plone.app.event/plone/app/event/portlets/events.py:45
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:45
 msgid "Events"
 msgstr "Udalosti"
 
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Events can be shown in calendars."
 msgstr ""
 
@@ -1466,6 +1467,7 @@ msgstr "Nájsť objekty sprostredkujúce štandardný pohľad na ich adresár."
 msgid "Find items that can contain other objects"
 msgstr "Nájsť položky, ktoré môžu obsahovať iné objekty"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:24
 #: plone.portlet.collection/plone/portlet/collection/collection.py:31
 msgid "Find the collection which provides the items to list"
 msgstr "Vyhľadať kolekciu pre zoznam položiek"
@@ -1576,9 +1578,9 @@ msgstr "Titulná stránka"
 msgid "Home folder"
 msgstr "Domovský adresár (priečimok)"
 
+#: plone.app.event/plone/app/event/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:23
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:21
 msgid "How many items to list."
 msgstr "Počet položiek vo výpisoch."
 
@@ -1619,10 +1621,12 @@ msgstr ""
 msgid "If enabled popup overlays will be used for simple forms like login, contact and delete confirmation."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:36
 #: plone.portlet.collection/plone/portlet/collection/collection.py:48
 msgid "If enabled, a more... link will appear in the footer of the portlet, linking to the underlying Collection."
 msgstr "Povoliť odkaz na viac... v pätičke portletu."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:42
 #: plone.portlet.collection/plone/portlet/collection/collection.py:54
 msgid "If enabled, effective dates will be shown underneath the items listed."
 msgstr "Povoliť zobrazovanie časov prvej dostupnosti v zoznamoch položiek."
@@ -1667,7 +1671,7 @@ msgstr ""
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Aktivovanie spôsobí vytváranie domovských adresárov pre používateľov pri ich prihlásení."
 
-#: plone.app.collection/plone/app/collection/collection.py:50
+#: plone.app.collection/plone/app/collection/collection.py:76
 msgid "If selected, only the 'Number of Items' indicated below will be displayed."
 msgstr ""
 
@@ -1795,6 +1799,7 @@ msgstr "Položky boli odstránené."
 msgid "Item(s) pasted."
 msgstr "Vložené."
 
+#: plone.app.event/plone/app/event/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:28
 msgid "Items in which workflow state to show."
@@ -1855,11 +1860,12 @@ msgstr "Kontrola dostupných značiek pre editovanie obsahu. "
 msgid "Lets you upload a file to the site."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:30
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr "Limit"
 
-#: plone.app.collection/plone/app/collection/collection.py:49
+#: plone.app.collection/plone/app/collection/collection.py:75
 msgid "Limit Search Results"
 msgstr ""
 
@@ -2135,6 +2141,10 @@ msgstr "Zmena portletu"
 msgid "More information about the upgrade procedure can be found in the documentation section of plone.org in the ${upgrade_guide}."
 msgstr ""
 
+#: plone.app.event/plone/app/event/browser/event_view.pt:113
+msgid "More occurrences of this event:"
+msgstr ""
+
 #: CMFPlone/skins/plone_forms/search_form.pt:115
 msgid "More search options"
 msgstr ""
@@ -2236,6 +2246,10 @@ msgstr "Nie"
 msgid "No changes made."
 msgstr "Bez zmien."
 
+#: plone.app.event/plone/app/event/browser/ical.py:17
+msgid "No events found."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:251
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr ""
@@ -2252,13 +2266,13 @@ msgstr ""
 msgid "Notify with message ${message}"
 msgstr "Oznámiť správu ${message}"
 
-#: plone.app.collection/plone/app/collection/collection.py:61
+#: plone.app.collection/plone/app/collection/collection.py:87
 msgid "Number of Items"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20
 msgid "Number of items to display"
 msgstr "Počet zobrazovaných položiek"
 
@@ -2558,6 +2572,7 @@ msgstr "Kritérium dané hodnotou 'Portal Types'"
 msgid "Portlet footer"
 msgstr "Pätička portletu"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:19
 #: plone.portlet.collection/plone/portlet/collection/collection.py:26
 #: plone.portlet.static/plone/portlet/static/static.py:30
 msgid "Portlet header"
@@ -2981,7 +2996,7 @@ msgstr "Vyskúšať prechod vo workflow-e"
 msgid "Select values from list"
 msgstr "Vybrať zo zoznamu"
 
-#: plone.app.collection/plone/app/collection/collection.py:75
+#: plone.app.collection/plone/app/collection/collection.py:101
 msgid "Select which fields to display when 'Display as Table' is checked."
 msgstr ""
 
@@ -3047,6 +3062,7 @@ msgstr "Všetky dostupné typy obsahu"
 msgid "Show content type icons"
 msgstr "Ikonky označujúce typy obsahu"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:41
 #: plone.portlet.collection/plone/portlet/collection/collection.py:53
 msgid "Show dates"
 msgstr "Zobrazovať dátumy"
@@ -3061,6 +3077,7 @@ msgstr "Zobraziť interne"
 msgid "Show items normally excluded from navigation if viewing their children."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:35
 #: plone.portlet.collection/plone/portlet/collection/collection.py:47
 msgid "Show more... link"
 msgstr "Zobraziť odkaz na viac..."
@@ -3177,6 +3194,14 @@ msgstr ""
 msgid "Sort the Search Results based on the selected criterion"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/collection.py:51
+msgid "Sort the collection on this index"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:63
+msgid "Sort the results in reversed order"
+msgstr ""
+
 #: validation/validators/IdValidator.py:32
 msgid "Spaces are not allowed in ids"
 msgstr "Medzery nesmú byť v id-čkach"
@@ -3189,6 +3214,7 @@ msgstr ""
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is <name> <width>:<height>."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:31
 #: plone.portlet.collection/plone/portlet/collection/collection.py:37
 msgid "Specify the maximum number of items to show in the portlet. Leave this blank to show all items."
 msgstr "Špecifikovanie maximálneho množstva položiek. Ponechajte prázdne na zobrazenie všetkého.  "
@@ -3302,7 +3328,7 @@ msgstr ""
 msgid "TALES expression is: ${tales_expression}"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:74
+#: plone.app.collection/plone/app/collection/collection.py:100
 msgid "Table Columns"
 msgstr ""
 
@@ -3321,6 +3347,7 @@ msgstr ""
 msgid "Tags are used for ad-hoc organization of content"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:23
 #: plone.portlet.collection/plone/portlet/collection/collection.py:30
 msgid "Target collection"
 msgstr "Cieľová kolekcia"
@@ -3658,6 +3685,7 @@ msgstr "Tento súbor nie je textový. Na vkladanie binárnych súborov použite 
 msgid "This is the Add-on configuration section, you can activate and deactivate add-ons in the lists below."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:152
 #: plone.portlet.collection/plone/portlet/collection/collection.py:206
 msgid "This portlet display a listing of items from a Collection."
 msgstr "Tento portlet zobrazuje zoznam. "
@@ -3682,6 +3710,7 @@ msgstr "Portlet zobrazujúci nové správy."
 msgid "This portlet displays recently modified content."
 msgstr "Portlet zobrazujúci nedávno modifikovaný obsah."
 
+#: plone.app.event/plone/app/event/portlets/events.py:112
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:112
 msgid "This portlet lists upcoming Events."
 msgstr "Portlet zobrazujúci očakávané udalosti."
@@ -3728,6 +3757,7 @@ msgstr "Názov (Titul)"
 msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr "Názov portletu. Použije sa názov kanála, ak bude prázdny."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:20
 #: plone.portlet.collection/plone/portlet/collection/collection.py:27
 #: plone.portlet.static/plone/portlet/static/static.py:31
 msgid "Title of the rendered portlet"
@@ -4048,6 +4078,7 @@ msgstr ""
 msgid "Workflow Policies"
 msgstr "Politiky pre workflow"
 
+#: plone.app.event/plone/app/event/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Workflow state"
@@ -4296,6 +4327,7 @@ msgid "box_error"
 msgstr "Chyba"
 
 #. Default: "Upcoming Events"
+#: plone.app.event/plone/app/event/portlets/events.pt:10
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:10
 msgid "box_events"
 msgstr "Očakávané udalosti"
@@ -4350,6 +4382,7 @@ msgid "box_news"
 msgstr "Správy"
 
 #. Default: "Previous events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:71
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:71
 msgid "box_previous_events"
 msgstr "Staršie alebo prebiehajúce udalosti..."
@@ -4381,6 +4414,7 @@ msgid "box_sign_in"
 msgstr "Prihlásiť sa"
 
 #. Default: "Upcoming events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:78
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:78
 msgid "box_upcoming_events"
 msgstr "Očakávané udalosti..."
@@ -4417,16 +4451,19 @@ msgstr "Použiť nastavenia nadradeného adresára"
 
 #. Default: "Attendees"
 #: CMFPlone/skins/plone_content/event_view.pt:132
+#: plone.app.event/plone/app/event/browser/event_view.pt:153
 msgid "contact_attendees"
 msgstr "Účastníci"
 
 #. Default: "Contact Name"
 #: CMFPlone/skins/plone_content/event_view.pt:112
+#: plone.app.event/plone/app/event/browser/event_view.pt:133
 msgid "contact_name"
 msgstr "Meno kontaktnej osoby"
 
 #. Default: "Contact Phone"
 #: CMFPlone/skins/plone_content/event_view.pt:124
+#: plone.app.event/plone/app/event/browser/event_view.pt:145
 msgid "contact_phone"
 msgstr "Kontaktný tel."
 
@@ -4819,7 +4856,7 @@ msgstr "Tento objekt neposkytuje možnosť porovnávania."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
-#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:176
 msgid "description_no_items_in_folder"
 msgstr "Tento adresár (priečinok) je momentálne prázdny."
 
@@ -5156,35 +5193,42 @@ msgstr "až"
 
 #. Default: "More information about this event…"
 #: CMFPlone/skins/plone_content/event_view.pt:165
+#: plone.app.event/plone/app/event/browser/event_view.pt:186
 msgid "event_more_information"
 msgstr "Viac informácií o podujatí..."
 
 #. Default: "What"
 #: CMFPlone/skins/plone_content/event_view.pt:24
+#: plone.app.event/plone/app/event/browser/event_view.pt:24
 msgid "event_what"
 msgstr "Čo"
 
 #. Default: "When"
 #: CMFPlone/skins/plone_content/event_view.pt:32
+#: plone.app.event/plone/app/event/browser/event_view.pt:32
 msgid "event_when"
 msgstr "Kedy"
 
 #. Default: "${startdate} to ${linebreak} ${enddate}"
 #: CMFPlone/skins/plone_content/event_view.pt:51
+#: plone.app.event/plone/app/event/browser/event_view.pt:55
 msgid "event_when_differentday"
 msgstr "${startdate} do ${linebreak} ${enddate}"
 
 #: CMFPlone/skins/plone_content/event_view.pt:45
+#: plone.app.event/plone/app/event/browser/event_view.pt:48
 msgid "event_when_differentday_optional_word_between_date_and_time"
 msgstr ""
 
 #. Default: "${date} ${linebreak} from ${starttime} to ${endtime}"
 #: CMFPlone/skins/plone_content/event_view.pt:86
+#: plone.app.event/plone/app/event/browser/event_view.pt:96
 msgid "event_when_sameday"
 msgstr "${date} ${linebreak} od ${starttime} do ${endtime}"
 
 #. Default: "Where"
 #: CMFPlone/skins/plone_content/event_view.pt:101
+#: plone.app.event/plone/app/event/browser/event_view.pt:122
 msgid "event_where"
 msgstr "Kde"
 
@@ -5256,6 +5300,7 @@ msgstr "Pridať novú položku"
 
 #. Default: "Add event to calendar"
 #: CMFPlone/skins/plone_content/event_view.pt:140
+#: plone.app.event/plone/app/event/browser/event_view.pt:161
 msgid "heading_add_to_calendar"
 msgstr "Pridanie oznamu o udalosti do kalendára"
 
@@ -6473,11 +6518,13 @@ msgstr ""
 
 #. Default: "iCal"
 #: CMFPlone/skins/plone_content/event_view.pt:153
+#: plone.app.event/plone/app/event/browser/event_view.pt:174
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
 #: CMFPlone/skins/plone_content/event_view.pt:147
+#: plone.app.event/plone/app/event/browser/event_view.pt:168
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -8465,10 +8512,6 @@ msgstr ""
 msgid "large_text"
 msgstr "Väčšie písmo"
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
-msgid "last modified"
-msgstr ""
-
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197
 msgid "last_login"
@@ -8863,6 +8906,7 @@ msgid "message_send_feedback_confirm"
 msgstr "Mail s Vašimi otázkami, resp. komentármi bol odoslaný na správu sídla, portálu."
 
 #. Default: "More…"
+#: plone.app.collection/plone/app/collection/portlets/templates/collectionportlet.pt:41
 #: plone.portlet.collection/plone/portlet/collection/collection.pt:45
 msgid "more_url"
 msgstr "Viac..."
@@ -9146,6 +9190,7 @@ msgid "summary_author_content_list"
 msgstr "Zoznam obsahu daného autora zoskupený podľa typu"
 
 #. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:48
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:48
 msgid "summary_calendar"
 msgstr "Kalendár"
@@ -9158,6 +9203,7 @@ msgstr "Zoznam obsahu"
 
 #. Default: "Event details"
 #: CMFPlone/skins/plone_content/event_view.pt:18
+#: plone.app.event/plone/app/event/browser/event_view.pt:18
 msgid "summary_event_details"
 msgstr "Detaily k udalosti"
 
@@ -9443,11 +9489,13 @@ msgstr "Pridať statický textový portlet"
 
 #. Default: "Download this event in iCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:148
+#: plone.app.event/plone/app/event/browser/event_view.pt:169
 msgid "title_add_to_ical"
 msgstr "Pridať kalendárovú položku vo formáte iCal"
 
 #. Default: "Download this event in vCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:142
+#: plone.app.event/plone/app/event/browser/event_view.pt:163
 msgid "title_add_to_vcal"
 msgstr "Pridať kalendárovú položku vo formáte vCal"
 
@@ -9623,6 +9671,7 @@ msgid "title_next_item"
 msgstr "Ďalej"
 
 #. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:35
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:35
 msgid "title_next_month"
 msgstr "Ďalší mesiac"
@@ -9650,6 +9699,7 @@ msgid "title_previous_item"
 msgstr "Naspäť"
 
 #. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:16
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:16
 msgid "title_previous_month"
 msgstr "Predchádzajúci mesiac"

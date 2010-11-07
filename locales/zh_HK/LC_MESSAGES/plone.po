@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-10-30 17:00+0000\n"
+"POT-Creation-Date: 2010-11-07 17:40+0000\n"
 "PO-Revision-Date: 2005-09-13 10:00+0800\n"
 "Last-Translator: Arthur Chan (ccube) <arthur@soqhome.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -54,6 +54,7 @@ msgstr ""
 
 #. Default: "${monthname} ${year}"
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:237
+#: plone.app.event/plone/app/event/portlets/calendar.pt:30
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:30
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
@@ -104,20 +105,12 @@ msgstr "${title} 不能轉移."
 msgid "${tname} has been created."
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
-msgid "(${location}, from ${start} to ${end})"
-msgstr ""
-
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr ""
 
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
-msgstr ""
-
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
-msgid "(from ${start} to ${end})"
 msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
@@ -397,6 +390,7 @@ msgstr ""
 msgid "Add Classic Portlet"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:151
 #: plone.portlet.collection/plone/portlet/collection/collection.py:205
 msgid "Add Collection Portlet"
 msgstr ""
@@ -409,6 +403,7 @@ msgstr ""
 msgid "Add Copy Action"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:111
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:111
 msgid "Add Events Portlet"
 msgstr ""
@@ -668,6 +663,7 @@ msgid "By default, any content item in the root of the portal will be shown as a
 msgstr ""
 
 #: CMFPlone/profiles/default/controlpanel.xml
+#: plone.app.event/plone/app/event/portlets/calendar.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr ""
@@ -1183,6 +1179,7 @@ msgstr "修改"
 msgid "Edit Classic Portlet"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:168
 #: plone.portlet.collection/plone/portlet/collection/collection.py:221
 msgid "Edit Collection Portlet"
 msgstr ""
@@ -1195,6 +1192,7 @@ msgstr ""
 msgid "Edit Copy Action"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:119
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:119
 msgid "Edit Events Portlet"
 msgstr ""
@@ -1394,6 +1392,7 @@ msgstr ""
 # Information about an upcoming event, which can be displayed in the calendar.
 #. Default: "Event"
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Event"
 msgstr "事件"
 
@@ -1402,11 +1401,13 @@ msgid "Event changes saved."
 msgstr "事件項目的變更經已儲存."
 
 #: CMFPlone/profiles/default/portlets.xml
+#: plone.app.event/plone/app/event/portlets/events.py:45
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:45
 msgid "Events"
 msgstr ""
 
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Events can be shown in calendars."
 msgstr ""
 
@@ -1511,6 +1512,7 @@ msgstr "在找出在其文件夾才為預設檢視的項目."
 msgid "Find items that can contain other objects"
 msgstr "找出可裝有其它物件的項目"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:24
 #: plone.portlet.collection/plone/portlet/collection/collection.py:31
 msgid "Find the collection which provides the items to list"
 msgstr ""
@@ -1624,9 +1626,9 @@ msgstr "首頁"
 msgid "Home folder"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:23
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:21
 msgid "How many items to list."
 msgstr ""
 
@@ -1667,10 +1669,12 @@ msgstr ""
 msgid "If enabled popup overlays will be used for simple forms like login, contact and delete confirmation."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:36
 #: plone.portlet.collection/plone/portlet/collection/collection.py:48
 msgid "If enabled, a more... link will appear in the footer of the portlet, linking to the underlying Collection."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:42
 #: plone.portlet.collection/plone/portlet/collection/collection.py:54
 msgid "If enabled, effective dates will be shown underneath the items listed."
 msgstr ""
@@ -1715,7 +1719,7 @@ msgstr ""
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:50
+#: plone.app.collection/plone/app/collection/collection.py:76
 msgid "If selected, only the 'Number of Items' indicated below will be displayed."
 msgstr ""
 
@@ -1850,6 +1854,7 @@ msgstr ""
 msgid "Item(s) pasted."
 msgstr "已複製項目."
 
+#: plone.app.event/plone/app/event/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:28
 msgid "Items in which workflow state to show."
@@ -1912,11 +1917,12 @@ msgstr ""
 msgid "Lets you upload a file to the site."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:30
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:49
+#: plone.app.collection/plone/app/collection/collection.py:75
 msgid "Limit Search Results"
 msgstr ""
 
@@ -2213,6 +2219,10 @@ msgstr ""
 msgid "More information about the upgrade procedure can be found in the documentation section of plone.org in the ${upgrade_guide}."
 msgstr ""
 
+#: plone.app.event/plone/app/event/browser/event_view.pt:113
+msgid "More occurrences of this event:"
+msgstr ""
+
 #: CMFPlone/skins/plone_forms/search_form.pt:115
 msgid "More search options"
 msgstr ""
@@ -2315,6 +2325,10 @@ msgstr "否"
 msgid "No changes made."
 msgstr ""
 
+#: plone.app.event/plone/app/event/browser/ical.py:17
+msgid "No events found."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:251
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr ""
@@ -2331,13 +2345,13 @@ msgstr ""
 msgid "Notify with message ${message}"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:61
+#: plone.app.collection/plone/app/collection/collection.py:87
 msgid "Number of Items"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20
 msgid "Number of items to display"
 msgstr ""
 
@@ -2649,6 +2663,7 @@ msgstr "網站類別條件"
 msgid "Portlet footer"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:19
 #: plone.portlet.collection/plone/portlet/collection/collection.py:26
 #: plone.portlet.static/plone/portlet/static/static.py:30
 msgid "Portlet header"
@@ -3099,7 +3114,7 @@ msgstr ""
 msgid "Select values from list"
 msgstr "從列中選取數值"
 
-#: plone.app.collection/plone/app/collection/collection.py:75
+#: plone.app.collection/plone/app/collection/collection.py:101
 msgid "Select which fields to display when 'Display as Table' is checked."
 msgstr ""
 
@@ -3170,6 +3185,7 @@ msgstr ""
 msgid "Show content type icons"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:41
 #: plone.portlet.collection/plone/portlet/collection/collection.py:53
 msgid "Show dates"
 msgstr ""
@@ -3184,6 +3200,7 @@ msgstr ""
 msgid "Show items normally excluded from navigation if viewing their children."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:35
 #: plone.portlet.collection/plone/portlet/collection/collection.py:47
 msgid "Show more... link"
 msgstr ""
@@ -3308,6 +3325,14 @@ msgstr ""
 msgid "Sort the Search Results based on the selected criterion"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/collection.py:51
+msgid "Sort the collection on this index"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:63
+msgid "Sort the results in reversed order"
+msgstr ""
+
 #: validation/validators/IdValidator.py:32
 msgid "Spaces are not allowed in ids"
 msgstr ""
@@ -3320,6 +3345,7 @@ msgstr ""
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is <name> <width>:<height>."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:31
 #: plone.portlet.collection/plone/portlet/collection/collection.py:37
 msgid "Specify the maximum number of items to show in the portlet. Leave this blank to show all items."
 msgstr ""
@@ -3441,7 +3467,7 @@ msgstr ""
 msgid "TALES expression is: ${tales_expression}"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:74
+#: plone.app.collection/plone/app/collection/collection.py:100
 msgid "Table Columns"
 msgstr ""
 
@@ -3461,6 +3487,7 @@ msgstr ""
 msgid "Tags are used for ad-hoc organization of content"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:23
 #: plone.portlet.collection/plone/portlet/collection/collection.py:30
 msgid "Target collection"
 msgstr ""
@@ -3818,6 +3845,7 @@ msgstr ""
 msgid "This is the Add-on configuration section, you can activate and deactivate add-ons in the lists below."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:152
 #: plone.portlet.collection/plone/portlet/collection/collection.py:206
 msgid "This portlet display a listing of items from a Collection."
 msgstr ""
@@ -3842,6 +3870,7 @@ msgstr ""
 msgid "This portlet displays recently modified content."
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:112
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:112
 msgid "This portlet lists upcoming Events."
 msgstr ""
@@ -3890,6 +3919,7 @@ msgstr "標題"
 msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:20
 #: plone.portlet.collection/plone/portlet/collection/collection.py:27
 #: plone.portlet.static/plone/portlet/static/static.py:31
 msgid "Title of the rendered portlet"
@@ -4212,6 +4242,7 @@ msgstr ""
 msgid "Workflow Policies"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Workflow state"
@@ -4473,6 +4504,7 @@ msgid "box_error"
 msgstr ""
 
 #. Default: "Upcoming Events"
+#: plone.app.event/plone/app/event/portlets/events.pt:10
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:10
 msgid "box_events"
 msgstr "事件預報"
@@ -4531,6 +4563,7 @@ msgid "box_news"
 msgstr "最新消息"
 
 #. Default: "Previous events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:71
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:71
 msgid "box_previous_events"
 msgstr ""
@@ -4562,6 +4595,7 @@ msgid "box_sign_in"
 msgstr "登入"
 
 #. Default: "Upcoming events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:78
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:78
 #, fuzzy
 msgid "box_upcoming_events"
@@ -4599,16 +4633,19 @@ msgstr "使用母文件夾的設定"
 
 #. Default: "Attendees"
 #: CMFPlone/skins/plone_content/event_view.pt:132
+#: plone.app.event/plone/app/event/browser/event_view.pt:153
 msgid "contact_attendees"
 msgstr "參與者"
 
 #. Default: "Contact Name"
 #: CMFPlone/skins/plone_content/event_view.pt:112
+#: plone.app.event/plone/app/event/browser/event_view.pt:133
 msgid "contact_name"
 msgstr "姓名"
 
 #. Default: "Contact Phone"
 #: CMFPlone/skins/plone_content/event_view.pt:124
+#: plone.app.event/plone/app/event/browser/event_view.pt:145
 msgid "contact_phone"
 msgstr "電話"
 
@@ -5001,7 +5038,7 @@ msgstr "這物件不提供比較功能."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
-#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:176
 msgid "description_no_items_in_folder"
 msgstr "這文件夾中目前沒有任何項目."
 
@@ -5334,36 +5371,43 @@ msgstr "至"
 
 #. Default: "More information about this event…"
 #: CMFPlone/skins/plone_content/event_view.pt:165
+#: plone.app.event/plone/app/event/browser/event_view.pt:186
 #, fuzzy
 msgid "event_more_information"
 msgstr "更多關於這事件的資訊"
 
 #. Default: "What"
 #: CMFPlone/skins/plone_content/event_view.pt:24
+#: plone.app.event/plone/app/event/browser/event_view.pt:24
 msgid "event_what"
 msgstr "為何"
 
 #. Default: "When"
 #: CMFPlone/skins/plone_content/event_view.pt:32
+#: plone.app.event/plone/app/event/browser/event_view.pt:32
 msgid "event_when"
 msgstr "時間:"
 
 #. Default: "${startdate} to ${linebreak} ${enddate}"
 #: CMFPlone/skins/plone_content/event_view.pt:51
+#: plone.app.event/plone/app/event/browser/event_view.pt:55
 msgid "event_when_differentday"
 msgstr "${startdate} 至 ${linebreak} ${enddate}"
 
 #: CMFPlone/skins/plone_content/event_view.pt:45
+#: plone.app.event/plone/app/event/browser/event_view.pt:48
 msgid "event_when_differentday_optional_word_between_date_and_time"
 msgstr ""
 
 #. Default: "${date} ${linebreak} from ${starttime} to ${endtime}"
 #: CMFPlone/skins/plone_content/event_view.pt:86
+#: plone.app.event/plone/app/event/browser/event_view.pt:96
 msgid "event_when_sameday"
 msgstr "${date} ${linebreak} 由 ${starttime} 至 ${endtime}"
 
 #. Default: "Where"
 #: CMFPlone/skins/plone_content/event_view.pt:101
+#: plone.app.event/plone/app/event/browser/event_view.pt:122
 msgid "event_where"
 msgstr "地點:"
 
@@ -5437,6 +5481,7 @@ msgstr "增加新項目"
 
 #. Default: "Add event to calendar"
 #: CMFPlone/skins/plone_content/event_view.pt:140
+#: plone.app.event/plone/app/event/browser/event_view.pt:161
 msgid "heading_add_to_calendar"
 msgstr "增加事件至日曆"
 
@@ -6685,12 +6730,14 @@ msgstr ""
 
 #. Default: "iCal"
 #: CMFPlone/skins/plone_content/event_view.pt:153
+#: plone.app.event/plone/app/event/browser/event_view.pt:174
 #, fuzzy
 msgid "label_add_to_ical"
 msgstr "iCal (Mac OS X)"
 
 #. Default: "vCal"
 #: CMFPlone/skins/plone_content/event_view.pt:147
+#: plone.app.event/plone/app/event/browser/event_view.pt:168
 #, fuzzy
 msgid "label_add_to_vcal"
 msgstr "vCal (Windows, Linux)"
@@ -8729,10 +8776,6 @@ msgstr ""
 msgid "large_text"
 msgstr "大字"
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
-msgid "last modified"
-msgstr ""
-
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197
 msgid "last_login"
@@ -9129,6 +9172,7 @@ msgid "message_send_feedback_confirm"
 msgstr ""
 
 #. Default: "More…"
+#: plone.app.collection/plone/app/collection/portlets/templates/collectionportlet.pt:41
 #: plone.portlet.collection/plone/portlet/collection/collection.pt:45
 msgid "more_url"
 msgstr ""
@@ -9431,6 +9475,7 @@ msgid "summary_author_content_list"
 msgstr "列出作者相關項目, 以內容類別分類"
 
 #. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:48
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:48
 msgid "summary_calendar"
 msgstr "日曆"
@@ -9443,6 +9488,7 @@ msgstr "內容清單"
 
 #. Default: "Event details"
 #: CMFPlone/skins/plone_content/event_view.pt:18
+#: plone.app.event/plone/app/event/browser/event_view.pt:18
 msgid "summary_event_details"
 msgstr "事件詳情"
 
@@ -9733,12 +9779,14 @@ msgstr ""
 
 #. Default: "Download this event in iCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:148
+#: plone.app.event/plone/app/event/browser/event_view.pt:169
 #, fuzzy
 msgid "title_add_to_ical"
 msgstr "新增這項目至您的iCal月曆"
 
 #. Default: "Download this event in vCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:142
+#: plone.app.event/plone/app/event/browser/event_view.pt:163
 #, fuzzy
 msgid "title_add_to_vcal"
 msgstr "新增這項目至您的vCal月曆"
@@ -9913,6 +9961,7 @@ msgid "title_next_item"
 msgstr ""
 
 #. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:35
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:35
 msgid "title_next_month"
 msgstr "下月"
@@ -9940,6 +9989,7 @@ msgid "title_previous_item"
 msgstr ""
 
 #. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:16
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:16
 msgid "title_previous_month"
 msgstr "上月"

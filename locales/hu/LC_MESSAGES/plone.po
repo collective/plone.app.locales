@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-10-30 17:00+0000\n"
+"POT-Creation-Date: 2010-11-07 17:40+0000\n"
 "PO-Revision-Date: 2009-02-01 19:49+0100\n"
 "Last-Translator: József Jároli <jaroli@yahoo.com>\n"
 "Language-Team: Hungarian Plone Translators <translators@plone.hu>\n"
@@ -61,6 +61,7 @@ msgstr "${items} elemet nem lehetett törölni."
 
 #. Default: "${monthname} ${year}"
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:237
+#: plone.app.event/plone/app/event/portlets/calendar.pt:30
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:30
 msgid "${monthname} ${year}"
 msgstr "${year}. ${monthname}"
@@ -111,20 +112,12 @@ msgstr "${title} nem mozgatható."
 msgid "${tname} has been created."
 msgstr "${tname} sikeresen létrehozva."
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
-msgid "(${location}, from ${start} to ${end})"
-msgstr ""
-
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr ""
 
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
-msgstr ""
-
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
-msgid "(from ${start} to ${end})"
 msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
@@ -392,6 +385,7 @@ msgstr "Hozzáad"
 msgid "Add Classic Portlet"
 msgstr "Klasszikus portlet hozzáadása"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:151
 #: plone.portlet.collection/plone/portlet/collection/collection.py:205
 msgid "Add Collection Portlet"
 msgstr "Gyűjteményes portlet hozzáadása"
@@ -404,6 +398,7 @@ msgstr "Tartalomtípus-feltétel hozzáadása"
 msgid "Add Copy Action"
 msgstr "Másolás művelet hozzáadása"
 
+#: plone.app.event/plone/app/event/portlets/events.py:111
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:111
 msgid "Add Events Portlet"
 msgstr "Események portlet hozzáadása"
@@ -654,6 +649,7 @@ msgid "By default, any content item in the root of the portal will be shown as a
 msgstr ""
 
 #: CMFPlone/profiles/default/controlpanel.xml
+#: plone.app.event/plone/app/event/portlets/calendar.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr "Naptár"
@@ -1160,6 +1156,7 @@ msgstr "Szerkeszt"
 msgid "Edit Classic Portlet"
 msgstr "Klasszikus portlet szerkesztése"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:168
 #: plone.portlet.collection/plone/portlet/collection/collection.py:221
 msgid "Edit Collection Portlet"
 msgstr "Gyűjteményes portlet szerkesztése"
@@ -1172,6 +1169,7 @@ msgstr "Tartalomtípus feltétel szerkesztése"
 msgid "Edit Copy Action"
 msgstr "Másolás művelet szerkesztése"
 
+#: plone.app.event/plone/app/event/portlets/events.py:119
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:119
 msgid "Edit Events Portlet"
 msgstr "Esemény portlet szerkesztése"
@@ -1364,6 +1362,7 @@ msgstr "Hibák"
 
 #. Default: "Event"
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Event"
 msgstr "Esemény elem"
 
@@ -1372,11 +1371,13 @@ msgid "Event changes saved."
 msgstr "Esemény elem módosításai elmentve."
 
 #: CMFPlone/profiles/default/portlets.xml
+#: plone.app.event/plone/app/event/portlets/events.py:45
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:45
 msgid "Events"
 msgstr "Események"
 
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Events can be shown in calendars."
 msgstr ""
 
@@ -1474,6 +1475,7 @@ msgstr "Olyan elemek keresése, amelyek az őket tartalmazó mappák alapértelm
 msgid "Find items that can contain other objects"
 msgstr "Olyan elemek keresése, amelyek más objektumokat tartalmazhatnak"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:24
 #: plone.portlet.collection/plone/portlet/collection/collection.py:31
 msgid "Find the collection which provides the items to list"
 msgstr "Annak a gyűjteménynek a megtalálása, amelyből az elem a listára került"
@@ -1584,9 +1586,9 @@ msgstr "Főoldal"
 msgid "Home folder"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:23
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:21
 msgid "How many items to list."
 msgstr "Hány tételt listázzon ki."
 
@@ -1627,10 +1629,12 @@ msgstr ""
 msgid "If enabled popup overlays will be used for simple forms like login, contact and delete confirmation."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:36
 #: plone.portlet.collection/plone/portlet/collection/collection.py:48
 msgid "If enabled, a more... link will appear in the footer of the portlet, linking to the underlying Collection."
 msgstr "Ha engedélyezi, akkor 'részletek...' hivatkozás fog megjelenni a portlet alján, amely a megfelelő Gyűjteményhez vezet."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:42
 #: plone.portlet.collection/plone/portlet/collection/collection.py:54
 msgid "If enabled, effective dates will be shown underneath the items listed."
 msgstr "Ha engedélyezi, akkor a listázott elemek alatt az effektív dátumok jelennek meg."
@@ -1675,7 +1679,7 @@ msgstr ""
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Ha bejelöli, akkor létrejönnek a regisztrált felhasználók saját mappái, ahova bejelentkezés után tartalmakat tölthetnek fel."
 
-#: plone.app.collection/plone/app/collection/collection.py:50
+#: plone.app.collection/plone/app/collection/collection.py:76
 msgid "If selected, only the 'Number of Items' indicated below will be displayed."
 msgstr ""
 
@@ -1803,6 +1807,7 @@ msgstr "Elem(ek) sikeresen törölve."
 msgid "Item(s) pasted."
 msgstr "Elem(ek) sikeresen beillesztve."
 
+#: plone.app.event/plone/app/event/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:28
 msgid "Items in which workflow state to show."
@@ -1863,11 +1868,12 @@ msgstr "Meghatározhatja, hogy mely jelölőnyelvek legyenek elérhetők a tarta
 msgid "Lets you upload a file to the site."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:30
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr "Korlát"
 
-#: plone.app.collection/plone/app/collection/collection.py:49
+#: plone.app.collection/plone/app/collection/collection.py:75
 msgid "Limit Search Results"
 msgstr ""
 
@@ -2144,6 +2150,10 @@ msgstr "Portál változtatása"
 msgid "More information about the upgrade procedure can be found in the documentation section of plone.org in the ${upgrade_guide}."
 msgstr ""
 
+#: plone.app.event/plone/app/event/browser/event_view.pt:113
+msgid "More occurrences of this event:"
+msgstr ""
+
 #: CMFPlone/skins/plone_forms/search_form.pt:115
 msgid "More search options"
 msgstr ""
@@ -2246,6 +2256,10 @@ msgstr "Nem"
 msgid "No changes made."
 msgstr "Nem történt változás."
 
+#: plone.app.event/plone/app/event/browser/ical.py:17
+msgid "No events found."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:251
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr ""
@@ -2262,13 +2276,13 @@ msgstr ""
 msgid "Notify with message ${message}"
 msgstr "Értesítés ezzel az üzenettel: ${message}"
 
-#: plone.app.collection/plone/app/collection/collection.py:61
+#: plone.app.collection/plone/app/collection/collection.py:87
 msgid "Number of Items"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20
 msgid "Number of items to display"
 msgstr "Megjelenítendő elemek száma"
 
@@ -2570,6 +2584,7 @@ msgstr "Portáltípusok kritérium"
 msgid "Portlet footer"
 msgstr "Portlet lábléc"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:19
 #: plone.portlet.collection/plone/portlet/collection/collection.py:26
 #: plone.portlet.static/plone/portlet/static/static.py:30
 msgid "Portlet header"
@@ -2995,7 +3010,7 @@ msgstr "Válassza ki, hogy mely munkafolyamat-átmenetet kíséreljük meg. "
 msgid "Select values from list"
 msgstr "Értékek kiválasztása listából"
 
-#: plone.app.collection/plone/app/collection/collection.py:75
+#: plone.app.collection/plone/app/collection/collection.py:101
 msgid "Select which fields to display when 'Display as Table' is checked."
 msgstr ""
 
@@ -3063,6 +3078,7 @@ msgstr "Minden elérhető tartalomtípus mutatása"
 msgid "Show content type icons"
 msgstr "A tartalomtípusok ikonjainak mutatása"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:41
 #: plone.portlet.collection/plone/portlet/collection/collection.py:53
 msgid "Show dates"
 msgstr "Dátumok megjelenítése"
@@ -3077,6 +3093,7 @@ msgstr "Befelé megmutat"
 msgid "Show items normally excluded from navigation if viewing their children."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:35
 #: plone.portlet.collection/plone/portlet/collection/collection.py:47
 msgid "Show more... link"
 msgstr "A 'részletek...' link megjelenítése"
@@ -3195,6 +3212,14 @@ msgstr ""
 msgid "Sort the Search Results based on the selected criterion"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/collection.py:51
+msgid "Sort the collection on this index"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:63
+msgid "Sort the results in reversed order"
+msgstr ""
+
 #: validation/validators/IdValidator.py:32
 msgid "Spaces are not allowed in ids"
 msgstr ""
@@ -3207,6 +3232,7 @@ msgstr ""
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is <name> <width>:<height>."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:31
 #: plone.portlet.collection/plone/portlet/collection/collection.py:37
 msgid "Specify the maximum number of items to show in the portlet. Leave this blank to show all items."
 msgstr "Adja meg a maximálisan megjelenítendő tételek számát. Hagyja üresen ezt, ha mindet meg akarja jeleníteni."
@@ -3321,7 +3347,7 @@ msgstr ""
 msgid "TALES expression is: ${tales_expression}"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:74
+#: plone.app.collection/plone/app/collection/collection.py:100
 msgid "Table Columns"
 msgstr ""
 
@@ -3340,6 +3366,7 @@ msgstr ""
 msgid "Tags are used for ad-hoc organization of content"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:23
 #: plone.portlet.collection/plone/portlet/collection/collection.py:30
 msgid "Target collection"
 msgstr "Célgyűjtemény"
@@ -3677,6 +3704,7 @@ msgstr "Ez nem szöveges fájl. Bináris fájl feltöltéséhez válassza a Fáj
 msgid "This is the Add-on configuration section, you can activate and deactivate add-ons in the lists below."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:152
 #: plone.portlet.collection/plone/portlet/collection/collection.py:206
 msgid "This portlet display a listing of items from a Collection."
 msgstr "Ez a portlet egy Gyűjtemény tételeinek listáját mutatja."
@@ -3701,6 +3729,7 @@ msgstr "Ez a portlet a legutóbbi Híreket jeleníti meg."
 msgid "This portlet displays recently modified content."
 msgstr "Ez a portlet a Legutóbbi módosításokat sorolja fel."
 
+#: plone.app.event/plone/app/event/portlets/events.py:112
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:112
 msgid "This portlet lists upcoming Events."
 msgstr "Ez a portlet a jövőbeni Eseményeket jeleníti meg."
@@ -3747,6 +3776,7 @@ msgstr "Cím"
 msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:20
 #: plone.portlet.collection/plone/portlet/collection/collection.py:27
 #: plone.portlet.static/plone/portlet/static/static.py:31
 msgid "Title of the rendered portlet"
@@ -4067,6 +4097,7 @@ msgstr ""
 msgid "Workflow Policies"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Workflow state"
@@ -4326,6 +4357,7 @@ msgid "box_error"
 msgstr "Hiba"
 
 #. Default: "Upcoming Events"
+#: plone.app.event/plone/app/event/portlets/events.pt:10
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:10
 msgid "box_events"
 msgstr "Közelgő események"
@@ -4382,6 +4414,7 @@ msgid "box_news"
 msgstr "Hírek"
 
 #. Default: "Previous events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:71
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:71
 msgid "box_previous_events"
 msgstr "Korábbi események"
@@ -4413,6 +4446,7 @@ msgid "box_sign_in"
 msgstr "Bejelentkezés"
 
 #. Default: "Upcoming events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:78
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:78
 msgid "box_upcoming_events"
 msgstr "Közelgő események"
@@ -4449,16 +4483,19 @@ msgstr "Szülő mappa beállításának használata"
 
 #. Default: "Attendees"
 #: CMFPlone/skins/plone_content/event_view.pt:132
+#: plone.app.event/plone/app/event/browser/event_view.pt:153
 msgid "contact_attendees"
 msgstr "Jelenlévők"
 
 #. Default: "Contact Name"
 #: CMFPlone/skins/plone_content/event_view.pt:112
+#: plone.app.event/plone/app/event/browser/event_view.pt:133
 msgid "contact_name"
 msgstr "Név"
 
 #. Default: "Contact Phone"
 #: CMFPlone/skins/plone_content/event_view.pt:124
+#: plone.app.event/plone/app/event/browser/event_view.pt:145
 msgid "contact_phone"
 msgstr "Telefonszám"
 
@@ -4852,7 +4889,7 @@ msgstr "Ez az objektum nem vethető össze másikkal."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
-#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:176
 msgid "description_no_items_in_folder"
 msgstr "Jelenleg nincs megjeleníthető elem a mappában."
 
@@ -5187,36 +5224,43 @@ msgstr "és"
 
 #. Default: "More information about this event…"
 #: CMFPlone/skins/plone_content/event_view.pt:165
+#: plone.app.event/plone/app/event/browser/event_view.pt:186
 #, fuzzy
 msgid "event_more_information"
 msgstr "Több információ erről az eseményről"
 
 #. Default: "What"
 #: CMFPlone/skins/plone_content/event_view.pt:24
+#: plone.app.event/plone/app/event/browser/event_view.pt:24
 msgid "event_what"
 msgstr "Esemény megnevezése:"
 
 #. Default: "When"
 #: CMFPlone/skins/plone_content/event_view.pt:32
+#: plone.app.event/plone/app/event/browser/event_view.pt:32
 msgid "event_when"
 msgstr "Időpont:"
 
 #. Default: "${startdate} to ${linebreak} ${enddate}"
 #: CMFPlone/skins/plone_content/event_view.pt:51
+#: plone.app.event/plone/app/event/browser/event_view.pt:55
 msgid "event_when_differentday"
 msgstr "${startdate} meddig: ${linebreak} ${enddate}"
 
 #: CMFPlone/skins/plone_content/event_view.pt:45
+#: plone.app.event/plone/app/event/browser/event_view.pt:48
 msgid "event_when_differentday_optional_word_between_date_and_time"
 msgstr ""
 
 #. Default: "${date} ${linebreak} from ${starttime} to ${endtime}"
 #: CMFPlone/skins/plone_content/event_view.pt:86
+#: plone.app.event/plone/app/event/browser/event_view.pt:96
 msgid "event_when_sameday"
 msgstr "${date} ${linebreak} mikortól: ${starttime} meddig: ${endtime}"
 
 #. Default: "Where"
 #: CMFPlone/skins/plone_content/event_view.pt:101
+#: plone.app.event/plone/app/event/browser/event_view.pt:122
 msgid "event_where"
 msgstr "Helyszín:"
 
@@ -5292,6 +5336,7 @@ msgstr "Új elem hozzáadása"
 
 #. Default: "Add event to calendar"
 #: CMFPlone/skins/plone_content/event_view.pt:140
+#: plone.app.event/plone/app/event/browser/event_view.pt:161
 msgid "heading_add_to_calendar"
 msgstr "Esemény hozzáadása a naptárhoz"
 
@@ -6519,11 +6564,13 @@ msgstr ""
 
 #. Default: "iCal"
 #: CMFPlone/skins/plone_content/event_view.pt:153
+#: plone.app.event/plone/app/event/browser/event_view.pt:174
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
 #: CMFPlone/skins/plone_content/event_view.pt:147
+#: plone.app.event/plone/app/event/browser/event_view.pt:168
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -8518,10 +8565,6 @@ msgstr ""
 msgid "large_text"
 msgstr "Nagy"
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
-msgid "last modified"
-msgstr ""
-
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197
 msgid "last_login"
@@ -8917,6 +8960,7 @@ msgid "message_send_feedback_confirm"
 msgstr "A portál adminisztrátorának elment egy levél az Ön kérdésével ill. hozzászólásával."
 
 #. Default: "More…"
+#: plone.app.collection/plone/app/collection/portlets/templates/collectionportlet.pt:41
 #: plone.portlet.collection/plone/portlet/collection/collection.pt:45
 msgid "more_url"
 msgstr "Tovább…"
@@ -9199,6 +9243,7 @@ msgid "summary_author_content_list"
 msgstr "Listázza egy adott szerző által létrehozott tartalmakat típus szerint csoportosítva"
 
 #. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:48
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:48
 msgid "summary_calendar"
 msgstr "Naptár"
@@ -9211,6 +9256,7 @@ msgstr "Tartalom listázása"
 
 #. Default: "Event details"
 #: CMFPlone/skins/plone_content/event_view.pt:18
+#: plone.app.event/plone/app/event/browser/event_view.pt:18
 msgid "summary_event_details"
 msgstr "Esemény részletek"
 
@@ -9496,12 +9542,14 @@ msgstr ""
 
 #. Default: "Download this event in iCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:148
+#: plone.app.event/plone/app/event/browser/event_view.pt:169
 #, fuzzy
 msgid "title_add_to_ical"
 msgstr "Az elem hozzáadása az Ön iCal naptárához"
 
 #. Default: "Download this event in vCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:142
+#: plone.app.event/plone/app/event/browser/event_view.pt:163
 #, fuzzy
 msgid "title_add_to_vcal"
 msgstr "Az elem hozzáadása az Ön vCal naptárához"
@@ -9677,6 +9725,7 @@ msgid "title_next_item"
 msgstr "Ugrás a következő elemre"
 
 #. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:35
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:35
 msgid "title_next_month"
 msgstr "Következő hónap"
@@ -9704,6 +9753,7 @@ msgid "title_previous_item"
 msgstr "Ugrás az előző elemre"
 
 #. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:16
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:16
 msgid "title_previous_month"
 msgstr "Előző hónap"

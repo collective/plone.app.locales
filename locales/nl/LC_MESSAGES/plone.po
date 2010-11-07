@@ -17,7 +17,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-10-30 17:00+0000\n"
+"POT-Creation-Date: 2010-11-07 17:40+0000\n"
 "PO-Revision-Date: 2010-11-01 14:02+0100\n"
 "Last-Translator: Maurits van Rees <m.van.rees@zestsoftware.nl>\n"
 "Language-Team: Plone Netherlands <plone-nl@lists.plone.org>\n"
@@ -70,6 +70,7 @@ msgstr "${items} kon(den) niet verwijderd worden."
 # ability to change month/year order in the calendar
 #. Default: "${monthname} ${year}"
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:237
+#: plone.app.event/plone/app/event/portlets/calendar.pt:30
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:30
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
@@ -120,10 +121,6 @@ msgstr "${title} kan niet worden verplaatst."
 msgid "${tname} has been created."
 msgstr "${tname} is aangemaakt."
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
-msgid "(${location}, from ${start} to ${end})"
-msgstr "(${location}, van ${start} tot ${end})"
-
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr "(Heeft JavaScript nodig)"
@@ -131,10 +128,6 @@ msgstr "(Heeft JavaScript nodig)"
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
 msgstr "(Onbewerkt)"
-
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
-msgid "(from ${start} to ${end})"
-msgstr "(van ${start} tot ${end})"
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -401,6 +394,7 @@ msgstr "Toevoegen"
 msgid "Add Classic Portlet"
 msgstr "Voeg klassieke portlet toe"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:151
 #: plone.portlet.collection/plone/portlet/collection/collection.py:205
 msgid "Add Collection Portlet"
 msgstr "Voeg verzamelingportlet toe"
@@ -413,6 +407,7 @@ msgstr "Voeg content type conditie toe"
 msgid "Add Copy Action"
 msgstr "Voeg kopie actie toe"
 
+#: plone.app.event/plone/app/event/portlets/events.py:111
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:111
 msgid "Add Events Portlet"
 msgstr "Voeg agenda portlet toe"
@@ -665,6 +660,7 @@ msgid "By default, any content item in the root of the portal will be shown as a
 msgstr "Standaard worden content items in het hoofdniveau van de website getoond als een globale sectie. Als u deze optie uitschakeld, zullen alleen de mappen worden getoond. Dit heeft alleen effect als \"Automatisch genereren tabs' is ingeschakeld."
 
 #: CMFPlone/profiles/default/controlpanel.xml
+#: plone.app.event/plone/app/event/portlets/calendar.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr "Kalender"
@@ -1169,6 +1165,7 @@ msgstr "Bewerken"
 msgid "Edit Classic Portlet"
 msgstr "Klassieke portlet bewerken"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:168
 #: plone.portlet.collection/plone/portlet/collection/collection.py:221
 msgid "Edit Collection Portlet"
 msgstr "Verzamelingportlet bewerken"
@@ -1181,6 +1178,7 @@ msgstr "Content type conditie bewerken"
 msgid "Edit Copy Action"
 msgstr "Kopie actie bewerken"
 
+#: plone.app.event/plone/app/event/portlets/events.py:119
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:119
 msgid "Edit Events Portlet"
 msgstr "Agenda portlet bewerken"
@@ -1373,6 +1371,7 @@ msgstr "Fouten"
 
 #. Default: "Event"
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Event"
 msgstr "Agenda item"
 
@@ -1381,11 +1380,13 @@ msgid "Event changes saved."
 msgstr "Wijzigingen in agendaitem zijn opgeslagen."
 
 #: CMFPlone/profiles/default/portlets.xml
+#: plone.app.event/plone/app/event/portlets/events.py:45
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:45
 msgid "Events"
 msgstr "Agenda"
 
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Events can be shown in calendars."
 msgstr "Agenda items kunnen getoond worden in kalenders."
 
@@ -1483,6 +1484,7 @@ msgstr "Toont items die door de bovenliggende map als standaardweergave worden g
 msgid "Find items that can contain other objects"
 msgstr "Toont items die andere items kunnen bevatten"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:24
 #: plone.portlet.collection/plone/portlet/collection/collection.py:31
 msgid "Find the collection which provides the items to list"
 msgstr "Zoek de verzameling die de items bevat om te tonen"
@@ -1593,9 +1595,9 @@ msgstr "Home"
 msgid "Home folder"
 msgstr "Home folder"
 
+#: plone.app.event/plone/app/event/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:23
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:21
 msgid "How many items to list."
 msgstr "Aantal te tonen items."
 
@@ -1636,10 +1638,12 @@ msgstr "Indien ingeschakeld, zullen alle externe links gemarkeerd worden met een
 msgid "If enabled popup overlays will be used for simple forms like login, contact and delete confirmation."
 msgstr "Popup schermen zullen, indien dit is ingeschakeld, worden gebruikt voor simpele formulieren als login, contact en de bevestiging van verwijderen."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:36
 #: plone.portlet.collection/plone/portlet/collection/collection.py:48
 msgid "If enabled, a more... link will appear in the footer of the portlet, linking to the underlying Collection."
 msgstr "Indien ingeschakeld zal een meer... link verschijnen in de voettekst van de portlet, linkend naar de onderliggende Verzameling."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:42
 #: plone.portlet.collection/plone/portlet/collection/collection.py:54
 msgid "If enabled, effective dates will be shown underneath the items listed."
 msgstr "Indien ingeschakeld zullen de ingangsdatums getoond worden onder de items."
@@ -1684,7 +1688,7 @@ msgstr "Indien niet geselecteerd zal er een URL worden gegenereerd en u worden t
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Indien geselecteerd, maakt het systeem persoonlijke mappen aan waar de gebruikers content kunnen toevoegen."
 
-#: plone.app.collection/plone/app/collection/collection.py:50
+#: plone.app.collection/plone/app/collection/collection.py:76
 msgid "If selected, only the 'Number of Items' indicated below will be displayed."
 msgstr "Indien geselecteerd, wordt alleen het 'Aantal items' weergegeven dat hieronder is aangegeven."
 
@@ -1812,6 +1816,7 @@ msgstr "Item(s) verwijderd."
 msgid "Item(s) pasted."
 msgstr "Item(s) geplakt."
 
+#: plone.app.event/plone/app/event/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:28
 msgid "Items in which workflow state to show."
@@ -1874,11 +1879,12 @@ msgstr "Hiermee bepaald u welke opmaak beschikbaar is bij het bewerken van conte
 msgid "Lets you upload a file to the site."
 msgstr "Laat je een bestand uploaden naar de website."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:30
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr "Limiet"
 
-#: plone.app.collection/plone/app/collection/collection.py:49
+#: plone.app.collection/plone/app/collection/collection.py:75
 msgid "Limit Search Results"
 msgstr "Beperk zoekresultaten"
 
@@ -2155,6 +2161,10 @@ msgstr "Portlet bewerken"
 msgid "More information about the upgrade procedure can be found in the documentation section of plone.org in the ${upgrade_guide}."
 msgstr "Meer informatie over de procedure van bijwerken, kan worden gevonde in de documentatie welke u kunt vinden op plone.org bij ${upgrade_guide}."
 
+#: plone.app.event/plone/app/event/browser/event_view.pt:113
+msgid "More occurrences of this event:"
+msgstr ""
+
 #: CMFPlone/skins/plone_forms/search_form.pt:115
 msgid "More search options"
 msgstr "Meer zoek mogelijkheden"
@@ -2256,6 +2266,10 @@ msgstr "Nee"
 msgid "No changes made."
 msgstr "Geen wijzigingen"
 
+#: plone.app.event/plone/app/event/browser/ical.py:17
+msgid "No events found."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:251
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr "U heeft geen mailhost ingevuld. Dit maakt het onmogelijk wachtwoorden te resetten."
@@ -2272,13 +2286,13 @@ msgstr "Geen"
 msgid "Notify with message ${message}"
 msgstr "Notificatie met bericht ${message}"
 
-#: plone.app.collection/plone/app/collection/collection.py:61
+#: plone.app.collection/plone/app/collection/collection.py:87
 msgid "Number of Items"
 msgstr "Aantal items"
 
+#: plone.app.event/plone/app/event/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20
 msgid "Number of items to display"
 msgstr "Aantal te tonen items"
 
@@ -2580,6 +2594,7 @@ msgstr "Content type criterium"
 msgid "Portlet footer"
 msgstr "Voettekst van de portlet"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:19
 #: plone.portlet.collection/plone/portlet/collection/collection.py:26
 #: plone.portlet.static/plone/portlet/static/static.py:30
 msgid "Portlet header"
@@ -3005,7 +3020,7 @@ msgstr "Selecteer de uit te voeren workflow overgang"
 msgid "Select values from list"
 msgstr "Selecteer waarden uit een lijst"
 
-#: plone.app.collection/plone/app/collection/collection.py:75
+#: plone.app.collection/plone/app/collection/collection.py:101
 msgid "Select which fields to display when 'Display as Table' is checked."
 msgstr "Selecteer welke velden getoond moeten worden wanneer 'Tabelweergave' is geselecteerd"
 
@@ -3072,6 +3087,7 @@ msgstr "Toon alle beschikbare content types"
 msgid "Show content type icons"
 msgstr "Toon content type iconen"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:41
 #: plone.portlet.collection/plone/portlet/collection/collection.py:53
 msgid "Show dates"
 msgstr "Toon datums"
@@ -3086,6 +3102,7 @@ msgstr "Intern zichtbaar maken"
 msgid "Show items normally excluded from navigation if viewing their children."
 msgstr "Toon items welke normaalgesproken uitgesloten zijn van navigatie, wanneer onderliggende items bekeken worden."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:35
 #: plone.portlet.collection/plone/portlet/collection/collection.py:47
 msgid "Show more... link"
 msgstr "Toon meer... link"
@@ -3203,6 +3220,14 @@ msgstr "Sorteer resultaten"
 msgid "Sort the Search Results based on the selected criterion"
 msgstr "Sorteer de Zoekresultaten op basis van de geselecteerde criteria"
 
+#: plone.app.collection/plone/app/collection/collection.py:51
+msgid "Sort the collection on this index"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:63
+msgid "Sort the results in reversed order"
+msgstr ""
+
 #: validation/validators/IdValidator.py:32
 msgid "Spaces are not allowed in ids"
 msgstr "Spaties zijn in id's niet toegestaan"
@@ -3215,6 +3240,7 @@ msgstr "Map speciaal voor tijdelijke gegevens"
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is <name> <width>:<height>."
 msgstr "Specificeer alle maximaal toegestane formaten van afbeeldingen, één per regel. Het aanbevogen formaat is <naam> <breedte>:<hoogte>."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:31
 #: plone.portlet.collection/plone/portlet/collection/collection.py:37
 msgid "Specify the maximum number of items to show in the portlet. Leave this blank to show all items."
 msgstr "Geef het maximale aantal items aan dat in het portlet getoond mag worden. Laat leeg om alle items te tonen."
@@ -3328,7 +3354,7 @@ msgstr "TALES-expressie"
 msgid "TALES expression is: ${tales_expression}"
 msgstr "De TALES-expressie is: ${tales_expression}"
 
-#: plone.app.collection/plone/app/collection/collection.py:74
+#: plone.app.collection/plone/app/collection/collection.py:100
 msgid "Table Columns"
 msgstr "Tabelkolommen"
 
@@ -3347,6 +3373,7 @@ msgstr "Tags"
 msgid "Tags are used for ad-hoc organization of content"
 msgstr "Tags worden gebruikt voor de ad-hoc organisatie van content."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:23
 #: plone.portlet.collection/plone/portlet/collection/collection.py:30
 msgid "Target collection"
 msgstr "Doelverzameling"
@@ -3684,6 +3711,7 @@ msgstr "Dit is geen tekstbestand. MSWord documenten dient u als type 'bestand' t
 msgid "This is the Add-on configuration section, you can activate and deactivate add-ons in the lists below."
 msgstr "Dit is het configuratiemenu voor de extra producten. U kunt extra producten uit onderstaande lijst activeren en de-activeren."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:152
 #: plone.portlet.collection/plone/portlet/collection/collection.py:206
 msgid "This portlet display a listing of items from a Collection."
 msgstr "Deze portlet geeft een lijst weer van items uit een verzameling."
@@ -3708,6 +3736,7 @@ msgstr "Dit portlet geeft recente nieuwsberichten weer."
 msgid "This portlet displays recently modified content."
 msgstr "Dit portlet geeft recent gewijzigde items weer."
 
+#: plone.app.event/plone/app/event/portlets/events.py:112
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:112
 msgid "This portlet lists upcoming Events."
 msgstr "Dit portlet geeft aankomende agenda items weer."
@@ -3754,6 +3783,7 @@ msgstr "Titel"
 msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr "Portlettitel. De naam van de feed zal gebruikt worden indien leeg."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:20
 #: plone.portlet.collection/plone/portlet/collection/collection.py:27
 #: plone.portlet.static/plone/portlet/static/static.py:31
 msgid "Title of the rendered portlet"
@@ -4074,6 +4104,7 @@ msgstr "Workflow"
 msgid "Workflow Policies"
 msgstr "Publicatiebeleid"
 
+#: plone.app.event/plone/app/event/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Workflow state"
@@ -4322,6 +4353,7 @@ msgid "box_error"
 msgstr "Foutmelding"
 
 #. Default: "Upcoming Events"
+#: plone.app.event/plone/app/event/portlets/events.pt:10
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:10
 msgid "box_events"
 msgstr "Agenda"
@@ -4376,6 +4408,7 @@ msgid "box_news"
 msgstr "Nieuws"
 
 #. Default: "Previous events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:71
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:71
 msgid "box_previous_events"
 msgstr "Vorige agenda items..."
@@ -4407,6 +4440,7 @@ msgid "box_sign_in"
 msgstr "Inloggen"
 
 #. Default: "Upcoming events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:78
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:78
 msgid "box_upcoming_events"
 msgstr "Aankomende agenda items..."
@@ -4443,16 +4477,19 @@ msgstr "Instellingen van bovenliggende map overnemen"
 
 #. Default: "Attendees"
 #: CMFPlone/skins/plone_content/event_view.pt:132
+#: plone.app.event/plone/app/event/browser/event_view.pt:153
 msgid "contact_attendees"
 msgstr "Deelnemers"
 
 #. Default: "Contact Name"
 #: CMFPlone/skins/plone_content/event_view.pt:112
+#: plone.app.event/plone/app/event/browser/event_view.pt:133
 msgid "contact_name"
 msgstr "Naam"
 
 #. Default: "Contact Phone"
 #: CMFPlone/skins/plone_content/event_view.pt:124
+#: plone.app.event/plone/app/event/browser/event_view.pt:145
 msgid "contact_phone"
 msgstr "Telefoonnummer"
 
@@ -4841,7 +4878,7 @@ msgstr "Het is niet mogelijk om de wijzigingen te vergelijken."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
-#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:176
 msgid "description_no_items_in_folder"
 msgstr "Op dit moment bevinden zich geen items in deze map."
 
@@ -5171,35 +5208,42 @@ msgstr "en"
 
 #. Default: "More information about this event…"
 #: CMFPlone/skins/plone_content/event_view.pt:165
+#: plone.app.event/plone/app/event/browser/event_view.pt:186
 msgid "event_more_information"
 msgstr "Meer informatie over dit agenda item"
 
 #. Default: "What"
 #: CMFPlone/skins/plone_content/event_view.pt:24
+#: plone.app.event/plone/app/event/browser/event_view.pt:24
 msgid "event_what"
 msgstr "Wat"
 
 #. Default: "When"
 #: CMFPlone/skins/plone_content/event_view.pt:32
+#: plone.app.event/plone/app/event/browser/event_view.pt:32
 msgid "event_when"
 msgstr "Wanneer"
 
 #. Default: "${startdate} to ${linebreak} ${enddate}"
 #: CMFPlone/skins/plone_content/event_view.pt:51
+#: plone.app.event/plone/app/event/browser/event_view.pt:55
 msgid "event_when_differentday"
 msgstr "${startdate} tot ${linebreak} ${enddate}"
 
 #: CMFPlone/skins/plone_content/event_view.pt:45
+#: plone.app.event/plone/app/event/browser/event_view.pt:48
 msgid "event_when_differentday_optional_word_between_date_and_time"
 msgstr " "
 
 #. Default: "${date} ${linebreak} from ${starttime} to ${endtime}"
 #: CMFPlone/skins/plone_content/event_view.pt:86
+#: plone.app.event/plone/app/event/browser/event_view.pt:96
 msgid "event_when_sameday"
 msgstr "${date} ${linebreak} van ${starttime} tot ${endtime}"
 
 #. Default: "Where"
 #: CMFPlone/skins/plone_content/event_view.pt:101
+#: plone.app.event/plone/app/event/browser/event_view.pt:122
 msgid "event_where"
 msgstr "Waar"
 
@@ -5270,6 +5314,7 @@ msgstr "Nieuw item toevoegen"
 
 #. Default: "Add event to calendar"
 #: CMFPlone/skins/plone_content/event_view.pt:140
+#: plone.app.event/plone/app/event/browser/event_view.pt:161
 msgid "heading_add_to_calendar"
 msgstr "Voeg agenda item toe aan kalender"
 
@@ -6471,11 +6516,13 @@ msgstr "Voeg toe aan de volgende groepen:"
 
 #. Default: "iCal"
 #: CMFPlone/skins/plone_content/event_view.pt:153
+#: plone.app.event/plone/app/event/browser/event_view.pt:174
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
 #: CMFPlone/skins/plone_content/event_view.pt:147
+#: plone.app.event/plone/app/event/browser/event_view.pt:168
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -8452,10 +8499,6 @@ msgstr "eenvoudige technische configuratie"
 msgid "large_text"
 msgstr "Groot"
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
-msgid "last modified"
-msgstr "Laatst gewijzigd"
-
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197
 msgid "last_login"
@@ -8848,6 +8891,7 @@ msgid "message_send_feedback_confirm"
 msgstr "Er is een e-mail verzonden naar de beheerder van de site m.b.t. uw vragen en/of opmerkingen."
 
 #. Default: "More…"
+#: plone.app.collection/plone/app/collection/portlets/templates/collectionportlet.pt:41
 #: plone.portlet.collection/plone/portlet/collection/collection.pt:45
 msgid "more_url"
 msgstr "Meer…"
@@ -9142,6 +9186,7 @@ msgid "summary_author_content_list"
 msgstr "Toont een lijst van alle inhoud van één maker, gesorteerd op content type"
 
 #. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:48
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:48
 msgid "summary_calendar"
 msgstr "Agenda"
@@ -9154,6 +9199,7 @@ msgstr "Inhoudsweergave"
 
 #. Default: "Event details"
 #: CMFPlone/skins/plone_content/event_view.pt:18
+#: plone.app.event/plone/app/event/browser/event_view.pt:18
 msgid "summary_event_details"
 msgstr "Details van agenda item"
 
@@ -9435,11 +9481,13 @@ msgstr "Voeg statische tekst portlet toe"
 
 #. Default: "Download this event in iCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:148
+#: plone.app.event/plone/app/event/browser/event_view.pt:169
 msgid "title_add_to_ical"
 msgstr "Download dit agenda item in iCal formaat."
 
 #. Default: "Download this event in vCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:142
+#: plone.app.event/plone/app/event/browser/event_view.pt:163
 msgid "title_add_to_vcal"
 msgstr "Download dit agenda item in vCal formaat."
 
@@ -9611,6 +9659,7 @@ msgid "title_next_item"
 msgstr "Ga naar volgende item"
 
 #. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:35
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:35
 msgid "title_next_month"
 msgstr "Volgende maand"
@@ -9638,6 +9687,7 @@ msgid "title_previous_item"
 msgstr "Ga naar vorige item"
 
 #. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:16
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:16
 msgid "title_previous_month"
 msgstr "Vorige maand"

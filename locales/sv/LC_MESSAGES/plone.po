@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-10-30 17:00+0000\n"
+"POT-Creation-Date: 2010-11-07 17:40+0000\n"
 "PO-Revision-Date: 2010-09-29 23:38+0100\n"
 "Last-Translator: Karl Johan Kleist <karl.johan@kleist-it-consulting.de>\n"
 "Language-Team: Svenska <plone-i18n@lists.sourceforge.net>\n"
@@ -57,6 +57,7 @@ msgstr "${items} kunde inte tas bort."
 
 #. Default: "${monthname} ${year}"
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:237
+#: plone.app.event/plone/app/event/portlets/calendar.pt:30
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:30
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
@@ -107,10 +108,6 @@ msgstr "${title} är inte flyttbar."
 msgid "${tname} has been created."
 msgstr "${tname} har skapats."
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
-msgid "(${location}, from ${start} to ${end})"
-msgstr ""
-
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr "(Kräver JavaScript)"
@@ -118,10 +115,6 @@ msgstr "(Kräver JavaScript)"
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
 msgstr "(Utan CSS)"
-
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
-msgid "(from ${start} to ${end})"
-msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -393,6 +386,7 @@ msgstr "Lägg till"
 msgid "Add Classic Portlet"
 msgstr "Lägg till \"Klassisk portlet\""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:151
 #: plone.portlet.collection/plone/portlet/collection/collection.py:205
 msgid "Add Collection Portlet"
 msgstr "Lägg till portlet \"Samling\""
@@ -405,6 +399,7 @@ msgstr "Skapa villkor för innehållstyp"
 msgid "Add Copy Action"
 msgstr "Lägg till åtgärd \"Kopiera\""
 
+#: plone.app.event/plone/app/event/portlets/events.py:111
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:111
 msgid "Add Events Portlet"
 msgstr "Lägg till portlet \"Evenemang\""
@@ -655,6 +650,7 @@ msgid "By default, any content item in the root of the portal will be shown as a
 msgstr "Som standard visas alla poster i webbplatsens rot som flikar. Avmarkera om du vill att bara mappar/samlingar ska visas. (Kräver att \"Generera flikar automatiskt\" är markerad.)"
 
 #: CMFPlone/profiles/default/controlpanel.xml
+#: plone.app.event/plone/app/event/portlets/calendar.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr "Kalender"
@@ -1167,6 +1163,7 @@ msgid "Edit Classic Portlet"
 msgstr "Ändra klassisk portlet"
 
 # cannot use <q> here
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:168
 #: plone.portlet.collection/plone/portlet/collection/collection.py:221
 msgid "Edit Collection Portlet"
 msgstr "Ändra portlet \"Samling\""
@@ -1180,6 +1177,7 @@ msgid "Edit Copy Action"
 msgstr "Ändra åtgärd \"Kopiera\""
 
 # cannot use <q> here
+#: plone.app.event/plone/app/event/portlets/events.py:119
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:119
 msgid "Edit Events Portlet"
 msgstr "Ändra portlet \"Evenemang\""
@@ -1377,6 +1375,7 @@ msgstr "Felhantering"
 
 #. Default: "Event"
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Event"
 msgstr "Evenemang"
 
@@ -1385,11 +1384,13 @@ msgid "Event changes saved."
 msgstr "Dina ändringar av evenemanget har sparats."
 
 #: CMFPlone/profiles/default/portlets.xml
+#: plone.app.event/plone/app/event/portlets/events.py:45
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:45
 msgid "Events"
 msgstr "Evenemang"
 
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Events can be shown in calendars."
 msgstr "Evenemang kan visas i kalendrar."
 
@@ -1487,6 +1488,7 @@ msgstr "Hitta poster som är valda som vy för sin mapp."
 msgid "Find items that can contain other objects"
 msgstr "Hitta poster som kan innehålla andra objekt"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:24
 #: plone.portlet.collection/plone/portlet/collection/collection.py:31
 msgid "Find the collection which provides the items to list"
 msgstr "Sök den samling som ska tillhandahålla de listade posterna"
@@ -1599,9 +1601,9 @@ msgstr "Hem"
 msgid "Home folder"
 msgstr "Hem-mapp"
 
+#: plone.app.event/plone/app/event/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:23
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:21
 msgid "How many items to list."
 msgstr "Hur många poster som ska listas."
 
@@ -1644,10 +1646,12 @@ msgstr "Länkar till sidor på andra webbplatser kommer att markeras med en lite
 msgid "If enabled popup overlays will be used for simple forms like login, contact and delete confirmation."
 msgstr "Använd popup-fönster för enkla formulär som inloggning, kontakt och bekräftelse av radering."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:36
 #: plone.portlet.collection/plone/portlet/collection/collection.py:48
 msgid "If enabled, a more... link will appear in the footer of the portlet, linking to the underlying Collection."
 msgstr "En länk till den underliggande samlingen kommer att visas i portletens fot."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:42
 #: plone.portlet.collection/plone/portlet/collection/collection.py:54
 msgid "If enabled, effective dates will be shown underneath the items listed."
 msgstr "Visa publiceringsdatum under de listade posterna."
@@ -1692,7 +1696,7 @@ msgstr "Om avmarkerad: Nya användare får ett e-post-meddelande med en länk ti
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "När användare loggar in första gången får de en personlig mapp där de kan skapa eget innehåll."
 
-#: plone.app.collection/plone/app/collection/collection.py:50
+#: plone.app.collection/plone/app/collection/collection.py:76
 msgid "If selected, only the 'Number of Items' indicated below will be displayed."
 msgstr ""
 
@@ -1821,6 +1825,7 @@ msgid "Item(s) pasted."
 msgstr "Innehållet har klistrats in."
 
 # Jag kan inte dekryptera den engelska texten. Är den korrekt? Har kikat på -de.po och -fr.po / kleist
+#: plone.app.event/plone/app/event/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:28
 msgid "Items in which workflow state to show."
@@ -1882,11 +1887,12 @@ msgstr "Låter dig kontrollera vilka slags märkspråk som är tillgängliga nä
 msgid "Lets you upload a file to the site."
 msgstr "Filer kan laddas upp till webbplatsen från din dator."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:30
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr "Max. antal"
 
-#: plone.app.collection/plone/app/collection/collection.py:49
+#: plone.app.collection/plone/app/collection/collection.py:75
 msgid "Limit Search Results"
 msgstr ""
 
@@ -2166,6 +2172,10 @@ msgstr "Ändra portlet"
 msgid "More information about the upgrade procedure can be found in the documentation section of plone.org in the ${upgrade_guide}."
 msgstr "Mer information om uppgraderingsproceduren finns i dokumentations-sektionen på <strong>plone.org</strong>: ${upgrade_guide}"
 
+#: plone.app.event/plone/app/event/browser/event_view.pt:113
+msgid "More occurrences of this event:"
+msgstr ""
+
 #: CMFPlone/skins/plone_forms/search_form.pt:115
 msgid "More search options"
 msgstr "Fler sökkriterier"
@@ -2267,6 +2277,10 @@ msgstr "Nej"
 msgid "No changes made."
 msgstr "Inga ändringar utförda."
 
+#: plone.app.event/plone/app/event/browser/ical.py:17
+msgid "No events found."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:251
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr "Ingen server för utgående e-post definierad. Kan ej återställa lösenordet."
@@ -2283,13 +2297,13 @@ msgstr "Ingen"
 msgid "Notify with message ${message}"
 msgstr "Notifiera med meddelande ${message}"
 
-#: plone.app.collection/plone/app/collection/collection.py:61
+#: plone.app.collection/plone/app/collection/collection.py:87
 msgid "Number of Items"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20
 msgid "Number of items to display"
 msgstr "Antal poster att visa"
 
@@ -2593,6 +2607,7 @@ msgstr "Kriterium för en \"Portal Type\""
 msgid "Portlet footer"
 msgstr "Fot"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:19
 #: plone.portlet.collection/plone/portlet/collection/collection.py:26
 #: plone.portlet.static/plone/portlet/static/static.py:30
 msgid "Portlet header"
@@ -3021,7 +3036,7 @@ msgstr "Välj vilken statusövergång i arbetsflödet som ska försökas"
 msgid "Select values from list"
 msgstr "Välj värden från lista"
 
-#: plone.app.collection/plone/app/collection/collection.py:75
+#: plone.app.collection/plone/app/collection/collection.py:101
 msgid "Select which fields to display when 'Display as Table' is checked."
 msgstr ""
 
@@ -3090,6 +3105,7 @@ msgstr "Visa alla innehållstyper som kan läggas till här"
 msgid "Show content type icons"
 msgstr "Visa ikoner för innehållstyper"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:41
 #: plone.portlet.collection/plone/portlet/collection/collection.py:53
 msgid "Show dates"
 msgstr "Visa datum"
@@ -3104,6 +3120,7 @@ msgstr "Visa internt"
 msgid "Show items normally excluded from navigation if viewing their children."
 msgstr "Visa alltid överordnade mappar"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:35
 #: plone.portlet.collection/plone/portlet/collection/collection.py:47
 msgid "Show more... link"
 msgstr "Visa länken 'Mer... '"
@@ -3222,6 +3239,14 @@ msgstr "Sorteringsordning"
 msgid "Sort the Search Results based on the selected criterion"
 msgstr "Sortera sökresultatet efter..."
 
+#: plone.app.collection/plone/app/collection/collection.py:51
+msgid "Sort the collection on this index"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:63
+msgid "Sort the results in reversed order"
+msgstr ""
+
 #: validation/validators/IdValidator.py:32
 msgid "Spaces are not allowed in ids"
 msgstr "Blanksteg ej tillåtet i id"
@@ -3234,6 +3259,7 @@ msgstr "Speciell mapp för temporära data."
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is <name> <width>:<height>."
 msgstr "Lista alla tillåtna bildstorlekar, en per rad enligt detta format: \"<namn> <bredd>:<höjd>\"."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:31
 #: plone.portlet.collection/plone/portlet/collection/collection.py:37
 msgid "Specify the maximum number of items to show in the portlet. Leave this blank to show all items."
 msgstr "Maximalt antal poster som ska listas. Lämna tomt för att lista alla poster."
@@ -3349,7 +3375,7 @@ msgstr ""
 msgid "TALES expression is: ${tales_expression}"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:74
+#: plone.app.collection/plone/app/collection/collection.py:100
 msgid "Table Columns"
 msgstr ""
 
@@ -3369,6 +3395,7 @@ msgstr "Taggar"
 msgid "Tags are used for ad-hoc organization of content"
 msgstr "Taggar används för ad hoc-organisering av innehåll"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:23
 #: plone.portlet.collection/plone/portlet/collection/collection.py:30
 msgid "Target collection"
 msgstr "Underliggande samling"
@@ -3711,6 +3738,7 @@ msgstr "Denna fil innehåller inte text. För att skicka in binära filer, skapa
 msgid "This is the Add-on configuration section, you can activate and deactivate add-ons in the lists below."
 msgstr "Aktivering och inaktivering av påbyggnadsprodukter"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:152
 #: plone.portlet.collection/plone/portlet/collection/collection.py:206
 msgid "This portlet display a listing of items from a Collection."
 msgstr "Denna portlet visar en lista av poster från en Samling."
@@ -3735,6 +3763,7 @@ msgstr "Denna portlet visar nyligen tillkomna nyheter."
 msgid "This portlet displays recently modified content."
 msgstr "Denna portlet visar nyligen ändrat innehåll."
 
+#: plone.app.event/plone/app/event/portlets/events.py:112
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:112
 msgid "This portlet lists upcoming Events."
 msgstr "Denna portlet visar kommande evenemang."
@@ -3782,6 +3811,7 @@ msgstr "Titel"
 msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr "Portletens titel. Om utelämnad, används RSS-feedets titel."
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:20
 #: plone.portlet.collection/plone/portlet/collection/collection.py:27
 #: plone.portlet.static/plone/portlet/static/static.py:31
 msgid "Title of the rendered portlet"
@@ -4110,6 +4140,7 @@ msgstr "Arbetsflöde"
 msgid "Workflow Policies"
 msgstr "Policyer för arbetsflöden"
 
+#: plone.app.event/plone/app/event/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Workflow state"
@@ -4360,6 +4391,7 @@ msgid "box_error"
 msgstr "Fel"
 
 #. Default: "Upcoming Events"
+#: plone.app.event/plone/app/event/portlets/events.pt:10
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:10
 msgid "box_events"
 msgstr "Evenemang"
@@ -4414,6 +4446,7 @@ msgid "box_news"
 msgstr "Nyheter"
 
 #. Default: "Previous events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:71
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:71
 msgid "box_previous_events"
 msgstr "Tidigare evenemang…"
@@ -4445,6 +4478,7 @@ msgid "box_sign_in"
 msgstr "Inloggning"
 
 #. Default: "Upcoming events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:78
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:78
 msgid "box_upcoming_events"
 msgstr "Kommande evenemang…"
@@ -4482,16 +4516,19 @@ msgstr "Använd inställning från överliggande mapp"
 
 #. Default: "Attendees"
 #: CMFPlone/skins/plone_content/event_view.pt:132
+#: plone.app.event/plone/app/event/browser/event_view.pt:153
 msgid "contact_attendees"
 msgstr "Närvarande"
 
 #. Default: "Contact Name"
 #: CMFPlone/skins/plone_content/event_view.pt:112
+#: plone.app.event/plone/app/event/browser/event_view.pt:133
 msgid "contact_name"
 msgstr "Namn"
 
 #. Default: "Contact Phone"
 #: CMFPlone/skins/plone_content/event_view.pt:124
+#: plone.app.event/plone/app/event/browser/event_view.pt:145
 msgid "contact_phone"
 msgstr "Kontaktpersonens telefon"
 
@@ -4893,7 +4930,7 @@ msgstr "Denna innehållstyp har inte stöd för jämförelser."
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
-#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:176
 msgid "description_no_items_in_folder"
 msgstr "Mappen har inget innehåll."
 
@@ -5227,35 +5264,42 @@ msgstr "till"
 
 #. Default: "More information about this event…"
 #: CMFPlone/skins/plone_content/event_view.pt:165
+#: plone.app.event/plone/app/event/browser/event_view.pt:186
 msgid "event_more_information"
 msgstr "Mer information om detta evenemang…"
 
 #. Default: "What"
 #: CMFPlone/skins/plone_content/event_view.pt:24
+#: plone.app.event/plone/app/event/browser/event_view.pt:24
 msgid "event_what"
 msgstr "Vad"
 
 #. Default: "When"
 #: CMFPlone/skins/plone_content/event_view.pt:32
+#: plone.app.event/plone/app/event/browser/event_view.pt:32
 msgid "event_when"
 msgstr "När"
 
 #. Default: "${startdate} to ${linebreak} ${enddate}"
 #: CMFPlone/skins/plone_content/event_view.pt:51
+#: plone.app.event/plone/app/event/browser/event_view.pt:55
 msgid "event_when_differentday"
 msgstr "${startdate} till ${linebreak} ${enddate}"
 
 #: CMFPlone/skins/plone_content/event_view.pt:45
+#: plone.app.event/plone/app/event/browser/event_view.pt:48
 msgid "event_when_differentday_optional_word_between_date_and_time"
 msgstr "klockan"
 
 #. Default: "${date} ${linebreak} from ${starttime} to ${endtime}"
 #: CMFPlone/skins/plone_content/event_view.pt:86
+#: plone.app.event/plone/app/event/browser/event_view.pt:96
 msgid "event_when_sameday"
 msgstr "${date} ${linebreak} från ${starttime} till ${endtime}"
 
 #. Default: "Where"
 #: CMFPlone/skins/plone_content/event_view.pt:101
+#: plone.app.event/plone/app/event/browser/event_view.pt:122
 msgid "event_where"
 msgstr "Var"
 
@@ -5326,6 +5370,7 @@ msgstr "Skapa ny post"
 
 #. Default: "Add event to calendar"
 #: CMFPlone/skins/plone_content/event_view.pt:140
+#: plone.app.event/plone/app/event/browser/event_view.pt:161
 msgid "heading_add_to_calendar"
 msgstr "Lägg till evenemang till kalender"
 
@@ -6548,11 +6593,13 @@ msgstr "Medlemskap i grupper:"
 
 #. Default: "iCal"
 #: CMFPlone/skins/plone_content/event_view.pt:153
+#: plone.app.event/plone/app/event/browser/event_view.pt:174
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
 #: CMFPlone/skins/plone_content/event_view.pt:147
+#: plone.app.event/plone/app/event/browser/event_view.pt:168
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -8549,10 +8596,6 @@ msgstr "&#151; avancerad teknisk konfigurering."
 msgid "large_text"
 msgstr "Stor"
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
-msgid "last modified"
-msgstr ""
-
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197
 msgid "last_login"
@@ -8948,6 +8991,7 @@ msgid "message_send_feedback_confirm"
 msgstr "Ett e-postmeddelande har nu sänts till webbplatsens administratör."
 
 #. Default: "More…"
+#: plone.app.collection/plone/app/collection/portlets/templates/collectionportlet.pt:41
 #: plone.portlet.collection/plone/portlet/collection/collection.pt:45
 msgid "more_url"
 msgstr "Mer..."
@@ -9244,6 +9288,7 @@ msgid "summary_author_content_list"
 msgstr "Förteckning över innehåll skrivet av en författare grupperat enligt innehållstyp"
 
 #. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:48
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:48
 msgid "summary_calendar"
 msgstr "Kalender"
@@ -9256,6 +9301,7 @@ msgstr "Innehållsförteckning"
 
 #. Default: "Event details"
 #: CMFPlone/skins/plone_content/event_view.pt:18
+#: plone.app.event/plone/app/event/browser/event_view.pt:18
 msgid "summary_event_details"
 msgstr "Närmare uppgifter om evenemanget"
 
@@ -9538,11 +9584,13 @@ msgstr "Lägg till portlet för statisk text"
 
 #. Default: "Download this event in iCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:148
+#: plone.app.event/plone/app/event/browser/event_view.pt:169
 msgid "title_add_to_ical"
 msgstr "Ladda ner detta evenemang i iCal-format"
 
 #. Default: "Download this event in vCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:142
+#: plone.app.event/plone/app/event/browser/event_view.pt:163
 msgid "title_add_to_vcal"
 msgstr "Ladda ner detta evenemang i vCal-format"
 
@@ -9719,6 +9767,7 @@ msgid "title_next_item"
 msgstr "Gå till nästa post"
 
 #. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:35
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:35
 msgid "title_next_month"
 msgstr "Nästa månad"
@@ -9746,6 +9795,7 @@ msgid "title_previous_item"
 msgstr "Gå till föregående post"
 
 #. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:16
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:16
 msgid "title_previous_month"
 msgstr "Föregående månad"

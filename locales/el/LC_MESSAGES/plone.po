@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2010-10-30 17:00+0000\n"
+"POT-Creation-Date: 2010-11-07 17:40+0000\n"
 "PO-Revision-Date: 2008-12-22 03:45+0200\n"
 "Last-Translator: Haris Konstantatos <h_konstantatos@yahoo.gr>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -58,6 +58,7 @@ msgstr "${items} δεν ήταν δυνατό να διαγραφεί."
 
 #. Default: "${monthname} ${year}"
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:237
+#: plone.app.event/plone/app/event/portlets/calendar.pt:30
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:30
 msgid "${monthname} ${year}"
 msgstr "${monthname} ${year}"
@@ -108,20 +109,12 @@ msgstr "${title} δεν είναι μετακινήσιμο."
 msgid "${tname} has been created."
 msgstr "${tname} δημιουργήθηκε."
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:57
-msgid "(${location}, from ${start} to ${end})"
-msgstr ""
-
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:21
 msgid "(Requires JavaScript)"
 msgstr ""
 
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:60
 msgid "(Unstyled)"
-msgstr ""
-
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:74
-msgid "(from ${start} to ${end})"
 msgstr ""
 
 #. Default: "- An intranet workflow where content is only accessible if you are logged in. - Basic states are: Internal Draft, Pending Review, Internally Published and Private. - Also has an Externally Published state, so you can make selected content available to people outside the intranet."
@@ -389,6 +382,7 @@ msgstr "Προσθήκη"
 msgid "Add Classic Portlet"
 msgstr "Προσθήκη Κλασικού Πλαισίου"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:151
 #: plone.portlet.collection/plone/portlet/collection/collection.py:205
 msgid "Add Collection Portlet"
 msgstr ""
@@ -401,6 +395,7 @@ msgstr "Προσθήκη Συνθήκης Τύπου Αντικειμένου"
 msgid "Add Copy Action"
 msgstr "Προσηκη Ενέργειας Αντιγραφής"
 
+#: plone.app.event/plone/app/event/portlets/events.py:111
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:111
 msgid "Add Events Portlet"
 msgstr "Προσθήκη Πλαισίου Γεγονότων"
@@ -650,6 +645,7 @@ msgid "By default, any content item in the root of the portal will be shown as a
 msgstr ""
 
 #: CMFPlone/profiles/default/controlpanel.xml
+#: plone.app.event/plone/app/event/portlets/calendar.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.py:34
 msgid "Calendar"
 msgstr "Ημερολόγιο"
@@ -1154,6 +1150,7 @@ msgstr "Επεξεργασία"
 msgid "Edit Classic Portlet"
 msgstr "Επεξεργασία κλασσικού πλαισίου"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:168
 #: plone.portlet.collection/plone/portlet/collection/collection.py:221
 msgid "Edit Collection Portlet"
 msgstr "Επεξεργασία Πλαισίου Συλλογής"
@@ -1166,6 +1163,7 @@ msgstr ""
 msgid "Edit Copy Action"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:119
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:119
 msgid "Edit Events Portlet"
 msgstr ""
@@ -1358,6 +1356,7 @@ msgstr "Σφάλματα"
 
 #. Default: "Event"
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Event"
 msgstr "Γεγονός"
 
@@ -1366,11 +1365,13 @@ msgid "Event changes saved."
 msgstr "Οι αλλαγές στο Γεγονός αποθηκεύτηκαν."
 
 #: CMFPlone/profiles/default/portlets.xml
+#: plone.app.event/plone/app/event/portlets/events.py:45
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:45
 msgid "Events"
 msgstr "Γεγονότα"
 
 #: CMFPlone/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/default/types/Event.xml
 msgid "Events can be shown in calendars."
 msgstr ""
 
@@ -1468,6 +1469,7 @@ msgstr "Εύρεση αντικειμένων που αποτελούν την �
 msgid "Find items that can contain other objects"
 msgstr "Εύρεση αντικειμένων που μπορούν να περιέχουν άλλα αντικείμενα"
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:24
 #: plone.portlet.collection/plone/portlet/collection/collection.py:31
 msgid "Find the collection which provides the items to list"
 msgstr ""
@@ -1579,9 +1581,9 @@ msgstr "Αρχική Σελίδα"
 msgid "Home folder"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:24
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:23
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:21
 msgid "How many items to list."
 msgstr "Πόσα αντικείμενα να φαίνονται."
 
@@ -1622,10 +1624,12 @@ msgstr ""
 msgid "If enabled popup overlays will be used for simple forms like login, contact and delete confirmation."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:36
 #: plone.portlet.collection/plone/portlet/collection/collection.py:48
 msgid "If enabled, a more... link will appear in the footer of the portlet, linking to the underlying Collection."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:42
 #: plone.portlet.collection/plone/portlet/collection/collection.py:54
 msgid "If enabled, effective dates will be shown underneath the items listed."
 msgstr ""
@@ -1670,7 +1674,7 @@ msgstr ""
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:50
+#: plone.app.collection/plone/app/collection/collection.py:76
 msgid "If selected, only the 'Number of Items' indicated below will be displayed."
 msgstr ""
 
@@ -1798,6 +1802,7 @@ msgstr "Τα αντικείμενα διαγράφηκαν"
 msgid "Item(s) pasted."
 msgstr "Τα αντικείμενα επικολλήθηκαν."
 
+#: plone.app.event/plone/app/event/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:29
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:28
 msgid "Items in which workflow state to show."
@@ -1858,11 +1863,12 @@ msgstr ""
 msgid "Lets you upload a file to the site."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:30
 #: plone.portlet.collection/plone/portlet/collection/collection.py:36
 msgid "Limit"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:49
+#: plone.app.collection/plone/app/collection/collection.py:75
 msgid "Limit Search Results"
 msgstr ""
 
@@ -2138,6 +2144,10 @@ msgstr "Τροποποίηση πλαισίου"
 msgid "More information about the upgrade procedure can be found in the documentation section of plone.org in the ${upgrade_guide}."
 msgstr ""
 
+#: plone.app.event/plone/app/event/browser/event_view.pt:113
+msgid "More occurrences of this event:"
+msgstr ""
+
 #: CMFPlone/skins/plone_forms/search_form.pt:115
 msgid "More search options"
 msgstr ""
@@ -2239,6 +2249,10 @@ msgstr "Όχι"
 msgid "No changes made."
 msgstr "Δέν έγιναν αλλαγές."
 
+#: plone.app.event/plone/app/event/browser/ical.py:17
+msgid "No events found."
+msgstr ""
+
 #: plone.app.controlpanel/plone/app/controlpanel/usergroups.py:251
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr ""
@@ -2255,13 +2269,13 @@ msgstr ""
 msgid "Notify with message ${message}"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:61
+#: plone.app.collection/plone/app/collection/collection.py:87
 msgid "Number of Items"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:23
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:22
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:20
 msgid "Number of items to display"
 msgstr "Πλήθος προβαλλόμενων αντικειμένων"
 
@@ -2561,6 +2575,7 @@ msgstr "Κριτήριο Τύπου Πύλης"
 msgid "Portlet footer"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:19
 #: plone.portlet.collection/plone/portlet/collection/collection.py:26
 #: plone.portlet.static/plone/portlet/static/static.py:30
 msgid "Portlet header"
@@ -2984,7 +2999,7 @@ msgstr ""
 msgid "Select values from list"
 msgstr "Επιλογή τιμών από τη λίστα"
 
-#: plone.app.collection/plone/app/collection/collection.py:75
+#: plone.app.collection/plone/app/collection/collection.py:101
 msgid "Select which fields to display when 'Display as Table' is checked."
 msgstr ""
 
@@ -3050,6 +3065,7 @@ msgstr "Προβολή όλως των διαθέσιμων τύπων αντι�
 msgid "Show content type icons"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:41
 #: plone.portlet.collection/plone/portlet/collection/collection.py:53
 msgid "Show dates"
 msgstr ""
@@ -3064,6 +3080,7 @@ msgstr "Προβολή εσωτερικά"
 msgid "Show items normally excluded from navigation if viewing their children."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:35
 #: plone.portlet.collection/plone/portlet/collection/collection.py:47
 msgid "Show more... link"
 msgstr ""
@@ -3180,6 +3197,14 @@ msgstr ""
 msgid "Sort the Search Results based on the selected criterion"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/collection.py:51
+msgid "Sort the collection on this index"
+msgstr ""
+
+#: plone.app.collection/plone/app/collection/collection.py:63
+msgid "Sort the results in reversed order"
+msgstr ""
+
 #: validation/validators/IdValidator.py:32
 msgid "Spaces are not allowed in ids"
 msgstr ""
@@ -3192,6 +3217,7 @@ msgstr ""
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is <name> <width>:<height>."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:31
 #: plone.portlet.collection/plone/portlet/collection/collection.py:37
 msgid "Specify the maximum number of items to show in the portlet. Leave this blank to show all items."
 msgstr ""
@@ -3306,7 +3332,7 @@ msgstr ""
 msgid "TALES expression is: ${tales_expression}"
 msgstr ""
 
-#: plone.app.collection/plone/app/collection/collection.py:74
+#: plone.app.collection/plone/app/collection/collection.py:100
 msgid "Table Columns"
 msgstr ""
 
@@ -3326,6 +3352,7 @@ msgstr ""
 msgid "Tags are used for ad-hoc organization of content"
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:23
 #: plone.portlet.collection/plone/portlet/collection/collection.py:30
 msgid "Target collection"
 msgstr ""
@@ -3663,6 +3690,7 @@ msgstr "Αυτό το αρχείο δεν περιέχει κείμενο. Γι�
 msgid "This is the Add-on configuration section, you can activate and deactivate add-ons in the lists below."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:152
 #: plone.portlet.collection/plone/portlet/collection/collection.py:206
 msgid "This portlet display a listing of items from a Collection."
 msgstr "Αυτό το πλαίσιο δείχνει μια λίστα αντικειμένων από μια Συλλογή."
@@ -3687,6 +3715,7 @@ msgstr "Αυτό το πλαίσιο δείχνει τις πρόσφατες Ε
 msgid "This portlet displays recently modified content."
 msgstr "Αυτό το πλαίσιο δείχνει τα περιεχόμενα που τροποιήθηκαν πρόσφατα."
 
+#: plone.app.event/plone/app/event/portlets/events.py:112
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:112
 msgid "This portlet lists upcoming Events."
 msgstr "Αυτό το πλαίσιο δείχνει τα επερχόμενα Γεγονότα."
@@ -3733,6 +3762,7 @@ msgstr "Τίτλος"
 msgid "Title of the portlet.  If omitted, the title of the feed will be used."
 msgstr ""
 
+#: plone.app.collection/plone/app/collection/portlets/collectionportlet.py:20
 #: plone.portlet.collection/plone/portlet/collection/collection.py:27
 #: plone.portlet.static/plone/portlet/static/static.py:31
 msgid "Title of the rendered portlet"
@@ -4053,6 +4083,7 @@ msgstr ""
 msgid "Workflow Policies"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/events.py:28
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Workflow state"
@@ -4302,6 +4333,7 @@ msgid "box_error"
 msgstr "Σφάλμα"
 
 #. Default: "Upcoming Events"
+#: plone.app.event/plone/app/event/portlets/events.pt:10
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:10
 msgid "box_events"
 msgstr "Προσεχή Γεγονότα"
@@ -4356,6 +4388,7 @@ msgid "box_news"
 msgstr "Ειδήσεις"
 
 #. Default: "Previous events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:71
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:71
 msgid "box_previous_events"
 msgstr "Προηγούμενα γεγονότα..."
@@ -4387,6 +4420,7 @@ msgid "box_sign_in"
 msgstr "Είσοδος"
 
 #. Default: "Upcoming events…"
+#: plone.app.event/plone/app/event/portlets/events.pt:78
 #: plone.app.portlets/plone/app/portlets/portlets/events.pt:78
 #, fuzzy
 msgid "box_upcoming_events"
@@ -4424,16 +4458,19 @@ msgstr "Χρησιμοποίηση των ρυθμίσεων του γονικο
 
 #. Default: "Attendees"
 #: CMFPlone/skins/plone_content/event_view.pt:132
+#: plone.app.event/plone/app/event/browser/event_view.pt:153
 msgid "contact_attendees"
 msgstr "Παριστάμενοι"
 
 #. Default: "Contact Name"
 #: CMFPlone/skins/plone_content/event_view.pt:112
+#: plone.app.event/plone/app/event/browser/event_view.pt:133
 msgid "contact_name"
 msgstr "Όνομα Επικοινωνίας"
 
 #. Default: "Contact Phone"
 #: CMFPlone/skins/plone_content/event_view.pt:124
+#: plone.app.event/plone/app/event/browser/event_view.pt:145
 msgid "contact_phone"
 msgstr "Τηλέφωνο Επικοινωνίας"
 
@@ -4824,7 +4861,7 @@ msgstr "Αυτό το αντικείμενο δεν παρέχει υποστή�
 
 #. Default: "There are currently no items in this folder."
 #: CMFPlone/skins/plone_content/folder_listing.pt:181
-#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:179
+#: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:176
 msgid "description_no_items_in_folder"
 msgstr "Αυτή τη στιγμή δεν υπάρχουν αντικείμενα σε αυτόν τον φάκελο."
 
@@ -5158,35 +5195,42 @@ msgstr "έως"
 
 #. Default: "More information about this event…"
 #: CMFPlone/skins/plone_content/event_view.pt:165
+#: plone.app.event/plone/app/event/browser/event_view.pt:186
 msgid "event_more_information"
 msgstr "Περισσότερες πληροφορίες σχετικά με το γεγονός"
 
 #. Default: "What"
 #: CMFPlone/skins/plone_content/event_view.pt:24
+#: plone.app.event/plone/app/event/browser/event_view.pt:24
 msgid "event_what"
 msgstr "Τι"
 
 #. Default: "When"
 #: CMFPlone/skins/plone_content/event_view.pt:32
+#: plone.app.event/plone/app/event/browser/event_view.pt:32
 msgid "event_when"
 msgstr "Πότε"
 
 #. Default: "${startdate} to ${linebreak} ${enddate}"
 #: CMFPlone/skins/plone_content/event_view.pt:51
+#: plone.app.event/plone/app/event/browser/event_view.pt:55
 msgid "event_when_differentday"
 msgstr "${startdate} έως ${linebreak} ${enddate}"
 
 #: CMFPlone/skins/plone_content/event_view.pt:45
+#: plone.app.event/plone/app/event/browser/event_view.pt:48
 msgid "event_when_differentday_optional_word_between_date_and_time"
 msgstr ""
 
 #. Default: "${date} ${linebreak} from ${starttime} to ${endtime}"
 #: CMFPlone/skins/plone_content/event_view.pt:86
+#: plone.app.event/plone/app/event/browser/event_view.pt:96
 msgid "event_when_sameday"
 msgstr "${date} ${linebreak} από ${starttime} έως ${endtime}"
 
 #. Default: "Where"
 #: CMFPlone/skins/plone_content/event_view.pt:101
+#: plone.app.event/plone/app/event/browser/event_view.pt:122
 msgid "event_where"
 msgstr "Που"
 
@@ -5259,6 +5303,7 @@ msgstr "Προσθήκη νέου αντικειμένου"
 
 #. Default: "Add event to calendar"
 #: CMFPlone/skins/plone_content/event_view.pt:140
+#: plone.app.event/plone/app/event/browser/event_view.pt:161
 msgid "heading_add_to_calendar"
 msgstr "Προσθήκη γεγονότος στο ημερολόγιο"
 
@@ -6478,12 +6523,14 @@ msgstr ""
 
 #. Default: "iCal"
 #: CMFPlone/skins/plone_content/event_view.pt:153
+#: plone.app.event/plone/app/event/browser/event_view.pt:174
 #, fuzzy
 msgid "label_add_to_ical"
 msgstr " iCal (Mac OS X)"
 
 #. Default: "vCal"
 #: CMFPlone/skins/plone_content/event_view.pt:147
+#: plone.app.event/plone/app/event/browser/event_view.pt:168
 #, fuzzy
 msgid "label_add_to_vcal"
 msgstr " vCal (Windows, Linux)"
@@ -8487,10 +8534,6 @@ msgstr ""
 msgid "large_text"
 msgstr "Μεγάλο"
 
-#: plone.app.collection/plone/app/collection/browser/templates/all_content.pt:96
-msgid "last modified"
-msgstr ""
-
 #. Default: "Last log-in"
 #: CMFPlone/skins/plone_forms/search_form.pt:197
 msgid "last_login"
@@ -8888,6 +8931,7 @@ msgid "message_send_feedback_confirm"
 msgstr ""
 
 #. Default: "More…"
+#: plone.app.collection/plone/app/collection/portlets/templates/collectionportlet.pt:41
 #: plone.portlet.collection/plone/portlet/collection/collection.pt:45
 msgid "more_url"
 msgstr "Περισσότερα..."
@@ -9175,6 +9219,7 @@ msgid "summary_author_content_list"
 msgstr "Προβάλει το περιεχόμενο που γράφτηκε από έναν συντάκτη και το ομαδοποιεί ανά είδος περιεχομένου."
 
 #. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:48
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:48
 msgid "summary_calendar"
 msgstr "Ημερολόγιο"
@@ -9187,6 +9232,7 @@ msgstr "Λίστα περιεχομένου"
 
 #. Default: "Event details"
 #: CMFPlone/skins/plone_content/event_view.pt:18
+#: plone.app.event/plone/app/event/browser/event_view.pt:18
 msgid "summary_event_details"
 msgstr "Λεπτομέρειες γεγονότος"
 
@@ -9476,12 +9522,14 @@ msgstr ""
 
 #. Default: "Download this event in iCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:148
+#: plone.app.event/plone/app/event/browser/event_view.pt:169
 #, fuzzy
 msgid "title_add_to_ical"
 msgstr "Προσθέστε αυτό το αντικείμενο στο iCal ημερολόγιο σας"
 
 #. Default: "Download this event in vCal format"
 #: CMFPlone/skins/plone_content/event_view.pt:142
+#: plone.app.event/plone/app/event/browser/event_view.pt:163
 #, fuzzy
 msgid "title_add_to_vcal"
 msgstr "Προσθέστε αυτό το αντικείμενο στο vCal ημερολόγιο σας"
@@ -9656,6 +9704,7 @@ msgid "title_next_item"
 msgstr ""
 
 #. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:35
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:35
 msgid "title_next_month"
 msgstr "Επόμενος μήνας"
@@ -9683,6 +9732,7 @@ msgid "title_previous_item"
 msgstr ""
 
 #. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/calendar.pt:16
 #: plone.app.portlets/plone/app/portlets/portlets/calendar.pt:16
 msgid "title_previous_month"
 msgstr "Προηγούμενος μήνας"
