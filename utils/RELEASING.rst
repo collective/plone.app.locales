@@ -5,7 +5,7 @@ Prerelease
 ----------
 Go to plone.app.locales directory::
 
-    cd ~/svn/plonenext/4.0.0/src/plone.app.locales
+    cd ~/svn/plone-coredev/branches/4.0/src/plone.app.locales
 
 Prepare the release::
 
