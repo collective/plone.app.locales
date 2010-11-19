@@ -60,7 +60,7 @@ Plone 4. Keep i18n for Plone 3)::
     locales-addons -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/locales-addons
     utils -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/utils
 
-Set the svn:externals and remove locales-future::
+Set the svn:externals::
 
     svn propset svn:externals -F EXTERNALS.txt .
     svn up
@@ -77,7 +77,8 @@ remove locales-future translations registration in configure.zcml and commit::
 
 Then::
 
-    cd plone/app/locales/locales/
+    cd plone/app/locales/locales/  # For Plone 3
+    cd plone/app/locales/  # For Plone 4
     for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
 
     cd -
