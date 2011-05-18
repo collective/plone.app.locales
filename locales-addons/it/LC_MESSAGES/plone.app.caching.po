@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plone.app.caching\n"
 "POT-Creation-Date: 2010-08-06 20:53+0000\n"
-"PO-Revision-Date: 2011-05-13 15:35+0200\n"
+"PO-Revision-Date: 2011-05-18 15:39+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -32,15 +32,15 @@ msgstr "E' richiesto un numero intero."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:243
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
-msgstr "Memorizza nel browser e nel proxy (prefedinito: 24 ore). Attenzione: utilizzare solo per risorse stabili che non cambiano mai senza cambiare anche il proprio URL, o risorse per cui non è critico il continuo aggiornamento. "
+msgstr "Memorizza nel browser e nel proxy (prefedinito: 24 ore). Attenzione: utilizzare solo per risorse stabili che non cambiano mai senza cambiare anche il proprio URL, o risorse per cui il continuo aggiornamento non è critico."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:216
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires. "
-msgstr ""
+msgstr "Memorizza nel browser ma scade immediatamente (simile a 'Caching debole'), e memorizza nel proxy (prefedinito: 24 ore). Utilizzare un reverse proxy svuotabile per migliori risultati. Attenzione: se il proxy non può essere svuotato, o non può essere configurato per rimuovere il token 's-maxage' dalla risposta, allora potrebbero essere inviate risposte obsolete fino a che la risorsa memorizzata non scadrà."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:189
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True. "
-msgstr ""
+msgstr "Memorizza nel browser ma scade immediatamente e abilita le risposte 304 alle successive richieste. Le risposte 304 richiedono una configurazione per le impostazioni 'Last-modified' e/o 'ETags'. Se l'intestazione 'Last-Modified' non è sufficiente per assicurare l'aggiornamento, abilitare il controllo sul ETag inserendo ogni componente ETag che dovrebbe essere utilizzato per comporre l'intestazione ETag. Per memorizzare anche le risposte pubbliche nella memoria di Zope, impostare 'RAM cache' a Vero. "
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:602
 msgid "Cache purged."
@@ -48,12 +48,12 @@ msgstr "Cache svuotata."
 
 #: plone.app.caching/plone/app/caching/profiles/default/controlpanel.xml
 msgid "Caching"
-msgstr ""
+msgstr "Caching"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:648
 #: plone.app.caching/plone/app/caching/browser/edit.py:233
 msgid "Cancel"
-msgstr "Cancella"
+msgstr "Annulla"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:312
 #: plone.app.caching/plone/app/caching/browser/edit.py:230
@@ -102,7 +102,7 @@ msgstr "Abilita la compressione GZip"
 
 #: plone.app.caching/plone/app/caching/operations/default.py:70
 msgid "Generic caching"
-msgstr ""
+msgstr "Caching generico"
 
 #: plone.app.caching/plone/app/caching/browser/import.pt:121
 msgid "Import"
@@ -130,7 +130,7 @@ msgstr "Associa i nomi dei page template dello skin layer ai nomi delle regole"
 
 #: plone.app.caching/plone/app/caching/operations/default.py:215
 msgid "Moderate caching"
-msgstr ""
+msgstr "Caching moderato"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:519
 msgid "No URLs or paths entered."
@@ -155,7 +155,7 @@ msgstr "Svuota"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:595
 msgid "RAM cache not installed."
-msgstr ""
+msgstr "RAM cache non installata"
 
 #: plone.app.caching/plone/app/caching/interfaces.py:68
 msgid "Request variables"
@@ -192,7 +192,7 @@ msgstr "Si sono verificati degli errori."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:71
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
-msgstr ""
+msgstr "Con questa operazione, tutte le funzioni di memorizzazione standard possono essere eseguite con varie combinazioni di parametri opzionali. Nella maggior parte dei casi, è probabilmente più facile usare una delle altre operazioni più semplici (Caching forte, Caching moderato, Caching debole o Nessun caching)."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:291
 msgid "Use this operation to keep the response out of all caches."
@@ -228,27 +228,27 @@ msgstr "Seleziona un profilo qui sotto per l'importazione delle configurazioni d
 #. Default: "High-performance sites will often place a caching reverse proxy such as Varnish or Squid in front of Zope. The caching operations configured elsewhere on this screen can often take advantage of such a proxy by instructing it to cache certain content in a certain way, whilst passing requests for other content through to Plone always. Plone can also send so-called <code>PURGE</code> requests to a caching proxy when content changes, reducing the risk of a stale response from a cached copy."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:140
 msgid "description_caching_proxies"
-msgstr ""
+msgstr "I siti ad alte prestazioni mettono spesso davanti a Zope un reverse proxy per il caching come Varnish o Squid. Le operazioni di caching configurate in altre parti possono spesso gestire a questo tipo di proxy istruendoli sul modo di memorizzare certi contenuti e quando passare le richieste di altri contenuti direttamente a Plone. Plone può anche mandare una richiesta cosiddetta <code>PURGE</code> ad un proxy quando il contenuto viene modificato, riducendo così il rischio di una risposta obsoleta dalla memoria del proxy."
 
 #. Default: "<p> Many caching operations accept parameters to influence their behaviour. For example, an operation which returns a page cached in RAM may accept a parameter specifying the timeout period before pages are re-calculated. Most operations, however, will have \"sensible defaults\", so that they work acceptably even when no parameters have been set. Note also that not all operations support parameters. </p> <p> Parameters can be set at two levels. By default, parameters apply to all uses of particular operation. Thus, if you have assigned an operation to more than one ruleset, the <em>same</em> parameters will be used. However, you can also override the parameters for a particular ruleset. </p> <p> Use the table below to access parameters for a particular operation or ruleset. <strong>Warning:</strong> If you have made changes elsewhere in this form, you should save them before configuring any operation parameters. Otherwise, you will lose your changes. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:547
 msgid "description_detailed_settings"
-msgstr ""
+msgstr "<p> Molte operazioni di memorizzazione accettano dei parametri per modificare il proprio comportamento. Ad esempio, un'operazione che restituisce una pagina memorizzata in RAM potrebbe accettare un parametro che specifichi il periodo di timeout prima che la pagina venga ricalcolata. La maggior parte delle operazioni comunque avranno un comportamento predefinito ragionevole in modo da poter operare anche senza parametri. Notare inoltre che non tutte le operazione supportano dei parametri. </p><p> I parametri possono essere impostati a due livelli. Normalmente i parametri si applicani a tutti gli utilizzi di una particolare operazione. Quindi, se avete assegnato ad un operazione a più di una regola, verranno usati gli <em>stessi</em> parametri. Comunque è possibile anche sovrascrivere i parametri per una certa regola.</p> <p> Usare la tabella sottostante per accedere ai parametri di una particolare regola. <strong>Attenzione:</strong> se sono state fatte modifiche in altre parti di questa maschera, dovresti salvare prima di configurare qualsiasi altro parametro delle operazioni, altrimenti perderai le modifiche fatte."
 
 #. Default: "<p> Caching can be controlled by mapping <em>rulesets</em> to <em>caching operations</em>. </p> <p> A <strong>ruleset</strong> is a name given to a resource published by Plone, such as a view. Rulesets are declared by the developers who write those views. You can think of them as a way to give hints about how something should be cached, without actually implementing the caching operations. </p> <p> The exact caching operations to use are mapped to rulesets in the table below. Caching operations will often set response headers to tell the users's web browser and/or a caching proxy how to cache content. They may also intercept a response to return a cached copy or instruct the browser to use its own cached copy, if it is considered to be current. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:395
 msgid "description_mappings"
-msgstr ""
+msgstr "<p> Il caching può essere controllato assegnando le <em>regole</em> alle <em>Operazioni di memorizzazione</em>. </p><p> Una <strong>regola</strong> è il nome dato ad una risorsa pubblicata da Plone, come ad esempio una vista. Le regole sono dichiarate dagli sviluppatori che scrivono queste viste. Si può pensare ad una regola come ad un accenno di come una risorsa debba essere memorizzata, senza effettivamente implementare le operazioni di memorizzazione. </p><p>Le specifiche operazioni di memorizzazione da usare sono assegnate alle regole nella tabella sottostante. Le operazioni di memorizzazione definiscono spesso le intestazioni delle risposte da inviare al browser dell'utente per utilizzare la sua copia di cache se questa è aggiornata."
 
 #. Default: "The following items were purged:"
 #: plone.app.caching/plone/app/caching/browser/purge.pt:73
 msgid "description_purged"
-msgstr ""
+msgstr "I seguenti elementi verranno svuotati:"
 
 #. Default: "Plone maintains a cache of certain pages and fragments of pages in memory to speed up rendering. Certain caching operations, when mapped, can be used to place entire pages into the RAM cache. Using the RAM cache may allow you to gain some speed (and reduce CPU usage), at the cost of using more memory. Note that the default RAM cache is shared among threads in the same Zope instance, but is not shared between Zope instances. Thus, if you are running a multi-instance ZEO setup, you may find it more efficient to segment your users using a front-end load balancer so that they always reach the same back-end instance. As an alternative, you can integrate a shared cache such as <em>memcached</em>. See the documentation for details."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:296
 msgid "description_ram"
-msgstr ""
+msgstr "Plone mantiene una cache di certe pagine e frammenti di pagine in memoria per velocizzare il rendering. Certe operazioni di memorizzazione, quando assegnate, possono essere utilizzate per mettere l'intera pagina nella RAM cache. Utilizzare la RAM cache può aumentare la velocità (e ridurre l'utilizzo della CPU), al costo di usare più memoria. Da notare che la RAM cache predefinita è condivisa tra tutti i threads della stessa istanza Zope, ma non è condivisa tra le varie istanze Zope. Quindi, se si utilizza una configurazione multi-istanza ZEO, potrebbe essere più efficiente una cache condivisa com <em>memcached</em>. Per maggiori dettagli vedere la documentazione."
 
 #. Default: "The table below shows statistics for the default RAM cache. You can use the <em>Purge</em> button to manually clear the cache if you suspect there are stale items there."
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:63
@@ -338,12 +338,12 @@ msgstr "Non associata"
 #. Default: "Use the table below to create, clear and edit operation parameters. If you clear the ruleset-specific parameters for a given operation, it will fall back on the global operation parameters."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:574
 msgid "help_operation_parameters"
-msgstr ""
+msgstr "Utilizzare la tabella sottostante per creare, eliminare e modificare i parametri delle operazioni. Se si eliminano i parametri specifici di una regola per una data operazione, la regola ritornerà ai propri parametri globali."
 
 #. Default: "If you have enabled purging, Plone can automatically purge the views of content items when they are modified or removed. Select the types to automatically purge below. <strong>Note:</strong> although a content items's view can be purged easily, it is not always possible to purge every page where that item may appear. Items that appear in dynamic listings (such as <em>Collection</em> portlets), the navigation tree and other navigational aids may appear out of date if you have cached the pages where those items would appear."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:199
 msgid "help_purged_content_types"
-msgstr ""
+msgstr "Se è stato abilitato lo svuotamento, Plone può automaticamente svuotare le viste dei contenuti quando vengono modificati o rimossi. Selezionare qui sotto i tipi da svuotare automaticamente. <strong>Nota:</strong> anche se la vista di un contenuto può essere svuotata facilmente, non è sempre possibile svuotare ogni pagina in cui quel contenuto potrebbe apparire. I contenuti che compaiono in liste dinamiche (come ad esempio le portlet <em>Collezione</em>), nel albero di navigazione o in altri aiuti alla navigazione potrebbero apparire scaduti se sono state memorizzate le pagine dove questi contenuti appaiono."
 
 #. Default: "Enable this option if you have configured a caching proxy in front of Plone, and the proxy supports HTTP <code>PURGE</code> requests."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:161
@@ -378,37 +378,37 @@ msgstr "Seleziona questa opzione per attendere per il completamento della rimozi
 #. Default: "<p> Legacy page templates defined in the <em>portal_skins</em> tool in the ZMI, or created or customised through the web cannot be associated with rulesets in the usual way. There are two options: </p> <ul> <li>If the template is the <em>default type</em> of a content type it is possible to associate the type class or an interface it provides with a ruleset.</li> <li>You can also associate a specific page template (by name) or content type with a ruleset using the options below.</li> </ul> <p> <strong>Note:</strong> By default, folder-like content types are associated with the ruleset <code>plone.content.folderView</code>, and item-like content types are associated with the ruleset <code>plone.content.itemView</code>. Any settings entered below or set via an explicit cache ruleset (in a ZCML file) will override these defaults. </p> <p> <strong>Note:</strong> You can only use each template name or content type once! </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:460
 msgid "help_template_mappings"
-msgstr ""
+msgstr "<p> I vecchi page templates definiti nello strumento <em>portal_skins</em> nella ZMI, sia creati sia modificati 'through the web' non possono essere associati alle regole nel modo usuale. Ci sono due alternative: </p><ul><li> se il template è il <em>tipo predefinito</em> del tipo di contenuto allora è possibile associare il tipo di classe o l'interfaccia che fornisce alla regola.</li><li> Si può anche associare uno specifico page template (per nome) o un tipo di contenuto ad una regola usando l'opzione sottostante.</li></ul><p><strong>Nota:</strong> in maniera predefinita, i contenuti contenitori (come le cartelle) vengono associati con la regola <code>plone.content.folderView</code>, e i contenuti semplici a <code>plone.content.itemView</code>. Qualsiasi impostazione inserita qui sotto o impostata con una esplicita regola di cache (in un file ZCML) sovrascriverà questo comportamento. </p><p><strong>Nota:</strong> è possibile utilizzare ogni nome di template o tipo di contenuto una sola volta! </p>"
 
 #. Default: "Enter URLs to purge, one per line, below. You can either enter a full URL including a domain, or a path relative to the site root, starting with a <em>/</em>."
 #: plone.app.caching/plone/app/caching/browser/purge.pt:87
 msgid "help_urls"
-msgstr ""
+msgstr "Inserire sotto gli URL da svuotare, uno per linea. Si può inserire sia un URL comprensivo del dominio sia un path relativo alla radice del sito facendolo iniziare con <em>/</em>."
 
 #. Default: "Enable this if you are using virtual hosting with Zope's VirtualHostMonster and you perform URL rewriting (to incorporate the special virtual hosting tokens such as <code>VirtualHostBase</code> and <code>VirtualHostRoot</code> in the URL) <em>before</em> the request is passed to the caching proxy, e.g. in an Apache web server that receives requests and passes them on to a Varnish caching proxy. Disable this option if you are not using virtual hosting, or if the caching proxy is in front of whatever performs the rewrite (or is itself performing the rewrites), disable this option."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:235
 msgid "help_virtual_hosting"
-msgstr ""
+msgstr "Abilitare questo se si sta utilizzando l'hosting virtuale con il VirtualHostMonster di Zope e vengono applicate delle riscritture di URL (per incorporare gli speciali token del hosting virtual come <code>VirtualHostBase</code> e <code>VirtualHostRoot</code> nell'URL) <em>prima</em> che la richiesta sia passata al proxy di caching, ad es. nel web server Apache che riceve le richieste e le passa al proxy di caching Varnish. Disabilitare questa opzione se non si sta utilizzando l'hosting virtuale, o se il proxy di caching è davanti a chi applica le riscritture (o se lui stesso applica le riscritture)."
 
 #. Default: "Entries"
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:77
 msgid "label_cache_entries"
-msgstr ""
+msgstr "Risorse"
 
 #. Default: "Hits"
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:74
 msgid "label_cache_hits"
-msgstr ""
+msgstr "Accessi"
 
 #. Default: "Key"
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:73
 msgid "label_cache_key"
-msgstr ""
+msgstr "Chiave"
 
 #. Default: "Misses"
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:75
 msgid "label_cache_misses"
-msgstr ""
+msgstr "Saltati"
 
 #. Default: "Size (bytes)"
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:76
@@ -418,7 +418,7 @@ msgstr "Dimensione (bytes)"
 #. Default: "Caching proxies"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:174
 msgid "label_caching_proxies"
-msgstr ""
+msgstr "Proxyies di caching"
 
 #. Default: "Enable GZip compression"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:120
@@ -482,7 +482,7 @@ msgstr "Intervallo di rimozione"
 #. Default: "Maximum age of entries in the cache"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:343
 msgid "label_ram_max_age"
-msgstr ""
+msgstr "Tempo limite di permanenza delle risorse nella cache"
 
 #. Default: "Maximum entries in the cache"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:320
@@ -494,12 +494,12 @@ msgstr "Massimo numero di oggetti nella cache"
 #: plone.app.caching/plone/app/caching/browser/import.pt:33
 #: plone.app.caching/plone/app/caching/browser/purge.pt:33
 msgid "label_ramcache"
-msgstr ""
+msgstr "RAM cache"
 
 #. Default: "per-ruleset parameters"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:629
 msgid "label_ruleset"
-msgstr ""
+msgstr "parametri specifici per la regola"
 
 #. Default: "Change settings"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:34
@@ -543,7 +543,7 @@ msgstr "Le riscritture del Virtual Host avvengono prima del proxy di caching"
 #. Default: "Caching proxies"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:136
 msgid "legend_caching_proxies"
-msgstr ""
+msgstr "Proxies di caching"
 
 #. Default: "Detailed settings"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:543
