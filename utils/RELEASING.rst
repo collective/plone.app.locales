@@ -20,7 +20,7 @@ Verify there is no error in the po files::
 
     cd plone/app/locales/locales/
     svn up
-    for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
+    for po in `find . -name "*.po"` ; do msgfmt --no-hash -o `dirname $po`/`basename $po .po`.mo $po; done
 
 
 Release
@@ -79,7 +79,7 @@ Then::
 
     cd plone/app/locales/locales/  # For Plone 3
     cd plone/app/locales/  # For Plone 4
-    for po in `find . -name "*.po"` ; do msgfmt -o `dirname $po`/`basename $po .po`.mo $po; done
+    for po in `find . -name "*.po"` ; do msgfmt --no-hash -o `dirname $po`/`basename $po .po`.mo $po; done
 
     cd -
     python setup.py mregister --strict sdist --formats=zip mupload
