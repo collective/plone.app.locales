@@ -28,15 +28,15 @@ msgstr "Kokonaisluku on pakollinen."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:243
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
-msgstr ""
+msgstr "Tallenna sekä selaimen että proxyn välimuistiin (oletus: 24 tuntia). Huomioitavaa: Käytä vain sellaisille resursseille, jotka eivät muutu ilman URL:n muuttumista tai joiden ei tarvitse välttämättä olla koko ajan ajantasalla."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:216
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires. "
-msgstr ""
+msgstr "Tallenna selaimen välimuistiin, mutta vanhenna välittömästi (sama kuin 'heikko välimuistin käyttö') ja tallenna välimuistiproxyyn (oletus: 24 tuntia). Käytä tyhjennystä (purge) tukevaa välimuistiproxyä saadaksesi parhaan tuloksen. Huomioitavaa: Sivusto saattaa näyttää vanhentuneita resursseja kunnes välimuistiin tallennettu tieto vanhentuu, jos välimuistiproxyä ei voi tyhjentää tai konfiguroida poistamaan 's-maxage' avainta vastauksesta (response)."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:189
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True. "
-msgstr ""
+msgstr "Tallenna selaimen välimuistiin, mutta vanhenna välittömästi ja ota käyttöön 304 vastaukset seuraaville kutsuille (request). Jos Last-Modified tieto on riittämätön varmistamaan tulosten ajantasaisuus, ota käyttöön ETag tarkistus listaamalla jokaisen ETag komponentin joiden perusteella ETag otsikko luodaan. Tallentaaksesi julkiset vastaukset Zope:n muistiin, ota RAM välimuisti käyttöön. "
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:602
 msgid "Cache purged."
@@ -58,7 +58,7 @@ msgstr "Muutokset tallennettu."
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:221
 msgid "Content type ${contentType} is already mapped to the rule ${ruleset}."
-msgstr ""
+msgstr "Sisältötyyppi ${contentType} on jo yhdistetty sääntöön ${ruleset}."
 
 #: plone.app.caching/plone/app/caching/interfaces.py:54
 msgid "Content type name"
@@ -86,7 +86,7 @@ msgstr "Muokkaa ${operation} asetuksia"
 
 #: plone.app.caching/plone/app/caching/browser/edit.py:210
 msgid "Edit ${operation} options for Ruleset: ${ruleset}"
-msgstr ""
+msgstr "Muokkaa ${operation} asetuksia sääntöjoukolle: ${ruleset}"
 
 #: plone.app.caching/plone/app/caching/browser/edit.py:235
 msgid "Edit cancelled."
@@ -130,7 +130,7 @@ msgstr "Maltillinen välimuistin käyttö"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:519
 msgid "No URLs or paths entered."
-msgstr ""
+msgstr "URL:ia tai polkua ei annettu."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:290
 msgid "No caching"
@@ -138,11 +138,11 @@ msgstr "Älä käytä välimuistia"
 
 #: plone.app.caching/plone/app/caching/interfaces.py:47
 msgid "Page template name"
-msgstr ""
+msgstr "Sivupohjan nimi"
 
 #: plone.app.caching/plone/app/caching/interfaces.py:45
 msgid "Page template/ruleset mapping"
-msgstr ""
+msgstr "Sivupohjan/sääntöjoukon yhdistäminen"
 
 #: plone.app.caching/plone/app/caching/browser/purge.pt:122
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:94
@@ -151,15 +151,15 @@ msgstr "Tyhjennä"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:595
 msgid "RAM cache not installed."
-msgstr ""
+msgstr "RAM välimuistia ei ole asennettu."
 
 #: plone.app.caching/plone/app/caching/interfaces.py:68
 msgid "Request variables"
-msgstr ""
+msgstr "Kutsun (request) muuttujat"
 
 #: plone.app.caching/plone/app/caching/interfaces.py:66
 msgid "Request variables that prevent caching"
-msgstr ""
+msgstr "Kutsun (request) muuttujat, jotka estävät välimuistiin tallennuksen"
 
 #: plone.app.caching/plone/app/caching/interfaces.py:48
 msgid "Ruleset name"
@@ -184,11 +184,11 @@ msgstr "Sivupohja ${template} on jo yhdistetty sääntöön ${ruleset}."
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:293
 msgid "There were errors."
-msgstr ""
+msgstr "Tapahtui virhe."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:71
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
-msgstr ""
+msgstr "Tämän operaation aikana kaikkia standardeja välimuistin funktiota voidaan suorittaa valinnaisten parametrien asetusten kautta. Useimmissa tapauksissa on todennäköisesti helpompaa käyttää yksinkertaisempia operaatioita (vahva välimuistin käyttä, maltillinen välimuistin käyttö, heikko välimuistin käyttö tai älä käytä välimuistia)."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:291
 msgid "Use this operation to keep the response out of all caches."
@@ -209,7 +209,7 @@ msgstr "Valitse tuotava profiili."
 #. Default: "If you have enabled a caching proxy, it may end up caching objects which are no longer current. Plone will attempt to automatically purge objects when they change, but if you are seeing stale objects in your cache, you can purge them manually below."
 #: plone.app.caching/plone/app/caching/browser/purge.pt:63
 msgid "description_cache_purging"
-msgstr ""
+msgstr "Jos olet ottanyt käyttöön välimuistiproxyn, voit saada välimuistista objekteja, jotka eivä ole ajantasaisia. Plone yrittää automaattisesti tyhjentää muuttuneita objekteja välimuistista. Jos tästä huolimatta näet vanhentuneita objekteja välimuistissa, voit tyhjentää ne manuaalisesti alla."
 
 #. Default: "Control how pages, images, style sheets and other resources are cached."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:79
@@ -224,17 +224,17 @@ msgstr "Valitse alla olevasta listasta profiili, jonka välimuistiasetukset halu
 #. Default: "High-performance sites will often place a caching reverse proxy such as Varnish or Squid in front of Zope. The caching operations configured elsewhere on this screen can often take advantage of such a proxy by instructing it to cache certain content in a certain way, whilst passing requests for other content through to Plone always. Plone can also send so-called <code>PURGE</code> requests to a caching proxy when content changes, reducing the risk of a stale response from a cached copy."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:140
 msgid "description_caching_proxies"
-msgstr ""
+msgstr "Suorituskykyiset sivustot asettavat usein välimuistiproxyn (esim. Varnish tai Squid) Zopen edustalle. Muualla määritellyt välimuistioperaatiot käyttävät sitä hyödykseen tallentamalla tietyn sisällön välimuistiin ja ohjaamalla kutsut (request) toiseen sisältöön suoraan Plonelle. Plone voi myös lähettää niinsanotun <code>PURGE</code> kutsun välimuistiproxylle, kun sisältö muuttuu vähentäen riskiä saada vanhentuneita vastauksia välimuistissa olevasta kopiosta."
 
 #. Default: "<p> Many caching operations accept parameters to influence their behaviour. For example, an operation which returns a page cached in RAM may accept a parameter specifying the timeout period before pages are re-calculated. Most operations, however, will have \"sensible defaults\", so that they work acceptably even when no parameters have been set. Note also that not all operations support parameters. </p> <p> Parameters can be set at two levels. By default, parameters apply to all uses of particular operation. Thus, if you have assigned an operation to more than one ruleset, the <em>same</em> parameters will be used. However, you can also override the parameters for a particular ruleset. </p> <p> Use the table below to access parameters for a particular operation or ruleset. <strong>Warning:</strong> If you have made changes elsewhere in this form, you should save them before configuring any operation parameters. Otherwise, you will lose your changes. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:547
 msgid "description_detailed_settings"
-msgstr ""
+msgstr "<p> Monet välimuistioperaatiot hyväksyvät parametrejä jotka vaikuttavat niiden käytökseen. Esimerkiksi operaatio, joka palauttaa muistiin tallennetun sivun voi hyväksyä parametrina aikajakson, jonka jälkeen sivu päivitetään välimuistiin uudelleen. Useimmilla operaatioilla on yleensä \"järkevät oletusarvot\", jotta ne toimisivat hyväksyttävästi vaikka mitään parametrejä ei olisi asetettu. Huomaa myös, että kaikki operaatiot eivät tue parametrejä. </p> <p> Parametrejä voidaan asettaa kahdella tasolla. Oletuksena parametrit koskevat tietyn operaation kaikkia käyttökertoja. Jos olet asettanut operaation useammalle kuin yhdelle sääntöjoukolle, <em>samaa</em> parametriä käytetään kaikissa. Voit kuitenkin ylikirjoittaa parametrit yksittäisille sääntöjoukoille. </p> <p> Käytä alla olevaa taulukkoa päästäksesi käsiksi tietyn operaation tai sääntöjoukon parametreihin. <strong>Varoitus:</strong> Tallenna muualla tässä lomakkeessa tekemäsi muutokset ennen operaatioiden parametrien määrittelyä. Muussa tapauksessa tekemäsi muutokset menetetään. </p>"
 
 #. Default: "<p> Caching can be controlled by mapping <em>rulesets</em> to <em>caching operations</em>. </p> <p> A <strong>ruleset</strong> is a name given to a resource published by Plone, such as a view. Rulesets are declared by the developers who write those views. You can think of them as a way to give hints about how something should be cached, without actually implementing the caching operations. </p> <p> The exact caching operations to use are mapped to rulesets in the table below. Caching operations will often set response headers to tell the users's web browser and/or a caching proxy how to cache content. They may also intercept a response to return a cached copy or instruct the browser to use its own cached copy, if it is considered to be current. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:395
 msgid "description_mappings"
-msgstr ""
+msgstr "<p> Välimuistin käyttöä voidaan hallita yhdistämällä <em>sääntöjoukkoja</em> <em>välimuisioperaatioihin</em>. </p> <p><strong>Sääntöjoukko</strong> on tietylle Plonen julkaisemalle resurssille annettu nimi (esim. näkymä). Sääntöjoukot määrittelee näiden näkymien kehittäjät. Niitä voidaan pitää tapana antaa vinkkejä miten jokin pitäisi tallentaa välimuistiin ilman välimuistioperaatioiden varsinaista toteuttamista. </p> <p> Käytettävät välimuistioperaatiot yhdistetään sääntöjoukkoon alla olevassa taulukossa. Välimuistioperaatiot asettavat usein vastaukseen (response) otsikkotiedon kertoakseen käyttäjän www-selaimelle ja/tai välimuistiproxylle miten sisältö tallennetaan välimuistiin. Ne voivat myös keskeyttää vastauksen palauttaakseen välimuistiin tallennetun kopion ohjatakseen selainta käyttämään sen omassa välimuistissa olevaa kopiota, jos se on vainajantasainen."
 
 #. Default: "The following items were purged:"
 #: plone.app.caching/plone/app/caching/browser/purge.pt:73
@@ -244,7 +244,7 @@ msgstr "Seuraavat kohteet tyhjennettiin:"
 #. Default: "Plone maintains a cache of certain pages and fragments of pages in memory to speed up rendering. Certain caching operations, when mapped, can be used to place entire pages into the RAM cache. Using the RAM cache may allow you to gain some speed (and reduce CPU usage), at the cost of using more memory. Note that the default RAM cache is shared among threads in the same Zope instance, but is not shared between Zope instances. Thus, if you are running a multi-instance ZEO setup, you may find it more efficient to segment your users using a front-end load balancer so that they always reach the same back-end instance. As an alternative, you can integrate a shared cache such as <em>memcached</em>. See the documentation for details."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:296
 msgid "description_ram"
-msgstr ""
+msgstr "Plone ylläpitää tiettyjä sivuja tai osia sivuista välimuistissa nopeuttaakseen sivujen näyttämistä. Tietyt välimuistioperaatiot yhdistettynä sääntöjoukkoon mahdollistavat kokonaisten sivujen asettamisen RAM välimuistiin. Käyttämällä RAM välimuistia voit nopeuttaa sivujen latautumista (ja vähentää CPU kuormaa), mutta samalla muistin kulutus kasvaa. Huomaa, että oletuksena käytössä oleva RAM välimuisti on jaettu säikeiden kesken samassa Zope-instanssissa, mutta ei Zope-instanssien kesken. Jos käytät ZEO:a useamman instanssin kesken on todennäköisesti edullisempaa käyttää edustalla kuorman tasaajaa osioimaan käyttäjiä niin, että ne päätyvät aina saman instanssiin. Vaihtoehtoisesti voit ottaa käyttöön jaetun välimuistin, kuten <em>memcached</em>:n. Katso lisätietoja dokumentaatiosta."
 
 #. Default: "The table below shows statistics for the default RAM cache. You can use the <em>Purge</em> button to manually clear the cache if you suspect there are stale items there."
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:63
@@ -309,7 +309,7 @@ msgstr "Ota tämä käyttöön pakataksesi sisällön ennen sen lähettämistä 
 #. Default: "<p> If you have enabled <em>Virtual host rewriting takes place front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com</code> vs. <code>http://www.example.com</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:257
 msgid "help_domains"
-msgstr ""
+msgstr "<p> Jos olet ottanut käyttöön <em>Virtuaalisen isännän uudelleenkirjaus tapahtuu ennen välimuistiproxyä</em> asetuksen yllä ja sivustosi on saavutettavissa useamman domainin kautta (esim. <code>http://example.com</code> vs. <code>http://www.example.com</code>, kirjoita kaikki käytössä olevat domainit alle omalle rivilleen. Tällä varmistetaan, että välimuistin tyhjennyspyynnöt lähetetään jokaiselle domainille. Huomaa, että on tehokkaampaa konfiguroida edustalla oleva www-palvelin yksinkertaisesti ohjaamaan kaikki pyynnöt yhdelle domainille niin, että Zope näkee vain yhden domainin. </p> <p> Tämä lista voidaan jättää tyhjäksi, jos et käytä virtuaalista hostausta, jos virtuaalisen isännän uudelleenkirjaus tapahtuu välimuistiproxyn jälkeen, tai jos sinulla on vain yksi virtuaalisesti hostattu domain-nimi. </p>"
 
 #. Default: "If this option is disabled, no caching will take place."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:106
@@ -334,12 +334,12 @@ msgstr "Ei yhdistetty"
 #. Default: "Use the table below to create, clear and edit operation parameters. If you clear the ruleset-specific parameters for a given operation, it will fall back on the global operation parameters."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:574
 msgid "help_operation_parameters"
-msgstr ""
+msgstr "Käytä alla olevaa taulukkoa luodaksesi, tyhjentääksesi ja muokataksesi operaation parametrejä. Jos tyhjennät sääntöjoukko-kohtaiset parametrit tietylle operaatiolle käytetään sen sijaan yleisiä parametrejä."
 
 #. Default: "If you have enabled purging, Plone can automatically purge the views of content items when they are modified or removed. Select the types to automatically purge below. <strong>Note:</strong> although a content items's view can be purged easily, it is not always possible to purge every page where that item may appear. Items that appear in dynamic listings (such as <em>Collection</em> portlets), the navigation tree and other navigational aids may appear out of date if you have cached the pages where those items would appear."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:199
 msgid "help_purged_content_types"
-msgstr ""
+msgstr "Jos olet ottanut tyhjennyksen käyttöön, Plone voi automaattisesti tyhjentää sisältötyyppien näkymät, kun niitä muokataan tai poistetaan. Valitse automaattisesti tyhjennettävät tyypit alta. <strong>Huomaa:</strong> vaikka sisältötyyppien näkymät voidaan tyhjentää välimuistista helposti, aina ei ole mahdollista tyhjentää jokaista sivua jossa tämä näkymä esiintyy."
 
 #. Default: "Enable this option if you have configured a caching proxy in front of Plone, and the proxy supports HTTP <code>PURGE</code> requests."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:161
