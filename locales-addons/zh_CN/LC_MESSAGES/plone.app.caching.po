@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plone.app.caching\n"
 "POT-Creation-Date: 2010-08-06 20:53+0000\n"
-"PO-Revision-Date: 2011-07-31 22:06+0800\n"
+"PO-Revision-Date: 2011-08-17 17:26+0800\n"
 "Last-Translator: Jian Aijun <jianaijun@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -30,12 +30,12 @@ msgstr "必须是一个整数。"
 
 #: plone.app.caching/plone/app/caching/operations/default.py:243
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
-msgstr "在浏览器和代理中缓存（默认： 24 小时）。注意： 仅用于不改变其URL而永久不会改变的稳定的资源,或者临时失效也不会有重要影响的资源。"
+msgstr "在浏览器和代理中缓存（默认： 24 小时）。注意： 仅用于永久不会改变其URL的稳定资源,或者临时失效也不会有重要影响的资源。"
 
 #: plone.app.caching/plone/app/caching/operations/default.py:216
 #, fuzzy
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires. "
-msgstr "在浏览器中的缓存但立即过期（等同于'低等级缓存'），和代理服务器中的缓存 （默认： 24 小时）。使用 purgable 缓存反向代理以取得最佳效果。警告： 如果代理服务器不能被清除，或者不能配置为从响应删除 's-maxage' 标记，然后陈旧的响应可能会被看到，直到缓存项过期。"
+msgstr "在浏览器中的缓存但立即过期（等同于'低级缓存'），和代理服务器中的缓存 （默认： 24 小时）。使用 purgable 缓存反向代理以取得最佳效果。警告： 如果代理服务器不能被清除，或者不能配置为从响应删除 's-maxage' 标记，然后陈旧的响应可能会被看到，直到缓存项过期。"
 
 #: plone.app.caching/plone/app/caching/operations/default.py:189
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True. "
@@ -81,7 +81,7 @@ msgstr "删除设置（使用默认值）"
 
 #: plone.app.caching/plone/app/caching/interfaces.py:38
 msgid "Determine whether GZip compression should be enabled for standard responses"
-msgstr "决定是否应启用 GZip 压缩，对于标准响应应该启用"
+msgstr "决定是否应启用 GZip 压缩，对于标准响应该启用"
 
 #: plone.app.caching/plone/app/caching/browser/edit.py:214
 msgid "Edit ${operation} options"
@@ -129,7 +129,7 @@ msgstr "映射皮肤层页面模板名称到规则集名称"
 
 #: plone.app.caching/plone/app/caching/operations/default.py:215
 msgid "Moderate caching"
-msgstr "中等级缓存"
+msgstr "中级缓存"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:519
 msgid "No URLs or paths entered."
@@ -179,11 +179,11 @@ msgstr "保存"
 
 #: plone.app.caching/plone/app/caching/operations/default.py:242
 msgid "Strong caching"
-msgstr "高等级缓存"
+msgstr "高级缓存"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:249
 msgid "Template ${template} is already mapped to the rule ${ruleset}."
-msgstr ""
+msgstr "模板 ${template} 已经映射到规则 ${ruleset} 。"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:293
 msgid "There were errors."
@@ -203,7 +203,7 @@ msgstr ""
 
 #: plone.app.caching/plone/app/caching/operations/default.py:188
 msgid "Weak caching"
-msgstr "低等级缓存"
+msgstr "低级缓存"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:476
 msgid "You must select a profile to import."
@@ -222,7 +222,7 @@ msgstr "控制如何缓存 页面、图像、样式表和其它资源。"
 #. Default: "Choose a profile below to import cache settings. Additional profiles may be installed by third party products. <strong>Warning:</strong> This may overwrite existing settings."
 #: plone.app.caching/plone/app/caching/browser/import.pt:63
 msgid "description_caching_ipmort"
-msgstr ""
+msgstr "从下面选择一个配置文件导入缓存设置。其他配置文件可以通过第三方产品安装。<strong>警告：</strong> 这可能会覆盖现有设置。"
 
 #. Default: "High-performance sites will often place a caching reverse proxy such as Varnish or Squid in front of Zope. The caching operations configured elsewhere on this screen can often take advantage of such a proxy by instructing it to cache certain content in a certain way, whilst passing requests for other content through to Plone always. Plone can also send so-called <code>PURGE</code> requests to a caching proxy when content changes, reducing the risk of a stale response from a cached copy."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:140
@@ -242,7 +242,7 @@ msgstr ""
 #. Default: "The following items were purged:"
 #: plone.app.caching/plone/app/caching/browser/purge.pt:73
 msgid "description_purged"
-msgstr ""
+msgstr "下列条目已被清除："
 
 #. Default: "Plone maintains a cache of certain pages and fragments of pages in memory to speed up rendering. Certain caching operations, when mapped, can be used to place entire pages into the RAM cache. Using the RAM cache may allow you to gain some speed (and reduce CPU usage), at the cost of using more memory. Note that the default RAM cache is shared among threads in the same Zope instance, but is not shared between Zope instances. Thus, if you are running a multi-instance ZEO setup, you may find it more efficient to segment your users using a front-end load balancer so that they always reach the same back-end instance. As an alternative, you can integrate a shared cache such as <em>memcached</em>. See the documentation for details."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:296
@@ -256,9 +256,8 @@ msgstr "下表显示了默认的 RAM 缓存的统计信息。如果怀疑有陈�
 
 #. Default: "Import caching profiles"
 #: plone.app.caching/plone/app/caching/browser/import.pt:53
-#, fuzzy
 msgid "heading_caching_import"
-msgstr "导入缓存配置"
+msgstr "导入缓存配置文件"
 
 #. Default: "Purge caching proxy"
 #: plone.app.caching/plone/app/caching/browser/purge.pt:53
@@ -273,12 +272,12 @@ msgstr "缓存设置"
 #. Default: "Content types"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:491
 msgid "heading_content_types"
-msgstr ""
+msgstr "内容类型"
 
 #. Default: "Operation"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:427
 msgid "heading_operation"
-msgstr ""
+msgstr "操作"
 
 #. Default: "Status"
 #: plone.app.caching/plone/app/caching/browser/purge.pt:72
@@ -368,7 +367,7 @@ msgstr ""
 #. Default: "This allows rollback to a previous state via the <em>portal_setup</em> tool."
 #: plone.app.caching/plone/app/caching/browser/import.pt:114
 msgid "help_snapshot"
-msgstr ""
+msgstr "允许回滚到以前的状态，通过 <em> portal_setup </em> 工具。"
 
 #. Default: "Select this option to wait while the purge completes. This allows you to see the results of the purges. Purging asynchronously will return immediately, but you will need to check your caching proxy's log files to see if the purge actually succeeded."
 #: plone.app.caching/plone/app/caching/browser/purge.pt:112
@@ -393,7 +392,7 @@ msgstr ""
 #. Default: "Entries"
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:77
 msgid "label_cache_entries"
-msgstr ""
+msgstr "条目"
 
 #. Default: "Hits"
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:74
@@ -438,7 +437,7 @@ msgstr "启用缓存"
 #. Default: "global parameters"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:614
 msgid "label_global"
-msgstr ""
+msgstr "全局参数"
 
 #. Default: "Import settings"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:39
@@ -450,17 +449,17 @@ msgstr "导入设置"
 #. Default: "Ruleset mappings"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:417
 msgid "label_mappings"
-msgstr ""
+msgstr "规则集映射"
 
 #. Default: "Operation parameters"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:573
 msgid "label_operation_parameters"
-msgstr ""
+msgstr "操作参数"
 
 #. Default: "Content types to purge"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:198
 msgid "label_purged_content_types"
-msgstr ""
+msgstr "要清除的内容类型"
 
 #. Default: "Purge caching proxy"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:44
@@ -472,7 +471,7 @@ msgstr ""
 #. Default: "Enable purging"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:160
 msgid "label_purging_enabled"
-msgstr ""
+msgstr "启用清除"
 
 #. Default: "Cleanup interval"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:366
@@ -482,12 +481,12 @@ msgstr "清理间隔"
 #. Default: "Maximum age of entries in the cache"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:343
 msgid "label_ram_max_age"
-msgstr ""
+msgstr "在缓存中的条目的最大生存期"
 
 #. Default: "Maximum entries in the cache"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:320
 msgid "label_ram_max_entries"
-msgstr ""
+msgstr "在缓存中的最大条目数"
 
 #. Default: "RAM cache"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:49
@@ -511,7 +510,7 @@ msgstr "更改设置"
 #. Default: "Take a snapshot of the site prior to importing new setting."
 #: plone.app.caching/plone/app/caching/browser/import.pt:110
 msgid "label_snapshot"
-msgstr ""
+msgstr "导入新的设置之前，做一个网站快照。"
 
 #. Default: "Purge synchronously"
 #: plone.app.caching/plone/app/caching/browser/purge.pt:109
