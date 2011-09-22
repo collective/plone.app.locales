@@ -82,7 +82,7 @@ Then::
     for po in `find . -name "*.po"` ; do msgfmt --no-hash -o `dirname $po`/`basename $po .po`.mo $po; done
 
     cd -
-    python setup.py mregister --strict sdist --formats=zip mupload
+    python setup.py register sdist --formats=zip upload
 
 Update plone.app.locales version in versions.cfg and etc/versions in
 plonenext/3.3.
