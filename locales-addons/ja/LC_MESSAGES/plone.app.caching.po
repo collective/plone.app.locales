@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone.app.caching\n"
-"POT-Creation-Date: 2010-08-06 20:53+0000\n"
+"POT-Creation-Date: 2011-11-18 21:00+0000\n"
 "PO-Revision-Date: 2010-08-13 00:43+0900\n"
 "Last-Translator: Takeshi Yamamoto (Retsu) <tyam@mac.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -47,12 +47,12 @@ msgid "Caching"
 msgstr "キャッシング"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:648
-#: plone.app.caching/plone/app/caching/browser/edit.py:233
+#: plone.app.caching/plone/app/caching/browser/edit.py:232
 msgid "Cancel"
 msgstr "取り消す"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:312
-#: plone.app.caching/plone/app/caching/browser/edit.py:230
+#: plone.app.caching/plone/app/caching/browser/edit.py:229
 msgid "Changes saved."
 msgstr "変更が保存されました"
 
@@ -72,7 +72,7 @@ msgstr "コンテンツタイプ／ルールセットのマッピング"
 msgid "Content types to purge"
 msgstr "キャッシュをパージするコンテンツタイプ"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:239
+#: plone.app.caching/plone/app/caching/browser/edit.py:238
 msgid "Delete settings (use defaults)"
 msgstr "削除設定（デフォルトを使う）"
 
@@ -80,15 +80,15 @@ msgstr "削除設定（デフォルトを使う）"
 msgid "Determine whether GZip compression should be enabled for standard responses"
 msgstr "標準レスポンスでGZip圧縮を有効にすべきかどうかを決めます"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:214
+#: plone.app.caching/plone/app/caching/browser/edit.py:213
 msgid "Edit ${operation} options"
 msgstr "${operation} オプションを編集する"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:210
+#: plone.app.caching/plone/app/caching/browser/edit.py:209
 msgid "Edit ${operation} options for Ruleset: ${ruleset}"
 msgstr "${ruleset} ルールセットの ${operation} オプションを編集する"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:235
+#: plone.app.caching/plone/app/caching/browser/edit.py:234
 msgid "Edit cancelled."
 msgstr "編集は取り消されました"
 
@@ -100,6 +100,10 @@ msgstr "GZip圧縮を有効にする"
 msgid "Generic caching"
 msgstr "包括的キャッシング"
 
+#: plone.app.caching/plone/app/caching/configure.zcml
+msgid "HTTP caching support"
+msgstr ""
+
 #: plone.app.caching/plone/app/caching/browser/import.pt:121
 msgid "Import"
 msgstr "インポート"
@@ -107,6 +111,10 @@ msgstr "インポート"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:493
 msgid "Import complete."
 msgstr "インポートが完了しました"
+
+#: plone.app.caching/plone/app/caching/configure.zcml
+msgid "Installs plone.app.caching"
+msgstr ""
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:259
 msgid "Invalid URL: ${url}"
@@ -165,12 +173,12 @@ msgstr "キャッシングを妨げるリクエスト変数"
 msgid "Ruleset name"
 msgstr "ルールセット名"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:247
+#: plone.app.caching/plone/app/caching/browser/edit.py:246
 msgid "Ruleset-specific settings removed."
 msgstr "ルールセットに固有の設定が取り除かれました"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:641
-#: plone.app.caching/plone/app/caching/browser/edit.py:223
+#: plone.app.caching/plone/app/caching/browser/edit.py:222
 msgid "Save"
 msgstr "保存"
 
@@ -306,10 +314,10 @@ msgstr "キャッシングプロキシそれぞれのドメイン名を入力し
 msgid "help_compression_enabled"
 msgstr "もしサポートされているなら、コンテンツをクライアントに送る前にコンテンツを圧縮するためにこれを有効にします。（ほとんどすべての現代的なWebブラウザはGZip圧縮をサポートします。）圧縮はサーバにわずかに多く負荷をかけますが、ネットワーク越しに送られなければならないデータの量を減らすことで、エンドユーザにサイトが早く見えるようなります。"
 
-#. Default: "<p> If you have enabled <em>Virtual host rewriting takes place front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com</code> vs. <code>http://www.example.com</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
+#. Default: "<p> If you have enabled <em>Virtual host rewriting takes place front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:257
 msgid "help_domains"
-msgstr "<p> 上記で <em>バーチャルホストの書き換えはキャッシングプロキシの前で起きる</em> を有効にし、さらにサイトは複数ドメイン経由で到達可能（たとえば、<code>http://example.com</code> と <code>http://www.example.com</code>）であれば、すべての利用可能なドメインをここに１行に１つずつ入力します。これはパージリクエストが該当するすべてのドメインに確実に送られるようにするためです。Zopeがひとつのドメインを「見る」だけですむように、すべてのリクエストを１つのドメインに単純にリダイレクトするように最前面のウェブサーバを設定するほうががより効率的であることは知っておいてください。</p> <p> キャッシングプロキシを使わないのなかったり、バーチャルホスティングを使わなかったり、バーチャルホスト書き換えがキャッシングプロキシの後方で起きたり、あるいはたった１つのバーチャルホストされたドメイン名しか持っていなければ、このリストを空白のままにしておくのが安全です。</p>"
+msgstr "<p> 上記で <em>バーチャルホストの書き換えはキャッシングプロキシの前で起きる</em> を有効にし、さらにサイトは複数ドメイン経由で到達可能（たとえば、<code>http://example.com:80</code> と <code>http://www.example.com:80</code>）であれば、すべての利用可能なドメインをここに１行に１つずつ入力します。これはパージリクエストが該当するすべてのドメインに確実に送られるようにするためです。Zopeがひとつのドメインを「見る」だけですむように、すべてのリクエストを１つのドメインに単純にリダイレクトするように最前面のウェブサーバを設定するほうががより効率的であることは知っておいてください。</p> <p> キャッシングプロキシを使わないのなかったり、バーチャルホスティングを使わなかったり、バーチャルホスト書き換えがキャッシングプロキシの後方で起きたり、あるいはたった１つのバーチャルホストされたドメイン名しか持っていなければ、このリストを空白のままにしておくのが安全です。</p>"
 
 #. Default: "If this option is disabled, no caching will take place."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:106
