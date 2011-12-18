@@ -48,11 +48,11 @@ msgstr "E' richiesto un numero intero."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:243
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
-msgstr "Usa la cache nel browser e nel proxy (prefedinito: 24 ore). Attenzione: utilizzare solo per risorse stabili che non cambiano mai senza cambiare anche il proprio URL, o risorse per cui il continuo aggiornamento non è critico."
+msgstr "Usa la cache nel browser e nel proxy (predefinito: 24 ore). Attenzione: utilizzare solo per risorse stabili che non cambiano mai senza cambiare anche il proprio URL, o risorse per cui il continuo aggiornamento non è critico."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:216
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires. "
-msgstr "Usa la cache nel browser ma scade immediatamente (simile a 'Caching debole'), e la cache nel proxy (prefedinito: 24 ore). Utilizzare un reverse proxy svuotabile per migliori risultati. Attenzione: se il proxy non può essere svuotato, o non può essere configurato per rimuovere il token 's-maxage' dalla risposta, allora potrebbero essere inviate risposte obsolete fino a che la risorsa memorizzata non scadrà."
+msgstr "Usa la cache nel browser ma scade immediatamente (simile a 'Caching debole'), e la cache nel proxy (predefinito: 24 ore). Utilizzare un reverse proxy con la funzionalità di purge per migliori risultati. Attenzione: se il proxy non può essere svuotato, o non può essere configurato per rimuovere il token 's-maxage' dalla risposta, allora potrebbero essere inviate risposte obsolete fino a che la risorsa memorizzata non scadrà."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:189
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True. "
@@ -106,7 +106,7 @@ msgstr "Associazione tipo di contenuto/regola"
 
 #: plone.app.caching/plone/app/caching/interfaces.py:59
 msgid "Content types to purge"
-msgstr "Tipo di contenuto da svuotare"
+msgstr "Tipi di contenuto da svuotare"
 
 #: plone.app.caching/plone/app/caching/browser/edit.py:238
 msgid "Delete settings (use defaults)"
@@ -333,7 +333,7 @@ msgstr "Plone mantiene una cache di certe pagine e frammenti di pagine in memori
 #. Default: "The table below shows statistics for the default RAM cache. You can use the <em>Purge</em> button to manually clear the cache if you suspect there are stale items there."
 #: plone.app.caching/plone/app/caching/browser/ramcache.pt:63
 msgid "description_ramcache_stats"
-msgstr "La tabella sottostante mostra le statistiche della cache RAM predefinira. Se pensi che siano presenti oggetti obsoleti, puoi usare il pulsante <em>Svuota</em> per pulire manualmente la cache."
+msgstr "La tabella sottostante mostra le statistiche della cache RAM predefinita. Se pensi che siano presenti oggetti obsoleti, puoi usare il pulsante <em>Svuota</em> per pulire manualmente la cache."
 
 #. Default: "Import caching profiles"
 #: plone.app.caching/plone/app/caching/browser/import.pt:53
@@ -383,12 +383,12 @@ msgstr "Templates"
 #. Default: "Enter the domain name of each caching proxy, one per line. For example, if you have Varnish running on the local machine on port 1234, you could enter <code>http://localhost:1234</code>. The domain name must be reachable by the Zope process, but does not need to be reachable from users' local machines."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:175
 msgid "help_caching_proxies"
-msgstr "Inserisci il nome di dominio per ogni proxy di cachin, uno per linea. Ad esempio, se c'è un Varnish in esecuzione sulla macchina locale sulla porta 1234, inserire <code>http://localhost:1234</code>. Il nome di dominio deve essere raggiungibile dal processo Zope, ma non è necessario che sia raggiungibile dalle macchine locali degli utenti."
+msgstr "Inserisci il nome di dominio per ogni proxy di caching, uno per linea. Ad esempio, se c'è un Varnish in esecuzione sulla macchina locale sulla porta 1234, inserire <code>http://localhost:1234</code>. Il nome di dominio deve essere raggiungibile dal processo Zope, ma non è necessario che sia raggiungibile dalle macchine locali degli utenti."
 
 #. Default: "Enable this to compress content before sending it to the client, if supported. (Almost all modern web browsers support GZip compression.) Compression places marginally more load on the server, but can make the site appear faster to end users by reducing the amount of data that has to be sent over the network."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:121
 msgid "help_compression_enabled"
-msgstr "Abilita questo per comprimere il contenuto prima di inviarlo al client, se supportato. (Quasi tutti i moderni browser supportano la compressione GZip.) La compressione aggiunge un carico di lavoro marginale sul server, ma può fare sembrare il sito più veloce agli utenti riducendo la quantità di dati da inviare sulla rete."
+msgstr "Abilita la compressione del contenuto prima dell'invio al client, se supportato. (Quasi tutti i moderni browser supportano la compressione GZip.) La compressione aggiunge un carico di lavoro marginale sul server, ma riducendo la quantità di dati da inviare sulla rete può fare sembrare il sito più veloce agli utenti."
 
 #. Default: "<p> If you have enabled <em>Virtual host rewriting takes place front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:257
@@ -398,7 +398,7 @@ msgstr "<p> Se è stato selezionato <em>Le riscritture del Virtual Host avvengon
 #. Default: "If this option is disabled, no caching will take place."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:106
 msgid "help_enabled"
-msgstr "Se questa opzione è disabilitata non verrà effettuata alcun caching."
+msgstr "Se questa opzione è disabilitata non verrà effettuato alcun caching."
 
 #. Default: "Use the table below to map rulesets to caching operations."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:418
