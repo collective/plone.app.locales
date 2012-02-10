@@ -5,7 +5,7 @@ Prerelease
 ----------
 Go to plone.app.locales directory::
 
-    cd ~/svn/plone-coredev/branches/4.0/src/plone.app.locales
+    cd plone-coredev-4.2/src/plone.app.locales
 
 Prepare the release::
 
@@ -28,9 +28,9 @@ Release
 Do the release (for Plone 3.3.x, use branches/3.x instead of trunk)::
 
     svn cp https://svn.plone.org/svn/plone/plone.app.locales/trunk \
-    https://svn.plone.org/svn/plone/plone.app.locales/tags/4.0.0 -m"Tagged, I'll tag externals on next commit"
+    https://svn.plone.org/svn/collective/plone.app.locales/tags/4.0.0 -m"Tagged, I'll tag externals on next commit"
     cd /tmp
-    svn co https://svn.plone.org/svn/plone/plone.app.locales/tags/4.0.0
+    svn co https://svn.plone.org/svn/collective/plone.app.locales/tags/4.0.0
 
 You now have to pin PloneTranslations.
 
