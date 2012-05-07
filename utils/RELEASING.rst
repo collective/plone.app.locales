@@ -47,13 +47,13 @@ Go back to the parent folder::
 
 For Plone 4::
 
-    rm -rf locales-future i18n
+    rm -rf locales-future
 
 Modify the externals accordingly::
 
     vi EXTERNALS.txt
 
-You should have something like this (remove locales-future and i18n for
+You should have something like this (remove locales-future for
 Plone 4. Keep i18n for Plone 3)::
     
     locales -r88537 https://svn.plone.org/svn/collective/PloneTranslations/trunk/locales
