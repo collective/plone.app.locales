@@ -39,7 +39,7 @@ for line in result_file.xreadlines():
         po, ext = os.path.splitext(os.path.basename(path))
         domain, language = po.split('-', 1)
     else:
-        language = path.split('/')[2].replace('_', '-')
+        language = path.split('/')[-3].replace('_', '-')
         domain = os.path.splitext(os.path.basename(path))[0]
     language = language.lower()
     #print domain, language
