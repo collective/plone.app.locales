@@ -3,9 +3,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ATContentTypes\n"
-"POT-Creation-Date: 2012-09-29 12:41+0000\n"
-"PO-Revision-Date: 2011-01-27 11:01+0300\n"
-"Last-Translator: Olha <olha.pelishok@gmail.com>\n"
+"POT-Creation-Date: 2012-10-19 06:16+0000\n"
+"PO-Revision-Date: 2012-10-19 09:49+0300\n"
+"Last-Translator: Roman Kozlovskyi <krzroman@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -70,6 +70,10 @@ msgstr "6 місяців"
 msgid "Added criterion ${criterion} for field ${field}."
 msgstr "Критерій ${criterion} для поля ${field} додано."
 
+#: plone.app.event/plone/app/event/controlpanel/event.py:26
+msgid "Available timezones"
+msgstr "Доступні часові пояси"
+
 #. Default: "Between"
 #: ATContentTypes/criteria/simpleint.py:26
 msgid "Between"
@@ -96,6 +100,10 @@ msgstr "Критерій типу ${type} не додано, не працює �
 #: ATContentTypes/criteria/simpleint.py:23
 msgid "Equal to"
 msgstr "Рівний"
+
+#: plone.app.event/plone/app/event/controlpanel/event.py:41
+msgid "Event settings"
+msgstr "Налаштування події"
 
 #. image transform method name
 #. Default: "Flip around horizontal axis"
@@ -143,6 +151,10 @@ msgstr "Вдень"
 msgid "Please correct the indicated errors."
 msgstr "Будь-ласка, виправіть вказані помилки."
 
+#: plone.app.event/plone/app/event/controlpanel/event.py:14
+msgid "Portal default timezone"
+msgstr "Часовий пояс сайту за замовчуванням"
+
 #: ATContentTypes/skins/ATContentTypes/criterion_remove.cpy:25
 msgid "Removed criteria ${criteria}."
 msgstr "Критерії ${criteria} видалено."
@@ -175,6 +187,10 @@ msgstr "Порядок сортування для поля ${field} не вст
 #: ATContentTypes/skins/ATContentTypes/criterion_set_sort.cpy:20
 msgid "Sort order set on field ${field}."
 msgstr "Порядок сортування у полі ${field}."
+
+#: plone.app.event/plone/app/event/event.py:110
+msgid "Timezone"
+msgstr "Часовий пояс"
 
 #: ATContentTypes/skins/ATContentTypes/validate_remove_criterion.vpy:13
 msgid "You must first select a criterion to remove."
@@ -295,19 +311,19 @@ msgstr "Пошук не показав жодних результатів."
 
 #. Default: "End date must be after start date."
 #: ATContentTypes/content/event.py:244
-#: plone.app.event/plone/app/event/event.py:286
+#: plone.app.event/plone/app/event/event.py:309
 msgid "error_end_must_be_after_start_date"
 msgstr "Дата закінчення повинна бути після дати початку."
 
 #. Default: "End date is not valid."
 #: ATContentTypes/content/event.py:226
-#: plone.app.event/plone/app/event/event.py:268
+#: plone.app.event/plone/app/event/event.py:291
 msgid "error_invalid_end_date"
 msgstr "Дата закінчення недійсна."
 
 #. Default: "Start date is not valid."
 #: ATContentTypes/content/event.py:234
-#: plone.app.event/plone/app/event/event.py:276
+#: plone.app.event/plone/app/event/event.py:299
 msgid "error_invalid_start_date"
 msgstr "Дата початку недійсна."
 
@@ -337,6 +353,11 @@ msgstr "Індекси (поля для пошуку)"
 #: ATContentTypes/skins/ATContentTypes/atct_manageTopicMetadata.cpt:73
 msgid "heading_metadata_fields_for_display"
 msgstr "Метадані (поля, які показувати)"
+
+#. Default: "The timezones, which should be available for the portal. Can be set for users and events"
+#: plone.app.event/plone/app/event/controlpanel/event.py:27
+msgid "help_available_timezones"
+msgstr "Часові пояси, які повинні бути доступними для порталу. Можеть бути встановлені для користувачів і подій"
 
 #. Default: "True or false"
 #: ATContentTypes/criteria/boolean.py:29
@@ -414,13 +435,18 @@ msgid "help_enable_table_of_contents_description"
 msgstr "Якщо вибрано, то зміст буде відображатися зверху на сторінці."
 
 #. Default: "Enter recurrence rules, one per line."
-#: plone.app.event/plone/app/event/event.py:167
+#: plone.app.event/plone/app/event/event.py:121
 msgid "help_event_recurrence"
 msgstr "Введіть правила повторення подій, по одному в кожному рядку."
 
+#. Default: "Event related settings like timezone, etc."
+#: plone.app.event/plone/app/event/controlpanel/event.py:42
+msgid "help_event_settings"
+msgstr "Налаштування пов'язані з подією, такі як часовий пояс і т.д."
+
 #. Default: "Web address with more info about the event. Add http:// for external links."
 #: ATContentTypes/content/event.py:94
-#: plone.app.event/plone/app/event/event.py:123
+#: plone.app.event/plone/app/event/event.py:156
 msgid "help_event_url"
 msgstr "Веб-адреса за якою є більше інформації про подію. Для зовнішніх посилань додайте http:// ."
 
@@ -479,6 +505,11 @@ msgstr "Увімкнення можливості переходу до наст
 #: ATContentTypes/criteria/path.py:36
 msgid "help_path_criteria_value"
 msgstr "Теки, у яких шукати."
+
+#. Default: "The timezone setting of the portal. Users can set their own timezone, if available timezones are defined."
+#: plone.app.event/plone/app/event/controlpanel/event.py:15
+msgid "help_portal_timezone"
+msgstr "Налаштування часового поясу порталу. Користувачі можуть встановлювати свої власні часові пояси, якщо такі часові пояси визначені."
 
 #. Default: "One of the available content types."
 #: ATContentTypes/criteria/portaltype.py:22
@@ -564,19 +595,19 @@ msgstr "Переважаючі типи"
 
 #. Default: "Contact E-mail"
 #: ATContentTypes/content/event.py:118
-#: plone.app.event/plone/app/event/event.py:147
+#: plone.app.event/plone/app/event/event.py:180
 msgid "label_contact_email"
 msgstr "Контактний адрес електронної пошти"
 
 #. Default: "Contact Name"
 #: ATContentTypes/content/event.py:107
-#: plone.app.event/plone/app/event/event.py:136
+#: plone.app.event/plone/app/event/event.py:169
 msgid "label_contact_name"
 msgstr "Контактне ім'я"
 
 #. Default: "Contact Phone"
 #: ATContentTypes/content/event.py:129
-#: plone.app.event/plone/app/event/event.py:158
+#: plone.app.event/plone/app/event/event.py:191
 msgid "label_contact_phone"
 msgstr "Контактний телефон"
 
@@ -643,48 +674,48 @@ msgstr "Завантажити PDF "
 
 #. Default: "Event body text"
 #: ATContentTypes/content/event.py:74
-#: plone.app.event/plone/app/event/event.py:102
+#: plone.app.event/plone/app/event/event.py:135
 msgid "label_event_announcement"
 msgstr "Текст події"
 
 #. Default: "Attendees"
 #: ATContentTypes/content/event.py:84
-#: plone.app.event/plone/app/event/event.py:113
+#: plone.app.event/plone/app/event/event.py:146
 msgid "label_event_attendees"
 msgstr "Учасники"
 
 #. Default: "Event Ends"
 #: ATContentTypes/content/event.py:62
-#: plone.app.event/plone/app/event/event.py:89
+#: plone.app.event/plone/app/event/event.py:98
 msgid "label_event_end"
 msgstr "Закінчення події "
 
 #. Default: "Event Location"
 #: ATContentTypes/content/event.py:38
-#: plone.app.event/plone/app/event/event.py:55
+#: plone.app.event/plone/app/event/event.py:63
 msgid "label_event_location"
 msgstr "Місце проведення події"
 
 #. Default: "Event Recurrence"
-#: plone.app.event/plone/app/event/event.py:169
+#: plone.app.event/plone/app/event/event.py:123
 msgid "label_event_recurrence"
 msgstr "Повторення подій"
 
 #. Default: "Event Starts"
 #: ATContentTypes/content/event.py:50
-#: plone.app.event/plone/app/event/event.py:76
+#: plone.app.event/plone/app/event/event.py:85
 msgid "label_event_start"
 msgstr "Початок події"
 
 #. Default: "Event Type(s)"
 #: ATContentTypes/content/event.py:137
-#: plone.app.event/plone/app/event/event.py:178
+#: plone.app.event/plone/app/event/event.py:200
 msgid "label_event_type"
 msgstr "Тип(и) події"
 
 #. Default: "Event URL"
 #: ATContentTypes/content/event.py:97
-#: plone.app.event/plone/app/event/event.py:126
+#: plone.app.event/plone/app/event/event.py:159
 msgid "label_event_url"
 msgstr "URL події"
 
@@ -821,6 +852,11 @@ msgstr "Значення"
 msgid "label_summary"
 msgstr "Резюме"
 
+#. Default: "Select the Timezone, where this event happens."
+#: plone.app.event/plone/app/event/event.py:111
+msgid "label_timezone"
+msgstr "Виберіть часовий пояс, де ця подія відбувається."
+
 #. Default: "Transform"
 #: ATContentTypes/skins/ATContentTypes/atct_image_transform.pt:33
 msgid "label_transform"
@@ -832,7 +868,7 @@ msgid "label_url"
 msgstr "URL"
 
 #. Default: "Whole day event"
-#: plone.app.event/plone/app/event/event.py:64
+#: plone.app.event/plone/app/event/event.py:73
 msgid "label_whole_day_event"
 msgstr "Подія, що триває весь день"
 
