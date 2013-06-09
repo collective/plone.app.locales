@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2013-05-09 11:25+0800\n"
+"PO-Revision-Date: 2013-06-08 22:33+0800\n"
 "Last-Translator: Jian Aijun <jianaijun@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
@@ -196,7 +196,7 @@ msgstr "日期范围条件"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:78
 msgid "A file extension condition can restrict a rule from executing unless the target is a File with a particular extension."
-msgstr "文件扩展名条件，如果文件扩展名不能满足指定的规则，则阻止规则执行。"
+msgstr "文件扩展名条件，如果文件没有指定的扩展名，则阻止规则执行。"
 
 #: ./plone.resource/plone/resource/profiles.zcml
 msgid "A folder for storing and serving static resource files"
@@ -346,7 +346,7 @@ msgstr "规则摘要"
 
 #: plone/app/imaging/interfaces.py:24
 msgid "A value for the quality of scaled images, from 1 (lowest) to 95 (highest). A value of 0 will mean plone.scaling's default will be used, which is currently 88."
-msgstr ""
+msgstr "缩放图片的质量值，从 1 (最低) 到 95 （最高）。值为 0 表示使用 plone.scaling 的默认值，目前是 88。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:84
 msgid "A workflow action triggers a workflow transition on an object."
@@ -672,7 +672,7 @@ msgstr "条目的工作流状态（如：已发布）"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:265
 msgid "Apply rule on the whole site"
-msgstr ""
+msgstr "将规则应用于整个站点"
 
 #: plone/app/theming/browser/mapper.pt:1072
 msgid "Apply rule to children of the matched content node(s)"
@@ -1527,7 +1527,7 @@ msgstr "Email 地址未知。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:39
 msgid "Email recipients"
-msgstr "Email 收件人"
+msgstr "收件人"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:69
 msgid "Email report to ${recipients}"
@@ -1535,7 +1535,7 @@ msgstr "发送邮件报告给 ${recipients}"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:34
 msgid "Email source"
-msgstr "Email 来源"
+msgstr "发件人"
 
 #: plone.app.controlpanel/plone/app/controlpanel/editing.py:44
 msgid "Enable External Editor feature"
@@ -2652,11 +2652,11 @@ msgstr "需要来源内容的 ID"
 #: plone.app.controlpanel/plone/app/controlpanel/skins.py:21
 #: plone/app/theming/browser/controlpanel.pt:556
 msgid "Never show icons"
-msgstr "总显示图标"
+msgstr "从不显示图标"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/adding.py:44
 msgid "New content rule created. Please add conditions and actions at the bottom of the page."
-msgstr ""
+msgstr "新的内容规则已创建。请在页面的底部添加条件和操作。"
 
 #: Archetypes/skins/archetypes/add_reference.cpy:16
 msgid "New reference created."
@@ -2743,11 +2743,11 @@ msgstr "显示条目的数目"
 
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "Object added to this container"
-msgstr "对象已添加到这个文件夹"
+msgstr "对象已添加到此文件夹"
 
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "Object modified"
-msgstr "对象已修改"
+msgstr "对象已被更改"
 
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "Object removed from this container"
@@ -3488,7 +3488,7 @@ msgstr "保存"
 
 #: plone/app/imaging/interfaces.py:23
 msgid "Scaled image quality"
-msgstr ""
+msgstr "缩放后的图片质量"
 
 #: CMFPlone/profiles/default/controlpanel.xml
 #: CMFPlone/profiles/default/portlets.xml
@@ -3632,7 +3632,7 @@ msgstr "打回"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
 msgid "Send email"
-msgstr "发送 email"
+msgstr "发送邮件"
 
 # Action icon title for Send To
 #. Default: "Send this page to somebody"
@@ -3955,7 +3955,7 @@ msgstr "标题不能为空。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:32
 msgid "Subject of the message"
-msgstr "消息的标题"
+msgstr "消息的主题"
 
 #. Default: "Submit"
 #: plone.app.iterate/plone/app/iterate/profiles/test/workflows/workingcopy_workflow/definition.xml
@@ -4129,11 +4129,11 @@ msgstr "该 email 地址不可用。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:35
 msgid "The email address that sends the email. If no email is provided here, it will use the portal from address."
-msgstr "发送 email 的邮件地址。如果这里不提供 email ，将使用网站发件人地址。"
+msgstr "发送 email 的邮件地址。如留空，则使用网站发件人地址。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:40
 msgid "The email where you want to send this message. To send it to different email addresses, just separate them with ,"
-msgstr "要发送此邮件的 email 地址。如果有多个 email 地址，用逗号（','）分隔。"
+msgstr "要发送邮件的接收邮件地址。如果有多个邮件地址，用逗号（','）分隔。"
 
 #. Default: "The end date and time of an event"
 #: CMFPlone/profiles/default/portal_atct.xml
@@ -4174,7 +4174,7 @@ msgstr "网站的 ID。最终将作为 URL 的一部分。<br />不允许任何�
 #: CMFPlone/skins/plone_scripts/folder_paste.cpy:38
 #: CMFPlone/skins/plone_scripts/object_paste.cpy:40
 msgid "The item you are trying to paste could not be found. It may have been moved or deleted after you copied or cut it. "
-msgstr ""
+msgstr "找不到要粘贴的条目。它可在能你复制或剪切它后已被移动或删除。"
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "The item's title, transformed for sorting"
@@ -4247,11 +4247,11 @@ msgstr "Plone 站点中的根对象。"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/elements.py:76
 msgid "The rule has been enabled on site root and all its subfolders"
-msgstr ""
+msgstr "此规则已在站点根文件夹和其所有子文件夹中已启用"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:255
 msgid "The rule is enabled but will perform nothing since it is not assigned anywhere. <br /> Go to the folder where you want the rule to apply, or at the site root, click on 'rule' tab, and then locally setup the rules."
-msgstr ""
+msgstr "此规则已启用，但因为它什么都不做，因为它没有被分配到任何位置。 <br /> 转到要应用的规则的文件夹或站点的根文件夹，点击 ‘规则’ 标签，设置规则。"
 
 #. Default: "The short name of an item (used in the url)"
 #: CMFPlone/profiles/default/portal_atct.xml
@@ -4399,11 +4399,11 @@ msgstr "该附加组件没有定义升级过程。请查询其文档获取升级
 
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:172
 msgid "There is not any action performed by this rule. Click on Add button to setup an action."
-msgstr ""
+msgstr "此规则不执行任何操作。单击 ‘添加’ 按钮，设置操作。"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:91
 msgid "There is not any additional condition checked on this rule."
-msgstr ""
+msgstr "此规则不检查任何条件。"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:35
 msgid "There was an error saving content rules."
@@ -4586,11 +4586,11 @@ msgstr "转换"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:23
 msgid "Transition"
-msgstr "事务"
+msgstr "转换"
 
 #: plone.stringinterp/plone/stringinterp/adapters.py:560
 msgid "Transition title"
-msgstr "事务标题"
+msgstr "转换标题"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
 msgid "Transition workflow state"
@@ -4899,15 +4899,15 @@ msgstr "当上一步状态转换被执行"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:55
 msgid "Whether or not content rules should be disabled globally. If this is selected, no rules will be executed anywhere in the portal."
-msgstr "全局禁用内容规则。如果选择中，在网站的任何地方都不会执行规则。"
+msgstr "全局禁用内容规则。如果选择中，在网站任何地方的规则都不会被执行。"
 
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:119
 msgid "Whether or not execution of further rules should stop after this rule is executed"
-msgstr "在这个规则应用后，是否停止更深一级的规则。"
+msgstr "此规则执行后，停止执行后面的内容规则。"
 
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:115
 msgid "Whether or not the rule is currently enabled"
-msgstr "是否启用当前规则？"
+msgstr "是否启用当前规则"
 
 #: CMFPlone/skins/plone_form_scripts/plone_change_password.py:39
 #: CMFPlone/skins/plone_login/login_change_password.cpy:19
@@ -5418,7 +5418,7 @@ msgstr "当一个触发事件发生，规则就会执行。规则的操作仅在
 #. Default: "Stop evaluating content rules after this rule completes"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:62
 msgid "contentrules_description_stop"
-msgstr "本条规则完成后停止执行内容规则"
+msgstr "此规则执行后，停止执行后面的内容规则"
 
 #. Default: "The rule will execute when the following event occurs."
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:55
@@ -5497,12 +5497,12 @@ msgstr "描述"
 #. Default: "Use the form below to define, change or remove content rules. Rules will automatically perform actions on content when certain triggers take place. After defining rules, you may want to go to a folder to assign them, using the \"rules\" item in the actions menu."
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:27
 msgid "description-contentrules-controlpanel"
-msgstr "使用下面的表单定义、更改或删除内容规则。当某些触发发生时，规则将自动执行基于内容的操作。规则定义后，您可以使用文件夹菜单栏中的 '规则' 菜单项，给文件夹分配规则。"
+msgstr "使用下面的表单定义、更改或删除内容规则。当某些触发发生时，规则将自动执行基于内容的操作。规则定义后，您可以使用文件夹菜单栏中的 ‘规则’ 标签，给文件夹分配规则。"
 
 #. Default: "Some content in the subject, email source, email recipient and message may be replaced with \"$&#123;&#125;\" variables from the table below."
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:140
 msgid "description-contentrules-mailsub"
-msgstr "标题，email 来源，email 收件人以及消息中的一些内容可能被下表中的 \"$&#123;&#125;\" 变量替换。"
+msgstr "邮件主题，发件人，收件人以及消息中的一些内容可以用下表中的 \"$&#123;&#125;\" 变量替换。"
 
 #. Default: "Access keys are a navigation device enabling you to get around this web site using your keyboard."
 #: CMFPlone/skins/plone_templates/accessibility-info.pt:55
@@ -5608,7 +5608,7 @@ msgstr "请为这个规则设定一个描述性的标题。"
 #. Default: "The following content rules are active in this ${type_name}."
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:42
 msgid "description_contentrules_assigned"
-msgstr "下面的内容规则在${type_name}类型中是活动的。"
+msgstr "在此 ${type_name} 中的以下内容规则处于启用状态。"
 
 #. Default: "There are currently no active content rules in this ${type_name}."
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:47
@@ -5618,7 +5618,7 @@ msgstr "没有指定任何内容规则。"
 #. Default: "This rule is assigned to the following locations."
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:274
 msgid "description_contentrules_rule_assignments"
-msgstr "这个规则被分配给其下的位置。"
+msgstr "此规则已被分配到下列位置。"
 
 #. Default: "Note that content type portlets are normally rendered below context portlets."
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-content-type.pt:40
@@ -5903,7 +5903,7 @@ msgstr "全部的发布内容，最近的在前面。"
 #. Default: "Use the form below to edit the value of this particular record."
 #: plone.app.registry/plone/app/registry/browser/edit_layout.pt:17
 msgid "description_record_edit"
-msgstr "使用下面的表单编辑这个特定的记录。"
+msgstr "使用下面的表单编辑此记录的值。"
 
 #. Default: "The table below shows record currently managed by the configuration registry. Click on a record to edit it."
 #: plone.app.registry/plone/app/registry/browser/records.pt:103
@@ -7716,7 +7716,7 @@ msgstr "保存变更"
 #. Default: "Apply to current folder only"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:229
 msgid "label_apply_current_folder"
-msgstr "仅应用于当前的文件夹"
+msgstr "只应用于当前文件夹"
 
 #. Default: "Apply to subfolders"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:224
@@ -7994,7 +7994,7 @@ msgstr "活动"
 #. Default: "Active content rules in this ${content_type}"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:132
 msgid "label_contentrules_active_assignments"
-msgstr "活动内容规则在${content_type}"
+msgstr "在此 ${content_type} 中启用的内容规则"
 
 #. Default: "Enabled here?"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:141
@@ -8034,7 +8034,7 @@ msgstr "内容规则"
 #. Default: "unassigned"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:157
 msgid "label_contentrules_rule_unassigned"
-msgstr "未分配"
+msgstr "取消分配"
 
 #. Default: "Applies to subfolders?"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:138
@@ -8714,7 +8714,7 @@ msgstr "主要语言："
 #. Default: "You are managing the portlets of the default view of a container. If you wanted to manage the portlets of the container itself, ${go_here}."
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:50
 msgid "label_manage_portlets_default_view_container"
-msgstr "您在管理一个文件夹默认视图的面板。如果您需要管理文件夹本身的面板，${go_here}。"
+msgstr "您在管理一个文件夹默认视图的面板。如果您想要管理文件夹本身的面板，${go_here}。"
 
 #. Default: "go here"
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:50
@@ -9475,7 +9475,7 @@ msgstr "字符串值"
 #: CMFPlone/skins/plone_content/author.cpt:196
 #: CMFPlone/skins/plone_templates/contact-info.cpt:116
 msgid "label_subject"
-msgstr "标题"
+msgstr "主题"
 
 #. Default: "Subobjects"
 #: CMFPlone/skins/plone_forms/ownership_form.cpt:65
@@ -11328,7 +11328,7 @@ msgstr "自动选择语言（站点默认）"
 #. Default: "Content rules are disabled globally. No assigned rules will execute until they are re-enabled. Use the ${controlpanel_link}to enable them again."
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-assignments.pt:24
 msgid "warning_contentrules_disabled"
-msgstr "内容规则已全局禁用。已分配规则将不会执行，直到被重新启用。使用 ${controlpanel_link} 再次启用他们。"
+msgstr "内容规则已全局禁用。已分配规则将不会执行，直到被重新启用。使用 ${controlpanel_link} 进行启用。"
 
 #. Default: "Policy..."
 #: plone.app.contentmenu/plone/app/contentmenu/menu.py:781
