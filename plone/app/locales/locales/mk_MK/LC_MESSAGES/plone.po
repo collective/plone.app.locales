@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2013-06-20 14:15+0000\n"
+"POT-Creation-Date: 2013-06-24 06:48+0000\n"
 "PO-Revision-Date: 2008-02-08 00:54+0100\n"
 "Last-Translator: Dimitar Bojchev <dimitar.dk@gmail.com>\n"
 "Language-Team: PloneMK\n"
@@ -1594,11 +1594,7 @@ msgstr ""
 msgid "End Date"
 msgstr "Крајни датум"
 
-#: plone.app.users/plone/app/users/browser/personalpreferences.py:414
-msgid "Enter your new password. "
-msgstr ""
-
-#: plone.app.users/plone/app/users/browser/register.py:252
+#: plone.app.users/plone/app/users/browser/personalpreferences.py:413
 msgid "Enter your new password. ${errors}"
 msgstr ""
 
@@ -2533,6 +2529,10 @@ msgstr ""
 msgid "Metadata"
 msgstr ""
 
+#: PlonePAS/plugins/passwordpolicy.py:63
+msgid "Minimum 5 characters."
+msgstr ""
+
 #: CMFPlone/skins/plone_templates/calendar_macros.pt:175
 msgid "Minute"
 msgstr ""
@@ -2862,7 +2862,7 @@ msgstr "Лозинката е променета."
 msgid "Password incorrect."
 msgstr "Лозинката е неисправна."
 
-#: plone.app.users/plone/app/users/browser/register.py:310
+#: plone.app.users/plone/app/users/browser/register.py:311
 msgid "Passwords do not match."
 msgstr "Лозинките не се исти."
 
@@ -4193,7 +4193,7 @@ msgid "The location of an item in the site (path)"
 msgstr "Локацијата на предметот на страницата (патека)"
 
 #: CMFPlone/RegistrationTool.py:221
-#: plone.app.users/plone/app/users/browser/register.py:360
+#: plone.app.users/plone/app/users/browser/register.py:361
 msgid "The login name you selected is already in use or is not valid. Please choose another."
 msgstr "Корисничкото име кое сте го изабрале веќе се користи или не е валидно. Ве молиме изберете некое друго име."
 
@@ -4518,7 +4518,7 @@ msgstr ""
 msgid "This site configuration is outdated and needs to be upgraded:"
 msgstr ""
 
-#: plone.app.users/plone/app/users/browser/register.py:351
+#: plone.app.users/plone/app/users/browser/register.py:352
 msgid "This username is reserved. Please choose a different name."
 msgstr "ова корисничко име е резервирано. Ве молиме изаберете друго име."
 
@@ -4740,7 +4740,7 @@ msgstr ""
 msgid "User Logged out"
 msgstr ""
 
-#: plone.app.users/plone/app/users/browser/register.py:636
+#: plone.app.users/plone/app/users/browser/register.py:637
 msgid "User added."
 msgstr "Корисникот е додаден."
 
@@ -5029,7 +5029,7 @@ msgid "You must enable cookies before you can log in."
 msgstr "Морате да дозволите употребување колачиња пред да се пријавите."
 
 #: CMFPlone/RegistrationTool.py:231
-#: plone.app.users/plone/app/users/browser/register.py:370
+#: plone.app.users/plone/app/users/browser/register.py:371
 msgid "You must enter a valid email address."
 msgstr ""
 
@@ -5080,6 +5080,10 @@ msgstr "Вашите промени на линковите се зачуван�
 
 #: CMFPlone/RegistrationTool.py:168
 msgid "Your password and confirmation did not match. Please try again."
+msgstr ""
+
+#: PlonePAS/plugins/passwordpolicy.py:66
+msgid "Your password must contain at least 5 characters."
 msgstr ""
 
 #: CMFPlone/skins/plone_form_scripts/personalize.cpy:64
@@ -6356,7 +6360,7 @@ msgid "heading_add_to_calendar"
 msgstr "Додај настан во календар"
 
 #. Default: "Add New User"
-#: plone.app.users/plone/app/users/browser/register.py:577
+#: plone.app.users/plone/app/users/browser/register.py:578
 msgid "heading_add_user_form"
 msgstr ""
 
@@ -6649,7 +6653,7 @@ msgstr "неодамна објавени поглавја"
 
 ##, fuzzy
 #. Default: "Registration form"
-#: plone.app.users/plone/app/users/browser/register.py:532
+#: plone.app.users/plone/app/users/browser/register.py:533
 msgid "heading_registration_form"
 msgstr "Образец за зачленување"
 
@@ -7275,6 +7279,11 @@ msgstr ""
 #, fuzzy
 msgid "help_password_creation"
 msgstr "Најмалку 5 знаци."
+
+#. Default: "Enter your new password. ${errors}"
+#: plone.app.users/plone/app/users/browser/register.py:252
+msgid "help_password_creation_with_errors"
+msgstr ""
 
 #. Default: "If you have forgotten your password, ${click_here}."
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:122
@@ -9193,7 +9202,7 @@ msgid "label_refresh"
 msgstr "Освежи"
 
 #. Default: "Register"
-#: plone.app.users/plone/app/users/browser/register.py:401
+#: plone.app.users/plone/app/users/browser/register.py:402
 msgid "label_register"
 msgstr "зачлени се"
 
@@ -10221,7 +10230,7 @@ msgid "msg_no_email_duplicates_found"
 msgstr ""
 
 #. Default: "You must set a password or choose to send an email."
-#: plone.app.users/plone/app/users/browser/register.py:390
+#: plone.app.users/plone/app/users/browser/register.py:391
 msgid "msg_no_password_no_mail_me"
 msgstr ""
 
@@ -10509,12 +10518,12 @@ msgid "sort_by"
 msgstr ""
 
 #. Default: "Failed to create your account: we were unable to send instructions for setting a password to your email address: ${address}"
-#: plone.app.users/plone/app/users/browser/register.py:504
+#: plone.app.users/plone/app/users/browser/register.py:505
 msgid "status_fatal_password_mail"
 msgstr ""
 
 #. Default: "This account has been created, but we were unable to send instructions for setting a password to this email address: ${address}"
-#: plone.app.users/plone/app/users/browser/register.py:516
+#: plone.app.users/plone/app/users/browser/register.py:517
 msgid "status_nonfatal_password_mail"
 msgstr ""
 
