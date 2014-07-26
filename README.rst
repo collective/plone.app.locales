@@ -7,3 +7,6 @@ non core add-ons:
 - LinguaPlone
 - plone.app.caching
 - plone.app.ldap
+
+This version is not compatible with Plone version inferior to 4.3.
+
