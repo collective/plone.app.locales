@@ -35,7 +35,7 @@ atcontenttypes
 atreferencebrowserwidget
 ------------------------
 ::
-    
+
     bin/i18n atreferencebrowserwidget
 
 passwordresettool
