@@ -1,9 +1,9 @@
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2013.
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2013, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: plone.app.caching\n"
 "POT-Creation-Date: 2013-05-22 08:09+0000\n"
-"PO-Revision-Date: 2013-10-18 19:06-0430\n"
+"PO-Revision-Date: 2015-03-17 21:38-0430\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/plone/language/es/)\n"
 "Language: es\n"
@@ -66,7 +66,13 @@ msgid ""
 "results. Caution: If proxy cannot be purged, or cannot be configured to "
 "remove the 's-maxage' token from the response, then stale responses might be"
 " seen until the cached entry expires. "
-msgstr "Caché en el navegador mas expira inmediatamente (igual como 'caché débil'), y caché en el servidor proxy (por defecto: 24 horas). Utilice un caché purgable proxy inverso para obtener mejores resultados. PRECAUCIÓN: Si  el servidor proxy no puede ser purgado, o no puede ser configurado para remover el token 's-maxage' desde la respuesta, entonces las respuestas obsoletos pueden ser vistos hasta que caduque la entrada de caché."
+msgstr ""
+"Caché en el navegador mas expira inmediatamente (igual como 'caché débil'), "
+"y caché en el servidor proxy (por defecto: 24 horas). Utilice un caché "
+"purgable proxy inverso para obtener mejores resultados. PRECAUCIÓN: Si  el "
+"servidor proxy no puede ser purgado, o no puede ser configurado para remover "
+"el token 's-maxage' desde la respuesta, entonces las respuestas obsoletos "
+"pueden ser vistos hasta que caduque la entrada de caché."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:193
 msgid ""
@@ -374,7 +380,24 @@ msgstr "Los sitios de alto rendimiento a menudo emplazados en frente a un servid
 #. Otherwise, you will lose your changes. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:560
 msgid "description_detailed_settings"
-msgstr "<p>Muchas operaciones de almacenamiento en caché aceptan parámetros para influir en su comportamiento. Por ejemplo, una operación que devuelve una página almacenada en caché en la memoria RAM puede aceptar un parámetro que especifica el tiempo de espera antes de las páginas sean re-calculadas. La mayoría de las operaciones, sin embargo, tendrán \\\"parámetros por defecto\\\", para que funcionen aceptablemente incluso cuando no se han establecido parámetros. Tenga en cuenta también que no todas las operaciones soportan los parámetros. </p> <p> Los parámetros se pueden ajustar en dos niveles. De forma predeterminada, los parámetros se aplican a todos los usos de la operación particular. Por lo tanto, si ha asignado una operación a más de un conjunto de reglas, los <em>mismos</em> parámetros se utilizará. Sin embargo, también puede cambiar los parámetros de un conjunto de reglas en particular. </p> <p> Utilice la siguiente tabla para acceder a los parámetros de operación particular o conjunto de reglas. <strong>Advertencia:</strong> Si ha realizado cambios en esta forma en otros lugares, debe guardarlos antes de configurar los parámetros de funcionamiento. De lo contrario, se perderán los cambios. </p>"
+msgstr ""
+"<p>Muchas operaciones de almacenamiento en caché aceptan parámetros para "
+"influir en su comportamiento. Por ejemplo, una operación que devuelve una "
+"página almacenada en caché en la memoria RAM puede aceptar un parámetro que "
+"especifica el tiempo de espera antes de las páginas sean re-calculadas. La "
+"mayoría de las operaciones, sin embargo, tendrán \\\"parámetros por defecto\\\", "
+"para que funcionen aceptablemente incluso cuando no se han establecido "
+"parámetros. Tenga en cuenta también que no todas las operaciones soportan "
+"los parámetros. </p> <p> Los parámetros se pueden ajustar en dos niveles. De "
+"forma predeterminada, los parámetros se aplican a todos los usos de la "
+"operación particular. Por lo tanto, si ha asignado una operación a más de un "
+"conjunto de reglas, los <em>mismos</em> parámetros se utilizará. Sin "
+"embargo, también puede cambiar los parámetros de un conjunto de reglas en "
+"particular. </p> <p> Utilice la siguiente tabla para acceder a los "
+"parámetros de operación particular o conjunto de reglas. "
+"<strong>Advertencia:</strong> Si ha realizado cambios en esta forma en otros "
+"lugares, debe guardarlos antes de configurar los parámetros de "
+"funcionamiento. De lo contrario, se perderán los cambios. </p>"
 
 #. Default: "<p> Caching can be controlled by mapping <em>rulesets</em> to
 #. <em>caching operations</em>. </p> <p> A <strong>ruleset</strong> is a name
@@ -421,7 +444,7 @@ msgstr "La siguiente tabla muestra estadísticas para el caché RAM por defecto.
 #. Default: "Import caching profiles"
 #: plone.app.caching/plone/app/caching/browser/import.pt:53
 msgid "heading_caching_import"
-msgstr "Importar perfiles de cacheo"
+msgstr "Importar perfiles de caché"
 
 #. Default: "Purge caching proxy"
 #: plone.app.caching/plone/app/caching/browser/purge.pt:53
@@ -494,7 +517,20 @@ msgstr "Habilite esta para comprimir el contenido antes de enviarlo al cliente, 
 #. if you only have a single virtually hosted domain name. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:270
 msgid "help_domains"
-msgstr "<p> Si usted tiene habilitado <em>re-escritura de Virtual host tiene lugar delante del servidor proxy caché</em> de arriba, y su sitio es accesible a través de múltiples dominios (por ejemplo <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), escriba los dominios disponibles aquí, uno por línea. Esto asegurará que las solicitudes de purga se envían para todos los dominios en su caso. Tenga en cuenta que es más eficiente para configurar el servidor de aplicaciones web más simplemente redirigir todas las solicitudes para un mismo dominio, de modo que sólo Zope \\\"vea\\\" un solo dominio. </p> <p> Es seguro dejar la lista en blanco si no está usando un servidor proxy caché, si usted no está usando hosting virtual, si la re-escritura de host virtual tiene lugar detrás del servidor proxy de almacenamiento en caché, o si sólo tiene un solo nombre de dominio virtualmente hospedado. </p>"
+msgstr ""
+"<p> Si usted tiene habilitado <em>re-escritura de Virtual host tiene lugar "
+"delante del servidor proxy caché</em> de arriba, y su sitio es accesible a "
+"través de múltiples dominios (por ejemplo <code>http://example.com:80</code> "
+"vs. <code>http://www.example.com:80</code>), escriba los dominios "
+"disponibles aquí, uno por línea. Esto asegurará que las solicitudes de purga "
+"se envían para todos los dominios en su caso. Tenga en cuenta que es más "
+"eficiente para configurar el servidor de aplicaciones web más simplemente "
+"redirigir todas las solicitudes para un mismo dominio, de modo que sólo Zope "
+"\\\"vea\\\" un solo dominio. </p> <p> Es seguro dejar la lista en blanco si no "
+"está usando un servidor proxy caché, si usted no está usando hosting "
+"virtual, si la re-escritura de host virtual tiene lugar detrás del servidor "
+"proxy de almacenamiento en caché, o si sólo tiene un solo nombre de dominio "
+"virtualmente hospedado. </p>"
 
 #. Default: "If this option is disabled, no caching will take place."
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:119
@@ -745,7 +781,9 @@ msgstr "Cambiar las configuraciones"
 #. Default: "Take a snapshot of the site prior to importing new setting."
 #: plone.app.caching/plone/app/caching/browser/import.pt:110
 msgid "label_snapshot"
-msgstr "Tomar una 'foto' del sitio antes de importar las nuevas configuraciones."
+msgstr ""
+"Tomar una copia (snapshot) del sitio antes de importar las nuevas "
+"configuraciones."
 
 #. Default: "Purge synchronously"
 #: plone.app.caching/plone/app/caching/browser/purge.pt:109
