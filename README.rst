@@ -8,5 +8,5 @@ non core add-ons:
 - plone.app.caching
 - plone.app.ldap
 
-This version is not compatible with Plone version inferior to 4.3.
+This version is not compatible with Plone 4.x.
 
