@@ -158,6 +158,14 @@ msgstr ""
 msgid "A classic portlet allows you to use legacy portlet templates."
 msgstr "Klassinen sovelma mahdollistaa perinteisten sovelmamallien käytön."
 
+#: plone.app.discussion/plone/app/discussion/comment.py:349
+msgid "A comment has been posted."
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:142
+msgid "A comment id unique to this conversation"
+msgstr "Tämän keskustelun sisällä uniikki tunniste"
+
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:131
 msgid "A copy action can copy an object to a different folder."
 msgstr "Kopiointitoiminto voi kopioida kohteen toiseen kansioon."
@@ -253,6 +261,10 @@ msgstr "Rooliehdo voi estää sääntöä toimimasta ellei nykyisellä käyttäj
 #: CMFPlone/browser/templates/plone-addsite.pt:60
 msgid "A short title for the site. This will be shown in the title of the browser window on each page."
 msgstr "Sivuston otsikko. Tämä näytetään selainikkunan otsikkona jokaisella sivulla."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "A simple review workflow for comments"
+msgstr ""
 
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:103
 msgid "A summary of the rule"
@@ -415,6 +427,10 @@ msgstr "Lisää työnkulun tilaehto"
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:61
 msgid "Add Workflow Transition Condition"
 msgstr "Lisää työnkulun siirtymäehto"
+
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:62
+msgid "Add a comment"
+msgstr "Lisää viesti"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/rule.py:22
 msgid "Add a new rule. Once complete, you can manage the rule's actions and conditions separately."
@@ -582,8 +598,20 @@ msgstr "Sisällön tyyppi (esim. Tapahtuma)"
 msgid "An item's workflow state (e.g.published)"
 msgstr "Sisällön työkulun tila (esim. julkaistu)"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:69
+msgid "Anonymous Comments"
+msgstr "Viestit tunnistamattomilta käyttäjiltä"
+
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:217
 msgid "Apply rule on the whole site"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approve"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approving the comment makes it visible to other users."
 msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:30
@@ -742,6 +770,10 @@ msgstr "Peru noutaminen"
 msgid "Cannot find checkout location"
 msgstr "Noudettavan version sijaintia ei löydy"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:182
+msgid "Captcha"
+msgstr ""
+
 #: plone.protect/plone/protect/confirm.pt:27
 msgid "Careful, it's possible someone is executing an exploit against you. Verify you just performed an action on this site and that you were not referred here by a different website or email."
 msgstr ""
@@ -793,8 +825,8 @@ msgid "Changes made."
 msgstr "Muutokset on tehty."
 
 #: CMFPlone/controlpanel/browser/types.py:67
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:83
 #: plone.app.portlets/plone/app/portlets/browser/formhelper.py:183
-#: plone/app/theming/browser/controlpanel.py:204
 msgid "Changes saved"
 msgstr ""
 
@@ -878,12 +910,56 @@ msgstr ""
 msgid "Comment"
 msgstr "Kommentti"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Comment Review Workflow"
+msgstr ""
+
 #. Default: "Comment about the last transition"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "Kommentti viimeisimmästä siirtymästä."
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:182
+msgid "Comment approved."
+msgstr "Viesti hyväksytty."
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:98
+msgid "Comment author email"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:86
+msgid "Comment author full name"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:74
+msgid "Comment author user name"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:104
+msgid "Comment deleted."
+msgstr "Viesti poistettu."
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:50
+msgid "Comment id"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:62
+msgid "Comment text"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Commentators"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:70
+msgid "Commenter Image"
+msgstr "Kirjoittajan kuva"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:49
+msgid "Comments"
+msgstr ""
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1041,6 +1117,10 @@ msgstr ""
 msgid "Contributors Ids"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:137
+msgid "Conversation"
+msgstr "Keskustelu"
+
 #. Default: "Copy"
 #: CMFPlone/profiles/default/actions.xml
 #: plone.app.content/plone/app/content/browser/contents/copy.py:26
@@ -1097,9 +1177,10 @@ msgstr "Luo uusi Plone-sivusto"
 msgid "Created on"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:175
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Creation date"
-msgstr ""
+msgstr "Luotu"
 
 #. Default: "Creator"
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -1190,6 +1271,10 @@ msgstr "Muokattu"
 
 #: CMFPlone/profiles/default/controlpanel.xml
 msgid "Date and Time"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:39
+msgid "Date of the most recent public comment"
 msgstr ""
 
 #. Default: "Date range"
@@ -1371,9 +1456,17 @@ msgstr ""
 msgid "Disable html filtering"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/vocabularies.py:44
+msgid "Disabled"
+msgstr "Ei käytössä"
+
 #: CMFPlone/interfaces/controlpanel.py:119
 msgid "Disabling locking here will only affect users editing content through the Plone web UI.  Content edited via WebDAV clients will still be subject to locking."
 msgstr "Lukituksen poistaminen vaikuttaa käyttäjiin, jotka muokkaavat sisältöä Plonen käyttöliittymän kautta. WebDAV asiakassovelluksilla muokkattaessa lukitus on edelleen voimassa."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/controlpanel.xml
+msgid "Discussion"
+msgstr ""
 
 #. Default: "Discussion Item"
 #: portal type title of type with description Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface.
@@ -1384,6 +1477,10 @@ msgstr "Kommentti"
 #: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Kommentit ovat vastauksia muuhun sisältöön. Niitä *ei* pitäisi voida lisätä normaalin \"folder_factories\"-rajanpinnan kautta."
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:27
+msgid "Discussion settings"
+msgstr "Kommentointi- ja keskustelutoimintojen asetukset"
 
 #: CMFPlone/skins/plone_deprecated/search_form.pt:371
 msgid "Display options"
@@ -1547,6 +1644,10 @@ msgstr "Muokkaa työnkulun siirtymäehtoa"
 msgid "Edit an existing rule."
 msgstr "Muokkaa olemassaolevaa sääntöä"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:89
+msgid "Edit cancelled"
+msgstr ""
+
 #: CMFPlone/controlpanel/browser/syndication.py:94
 #: plone.app.registry/plone/app/registry/browser/edit.py:57
 msgid "Edit cancelled."
@@ -1604,6 +1705,10 @@ msgstr ""
 msgid "Effective range"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:154
+msgid "Email"
+msgstr "Sähköposti"
+
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:62
 msgid "Email address not known."
 msgstr "Tuntematon sähköpostiosoite."
@@ -1623,6 +1728,10 @@ msgstr "Postita raportti seuraaviin osoitteisiin: ${recipients}"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:36
 msgid "Email source"
 msgstr "Sähköpostin lähde"
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:68
+msgid "Enable Comments"
+msgstr "Salli Kommentointi & Keskustelut"
 
 #: CMFPlone/interfaces/controlpanel.py:98
 msgid "Enable External Editor feature"
@@ -2158,6 +2267,10 @@ msgstr "Käyttäjätunnus"
 msgid "Id $id is already in use"
 msgstr "Tunniste $id on jo käytössä"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:145
+msgid "Id of comment this comment is in reply to"
+msgstr "Sen viestin tunniste johon tämä viesti vastaa"
+
 #: plone.stringinterp/plone/stringinterp/adapters.py:73
 msgid "Identifier of the content or login of managed user"
 msgstr ""
@@ -2636,9 +2749,10 @@ msgstr "Käyttäjätunnusta ei löytynyt."
 msgid "Logout"
 msgstr "Kirjaudu ulos"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:159
 #: plone.app.textfield/plone/app/textfield/interfaces.py:57
 msgid "MIME type"
-msgstr ""
+msgstr "MIME-tyyppi"
 
 msgid "MP3 audio"
 msgstr ""
@@ -2913,9 +3027,18 @@ msgstr ""
 msgid "Missing syndication settings action."
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/actions.xml
+msgid "Moderate comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:72
+msgid "Moderator Email Notification"
+msgstr "Ilmoitukset sähköpostitse tarkistajille"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:176
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Modification date"
-msgstr ""
+msgstr "Muutettu"
 
 #: plone.app.portlets/plone/app/portlets/browser/formhelper.py:152
 msgid "Modify portlet"
@@ -2986,9 +3109,10 @@ msgstr "Oma kansio"
 msgid "My Preferences"
 msgstr "Omat asetukset"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:139
 #: plone/app/theming/interfaces.py:33
 msgid "Name"
-msgstr ""
+msgstr "Nimi"
 
 #: CMFPlone/interfaces/controlpanel.py:778
 msgid "Named"
@@ -3128,6 +3252,10 @@ msgstr ""
 #: plone.app.contenttypes/plone/app/contenttypes/migration/atct_migrator.pt:43
 #: plone.app.contenttypes/plone/app/contenttypes/migration/custom_migration.pt:37
 msgid "Note about how long it might take"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:168
+msgid "Notify me of new comments via email."
 msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
@@ -3338,7 +3466,7 @@ msgid "Paths to folders and collections to link to at the portal root."
 msgstr ""
 
 #. Default: "Pending"
-#: workflow state defined in plone_workflow - id pending
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "Pending"
 msgstr "Odottaa"
 
@@ -3500,6 +3628,10 @@ msgstr ""
 #: plone.stringinterp/plone/stringinterp/adapters.py:709
 msgid "Portal title"
 msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:132
+msgid "Portal type"
+msgstr "Sisältötyyppi"
 
 #: plone.portlet.static/plone/portlet/static/static.py:49
 msgid "Portlet footer"
@@ -3852,6 +3984,10 @@ msgstr ""
 
 msgid "Reviewer"
 msgstr "Tarkastaja"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Reviewer approves content"
+msgstr ""
 
 #. Default: "Reviewer makes content available externally"
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -4425,6 +4561,10 @@ msgstr ""
 msgid "Submit for publication"
 msgstr "Lähetä julkaistavaksi"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Submitted, pending review."
+msgstr ""
+
 #. Default: "Subtopics"
 #: type action defined on Smart Folder
 msgid "Subtopics"
@@ -4601,6 +4741,7 @@ msgstr "Viimeisimmän siirtymän suorittaneen käyttäjän tunniste"
 
 #. Default: "The ID of the user who performed the previous transition"
 #: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "The ID of the user who performed the previous transition"
 msgstr "Edellisen siirtymän suorittaneen käyttäjän tunniste"
 
@@ -4750,6 +4891,14 @@ msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:205
 msgid "The rule is enabled but will perform nothing since it is not assigned anywhere."
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:44
+msgid "The set of unique commentators (usernames)"
+msgstr "Kirjoittajat (käyttäjätunnukset)"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:49
+msgid "The set of unique commentators (usernames) of published_comments"
 msgstr ""
 
 #. Default: "The short name of an item (used in the url)"
@@ -5098,10 +5247,26 @@ msgstr ""
 msgid "Total comments"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments on this item."
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:33
+msgid "Total number of public comments on this item"
+msgstr ""
+
 #. Default: "Transform"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Image.xml
 msgid "Transform"
 msgstr "Muunna"
+
+#: plone.app.discussion/plone/app/discussion/comment.py:161
+msgid "Transform '%s' => '%s' not available."
+msgstr ""
 
 #: plone.app.textfield/plone/app/textfield/interfaces.py:79
 msgid "Transformed value in the target MIME type"
@@ -5292,6 +5457,10 @@ msgstr ""
 msgid "User Data Form"
 msgstr "Käyttäjän tietot"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:74
+msgid "User Email Notification"
+msgstr ""
+
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "User Logged in"
 msgstr ""
@@ -5324,6 +5493,10 @@ msgstr "Käyttäjän rooli"
 msgid "User/Groups settings"
 msgstr "Käyttäjä-/ryhmäasetukset"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:174
+msgid "Username of the commenter"
+msgstr ""
+
 #: CMFPlone/PloneControlPanel.py:69
 msgid "Users"
 msgstr ""
@@ -5334,6 +5507,10 @@ msgstr ""
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:33
 msgid "Users and Groups"
 msgstr "Käyttäjät ja ryhmät"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Users who have commented on the item"
+msgstr ""
 
 #: validation/validators/RegexValidator.py:44
 msgid "Validation failed($name): $value of type $type, expected 'string'"
@@ -5431,6 +5608,10 @@ msgstr "Näkyy kaikille, mutta ei ole hyväksyjän hyväksymä."
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, editable by the owner."
 msgstr "Näkyy kaikille, omistaja voi muokata."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Visible to everyone, non-editable."
+msgstr ""
 
 #. Default: "Visible to everyone, not editable by the owner."
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
@@ -5663,6 +5844,10 @@ msgstr "Tietokanta tulisi pakata säännölisesti. Alla oleva numero määrittä
 msgid "Your Plone site has not been added yet:"
 msgstr "Plone sivustoa ei ole vielä lisätty:"
 
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:258
+msgid "Your comment awaits moderator approval."
+msgstr "Viestisi on vastaanotettu. Se tulee näkyviin heti kun ylläpito on hyväksynyt sen julkaistavaksi."
+
 #: CMFPlone/RegistrationTool.py:181
 msgid "Your password and confirmation did not match. Please try again."
 msgstr ""
@@ -5712,6 +5897,11 @@ msgstr ""
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:68
 msgid "action_convert_legacy_portlets"
 msgstr "Täällä on vanhan tavan mukaisia sovelmia. Paina nappia muuntaaksesi ne ajanmukaisiksi sovelmiksi."
+
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:128
+msgid "add_comment_button"
+msgstr "Lisää"
 
 #. Default: "This item can not be deleted because it is currently locked by another user."
 #: plone.app.content/plone/app/content/browser/templates/delete_confirmation.pt:18
@@ -5868,6 +6058,21 @@ msgstr "Hae"
 msgid "box_sign_in"
 msgstr "Kirjaudu sisään"
 
+#. Default: "Delete"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:68
+msgid "bulkactions_delete"
+msgstr "Poista valitut"
+
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
+msgid "bulkactions_publish"
+msgstr "Hyväksy valitut"
+
+#. Default: "Cancel"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:101
+msgid "cancel_form_button"
+msgstr ""
+
 #. Default: "Category"
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:13
 msgid "category-contentrules-mailsub"
@@ -5886,6 +6091,41 @@ msgstr "Tämä on ${creator}:n ${created} tekemä työkopio ${baseline_title}:st
 #. Default: "Clear filter"
 #: plone.app.registry/plone/app/registry/browser/records.pt:42
 msgid "clear_filter"
+msgstr ""
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. Web and email addresses are transformed into clickable links."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:47
+msgid "comment_description_intelligent_text"
+msgstr ""
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. You can use the Markdown syntax for links and images."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:41
+msgid "comment_description_markdown"
+msgstr ""
+
+#. Default: "Comments are moderated."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:53
+msgid "comment_description_moderation_enabled"
+msgstr ""
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:36
+msgid "comment_description_plain_text"
+msgstr ""
+
+#. Default: "Edit comment cancelled"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:105
+msgid "comment_edit_cancel_notification"
+msgstr ""
+
+#. Default: "Comment was edited"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:95
+msgid "comment_edit_notification"
+msgstr ""
+
+#. Default: "${author_name} on ${content}"
+#: plone.app.discussion/plone/app/discussion/comment.py:43
+msgid "comment_title"
 msgstr ""
 
 #. Default: "Are you certain you want to delete the selected items?"
@@ -6611,6 +6851,16 @@ msgstr ""
 msgid "edit"
 msgstr "muokkaa"
 
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:74
+msgid "edit_comment_form_button"
+msgstr ""
+
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:58
+msgid "edit_comment_form_title"
+msgstr ""
+
 # E-Mail group property
 # E-Mail group property
 #. Default: "E-Mail"
@@ -6729,6 +6979,11 @@ msgstr ""
 msgid "heading_accessibility_statement"
 msgstr ""
 
+#. Default: "Action"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
+msgid "heading_action"
+msgstr "Toimenpide"
+
 #. Default: "Add actions portlet"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:196
 msgid "heading_add_actions_portlet"
@@ -6784,6 +7039,16 @@ msgstr ""
 msgid "heading_change_password_for"
 msgstr "Vaihda käyttäjän ${user} salasana"
 
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
+msgid "heading_comment"
+msgstr "Viestin sisältö"
+
+#. Default: "Commenter"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:81
+msgid "heading_commenter"
+msgstr "Kirjoittaja"
+
 #. Default: "Contact form"
 #: CMFPlone/browser/templates/contact-info.pt:18
 msgid "heading_contact_form"
@@ -6808,6 +7073,11 @@ msgstr "Yhteiskäyttöoikeudet kohteeseen ${folder}"
 #: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:16
 msgid "heading_dashboard"
 msgstr "Käyttäjän ${user_name} kojelauta"
+
+#. Default: "Date"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
+msgid "heading_date"
+msgstr "Ajankohta"
 
 #. Default: "Description"
 #: plone.app.registry/plone/app/registry/browser/records.pt:80
@@ -6872,6 +7142,11 @@ msgstr "Ryhmän ${groupname} jäsenet"
 msgid "heading_groupmembers_current"
 msgstr "Ryhmän nykyiset jäsenet"
 
+#. Default: "In Response To"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
+msgid "heading_in_reponse_to"
+msgstr "Kohde"
+
 #. Default: "Use language codes in URL path for manual override"
 #: CMFPlone/interfaces/controlpanel.py:228
 msgid "heading_language_codes_in_URL"
@@ -6896,6 +7171,11 @@ msgstr "Etsi käyttäjiä"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:69
 msgid "heading_memberships_current"
 msgstr "Nykyiset ryhmäjäsenyydet"
+
+#. Default: "Moderate comments"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:24
+msgid "heading_moderate_comments"
+msgstr "Viestien esitarkistus"
 
 #. Default: "Name"
 #: plone.app.registry/plone/app/registry/browser/records.pt:78
@@ -7153,6 +7433,16 @@ msgstr ""
 msgid "help_always_show_selector"
 msgstr ""
 
+#. Default: "If selected, anonymous users are able to post comments without loggin in. It is highly recommended to use a captcha solution to prevent spam if this setting is enabled."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:214
+msgid "help_anonymous_comments"
+msgstr "Jos viestit tunnistamattomilta käyttäjiltä sallitaan, on erittäin suositeltavaa käyttää automaattisten roskapostittimien estintä (engl. captcha)."
+
+#. Default: "If selected, anonymous user will have to give their email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:228
+msgid "help_anonymous_email_enabled"
+msgstr ""
+
 #. Default: "The URL of the \"After the Deadline\" grammar and spell checking server. The default value is the public server, but ideally you should download and install your own and specify its address here."
 #: CMFPlone/interfaces/controlpanel.py:703
 msgid "help_atd_service_url"
@@ -7183,6 +7473,11 @@ msgstr "Tosi tai epätosi"
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:114
 msgid "help_capslock_password"
 msgstr "Isoilla ja pienillä kirjaimilla on merkitystä (esim. a ja A) - varmista, että Caps Lock ei ole päällä."
+
+#. Default: "Use this setting to enable or disable Captcha validation for comments. Install plone.formwidget.captcha, plone.formwidget.recaptcha, collective.akismet, or collective.z3cform.norobots if there are no options available."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:297
+msgid "help_captcha"
+msgstr "Roskaviestiautomaattien estimen (engl. captcha) käyttö. Jos mitään estintä ei ole valittavissa, järjestelmään ei ole asennettu mitään estintä. Soveltuvia estimiä ovat plone.formwidget.captcha ('Captcha') ja plone.formwidget.recaptcha ('ReCapthca')."
 
 #. Default: "Select the transition to be used for modifying the items state."
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:8
@@ -7278,10 +7573,20 @@ msgstr "Haettavan aikavälin aloitusajankohta."
 msgid "help_default_icon"
 msgstr ""
 
+#. Default: "If selected, supports deleting of own comments for users with the 'Delete own comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:269
+msgid "help_delete_own_comment_enabled"
+msgstr ""
+
 #. Default: "Used in item listings and search results."
 #: Archetypes/ExtensibleMetadata.py:93
 msgid "help_description"
 msgstr "Käytetään sisältöjen listauksissa ja hakutuloksissa."
+
+#. Default: "Some discussion related settings are not located in the Discussion Control Panel.\nTo enable comments for a specific content type, go to the Types Control Panel of this type and choose \"Allow comments\".\nTo enable the moderation workflow for comments, go to the Types Control Panel, choose \"Comment\" and set workflow to \"Comment Review Workflow\"."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:28
+msgid "help_discussion_settings_editform"
+msgstr "Tarkista myös keskusteluun / kommentointiin liittyvät asetukset sisältötyyppien hallintapaneelissa ('Sisältötyypit')."
 
 #. Default: "You can specify a Doctype string which will be set on the output, for example \"&lt;!DOCTYPE html&gt;\". If left blank the default XHTML 1.0 transistional Doctype or that set in the Diazo theme is used."
 #: plone/app/theming/browser/controlpanel.pt:422
@@ -7291,6 +7596,11 @@ msgstr ""
 #. Default: "Switching the email login setting in the ${link} on or off automatically changes the login name for existing users. This may fail when there are duplicates. On this page you can search for duplicates."
 #: CMFPlone/controlpanel/browser/emaillogin.pt:18
 msgid "help_duplicate_login_names"
+msgstr ""
+
+#. Default: "If selected, supports editing of comments for users with the 'Edit comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:258
+msgid "help_edit_comment_enabled"
 msgstr ""
 
 #. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
@@ -7368,6 +7678,11 @@ msgstr "Jos et ole varma, mitä muotoa sinun tulisi käyttää, valitse \"Pelkk�
 msgid "help_full_name_creation"
 msgstr "Syötä koko nimesi, esim. Matti Meikäläinen."
 
+#. Default: "If selected, users are able to post comments on the site. Though, you have to enable comments for specific content types, folders or content objects before users will be able to post comments."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:200
+msgid "help_globally_enabled"
+msgstr "Huomaa, että keskustelu/kommentointi pitää myös lisäksi erikseen asettaa päälle halutuille sisältötyypeille ja/tai yksittäisille sisällöille."
+
 #. Default: "A unique identifier for the group. Can not be changed after creation."
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.pt:34
 msgid "help_groupname"
@@ -7443,6 +7758,21 @@ msgstr ""
 #: CMFPlone/browser/interfaces.py:378
 msgid "help_message"
 msgstr "Kirjoita viesti, jonka haluat lähettää."
+
+#. Default: "If selected, comments will enter a 'Pending' state in which they are invisible to the public. A user with the 'Review comments' permission ('Reviewer' or 'Manager') can approve comments to make them visible to the public. If you want to enable a custom comment workflow, you have to go to the types control panel."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:241
+msgid "help_moderation_enabled"
+msgstr ""
+
+#. Default: "Address to which moderator notifications will be sent."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:338
+msgid "help_moderator_email"
+msgstr ""
+
+#. Default: "If selected, the moderator is notified if a comment needs attention. The moderator email address can be set below."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:324
+msgid "help_moderator_notification_enabled"
+msgstr "Tarkistajana toimivalle ylläpitäjälle ilmoitetaan toimenpiteitä edellyttävistä viesteistä."
 
 #. Default: "Date this content was modified last"
 #: Archetypes/ExtensibleMetadata.py:208
@@ -7718,6 +8048,11 @@ msgstr "Lyhyt nimi on kohteen verkko-osoitteen (URL) viimeinen osa."
 msgid "help_shortname"
 msgstr "Sisällön tunniste on osa sen verkko-osoitetta. Vältä välilyöntejä, isoja kirjaimia, alaviivaa, skandinaavisia kirjaimia tai muita erikoismerkkejä."
 
+#. Default: "If selected, an image of the user is shown next to the comment."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:313
+msgid "help_show_commenter_image"
+msgstr "Näytetäänkö kirjoittajan kuva viestin yhteydessä."
+
 #. Default: "Show icons or default icon for actions without icon."
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:43
 msgid "help_show_icons"
@@ -7768,6 +8103,11 @@ msgstr "Tageja käytetään yleisesti sisällön ad-hoc järjestämiseen."
 #: Archetypes/TemplateMixin.py:25
 msgid "help_template_mixin"
 msgstr "Valitse sivupohja, jota käytetään tämän sisällön esitykseen."
+
+#. Default: "Use this setting to choose if the comment text should be transformed in any way. You can choose between 'Plain text' and 'Intelligent text'. 'Intelligent text' converts plain text into HTML where line breaks and indentation is preserved, and web and email addresses are made into clickable links."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:280
+msgid "help_text_transform"
+msgstr ""
 
 #. Default: "Select a file to upload."
 #: plone/app/theming/browser/controlpanel.pt:716
@@ -7829,6 +8169,11 @@ msgstr "Lisää alkuun \"http://\", jos linkin kohde on tämän sivuston ulkopuo
 #: plone.app.users/plone/app/users/schema.py:93
 msgid "help_user_name_creation_casesensitive"
 msgstr "Syötä haluamasi käyttäjätunnus, esimerkiksi <em>mmeikala</em>. Älä käytä välilyöntejä, erikoismerkkejä tai skandinaavisia kirjaimia. Kirjainkoolla on merkitystä, joten varmista, ettei Caps Lock ole päällä. Käytät valitsemaasi tunnusta jatkossa sivustolle kirjautumiseen, joten sen tulisi olla helppo muistaa."
+
+#. Default: "If selected, users can choose to be notified of new comments by email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:350
+msgid "help_user_notification_enabled"
+msgstr ""
 
 #. Default: "Wysiwyg editor to use."
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:31
@@ -7946,6 +8291,11 @@ msgstr "Toiminnot"
 msgid "label_add"
 msgstr "Lisää"
 
+#. Default: "Add comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:194
+msgid "label_add_comment"
+msgstr ""
+
 #. Default: "Add New Group"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:84
 msgid "label_add_new_group"
@@ -8032,6 +8382,22 @@ msgstr ""
 msgid "label_an_anonymous_user"
 msgstr "tunnistautumaton käyttäjä"
 
+#. Default: "Anonymous"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:76
+#: plone.app.discussion/plone/app/discussion/comment.py:179
+msgid "label_anonymous"
+msgstr ""
+
+#. Default: "Enable anonymous comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:212
+msgid "label_anonymous_comments"
+msgstr "Salli viestit tunnistamattomilta käyttäjiltä"
+
+#. Default: "Enable anonymous email field"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:226
+msgid "label_anonymous_email_enabled"
+msgstr ""
+
 #. Default: "Anonymous User"
 #: plone.app.layout/plone/app/layout/viewlets/content.py:376
 msgid "label_anonymous_user"
@@ -8041,6 +8407,11 @@ msgstr "Tunnistautumaton käyttäjä"
 #: CMFPlone/skins/plone_deprecated/search_form.pt:306
 msgid "label_any_author"
 msgstr "Kuka tahansa"
+
+#. Default: "Apply"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:71
+msgid "label_apply"
+msgstr "toteuta"
 
 #. Default: "Apply Changes"
 #: plone.app.users/plone/app/users/browser/registersettingspanel.py:32
@@ -8121,6 +8492,11 @@ msgstr "Peru"
 #: plone.app.users/plone/app/users/browser/register.py:676
 msgid "label_cant_mail_password_reset"
 msgstr "Normaalisti tarjoaisimme mahdollisuutta lähettää käyttäjän sähköpostiin ohjeet salasanan asettamiseksi, mutta tällä sivustolla ei ole kelvollisia sähköpostiasetuksia. Voit korjata tämän sivuston sähköpostiasetuksista."
+
+#. Default: "Captcha"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:295
+msgid "label_captcha"
+msgstr "Roskaviestien estin"
 
 #. Default: "Change"
 #: CMFPlone/controlpanel/browser/types.pt:47
@@ -8209,8 +8585,14 @@ msgstr "Napsauta nähdäksesi kuva alkuperäisessä koossa..."
 
 #. Default: "Comment"
 #: CMFPlone/browser/interfaces.py:342
+#: plone.app.discussion/plone/app/discussion/interfaces.py:161
 msgid "label_comment"
 msgstr "Kommentti"
+
+#. Default: "Commenting has been disabled."
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:171
+msgid "label_commenting_disabled"
+msgstr ""
 
 #. Default: "Comments"
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:3
@@ -8426,8 +8808,15 @@ msgstr "Oletusarvoinen työnkulku (${title})"
 
 #. Default: "Delete"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:173
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:98
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:130
 msgid "label_delete"
 msgstr "Poista"
+
+#. Default: "Enable deleting own comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:267
+msgid "label_delete_own_comment_enabled"
+msgstr ""
 
 #. Default: "Description"
 #: Archetypes/ExtensibleMetadata.py:92
@@ -8475,9 +8864,14 @@ msgstr ""
 #. Default: "Edit"
 #: CMFPlone/browser/templates/author.pt:85
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:58
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:28
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:131
 msgid "label_edit"
 msgstr "Muokkaa"
+
+#. Default: "Enable editing of comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:256
+msgid "label_edit_comment_enabled"
+msgstr ""
 
 #. Default: "You are editing the default view of a container. If you wanted to edit the container itself, ${go_here}."
 #: Archetypes/skins/archetypes/edit_macros.pt:41
@@ -8667,6 +9061,11 @@ msgstr "Koko nimi"
 #: plone.app.users/plone/app/users/browser/membersearch.py:38
 msgid "label_fullname"
 msgstr "Koko nimi"
+
+#. Default: "Globally enable comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:198
+msgid "label_globally_enabled"
+msgstr "Keskustelu/kommentointitoiminnot käytössä"
 
 #. Default: "GNU GPL license"
 #: CMFPlone/browser/templates/footer.pt:31
@@ -8879,6 +9278,11 @@ msgstr "Jatka sivuston ${portal_title} etusivulle"
 msgid "label_login_name"
 msgstr "Käyttäjätunnus"
 
+#. Default: "Log in to add comments"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:20
+msgid "label_login_to_add_comments"
+msgstr ""
+
 #. Default: "Log in to send feedback"
 #: CMFPlone/browser/templates/author.pt:158
 msgid "label_login_to_send_feedback"
@@ -8922,6 +9326,21 @@ msgstr ""
 #: CMFPlone/browser/interfaces.py:376
 msgid "label_message"
 msgstr "Viesti"
+
+#. Default: "Enable comment moderation"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:237
+msgid "label_moderation_enabled"
+msgstr ""
+
+#. Default: "Moderator Email Address"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:334
+msgid "label_moderator_email"
+msgstr ""
+
+#. Default: "Enable moderator email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:322
+msgid "label_moderator_notification_enabled"
+msgstr "Ilmoita viesteistä sähköpostitse ylläpitäjälle"
 
 #. Default: "Modification Date"
 #: Archetypes/ExtensibleMetadata.py:206
@@ -9194,6 +9613,11 @@ msgstr "Vanha profiilin versio oli ${version}."
 msgid "label_product_upgrade_old_version"
 msgstr "Vanha versio oli ${version}."
 
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:121
+msgid "label_publish"
+msgstr "Hyväksy"
+
 #. Default: "effective"
 #: plone.app.layout/plone/app/layout/viewlets/content_history.pt:49
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:49
@@ -9264,6 +9688,11 @@ msgstr "Poista valitut ryhmät/käyttäjät"
 msgid "label_replace_existing"
 msgstr ""
 
+#. Default: "Reply"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:162
+msgid "label_reply"
+msgstr ""
+
 #. Default: "Request URL"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:55
 msgid "label_request_url"
@@ -9311,6 +9740,11 @@ msgstr "Tallenna"
 #: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-contextual.pt:178
 msgid "label_save_settings"
 msgstr "Tallenna asetukset"
+
+#. Default: "says:"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:79
+msgid "label_says"
+msgstr ""
 
 #. Default: "Categorization"
 #: ./ATContentTypes/content/schemata.py
@@ -9457,6 +9891,16 @@ msgstr "Näytä kaikki"
 msgid "label_show_batched"
 msgstr "Näytä sivutettuna"
 
+#. Default: "Show commenter image"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:311
+msgid "label_show_commenter_image"
+msgstr "Näytä kirjoittajan kuva"
+
+#. Default: "show full comment text"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:114
+msgid "label_show_full_comment_text"
+msgstr "Näytä kokonaan"
+
 #. Default: "Show icons"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:41
 msgid "label_show_icons"
@@ -9548,6 +9992,7 @@ msgstr "Arvo"
 
 #. Default: "Subject"
 #: CMFPlone/browser/interfaces.py:370
+#: plone.app.discussion/plone/app/discussion/interfaces.py:156
 msgid "label_subject"
 msgstr "Aihe"
 
@@ -9576,6 +10021,11 @@ msgstr "Esityssivupohja"
 #: plone.app.textfield/plone/app/textfield/widget_input.pt:28
 msgid "label_text_format"
 msgstr "Tekstimuoto"
+
+#. Default: "Comment text transform"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:278
+msgid "label_text_transform"
+msgstr ""
 
 #. Default: "Theme base"
 #: plone/app/theming/browser/controlpanel.pt:532
@@ -9698,6 +10148,11 @@ msgstr "Verkko-osoite"
 #: plone.app.users/plone/app/users/schema.py:92
 msgid "label_user_name"
 msgstr "Käyttäjätunnus"
+
+#. Default: "Enable user email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:346
+msgid "label_user_notification_enabled"
+msgstr ""
 
 #. Default: "User Search"
 #: CMFPlone/controlpanel/browser/usergroups_usersoverview.pt:83
@@ -9983,6 +10438,16 @@ msgstr "Kun evästetunnistus (<em>cookie authentication</em>) on poissa käytös
 msgid "login_portlet_disabled"
 msgstr "Evästetunnistus on poistettu käytöstä. Kirjautumissovelma ei ole käytettävissä."
 
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:47
+msgid "mail_notification_message"
+msgstr ""
+
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n\nApprove comment:\n${link_approve}\n\nDelete comment:\n${link_delete}\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:55
+msgid "mail_notification_message_moderator"
+msgstr ""
+
 #. Default: "Manage portlets"
 #: plone.app.contentmenu/plone/app/contentmenu/menu.py:814
 #: plone.app.layout/plone/app/layout/viewlets/manage_portlets_fallback.pt:7
@@ -10013,6 +10478,21 @@ msgstr "Valitettavasti sähköpostiosoitteesi muuttaminen ei ole sallittu."
 #: plone.app.users/plone/app/users/browser/account.py:35
 msgid "message_email_in_use"
 msgstr "Valitsemasi sähköpostiosoite on jo käytössä tai ei ole kelvollinen käyttäjätunnus. Kokeile toista osoitetta."
+
+#. Default: "enable the 'Comment Review Workflow' for the Comment content type"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_enable_comment_workflow"
+msgstr "Aseta 'Comment Review Workflow' työnkulku Viesti-sisältötyypille."
+
+#. Default: "Moderation workflow is disabled. You have to ${enable_comment_workflow} before you can moderate comments here."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_moderation_disabled"
+msgstr "Esitarkistustoiminto edellyttää tarkoitukseen tehdyn viestien tarkistustyönkulun käyttöä. Kommenttiviestien työnkuluksi tulee asettaa viestien tarkistustyönkulku, ennenkuin tarkistustoimintoa voidaan käyttää."
+
+#. Default: "No comments to moderate."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:43
+msgid "message_nothing_to_moderate"
+msgstr "Ei tarkistettavia viestejä"
 
 #. Default: "You see this page because you have permission to edit this link. Others will be immediately redirected to the link's target URL."
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/link.pt:15
@@ -10406,6 +10886,11 @@ msgstr ""
 msgid "test wc workflow"
 msgstr ""
 
+#. Default: "migrate your comments"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:64
+msgid "text_comments_migration_link"
+msgstr ""
+
 #. Default: "Caught &e at &c by &u"
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:40
 msgid "text_contentrules_logger_message"
@@ -10423,10 +10908,20 @@ msgstr "Sisällön luomisessa avustaneet: ${name}"
 msgid "text_creator_date"
 msgstr "tehnyt ${creator}, viimeksi päivitetty: ${date}"
 
+#. Default: "You have configured a custom workflow for the 'Discussion Item' content type. You can enable/disable the comment moderation in this control panel only if you use one of the default 'Discussion Item' workflows. Go to the ${label_discussion_control_panel_link} to choose a workflow for the 'Discussion Item' type."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:44
+msgid "text_custom_comment_workflow"
+msgstr ""
+
 #. Default: "Site"
 #: CMFPlone/browser/templates/plone-addsite.pt:65
 msgid "text_default_site_title"
 msgstr "Sivusto"
+
+#. Default: "Types control panel"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:45
+msgid "text_discussion_type_control_panel_link"
+msgstr ""
 
 #. Default: "The specified log entry was not found. It may have expired. If you are using a load-balanced ZEO (cluster) setup, try reloading until you get the right server in the cluster."
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:35
@@ -10451,11 +10946,13 @@ msgstr "Tämän sivuston sähköpostitoiminto ei ole käytössä, joten yhteyden
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/controlpanel/browser/overview.pt:52
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:24
 msgid "text_no_mailhost_configured"
 msgstr "Sivuston sähköpostitoiminnon lähetystietoja (postipalvelin, sivuston lähettäjäosoite) ei ole määritelty. Useat toiminnot, kuten yhteystietolomakkeet, sähköpostimuistutukset ja salasanan vaihtamiset, eivät toimi. Siirry ${label_mail_control_panel_link} hallintasivulle muokataksesi sähköpostiasetuksia."
 
 #. Default: "Mail control panel"
 #: CMFPlone/controlpanel/browser/overview.pt:53
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:25
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "postiasetukset"
 
@@ -10536,6 +11033,11 @@ msgstr "Hae"
 #. Default: "Located in"
 #: CMFPlone/browser/templates/search.pt:299
 msgid "text_searchitem_location"
+msgstr ""
+
+#. Default: "You have comments that have not been migrated to the new commenting system that has been introduced in Plone 4.1. Please ${label_comments_migration_link} to fix this."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:63
+msgid "text_unmigrated_comments"
 msgstr ""
 
 #. Default: "This user does not belong to any group."
@@ -10666,6 +11168,11 @@ msgstr "Tekijän tiedot"
 #: plone.app.theming/resources/theme/theme1/overrides/plone.app.layout.viewlets.colophon.pt:8
 msgid "title_built_with_plone"
 msgstr "Tämä sivusto käyttää Plone avoimen lähdekoodin sisällönhallintajärjestelmää (CMS/WCM)."
+
+#. Default: "Bulk Actions"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:64
+msgid "title_bulkactions"
+msgstr "toimenpide..."
 
 #. Default: "Can add"
 #: plone.app.workflow/plone/app/workflow/localroles.py:33

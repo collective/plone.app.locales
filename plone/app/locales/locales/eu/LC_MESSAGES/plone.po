@@ -159,6 +159,14 @@ msgstr "Zure itxurari oinarrizko rules.xml fitxategia gehitu diogu baina ez du i
 msgid "A classic portlet allows you to use legacy portlet templates."
 msgstr "Portlet klasikoak, txantiloietan oinarritutako portlet zaharrak erabiltzen uzten dizu"
 
+#: plone.app.discussion/plone/app/discussion/comment.py:349
+msgid "A comment has been posted."
+msgstr "Erantzun bat argitaratu da."
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:142
+msgid "A comment id unique to this conversation"
+msgstr "Eztabaida honetarako bakarra den erantzunaren id-a."
+
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:131
 msgid "A copy action can copy an object to a different folder."
 msgstr "Kopiatze-ekintzak objektu bat beste karpeta batera kopiatu dezake."
@@ -254,6 +262,10 @@ msgstr "Tol-baldintza batek, erregela bat exekutatzea ekidin dezake, uneko erabi
 #: CMFPlone/browser/templates/plone-addsite.pt:60
 msgid "A short title for the site. This will be shown in the title of the browser window on each page."
 msgstr "Webgunearen izenburu laburra. Nabigatzailearen izenburu-barran agertuko da webgunearen orrialde guztietan."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "A simple review workflow for comments"
+msgstr ""
 
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:103
 msgid "A summary of the rule"
@@ -416,6 +428,10 @@ msgstr "Lan-fluxu egoera baldintza gehitu"
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:61
 msgid "Add Workflow Transition Condition"
 msgstr "Lan-fluxu trantsizio baldintza gehitu"
+
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:62
+msgid "Add a comment"
+msgstr "Erantzuna gehitu"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/rule.py:22
 msgid "Add a new rule. Once complete, you can manage the rule's actions and conditions separately."
@@ -584,9 +600,21 @@ msgstr "Elementu mota bat (adb. Hitzordua)"
 msgid "An item's workflow state (e.g.published)"
 msgstr "Elementu baten lan-fluxu egoera (adb. argitaratua)"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:69
+msgid "Anonymous Comments"
+msgstr "Erantzun anonimoak"
+
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:217
 msgid "Apply rule on the whole site"
 msgstr "Erregela webgune guztiari aplikatu"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approve"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approving the comment makes it visible to other users."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:30
 #: plone.app.contentrules/plone/app/contentrules/actions/move.py:31
@@ -744,6 +772,10 @@ msgstr "Bertsio berria ezeztatu"
 msgid "Cannot find checkout location"
 msgstr "Ezin da aurkitu bertsio berria non dagoen"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:182
+msgid "Captcha"
+msgstr "Captcha"
+
 #: plone.protect/plone/protect/confirm.pt:27
 msgid "Careful, it's possible someone is executing an exploit against you. Verify you just performed an action on this site and that you were not referred here by a different website or email."
 msgstr "Kontuz, baliteke norbait zuk nahi ez duzun akzio bat egitera bultzatzen aritzea. Egiaztatu ekintza hau egitera ez zarela kanpoko webgune batetik etorri, zure webgunetik baizik."
@@ -795,8 +827,8 @@ msgid "Changes made."
 msgstr "Aldaketak eginda."
 
 #: CMFPlone/controlpanel/browser/types.py:67
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:83
 #: plone.app.portlets/plone/app/portlets/browser/formhelper.py:183
-#: plone/app/theming/browser/controlpanel.py:204
 msgid "Changes saved"
 msgstr "Aldaketak ondo gorde dira"
 
@@ -880,12 +912,56 @@ msgstr "Shim-en baliabideentzat Komarekin Banatutako Balioak (CSV)"
 msgid "Comment"
 msgstr "Iruzkina"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Comment Review Workflow"
+msgstr ""
+
 #. Default: "Comment about the last transition"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "Azken trantsizioari buruzko iruzkina"
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:182
+msgid "Comment approved."
+msgstr "Erantzuna onartuta."
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:98
+msgid "Comment author email"
+msgstr "E-posta"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:86
+msgid "Comment author full name"
+msgstr "Izena"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:74
+msgid "Comment author user name"
+msgstr "Erabiltzaile-izena"
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:104
+msgid "Comment deleted."
+msgstr "Erantzuna ezabatuta."
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:50
+msgid "Comment id"
+msgstr "Id-a"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:62
+msgid "Comment text"
+msgstr "Testua"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Commentators"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:70
+msgid "Commenter Image"
+msgstr "Erantzuna eman duenaren irudia."
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:49
+msgid "Comments"
+msgstr "Erantzunak"
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1043,6 +1119,10 @@ msgstr "Laguntzaileen eposta helbideak"
 msgid "Contributors Ids"
 msgstr "Laguntzaileen erabiltzaile-izenak"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:137
+msgid "Conversation"
+msgstr "Eztabaida"
+
 #. Default: "Copy"
 #: CMFPlone/profiles/default/actions.xml
 #: plone.app.content/plone/app/content/browser/contents/copy.py:26
@@ -1099,6 +1179,7 @@ msgstr "Plone atari berria sortu"
 msgid "Created on"
 msgstr "Sorrera data"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:175
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Creation date"
 msgstr "Sorrera data"
@@ -1193,6 +1274,10 @@ msgstr "Aldaketa-data"
 #: CMFPlone/profiles/default/controlpanel.xml
 msgid "Date and Time"
 msgstr "Data eta ordua"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:39
+msgid "Date of the most recent public comment"
+msgstr "Azken erantzunaren data"
 
 #. Default: "Date range"
 #: criterion description of criterion ATDateRangeCriterion
@@ -1373,9 +1458,17 @@ msgstr "Globalki desaktibatu"
 msgid "Disable html filtering"
 msgstr "Desaktibatu HTML filtroa"
 
+#: plone.app.discussion/plone/app/discussion/vocabularies.py:44
+msgid "Disabled"
+msgstr "Desaktibatuta"
+
 #: CMFPlone/interfaces/controlpanel.py:119
 msgid "Disabling locking here will only affect users editing content through the Plone web UI.  Content edited via WebDAV clients will still be subject to locking."
 msgstr "Edizioa blokeatzea hemen desaktibatzeak Ploneren interfazetik edukia editatzen dutenentzat bakarrik izango du eragina. WebDAV bidez egindako edizioak blokeatzea aktibatuta izango du."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/controlpanel.xml
+msgid "Discussion"
+msgstr ""
 
 #. Default: "Discussion Item"
 #: portal type title of type with description Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface.
@@ -1386,6 +1479,10 @@ msgstr "Eztabaida elementua"
 #: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Eztabaida elementuak, bestelako edukiari erantzuten dioten dokumentuak dira. Ez lukete 'folder_factories' interfazearen bitartez gehigarri egon behar."
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:27
+msgid "Discussion settings"
+msgstr "Eztabaidaren ezarpenak"
 
 #: CMFPlone/skins/plone_deprecated/search_form.pt:371
 msgid "Display options"
@@ -1549,6 +1646,10 @@ msgstr "Lan-fluxuaren trantsizio baldintza aldatu"
 msgid "Edit an existing rule."
 msgstr "Existitzen den erregela bat aldatu."
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:89
+msgid "Edit cancelled"
+msgstr "Edizioa utzita"
+
 #: CMFPlone/controlpanel/browser/syndication.py:94
 #: plone.app.registry/plone/app/registry/browser/edit.py:57
 msgid "Edit cancelled."
@@ -1606,6 +1707,10 @@ msgstr "Argitaratze-data"
 msgid "Effective range"
 msgstr "Argitaratze data-tartea"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:154
+msgid "Email"
+msgstr "E-posta"
+
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:62
 msgid "Email address not known."
 msgstr "E-posta helbide ezezaguna."
@@ -1625,6 +1730,10 @@ msgstr "${recipients}-i e-posta bidali"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:36
 msgid "Email source"
 msgstr "E-postaren iturburua"
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:68
+msgid "Enable Comments"
+msgstr "Erantzunak aktibatu"
 
 #: CMFPlone/interfaces/controlpanel.py:98
 msgid "Enable External Editor feature"
@@ -2160,6 +2269,10 @@ msgstr "Ida"
 msgid "Id $id is already in use"
 msgstr "$id identifikadorea erabilita dago jadanik"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:145
+msgid "Id of comment this comment is in reply to"
+msgstr "Erantzun honek erreferentzia egiten dion erantzunaren id-a"
+
 #: plone.stringinterp/plone/stringinterp/adapters.py:73
 msgid "Identifier of the content or login of managed user"
 msgstr "Edukiaren identifikadorea edo erabiltzaile-izena"
@@ -2638,6 +2751,7 @@ msgstr "Sarrera izen hori ez dugu aurkitu."
 msgid "Logout"
 msgstr "Irten"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:159
 #: plone.app.textfield/plone/app/textfield/interfaces.py:57
 msgid "MIME type"
 msgstr "MIME mota"
@@ -2915,6 +3029,15 @@ msgstr "Rss loturaren akzioa falta da"
 msgid "Missing syndication settings action."
 msgstr "Sindikazioaren konfigurazioaren akzioa falta da"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/actions.xml
+msgid "Moderate comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:72
+msgid "Moderator Email Notification"
+msgstr "Moderatzailea e-postaz abisatu"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:176
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Modification date"
 msgstr "Aldaketa-data"
@@ -2988,6 +3111,7 @@ msgstr "Nire Karpeta"
 msgid "My Preferences"
 msgstr "Nire hobespenak"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:139
 #: plone/app/theming/interfaces.py:33
 msgid "Name"
 msgstr "Izena"
@@ -3131,6 +3255,10 @@ msgstr "Oharra"
 #: plone.app.contenttypes/plone/app/contenttypes/migration/custom_migration.pt:37
 msgid "Note about how long it might take"
 msgstr "Hartuko duen denboraren inguruko oharra"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:168
+msgid "Notify me of new comments via email."
+msgstr "Erantzun berriak e-postaz bidali"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
 msgid "Notify user"
@@ -3340,7 +3468,7 @@ msgid "Paths to folders and collections to link to at the portal root."
 msgstr "Atariaren erroan zein karpeta eta bildumatara egin behar den lotura."
 
 #. Default: "Pending"
-#: workflow state defined in plone_workflow - id pending
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "Pending"
 msgstr "Zain"
 
@@ -3503,6 +3631,10 @@ msgstr "Atariaren defektuzko ordu-zona"
 #: plone.stringinterp/plone/stringinterp/adapters.py:709
 msgid "Portal title"
 msgstr "Atariaren izenburua"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:132
+msgid "Portal type"
+msgstr "Elementu mota"
 
 #: plone.portlet.static/plone/portlet/static/static.py:49
 msgid "Portlet footer"
@@ -3857,6 +3989,10 @@ msgstr "Egoera"
 
 msgid "Reviewer"
 msgstr "Zuzentzailea"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Reviewer approves content"
+msgstr ""
 
 #. Default: "Reviewer makes content available externally"
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -4433,6 +4569,10 @@ msgstr "Zirriborroa argitaratzera bidali"
 msgid "Submit for publication"
 msgstr "Argitaratzera bidali"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Submitted, pending review."
+msgstr ""
+
 #. Default: "Subtopics"
 #: type action defined on Smart Folder
 msgid "Subtopics"
@@ -4609,6 +4749,7 @@ msgstr "Azken trantsizioa exekutatu duen erabiltzailearen IDa"
 
 #. Default: "The ID of the user who performed the previous transition"
 #: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "The ID of the user who performed the previous transition"
 msgstr "Aurreko trantsizioa exekutatu duen erabiltzailearen IDa"
 
@@ -4759,6 +4900,14 @@ msgstr "Erregela hau atariaren erroan eta bere azpikarpeta guztietan aktibatu da
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:205
 msgid "The rule is enabled but will perform nothing since it is not assigned anywhere."
 msgstr "Erregela hau aktibatuta dago baina inon ez dago esleituta, beraz ez da inon exekutatuko."
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:44
+msgid "The set of unique commentators (usernames)"
+msgstr "Erantzunak eman dituzten erabiltzaileak (erabiltzaile-izenak)"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:49
+msgid "The set of unique commentators (usernames) of published_comments"
+msgstr "Erantzun-emaleen erabiltzaile izenak"
 
 #. Default: "The short name of an item (used in the url)"
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -5107,10 +5256,26 @@ msgstr "Goian"
 msgid "Total comments"
 msgstr "Erantzun kopurua"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments on this item."
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:33
+msgid "Total number of public comments on this item"
+msgstr "Elementu  honen erantzun publiko kopurua"
+
 #. Default: "Transform"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Image.xml
 msgid "Transform"
 msgstr "Transformatu"
+
+#: plone.app.discussion/plone/app/discussion/comment.py:161
+msgid "Transform '%s' => '%s' not available."
+msgstr "'%s' => '%s' eraldaketa ez dago erabilgarri."
 
 #: plone.app.textfield/plone/app/textfield/interfaces.py:79
 msgid "Transformed value in the target MIME type"
@@ -5301,6 +5466,10 @@ msgstr "Erabiltzailea sortu da"
 msgid "User Data Form"
 msgstr "Erabiltzaileen datuen formularioa"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:74
+msgid "User Email Notification"
+msgstr "E-posta abisuak"
+
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "User Logged in"
 msgstr "Erabiltzailea sartu da"
@@ -5333,6 +5502,10 @@ msgstr "Erabiltzailearen rola"
 msgid "User/Groups settings"
 msgstr "Erabiltzaile/taldeen ezarpenak"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:174
+msgid "Username of the commenter"
+msgstr "Erantzuna utzi duenaren erabiltzaile-izena"
+
 #: CMFPlone/PloneControlPanel.py:69
 msgid "Users"
 msgstr "Erabiltzaileak"
@@ -5343,6 +5516,10 @@ msgstr "Erabiltzaileak"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:33
 msgid "Users and Groups"
 msgstr "Erabiltzaile eta taldeak"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Users who have commented on the item"
+msgstr ""
 
 #: validation/validators/RegexValidator.py:44
 msgid "Validation failed($name): $value of type $type, expected 'string'"
@@ -5440,6 +5617,10 @@ msgstr "Edozeinek ikusteko moduan, baina errebisoreek onartu gabe."
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, editable by the owner."
 msgstr "Edozeinek ikusteko moduan, jabeak alda dezake."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Visible to everyone, non-editable."
+msgstr ""
 
 #. Default: "Visible to everyone, not editable by the owner."
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
@@ -5672,6 +5853,10 @@ msgstr "Zure datu-basea noizean behin trinkotu egin beharko zenuke. Zenbaki hone
 msgid "Your Plone site has not been added yet:"
 msgstr "Oraindik ez da Plone ataririk gehitu:"
 
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:258
+msgid "Your comment awaits moderator approval."
+msgstr "Zure erantzuna moderazio kolan dago."
+
 #: CMFPlone/RegistrationTool.py:181
 msgid "Your password and confirmation did not match. Please try again."
 msgstr "Zure pasahitza eta konfirmazioa ez datoz bat. Saiatu berriz mesedez."
@@ -5721,6 +5906,11 @@ msgstr "URL absolutuen aurrizkia"
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:68
 msgid "action_convert_legacy_portlets"
 msgstr "Hemen definitutako portlet zaharrak daude. Egin klik portlet berri bihurtzeko."
+
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:128
+msgid "add_comment_button"
+msgstr "Eman erantzuna"
 
 #. Default: "This item can not be deleted because it is currently locked by another user."
 #: plone.app.content/plone/app/content/browser/templates/delete_confirmation.pt:18
@@ -5877,6 +6067,21 @@ msgstr "Bilaketa"
 msgid "box_sign_in"
 msgstr "Saioa hasi"
 
+#. Default: "Delete"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:68
+msgid "bulkactions_delete"
+msgstr "Ezabatu"
+
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
+msgid "bulkactions_publish"
+msgstr "Onartu"
+
+#. Default: "Cancel"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:101
+msgid "cancel_form_button"
+msgstr "Utzi"
+
 #. Default: "Category"
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:13
 msgid "category-contentrules-mailsub"
@@ -5896,6 +6101,41 @@ msgstr "Hau ${creator}-ek ${created}en egindako ${baseline_title}en lan-bertsioa
 #: plone.app.registry/plone/app/registry/browser/records.pt:42
 msgid "clear_filter"
 msgstr "Filtroa garbitu"
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. Web and email addresses are transformed into clickable links."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:47
+msgid "comment_description_intelligent_text"
+msgstr "Erantzuna formulario hau betez utzi dezakezu. Formatua testu arruntarena da. Web eta e-posta helbideak automatikoki klikagarri agertuko dira."
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. You can use the Markdown syntax for links and images."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:41
+msgid "comment_description_markdown"
+msgstr "Erantzuna formulario hau betez utzi dezakezu. Formatua testu arruntarena da. Lotura era irudientzat 'Markdown' sintaxia erabili dezakezu."
+
+#. Default: "Comments are moderated."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:53
+msgid "comment_description_moderation_enabled"
+msgstr "Erantzunak moderatuta daude."
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:36
+msgid "comment_description_plain_text"
+msgstr "Erantzuna formulario hau betez utzi dezakezu. Formatua testu arruntarena da."
+
+#. Default: "Edit comment cancelled"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:105
+msgid "comment_edit_cancel_notification"
+msgstr "Erantzuna editatzea bertan behera utzi da"
+
+#. Default: "Comment was edited"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:95
+msgid "comment_edit_notification"
+msgstr "Erantzuna aldatu egin da"
+
+#. Default: "${author_name} on ${content}"
+#: plone.app.discussion/plone/app/discussion/comment.py:43
+msgid "comment_title"
+msgstr "${content} - ${creator}"
 
 #. Default: "Are you certain you want to delete the selected items?"
 #: plone.app.content/plone/app/content/browser/contents/templates/delete.pt:5
@@ -6619,6 +6859,16 @@ msgstr "Dokumentazioa"
 msgid "edit"
 msgstr "Editatu"
 
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:74
+msgid "edit_comment_form_button"
+msgstr "Erantzuna editatu"
+
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:58
+msgid "edit_comment_form_title"
+msgstr "Erantzuna editatu"
+
 # E-Mail group property
 # E-Mail group property
 #. Default: "E-Mail"
@@ -6737,6 +6987,11 @@ msgstr "Irisgarritasuna"
 msgid "heading_accessibility_statement"
 msgstr "Irisgarritasun Adierazpena"
 
+#. Default: "Action"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
+msgid "heading_action"
+msgstr "Ekintza"
+
 #. Default: "Add actions portlet"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:196
 msgid "heading_add_actions_portlet"
@@ -6792,6 +7047,16 @@ msgstr "Erabili nabigatzailearen hizkuntza-negoziazioa"
 msgid "heading_change_password_for"
 msgstr "${user} -rako pasahitza aldatu"
 
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
+msgid "heading_comment"
+msgstr "Erantzuna"
+
+#. Default: "Commenter"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:81
+msgid "heading_commenter"
+msgstr "Egilea"
+
 #. Default: "Contact form"
 #: CMFPlone/browser/templates/contact-info.pt:18
 msgid "heading_contact_form"
@@ -6816,6 +7081,11 @@ msgstr "${folder}-en esleitutako baimenak"
 #: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:16
 msgid "heading_dashboard"
 msgstr "${user_name}-en lanlekua"
+
+#. Default: "Date"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
+msgid "heading_date"
+msgstr "Data"
 
 #. Default: "Description"
 #: plone.app.registry/plone/app/registry/browser/records.pt:80
@@ -6878,6 +7148,11 @@ msgstr "Taldea: ${groupname}"
 msgid "heading_groupmembers_current"
 msgstr "Oraingo taldekideak"
 
+#. Default: "In Response To"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
+msgid "heading_in_reponse_to"
+msgstr "Honi erantzunez"
+
 #. Default: "Use language codes in URL path for manual override"
 #: CMFPlone/interfaces/controlpanel.py:228
 msgid "heading_language_codes_in_URL"
@@ -6902,6 +7177,11 @@ msgstr "Kideak bilatu"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:69
 msgid "heading_memberships_current"
 msgstr "Oraingo Taldekidetzak"
+
+#. Default: "Moderate comments"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:24
+msgid "heading_moderate_comments"
+msgstr "Erantzunak moderatu"
 
 #. Default: "Name"
 #: plone.app.registry/plone/app/registry/browser/records.pt:78
@@ -7156,6 +7436,16 @@ msgstr "Erabiltzaile-rol hau duten erabiltzaileek bakarrik gehitu ditzakete etik
 msgid "help_always_show_selector"
 msgstr " "
 
+#. Default: "If selected, anonymous users are able to post comments without loggin in. It is highly recommended to use a captcha solution to prevent spam if this setting is enabled."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:214
+msgid "help_anonymous_comments"
+msgstr "Aukeratuta badago, erabiltzaile anonimoek erantzunak gehitu ditzakete login egin gabe. Berariaz gomendatzen dizugu Captcha kontrolen bat aktibatzea anonimoen erantzunak baimentzen badituzu."
+
+#. Default: "If selected, anonymous user will have to give their email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:228
+msgid "help_anonymous_email_enabled"
+msgstr "Aukeratuta badago, erabiltzaile anonimoek eposta helbidea idatzi beharko dute"
+
 #. Default: "The URL of the \"After the Deadline\" grammar and spell checking server. The default value is the public server, but ideally you should download and install your own and specify its address here."
 #: CMFPlone/interfaces/controlpanel.py:703
 msgid "help_atd_service_url"
@@ -7186,6 +7476,11 @@ msgstr "Egiazkoa ala faltsua"
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:114
 msgid "help_capslock_password"
 msgstr "Pasahitzak maiuskula eta minuskulak bereizi egiten ditu, beraz ziurtatu maiuskulak blokeatzeko tekla gaituta ez dagoela."
+
+#. Default: "Use this setting to enable or disable Captcha validation for comments. Install plone.formwidget.captcha, plone.formwidget.recaptcha, collective.akismet, or collective.z3cform.norobots if there are no options available."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:297
+msgid "help_captcha"
+msgstr "Erabili aukera hau Captcha aktibatu edo desaktibatzeko. Instalatu plone.formwidget.captcha, plone.formwidget.recaptcha, collective.akismet edo collective.z3cform.norobots aukerarik ez baldin badago."
 
 #. Default: "Select the transition to be used for modifying the items state."
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:8
@@ -7281,10 +7576,23 @@ msgstr "Data-tartearen hasiera finkatu."
 msgid "help_default_icon"
 msgstr "Ikono berezirik ez duen akzioan erakutsi beharreko ikonoa. 16 x 16 pixeleko irudia."
 
+#. Default: "If selected, supports deleting of own comments for users with the 'Delete own comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:269
+msgid "help_delete_own_comment_enabled"
+msgstr "Aukeratuta badago, 'Delete own comments' baimena duten erabiltzaileek beren erantzunak ezabatu ditzakete."
+
 #. Default: "Used in item listings and search results."
 #: Archetypes/ExtensibleMetadata.py:93
 msgid "help_description"
 msgstr "Elementuaren deskribapen laburra."
+
+#. Default: "Some discussion related settings are not located in the Discussion Control Panel.\nTo enable comments for a specific content type, go to the Types Control Panel of this type and choose \"Allow comments\".\nTo enable the moderation workflow for comments, go to the Types Control Panel, choose \"Comment\" and set workflow to \"Comment Review Workflow\"."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:28
+msgid "help_discussion_settings_editform"
+msgstr ""
+"Erantzunei dagozkien ezarpen batzuk ez daude Eztabaiden Kontrol Panelean.\n"
+"Elementu-mota jakin bati erantzunak aktibatzeko, joan elementu-moten kontrol panelera, aukeratu elementua eta aktibatu 'Erantzunak Baimendu'.\n"
+"Erantzunen Moderazio Workflowa aktibatzeko, joan elementu-moten kontrol panelera, aukeratu 'Erantzuna' eta ezarri 'Erantzunen Moderazio Workflowa'."
 
 #. Default: "You can specify a Doctype string which will be set on the output, for example \"&lt;!DOCTYPE html&gt;\". If left blank the default XHTML 1.0 transistional Doctype or that set in the Diazo theme is used."
 #: plone/app/theming/browser/controlpanel.pt:422
@@ -7295,6 +7603,11 @@ msgstr "HTMLa sortzen denean txertatuko den Doctype-a ezarri dezakezu, adibidez 
 #: CMFPlone/controlpanel/browser/emaillogin.pt:18
 msgid "help_duplicate_login_names"
 msgstr "${link}-en email bidezko logina aktibatu edo desaktibatuz, login egiteko izena aldatu egingo da egungo erabiltzaileentzat. Honek huts egin dezake bikoiztutako elementuak badaude. Orrialde honetan bikoiztutako elementu horiek aurkitu ditzakezu."
+
+#. Default: "If selected, supports editing of comments for users with the 'Edit comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:258
+msgid "help_edit_comment_enabled"
+msgstr "Aukeratuta badago, 'Edit comments' baimena duten erabiltzaileek erantzunak editatu ditzakete."
 
 #. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
 #: Archetypes/ExtensibleMetadata.py:139
@@ -7371,6 +7684,11 @@ msgstr "Erabiliko duzun formatuaz ziur ez bazaude, hauta ezazu Testu Arrunta eta
 msgid "help_full_name_creation"
 msgstr "Sar itzazu zure izen-abizenak, adb., Jon Garmendia"
 
+#. Default: "If selected, users are able to post comments on the site. Though, you have to enable comments for specific content types, folders or content objects before users will be able to post comments."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:200
+msgid "help_globally_enabled"
+msgstr "Aukeratuta badago, atarian erantzunak gehitu daitezke. Edonola ere, elementu-mota bakoitzarentzat erantzunak baimendu beharko dituzu erabiltzaileak erantzunak ematen hasi aurretik."
+
 #. Default: "A unique identifier for the group. Can not be changed after creation."
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.pt:34
 msgid "help_groupname"
@@ -7446,6 +7764,21 @@ msgstr "Aktibatuta badago, kanpo-lotura guztien ondoan ikonotxo bat agertuko da.
 #: CMFPlone/browser/interfaces.py:378
 msgid "help_message"
 msgstr "Bidali nahi duzun mezua sartu, mesedez."
+
+#. Default: "If selected, comments will enter a 'Pending' state in which they are invisible to the public. A user with the 'Review comments' permission ('Reviewer' or 'Manager') can approve comments to make them visible to the public. If you want to enable a custom comment workflow, you have to go to the types control panel."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:241
+msgid "help_moderation_enabled"
+msgstr "Aukeratuta badago, erantzuna 'Zain' izeneko egoeran geldituko da eta ez da argitaratuko. 'Erantzunak errebisatu' baimena duten erabiltzaileek ('Zuzentzailea' edo 'Kudeatzailea') argitaratu ditzakete albisteak. Erantzunen worfklowa pertsonalizatu nahi baduzu, elementu-moten kontrol panelera joan zaitez."
+
+#. Default: "Address to which moderator notifications will be sent."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:338
+msgid "help_moderator_email"
+msgstr "Moderatzailearen notifikazioak bidali behar diren helbidea."
+
+#. Default: "If selected, the moderator is notified if a comment needs attention. The moderator email address can be set below."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:324
+msgid "help_moderator_notification_enabled"
+msgstr "Aukeratuta badago, moderatzaileari eposta abisua helduko zaio erantzun bat gehitzean. Moderatzailearen eposta hemen ezarri daiteke."
 
 #. Default: "Date this content was modified last"
 #: Archetypes/ExtensibleMetadata.py:208
@@ -7715,6 +8048,11 @@ msgstr "Izen Motza, elementu baten URL-an erakusten den zatia da."
 msgid "help_shortname"
 msgstr "Ez luke ez espaziorik, ez barra baxurik eta letra larri eta xeherik nahasirik izan behar. Izen Motza elementu baten web helbidearen zatia da."
 
+#. Default: "If selected, an image of the user is shown next to the comment."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:313
+msgid "help_show_commenter_image"
+msgstr "Aukeratuta badago, erantzuna eman duenaren irudi bat agertuko da testuaren ondoan."
+
 #. Default: "Show icons or default icon for actions without icon."
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:43
 msgid "help_show_icons"
@@ -7764,6 +8102,11 @@ msgstr "Elementuak sailkatzeko erabiltzen dira etiketak"
 #: Archetypes/TemplateMixin.py:25
 msgid "help_template_mixin"
 msgstr "Elementu hau ikusteko erabiliko den txantiloia hautatu."
+
+#. Default: "Use this setting to choose if the comment text should be transformed in any way. You can choose between 'Plain text' and 'Intelligent text'. 'Intelligent text' converts plain text into HTML where line breaks and indentation is preserved, and web and email addresses are made into clickable links."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:280
+msgid "help_text_transform"
+msgstr "Erabili aukera hau erantzunaren testua nolabait eraldatu behar bada. 'Testu arrunta' edo 'Testu argia'ren artean aukeratu dezakezu. 'Testu argia'-k testu arrunta HTML bihurtzen du lerro saltoak eta espazioak mantenduz, eta web helbideak eta e-postak klikagarri eginez."
 
 #. Default: "Select a file to upload."
 #: plone/app/theming/browser/controlpanel.pt:716
@@ -7825,6 +8168,11 @@ msgstr "Ataritik kanpoko loturei http:// gehitu."
 #: plone.app.users/plone/app/users/schema.py:93
 msgid "help_user_name_creation_casesensitive"
 msgstr "Sar ezazu erabiltzaile-izena, normalean 'jgarmendia' modukoa izan ohi da. Espazio edo karaktere bereziak ezin dira erabili. Erabiltzaile-izenak eta pasahitzak maiuskula/minuskulak bereizten ditu, beraz ziurtatu maiuskulak blokeatzeko tekla gaituta ez dagoela. Webgunean sartzeko erabiltzaile-izen hau erabili beharko duzu."
+
+#. Default: "If selected, users can choose to be notified of new comments by email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:350
+msgid "help_user_notification_enabled"
+msgstr "Aukeratuta badago, erabiltzaileek euren erantzunen erantzunak e-postaz jasotzea aktibatu dezakete."
 
 #. Default: "Wysiwyg editor to use."
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:31
@@ -7942,6 +8290,11 @@ msgstr "Akzioak"
 msgid "label_add"
 msgstr "Gehitu"
 
+#. Default: "Add comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:194
+msgid "label_add_comment"
+msgstr ""
+
 #. Default: "Add New Group"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:84
 msgid "label_add_new_group"
@@ -8028,6 +8381,22 @@ msgstr "Beti erakutsi hizkuntza aldatzeko loturak"
 msgid "label_an_anonymous_user"
 msgstr "erabiltzaile anonimoa"
 
+#. Default: "Anonymous"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:76
+#: plone.app.discussion/plone/app/discussion/comment.py:179
+msgid "label_anonymous"
+msgstr "Anonimoak"
+
+#. Default: "Enable anonymous comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:212
+msgid "label_anonymous_comments"
+msgstr "Aktibatu erabiltzaile anonimoen erantzunak"
+
+#. Default: "Enable anonymous email field"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:226
+msgid "label_anonymous_email_enabled"
+msgstr "Aktibatu anonimoentzat eposta eremua"
+
 #. Default: "Anonymous User"
 #: plone.app.layout/plone/app/layout/viewlets/content.py:376
 msgid "label_anonymous_user"
@@ -8037,6 +8406,11 @@ msgstr "Erabiltzaile anonimoa"
 #: CMFPlone/skins/plone_deprecated/search_form.pt:306
 msgid "label_any_author"
 msgstr "Edozein egile"
+
+#. Default: "Apply"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:71
+msgid "label_apply"
+msgstr "Aplikatu"
 
 #. Default: "Apply Changes"
 #: plone.app.users/plone/app/users/browser/registersettingspanel.py:32
@@ -8117,6 +8491,11 @@ msgstr "Ezeztatu"
 #: plone.app.users/plone/app/users/browser/register.py:676
 msgid "label_cant_mail_password_reset"
 msgstr "Normalean formularioa bete ostean e-posta mezu bat bidaltzeko aukera izango zenuke horrela erabiltzaileak bere pasahitza ezar dezan. Hala ere, atariak ez du baliozko posta ezarpenik. E-posta ezarpenetan konpon dezakezu hau."
+
+#. Default: "Captcha"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:295
+msgid "label_captcha"
+msgstr "Captcha"
 
 #. Default: "Change"
 #: CMFPlone/controlpanel/browser/types.pt:47
@@ -8209,8 +8588,14 @@ msgstr "Tamaina osoko irudia ikusteko egin klik…"
 
 #. Default: "Comment"
 #: CMFPlone/browser/interfaces.py:342
+#: plone.app.discussion/plone/app/discussion/interfaces.py:161
 msgid "label_comment"
 msgstr "Iruzkina"
+
+#. Default: "Commenting has been disabled."
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:171
+msgid "label_commenting_disabled"
+msgstr "Ezin da erantzunik gehitu."
 
 #. Default: "Comments"
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:3
@@ -8425,8 +8810,15 @@ msgstr "Defektuzko workflowa (${title})"
 
 #. Default: "Delete"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:173
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:98
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:130
 msgid "label_delete"
 msgstr "Ezabatu"
+
+#. Default: "Enable deleting own comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:267
+msgid "label_delete_own_comment_enabled"
+msgstr "Aktibatu norbere erantzunak ezabatzea."
 
 #. Default: "Description"
 #: Archetypes/ExtensibleMetadata.py:92
@@ -8474,9 +8866,14 @@ msgstr "Doctype"
 #. Default: "Edit"
 #: CMFPlone/browser/templates/author.pt:85
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:58
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:28
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:131
 msgid "label_edit"
 msgstr "Editatu"
+
+#. Default: "Enable editing of comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:256
+msgid "label_edit_comment_enabled"
+msgstr "Aktibatu erantzunak editatzea."
 
 #. Default: "You are editing the default view of a container. If you wanted to edit the container itself, ${go_here}."
 #: Archetypes/skins/archetypes/edit_macros.pt:41
@@ -8666,6 +9063,11 @@ msgstr "Izen-abizenak"
 #: plone.app.users/plone/app/users/browser/membersearch.py:38
 msgid "label_fullname"
 msgstr "Izen-abizenak"
+
+#. Default: "Globally enable comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:198
+msgid "label_globally_enabled"
+msgstr "Erantzunak globalki aktibatu"
 
 #. Default: "GNU GPL license"
 #: CMFPlone/browser/templates/footer.pt:31
@@ -8877,6 +9279,11 @@ msgstr "Segi ${portal_title} webgunearen orri nagusira"
 msgid "label_login_name"
 msgstr "Erabiltzaile-izena"
 
+#. Default: "Log in to add comments"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:20
+msgid "label_login_to_add_comments"
+msgstr ""
+
 #. Default: "Log in to send feedback"
 #: CMFPlone/browser/templates/author.pt:158
 msgid "label_login_to_send_feedback"
@@ -8920,6 +9327,21 @@ msgstr "Erabiltzaileen eremuak"
 #: CMFPlone/browser/interfaces.py:376
 msgid "label_message"
 msgstr "Mezua"
+
+#. Default: "Enable comment moderation"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:237
+msgid "label_moderation_enabled"
+msgstr "Erantzunen moderazioa aktibatu."
+
+#. Default: "Moderator Email Address"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:334
+msgid "label_moderator_email"
+msgstr "Moderatzailearen e-posta helbidea"
+
+#. Default: "Enable moderator email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:322
+msgid "label_moderator_notification_enabled"
+msgstr "Aktibatu moderatzaileari e-postaz abisatzea"
 
 #. Default: "Modification Date"
 #: Archetypes/ExtensibleMetadata.py:206
@@ -9192,6 +9614,11 @@ msgstr "Profil zaharraren bertsioa ${version} zen."
 msgid "label_product_upgrade_old_version"
 msgstr "Bertsio zaharra ${version} zen."
 
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:121
+msgid "label_publish"
+msgstr "Argitaratu"
+
 #. Default: "effective"
 #: plone.app.layout/plone/app/layout/viewlets/content_history.pt:49
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:49
@@ -9262,6 +9689,11 @@ msgstr "Aukeratutako taldeak / erabiltzaileak ezabatu"
 msgid "label_replace_existing"
 msgstr "Ordezkatu egungo itxura"
 
+#. Default: "Reply"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:162
+msgid "label_reply"
+msgstr ""
+
 #. Default: "Request URL"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:55
 msgid "label_request_url"
@@ -9309,6 +9741,11 @@ msgstr "Gorde"
 #: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-contextual.pt:178
 msgid "label_save_settings"
 msgstr "Ezarpenak gorde"
+
+#. Default: "says:"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:79
+msgid "label_says"
+msgstr "dio:"
 
 #. Default: "Categorization"
 #: ./ATContentTypes/content/schemata.py
@@ -9452,6 +9889,16 @@ msgstr "Sarrera guztiak erakutsi"
 msgid "label_show_batched"
 msgstr "Multzokatuta erakutsi"
 
+#. Default: "Show commenter image"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:311
+msgid "label_show_commenter_image"
+msgstr "Erantzuna eman duenaren irudia erakutsi"
+
+#. Default: "show full comment text"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:114
+msgid "label_show_full_comment_text"
+msgstr "Erakutsi testu osoa"
+
 #. Default: "Show icons"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:41
 msgid "label_show_icons"
@@ -9543,6 +9990,7 @@ msgstr "Balioa"
 
 #. Default: "Subject"
 #: CMFPlone/browser/interfaces.py:370
+#: plone.app.discussion/plone/app/discussion/interfaces.py:156
 msgid "label_subject"
 msgstr "Gaia"
 
@@ -9571,6 +10019,11 @@ msgstr "Txantiloia ikusi"
 #: plone.app.textfield/plone/app/textfield/widget_input.pt:28
 msgid "label_text_format"
 msgstr "Testuaren formatua"
+
+#. Default: "Comment text transform"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:278
+msgid "label_text_transform"
+msgstr "Erantzunari aplikatu beharreko transformazioa"
 
 #. Default: "Theme base"
 #: plone/app/theming/browser/controlpanel.pt:532
@@ -9693,6 +10146,11 @@ msgstr "URL"
 #: plone.app.users/plone/app/users/schema.py:92
 msgid "label_user_name"
 msgstr "Erabiltzailearen izena"
+
+#. Default: "Enable user email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:346
+msgid "label_user_notification_enabled"
+msgstr "Aktibatu erabiltzaileek e-postaz jakinaraztea"
 
 #. Default: "User Search"
 #: CMFPlone/controlpanel/browser/usergroups_usersoverview.pt:83
@@ -9976,6 +10434,30 @@ msgstr "Cookie autentifikazioa desgaitua dagoen bitartean, cookie-etan oinarritu
 msgid "login_portlet_disabled"
 msgstr "Cookien bitarteko autentikazioa desgaitua. Saio hasierako portleta ez dago erabilgarri"
 
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:47
+msgid "mail_notification_message"
+msgstr ""
+"Erantzuna berria:Izenburua: ${title} \n"
+"Lotura: ${link}\n"
+"\n"
+"${text}\n"
+"--"
+
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n\nApprove comment:\n${link_approve}\n\nDelete comment:\n${link_delete}\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:55
+msgid "mail_notification_message_moderator"
+msgstr ""
+"Erantzun berria:\n"
+"\n"
+"Izenburua: ${title}\n"
+"Lotura: ${link}\n"
+"\n"
+"${text}\n"
+"\n"
+"Erantzuna onartu: ${link_approve}\n"
+"Erantzuna ezabatu: ${link_delete}"
+
 #. Default: "Manage portlets"
 #: plone.app.contentmenu/plone/app/contentmenu/menu.py:814
 #: plone.app.layout/plone/app/layout/viewlets/manage_portlets_fallback.pt:7
@@ -10006,6 +10488,21 @@ msgstr "Ezin duzu zure e-posta helbidea aldatu."
 #: plone.app.users/plone/app/users/browser/account.py:35
 msgid "message_email_in_use"
 msgstr "Idatzitako e-posta helbidea beste norbaitek darabil edo ez da baliozkoa. Aukeratu beste bat."
+
+#. Default: "enable the 'Comment Review Workflow' for the Comment content type"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_enable_comment_workflow"
+msgstr "Aktibatu 'Erantzunen Moderazio Workflowa' Erantzuna elementu-motarentzat."
+
+#. Default: "Moderation workflow is disabled. You have to ${enable_comment_workflow} before you can moderate comments here."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_moderation_disabled"
+msgstr "Moderazioa desaktibatuta dago. ${enable_comment_workflow} behar duzu, hemen ezer moderatu aurretik."
+
+#. Default: "No comments to moderate."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:43
+msgid "message_nothing_to_moderate"
+msgstr "Ez dago ezer moderazio kolan"
 
 #. Default: "You see this page because you have permission to edit this link. Others will be immediately redirected to the link's target URL."
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/link.pt:15
@@ -10391,6 +10888,11 @@ msgstr "Kendu beharreko etiketak"
 msgid "test wc workflow"
 msgstr "Probatako lan-fluxua"
 
+#. Default: "migrate your comments"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:64
+msgid "text_comments_migration_link"
+msgstr ""
+
 #. Default: "Caught &e at &c by &u"
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:40
 msgid "text_contentrules_logger_message"
@@ -10408,10 +10910,20 @@ msgstr "Parte hartzaileak: ${name}"
 msgid "text_creator_date"
 msgstr "${creator}-k sortua , azken eguneratzea: ${date}"
 
+#. Default: "You have configured a custom workflow for the 'Discussion Item' content type. You can enable/disable the comment moderation in this control panel only if you use one of the default 'Discussion Item' workflows. Go to the ${label_discussion_control_panel_link} to choose a workflow for the 'Discussion Item' type."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:44
+msgid "text_custom_comment_workflow"
+msgstr ""
+
 #. Default: "Site"
 #: CMFPlone/browser/templates/plone-addsite.pt:65
 msgid "text_default_site_title"
 msgstr "Ataria"
+
+#. Default: "Types control panel"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:45
+msgid "text_discussion_type_control_panel_link"
+msgstr ""
 
 # Do people understand what this message means?
 #. Default: "The specified log entry was not found. It may have expired. If you are using a load-balanced ZEO (cluster) setup, try reloading until you get the right server in the cluster."
@@ -10437,11 +10949,13 @@ msgstr "Webgune honek ez dauka e-posta ezarpenik konfiguratuta. Hau egin artean 
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/controlpanel/browser/overview.pt:52
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:24
 msgid "text_no_mailhost_configured"
 msgstr "Ez duzu posta zerbitzaria edo 'Nork' helbidea konfiguratu, beraz kontaktu formularioak, e-posta jakinarazpenek edo pasahitzak berrezartzeak ez dute funtzionatuko. Joan ${label_mail_control_panel_link} atalera hau konpontzeko"
 
 #. Default: "Mail control panel"
 #: CMFPlone/controlpanel/browser/overview.pt:53
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:25
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "e-posta ezarpenak"
 
@@ -10522,6 +11036,11 @@ msgstr "Bilatu atarian"
 #: CMFPlone/browser/templates/search.pt:299
 msgid "text_searchitem_location"
 msgstr "Non kokatuta"
+
+#. Default: "You have comments that have not been migrated to the new commenting system that has been introduced in Plone 4.1. Please ${label_comments_migration_link} to fix this."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:63
+msgid "text_unmigrated_comments"
+msgstr ""
 
 #. Default: "This user does not belong to any group."
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:98
@@ -10650,6 +11169,11 @@ msgstr "Egilearen informazioa"
 #: plone.app.theming/resources/theme/theme1/overrides/plone.app.layout.viewlets.colophon.pt:8
 msgid "title_built_with_plone"
 msgstr "Atari hau Plone Eduki Kudeaketa Sistema erabiliz sortu da."
+
+#. Default: "Bulk Actions"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:64
+msgid "title_bulkactions"
+msgstr "Aldi-bereko ekintzak"
 
 #. Default: "Can add"
 #: plone.app.workflow/plone/app/workflow/localroles.py:33

@@ -171,6 +171,14 @@ msgstr "HTML boilerplate の rules.xml がテーマに追加されましたが i
 msgid "A classic portlet allows you to use legacy portlet templates."
 msgstr "クラシックポートレットは従来のポートレットテンプレートを使えるようにします"
 
+#: plone.app.discussion/plone/app/discussion/comment.py:349
+msgid "A comment has been posted."
+msgstr "コメントが投稿されました"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:142
+msgid "A comment id unique to this conversation"
+msgstr "この会話上のユニークなコメントID"
+
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:131
 msgid "A copy action can copy an object to a different folder."
 msgstr "コピーアクションはオブジェクトを別のフォルダにコピーすることができます"
@@ -266,6 +274,10 @@ msgstr "ロール条件は、現在のユーザが特定のロールを持たな
 #: CMFPlone/browser/templates/plone-addsite.pt:60
 msgid "A short title for the site. This will be shown in the title of the browser window on each page."
 msgstr "サイトについての短いタイトル。これは各ページごとにブラウザのウィンドウタイトルとして表示されます。"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "A simple review workflow for comments"
+msgstr ""
 
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:103
 msgid "A summary of the rule"
@@ -428,6 +440,10 @@ msgstr "ワークフロー状態条件を追加"
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:61
 msgid "Add Workflow Transition Condition"
 msgstr "ワークフロー遷移条件を追加"
+
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:62
+msgid "Add a comment"
+msgstr "コメントを追加"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/rule.py:22
 msgid "Add a new rule. Once complete, you can manage the rule's actions and conditions separately."
@@ -596,9 +612,21 @@ msgstr "アイテムのタイプ（例えばイベント）"
 msgid "An item's workflow state (e.g.published)"
 msgstr "アイテムのワークフロー状態（たとえば公開中）"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:69
+msgid "Anonymous Comments"
+msgstr "匿名コメント"
+
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:217
 msgid "Apply rule on the whole site"
 msgstr "ルールをサイト全体に適用"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approve"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approving the comment makes it visible to other users."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:30
 #: plone.app.contentrules/plone/app/contentrules/actions/move.py:31
@@ -756,6 +784,10 @@ msgstr "チェックアウトを取り消す"
 msgid "Cannot find checkout location"
 msgstr "チェックアウト位置を見つけることができません"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:182
+msgid "Captcha"
+msgstr "CAPTCHA"
+
 #: plone.protect/plone/protect/confirm.pt:27
 msgid "Careful, it's possible someone is executing an exploit against you. Verify you just performed an action on this site and that you were not referred here by a different website or email."
 msgstr ""
@@ -807,8 +839,8 @@ msgid "Changes made."
 msgstr "変更がなされました"
 
 #: CMFPlone/controlpanel/browser/types.py:67
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:83
 #: plone.app.portlets/plone/app/portlets/browser/formhelper.py:183
-#: plone/app/theming/browser/controlpanel.py:204
 msgid "Changes saved"
 msgstr "変更が保存されました"
 
@@ -892,12 +924,56 @@ msgstr ""
 msgid "Comment"
 msgstr "コメント"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Comment Review Workflow"
+msgstr ""
+
 #. Default: "Comment about the last transition"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "最後の遷移についてのコメント"
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:182
+msgid "Comment approved."
+msgstr "コメントが承認されました"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:98
+msgid "Comment author email"
+msgstr "投稿者のメールアドレス"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:86
+msgid "Comment author full name"
+msgstr "投稿者の氏名"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:74
+msgid "Comment author user name"
+msgstr "投稿者のユーザ名"
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:104
+msgid "Comment deleted."
+msgstr "コメントが削除されました"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:50
+msgid "Comment id"
+msgstr "コメントID"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:62
+msgid "Comment text"
+msgstr "コメント本文"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Commentators"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:70
+msgid "Commenter Image"
+msgstr "投稿者者の画像"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:49
+msgid "Comments"
+msgstr "コメント"
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1055,6 +1131,10 @@ msgstr "貢献者のEメール"
 msgid "Contributors Ids"
 msgstr "貢献者のID"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:137
+msgid "Conversation"
+msgstr "会話"
+
 #. Default: "Copy"
 #: CMFPlone/profiles/default/actions.xml
 #: plone.app.content/plone/app/content/browser/contents/copy.py:26
@@ -1111,6 +1191,7 @@ msgstr "新しいPloneサイトを作成"
 msgid "Created on"
 msgstr "作成日"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:175
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Creation date"
 msgstr "作成日"
@@ -1205,6 +1286,10 @@ msgstr "変更日付"
 #: CMFPlone/profiles/default/controlpanel.xml
 msgid "Date and Time"
 msgstr "日時"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:39
+msgid "Date of the most recent public comment"
+msgstr "最近のコメントの日付"
 
 #. Default: "Date range"
 #: criterion description of criterion ATDateRangeCriterion
@@ -1385,9 +1470,17 @@ msgstr "サイト全体で無効"
 msgid "Disable html filtering"
 msgstr "HTMLフィルタリングを無効にする"
 
+#: plone.app.discussion/plone/app/discussion/vocabularies.py:44
+msgid "Disabled"
+msgstr "無効です"
+
 #: CMFPlone/interfaces/controlpanel.py:119
 msgid "Disabling locking here will only affect users editing content through the Plone web UI.  Content edited via WebDAV clients will still be subject to locking."
 msgstr "ここでロックを無効にすることはPloneのWeb UIを通じたコンテンツ編集をしているユーザにしか影響しません。WebDAVクライアントを介して編集されるコンテンツは依然としてロックされる可能性があります。"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/controlpanel.xml
+msgid "Discussion"
+msgstr ""
 
 #. Default: "Discussion Item"
 #: portal type title of type with description Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface.
@@ -1398,6 +1491,10 @@ msgstr "ディスカッションアイテム"
 #: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "ディスカッションアイテムは他のコンテンツへの返事であるドキュメントです。これらは標準的な'folder_factories'インタフェースを通じて追加されるべきではありません。"
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:27
+msgid "Discussion settings"
+msgstr "ディスカッションの設定"
 
 #: CMFPlone/skins/plone_deprecated/search_form.pt:371
 msgid "Display options"
@@ -1561,6 +1658,10 @@ msgstr "ワークフロー遷移条件を編集"
 msgid "Edit an existing rule."
 msgstr "既存ルールを編集"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:89
+msgid "Edit cancelled"
+msgstr "編集が取り消されました"
+
 #: CMFPlone/controlpanel/browser/syndication.py:94
 #: plone.app.registry/plone/app/registry/browser/edit.py:57
 msgid "Edit cancelled."
@@ -1618,6 +1719,10 @@ msgstr "公開日"
 msgid "Effective range"
 msgstr "公開期間"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:154
+msgid "Email"
+msgstr "メール"
+
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:62
 msgid "Email address not known."
 msgstr "メールアドレスがわかりません"
@@ -1637,6 +1742,10 @@ msgstr "${recipients} にメール報告する"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:36
 msgid "Email source"
 msgstr "Eメール送信元"
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:68
+msgid "Enable Comments"
+msgstr "コメントを有効にする"
 
 #: CMFPlone/interfaces/controlpanel.py:98
 msgid "Enable External Editor feature"
@@ -2172,6 +2281,10 @@ msgstr "ID"
 msgid "Id $id is already in use"
 msgstr "ID $id はすでに使われています"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:145
+msgid "Id of comment this comment is in reply to"
+msgstr "このコメントの返答先のコメントID"
+
 #: plone.stringinterp/plone/stringinterp/adapters.py:73
 msgid "Identifier of the content or login of managed user"
 msgstr "コンテンツのIDまたは管理されたユーザのログイン"
@@ -2650,6 +2763,7 @@ msgstr "ログイン名が見つかりません"
 msgid "Logout"
 msgstr "ログアウト"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:159
 #: plone.app.textfield/plone/app/textfield/interfaces.py:57
 msgid "MIME type"
 msgstr "MIMEタイプ"
@@ -2928,6 +3042,15 @@ msgstr "actionにrssオブジェクトが見つかりません"
 msgid "Missing syndication settings action."
 msgstr "actionにsyndicationオブジェクトが見つかりません"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/actions.xml
+msgid "Moderate comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:72
+msgid "Moderator Email Notification"
+msgstr "モデレーターへのメール通知"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:176
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Modification date"
 msgstr "変更日"
@@ -3001,6 +3124,7 @@ msgstr "マイフォルダ"
 msgid "My Preferences"
 msgstr "マイプリファレンス"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:139
 #: plone/app/theming/interfaces.py:33
 msgid "Name"
 msgstr "名前"
@@ -3144,6 +3268,10 @@ msgstr "備考"
 #: plone.app.contenttypes/plone/app/contenttypes/migration/custom_migration.pt:37
 msgid "Note about how long it might take"
 msgstr "どのぐらい時間がかかるだろうかについての注記"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:168
+msgid "Notify me of new comments via email."
+msgstr "新しいコメントを私にメールで知らせる"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
 msgid "Notify user"
@@ -3353,7 +3481,7 @@ msgid "Paths to folders and collections to link to at the portal root."
 msgstr "ポータルルートから配信するフィードに含むフォルダおよびコレクション"
 
 #. Default: "Pending"
-#: workflow state defined in plone_workflow - id pending
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "Pending"
 msgstr "審査中"
 
@@ -3517,6 +3645,10 @@ msgstr "ポータルのデフォルトタイムゾーン"
 #: plone.stringinterp/plone/stringinterp/adapters.py:709
 msgid "Portal title"
 msgstr "ポータルのタイトル"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:132
+msgid "Portal type"
+msgstr "ポータルタイプ"
 
 #: plone.portlet.static/plone/portlet/static/static.py:49
 msgid "Portlet footer"
@@ -3871,6 +4003,10 @@ msgstr "審査状態"
 
 msgid "Reviewer"
 msgstr "審査員"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Reviewer approves content"
+msgstr ""
 
 #. Default: "Reviewer makes content available externally"
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -4447,6 +4583,10 @@ msgstr "ドラフトコンテンツを提出"
 msgid "Submit for publication"
 msgstr "審査を依頼"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Submitted, pending review."
+msgstr ""
+
 #. Default: "Subtopics"
 #: type action defined on Smart Folder
 msgid "Subtopics"
@@ -4623,6 +4763,7 @@ msgstr "最終遷移を実施したユーザのID"
 
 #. Default: "The ID of the user who performed the previous transition"
 #: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "The ID of the user who performed the previous transition"
 msgstr "前の遷移を実施したユーザのID"
 
@@ -4773,6 +4914,14 @@ msgstr "ルールはサイトルートとそのすべてのサブフォルダに
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:205
 msgid "The rule is enabled but will perform nothing since it is not assigned anywhere."
 msgstr "ルールは有効化されましたが、どこにも適用されていないため何も実行されません"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:44
+msgid "The set of unique commentators (usernames)"
+msgstr "ユニークな投稿者(ユーザ名)のセット"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:49
+msgid "The set of unique commentators (usernames) of published_comments"
+msgstr "published_commentsのユニークな投稿者(ユーザ名)のセット"
 
 #. Default: "The short name of an item (used in the url)"
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -5121,10 +5270,26 @@ msgstr ""
 msgid "Total comments"
 msgstr "コメント計"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments on this item."
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:33
+msgid "Total number of public comments on this item"
+msgstr "このアイテムのコメント数"
+
 #. Default: "Transform"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Image.xml
 msgid "Transform"
 msgstr "変換"
+
+#: plone.app.discussion/plone/app/discussion/comment.py:161
+msgid "Transform '%s' => '%s' not available."
+msgstr ""
 
 #: plone.app.textfield/plone/app/textfield/interfaces.py:79
 msgid "Transformed value in the target MIME type"
@@ -5315,6 +5480,10 @@ msgstr "作られたユーザ"
 msgid "User Data Form"
 msgstr "ユーザデータフォーム"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:74
+msgid "User Email Notification"
+msgstr "ユーザへのメール通知"
+
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "User Logged in"
 msgstr "ログインしているユーザ"
@@ -5347,6 +5516,10 @@ msgstr "ユーザのロール"
 msgid "User/Groups settings"
 msgstr "ユーザとグループの設定"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:174
+msgid "Username of the commenter"
+msgstr "投稿者のユーザ名"
+
 #: CMFPlone/PloneControlPanel.py:69
 msgid "Users"
 msgstr ""
@@ -5357,6 +5530,10 @@ msgstr ""
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:33
 msgid "Users and Groups"
 msgstr "ユーザとグループ"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Users who have commented on the item"
+msgstr ""
 
 #: validation/validators/RegexValidator.py:44
 msgid "Validation failed($name): $value of type $type, expected 'string'"
@@ -5454,6 +5631,10 @@ msgstr "誰にでもビジブルであるが、審査員によって承認され
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, editable by the owner."
 msgstr "誰にでもビジブルであり、所有者による編集が可能"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Visible to everyone, non-editable."
+msgstr ""
 
 #. Default: "Visible to everyone, not editable by the owner."
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
@@ -5686,6 +5867,10 @@ msgstr "データベースファイルを定期的にパックするべきです
 msgid "Your Plone site has not been added yet:"
 msgstr "あなたのPloneサイトはまだ追加されていません:"
 
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:258
+msgid "Your comment awaits moderator approval."
+msgstr "コメントは司会の承認を待ちます"
+
 #: CMFPlone/RegistrationTool.py:181
 msgid "Your password and confirmation did not match. Please try again."
 msgstr "パスワードとその確認が合致しません。もう一度試みてください"
@@ -5735,6 +5920,11 @@ msgstr "URLプリフィックス(絶対指定)"
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:68
 msgid "action_convert_legacy_portlets"
 msgstr "ここでレガシーポートレットが定義されています。新スタイルポートレットに変換するにはボタンを押してください。"
+
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:128
+msgid "add_comment_button"
+msgstr "コメント"
 
 #. Default: "This item can not be deleted because it is currently locked by another user."
 #: plone.app.content/plone/app/content/browser/templates/delete_confirmation.pt:18
@@ -5891,6 +6081,21 @@ msgstr "検索"
 msgid "box_sign_in"
 msgstr "ログイン"
 
+#. Default: "Delete"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:68
+msgid "bulkactions_delete"
+msgstr "削除する"
+
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
+msgid "bulkactions_publish"
+msgstr "承認する"
+
+#. Default: "Cancel"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:101
+msgid "cancel_form_button"
+msgstr "キャンセル"
+
 #. Default: "Category"
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:13
 msgid "category-contentrules-mailsub"
@@ -5910,6 +6115,41 @@ msgstr "これは ${creator} によって ${created} に作られた ${baseline_
 #: plone.app.registry/plone/app/registry/browser/records.pt:42
 msgid "clear_filter"
 msgstr "フィルタを解除"
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. Web and email addresses are transformed into clickable links."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:47
+msgid "comment_description_intelligent_text"
+msgstr "下のフォームに書き込むことでコメントを追加できます。Webアドレスやメールアドレスは、クリック可能なリンクに変換されます。"
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. You can use the Markdown syntax for links and images."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:41
+msgid "comment_description_markdown"
+msgstr "下のフォームに書き込むことでコメントを追加できます。Markdown形式のリンクと画像が指定できます。"
+
+#. Default: "Comments are moderated."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:53
+msgid "comment_description_moderation_enabled"
+msgstr "コメントはモデレートされます"
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:36
+msgid "comment_description_plain_text"
+msgstr "下のフォームに書き込むことでコメントを追加できます。プレーンテキスト形式です。"
+
+#. Default: "Edit comment cancelled"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:105
+msgid "comment_edit_cancel_notification"
+msgstr "コメントの編集はキャンセルされました"
+
+#. Default: "Comment was edited"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:95
+msgid "comment_edit_notification"
+msgstr "コメントは編集されました"
+
+#. Default: "${author_name} on ${content}"
+#: plone.app.discussion/plone/app/discussion/comment.py:43
+msgid "comment_title"
+msgstr "${author_name} が ${content} にコメント"
 
 #. Default: "Are you certain you want to delete the selected items?"
 #: plone.app.content/plone/app/content/browser/contents/templates/delete.pt:5
@@ -6638,6 +6878,16 @@ msgstr ""
 msgid "edit"
 msgstr "編集"
 
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:74
+msgid "edit_comment_form_button"
+msgstr "コメントを編集"
+
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:58
+msgid "edit_comment_form_title"
+msgstr "コメントを編集"
+
 # E-Mail group property
 # E-Mail group property
 #. Default: "E-Mail"
@@ -6756,6 +7006,11 @@ msgstr ""
 msgid "heading_accessibility_statement"
 msgstr ""
 
+#. Default: "Action"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
+msgid "heading_action"
+msgstr "アクション"
+
 #. Default: "Add actions portlet"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:196
 msgid "heading_add_actions_portlet"
@@ -6811,6 +7066,16 @@ msgstr "ブラウザの言語要求ネゴシエーションを使用"
 msgid "heading_change_password_for"
 msgstr "${user} のパスワードを変更"
 
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
+msgid "heading_comment"
+msgstr "コメント"
+
+#. Default: "Commenter"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:81
+msgid "heading_commenter"
+msgstr "投稿者"
+
 #. Default: "Contact form"
 #: CMFPlone/browser/templates/contact-info.pt:18
 msgid "heading_contact_form"
@@ -6835,6 +7100,11 @@ msgstr "${folder} の共有"
 #: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:16
 msgid "heading_dashboard"
 msgstr "${user_name}のダッシュボード"
+
+#. Default: "Date"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
+msgid "heading_date"
+msgstr "日付"
 
 #. Default: "Description"
 #: plone.app.registry/plone/app/registry/browser/records.pt:80
@@ -6898,6 +7168,11 @@ msgstr "グループ: ${groupname}"
 msgid "heading_groupmembers_current"
 msgstr "現在のグループメンバー"
 
+#. Default: "In Response To"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
+msgid "heading_in_reponse_to"
+msgstr "回答する先"
+
 #. Default: "Use language codes in URL path for manual override"
 #: CMFPlone/interfaces/controlpanel.py:228
 msgid "heading_language_codes_in_URL"
@@ -6922,6 +7197,11 @@ msgstr "ユーザの検索"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:69
 msgid "heading_memberships_current"
 msgstr "現在のグループメンバーシップ"
+
+#. Default: "Moderate comments"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:24
+msgid "heading_moderate_comments"
+msgstr "コメントをモデレート"
 
 #. Default: "Name"
 #: plone.app.registry/plone/app/registry/browser/records.pt:78
@@ -7178,6 +7458,16 @@ msgstr ""
 msgid "help_always_show_selector"
 msgstr ""
 
+#. Default: "If selected, anonymous users are able to post comments without loggin in. It is highly recommended to use a captcha solution to prevent spam if this setting is enabled."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:214
+msgid "help_anonymous_comments"
+msgstr "匿名ユーザがログインせずにコメントを投稿できます。この設定を有効にする場合は、CAPTCHAを使ってスパムを防ぐことをお勧めします。"
+
+#. Default: "If selected, anonymous user will have to give their email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:228
+msgid "help_anonymous_email_enabled"
+msgstr "匿名ユーザはメールアドレスの記入が必要になります"
+
 #. Default: "The URL of the \"After the Deadline\" grammar and spell checking server. The default value is the public server, but ideally you should download and install your own and specify its address here."
 #: CMFPlone/interfaces/controlpanel.py:703
 msgid "help_atd_service_url"
@@ -7208,6 +7498,11 @@ msgstr "True または False"
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:114
 msgid "help_capslock_password"
 msgstr "大文字小文字は区別されます。Caps Lockキーの状態に注意してください。"
+
+#. Default: "Use this setting to enable or disable Captcha validation for comments. Install plone.formwidget.captcha, plone.formwidget.recaptcha, collective.akismet, or collective.z3cform.norobots if there are no options available."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:297
+msgid "help_captcha"
+msgstr "コメントでのCAPTCHAの有効/無効を設定します。CAPTCHAを有効にするには plone.formwidget.captcha, plone.formwidget.recaptcha, collective.akismet または collective.z3cform.norobots をインストールしてください。"
 
 #. Default: "Select the transition to be used for modifying the items state."
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:8
@@ -7303,10 +7598,23 @@ msgstr "検索する日付範囲の始まり"
 msgid "help_default_icon"
 msgstr "特定のアイコンを持たないアクションに使われるべきアイコン。16x16ピクセルの画像"
 
+#. Default: "If selected, supports deleting of own comments for users with the 'Delete own comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:269
+msgid "help_delete_own_comment_enabled"
+msgstr "'Delete own comments' 権限を持つユーザーは、自身のコメントを削除可能にします。"
+
 #. Default: "Used in item listings and search results."
 #: Archetypes/ExtensibleMetadata.py:93
 msgid "help_description"
 msgstr "アイテムリスティングと検索結果で使われる"
+
+#. Default: "Some discussion related settings are not located in the Discussion Control Panel.\nTo enable comments for a specific content type, go to the Types Control Panel of this type and choose \"Allow comments\".\nTo enable the moderation workflow for comments, go to the Types Control Panel, choose \"Comment\" and set workflow to \"Comment Review Workflow\"."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:28
+msgid "help_discussion_settings_editform"
+msgstr ""
+"ディスカッションに関するいくつかの設定は、このコントロールパネルにはありません。\n"
+"特定のコンテンツタイプに対してコメントを有効にするには、タイプコントロールパネルでコンテンツタイプを選択し「コメントを許す」を選択します。\n"
+"コメントに対してモデレーションワークフローを有効にするには、タイプコントロールパネルに行き、「コメント」を選び、ワークフローを「コメント審査ワークフロー」に設定します。"
 
 #. Default: "You can specify a Doctype string which will be set on the output, for example \"&lt;!DOCTYPE html&gt;\". If left blank the default XHTML 1.0 transistional Doctype or that set in the Diazo theme is used."
 #: plone/app/theming/browser/controlpanel.pt:422
@@ -7318,6 +7626,11 @@ msgstr "出力の中に記述されるDoctypeストリングを指定するこ�
 #: CMFPlone/controlpanel/browser/emaillogin.pt:18
 msgid "help_duplicate_login_names"
 msgstr "${link} 内のEメールログイン設定をオンやオフに切り替えると、既存ユーザのログイン名が自動的に変更されます。この時にもし重複があれば、失敗します。このページで重複を探すことができます。"
+
+#. Default: "If selected, supports editing of comments for users with the 'Edit comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:258
+msgid "help_edit_comment_enabled"
+msgstr "'Edit comments' 権限を持つユーザーは、自身のコメントを編集可能にします。"
 
 #. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
 #: Archetypes/ExtensibleMetadata.py:139
@@ -7393,6 +7706,11 @@ msgstr "どのフォーマットを使うかわからなければ、プレーン
 #: plone.app.users/plone/app/users/schema.py:76
 msgid "help_full_name_creation"
 msgstr "氏名を入力。例： Hanako Suzuki や 山田太郎"
+
+#. Default: "If selected, users are able to post comments on the site. Though, you have to enable comments for specific content types, folders or content objects before users will be able to post comments."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:200
+msgid "help_globally_enabled"
+msgstr "このサイトでユーザがコメントを投稿できるようになります。しかし、コメントを投稿できるようになるためには、さらにコンテンツタイプ、フォルダ、コンテンツオブジェクトに対して、コメントを有効にしなければなりません。"
 
 #. Default: "A unique identifier for the group. Can not be changed after creation."
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.pt:34
@@ -7470,6 +7788,21 @@ msgstr "有効にすると、すべての外部リンクはリンクタイプに
 #: CMFPlone/browser/interfaces.py:378
 msgid "help_message"
 msgstr "送りたいメッセージを入力してください。"
+
+#. Default: "If selected, comments will enter a 'Pending' state in which they are invisible to the public. A user with the 'Review comments' permission ('Reviewer' or 'Manager') can approve comments to make them visible to the public. If you want to enable a custom comment workflow, you have to go to the types control panel."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:241
+msgid "help_moderation_enabled"
+msgstr "コメントは投稿されると非公開の「保留」状態になります。「コメントを審査」権限を持つユーザ(審査員または管理者)がコメントを承認して公開します。カスタムコメントワークフローを有効にするには、タイプコントロールパネルに行く必要があります。"
+
+#. Default: "Address to which moderator notifications will be sent."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:338
+msgid "help_moderator_email"
+msgstr "モデレータへの通知の送付先アドレス"
+
+#. Default: "If selected, the moderator is notified if a comment needs attention. The moderator email address can be set below."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:324
+msgid "help_moderator_notification_enabled"
+msgstr "コメントが注意を要するものであるかどうか、モデレータは通知を受けるようになります。モデレータのメールアドレスは下のフィールドに設定します。"
 
 #. Default: "Date this content was modified last"
 #: Archetypes/ExtensibleMetadata.py:208
@@ -7742,6 +8075,11 @@ msgstr "ショートネームはこのアイテムのURL内に現れる部分で
 msgid "help_shortname"
 msgstr "空白や下線を含んだり大文字小文字を混在させてはいけません。ショートネームはアイテムのURLの一部となります。"
 
+#. Default: "If selected, an image of the user is shown next to the comment."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:313
+msgid "help_show_commenter_image"
+msgstr "コメントの横にユーザの画像が表示されます。"
+
 #. Default: "Show icons or default icon for actions without icon."
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:43
 msgid "help_show_icons"
@@ -7792,6 +8130,11 @@ msgstr "タグはコンテンツのアドホックな整理によく使われま
 #: Archetypes/TemplateMixin.py:25
 msgid "help_template_mixin"
 msgstr "このアイテムを見るのに使われるテンプレートを選びます。"
+
+#. Default: "Use this setting to choose if the comment text should be transformed in any way. You can choose between 'Plain text' and 'Intelligent text'. 'Intelligent text' converts plain text into HTML where line breaks and indentation is preserved, and web and email addresses are made into clickable links."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:280
+msgid "help_text_transform"
+msgstr "コメントテキストの変換形式を選択します。「Intelligent text」はプレーンテキストをHTMLに変換します。改行とインデントは維持され、Webとメールアドレスはクリッカブルリンクになります。"
 
 #. Default: "Select a file to upload."
 #: plone/app/theming/browser/controlpanel.pt:716
@@ -7854,6 +8197,11 @@ msgstr "サイトの外へのリンクには「http://」を追加します。"
 #: plone.app.users/plone/app/users/schema.py:93
 msgid "help_user_name_creation_casesensitive"
 msgstr "ユーザ名を入力してください。通常は「ksuzuki」のような文字列です。空白や特殊文字は使えません。ユーザ名とパスワードは大文字と小文字を区別するので、Caps Lockキーに注意してください。これはログインに使われる名前です。"
+
+#. Default: "If selected, users can choose to be notified of new comments by email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:350
+msgid "help_user_notification_enabled"
+msgstr "ユーザは新しいコメントのメール通知を選択できるようになります。"
 
 #. Default: "Wysiwyg editor to use."
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:31
@@ -7971,6 +8319,11 @@ msgstr "編集操作"
 msgid "label_add"
 msgstr "追加"
 
+#. Default: "Add comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:194
+msgid "label_add_comment"
+msgstr ""
+
 #. Default: "Add New Group"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:84
 msgid "label_add_new_group"
@@ -8057,6 +8410,22 @@ msgstr "常に言語セレクターを表示"
 msgid "label_an_anonymous_user"
 msgstr "未ログインユーザ (anonymous)"
 
+#. Default: "Anonymous"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:76
+#: plone.app.discussion/plone/app/discussion/comment.py:179
+msgid "label_anonymous"
+msgstr "匿名"
+
+#. Default: "Enable anonymous comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:212
+msgid "label_anonymous_comments"
+msgstr "匿名コメントを有効にする"
+
+#. Default: "Enable anonymous email field"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:226
+msgid "label_anonymous_email_enabled"
+msgstr "匿名ユーザのメールフィールドを有効にする"
+
 #. Default: "Anonymous User"
 #: plone.app.layout/plone/app/layout/viewlets/content.py:376
 msgid "label_anonymous_user"
@@ -8066,6 +8435,11 @@ msgstr "未ログインユーザ (anonymous)"
 #: CMFPlone/skins/plone_deprecated/search_form.pt:306
 msgid "label_any_author"
 msgstr "どの作者でも"
+
+#. Default: "Apply"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:71
+msgid "label_apply"
+msgstr "適用"
 
 #. Default: "Apply Changes"
 #: plone.app.users/plone/app/users/browser/registersettingspanel.py:32
@@ -8146,6 +8520,11 @@ msgstr "取り消し"
 #: plone.app.users/plone/app/users/browser/register.py:676
 msgid "label_cant_mail_password_reset"
 msgstr "通常は、このフォームの完了時点で、パスワードを設定する方法を記したメールをユーザに送るように推奨しています。ですが、このサイトは有効なメール設定がしてありません。メール設定の中でこれを設定することができます。"
+
+#. Default: "Captcha"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:295
+msgid "label_captcha"
+msgstr "キャプチャ"
 
 #. Default: "Change"
 #: CMFPlone/controlpanel/browser/types.pt:47
@@ -8234,8 +8613,14 @@ msgstr "フルサイズ画像を見るためにクリック"
 
 #. Default: "Comment"
 #: CMFPlone/browser/interfaces.py:342
+#: plone.app.discussion/plone/app/discussion/interfaces.py:161
 msgid "label_comment"
 msgstr "コメント"
+
+#. Default: "Commenting has been disabled."
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:171
+msgid "label_commenting_disabled"
+msgstr "コメント機能が無効になりました"
 
 #. Default: "Comments"
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:3
@@ -8450,8 +8835,15 @@ msgstr "デフォルトワークフロー (${title})"
 
 #. Default: "Delete"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:173
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:98
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:130
 msgid "label_delete"
 msgstr "削除"
+
+#. Default: "Enable deleting own comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:267
+msgid "label_delete_own_comment_enabled"
+msgstr "自分のコメント削除を有効にする"
 
 #. Default: "Description"
 #: Archetypes/ExtensibleMetadata.py:92
@@ -8499,9 +8891,14 @@ msgstr "Doctype"
 #. Default: "Edit"
 #: CMFPlone/browser/templates/author.pt:85
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:58
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:28
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:131
 msgid "label_edit"
 msgstr "編集"
+
+#. Default: "Enable editing of comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:256
+msgid "label_edit_comment_enabled"
+msgstr "コメントの編集を有効にする"
 
 #. Default: "You are editing the default view of a container. If you wanted to edit the container itself, ${go_here}."
 #: Archetypes/skins/archetypes/edit_macros.pt:41
@@ -8691,6 +9088,11 @@ msgstr "氏名（フルネーム）"
 #: plone.app.users/plone/app/users/browser/membersearch.py:38
 msgid "label_fullname"
 msgstr "氏名（フルネーム）"
+
+#. Default: "Globally enable comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:198
+msgid "label_globally_enabled"
+msgstr "サイト全体でコメントを有効にする"
 
 #. Default: "GNU GPL license"
 #: CMFPlone/browser/templates/footer.pt:31
@@ -8903,6 +9305,11 @@ msgstr "${portal_title} ホームページに続ける"
 msgid "label_login_name"
 msgstr "ログイン名"
 
+#. Default: "Log in to add comments"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:20
+msgid "label_login_to_add_comments"
+msgstr ""
+
 #. Default: "Log in to send feedback"
 #: CMFPlone/browser/templates/author.pt:158
 msgid "label_login_to_send_feedback"
@@ -8946,6 +9353,21 @@ msgstr ""
 #: CMFPlone/browser/interfaces.py:376
 msgid "label_message"
 msgstr "メッセージ"
+
+#. Default: "Enable comment moderation"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:237
+msgid "label_moderation_enabled"
+msgstr "コメントのモデレーションを有効にする"
+
+#. Default: "Moderator Email Address"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:334
+msgid "label_moderator_email"
+msgstr "モデレータのメールアドレス"
+
+#. Default: "Enable moderator email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:322
+msgid "label_moderator_notification_enabled"
+msgstr "モデレータへのメール通知を有効にする"
 
 #. Default: "Modification Date"
 #: Archetypes/ExtensibleMetadata.py:206
@@ -9219,6 +9641,11 @@ msgstr "古いプロファイルバージョンは ${version} でした"
 msgid "label_product_upgrade_old_version"
 msgstr "古いバージョンは ${version} でした"
 
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:121
+msgid "label_publish"
+msgstr "承認"
+
 #. Default: "effective"
 #: plone.app.layout/plone/app/layout/viewlets/content_history.pt:49
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:49
@@ -9289,6 +9716,11 @@ msgstr "選ばれたグループ/ユーザを削除"
 msgid "label_replace_existing"
 msgstr "既存テーマを置き換える"
 
+#. Default: "Reply"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:162
+msgid "label_reply"
+msgstr ""
+
 #. Default: "Request URL"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:55
 msgid "label_request_url"
@@ -9336,6 +9768,11 @@ msgstr "保存"
 #: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-contextual.pt:178
 msgid "label_save_settings"
 msgstr "設定を保存"
+
+#. Default: "says:"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:79
+msgid "label_says"
+msgstr "さん:"
 
 #. Default: "Categorization"
 #: ./ATContentTypes/content/schemata.py
@@ -9480,6 +9917,16 @@ msgstr "すべてのエントリを見せる"
 msgid "label_show_batched"
 msgstr "小分けで見せる"
 
+#. Default: "Show commenter image"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:311
+msgid "label_show_commenter_image"
+msgstr "投稿者の画像を表示"
+
+#. Default: "show full comment text"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:114
+msgid "label_show_full_comment_text"
+msgstr "コメントテキストをすべて表示"
+
 #. Default: "Show icons"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:41
 msgid "label_show_icons"
@@ -9571,6 +10018,7 @@ msgstr "値"
 
 #. Default: "Subject"
 #: CMFPlone/browser/interfaces.py:370
+#: plone.app.discussion/plone/app/discussion/interfaces.py:156
 msgid "label_subject"
 msgstr "件名"
 
@@ -9599,6 +10047,11 @@ msgstr "表示テンプレート"
 #: plone.app.textfield/plone/app/textfield/widget_input.pt:28
 msgid "label_text_format"
 msgstr "テキストフォーマット"
+
+#. Default: "Comment text transform"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:278
+msgid "label_text_transform"
+msgstr "テキスト変換"
 
 #. Default: "Theme base"
 #: plone/app/theming/browser/controlpanel.pt:532
@@ -9721,6 +10174,11 @@ msgstr "URL"
 #: plone.app.users/plone/app/users/schema.py:92
 msgid "label_user_name"
 msgstr "ユーザ名"
+
+#. Default: "Enable user email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:346
+msgid "label_user_notification_enabled"
+msgstr "ユーザへのメール通知を有効にする"
 
 #. Default: "User Search"
 #: CMFPlone/controlpanel/browser/usergroups_usersoverview.pt:83
@@ -10006,6 +10464,32 @@ msgstr "クッキー認証が無効なので、クッキーベースのログイ
 msgid "login_portlet_disabled"
 msgstr "クッキー認証が無効です。ログインポートレットが使えません。"
 
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:47
+msgid "mail_notification_message"
+msgstr ""
+"'${title}' へのコメントが投稿されました: ${link}\n"
+"\n"
+"---\n"
+"${text}\n"
+"---\n"
+
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n\nApprove comment:\n${link_approve}\n\nDelete comment:\n${link_delete}\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:55
+msgid "mail_notification_message_moderator"
+msgstr ""
+"${title} へのコメントが投稿されました: ${link}\n"
+"\n"
+"---\n"
+"${text}\n"
+"---\n"
+"\n"
+"コメントを承認:\n"
+"${link_approve}\n"
+"\n"
+"コメントを削除:\n"
+"${link_delete}\n"
+
 #. Default: "Manage portlets"
 #: plone.app.contentmenu/plone/app/contentmenu/menu.py:814
 #: plone.app.layout/plone/app/layout/viewlets/manage_portlets_fallback.pt:7
@@ -10036,6 +10520,21 @@ msgstr "すみませんが、メールアドレスを変更することは許さ
 #: plone.app.users/plone/app/users/browser/account.py:35
 msgid "message_email_in_use"
 msgstr "あなたが選んだメールアドレスはすでに使われているか、あるいはログイン名として妥当ではありません。他のものにしてください。"
+
+#. Default: "enable the 'Comment Review Workflow' for the Comment content type"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_enable_comment_workflow"
+msgstr "コメントコンテンツタイプに対して「コメント審査ワークフロー」を有効にします"
+
+#. Default: "Moderation workflow is disabled. You have to ${enable_comment_workflow} before you can moderate comments here."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_moderation_disabled"
+msgstr "モデレーションワークフローは無効です。ここでコメントをモデレートするには、 ${enable_comment_workflow} しなければなりません。"
+
+#. Default: "No comments to moderate."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:43
+msgid "message_nothing_to_moderate"
+msgstr "モデレートするコメントはありません"
 
 #. Default: "You see this page because you have permission to edit this link. Others will be immediately redirected to the link's target URL."
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/link.pt:15
@@ -10430,6 +10929,11 @@ msgstr ""
 msgid "test wc workflow"
 msgstr "ワーキングコピーワークフローのテスト"
 
+#. Default: "migrate your comments"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:64
+msgid "text_comments_migration_link"
+msgstr ""
+
 #. Default: "Caught &e at &c by &u"
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:40
 msgid "text_contentrules_logger_message"
@@ -10447,10 +10951,20 @@ msgstr "提供者: ${name}"
 msgid "text_creator_date"
 msgstr "作成者: ${creator} 最終更新: ${date}"
 
+#. Default: "You have configured a custom workflow for the 'Discussion Item' content type. You can enable/disable the comment moderation in this control panel only if you use one of the default 'Discussion Item' workflows. Go to the ${label_discussion_control_panel_link} to choose a workflow for the 'Discussion Item' type."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:44
+msgid "text_custom_comment_workflow"
+msgstr ""
+
 #. Default: "Site"
 #: CMFPlone/browser/templates/plone-addsite.pt:65
 msgid "text_default_site_title"
 msgstr "サイト"
+
+#. Default: "Types control panel"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:45
+msgid "text_discussion_type_control_panel_link"
+msgstr ""
 
 #. Default: "The specified log entry was not found. It may have expired. If you are using a load-balanced ZEO (cluster) setup, try reloading until you get the right server in the cluster."
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:35
@@ -10475,11 +10989,13 @@ msgstr "このサイトは正しいメール設定がなされていません。
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/controlpanel/browser/overview.pt:52
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:24
 msgid "text_no_mailhost_configured"
 msgstr "メールホストやサイト「差出人」メールアドレスを設定していないので、お問い合わせフォーム、メール通知、パスワード再設定などのいろいろな機能が働きません。 これを直すために、${label_mail_control_panel_link} に行ってください。"
 
 #. Default: "Mail control panel"
 #: CMFPlone/controlpanel/browser/overview.pt:53
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:25
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "メールコントロールパネル"
 
@@ -10560,6 +11076,11 @@ msgstr "サイトを検索"
 #: CMFPlone/browser/templates/search.pt:299
 msgid "text_searchitem_location"
 msgstr "存在位置"
+
+#. Default: "You have comments that have not been migrated to the new commenting system that has been introduced in Plone 4.1. Please ${label_comments_migration_link} to fix this."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:63
+msgid "text_unmigrated_comments"
+msgstr ""
 
 #. Default: "This user does not belong to any group."
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:98
@@ -10689,6 +11210,11 @@ msgstr "作者情報"
 #: plone.app.theming/resources/theme/theme1/overrides/plone.app.layout.viewlets.colophon.pt:8
 msgid "title_built_with_plone"
 msgstr "このサイトは Plone オープンソース CMS/WCM を使って作られました。"
+
+#. Default: "Bulk Actions"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:64
+msgid "title_bulkactions"
+msgstr "一括アクション"
 
 #. Default: "Can add"
 #: plone.app.workflow/plone/app/workflow/localroles.py:33

@@ -162,6 +162,14 @@ msgstr "Een basis rules.xml is toegevoegd aan het thema, maar de index.html werd
 msgid "A classic portlet allows you to use legacy portlet templates."
 msgstr "Een klassieke portlet biedt de mogelijkheid om verouderde sjablonen te gebruiken"
 
+#: plone.app.discussion/plone/app/discussion/comment.py:349
+msgid "A comment has been posted."
+msgstr "Commentaar is geplaatst"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:142
+msgid "A comment id unique to this conversation"
+msgstr "Een unieke ID voor dit commentaar"
+
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:131
 msgid "A copy action can copy an object to a different folder."
 msgstr "Een kopieer-actie kan een item kopiëren naar een andere map."
@@ -257,6 +265,10 @@ msgstr "Een rol-conditie voorkomt dat een regel wordt uitgevoerd tenzij de huidi
 #: CMFPlone/browser/templates/plone-addsite.pt:60
 msgid "A short title for the site. This will be shown in the title of the browser window on each page."
 msgstr "Een korte titel voor de website. Dit zal worden weergegeven in de titel van het browser scherm op elke pagina."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "A simple review workflow for comments"
+msgstr ""
 
 # Messages removed in plone.contentrules 2.0.2
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:103
@@ -418,6 +430,10 @@ msgstr "Voeg workflowstatus-conditie toe"
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:61
 msgid "Add Workflow Transition Condition"
 msgstr "Voeg workflowtransitie-conditie toe"
+
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:62
+msgid "Add a comment"
+msgstr "Voeg opmerking toe"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/rule.py:22
 msgid "Add a new rule. Once complete, you can manage the rule's actions and conditions separately."
@@ -583,9 +599,21 @@ msgstr "Het type item (bijv. agenda-item)"
 msgid "An item's workflow state (e.g.published)"
 msgstr "De status van een item (bijv. gepubliceerd)"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:69
+msgid "Anonymous Comments"
+msgstr "Anoniem commentaar"
+
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:217
 msgid "Apply rule on the whole site"
 msgstr "Pas regel toe op de gehele website"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approve"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approving the comment makes it visible to other users."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:30
 #: plone.app.contentrules/plone/app/contentrules/actions/move.py:31
@@ -740,6 +768,10 @@ msgstr "Annuleer check-out"
 msgid "Cannot find checkout location"
 msgstr "Kan locatie van check-out niet vinden"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:182
+msgid "Captcha"
+msgstr ""
+
 #: plone.protect/plone/protect/confirm.pt:27
 msgid "Careful, it's possible someone is executing an exploit against you. Verify you just performed an action on this site and that you were not referred here by a different website or email."
 msgstr ""
@@ -790,8 +822,8 @@ msgid "Changes made."
 msgstr "Wijzigingen zijn doorgevoerd."
 
 #: CMFPlone/controlpanel/browser/types.py:67
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:83
 #: plone.app.portlets/plone/app/portlets/browser/formhelper.py:183
-#: plone/app/theming/browser/controlpanel.py:204
 msgid "Changes saved"
 msgstr "Wijzigingen zijn opgeslagen"
 
@@ -872,11 +904,55 @@ msgstr ""
 msgid "Comment"
 msgstr "Opmerking"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Comment Review Workflow"
+msgstr ""
+
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "Opmerking over de laatste transitie"
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:182
+msgid "Comment approved."
+msgstr "Commentaar goedgekeurd"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:98
+msgid "Comment author email"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:86
+msgid "Comment author full name"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:74
+msgid "Comment author user name"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:104
+msgid "Comment deleted."
+msgstr "Commentaar verwijderd"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:50
+msgid "Comment id"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:62
+msgid "Comment text"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Commentators"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:70
+msgid "Commenter Image"
+msgstr "Profielfoto commentator"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:49
+msgid "Comments"
+msgstr ""
 
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Community Workflow"
@@ -1030,6 +1106,10 @@ msgstr "Mede-auteur e-mails"
 msgid "Contributors Ids"
 msgstr "Mede-auteur ids"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:137
+msgid "Conversation"
+msgstr "Conversatie"
+
 #: CMFPlone/profiles/default/actions.xml
 #: plone.app.content/plone/app/content/browser/contents/copy.py:26
 #: plone/app/theming/browser/controlpanel.pt:180
@@ -1085,6 +1165,7 @@ msgstr "Maak een nieuwe Plone site"
 msgid "Created on"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:175
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Creation date"
 msgstr "Aanmaakdatum"
@@ -1176,6 +1257,10 @@ msgstr "Datum laatst gewijzigd"
 
 #: CMFPlone/profiles/default/controlpanel.xml
 msgid "Date and Time"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:39
+msgid "Date of the most recent public comment"
 msgstr ""
 
 #. Default: "Date range"
@@ -1355,9 +1440,17 @@ msgstr "Globaal uitschakelen"
 msgid "Disable html filtering"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/vocabularies.py:44
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
 #: CMFPlone/interfaces/controlpanel.py:119
 msgid "Disabling locking here will only affect users editing content through the Plone web UI.  Content edited via WebDAV clients will still be subject to locking."
 msgstr "Het uitschakelen van vergrendelen zal alleen gebruikers die via het web content bewerken treffen. Content die via WebDAV bewerkt wordt, blijven onderhevig aan vergrendeling."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/controlpanel.xml
+msgid "Discussion"
+msgstr ""
 
 #. Default: "Discussion Item"
 #: portal type title of type with description Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface.
@@ -1369,6 +1462,10 @@ msgstr "Discussie"
 #: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Door het invullen van dit formulier kunt u op inhoud van de website reageren. Dit is alleen mogelijk als de auteur deze mogelijkheid heeft ingeschakeld voor het betreffende item."
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:27
+msgid "Discussion settings"
+msgstr "Discussie instellingen"
 
 #: CMFPlone/skins/plone_deprecated/search_form.pt:371
 msgid "Display options"
@@ -1530,6 +1627,10 @@ msgstr "Workflowtransitie-conditie bewerken"
 msgid "Edit an existing rule."
 msgstr "Een bestaande regel bewerken"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:89
+msgid "Edit cancelled"
+msgstr "Bewerken geannulleerd."
+
 #: CMFPlone/controlpanel/browser/syndication.py:94
 #: plone.app.registry/plone/app/registry/browser/edit.py:57
 msgid "Edit cancelled."
@@ -1586,6 +1687,10 @@ msgstr "Ingangsdatum"
 msgid "Effective range"
 msgstr "Effectieve reeks"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:154
+msgid "Email"
+msgstr "E-mail"
+
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:62
 msgid "Email address not known."
 msgstr "E-mailadres onbekend."
@@ -1605,6 +1710,10 @@ msgstr "E-mail rapport naar ${recipients}"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:36
 msgid "Email source"
 msgstr "Verstuurder van de e-mail"
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:68
+msgid "Enable Comments"
+msgstr "Commentaar toestaan"
 
 #: CMFPlone/interfaces/controlpanel.py:98
 msgid "Enable External Editor feature"
@@ -2124,6 +2233,10 @@ msgstr "Id"
 msgid "Id $id is already in use"
 msgstr "Het id $id is al in gebruik"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:145
+msgid "Id of comment this comment is in reply to"
+msgstr "Id van commentaar waarop deze commentaar reageert"
+
 #: plone.stringinterp/plone/stringinterp/adapters.py:73
 msgid "Identifier of the content or login of managed user"
 msgstr "Naam van de inhoud of loginnaam van de gebruiker"
@@ -2590,6 +2703,7 @@ msgstr "Gebruikersnaam niet gevonden."
 msgid "Logout"
 msgstr "Uitloggen"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:159
 #: plone.app.textfield/plone/app/textfield/interfaces.py:57
 msgid "MIME type"
 msgstr "MIME-type"
@@ -2857,6 +2971,15 @@ msgstr "RSS-link actie ontbreekt"
 msgid "Missing syndication settings action."
 msgstr "Ontbrekende syndicatie-instellingen actie."
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/actions.xml
+msgid "Moderate comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:72
+msgid "Moderator Email Notification"
+msgstr "E-mail notificatie voor de redactie"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:176
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Modification date"
 msgstr "Wijzigingsdatum"
@@ -2927,6 +3050,7 @@ msgstr "Mijn map"
 msgid "My Preferences"
 msgstr "Mijn voorkeuren"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:139
 #: plone/app/theming/interfaces.py:33
 msgid "Name"
 msgstr "Naam"
@@ -3068,6 +3192,10 @@ msgstr "Aantekening"
 #: plone.app.contenttypes/plone/app/contenttypes/migration/custom_migration.pt:37
 msgid "Note about how long it might take"
 msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:168
+msgid "Notify me of new comments via email."
+msgstr "Hou me middels e-mail op de hoogte van nieuwe commentaar."
 
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
 msgid "Notify user"
@@ -3273,7 +3401,7 @@ msgid "Paths to folders and collections to link to at the portal root."
 msgstr "Paden naar verzamelingen en mappen om naar te linken vanaf de  hoofdmap van de site."
 
 #. Default: "Pending"
-#: workflow state defined in plone_workflow - id pending
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "Pending"
 msgstr "In behandeling"
 
@@ -3432,6 +3560,10 @@ msgstr ""
 #: plone.stringinterp/plone/stringinterp/adapters.py:709
 msgid "Portal title"
 msgstr "Portaal-titel"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:132
+msgid "Portal type"
+msgstr "type"
 
 #: plone.portlet.static/plone/portlet/static/static.py:49
 msgid "Portlet footer"
@@ -3759,6 +3891,10 @@ msgstr "Workflowstatus"
 
 msgid "Reviewer"
 msgstr "Redacteur"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Reviewer approves content"
+msgstr ""
 
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Reviewer makes content available externally"
@@ -4312,6 +4448,10 @@ msgstr "Dien concept content in ter publicatie"
 msgid "Submit for publication"
 msgstr "Indienen ter publicatie"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Submitted, pending review."
+msgstr ""
+
 #. Default: "Subtopics"
 #: type action defined on Smart Folder
 msgid "Subtopics"
@@ -4482,6 +4622,7 @@ msgid "The ID of the user who performed the last transition"
 msgstr "Het ID van de gebruiker die de laatste transitie heeft uitgevoerd"
 
 #: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "The ID of the user who performed the previous transition"
 msgstr "Het ID van de gebruiker die de vorige transitie heeft uitgevoerd"
 
@@ -4629,6 +4770,14 @@ msgstr "De regel is ingeschakeld op de hoofdmap en alle submappen"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:205
 msgid "The rule is enabled but will perform nothing since it is not assigned anywhere."
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:44
+msgid "The set of unique commentators (usernames)"
+msgstr "Lijst van commentatoren (gebruikernamen)"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:49
+msgid "The set of unique commentators (usernames) of published_comments"
 msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -4973,9 +5122,25 @@ msgstr ""
 msgid "Total comments"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments on this item."
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:33
+msgid "Total number of public comments on this item"
+msgstr ""
+
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Image.xml
 msgid "Transform"
 msgstr "Draaien"
+
+#: plone.app.discussion/plone/app/discussion/comment.py:161
+msgid "Transform '%s' => '%s' not available."
+msgstr ""
 
 #: plone.app.textfield/plone/app/textfield/interfaces.py:79
 msgid "Transformed value in the target MIME type"
@@ -5164,6 +5329,10 @@ msgstr "Gebruiker aangemaakt"
 msgid "User Data Form"
 msgstr "Gebruikers Data Formulier"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:74
+msgid "User Email Notification"
+msgstr "Gebruker E-mail Notificatie"
+
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "User Logged in"
 msgstr "Gebruiker ingelogd"
@@ -5196,6 +5365,10 @@ msgstr "Rol van gebruiker"
 msgid "User/Groups settings"
 msgstr "Gebruikers- en groepeninstellingen"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:174
+msgid "Username of the commenter"
+msgstr ""
+
 #: CMFPlone/PloneControlPanel.py:69
 msgid "Users"
 msgstr ""
@@ -5205,6 +5378,10 @@ msgstr ""
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:33
 msgid "Users and Groups"
 msgstr "Gebruikers en groepen"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Users who have commented on the item"
+msgstr ""
 
 #: validation/validators/RegexValidator.py:44
 msgid "Validation failed($name): $value of type $type, expected 'string'"
@@ -5297,6 +5474,10 @@ msgstr "Zichtbaar voor iedereen, maar niet goedgekeurd door de redacteuren."
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, editable by the owner."
 msgstr "Zichtbaar voor iedereen, bewerkbaar door de eigenaar."
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Visible to everyone, non-editable."
+msgstr ""
 
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -5523,6 +5704,10 @@ msgstr "U dient regelmatig database onderhoud te plegen. Dit geeft aan hoeveel d
 msgid "Your Plone site has not been added yet:"
 msgstr "Uw Plone site is nog niet toegevoegd:"
 
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:258
+msgid "Your comment awaits moderator approval."
+msgstr "Je commentaar zal geplaatst worden na goedkeuring."
+
 #: CMFPlone/RegistrationTool.py:181
 msgid "Your password and confirmation did not match. Please try again."
 msgstr "Uw wachtwoord en bevestiging komen niet overeen. Probeer het nogmaals."
@@ -5573,6 +5758,11 @@ msgstr "Absoluut URL voorvoegsel"
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:68
 msgid "action_convert_legacy_portlets"
 msgstr "Er zijn verouderde portlets gedefinieerd. Click op de button om ze te converteren naar nieuwe stijl portlets."
+
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:128
+msgid "add_comment_button"
+msgstr "Commentaar toevoegen"
 
 #. another user."
 #. Default: "This item can not be deleted because it is currently locked by another user."
@@ -5732,6 +5922,21 @@ msgstr "Zoeken"
 msgid "box_sign_in"
 msgstr "Inloggen"
 
+#. Default: "Delete"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:68
+msgid "bulkactions_delete"
+msgstr "Verwijderen"
+
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
+msgid "bulkactions_publish"
+msgstr "Publiceren"
+
+#. Default: "Cancel"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:101
+msgid "cancel_form_button"
+msgstr ""
+
 #. Default: "Category"
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:13
 msgid "category-contentrules-mailsub"
@@ -5752,6 +5957,41 @@ msgstr "Dit is een werkkopie van ${baseline_title}, gemaakt door ${creator} op $
 #: plone.app.registry/plone/app/registry/browser/records.pt:42
 msgid "clear_filter"
 msgstr "Verwijder filter"
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. Web and email addresses are transformed into clickable links."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:47
+msgid "comment_description_intelligent_text"
+msgstr "U kunt commentaar toevoegen door onderstaand formulier in te vullen. Platte tekst formaat. Web en e-mail adressen worden omgezet in klikbare links."
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. You can use the Markdown syntax for links and images."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:41
+msgid "comment_description_markdown"
+msgstr ""
+
+#. Default: "Comments are moderated."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:53
+msgid "comment_description_moderation_enabled"
+msgstr "Commentaren zijn gemodereerd."
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:36
+msgid "comment_description_plain_text"
+msgstr "U kunt commentaar toevoegen door onderstaand formulier in te vullen. Platte tekst formaat."
+
+#. Default: "Edit comment cancelled"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:105
+msgid "comment_edit_cancel_notification"
+msgstr ""
+
+#. Default: "Comment was edited"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:95
+msgid "comment_edit_notification"
+msgstr ""
+
+#. Default: "${author_name} on ${content}"
+#: plone.app.discussion/plone/app/discussion/comment.py:43
+msgid "comment_title"
+msgstr "${creator} over ${content}"
 
 #. Default: "Are you certain you want to delete the selected items?"
 #: plone.app.content/plone/app/content/browser/contents/templates/delete.pt:5
@@ -6604,6 +6844,16 @@ msgstr ""
 msgid "edit"
 msgstr "wijzigen"
 
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:74
+msgid "edit_comment_form_button"
+msgstr ""
+
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:58
+msgid "edit_comment_form_title"
+msgstr ""
+
 #. Default: "E-Mail"
 #: Memberproperty
 msgid "email"
@@ -6727,6 +6977,11 @@ msgstr "Toegankelijkheid"
 msgid "heading_accessibility_statement"
 msgstr "Toegankelijkheidsverklaring"
 
+#. Default: "Action"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
+msgid "heading_action"
+msgstr "Actie"
+
 #. Default: "Add actions portlet"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:196
 msgid "heading_add_actions_portlet"
@@ -6782,6 +7037,16 @@ msgstr ""
 msgid "heading_change_password_for"
 msgstr "Wijzig wachtwoord van ${user}"
 
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
+msgid "heading_comment"
+msgstr "Commentaar"
+
+#. Default: "Commenter"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:81
+msgid "heading_commenter"
+msgstr "Commentator"
+
 #. Default: "Contact form"
 #: CMFPlone/browser/templates/contact-info.pt:18
 msgid "heading_contact_form"
@@ -6806,6 +7071,11 @@ msgstr "Huidige gedeelde rechten voor ${folder}"
 #: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:16
 msgid "heading_dashboard"
 msgstr "${user_name}'s dashboard"
+
+#. Default: "Date"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
+msgid "heading_date"
+msgstr "Datum"
 
 #. Default: "Description"
 #: plone.app.registry/plone/app/registry/browser/records.pt:80
@@ -6868,6 +7138,11 @@ msgstr "Leden van de ${groupname}-groep"
 msgid "heading_groupmembers_current"
 msgstr "Huidige groepsleden"
 
+#. Default: "In Response To"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
+msgid "heading_in_reponse_to"
+msgstr "In antwoord op"
+
 #. Default: "Use language codes in URL path for manual override"
 #: CMFPlone/interfaces/controlpanel.py:228
 msgid "heading_language_codes_in_URL"
@@ -6892,6 +7167,11 @@ msgstr "Zoek naar gebruikers"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:69
 msgid "heading_memberships_current"
 msgstr "Huidige groepslidmaatschappen"
+
+#. Default: "Moderate comments"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:24
+msgid "heading_moderate_comments"
+msgstr "Commentaar modereren"
 
 #. Default: "Name"
 #: plone.app.registry/plone/app/registry/browser/records.pt:78
@@ -7149,6 +7429,16 @@ msgstr ""
 msgid "help_always_show_selector"
 msgstr ""
 
+#. Default: "If selected, anonymous users are able to post comments without loggin in. It is highly recommended to use a captcha solution to prevent spam if this setting is enabled."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:214
+msgid "help_anonymous_comments"
+msgstr "Indien geselecteerd, anonieme bezoekers kunnen commentaar achterlaten zonder in te loggen. Het is aanbevolen om de captcha-oplossing te gebruiken om spam te voorkomen als deze optie is ingeschakeld."
+
+#. Default: "If selected, anonymous user will have to give their email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:228
+msgid "help_anonymous_email_enabled"
+msgstr ""
+
 #. Default: "The URL of the \"After the Deadline\" grammar and spell checking server. The default value is the public server, but ideally you should download and install your own and specify its address here."
 #: CMFPlone/interfaces/controlpanel.py:703
 msgid "help_atd_service_url"
@@ -7180,6 +7470,11 @@ msgstr "Goed of fout"
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:114
 msgid "help_capslock_password"
 msgstr "Wachtwoorden zijn hoofdlettergevoelig, let erop dat CAPS-LOCK niet aanstaat."
+
+#. Default: "Use this setting to enable or disable Captcha validation for comments. Install plone.formwidget.captcha, plone.formwidget.recaptcha, collective.akismet, or collective.z3cform.norobots if there are no options available."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:297
+msgid "help_captcha"
+msgstr "Indien geselecteerd, Captcha validatie wordt gebruikt voor het commentaar. Installeer plone.formwidget of plone.formwidget.recaptcha als er geen opties beschikbaar zijn."
 
 #. Default: "Select the transition to be used for modifying the items state."
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:8
@@ -7283,10 +7578,20 @@ msgstr "Het begin van de te doorzoeken datumreeks."
 msgid "help_default_icon"
 msgstr "Het icoon dat we gebruiken voor acties zonder eigen icoon. Een afbeelding van 16x16 pixels."
 
+#. Default: "If selected, supports deleting of own comments for users with the 'Delete own comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:269
+msgid "help_delete_own_comment_enabled"
+msgstr ""
+
 #. Default: "Used in item listings and search results."
 #: Archetypes/ExtensibleMetadata.py:93
 msgid "help_description"
 msgstr "Een korte beschrijving van de inhoud."
+
+#. Default: "Some discussion related settings are not located in the Discussion Control Panel.\nTo enable comments for a specific content type, go to the Types Control Panel of this type and choose \"Allow comments\".\nTo enable the moderation workflow for comments, go to the Types Control Panel, choose \"Comment\" and set workflow to \"Comment Review Workflow\"."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:28
+msgid "help_discussion_settings_editform"
+msgstr "Sommige discussie instellingen staan niet op deze pagina. Om commentaar in te schakelen voor een specifiek content-type, ga naar het Typen instellingenscherm van het betreffende type en kies 'commentaar toestaan'. Om de moderatie-workflow in te schakelen, ga naar het Typen instellingenscherm en kies het type 'Comment' stel de 'Comment Review Workflow' in."
 
 #. for example \"&lt;!DOCTYPE html&gt;\". If left blank the default XHTML 1.0
 #. transistional Doctype or that set in the Diazo theme is used."
@@ -7298,6 +7603,11 @@ msgstr "U kunt het Doctype specificeren, bijvoorbeeld \\\"&lt;!DOCTYPE html&gt;\
 #. Default: "Switching the email login setting in the ${link} on or off automatically changes the login name for existing users. This may fail when there are duplicates. On this page you can search for duplicates."
 #: CMFPlone/controlpanel/browser/emaillogin.pt:18
 msgid "help_duplicate_login_names"
+msgstr ""
+
+#. Default: "If selected, supports editing of comments for users with the 'Edit comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:258
+msgid "help_edit_comment_enabled"
 msgstr ""
 
 #. the item will be published immediately."
@@ -7385,6 +7695,11 @@ msgstr "Selecteer in welk formaat u de inhoud van dit document wilt invoeren. Ki
 #: plone.app.users/plone/app/users/schema.py:76
 msgid "help_full_name_creation"
 msgstr "Vul de volledige naam in, bijvoorbeeld Jan Smit."
+
+#. Default: "If selected, users are able to post comments on the site. Though, you have to enable comments for specific content types, folders or content objects before users will be able to post comments."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:200
+msgid "help_globally_enabled"
+msgstr "Indien geselecteerd, gebruikers kunnen commentaar plaatsen op de site. Het kan zijn dat commentaar voor een specifiek content-type ingeschakeld moet worden voordat commentaar mogelijk is."
 
 #. creation."
 #. Default: "A unique identifier for the group. Can not be changed after creation."
@@ -7479,6 +7794,21 @@ msgstr "Indien ingeschakeld zullen alle externe links gemarkeerd zijn met een ic
 #: CMFPlone/browser/interfaces.py:378
 msgid "help_message"
 msgstr "Voer hier de boodschap in die u wilt verzenden."
+
+#. Default: "If selected, comments will enter a 'Pending' state in which they are invisible to the public. A user with the 'Review comments' permission ('Reviewer' or 'Manager') can approve comments to make them visible to the public. If you want to enable a custom comment workflow, you have to go to the types control panel."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:241
+msgid "help_moderation_enabled"
+msgstr "Indien geselecteerd, de moderator zal ingelicht worden als een commentaar aandacht nodig heeft."
+
+#. Default: "Address to which moderator notifications will be sent."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:338
+msgid "help_moderator_email"
+msgstr "Emailadres van de moderator naar wie een notificatie zal worden gestuurd."
+
+#. Default: "If selected, the moderator is notified if a comment needs attention. The moderator email address can be set below."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:324
+msgid "help_moderator_notification_enabled"
+msgstr "Indien geselecteerd, de moderator zal ingelicht worden als een commentaar aandacht nodig heeft."
 
 #. Default: "Date this content was modified last"
 #: Archetypes/ExtensibleMetadata.py:208
@@ -7784,6 +8114,11 @@ msgstr "De verkorte naam is het gedeelte dat in het internet adres wordt gebruik
 msgid "help_shortname"
 msgstr "Gebruik geen spaties, speciale tekens of hoofdletters. Het zal deel uit maken van het internetadres van dit item."
 
+#. Default: "If selected, an image of the user is shown next to the comment."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:313
+msgid "help_show_commenter_image"
+msgstr "Indien geselecteerd, de profielfoto van een gebruiker wordt naast het commentaar getoond."
+
 #. Default: "Show icons or default icon for actions without icon."
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:43
 msgid "help_show_icons"
@@ -7836,6 +8171,11 @@ msgstr "Tags worden vaak gebruikt om inhoud op een ad-hoc manier te organiseren.
 #: Archetypes/TemplateMixin.py:25
 msgid "help_template_mixin"
 msgstr "Kies een sjabloon dat gebruikt wordt voor het weergeven van dit item."
+
+#. Default: "Use this setting to choose if the comment text should be transformed in any way. You can choose between 'Plain text' and 'Intelligent text'. 'Intelligent text' converts plain text into HTML where line breaks and indentation is preserved, and web and email addresses are made into clickable links."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:280
+msgid "help_text_transform"
+msgstr "Gebruik deze instelling om ervoor te kiezen of de commentaar tekst getransformeerd moet worden. U kunt kiezen uit 'Platte tekst' en 'Intelligente tekst'. 'Intelligente tekst' zet platte tekst om in HTML waarbij nieuwe regels en inspringen worden gehandhaaft, en waarbij web en e-mail adressen in klikbare links worden omgezet."
 
 #. Default: "Select a file to upload."
 #: plone/app/theming/browser/controlpanel.pt:716
@@ -7903,6 +8243,11 @@ msgstr "Voeg http:// toe voor een link naar een externe website."
 #: plone.app.users/plone/app/users/schema.py:93
 msgid "help_user_name_creation_casesensitive"
 msgstr "Vul een gebruikersnaam in, bijvoorbeeld \"jsmit\". Gebruik geen spaties of speciale karakters. Gebruikersnamen zijn hoofdlettergevoelig. Let dus op dat de CAPS LOCK toets niet aan staat. De gebruikersnaam wordt voor de login gebruikt."
+
+#. Default: "If selected, users can choose to be notified of new comments by email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:350
+msgid "help_user_notification_enabled"
+msgstr "Indien geselecteerd kunnen gebruikers ervoor kiezen per e-mail bericht te ontvangen van nieuwe commentaar."
 
 #. Default: "Wysiwyg editor to use."
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:31
@@ -8025,6 +8370,11 @@ msgstr "Acties"
 msgid "label_add"
 msgstr "Toevoegen"
 
+#. Default: "Add comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:194
+msgid "label_add_comment"
+msgstr ""
+
 #. Default: "Add New Group"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:84
 msgid "label_add_new_group"
@@ -8111,6 +8461,22 @@ msgstr ""
 msgid "label_an_anonymous_user"
 msgstr "een anonieme gebruiker"
 
+#. Default: "Anonymous"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:76
+#: plone.app.discussion/plone/app/discussion/comment.py:179
+msgid "label_anonymous"
+msgstr "Anoniem"
+
+#. Default: "Enable anonymous comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:212
+msgid "label_anonymous_comments"
+msgstr "Anoniem commentariëren inschakelen"
+
+#. Default: "Enable anonymous email field"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:226
+msgid "label_anonymous_email_enabled"
+msgstr ""
+
 #. Default: "Anonymous User"
 #: plone.app.layout/plone/app/layout/viewlets/content.py:376
 msgid "label_anonymous_user"
@@ -8120,6 +8486,11 @@ msgstr "Anonieme gebruiker"
 #: CMFPlone/skins/plone_deprecated/search_form.pt:306
 msgid "label_any_author"
 msgstr "Alle auteurs"
+
+#. Default: "Apply"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:71
+msgid "label_apply"
+msgstr "Toepassen"
 
 #. Default: "Apply Changes"
 #: plone.app.users/plone/app/users/browser/registersettingspanel.py:32
@@ -8202,6 +8573,11 @@ msgstr "Annuleren"
 #: plone.app.users/plone/app/users/browser/register.py:676
 msgid "label_cant_mail_password_reset"
 msgstr "Normaal gesproken zouden we aanbieden een e-mail naar de gebruiker te sturen met instructies om het wachtwoord via dit formulier compleet op te stellen. Helaas heeft deze website geen valide e-mail setup. U kunt dit herstellen in de E-mailinstellingen."
+
+#. Default: "Captcha"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:295
+msgid "label_captcha"
+msgstr "Captcha"
 
 #. Default: "Change"
 #: CMFPlone/controlpanel/browser/types.pt:47
@@ -8291,8 +8667,14 @@ msgstr "Klik voor de volledige weergave van de afbeelding..."
 
 #. Default: "Comment"
 #: CMFPlone/browser/interfaces.py:342
+#: plone.app.discussion/plone/app/discussion/interfaces.py:161
 msgid "label_comment"
 msgstr "Opmerking"
+
+#. Default: "Commenting has been disabled."
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:171
+msgid "label_commenting_disabled"
+msgstr "Commentaar is uitgeschakeld"
 
 #. Default: "Comments"
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:3
@@ -8507,8 +8889,15 @@ msgstr "Standaard workflow (${title})"
 
 #. Default: "Delete"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:173
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:98
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:130
 msgid "label_delete"
 msgstr "Verwijderen"
+
+#. Default: "Enable deleting own comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:267
+msgid "label_delete_own_comment_enabled"
+msgstr ""
 
 #. Default: "Description"
 #: Archetypes/ExtensibleMetadata.py:92
@@ -8556,9 +8945,14 @@ msgstr "Doctype"
 #. Default: "Edit"
 #: CMFPlone/browser/templates/author.pt:85
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:58
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:28
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:131
 msgid "label_edit"
 msgstr "Bewerken"
+
+#. Default: "Enable editing of comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:256
+msgid "label_edit_comment_enabled"
+msgstr ""
 
 #. edit the container itself, ${go_here}."
 #. Default: "You are editing the default view of a container. If you wanted to edit the container itself, ${go_here}."
@@ -8749,6 +9143,11 @@ msgstr "Volledige naam"
 #: plone.app.users/plone/app/users/browser/membersearch.py:38
 msgid "label_fullname"
 msgstr "Volledige naam"
+
+#. Default: "Globally enable comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:198
+msgid "label_globally_enabled"
+msgstr "Commentaar globaal toestaan"
 
 #. Default: "GNU GPL license"
 #: CMFPlone/browser/templates/footer.pt:31
@@ -8961,6 +9360,11 @@ msgstr "Doorgaan naar de home page van ${portal_title}"
 msgid "label_login_name"
 msgstr "Gebruikersnaam"
 
+#. Default: "Log in to add comments"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:20
+msgid "label_login_to_add_comments"
+msgstr ""
+
 #. Default: "Log in to send feedback"
 #: CMFPlone/browser/templates/author.pt:158
 msgid "label_login_to_send_feedback"
@@ -9005,6 +9409,21 @@ msgstr ""
 #: CMFPlone/browser/interfaces.py:376
 msgid "label_message"
 msgstr "Bericht"
+
+#. Default: "Enable comment moderation"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:237
+msgid "label_moderation_enabled"
+msgstr "Moderatie is ingeschakeld"
+
+#. Default: "Moderator Email Address"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:334
+msgid "label_moderator_email"
+msgstr "Moderator emailadres"
+
+#. Default: "Enable moderator email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:322
+msgid "label_moderator_notification_enabled"
+msgstr "Notificatie voor moderator inschakelen"
 
 #. Default: "Modification Date"
 #: Archetypes/ExtensibleMetadata.py:206
@@ -9278,6 +9697,11 @@ msgstr "De oude profielversie was ${version}."
 msgid "label_product_upgrade_old_version"
 msgstr "De oude versie was ${version}."
 
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:121
+msgid "label_publish"
+msgstr "Publiceren"
+
 #. Default: "effective"
 #: plone.app.layout/plone/app/layout/viewlets/content_history.pt:49
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:49
@@ -9348,6 +9772,11 @@ msgstr "Verwijder de geselecteerde groepen / gebruikers"
 msgid "label_replace_existing"
 msgstr "Vervang huidig thema"
 
+#. Default: "Reply"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:162
+msgid "label_reply"
+msgstr ""
+
 #. Default: "Request URL"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:55
 msgid "label_request_url"
@@ -9395,6 +9824,11 @@ msgstr "Bewaren"
 #: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-contextual.pt:178
 msgid "label_save_settings"
 msgstr "Bewaar instellingen"
+
+#. Default: "says:"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:79
+msgid "label_says"
+msgstr "zegt:"
 
 #. Default: "Categorization"
 #: ./ATContentTypes/content/schemata.py
@@ -9539,6 +9973,16 @@ msgstr "Alle meldingen tonen"
 msgid "label_show_batched"
 msgstr "Toon opgedeeld"
 
+#. Default: "Show commenter image"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:311
+msgid "label_show_commenter_image"
+msgstr "Toon portret commentator"
+
+#. Default: "show full comment text"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:114
+msgid "label_show_full_comment_text"
+msgstr "Toon het volledige commentaar"
+
 #. Default: "Show icons"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:41
 msgid "label_show_icons"
@@ -9629,6 +10073,7 @@ msgstr "Waarde"
 
 #. Default: "Subject"
 #: CMFPlone/browser/interfaces.py:370
+#: plone.app.discussion/plone/app/discussion/interfaces.py:156
 msgid "label_subject"
 msgstr "Onderwerp"
 
@@ -9657,6 +10102,11 @@ msgstr "Geef sjabloon weer"
 #: plone.app.textfield/plone/app/textfield/widget_input.pt:28
 msgid "label_text_format"
 msgstr "Tekstopmaak"
+
+#. Default: "Comment text transform"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:278
+msgid "label_text_transform"
+msgstr "Reactie tekst transformatie"
 
 #. Default: "Theme base"
 #: plone/app/theming/browser/controlpanel.pt:532
@@ -9779,6 +10229,11 @@ msgstr "internetadres (URL)"
 #: plone.app.users/plone/app/users/schema.py:92
 msgid "label_user_name"
 msgstr "Gebruikersnaam"
+
+#. Default: "Enable user email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:346
+msgid "label_user_notification_enabled"
+msgstr "Gebruikers-notificatie ingeschakeld"
 
 #. Default: "User Search"
 #: CMFPlone/controlpanel/browser/usergroups_usersoverview.pt:83
@@ -10066,6 +10521,16 @@ msgstr "Cookies zijn uitgeschakeld. Cookie gebaseerde login is niet mogelijk."
 msgid "login_portlet_disabled"
 msgstr "Cookie authenticatie is uitgeschakeld. De loginbox is niet beschikbaar."
 
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:47
+msgid "mail_notification_message"
+msgstr "Een commentaar op '${title}' is geplaatst: ${link}"
+
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n\nApprove comment:\n${link_approve}\n\nDelete comment:\n${link_delete}\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:55
+msgid "mail_notification_message_moderator"
+msgstr "Commentaar op '${title}' is geplaatst: ${link}"
+
 #. Default: "Manage portlets"
 #: plone.app.contentmenu/plone/app/contentmenu/menu.py:814
 #: plone.app.layout/plone/app/layout/viewlets/manage_portlets_fallback.pt:7
@@ -10097,6 +10562,21 @@ msgstr "Helaas, het is niet toegestaan uw e-mailadres te wijzigen."
 #: plone.app.users/plone/app/users/browser/account.py:35
 msgid "message_email_in_use"
 msgstr "Het e-mailadres wat u heeft ingevoerd is reeds in gebruik, of is niet geldig als een loginnaam. Geef een ander e-mailadres op."
+
+#. Default: "enable the 'Comment Review Workflow' for the Comment content type"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_enable_comment_workflow"
+msgstr "Activeer de 'Commentaar Goedkeuren Werkstroom' voor het Commentaar content-type"
+
+#. Default: "Moderation workflow is disabled. You have to ${enable_comment_workflow} before you can moderate comments here."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_moderation_disabled"
+msgstr "Moderatie uitgeschakeld"
+
+#. Default: "No comments to moderate."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:43
+msgid "message_nothing_to_moderate"
+msgstr "Niets te modereren"
 
 #. Others will be immediately redirected to the link's target URL."
 #. Default: "You see this page because you have permission to edit this link. Others will be immediately redirected to the link's target URL."
@@ -10507,6 +10987,11 @@ msgstr ""
 msgid "test wc workflow"
 msgstr "test workflow voor werkkopiën"
 
+#. Default: "migrate your comments"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:64
+msgid "text_comments_migration_link"
+msgstr ""
+
 #. Default: "Caught &e at &c by &u"
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:40
 msgid "text_contentrules_logger_message"
@@ -10524,10 +11009,20 @@ msgstr "Mede-auteurs: ${name}"
 msgid "text_creator_date"
 msgstr "door ${creator} , laatste wijziging: ${date}"
 
+#. Default: "You have configured a custom workflow for the 'Discussion Item' content type. You can enable/disable the comment moderation in this control panel only if you use one of the default 'Discussion Item' workflows. Go to the ${label_discussion_control_panel_link} to choose a workflow for the 'Discussion Item' type."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:44
+msgid "text_custom_comment_workflow"
+msgstr ""
+
 #. Default: "Site"
 #: CMFPlone/browser/templates/plone-addsite.pt:65
 msgid "text_default_site_title"
 msgstr "Website"
+
+#. Default: "Types control panel"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:45
+msgid "text_discussion_type_control_panel_link"
+msgstr ""
 
 #. you are using a load-balanced ZEO (cluster) setup, try reloading until you
 #. get the right server in the cluster."
@@ -10558,11 +11053,13 @@ msgstr "Voor deze website zijn geen geldige e-mailinstellingen ingevoerd, dus u 
 #. this."
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/controlpanel/browser/overview.pt:52
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:24
 msgid "text_no_mailhost_configured"
 msgstr "U heeft geen e-mailhost of een 'Van' adres voor de website geconfigureerd, dus verscheidene toepassingen waaronder contactformulieren, e-mailberichtgeving en het resetten van een wachtwoord zullen niet werken. Ga naar de ${label_mail_control_panel_link} om dit te herstellen."
 
 #. Default: "Mail control panel"
 #: CMFPlone/controlpanel/browser/overview.pt:53
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:25
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "E-mail configuratiescherm"
 
@@ -10645,6 +11142,11 @@ msgstr "Zoek"
 #: CMFPlone/browser/templates/search.pt:299
 msgid "text_searchitem_location"
 msgstr "Bevindt zich in"
+
+#. Default: "You have comments that have not been migrated to the new commenting system that has been introduced in Plone 4.1. Please ${label_comments_migration_link} to fix this."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:63
+msgid "text_unmigrated_comments"
+msgstr ""
 
 #. Default: "This user does not belong to any group."
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:98
@@ -10775,6 +11277,11 @@ msgstr "Auteursinformatie"
 #: plone.app.theming/resources/theme/theme1/overrides/plone.app.layout.viewlets.colophon.pt:8
 msgid "title_built_with_plone"
 msgstr "Deze website is gemaakt met Plone CMS, het Open Source Web Content Management Systeem."
+
+#. Default: "Bulk Actions"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:64
+msgid "title_bulkactions"
+msgstr "Bulkacties"
 
 #. Default: "Can add"
 #: plone.app.workflow/plone/app/workflow/localroles.py:33

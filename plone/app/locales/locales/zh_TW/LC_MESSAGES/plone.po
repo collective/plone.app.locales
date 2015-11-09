@@ -156,6 +156,14 @@ msgstr "已新增 rules.xml 樣版檔案，但還沒設定 index.html 檔案。"
 msgid "A classic portlet allows you to use legacy portlet templates."
 msgstr "傳統式資訊方框，允許使用舊式的資訊方框樣板。"
 
+#: plone.app.discussion/plone/app/discussion/comment.py:349
+msgid "A comment has been posted."
+msgstr "留言已張貼。"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:142
+msgid "A comment id unique to this conversation"
+msgstr "留言的識別碼"
+
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:131
 msgid "A copy action can copy an object to a different folder."
 msgstr "能拷貝物件到不同目錄的拷貝動作。"
@@ -251,6 +259,10 @@ msgstr "用來限制規則執行的角色條件，除非使用者具有這個角
 #: CMFPlone/browser/templates/plone-addsite.pt:60
 msgid "A short title for the site. This will be shown in the title of the browser window on each page."
 msgstr "網站的標題名稱，會顯示在瀏覽器的標題區。"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "A simple review workflow for comments"
+msgstr ""
 
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:103
 msgid "A summary of the rule"
@@ -413,6 +425,10 @@ msgstr "新增工作流程狀態條件"
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:61
 msgid "Add Workflow Transition Condition"
 msgstr "新增工作流程轉換條件"
+
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:62
+msgid "Add a comment"
+msgstr "新增留言"
 
 #: plone.app.contentrules/plone/app/contentrules/browser/rule.py:22
 msgid "Add a new rule. Once complete, you can manage the rule's actions and conditions separately."
@@ -581,9 +597,21 @@ msgstr "想要搜尋的型別項目 (例如: 活動)"
 msgid "An item's workflow state (e.g.published)"
 msgstr "想要搜尋的流程狀態 (例如: 已公開)"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:69
+msgid "Anonymous Comments"
+msgstr "匿名留言"
+
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:217
 msgid "Apply rule on the whole site"
 msgstr "套用規則到整個網站"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approve"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Approving the comment makes it visible to other users."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:30
 #: plone.app.contentrules/plone/app/contentrules/actions/move.py:31
@@ -741,6 +769,10 @@ msgstr "取消版本取出"
 msgid "Cannot find checkout location"
 msgstr "無法找到版本取出的位置"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:182
+msgid "Captcha"
+msgstr ""
+
 #: plone.protect/plone/protect/confirm.pt:27
 msgid "Careful, it's possible someone is executing an exploit against you. Verify you just performed an action on this site and that you were not referred here by a different website or email."
 msgstr "注意，可能有人企圖攻擊網站，請確認你剛在網站上執行指令，而不是從別的網站或信件轉址過來。"
@@ -792,8 +824,8 @@ msgid "Changes made."
 msgstr "完成變更。"
 
 #: CMFPlone/controlpanel/browser/types.py:67
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:83
 #: plone.app.portlets/plone/app/portlets/browser/formhelper.py:183
-#: plone/app/theming/browser/controlpanel.py:204
 msgid "Changes saved"
 msgstr "變更已儲存"
 
@@ -877,12 +909,56 @@ msgstr "使用逗號來分隔多筆設定值。"
 msgid "Comment"
 msgstr "備註"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Comment Review Workflow"
+msgstr ""
+
 #. Default: "Comment about the last transition"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "為狀態轉換新增備註"
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:182
+msgid "Comment approved."
+msgstr "留言已審核"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:98
+msgid "Comment author email"
+msgstr "留言作者電郵"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:86
+msgid "Comment author full name"
+msgstr "留言作者姓名"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:74
+msgid "Comment author user name"
+msgstr "留言作者帳號"
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:104
+msgid "Comment deleted."
+msgstr "留言已刪除"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:50
+msgid "Comment id"
+msgstr "留言識別碼"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:62
+msgid "Comment text"
+msgstr "留言內文"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Commentators"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:70
+msgid "Commenter Image"
+msgstr "留言者圖檔"
+
+#: plone.app.discussion/plone/app/discussion/contentrules.py:49
+msgid "Comments"
+msgstr "留言"
 
 #. Default: "Community Workflow"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -1040,6 +1116,10 @@ msgstr "貢獻者 E-Mail"
 msgid "Contributors Ids"
 msgstr "貢獻者 ID"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:137
+msgid "Conversation"
+msgstr "留言功能"
+
 #. Default: "Copy"
 #: CMFPlone/profiles/default/actions.xml
 #: plone.app.content/plone/app/content/browser/contents/copy.py:26
@@ -1096,6 +1176,7 @@ msgstr "建立新的 Plone 網站"
 msgid "Created on"
 msgstr "建立日期"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:175
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Creation date"
 msgstr "建立日期"
@@ -1190,6 +1271,10 @@ msgstr "修改日期"
 #: CMFPlone/profiles/default/controlpanel.xml
 msgid "Date and Time"
 msgstr "時區與日期"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:39
+msgid "Date of the most recent public comment"
+msgstr "最新留言的日期"
 
 #. Default: "Date range"
 #: criterion description of criterion ATDateRangeCriterion
@@ -1370,9 +1455,17 @@ msgstr "停用"
 msgid "Disable html filtering"
 msgstr "停用 HTML 過濾條件"
 
+#: plone.app.discussion/plone/app/discussion/vocabularies.py:44
+msgid "Disabled"
+msgstr "已停用"
+
 #: CMFPlone/interfaces/controlpanel.py:119
 msgid "Disabling locking here will only affect users editing content through the Plone web UI.  Content edited via WebDAV clients will still be subject to locking."
 msgstr "沒勾選的話，只會影響到透過網頁介面編輯內容的使用者。透過 WebDAV 編輯的時候，仍會進行鎖定。"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/controlpanel.xml
+msgid "Discussion"
+msgstr ""
 
 #. Default: "Discussion Item"
 #: portal type title of type with description Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface.
@@ -1383,6 +1476,10 @@ msgstr "留言項目"
 #: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "留言項目是回應其他內容的文件，*不*能透過 folder_factories 介面來新增。"
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:27
+msgid "Discussion settings"
+msgstr "討論區設定"
 
 #: CMFPlone/skins/plone_deprecated/search_form.pt:371
 msgid "Display options"
@@ -1546,6 +1643,10 @@ msgstr "編輯工作流程轉換條件"
 msgid "Edit an existing rule."
 msgstr "編輯既有的規則。"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:89
+msgid "Edit cancelled"
+msgstr "取消編輯"
+
 #: CMFPlone/controlpanel/browser/syndication.py:94
 #: plone.app.registry/plone/app/registry/browser/edit.py:57
 msgid "Edit cancelled."
@@ -1603,6 +1704,10 @@ msgstr "有效日期"
 msgid "Effective range"
 msgstr "有效範圍"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:154
+msgid "Email"
+msgstr "E-Mail"
+
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:62
 msgid "Email address not known."
 msgstr "電子郵件信箱不可辨識。"
@@ -1622,6 +1727,10 @@ msgstr "電子郵件通知寄給 ${recipients}"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:36
 msgid "Email source"
 msgstr "寄信人郵件信箱"
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:68
+msgid "Enable Comments"
+msgstr "允許留言"
 
 #: CMFPlone/interfaces/controlpanel.py:98
 msgid "Enable External Editor feature"
@@ -2157,6 +2266,10 @@ msgstr "識別碼"
 msgid "Id $id is already in use"
 msgstr "辨別碼 $id 已被使用"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:145
+msgid "Id of comment this comment is in reply to"
+msgstr "留言的識別碼"
+
 #: plone.stringinterp/plone/stringinterp/adapters.py:73
 msgid "Identifier of the content or login of managed user"
 msgstr "內容的識別碼或使用者的帳號"
@@ -2635,6 +2748,7 @@ msgstr "找不到登入帳號。"
 msgid "Logout"
 msgstr "登出"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:159
 #: plone.app.textfield/plone/app/textfield/interfaces.py:57
 msgid "MIME type"
 msgstr "MIME 類型"
@@ -2913,6 +3027,15 @@ msgstr "找不到 RSS 連結動作。"
 msgid "Missing syndication settings action."
 msgstr "找不到 RSS 設定動作。"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/actions.xml
+msgid "Moderate comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:72
+msgid "Moderator Email Notification"
+msgstr "審核者的電子郵件通知"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:176
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Modification date"
 msgstr "修改日期"
@@ -2986,6 +3109,7 @@ msgstr "我的資料夾"
 msgid "My Preferences"
 msgstr "個人偏好"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:139
 #: plone/app/theming/interfaces.py:33
 msgid "Name"
 msgstr "名稱"
@@ -3129,6 +3253,10 @@ msgstr "注意"
 #: plone.app.contenttypes/plone/app/contenttypes/migration/custom_migration.pt:37
 msgid "Note about how long it might take"
 msgstr "請注意，這可能會花費許多時間。"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:168
+msgid "Notify me of new comments via email."
+msgstr "寄送電郵通知新留言。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
 msgid "Notify user"
@@ -3338,7 +3466,7 @@ msgid "Paths to folders and collections to link to at the portal root."
 msgstr "在根目錄要顯示的目錄和選集。"
 
 #. Default: "Pending"
-#: workflow state defined in plone_workflow - id pending
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "Pending"
 msgstr "等待"
 
@@ -3502,6 +3630,10 @@ msgstr "預設時區"
 #: plone.stringinterp/plone/stringinterp/adapters.py:709
 msgid "Portal title"
 msgstr "網站名稱"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:132
+msgid "Portal type"
+msgstr "網站型別"
 
 #: plone.portlet.static/plone/portlet/static/static.py:49
 msgid "Portlet footer"
@@ -3856,6 +3988,10 @@ msgstr "審核狀態"
 
 msgid "Reviewer"
 msgstr "審核者"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Reviewer approves content"
+msgstr ""
 
 #. Default: "Reviewer makes content available externally"
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -4432,6 +4568,10 @@ msgstr "送出草稿進行發佈"
 msgid "Submit for publication"
 msgstr "提交為發佈"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Submitted, pending review."
+msgstr ""
+
 #. Default: "Subtopics"
 #: type action defined on Smart Folder
 msgid "Subtopics"
@@ -4608,6 +4748,7 @@ msgstr "最後進行狀態轉換的使用者ID"
 
 #. Default: "The ID of the user who performed the previous transition"
 #: CMFPlone/profiles/default/workflows/one_state_workflow/definition.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "The ID of the user who performed the previous transition"
 msgstr "進行前一個狀態轉換的使用者ID"
 
@@ -4758,6 +4899,14 @@ msgstr "內容規則已啟用並套用至全站"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:205
 msgid "The rule is enabled but will perform nothing since it is not assigned anywhere."
 msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:44
+msgid "The set of unique commentators (usernames)"
+msgstr "留言者 (使用者名稱) 的集合"
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:49
+msgid "The set of unique commentators (usernames) of published_comments"
+msgstr "留言的帳號列表"
 
 #. Default: "The short name of an item (used in the url)"
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -5106,10 +5255,26 @@ msgstr "上方"
 msgid "Total comments"
 msgstr "留言數量"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Total number of comments on this item."
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/interfaces.py:33
+msgid "Total number of public comments on this item"
+msgstr "留言的數量統計"
+
 #. Default: "Transform"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Image.xml
 msgid "Transform"
 msgstr "轉換"
+
+#: plone.app.discussion/plone/app/discussion/comment.py:161
+msgid "Transform '%s' => '%s' not available."
+msgstr "轉換 '%s' => '%s' 並不存在"
 
 #: plone.app.textfield/plone/app/textfield/interfaces.py:79
 msgid "Transformed value in the target MIME type"
@@ -5300,6 +5465,10 @@ msgstr "使用者已新增"
 msgid "User Data Form"
 msgstr "使用者資料表單"
 
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:74
+msgid "User Email Notification"
+msgstr "新留言通知使用者"
+
 #: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
 msgid "User Logged in"
 msgstr "使用者已登入"
@@ -5332,6 +5501,10 @@ msgstr "使用者的角色"
 msgid "User/Groups settings"
 msgstr "使用者/群組設定"
 
+#: plone.app.discussion/plone/app/discussion/interfaces.py:174
+msgid "Username of the commenter"
+msgstr "留言者的帳號"
+
 #: CMFPlone/PloneControlPanel.py:69
 msgid "Users"
 msgstr "成員"
@@ -5342,6 +5515,10 @@ msgstr "成員"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:33
 msgid "Users and Groups"
 msgstr "使用者和群組"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
+msgid "Users who have commented on the item"
+msgstr ""
 
 #: validation/validators/RegexValidator.py:44
 msgid "Validation failed($name): $value of type $type, expected 'string'"
@@ -5439,6 +5616,10 @@ msgstr "任何人都可檢視，但尚未通過審核許可。"
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Visible to everyone, editable by the owner."
 msgstr "任何人都可檢視，擁有者可修改。"
+
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
+msgid "Visible to everyone, non-editable."
+msgstr ""
 
 #. Default: "Visible to everyone, not editable by the owner."
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
@@ -5671,6 +5852,10 @@ msgstr "資料庫應該定期壓實整理。下列數值指的是歷史動作可
 msgid "Your Plone site has not been added yet:"
 msgstr "尚未有 Plone 網站被建立："
 
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:258
+msgid "Your comment awaits moderator approval."
+msgstr "你的留言等待審核中。"
+
 #: CMFPlone/RegistrationTool.py:181
 msgid "Your password and confirmation did not match. Please try again."
 msgstr "輸入的密碼並不一致，再試一次。"
@@ -5720,6 +5905,11 @@ msgstr "路徑前置值"
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:68
 msgid "action_convert_legacy_portlets"
 msgstr "舊式資訊方框在這裡設定。點選按鈕，轉換成新式資訊方框。"
+
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:128
+msgid "add_comment_button"
+msgstr "留言"
 
 #. Default: "This item can not be deleted because it is currently locked by another user."
 #: plone.app.content/plone/app/content/browser/templates/delete_confirmation.pt:18
@@ -5876,6 +6066,21 @@ msgstr "搜尋"
 msgid "box_sign_in"
 msgstr "登入"
 
+#. Default: "Delete"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:68
+msgid "bulkactions_delete"
+msgstr "刪除"
+
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
+msgid "bulkactions_publish"
+msgstr "審核"
+
+#. Default: "Cancel"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:101
+msgid "cancel_form_button"
+msgstr ""
+
 #. Default: "Category"
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:13
 msgid "category-contentrules-mailsub"
@@ -5895,6 +6100,41 @@ msgstr "這是 ${baseline_title} 的作業備份，由 ${creator} 於 ${created}
 #: plone.app.registry/plone/app/registry/browser/records.pt:42
 msgid "clear_filter"
 msgstr "清除過濾條件"
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. Web and email addresses are transformed into clickable links."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:47
+msgid "comment_description_intelligent_text"
+msgstr "填寫下列表單後，就可以新增留言。網址會被轉換成可點選的連結。"
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting. You can use the Markdown syntax for links and images."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:41
+msgid "comment_description_markdown"
+msgstr "填寫表單後可以留言，可以套用 Markdown 語法來輸入連結或圖檔。"
+
+#. Default: "Comments are moderated."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:53
+msgid "comment_description_moderation_enabled"
+msgstr "留言等待審核中"
+
+#. Default: "You can add a comment by filling out the form below. Plain text formatting."
+#: plone.app.discussion/plone/app/discussion/browser/comments.py:36
+msgid "comment_description_plain_text"
+msgstr "填寫下列表單後，就可以新增留言。"
+
+#. Default: "Edit comment cancelled"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:105
+msgid "comment_edit_cancel_notification"
+msgstr ""
+
+#. Default: "Comment was edited"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:95
+msgid "comment_edit_notification"
+msgstr ""
+
+#. Default: "${author_name} on ${content}"
+#: plone.app.discussion/plone/app/discussion/comment.py:43
+msgid "comment_title"
+msgstr "${author_name} 在 ${content} 留言"
 
 #. Default: "Are you certain you want to delete the selected items?"
 #: plone.app.content/plone/app/content/browser/contents/templates/delete.pt:5
@@ -6616,6 +6856,16 @@ msgstr ""
 msgid "edit"
 msgstr "編輯"
 
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:74
+msgid "edit_comment_form_button"
+msgstr ""
+
+#. Default: "Edit comment"
+#: plone.app.discussion/plone/app/discussion/browser/comment.py:58
+msgid "edit_comment_form_title"
+msgstr ""
+
 # E-Mail group property
 # E-Mail group property
 #. Default: "E-Mail"
@@ -6734,6 +6984,11 @@ msgstr ""
 msgid "heading_accessibility_statement"
 msgstr ""
 
+#. Default: "Action"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
+msgid "heading_action"
+msgstr "動作"
+
 #. Default: "Add actions portlet"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:196
 msgid "heading_add_actions_portlet"
@@ -6789,6 +7044,16 @@ msgstr ""
 msgid "heading_change_password_for"
 msgstr "改變使用者 ${user} 密碼"
 
+#. Default: "Comment"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
+msgid "heading_comment"
+msgstr "留言"
+
+#. Default: "Commenter"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:81
+msgid "heading_commenter"
+msgstr "留言者"
+
 #. Default: "Contact form"
 #: CMFPlone/browser/templates/contact-info.pt:18
 msgid "heading_contact_form"
@@ -6813,6 +7078,11 @@ msgstr "設定 ${folder} 資料夾的分享權限"
 #: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:16
 msgid "heading_dashboard"
 msgstr "${user_name} 的個人資訊區"
+
+#. Default: "Date"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
+msgid "heading_date"
+msgstr "日期"
 
 #. Default: "Description"
 #: plone.app.registry/plone/app/registry/browser/records.pt:80
@@ -6876,6 +7146,11 @@ msgstr "群組: ${groupname}"
 msgid "heading_groupmembers_current"
 msgstr "目前群組成員"
 
+#. Default: "In Response To"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
+msgid "heading_in_reponse_to"
+msgstr "回應"
+
 #. Default: "Use language codes in URL path for manual override"
 #: CMFPlone/interfaces/controlpanel.py:228
 msgid "heading_language_codes_in_URL"
@@ -6900,6 +7175,11 @@ msgstr "搜尋成員"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:69
 msgid "heading_memberships_current"
 msgstr "目前群組成員列表"
+
+#. Default: "Moderate comments"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:24
+msgid "heading_moderate_comments"
+msgstr "審核留言"
 
 #. Default: "Name"
 #: plone.app.registry/plone/app/registry/browser/records.pt:78
@@ -7154,6 +7434,16 @@ msgstr ""
 msgid "help_always_show_selector"
 msgstr ""
 
+#. Default: "If selected, anonymous users are able to post comments without loggin in. It is highly recommended to use a captcha solution to prevent spam if this setting is enabled."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:214
+msgid "help_anonymous_comments"
+msgstr "勾選的話，匿名使用者不必登入系統就能留言。建議使用 captcha 來避免垃圾留言。"
+
+#. Default: "If selected, anonymous user will have to give their email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:228
+msgid "help_anonymous_email_enabled"
+msgstr "勾選的話，匿名留言者必須填寫電郵信箱。"
+
 #. Default: "The URL of the \"After the Deadline\" grammar and spell checking server. The default value is the public server, but ideally you should download and install your own and specify its address here."
 #: CMFPlone/interfaces/controlpanel.py:703
 msgid "help_atd_service_url"
@@ -7184,6 +7474,11 @@ msgstr "真或假"
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:114
 msgid "help_capslock_password"
 msgstr "英文字母大小寫有差別，請確定鍵盤的 CapsLock 鍵沒被誤按。"
+
+#. Default: "Use this setting to enable or disable Captcha validation for comments. Install plone.formwidget.captcha, plone.formwidget.recaptcha, collective.akismet, or collective.z3cform.norobots if there are no options available."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:297
+msgid "help_captcha"
+msgstr "設定留言是否啟用或停用 captcha 功能，如果還沒有這類模組選項的話，可安裝 plone.formwidget.captcha、plone.formwidget.recaptcha、collective.akismet 或 collective.z3cform.norobots。"
 
 #. Default: "Select the transition to be used for modifying the items state."
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:8
@@ -7279,10 +7574,23 @@ msgstr "搜尋日期範圍的開始日期"
 msgid "help_default_icon"
 msgstr "指定動作的預設圖示，尺寸是 16x16 像素。"
 
+#. Default: "If selected, supports deleting of own comments for users with the 'Delete own comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:269
+msgid "help_delete_own_comment_enabled"
+msgstr ""
+
 #. Default: "Used in item listings and search results."
 #: Archetypes/ExtensibleMetadata.py:93
 msgid "help_description"
 msgstr "會出現在目錄清單和搜尋結果裡。"
+
+#. Default: "Some discussion related settings are not located in the Discussion Control Panel.\nTo enable comments for a specific content type, go to the Types Control Panel of this type and choose \"Allow comments\".\nTo enable the moderation workflow for comments, go to the Types Control Panel, choose \"Comment\" and set workflow to \"Comment Review Workflow\"."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:28
+msgid "help_discussion_settings_editform"
+msgstr ""
+"某些討論區設定值並未在討論區控制面板找得到。\n"
+"想要指定某個內容型別的留言功能，請到型別控制面板，指定「允許留言」。\n"
+"想要指定留言的審核流程，請到型別控制面板，點選「留言」並指定工作流程為「留言審核流程」。"
 
 #. Default: "You can specify a Doctype string which will be set on the output, for example \"&lt;!DOCTYPE html&gt;\". If left blank the default XHTML 1.0 transistional Doctype or that set in the Diazo theme is used."
 #: plone/app/theming/browser/controlpanel.pt:422
@@ -7292,6 +7600,11 @@ msgstr "可以指定網頁輸出時，在 \"html\" 標籤之前的 Doctype 字�
 #. Default: "Switching the email login setting in the ${link} on or off automatically changes the login name for existing users. This may fail when there are duplicates. On this page you can search for duplicates."
 #: CMFPlone/controlpanel/browser/emaillogin.pt:18
 msgid "help_duplicate_login_names"
+msgstr ""
+
+#. Default: "If selected, supports editing of comments for users with the 'Edit comments' permission."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:258
+msgid "help_edit_comment_enabled"
 msgstr ""
 
 #. Default: "The date when the item will be published. If no date is selected the item will be published immediately."
@@ -7369,6 +7682,11 @@ msgstr "如果你不確定用那種格式，請選擇純文字（Plain Text）�
 msgid "help_full_name_creation"
 msgstr "輸入使用者的完整姓名，例如: 張三。"
 
+#. Default: "If selected, users are able to post comments on the site. Though, you have to enable comments for specific content types, folders or content objects before users will be able to post comments."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:200
+msgid "help_globally_enabled"
+msgstr "勾選的話，就啟用使用者的留言功能，不過，仍然要決定哪些內容型別、目錄、項目，能讓使用者留言。"
+
 #. Default: "A unique identifier for the group. Can not be changed after creation."
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.pt:34
 msgid "help_groupname"
@@ -7444,6 +7762,21 @@ msgstr "勾選的話，所有的站外連結會標示圖示。"
 #: CMFPlone/browser/interfaces.py:378
 msgid "help_message"
 msgstr "請輸入訊息內容。"
+
+#. Default: "If selected, comments will enter a 'Pending' state in which they are invisible to the public. A user with the 'Review comments' permission ('Reviewer' or 'Manager') can approve comments to make them visible to the public. If you want to enable a custom comment workflow, you have to go to the types control panel."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:241
+msgid "help_moderation_enabled"
+msgstr "勾選的話，留言會先變成待審狀態，直到通過審核後才會公開，想要客製化管理流程的話，必須到型別設定頁面。"
+
+#. Default: "Address to which moderator notifications will be sent."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:338
+msgid "help_moderator_email"
+msgstr "審核通知信的寄送地址。"
+
+#. Default: "If selected, the moderator is notified if a comment needs attention. The moderator email address can be set below."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:324
+msgid "help_moderator_notification_enabled"
+msgstr "勾選的話，有人留言時就會通知審核者。審核者的寄信地址可在下列欄位設定。"
 
 #. Default: "Date this content was modified last"
 #: Archetypes/ExtensibleMetadata.py:208
@@ -7713,6 +8046,11 @@ msgstr "識別碼是項目 URL 網址的一部份。"
 msgid "help_shortname"
 msgstr "識別碼是網址的一部分，請不要使用空白、底線或混用大小寫。"
 
+#. Default: "If selected, an image of the user is shown next to the comment."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:313
+msgid "help_show_commenter_image"
+msgstr "勾選的話，使用者的圖檔會顯示在留言旁邊。"
+
 #. Default: "Show icons or default icon for actions without icon."
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:43
 msgid "help_show_icons"
@@ -7762,6 +8100,11 @@ msgstr "關鍵詞可以當作內容的分類標籤。"
 #: Archetypes/TemplateMixin.py:25
 msgid "help_template_mixin"
 msgstr "選擇用來顯示這項目的樣板。"
+
+#. Default: "Use this setting to choose if the comment text should be transformed in any way. You can choose between 'Plain text' and 'Intelligent text'. 'Intelligent text' converts plain text into HTML where line breaks and indentation is preserved, and web and email addresses are made into clickable links."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:280
+msgid "help_text_transform"
+msgstr "選擇留言的標註格式，選擇「排版文字」的話，會主動保留內容的換行和縮排，也會把網址變成可以點選的連結。"
 
 #. Default: "Select a file to upload."
 #: plone/app/theming/browser/controlpanel.pt:716
@@ -7823,6 +8166,11 @@ msgstr "為外部連結加上 http://。"
 #: plone.app.users/plone/app/users/schema.py:93
 msgid "help_user_name_creation_casesensitive"
 msgstr "輸入想要的使用者帳號，常見的例子像是 'jsmith'。這會是用來登入系統的帳號，請不要使用中文、空白、或特殊字元，而且大小寫字母有差別。"
+
+#. Default: "If selected, users can choose to be notified of new comments by email."
+#: plone.app.discussion/plone/app/discussion/interfaces.py:350
+msgid "help_user_notification_enabled"
+msgstr "勾選的話，使用者可以收到新留言的通知信。"
 
 #. Default: "Wysiwyg editor to use."
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:31
@@ -7940,6 +8288,11 @@ msgstr "動作"
 msgid "label_add"
 msgstr "新增"
 
+#. Default: "Add comment"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:194
+msgid "label_add_comment"
+msgstr ""
+
 #. Default: "Add New Group"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:84
 msgid "label_add_new_group"
@@ -8026,6 +8379,22 @@ msgstr "永遠顯示語言選項"
 msgid "label_an_anonymous_user"
 msgstr "一位匿名者"
 
+#. Default: "Anonymous"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:76
+#: plone.app.discussion/plone/app/discussion/comment.py:179
+msgid "label_anonymous"
+msgstr "無名氏"
+
+#. Default: "Enable anonymous comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:212
+msgid "label_anonymous_comments"
+msgstr "啟用匿名留言功能"
+
+#. Default: "Enable anonymous email field"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:226
+msgid "label_anonymous_email_enabled"
+msgstr "啟用匿名留言的電郵欄位"
+
 #. Default: "Anonymous User"
 #: plone.app.layout/plone/app/layout/viewlets/content.py:376
 msgid "label_anonymous_user"
@@ -8035,6 +8404,11 @@ msgstr "匿名使用者"
 #: CMFPlone/skins/plone_deprecated/search_form.pt:306
 msgid "label_any_author"
 msgstr "任意作者"
+
+#. Default: "Apply"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:71
+msgid "label_apply"
+msgstr "更新"
 
 #. Default: "Apply Changes"
 #: plone.app.users/plone/app/users/browser/registersettingspanel.py:32
@@ -8115,6 +8489,11 @@ msgstr "取消"
 #: plone.app.users/plone/app/users/browser/register.py:676
 msgid "label_cant_mail_password_reset"
 msgstr "系統會寄送通知信件，協助使用者完成註冊表單裡的密碼設定，但這個網站尚未設定電子郵件，請到郵件設定完成它。"
+
+#. Default: "Captcha"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:295
+msgid "label_captcha"
+msgstr "captcha"
 
 #. Default: "Change"
 #: CMFPlone/controlpanel/browser/types.pt:47
@@ -8203,8 +8582,14 @@ msgstr "點選以顯示原大小圖片…"
 
 #. Default: "Comment"
 #: CMFPlone/browser/interfaces.py:342
+#: plone.app.discussion/plone/app/discussion/interfaces.py:161
 msgid "label_comment"
 msgstr "留言"
+
+#. Default: "Commenting has been disabled."
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:171
+msgid "label_commenting_disabled"
+msgstr "留言功能已停用。"
 
 #. Default: "Comments"
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:3
@@ -8419,8 +8804,15 @@ msgstr "預設流程(${title})"
 
 #. Default: "Delete"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:173
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:98
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:130
 msgid "label_delete"
 msgstr "刪除"
+
+#. Default: "Enable deleting own comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:267
+msgid "label_delete_own_comment_enabled"
+msgstr ""
 
 #. Default: "Description"
 #: Archetypes/ExtensibleMetadata.py:92
@@ -8468,9 +8860,14 @@ msgstr "Doctype 字串"
 #. Default: "Edit"
 #: CMFPlone/browser/templates/author.pt:85
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:58
-#: plone.app.layout/plone/app/layout/dashboard/dashboard.pt:28
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:131
 msgid "label_edit"
 msgstr "編輯"
+
+#. Default: "Enable editing of comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:256
+msgid "label_edit_comment_enabled"
+msgstr ""
 
 #. Default: "You are editing the default view of a container. If you wanted to edit the container itself, ${go_here}."
 #: Archetypes/skins/archetypes/edit_macros.pt:41
@@ -8660,6 +9057,11 @@ msgstr "使用者的全名"
 #: plone.app.users/plone/app/users/browser/membersearch.py:38
 msgid "label_fullname"
 msgstr "完整名稱"
+
+#. Default: "Globally enable comments"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:198
+msgid "label_globally_enabled"
+msgstr "全域啟用留言功能"
 
 #. Default: "GNU GPL license"
 #: CMFPlone/browser/templates/footer.pt:31
@@ -8872,6 +9274,11 @@ msgstr "繼續到 ${portal_title} 首頁"
 msgid "label_login_name"
 msgstr "登入帳號"
 
+#. Default: "Log in to add comments"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:20
+msgid "label_login_to_add_comments"
+msgstr ""
+
 #. Default: "Log in to send feedback"
 #: CMFPlone/browser/templates/author.pt:158
 msgid "label_login_to_send_feedback"
@@ -8915,6 +9322,21 @@ msgstr "成員欄位"
 #: CMFPlone/browser/interfaces.py:376
 msgid "label_message"
 msgstr "訊息"
+
+#. Default: "Enable comment moderation"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:237
+msgid "label_moderation_enabled"
+msgstr "啟用審核功能"
+
+#. Default: "Moderator Email Address"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:334
+msgid "label_moderator_email"
+msgstr "審核者電郵地址"
+
+#. Default: "Enable moderator email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:322
+msgid "label_moderator_notification_enabled"
+msgstr "啟用通知審核者的功能"
 
 #. Default: "Modification Date"
 #: Archetypes/ExtensibleMetadata.py:206
@@ -9187,6 +9609,11 @@ msgstr "舊設定檔版本是 ${version}。"
 msgid "label_product_upgrade_old_version"
 msgstr "舊版本是 ${version}。"
 
+#. Default: "Approve"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:121
+msgid "label_publish"
+msgstr "審核"
+
 #. Default: "effective"
 #: plone.app.layout/plone/app/layout/viewlets/content_history.pt:49
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:49
@@ -9257,6 +9684,11 @@ msgstr "移除已選的群組 / 使用者"
 msgid "label_replace_existing"
 msgstr "重新上傳佈景主題"
 
+#. Default: "Reply"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:162
+msgid "label_reply"
+msgstr ""
+
 #. Default: "Request URL"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:55
 msgid "label_request_url"
@@ -9304,6 +9736,11 @@ msgstr "儲存"
 #: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-contextual.pt:178
 msgid "label_save_settings"
 msgstr "儲存設定"
+
+#. Default: "says:"
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:79
+msgid "label_says"
+msgstr "留言："
 
 #. Default: "Categorization"
 #: ./ATContentTypes/content/schemata.py
@@ -9447,6 +9884,16 @@ msgstr "顯示全部項目"
 msgid "label_show_batched"
 msgstr "分批顯示"
 
+#. Default: "Show commenter image"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:311
+msgid "label_show_commenter_image"
+msgstr "顯示留言者圖檔"
+
+#. Default: "show full comment text"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:114
+msgid "label_show_full_comment_text"
+msgstr "顯示完整的留言內容"
+
 #. Default: "Show icons"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:41
 msgid "label_show_icons"
@@ -9538,6 +9985,7 @@ msgstr "值"
 
 #. Default: "Subject"
 #: CMFPlone/browser/interfaces.py:370
+#: plone.app.discussion/plone/app/discussion/interfaces.py:156
 msgid "label_subject"
 msgstr "標題"
 
@@ -9566,6 +10014,11 @@ msgstr "檢視樣版"
 #: plone.app.textfield/plone/app/textfield/widget_input.pt:28
 msgid "label_text_format"
 msgstr "文字格式"
+
+#. Default: "Comment text transform"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:278
+msgid "label_text_transform"
+msgstr "留言排版格式"
 
 #. Default: "Theme base"
 #: plone/app/theming/browser/controlpanel.pt:532
@@ -9688,6 +10141,11 @@ msgstr "網址"
 #: plone.app.users/plone/app/users/schema.py:92
 msgid "label_user_name"
 msgstr "使用者帳號"
+
+#. Default: "Enable user email notification"
+#: plone.app.discussion/plone/app/discussion/interfaces.py:346
+msgid "label_user_notification_enabled"
+msgstr "啟用通知使用者的功能"
 
 #. Default: "User Search"
 #: CMFPlone/controlpanel/browser/usergroups_usersoverview.pt:83
@@ -9971,6 +10429,32 @@ msgstr "由於已停用 cookie 認證，無法使用 cookie 來進行登入。"
 msgid "login_portlet_disabled"
 msgstr "Cookie 認證被關閉，無法使用登入資訊方框。"
 
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:47
+msgid "mail_notification_message"
+msgstr ""
+"${title} 有新留言：${link}\n"
+"\n"
+"---\n"
+"${text}\n"
+"---\n"
+
+#. Default: "A comment on '${title}' has been posted here: ${link}\n\n---\n${text}\n---\n\nApprove comment:\n${link_approve}\n\nDelete comment:\n${link_delete}\n"
+#: plone.app.discussion/plone/app/discussion/comment.py:55
+msgid "mail_notification_message_moderator"
+msgstr ""
+"${title} 有新留言：${link}\n"
+"\n"
+"---\n"
+"${text}\n"
+"---\n"
+"\n"
+"審核通過：\n"
+"${link_approve}\n"
+"\n"
+"刪除留言：\n"
+"${link_delete}\n"
+
 #. Default: "Manage portlets"
 #: plone.app.contentmenu/plone/app/contentmenu/menu.py:814
 #: plone.app.layout/plone/app/layout/viewlets/manage_portlets_fallback.pt:7
@@ -10001,6 +10485,21 @@ msgstr "抱歉，你不能更換電子郵件信箱。"
 #: plone.app.users/plone/app/users/browser/account.py:35
 msgid "message_email_in_use"
 msgstr "你選用的電子郵件信箱已被使用或不適用，請再改選一個。"
+
+#. Default: "enable the 'Comment Review Workflow' for the Comment content type"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_enable_comment_workflow"
+msgstr "啟用「留言審核工作流程」"
+
+#. Default: "Moderation workflow is disabled. You have to ${enable_comment_workflow} before you can moderate comments here."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+msgid "message_moderation_disabled"
+msgstr "審核工作流程已停用，必須 ${enable_comment_workflow} 才能審核這裡的留言。"
+
+#. Default: "No comments to moderate."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:43
+msgid "message_nothing_to_moderate"
+msgstr "沒有留言等待審核。"
 
 #. Default: "You see this page because you have permission to edit this link. Others will be immediately redirected to the link's target URL."
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/link.pt:15
@@ -10390,6 +10889,11 @@ msgstr "想要移除的關鍵詞"
 msgid "test wc workflow"
 msgstr "測試 wc 工作流程"
 
+#. Default: "migrate your comments"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:64
+msgid "text_comments_migration_link"
+msgstr ""
+
 #. Default: "Caught &e at &c by &u"
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:40
 msgid "text_contentrules_logger_message"
@@ -10407,10 +10911,20 @@ msgstr "貢獻者: ${name}"
 msgid "text_creator_date"
 msgstr "作者: ${creator}, 更新: ${date}"
 
+#. Default: "You have configured a custom workflow for the 'Discussion Item' content type. You can enable/disable the comment moderation in this control panel only if you use one of the default 'Discussion Item' workflows. Go to the ${label_discussion_control_panel_link} to choose a workflow for the 'Discussion Item' type."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:44
+msgid "text_custom_comment_workflow"
+msgstr ""
+
 #. Default: "Site"
 #: CMFPlone/browser/templates/plone-addsite.pt:65
 msgid "text_default_site_title"
 msgstr "預設網站"
+
+#. Default: "Types control panel"
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:45
+msgid "text_discussion_type_control_panel_link"
+msgstr ""
 
 #. Default: "The specified log entry was not found. It may have expired. If you are using a load-balanced ZEO (cluster) setup, try reloading until you get the right server in the cluster."
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:35
@@ -10435,11 +10949,13 @@ msgstr "本網站尚未完成電子郵件設定，因此無法使用連絡表單
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/controlpanel/browser/overview.pt:52
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:24
 msgid "text_no_mailhost_configured"
 msgstr "尚未設定郵件伺服器或網站寄件者 (From欄位) 資料。包含連絡表單、電子郵件通知、密碼重設等很多功能，將無法作用。請到 ${label_mail_control_panel_link} 進行相關設定。"
 
 #. Default: "Mail control panel"
 #: CMFPlone/controlpanel/browser/overview.pt:53
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:25
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "電子郵件控制台"
 
@@ -10520,6 +11036,11 @@ msgstr "搜尋網站"
 #: CMFPlone/browser/templates/search.pt:299
 msgid "text_searchitem_location"
 msgstr "目錄位置"
+
+#. Default: "You have comments that have not been migrated to the new commenting system that has been introduced in Plone 4.1. Please ${label_comments_migration_link} to fix this."
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:63
+msgid "text_unmigrated_comments"
+msgstr ""
 
 #. Default: "This user does not belong to any group."
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:98
@@ -10648,6 +11169,11 @@ msgstr "作者資訊"
 #: plone.app.theming/resources/theme/theme1/overrides/plone.app.layout.viewlets.colophon.pt:8
 msgid "title_built_with_plone"
 msgstr "本網站使用 Plone 開放源碼內容管理系統建置而成。"
+
+#. Default: "Bulk Actions"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:64
+msgid "title_bulkactions"
+msgstr "批次動作"
 
 #. Default: "Can add"
 #: plone.app.workflow/plone/app/workflow/localroles.py:33
