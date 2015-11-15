@@ -31,7 +31,6 @@ result_file = open(sys.argv[1])
 
 stats = {}
 for line in result_file.xreadlines():
-    print line
     path, res = line.split(':')
     language = path.split('/')[-3].replace('_', '-')
     domain = os.path.splitext(os.path.basename(path))[0]
