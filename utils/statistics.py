@@ -1,7 +1,7 @@
 """
 Execute the following commands:
 cd ..
-LANG=en; for po in `find . -name "*.po"` ; do echo -n "$po:";msgfmt -o /dev/null --statistics $po 2>&1 |tail -n1; done > raw_numbers.txt
+(for po in `find . -name "*.po"` ; do echo -n "$po:"; LANG=en msgfmt -o /dev/null --statistics $po 2>&1 |tail -n1; done) > raw_numbers.txt
 cd utils
 python statistics.py ../raw_numbers.txt
 or if you want only your language to be displayed, here french:
