@@ -1,11 +1,11 @@
 """
 Execute the following commands:
 cd ..
-LANG=en; for po in `find . -name "*.po"` ; do echo -n "$po:";msgfmt -o /dev/null --statistics $po 2>&1 |tail -n1; done > /tmp/results.txt
+(for po in `find . -name "*.po"` ; do echo -n "$po:"; LANG=en msgfmt -o /dev/null --statistics $po 2>&1 |tail -n1; done) > raw_numbers.txt
 cd utils
-python statistics.py /tmp/results.txt
+python statistics.py ../raw_numbers.txt
 or if you want only your language to be displayed, here french:
-python statistics.py /tmp/results.txt fr
+python statistics.py ../raw_numbers.txt fr
 
 Number of languages above 70 %:
 python statistics.py /tmp/results.txt > /tmp/res
@@ -31,7 +31,6 @@ result_file = open(sys.argv[1])
 
 stats = {}
 for line in result_file.xreadlines():
-    print line
     path, res = line.split(':')
     language = path.split('/')[-3].replace('_', '-')
     domain = os.path.splitext(os.path.basename(path))[0]
