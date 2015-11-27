@@ -6,7 +6,7 @@ setup(name='plone.app.locales',
       version=version,
       description="Translation files for Plone",
       long_description=open("README.rst").read() + "\n" +
-                       open("CHANGES.txt").read(),
+                       open("CHANGES.rst").read(),
       classifiers=[
           "Environment :: Web Environment",
           "Framework :: Plone",
