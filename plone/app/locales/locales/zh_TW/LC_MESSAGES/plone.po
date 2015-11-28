@@ -382,6 +382,10 @@ msgstr "新增搬移動作"
 msgid "Add Navigation Portlet"
 msgstr "新增導覽資訊方框"
 
+#: plone.directives.form/plone/directives/form/form.py:186
+msgid "Add New Item operation cancelled"
+msgstr ""
+
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:93
 msgid "Add News Portlet"
 msgstr "新增新聞資訊方框"
@@ -794,6 +798,10 @@ msgstr "根目錄的所有項目，預設會成為導覽頁籤區的選項，如
 #: CMFPlone/interfaces/resources.py:21
 msgid "CSS/LESS files"
 msgstr "CSS/LESS 檔案"
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:21
+msgid "Caching proxies"
+msgstr ""
 
 #: plone.app.content/plone/app/content/browser/contents/rearrange.py:62
 msgid "Can not rearrange folder"
@@ -1571,6 +1579,10 @@ msgstr "和目前的密碼不一致。"
 msgid "Does your bundle contains any RequireJS or LESS file?"
 msgstr "你的 Bundle 包含 RequireJS 或 LESS 檔案嗎?"
 
+#: plone.cachepurging/plone/cachepurging/interfaces.py:53
+msgid "Domains"
+msgstr ""
+
 #. Default: "Download"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/File.xml
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Image.xml
@@ -1698,6 +1710,7 @@ msgid "Edit an existing rule."
 msgstr "編輯既有的規則。"
 
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:89
+#: plone.directives.form/plone/directives/form/form.py:228
 msgid "Edit cancelled"
 msgstr "取消編輯"
 
@@ -1815,6 +1828,10 @@ msgstr "啟用連結檢查"
 #: CMFPlone/interfaces/controlpanel.py:118
 msgid "Enable locking for through-the-web edits"
 msgstr "啟用網頁編輯的鎖定功能"
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:15
+msgid "Enable purging"
+msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:400
 msgid "Enable resizing the editor window."
@@ -2349,6 +2366,10 @@ msgstr "內容的網址"
 #: CMFPlone/interfaces/controlpanel.py:919
 msgid "If an item has been excluded from navigation should it be shown in navigation when viewing content contained within it or within a subfolder."
 msgstr "如果已將項目設定不在導覽方框顯示，當在目錄或子目錄裡讀取的時候，是否還會顯示它。"
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:16
+msgid "If disabled, no purging will take place"
+msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:64
 msgid "If enabled, a more... link will appear in the footer of the portlet, linking to the underlying Collection."
@@ -3757,6 +3778,10 @@ msgstr "設定私有項目為內部草稿狀態。"
 msgid "Properties"
 msgstr "Property"
 
+#: plone.cachepurging/plone/cachepurging/interfaces.py:22
+msgid "Provide the URLs of each proxy to which PURGE requests shoudl be sent."
+msgstr ""
+
 #. Default: "Provides access to workflow history"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
@@ -4257,6 +4282,10 @@ msgstr "指定目錄的預設頁面識別碼"
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_3/registry.xml
 msgid "Select which roles have the permission to view inactive objects"
 msgstr "指定何種角色具備檢視下架項目的權限"
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:28
+msgid "Send PURGE requests with virtual hosting paths"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:207
 msgid "Send an email on the triggering object"
@@ -5177,6 +5206,14 @@ msgstr "指定編輯器高度的像素值，如果啟用自動調整尺寸的功
 #: CMFPlone/interfaces/controlpanel.py:417
 msgid "This option gives you the ability to specify the width of the editor (like 100% or 400px)."
 msgstr "指定編輯器的寬度，可以使用像素值或百分比來控制，例如 100% 或 400px。"
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:54
+msgid "This option is only relevant if you are using virtual hosting and you have enabled the option to send PURGE requests with virtual hosting URLs above. If you your site is served on multiple domains e.g. http://example.org and http://www.example.org you may wish to purge both. If so, list all your domains here"
+msgstr ""
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:29
+msgid "This option is only relevant if you are using virtual hosting with Zope's VirtualHostMonster. This relies on special tokens (VirtualHostBase and VirtualHostRoot) in the URL to instruct Zope about the types of URLs that the user sees. If virtual host URLs are in use and this option is set, PURGE requests will be sent to the caching proxy with the virtual hosting tokens in place. This makes sense if there is a web server in front of your caching proxy performing the rewrites necessary to translate a user-facing URL into a virtual hosting URL, so that the requests the caching proxy sees have the rewrite information in them. Conversely, if the rewrite is done in or behind the caching proxy, you want to disable this option, so that the PURGE requests use URLs that match those seen by the caching proxy as they come from the client."
+msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:229
 msgid "This portlet displays a listing of items from a Collection."

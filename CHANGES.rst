@@ -4,7 +4,8 @@ Changelog
 5.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add messages from plone.cachepurging and plone.directives.form packages.
+  [vincentfretin]
 
 
 5.0.6 (2015-11-28)
