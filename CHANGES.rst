@@ -4,8 +4,8 @@ Changelog
 5.0.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Updated pt-BR translations.
+  [idgserpro]
 
 5.0.7 (2015-12-04)
 ------------------
