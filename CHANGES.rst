@@ -4,6 +4,10 @@ Changelog
 5.0.7 (unreleased)
 ------------------
 
+- Add 129 messages from plone.app.dexterity and plone.schemaeditor
+  with existing translations from those packages.
+  [vincentfretin]
+
 - Add 3 new messages from plone.protect
   [vincentfretin]
 
