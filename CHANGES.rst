@@ -66,6 +66,9 @@ Changelog
 - Danish translation complete for the first time since 2012. :-)
   [tmog]
 
+- Updated German translations
+  [tobiasherp]
+
 5.0.5 (2015-09-28)
 ------------------
 
