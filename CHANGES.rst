@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.0.7 (unreleased)
+5.0.7 (2015-12-04)
 ------------------
 
 - Add 129 messages from plone.app.dexterity and plone.schemaeditor
