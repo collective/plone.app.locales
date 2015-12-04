@@ -4,6 +4,9 @@ Changelog
 5.0.7 (unreleased)
 ------------------
 
+- Add 3 new messages from plone.protect
+  [vincentfretin]
+
 - Add messages from plone.cachepurging and plone.directives.form packages.
   [vincentfretin]
 
