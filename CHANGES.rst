@@ -1,8 +1,21 @@
 Changelog
 =========
 
-5.0.7 (unreleased)
+5.0.8 (unreleased)
 ------------------
+
+- Updated pt-BR translations.
+  [idgserpro]
+
+5.0.7 (2015-12-04)
+------------------
+
+- Add 129 messages from plone.app.dexterity and plone.schemaeditor
+  with existing translations from those packages.
+  [vincentfretin]
+
+- Add 3 new messages from plone.protect
+  [vincentfretin]
 
 - Add messages from plone.cachepurging and plone.directives.form packages.
   [vincentfretin]
