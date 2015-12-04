@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
-version = '5.0.6.dev0'
+version = '5.0.7.dev0'
 
 setup(name='plone.app.locales',
       version=version,
       description="Translation files for Plone",
       long_description=open("README.rst").read() + "\n" +
-                       open("CHANGES.txt").read(),
+                       open("CHANGES.rst").read(),
       classifiers=[
           "Environment :: Web Environment",
           "Framework :: Plone",
@@ -18,7 +18,7 @@ setup(name='plone.app.locales',
       keywords='plone i18n locale translation',
       author='Plone Foundation',
       author_email='plone-developers@lists.sourceforge.net',
-      url='http://pypi.python.org/pypi/plone.app.locales',
+      url='https://github.com/collective/plone.app.locales',
       license='GPL version 2',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['plone', 'plone.app'],
