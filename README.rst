@@ -1,7 +1,9 @@
 Introduction
 ============
 
-This package contains the translation files for Plone Core 
+This package contains the translation files for Plone Core
+
+.. note:: A `Contributor’s Agreement <https://plone.org/foundation/contributors-agreement>`_ is not needed to contribute to this repository.
 
 - atcontenttypes-manual.pot
 - atcontenttypes.pot

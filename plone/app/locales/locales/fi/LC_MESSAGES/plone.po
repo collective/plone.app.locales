@@ -20,6 +20,10 @@ msgstr ""
 "Preferred-Encodings: latin9 utf-8\n"
 "Domain: plone\n"
 
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:95
+msgid "# of items"
+msgstr ""
+
 #: plone.locking/plone/locking/browser/locking.py:150
 msgid "$d day and $h hours"
 msgstr "$d päivä ja $h tuntia"
@@ -96,11 +100,15 @@ msgstr "${title} ei ole siirrettävissä."
 msgid "${tname} has been created."
 msgstr "${tname} on luotu."
 
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:141
+msgid "'${name}' is a reserved field name."
+msgstr ""
+
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:64
 msgid "(Unstyled)"
 msgstr "(Tyylitön)"
 
-#: plone/app/theming/browser/controlpanel.pt:134
+#: plone/app/theming/browser/controlpanel.pt:131
 msgid "(active)"
 msgstr ""
 
@@ -274,7 +282,7 @@ msgstr ""
 msgid "A simple review workflow for comments"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1453
+#: CMFPlone/interfaces/controlpanel.py:1464
 msgid "A value for the quality of scaled images, from 1 (lowest) to 95 (highest). A value of 0 will mean plone.scaling's default will be used, which is currently 88."
 msgstr ""
 
@@ -331,7 +339,7 @@ msgstr ""
 msgid "Actions portlet"
 msgstr ""
 
-#: plone/app/theming/browser/controlpanel.pt:160
+#: plone/app/theming/browser/controlpanel.pt:157
 msgid "Activate"
 msgstr ""
 
@@ -351,6 +359,10 @@ msgstr "Lisää klassinen sovelma"
 #: plone.portlet.collection/plone/portlet/collection/collection.py:228
 msgid "Add Collection Portlet"
 msgstr "Lisää kokoelma sovelma"
+
+#: plone.app.dexterity/plone/app/dexterity/browser/add_type.py:13
+msgid "Add Content Type"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:86
 msgid "Add Content Type Condition"
@@ -383,6 +395,14 @@ msgstr "Lisää siirtymätoiminto"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:293
 msgid "Add Navigation Portlet"
 msgstr "Lisää navigointisovelma"
+
+#: plone.app.dexterity/plone/app/dexterity/browser/types_listing.pt:25
+msgid "Add New Content Type&hellip;"
+msgstr ""
+
+#: plone.directives.form/plone/directives/form/form.py:186
+msgid "Add New Item operation cancelled"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:93
 msgid "Add News Portlet"
@@ -440,6 +460,14 @@ msgstr "Lisää viesti"
 msgid "Add a new rule. Once complete, you can manage the rule's actions and conditions separately."
 msgstr "Lisää uusi sääntö. Kun olet valmis, voit hallita säännön toimintoja ja ehtoja erikseen."
 
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/add_field.py:23
+msgid "Add new field"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/add_fieldset.py:21
+msgid "Add new fieldset"
+msgstr ""
+
 #: CMFPlone/interfaces/controlpanel.py:346
 msgid "Add tag names here for tags which are not part of XHTML but which should be permitted."
 msgstr "Lisää tähän niiden tagien nimet, jotka eivät kuulu XHTML:ään, mutta jotka tulisi silti sallia."
@@ -459,20 +487,40 @@ msgstr "Tuotteiden hallinta"
 msgid "Add-ons"
 msgstr "Lisäosat"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:38
+msgid "Adds Dexterity-based Folder and Document types for testing."
+msgstr ""
+
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:34
 msgid "Adds a table of contents"
 msgstr ""
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:43
 msgid "Adds collection behavior"
 msgstr ""
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:40
+msgid "Adds creator, contributor, and rights fields."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:33
+msgid "Adds effective date and expiration date fields."
+msgstr ""
+
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:17
 msgid "Adds image and image caption fields"
 msgstr ""
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:26
+msgid "Adds keywords and language fields."
+msgstr ""
+
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:52
 msgid "Adds richtext behavior"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:51
+msgid "Adds standard metadata fields (equals Basic metadata + Categorization + Effective range + Ownership)"
 msgstr ""
 
 #: plone.app.openid/plone/app/openid/configure.zcml:25
@@ -483,8 +531,12 @@ msgstr "Lisää OpenID autentikoinnin tuen Plone-sivustolle"
 msgid "Adds support for rendering z3c.form forms in Plone"
 msgstr "Lisää z3c.forms lomakkeiden tuen Ploneen"
 
-#: plone.app.referenceablebehavior/plone/app/referenceablebehavior/configure.zcml
+#: plone.app.referenceablebehavior/plone/app/referenceablebehavior/configure.zcml:17
 msgid "Adds the ability to be referenced by Archetypes items"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:19
+msgid "Adds title and description fields."
 msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/configure.zcml:23
@@ -497,7 +549,7 @@ msgstr "Lisää Ploneen tuen työkopioille."
 msgid "Advanced"
 msgstr ""
 
-#: plone/app/theming/browser/controlpanel.pt:332
+#: plone/app/theming/browser/controlpanel.pt:329
 msgid "Advanced settings"
 msgstr ""
 
@@ -531,6 +583,10 @@ msgstr ""
 msgid "After you do this you can't edit your existing content (you can still view it) unless you migrate them to Dexterity in the next step."
 msgstr ""
 
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:45
+msgid "Album view"
+msgstr ""
+
 #: CMFPlone/interfaces/controlpanel.py:487
 msgid "Alignment styles"
 msgstr ""
@@ -540,7 +596,8 @@ msgid "All Content"
 msgstr "Kaikki sisältö"
 
 #. Default: "All content"
-#: dynamic view name template folder_full_view on type Folder
+#: plone.app.collection/plone/app/collection/browser/configure.zcml:66
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:39
 msgid "All content"
 msgstr "Kaikki sisältö"
 
@@ -548,8 +605,29 @@ msgstr "Kaikki sisältö"
 msgid "Allow anyone to view 'about' information"
 msgstr "Salli kenen tahansa nähdä yleistiedot (about-linkki)"
 
-#: CMFPlone/interfaces/controlpanel.py:1478
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:95
+#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:30
+msgid "Allow discussion"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:31
+msgid "Allow discussion for this content object."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:95
+msgid "Allow discussion on this item"
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:1489
 msgid "Allow external login sites"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:81
+msgid "Allow items to be excluded from navigation"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:88
+msgid "Allow items to have next previous navigation enabled"
 msgstr ""
 
 #: CMFPlone/interfaces/syndication.py:154
@@ -560,6 +638,10 @@ msgstr ""
 msgid "Allowed"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:83
+msgid "Allowed Content Types"
+msgstr ""
+
 #: CMFPlone/interfaces/syndication.py:190
 msgid "Allowed Feed Types"
 msgstr ""
@@ -568,7 +650,7 @@ msgstr ""
 msgid "Allowed MIME types"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1434
+#: CMFPlone/interfaces/controlpanel.py:1445
 msgid "Allowed image sizes"
 msgstr "Kuvien sallitut koot"
 
@@ -584,7 +666,7 @@ msgstr "Anna käyttäjien rekisteröidä itsensä sivustolle. Jos tätä ei ole 
 msgid "Allows users to subscribe to feeds of search results"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1357
+#: CMFPlone/interfaces/controlpanel.py:1368
 msgid "Alternative formats"
 msgstr "Vaihtoehtoiset tiedostomuodot"
 
@@ -618,6 +700,34 @@ msgstr "Sisällön työkulun tila (esim. julkaistu)"
 msgid "Anonymous Comments"
 msgstr "Viestit tunnistamattomilta käyttäjiltä"
 
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:101
+msgid "Apply only to a objects in a particular workflow state"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:71
+msgid "Apply only to a particular file extension"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:41
+msgid "Apply only when the current content object is of a particular type"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:189
+msgid "Apply only when the current user has the given role"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:160
+msgid "Apply only when the current user is in the given group"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:131
+msgid "Apply only when the executed transition was as specified"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:219
+msgid "Apply only when the result of a TALES expression is True"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:217
 msgid "Apply rule on the whole site"
 msgstr ""
@@ -636,6 +746,10 @@ msgstr ""
 
 #: plone.app.collection/plone/app/collection/configure.zcml:19
 msgid "Archetypes-based collections"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/schema_listing.pt:125
+msgid "Are you sure you want to delete this field?"
 msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:30
@@ -667,8 +781,16 @@ msgstr ""
 msgid "AtD service URL"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1466
+#: CMFPlone/interfaces/controlpanel.py:1477
 msgid "Auth cookie length"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:58
+msgid "Automatically generate short URL name for content based on its initial title"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:65
+msgid "Automatically generate short URL name for content based on its primary field file name"
 msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:828
@@ -691,7 +813,7 @@ msgstr ""
 msgid "Available editors in the portal."
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1200
+#: CMFPlone/interfaces/controlpanel.py:1211
 msgid "Available timezones"
 msgstr ""
 
@@ -706,6 +828,10 @@ msgstr ""
 #: CMFPlone/browser/templates/plone-addsite.pt:133
 msgid "Base configuration"
 msgstr "Asetukset"
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:19
+msgid "Basic metadata"
+msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_11/registry.xml
@@ -732,6 +858,15 @@ msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Before today"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/behaviors.py:55
+#: plone.app.dexterity/plone/app/dexterity/browser/layout.py:16
+msgid "Behaviors"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/behaviors.py:57
+msgid "Behaviors successfully updated."
 msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -761,6 +896,10 @@ msgstr ""
 
 #: CMFPlone/interfaces/resources.py:21
 msgid "CSS/LESS files"
+msgstr ""
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:21
+msgid "Caching proxies"
 msgstr ""
 
 #: plone.app.content/plone/app/content/browser/contents/rearrange.py:62
@@ -804,6 +943,10 @@ msgstr ""
 
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:122
 msgid "Cascading rule"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:26
+msgid "Categorization"
 msgstr ""
 
 #. Default: "Change Password"
@@ -856,7 +999,7 @@ msgstr ""
 msgid "Changes saved."
 msgstr "Muutokset on tallennettu."
 
-#: CMFPlone/interfaces/controlpanel.py:1337
+#: CMFPlone/interfaces/controlpanel.py:1348
 msgid "Characterset to use when sending emails."
 msgstr ""
 
@@ -871,6 +1014,10 @@ msgstr "Sisään"
 #: plone.app.iterate/plone/app/iterate/profiles/default/actions.xml
 msgid "Check out"
 msgstr "Ulos"
+
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:175
+msgid "Check this box if you want this field to be required."
+msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/browser/checkout.py:82
 msgid "Check-out created"
@@ -896,7 +1043,7 @@ msgstr ""
 msgid "Classic portlet"
 msgstr "Perinteinen sovelma"
 
-#: plone/app/theming/browser/controlpanel.pt:172
+#: plone/app/theming/browser/controlpanel.pt:169
 msgid "Clear Cache"
 msgstr ""
 
@@ -904,8 +1051,17 @@ msgstr ""
 msgid "Client/server ordering mismatch"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:77
+msgid "Clone"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/clone_type.py:13
+msgid "Clone Content Type"
+msgstr ""
+
 #. Default: "Collection"
 #: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:43
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Collection.xml
 msgid "Collection"
 msgstr "Kokoelma"
@@ -1048,6 +1204,14 @@ msgstr "Muokkaa sääntöä"
 msgid "Configure, enable, disable, debug and build Plone JavaScript/LESS/CSS resources. Plone utilizes RequireJS and LESS CSS to build its resources. Re-building a Plone bundle TTW requires a modern web browser."
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:29
+msgid "Configures various components needed for full Dexterity support."
+msgstr ""
+
+#: plone.protect/plone/protect/confirm.pt:41
+msgid "Confirm action"
+msgstr ""
+
 #: plone.protect/plone/protect/confirm.pt:20
 msgid "Confirm that you'd like to perform this action."
 msgstr ""
@@ -1064,6 +1228,10 @@ msgstr ""
 #: CMFPlone/profiles/default/actions.xml
 msgid "Contact"
 msgstr "Ota yhteyttä"
+
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:62
+msgid "Container"
+msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Contains"
@@ -1095,6 +1263,10 @@ msgstr "Sisältötyyppi"
 msgid "Content listing"
 msgstr "Sisältölistaus"
 
+#: plone.app.contentmenu/plone/app/contentmenu/configure.zcml:11
+msgid "Content menu - contains contextual actions related to the content"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:35
 msgid "Content rule settings updated."
 msgstr ""
@@ -1107,6 +1279,7 @@ msgstr ""
 msgid "Content rules has been globally enabled"
 msgstr ""
 
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:41
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:26
 msgid "Content type"
 msgstr "Sisältötyyppi"
@@ -1117,6 +1290,7 @@ msgstr "Sisältötyypit ovat: ${names}"
 
 #. Default: "Contents"
 #: CMFPlone/profiles/default/actions.xml
+#: plone.app.dexterity/plone/app/dexterity/browser/container.pt:28
 msgid "Contents"
 msgstr "Sisältö"
 
@@ -1142,7 +1316,7 @@ msgstr "Keskustelu"
 #. Default: "Copy"
 #: CMFPlone/profiles/default/actions.xml
 #: plone.app.content/plone/app/content/browser/contents/copy.py:26
-#: plone/app/theming/browser/controlpanel.pt:180
+#: plone/app/theming/browser/controlpanel.pt:177
 msgid "Copy"
 msgstr "Kopioi"
 
@@ -1154,7 +1328,11 @@ msgstr "Leikkaa tai kopioi yksi tai useampia kohteita, jotka haluat liittää."
 msgid "Copy submitted for publication - pending approval"
 msgstr ""
 
-#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:95
+msgid "Copy the triggering item to a specific folder"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:95
 msgid "Copy to folder"
 msgstr "Kopioi kansioon"
 
@@ -1175,7 +1353,7 @@ msgid "Could not transition: ${title}"
 msgstr ""
 
 #: plone.app.layout/plone/app/layout/viewlets/content.py:381
-#: plone/app/theming/browser/controlpanel.pt:242
+#: plone/app/theming/browser/controlpanel.pt:239
 msgid "Create"
 msgstr "Luo"
 
@@ -1292,7 +1470,7 @@ msgid "Date of the most recent public comment"
 msgstr ""
 
 #. Default: "Date range"
-#: criterion description of criterion ATDateRangeCriterion
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:33
 msgid "Date range"
 msgstr "Aikaväli"
 
@@ -1312,7 +1490,7 @@ msgstr ""
 msgid "Days of object history to keep after packing"
 msgstr "Pakkauksen jälkeen säilytettävien objektien historian pituus päivinä"
 
-#: plone/app/theming/browser/controlpanel.pt:166
+#: plone/app/theming/browser/controlpanel.pt:163
 msgid "Deactivate"
 msgstr ""
 
@@ -1337,7 +1515,7 @@ msgstr "Oletus editori"
 msgid "Default encoding for the value"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1346
+#: CMFPlone/interfaces/controlpanel.py:1357
 msgid "Default format"
 msgstr "Oletusformaatti"
 
@@ -1349,7 +1527,7 @@ msgstr ""
 msgid "Default output MIME type"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1154
+#: CMFPlone/interfaces/controlpanel.py:1165
 msgid "Default page ids"
 msgstr ""
 
@@ -1396,12 +1574,21 @@ msgstr "Poista"
 msgid "Delete ${override}"
 msgstr ""
 
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/schema_listing.pt:125
+msgid "Delete field"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:147
 #: plone.app.contentrules/plone/app/contentrules/actions/delete.py:27
 msgid "Delete object"
 msgstr "Poista kohde"
 
 #: plone.app.content/plone/app/content/browser/contents/delete.py:34
 msgid "Delete selected items"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:147
+msgid "Delete the triggering item"
 msgstr ""
 
 #: plone/app/theming/interfaces.py:200
@@ -1424,9 +1611,9 @@ msgstr ""
 msgid "Depends on another bundle"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:57
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.contentrules/plone/contentrules/rule/interfaces.py:103
-#: plone.stringinterp/plone/stringinterp/adapters.py:113
 msgid "Description"
 msgstr "Kuvaus"
 
@@ -1442,11 +1629,11 @@ msgstr "Määrittää onko ulkoinen editori käytettävissä. Tämä toiminto va
 msgid "Determines if the users should get warnings when they delete or move content that is linked from inside the site."
 msgstr "Määrittää saavatko käyttäjät varoituksen jos he yrittävät poistaa tai siirtää sisältöä, johon on linkkejä muualta tältä sivustolta."
 
-#: CMFPlone/interfaces/controlpanel.py:1378
+#: CMFPlone/interfaces/controlpanel.py:1389
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of groups it can be very slow or impossible to build a list all groups. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for groups instead of listing all of them."
 msgstr "Määrittää onko Plone optimoitu pientä vai suurta sivustoa varten. Jos käytössä on paljon ryhmiä, kaikkien ryhmien listan rakentaminen voi olla hyvin hidasta tai mahdotonta. Tämä valinta muuttaa käyttöliittymää ja Plonen toimintaa siten, että ryhmiä haetaan, eikä kaikkia ryhmiä vain luetella."
 
-#: CMFPlone/interfaces/controlpanel.py:1391
+#: CMFPlone/interfaces/controlpanel.py:1402
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of users it can be very slow or impossible to build a list all users. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for users instead of listing all of them."
 msgstr "Määrittää onko Plone optimoitu pientä vai suurta sivustoa varten. Jos käytössä on paljon käyttäjiä, kaikkien käyttäjien listan rakentaminen voi olla hyvin hidasta tai mahdotonta. Tämä valinta muuttaa käyttöliittymää ja Plonen toimintaa siten, että käyttäjiä haetaan, eikä kaikkia käyttäjiä vain luetella."
 
@@ -1456,6 +1643,12 @@ msgstr ""
 
 #: CMFPlone/interfaces/resources.py:98
 msgid "Develop JavaScript"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:238
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:29
+#: plone.app.dexterity/plone/app/dexterity/profiles/default/actions.xml
+msgid "Dexterity Content Types"
 msgstr ""
 
 #: plone/app/theming/configure.zcml:33
@@ -1524,10 +1717,14 @@ msgstr "Syötetty salasana ei vastaa nykyistä salasanaa."
 msgid "Does your bundle contains any RequireJS or LESS file?"
 msgstr ""
 
+#: plone.cachepurging/plone/cachepurging/interfaces.py:53
+msgid "Domains"
+msgstr ""
+
 #. Default: "Download"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/File.xml
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Image.xml
-#: plone/app/theming/browser/controlpanel.pt:264
+#: plone/app/theming/browser/controlpanel.pt:261
 msgid "Download"
 msgstr "Lataa"
 
@@ -1542,6 +1739,10 @@ msgstr "Testiajo moodi"
 #: plone.stringinterp/plone/stringinterp/adapters.py:92
 msgid "Dublin Core"
 msgstr "Dublin Core"
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:51
+msgid "Dublin Core metadata"
+msgstr ""
 
 #: plone/app/theming/browser/controlpanel.py:351
 msgid "Duplicate title"
@@ -1561,6 +1762,14 @@ msgstr ""
 msgid "Edit"
 msgstr "Muokkaa"
 
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:160
+msgid "Edit ${name}"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:156
+msgid "Edit ${title} (${name})"
+msgstr ""
+
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:70
 msgid "Edit Classic Portlet"
 msgstr "Muokkaa klassista sovelmaa"
@@ -1576,6 +1785,10 @@ msgstr "Muokkaa sisältötyyppiehtoa"
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:145
 msgid "Edit Copy Action"
 msgstr "Muokkaa kopiointitoimintoa"
+
+#: plone.schemaeditor/plone/schemaeditor/browser/field/edit.py:128
+msgid "Edit Field '${fieldname}'"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:99
 msgid "Edit File Extension Condition"
@@ -1593,7 +1806,7 @@ msgstr "Muokkaa loggaustoimintoa"
 msgid "Edit Mail Action"
 msgstr "Muokkaa postitustoimintoa"
 
-#: plone.app.users/plone/app/users/browser/schema_layout.pt:20
+#: plone.app.users/plone/app/users/browser/schema_layout.pt:19
 #: plone.app.users/plone/app/users/browser/schemaeditor.py:98
 msgid "Edit Member Form Fields"
 msgstr ""
@@ -1651,6 +1864,7 @@ msgid "Edit an existing rule."
 msgstr "Muokkaa olemassaolevaa sääntöä"
 
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:89
+#: plone.directives.form/plone/directives/form/form.py:228
 msgid "Edit cancelled"
 msgstr ""
 
@@ -1708,6 +1922,7 @@ msgid "Effective range"
 msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/interfaces.py:154
+#: plone.schema/plone/schema/editor.py:22
 msgid "Email"
 msgstr "Sähköposti"
 
@@ -1715,7 +1930,7 @@ msgstr "Sähköposti"
 msgid "Email address not known."
 msgstr "Tuntematon sähköpostiosoite."
 
-#: CMFPlone/interfaces/controlpanel.py:1336
+#: CMFPlone/interfaces/controlpanel.py:1347
 msgid "Email characterset"
 msgstr ""
 
@@ -1768,6 +1983,14 @@ msgstr "Ota käyttöön linkkien eheystarkistus"
 msgid "Enable locking for through-the-web edits"
 msgstr "Ota lukitseminen käyttöön verkon kautta tapahtuvassa muokkauksessa"
 
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:107
+msgid "Enable next previous navigation for all items of this type"
+msgstr ""
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:15
+msgid "Enable purging"
+msgstr ""
+
 #: CMFPlone/interfaces/controlpanel.py:400
 msgid "Enable resizing the editor window."
 msgstr ""
@@ -1809,6 +2032,10 @@ msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:626
 msgid "Enter a list of custom plugins which will be loaded in the editor. Format is pluginname|location, one per line."
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/schema.py:93
+msgid "Enter allowed choices one per line."
 msgstr ""
 
 #: plone.app.users/plone/app/users/browser/passwordpanel.py:72
@@ -1855,6 +2082,22 @@ msgstr ""
 msgid "Error upgrading ${product}."
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:55
+msgid "Error: The file submitted must be a zip archive containing only type profile information."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:46
+msgid "Error: The file submitted must be a zip archive."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/modeleditor.py:60
+msgid "Error: all model elements must be 'schema'"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/modeleditor.py:54
+msgid "Error: root tag must be 'model'"
+msgstr ""
+
 #. Default: "Errors"
 #: CMFPlone/profiles/default/controlpanel.xml
 msgid "Errors"
@@ -1890,6 +2133,10 @@ msgstr "Esimerkki sisältöä"
 msgid "Excel spreadsheet"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:81
+msgid "Exclude From navigation"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:48
 msgid "Exclude actor from recipients"
 msgstr ""
@@ -1908,6 +2155,14 @@ msgstr "Suorita siirtymä ${transition}"
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Expiration date"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:102
+msgid "Export Schema Models"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:90
+msgid "Export Type Profiles"
 msgstr ""
 
 #: CMFPlone/interfaces/resources.py:36
@@ -1954,15 +2209,15 @@ msgstr ""
 msgid "External Edit"
 msgstr "Muokkaa erillisellä editorilla"
 
-#: CMFPlone/interfaces/controlpanel.py:1497
+#: CMFPlone/interfaces/controlpanel.py:1508
 msgid "External login iframe"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1485
+#: CMFPlone/interfaces/controlpanel.py:1496
 msgid "External login url"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1491
+#: CMFPlone/interfaces/controlpanel.py:1502
 msgid "External logout url"
 msgstr ""
 
@@ -1971,11 +2226,11 @@ msgstr ""
 msgid "Externally visible"
 msgstr "Näkyvä ulospäin"
 
-#: CMFPlone/interfaces/controlpanel.py:1419
+#: CMFPlone/interfaces/controlpanel.py:1430
 msgid "Facebook app id"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1426
+#: CMFPlone/interfaces/controlpanel.py:1437
 msgid "Facebook username"
 msgstr ""
 
@@ -2027,13 +2282,30 @@ msgstr ""
 msgid "Feed reload timeout"
 msgstr "Syötteen virkistysväli"
 
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/add_field.py:88
+msgid "Field added successfully."
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:166
+msgid "Field type"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/fields.py:27
+#: plone.app.dexterity/plone/app/dexterity/browser/layout.py:15
+msgid "Fields"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/add_fieldset.py:41
+msgid "Fieldset added successfully."
+msgstr ""
+
 #. Default: "File"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/File.xml
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/File.xml
 msgid "File"
 msgstr "Tiedosto"
 
-#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:71
 msgid "File Extension"
 msgstr "Tiedostopääte"
 
@@ -2053,8 +2325,12 @@ msgstr "Tiedostopääte on ${ext}"
 msgid "Filename: ${filename}"
 msgstr "Tiedoston nimi: ${filename}"
 
-#: plone.app.registry/plone/app/registry/browser/records.pt:55
+#: plone.app.registry/plone/app/registry/browser/records.pt:54
 msgid "Filter"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:70
+msgid "Filter Contained Types"
 msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:901
@@ -2095,6 +2371,10 @@ msgstr "Etsi kokoelma, jonka sisältö näytetään listassa."
 msgid "Folder"
 msgstr "Kansio"
 
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:118
+msgid "Folder Addable Constrains"
+msgstr ""
+
 #. Default: "Folder Listing"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Folder.xml
 msgid "Folder Listing"
@@ -2117,7 +2397,7 @@ msgstr ""
 msgid "For enabling web statistics support from external providers (for e.g. Google Analytics). Paste the code snippets provided. It will be included in the rendered HTML as entered near the end of the page."
 msgstr "Alla oleva kenttä mahdollistaa sivustoa koskevien tilastojen keräämisen ulkopuolisen palvelun toimesta (esimerkkinä Google Analytics). Liitä ulkopuolisen palvelun tarjoama koodi alla olevaan kenttään. Kyseinen koodi liitetään sivun loppuun."
 
-#: CMFPlone/interfaces/controlpanel.py:1427
+#: CMFPlone/interfaces/controlpanel.py:1438
 msgid "For linking open graph data to a facebook account"
 msgstr ""
 
@@ -2127,6 +2407,10 @@ msgstr "Formaatti"
 
 #: CMFPlone/interfaces/controlpanel.py:507
 msgid "Formats"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/schema_listing.pt:103
+msgid "From the ${behavior_name} behavior:"
 msgstr ""
 
 #: plone.stringinterp/plone/stringinterp/adapters.py:547
@@ -2155,6 +2439,10 @@ msgstr "Luo välilehdet kansioiden lisäksi muillekin kohteille."
 
 #: plone.app.textfield/plone/app/textfield/interfaces.py:73
 msgid "Get the raw value as an encoded string"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:127
+msgid "Gives the ability to rename an item from its edit form."
 msgstr ""
 
 #: CMFPlone/browser/templates/plone-logged-out.pt:29
@@ -2226,8 +2514,12 @@ msgstr ""
 msgid "Header styles"
 msgstr ""
 
-#: plone/app/theming/browser/controlpanel.pt:109
+#: plone/app/theming/browser/controlpanel.pt:108
 msgid "Help"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:160
+msgid "Help Text"
 msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:945
@@ -2301,6 +2593,10 @@ msgstr ""
 #: CMFPlone/interfaces/controlpanel.py:919
 msgid "If an item has been excluded from navigation should it be shown in navigation when viewing content contained within it or within a subfolder."
 msgstr "Jos kohde on piilotettu sisältöpuusta, näytetäänkö se silti jos katsotaan sen sisällä olevaa sisältöä tai alikansioita."
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:16
+msgid "If disabled, no purging will take place"
+msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:64
 msgid "If enabled, a more... link will appear in the footer of the portlet, linking to the underlying Collection."
@@ -2378,13 +2674,25 @@ msgstr ""
 msgid "Images can be referenced in pages or displayed in an album."
 msgstr "Kuviin voidaan viitata sivuilla tai niitä voidaan näyttää kuva-albumissa."
 
-#: plone/app/theming/browser/controlpanel.pt:759
+#: plone/app/theming/browser/controlpanel.pt:756
 msgid "Import"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:97
+msgid "Import Content Types"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/types_listing.pt:30
+msgid "Import Type Profiles&hellip;"
 msgstr ""
 
 #: plone.app.contenttypes/plone/app/contenttypes/migration/atct_migrator.pt:36
 #: plone.app.contenttypes/plone/app/contenttypes/migration/custom_migration.pt:31
 msgid "Important"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:122
+msgid "Imported successfully."
 msgstr ""
 
 #: CMFPlone/interfaces/resources.py:62
@@ -2399,7 +2707,7 @@ msgstr ""
 msgid "In case you want to render this resource on conditional comment"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1407
+#: CMFPlone/interfaces/controlpanel.py:1418
 msgid "Include meta tags on pages to give hints to social media on how to render your pages better when shared"
 msgstr ""
 
@@ -2430,7 +2738,7 @@ msgstr ""
 msgid "Input format"
 msgstr ""
 
-#: plone/app/theming/browser/controlpanel.pt:272
+#: plone/app/theming/browser/controlpanel.pt:269
 msgid "Inspect theme"
 msgstr ""
 
@@ -2506,7 +2814,7 @@ msgstr ""
 msgid "Is within (relative)"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1122
+#: CMFPlone/interfaces/controlpanel.py:1133
 msgid "It can be in the side vertical mode or in the top horizontal mode"
 msgstr ""
 
@@ -2526,6 +2834,10 @@ msgstr "Sisältö liitetty."
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:27
 msgid "Items in which workflow state to show."
 msgstr "Missä työnkulun tilassa olevat kohteen näytetään."
+
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:63
+msgid "Items of this type will be able to contain other items."
+msgstr ""
 
 #: plone.app.content/plone/app/content/browser/contents/rename.py:43
 msgid "Items renamed"
@@ -2590,7 +2902,7 @@ msgstr ""
 msgid "Latest available configuration"
 msgstr "Viimeisin saatavilla oleva konfiguraatio"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:17
 msgid "Lead Image"
 msgstr ""
 
@@ -2657,6 +2969,10 @@ msgstr ""
 msgid "Local Roles"
 msgstr ""
 
+#: plone.protect/plone/protect/configure.zcml:31
+msgid "Local configuration for plone.protect"
+msgstr ""
+
 #. Default: "Location"
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_5/registry.xml
@@ -2683,12 +2999,16 @@ msgstr ""
 msgid "Location in the site structure"
 msgstr ""
 
-#: plone.app.lockingbehavior/plone/app/lockingbehavior/configure.zcml
+#: plone.app.lockingbehavior/plone/app/lockingbehavior/configure.zcml:16
 msgid "Locking"
 msgstr ""
 
-#: plone.app.lockingbehavior/plone/app/lockingbehavior/configure.zcml
+#: plone.app.lockingbehavior/plone/app/lockingbehavior/configure.zcml:16
 msgid "Locking support for dexterity"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:35
+msgid "Log a particular event"
 msgstr ""
 
 #. Default: "Log in"
@@ -2709,7 +3029,7 @@ msgstr "Poistu"
 msgid "Logged-in users"
 msgstr "Kirjautuneet käyttäjät"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:35
 msgid "Logger"
 msgstr "Loki"
 
@@ -2802,6 +3122,10 @@ msgstr "Ylläpito"
 msgid "Maintenance Settings"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:74
+msgid "Make all items of this type a navigation root"
+msgstr ""
+
 #. Default: "Make private"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
@@ -2851,11 +3175,11 @@ msgstr ""
 msgid "Mandatory dependencies for a Plone site"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1377
+#: CMFPlone/interfaces/controlpanel.py:1388
 msgid "Many groups?"
 msgstr "Useita ryhmiä?"
 
-#: CMFPlone/interfaces/controlpanel.py:1390
+#: CMFPlone/interfaces/controlpanel.py:1401
 msgid "Many users?"
 msgstr "Useita käyttäjiä?"
 
@@ -2863,11 +3187,11 @@ msgstr "Useita käyttäjiä?"
 msgid "Maps skin names to lists of resource bundle names"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1512
+#: CMFPlone/interfaces/controlpanel.py:1523
 msgid "Mark special links"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1513
+#: CMFPlone/interfaces/controlpanel.py:1524
 msgid "Marks external or special protocol links with class."
 msgstr ""
 
@@ -2947,6 +3271,10 @@ msgstr "Jäsen lähettää sisällön julkaistavaksi"
 
 #: plone.stringinterp/plone/stringinterp/adapters.py:520
 msgid "Members E-Mails"
+msgstr ""
+
+#: plone.app.contentmenu/plone/app/contentmenu/configure.zcml:116
+msgid "Menu listing Zope3 views registered for use as dynamic views                    on CMF Content. Currently the only purpose of this menu is                    the registration of user-visible titles for these views"
 msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/logger.py:37
@@ -3042,7 +3370,7 @@ msgstr "Muokkaa sovelmaa"
 msgid "Modify properties on items"
 msgstr ""
 
-#: plone/app/theming/browser/controlpanel.pt:269
+#: plone/app/theming/browser/controlpanel.pt:266
 msgid "Modify theme"
 msgstr ""
 
@@ -3064,7 +3392,11 @@ msgstr "Siirrä alas"
 msgid "Move the content to the pending state where it will be reviewed by an editor by publication."
 msgstr ""
 
-#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:125
+msgid "Move the triggering item to a specific folder"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:125
 msgid "Move to folder"
 msgstr "Siirrä kansioon"
 
@@ -3099,6 +3431,14 @@ msgstr "Omat asetukset"
 #: plone/app/theming/interfaces.py:33
 msgid "Name"
 msgstr "Nimi"
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:65
+msgid "Name from file name"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:58
+msgid "Name from title"
+msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:778
 msgid "Named"
@@ -3139,6 +3479,10 @@ msgstr ""
 msgid "Navigation path"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:74
+msgid "Navigation root"
+msgstr ""
+
 #. Default: "Negotiation scheme"
 #: CMFPlone/interfaces/controlpanel.py:206
 msgid "Negotiation scheme"
@@ -3156,7 +3500,7 @@ msgstr ""
 msgid "New reference created."
 msgstr "Uusi viittaus luotu."
 
-#: plone/app/theming/browser/controlpanel.pt:96
+#: plone/app/theming/browser/controlpanel.pt:95
 msgid "New theme"
 msgstr ""
 
@@ -3181,8 +3525,17 @@ msgstr "Uutiset"
 msgid "News Item"
 msgstr "Uutinen"
 
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:107
+msgid "Next previous navigation"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:88
+msgid "Next previous navigation toggle"
+msgstr ""
+
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:38
+#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:16
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "No"
 msgstr "Ei"
@@ -3196,6 +3549,10 @@ msgstr ""
 #: plone.app.users/plone/app/users/browser/account.py:140
 msgid "No changes made."
 msgstr "Ei muutoksia."
+
+#: plone.app.dexterity/plone/app/dexterity/browser/behaviors.py:58
+msgid "No changes were made."
+msgstr ""
 
 #: plone.app.contenttypes/plone/app/contenttypes/migration/atct_migrator.pt:119
 #: plone.app.contenttypes/plone/app/contenttypes/migration/custom_migration.pt:148
@@ -3240,7 +3597,7 @@ msgstr ""
 msgid "Notify me of new comments via email."
 msgstr ""
 
-#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:65
 msgid "Notify user"
 msgstr "Ilmoita käyttäjälle"
 
@@ -3279,19 +3636,19 @@ msgstr ""
 msgid "Object Size"
 msgstr ""
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:54
 msgid "Object added to this container"
 msgstr "Kohde lisätty tähän kansioon"
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:72
 msgid "Object copied"
 msgstr ""
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:66
 msgid "Object modified"
 msgstr "Kohdetta muokattu"
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:60
 msgid "Object removed from this container"
 msgstr "Kohde poistettu tästä kansiosta"
 
@@ -3306,7 +3663,11 @@ msgstr "Jätä sovelman reunukset pois"
 msgid "One image field maximum."
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1506
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:77
+msgid "One or more types in the import archive is an existing type. Delete \"%s\" if you really wish to replace it.name"
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:1517
 msgid "Open external links in new a window"
 msgstr ""
 
@@ -3351,11 +3712,20 @@ msgstr "Järjestys kansiossa"
 msgid "Original URL"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/browser/layout.py:14
+#: plone.app.dexterity/plone/app/dexterity/browser/overview.py:34
+msgid "Overview"
+msgstr ""
+
 msgid "Owner"
 msgstr "Omistaja"
 
 #: plone.stringinterp/plone/stringinterp/adapters.py:466
 msgid "Owners E-Mails"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:40
+msgid "Ownership"
 msgstr ""
 
 msgid "PDF document"
@@ -3386,6 +3756,7 @@ msgstr "Tietokanta pakattu."
 #. Default: "Page"
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Document.xml
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Document.xml
+#: plone.app.dexterity/plone/app/dexterity/profiles/testing/types/Document.xml
 msgid "Page"
 msgstr "Sivu"
 
@@ -3463,6 +3834,10 @@ msgstr ""
 msgid "Pending review"
 msgstr "Sisällön tarkistus kesken"
 
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:177
+msgid "Perform a workflow transition on the triggering object"
+msgstr ""
+
 #: plone.app.content/plone/app/content/browser/contents/__init__.py:98
 msgid "Permission denied for \"${title}\""
 msgstr ""
@@ -3528,12 +3903,36 @@ msgstr "Muista varmistaa salasanasi."
 msgid "Please note that migrating references will increase this time."
 msgstr ""
 
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/add_fieldset.py:34
+msgid "Please select a fieldset name that is not already used."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:82
+msgid "Please select a single type to clone."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:88
+msgid "Please select a type to clone."
+msgstr ""
+
 #: plone.app.content/plone/app/content/browser/selection.py:71
 msgid "Please select an item to use."
 msgstr "Valitse käytettävä kohde."
 
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:95
+msgid "Please select types to export."
+msgstr ""
+
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Please use YYYY/MM/DD."
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:138
+msgid "Please use only letters, numbers and the following characters: _."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:29
+msgid "Please use only letters, numbers, and the following characters: .-_"
 msgstr ""
 
 #: CMFPlone/browser/templates/plone-addsite.pt:24
@@ -3558,11 +3957,11 @@ msgstr "Plone-sivusto"
 msgid "Plone Test Fixture"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1324
+#: CMFPlone/interfaces/controlpanel.py:1335
 msgid "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address for the site-wide contact form and the 'Send test e-mail' feature."
 msgstr "Plone luo sähköpostit käyttäen tätä osoitetta sähköpostin paluuosoitteena. Sähköpostiosoitetta käytetään myös yhteydenottolomakkeen ja sähköpostin lähetyksen testauksen vastaanottajaosoitteena."
 
-#: CMFPlone/interfaces/controlpanel.py:1315
+#: CMFPlone/interfaces/controlpanel.py:1326
 msgid "Plone generates e-mail using this name as the e-mail sender."
 msgstr "Plone laatii sähköpostit käyttämällä tätä nimeä sähköpostin lähettäjänä."
 
@@ -3590,7 +3989,7 @@ msgstr ""
 msgid "Portal URL"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1189
+#: CMFPlone/interfaces/controlpanel.py:1200
 msgid "Portal default timezone"
 msgstr ""
 
@@ -3615,8 +4014,12 @@ msgstr "Sovelman ylätunniste"
 msgid "Position in Parent"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1121
+#: CMFPlone/interfaces/controlpanel.py:1132
 msgid "Position where the toolbar is displayed"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/schema.py:92
+msgid "Possible values"
 msgstr ""
 
 msgid "PowerPoint presentation"
@@ -3687,6 +4090,10 @@ msgstr "Korottaa yksityisen kohteesi sisäiseksi luonnokseksi."
 
 #: plone.app.content/plone/app/content/browser/contents/properties.py:28
 msgid "Properties"
+msgstr ""
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:22
+msgid "Provide the URLs of each proxy to which PURGE requests shoudl be sent."
 msgstr ""
 
 #. Default: "Provides access to workflow history"
@@ -3841,7 +4248,7 @@ msgstr "Viimeaikaiset"
 msgid "Recipient address rejected by server."
 msgstr "Palvelin hylkäsi vastaanottajan osoitteen."
 
-#: CMFPlone/interfaces/controlpanel.py:1240
+#: CMFPlone/interfaces/controlpanel.py:1251
 msgid "Redirect links"
 msgstr ""
 
@@ -3849,7 +4256,7 @@ msgstr ""
 msgid "Referenceable Behavior for DX"
 msgstr ""
 
-#: plone.app.referenceablebehavior/plone/app/referenceablebehavior/configure.zcml
+#: plone.app.referenceablebehavior/plone/app/referenceablebehavior/configure.zcml:17
 msgid "Referenceable by Archetypes"
 msgstr ""
 
@@ -3858,11 +4265,11 @@ msgstr ""
 msgid "Register"
 msgstr "Rekisteröidy"
 
-#: plone.app.users/plone/app/users/browser/registersettingspanel.py:18
+#: plone.app.users/plone/app/users/browser/registersettingspanel.py:17
 msgid "Registration settings"
 msgstr "Rekisteröintiasetukset"
 
-#: plone.app.users/plone/app/users/browser/registersettingspanel.py:17
+#: plone.app.users/plone/app/users/browser/registersettingspanel.py:16
 msgid "Registration settings for this site."
 msgstr "Rekisteröintiasetukset tälle sivustolle."
 
@@ -3914,6 +4321,10 @@ msgstr "Uudelleennimeä '${oldid}' '${newid}':ksi"
 msgid "Render Body"
 msgstr ""
 
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:174
+msgid "Required field"
+msgstr ""
+
 #: CMFPlone/controlpanel/browser/resourceregistry.pt:20
 #: CMFPlone/profiles/default/controlpanel.xml
 msgid "Resource Registries"
@@ -3941,6 +4352,10 @@ msgstr ""
 msgid "Restart"
 msgstr "Uudelleenkäynnistä"
 
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:118
+msgid "Restrict the content types that can be added to folderish content"
+msgstr ""
+
 #. Default: "Restrict to current user"
 #: criterion description of criterion ATCurrentAuthorCriterion
 msgid "Restrict to current user"
@@ -3952,6 +4367,10 @@ msgstr "Rajoita nykyiseen käyttäjään"
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 msgid "Retract"
 msgstr "Peru tarkastuspyyntö"
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:65
+msgid "Return a portal message to the user"
+msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:874
 msgid "Reversed sort order for tabs."
@@ -4026,7 +4445,7 @@ msgstr ""
 msgid "Rich Text"
 msgstr ""
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:52
 msgid "RichText"
 msgstr ""
 
@@ -4042,7 +4461,7 @@ msgstr "Roolit"
 msgid "Roles are: ${names}"
 msgstr "Roolit ovat: ${names}"
 
-#: CMFPlone/interfaces/controlpanel.py:1169
+#: CMFPlone/interfaces/controlpanel.py:1180
 msgid "Roles that can add keywords"
 msgstr ""
 
@@ -4068,7 +4487,15 @@ msgstr ""
 msgid "Save"
 msgstr "Tallenna"
 
-#: CMFPlone/interfaces/controlpanel.py:1452
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:97
+msgid "Save Defaults"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/modeleditor.py:88
+msgid "Saved"
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:1463
 msgid "Scaled image quality"
 msgstr ""
 
@@ -4145,7 +4572,11 @@ msgstr "Valitse kohteet satunnaisesti"
 msgid "Select referenced content"
 msgstr "Valitse viitattu sisältö"
 
-#: CMFPlone/interfaces/controlpanel.py:1347
+#: plone.app.dexterity/plone/app/dexterity/browser/behaviors.py:56
+msgid "Select the behaviors to enable for this content type."
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:1358
 msgid "Select the default format of textfields for newly created content objects."
 msgstr "Valitse uuden sisällön tekstikenttien oletusmuoto."
 
@@ -4171,18 +4602,26 @@ msgstr "Valitse arvot luettelosta"
 msgid "Select which fields to display when 'Tabular view' is selected in the display menu."
 msgstr "Valitse kentät jotka näytetään, kun 'Taulukkonäkymä' on kohteen oletusnäkymä."
 
-#: CMFPlone/interfaces/controlpanel.py:1358
+#: CMFPlone/interfaces/controlpanel.py:1369
 msgid "Select which formats are available for users as alternative to the default format. Note that if new formats are installed, they will be enabled for text fields by default unless explicitly turned off here or by the relevant installer."
 msgstr "Valitse mitkä muodot ovat vaihtoehtoina oletusmuodon lisäksi. Huomaa, että uudet asennetut muodot ovat oletusarvoisesti käytettävissä ellei niitä kytketä pois tästä tai asennusohjelman toimesta."
 
 #. Default: "a container."
-#: CMFPlone/interfaces/controlpanel.py:1155
+#: CMFPlone/interfaces/controlpanel.py:1166
 msgid "Select which ids can act as fallback default pages for"
 msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_3/registry.xml
 msgid "Select which roles have the permission to view inactive objects"
+msgstr ""
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:28
+msgid "Send PURGE requests with virtual hosting paths"
+msgstr ""
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:207
+msgid "Send an email on the triggering object"
 msgstr ""
 
 #. Default: "Send back"
@@ -4192,7 +4631,7 @@ msgstr ""
 msgid "Send back"
 msgstr "Lähetä takaisin"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:207
 msgid "Send email"
 msgstr "Lähetä sähköposti"
 
@@ -4221,10 +4660,16 @@ msgid "Set to None to disable checking"
 msgstr ""
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/tableofcontents.py:14
+#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:25
+#: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:19
 msgid "Settings"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1406
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/schema_listing.pt:120
+msgid "Settings&hellip;"
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:1417
 msgid "Share social data"
 msgstr ""
 
@@ -4233,8 +4678,18 @@ msgstr ""
 msgid "Sharing"
 msgstr "Käyttöoikeudet"
 
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:50
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:153
+msgid "Short Name"
+msgstr ""
+
 #: CMFPlone/interfaces/controlpanel.py:869
 msgid "Short Name (ID)"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:127
+#: plone.app.dexterity/plone/app/dexterity/behaviors/id.py:26
+msgid "Short name"
 msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -4300,9 +4755,17 @@ msgstr ""
 msgid "Show the date a content item was published in the byline."
 msgstr ""
 
+#: CMFPlone/interfaces/controlpanel.py:1122
+msgid "Show thumbs in listings"
+msgstr ""
+
 #: CMFPlone/skins/plone_prefs/prefs_error_log_update.py:14
 msgid "Showing all entries"
 msgstr "Näytetään kaikki"
+
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:161
+msgid "Shows up in the form as help text for the field."
+msgstr ""
 
 #. Default: "Shut down"
 #: CMFPlone/controlpanel/browser/maintenance.pt:68
@@ -4310,7 +4773,7 @@ msgstr "Näytetään kaikki"
 msgid "Shut down"
 msgstr "Sammuta"
 
-#: CMFPlone/interfaces/controlpanel.py:1127
+#: CMFPlone/interfaces/controlpanel.py:1138
 msgid "Side"
 msgstr ""
 
@@ -4341,11 +4804,11 @@ msgstr "Yksitilainen työnkulku"
 msgid "Site"
 msgstr "Sivusto"
 
-#: CMFPlone/interfaces/controlpanel.py:1323
+#: CMFPlone/interfaces/controlpanel.py:1334
 msgid "Site 'From' address"
 msgstr "Sivuston \"From\"-osoite"
 
-#: CMFPlone/interfaces/controlpanel.py:1314
+#: CMFPlone/interfaces/controlpanel.py:1325
 msgid "Site 'From' name"
 msgstr "Sivuston \"From\"-nimi"
 
@@ -4377,7 +4840,7 @@ msgstr ""
 msgid "Site Setup"
 msgstr "Sivuston asetukset"
 
-#: CMFPlone/interfaces/controlpanel.py:1132
+#: CMFPlone/interfaces/controlpanel.py:1143
 msgid "Site based relative url for toolbar logo"
 msgstr ""
 
@@ -4402,11 +4865,6 @@ msgstr "Kokoelma"
 #: action_icon id topic_icon.gif - category controlpanel
 msgid "Smart Folder Settings"
 msgstr "Kokoelman asetukset"
-
-#. Default: "Smart Folder view"
-#: dynamic view name template atct_topic_view on type Topic
-msgid "Smart Folder view"
-msgstr "Kokoelman näkymä"
 
 #: CMFPlone/profiles/default/controlpanel.xml
 msgid "Social Media"
@@ -4450,7 +4908,7 @@ msgstr "Välilyönnit eivät ole sallittu tunnisteissa"
 msgid "Specialized folder for temporary data."
 msgstr "Kansio tilapäiselle tiedolle."
 
-#: CMFPlone/interfaces/controlpanel.py:1435
+#: CMFPlone/interfaces/controlpanel.py:1446
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is &lt;name&gt; &lt;width&gt;:&lt;height&gt;."
 msgstr ""
 
@@ -4471,9 +4929,8 @@ msgid "Spellchecker plugin to use"
 msgstr ""
 
 #. Default: "Standard view"
-#: dynamic view name template folder_listing on type Folder
-#: dynamic view name template folder_listing on type Large Plone Folder
-#: dynamic view name template folder_listing on type Topic
+#: plone.app.collection/plone/app/collection/browser/configure.zcml:58
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:21
 msgid "Standard view"
 msgstr "Perusnäkymä"
 
@@ -4589,9 +5046,8 @@ msgid "Successfully updated tags on items"
 msgstr ""
 
 #. Default: "Summary view"
-#: dynamic view name template folder_summary_view on type Folder
-#: dynamic view name template folder_summary_view on type Large Plone Folder
-#: dynamic view name template folder_summary_view on type Topic
+#: plone.app.collection/plone/app/collection/browser/configure.zcml:62
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:27
 msgid "Summary view"
 msgstr "Yhteenvetonäkymä"
 
@@ -4605,6 +5061,7 @@ msgstr "Uutisvirta"
 msgid "Syndication Settings"
 msgstr ""
 
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:219
 #: plone.app.contentrules/plone/app/contentrules/conditions/talesexpression.py:24
 msgid "TALES expression"
 msgstr "TALES lauseke"
@@ -4621,7 +5078,7 @@ msgstr ""
 msgid "Table Columns"
 msgstr "Taulukon sarakkeet"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:34
 msgid "Table of contents"
 msgstr ""
 
@@ -4630,9 +5087,8 @@ msgid "Table styles"
 msgstr ""
 
 #. Default: "Tabular view"
-#: dynamic view name template folder_tabular_view on type Folder
-#: dynamic view name template folder_tabular_view on type Large Plone Folder
-#: dynamic view name template folder_tabular_view on type Topic
+#: plone.app.collection/plone/app/collection/browser/configure.zcml:70
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:33
 msgid "Tabular view"
 msgstr "Taulukkonäkymä"
 
@@ -4677,7 +5133,7 @@ msgstr "Väliaikaiskansio"
 msgid "Template"
 msgstr "Sivupohja"
 
-#: plone/app/theming/browser/controlpanel.pt:104
+#: plone/app/theming/browser/controlpanel.pt:103
 msgid "Test Styles"
 msgstr ""
 
@@ -4710,6 +5166,30 @@ msgstr "Alatunnisteessa näytettävä teksti"
 msgid "That user does not have an email address."
 msgstr "Käyttäjällä ei ole sähköpostiosoitetta."
 
+#: plone.app.contentmenu/plone/app/contentmenu/configure.zcml:19
+msgid "The 'actions' menu - allows the user to execute actions on an object"
+msgstr ""
+
+#: plone.app.contentmenu/plone/app/contentmenu/configure.zcml:31
+msgid "The 'add' menu - allows the user to add new content items in the context"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:187
+msgid "The 'description' field must be a Text field."
+msgstr ""
+
+#: plone.app.contentmenu/plone/app/contentmenu/configure.zcml:25
+msgid "The 'display' menu - allows the user to select the view of an object"
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:184
+msgid "The 'title' field must be a Text line (string) field."
+msgstr ""
+
+#: plone.app.contentmenu/plone/app/contentmenu/configure.zcml:37
+msgid "The 'workflow' menu - allows the user to execute workflow transitions"
+msgstr ""
+
 #. Default: "The ID of the user who performed the last transition"
 #: CMFPlone/profiles/default/workflows/folder_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/intranet_folder_workflow/definition.xml
@@ -4731,7 +5211,7 @@ msgstr "Tarkistettava TALES lauseke."
 msgid "The content type to check for."
 msgstr "Tarkistettava sisältötyyppi."
 
-#: CMFPlone/interfaces/controlpanel.py:1252
+#: CMFPlone/interfaces/controlpanel.py:1263
 msgid "The content types that should be available for selection when setting a default page."
 msgstr ""
 
@@ -4775,6 +5255,10 @@ msgstr ""
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:25
 msgid "The file extension to check for"
 msgstr "Tarkistettava tiedostopääte"
+
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:197
+msgid "The following custom content types are available for your site."
+msgstr ""
 
 #: CMFPlone/browser/templates/plone-upgrade.pt:129
 msgid "The following list shows which upgrade steps are going to be run. Upgrading sometimes performs a catalog/security update, which may take a long time on large sites. Be patient."
@@ -4880,6 +5364,10 @@ msgstr "Sivuston konfiguraatio on vanhentunut ja se täytyy päivittää."
 msgid "The site configuration is outdated and needs to be upgraded. Please ${link_continue_with_the_upgrade}."
 msgstr "Sivuston kokoonpano on vanhentunut ja se täytyy päivittää. ${link_continue_with_the_upgrade}."
 
+#: plone.schema/plone/schema/email.py:20
+msgid "The specified email is not valid."
+msgstr ""
+
 #. Default: "The start date and time of an event"
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "The start date and time of an event"
@@ -4931,7 +5419,7 @@ msgstr ""
 msgid "The workflow transitions to check for."
 msgstr "Työnkulun siirtymä, jota seurataan."
 
-#: plone/app/theming/browser/controlpanel.pt:519
+#: plone/app/theming/browser/controlpanel.pt:516
 msgid "Theme base"
 msgstr ""
 
@@ -4939,7 +5427,7 @@ msgstr ""
 msgid "Theme deleted"
 msgstr ""
 
-#: plone/app/theming/browser/controlpanel.pt:344
+#: plone/app/theming/browser/controlpanel.pt:341
 msgid "Theme details"
 msgstr ""
 
@@ -4953,13 +5441,17 @@ msgstr ""
 
 #. Default: "Themes"
 #: CMFPlone/profiles/default/controlpanel.xml
-#: plone/app/theming/browser/controlpanel.pt:88
+#: plone/app/theming/browser/controlpanel.pt:87
 #: plone/app/theming/profiles/default/controlpanel.xml
 msgid "Themes"
 msgstr "Teemat"
 
 #: plone/app/theming/profiles/default/controlpanel.xml
 msgid "Theming"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:106
+msgid "There is already a content type named '${name}'"
 msgstr ""
 
 #: CMFPlone/skins/plone_scripts/check_id.py:132
@@ -4993,7 +5485,7 @@ msgstr ""
 
 #: plone.app.users/plone/app/users/browser/membersearch.py:96
 #: plone.app.users/plone/app/users/browser/register.py:70
-#: plone.app.users/plone/app/users/browser/registersettingspanel.py:21
+#: plone.app.users/plone/app/users/browser/registersettingspanel.py:20
 msgid "There were errors."
 msgstr ""
 
@@ -5049,8 +5541,12 @@ msgstr ""
 msgid "This is the Add-on configuration section, you can activate and deactivate add-ons in the lists below."
 msgstr "Tämä on lisäosien hallintasivu. Alla olevien listojen avulla voit joko ottaa käyttöön tai poistaa käytöstä haluamiasi lisäosia."
 
-#: CMFPlone/interfaces/controlpanel.py:1133
+#: CMFPlone/interfaces/controlpanel.py:1144
 msgid "This must be a relative url to portal root site. By default its /++plone++static/plone-toolbarlogo.svg"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/behaviors/id.py:27
+msgid "This name will be displayed in the URL."
 msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:650
@@ -5079,6 +5575,14 @@ msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:417
 msgid "This option gives you the ability to specify the width of the editor (like 100% or 400px)."
+msgstr ""
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:54
+msgid "This option is only relevant if you are using virtual hosting and you have enabled the option to send PURGE requests with virtual hosting URLs above. If you your site is served on multiple domains e.g. http://example.org and http://www.example.org you may wish to purge both. If so, list all your domains here"
+msgstr ""
+
+#: plone.cachepurging/plone/cachepurging/interfaces.py:29
+msgid "This option is only relevant if you are using virtual hosting with Zope's VirtualHostMonster. This relies on special tokens (VirtualHostBase and VirtualHostRoot) in the URL to instruct Zope about the types of URLs that the user sees. If virtual host URLs are in use and this option is set, PURGE requests will be sent to the caching proxy with the virtual hosting tokens in place. This makes sense if there is a web server in front of your caching proxy performing the rewrites necessary to translate a user-facing URL into a virtual hosting URL, so that the requests the caching proxy sees have the rewrite information in them. Conversely, if the rewrite is done in or behind the caching proxy, you want to disable this option, so that the PURGE requests use URLs that match those seen by the caching proxy as they come from the client."
 msgstr ""
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:229
@@ -5137,10 +5641,12 @@ msgstr "Valitsemasi käyttäjänimi on varattu. Valitse toinen nimi."
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
 msgstr ""
 
+#: CMFPlone/interfaces/controlpanel.py:1121
+msgid "Thumb visibility"
+msgstr ""
+
 #. Default: "Thumbnail view"
-#: dynamic view name template atct_album_view on type Folder
-#: dynamic view name template atct_album_view on type Large Plone Folder
-#: dynamic view name template atct_album_view on type Topic
+#: plone.app.collection/plone/app/collection/browser/configure.zcml:74
 msgid "Thumbnail view"
 msgstr "Kuvakenäkymä"
 
@@ -5185,11 +5691,11 @@ msgstr "Sovelman otsikko. Jos tyhjä, käytetään otsikkona syötteen otsikkoa.
 msgid "Title of the rendered portlet"
 msgstr "Sovelman otsikko"
 
-#: CMFPlone/interfaces/controlpanel.py:1420
+#: CMFPlone/interfaces/controlpanel.py:1431
 msgid "To be used with some integrations like open graph data"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1414
+#: CMFPlone/interfaces/controlpanel.py:1425
 msgid "To idenitify things like Twitter Cards"
 msgstr ""
 
@@ -5201,7 +5707,7 @@ msgstr "Jotta uudet lisäosat näkyisivät alla olevassa listassa, ne täytyy li
 msgid "Today"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1128
+#: CMFPlone/interfaces/controlpanel.py:1139
 msgid "Top"
 msgstr ""
 
@@ -5242,7 +5748,7 @@ msgstr "Siirtymä"
 msgid "Transition title"
 msgstr "Siirtymän nimi"
 
-#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:177
 msgid "Transition workflow state"
 msgstr "Siirtymän työnkulun tila"
 
@@ -5250,7 +5756,7 @@ msgstr "Siirtymän työnkulun tila"
 msgid "Triggering event"
 msgstr "Liipaisintapahtuma"
 
-#: CMFPlone/interfaces/controlpanel.py:1413
+#: CMFPlone/interfaces/controlpanel.py:1424
 msgid "Twitter Username"
 msgstr ""
 
@@ -5259,23 +5765,44 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:46
+msgid "Type Name"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/add_type.py:48
+msgid "Type added successfully."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/clone_type.py:35
+msgid "Type cloned successfully."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:32
+msgid "Type profiles archive file"
+msgstr ""
+
 #: CMFPlone/controlpanel/browser/types.py:53
 msgid "Types Settings"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:73
+msgid "Types in archive must be only Dexterity types."
 msgstr ""
 
 #: CMFPlone/controlpanel/browser/types.py:55
 msgid "Types settings"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1251
+#: CMFPlone/interfaces/controlpanel.py:1262
 msgid "Types that can be set as a default page"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1226
+#: CMFPlone/interfaces/controlpanel.py:1237
 msgid "Types which use the view action in listing views."
 msgstr ""
 
 #: CMFPlone/interfaces/resources.py:22
+#: plone.schema/plone/schema/editor.py:21
 #: plone.stringinterp/plone/stringinterp/adapters.py:53
 msgid "URL"
 msgstr "URL"
@@ -5343,7 +5870,7 @@ msgstr ""
 msgid "Unlock"
 msgstr "Poista lukitus"
 
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/update.py:59
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/update.py:56
 msgid "Update cancelled."
 msgstr "Päivitys peruttu."
 
@@ -5383,7 +5910,7 @@ msgstr ""
 msgid "Upgrades"
 msgstr ""
 
-#: plone/app/theming/browser/controlpanel.pt:100
+#: plone/app/theming/browser/controlpanel.pt:99
 msgid "Upload Zip file"
 msgstr ""
 
@@ -5403,11 +5930,23 @@ msgstr ""
 msgid "Use email address as login name"
 msgstr "Käytä sähköpostiosoitetta käyttäjätunnuksena"
 
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:154
+msgid "Used for programmatic access to the field."
+msgstr ""
+
+#: plone.schemaeditor/plone/schemaeditor/interfaces.py:199
+msgid "Used for programmatic access to the fieldset."
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:51
+msgid "Used for programmatic access to the type."
+msgstr ""
+
 #: plone.app.layout/plone/app/layout/dashboard/user_actions.pt:19
 msgid "User Actions"
 msgstr ""
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:96
 msgid "User Created"
 msgstr ""
 
@@ -5419,15 +5958,15 @@ msgstr "Käyttäjän tietot"
 msgid "User Email Notification"
 msgstr ""
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:84
 msgid "User Logged in"
 msgstr ""
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:90
 msgid "User Logged out"
 msgstr ""
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:102
 msgid "User Removed"
 msgstr ""
 
@@ -5443,11 +5982,11 @@ msgstr "Sivuston käyttäjä- ja ryhmäasetukset."
 msgid "User portrait picture"
 msgstr ""
 
-#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:160
 msgid "User's group"
 msgstr "Käyttäjän ryhmä"
 
-#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:189
 msgid "User's role"
 msgstr "Käyttäjän rooli"
 
@@ -5506,7 +6045,7 @@ msgstr "Validointi epäonnistui($name): value on tyhjä ($value)."
 msgid "Validation failed($name: Uploaded data is too large: ${size}MB (max ${max}MB)"
 msgstr "Validointi epäonnistui($name): palvelimelle kopioitu tiedosto on liian suuri: ${size}MB (max ${max}MB)"
 
-#: CMFPlone/interfaces/controlpanel.py:1472
+#: CMFPlone/interfaces/controlpanel.py:1483
 msgid "Verify login name"
 msgstr ""
 
@@ -5517,7 +6056,7 @@ msgstr ""
 msgid "View"
 msgstr "Näytä"
 
-#: CMFPlone/skins/plone_content/document_view.pt.metadata
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:157
 msgid "View Document"
 msgstr "Näytä sivu"
 
@@ -5525,19 +6064,23 @@ msgstr "Näytä sivu"
 msgid "View Event"
 msgstr "Näytä tapahtuma"
 
-#: CMFPlone/skins/plone_content/file_view.pt.metadata
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:167
 msgid "View File"
 msgstr "Näytä tiedosto"
 
-#: CMFPlone/skins/plone_content/image_view.pt.metadata
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:176
 msgid "View Image"
 msgstr "Näytä kuva"
 
-#: CMFPlone/skins/plone_content/link_view.pt.metadata
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:185
+msgid "View Image Fullscreen"
+msgstr ""
+
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:194
 msgid "View Link"
 msgstr "Näytä linkki"
 
-#: CMFPlone/skins/plone_content/newsitem_view.pt.metadata
+#: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:203
 msgid "View News Item"
 msgstr "Näytä uutinen"
 
@@ -5668,12 +6211,13 @@ msgstr ""
 msgid "Workflow"
 msgstr "Työnkulku"
 
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:101
 #: plone.app.contentrules/plone/app/contentrules/conditions/wfstate.py:22
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:26
 msgid "Workflow state"
 msgstr "Työnkulun tila"
 
-#: ./plone.app.contentrules/plone/app/contentrules/configure.zcml
+#: plone.app.contentrules/plone/app/contentrules/configure.zcml:78
 msgid "Workflow state changed"
 msgstr "Työnkulun tila muuttunut"
 
@@ -5681,6 +6225,7 @@ msgstr "Työnkulun tila muuttunut"
 msgid "Workflow states are: ${states}"
 msgstr "Työnkulun tilat ovat: ${states}"
 
+#: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:131
 #: plone.app.contentrules/plone/app/contentrules/conditions/wftransition.py:22
 msgid "Workflow transition"
 msgstr "Työnkulun siirtymä"
@@ -5699,6 +6244,7 @@ msgstr ""
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:35
+#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:15
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Yes"
 msgstr "Kyllä"
@@ -5754,6 +6300,10 @@ msgstr "Olet kirjautunut ulos."
 #: CMFPlone/browser/templates/plone-overview.pt:69
 msgid "You have multiple Plone sites:"
 msgstr "Sinulla on useita Plone sivustoja:"
+
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:98
+msgid "You may import types by uploading a zip archive containing type profiles. The import archive should contain a types.xml file and a types directory containing one or more Dexterity type information files. For a sample, create a content type and export it from the Dexterity Content Types page."
+msgstr ""
 
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:22
 #: CMFPlone/skins/plone_login/login_password_validate.vpy:17
@@ -5838,6 +6388,10 @@ msgstr "Zope-tietokannan pakkaus"
 msgid "Zope server and site maintenance options."
 msgstr "Zope-palvelimen ja sivuston ylläpitotoiminnot."
 
+#: plone.app.contentmenu/plone/app/contentmenu/configure.zcml:116
+msgid "Zope3 Views used as selectable content views"
+msgstr ""
+
 #: plone.app.content/plone/app/content/browser/actions.py:83
 msgid "\"${title}\" has already been deleted"
 msgstr ""
@@ -5856,6 +6410,16 @@ msgstr "Täällä on vanhan tavan mukaisia sovelmia. Paina nappia muuntaaksesi n
 #: plone.app.discussion/plone/app/discussion/browser/comments.py:128
 msgid "add_comment_button"
 msgstr "Lisää"
+
+#. Default: "Add new fieldset…"
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/schema_listing.pt:13
+msgid "add_fieldset_hellip"
+msgstr ""
+
+#. Default: "Add new field…"
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/schema_listing.pt:7
+msgid "add_new_field_hellip"
+msgstr ""
 
 #. Default: "This item can not be deleted because it is currently locked by another user."
 #: plone.app.content/plone/app/content/browser/templates/delete_confirmation.pt:18
@@ -5949,7 +6513,7 @@ msgstr "Kielivalinnat"
 
 #. Default: "last modified"
 #: CMFPlone/browser/templates/search.pt:270
-#: CMFPlone/skins/plone_content/folder_listing.pt:144
+#: CMFPlone/skins/plone_content/folder_listing.pt:142
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:85
 msgid "box_last_modified"
 msgstr "Viimeisin muutos"
@@ -5963,11 +6527,6 @@ msgstr "Lisää uutisia..."
 #: plone.app.portlets/plone/app/portlets/portlets/recent.pt:56
 msgid "box_more_recently_changed"
 msgstr "Kaikki uusimmat muutokset..."
-
-#. Default: "More…"
-#: plone.app.portlets/plone/app/portlets/portlets/rss.pt:47
-msgid "box_morelink"
-msgstr "Lisää..."
 
 #. Default: "New user?"
 #: plone.app.portlets/plone/app/portlets/portlets/login.pt:111
@@ -6043,7 +6602,7 @@ msgid "checkout_info"
 msgstr "Tämä on ${creator}:n ${created} tekemä työkopio ${baseline_title}:sta."
 
 #. Default: "Clear filter"
-#: plone.app.registry/plone/app/registry/browser/records.pt:42
+#: plone.app.registry/plone/app/registry/browser/records.pt:41
 msgid "clear_filter"
 msgstr ""
 
@@ -6252,12 +6811,12 @@ msgid "description_add_new_item"
 msgstr "Valitse kansioosi lisättävän sisällön tyyppi."
 
 #. Default: "Use the fields below to configure the Diazo theme manually. Usually, these settings are applied by enabling a theme from the <strong>Themes</strong> tab."
-#: plone/app/theming/browser/controlpanel.pt:346
+#: plone/app/theming/browser/controlpanel.pt:343
 msgid "description_advanced"
 msgstr ""
 
 #. Default: "The settings below control the presentation of the <em>content</em> produced by Plone before a Diazo theme is applied. Note that these settings will have an effect even if no Diazo theme is currently enabled."
-#: plone/app/theming/browser/controlpanel.pt:521
+#: plone/app/theming/browser/controlpanel.pt:518
 msgid "description_advanced_base"
 msgstr ""
 
@@ -6277,7 +6836,7 @@ msgid "description_available_languages"
 msgstr ""
 
 #. Default: "Use the buttons to create or upload a new Diazo theme, or select an existing theme from a the list below."
-#: plone/app/theming/browser/controlpanel.pt:90
+#: plone/app/theming/browser/controlpanel.pt:89
 msgid "description_basic_settings"
 msgstr ""
 
@@ -6410,7 +6969,7 @@ msgid "description_groups_management2"
 msgstr "Symboli ${image_link_icon} tarkoittaa, että rooli on periytynyt jonkun toisen ryhmän jäsenyydestä."
 
 #. Default: "You can import a Zip file containing an existing theme. This should contain a single top level directory, which will be used as the theme identifier. If no Diazo <code>rules.xml</code> or <code>manifest.cfg</code> file is found in this directory, a default <code>rules.xml</code> file will be created."
-#: plone/app/theming/browser/controlpanel.pt:695
+#: plone/app/theming/browser/controlpanel.pt:692
 msgid "description_import"
 msgstr ""
 
@@ -6475,6 +7034,11 @@ msgstr "Vasen ja oikea sovelma-alue näyttävät nyt vain ne sovelmat, jotka on 
 msgid "description_member_search"
 msgstr "Tällä hakulomakkeella voit etsiä käyttäjiä antamalla yhden tai useamman hakuehdon."
 
+#. Default: "This form allows you to directly edit the XML representation of the field list. This makes it possible to add annotations for fieldsets, validation and widgets. See the <a href=\"http://docs.plone.org/external/plone.app.dexterity/docs/reference/dexterity-xml.html\">Dexterity XML</a> section of the <a href=\"http://docs.plone.org/external/plone.app.dexterity/docs/index.html\">Dexterity Developer Manual</a> for details."
+#: plone.app.dexterity/plone/app/dexterity/browser/modeleditor.pt:25
+msgid "description_model_edit"
+msgstr ""
+
 #. Default: "Your personal settings."
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:85
 msgid "description_my_preferences"
@@ -6495,7 +7059,7 @@ msgid "description_no_account_registration_linktext"
 msgstr "rekisteröitymislomake"
 
 #. Default: "There are currently no items in this folder."
-#: CMFPlone/skins/plone_content/folder_listing.pt:177
+#: CMFPlone/skins/plone_content/folder_listing.pt:175
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:173
 #: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
 msgid "description_no_items_in_folder"
@@ -6599,7 +7163,7 @@ msgid "description_recently_modified"
 msgstr "Kaikki uusimmat muutokset, uusin ensimmäisenä."
 
 #. Default: "All published items, latest first."
-#: CMFPlone/skins/plone_templates/recently_published.pt:26
+#: CMFPlone/skins/plone_templates/recently_published.pt:27
 msgid "description_recently_published"
 msgstr "Kaikki julkaistu sisältö - uusin julkaistu ensimmäisenä."
 
@@ -6609,7 +7173,7 @@ msgid "description_record_edit"
 msgstr "Käytä alla olevaa lomaketta muokatakseti tätä rekisteriä."
 
 #. Default: "The table below shows record currently managed by the configuration registry. Click on a record to edit it."
-#: plone.app.registry/plone/app/registry/browser/records.pt:30
+#: plone.app.registry/plone/app/registry/browser/records.pt:29
 msgid "description_registry"
 msgstr "Alla oleva taulukko näyttää hallittavat asetusrekisterit. Klikkaa rekisteriä muokataksesi sitä."
 
@@ -6822,9 +7386,19 @@ msgstr ""
 msgid "error_already_installed"
 msgstr ""
 
+#. Default: "Expiration date must be after publishing date."
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:168
+msgid "error_expiration_must_be_after_effective_date"
+msgstr ""
+
 #. Default: "Please ensure you enter one expression per line, in the format <name> = <expression>."
 #: plone/app/theming/browser/controlpanel.py:172
 msgid "error_invalid_parameter_expressions"
+msgstr ""
+
+#. Default: "Invalid effective or expires date"
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:131
+msgid "error_invalid_publication"
 msgstr ""
 
 #. Default: "The uploaded file is not a valid Zip archive"
@@ -6857,12 +7431,22 @@ msgstr ""
 msgid "expiration_date"
 msgstr ""
 
+#. Default: "The '${value1}' vocabulary value conflicts with '${value2}'."
+#: plone.schemaeditor/plone/schemaeditor/fields.py:175
+msgid "field_edit_error_conflicting_values"
+msgstr ""
+
+#. Default: "You can't set a vocabulary name AND vocabulary values. Please clear values field or set no value here."
+#: plone.schemaeditor/plone/schemaeditor/fields.py:205
+msgid "field_edit_error_values_and_name"
+msgstr ""
+
 #: CMFPlone/browser/templates/search.pt:281
 #: plone.app.querystring/plone/app/querystring/results.pt:71
 msgid "filed under:"
 msgstr ""
 
-#: plone.app.registry/plone/app/registry/browser/records.pt:50
+#: plone.app.registry/plone/app/registry/browser/records.pt:49
 msgid "filter by..."
 msgstr ""
 
@@ -6997,7 +7581,7 @@ msgid "heading_date"
 msgstr "Ajankohta"
 
 #. Default: "Description"
-#: plone.app.registry/plone/app/registry/browser/records.pt:80
+#: plone.app.registry/plone/app/registry/browser/records.pt:79
 msgid "heading_description"
 msgstr "Kuvaus"
 
@@ -7089,13 +7673,18 @@ msgstr "Etsi käyttäjiä"
 msgid "heading_memberships_current"
 msgstr "Nykyiset ryhmäjäsenyydet"
 
+#. Default: "Edit field model for ${name}"
+#: plone.app.dexterity/plone/app/dexterity/browser/modeleditor.pt:22
+msgid "heading_model_edit"
+msgstr ""
+
 #. Default: "Moderate comments"
 #: plone.app.discussion/plone/app/discussion/browser/moderation.pt:24
 msgid "heading_moderate_comments"
 msgstr "Viestien esitarkistus"
 
 #. Default: "Name"
-#: plone.app.registry/plone/app/registry/browser/records.pt:78
+#: plone.app.registry/plone/app/registry/browser/records.pt:77
 msgid "heading_name"
 msgstr "Nimi"
 
@@ -7141,7 +7730,7 @@ msgid "heading_recently_modified"
 msgstr "Muuttunut sisältö"
 
 #. Default: "Published items"
-#: CMFPlone/skins/plone_templates/recently_published.pt:21
+#: CMFPlone/skins/plone_templates/recently_published.pt:22
 msgid "heading_recently_published"
 msgstr "Julkaistu sisältö"
 
@@ -7151,7 +7740,7 @@ msgid "heading_registration_form"
 msgstr "Rekisteröitymislomake"
 
 #. Default: "Configuration Registry"
-#: plone.app.registry/plone/app/registry/browser/records.pt:28
+#: plone.app.registry/plone/app/registry/browser/records.pt:27
 #, fuzzy
 msgid "heading_registry"
 msgstr "Asetusrekisteri"
@@ -7249,7 +7838,7 @@ msgid "heading_theme_settings"
 msgstr ""
 
 #. Default: "Title"
-#: plone.app.registry/plone/app/registry/browser/records.pt:79
+#: plone.app.registry/plone/app/registry/browser/records.pt:78
 msgid "heading_title"
 msgstr "Otsikko"
 
@@ -7259,7 +7848,7 @@ msgid "heading_top_level_domain"
 msgstr ""
 
 #. Default: "Type"
-#: plone.app.registry/plone/app/registry/browser/records.pt:81
+#: plone.app.registry/plone/app/registry/browser/records.pt:80
 msgid "heading_type"
 msgstr "Tyyppi"
 
@@ -7285,7 +7874,7 @@ msgid "heading_validation"
 msgstr ""
 
 #. Default: "Value"
-#: plone.app.registry/plone/app/registry/browser/records.pt:82
+#: plone.app.registry/plone/app/registry/browser/records.pt:81
 msgid "heading_value"
 msgstr "Arvo"
 
@@ -7317,7 +7906,7 @@ msgid "heading_zope_server"
 msgstr "Zope-palvelin"
 
 #. Default: "If your theme uses relative paths for images, stylesheets or other resources, you can enter a prefix here to make sure these resources will work regardless of which page Plone is rendering."
-#: plone/app/theming/browser/controlpanel.pt:397
+#: plone/app/theming/browser/controlpanel.pt:394
 msgid "help_absolute_prefix"
 msgstr ""
 
@@ -7331,6 +7920,10 @@ msgstr ""
 msgid "help_add_actions_portlet"
 msgstr ""
 
+#: plone.app.dexterity/plone/app/dexterity/browser/types.py:200
+msgid "help_addcontenttype_button"
+msgstr ""
+
 #. Default: "Examples: pt-br (Brazilian Portuguese), en-us (American English) etc."
 #: CMFPlone/interfaces/controlpanel.py:172
 msgid "help_allow_combined_language_codes"
@@ -7342,7 +7935,7 @@ msgid "help_allow_comments"
 msgstr "Jos tämä on valittu, käyttäjät voivat kommentoida kohdetta."
 
 #. Default: "Only the following roles can add new keywords "
-#: CMFPlone/interfaces/controlpanel.py:1170
+#: CMFPlone/interfaces/controlpanel.py:1181
 msgid "help_allow_roles_to_add_keywords"
 msgstr ""
 
@@ -7371,7 +7964,7 @@ msgid "help_atderrortypes_to_show"
 msgstr ""
 
 #. Default: "The timezones, which should be available for the portal. Can be set for users and events"
-#: CMFPlone/interfaces/controlpanel.py:1201
+#: CMFPlone/interfaces/controlpanel.py:1212
 msgid "help_available_timezones"
 msgstr ""
 
@@ -7413,7 +8006,7 @@ msgid "help_checkout_folder"
 msgstr "Valitse kansio jonne sisältö noudetaan."
 
 #. Default: "A comment about this link."
-#: CMFPlone/browser/interfaces.py:344
+#: CMFPlone/browser/interfaces.py:337
 msgid "help_comment_to_link"
 msgstr "Lyhyt kommentti tästä linkistä."
 
@@ -7431,11 +8024,13 @@ msgstr "&e = laukaiseva tapahtuma, &c = konteksti, &u = käyttäjä"
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
 #: Archetypes/ExtensibleMetadata.py:114
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:210
 msgid "help_contributors"
 msgstr "Tämän sisällön tuottamiseen osallistuneet avustajat. Jokaisen nimen tulisi olla omalla rivillään."
 
 #. Default: "Copyright statement or other rights information on this item."
 #: Archetypes/ExtensibleMetadata.py:173
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:227
 msgid "help_copyrights"
 msgstr "Sisällön tekijänoikeustiedot."
 
@@ -7446,6 +8041,7 @@ msgstr "Sisällön luontipäivä"
 
 #. Default: "Persons responsible for creating the content of this item. Please enter a list of user names, one per line. The principal creator should come first."
 #: Archetypes/ExtensibleMetadata.py:126
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:192
 msgid "help_creators"
 msgstr "Tämän sisältökohteen tekijät. Lisää tekijät kukin omalle rivilleen. Pääasiallisen tekijän tulisi olla ensimmäisenä."
 
@@ -7497,6 +8093,7 @@ msgstr ""
 
 #. Default: "Used in item listings and search results."
 #: Archetypes/ExtensibleMetadata.py:93
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:73
 msgid "help_description"
 msgstr "Käytetään sisältöjen listauksissa ja hakutuloksissa."
 
@@ -7506,7 +8103,7 @@ msgid "help_discussion_settings_editform"
 msgstr "Tarkista myös keskusteluun / kommentointiin liittyvät asetukset sisältötyyppien hallintapaneelissa ('Sisältötyypit')."
 
 #. Default: "You can specify a Doctype string which will be set on the output, for example \"&lt;!DOCTYPE html&gt;\". If left blank the default XHTML 1.0 transistional Doctype or that set in the Diazo theme is used."
-#: plone/app/theming/browser/controlpanel.pt:422
+#: plone/app/theming/browser/controlpanel.pt:419
 msgid "help_doctype"
 msgstr ""
 
@@ -7538,12 +8135,12 @@ msgid "help_email_creation_for_login"
 msgstr "Kirjoita sähköpostiosoite. Tämä tulee olemaan käyttäjätunnuksesi. Kunnioitamme yksityisyyttäsi, emmekä anna tai paljasta osoitettasi ulkopuolisille."
 
 #. Default: "Select this option to enable the newly created theme immediately."
-#: plone/app/theming/browser/controlpanel.pt:235
+#: plone/app/theming/browser/controlpanel.pt:232
 msgid "help_enable_immediately"
 msgstr ""
 
 #. Default: "Select this option to enable the newly uploaded theme immediately."
-#: plone/app/theming/browser/controlpanel.pt:738
+#: plone/app/theming/browser/controlpanel.pt:735
 msgid "help_enable_new_theme"
 msgstr ""
 
@@ -7563,7 +8160,7 @@ msgid "help_event_settings"
 msgstr ""
 
 #. Default: "If selected, this item will not appear in the navigation tree"
-#: widget description of BooleanWidget for label Exclude from navigation
+#: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:28
 msgid "help_exclude_from_nav"
 msgstr "Jos tämä on valittu, kohde piilotetaan navigointipuusta."
 
@@ -7575,12 +8172,12 @@ msgid "help_expiration_date"
 msgstr "Sisällön vanhenemispäivä, jolloin sisältö piilotetaan automaattisesti. Jos vanhenemispäivää ei määritellä, sisältö pysyy julkaistuna."
 
 #. Default: "If enabled all external links in the content region open in a new window."
-#: plone/app/theming/browser/controlpanel.pt:576
+#: plone/app/theming/browser/controlpanel.pt:573
 msgid "help_ext_links_open_new_window"
 msgstr ""
 
 #. Default: "First day in the week."
-#: CMFPlone/interfaces/controlpanel.py:1213
+#: CMFPlone/interfaces/controlpanel.py:1224
 msgid "help_first_weekday"
 msgstr ""
 
@@ -7612,7 +8209,7 @@ msgid "help_homepage"
 msgstr "Oman kotisivusi osoite, jos sinulla sellainen on."
 
 #. Default: "If there are hostnames that you do not want to be themed, you can list them here, one per line. This is useful during theme development, so that you can compare the themed and unthemed sites. In some cases, you may also want to provided an unthemed host alias for content administrators to be able to use 'plain' Plone."
-#: plone/app/theming/browser/controlpanel.pt:463
+#: plone/app/theming/browser/controlpanel.pt:460
 msgid "help_hostname_blacklist"
 msgstr ""
 
@@ -7667,12 +8264,12 @@ msgid "help_login_name_caps"
 msgstr "Kirjainkoolla (esim. a ja A) on käyttäjätunnuksissa merkitystä. Varmista, ettei näppäimistön Caps Lock -toiminto ole päällä."
 
 #. Default: "If enabled all external links will be marked with link type specific icons."
-#: plone/app/theming/browser/controlpanel.pt:561
+#: plone/app/theming/browser/controlpanel.pt:558
 msgid "help_mark_special_links"
 msgstr ""
 
 #. Default: "Please enter the message you want to send."
-#: CMFPlone/browser/interfaces.py:378
+#: CMFPlone/browser/interfaces.py:371
 msgid "help_message"
 msgstr "Kirjoita viesti, jonka haluat lähettää."
 
@@ -7725,12 +8322,12 @@ msgid "help_new_password"
 msgstr "Syötä uusi salasanasi. Siinä on oltava vähintään 5 merkkiä."
 
 #. Default: "You may also provide a longer description for your theme."
-#: plone/app/theming/browser/controlpanel.pt:216
+#: plone/app/theming/browser/controlpanel.pt:213
 msgid "help_new_theme_description"
 msgstr ""
 
 #. Default: "Enter a short, descriptive title for your theme"
-#: plone/app/theming/browser/controlpanel.pt:200
+#: plone/app/theming/browser/controlpanel.pt:197
 msgid "help_new_theme_title"
 msgstr ""
 
@@ -7738,6 +8335,11 @@ msgstr ""
 #: widget description of ImageWidget for label Image
 msgid "help_news_image"
 msgstr "Näytetään uutisluettelossa ja itse uutisartikkelissa. Kuva pienennetään kohtuullisen kokoiseksi."
+
+#. Default: "This enables next/previous widget on content items contained in this folder."
+#: plone.app.dexterity/plone/app/dexterity/behaviors/nextprevious.py:41
+msgid "help_nextprevious"
+msgstr ""
 
 #. Default: "There are no items in this folder that can be selected as a default view page."
 #: plone.app.content/plone/app/content/browser/templates/select_default_page.pt:77
@@ -7750,7 +8352,7 @@ msgid "help_openid_identity_url"
 msgstr "Kirjoita OpenID-osoitteesi kirjautuaksesi."
 
 #. Default: "You can define parameters that will be passed to the compiled theme here. In your rules file, you can refer to a parameter by <code>$name</code>. Parameters are defined using TALES expressions, which should evaluate to a string, a number, a boolean or None. Available variables are <code>context</code>, <code>request</code>, <code>portal</code>, <code>portal_state</code>, and <code>context_state</code>. Define one variable per line, in the format <code>name = expression</code>."
-#: plone/app/theming/browser/controlpanel.pt:493
+#: plone/app/theming/browser/controlpanel.pt:490
 msgid "help_parameter_expressions"
 msgstr ""
 
@@ -7778,7 +8380,7 @@ msgid "help_path_criteria_value"
 msgstr "Kansiot, joista haetaan."
 
 #. Default: "The timezone setting of the portal. Users can set their own timezone, if available timezones are defined."
-#: CMFPlone/interfaces/controlpanel.py:1190
+#: CMFPlone/interfaces/controlpanel.py:1201
 msgid "help_portal_timezone"
 msgstr ""
 
@@ -7804,12 +8406,12 @@ msgid "help_publishing_comments"
 msgstr "Tämä kommentti lisätään julkaisuhistoriaan. Jos olet valinnut useita kohteita, lisätään tämä kommentti niihin kaikkiin."
 
 #. Default: "Allow rules and themes to be read from remote servers."
-#: plone/app/theming/browser/controlpanel.pt:450
+#: plone/app/theming/browser/controlpanel.pt:447
 msgid "help_read_network"
 msgstr ""
 
 #. Default: "When clicking on a Link type, should the user be taken to the default view or be redirected to the Link's URL?"
-#: CMFPlone/interfaces/controlpanel.py:1241
+#: CMFPlone/interfaces/controlpanel.py:1252
 msgid "help_redirect_links"
 msgstr ""
 
@@ -7837,17 +8439,17 @@ msgid "help_render_body"
 msgstr ""
 
 #. Default: "Select this option to replace any existing theme that may have been uploaded previously."
-#: plone/app/theming/browser/controlpanel.pt:752
+#: plone/app/theming/browser/controlpanel.pt:749
 msgid "help_replace_existing"
 msgstr ""
 
 #. Default: "robots.txt is read by search-engines to determine how to index your site. For details see <a href='http://www.robotstxt.org'>http://www.robotstxt.org</a>. '{portal_url}' is replaced by the sites url."
-#: CMFPlone/interfaces/controlpanel.py:1142
+#: CMFPlone/interfaces/controlpanel.py:1153
 msgid "help_robots_txt"
 msgstr ""
 
 #. Default: "Enter a path or URL for the theme rules file."
-#: plone/app/theming/browser/controlpanel.pt:375
+#: plone/app/theming/browser/controlpanel.pt:372
 msgid "help_rules"
 msgstr ""
 
@@ -7884,23 +8486,23 @@ msgid "help_selection_criteria_value"
 msgstr "Nykyiset arvot."
 
 #. Default: "Your email address."
-#: CMFPlone/browser/interfaces.py:336
+#: CMFPlone/browser/interfaces.py:329
 msgid "help_send_from"
 msgstr "Sähköpostiosoitteesi."
 
 #. Default: "The e-mail address to send this link to."
-#: CMFPlone/browser/interfaces.py:328
+#: CMFPlone/browser/interfaces.py:321
 msgid "help_send_to_mail"
 msgstr "Sähköpostiosoite, johon linkki lähetetään."
 
 #. Default: "Please enter your e-mail address."
-#: CMFPlone/browser/interfaces.py:364
+#: CMFPlone/browser/interfaces.py:357
 #, fuzzy
 msgid "help_sender_from_address"
 msgstr "Anna sähköpostiosoitteesi"
 
 #. Default: "Please enter your full name."
-#: CMFPlone/browser/interfaces.py:356
+#: CMFPlone/browser/interfaces.py:349
 #, fuzzy
 msgid "help_sender_fullname"
 msgstr "Anna koko nimesi"
@@ -7941,23 +8543,23 @@ msgid "help_show_title"
 msgstr ""
 
 #. Default: "The password for the ESMTP user account."
-#: CMFPlone/interfaces/controlpanel.py:1306
+#: CMFPlone/interfaces/controlpanel.py:1317
 msgid "help_smtp_pass"
 msgstr "ESMTP-käyttäjätunnuksen salasana."
 
 #. Default: "The port of your local SMTP (outgoing e-mail) server. Usually '25'."
-#: CMFPlone/interfaces/controlpanel.py:1284
+#: CMFPlone/interfaces/controlpanel.py:1295
 #, fuzzy
 msgid "help_smtp_port"
 msgstr "Käyttämäsi lähtevän sähköpostin SMTP-palvelimen portti. Yleensä \"25\"."
 
 #. Default: "The address of your local SMTP (outgoing e-mail) server. Usually 'localhost', unless you use an external server to send e-mail."
-#: CMFPlone/interfaces/controlpanel.py:1272
+#: CMFPlone/interfaces/controlpanel.py:1283
 msgid "help_smtp_server"
 msgstr "Tämä on lähtevän sähköpostin SMTP-palvelimen osoite. Se on yleensä \"localhost\", ellet käytä ulkoista palvelinta sähköpostin lähettämiseen."
 
 #. Default: "Username for authentication to your e-mail server. Not required unless you are using ESMTP."
-#: CMFPlone/interfaces/controlpanel.py:1294
+#: CMFPlone/interfaces/controlpanel.py:1305
 msgid "help_smtp_userid"
 msgstr "Tämä on sähköpostipalvelimen vaatima käyttäjätunnus. Sitä ei tarvita, ellet käytä ESMTP:tä."
 
@@ -7973,6 +8575,7 @@ msgstr "Uutisvirrassa näkyvän sisällön enimmäismäärä."
 
 #. Default: "Tags are commonly used for ad-hoc organization of content."
 #: Archetypes/ExtensibleMetadata.py:79
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:101
 msgid "help_tags"
 msgstr "Tageja käytetään yleisesti sisällön ad-hoc järjestämiseen."
 
@@ -7987,17 +8590,17 @@ msgid "help_text_transform"
 msgstr ""
 
 #. Default: "Select a file to upload."
-#: plone/app/theming/browser/controlpanel.pt:716
+#: plone/app/theming/browser/controlpanel.pt:713
 msgid "help_theme_archive"
 msgstr ""
 
 #. Default: "The theme base defines a collection of templates and other resources that makes up the raw content to which a theme is applied. Most Diazo themes will assume the default theme base, so only change this if you know what you are doing."
-#: plone/app/theming/browser/controlpanel.pt:534
+#: plone/app/theming/browser/controlpanel.pt:531
 msgid "help_theme_base"
 msgstr ""
 
 #. Default: "If enabled the currently configured Diazo theme (if any) will be applied."
-#: plone/app/theming/browser/controlpanel.pt:362
+#: plone/app/theming/browser/controlpanel.pt:359
 msgid "help_theme_enabled"
 msgstr ""
 
@@ -8032,7 +8635,7 @@ msgid "help_title"
 msgstr ""
 
 #. Default: "When clicking items in listing views, these types will use the '/view' action instead of using their default view."
-#: CMFPlone/interfaces/controlpanel.py:1227
+#: CMFPlone/interfaces/controlpanel.py:1238
 msgid "help_types_use_view_action_in_listings"
 msgstr ""
 
@@ -8147,7 +8750,7 @@ msgid "is not an integer."
 msgstr "ei ole kokonaisluku."
 
 #. Default: "Absolute path prefix"
-#: plone/app/theming/browser/controlpanel.pt:396
+#: plone/app/theming/browser/controlpanel.pt:393
 msgid "label_absolute_prefix"
 msgstr ""
 
@@ -8234,6 +8837,11 @@ msgstr "Muuttunut sisältö"
 msgid "label_all"
 msgstr "Kaikki"
 
+#. Default: "All content types"
+#: plone.app.dexterity/plone/app/dexterity/browser/overview.pt:24
+msgid "label_all_content_types"
+msgstr ""
+
 #. Default: "Show country-specific language variants"
 #: CMFPlone/interfaces/controlpanel.py:168
 msgid "label_allow_combined_language_codes"
@@ -8286,7 +8894,7 @@ msgid "label_apply"
 msgstr "toteuta"
 
 #. Default: "Apply Changes"
-#: plone.app.users/plone/app/users/browser/registersettingspanel.py:32
+#: plone.app.users/plone/app/users/browser/registersettingspanel.py:31
 msgid "label_apply_changes"
 msgstr "Ota muutokset käyttöön"
 
@@ -8320,6 +8928,11 @@ msgstr "Tekijän kotisivu tällä sivustolla..."
 msgid "label_back_to_errorlog"
 msgstr "Siirry virhelokiin"
 
+#. Default: "Back to the schema editor"
+#: plone.app.dexterity/plone/app/dexterity/browser/modeleditor.pt:33
+msgid "label_back_to_schemaeditor"
+msgstr ""
+
 #. Default: "Back to site"
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/image_view_fullscreen.pt:50
 msgid "label_back_to_site"
@@ -8341,9 +8954,14 @@ msgstr "Kommentti"
 msgid "label_boolean_criteria_bool"
 msgstr "Arvo"
 
+#. Default: "Yes/No"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:88
+msgid "label_boolean_field"
+msgstr ""
+
 #. Default: "by ${author}"
 #: CMFPlone/browser/templates/search.pt:246
-#: CMFPlone/skins/plone_content/folder_listing.pt:131
+#: CMFPlone/skins/plone_content/folder_listing.pt:129
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:74
 msgid "label_by_author"
 msgstr "tekijä: ${author}"
@@ -8418,6 +9036,11 @@ msgstr "Toimitusviesti"
 msgid "label_checkout_folder"
 msgstr "Nouda kansio"
 
+#. Default: "Choice"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:104
+msgid "label_choice_field"
+msgstr ""
+
 #. Default: "Choose a content item…"
 #: plone.app.content/plone/app/content/browser/templates/select_default_view.pt:52
 msgid "label_choose_content_item"
@@ -8451,7 +9074,7 @@ msgid "label_click_to_view_full_image"
 msgstr "Napsauta nähdäksesi kuva alkuperäisessä koossa..."
 
 #. Default: "Comment"
-#: CMFPlone/browser/interfaces.py:342
+#: CMFPlone/browser/interfaces.py:335
 #: plone.app.discussion/plone/app/discussion/interfaces.py:161
 msgid "label_comment"
 msgstr "Kommentti"
@@ -8493,6 +9116,11 @@ msgstr "Yhteyshenkilön nimi"
 #: widget label of StringWidget - description ""
 msgid "label_contact_phone"
 msgstr "Yhteyshenkilön puhelinnumero"
+
+#. Default: "Contained items"
+#: plone.app.dexterity/plone/app/dexterity/browser/overview.pt:9
+msgid "label_contained_items"
+msgstr ""
 
 #. Default: "Add content rule"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:185
@@ -8557,6 +9185,7 @@ msgstr "Sovelletaan alikansioihin"
 
 #. Default: "Contributors"
 #: Archetypes/ExtensibleMetadata.py:113
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:209
 msgid "label_contributors"
 msgstr "Sisällön luomiseen osallistuneet avustajat:"
 
@@ -8572,6 +9201,7 @@ msgstr "Kopioi virheilmoitukset Zope-tapahtumalokiin"
 
 #. Default: "Rights"
 #: Archetypes/ExtensibleMetadata.py:172
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:226
 msgid "label_copyrights"
 msgstr "Oikeudet"
 
@@ -8587,6 +9217,7 @@ msgstr "Luontipäivämäärä"
 
 #. Default: "Creators"
 #: Archetypes/ExtensibleMetadata.py:125
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:191
 msgid "label_creators"
 msgstr "Tekijät"
 
@@ -8643,6 +9274,11 @@ msgstr "Taulukkonäkymän sarakkeet"
 msgid "label_dashboard"
 msgstr "Kojelauta"
 
+#. Default: "Date"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:94
+msgid "label_date_field"
+msgstr ""
+
 #. Default: "End Date"
 #: widget label of CalendarWidget - description "The ending of the date range to search."
 msgid "label_date_range_criteria_end"
@@ -8656,6 +9292,11 @@ msgstr "Ensimmäinen päivä"
 #. Default: "Date and Time Settings"
 #: CMFPlone/controlpanel/browser/dateandtime.py:14
 msgid "label_dateandtime_settings"
+msgstr ""
+
+#. Default: "Date/Time"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:92
+msgid "label_datetime_field"
 msgstr ""
 
 #. Default: "Default icon"
@@ -8688,7 +9329,7 @@ msgstr ""
 #. Default: "Description"
 #: Archetypes/ExtensibleMetadata.py:92
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:259
-#: plone.app.viewletmanager/plone/app/viewletmanager/manage-viewlets.pt:51
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:72
 msgid "label_description"
 msgstr "Kuvaus"
 
@@ -8724,7 +9365,7 @@ msgid "label_display_flags"
 msgstr ""
 
 #. Default: "Doctype"
-#: plone/app/theming/browser/controlpanel.pt:421
+#: plone/app/theming/browser/controlpanel.pt:418
 msgid "label_doctype"
 msgstr ""
 
@@ -8742,11 +9383,13 @@ msgstr ""
 
 #. Default: "You are editing the default view of a container. If you wanted to edit the container itself, ${go_here}."
 #: Archetypes/skins/archetypes/edit_macros.pt:41
+#: plone.app.dexterity/plone/app/dexterity/browser/default_page_warning.pt:12
 msgid "label_edit_default_view_container"
 msgstr "Muokkaat kansion oletusnäkymäkohdetta. Jos kuitenkin haluat muokata itse kansiota, ${go_here}."
 
 #. Default: "go here"
 #: Archetypes/skins/archetypes/edit_macros.pt:41
+#: plone.app.dexterity/plone/app/dexterity/browser/default_page_warning.pt:12
 msgid "label_edit_default_view_container_go_here"
 msgstr "siirry tänne"
 
@@ -8776,12 +9419,12 @@ msgid "label_enable_cookies"
 msgstr "otettava evästeet käyttöön"
 
 #. Default: "Immediately enable new theme"
-#: plone/app/theming/browser/controlpanel.pt:234
+#: plone/app/theming/browser/controlpanel.pt:231
 msgid "label_enable_immediately"
 msgstr ""
 
 #. Default: "Immediately enable new theme"
-#: plone/app/theming/browser/controlpanel.pt:737
+#: plone/app/theming/browser/controlpanel.pt:734
 msgid "label_enable_new_theme"
 msgstr ""
 
@@ -8796,26 +9439,26 @@ msgid "label_event_attendees"
 msgstr "Osallistujat"
 
 #. Default: "from ${start} to ${end}"
-#: CMFPlone/skins/plone_content/folder_listing.pt:109
+#: CMFPlone/skins/plone_content/folder_listing.pt:107
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:104
 msgid "label_event_byline"
 msgstr "(${start} - ${end})"
 
 #. Default: "— ${location},"
-#: CMFPlone/skins/plone_content/folder_listing.pt:116
+#: CMFPlone/skins/plone_content/folder_listing.pt:114
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:111
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing.pt:63
 msgid "label_event_byline_location"
 msgstr "— ${location},"
 
 #. Default: "${start}"
-#: CMFPlone/skins/plone_content/folder_listing.pt:82
+#: CMFPlone/skins/plone_content/folder_listing.pt:80
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:77
 msgid "label_event_byline_onlyfrom"
 msgstr "${start}"
 
 #. Default: "${start} from ${starttime} to ${end}"
-#: CMFPlone/skins/plone_content/folder_listing.pt:97
+#: CMFPlone/skins/plone_content/folder_listing.pt:95
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:92
 msgid "label_event_byline_samedate"
 msgstr "${start} klo ${starttime} — ${end}"
@@ -8866,7 +9509,7 @@ msgid "label_exception_value"
 msgstr "Virheen arvo"
 
 #. Default: "Exclude from navigation"
-#: widget label of BooleanWidget - description "If selected, this item will not appear in the navigation tree"
+#: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:24
 msgid "label_exclude_from_nav"
 msgstr "Piilota sisältöpuusta"
 
@@ -8883,7 +9526,7 @@ msgid "label_expiration_date"
 msgstr "Viimeinen voimassaolopäivä"
 
 #. Default: "External links open in new window"
-#: plone/app/theming/browser/controlpanel.pt:575
+#: plone/app/theming/browser/controlpanel.pt:572
 msgid "label_ext_links_open_new_window"
 msgstr ""
 
@@ -8897,14 +9540,24 @@ msgstr "Tiedosto"
 msgid "label_filed_under"
 msgstr "kuuluu seuraaviin kategorioihin:"
 
+#. Default: "Items of this type can act as a folder containing other  items. What content types should be allowed inside?"
+#: plone.app.dexterity/plone/app/dexterity/interfaces.py:71
+msgid "label_filter_contained_types"
+msgstr ""
+
 #. Default: "Find a group here"
 #: CMFPlone/controlpanel/browser/usergroups_groupmembership.pt:36
 msgid "label_find_group"
 msgstr "Hae ryhmä."
 
 #. Default: "First weekday"
-#: CMFPlone/interfaces/controlpanel.py:1212
+#: CMFPlone/interfaces/controlpanel.py:1223
 msgid "label_first_weekday"
+msgstr ""
+
+#. Default: "Floating-point number"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:86
+msgid "label_float_field"
 msgstr ""
 
 #. Default: "Format"
@@ -9005,7 +9658,7 @@ msgid "label_homepage"
 msgstr "Kotisivu"
 
 #. Default: "Unthemed host names"
-#: plone/app/theming/browser/controlpanel.pt:462
+#: plone/app/theming/browser/controlpanel.pt:459
 msgid "label_hostname_blacklist"
 msgstr ""
 
@@ -9051,6 +9704,11 @@ msgstr "Peri ehdot"
 msgid "label_inherit_local_roles"
 msgstr "Peri oikeudet ylemmiltä tasoilta"
 
+#. Default: "Integer"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:84
+msgid "label_integer_field"
+msgstr ""
+
 #. Default: "Item count"
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:74
 #, fuzzy
@@ -9074,6 +9732,7 @@ msgstr "Kategoriat"
 
 #. Default: "Language"
 #: Archetypes/ExtensibleMetadata.py:163
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:117
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:40
 msgid "label_language"
 msgstr "Kieli"
@@ -9168,7 +9827,7 @@ msgid "label_manage_portlets_default_view_container_go_here"
 msgstr "mene tänne"
 
 #. Default: "Mark special links"
-#: plone/app/theming/browser/controlpanel.pt:560
+#: plone/app/theming/browser/controlpanel.pt:557
 msgid "label_mark_special_links"
 msgstr ""
 
@@ -9180,7 +9839,7 @@ msgid "label_member_fields"
 msgstr ""
 
 #. Default: "Message"
-#: CMFPlone/browser/interfaces.py:376
+#: CMFPlone/browser/interfaces.py:369
 msgid "label_message"
 msgstr "Viesti"
 
@@ -9203,6 +9862,11 @@ msgstr "Ilmoita viesteistä sähköpostitse ylläpitäjälle"
 #: Archetypes/ExtensibleMetadata.py:206
 msgid "label_modification_date"
 msgstr "Muokkauspäivä"
+
+#. Default: "Multiple Choice"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:224
+msgid "label_multi_choice_field"
+msgstr ""
 
 #. Default: "Name"
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.pt:28
@@ -9254,12 +9918,12 @@ msgid "label_new_short_name"
 msgstr "Uusi tunniste"
 
 #. Default: "Description"
-#: plone/app/theming/browser/controlpanel.pt:215
+#: plone/app/theming/browser/controlpanel.pt:212
 msgid "label_new_theme_description"
 msgstr ""
 
 #. Default: "Title"
-#: plone/app/theming/browser/controlpanel.pt:199
+#: plone/app/theming/browser/controlpanel.pt:196
 msgid "label_new_theme_title"
 msgstr ""
 
@@ -9283,6 +9947,11 @@ msgstr "Seuraava"
 msgid "label_next_item"
 msgstr "Seuraava: ${itemtitle}"
 
+#. Default: "Enable next previous navigation"
+#: plone.app.dexterity/plone/app/dexterity/behaviors/nextprevious.py:37
+msgid "label_nextprevious"
+msgstr ""
+
 #. Default: "No tags currently selected."
 #: Archetypes/skins/archetypes/widgets/keyword.pt:81
 msgid "label_noTagsSelected"
@@ -9292,6 +9961,11 @@ msgstr "Yhtään avainsanaa ei ole valittu."
 #: plone.app.content/plone/app/content/browser/templates/content_status_history.pt:327
 msgid "label_no_change"
 msgstr "Ei muutosta"
+
+#. Default: "No content types"
+#: plone.app.dexterity/plone/app/dexterity/browser/overview.pt:18
+msgid "label_no_content_types"
+msgstr ""
 
 #. Default: "No group was specified."
 #: CMFPlone/controlpanel/browser/usergroups_groupmembership.pt:34
@@ -9340,7 +10014,7 @@ msgid "label_or"
 msgstr "tai"
 
 #. Default: "Parameter expressions"
-#: plone/app/theming/browser/controlpanel.pt:492
+#: plone/app/theming/browser/controlpanel.pt:489
 msgid "label_parameter_expressions"
 msgstr ""
 
@@ -9355,6 +10029,11 @@ msgstr "Salasana"
 #: plone.app.users/plone/app/users/browser/register.py:614
 msgid "label_password_change_mail"
 msgstr "Sinulle lähetetään verkko-osoite sähköpostitse; seuraa vastaanottamaasi linkkiä, niin pääset vaihtamaan salasanasi ja saat rekisteröitymisen suoritettua."
+
+#. Default: "Password"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:90
+msgid "label_password_field"
+msgstr ""
 
 #. Default: "Search Sub-Folders"
 #: ATContentTypes/criteria/relativepath.py
@@ -9483,7 +10162,7 @@ msgid "label_quick_search"
 msgstr "Pikahaku"
 
 #. Default: "Read network"
-#: plone/app/theming/browser/controlpanel.pt:449
+#: plone/app/theming/browser/controlpanel.pt:446
 msgid "label_read_network"
 msgstr ""
 
@@ -9536,7 +10215,7 @@ msgid "label_remove_selected_users"
 msgstr "Poista valitut ryhmät/käyttäjät"
 
 #. Default: "Replace existing theme"
-#: plone/app/theming/browser/controlpanel.pt:751
+#: plone/app/theming/browser/controlpanel.pt:748
 msgid "label_replace_existing"
 msgstr ""
 
@@ -9572,7 +10251,7 @@ msgid "label_rule_event_trigger"
 msgstr "Tapahtuman liipaisin: ${trigger}"
 
 #. Default: "Rules file"
-#: plone/app/theming/browser/controlpanel.pt:374
+#: plone/app/theming/browser/controlpanel.pt:371
 msgid "label_rules"
 msgstr ""
 
@@ -9591,6 +10270,21 @@ msgstr "Tallenna asetukset"
 #. Default: "says:"
 #: plone.app.discussion/plone/app/discussion/browser/comments.pt:79
 msgid "label_says"
+msgstr ""
+
+#. Default: "Categorization"
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:95
+msgid "label_schema_categorization"
+msgstr ""
+
+#. Default: "Dates"
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:140
+msgid "label_schema_dates"
+msgstr ""
+
+#. Default: "Ownership"
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:183
+msgid "label_schema_ownership"
 msgstr ""
 
 #. Default: "Search"
@@ -9651,23 +10345,23 @@ msgid "label_send"
 msgstr "Lähetä"
 
 #. Default: "From"
-#: CMFPlone/browser/interfaces.py:334
+#: CMFPlone/browser/interfaces.py:327
 msgid "label_send_from"
 msgstr "Lähettäjä"
 
 #. Default: "Send to"
-#: CMFPlone/browser/interfaces.py:326
+#: CMFPlone/browser/interfaces.py:319
 msgid "label_send_to_mail"
 msgstr "Vastaanottajan osoite"
 
 #. Default: "From"
-#: CMFPlone/browser/interfaces.py:362
+#: CMFPlone/browser/interfaces.py:355
 #, fuzzy
 msgid "label_sender_from_address"
 msgstr "Sähköposti"
 
 #. Default: "Name"
-#: CMFPlone/browser/interfaces.py:354
+#: CMFPlone/browser/interfaces.py:347
 msgid "label_sender_fullname"
 msgstr "Nimi"
 
@@ -9747,17 +10441,17 @@ msgid "label_size"
 msgstr "Koko"
 
 #. Default: "ESMTP password"
-#: CMFPlone/interfaces/controlpanel.py:1303
+#: CMFPlone/interfaces/controlpanel.py:1314
 msgid "label_smtp_pass"
 msgstr "ESMPT-salasana"
 
 #. Default: "SMTP port"
-#: CMFPlone/interfaces/controlpanel.py:1282
+#: CMFPlone/interfaces/controlpanel.py:1293
 msgid "label_smtp_port"
 msgstr "SMTP-portti"
 
 #. Default: "SMTP server"
-#: CMFPlone/interfaces/controlpanel.py:1269
+#: CMFPlone/interfaces/controlpanel.py:1280
 msgid "label_smtp_server"
 msgstr "SMTP-palvelin"
 
@@ -9768,9 +10462,14 @@ msgid "label_smtp_test"
 msgstr "Tallenna ja lähetä testisähköposti"
 
 #. Default: "ESMTP username"
-#: CMFPlone/interfaces/controlpanel.py:1291
+#: CMFPlone/interfaces/controlpanel.py:1302
 msgid "label_smtp_userid"
 msgstr "ESMTP-käyttäjätunnus"
+
+#. Default: "Some content types:"
+#: plone.app.dexterity/plone/app/dexterity/browser/overview.pt:30
+msgid "label_some_content_types"
+msgstr ""
 
 #. Default: "Sort on"
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:54
@@ -9793,7 +10492,7 @@ msgid "label_string_criteria_value"
 msgstr "Arvo"
 
 #. Default: "Subject"
-#: CMFPlone/browser/interfaces.py:370
+#: CMFPlone/browser/interfaces.py:363
 #: plone.app.discussion/plone/app/discussion/interfaces.py:156
 msgid "label_subject"
 msgstr "Aihe"
@@ -9810,6 +10509,7 @@ msgstr "Sisällysluettelo"
 
 #. Default: "Tags"
 #: Archetypes/ExtensibleMetadata.py:78
+#: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:100
 msgid "label_tags"
 msgstr "Tagit"
 
@@ -9817,6 +10517,11 @@ msgstr "Tagit"
 #: Archetypes/TemplateMixin.py:23
 msgid "label_template_mixin"
 msgstr "Esityssivupohja"
+
+#. Default: "Text"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:82
+msgid "label_text_field"
+msgstr ""
 
 #. Default: "Text Format"
 #: Archetypes/skins/archetypes/widgets/visual.pt:35
@@ -9829,13 +10534,18 @@ msgstr "Tekstimuoto"
 msgid "label_text_transform"
 msgstr ""
 
+#. Default: "Text line (String)"
+#: plone.schemaeditor/plone/schemaeditor/fields.py:78
+msgid "label_textline_field"
+msgstr ""
+
 #. Default: "Theme base"
-#: plone/app/theming/browser/controlpanel.pt:532
+#: plone/app/theming/browser/controlpanel.pt:529
 msgid "label_theme_base"
 msgstr ""
 
 #. Default: "Theme enabled"
-#: plone/app/theming/browser/controlpanel.pt:361
+#: plone/app/theming/browser/controlpanel.pt:358
 msgid "label_theme_enabled"
 msgstr ""
 
@@ -10114,7 +10824,7 @@ msgid "linkintegrity_item_not_accessible"
 msgstr "Tämä kohde ei ole saatavilla."
 
 #. Default: "Link integrity information updated for ${count} items in ${time} seconds."
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/update.py:48
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/update.py:45
 #, fuzzy
 msgid "linkintegrity_update_info"
 msgstr "Linkin eheystiedot on päivitetty  ${count} kohteelle."
@@ -10380,7 +11090,7 @@ msgstr "Säilytä nykyinen kuva"
 msgid "openid_intro"
 msgstr "Jos sinulla ei ole OpenID-tunnusta, voit hankkia itsellesi sellaisen täältä: ${openid_myopenid}."
 
-#: plone.app.registry/plone/app/registry/browser/records.pt:60
+#: plone.app.registry/plone/app/registry/browser/records.pt:59
 msgid "or"
 msgstr ""
 
@@ -10416,6 +11126,10 @@ msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/configure.zcml:32
 msgid "plone.app.iterate: Test fixture"
+msgstr ""
+
+#: plone.protect/plone/protect/configure.zcml:31
+msgid "plone.protect configuration"
 msgstr ""
 
 #. Default: "Static Portlet"
@@ -10509,7 +11223,7 @@ msgstr "peru tarkistus"
 msgid "return_to_view"
 msgstr "Palaa"
 
-#: CMFPlone/interfaces/controlpanel.py:1141
+#: CMFPlone/interfaces/controlpanel.py:1152
 msgid "robots.txt"
 msgstr ""
 
@@ -10524,7 +11238,7 @@ msgid "rules_file_path"
 msgstr ""
 
 #. Default: "Select Prefix"
-#: plone.app.registry/plone/app/registry/browser/records.pt:63
+#: plone.app.registry/plone/app/registry/browser/records.pt:62
 msgid "select_prefix"
 msgstr ""
 
@@ -10664,7 +11378,7 @@ msgid "test wc workflow"
 msgstr ""
 
 #. Default: "migrate your comments"
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:64
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:62
 msgid "text_comments_migration_link"
 msgstr ""
 
@@ -10680,13 +11394,13 @@ msgid "text_contributors"
 msgstr "Sisällön luomisessa avustaneet: ${name}"
 
 #. Default: "by ${creator}, last updated: ${date}"
-#: CMFPlone/skins/plone_templates/recently_modified.pt:63
-#: CMFPlone/skins/plone_templates/recently_published.pt:59
+#: CMFPlone/skins/plone_templates/recently_modified.pt:62
+#: CMFPlone/skins/plone_templates/recently_published.pt:62
 msgid "text_creator_date"
 msgstr "tehnyt ${creator}, viimeksi päivitetty: ${date}"
 
 #. Default: "You have configured a custom workflow for the 'Discussion Item' content type. You can enable/disable the comment moderation in this control panel only if you use one of the default 'Discussion Item' workflows. Go to the ${label_discussion_control_panel_link} to choose a workflow for the 'Discussion Item' type."
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:44
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:42
 msgid "text_custom_comment_workflow"
 msgstr ""
 
@@ -10696,7 +11410,7 @@ msgid "text_default_site_title"
 msgstr "Sivusto"
 
 #. Default: "Types control panel"
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:45
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:43
 msgid "text_discussion_type_control_panel_link"
 msgstr ""
 
@@ -10723,13 +11437,13 @@ msgstr "Tämän sivuston sähköpostitoiminto ei ole käytössä, joten yhteyden
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
 #: CMFPlone/controlpanel/browser/overview.pt:52
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:24
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:22
 msgid "text_no_mailhost_configured"
 msgstr "Sivuston sähköpostitoiminnon lähetystietoja (postipalvelin, sivuston lähettäjäosoite) ei ole määritelty. Useat toiminnot, kuten yhteystietolomakkeet, sähköpostimuistutukset ja salasanan vaihtamiset, eivät toimi. Siirry ${label_mail_control_panel_link} hallintasivulle muokataksesi sähköpostiasetuksia."
 
 #. Default: "Mail control panel"
 #: CMFPlone/controlpanel/browser/overview.pt:53
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:25
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:23
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "postiasetukset"
 
@@ -10739,12 +11453,12 @@ msgid "text_no_member_email"
 msgstr ""
 
 #. Default: "No items have been published."
-#: CMFPlone/skins/plone_templates/recently_published.pt:84
+#: CMFPlone/skins/plone_templates/recently_published.pt:87
 msgid "text_no_new_items"
 msgstr "Uutta sisältöä ei ole julkaistu."
 
 #. Default: "No items have been modified."
-#: CMFPlone/skins/plone_templates/recently_modified.pt:82
+#: CMFPlone/skins/plone_templates/recently_modified.pt:81
 msgid "text_no_new_modified_items"
 msgstr "Ei uusia muutoksia."
 
@@ -10813,7 +11527,7 @@ msgid "text_searchitem_location"
 msgstr ""
 
 #. Default: "You have comments that have not been migrated to the new commenting system that has been introduced in Plone 4.1. Please ${label_comments_migration_link} to fix this."
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:63
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:61
 msgid "text_unmigrated_comments"
 msgstr ""
 
@@ -10833,32 +11547,32 @@ msgid "text_zope_server_uptime"
 msgstr "Zope-palvelin on ollut päällä: ${time}"
 
 #. Default: "Create copy of ${theme_name}"
-#: plone/app/theming/browser/controlpanel.pt:186
+#: plone/app/theming/browser/controlpanel.pt:183
 msgid "theming_controlpanel_copy_theme"
 msgstr ""
 
 #. Default: "Are you sure you want to delete ${theme_name}"
-#: plone/app/theming/browser/controlpanel.pt:286
+#: plone/app/theming/browser/controlpanel.pt:283
 msgid "theming_controlpanel_delete_confirm"
 msgstr ""
 
 #. Default: "This operation cannot be undone. Note that filesystem themes cannot be deleted from within Plone."
-#: plone/app/theming/browser/controlpanel.pt:291
+#: plone/app/theming/browser/controlpanel.pt:288
 msgid "theming_controlpanel_delete_confirm_description"
 msgstr ""
 
 #. Default: "New theme"
-#: plone/app/theming/browser/controlpanel.pt:614
+#: plone/app/theming/browser/controlpanel.pt:611
 msgid "theming_controlpanel_new_theme"
 msgstr ""
 
 #. Default: "Please enter the details of your new theme"
-#: plone/app/theming/browser/controlpanel.pt:189
+#: plone/app/theming/browser/controlpanel.pt:186
 msgid "theming_controlpanel_new_theme_description"
 msgstr ""
 
 #. Default: "Upload theme"
-#: plone/app/theming/browser/controlpanel.pt:693
+#: plone/app/theming/browser/controlpanel.pt:690
 msgid "theming_controlpanel_upload"
 msgstr ""
 
@@ -11187,8 +11901,12 @@ msgid "title_wcag"
 msgstr ""
 
 #. Default: "Click to view a live preview. Forms will be disabled in the preview."
-#: plone/app/theming/browser/controlpanel.pt:142
+#: plone/app/theming/browser/controlpanel.pt:139
 msgid "tooltip_theme_preview"
+msgstr ""
+
+#: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:64
+msgid "types.xml in archive is invalid."
 msgstr ""
 
 #. Default: "Globally addable"
@@ -11350,4 +12068,3 @@ msgstr ""
 #: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:5
 msgid "you_are_here"
 msgstr "Sijainti:"
-

@@ -1,8 +1,31 @@
 Changelog
 =========
 
-5.0.6 (unreleased)
+5.0.8 (unreleased)
 ------------------
+
+- Updated pt-BR translations.
+  [idgserpro]
+
+5.0.7 (2015-12-04)
+------------------
+
+- Add 129 messages from plone.app.dexterity and plone.schemaeditor
+  with existing translations from those packages.
+  [vincentfretin]
+
+- Add 3 new messages from plone.protect
+  [vincentfretin]
+
+- Add messages from plone.cachepurging and plone.directives.form packages.
+  [vincentfretin]
+
+
+5.0.6 (2015-11-28)
+------------------
+
+- Update Slovenian translations for Plone 5
+  [matjazjeran, jcerjak]
 
 - Remove linguaplone translations.
   [vincentfretin]
@@ -42,6 +65,9 @@ Changelog
 
 - Danish translation complete for the first time since 2012. :-)
   [tmog]
+
+- Updated German translations
+  [tobiasherp]
 
 5.0.5 (2015-09-28)
 ------------------
