@@ -4,6 +4,11 @@ Changelog
 5.0.8 (unreleased)
 ------------------
 
+- Add 7 messages from plone.app.discussion and plone.app.contentmenu.
+
+- Updated pt_BR translations.
+  [claytonc]
+
 - Updated pt-BR translations.
   [idgserpro]
 
