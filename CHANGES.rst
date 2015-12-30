@@ -4,6 +4,9 @@ Changelog
 5.0.8 (unreleased)
 ------------------
 
+- Fix typo: shoudl -> should
+  [ale-rt]
+
 - Add 7 messages from plone.app.discussion and plone.app.contentmenu.
 
 - Updated pt_BR translations.
