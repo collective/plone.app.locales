@@ -15,6 +15,9 @@ Changelog
 - Updated pt-BR translations.
   [idgserpro]
 
+- Update Traditional Chinese translations.
+  [l34marr]
+
 5.0.7 (2015-12-04)
 ------------------
 
