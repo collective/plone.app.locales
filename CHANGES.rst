@@ -4,6 +4,9 @@ Changelog
 5.0.8 (unreleased)
 ------------------
 
+- Fix typo: Fenter -> Fenster
+  [agitator]
+
 - Fix typo: shoudl -> should
   [ale-rt]
 
