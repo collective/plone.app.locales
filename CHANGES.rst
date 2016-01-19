@@ -4,6 +4,9 @@ Changelog
 5.0.8 (unreleased)
 ------------------
 
+- Updated da_DK translations.
+  [tmog]
+
 - Fix typo: Fenter -> Fenster
   [agitator]
 
