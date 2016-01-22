@@ -3,6 +3,8 @@ Changelog
 
 5.0.8 (unreleased)
 ------------------
+- Updated RU translations.
+  [serge73]
 
 - Updated da_DK translations.
   [tmog]
