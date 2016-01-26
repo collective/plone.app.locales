@@ -74,11 +74,15 @@ msgstr "${sentances}. ${sentance}"
 msgid "${text_logged_out_link} and click 'Cancel' when prompted with an authentication prompt."
 msgstr "${text_logged_out_link} et cliquez sur 'Annuler' dans la fenêtre d'authentification."
 
-#: plone.app.content/plone/app/content/browser/actions.py:255
+#: plone.app.content/plone/app/content/browser/contents/copy.py:41
+msgid "${title} cannot be copied."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/actions.py:259
 msgid "${title} copied."
 msgstr "${title} a été copié."
 
-#: plone.app.content/plone/app/content/browser/actions.py:230
+#: plone.app.content/plone/app/content/browser/actions.py:234
 msgid "${title} cut."
 msgstr "${title} a été coupé."
 
@@ -86,7 +90,15 @@ msgstr "${title} a été coupé."
 msgid "${title} has been deleted."
 msgstr "${title} a été supprimé."
 
-#: plone.app.content/plone/app/content/browser/actions.py:218
+#: plone.app.content/plone/app/content/browser/contents/cut.py:45
+msgid "${title} is being edited and can not be cut."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/contents/cut.py:41
+msgid "${title} is being edited and cannot be cut."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/actions.py:222
 msgid "${title} is locked and cannot be cut."
 msgstr "${title} est verrouillé et ne peut être coupé."
 
@@ -94,11 +106,11 @@ msgstr "${title} est verrouillé et ne peut être coupé."
 msgid "${title} is locked and cannot be deleted."
 msgstr "${title} est verrouillé et ne peut être supprimé."
 
-#: plone.app.content/plone/app/content/browser/actions.py:251
+#: plone.app.content/plone/app/content/browser/actions.py:255
 msgid "${title} is not copyable."
 msgstr "${title} ne peut être copié."
 
-#: plone.app.content/plone/app/content/browser/actions.py:225
+#: plone.app.content/plone/app/content/browser/actions.py:229
 msgid "${title} is not moveable."
 msgstr "${title} ne peut être déplacé."
 
@@ -494,7 +506,7 @@ msgstr "Configuration des modules"
 msgid "Add-ons"
 msgstr "Modules"
 
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:38
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:36
 msgid "Adds Dexterity-based Folder and Document types for testing."
 msgstr ""
 
@@ -909,7 +921,7 @@ msgstr "Fichiers CSS/LESS"
 msgid "Caching proxies"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:62
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:69
 msgid "Can not rearrange folder"
 msgstr "Impossible de réordonner le dossier"
 
@@ -1054,7 +1066,7 @@ msgstr "Portlet classique"
 msgid "Clear Cache"
 msgstr "Vider le cache"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:53
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:60
 msgid "Client/server ordering mismatch"
 msgstr "L'ordre entre le client et le serveur n'est pas le même."
 
@@ -1102,10 +1114,6 @@ msgstr ""
 msgid "Comment about the last transition"
 msgstr "Commentaires à propos de la dernière transition"
 
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:11
-msgid "Comment added"
-msgstr ""
-
 #: plone.app.discussion/plone/app/discussion/browser/moderation.py:182
 msgid "Comment approved."
 msgstr "Commentaire approuvé."
@@ -1129,18 +1137,6 @@ msgstr "Commentaire supprimé."
 #: plone.app.discussion/plone/app/discussion/contentrules.py:50
 msgid "Comment id"
 msgstr "Id du commentaire"
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:17
-msgid "Comment removed"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:23
-msgid "Comment reply added"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:29
-msgid "Comment reply removed"
-msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:62
 msgid "Comment text"
@@ -1227,7 +1223,7 @@ msgstr "Configurer la règle"
 msgid "Configure, enable, disable, debug and build Plone JavaScript/LESS/CSS resources. Plone utilizes RequireJS and LESS CSS to build its resources. Re-building a Plone bundle TTW requires a modern web browser."
 msgstr "Configure, active, désactive, débogue ou construit les ressources JavaScript/LESS/CSS de Plone. Plone utilise RequireJS et LESS CSS pour construire ses ressources. La reconstruction des paquets Plone ‘TTW’ nécessite un navigateur récent."
 
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:29
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:27
 msgid "Configures various components needed for full Dexterity support."
 msgstr "Configure les composants requis pour le support complet de Dexterity."
 
@@ -1338,12 +1334,12 @@ msgstr "Conversation"
 
 #. Default: "Copy"
 #: CMFPlone/profiles/default/actions.xml
-#: plone.app.content/plone/app/content/browser/contents/copy.py:26
+#: plone.app.content/plone/app/content/browser/contents/copy.py:23
 #: plone/app/theming/browser/controlpanel.pt:177
 msgid "Copy"
 msgstr "Copier"
 
-#: plone.app.content/plone/app/content/browser/actions.py:276
+#: plone.app.content/plone/app/content/browser/actions.py:280
 msgid "Copy or cut one or more items to paste."
 msgstr "Copier ou couper un ou plusieurs éléments."
 
@@ -1392,7 +1388,7 @@ msgstr "Création d'un site Plone"
 msgid "Create a new Plone site"
 msgstr "Créer un nouveau site Plone"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:167
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:153
 msgid "Created on"
 msgstr "Créé le"
 
@@ -1460,7 +1456,7 @@ msgstr "Panneau de configuration pour la migration des types spécifiques"
 
 #. Default: "Cut"
 #: CMFPlone/profiles/default/actions.xml
-#: plone.app.content/plone/app/content/browser/contents/cut.py:27
+#: plone.app.content/plone/app/content/browser/contents/cut.py:23
 msgid "Cut"
 msgstr "Couper"
 
@@ -1669,7 +1665,7 @@ msgid "Develop JavaScript"
 msgstr "Développement JavaScript"
 
 #: plone.app.dexterity/plone/app/dexterity/browser/types.py:238
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:29
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:27
 #: plone.app.dexterity/plone/app/dexterity/profiles/default/actions.xml
 msgid "Dexterity Content Types"
 msgstr "Types de contenu Dexterity"
@@ -1704,7 +1700,6 @@ msgid "Discussion Item"
 msgstr "Commentaire"
 
 #. Default: "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
 #: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Les commentaires sont des types de contenu servant à discuter sur d'autres types de contenu. Notez qu'ils ne s'ajoutent pas par l'interface classique d'ajout des éléments."
@@ -2086,7 +2081,7 @@ msgstr "Est égal à"
 msgid "Error"
 msgstr "Erreur"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:23
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:30
 msgid "Error moving item"
 msgstr "Erreur lors du déplacement d'un élément"
 
@@ -2169,7 +2164,7 @@ msgstr "Exclure des destinataires l'utilisateur qui a fait l'action"
 msgid "Exclude the Current Context"
 msgstr "Exclure l'élément courrant"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:172
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:158
 msgid "Excluded from navigation"
 msgstr "Exclu de la navigation"
 
@@ -2177,6 +2172,7 @@ msgstr "Exclu de la navigation"
 msgid "Execute transition ${transition}"
 msgstr "Exécuter la transition ${transition}"
 
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:152
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Expiration date"
 msgstr "Date d'expiration"
@@ -2258,11 +2254,11 @@ msgstr "Identifiant de l'application Facebook"
 msgid "Facebook username"
 msgstr "Nom d’utilisateur Facebook"
 
-#: plone.app.content/plone/app/content/browser/contents/copy.py:35
+#: plone.app.content/plone/app/content/browser/contents/copy.py:32
 msgid "Failed to copy items"
 msgstr "Echec lors de la copies des éléments"
 
-#: plone.app.content/plone/app/content/browser/contents/cut.py:36
+#: plone.app.content/plone/app/content/browser/contents/cut.py:32
 msgid "Failed to cut items"
 msgstr "Echec lors du couper-coller des éléments"
 
@@ -2389,7 +2385,7 @@ msgid "Find the collection which provides the items to list"
 msgstr "Chercher la collection qui fournit les éléments à énumérer ; un élément de son titre par exemple."
 
 #. Default: "Folder"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:171
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:157
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Folder.xml
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Folder.xml
 msgid "Folder"
@@ -2581,7 +2577,7 @@ msgstr "Heure"
 msgid "How many items to list."
 msgstr "Combien d'éléments à afficher"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:164
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:149
 msgid "ID"
 msgstr "ID"
 
@@ -2589,7 +2585,7 @@ msgstr "ID"
 msgid "Icon visibility"
 msgstr "Visibilité des icônes"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:180
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:202
 #: plone.stringinterp/plone/stringinterp/adapters.py:567
 msgid "Id"
 msgstr "Id"
@@ -2851,7 +2847,7 @@ msgstr "Activé ?"
 msgid "Item state changed."
 msgstr "L'état de l'élément a changé."
 
-#: plone.app.content/plone/app/content/browser/actions.py:304
+#: plone.app.content/plone/app/content/browser/actions.py:308
 msgid "Item(s) pasted."
 msgstr "Le (ou les) élément(s) a (ont) été collé(s)."
 
@@ -2910,7 +2906,7 @@ msgstr "Langue par défaut du site"
 msgid "Larger than"
 msgstr "Plus grand que"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:174
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:160
 msgid "Last comment date"
 msgstr "Date dernier commentaire"
 
@@ -2918,7 +2914,7 @@ msgstr "Date dernier commentaire"
 msgid "Last compiled date"
 msgstr "Date de dernière compilation"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:165
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:150
 msgid "Last modified"
 msgstr "Dernièrement modifié"
 
@@ -3604,7 +3600,7 @@ msgstr ""
 msgid "No workflow"
 msgstr "Pas de processus documentaire"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:83
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:90
 msgid "Not explicit orderable"
 msgstr "Pas d'ordre explicite"
 
@@ -3657,7 +3653,7 @@ msgstr "Classeur ODS"
 msgid "ODT document"
 msgstr "Document ODT"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:173
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:159
 msgid "Object Size"
 msgstr "Taille"
 
@@ -3975,18 +3971,6 @@ msgstr "Configuration générale"
 msgid "Plone Discussions"
 msgstr ""
 
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Footerportlets"
-msgstr ""
-
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Leftcolumn"
-msgstr ""
-
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Rightcolumn"
-msgstr ""
-
 #. Default: "Plone Site"
 #: CMFPlone/profiles.zcml:12
 msgid "Plone Site"
@@ -4155,7 +4139,7 @@ msgstr "Brouillon public"
 msgid "Public draft"
 msgstr "Brouillon public"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:166
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:151
 msgid "Publication date"
 msgstr "Date de publication"
 
@@ -4354,7 +4338,7 @@ msgstr "Renommer"
 msgid "Rename items"
 msgstr "Renommer les éléments"
 
-#: plone.app.content/plone/app/content/browser/actions.py:173
+#: plone.app.content/plone/app/content/browser/actions.py:177
 msgid "Renamed '${oldid}' to '${newid}'."
 msgstr "Renommé '${oldid}' en '${newid}'."
 
@@ -4438,7 +4422,7 @@ msgstr "Titre de l'état documentaire"
 msgid "Review list"
 msgstr "Liste de modération"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:168
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:154
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Review state"
 msgstr "État"
@@ -5053,11 +5037,11 @@ msgstr "Succès"
 msgid "Success! Check your mailbox for the test message."
 msgstr "Succès ! Vérifiez la présence du message de test dans votre boite de courriel."
 
-#: plone.app.content/plone/app/content/browser/contents/copy.py:34
+#: plone.app.content/plone/app/content/browser/contents/copy.py:31
 msgid "Successfully copied items"
 msgstr "Éléments copiés avec succès"
 
-#: plone.app.content/plone/app/content/browser/contents/cut.py:35
+#: plone.app.content/plone/app/content/browser/contents/cut.py:31
 msgid "Successfully cut items"
 msgstr "Éléments coupés avec succès"
 
@@ -5070,7 +5054,7 @@ msgstr "Éléments supprimés avec succès"
 msgid "Successfully modified items"
 msgstr "Éléments modifiés avec succès"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:22
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:29
 msgid "Successfully moved item"
 msgstr "Élément déplacé avec succès"
 
@@ -5078,7 +5062,7 @@ msgstr "Élément déplacé avec succès"
 msgid "Successfully pasted items"
 msgstr "Éléments collés avec succès"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:61
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:68
 msgid "Successfully rearranged folder"
 msgstr "Réarrangement du dossier réussi"
 
@@ -5142,7 +5126,7 @@ msgstr "Vue tabulaire"
 msgid "Tag"
 msgstr "Mot-clé"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:169
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:155
 #: plone.app.content/plone/app/content/browser/contents/tags.py:26
 msgid "Tags"
 msgstr "Mots-clés"
@@ -5317,7 +5301,7 @@ msgstr "Le nom de groupe que vous avez saisi n'est pas valide."
 msgid "The id of the site. This ends up as part of the URL.<br /> No special characters are allowed."
 msgstr "L'id du site. Cela finit en tant que partie de l'URL. <br /> Pas de caractères spéciaux autorisés."
 
-#: plone.app.content/plone/app/content/browser/actions.py:294
+#: plone.app.content/plone/app/content/browser/actions.py:298
 msgid "The item you are trying to paste could not be found. It may have been moved or deleted after you copied or cut it."
 msgstr "L'élément que vous essayez de coller est introuvable. Il a pu être déplacé ou supprimé après que vous l'avez copié ou coupé."
 
@@ -5578,7 +5562,7 @@ msgstr "Ce module a été mis à jour"
 msgid "This field is required, please provide some information."
 msgstr "Ce champ est obligatoire, veuillez le remplir."
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:32
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:39
 msgid "This folder does not support ordering"
 msgstr "Ce dossier ne permet pas le tri"
 
@@ -5719,7 +5703,7 @@ msgstr "Astuce : vous pouvez utiliser * pour autocompléter."
 
 #. Default: "Title"
 #: CMFPlone/interfaces/controlpanel.py:864
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:181
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:203
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:230
 msgid "Title"
 msgstr "Titre"
@@ -5757,7 +5741,7 @@ msgstr "Aujourd'hui"
 msgid "Top"
 msgstr "En haut"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:175
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:161
 msgid "Total comments"
 msgstr "Total commentaires"
 
@@ -5806,7 +5790,7 @@ msgstr "Événements déclencheurs"
 msgid "Twitter Username"
 msgstr "Nom d’utilisateur twitter"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:170
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:156
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Type"
 msgstr "Type"
@@ -6303,7 +6287,7 @@ msgstr "Vous n’êtes pas autorisé à supprimer \"${title}\"."
 msgid "You are not authorized to paste ${title} here."
 msgstr "Vous n'êtes pas autorisé à coller ${title} ici."
 
-#: plone.app.content/plone/app/content/browser/actions.py:286
+#: plone.app.content/plone/app/content/browser/actions.py:290
 msgid "You are not authorized to paste here."
 msgstr "Vous n'êtes pas autorisé à coller ici."
 
@@ -6517,13 +6501,13 @@ msgid "batch_last_item"
 msgstr "Dernier élément"
 
 #. Default: "Next ${number} items"
-#: plone.batching/plone/batching/batchnavigation.pt:28
+#: plone.batching/plone/batching/batchnavigation.pt:83
 #: plone.batching/plone/batching/batchnavigation_bootstrap.pt:67
 msgid "batch_next_x_items"
 msgstr "${number} éléments suivants"
 
 #. Default: "Previous ${number} items"
-#: plone.batching/plone/batching/batchnavigation.pt:16
+#: plone.batching/plone/batching/batchnavigation.pt:19
 #: plone.batching/plone/batching/batchnavigation_bootstrap.pt:30
 msgid "batch_previous_x_items"
 msgstr "${number} éléments précédents"
@@ -6558,7 +6542,7 @@ msgid "box_languages"
 msgstr "Langues"
 
 #. Default: "last modified"
-#: CMFPlone/browser/templates/search.pt:270
+#: CMFPlone/browser/templates/search.pt:272
 #: CMFPlone/skins/plone_content/folder_listing.pt:142
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:85
 msgid "box_last_modified"
@@ -6585,7 +6569,7 @@ msgid "box_news"
 msgstr "Actualités"
 
 #. Default: "published"
-#: CMFPlone/browser/templates/search.pt:260
+#: CMFPlone/browser/templates/search.pt:262
 #: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:34
 #: plone.app.layout/plone/app/layout/viewlets/history_view.pt:49
 msgid "box_published"
@@ -7486,7 +7470,7 @@ msgstr "La valeur de vocabulaire '${value1}' est en conflit avec '${value2}'"
 msgid "field_edit_error_values_and_name"
 msgstr "Vous ne pouvez pas indiquer un nom de vocabulaire ET des valeurs. Merci de vider l'un des deux champs."
 
-#: CMFPlone/browser/templates/search.pt:281
+#: CMFPlone/browser/templates/search.pt:283
 #: plone.app.querystring/plone/app/querystring/results.pt:71
 msgid "filed under:"
 msgstr "Mots-clés associés :"
@@ -8995,7 +8979,7 @@ msgid "label_boolean_field"
 msgstr "Oui/Non"
 
 #. Default: "by ${author}"
-#: CMFPlone/browser/templates/search.pt:246
+#: CMFPlone/browser/templates/search.pt:248
 #: CMFPlone/skins/plone_content/folder_listing.pt:129
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:74
 msgid "label_by_author"
@@ -9979,7 +9963,7 @@ msgid "label_next"
 msgstr "Suivant"
 
 #. Default: "Next: ${itemtitle}"
-#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:40
+#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:37
 msgid "label_next_item"
 msgstr "Suivant : ${itemtitle}"
 
@@ -11354,7 +11338,7 @@ msgstr "Liste les éléments écrits par un auteur, groupés par type de contenu
 #. Default: "Content listing"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:17
 #: plone.app.content/plone/app/content/browser/table.pt:29
-#: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:26
+#: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:27
 msgid "summary_content_listing"
 msgstr "Affichage du contenu"
 
@@ -11557,7 +11541,7 @@ msgid "text_search"
 msgstr "Chercher par"
 
 #. Default: "Located in"
-#: CMFPlone/browser/templates/search.pt:299
+#: CMFPlone/browser/templates/search.pt:301
 msgid "text_searchitem_location"
 msgstr "Rattaché à"
 
@@ -11855,7 +11839,7 @@ msgid "title_portlet_blocked"
 msgstr "Bloqué"
 
 #. Default: "Go to previous item"
-#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:18
+#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:20
 msgid "title_previous_item"
 msgstr "Aller à l'élément précédent"
 

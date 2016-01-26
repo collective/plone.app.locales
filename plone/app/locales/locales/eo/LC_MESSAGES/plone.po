@@ -65,11 +65,15 @@ msgstr ""
 msgid "${text_logged_out_link} and click 'Cancel' when prompted with an authentication prompt."
 msgstr "${text_logged_out_link} kaj klaku al \"Nuligi\" kiam vi vidas la salutfenestron."
 
-#: plone.app.content/plone/app/content/browser/actions.py:255
+#: plone.app.content/plone/app/content/browser/contents/copy.py:41
+msgid "${title} cannot be copied."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/actions.py:259
 msgid "${title} copied."
 msgstr "${title} kopiita"
 
-#: plone.app.content/plone/app/content/browser/actions.py:230
+#: plone.app.content/plone/app/content/browser/actions.py:234
 msgid "${title} cut."
 msgstr "${title} eltondita"
 
@@ -77,7 +81,15 @@ msgstr "${title} eltondita"
 msgid "${title} has been deleted."
 msgstr "${title} forigita."
 
-#: plone.app.content/plone/app/content/browser/actions.py:218
+#: plone.app.content/plone/app/content/browser/contents/cut.py:45
+msgid "${title} is being edited and can not be cut."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/contents/cut.py:41
+msgid "${title} is being edited and cannot be cut."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/actions.py:222
 msgid "${title} is locked and cannot be cut."
 msgstr "${title} estas blokita kaj ne estas eltondebla."
 
@@ -85,11 +97,11 @@ msgstr "${title} estas blokita kaj ne estas eltondebla."
 msgid "${title} is locked and cannot be deleted."
 msgstr "${title} estas blokita kaj ne forĵetebla."
 
-#: plone.app.content/plone/app/content/browser/actions.py:251
+#: plone.app.content/plone/app/content/browser/actions.py:255
 msgid "${title} is not copyable."
 msgstr "${title} ne kopiebla."
 
-#: plone.app.content/plone/app/content/browser/actions.py:225
+#: plone.app.content/plone/app/content/browser/actions.py:229
 msgid "${title} is not moveable."
 msgstr "${title} ne movebla."
 
@@ -485,7 +497,7 @@ msgstr "Agordejo por aldonaj produktoj"
 msgid "Add-ons"
 msgstr "Aldonaĵoj"
 
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:38
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:36
 msgid "Adds Dexterity-based Folder and Document types for testing."
 msgstr ""
 
@@ -900,7 +912,7 @@ msgstr ""
 msgid "Caching proxies"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:62
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:69
 msgid "Can not rearrange folder"
 msgstr ""
 
@@ -1045,7 +1057,7 @@ msgstr "Klasika portleto"
 msgid "Clear Cache"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:53
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:60
 msgid "Client/server ordering mismatch"
 msgstr ""
 
@@ -1093,10 +1105,6 @@ msgstr ""
 msgid "Comment about the last transition"
 msgstr "Komento pri la lasta transiro"
 
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:11
-msgid "Comment added"
-msgstr ""
-
 #: plone.app.discussion/plone/app/discussion/browser/moderation.py:182
 msgid "Comment approved."
 msgstr ""
@@ -1119,18 +1127,6 @@ msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:50
 msgid "Comment id"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:17
-msgid "Comment removed"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:23
-msgid "Comment reply added"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:29
-msgid "Comment reply removed"
 msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:62
@@ -1218,7 +1214,7 @@ msgstr "Agordi regulon"
 msgid "Configure, enable, disable, debug and build Plone JavaScript/LESS/CSS resources. Plone utilizes RequireJS and LESS CSS to build its resources. Re-building a Plone bundle TTW requires a modern web browser."
 msgstr ""
 
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:29
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:27
 msgid "Configures various components needed for full Dexterity support."
 msgstr ""
 
@@ -1329,12 +1325,12 @@ msgstr ""
 
 #. Default: "Copy"
 #: CMFPlone/profiles/default/actions.xml
-#: plone.app.content/plone/app/content/browser/contents/copy.py:26
+#: plone.app.content/plone/app/content/browser/contents/copy.py:23
 #: plone/app/theming/browser/controlpanel.pt:177
 msgid "Copy"
 msgstr "Kopii"
 
-#: plone.app.content/plone/app/content/browser/actions.py:276
+#: plone.app.content/plone/app/content/browser/actions.py:280
 msgid "Copy or cut one or more items to paste."
 msgstr "Kopiu aŭ eltondu unu aŭ pliajn erojn por algluado."
 
@@ -1383,7 +1379,7 @@ msgstr "Kreado de Plone-retejo"
 msgid "Create a new Plone site"
 msgstr "Krei novan Plone-retejon"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:167
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:153
 msgid "Created on"
 msgstr ""
 
@@ -1451,7 +1447,7 @@ msgstr ""
 
 #. Default: "Cut"
 #: CMFPlone/profiles/default/actions.xml
-#: plone.app.content/plone/app/content/browser/contents/cut.py:27
+#: plone.app.content/plone/app/content/browser/contents/cut.py:23
 msgid "Cut"
 msgstr "Eltondi"
 
@@ -1660,7 +1656,7 @@ msgid "Develop JavaScript"
 msgstr ""
 
 #: plone.app.dexterity/plone/app/dexterity/browser/types.py:238
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:29
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:27
 #: plone.app.dexterity/plone/app/dexterity/profiles/default/actions.xml
 msgid "Dexterity Content Types"
 msgstr ""
@@ -1695,7 +1691,6 @@ msgid "Discussion Item"
 msgstr "Diskuta ero"
 
 #. Default: "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
 #: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Diskutaj eroj estas dokumentoj, kiuj respondas al alia enhavo. Ili *ne* devus esti aldoneblaj per la apriora 'folder_factories'-interfaco."
@@ -2077,7 +2072,7 @@ msgstr ""
 msgid "Error"
 msgstr "Eraro"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:23
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:30
 msgid "Error moving item"
 msgstr ""
 
@@ -2160,7 +2155,7 @@ msgstr ""
 msgid "Exclude the Current Context"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:172
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:158
 msgid "Excluded from navigation"
 msgstr ""
 
@@ -2168,6 +2163,7 @@ msgstr ""
 msgid "Execute transition ${transition}"
 msgstr "Faru transiron ${transition}"
 
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:152
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Expiration date"
 msgstr ""
@@ -2249,11 +2245,11 @@ msgstr ""
 msgid "Facebook username"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/copy.py:35
+#: plone.app.content/plone/app/content/browser/contents/copy.py:32
 msgid "Failed to copy items"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/cut.py:36
+#: plone.app.content/plone/app/content/browser/contents/cut.py:32
 msgid "Failed to cut items"
 msgstr ""
 
@@ -2380,7 +2376,7 @@ msgid "Find the collection which provides the items to list"
 msgstr "Trovi la kolektaĵon, kiu provizas la listigendajn erojn"
 
 #. Default: "Folder"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:171
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:157
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Folder.xml
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Folder.xml
 msgid "Folder"
@@ -2572,7 +2568,7 @@ msgstr ""
 msgid "How many items to list."
 msgstr "Kiom multaj eroj estu listigitaj."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:164
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:149
 msgid "ID"
 msgstr ""
 
@@ -2580,7 +2576,7 @@ msgstr ""
 msgid "Icon visibility"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:180
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:202
 #: plone.stringinterp/plone/stringinterp/adapters.py:567
 msgid "Id"
 msgstr "Identigilo"
@@ -2842,7 +2838,7 @@ msgstr ""
 msgid "Item state changed."
 msgstr "Stato de ero ŝanĝita."
 
-#: plone.app.content/plone/app/content/browser/actions.py:304
+#: plone.app.content/plone/app/content/browser/actions.py:308
 msgid "Item(s) pasted."
 msgstr "Ero(j) enmetita(j)"
 
@@ -2901,7 +2897,7 @@ msgstr "Lingve neŭtrala (reteja aprioraĵo)"
 msgid "Larger than"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:174
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:160
 msgid "Last comment date"
 msgstr ""
 
@@ -2909,7 +2905,7 @@ msgstr ""
 msgid "Last compiled date"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:165
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:150
 msgid "Last modified"
 msgstr ""
 
@@ -3595,7 +3591,7 @@ msgstr ""
 msgid "No workflow"
 msgstr "Nenia laborfluo"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:83
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:90
 msgid "Not explicit orderable"
 msgstr ""
 
@@ -3648,7 +3644,7 @@ msgstr ""
 msgid "ODT document"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:173
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:159
 msgid "Object Size"
 msgstr ""
 
@@ -3966,18 +3962,6 @@ msgstr "Agordo de Plone"
 msgid "Plone Discussions"
 msgstr ""
 
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Footerportlets"
-msgstr ""
-
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Leftcolumn"
-msgstr ""
-
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Rightcolumn"
-msgstr ""
-
 #. Default: "Plone Site"
 #: CMFPlone/profiles.zcml:12
 msgid "Plone Site"
@@ -4146,7 +4130,7 @@ msgstr "Publika malneto"
 msgid "Public draft"
 msgstr "Publika malneto"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:166
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:151
 msgid "Publication date"
 msgstr ""
 
@@ -4345,7 +4329,7 @@ msgstr "Renomi"
 msgid "Rename items"
 msgstr "Renomi eron"
 
-#: plone.app.content/plone/app/content/browser/actions.py:173
+#: plone.app.content/plone/app/content/browser/actions.py:177
 msgid "Renamed '${oldid}' to '${newid}'."
 msgstr "Renomis '${oldid}' al '${newid}'."
 
@@ -4429,7 +4413,7 @@ msgstr ""
 msgid "Review list"
 msgstr "Revizia listo"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:168
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:154
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Review state"
 msgstr ""
@@ -5044,11 +5028,11 @@ msgstr ""
 msgid "Success! Check your mailbox for the test message."
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/copy.py:34
+#: plone.app.content/plone/app/content/browser/contents/copy.py:31
 msgid "Successfully copied items"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/cut.py:35
+#: plone.app.content/plone/app/content/browser/contents/cut.py:31
 msgid "Successfully cut items"
 msgstr ""
 
@@ -5061,7 +5045,7 @@ msgstr ""
 msgid "Successfully modified items"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:22
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:29
 msgid "Successfully moved item"
 msgstr ""
 
@@ -5069,7 +5053,7 @@ msgstr ""
 msgid "Successfully pasted items"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:61
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:68
 msgid "Successfully rearranged folder"
 msgstr ""
 
@@ -5133,7 +5117,7 @@ msgstr "Tabela vido"
 msgid "Tag"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:169
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:155
 #: plone.app.content/plone/app/content/browser/contents/tags.py:26
 msgid "Tags"
 msgstr ""
@@ -5308,7 +5292,7 @@ msgstr "La grupnomo, kiun vi enskribis, ne estas valida."
 msgid "The id of the site. This ends up as part of the URL.<br /> No special characters are allowed."
 msgstr "La identigilo de la retejo. Tiu iĝos parto de la URL.<br /> Neniuj malordinaraj signoj estas permesitaj."
 
-#: plone.app.content/plone/app/content/browser/actions.py:294
+#: plone.app.content/plone/app/content/browser/actions.py:298
 msgid "The item you are trying to paste could not be found. It may have been moved or deleted after you copied or cut it."
 msgstr ""
 
@@ -5569,7 +5553,7 @@ msgstr ""
 msgid "This field is required, please provide some information."
 msgstr "Tiu kampo estas deviga, bonvolu doni iun informon."
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:32
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:39
 msgid "This folder does not support ordering"
 msgstr ""
 
@@ -5710,7 +5694,7 @@ msgstr ""
 
 #. Default: "Title"
 #: CMFPlone/interfaces/controlpanel.py:864
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:181
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:203
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:230
 msgid "Title"
 msgstr "Titolo"
@@ -5748,7 +5732,7 @@ msgstr ""
 msgid "Top"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:175
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:161
 msgid "Total comments"
 msgstr ""
 
@@ -5797,7 +5781,7 @@ msgstr "Ekiga evento"
 msgid "Twitter Username"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:170
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:156
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Type"
 msgstr ""
@@ -6294,7 +6278,7 @@ msgstr ""
 msgid "You are not authorized to paste ${title} here."
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/actions.py:286
+#: plone.app.content/plone/app/content/browser/actions.py:290
 msgid "You are not authorized to paste here."
 msgstr ""
 
@@ -6508,13 +6492,13 @@ msgid "batch_last_item"
 msgstr ""
 
 #. Default: "Next ${number} items"
-#: plone.batching/plone/batching/batchnavigation.pt:28
+#: plone.batching/plone/batching/batchnavigation.pt:83
 #: plone.batching/plone/batching/batchnavigation_bootstrap.pt:67
 msgid "batch_next_x_items"
 msgstr "${number} pliaj eroj"
 
 #. Default: "Previous ${number} items"
-#: plone.batching/plone/batching/batchnavigation.pt:16
+#: plone.batching/plone/batching/batchnavigation.pt:19
 #: plone.batching/plone/batching/batchnavigation_bootstrap.pt:30
 msgid "batch_previous_x_items"
 msgstr "${number} pli novaj eroj"
@@ -6549,7 +6533,7 @@ msgid "box_languages"
 msgstr "Lingvoj"
 
 #. Default: "last modified"
-#: CMFPlone/browser/templates/search.pt:270
+#: CMFPlone/browser/templates/search.pt:272
 #: CMFPlone/skins/plone_content/folder_listing.pt:142
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:85
 msgid "box_last_modified"
@@ -6576,7 +6560,7 @@ msgid "box_news"
 msgstr "Novaĵoj"
 
 #. Default: "published"
-#: CMFPlone/browser/templates/search.pt:260
+#: CMFPlone/browser/templates/search.pt:262
 #: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:34
 #: plone.app.layout/plone/app/layout/viewlets/history_view.pt:49
 msgid "box_published"
@@ -7478,7 +7462,7 @@ msgstr ""
 msgid "field_edit_error_values_and_name"
 msgstr ""
 
-#: CMFPlone/browser/templates/search.pt:281
+#: CMFPlone/browser/templates/search.pt:283
 #: plone.app.querystring/plone/app/querystring/results.pt:71
 msgid "filed under:"
 msgstr ""
@@ -8997,7 +8981,7 @@ msgid "label_boolean_field"
 msgstr ""
 
 #. Default: "by ${author}"
-#: CMFPlone/browser/templates/search.pt:246
+#: CMFPlone/browser/templates/search.pt:248
 #: CMFPlone/skins/plone_content/folder_listing.pt:129
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:74
 msgid "label_by_author"
@@ -9985,7 +9969,7 @@ msgid "label_next"
 msgstr "Sekva"
 
 #. Default: "Next: ${itemtitle}"
-#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:40
+#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:37
 msgid "label_next_item"
 msgstr "Plu: ${itemtitle}"
 
@@ -11349,7 +11333,7 @@ msgstr "Listigas enhavon skribitan de iu aŭtoro, grupigite laŭ enhavotipo"
 #. Default: "Content listing"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:17
 #: plone.app.content/plone/app/content/browser/table.pt:29
-#: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:26
+#: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:27
 msgid "summary_content_listing"
 msgstr "Listo de enhavo"
 
@@ -11553,7 +11537,7 @@ msgid "text_search"
 msgstr "Serĉi en retejo"
 
 #. Default: "Located in"
-#: CMFPlone/browser/templates/search.pt:299
+#: CMFPlone/browser/templates/search.pt:301
 msgid "text_searchitem_location"
 msgstr ""
 
@@ -11853,7 +11837,7 @@ msgid "title_portlet_blocked"
 msgstr "Blokita"
 
 #. Default: "Go to previous item"
-#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:18
+#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:20
 msgid "title_previous_item"
 msgstr "Al antaŭa ero"
 

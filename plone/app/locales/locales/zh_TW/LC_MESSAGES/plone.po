@@ -66,11 +66,15 @@ msgstr "${sentances}. ${sentance}"
 msgid "${text_logged_out_link} and click 'Cancel' when prompted with an authentication prompt."
 msgstr "${text_logged_out_link} 在出現認證畫面時，選擇「取消」。"
 
-#: plone.app.content/plone/app/content/browser/actions.py:255
+#: plone.app.content/plone/app/content/browser/contents/copy.py:41
+msgid "${title} cannot be copied."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/actions.py:259
 msgid "${title} copied."
 msgstr "${title} 已拷貝。"
 
-#: plone.app.content/plone/app/content/browser/actions.py:230
+#: plone.app.content/plone/app/content/browser/actions.py:234
 msgid "${title} cut."
 msgstr "剪下 ${title}。"
 
@@ -78,7 +82,15 @@ msgstr "剪下 ${title}。"
 msgid "${title} has been deleted."
 msgstr "${title} 已被刪除。"
 
-#: plone.app.content/plone/app/content/browser/actions.py:218
+#: plone.app.content/plone/app/content/browser/contents/cut.py:45
+msgid "${title} is being edited and can not be cut."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/contents/cut.py:41
+msgid "${title} is being edited and cannot be cut."
+msgstr ""
+
+#: plone.app.content/plone/app/content/browser/actions.py:222
 msgid "${title} is locked and cannot be cut."
 msgstr "${title} 被鎖定無法剪貼。"
 
@@ -86,11 +98,11 @@ msgstr "${title} 被鎖定無法剪貼。"
 msgid "${title} is locked and cannot be deleted."
 msgstr "${title} 被鎖定無法刪除。"
 
-#: plone.app.content/plone/app/content/browser/actions.py:251
+#: plone.app.content/plone/app/content/browser/actions.py:255
 msgid "${title} is not copyable."
 msgstr "${title} 無法拷貝。"
 
-#: plone.app.content/plone/app/content/browser/actions.py:225
+#: plone.app.content/plone/app/content/browser/actions.py:229
 msgid "${title} is not moveable."
 msgstr "${title} 無法搬移。"
 
@@ -486,7 +498,7 @@ msgstr "擴充模組配置"
 msgid "Add-ons"
 msgstr "擴充模組"
 
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:38
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:36
 msgid "Adds Dexterity-based Folder and Document types for testing."
 msgstr "新增測試用的 Folder 與 Document 型別。"
 
@@ -901,7 +913,7 @@ msgstr "CSS/LESS 檔案"
 msgid "Caching proxies"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:62
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:69
 msgid "Can not rearrange folder"
 msgstr "無法調整目錄"
 
@@ -1046,7 +1058,7 @@ msgstr "傳統式方框"
 msgid "Clear Cache"
 msgstr "清除快取"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:53
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:60
 msgid "Client/server ordering mismatch"
 msgstr "Client/Server 順序不一致"
 
@@ -1094,10 +1106,6 @@ msgstr "留言管理流程"
 msgid "Comment about the last transition"
 msgstr "為狀態轉換新增備註"
 
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:11
-msgid "Comment added"
-msgstr ""
-
 #: plone.app.discussion/plone/app/discussion/browser/moderation.py:182
 msgid "Comment approved."
 msgstr "留言已審核"
@@ -1121,18 +1129,6 @@ msgstr "留言已刪除"
 #: plone.app.discussion/plone/app/discussion/contentrules.py:50
 msgid "Comment id"
 msgstr "留言識別碼"
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:17
-msgid "Comment removed"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:23
-msgid "Comment reply added"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/contentrules.zcml:29
-msgid "Comment reply removed"
-msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:62
 msgid "Comment text"
@@ -1219,7 +1215,7 @@ msgstr "配置規則"
 msgid "Configure, enable, disable, debug and build Plone JavaScript/LESS/CSS resources. Plone utilizes RequireJS and LESS CSS to build its resources. Re-building a Plone bundle TTW requires a modern web browser."
 msgstr "Plone 應用 RequireJS 和 LESS CSS 來建立動態網頁特效，請不要使用舊版 IE 瀏覽器，它會造成網頁特效無法即時更新。"
 
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:29
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:27
 msgid "Configures various components needed for full Dexterity support."
 msgstr "設定 Dexterity 元件功能"
 
@@ -1330,12 +1326,12 @@ msgstr "留言功能"
 
 #. Default: "Copy"
 #: CMFPlone/profiles/default/actions.xml
-#: plone.app.content/plone/app/content/browser/contents/copy.py:26
+#: plone.app.content/plone/app/content/browser/contents/copy.py:23
 #: plone/app/theming/browser/controlpanel.pt:177
 msgid "Copy"
 msgstr "拷貝"
 
-#: plone.app.content/plone/app/content/browser/actions.py:276
+#: plone.app.content/plone/app/content/browser/actions.py:280
 msgid "Copy or cut one or more items to paste."
 msgstr "拷貝或剪下一或多個項目，然後貼到別處。"
 
@@ -1384,7 +1380,7 @@ msgstr "建立 Plone 網站"
 msgid "Create a new Plone site"
 msgstr "建立新的 Plone 網站"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:167
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:153
 msgid "Created on"
 msgstr "建立日期"
 
@@ -1452,7 +1448,7 @@ msgstr "自訂型別的昇級面板"
 
 #. Default: "Cut"
 #: CMFPlone/profiles/default/actions.xml
-#: plone.app.content/plone/app/content/browser/contents/cut.py:27
+#: plone.app.content/plone/app/content/browser/contents/cut.py:23
 msgid "Cut"
 msgstr "剪下"
 
@@ -1661,7 +1657,7 @@ msgid "Develop JavaScript"
 msgstr "建立 JavaScript"
 
 #: plone.app.dexterity/plone/app/dexterity/browser/types.py:238
-#: plone.app.dexterity/plone/app/dexterity/configure.zcml:29
+#: plone.app.dexterity/plone/app/dexterity/configure.zcml:27
 #: plone.app.dexterity/plone/app/dexterity/profiles/default/actions.xml
 msgid "Dexterity Content Types"
 msgstr "內容型別"
@@ -1696,7 +1692,6 @@ msgid "Discussion Item"
 msgstr "留言項目"
 
 #. Default: "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
 #: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "留言項目是回應其他內容的文件，*不*能透過 folder_factories 介面來新增。"
@@ -2078,7 +2073,7 @@ msgstr "等於"
 msgid "Error"
 msgstr "錯誤"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:23
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:30
 msgid "Error moving item"
 msgstr "移動項目發生錯誤"
 
@@ -2161,7 +2156,7 @@ msgstr "設定收信名單"
 msgid "Exclude the Current Context"
 msgstr "排除現行項目"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:172
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:158
 msgid "Excluded from navigation"
 msgstr "不在導覽樹顯示"
 
@@ -2169,6 +2164,7 @@ msgstr "不在導覽樹顯示"
 msgid "Execute transition ${transition}"
 msgstr "執行轉換 ${transition}"
 
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:152
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Expiration date"
 msgstr "失效日期"
@@ -2250,11 +2246,11 @@ msgstr "Facebook App ID"
 msgid "Facebook username"
 msgstr "Facebook Username"
 
-#: plone.app.content/plone/app/content/browser/contents/copy.py:35
+#: plone.app.content/plone/app/content/browser/contents/copy.py:32
 msgid "Failed to copy items"
 msgstr "複製項目發生錯誤"
 
-#: plone.app.content/plone/app/content/browser/contents/cut.py:36
+#: plone.app.content/plone/app/content/browser/contents/cut.py:32
 msgid "Failed to cut items"
 msgstr "剪下項目發生錯誤"
 
@@ -2381,7 +2377,7 @@ msgid "Find the collection which provides the items to list"
 msgstr "選擇提供項目列表的選集"
 
 #. Default: "Folder"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:171
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:157
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Folder.xml
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/uninstall/types/Folder.xml
 msgid "Folder"
@@ -2573,7 +2569,7 @@ msgstr "時"
 msgid "How many items to list."
 msgstr "多少列出的項目數量。"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:164
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:149
 msgid "ID"
 msgstr "識別碼"
 
@@ -2581,7 +2577,7 @@ msgstr "識別碼"
 msgid "Icon visibility"
 msgstr "顯示圖示"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:180
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:202
 #: plone.stringinterp/plone/stringinterp/adapters.py:567
 msgid "Id"
 msgstr "識別碼"
@@ -2843,7 +2839,7 @@ msgstr "啟用?"
 msgid "Item state changed."
 msgstr "項目狀態變更。"
 
-#: plone.app.content/plone/app/content/browser/actions.py:304
+#: plone.app.content/plone/app/content/browser/actions.py:308
 msgid "Item(s) pasted."
 msgstr "個項目被貼上。"
 
@@ -2902,7 +2898,7 @@ msgstr "語文中性 (預設值)"
 msgid "Larger than"
 msgstr "大於"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:174
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:160
 msgid "Last comment date"
 msgstr "留言時間"
 
@@ -2910,7 +2906,7 @@ msgstr "留言時間"
 msgid "Last compiled date"
 msgstr "最後編譯時間"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:165
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:150
 msgid "Last modified"
 msgstr "修改時間"
 
@@ -3596,7 +3592,7 @@ msgstr "無昇級步驟"
 msgid "No workflow"
 msgstr "無工作流程"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:83
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:90
 msgid "Not explicit orderable"
 msgstr "無法執行排序"
 
@@ -3649,7 +3645,7 @@ msgstr "ODS 檔案"
 msgid "ODT document"
 msgstr "ODT 檔案"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:173
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:159
 msgid "Object Size"
 msgstr "檔案大小"
 
@@ -3967,18 +3963,6 @@ msgstr "網站設定"
 msgid "Plone Discussions"
 msgstr "留言功能"
 
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Footerportlets"
-msgstr ""
-
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Leftcolumn"
-msgstr ""
-
-#: plone.app.contentmenu/plone/app/contentmenu/menu.py:889
-msgid "Plone Rightcolumn"
-msgstr ""
-
 #. Default: "Plone Site"
 #: CMFPlone/profiles.zcml:12
 msgid "Plone Site"
@@ -4147,7 +4131,7 @@ msgstr "公開草稿"
 msgid "Public draft"
 msgstr "公開草稿"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:166
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:151
 msgid "Publication date"
 msgstr "生效日期"
 
@@ -4346,7 +4330,7 @@ msgstr "改名"
 msgid "Rename items"
 msgstr "多筆改名"
 
-#: plone.app.content/plone/app/content/browser/actions.py:173
+#: plone.app.content/plone/app/content/browser/actions.py:177
 msgid "Renamed '${oldid}' to '${newid}'."
 msgstr "將 '${oldid}' 改名為 '${newid}'。"
 
@@ -4430,7 +4414,7 @@ msgstr "審核狀態標題"
 msgid "Review list"
 msgstr "審核列表"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:168
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:154
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Review state"
 msgstr "審核狀態"
@@ -5045,11 +5029,11 @@ msgstr "成功"
 msgid "Success! Check your mailbox for the test message."
 msgstr "成功! 請檢查信箱裡的測試說明。"
 
-#: plone.app.content/plone/app/content/browser/contents/copy.py:34
+#: plone.app.content/plone/app/content/browser/contents/copy.py:31
 msgid "Successfully copied items"
 msgstr "成功拷貝項目"
 
-#: plone.app.content/plone/app/content/browser/contents/cut.py:35
+#: plone.app.content/plone/app/content/browser/contents/cut.py:31
 msgid "Successfully cut items"
 msgstr "成功剪下項目"
 
@@ -5062,7 +5046,7 @@ msgstr "成功刪除項目"
 msgid "Successfully modified items"
 msgstr "成功修改項目"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:22
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:29
 msgid "Successfully moved item"
 msgstr "成功移除項目"
 
@@ -5070,7 +5054,7 @@ msgstr "成功移除項目"
 msgid "Successfully pasted items"
 msgstr "成功貼上項目"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:61
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:68
 msgid "Successfully rearranged folder"
 msgstr "成功重排項目"
 
@@ -5134,7 +5118,7 @@ msgstr "表格方式"
 msgid "Tag"
 msgstr "關鍵詞"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:169
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:155
 #: plone.app.content/plone/app/content/browser/contents/tags.py:26
 msgid "Tags"
 msgstr "關鍵詞"
@@ -5309,7 +5293,7 @@ msgstr "群組名稱不正確。"
 msgid "The id of the site. This ends up as part of the URL.<br /> No special characters are allowed."
 msgstr "網站的識別碼，它會成為網址的一部份。<br /> 識別碼裡不能包含空白鍵。"
 
-#: plone.app.content/plone/app/content/browser/actions.py:294
+#: plone.app.content/plone/app/content/browser/actions.py:298
 msgid "The item you are trying to paste could not be found. It may have been moved or deleted after you copied or cut it."
 msgstr "找不到想要複製的項目，它可能已被搬移或刪除。"
 
@@ -5570,7 +5554,7 @@ msgstr "擴充模組已經昇級。"
 msgid "This field is required, please provide some information."
 msgstr "這個欄位是必要的，請提供相關資訊。"
 
-#: plone.app.content/plone/app/content/browser/contents/rearrange.py:32
+#: plone.app.content/plone/app/content/browser/contents/rearrange.py:39
 msgid "This folder does not support ordering"
 msgstr "資料夾不支援重排"
 
@@ -5711,7 +5695,7 @@ msgstr "秘訣: 可以使用 * 來自動補齊。"
 
 #. Default: "Title"
 #: CMFPlone/interfaces/controlpanel.py:864
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:181
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:203
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:230
 msgid "Title"
 msgstr "標題"
@@ -5749,7 +5733,7 @@ msgstr "今天"
 msgid "Top"
 msgstr "上方"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:175
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:161
 msgid "Total comments"
 msgstr "留言數量"
 
@@ -5798,7 +5782,7 @@ msgstr "觸發條件"
 msgid "Twitter Username"
 msgstr "Twitter 帳號"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:170
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:156
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Type"
 msgstr "型別"
@@ -6295,7 +6279,7 @@ msgstr "沒有權限刪除 ${title}"
 msgid "You are not authorized to paste ${title} here."
 msgstr "沒有權限貼上 ${title}"
 
-#: plone.app.content/plone/app/content/browser/actions.py:286
+#: plone.app.content/plone/app/content/browser/actions.py:290
 msgid "You are not authorized to paste here."
 msgstr "沒有權限執行貼上動作。"
 
@@ -6509,13 +6493,13 @@ msgid "batch_last_item"
 msgstr "最末項"
 
 #. Default: "Next ${number} items"
-#: plone.batching/plone/batching/batchnavigation.pt:28
+#: plone.batching/plone/batching/batchnavigation.pt:83
 #: plone.batching/plone/batching/batchnavigation_bootstrap.pt:67
 msgid "batch_next_x_items"
 msgstr "後 ${number} 筆"
 
 #. Default: "Previous ${number} items"
-#: plone.batching/plone/batching/batchnavigation.pt:16
+#: plone.batching/plone/batching/batchnavigation.pt:19
 #: plone.batching/plone/batching/batchnavigation_bootstrap.pt:30
 msgid "batch_previous_x_items"
 msgstr "前 ${number} 筆"
@@ -6550,7 +6534,7 @@ msgid "box_languages"
 msgstr "語系"
 
 #. Default: "last modified"
-#: CMFPlone/browser/templates/search.pt:270
+#: CMFPlone/browser/templates/search.pt:272
 #: CMFPlone/skins/plone_content/folder_listing.pt:142
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:85
 msgid "box_last_modified"
@@ -6577,7 +6561,7 @@ msgid "box_news"
 msgstr "近期新聞"
 
 #. Default: "published"
-#: CMFPlone/browser/templates/search.pt:260
+#: CMFPlone/browser/templates/search.pt:262
 #: plone.app.layout/plone/app/layout/viewlets/document_byline.pt:34
 #: plone.app.layout/plone/app/layout/viewlets/history_view.pt:49
 msgid "box_published"
@@ -7476,7 +7460,7 @@ msgstr ""
 msgid "field_edit_error_values_and_name"
 msgstr ""
 
-#: CMFPlone/browser/templates/search.pt:281
+#: CMFPlone/browser/templates/search.pt:283
 #: plone.app.querystring/plone/app/querystring/results.pt:71
 msgid "filed under:"
 msgstr "分類:"
@@ -8986,7 +8970,7 @@ msgid "label_boolean_field"
 msgstr ""
 
 #. Default: "by ${author}"
-#: CMFPlone/browser/templates/search.pt:246
+#: CMFPlone/browser/templates/search.pt:248
 #: CMFPlone/skins/plone_content/folder_listing.pt:129
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:74
 msgid "label_by_author"
@@ -9968,7 +9952,7 @@ msgid "label_next"
 msgstr "下一個"
 
 #. Default: "Next: ${itemtitle}"
-#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:40
+#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:37
 msgid "label_next_item"
 msgstr "下一個: ${itemtitle}"
 
@@ -11350,7 +11334,7 @@ msgstr "依型別分類列出作者的內容"
 #. Default: "Content listing"
 #: CMFPlone/skins/plone_content/folder_tabular_view.pt:17
 #: plone.app.content/plone/app/content/browser/table.pt:29
-#: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:26
+#: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:27
 msgid "summary_content_listing"
 msgstr "內容列表清單"
 
@@ -11553,7 +11537,7 @@ msgid "text_search"
 msgstr "搜尋網站"
 
 #. Default: "Located in"
-#: CMFPlone/browser/templates/search.pt:299
+#: CMFPlone/browser/templates/search.pt:301
 msgid "text_searchitem_location"
 msgstr "目錄位置"
 
@@ -11851,7 +11835,7 @@ msgid "title_portlet_blocked"
 msgstr "不沿用"
 
 #. Default: "Go to previous item"
-#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:18
+#: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:20
 msgid "title_previous_item"
 msgstr "到前一個項目"
 
