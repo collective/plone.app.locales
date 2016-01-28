@@ -3,6 +3,9 @@ Changelog
 
 5.0.8 (unreleased)
 ------------------
+- Updated da_DK translation for registered notify welcome screen.
+  [tmog]
+
 - Updated RU translations.
   [serge73]
 
