@@ -7,6 +7,7 @@ Changelog
   [tmog]
 
 - Updated RU translations.
+  Сorrection of translation Tuesday Thursday June July
   [serge73]
 
 - Updated da_DK translations.
