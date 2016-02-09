@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '4.3.9.dev0'
+version = '4.3.9'
 
 setup(name='plone.app.locales',
       version=version,
