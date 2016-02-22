@@ -3,6 +3,10 @@ Changelog
 
 5.0.8 (unreleased)
 ------------------
+
+- Updated it translations
+  [ale-rt]
+
 - Updated es translation
   [jpgimenez]
 
