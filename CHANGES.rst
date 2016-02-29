@@ -4,6 +4,8 @@ Changelog
 5.0.8 (unreleased)
 ------------------
 
+- Fix vietnamese error in label_filed_under message.
+
 - Updated it translations
   [ale-rt]
 
