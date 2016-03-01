@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.0.8 (unreleased)
+5.0.8 (2016-03-01)
 ------------------
 
 - Fix vietnamese error in label_filed_under message.
