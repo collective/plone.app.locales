@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.0.9 (unreleased)
+5.0.9 (2016-03-02)
 ------------------
 
 - Update Japanese translations for widgets.po.
