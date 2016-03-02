@@ -4,7 +4,8 @@ Changelog
 5.0.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update Japanese translations for widgets.po.
+  [terapyon]
 
 
 5.0.8 (2016-03-01)
