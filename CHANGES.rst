@@ -4,7 +4,8 @@ Changelog
 5.0.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix typos in it translation
+  [ale-rt]
 
 
 5.0.9 (2016-03-02)
