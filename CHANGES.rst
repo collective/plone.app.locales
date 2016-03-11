@@ -1,8 +1,27 @@
 Changelog
 =========
 
-5.0.8 (unreleased)
+5.0.10 (unreleased)
+-------------------
+
+- Fix typos in it translation
+  [ale-rt]
+
+- Update Japanese translations for plone.po.
+  [terapyon]
+
+
+5.0.9 (2016-03-02)
 ------------------
+
+- Update Japanese translations for widgets.po.
+  [terapyon]
+
+
+5.0.8 (2016-03-01)
+------------------
+
+- Fix vietnamese error in label_filed_under message.
 
 - Updated it translations
   [ale-rt]
