@@ -7,6 +7,9 @@ Changelog
 - Fix typos in it translation
   [ale-rt]
 
+- Update Japanese translations for plone.po.
+  [terapyon]
+
 
 5.0.9 (2016-03-02)
 ------------------
