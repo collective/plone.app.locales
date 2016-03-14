@@ -10,7 +10,7 @@ Changelog
 - Update Japanese translations for plone.po.
   [terapyon]
 
-- Add Date and Time Settings russian translate [serge73]
+- Add Date and Time Settings, Language Settings control panel russian translate [serge73]
 
 
 5.0.9 (2016-03-02)
