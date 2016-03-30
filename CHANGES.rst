@@ -4,6 +4,9 @@ Changelog
 5.0.10 (unreleased)
 -------------------
 
+- Update Traditional Chinese translations.
+  [l34marr]
+
 - Fix typos in it translation
   [ale-rt]
 
