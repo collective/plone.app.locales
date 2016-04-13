@@ -16,6 +16,9 @@ Changelog
 - Add Date and Time Settings, Language Settings control panel russian translate. Full Russian translation frontpafe.po
   [serge73]
 
+- add label_schema_default and translate in Japanese
+  [terapyon]
+
 
 5.0.9 (2016-03-02)
 ------------------
