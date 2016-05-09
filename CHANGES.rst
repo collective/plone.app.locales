@@ -4,6 +4,13 @@ Changelog
 5.0.10 (unreleased)
 -------------------
 
+- Updated Language-Codes in po file headers.  These headers are not
+  used in Plone to determine the language: that is done by inspecting
+  the directory name.  But the i18ndude script uses the Language-Code
+  header when printing statistics.  Several were set to ``en`` or to
+  for example ``zh_CN`` (as the directory name should be) instead of
+  ``zh-cn`` (as the language code should be).  [maurits]
+
 - Update German translations.
   [chrimba]
 
@@ -18,7 +25,7 @@ Changelog
 
 - Add russian translate Date and Time Settings, Language Settings and much more in control panel.
   Full Russian translation frontpafe.po
-  Translation mocap and widgets 
+  Translation mocap and widgets
   [serge73]
 
 - add label_schema_default and translate in Japanese
