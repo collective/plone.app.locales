@@ -4,6 +4,9 @@ Changelog
 5.0.10 (unreleased)
 -------------------
 
+- Update German translations.
+  [staeff]
+
 - Fix typo in portuguese.
   https://github.com/collective/plone.app.locales/issues/112
   [staeff] 
