@@ -4,6 +4,8 @@ Changelog
 5.0.10 (unreleased)
 -------------------
 
+- Updated Dutch translations.  [maurits]
+
 - Updated Language-Codes in po file headers.  These headers are not
   used in Plone to determine the language: that is done by inspecting
   the directory name.  But the i18ndude script uses the Language-Code
@@ -16,7 +18,7 @@ Changelog
 
 - Fix typo in portuguese.
   https://github.com/collective/plone.app.locales/issues/112
-  [staeff] 
+  [staeff]
 
 - Update German translations.
   [chrimba]
