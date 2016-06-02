@@ -4,6 +4,8 @@ Changelog
 5.0.10 (unreleased)
 -------------------
 
+- Updated basque translations [erral]
+
 - Updated Dutch translations.  [maurits]
 
 - Updated Language-Codes in po file headers.  These headers are not
