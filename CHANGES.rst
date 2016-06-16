@@ -4,6 +4,9 @@ Changelog
 5.0.10 (unreleased)
 -------------------
 
+- Updated Traditional Chinese translations.
+  [l34marr]
+
 - Updated basque translations [erral]
 
 - Updated Dutch translations.  [maurits]
