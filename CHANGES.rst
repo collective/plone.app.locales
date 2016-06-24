@@ -9,7 +9,7 @@ Changelog
 
 - Updated basque translations [erral]
 
-- Updated Dutch translations.  [maurits]
+- Updated Dutch translations.  [maurits, fredvd]
 
 - Updated Language-Codes in po file headers.  These headers are not
   used in Plone to determine the language: that is done by inspecting
