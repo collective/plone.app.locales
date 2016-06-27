@@ -1,8 +1,10 @@
 Changelog
 =========
 
-5.0.10 (unreleased)
+5.0.10 (2016-06-27)
 -------------------
+
+- Updated French translation.
 
 - Updated Traditional Chinese translations.
   [l34marr]
