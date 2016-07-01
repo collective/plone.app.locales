@@ -7,6 +7,9 @@ Changelog
 - Updated Tranditional Chinese translations.
   [l34marr]
 
+- Updated italian translation.
+  [keul]
+
 
 5.0.10 (2016-06-27)
 -------------------
