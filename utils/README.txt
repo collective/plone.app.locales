@@ -11,6 +11,9 @@ Preparing Plone buildout
 Updating translations
 =====================
 
+You can find more info on the issue
+https://github.com/plone/Products.CMFPlone/issues/983
+
 plone
 -----
 ::
