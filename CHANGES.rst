@@ -4,6 +4,9 @@ Changelog
 5.0.11 (unreleased)
 -------------------
 
+- Minor German updates.
+  [thet]
+
 - Updated Tranditional Chinese translations.
   [l34marr]
 
