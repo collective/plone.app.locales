@@ -4,6 +4,10 @@ Changelog
 5.0.11 (unreleased)
 -------------------
 
+- German: Change "Ort" to "Path" for translations indicating the hierarchical location of some content.
+  Fixes: #117
+  [thet]
+
 - Minor German updates.
   [thet]
 
