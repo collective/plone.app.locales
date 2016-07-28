@@ -4,6 +4,15 @@ Changelog
 5.0.11 (unreleased)
 -------------------
 
+- German: Change the querystring criteria group from "Daten" to "Datum".
+  It's right, that "Daten" is the plural of "Datum".
+  But the naming is misleading and means the same like the english "data".
+  [thet]
+
+- German: Change "Ort" to "Path" for translations indicating the hierarchical location of some content.
+  Fixes: #117
+  [thet]
+
 - Minor German updates.
   [thet]
 
