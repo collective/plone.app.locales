@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone.app.ldap\n"
-"POT-Creation-Date: 2013-06-24 09:22+0000\n"
+"POT-Creation-Date: 2016-08-20 09:37+0000\n"
 "PO-Revision-Date: 2013-06-24 12:18+0300\n"
 "Last-Translator: Roman Kozlovskyi <krzroman@gmail.com>\n"
 "Language-Team: Ukrainian\n"
@@ -71,12 +71,20 @@ msgstr "Інфо"
 msgid "LDAP server refused your credentials"
 msgstr "LDAP сервер відхилив ваші облікові дані"
 
+#: plone.app.ldap/plone/app/ldap/configure.zcml:26
+msgid "LDAP support"
+msgstr ""
+
+#: plone.app.ldap/plone/app/ldap/configure.zcml:26
+msgid "Manage LDAP and Active Directory support for Plone."
+msgstr ""
+
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:63
 msgid "There were errors"
 msgstr "Виявлені помилки"
 
 #. Default: "Clear the caches, and adjust the cache timeouts."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:342
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:344
 msgid "description-caches"
 msgstr "Очистити кеш, а також налаштувати кеш тайм-аути."
 
@@ -90,43 +98,45 @@ msgstr "На цій панелі управління можна налашту�
 msgid "description-ldap-globalsettings"
 msgstr "Наступні параметри впливають на правила в усьому сайті."
 
-#. Default: "The LDAP schema defines the LDAP properties which can be used by the Plone. Properties with a Plone property name will be available as standard user properties in Plone. Properties without a Plone property name can be used as user id, login name or relative DN by the LDAP configuration."
+#. Default: "The LDAP schema defines the LDAP properties which can be used by the Plone. Properties with a Plone property name will be available as standard user properties in Plone (see portal_memberdata in the ZMI for a list). Any property which is not multi-valued can be used as the user id, login name or relative DN by the LDAP configuration."
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:132
+#, fuzzy
 msgid "description-schema"
 msgstr "LDAP схема визначає LDAP властивості, які можуть бути використані Plone. Властивості з ім'ям Plone властивості буде доступна в якості стандартних властивостей користувача в Plone. Властивості без імені власності Plone може бути використана в якості ідентифікатора користувача, нік або відносного DN для LDAP конфігурації."
 
-#. Default: "As a safety precaution attributes that are used as login, user or rDN attribute can not be removed."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:140
+#. Default: "As a safety precaution, attributes that are used as the user id, login name, or rDN attribute or are required for Active Directory cannot be removed."
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:141
+#, fuzzy
 msgid "description-schema-protected"
 msgstr "В якості запобіжного заходу атрибути, які використовуються в якості логіна, імені користувач або RDN атрибута не може бути видалені."
 
 #. Default: "Overview of all configured LDAP servers. If multiple servers are used the will be tried in top-to-bottom order."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:230
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:232
 msgid "description-servers"
 msgstr "Огляд усіх налаштованих серверів LDAP. Якщо кілька серверів використовуються, то вони застосовуються у порядку від верхнього до нижнього."
 
 #. Default: "Cache Timeouts"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:370
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:372
 msgid "heading-cache-timeouts"
 msgstr "Тайм-аути Кешу"
 
 #. Default: "Cached Users"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:417
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:419
 msgid "heading-cached-users"
 msgstr "Закешовані користувачів"
 
 #. Default: "Purge All Caches"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:353
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:355
 msgid "heading-purge-all-caches"
 msgstr "Очистити всі кеші"
 
 #. Default: "Empty all caches and force reloading of user records from LDAP."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:357
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:359
 msgid "help-purge-cache"
 msgstr "Очистити всі кеші і примусово оновити записи користувачів з LDAP."
 
 #. Default: "An integer representing seconds."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:373
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:375
 msgid "help-seconds"
 msgstr "Ціле число, що представляє секунди."
 
@@ -154,8 +164,9 @@ msgstr "Пароль, який використовувати при прив'я
 msgid "help_ldap_connection_type"
 msgstr "Тип з'єднання з LDAP"
 
-#. Default: "Default roles for new users"
+#. Default: "Default roles for new users."
 #: plone.app.ldap/plone/app/ldap/engine/interfaces.py:158
+#, fuzzy
 msgid "help_ldap_default_user_roles"
 msgstr "Ролі за замовчуванням для нових користувачів"
 
@@ -174,8 +185,9 @@ msgstr "Використати цей сервер LDAP"
 msgid "help_ldap_group_base"
 msgstr "Це те місце в LDAP каталозі, в якому всі групи зберігаються. Є кілька можливих варіантів для об'єкта класу і членів: groupOfNames, accessGroup або класи груп об'єктів може бути використана у власності даного користувача, або клас groupOfUniqueNames об'єкт може бути використаний з uniqueMember властивістю. В Active Directory системах тільки об'єкта-групи клас підтримується."
 
-#. Default: "The search scope determines where the LDAP server will search for groups. With BASE it will only look for users who directly in the group base location. SUBTREE will allow the server to also look in subfolders of the group base location."
+#. Default: "The search scope determines where the LDAP server will search for groups. With \"one level\" it will only look for groups directly in the group base location; \"subtree\" will allow the server to also look in subfolders of the group base location."
 #: plone.app.ldap/plone/app/ldap/engine/interfaces.py:137
+#, fuzzy
 msgid "help_ldap_group_scope"
 msgstr "Область пошуку визначає, де LDAP сервер буде шукати групи. З BASE буде дивитися тільки на користувачів, які містяться безпосередньо в основному розташуванні груп. SUBTREE дозволить серверу також подивитися у вкладених папках базового розташування груп."
 
@@ -214,13 +226,15 @@ msgstr "Це те місце в LDAP каталогу, де всі корист�
 msgid "help_ldap_user_object_classes"
 msgstr "Кожен об'єкт в базі даних LDAP має структурний об'єкт класу і, можливо, кілька додаткових класів об'єктів. Ці класи визначають обов'язкові та додаткові властивості, які можуть бути присутніми на об'єкті. Класи можуть бути введені розділений комами список."
 
-#. Default: "Method of encryption used for user passwords"
+#. Default: "Method of encryption used for user passwords."
 #: plone.app.ldap/plone/app/ldap/engine/interfaces.py:150
+#, fuzzy
 msgid "help_ldap_user_password_encryption"
 msgstr "Метод шифрування паролів користувачів"
 
-#. Default: "The search scope determines where the LDAP server will search for users. With BASE it will only look for users who directly in the user base location. SUBTREE will allow the server to also look in subfolders of the user base location."
+#. Default: "The search scope determines where the LDAP server will search for users. With \"one level\" it will only look for users directly in the user base location; \"subtree\" will allow the server to also look in subfolders of the user base location."
 #: plone.app.ldap/plone/app/ldap/engine/interfaces.py:110
+#, fuzzy
 msgid "help_ldap_user_scope"
 msgstr "Область пошуку визначає, де LDAP сервер буде шукати користувачів. З BASE буде дивитися тільки на користувачів, які містяться безпосередньо в основному розташуванні. SUBTREE дозволить серверу також подивитися у вкладених папках базового розташування користувачів."
 
@@ -239,18 +253,19 @@ msgstr "Виберіть, якщо ця властивість може мати
 msgid "help_operation_timeout"
 msgstr "Час очікування завершення такої операції, як пошук або оновлення. В секундах. Також можна використати -1 для нескінченного очікування."
 
-#. Default: "The name of the property as used in the Plone site. If no name is specified the property will not be visible in Plone but still be used as login name, user id or rDN."
+#. Default: "The name of the property as used in the Plone site. If no name is specified, the property will not be visible in Plone but may still be used as the login name, user id, or rDN."
 #: plone.app.ldap/plone/app/ldap/engine/interfaces.py:276
+#, fuzzy
 msgid "help_plone_property"
 msgstr "Ім'я властивості, використовувані в сайті Plone. Якщо ім'я не вказано, то властивість не будуть видна в Plone, проте її можна використовувати як ім'я, ідентифікатор користувача або rDN."
 
 #. Default: "Anonymous Cache"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:386
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:388
 msgid "label_anon_cache"
 msgstr "Кеші для анонімних користувачів"
 
 #. Default: "Authenticated Cache"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:372
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:374
 msgid "label_auth_cache"
 msgstr "кеші для автентифікованих користувачів"
 
@@ -265,36 +280,36 @@ msgid "label_connection_timeout"
 msgstr "Тайм-аут з'єднання"
 
 #. Default: "Delete"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:323
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:325
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:86
 msgid "label_delete"
 msgstr " Знищити"
 
 #. Default: "Delete"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:210
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:212
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:94
 msgid "label_delete_property"
 msgstr "Знищити"
 
 #. Default: "Disable"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:320
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:322
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:76
 msgid "label_disable"
 msgstr "Вимкнути"
 
 #. Default: "Enable"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:317
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:319
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:66
 msgid "label_enable"
 msgstr "Увімкнути"
 
 #. Default: "infinite"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:289
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:291
 msgid "label_infinity"
 msgstr "нескінченний"
 
 #. Default: "Binary"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:167
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:169
 msgid "label_ldap_binary"
 msgstr "Двійковий"
 
@@ -309,12 +324,12 @@ msgid "label_ldap_bind_password"
 msgstr "Пароль прив'язки"
 
 #. Default: "Connection timeout"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:258
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:260
 msgid "label_ldap_connection_timeout"
 msgstr "Тайм-аут з'єднання"
 
 #. Default: "Connection type"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:255
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:257
 #: plone.app.ldap/plone/app/ldap/engine/interfaces.py:215
 msgid "label_ldap_connection_type"
 msgstr "Тип з'єднання"
@@ -325,7 +340,7 @@ msgid "label_ldap_default_user_roles"
 msgstr "Ролі користувача за замовчуванням"
 
 #. Default: "Description"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:170
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:172
 msgid "label_ldap_description"
 msgstr "Опис"
 
@@ -335,7 +350,7 @@ msgid "label_ldap_dn_attribute"
 msgstr "rDN атрибут"
 
 #. Default: "Active"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:249
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:251
 #: plone.app.ldap/plone/app/ldap/engine/interfaces.py:199
 msgid "label_ldap_enabled"
 msgstr "Увімкнено"
@@ -351,7 +366,7 @@ msgid "label_ldap_group_scope"
 msgstr "Пошук місця для груп"
 
 #. Default: "LDAP property"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:158
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:160
 msgid "label_ldap_ldap_property"
 msgstr "LDAP властивість"
 
@@ -361,17 +376,17 @@ msgid "label_ldap_login_attribute"
 msgstr "Властивість ім'я користувача"
 
 #. Default: "Multi-valued"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:164
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:166
 msgid "label_ldap_multi_valued"
 msgstr "Багатозначний"
 
 #. Default: "Operation timeout"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:261
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:263
 msgid "label_ldap_operation_timeout"
 msgstr "Тайм-аут операції"
 
 #. Default: "Plone property"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:161
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:163
 msgid "label_ldap_plone_property"
 msgstr "Plone властивість"
 
@@ -386,7 +401,7 @@ msgid "label_ldap_read_only"
 msgstr "Тільки для читання"
 
 #. Default: "Server"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:252
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:254
 #: plone.app.ldap/plone/app/ldap/engine/interfaces.py:207
 msgid "label_ldap_server"
 msgstr "Сервер"
@@ -427,12 +442,12 @@ msgid "label_multi_valued"
 msgstr "Багатозначна власность"
 
 #. Default: "Negative Cache"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:400
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:402
 msgid "label_negative_cache"
 msgstr "Негативний Кеш"
 
 #. Default: "No"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:196
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:198
 msgid "label_no"
 msgstr "Ні"
 
@@ -447,7 +462,7 @@ msgid "label_plone_property"
 msgstr "Ім'я властивості в Plone"
 
 #. Default: "Add property"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:217
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:219
 msgid "label_property_add"
 msgstr "Додати властивість"
 
@@ -457,13 +472,13 @@ msgid "label_property_description"
 msgstr "Опис властивості"
 
 #. Default: "Purge"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:356
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:358
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:102
 msgid "label_purge"
 msgstr "Очищення"
 
 #. Default: "Add LDAP server"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:330
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:332
 msgid "label_server_add"
 msgstr "Додати LDAP сервер"
 
@@ -473,18 +488,18 @@ msgid "label_up_to_plone_setup"
 msgstr "Вверх, до налаштування сайту"
 
 #. Default: "Update Cache Timeouts"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:413
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:415
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:109
 msgid "label_update_cache_timeouts"
 msgstr "Оновлення тайм-аутів кешу"
 
 #. Default: "Yes"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:195
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:197
 msgid "label_yes"
 msgstr "Так"
 
 #. Default: "Caches"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:336
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:338
 msgid "legend-caches"
 msgstr "Кеші"
 
@@ -499,7 +514,7 @@ msgid "legend-schema"
 msgstr "LDAP схема"
 
 #. Default: "LDAP Servers"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:224
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:226
 msgid "legend-servers"
 msgstr "LDAP сервери"
 
@@ -507,4 +522,3 @@ msgstr "LDAP сервери"
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:31
 msgid "title_manage_ldap"
 msgstr "LDAP конфігурація"
-

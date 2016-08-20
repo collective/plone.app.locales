@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone.app.ldap\n"
-"POT-Creation-Date: 2013-05-22 08:09+0000\n"
+"POT-Creation-Date: 2016-08-20 09:37+0000\n"
 "PO-Revision-Date: 2011-08-03 09:26+0300\n"
 "Last-Translator: Jukka Ojaniemi <jukka.ojaniemi@jyu.fi>\n"
 "Language-Team: Finnish <plone-i18n@lists.sourceforge.net>\n"
@@ -17,51 +17,51 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone.app.ldap\n"
 
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:182
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:183
 msgid "Activated plugins"
 msgstr "Aktivoidut laajennukset"
 
-#: plone.app.ldap/plone/app/ldap/browser/schema.py:42
+#: plone.app.ldap/plone/app/ldap/browser/schema.py:39
 msgid "Add Property"
 msgstr "Lisää kenttä"
 
-#: plone.app.ldap/plone/app/ldap/browser/server.py:45
+#: plone.app.ldap/plone/app/ldap/browser/server.py:43
 msgid "Add Server"
 msgstr "Lisää palvelin"
 
-#: plone.app.ldap/plone/app/ldap/browser/schema.py:43
+#: plone.app.ldap/plone/app/ldap/browser/schema.py:40
 msgid "Add a LDAP property to the schema."
 msgstr "Lisää LDAP kenttä skeemaan."
 
-#: plone.app.ldap/plone/app/ldap/browser/server.py:46
+#: plone.app.ldap/plone/app/ldap/browser/server.py:44
 msgid "Add an new LDAP or ActiveDirectory server."
 msgstr "Lisää uusi LDAP tai ActiveDirectory palvelin."
 
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:46
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:47
 msgid "Apply"
 msgstr "Ota käyttöön"
 
-#: plone.app.ldap/plone/app/ldap/browser/schema.py:44
+#: plone.app.ldap/plone/app/ldap/browser/schema.py:41
 msgid "Configure property"
 msgstr "Määrittele kenttä"
 
-#: plone.app.ldap/plone/app/ldap/browser/server.py:47
+#: plone.app.ldap/plone/app/ldap/browser/server.py:45
 msgid "Configure server"
 msgstr "Muokkaa palvelimen asetuksia"
 
-#: plone.app.ldap/plone/app/ldap/browser/schema.py:57
+#: plone.app.ldap/plone/app/ldap/browser/schema.py:54
 msgid "Edit Property"
 msgstr "Muokkaa kenttää"
 
-#: plone.app.ldap/plone/app/ldap/browser/server.py:61
+#: plone.app.ldap/plone/app/ldap/browser/server.py:59
 msgid "Edit Server"
 msgstr "Muokkaa palvelinta"
 
-#: plone.app.ldap/plone/app/ldap/browser/server.py:62
+#: plone.app.ldap/plone/app/ldap/browser/server.py:60
 msgid "Edit a LDAP or ActiveDirectory server."
 msgstr "Muokkaa LDAP tai ActiveDirectory -palvelimen asetuksia."
 
-#: plone.app.ldap/plone/app/ldap/browser/schema.py:58
+#: plone.app.ldap/plone/app/ldap/browser/schema.py:55
 msgid "Edit a LDAP property."
 msgstr "Muokkaa LDAP kenttää."
 
@@ -69,16 +69,24 @@ msgstr "Muokkaa LDAP kenttää."
 msgid "Info"
 msgstr "Lisätietoja"
 
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:30
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:29
 msgid "LDAP server refused your credentials"
 msgstr "LDAP palvelin ei hyväksynyt tunnistautumistietoja"
 
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:62
+#: plone.app.ldap/plone/app/ldap/configure.zcml:26
+msgid "LDAP support"
+msgstr ""
+
+#: plone.app.ldap/plone/app/ldap/configure.zcml:26
+msgid "Manage LDAP and Active Directory support for Plone."
+msgstr ""
+
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:63
 msgid "There were errors"
 msgstr "Tapahtui virheitä"
 
 #. Default: "Clear the caches, and adjust the cache timeouts."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:342
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:344
 msgid "description-caches"
 msgstr "Välimuistin tyhjennys ja välimuistin aikakatkaisun asettaminen."
 
@@ -92,380 +100,387 @@ msgstr "Tässä hallintapaneelissa voit konfiguroida LDAP yhteyden. Voit käytt�
 msgid "description-ldap-globalsettings"
 msgstr "Seuraavat asetukset vaikuttavat sääntöihin globaalisti."
 
-#. Default: "The LDAP schema defines the LDAP properties which can be used by the Plone. Properties with a Plone property name will be available as standard user properties in Plone. Properties without a Plone property name can be used as user id, login name or relative DN by the LDAP configuration."
+#. Default: "The LDAP schema defines the LDAP properties which can be used by the Plone. Properties with a Plone property name will be available as standard user properties in Plone (see portal_memberdata in the ZMI for a list). Any property which is not multi-valued can be used as the user id, login name or relative DN by the LDAP configuration."
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:132
+#, fuzzy
 msgid "description-schema"
 msgstr "LDAP-skeema määrittelee Plonen käytettävissä olevat LDAP-kentät. Kentät, joilla on Plone-nimi ovat käytettävissä normaaleina käyttäjätietoina Plonessa. Kenttiä, joilla ei ole Plone-nimeä voidaan käyttää käyttäjätunnuksena (user id), kirjautumisnimenä (login name) tai suhteellisena DN:nä (relative DN) LDAP:n asetusten toimesta."
 
-#. Default: "As a safety precaution attributes that are used as login, user or rDN attribute can not be removed."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:140
+#. Default: "As a safety precaution, attributes that are used as the user id, login name, or rDN attribute or are required for Active Directory cannot be removed."
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:141
+#, fuzzy
 msgid "description-schema-protected"
 msgstr "Varotoimenpiteenä kirjautumiseen käytettäviä attribuutteja (user, rDN) ei voi poistaa."
 
 #. Default: "Overview of all configured LDAP servers. If multiple servers are used the will be tried in top-to-bottom order."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:230
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:232
 msgid "description-servers"
 msgstr "Yleiskatsaus kaikista määritellyistä LDAP-palvelimista. Jos käytössä on useampia LDAP-palvelimia, niitä yritetään käyttää ylhäältä alaspäin menevässä järjestyksessä."
 
 #. Default: "Cache Timeouts"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:370
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:372
 msgid "heading-cache-timeouts"
 msgstr "Välimuistin aikakatkaisut"
 
 #. Default: "Cached Users"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:417
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:419
 msgid "heading-cached-users"
 msgstr "Välimuistissa olevat käyttäjät"
 
 #. Default: "Purge All Caches"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:353
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:355
 msgid "heading-purge-all-caches"
 msgstr "Tyhjennä kaikki välimuistit"
 
 #. Default: "Empty all caches and force reloading of user records from LDAP."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:357
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:359
 msgid "help-purge-cache"
 msgstr "Tyhjennä kaikki välimuistit ja pakota käyttäjätietojen uudelleenlataus käyttämään LDAP-palvelinta."
 
 #. Default: "An integer representing seconds."
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:373
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:375
 msgid "help-seconds"
 msgstr "Sekunteja kuvaava kokonaisluku."
 
 #. Default: "Select if this property can have binary values."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:292
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:293
 msgid "help_binary"
 msgstr "Valitse tämä jos kenttä voi sisältää binäärisiä arvoja."
 
 #. Default: "The timeout in seconds to wait for a connection to the LDAP server to be established."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:225
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:226
 msgid "help_connection_timeout"
 msgstr "LDAP-yhteyden muodostumiseen kuluvan ajan aikakatkaisu sekunteina."
 
 #. Default: "The DN of a manager account in the LDAP directory. This must be allowed to access all user and group information as well as be able to update and create users and groups. Please note that Plone only supports simple binds. SASL is not supported."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:83
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:84
 msgid "help_ldap_bind_dn"
 msgstr "LDAP-hakemiston ylläpitäjän DN. Tälle täytyy olla pääsy kaikkiin käyttäjä- ja ryhmätietoihin, sekä oikeudet päivättää ja luoda käyttäjiä ja ryhmiä. Huomaa, että Plone tukee vain yksinkertaista sitomista (simple binds). SASL ei ole tuettu."
 
 #. Default: "Password to use when binding to the LDAP server."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:94
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:95
 msgid "help_ldap_bind_password"
 msgstr "LDAP-palvelimen yhteyttä varten tarvittava salasana."
 
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:216
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:217
 msgid "help_ldap_connection_type"
 msgstr ""
 
-#. Default: "Default roles for new users"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:157
+#. Default: "Default roles for new users."
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:158
+#, fuzzy
 msgid "help_ldap_default_user_roles"
 msgstr "Uudelle käyttäjälle annettavat oletusroolit"
 
 #. Default: "This is attribute is used to build the distinguished name (DN) for users that are being created in your LDAP directory. This is commonly either the users full name ('cn' property) or the userid ('uid' property)."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:36
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:37
 msgid "help_ldap_dn_attribute"
 msgstr "Tätä attribuuttia käytetään, kun LDAP-hakemistoon luotavalle käyttäjälle generoidaan edustusnimeä (distinguished name, DN). Tämä on yleisesti joko käyttäjän koko nimi ('cn' kenttä) tai käyttäjätunnus ('uid' kenttä)."
 
 #. Default: "Use this LDAP server"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:200
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:201
 msgid "help_ldap_enabled"
 msgstr "Käytä tätä LDAP-palvelinta"
 
 #. Default: "This is the location in your LDAP directory where all groups are stored. There are several options for object class and members possible: the groupOfNames, accessGroup or group object classes can be used with members given in the member property, or the groupOfUniqueNames object class can be used with uniqueMember property. In Active Directory systems only the group object class is supported."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:122
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:123
 msgid "help_ldap_group_base"
 msgstr "Tämä on ryhmät sisältävän LDAP-hakemiston sijainti. Objektiluokalle (object class) ja jäsenille (members) on tarjolla useita vaihtoehtoja: groupOfNames, accessGroup tai group object luokkia voidaan käyttää yhdessä jäsenen kanssa olettaen, että jäsen kenttää tai groupOfUniqueNames luokkaa voidaan käyttää uniqueMember kentän kanssa. Active Directory järjestelmissä vain group object luokka on tuettu."
 
-#. Default: "The search scope determines where the LDAP server will search for groups. With BASE it will only look for users who directly in the group base location. SUBTREE will allow the server to also look in subfolders of the group base location."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:136
+#. Default: "The search scope determines where the LDAP server will search for groups. With \"one level\" it will only look for groups directly in the group base location; \"subtree\" will allow the server to also look in subfolders of the group base location."
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:137
+#, fuzzy
 msgid "help_ldap_group_scope"
 msgstr "Haun ulottuvuus määrittelee mistä LDAP-palvelin etsii ryhmiä. BASE hakee käyttäjiä suoraan ryhmän määritellyn sijainnin alta. SUBTREE sallii palvelimen hakea myös ryhmän määritellyn sijainnin alla olevista alikansioista."
 
 #. Default: "The attribute is used as the login name for LDAP users logging into your site. In most cases this should be the same as the user id attribute."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:59
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:60
 msgid "help_ldap_login_attribute"
 msgstr "Attribuuttia käytetään sivustollesi kirjautuvien LDAP-käyttäjien kirjautumisnimenä (login name). Useimmiten tämän pitäisi olla sama, kuin käyttäjätunnuksen attribuutin."
 
 #. Default: "The name of the property as used in the LDAP directory."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:267
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:268
 msgid "help_ldap_property"
 msgstr "Kentän nimi LDAP-hakemistossa."
 
 #. Default: "Control whether Plone should attempt to modify objects and properties on the server."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:165
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:166
 msgid "help_ldap_read_only"
 msgstr ""
 
 #. Default: "The address or hostname of the LDAP server."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:208
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:209
 msgid "help_ldap_server"
 msgstr "LDAP-palvelimen osoite."
 
 #. Default: "Plone supports both Active Directory and standard LDAP servers. For Active Directory the read-only LDAP interface which is enabled for all Active Directory servers can be used."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:24
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:25
 msgid "help_ldap_server_type"
 msgstr "Plone tukee sekä Active Directory että LDAP-palvelimia. Active Directory voi käyttää vain lukemista tukevaa LDAP rajapintaa."
 
 #. Default: "This is the location in your LDAP directory where all users are stored."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:101
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:102
 msgid "help_ldap_user_base"
 msgstr "LDAP-hakemiston käyttäjät sisältävän kansion sijainti."
 
 #. Default: "Each object in the LDAP database has a structural object class and optionally several supplemental object classes. These classes define the required and optional properties that can be present on an object. Classes can be entered in a comma seperated list."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:70
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:71
 msgid "help_ldap_user_object_classes"
 msgstr "Jokaisella LDAP-tietokannassa olevalla objektilla on rakenteellinen objektin luokka (object class) ja vapaavalintaisesti useita täydentäviä objektin luokkia. Nämä luokat määrittelevät vaaditut ja valinnaiset kentät, jotka voivat olla objektissa läsnä. Luokkia voidaan lisätä pilkulla erotetulla listalla."
 
-#. Default: "Method of encryption used for user passwords"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:149
+#. Default: "Method of encryption used for user passwords."
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:150
+#, fuzzy
 msgid "help_ldap_user_password_encryption"
 msgstr "Käyttäjien salasanojen salausmetodi"
 
-#. Default: "The search scope determines where the LDAP server will search for users. With BASE it will only look for users who directly in the user base location. SUBTREE will allow the server to also look in subfolders of the user base location."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:109
+#. Default: "The search scope determines where the LDAP server will search for users. With \"one level\" it will only look for users directly in the user base location; \"subtree\" will allow the server to also look in subfolders of the user base location."
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:110
+#, fuzzy
 msgid "help_ldap_user_scope"
 msgstr "Haun ulottuvuus määrittelee mistä LDAP-palvelin etsii käyttäjiä. BASE hakee käyttäjiä suoraan käyttäjien määritellyn sijainnin alta. SUBTREE sallii palvelimen hakea myös käyttäjien määritellyn sijainnin alla olevista alikansioista."
 
 #. Default: "This attribute is used as the userid inside Plone for LDAP users. It has to be unique for all users."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:49
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:50
 msgid "help_ldap_userid_attribute"
 msgstr "Tätä attribuuttia käytetään LDAP-käyttäjien käyttäjätunnuksena Plonessa ja sen täytyy olla uniikki."
 
 #. Default: "Select if this property can have multiple values."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:285
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:286
 msgid "help_multi_valued"
 msgstr "Valitse tämä, jos kenttä voi sisältää useita arvoja."
 
 #. Default: "The timeout in seconds to wait for an operation such as a search or update to complete. If no timeout should be used use -1 as value."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:236
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:237
 msgid "help_operation_timeout"
 msgstr "Operaation suoritukseen kuluvan ajan aikakatkaisu sekunteina. Aseta arvoksi -1, jos et halua käyttää aikakatkaisua."
 
-#. Default: "The name of the property as used in the Plone site. If no name is specified the property will not be visible in Plone but still be used as login name, user id or rDN."
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:275
+#. Default: "The name of the property as used in the Plone site. If no name is specified, the property will not be visible in Plone but may still be used as the login name, user id, or rDN."
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:276
+#, fuzzy
 msgid "help_plone_property"
 msgstr "Kentän nimi, jolla sitä käytetään Plone-sivustolla. Jos nimeä ei määritellä, kenttä ei ole näkyvissä Plonessa, mutta sitä käytetään silti kirjautumisnimenä, käyttäjätunnuksena tai rDN:nä."
 
 #. Default: "Anonymous Cache"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:386
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:388
 msgid "label_anon_cache"
 msgstr "Kirjautumattomien käyttäjien välimuisti"
 
 #. Default: "Authenticated Cache"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:372
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:374
 msgid "label_auth_cache"
 msgstr "Kirjautuneiden käyttäjien välimuisti"
 
 #. Default: "Binary property"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:290
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:291
 msgid "label_binary"
 msgstr "Binäärikenttä"
 
 #. Default: "Connection timeout"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:223
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:224
 msgid "label_connection_timeout"
 msgstr "Yhteyden aikakatkaisu"
 
 #. Default: "Delete"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:323
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:85
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:325
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:86
 msgid "label_delete"
 msgstr "Poista"
 
 #. Default: "Delete"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:210
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:93
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:212
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:94
 msgid "label_delete_property"
 msgstr "Poista"
 
 #. Default: "Disable"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:320
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:75
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:322
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:76
 msgid "label_disable"
 msgstr "Poista käytöstä"
 
 #. Default: "Enable"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:317
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:65
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:319
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:66
 msgid "label_enable"
 msgstr "Ota käyttöön"
 
 #. Default: "infinite"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:289
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:291
 msgid "label_infinity"
 msgstr "ääretön"
 
 #. Default: "Binary"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:167
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:169
 msgid "label_ldap_binary"
 msgstr "Binäärinen"
 
 #. Default: "Bind DN"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:81
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:82
 msgid "label_ldap_bind_dn"
 msgstr "Yhdistä DN"
 
 #. Default: "Bind password"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:92
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:93
 msgid "label_ldap_bind_password"
 msgstr "Yhdistä salasana"
 
 #. Default: "Connection timeout"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:258
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:260
 msgid "label_ldap_connection_timeout"
 msgstr "Yhteyden aikakatkaisu"
 
 #. Default: "Connection type"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:255
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:214
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:257
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:215
 msgid "label_ldap_connection_type"
 msgstr "Yhteyden tyyppi"
 
 #. Default: "Default user roles"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:155
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:156
 msgid "label_ldap_default_user_roles"
 msgstr "Käyttäjän oletusroolit"
 
 #. Default: "Description"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:170
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:172
 msgid "label_ldap_description"
 msgstr "Kuvaus"
 
 #. Default: "rDN attribute"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:34
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:35
 msgid "label_ldap_dn_attribute"
 msgstr "rDN attribuutti"
 
 #. Default: "Active"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:249
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:198
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:251
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:199
 msgid "label_ldap_enabled"
 msgstr "Aktiivinen"
 
 #. Default: "Base DN for groups"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:120
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:121
 msgid "label_ldap_group_base"
 msgstr "Ryhmien Base DN"
 
 #. Default: "Search scope for groups"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:134
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:135
 msgid "label_ldap_group_scope"
 msgstr "Ryhmähaun ulottuvuus"
 
 #. Default: "LDAP property"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:158
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:160
 msgid "label_ldap_ldap_property"
 msgstr "LDAP kenttä"
 
 #. Default: "Login name attribute"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:57
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:58
 msgid "label_ldap_login_attribute"
 msgstr "Kirjautumisnimen (login name) attribuutti"
 
 #. Default: "Multi-valued"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:164
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:166
 msgid "label_ldap_multi_valued"
 msgstr "Moniarvoinen"
 
 #. Default: "Operation timeout"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:261
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:263
 msgid "label_ldap_operation_timeout"
 msgstr "Operaation aikakatkaisu"
 
 #. Default: "Plone property"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:161
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:163
 msgid "label_ldap_plone_property"
 msgstr "Plonen kenttä"
 
 #. Default: "LDAP property name"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:265
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:266
 msgid "label_ldap_property"
 msgstr "LDAP kentän nimi"
 
 #. Default: "Read Only"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:163
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:164
 msgid "label_ldap_read_only"
 msgstr ""
 
 #. Default: "Server"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:252
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:206
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:254
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:207
 msgid "label_ldap_server"
 msgstr "Palvelin"
 
 #. Default: "LDAP server type"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:22
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:23
 msgid "label_ldap_type"
 msgstr "LDAP-palvelimen tyyppi"
 
 #. Default: "Base DN for users"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:99
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:100
 msgid "label_ldap_user_base"
 msgstr "Käyttäjien Base DN"
 
 #. Default: "LDAP object classes"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:68
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:69
 msgid "label_ldap_user_object_classes"
 msgstr "LDAP-objektin luokat"
 
 #. Default: "User password encryption"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:147
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:148
 msgid "label_ldap_user_password_encryption"
 msgstr "Käyttäjän salasanan salaus"
 
 #. Default: "Search scope for users"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:107
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:108
 msgid "label_ldap_user_scope"
 msgstr "Käyttäjähaun ulottuvuus"
 
 #. Default: "User id attribute"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:47
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:48
 msgid "label_ldap_userid_attribute"
 msgstr "Käyttäjätunnuksen (user id) attribuutti"
 
 #. Default: "Multi-valued property"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:283
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:284
 msgid "label_multi_valued"
 msgstr "Moniarvoinen kenttä"
 
 #. Default: "Negative Cache"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:400
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:402
 msgid "label_negative_cache"
 msgstr "Negatiivinen välimuisti"
 
 #. Default: "No"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:196
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:198
 msgid "label_no"
 msgstr "Ei"
 
 #. Default: "Operation timeout"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:234
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:235
 msgid "label_operation_timeout"
 msgstr "Operaation aikakatkaisu"
 
 #. Default: "Plone property name"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:273
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:274
 msgid "label_plone_property"
 msgstr "Plone kentän nimi"
 
 #. Default: "Add property"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:217
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:219
 msgid "label_property_add"
 msgstr "Lisää kenttä"
 
 #. Default: "Property description"
-#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:260
+#: plone.app.ldap/plone/app/ldap/engine/interfaces.py:261
 msgid "label_property_description"
 msgstr "Kentän kuvaus"
 
 #. Default: "Purge"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:356
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:101
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:358
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:102
 msgid "label_purge"
 msgstr "Tyhjennä"
 
 #. Default: "Add LDAP server"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:330
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:332
 msgid "label_server_add"
 msgstr "Lisää LDAP-palvelin"
 
@@ -475,18 +490,18 @@ msgid "label_up_to_plone_setup"
 msgstr "Sivuston asetukset"
 
 #. Default: "Update Cache Timeouts"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:413
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:108
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:415
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.py:109
 msgid "label_update_cache_timeouts"
 msgstr "Päivitä välimuistin aikakatkaisun asetukset"
 
 #. Default: "Yes"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:195
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:197
 msgid "label_yes"
 msgstr "Kyllä"
 
 #. Default: "Caches"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:336
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:338
 msgid "legend-caches"
 msgstr "Välimuistit"
 
@@ -501,7 +516,7 @@ msgid "legend-schema"
 msgstr "LDAP skeema"
 
 #. Default: "LDAP Servers"
-#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:224
+#: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:226
 msgid "legend-servers"
 msgstr "LDAP-palvelimet"
 
@@ -509,4 +524,3 @@ msgstr "LDAP-palvelimet"
 #: plone.app.ldap/plone/app/ldap/browser/controlpanel.pt:31
 msgid "title_manage_ldap"
 msgstr "LDAP asetukset"
-
