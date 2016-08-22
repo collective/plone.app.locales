@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.0.11 (unreleased)
+5.0.11 (2016-08-22)
 -------------------
 
 - German: Change the querystring criteria group from "Daten" to "Datum".
