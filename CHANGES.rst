@@ -7,6 +7,8 @@ Changelog
 - Updated Tranditional Chinese translations.
   [l34marr]
 
+- Add coding header to python files.
+  [gforcada]
 
 5.0.11 (2016-08-22)
 -------------------

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
    Usage: admix.py <target-product> <source-product>
 """
