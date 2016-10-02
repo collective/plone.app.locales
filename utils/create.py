@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
    Usage: create.py <target-product> <source-product>
 

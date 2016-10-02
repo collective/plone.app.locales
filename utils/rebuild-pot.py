@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
    Usage: rebuild-pot.py <product> <path to products dir>
 

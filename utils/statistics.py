@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Execute the following commands:
 cd ..
