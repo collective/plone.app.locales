@@ -4,6 +4,9 @@ Changelog
 5.0.12 (unreleased)
 -------------------
 
+- Updated German Translations.
+  [vincero]
+
 - Updated Tranditional Chinese translations.
   [l34marr]
 
