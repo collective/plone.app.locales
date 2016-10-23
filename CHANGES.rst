@@ -4,6 +4,9 @@ Changelog
 5.0.12 (unreleased)
 -------------------
 
+- Add UK English translation
+  [MatthewWilkes]
+
 - Add messages and English translations for portlet manager names.
   [alecm]
 
