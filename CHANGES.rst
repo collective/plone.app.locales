@@ -1,8 +1,8 @@
 Changelog
 =========
 
-5.1 (unreleased)
-----------------
+5.1.0 (2016-11-08)
+------------------
 
 - Since Products.PasswordResetTool was merged into CMFPlone 5.1 and the templates now use the ``plone`` domain, merge all ``passwordresettool.po`` files into ``plone.po``.
   [thet]
