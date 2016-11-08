@@ -4,8 +4,8 @@ Changelog
 5.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Update basque translations.
+  [erral]
 
 5.1.0 (2016-11-08)
 ------------------
