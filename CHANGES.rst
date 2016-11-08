@@ -7,6 +7,13 @@ Changelog
 - Since Products.PasswordResetTool was merged into CMFPlone 5.1 and the templates now use the ``plone`` domain, merge all ``passwordresettool.po`` files into ``plone.po``.
   [thet]
 
+
+5.0.12 (2016-11-08)
+-------------------
+
+- Updated French translations.
+  [gnafou]
+
 - Add messages and English translations for portlet manager names.
   [alecm]
 
