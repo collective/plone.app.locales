@@ -28,5 +28,5 @@ and the following non core add-ons:
 -	linguaplone.pot
 - plone.app.ldap
 
-This version is compatible with Plone 5.x.
+This version is compatible with Plone 5.1.x.
 
