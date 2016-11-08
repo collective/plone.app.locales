@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.0.12 (unreleased)
+5.0.12 (2016-11-08)
 -------------------
 
 - Updated French translations.
