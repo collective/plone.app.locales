@@ -4,6 +4,9 @@ Changelog
 5.0.12 (unreleased)
 -------------------
 
+- Updated French translations.
+  [gnafou]
+
 - Add messages and English translations for portlet manager names.
   [alecm]
 
