@@ -7,6 +7,10 @@ Changelog
 - Update basque translations.
   [erral]
 
+- Updated Chinese Simplified translation
+  [jianaijun]
+
+
 5.1.0 (2016-11-08)
 ------------------
 
