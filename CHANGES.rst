@@ -4,6 +4,13 @@ Changelog
 5.1.1 (unreleased)
 ------------------
 
+- Update the Transifex resourceas configuration at Transifex project
+   https://www.transifex.com/plone/plone5/
+  [macagua]
+
+- Update Spanish translations.
+  [macagua]
+
 - Update basque translations.
   [erral]
 
