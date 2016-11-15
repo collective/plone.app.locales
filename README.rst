@@ -20,9 +20,12 @@ This package contains the translation files for Plone Core
 - plonelocales.pot
 - widgets.pot
 
-and the following non core add-ons:
+and the following non core add-ons at ``locales-addons`` directory:
 
-- plone.app.ldap
+- plone.app.ldap.pot
+- plone.app.ldap-manual.pot
+- plone.app.caching.pot
+- plone.app.caching-manual.pot
 
 This version is compatible with Plone 5.1.x.
 
