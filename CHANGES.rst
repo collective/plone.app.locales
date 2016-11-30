@@ -17,6 +17,9 @@ Changelog
 - Updated Chinese Simplified translation
   [jianaijun]
 
+- Updated Tranditional Chinese translations.
+  [l34marr]
+
 
 5.1.0 (2016-11-08)
 ------------------
