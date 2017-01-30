@@ -4,7 +4,8 @@ Changelog
 5.0.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update danish translation.
+  [tmog]
 
 
 5.0.12 (2016-11-08)
