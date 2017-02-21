@@ -1,10 +1,10 @@
 Changelog
 =========
 
-5.0.13 (unreleased)
+5.0.13 (2017-02-21)
 -------------------
 
-- Nothing changed yet.
+- Update Basque translation.
 
 
 5.0.12 (2016-11-08)
