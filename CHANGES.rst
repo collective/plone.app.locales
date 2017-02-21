@@ -1,8 +1,10 @@
 Changelog
 =========
 
-5.1.1 (unreleased)
+5.1.1 (2017-02-21)
 ------------------
+
+- Update Japanese translations.
 
 - Update the Transifex resourceas configuration at Transifex project
    https://www.transifex.com/plone/plone5/
