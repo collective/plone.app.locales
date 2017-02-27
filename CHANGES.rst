@@ -1,7 +1,60 @@
 Changelog
 =========
 
-5.0.11 (unreleased)
+5.1.2 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
+5.1.1 (2017-02-21)
+------------------
+
+- Update Japanese translations.
+
+- Update the Transifex resourceas configuration at Transifex project
+   https://www.transifex.com/plone/plone5/
+  [macagua]
+
+- Update Spanish translations.
+  [macagua]
+
+- Update basque translations.
+  [erral]
+
+- Updated Chinese Simplified translation
+  [jianaijun]
+
+- Updated Tranditional Chinese translations.
+  [l34marr]
+
+
+5.1.0 (2016-11-08)
+------------------
+
+- Since Products.PasswordResetTool was merged into CMFPlone 5.1 and the templates now use the ``plone`` domain, merge all ``passwordresettool.po`` files into ``plone.po``.
+  [thet]
+
+
+5.0.12 (2016-11-08)
+-------------------
+
+- Updated French translations.
+  [gnafou]
+
+- Add messages and English translations for portlet manager names.
+  [alecm]
+
+- Updated German Translations.
+  [vincero]
+
+- Updated Tranditional Chinese translations.
+  [l34marr]
+
+- Add coding header to python files.
+  [gforcada]
+
+5.0.11 (2016-08-22)
 -------------------
 
 - German: Change the querystring criteria group from "Daten" to "Datum".

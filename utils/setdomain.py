@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
    Usage: setdomain.py <product> <domain>
 """

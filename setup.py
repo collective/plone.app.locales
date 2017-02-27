@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 from setuptools import find_packages
 from setuptools import setup
 
-version = '5.0.11.dev0'
+version = '5.1.2.dev0'
 
 setup(
     name='plone.app.locales',
@@ -12,7 +13,7 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Plone',
-        'Framework :: Plone :: 5.0',
+        'Framework :: Plone :: 5.1',
         'Framework :: Zope2',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         'Operating System :: OS Independent',
