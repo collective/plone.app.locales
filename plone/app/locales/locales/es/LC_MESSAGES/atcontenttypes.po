@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ATContentTypes\n"
-"POT-Creation-Date: 2016-08-20 09:30+0000\n"
+"POT-Creation-Date: 2017-02-28 19:04+0000\n"
 "PO-Revision-Date: 2016-11-13 16:07 -0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2016\n"
 "Language-Team: Spanish (https://www.transifex.com/plone/teams/14552/es/)\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es\n"
 "Language-Code: es\n"
 "Language-Name: Español\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: atcontenttypes\n"
+"Language: es\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 
 #: ATContentTypes/criteria/date.py:23
@@ -64,15 +64,15 @@ msgstr "6 Meses"
 msgid "Added criterion ${criterion} for field ${field}."
 msgstr "Agregado el criterio ${criterion} para el campo ${field}."
 
-#: ATContentTypes/configure.zcml:53
+#: ATContentTypes/profiles.zcml:33
 msgid "Archetypes Content Types for Plone"
 msgstr "Tipo de Contenido Archetypes para Plone"
 
-#: ATContentTypes/configure.zcml:61
+#: ATContentTypes/profiles.zcml:25
 msgid "Archetypes-based default content for Plone"
 msgstr "Contenido por defecto basado en Archetypes para Plone"
 
-#: ATContentTypes/configure.zcml:69
+#: ATContentTypes/profiles.zcml:17
 msgid "Archetypes-tools without content-types"
 msgstr "Tipos de contenido sin herramientas Archetypes"
 
@@ -90,10 +90,8 @@ msgid "Collection settings saved."
 msgstr "Configuración de la colección guardada."
 
 #: ATContentTypes/skins/ATContentTypes/validate_add_criterion.vpy:21
-msgid ""
-"Criterion of type ${type} not added, it does not work with index ${index}."
-msgstr ""
-"Criterio de tipo ${type} no agregado, no funciona con el índice ${index}."
+msgid "Criterion of type ${type} not added, it does not work with index ${index}."
+msgstr "Criterio de tipo ${type} no agregado, no funciona con el índice ${index}."
 
 #: ATContentTypes/criteria/simpleint.py:21
 msgid "Equal to"
@@ -111,7 +109,8 @@ msgstr "Girar sobre el eje vertical"
 msgid "Greater than"
 msgstr "Mayor que"
 
-#: ATContentTypes/criteria/date.py:37 ATContentTypes/criteria/simpleint.py:23
+#: ATContentTypes/criteria/date.py:37
+#: ATContentTypes/criteria/simpleint.py:23
 msgid "Less than"
 msgstr "Menor que"
 
@@ -153,19 +152,26 @@ msgstr "Rotar 90 en el sentido contrario a las agujas del reloj"
 
 #: ATContentTypes/skins/ATContentTypes/validate_set_sort.vpy:16
 msgid "Sort order on field ${field} not set, it cannot be used for ordering."
-msgstr ""
-"No ha establecido el tipo de ordenación para el campo ${field}, por lo que "
-"no puede ser utilizado en ordenaciones."
+msgstr "No ha establecido el tipo de ordenación para el campo ${field}, por lo que no puede ser utilizado en ordenaciones."
 
 #: ATContentTypes/skins/ATContentTypes/criterion_set_sort.cpy:20
 msgid "Sort order set on field ${field}."
 msgstr "Tipo de ordenación establecido para el campo ${field}."
 
+#: ATContentTypes/profiles.zcml:43
+msgid "Uninstall Archetypes Content Types for Plone fully"
+msgstr ""
+
+#: ATContentTypes/profiles.zcml:54
+msgid "Uninstall Archetypes-based default content for Plone"
+msgstr ""
+
 #: ATContentTypes/skins/ATContentTypes/validate_remove_criterion.vpy:13
 msgid "You must first select a criterion to remove."
 msgstr "Antes debe seleccionar el criterio a quitar."
 
-#: ATContentTypes/criteria/list.py:21 ATContentTypes/criteria/selection.py:22
+#: ATContentTypes/criteria/list.py:21
+#: ATContentTypes/criteria/selection.py:22
 msgid "and"
 msgstr "y"
 
@@ -189,13 +195,12 @@ msgstr "Comentario"
 msgid "atct_history_comparison_between"
 msgstr "Comparación entre ${from} y ${to}"
 
-#. Default: "Shows the last changes of the item, with new content in green
 #. (normal text), and deleted content in red (strike-out text)."
+#. Default: "Shows the last changes of the item, with new content in green (normal text), and deleted content in red (strike-out text)."
 #: ATContentTypes/skins/ATContentTypes/atct_history.pt:18
+#, fuzzy
 msgid "atct_history_lastchanges_description"
-msgstr ""
-"Muestra los últimos cambios del elemento, con el nuevo contenido en verde "
-"(texto normal), y el contenido eliminado en rojo (texto tachado)."
+msgstr "Muestra los últimos cambios del elemento, con el nuevo contenido en verde (texto normal), y el contenido eliminado en rojo (texto tachado)."
 
 #. Default: "No changes available for this document"
 #: ATContentTypes/skins/ATContentTypes/atct_history.pt:63
@@ -207,19 +212,15 @@ msgstr "No hay cambios disponibles para este documento"
 msgid "atct_history_user"
 msgstr "Usuario"
 
-#. Default: "This changelog will be emptied when the site administrator
 #. performs maintenance (packing) of the database, and is only provided for
 #. your convenience. If the item has no history, it normally means that no
 #. changes have been made since the last time the history log was removed by
 #. the administrator."
+#. Default: "This changelog will be emptied when the site administrator performs maintenance (packing) of the database, and is only provided for your convenience. If the item has no history, it normally means that no changes have been made since the last time the history log was removed by the administrator."
 #: ATContentTypes/skins/ATContentTypes/atct_history.pt:26
+#, fuzzy
 msgid "atct_lastchanges_warning"
-msgstr ""
-"Este registro de cambios se vaciará cuando el administrador del sitio "
-"realice el mantenimiento (compresión) de la base de datos, y sólo se provee "
-"por su comodidad. Si el elemento no tiene historial, normalmente quiere "
-"decir que no se han realizado cambios desde la última vez que el histórico "
-"fue eliminado por el administrador."
+msgstr "Este registro de cambios se vaciará cuando el administrador del sitio realice el mantenimiento (compresión) de la base de datos, y sólo se provee por su comodidad. Si el elemento no tiene historial, normalmente quiere decir que no se han realizado cambios desde la última vez que el histórico fue eliminado por el administrador."
 
 #. Default: "All fields"
 #: ATContentTypes/skins/ATContentTypes/atct_manageTopicIndex.cpt:85
@@ -251,52 +252,46 @@ msgstr "Seleccionar manualmente"
 #. Default: "Configure which metadata will be available for Collection views."
 #: ATContentTypes/skins/ATContentTypes/atct_manageTopicMetadata.cpt:42
 msgid "description_configure_available_collection_metadata"
-msgstr ""
-"Configure qué metadatos estarán disponibles para las vistas de Colecciones."
+msgstr "Configure qué metadatos estarán disponibles para las vistas de Colecciones."
 
-#. Default: "Configure which indices will be displayed while creating criteria
 #. for Collections, and how they will be displayed."
+#. Default: "Configure which indices will be displayed while creating criteria for Collections, and how they will be displayed."
 #: ATContentTypes/skins/ATContentTypes/atct_manageTopicIndex.cpt:44
+#, fuzzy
 msgid "description_configure_collection_indices"
-msgstr ""
-"Configure qué índices se mostrarán al crearse criterios para Colecciones, y "
-"cómo serán visualizados."
+msgstr "Configure qué índices se mostrarán al crearse criterios para Colecciones, y cómo serán visualizados."
 
 #. Default: "Select the types which will be addable inside this folder."
 #: ATContentTypes/lib/constraintypes.py:78
 msgid "description_constrain_allowed_types"
 msgstr "Seleccionar los tipos que se pueden agregar a esta carpeta."
 
-#. Default: "Select the types which will be addable from the \"Add new item\"
 #. menu. Any additional types set in the list above will be addable from a
 #. separate form."
+#. Default: "Select the types which will be addable from the \"Add new item\" menu. Any additional types set in the list above will be addable from a separate form."
 #: ATContentTypes/lib/constraintypes.py:102
+#, fuzzy
 msgid "description_constrain_preferred_types"
-msgstr ""
-"Seleccione los tipos que se podrán agregar desde el menú \"Agregar nuevo "
-"elemento\". Cualquier tipo adicional incluido en la lista superior podrá ser"
-" agregado desde otro formulario."
+msgstr "Seleccione los tipos que se podrán agregar desde el menú \"Agregar nuevo elemento\". Cualquier tipo adicional incluido en la lista superior podrá ser agregado desde otro formulario."
 
 #. Default: "Select the constraint type mode for this folder."
 #: ATContentTypes/lib/constraintypes.py:57
 msgid "description_constrain_types_mode"
 msgstr "Seleccionar el modo de tipo de restricciones para esta carpeta."
 
-#. Default: "No criteria defined yet. The search will not show any results.
 #. Please add criteria below."
+#. Default: "No criteria defined yet. The search will not show any results. Please add criteria below."
 #: ATContentTypes/skins/ATContentTypes/criterion_edit_form.cpt:74
+#, fuzzy
 msgid "description_no_criteria_in_criteria_form"
-msgstr ""
-"No se han definido aún criterios. La búsqueda no mostrará ningún resultado. "
-"Por favor, agregue algún criterio abajo"
+msgstr "No se han definido aún criterios. La búsqueda no mostrará ningún resultado. Por favor, agregue algún criterio abajo"
 
-#. Default: "There are currently no criteria on which to search. Please add
 #. them using the 'criteria' tab."
+#. Default: "There are currently no criteria on which to search. Please add them using the 'criteria' tab."
 #: ATContentTypes/skins/ATContentTypes/atct_topic_view.pt:125
+#, fuzzy
 msgid "description_no_criteria_in_topic"
-msgstr ""
-"Actualmente no se han definido criterios de búsqueda. Por favor, agréguelos "
-"usando la pestaña 'criterios'."
+msgstr "Actualmente no se han definido criterios de búsqueda. Por favor, agréguelos usando la pestaña 'criterios'."
 
 #. Default: "There are currently no results for this search."
 #: ATContentTypes/skins/ATContentTypes/atct_topic_view.pt:118
@@ -368,29 +363,26 @@ msgstr "Valores actuales."
 #. Default: "Columns in the table are controlled by 'Table Columns' below."
 #: ATContentTypes/content/topic.py:121
 msgid "help_custom_view"
-msgstr ""
-"Las columnas de la tabla se gestionan en 'Columnas de la Tabla' abajo."
+msgstr "Las columnas de la tabla se gestionan en 'Columnas de la Tabla' abajo."
 
-#. Default: "Select which fields to display when 'Display as Table' is
 #. checked."
+#. Default: "Select which fields to display when 'Display as Table' is checked."
 #: ATContentTypes/content/topic.py:138
+#, fuzzy
 msgid "help_custom_view_fields"
-msgstr ""
-"Seleccione qué campos desea mostrar cuando 'Mostrar como Tabla' esté "
-"marcado."
+msgstr "Seleccione qué campos desea mostrar cuando 'Mostrar como Tabla' esté marcado."
 
 #. Default: "Select the date criteria operation."
 #: ATContentTypes/criteria/date.py:93
 msgid "help_date_criteria_operation"
 msgstr "Seleccione la operación de criterios de fecha"
 
-#. Default: "Select the date criteria range. Ignore this if you selected 'Now'
 #. above."
+#. Default: "Select the date criteria range. Ignore this if you selected 'Now' above."
 #: ATContentTypes/criteria/date.py:75
+#, fuzzy
 msgid "help_date_criteria_range"
-msgstr ""
-"Seleccione el rango de criterios de fecha. Ignore esto si ha seleccionado "
-"'Ahora' arriba."
+msgstr "Seleccione el rango de criterios de fecha. Ignore esto si ha seleccionado 'Ahora' arriba."
 
 #. Default: "Select the date criteria value."
 #: ATContentTypes/criteria/date.py:59
@@ -412,67 +404,61 @@ msgstr "El inicio del rango de fechas de búsqueda"
 msgid "help_enable_table_of_contents"
 msgstr "Tabla de contenidos"
 
-#. Default: "If selected, this will show a table of contents at the top of the
 #. page."
+#. Default: "If selected, this will show a table of contents at the top of the page."
 #: ATContentTypes/content/document.py:56
+#, fuzzy
 msgid "help_enable_table_of_contents_description"
-msgstr ""
-"Si está seleccionado, mostrará una tabla de contenidos en la parte superior "
-"de la página."
+msgstr "Si está seleccionado, mostrará una tabla de contenidos en la parte superior de la página."
 
-#. Default: "Web address with more info about the event. Add http:// for
 #. external links."
+#. Default: "Web address with more info about the event. Add http:// for external links."
 #: ATContentTypes/content/event.py:105
+#, fuzzy
 msgid "help_event_url"
-msgstr ""
-"Dirección web con más información sobre el evento. Agregue http:// para los "
-"enlaces externos."
+msgstr "Dirección web con más información sobre el evento. Agregue http:// para los enlaces externos."
 
 #. Default: "If selected, this item will not appear in the navigation tree"
 #: ATContentTypes/content/schemata.py:23
 msgid "help_exclude_from_nav"
-msgstr ""
-"Si está seleccionado, este elemento no aparecerá en el árbol de navegación"
+msgstr "Si está seleccionado, este elemento no aparecerá en el árbol de navegación"
 
-#. Default: "Narrow down the search results from the parent Collection(s) by
 #. using the criteria from this Collection."
+#. Default: "Narrow down the search results from the parent Collection(s) by using the criteria from this Collection."
 #: ATContentTypes/content/topic.py:78
+#, fuzzy
 msgid "help_inherit_collection_criteria"
-msgstr ""
-"Reducir los resultados de búsqueda de las Colecciones padre utilizando los "
-"criterios de esta Colección."
+msgstr "Reducir los resultados de búsqueda de las Colecciones padre utilizando los criterios de esta Colección."
 
-#. Default: "Specify whether you want to find values lesser than, greater
 #. than, equal to, or between the chosen value(s)."
+#. Default: "Specify whether you want to find values lesser than, greater than, equal to, or between the chosen value(s)."
 #: ATContentTypes/criteria/simpleint.py:70
+#, fuzzy
 msgid "help_int_criteria_direction"
-msgstr ""
-"Especifique si quiere buscar valores menores que, mayores que, iguales a, o "
-"entre valor(es) seleccionado(s)"
+msgstr "Especifique si quiere buscar valores menores que, mayores que, iguales a, o entre valor(es) seleccionado(s)"
 
 #. Default: "An integer number."
 #: ATContentTypes/criteria/simpleint.py:38
 msgid "help_int_criteria_value"
 msgstr "Un número entero"
 
-#. Default: "An integer number used as the maximum value if the between
 #. direction is selected."
+#. Default: "An integer number used as the maximum value if the between direction is selected."
 #: ATContentTypes/criteria/simpleint.py:53
+#, fuzzy
 msgid "help_int_criteria_value2"
-msgstr ""
-"Un número entero usado como el valor máximo si ha seleccionado el tipo de "
-"comparación 'entre'."
+msgstr "Un número entero usado como el valor máximo si ha seleccionado el tipo de comparación 'entre'."
 
-#. Default: "If selected, only the 'Number of Items' indicated below will be
 #. displayed."
+#. Default: "If selected, only the 'Number of Items' indicated below will be displayed."
 #: ATContentTypes/content/topic.py:95
+#, fuzzy
 msgid "help_limit_number"
-msgstr ""
-"Si está seleccionado, sólo el se mostrará el 'Número de Elementos' indicado "
-"abajo."
+msgstr "Si está seleccionado, sólo el se mostrará el 'Número de Elementos' indicado abajo."
 
 #. Default: "Operator used to join the tests on each value."
-#: ATContentTypes/criteria/list.py:51 ATContentTypes/criteria/selection.py:53
+#: ATContentTypes/criteria/list.py:51
+#: ATContentTypes/criteria/selection.py:53
 msgid "help_list_criteria_operator"
 msgstr "Operador utilizado para unir las pruebas en cada valor."
 
@@ -481,21 +467,19 @@ msgstr "Operador utilizado para unir las pruebas en cada valor."
 msgid "help_list_criteria_value"
 msgstr "Valores, cada uno en su propia línea."
 
-#. Default: "Will be shown in the news listing, and in the news item itself.
 #. Image will be scaled to a sensible size."
+#. Default: "Will be shown in the news listing, and in the news item itself. Image will be scaled to a sensible size."
 #: ATContentTypes/content/newsitem.py:67
+#, fuzzy
 msgid "help_news_image"
-msgstr ""
-"Será mostrada en el listado de noticias, y en el mismo elemento de noticias."
-" La imagen se escalará a un tamaño adecuado."
+msgstr "Será mostrada en el listado de noticias, y en el mismo elemento de noticias. La imagen se escalará a un tamaño adecuado."
 
-#. Default: "This enables next/previous widget on content items contained in
 #. this folder."
+#. Default: "This enables next/previous widget on content items contained in this folder."
 #: ATContentTypes/content/schemata.py:72
+#, fuzzy
 msgid "help_nextprevious"
-msgstr ""
-"Permite el control de siguiente/anterior en los elementos de contenido "
-"contenidos en esta carpeta."
+msgstr "Permite el control de siguiente/anterior en los elementos de contenido contenidos en esta carpeta."
 
 #. Default: "Folders to search in."
 #: ATContentTypes/criteria/path.py:35
@@ -512,13 +496,12 @@ msgstr "Uno de los tipos de portal registrados"
 msgid "help_select_transformation_method"
 msgstr "Seleccione el método de transformación."
 
-#. Default: "Should not contain spaces, underscores or mixed case. Short Name
 #. is part of the item's web address."
+#. Default: "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
 #: ATContentTypes/criteria/schemata.py:23
+#, fuzzy
 msgid "help_shortname"
-msgstr ""
-"No debe contener espacios, guiones bajos, o mezcla de mayúsculas y "
-"minúsculas. El Nombre Corto es parte de la dirección web del elemento. "
+msgstr "No debe contener espacios, guiones bajos, o mezcla de mayúsculas y minúsculas. El Nombre Corto es parte de la dirección web del elemento. "
 
 #. Default: "Reverse display order"
 #: ATContentTypes/skins/ATContentTypes/criterion_edit_form.cpt:265
@@ -554,7 +537,8 @@ msgid "label_back_to_album"
 msgstr "Volver al álbum"
 
 #. Default: "Body Text"
-#: ATContentTypes/content/document.py:43 ATContentTypes/content/newsitem.py:45
+#: ATContentTypes/content/document.py:43
+#: ATContentTypes/content/newsitem.py:45
 #: ATContentTypes/content/topic.py:64
 msgid "label_body_text"
 msgstr "Cuerpo del texto"
@@ -758,7 +742,8 @@ msgid "label_limit_number"
 msgstr "Limitar Resultados de Búsqueda"
 
 #. Default: "operator name"
-#: ATContentTypes/criteria/list.py:49 ATContentTypes/criteria/selection.py:51
+#: ATContentTypes/criteria/list.py:49
+#: ATContentTypes/criteria/selection.py:51
 msgid "label_list_criteria_operator"
 msgstr "nombre del operador"
 
@@ -823,7 +808,8 @@ msgid "label_string_criteria_value"
 msgstr "Valor"
 
 #. Default: "Summary"
-#: ATContentTypes/content/document.py:67 ATContentTypes/content/newsitem.py:88
+#: ATContentTypes/content/document.py:67
+#: ATContentTypes/content/newsitem.py:88
 msgid "label_summary"
 msgstr "Resumen"
 
@@ -880,7 +866,8 @@ msgstr "Nombre usual"
 msgid "no_sort_order"
 msgstr "Sin tipo de ordenación"
 
-#: ATContentTypes/criteria/list.py:22 ATContentTypes/criteria/selection.py:23
+#: ATContentTypes/criteria/list.py:22
+#: ATContentTypes/criteria/selection.py:23
 msgid "or"
 msgstr "o"
 
