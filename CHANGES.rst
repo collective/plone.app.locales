@@ -6,7 +6,8 @@ Changelog
 
 - Updated Tranditional Chinese translations.
   [l34marr]
-
+- Fix typo in Italian translation.
+  [arsenico13]
 
 5.1.1 (2017-02-21)
 ------------------
