@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone.app.caching\n"
-"POT-Creation-Date: 2016-08-20 09:31+0000\n"
+"POT-Creation-Date: 2017-04-20 15:47+0000\n"
 "PO-Revision-Date: 2012-08-14 00:23+0900\n"
 "Last-Translator: Takeshi Yamamoto <tyam@mac.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -22,7 +22,7 @@ msgstr "（必須）"
 msgid "A dynamic feed, e.g. using RSS or ATOM"
 msgstr ""
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:276
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:295
 msgid "A positive number is required."
 msgstr "正の数が必要です"
 
@@ -38,23 +38,23 @@ msgstr ""
 msgid "An example profile for a caching proxy setup with split-view caching enabled."
 msgstr ""
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:273
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:292
 msgid "An integer is required."
 msgstr "整数が必要です"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:234
+#: plone.app.caching/plone/app/caching/operations/default.py:283
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
 msgstr "ブラウザ内とプロキシ内のキャッシュ（デフォルトは２４時間）。注意：URLが変わらない限り絶対に変化しない持続性のあるリソースに対してだけ使うこと。あるいは一時的に古いものが表示されても問題にならないようなリソースに対して使います。"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:209
-msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires. "
-msgstr "ブラウザ内にキャッシュしますが、（弱いキャッシングと同じように）即座に期限が切れます。また、プロキシ内にキャッシュします（デフォルト：２４時間）。最高の結果を得るにはパージ可能なキャッシングリバースプロキシを使います。注意：もしプロキシがパージできなければ、あるいは's-maxage'トークンをレスポンスから取り除くように設定できなければ、キャッシュされた情報が期限切れになるまで新鮮でないレスポンスが見られることでしょう。"
+#: plone.app.caching/plone/app/caching/operations/default.py:255
+msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the \s-maxage\ token from the response, then stale responses might be seen until the cached entry expires. "
+msgstr ""
 
-#: plone.app.caching/plone/app/caching/operations/default.py:184
-msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True. "
-msgstr "ブラウザ内にキャッシュしますが、即座に期限切れとなり、続くレスポンスで304レスポンスを有効にします。304は 'Last-modified' と 'ETags' の設定がしてあることを必要とします。もし'Last-Modified'ヘッダが新鮮であることを担保するに十分でないなら、ETagのチェック印をチェック済みにします。これはETagヘッダを構成するにに使われるべきETagコンポーネントそれぞれを一覧表示して行ないます。さらに公開レスポンスをZopeメモリ内にキャッシュするには、「RAMキャッシュ」をTrueにします。"
+#: plone.app.caching/plone/app/caching/operations/default.py:227
+msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
+msgstr ""
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:599
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:655
 msgid "Cache purged."
 msgstr "キャッシュはパージされました"
 
@@ -63,12 +63,12 @@ msgid "Caching"
 msgstr "キャッシング"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:640
-#: plone.app.caching/plone/app/caching/browser/edit.py:232
+#: plone.app.caching/plone/app/caching/browser/edit.py:258
 msgid "Cancel"
 msgstr "取り消す"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:314
-#: plone.app.caching/plone/app/caching/browser/edit.py:229
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:346
+#: plone.app.caching/plone/app/caching/browser/edit.py:250
 msgid "Changes saved."
 msgstr "変更が保存されました"
 
@@ -88,35 +88,35 @@ msgstr "コンテンツフォルダビュー"
 msgid "Content item view"
 msgstr "コンテンツアイテムビュー"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:222
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:230
 msgid "Content type ${contentType} is already mapped to the rule ${ruleset}."
 msgstr "${contentType} コンテンツタイプはすでに${ruleset}ルールに結びつけられています。"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:46
+#: plone.app.caching/plone/app/caching/interfaces.py:50
 msgid "Content type name"
 msgstr "コンテンツタイプ名"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:44
+#: plone.app.caching/plone/app/caching/interfaces.py:48
 msgid "Content type/ruleset mapping"
 msgstr "コンテンツタイプ／ルールセットのマッピング"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:51
+#: plone.app.caching/plone/app/caching/interfaces.py:55
 msgid "Content types to purge"
 msgstr "キャッシュをパージするコンテンツタイプ"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:238
+#: plone.app.caching/plone/app/caching/browser/edit.py:270
 msgid "Delete settings (use defaults)"
 msgstr "削除設定（デフォルトを使う）"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:213
+#: plone.app.caching/plone/app/caching/browser/edit.py:233
 msgid "Edit ${operation} options"
 msgstr "${operation} オプションを編集する"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:209
+#: plone.app.caching/plone/app/caching/browser/edit.py:229
 msgid "Edit ${operation} options for Ruleset: ${ruleset}"
 msgstr "${ruleset} ルールセットの ${operation} オプションを編集する"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:234
+#: plone.app.caching/plone/app/caching/browser/edit.py:261
 msgid "Edit cancelled."
 msgstr "編集は取り消されました"
 
@@ -124,7 +124,7 @@ msgstr "編集は取り消されました"
 msgid "File and image resources"
 msgstr "ファイルと画像リソース"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:68
+#: plone.app.caching/plone/app/caching/operations/default.py:70
 msgid "Generic caching"
 msgstr "包括的キャッシング"
 
@@ -136,7 +136,7 @@ msgstr "HTTPキャッシングサポート"
 msgid "Import"
 msgstr "インポート"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:488
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:536
 msgid "Import complete."
 msgstr "インポートが完了しました"
 
@@ -156,39 +156,39 @@ msgstr ""
 msgid "Installs plone.app.caching"
 msgstr "plone.app.caching をインストールする"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:262
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:279
 msgid "Invalid URL: ${url}"
 msgstr "無効なURL: ${url}"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:52
+#: plone.app.caching/plone/app/caching/interfaces.py:56
 msgid "List content types which should be purged when modified"
 msgstr "変更されるとキャッシュがパージされるべきコンテンツタイプのリスト"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:45
+#: plone.app.caching/plone/app/caching/interfaces.py:49
 msgid "Maps content type names to ruleset names"
 msgstr "コンテンツタイプ名をルールセット名にマップする（対応関係を結ぶ）"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:38
+#: plone.app.caching/plone/app/caching/interfaces.py:42
 msgid "Maps skin layer page template names to ruleset names"
 msgstr "スキンレイヤページテンプレート名をルールセット名にマップする（対応関係を結ぶ）"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:208
+#: plone.app.caching/plone/app/caching/operations/default.py:254
 msgid "Moderate caching"
 msgstr "適度のキャッシング"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:513
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:566
 msgid "No URLs or paths entered."
 msgstr "URLやパスが何も入力されていません"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:279
+#: plone.app.caching/plone/app/caching/operations/default.py:339
 msgid "No caching"
 msgstr "キャッシングなし"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:39
+#: plone.app.caching/plone/app/caching/interfaces.py:43
 msgid "Page template name"
 msgstr "ページテンプレート名"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:37
+#: plone.app.caching/plone/app/caching/interfaces.py:41
 msgid "Page template/ruleset mapping"
 msgstr "ページテンプレート／ルールセットのマッピング"
 
@@ -197,28 +197,28 @@ msgstr "ページテンプレート／ルールセットのマッピング"
 msgid "Purge"
 msgstr "パージする"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:592
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:646
 msgid "RAM cache not installed."
 msgstr "RAMキャッシュがインストールされていません"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:60
+#: plone.app.caching/plone/app/caching/interfaces.py:66
 msgid "Request variables"
 msgstr "リクエスト変数"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:58
+#: plone.app.caching/plone/app/caching/interfaces.py:63
 msgid "Request variables that prevent caching"
 msgstr "キャッシングを妨げるリクエスト変数"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:40
+#: plone.app.caching/plone/app/caching/interfaces.py:44
 msgid "Ruleset name"
 msgstr "ルールセット名"
 
-#: plone.app.caching/plone/app/caching/browser/edit.py:246
+#: plone.app.caching/plone/app/caching/browser/edit.py:285
 msgid "Ruleset-specific settings removed."
 msgstr "ルールセットに固有の設定が取り除かれました"
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:633
-#: plone.app.caching/plone/app/caching/browser/edit.py:222
+#: plone.app.caching/plone/app/caching/browser/edit.py:242
 msgid "Save"
 msgstr "保存"
 
@@ -234,15 +234,15 @@ msgstr "Squid または Varnish のようなキャッシングプロキシを使
 msgid "Stable file and image resources"
 msgstr "不変のファイルと画像リソース"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:233
+#: plone.app.caching/plone/app/caching/operations/default.py:282
 msgid "Strong caching"
 msgstr "強いキャッシング"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:251
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:265
 msgid "Template ${template} is already mapped to the rule ${ruleset}."
 msgstr "${template} テンプレートはすでに ${ruleset} ルールにマップされています。"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:296
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:323
 msgid "There were errors."
 msgstr "エラーがありました"
 
@@ -250,19 +250,19 @@ msgstr "エラーがありました"
 msgid "These are resources which can be cached 'forever'. Normally this means that if the object does change, its URL changes too."
 msgstr "これらは「永遠に」キャッシュされるリソースです。通常これは、もしオブジェクトが変化したならば、そのURLも変化することを意味します。"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:69
+#: plone.app.caching/plone/app/caching/operations/default.py:71
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
 msgstr "この動作を通じて、すべての標準キャッシング機能はオプションパラメータ設定の様々な組み合わせを経て遂行されます。多くの場合、おそらくより簡単な動作（強いキャッシング、適度なキャッシング、弱いキャッシング、キャッシングなし）のうちどれか１つを使うのが簡単でしょう。"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:280
+#: plone.app.caching/plone/app/caching/operations/default.py:340
 msgid "Use this operation to keep the response out of all caches."
 msgstr "レスポンスをすべてのキャッシュから遠ざけておくには、この動作を使います。"
 
-#: plone.app.caching/plone/app/caching/interfaces.py:59
+#: plone.app.caching/plone/app/caching/interfaces.py:64
 msgid "Variables in the request that prevent caching if present"
 msgstr "リクエスト内にもしあればキャッシングを妨げる変数"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:183
+#: plone.app.caching/plone/app/caching/operations/default.py:226
 msgid "Weak caching"
 msgstr "弱いキャッシング"
 
@@ -278,7 +278,7 @@ msgstr "キャッシングプロキシあり（スプリットビューキャッ
 msgid "Without caching proxy"
 msgstr "キャッシングプロキシなし"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:471
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:515
 msgid "You must select a profile to import."
 msgstr "インポートするためのプロファイルを選ばなけれななりません。"
 
