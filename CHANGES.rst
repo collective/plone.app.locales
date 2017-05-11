@@ -1,11 +1,18 @@
 Changelog
 =========
 
-5.1.2 (unreleased)
+5.1.3 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
+5.1.2 (2017-04-21)
 ------------------
 
 - Updated Tranditional Chinese translations.
   [l34marr]
+
 - Fix typo in Italian translation.
   [arsenico13]
 
@@ -15,7 +22,7 @@ Changelog
 - Update Japanese translations.
 
 - Update the Transifex resourceas configuration at Transifex project
-   https://www.transifex.com/plone/plone5/
+  https://www.transifex.com/plone/plone5/
   [macagua]
 
 - Update Spanish translations.
