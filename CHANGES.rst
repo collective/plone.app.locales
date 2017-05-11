@@ -1,11 +1,55 @@
 Changelog
 =========
 
-5.0.12 (unreleased)
--------------------
+5.1.3 (unreleased)
+------------------
 
 - Add UK English translation
   [MatthewWilkes]
+
+5.1.2 (2017-04-21)
+------------------
+
+- Updated Tranditional Chinese translations.
+  [l34marr]
+
+- Fix typo in Italian translation.
+  [arsenico13]
+
+5.1.1 (2017-02-21)
+------------------
+
+- Update Japanese translations.
+
+- Update the Transifex resourceas configuration at Transifex project
+  https://www.transifex.com/plone/plone5/
+  [macagua]
+
+- Update Spanish translations.
+  [macagua]
+
+- Update basque translations.
+  [erral]
+
+- Updated Chinese Simplified translation
+  [jianaijun]
+
+- Updated Tranditional Chinese translations.
+  [l34marr]
+
+
+5.1.0 (2016-11-08)
+------------------
+
+- Since Products.PasswordResetTool was merged into CMFPlone 5.1 and the templates now use the ``plone`` domain, merge all ``passwordresettool.po`` files into ``plone.po``.
+  [thet]
+
+
+5.0.12 (2016-11-08)
+-------------------
+
+- Updated French translations.
+  [gnafou]
 
 - Add messages and English translations for portlet manager names.
   [alecm]
