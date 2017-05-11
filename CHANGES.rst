@@ -4,8 +4,8 @@ Changelog
 5.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Add UK English translation
+  [MatthewWilkes]
 
 5.1.2 (2017-04-21)
 ------------------
