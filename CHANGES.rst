@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.0.14 (unreleased)
+5.0.14 (2017-06-05)
 -------------------
 
 - Update danish translation.
