@@ -7,6 +7,9 @@ Changelog
 - Update danish translation.
   [tmog]
 
+- Update Basque translation.
+
+- Update Dutch translation.
 
 5.0.13 (2017-02-21)
 -------------------
