@@ -6,6 +6,8 @@ Changelog
 
 - Add UK English translation
   [MatthewWilkes]
+- Update German translations
+  [ksuess]
 
 5.1.2 (2017-04-21)
 ------------------
