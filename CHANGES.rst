@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.3 (unreleased)
+5.1.3 (2017-07-08)
 ------------------
 
 - Add UK English translation
