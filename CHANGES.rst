@@ -4,7 +4,8 @@ Changelog
 5.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Basque translation
+  [erral]
 
 
 5.1.3 (2017-07-08)
