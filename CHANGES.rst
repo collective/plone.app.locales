@@ -7,6 +7,8 @@ Changelog
 - Basque translation
   [erral]
 
+- remove mention of "retina" (https://github.com/plone/Products.CMFPlone/issues/2123)
+  [tkimnguyen]
 
 5.1.3 (2017-07-08)
 ------------------
