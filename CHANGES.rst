@@ -6,6 +6,8 @@ Changelog
 
 - Basque translation
   [erral]
+- Add some German translations for the related items widget
+  [cillianderoiste]
 
 
 5.1.3 (2017-07-08)
