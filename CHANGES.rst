@@ -8,6 +8,8 @@ Changelog
   [erral]
 - Add some German translations for the related items widget
   [cillianderoiste]
+- Add German translations for plone.protect dialogs.
+  [pgrunewald]
 
 
 5.1.3 (2017-07-08)
