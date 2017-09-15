@@ -10,7 +10,8 @@ Changelog
   [cillianderoiste]
 - Add German translations for plone.protect dialogs.
   [pgrunewald]
-
+- Update Traditional Chinese translations.
+  [l34marr]
 
 5.1.3 (2017-07-08)
 ------------------
