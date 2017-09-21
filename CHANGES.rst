@@ -4,11 +4,16 @@ Changelog
 5.1.4 (unreleased)
 ------------------
 
-- Basque translation
-  [erral]
-
 - remove mention of "retina" (https://github.com/plone/Products.CMFPlone/issues/2123)
   [tkimnguyen]
+- Basque translation
+  [erral]
+- Add some German translations for the related items widget
+  [cillianderoiste]
+- Add German translations for plone.protect dialogs.
+  [pgrunewald]
+- Update Traditional Chinese translations.
+  [l34marr]
 
 5.1.3 (2017-07-08)
 ------------------
