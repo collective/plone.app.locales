@@ -4,6 +4,8 @@ Changelog
 5.1.4 (unreleased)
 ------------------
 
+- remove mention of "retina" (https://github.com/plone/Products.CMFPlone/issues/2123)
+  [tkimnguyen]
 - Basque translation
   [erral]
 - Add some German translations for the related items widget
