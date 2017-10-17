@@ -4,6 +4,8 @@ Changelog
 5.1.4 (unreleased)
 ------------------
 
+- German fixes and updates
+  [staeff]
 - Basque fixes
   [erral]
 - remove mention of "retina" (https://github.com/plone/Products.CMFPlone/issues/2123)
