@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.4 (unreleased)
+5.1.4 (2018-01-24)
 ------------------
 
 - German fixes and updates
@@ -177,7 +177,7 @@ Changelog
   [tmog]
 
 - Updated RU translations.
-  Сorrection of translation Tuesday Thursday June July
+  Correction of translation Tuesday Thursday June July
   [serge73]
 
 - Updated da_DK translations.
