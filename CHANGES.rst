@@ -18,6 +18,8 @@ Changelog
   [pgrunewald]
 - Update Traditional Chinese translations.
   [l34marr]
+- Complete basque (eu) translation 
+  [erral]
 
 5.1.3 (2017-07-08)
 ------------------
