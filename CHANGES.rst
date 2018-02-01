@@ -4,8 +4,8 @@ Changelog
 5.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Update Traditional Chinese translations.
+  [l34marr]
 
 5.1.4 (2018-01-24)
 ------------------
