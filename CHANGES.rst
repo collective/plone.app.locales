@@ -7,6 +7,9 @@ Changelog
 - Update Traditional Chinese translations.
   [l34marr]
 
+- Update German translations.
+  [jaroel]
+
 5.1.4 (2018-01-24)
 ------------------
 
