@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.5 (unreleased)
+5.1.5 (2018-02-08)
 ------------------
 
 - Put back missing translation of password reset mails.
