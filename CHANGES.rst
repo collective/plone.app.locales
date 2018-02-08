@@ -4,8 +4,8 @@ Changelog
 5.0.15 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Fix spanish translation.
+  [erral]
 
 5.0.14 (2017-06-05)
 -------------------
