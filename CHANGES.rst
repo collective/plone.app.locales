@@ -4,6 +4,9 @@ Changelog
 5.1.5 (unreleased)
 ------------------
 
+- Put back missing translation of password reset mails.
+  [allusa, vincentfretin]
+
 - Update Traditional Chinese translations.
   [l34marr]
 
