@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.6 (unreleased)
+5.1.6 (2018-02-15)
 ------------------
 
 - Complete Spanish translation.
