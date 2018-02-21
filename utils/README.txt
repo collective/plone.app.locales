@@ -1,11 +1,9 @@
 Preparing Plone buildout
-==========================
-::
+========================
 
-    git clone -b 5.0 git://github.com/plone/buildout.coredev.git
-    cd buildout.coredev
-    python2.7 bootstrap.py
-    bin/buildout -c experimental/i18n.cfg
+Please read the instructions at
+https://docs.plone.org/develop/plone/i18n/contribute_to_translations.html
+to have a working install to work on translations.
 
 
 Updating translations
@@ -16,6 +14,8 @@ https://github.com/plone/Products.CMFPlone/issues/983
 
 plone
 -----
+From the plone buildout:
+
 ::
 
     bin/i18n plone
@@ -31,12 +31,6 @@ atreferencebrowserwidget
 ::
 
     bin/i18n atreferencebrowserwidget
-
-passwordresettool
------------------
-::
-
-    bin/i18n passwordresettool
 
 cmfplacefulworkflow
 -------------------
@@ -58,6 +52,10 @@ linguaplone
 
 plonefrontpage
 --------------
+
+The plonefrontpage.pot is maintained manually.
+To resync the po files:
+
 ::
 
     cd locales
