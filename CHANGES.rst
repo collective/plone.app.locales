@@ -4,6 +4,9 @@ Changelog
 5.1.7 (unreleased)
 ------------------
 
+- Complete widgets translation in spanish.
+  [erral]
+
 - Complete Basque translation for widgets.
   [erral]
 
