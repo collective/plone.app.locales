@@ -7,6 +7,9 @@ Changelog
 - Complete widgets translation in spanish.
   [erral]
 
+- Complete Basque translation for widgets.
+  [erral]
+
 
 5.1.6 (2018-02-15)
 ------------------
