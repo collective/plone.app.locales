@@ -4,7 +4,8 @@ Changelog
 5.1.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Complete Basque translation for widgets.
+  [erral]
 
 
 5.1.6 (2018-02-15)
