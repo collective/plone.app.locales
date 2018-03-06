@@ -10,6 +10,8 @@ Changelog
 - Complete Basque translation for widgets.
   [erral]
 
+- Update Traditional Chinese translations.
+  [l34marr]
 
 5.1.6 (2018-02-15)
 ------------------
