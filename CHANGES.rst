@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.7 (unreleased)
+5.1.7 (2018-03-11)
 ------------------
 
 - Got back the 8 messages for the contrain types menu from the 4.3.x branch.
