@@ -4,6 +4,9 @@ Changelog
 5.1.7 (unreleased)
 ------------------
 
+- Got back the 8 messages for the contrain types menu from the 4.3.x branch.
+  [vincentfretin]
+
 - Complete widgets translation in spanish.
   [erral]
 
