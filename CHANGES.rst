@@ -4,7 +4,8 @@ Changelog
 5.1.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update Brazilian Portuguese translations.
+  [hvelarde]
 
 
 5.1.7 (2018-03-11)
@@ -58,7 +59,7 @@ Changelog
   [pgrunewald]
 - Update Traditional Chinese translations.
   [l34marr]
-- Complete basque (eu) translation 
+- Complete basque (eu) translation
   [erral]
 
 5.1.3 (2017-07-08)
