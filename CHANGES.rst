@@ -5,7 +5,7 @@ Changelog
 ------------------
 
 - Update Brazilian Portuguese translations.
-  [hvelarde]
+  [hvelarde, agnogueira]
 
 
 5.1.7 (2018-03-11)
