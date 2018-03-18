@@ -8,7 +8,7 @@ Changelog
   [hvelarde, agnogueira]
 
 - Update Italian translations.
-  [cekk]
+  [ale-rt, cekk]
 
 5.1.7 (2018-03-11)
 ------------------
