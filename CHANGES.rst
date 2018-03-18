@@ -7,6 +7,8 @@ Changelog
 - Update Brazilian Portuguese translations.
   [hvelarde, agnogueira]
 
+- Update Italian translations.
+  [cekk]
 
 5.1.7 (2018-03-11)
 ------------------
