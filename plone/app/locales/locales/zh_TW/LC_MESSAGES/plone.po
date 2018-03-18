@@ -54,6 +54,10 @@ msgstr "${action/title}"
 msgid "${items} could not be found"
 msgstr "找不到 ${items}"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:25
+msgid "${monthname} ${year}"
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/check_id.py:81
 msgid "${name} is not a legal name. The following characters are invalid: ${characters}"
 msgstr "${name} 並不是合法的名稱。下列字元是不正確的: ${characters}"
@@ -160,6 +164,11 @@ msgstr "- 使用者可建立隨即發佈的內容。 - 內容可提交透過內�
 msgid "1 minute"
 msgstr "1 分鐘"
 
+#. Default: "Events in next 7 days."
+#: plone.app.event/plone/app/event/browser/event_listing.py:277
+msgid "7days_events"
+msgstr "未來七天內的活動。"
+
 #: plone.app.registry/plone/app/registry/configure.zcml:34
 msgid "A 'Mozilla about:config' style configuration registry"
 msgstr "'Mozilla about:config' 格式的設定檔"
@@ -240,9 +249,17 @@ msgstr "能夠顯示靜態 HTML 內容的資訊方框。"
 msgid "A portlet which can receive and render an RSS feed."
 msgstr "能夠接收及顯示 RSS 的資訊方框。"
 
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "A portlet which can render a calendar."
+msgstr ""
+
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet which can render a classic template-based portlet"
 msgstr "能夠顯示舊式樣版程式碼的資訊方框。"
+
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent events"
+msgstr ""
 
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet which can render a listing of recent news"
@@ -375,6 +392,10 @@ msgstr "啟用的擴充模組"
 msgid "Add"
 msgstr "新增"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:304
+msgid "Add Calendar Portlet"
+msgstr "新增月曆方框"
+
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:60
 msgid "Add Classic Portlet"
 msgstr "新增傳統式資訊方框"
@@ -394,6 +415,10 @@ msgstr "新增內容型別的條件"
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:148
 msgid "Add Copy Action"
 msgstr "新增複製動作"
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:242
+msgid "Add Events Portlet"
+msgstr "新增活動方框"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:87
 msgid "Add File Extension Condition"
@@ -935,6 +960,14 @@ msgstr "CSS/LESS 檔案"
 #: plone.cachepurging/plone/cachepurging/interfaces.py:23
 msgid "Caching proxies"
 msgstr "Caching Proxy"
+
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:76
+msgid "Calendar"
+msgstr "月曆方框"
+
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "Calendar portlet"
+msgstr ""
 
 #: plone.app.content/plone/app/content/browser/contents/rearrange.py:72
 msgid "Can not rearrange folder"
@@ -1864,6 +1897,10 @@ msgstr "編輯 ${name}"
 msgid "Edit ${title} (${name})"
 msgstr "編輯 ${title} (${name})"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:314
+msgid "Edit Calendar Portlet"
+msgstr "編輯月曆方框"
+
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:71
 msgid "Edit Classic Portlet"
 msgstr "編輯傳統式資訊方框"
@@ -1879,6 +1916,10 @@ msgstr "編輯內容型別的條件"
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:163
 msgid "Edit Copy Action"
 msgstr "編輯複製動作"
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:253
+msgid "Edit Events Portlet"
+msgstr "編輯活動方框"
 
 #: plone.schemaeditor/plone/schemaeditor/browser/field/edit.py:134
 msgid "Edit Field '${fieldname}'"
@@ -2133,8 +2174,8 @@ msgid "Enter a list of custom plugins which will be loaded in the editor. Format
 msgstr "輸入自訂 Plugin 的設定清單，它們會出現在編輯器上，格式是 pluginname|location 逐行填寫。"
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/thumb_icon.py:29
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:66
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:117
-#: plone.app.portlets/plone/app/portlets/portlets/news.py:43
 msgid "Enter a valid scale name (see 'Image Handling' control panel) to override (e.g. icon, tile, thumb, mini, preview, ... ). Leave empty to use default (see 'Site' control panel)."
 msgstr "輸入圖檔尺寸的名稱，例如 icon, tile, thumb, mini, preview 等，可以覆蓋預設值。留空的話，會使用預設值。"
 
@@ -2232,7 +2273,13 @@ msgstr "活動的結束日期"
 msgid "Event start date"
 msgstr "活動的起始日期"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:101
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "Events"
+msgstr "活動方框"
+
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/testing/types/plone.app.event.dx.event.xml
 msgid "Events can be shown in calendars."
 msgstr "會出現在月曆裡的活動項目。"
 
@@ -2665,9 +2712,9 @@ msgstr "個人資料夾"
 msgid "Hour"
 msgstr "時"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:35
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:26
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:27
-#: plone.app.portlets/plone/app/portlets/portlets/rss.py:239
 msgid "How many items to list."
 msgstr "多少列出的項目數量。"
 
@@ -2742,9 +2789,9 @@ msgstr "勾選的話，方框不會顯示文件圖示。"
 msgid "If enabled, the portlet will not show thumbs"
 msgstr "勾選的話，方框不會顯示縮圖。"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:77
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:128
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:52
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:43
 msgid "If enabled, the portlet will not show thumbs."
 msgstr "勾選的話，方框不會顯示縮圖。"
 
@@ -2980,6 +3027,8 @@ msgstr "項目狀態變更。"
 msgid "Item(s) pasted."
 msgstr "個項目被貼上。"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:52
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:43
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:34
 msgid "Items in which workflow state to show."
 msgstr "項目的工作流程狀態顯示。"
@@ -3794,9 +3843,9 @@ msgstr "網站地圖會顯示的目錄階層數量。"
 msgid "Number of items that will show up in one batch."
 msgstr "每個分頁會顯示的項目數量。"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:25
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:26
-#: plone.app.portlets/plone/app/portlets/portlets/rss.py:238
 msgid "Number of items to display"
 msgstr "顯示項目的數量"
 
@@ -3889,9 +3938,9 @@ msgstr "在目錄裡的順序"
 msgid "Original URL"
 msgstr "原始網址"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:65
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:116
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:42
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:40
 msgid "Override thumb scale"
 msgstr "覆蓋縮圖尺寸"
 
@@ -5286,9 +5335,9 @@ msgstr "覆蓋圖示"
 msgid "Suppress icons in list, table or summary view"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:76
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:127
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:53
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:51
 msgid "Suppress thumbs"
 msgstr "覆蓋縮圖"
 
@@ -5864,6 +5913,10 @@ msgstr "這個資訊方框用來顯示待審項目的清單。"
 msgid "This portlet displays an RSS feed."
 msgstr "這個資訊方框用來顯示 RSS 內容。"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:305
+msgid "This portlet displays events in a calendar."
+msgstr "以月曆形式顯示活動資訊。"
+
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:144
 msgid "This portlet displays recent News Items."
 msgstr "這個資訊方框用來顯示最近的新聞項目。"
@@ -5871,6 +5924,10 @@ msgstr "這個資訊方框用來顯示最近的新聞項目。"
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:159
 msgid "This portlet displays recently modified content."
 msgstr "這個資訊方框用來顯示最近修改的項目。"
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:243
+msgid "This portlet lists upcoming Events."
+msgstr "用來顯示最新的活動列表。"
 
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:62
 msgid "This portlet shows a search box."
@@ -6466,6 +6523,10 @@ msgstr "警告"
 msgid "Warning: disabling this can be dangerous. Only disable if you know what you are doing."
 msgstr ""
 
+#: plone.app.users/plone/app/users/schema.py:83
+msgid "We will use this address if you need to recover your password"
+msgstr ""
+
 #: CMFPlone/skins/plone_login/login_next.cpy:60
 msgid "Welcome! You are now logged in."
 msgstr "歡迎！你已經登入系統。"
@@ -6517,7 +6578,7 @@ msgstr "工作流程"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:101
 #: plone.app.contentrules/plone/app/contentrules/conditions/wfstate.py:24
-#: plone.app.portlets/plone/app/portlets/portlets/news.py:33
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:51
 msgid "Workflow state"
 msgstr "工作流程狀態"
 
@@ -6807,6 +6868,11 @@ msgstr "確認要刪除它嗎?"
 #: plone.app.content/plone/app/content/browser/templates/delete_confirmation.pt:27
 msgid "alert_really_delete_folder"
 msgstr "確定要刪除這目錄以及它包含的所有項目?"
+
+#. Default: "All events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:261
+msgid "all_events"
+msgstr "所有活動"
 
 #: CMFPlone/browser/search.py:179
 #: CMFPlone/interfaces/controlpanel.py:1071
@@ -7843,10 +7909,20 @@ msgstr "Mimetype ${mimetype} 在 ${name} 不能使用，請更正。"
 msgid "error_already_installed"
 msgstr "佈景主題已安裝，想要重新上傳的話，可以選擇「重新上傳佈景主題」來取代舊的資料。"
 
+#. Default: "End date must be after start date."
+#: plone.app.event/plone/app/event/dx/behaviors.py:159
+msgid "error_end_must_be_after_start_date"
+msgstr "結束日期必須在起始日期之後。"
+
 #. Default: "Expiration date must be after publishing date."
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:172
 msgid "error_expiration_must_be_after_effective_date"
 msgstr "失效日期必須在生效日期之後。"
+
+#. Default: "Invalid start or end date"
+#: plone.app.event/plone/app/event/dx/behaviors.py:50
+msgid "error_invalid_date"
+msgstr "起始或結束日期不正確。"
 
 #. Default: "Please ensure you enter one expression per line, in the format <name> = <expression>."
 #: plone/app/theming/browser/controlpanel.py:180
@@ -7877,6 +7953,26 @@ msgstr "${name} 是必填欄位，請更正。"
 #: Archetypes/Field.py:424
 msgid "error_vocabulary"
 msgstr "資料值 ${val} 不能用於元件 ${label} 的字彙集裡。"
+
+#. Default: "${from} until ${until}."
+#: plone.app.event/plone/app/event/browser/event_listing.py:278
+msgid "events_from_until"
+msgstr "從 ${from} 到 ${until}。"
+
+#. Default: "Events in ${month} ${year}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:335
+msgid "events_in_month"
+msgstr "${year} ${month} 的活動"
+
+#. Default: "Events in week ${weeknumber}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:312
+msgid "events_in_week"
+msgstr "第 ${weeknumber} 週的活動"
+
+#. Default: "Events on ${day}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:298
+msgid "events_on_day"
+msgstr "${day} 的活動"
 
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/browser/i18n.py:139
 msgid "except"
@@ -7954,6 +8050,11 @@ msgstr "限制…"
 #: plone.app.content/plone/app/content/browser/folderfactories.pt:29
 msgid "folder_add_settings_long"
 msgstr "點選在這裡能被新增的型別項目…"
+
+#. Default: "Future events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:267
+msgid "future_events"
+msgstr "最新活動"
 
 #. Default: "Up to rule management"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:24
@@ -8702,10 +8803,65 @@ msgstr "內容目錄"
 msgid "help_enable_table_of_contents_description"
 msgstr "勾選的話，文章的上方會顯示內容目錄。"
 
+#. Default: "List of attendees."
+#: plone.app.event/plone/app/event/dx/behaviors.py:222
+msgid "help_event_attendees"
+msgstr "逐行填寫參與者的名單。"
+
+#. Default: "Email address to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:265
+msgid "help_event_contact_email"
+msgstr "聯絡人員的電郵地址。"
+
+#. Default: "Name of a person to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:247
+msgid "help_event_contact_name"
+msgstr "聯絡人員的姓名。"
+
+#. Default: "Phone number to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:283
+msgid "help_event_contact_phone"
+msgstr "聯絡人員的電話。"
+
+#. Default: "Date and Time, when the event ends."
+#: plone.app.event/plone/app/event/dx/behaviors.py:96
+msgid "help_event_end"
+msgstr "活動結束的日期和時間。"
+
+#. Default: "Location of the event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:199
+msgid "help_event_location"
+msgstr "活動的位置資訊。"
+
+#. Default: "This event is open ended."
+#: plone.app.event/plone/app/event/dx/behaviors.py:133
+msgid "help_event_open_end"
+msgstr "活動結束時間未定。"
+
+#. Default: "Define the event recurrence rule."
+#: plone.app.event/plone/app/event/dx/behaviors.py:173
+msgid "help_event_recurrence"
+msgstr "設定活動的循環週期。"
+
 #. Default: "Date and Time related settings like timezone(s), etc."
 #: CMFPlone/controlpanel/browser/dateandtime.py:15
 msgid "help_event_settings"
 msgstr "日期或時間相關的設定，像是時區資訊。"
+
+#. Default: "Date and Time, when the event begins."
+#: plone.app.event/plone/app/event/dx/behaviors.py:77
+msgid "help_event_start"
+msgstr "活動起始的日期和時間。"
+
+#. Default: "Web address with more info about the event. Add http:// for external links."
+#: plone.app.event/plone/app/event/dx/behaviors.py:301
+msgid "help_event_url"
+msgstr "說明活動細節的網址。外部網站請加上 http:// 開頭資訊。"
+
+#. Default: "Event lasts whole day."
+#: plone.app.event/plone/app/event/dx/behaviors.py:115
+msgid "help_event_whole_day"
+msgstr "活動時間涵蓋一整天。"
 
 #. Default: "If selected, this item will not appear in the navigation tree"
 #: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:57
@@ -9252,6 +9408,61 @@ msgstr "HTML"
 #: CMFPlone/interfaces/controlpanel.py:1736
 msgid "i18n_domain_heading"
 msgstr "I18n Domain"
+
+#. Default: "Content type of the event, which is created when importing icalendar resources."
+#: plone.app.event/plone/app/event/ical/importer.py:222
+msgid "ical_import_event_type_desc"
+msgstr "匯入 iCal 時，預設要建立的活動型別。"
+
+#. Default: "Event Type"
+#: plone.app.event/plone/app/event/ical/importer.py:221
+msgid "ical_import_event_type_title"
+msgstr "活動類型"
+
+#. Default: "Icalendar resource file, if no URL is given."
+#: plone.app.event/plone/app/event/ical/importer.py:240
+msgid "ical_import_file_desc"
+msgstr "iCalendar 檔案或網址。"
+
+#. Default: "Icalendar File"
+#: plone.app.event/plone/app/event/ical/importer.py:239
+msgid "ical_import_file_title"
+msgstr "iCalendar 檔案"
+
+#. Default: "${num} events imported from ${filename}"
+#: plone.app.event/plone/app/event/ical/importer.py:340
+msgid "ical_import_imported"
+msgstr "從 ${filename} 匯入 ${num} 活動"
+
+#. Default: "Please provide either a icalendar ics file or a URL to a file."
+#: plone.app.event/plone/app/event/ical/importer.py:347
+msgid "ical_import_no_ics"
+msgstr "請提供 iCalendar ICS 檔案或網址。"
+
+#. Default: "Defines how to synchronize:\n1) \"Keep newer\": Import, if the imported event is modified after the existing\n   one.\n2) \"Keep mine\": On conflicts, just do nothing.\n3) \"Keep theirs\": On conflicts, update the existing event with the external\n   one.\n4) \"No Syncing\": Don't synchronize but import events and create new ones, even\n    if they already exist. For each one, create a new sync_uid."
+#: plone.app.event/plone/app/event/ical/importer.py:251
+msgid "ical_import_sync_strategy_desc"
+msgstr ""
+"設定同步方式:\n"
+"1) 保留新的資料: 如果匯入的資料較新，就覆蓋原本舊的。\n"
+"2) 保留既有資料: 資料重覆時，不會執行匯入動作。\n"
+"3) 保留匯入資料: 資料重覆時，使用匯入的資料。\n"
+"4) 不同步: 直接匯入，並為所有資料建立新識別碼。"
+
+#. Default: "Synchronization Strategy"
+#: plone.app.event/plone/app/event/ical/importer.py:247
+msgid "ical_import_sync_strategy_title"
+msgstr "同步方式"
+
+#. Default: "URL to an external icalendar resource file."
+#: plone.app.event/plone/app/event/ical/importer.py:232
+msgid "ical_import_url_desc"
+msgstr "外部 iCalendar 的檔案網址。"
+
+#. Default: "Icalendar URL"
+#: plone.app.event/plone/app/event/ical/importer.py:231
+msgid "ical_import_url_title"
+msgstr "iCal 網址"
 
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:39
@@ -10025,7 +10236,7 @@ msgid "label_event_announcement"
 msgstr "活動說明文字"
 
 #. Default: "Attendees"
-#: widget label of LinesWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:218
 msgid "label_event_attendees"
 msgstr "參與者"
 
@@ -10050,18 +10261,44 @@ msgstr "${start}"
 msgid "label_event_byline_samedate"
 msgstr "${start} 從 ${starttime} 到 ${end}"
 
+#. Default: "Contact E-mail"
+#: plone.app.event/plone/app/event/dx/behaviors.py:261
+msgid "label_event_contact_email"
+msgstr "聯絡電郵"
+
+#. Default: "Contact Name"
+#: plone.app.event/plone/app/event/dx/behaviors.py:243
+msgid "label_event_contact_name"
+msgstr "聯絡人員"
+
+#. Default: "Contact Phone"
+#: plone.app.event/plone/app/event/dx/behaviors.py:279
+msgid "label_event_contact_phone"
+msgstr "聯絡電話"
+
 #. Default: "Event Ends"
-#: widget label of CalendarWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:92
 msgid "label_event_end"
 msgstr "活動結束時間"
 
-#. Default: "Event Location"
-#: widget label of StringWidget - description ""
+#. Default: "Location"
+#: plone.app.event/plone/app/event/dx/behaviors.py:195
+#, fuzzy
 msgid "label_event_location"
 msgstr "活動地點"
 
+#. Default: "Open End"
+#: plone.app.event/plone/app/event/dx/behaviors.py:129
+msgid "label_event_open_end"
+msgstr "結束時間未定"
+
+#. Default: "Recurrence"
+#: plone.app.event/plone/app/event/dx/behaviors.py:169
+msgid "label_event_recurrence"
+msgstr "循環設定"
+
 #. Default: "Event Starts"
-#: widget label of CalendarWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:73
 msgid "label_event_start"
 msgstr "活動開始時間"
 
@@ -10069,6 +10306,16 @@ msgstr "活動開始時間"
 #: widget label of KeywordWidget - description ""
 msgid "label_event_type"
 msgstr "活動類型"
+
+#. Default: "Event URL"
+#: plone.app.event/plone/app/event/dx/behaviors.py:297
+msgid "label_event_url"
+msgstr "活動網址"
+
+#. Default: "Whole Day"
+#: plone.app.event/plone/app/event/dx/behaviors.py:111
+msgid "label_event_whole_day"
+msgstr "從早到晚"
 
 #. Default: "Exception"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:92
@@ -11764,6 +12011,11 @@ msgstr ""
 msgid "more_url"
 msgstr "更多…"
 
+#. Default: "Ical import settings saved."
+#: plone.app.event/plone/app/event/ical/importer.py:302
+msgid "msg_ical_import_settings_saved"
+msgstr "iCal 匯入設定已儲存。"
+
 #. Default: "The following login names would be used by more than one account:"
 #: CMFPlone/controlpanel/browser/emaillogin.pt:28
 msgid "msg_login_duplicates_found"
@@ -11778,6 +12030,11 @@ msgstr "沒有發現重覆的帳號。"
 #: plone.app.users/plone/app/users/browser/register.py:378
 msgid "msg_no_password_no_mail_me"
 msgstr "必須設定密碼或是選擇寄送通知信件。"
+
+#. Default: "There are ${results} more occurrences."
+#: plone.app.event/plone/app/event/browser/event_summary.py:80
+msgid "msg_num_more_occurrences"
+msgstr "還有 ${results} 筆資料。"
 
 #. Default: "Text is too long. (Maximum ${max} characters.)"
 #: plone.app.textfield/plone/app/textfield/__init__.py:64
@@ -11899,6 +12156,11 @@ msgstr "用來指定佈景主題的編譯參數，在規則檔裡可以用 <code
 msgid "past_end_date"
 msgstr ""
 
+#. Default: "Past events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:264
+msgid "past_events"
+msgstr "過往活動"
+
 #. Default: "pending"
 #: workflow state defined in plone_workflow - title Pending
 msgid "pending"
@@ -11926,6 +12188,10 @@ msgstr ""
 
 #: plone.app.collection/plone/app/collection/configure.zcml:19
 msgid "plone.app.collection, the new style Archetypes collections in Plone 4"
+msgstr ""
+
+#: plone.app.event/plone/app/event/profiles/testing/types/plone.app.event.dx.event.xml
+msgid "plone.app.event.dx.event"
 msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/configure.zcml:45
@@ -11968,6 +12234,18 @@ msgstr "依照類別來設定動作"
 #: CMFPlone/controlpanel/browser/actions.pt:13
 msgid "portal_actions_controlpanel_header"
 msgstr "動作"
+
+#. Default: "Select search base Folder or Collection to search for events. The URL to to this item will also be used to link to in calendar searches. If empty, the whole site will be searched and the event listing view will be called on the site root."
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:61
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:53
+msgid "portlet_help_search_base"
+msgstr "指定搜尋活動的起始目錄，這個設定值也會在月曆方框裡生效。留空的話，預設會搜尋整個網站。"
+
+#. Default: "Search base"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:60
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:52
+msgid "portlet_label_search_base"
+msgstr "搜尋的起始目錄"
 
 #. Default: "Static Portlet"
 #: plone.portlet.static/plone/portlet/static/static.py:124
@@ -12221,6 +12499,11 @@ msgstr "目前的分享權限設定"
 msgid "summary_author_content_list"
 msgstr "依型別分類列出作者的內容"
 
+#. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:41
+msgid "summary_calendar"
+msgstr ""
+
 #. Default: "Content listing"
 #: plone.app.content/plone/app/content/browser/table.pt:29
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:27
@@ -12242,6 +12525,26 @@ msgstr "檢視歷史"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:132
 msgid "summary_roles_for_groups"
 msgstr "為群組選擇身份"
+
+#. Default: "Keep mine"
+#: plone.app.event/plone/app/event/vocabularies.py:24
+msgid "sync_keep_mine"
+msgstr "保留既有資料"
+
+#. Default: "Keep newer"
+#: plone.app.event/plone/app/event/vocabularies.py:23
+msgid "sync_keep_newer"
+msgstr "保留新的資料"
+
+#. Default: "Keep theirs"
+#: plone.app.event/plone/app/event/vocabularies.py:25
+msgid "sync_keep_theirs"
+msgstr "保留匯入資料"
+
+#. Default: "No Syncing"
+#: plone.app.event/plone/app/event/vocabularies.py:26
+msgid "sync_none"
+msgstr "不同步"
 
 #. Default: "All ${count} items on this page are selected."
 #: plone.app.content/plone/app/content/browser/table.pt:41
@@ -12731,6 +13034,11 @@ msgstr "上移"
 msgid "title_next_item"
 msgstr "到下一個項目"
 
+#. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:30
+msgid "title_next_month"
+msgstr ""
+
 #. Default: "Personal Information"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:57
 #: plone.app.users/plone/app/users/browser/account-configlet.pt:32
@@ -12747,6 +13055,11 @@ msgstr "不沿用"
 #: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:20
 msgid "title_previous_item"
 msgstr "到前一個項目"
+
+#. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:12
+msgid "title_previous_month"
+msgstr ""
 
 #. Default: "Password Reset Tool"
 #: CMFPlone/browser/templates/explainPWResetTool.pt:7
@@ -12841,6 +13154,16 @@ msgstr "顯示"
 #: CMFPlone/browser/templates/accessibility-info.pt:21
 msgid "title_wcag"
 msgstr "網頁無障礙指南"
+
+#. Default: "Todays events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:274
+msgid "todays_events"
+msgstr "本日活動"
+
+#. Default: "Todays upcoming events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:270
+msgid "todays_upcoming_events"
+msgstr "本日最新活動"
 
 #. Default: "Click to view a live preview. Forms will be disabled in the preview."
 #: plone/app/theming/browser/controlpanel.pt:140
