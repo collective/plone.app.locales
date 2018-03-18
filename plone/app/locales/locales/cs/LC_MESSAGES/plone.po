@@ -77,6 +77,10 @@ msgstr ""
 msgid "${items} could not be found"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:25
+msgid "${monthname} ${year}"
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/check_id.py:81
 msgid "${name} is not a legal name. The following characters are invalid: ${characters}"
 msgstr "Řetězec ${name} nelze jako název použít, protože obsahuje následující nepovolené znaky: ${characters}"
@@ -183,6 +187,11 @@ msgstr "- Uživatelé mohou vytvořit obsah, který je okamžitě veřejně př�
 msgid "1 minute"
 msgstr "1 minuta"
 
+#. Default: "Events in next 7 days."
+#: plone.app.event/plone/app/event/browser/event_listing.py:277
+msgid "7days_events"
+msgstr "Události v následujícím týdnu."
+
 #: plone.app.registry/plone/app/registry/configure.zcml:34
 msgid "A 'Mozilla about:config' style configuration registry"
 msgstr "Konfigurační registr podobný 'about:config' v prohlížeči Mozilla/Firefox"
@@ -263,9 +272,17 @@ msgstr "Portlet, který zobrazuje statický HTML text."
 msgid "A portlet which can receive and render an RSS feed."
 msgstr "Portlet, který umí zpracovat a zobrazit externí RSS kanál."
 
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "A portlet which can render a calendar."
+msgstr ""
+
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet which can render a classic template-based portlet"
 msgstr "Portlet pro zobrazení portletu na základě existující šablony."
+
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent events"
+msgstr ""
 
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet which can render a listing of recent news"
@@ -398,6 +415,10 @@ msgstr "Aktivní přídavné produkty"
 msgid "Add"
 msgstr "Přidat"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:304
+msgid "Add Calendar Portlet"
+msgstr "Přidat portlet s kalendářem"
+
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:60
 msgid "Add Classic Portlet"
 msgstr "Přidat klasický portlet"
@@ -417,6 +438,10 @@ msgstr "Přidat podmínku na typ položky"
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:148
 msgid "Add Copy Action"
 msgstr "Přidat operaci Kopírovat"
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:242
+msgid "Add Events Portlet"
+msgstr "Přidat portlet s událostmi"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:87
 msgid "Add File Extension Condition"
@@ -868,7 +893,7 @@ msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:1354
 msgid "Available timezones"
-msgstr ""
+msgstr "Dostupná časová pásma"
 
 #: plone.app.contenttypes/plone/app/contenttypes/migration/atct_migrator_results.pt:77
 msgid "Back to Plone"
@@ -957,6 +982,14 @@ msgstr ""
 
 #: plone.cachepurging/plone/cachepurging/interfaces.py:23
 msgid "Caching proxies"
+msgstr ""
+
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:76
+msgid "Calendar"
+msgstr "Kalendář"
+
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "Calendar portlet"
 msgstr ""
 
 #: plone.app.content/plone/app/content/browser/contents/rearrange.py:72
@@ -1887,6 +1920,10 @@ msgstr ""
 msgid "Edit ${title} (${name})"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:314
+msgid "Edit Calendar Portlet"
+msgstr "Upravit portlet kalendáře"
+
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:71
 msgid "Edit Classic Portlet"
 msgstr "Upravit klasický portlet"
@@ -1902,6 +1939,10 @@ msgstr "Upravit podmínku typu obsahu"
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:163
 msgid "Edit Copy Action"
 msgstr "Upravit operaci Kopírovat"
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:253
+msgid "Edit Events Portlet"
+msgstr "Upravit portlet událostí"
 
 #: plone.schemaeditor/plone/schemaeditor/browser/field/edit.py:134
 msgid "Edit Field '${fieldname}'"
@@ -2156,8 +2197,8 @@ msgid "Enter a list of custom plugins which will be loaded in the editor. Format
 msgstr ""
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/thumb_icon.py:29
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:66
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:117
-#: plone.app.portlets/plone/app/portlets/portlets/news.py:43
 msgid "Enter a valid scale name (see 'Image Handling' control panel) to override (e.g. icon, tile, thumb, mini, preview, ... ). Leave empty to use default (see 'Site' control panel)."
 msgstr ""
 
@@ -2255,7 +2296,13 @@ msgstr "Datum ukončení události"
 msgid "Event start date"
 msgstr "Datum začátku události"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:101
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "Events"
+msgstr "Události"
+
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/testing/types/plone.app.event.dx.event.xml
 msgid "Events can be shown in calendars."
 msgstr "Události mohou být zobrazeny v kalendáři."
 
@@ -2688,9 +2735,9 @@ msgstr "Domovská složka"
 msgid "Hour"
 msgstr "Hodina"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:35
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:26
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:27
-#: plone.app.portlets/plone/app/portlets/portlets/rss.py:239
 msgid "How many items to list."
 msgstr "Kolik položek vypsat."
 
@@ -2765,9 +2812,9 @@ msgstr ""
 msgid "If enabled, the portlet will not show thumbs"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:77
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:128
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:52
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:43
 msgid "If enabled, the portlet will not show thumbs."
 msgstr ""
 
@@ -3003,6 +3050,8 @@ msgstr "Stav položky změněn"
 msgid "Item(s) pasted."
 msgstr "Položky byly vloženy."
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:52
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:43
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:34
 msgid "Items in which workflow state to show."
 msgstr "Zobrazit položky v tomto stavu pracovního postupu"
@@ -3817,9 +3866,9 @@ msgstr ""
 msgid "Number of items that will show up in one batch."
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:25
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:26
-#: plone.app.portlets/plone/app/portlets/portlets/rss.py:238
 msgid "Number of items to display"
 msgstr "Počet položek ke zobrazení"
 
@@ -3912,9 +3961,9 @@ msgstr "Pořadí ve složce"
 msgid "Original URL"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:65
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:116
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:42
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:40
 msgid "Override thumb scale"
 msgstr ""
 
@@ -4206,7 +4255,7 @@ msgstr "URL portálu"
 
 #: CMFPlone/interfaces/controlpanel.py:1343
 msgid "Portal default timezone"
-msgstr ""
+msgstr "Výchozí časové pásmo"
 
 #: plone.stringinterp/plone/stringinterp/adapters.py:750
 msgid "Portal title"
@@ -5309,9 +5358,9 @@ msgstr ""
 msgid "Suppress icons in list, table or summary view"
 msgstr ""
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:76
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:127
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:53
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:51
 msgid "Suppress thumbs"
 msgstr ""
 
@@ -5887,6 +5936,10 @@ msgstr "Tento portlet zobrazuje frontu dokumentů, které čekají na posouzení
 msgid "This portlet displays an RSS feed."
 msgstr "Tento portlet zobrazuje kanál RSS"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:305
+msgid "This portlet displays events in a calendar."
+msgstr "Tento portlet zobrazuje události v kalendáři"
+
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:144
 msgid "This portlet displays recent News Items."
 msgstr "Tento portlet zobrazuje poslední Novinky."
@@ -5894,6 +5947,10 @@ msgstr "Tento portlet zobrazuje poslední Novinky."
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:159
 msgid "This portlet displays recently modified content."
 msgstr "Tento portlet zobrazuje poslední upravené položky obsahu."
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:243
+msgid "This portlet lists upcoming Events."
+msgstr "Tento portlet zobrazuje nadcházející události"
 
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:62
 msgid "This portlet shows a search box."
@@ -6489,6 +6546,10 @@ msgstr "Varování"
 msgid "Warning: disabling this can be dangerous. Only disable if you know what you are doing."
 msgstr ""
 
+#: plone.app.users/plone/app/users/schema.py:83
+msgid "We will use this address if you need to recover your password"
+msgstr ""
+
 #: CMFPlone/skins/plone_login/login_next.cpy:60
 msgid "Welcome! You are now logged in."
 msgstr "Vítejte! Přihlášení proběhlo úspěšně."
@@ -6540,7 +6601,7 @@ msgstr "Workflow"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:101
 #: plone.app.contentrules/plone/app/contentrules/conditions/wfstate.py:24
-#: plone.app.portlets/plone/app/portlets/portlets/news.py:33
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:51
 msgid "Workflow state"
 msgstr "Stav pracovního postupu"
 
@@ -6830,6 +6891,11 @@ msgstr "Opravdu má být tato položka odstraněna?"
 #: plone.app.content/plone/app/content/browser/templates/delete_confirmation.pt:27
 msgid "alert_really_delete_folder"
 msgstr "Opravdu chcete vymazat tuto složku a celý její obsah?"
+
+#. Default: "All events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:261
+msgid "all_events"
+msgstr "Všechny události"
 
 #: CMFPlone/browser/search.py:179
 #: CMFPlone/interfaces/controlpanel.py:1071
@@ -7870,10 +7936,20 @@ msgstr "Mimetype ${mimetype} není pro ${name} povolen. Opravte to prosím."
 msgid "error_already_installed"
 msgstr "Tento vzhled je již nainstalován. Vyberte \"Nahradit existující vzhled\" a nahrajte ho znovu."
 
+#. Default: "End date must be after start date."
+#: plone.app.event/plone/app/event/dx/behaviors.py:159
+msgid "error_end_must_be_after_start_date"
+msgstr "Datum ukončení musí být po datu začátku události."
+
 #. Default: "Expiration date must be after publishing date."
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:172
 msgid "error_expiration_must_be_after_effective_date"
 msgstr ""
+
+#. Default: "Invalid start or end date"
+#: plone.app.event/plone/app/event/dx/behaviors.py:50
+msgid "error_invalid_date"
+msgstr "Neplatné datum začátku nebo ukončení"
 
 #. Default: "Please ensure you enter one expression per line, in the format <name> = <expression>."
 #: plone/app/theming/browser/controlpanel.py:180
@@ -7904,6 +7980,26 @@ msgstr "Vyplnění pole ${name} je povinné, zadejte požadovaný údaj."
 #: Archetypes/Field.py:424
 msgid "error_vocabulary"
 msgstr "Není možné použít hodnotu ${val} jako hodnotu pole ${label}."
+
+#. Default: "${from} until ${until}."
+#: plone.app.event/plone/app/event/browser/event_listing.py:278
+msgid "events_from_until"
+msgstr "${from} do ${until}."
+
+#. Default: "Events in ${month} ${year}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:335
+msgid "events_in_month"
+msgstr "Události v ${month} ${year}"
+
+#. Default: "Events in week ${weeknumber}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:312
+msgid "events_in_week"
+msgstr "Události v týdnu ${weeknumber}"
+
+#. Default: "Events on ${day}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:298
+msgid "events_on_day"
+msgstr "Události dne ${day}"
 
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/browser/i18n.py:139
 msgid "except"
@@ -7981,6 +8077,11 @@ msgstr "Omezit..."
 #: plone.app.content/plone/app/content/browser/folderfactories.pt:29
 msgid "folder_add_settings_long"
 msgstr "Chcete-li nastavit typy položek, které zde bude možné přidávat, klepněte sem."
+
+#. Default: "Future events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:267
+msgid "future_events"
+msgstr "Nadcházející události"
 
 #. Default: "Up to rule management"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:24
@@ -8529,7 +8630,7 @@ msgstr ""
 #. Default: "The timezones, which should be available for the portal. Can be set for users and events"
 #: CMFPlone/interfaces/controlpanel.py:1355
 msgid "help_available_timezones"
-msgstr ""
+msgstr "Časová pásma, která budou používána v portálu. Mohou být nastavena pro události a také jednotlivými uživateli."
 
 #. Default: "A short overview of who you are and what you do. Will be displayed on your author page, linked from the items you create."
 #: plone.app.users/plone/app/users/profiles/default/userschema.xml
@@ -8735,10 +8836,65 @@ msgstr ""
 msgid "help_enable_table_of_contents_description"
 msgstr ""
 
+#. Default: "List of attendees."
+#: plone.app.event/plone/app/event/dx/behaviors.py:222
+msgid "help_event_attendees"
+msgstr "Seznam účastníku."
+
+#. Default: "Email address to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:265
+msgid "help_event_contact_email"
+msgstr "Emailová adresa, kam mohou zájemci napsat o bližší informace k této události."
+
+#. Default: "Name of a person to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:247
+msgid "help_event_contact_name"
+msgstr "Jméno osoby,. která má na starosti kontakt s účastníky a veřejností."
+
+#. Default: "Phone number to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:283
+msgid "help_event_contact_phone"
+msgstr "Telefonní číslo, kde mohou zájemci získat bližší informace o této události."
+
+#. Default: "Date and Time, when the event ends."
+#: plone.app.event/plone/app/event/dx/behaviors.py:96
+msgid "help_event_end"
+msgstr "Datum a čas, kdy událost končí"
+
+#. Default: "Location of the event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:199
+msgid "help_event_location"
+msgstr "Místo konání události."
+
+#. Default: "This event is open ended."
+#: plone.app.event/plone/app/event/dx/behaviors.py:133
+msgid "help_event_open_end"
+msgstr "Tato událost nemá přesně určený konec."
+
+#. Default: "Define the event recurrence rule."
+#: plone.app.event/plone/app/event/dx/behaviors.py:173
+msgid "help_event_recurrence"
+msgstr "Definice pravidla pro opakování události."
+
 #. Default: "Date and Time related settings like timezone(s), etc."
 #: CMFPlone/controlpanel/browser/dateandtime.py:15
 msgid "help_event_settings"
-msgstr ""
+msgstr "Nastavení vlastností události jako je časové pásmo atd."
+
+#. Default: "Date and Time, when the event begins."
+#: plone.app.event/plone/app/event/dx/behaviors.py:77
+msgid "help_event_start"
+msgstr "Datum a čas začátku události."
+
+#. Default: "Web address with more info about the event. Add http:// for external links."
+#: plone.app.event/plone/app/event/dx/behaviors.py:301
+msgid "help_event_url"
+msgstr "Adresa stránky, kde se nacházejí bližší informace o události. Pro odkazy mimo tento portál musíte použít i prefix http://"
+
+#. Default: "Event lasts whole day."
+#: plone.app.event/plone/app/event/dx/behaviors.py:115
+msgid "help_event_whole_day"
+msgstr "Událost trvá celý den."
 
 #. Default: "If selected, this item will not appear in the navigation tree"
 #: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:57
@@ -8765,7 +8921,7 @@ msgstr ""
 #. Default: "First day in the week."
 #: CMFPlone/interfaces/controlpanel.py:1367
 msgid "help_first_weekday"
-msgstr ""
+msgstr "První den v týdnu."
 
 #. Default: "If you are unsure of which format to use, just select Plain Text and type the document as you usually do."
 #: Archetypes/skins/archetypes/wysiwyg_support.pt:18
@@ -8965,7 +9121,7 @@ msgstr "Složky, ve kterých se má vyhledávat."
 #. Default: "The timezone setting of the portal. Users can set their own timezone, if available timezones are defined."
 #: CMFPlone/interfaces/controlpanel.py:1344
 msgid "help_portal_timezone"
-msgstr ""
+msgstr "Nastavení časového pásma portálu. Uživatelé si mohou vybrat jiné časové pásmo ze seznamu povolených časových pásem."
 
 #. Default: "One of the available content types."
 #: widget description of MultiSelectionWidget for label Value
@@ -9294,6 +9450,61 @@ msgstr "Značkování HTML"
 #: CMFPlone/interfaces/controlpanel.py:1736
 msgid "i18n_domain_heading"
 msgstr ""
+
+#. Default: "Content type of the event, which is created when importing icalendar resources."
+#: plone.app.event/plone/app/event/ical/importer.py:222
+msgid "ical_import_event_type_desc"
+msgstr "Typ položky, která je vytvořena v případě icalendar importu událostí."
+
+#. Default: "Event Type"
+#: plone.app.event/plone/app/event/ical/importer.py:221
+msgid "ical_import_event_type_title"
+msgstr "Typ položky"
+
+#. Default: "Icalendar resource file, if no URL is given."
+#: plone.app.event/plone/app/event/ical/importer.py:240
+msgid "ical_import_file_desc"
+msgstr "Pokud není zadána adresa icalendar souboru, nahrajte icalendar soubor zde."
+
+#. Default: "Icalendar File"
+#: plone.app.event/plone/app/event/ical/importer.py:239
+msgid "ical_import_file_title"
+msgstr "Soubor s icalendar"
+
+#. Default: "${num} events imported from ${filename}"
+#: plone.app.event/plone/app/event/ical/importer.py:340
+msgid "ical_import_imported"
+msgstr "Počet událostí importovaných z ${filename}: ${num}"
+
+#. Default: "Please provide either a icalendar ics file or a URL to a file."
+#: plone.app.event/plone/app/event/ical/importer.py:347
+msgid "ical_import_no_ics"
+msgstr "Zadejste prosím soubor icalendar (ics) nebo jeho webovou adresu"
+
+#. Default: "Defines how to synchronize:\n1) \"Keep newer\": Import, if the imported event is modified after the existing\n   one.\n2) \"Keep mine\": On conflicts, just do nothing.\n3) \"Keep theirs\": On conflicts, update the existing event with the external\n   one.\n4) \"No Syncing\": Don't synchronize but import events and create new ones, even\n    if they already exist. For each one, create a new sync_uid."
+#: plone.app.event/plone/app/event/ical/importer.py:251
+msgid "ical_import_sync_strategy_desc"
+msgstr ""
+"Nastavení synchronizace:\n"
+"1) \"Ponechat novější\": Importovat, pokud importovaná událost je změněna po událost v portálu.\n"
+"2) \"Ponechat moje\":V případě konfliktu, nedělat nic\n"
+"3) \"Použít jejich\": V případě konfliktu nahradit událost z importovaného spuboru.\n"
+"4) \"Nesynchronizovat\": Nesynchronizovat existující události, ale importovat události a vytvořit novéi když už takové události existují. Pro každou nově importovanou vytvořit nové unikátní ID pro synchropnizaci"
+
+#. Default: "Synchronization Strategy"
+#: plone.app.event/plone/app/event/ical/importer.py:247
+msgid "ical_import_sync_strategy_title"
+msgstr "Strategie synchronizace"
+
+#. Default: "URL to an external icalendar resource file."
+#: plone.app.event/plone/app/event/ical/importer.py:232
+msgid "ical_import_url_desc"
+msgstr "Webová adresa souboru s icalendar"
+
+#. Default: "Icalendar URL"
+#: plone.app.event/plone/app/event/ical/importer.py:231
+msgid "ical_import_url_title"
+msgstr "icalendar URL"
 
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:39
@@ -10071,7 +10282,7 @@ msgid "label_event_announcement"
 msgstr "Text k události"
 
 #. Default: "Attendees"
-#: widget label of LinesWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:218
 msgid "label_event_attendees"
 msgstr "Návštěvníci"
 
@@ -10096,18 +10307,44 @@ msgstr "${start}"
 msgid "label_event_byline_samedate"
 msgstr "${start} od ${starttime} do ${end}"
 
+#. Default: "Contact E-mail"
+#: plone.app.event/plone/app/event/dx/behaviors.py:261
+msgid "label_event_contact_email"
+msgstr "Kontaktní e-mail"
+
+#. Default: "Contact Name"
+#: plone.app.event/plone/app/event/dx/behaviors.py:243
+msgid "label_event_contact_name"
+msgstr "Jméno kontaktu"
+
+#. Default: "Contact Phone"
+#: plone.app.event/plone/app/event/dx/behaviors.py:279
+msgid "label_event_contact_phone"
+msgstr "Kontaktní telefon"
+
 #. Default: "Event Ends"
-#: widget label of CalendarWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:92
 msgid "label_event_end"
 msgstr "Konec události"
 
-#. Default: "Event Location"
-#: widget label of StringWidget - description ""
+#. Default: "Location"
+#: plone.app.event/plone/app/event/dx/behaviors.py:195
+#, fuzzy
 msgid "label_event_location"
 msgstr "Místo události"
 
+#. Default: "Open End"
+#: plone.app.event/plone/app/event/dx/behaviors.py:129
+msgid "label_event_open_end"
+msgstr "Neurčitý konec"
+
+#. Default: "Recurrence"
+#: plone.app.event/plone/app/event/dx/behaviors.py:169
+msgid "label_event_recurrence"
+msgstr "Opakování"
+
 #. Default: "Event Starts"
-#: widget label of CalendarWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:73
 msgid "label_event_start"
 msgstr "Začátek události"
 
@@ -10115,6 +10352,16 @@ msgstr "Začátek události"
 #: widget label of KeywordWidget - description ""
 msgid "label_event_type"
 msgstr "Druh události"
+
+#. Default: "Event URL"
+#: plone.app.event/plone/app/event/dx/behaviors.py:297
+msgid "label_event_url"
+msgstr "Adresa události"
+
+#. Default: "Whole Day"
+#: plone.app.event/plone/app/event/dx/behaviors.py:111
+msgid "label_event_whole_day"
+msgstr "Celý den"
 
 #. Default: "Exception"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:92
@@ -10191,7 +10438,7 @@ msgstr "Najít zde skupinu"
 #. Default: "First weekday"
 #: CMFPlone/interfaces/controlpanel.py:1366
 msgid "label_first_weekday"
-msgstr ""
+msgstr "První den v týdnu"
 
 #. Default: "Floating-point number"
 #: plone.schemaeditor/plone/schemaeditor/fields.py:89
@@ -11823,6 +12070,11 @@ msgstr ""
 msgid "more_url"
 msgstr "Více..."
 
+#. Default: "Ical import settings saved."
+#: plone.app.event/plone/app/event/ical/importer.py:302
+msgid "msg_ical_import_settings_saved"
+msgstr "Nastavení ical importu bylo uloženo"
+
 #. Default: "The following login names would be used by more than one account:"
 #: CMFPlone/controlpanel/browser/emaillogin.pt:28
 msgid "msg_login_duplicates_found"
@@ -11837,6 +12089,11 @@ msgstr ""
 #: plone.app.users/plone/app/users/browser/register.py:378
 msgid "msg_no_password_no_mail_me"
 msgstr "Musíte nastavit heslo nebo zvolit možnost pro zaslání emailu."
+
+#. Default: "There are ${results} more occurrences."
+#: plone.app.event/plone/app/event/browser/event_summary.py:80
+msgid "msg_num_more_occurrences"
+msgstr ""
 
 #. Default: "Text is too long. (Maximum ${max} characters.)"
 #: plone.app.textfield/plone/app/textfield/__init__.py:64
@@ -11959,6 +12216,11 @@ msgstr "Zde můžete definovat parametry, které budou předány do vzhledu. Na 
 msgid "past_end_date"
 msgstr ""
 
+#. Default: "Past events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:264
+msgid "past_events"
+msgstr "Uskutečněné události"
+
 #. Default: "pending"
 #: workflow state defined in plone_workflow - title Pending
 msgid "pending"
@@ -11986,6 +12248,10 @@ msgstr ""
 
 #: plone.app.collection/plone/app/collection/configure.zcml:19
 msgid "plone.app.collection, the new style Archetypes collections in Plone 4"
+msgstr ""
+
+#: plone.app.event/plone/app/event/profiles/testing/types/plone.app.event.dx.event.xml
+msgid "plone.app.event.dx.event"
 msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/configure.zcml:45
@@ -12028,6 +12294,18 @@ msgstr ""
 #: CMFPlone/controlpanel/browser/actions.pt:13
 msgid "portal_actions_controlpanel_header"
 msgstr ""
+
+#. Default: "Select search base Folder or Collection to search for events. The URL to to this item will also be used to link to in calendar searches. If empty, the whole site will be searched and the event listing view will be called on the site root."
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:61
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:53
+msgid "portlet_help_search_base"
+msgstr "Vyberte výchozí složku, kde budou vyhledávány události. Tato složka bude také použita jako odkaz ve vyhledávání z kalendáře. Pokud není složka uvedena, pak se budou vyhledávat události v celém portálu."
+
+#. Default: "Search base"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:60
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:52
+msgid "portlet_label_search_base"
+msgstr "Výchozí složka vyhledávání"
 
 #. Default: "Static Portlet"
 #: plone.portlet.static/plone/portlet/static/static.py:124
@@ -12286,6 +12564,11 @@ msgstr "Aktuálně přiřazená oprávnění "
 msgid "summary_author_content_list"
 msgstr "Uvádí položky vytvořené autorem seskupené podle jejich typu."
 
+#. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:41
+msgid "summary_calendar"
+msgstr ""
+
 #. Default: "Content listing"
 #: plone.app.content/plone/app/content/browser/table.pt:29
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:27
@@ -12307,6 +12590,26 @@ msgstr "Historie revizí"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:132
 msgid "summary_roles_for_groups"
 msgstr "Výběr rolí pro všechny skupiny"
+
+#. Default: "Keep mine"
+#: plone.app.event/plone/app/event/vocabularies.py:24
+msgid "sync_keep_mine"
+msgstr "Ponechat moje"
+
+#. Default: "Keep newer"
+#: plone.app.event/plone/app/event/vocabularies.py:23
+msgid "sync_keep_newer"
+msgstr "Ponechat novější"
+
+#. Default: "Keep theirs"
+#: plone.app.event/plone/app/event/vocabularies.py:25
+msgid "sync_keep_theirs"
+msgstr "Použít jejich"
+
+#. Default: "No Syncing"
+#: plone.app.event/plone/app/event/vocabularies.py:26
+msgid "sync_none"
+msgstr "Nesynchronizovat"
 
 #. Default: "All ${count} items on this page are selected."
 #: plone.app.content/plone/app/content/browser/table.pt:41
@@ -12799,6 +13102,11 @@ msgstr "Posunout položku nahoru"
 msgid "title_next_item"
 msgstr "Přejít na další položku"
 
+#. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:30
+msgid "title_next_month"
+msgstr ""
+
 #. Default: "Personal Information"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:57
 #: plone.app.users/plone/app/users/browser/account-configlet.pt:32
@@ -12815,6 +13123,11 @@ msgstr "Blokováno"
 #: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:20
 msgid "title_previous_item"
 msgstr "Přejít na předchozí položku"
+
+#. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:12
+msgid "title_previous_month"
+msgstr ""
 
 #. Default: "Password Reset Tool"
 #: CMFPlone/browser/templates/explainPWResetTool.pt:7
@@ -12909,6 +13222,16 @@ msgstr "Zobrazit tuto verzi"
 #: CMFPlone/browser/templates/accessibility-info.pt:21
 msgid "title_wcag"
 msgstr "Portál Plone odpovídá požadavkům směrnice konsorcia W3C-WAI o dostupnosti obsahu sítě WWW pro postižené."
+
+#. Default: "Todays events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:274
+msgid "todays_events"
+msgstr "Dnešní události"
+
+#. Default: "Todays upcoming events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:270
+msgid "todays_upcoming_events"
+msgstr "Dnešní nadcházející události"
 
 #. Default: "Click to view a live preview. Forms will be disabled in the preview."
 #: plone/app/theming/browser/controlpanel.pt:140

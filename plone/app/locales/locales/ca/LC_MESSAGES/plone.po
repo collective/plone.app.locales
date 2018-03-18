@@ -63,6 +63,10 @@ msgstr "${action/title}"
 msgid "${items} could not be found"
 msgstr "No s'han trobat ${items}"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:25
+msgid "${monthname} ${year}"
+msgstr ""
+
 #: CMFPlone/skins/plone_scripts/check_id.py:81
 msgid "${name} is not a legal name. The following characters are invalid: ${characters}"
 msgstr "${name} no és un nom vàlid. Els caràcters següents són invàlids: ${characters}"
@@ -169,6 +173,11 @@ msgstr "- Els usuaris poden crear contingut que és accessible públicament de f
 msgid "1 minute"
 msgstr "1 minut"
 
+#. Default: "Events in next 7 days."
+#: plone.app.event/plone/app/event/browser/event_listing.py:277
+msgid "7days_events"
+msgstr "Esdeveniments dels propers 7 dies"
+
 #: plone.app.registry/plone/app/registry/configure.zcml:34
 msgid "A 'Mozilla about:config' style configuration registry"
 msgstr "Un registre de configuració semblant a 'Mozilla about:config'"
@@ -249,9 +258,17 @@ msgstr "Un portlet que pot mostrar text HTML estàtic."
 msgid "A portlet which can receive and render an RSS feed."
 msgstr "Un portlet que pot rebre i mostrar un canal RSS."
 
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "A portlet which can render a calendar."
+msgstr ""
+
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet which can render a classic template-based portlet"
 msgstr "Un portlet que pot mostrar un portlet clàssic basat en plantilla"
+
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "A portlet which can render a listing of recent events"
+msgstr ""
 
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet which can render a listing of recent news"
@@ -384,6 +401,10 @@ msgstr "Complements activats"
 msgid "Add"
 msgstr "Afegeix"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:304
+msgid "Add Calendar Portlet"
+msgstr "Afegeix portlets de Calendari"
+
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:60
 msgid "Add Classic Portlet"
 msgstr "Afegeix un portlet clàssic"
@@ -403,6 +424,10 @@ msgstr "Afegeix una condició de tipus de contingut"
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:148
 msgid "Add Copy Action"
 msgstr "Afegeix una acció de còpia"
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:242
+msgid "Add Events Portlet"
+msgstr "Afegeix un portlet d'esdeveniment"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:87
 msgid "Add File Extension Condition"
@@ -944,6 +969,14 @@ msgstr "Fitxers CSS/LESS"
 #: plone.cachepurging/plone/cachepurging/interfaces.py:23
 msgid "Caching proxies"
 msgstr "Servidors intermediaris amb memòria cau"
+
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:76
+msgid "Calendar"
+msgstr "Calendari"
+
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "Calendar portlet"
+msgstr ""
 
 #: plone.app.content/plone/app/content/browser/contents/rearrange.py:72
 msgid "Can not rearrange folder"
@@ -1873,6 +1906,10 @@ msgstr "Edita ${name}"
 msgid "Edit ${title} (${name})"
 msgstr "Edita ${title} (${name})"
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:314
+msgid "Edit Calendar Portlet"
+msgstr "Edita el portlet de Calendari"
+
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:71
 msgid "Edit Classic Portlet"
 msgstr "Edita el portlet clàssic"
@@ -1888,6 +1925,10 @@ msgstr "Edita la condició de tipus de contingut"
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:163
 msgid "Edit Copy Action"
 msgstr "Edita l'acció de còpia"
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:253
+msgid "Edit Events Portlet"
+msgstr "Edita el portlet d'esdeveniments"
 
 #: plone.schemaeditor/plone/schemaeditor/browser/field/edit.py:134
 msgid "Edit Field '${fieldname}'"
@@ -2142,8 +2183,8 @@ msgid "Enter a list of custom plugins which will be loaded in the editor. Format
 msgstr "Llista d'extensions personalitzades que s'afegeixen a l'editor. Entreu-ne una per línia amb el format nom d'extensió|localització."
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/thumb_icon.py:29
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:66
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:117
-#: plone.app.portlets/plone/app/portlets/portlets/news.py:43
 msgid "Enter a valid scale name (see 'Image Handling' control panel) to override (e.g. icon, tile, thumb, mini, preview, ... ). Leave empty to use default (see 'Site' control panel)."
 msgstr "Nom d'escala vàlida (vegeu 'Manipulació d'imatges' a la configuració del lloc) que voleu redefinir (per exemple icon, tile, thumb, mini, preview, ... ). Si ho deixeu en blanc s'utilitzen els valors per defecte (vegeu 'Lloc' a la configuració del lloc)."
 
@@ -2241,7 +2282,13 @@ msgstr "Data de finalització de l'esdeveniment"
 msgid "Event start date"
 msgstr "Data d'inici de l'esdeveniment"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:101
+#: plone.app.event/plone/app/event/profiles/default/portlets.xml
+msgid "Events"
+msgstr "Esdeveniments"
+
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Event.xml
+#: plone.app.event/plone/app/event/profiles/testing/types/plone.app.event.dx.event.xml
 msgid "Events can be shown in calendars."
 msgstr "Els esdeveniments es poden mostrar en els calendaris."
 
@@ -2674,9 +2721,9 @@ msgstr "Carpeta d'inici"
 msgid "Hour"
 msgstr "Hora"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:35
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:26
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:27
-#: plone.app.portlets/plone/app/portlets/portlets/rss.py:239
 msgid "How many items to list."
 msgstr "Quants elements llistar."
 
@@ -2751,9 +2798,9 @@ msgstr "Quan està activat, el portlet no mostra les icones dels tipus document.
 msgid "If enabled, the portlet will not show thumbs"
 msgstr "Quan està activat, el portlet no previsualitza les miniatures"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:77
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:128
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:52
-#: plone.app.portlets/plone/app/portlets/portlets/review.py:43
 msgid "If enabled, the portlet will not show thumbs."
 msgstr "Quan està activat, el portlet no previsualitza les miniatures."
 
@@ -2989,6 +3036,8 @@ msgstr "S'ha canviat l'estat de l'element."
 msgid "Item(s) pasted."
 msgstr "Elements enganxats."
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:52
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:43
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:34
 msgid "Items in which workflow state to show."
 msgstr "Elements en els quals mostrar l'estat del circuit."
@@ -3803,9 +3852,9 @@ msgstr "Quantitat de nivells de carpeta que s'han de mostrar al mapa del lloc."
 msgid "Number of items that will show up in one batch."
 msgstr "Quantitat d'elements que es mostren a cada lot."
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:34
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:25
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:26
-#: plone.app.portlets/plone/app/portlets/portlets/rss.py:238
 msgid "Number of items to display"
 msgstr "Nombre d'elements a mostrar"
 
@@ -3898,9 +3947,9 @@ msgstr "Ordre en la carpeta"
 msgid "Original URL"
 msgstr "URL original"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:65
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:116
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:42
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:40
 msgid "Override thumb scale"
 msgstr "Redefineix l'escala de les miniatures"
 
@@ -5295,9 +5344,9 @@ msgstr "Amaga les icones "
 msgid "Suppress icons in list, table or summary view"
 msgstr "Amaga les icones a les llistes, a les taules i a les vistes resum"
 
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:76
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:127
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:53
-#: plone.app.portlets/plone/app/portlets/portlets/recent.py:51
 msgid "Suppress thumbs"
 msgstr "Amaga les miniatures"
 
@@ -5873,6 +5922,10 @@ msgstr "Aquest portlet mostra una cua de documents pendents de revisió."
 msgid "This portlet displays an RSS feed."
 msgstr "Aquest portlet mostra un canal RSS."
 
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:305
+msgid "This portlet displays events in a calendar."
+msgstr "Aquest portlet mostra els esdeveniments del calendari"
+
 #: plone.app.portlets/plone/app/portlets/portlets/news.py:144
 msgid "This portlet displays recent News Items."
 msgstr "Aquest portlet mostra les notícies recents."
@@ -5880,6 +5933,10 @@ msgstr "Aquest portlet mostra les notícies recents."
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:159
 msgid "This portlet displays recently modified content."
 msgstr "Aquest portlet mostra el contingut modificat recentment."
+
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:243
+msgid "This portlet lists upcoming Events."
+msgstr "Aquest portlet llista els propers esdeveniments."
 
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:62
 msgid "This portlet shows a search box."
@@ -6475,6 +6532,10 @@ msgstr "Avís"
 msgid "Warning: disabling this can be dangerous. Only disable if you know what you are doing."
 msgstr "Alerta: si desactiveu això pot ser perillós. Només desactiveu-ho si sou conscients del que feu."
 
+#: plone.app.users/plone/app/users/schema.py:83
+msgid "We will use this address if you need to recover your password"
+msgstr ""
+
 #: CMFPlone/skins/plone_login/login_next.cpy:60
 msgid "Welcome! You are now logged in."
 msgstr "Us donem la benvinguda! Heu iniciat la sessió."
@@ -6527,7 +6588,7 @@ msgstr "Circuit"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/configure.zcml:101
 #: plone.app.contentrules/plone/app/contentrules/conditions/wfstate.py:24
-#: plone.app.portlets/plone/app/portlets/portlets/news.py:33
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:51
 msgid "Workflow state"
 msgstr "Estat del circuit"
 
@@ -6817,6 +6878,11 @@ msgstr "Segur que voleu suprimir aquest element?"
 #: plone.app.content/plone/app/content/browser/templates/delete_confirmation.pt:27
 msgid "alert_really_delete_folder"
 msgstr "Segur que voleu suprimir aquesta carpeta i tot el seu contingut?"
+
+#. Default: "All events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:261
+msgid "all_events"
+msgstr "Tots els esdeveniments"
 
 #: CMFPlone/browser/search.py:179
 #: CMFPlone/interfaces/controlpanel.py:1071
@@ -7853,10 +7919,20 @@ msgstr "El tipus MIME ${mimetype} no està permès a ${name}."
 msgid "error_already_installed"
 msgstr "Aquest tema ja està instal·lat. Selecciona 'Substitueix el tema existent' i torna'l a pujar per actualitzar-lo."
 
+#. Default: "End date must be after start date."
+#: plone.app.event/plone/app/event/dx/behaviors.py:159
+msgid "error_end_must_be_after_start_date"
+msgstr "La data de finalització ha de ser posterior a la data d'inici."
+
 #. Default: "Expiration date must be after publishing date."
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:172
 msgid "error_expiration_must_be_after_effective_date"
 msgstr "La data d'expiració ha de ser posterior a la data de publicació."
+
+#. Default: "Invalid start or end date"
+#: plone.app.event/plone/app/event/dx/behaviors.py:50
+msgid "error_invalid_date"
+msgstr "Data d'inici o fi incorrecta"
 
 #. Default: "Please ensure you enter one expression per line, in the format <name> = <expression>."
 #: plone/app/theming/browser/controlpanel.py:180
@@ -7887,6 +7963,26 @@ msgstr "${name} és necessari, si us plau, corregiu-lo."
 #: Archetypes/Field.py:424
 msgid "error_vocabulary"
 msgstr "Els valors ${val} no estan permesos pel vocabulari de l'element ${label}."
+
+#. Default: "${from} until ${until}."
+#: plone.app.event/plone/app/event/browser/event_listing.py:278
+msgid "events_from_until"
+msgstr "${from} fins el ${until}."
+
+#. Default: "Events in ${month} ${year}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:335
+msgid "events_in_month"
+msgstr "Esdeveniments de/d' ${month} ${year}"
+
+#. Default: "Events in week ${weeknumber}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:312
+msgid "events_in_week"
+msgstr "Esdeveniments en la setmana ${weeknumber}"
+
+#. Default: "Events on ${day}"
+#: plone.app.event/plone/app/event/browser/event_listing.py:298
+msgid "events_on_day"
+msgstr "Esdeveniments en ${day}"
 
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/browser/i18n.py:139
 msgid "except"
@@ -7964,6 +8060,11 @@ msgstr "Restriccions…"
 #: plone.app.content/plone/app/content/browser/folderfactories.pt:29
 msgid "folder_add_settings_long"
 msgstr "Cliqueu per a configurar quins tipus d'elements es poden afegir aquí…"
+
+#. Default: "Future events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:267
+msgid "future_events"
+msgstr "Propers esdeveniments"
 
 #. Default: "Up to rule management"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:24
@@ -8709,10 +8810,65 @@ msgstr "Taula de continguts"
 msgid "help_enable_table_of_contents_description"
 msgstr "Quan està activat, es mostra una taula de continguts a dalt de tot de la pàgina."
 
+#. Default: "List of attendees."
+#: plone.app.event/plone/app/event/dx/behaviors.py:222
+msgid "help_event_attendees"
+msgstr "Lista d'assistens"
+
+#. Default: "Email address to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:265
+msgid "help_event_contact_email"
+msgstr "Adreça de contacte de l'esdeveniment."
+
+#. Default: "Name of a person to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:247
+msgid "help_event_contact_name"
+msgstr "Responsable de l'esdeveniment."
+
+#. Default: "Phone number to contact about this event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:283
+msgid "help_event_contact_phone"
+msgstr "Telèfon de contacte de l'esdeveniment"
+
+#. Default: "Date and Time, when the event ends."
+#: plone.app.event/plone/app/event/dx/behaviors.py:96
+msgid "help_event_end"
+msgstr "Data i hora en la que finalitza l'esdeveniment."
+
+#. Default: "Location of the event."
+#: plone.app.event/plone/app/event/dx/behaviors.py:199
+msgid "help_event_location"
+msgstr "Lloc de l'esdeveniment."
+
+#. Default: "This event is open ended."
+#: plone.app.event/plone/app/event/dx/behaviors.py:133
+msgid "help_event_open_end"
+msgstr "Esdeveniment sense data de fi."
+
+#. Default: "Define the event recurrence rule."
+#: plone.app.event/plone/app/event/dx/behaviors.py:173
+msgid "help_event_recurrence"
+msgstr "Defineix la regla de periodicitat de l'esdeveniment"
+
 #. Default: "Date and Time related settings like timezone(s), etc."
 #: CMFPlone/controlpanel/browser/dateandtime.py:15
 msgid "help_event_settings"
 msgstr "Configuració relacionada amb la data i hora, com per exemple el fus horari."
+
+#. Default: "Date and Time, when the event begins."
+#: plone.app.event/plone/app/event/dx/behaviors.py:77
+msgid "help_event_start"
+msgstr "Data i hora d'inici de l'esdeveniment."
+
+#. Default: "Web address with more info about the event. Add http:// for external links."
+#: plone.app.event/plone/app/event/dx/behaviors.py:301
+msgid "help_event_url"
+msgstr "Adreça web amb més informació sobre l'esdeveniment. Afegiu http:// si es tracta d'un enllaç extern."
+
+#. Default: "Event lasts whole day."
+#: plone.app.event/plone/app/event/dx/behaviors.py:115
+msgid "help_event_whole_day"
+msgstr "Esdeveniments de dia complet"
 
 #. Default: "If selected, this item will not appear in the navigation tree"
 #: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:57
@@ -9259,6 +9415,57 @@ msgstr "HTML"
 #: CMFPlone/interfaces/controlpanel.py:1736
 msgid "i18n_domain_heading"
 msgstr "Domini i18n"
+
+#. Default: "Content type of the event, which is created when importing icalendar resources."
+#: plone.app.event/plone/app/event/ical/importer.py:222
+msgid "ical_import_event_type_desc"
+msgstr "Tipus de contingut de l'esdeveniment, que serà creat quan s'importi des d'un arxiu iCal"
+
+#. Default: "Event Type"
+#: plone.app.event/plone/app/event/ical/importer.py:221
+msgid "ical_import_event_type_title"
+msgstr "Esdeveniment"
+
+#. Default: "Icalendar resource file, if no URL is given."
+#: plone.app.event/plone/app/event/ical/importer.py:240
+msgid "ical_import_file_desc"
+msgstr "Font de l'iCalendar, si no es proporciona un esdeveniment."
+
+#. Default: "Icalendar File"
+#: plone.app.event/plone/app/event/ical/importer.py:239
+msgid "ical_import_file_title"
+msgstr "Arxiu iCalendar"
+
+#. Default: "${num} events imported from ${filename}"
+#: plone.app.event/plone/app/event/ical/importer.py:340
+msgid "ical_import_imported"
+msgstr "${num} esdeveniments importats des de/d' ${filename}"
+
+#. Default: "Please provide either a icalendar ics file or a URL to a file."
+#: plone.app.event/plone/app/event/ical/importer.py:347
+msgid "ical_import_no_ics"
+msgstr "Si us plau, proporciona un arxiu iCalendar o un enllaç a un arxiu."
+
+#. Default: "Defines how to synchronize:\n1) \"Keep newer\": Import, if the imported event is modified after the existing\n   one.\n2) \"Keep mine\": On conflicts, just do nothing.\n3) \"Keep theirs\": On conflicts, update the existing event with the external\n   one.\n4) \"No Syncing\": Don't synchronize but import events and create new ones, even\n    if they already exist. For each one, create a new sync_uid."
+#: plone.app.event/plone/app/event/ical/importer.py:251
+msgid "ical_import_sync_strategy_desc"
+msgstr ""
+"Defineix com sincronitzar:\n"
+
+#. Default: "Synchronization Strategy"
+#: plone.app.event/plone/app/event/ical/importer.py:247
+msgid "ical_import_sync_strategy_title"
+msgstr ""
+
+#. Default: "URL to an external icalendar resource file."
+#: plone.app.event/plone/app/event/ical/importer.py:232
+msgid "ical_import_url_desc"
+msgstr ""
+
+#. Default: "Icalendar URL"
+#: plone.app.event/plone/app/event/ical/importer.py:231
+msgid "ical_import_url_title"
+msgstr ""
 
 #. Default: "If all of the following conditions are met:"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:39
@@ -10036,7 +10243,7 @@ msgid "label_event_announcement"
 msgstr "Text de l'esdeveniment"
 
 #. Default: "Attendees"
-#: widget label of LinesWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:218
 msgid "label_event_attendees"
 msgstr "Assistents"
 
@@ -10061,18 +10268,44 @@ msgstr "${start}"
 msgid "label_event_byline_samedate"
 msgstr "${start} de ${starttime} a ${end}"
 
+#. Default: "Contact E-mail"
+#: plone.app.event/plone/app/event/dx/behaviors.py:261
+msgid "label_event_contact_email"
+msgstr ""
+
+#. Default: "Contact Name"
+#: plone.app.event/plone/app/event/dx/behaviors.py:243
+msgid "label_event_contact_name"
+msgstr ""
+
+#. Default: "Contact Phone"
+#: plone.app.event/plone/app/event/dx/behaviors.py:279
+msgid "label_event_contact_phone"
+msgstr ""
+
 #. Default: "Event Ends"
-#: widget label of CalendarWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:92
 msgid "label_event_end"
 msgstr "L'esdeveniment finalitza"
 
-#. Default: "Event Location"
-#: widget label of StringWidget - description ""
+#. Default: "Location"
+#: plone.app.event/plone/app/event/dx/behaviors.py:195
+#, fuzzy
 msgid "label_event_location"
 msgstr "Ubicació de l'esdeveniment"
 
+#. Default: "Open End"
+#: plone.app.event/plone/app/event/dx/behaviors.py:129
+msgid "label_event_open_end"
+msgstr ""
+
+#. Default: "Recurrence"
+#: plone.app.event/plone/app/event/dx/behaviors.py:169
+msgid "label_event_recurrence"
+msgstr ""
+
 #. Default: "Event Starts"
-#: widget label of CalendarWidget - description ""
+#: plone.app.event/plone/app/event/dx/behaviors.py:73
 msgid "label_event_start"
 msgstr "L'esdeveniment comença"
 
@@ -10080,6 +10313,16 @@ msgstr "L'esdeveniment comença"
 #: widget label of KeywordWidget - description ""
 msgid "label_event_type"
 msgstr "Tipus d'esdeveniment"
+
+#. Default: "Event URL"
+#: plone.app.event/plone/app/event/dx/behaviors.py:297
+msgid "label_event_url"
+msgstr ""
+
+#. Default: "Whole Day"
+#: plone.app.event/plone/app/event/dx/behaviors.py:111
+msgid "label_event_whole_day"
+msgstr ""
 
 #. Default: "Exception"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:92
@@ -11559,12 +11802,28 @@ msgstr "dddd dd 'de' mmmm 'de' yyyy"
 #. Default: "A comment on \"${title}\" has been posted here: ${link}\n\n---\n${text}\n---\n"
 #: plone.app.discussion/plone/app/discussion/comment.py:51
 msgid "mail_notification_message"
-msgstr "S'ha publicat un comentari sobre el contingut ${title} en aquesta adreça: ${link}\\n\\n---\\n${text}\\n---\\n"
+msgstr ""
+"S'ha publicat un comentari sobre el contingut ${title} en aquesta adreça: ${link}\\n"
+"\\n"
+"---\\n"
+"${text}\\n"
+"---\\n"
 
 #. Default: "A comment on \"${title}\" has been posted here: ${link}\n\n---\n${text}\n---\n\nApprove comment:\n${link_approve}\n\nDelete comment:\n${link_delete}\n"
 #: plone.app.discussion/plone/app/discussion/comment.py:60
 msgid "mail_notification_message_moderator"
-msgstr "Un comentari sobre \"${title}\" s'ha publicat aquí: ${link}\\n\\n---\\n${text}\\n---\\n\\nAproveu el comentari:\\n${link_approve}\\n\\nSuprimiu el comentari:\\n${link_delete}\\n"
+msgstr ""
+"Un comentari sobre \"${title}\" s'ha publicat aquí: ${link}\\n"
+"\\n"
+"---\\n"
+"${text}\\n"
+"---\\n"
+"\\n"
+"Aproveu el comentari:\\n"
+"${link_approve}\\n"
+"\\n"
+"Suprimiu el comentari:\\n"
+"${link_delete}\\n"
 
 #. Default: "Welcome ${fullname}, Your user account has been created. Your username is ${member}. Please activate it by visiting ${set_password} Please activate your account before ${expirationdate}"
 #: CMFPlone/browser/templates/registered_notify_template.pt:23
@@ -11759,6 +12018,11 @@ msgstr "del mes"
 msgid "more_url"
 msgstr "Més..."
 
+#. Default: "Ical import settings saved."
+#: plone.app.event/plone/app/event/ical/importer.py:302
+msgid "msg_ical_import_settings_saved"
+msgstr ""
+
 #. Default: "The following login names would be used by more than one account:"
 #: CMFPlone/controlpanel/browser/emaillogin.pt:28
 msgid "msg_login_duplicates_found"
@@ -11773,6 +12037,11 @@ msgstr "No s'han trobat noms d'usuari que siguin utilitzats en més d'un compte.
 #: plone.app.users/plone/app/users/browser/register.py:378
 msgid "msg_no_password_no_mail_me"
 msgstr "Heu d'establir una contrasenya o optar per enviar un correu electrònic."
+
+#. Default: "There are ${results} more occurrences."
+#: plone.app.event/plone/app/event/browser/event_summary.py:80
+msgid "msg_num_more_occurrences"
+msgstr ""
 
 #. Default: "Text is too long. (Maximum ${max} characters.)"
 #: plone.app.textfield/plone/app/textfield/__init__.py:64
@@ -11894,6 +12163,11 @@ msgstr "Podeu definir paràmetres aquí, que s'inclouran al tema compilat. En el
 msgid "past_end_date"
 msgstr "Error: La data d'acabament no pot ser anterior a la data d'inici"
 
+#. Default: "Past events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:264
+msgid "past_events"
+msgstr ""
+
 #. Default: "pending"
 #: workflow state defined in plone_workflow - title Pending
 msgid "pending"
@@ -11922,6 +12196,10 @@ msgstr "plone.app.collection (desinstal·la)"
 #: plone.app.collection/plone/app/collection/configure.zcml:19
 msgid "plone.app.collection, the new style Archetypes collections in Plone 4"
 msgstr "plone.app.collection, el nou estil de col·leccions Archetypes a Plone 4"
+
+#: plone.app.event/plone/app/event/profiles/testing/types/plone.app.event.dx.event.xml
+msgid "plone.app.event.dx.event"
+msgstr ""
 
 #: plone.app.iterate/plone/app/iterate/configure.zcml:45
 msgid "plone.app.iterate: Test fixture"
@@ -11963,6 +12241,18 @@ msgstr "Secció on podeu configurar les accions del portal; podeu gestionar les 
 #: CMFPlone/controlpanel/browser/actions.pt:13
 msgid "portal_actions_controlpanel_header"
 msgstr "Accions del portal"
+
+#. Default: "Select search base Folder or Collection to search for events. The URL to to this item will also be used to link to in calendar searches. If empty, the whole site will be searched and the event listing view will be called on the site root."
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:61
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:53
+msgid "portlet_help_search_base"
+msgstr ""
+
+#. Default: "Search base"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.py:60
+#: plone.app.event/plone/app/event/portlets/portlet_events.py:52
+msgid "portlet_label_search_base"
+msgstr ""
 
 #. Default: "Static Portlet"
 #: plone.portlet.static/plone/portlet/static/static.py:124
@@ -12209,6 +12499,11 @@ msgstr "Permisos d'ús compartit actuals"
 msgid "summary_author_content_list"
 msgstr "Llista contingut escrit per un autor agrupat per tipus de contingut"
 
+#. Default: "Calendar"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:41
+msgid "summary_calendar"
+msgstr ""
+
 #. Default: "Content listing"
 #: plone.app.content/plone/app/content/browser/table.pt:29
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing_tabular.pt:27
@@ -12230,6 +12525,26 @@ msgstr "Historial de revisions"
 #: CMFPlone/controlpanel/browser/usergroups_groupsoverview.pt:132
 msgid "summary_roles_for_groups"
 msgstr "Selecciona rols per a cada grup"
+
+#. Default: "Keep mine"
+#: plone.app.event/plone/app/event/vocabularies.py:24
+msgid "sync_keep_mine"
+msgstr ""
+
+#. Default: "Keep newer"
+#: plone.app.event/plone/app/event/vocabularies.py:23
+msgid "sync_keep_newer"
+msgstr ""
+
+#. Default: "Keep theirs"
+#: plone.app.event/plone/app/event/vocabularies.py:25
+msgid "sync_keep_theirs"
+msgstr ""
+
+#. Default: "No Syncing"
+#: plone.app.event/plone/app/event/vocabularies.py:26
+msgid "sync_none"
+msgstr ""
 
 #. Default: "All ${count} items on this page are selected."
 #: plone.app.content/plone/app/content/browser/table.pt:41
@@ -12719,6 +13034,11 @@ msgstr "Mou l'element amunt"
 msgid "title_next_item"
 msgstr "Vés a l'element següent"
 
+#. Default: "Next month"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:30
+msgid "title_next_month"
+msgstr ""
+
 #. Default: "Personal Information"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:57
 #: plone.app.users/plone/app/users/browser/account-configlet.pt:32
@@ -12735,6 +13055,11 @@ msgstr "Bloquejat"
 #: plone.app.layout/plone/app/layout/nextprevious/nextprevious.pt:20
 msgid "title_previous_item"
 msgstr "Vés a l'element anterior"
+
+#. Default: "Previous month"
+#: plone.app.event/plone/app/event/portlets/portlet_calendar.pt:12
+msgid "title_previous_month"
+msgstr ""
 
 #. Default: "Password Reset Tool"
 #: CMFPlone/browser/templates/explainPWResetTool.pt:7
@@ -12829,6 +13154,16 @@ msgstr "Visualització"
 #: CMFPlone/browser/templates/accessibility-info.pt:21
 msgid "title_wcag"
 msgstr "Directrius per a l'accessibilitat del contingut web (WCAG)"
+
+#. Default: "Todays events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:274
+msgid "todays_events"
+msgstr ""
+
+#. Default: "Todays upcoming events"
+#: plone.app.event/plone/app/event/browser/event_listing.py:270
+msgid "todays_upcoming_events"
+msgstr ""
 
 #. Default: "Click to view a live preview. Forms will be disabled in the preview."
 #: plone/app/theming/browser/controlpanel.pt:140
