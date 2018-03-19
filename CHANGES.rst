@@ -5,7 +5,7 @@ Changelog
 ------------------
 
 - Update Brazilian Portuguese translations.
-  [hvelarde, agnogueira]
+  [hvelarde, agnogueira, lyralemos]
 
 - Update Italian translations.
   [ale-rt, cekk]
