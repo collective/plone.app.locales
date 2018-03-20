@@ -4,6 +4,9 @@ Changelog
 5.1.8 (unreleased)
 ------------------
 
+- Include plone.dexterity translations.
+  [erral]
+
 - Include plone.app.multilingual translations.
   [erral]
 
