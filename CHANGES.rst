@@ -4,6 +4,9 @@ Changelog
 5.0.15 (unreleased)
 -------------------
 
+- Include plone.dexterity translations.
+  [erral]
+
 - Fix spanish translation.
   [erral]
 
