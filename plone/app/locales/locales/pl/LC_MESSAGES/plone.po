@@ -120,6 +120,10 @@ msgstr "${tname} został utworzony"
 msgid "'${name}' is a reserved field name."
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:313
+msgid "(Required)"
+msgstr ""
+
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:65
 msgid "(Unstyled)"
 msgstr "(Brak styli)"
@@ -290,6 +294,10 @@ msgstr "Portlet do wyświetlania wyników zapytania o kolekcje."
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet which shows a search box."
 msgstr "Portlet do wyświetlania wyszukiwarki."
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:296
+msgid "A positive number is required."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/role.py:82
 msgid "A role condition can prevent rules from executing unless the current user has a particular role."
@@ -543,7 +551,7 @@ msgstr "Konfiguracja produktów dodatkowych"
 msgid "Add-ons"
 msgstr "Add-ons"
 
-#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:64
+#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:59
 msgid "Adds CMFEditions support for Dexterity."
 msgstr ""
 
@@ -740,6 +748,10 @@ msgstr ""
 
 #: plone/app/theming/browser/theme-error.pt:12
 msgid "An error occurred trying to parse the rules file:"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:293
+msgid "An integer is required."
 msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -978,6 +990,26 @@ msgstr ""
 
 #: CMFPlone/interfaces/resources.py:24
 msgid "CSS/LESS files"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:283
+msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:255
+msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the \s-maxage\ token from the response, then stale responses might be seen until the cached entry expires. "
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:227
+msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:656
+msgid "Cache purged."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/profiles/default/controlpanel.xml
+msgid "Caching"
 msgstr ""
 
 #: plone.cachepurging/plone/cachepurging/interfaces.py:23
@@ -1395,9 +1427,25 @@ msgstr ""
 msgid "Content type"
 msgstr "Typ treści"
 
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:231
+msgid "Content type ${contentType} is already mapped to the rule ${ruleset}."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/interfaces.py:50
+msgid "Content type name"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/interfaces.py:48
+msgid "Content type/ruleset mapping"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:58
 msgid "Content types are: ${names}"
 msgstr "Typ treści to: ${names}"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:55
+msgid "Content types to purge"
+msgstr ""
 
 #. Default: "Contents"
 #: CMFPlone/profiles/default/actions.xml
@@ -1721,6 +1769,10 @@ msgstr ""
 msgid "Delete selected items"
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/browser/edit.py:270
+msgid "Delete settings (use defaults)"
+msgstr ""
+
 #: CMFPlone/controlpanel/browser/actions.pt:49
 msgid "Delete the action?"
 msgstr ""
@@ -1786,7 +1838,7 @@ msgstr ""
 msgid "Dexterity Content Types"
 msgstr ""
 
-#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:64
+#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:59
 msgid "Dexterity versioning support"
 msgstr ""
 
@@ -1928,6 +1980,14 @@ msgstr "Edycja"
 msgid "Edit ${name}"
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/browser/edit.py:233
+msgid "Edit ${operation} options"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/edit.py:229
+msgid "Edit ${operation} options for Ruleset: ${ruleset}"
+msgstr ""
+
 #: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:155
 msgid "Edit ${title} (${name})"
 msgstr ""
@@ -2044,6 +2104,7 @@ msgid "Edit cancelled"
 msgstr ""
 
 #: CMFPlone/controlpanel/browser/syndication.py:95
+#: plone.app.caching/plone/app/caching/browser/edit.py:261
 #: plone.app.registry/plone/app/registry/browser/edit.py:57
 msgid "Edit cancelled."
 msgstr "Edytowanie anulowane"
@@ -2649,6 +2710,10 @@ msgstr ""
 msgid "Generate tabs for items other than folders."
 msgstr "Generuj taby dla obiektów innych niż foldery."
 
+#: plone.app.caching/plone/app/caching/operations/default.py:70
+msgid "Generic caching"
+msgstr ""
+
 #: plone.app.textfield/plone/app/textfield/interfaces.py:75
 msgid "Get the raw value as an encoded string"
 msgstr ""
@@ -2924,6 +2989,7 @@ msgstr ""
 msgid "Images can be referenced in pages or displayed in an album."
 msgstr "Obrazy mogą być umieszczane na stronach lub wyświetlane w galeriach"
 
+#: plone.app.caching/plone/app/caching/browser/import.pt:113
 #: plone/app/theming/browser/controlpanel.pt:763
 msgid "Import"
 msgstr "Importuj"
@@ -2934,6 +3000,10 @@ msgstr ""
 
 #: plone.app.dexterity/plone/app/dexterity/browser/types_listing.pt:30
 msgid "Import Type Profiles&hellip;"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:537
+msgid "Import complete."
 msgstr ""
 
 #: plone.app.contenttypes/plone/app/contenttypes/migration/atct_migrator.pt:36
@@ -3054,6 +3124,10 @@ msgstr "Intranetowy obieg informacji dla folderów"
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Intranet/Extranet Workflow"
 msgstr "Intranetowy/Extranetowy obieg informacji"
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:280
+msgid "Invalid URL: ${url}"
+msgstr ""
 
 #: CMFPlone/RegistrationTool.py:488
 #: plone.app.discussion/plone/app/discussion/interfaces.py:19
@@ -3244,6 +3318,10 @@ msgstr "Odnośnik"
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:245
 msgid "Link of the RSS feed to display."
 msgstr "Odnośnik łącza RSS, którego wpisy mają być wyświetlane."
+
+#: plone.app.caching/plone/app/caching/interfaces.py:56
+msgid "List content types which should be purged when modified"
+msgstr ""
 
 #. Default: "List of values"
 #: criterion description of criterion ATListCriterion
@@ -3481,6 +3559,14 @@ msgstr "Wiele grup?"
 msgid "Many users?"
 msgstr "Wielu użytkowników?"
 
+#: plone.app.caching/plone/app/caching/interfaces.py:49
+msgid "Maps content type names to ruleset names"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/interfaces.py:42
+msgid "Maps skin layer page template names to ruleset names"
+msgstr ""
+
 #: CMFPlone/resources/viewlets/settings.py:16
 msgid "Maps skin names to lists of resource bundle names"
 msgstr ""
@@ -3650,6 +3736,10 @@ msgstr ""
 
 #: CMFPlone/controlpanel/browser/syndication.py:29
 msgid "Missing syndication settings action."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:254
+msgid "Moderate caching"
 msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/profiles/default/actions.xml
@@ -3879,6 +3969,14 @@ msgstr "Nie"
 
 #: CMFPlone/interfaces/controlpanel.py:1216
 msgid "No Thumbs in portlets"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:567
+msgid "No URLs or paths entered."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:339
+msgid "No caching"
 msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/browser/formhelper.py:205
@@ -4133,6 +4231,14 @@ msgstr "Spakowano bazę danych."
 #: plone.app.dexterity/plone/app/dexterity/profiles/testing/types/Document.xml
 msgid "Page"
 msgstr "Strona"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:43
+msgid "Page template name"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/interfaces.py:41
+msgid "Page template/ruleset mapping"
+msgstr ""
 
 #: plone/app/theming/interfaces.py:57
 msgid "Parameter expressions"
@@ -4525,6 +4631,11 @@ msgstr "Opublikowany i widoczny dla użytkowników intranetu, nieedytowalny prze
 msgid "Publishing the item makes it visible to other users."
 msgstr "Publikacja sprawia, że element będzie widoczny dla innych użytkowników."
 
+#: plone.app.caching/plone/app/caching/browser/purge.pt:117
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:86
+msgid "Purge"
+msgstr ""
+
 # Atrybut 'title' linku 'wyślij do publikacji' (pojawia się w dymku jako tekst pomocy)
 #. Default: "Puts your item in a review queue, so it can be published externally or internally."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -4580,6 +4691,10 @@ msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles.zcml:18
 msgid "Querystring parser/builder"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:647
+msgid "RAM cache not installed."
 msgstr ""
 
 #: CMFPlone/profiles/dependencies/portlets.xml
@@ -4724,6 +4839,14 @@ msgstr "Nazwa: '${oldid}' zmieniona na: '${newid}'."
 
 #: CMFPlone/interfaces/syndication.py:176
 msgid "Render Body"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/interfaces.py:66
+msgid "Request variables"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/interfaces.py:63
+msgid "Request variables that prevent caching"
 msgstr ""
 
 #: plone.schemaeditor/plone/schemaeditor/interfaces.py:188
@@ -4878,6 +5001,14 @@ msgstr ""
 #: CMFPlone/profiles/default/actions.xml
 msgid "Rules"
 msgstr "Reguły"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:44
+msgid "Ruleset name"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/edit.py:285
+msgid "Ruleset-specific settings removed."
+msgstr ""
 
 #: CMFPlone/browser/templates/plone-upgrade.pt:171
 msgid "Run the upgrade and show the result without actually writing anything to the database."
@@ -5390,6 +5521,10 @@ msgstr "Portlet do wyświetlania statycznego tekstu."
 msgid "Stop executing rules"
 msgstr "Zatrzymaj wykonywanie reguł"
 
+#: plone.app.caching/plone/app/caching/operations/default.py:282
+msgid "Strong caching"
+msgstr ""
+
 #: CMFPlone/interfaces/resources.py:111
 msgid "Stub JavaScript modules"
 msgstr ""
@@ -5600,6 +5735,10 @@ msgstr "TempFolder"
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:15
 msgid "Template"
 msgstr "Szablon"
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:266
+msgid "Template ${template} is already mapped to the rule ${ruleset}."
+msgstr ""
 
 #: plone/app/theming/browser/controlpanel.pt:104
 msgid "Test Styles"
@@ -5963,9 +6102,9 @@ msgstr ""
 msgid "There were errors"
 msgstr "Wystąpiły błędy"
 
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:324
 #: plone.app.users/plone/app/users/browser/membersearch.py:94
 #: plone.app.users/plone/app/users/browser/register.py:64
-#: plone.app.users/plone/app/users/browser/registersettingspanel.py:20
 msgid "There were errors."
 msgstr ""
 
@@ -6137,6 +6276,10 @@ msgstr "Nazwa jest zarezerwowana. Proszę wybrać inną nazwę."
 
 #: CMFPlone/browser/templates/plone-upgrade.pt:68
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:71
+msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
 msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:1253
@@ -6472,6 +6615,10 @@ msgstr ""
 msgid "Use email address as login name"
 msgstr "Użyj adresu email jako nazwy użytkownika"
 
+#: plone.app.caching/plone/app/caching/operations/default.py:340
+msgid "Use this operation to keep the response out of all caches."
+msgstr ""
+
 #: plone.schemaeditor/plone/schemaeditor/interfaces.py:167
 msgid "Used for programmatic access to the field."
 msgstr ""
@@ -6595,15 +6742,19 @@ msgstr "Błąd walidacji($name): wartość jest pusta ($value)."
 msgid "Validation failed($name: Uploaded data is too large: ${size}MB (max ${max}MB)"
 msgstr "Błąd walidacji($name): Wysłany plik jest zbyt duży: ${size}MB (maksymalnie ${max}MB)"
 
+#: plone.app.caching/plone/app/caching/interfaces.py:64
+msgid "Variables in the request that prevent caching if present"
+msgstr ""
+
 #: CMFPlone/interfaces/controlpanel.py:1674
 msgid "Verify login name"
 msgstr ""
 
-#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:30
+#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:25
 msgid "Versioning"
 msgstr ""
 
-#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:30
+#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:25
 msgid "Versioning support with CMFEditions"
 msgstr ""
 
@@ -6718,6 +6869,10 @@ msgstr ""
 
 #: plone.app.users/plone/app/users/schema.py:83
 msgid "We will use this address if you need to recover your password"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:226
+msgid "Weak caching"
 msgstr ""
 
 #: CMFPlone/skins/plone_login/login_next.cpy:60
@@ -6891,6 +7046,10 @@ msgstr "Musisz podać prawidłową nazwę."
 #: CMFPlone/RegistrationTool.py:235
 msgid "You must enter an email address."
 msgstr "Musisz podać adres email."
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:516
+msgid "You must select a profile to import."
+msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_publish.cpy:19
 #: plone.app.content/plone/app/content/browser/content_status_history.py:112
@@ -7637,6 +7796,26 @@ msgstr ""
 msgid "description_bypass_languageindependent_field_permission_check"
 msgstr ""
 
+#. Default: "If you have enabled a caching proxy, it may end up caching objects which are no longer current. Plone will attempt to automatically purge objects when they change, but if you are seeing stale objects in your cache, you can purge them manually below."
+#: plone.app.caching/plone/app/caching/browser/purge.pt:54
+msgid "description_cache_purging"
+msgstr ""
+
+#. Default: "Control how pages, images, style sheets and other resources are cached."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:85
+msgid "description_cache_settings"
+msgstr ""
+
+#. Default: "Choose a profile below to import cache settings. Additional profiles may be installed by third party products. <strong>Warning:</strong> This may overwrite existing settings."
+#: plone.app.caching/plone/app/caching/browser/import.pt:54
+msgid "description_caching_ipmort"
+msgstr ""
+
+#. Default: "High-performance sites will often place a caching reverse proxy such as Varnish or Squid in front of Zope. The caching operations configured elsewhere on this screen can often take advantage of such a proxy by instructing it to cache certain content in a certain way, whilst passing requests for other content through to Plone always. Plone can also send so-called <code>PURGE</code> requests to a caching proxy when content changes, reducing the risk of a stale response from a cached copy."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:129
+msgid "description_caching_proxies"
+msgstr ""
+
 #. Default: "Canceling the check-out will delete this working copy, and any modifications made to it will be lost. The existing version of the content will become unlocked."
 #: plone.app.iterate/plone/app/iterate/browser/cancel.pt:22
 msgid "description_cancel"
@@ -7713,6 +7892,11 @@ msgstr "${plonecms} – Copyright ${copyright} 2000: ${current_year} by ${plonef
 #: CMFPlone/controlpanel/browser/overview.pt:151
 msgid "description_debug_mode"
 msgstr "Uwaga: Pracujesz w trybie „debugowania”. Ten tryb jest przeznaczony do witryn podczas ich tworzenia/developmentu. Pozwala on by zmiany ustawień konfiguracyjnych były natychmiast widoczne, co jednak powoduje że witryna pracuje wolniej. Aby wyłączyć ten tryb, musisz zmienić plik zope.conf by zawierał linie „debug-mode off” i zrestartować serwer Zope."
+
+#. Default: "<p> Many caching operations accept parameters to influence their behaviour. For example, an operation which returns a page cached in RAM may accept a parameter specifying the timeout period before pages are re-calculated. Most operations, however, will have \"sensible defaults\", so that they work acceptably even when no parameters have been set. Note also that not all operations support parameters. </p> <p> Parameters can be set at two levels. By default, parameters apply to all uses of particular operation. Thus, if you have assigned an operation to more than one ruleset, the <em>same</em> parameters will be used. However, you can also override the parameters for a particular ruleset. </p> <p> Use the table below to access parameters for a particular operation or ruleset. <strong>Warning:</strong> If you have made changes elsewhere in this form, you should save them before configuring any operation parameters. Otherwise, you will lose your changes. </p>"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:536
+msgid "description_detailed_settings"
+msgstr ""
 
 #. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
 #: Archetypes/skins/archetypes/metadata_macros.pt:32
@@ -7856,6 +8040,11 @@ msgstr "Obszary portletów zawierają teraz tylko te przypisane w obecnym kontek
 msgid "description_manage_group_portlets"
 msgstr "Obszary portletów zawierają teraz tylko portlety przypisane do tej grupy. Przy pomocy przycisków na każdym z portletów możesz przesunąć go w górę lub w dół, usunąć lub edytować. Aby dodać nowy portlet użyj listy rozwijalnej."
 
+#. Default: "<p> Caching can be controlled by mapping <em>rulesets</em> to <em>caching operations</em>. </p> <p> A <strong>ruleset</strong> is a name given to a resource published by Plone, such as a view. Rulesets are declared by the developers who write those views. You can think of them as a way to give hints about how something should be cached, without actually implementing the caching operations. </p> <p> The exact caching operations to use are mapped to rulesets in the table below. Caching operations will often set response headers to tell the users's web browser and/or a caching proxy how to cache content. They may also intercept a response to return a cached copy or instruct the browser to use its own cached copy, if it is considered to be current. </p>"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:384
+msgid "description_mappings"
+msgstr ""
+
 #. Default: "This search form enables you to find users by specifying one or more search criteria."
 #: plone.app.users/plone/app/users/browser/membersearch.py:89
 msgid "description_member_search"
@@ -7995,11 +8184,26 @@ msgstr "Pracujesz teraz w trybie \"produkcyjnym\". Jest to preferowany tryb dla 
 msgid "description_publishing_process_short"
 msgstr "Status określa kto może widzieć dany element. Odrębnym sposobem sterowania widocznością elementu jest ustawienie <strong>Daty Publikacji</strong>. Element nie jest zwracany w publicznych wynikach wyszukiwania przed jego datą publikacji. Zapobiegnie to pojawieniu się elementu w portletach i listach zawartości folderów, jakkolwiek będzie on wciąż dostępny, jeśli zostanie wywołany poprzez bezpośrednie (ręczne) podanie jego adres URL."
 
+#. Default: "The following items were purged:"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:65
+msgid "description_purged"
+msgstr ""
+
 #. Default: "You are logged in via HTTP authentication (i.e. the Management Interface). In order to log out, you must:"
 #: CMFPlone/skins/plone_login/logged_out.cpt:36
 #, fuzzy
 msgid "description_quit_to_log_out"
 msgstr "Ponieważ jesteś zalogowany używając autentykacji HTTP (np. do interfejsu ZMI), jedynym sposobem na wylogowanie jest całkowite zamknięcie przeglądarki."
+
+#. Default: "Plone maintains a cache of certain pages and fragments of pages in memory to speed up rendering. Certain caching operations, when mapped, can be used to place entire pages into the RAM cache. Using the RAM cache may allow you to gain some speed (and reduce CPU usage), at the cost of using more memory. Note that the default RAM cache is shared among threads in the same Zope instance, but is not shared between Zope instances. Thus, if you are running a multi-instance ZEO setup, you may find it more efficient to segment your users using a front-end load balancer so that they always reach the same back-end instance. As an alternative, you can integrate a shared cache such as <em>memcached</em>. See the documentation for details."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:285
+msgid "description_ram"
+msgstr ""
+
+#. Default: "The table below shows statistics for the default RAM cache. You can use the <em>Purge</em> button to manually clear the cache if you suspect there are stale items there."
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:54
+msgid "description_ramcache_stats"
+msgstr ""
 
 #. Default: "All recently modified items, latest first."
 #: CMFPlone/skins/plone_templates/recently_modified.pt:28
@@ -8626,6 +8830,21 @@ msgstr ""
 msgid "heading_bypass_languageindependent_field_permission_check"
 msgstr ""
 
+#. Default: "Import caching profiles"
+#: plone.app.caching/plone/app/caching/browser/import.pt:45
+msgid "heading_caching_import"
+msgstr ""
+
+#. Default: "Purge caching proxy"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:45
+msgid "heading_caching_purging"
+msgstr ""
+
+#. Default: "Caching settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:81
+msgid "heading_caching_settings"
+msgstr ""
+
 #. Default: "Change password for ${user}"
 #: CMFPlone/skins/plone_prefs/password_form.pt:15
 msgid "heading_change_password_for"
@@ -8645,6 +8864,11 @@ msgstr ""
 #: CMFPlone/browser/templates/contact-info.pt:18
 msgid "heading_contact_form"
 msgstr "Formularz kontaktowy"
+
+#. Default: "Content types"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:480
+msgid "heading_content_types"
+msgstr ""
 
 #. Default: "Use cookie for manual override"
 #: CMFPlone/interfaces/controlpanel.py:263
@@ -8834,6 +9058,11 @@ msgstr ""
 msgid "heading_not_found_suggestions"
 msgstr "Być może szukałeś..."
 
+#. Default: "Operation"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:416
+msgid "heading_operation"
+msgstr ""
+
 #. Default: "Please wait while you are logged in"
 #: CMFPlone/skins/plone_login/external_login_return.cpt:34
 msgid "heading_please_wait_while_you_are_logged_in"
@@ -8848,6 +9077,11 @@ msgstr "Portlety przypisane w tym miejscu"
 #: plone.app.content/plone/app/content/browser/templates/content_status_history.pt:50
 msgid "heading_publishing_process"
 msgstr "Proces publikacji"
+
+#. Default: "Status"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:64
+msgid "heading_purged"
+msgstr ""
 
 #. Default: "Password request expired"
 #: CMFPlone/browser/templates/pwreset_expired.pt:11
@@ -8869,6 +9103,11 @@ msgstr "Hasło zmienione"
 #, fuzzy
 msgid "heading_quit_to_log_out"
 msgstr "Zamknij przeglądarke by wylogować się"
+
+#. Default: "RAM cache statistics"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:45
+msgid "heading_ramcache_stats"
+msgstr ""
 
 #. Default: "Modified items"
 #: CMFPlone/skins/plone_templates/recently_modified.pt:23
@@ -8910,6 +9149,11 @@ msgstr "ŻĄDANIE"
 #: CMFPlone/browser/templates/pwreset_form.pt:11
 msgid "heading_reset_password"
 msgstr "Zmień swoje hasło"
+
+#. Default: "Ruleset"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:415
+msgid "heading_ruleset"
+msgstr ""
 
 #. Default: "Search for groups"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:106
@@ -9001,6 +9245,11 @@ msgstr "Przykro nam, ale taka strona nie istnieje..."
 #: CMFPlone/browser/syndication/views.py:82
 msgid "heading_syndication_properties"
 msgstr "Właściwości Udostępniania"
+
+#. Default: "Templates"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:481
+msgid "heading_templates"
+msgstr ""
 
 #. Default: "Theme settings"
 #: plone/app/theming/browser/controlpanel.pt:72
@@ -9156,6 +9405,11 @@ msgstr "Opisz krótko kim jesteś i czym się zajmujesz. Ten opis zostanie wyśw
 msgid "help_boolean_criteria_bool"
 msgstr "Prawda lub Fałsz"
 
+#. Default: "Enter the domain name of each caching proxy, one per line. For example, if you have Varnish running on the local machine on port 1234, you could enter <code>http://localhost:1234</code>. The domain name must be reachable by the Zope process, but does not need to be reachable from users' local machines."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:164
+msgid "help_caching_proxies"
+msgstr ""
+
 #. Default: "Case sensitive, make sure caps lock is not enabled."
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:114
 msgid "help_capslock_password"
@@ -9290,6 +9544,11 @@ msgstr ""
 msgid "help_doctype"
 msgstr "Możesz podać tekst Doctype, który zostanie ustawiony na wyjściu, na przykład \"<!DOCTYPE html>\". Jeśli pole pozostanie puste to zostanie wykorzystany domyślny Doctype XHTML 1.0 transitional lub taki jaki został ustawiony w motywie Diazo."
 
+#. Default: "<p> If you have enabled <em>Virtual host rewriting takes place front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:246
+msgid "help_domains"
+msgstr ""
+
 #. Default: "Switching the email login setting in the ${link} on or off automatically changes the login name for existing users. This may fail when there are duplicates. On this page you can search for duplicates."
 #: CMFPlone/controlpanel/browser/emaillogin.pt:18
 msgid "help_duplicate_login_names"
@@ -9346,6 +9605,11 @@ msgstr ""
 #. Default: "If selected, this will show a table of contents at the top of the page."
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/tableofcontents.py:22
 msgid "help_enable_table_of_contents_description"
+msgstr ""
+
+#. Default: "If this option is disabled, no caching will take place."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:115
+msgid "help_enabled"
 msgstr ""
 
 #. Default: "List of attendees."
@@ -9537,6 +9801,11 @@ msgstr "Geograficzna lokalizacja (miejsce) skojarzone z tym elementem, jeśli do
 msgid "help_login_name_caps"
 msgstr "Duże/małe litery w nazwach użytkowników są rozróżnialne. Upewnij się, że klawisz CapsLock nie jest włączony."
 
+#. Default: "Use the table below to map rulesets to caching operations."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:407
+msgid "help_main_mappings"
+msgstr ""
+
 #. Default: "If enabled all external links will be marked with link type specific icons."
 #: plone/app/theming/browser/controlpanel.pt:565
 msgid "help_mark_special_links"
@@ -9615,10 +9884,25 @@ msgstr "Wyswietli się na liście aktualności i w danej aktualności. Obraz zos
 msgid "help_nextprevious"
 msgstr ""
 
+#. Default: "No parameters"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:592
+msgid "help_no_options"
+msgstr ""
+
 #. Default: "There are no items in this folder that can be selected as a default view page."
 #: plone.app.content/plone/app/content/browser/templates/select_default_page.pt:73
 msgid "help_no_selectable_default_pages"
 msgstr "W tym folderze nie ma elementów które mogą być wybrane jako domyślne."
+
+#. Default: "Not mapped"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:584
+msgid "help_not_mapped"
+msgstr ""
+
+#. Default: "Use the table below to create, clear and edit operation parameters. If you clear the ruleset-specific parameters for a given operation, it will fall back on the global operation parameters."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:563
+msgid "help_operation_parameters"
+msgstr ""
 
 #. Default: "You can define parameters that will be passed to the compiled theme here. In your rules file, you can refer to a parameter by <code>$name</code>. Parameters are defined using TALES expressions, which should evaluate to a string, a number, a boolean or None. Available variables are <code>context</code>, <code>request</code>, <code>portal</code>, <code>portal_state</code>, and <code>context_state</code>. Define one variable per line, in the format <code>name = expression</code>."
 #: plone/app/theming/browser/controlpanel.pt:497
@@ -9672,6 +9956,31 @@ msgstr "Preferowany przez ciebie język."
 #: plone.app.content/plone/app/content/browser/templates/content_status_history.pt:280
 msgid "help_publishing_comments"
 msgstr "Wpisz krótki opis lub komentarz do dodania do historii publikacji dokumentu. Jeśli wybrałeś kilka elementów, ten komentarz będzie dodany do wszystkich z nich."
+
+#. Default: "If you have enabled purging, Plone can automatically purge the views of content items when they are modified or removed. Select the types to automatically purge below. <strong>Note:</strong> although a content items's view can be purged easily, it is not always possible to purge every page where that item may appear. Items that appear in dynamic listings (such as <em>Collection</em> portlets), the navigation tree and other navigational aids may appear out of date if you have cached the pages where those items would appear."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:188
+msgid "help_purged_content_types"
+msgstr ""
+
+#. Default: "Enable this option if you have configured a caching proxy in front of Plone, and the proxy supports HTTP <code>PURGE</code> requests."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:150
+msgid "help_purging_enabled"
+msgstr ""
+
+#. Default: "Enter the time, in seconds, before attempts to clean up the cache. A lower value may reduce memory consumption by purging items frequently, but can also slow down the system by tying up the cache with maintenance tasks for too long."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:361
+msgid "help_ram_cleanup_interval"
+msgstr ""
+
+#. Default: "Enter the maximum time, in seconds, that an item may remain in the cache before being purged."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:338
+msgid "help_ram_max_age"
+msgstr ""
+
+#. Default: "Use this to control how many items can be placed in the cache. The more items you allow, the higher the potential memory consumption."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:315
+msgid "help_ram_max_entries"
+msgstr ""
 
 #. Default: "Allow rules and themes to be read from remote servers."
 #: plone/app/theming/browser/controlpanel.pt:454
@@ -9835,10 +10144,20 @@ msgstr "Adres Twojego serwera poczty wychodzącej SMTP. Zazwyczaj \"localhost\",
 msgid "help_smtp_userid"
 msgstr "Login do wysyłania poczty, niezbędny jeśli SMTP wymaga autoryzacji"
 
+#. Default: "This allows rollback to a previous state via the <em>portal_setup</em> tool."
+#: plone.app.caching/plone/app/caching/browser/import.pt:106
+msgid "help_snapshot"
+msgstr ""
+
 #. Default: "A string value."
 #: widget description of StringWidget for label Value
 msgid "help_string_criteria_value"
 msgstr "Wartość tekstowa."
+
+#. Default: "Select this option to wait while the purge completes. This allows you to see the results of the purges. Purging asynchronously will return immediately, but you will need to check your caching proxy's log files to see if the purge actually succeeded."
+#: plone.app.caching/plone/app/caching/browser/purge.pt:107
+msgid "help_synchronous"
+msgstr ""
 
 #. Default: "Maximum number of items that will be syndicated."
 #: CMFPlone/interfaces/syndication.py:185
@@ -9850,6 +10169,11 @@ msgstr "Maksymalna ilość elementów podlegających udostępnianiu."
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:105
 msgid "help_tags"
 msgstr "Kategorie są często używane do organizacji treści."
+
+#. Default: "<p> Legacy page templates defined in the <em>portal_skins</em> tool in the ZMI, or created or customised through the web cannot be associated with rulesets in the usual way. There are two options: </p> <ul> <li>If the template is the <em>default type</em> of a content type it is possible to associate the type class or an interface it provides with a ruleset.</li> <li>You can also associate a specific page template (by name) or content type with a ruleset using the options below.</li> </ul> <p> <strong>Note:</strong> By default, folder-like content types are associated with the ruleset <code>plone.content.folderView</code>, and item-like content types are associated with the ruleset <code>plone.content.itemView</code>. Any settings entered below or set via an explicit cache ruleset (in a ZCML file) will override these defaults. </p> <p> <strong>Note:</strong> You can only use each template name or content type once! </p>"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:449
+msgid "help_template_mappings"
+msgstr ""
 
 #. Default: "Choose a template that will be used for viewing this item."
 #: Archetypes/TemplateMixin.py:25
@@ -9918,6 +10242,11 @@ msgstr ""
 msgid "help_url"
 msgstr "Dodaj http:// do linków zewnętrznych"
 
+#. Default: "Enter URLs to purge, one per line, below. You can either enter a full URL including a domain, or a path relative to the site root, starting with a <em>/</em>."
+#: plone.app.caching/plone/app/caching/browser/purge.pt:82
+msgid "help_urls"
+msgstr ""
+
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 #: plone.app.users/plone/app/users/schema.py:94
 msgid "help_user_name_creation_casesensitive"
@@ -9941,6 +10270,11 @@ msgstr "Podaj swój adres e-mail w celu potwierdzenia."
 #. Default: "Enable/disable versioning for this document."
 #: plone.app.versioningbehavior/plone/app/versioningbehavior/behaviors.py:38
 msgid "help_versioning_enabled"
+msgstr ""
+
+#. Default: "Enable this if you are using virtual hosting with Zope's VirtualHostMonster and you perform URL rewriting (to incorporate the special virtual hosting tokens such as <code>VirtualHostBase</code> and <code>VirtualHostRoot</code> in the URL) <em>before</em> the request is passed to the caching proxy, e.g. in an Apache web server that receives requests and passes them on to a Varnish caching proxy. Disable this option if you are not using virtual hosting, or if the caching proxy is in front of whatever performs the rewrite (or is itself performing the rewrites), disable this option."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:224
+msgid "help_virtual_hosting"
 msgstr ""
 
 #. Default: "Wysiwyg editor to use."
@@ -10360,6 +10694,46 @@ msgstr ""
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/listing.pt:88
 msgid "label_by_author"
 msgstr "przez ${author}"
+
+#. Default: "Entries"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:72
+msgid "label_cache_entries"
+msgstr ""
+
+#. Default: "Hits"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:69
+msgid "label_cache_hits"
+msgstr ""
+
+#. Default: "Key"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:68
+msgid "label_cache_key"
+msgstr ""
+
+#. Default: "Misses"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:70
+msgid "label_cache_misses"
+msgstr ""
+
+#. Default: "Size (bytes)"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:71
+msgid "label_cache_size_bytes"
+msgstr ""
+
+#. Default: "First time here? We recommend that you get started by ${link}."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:65
+msgid "label_caching_first_time_here?"
+msgstr ""
+
+#. Default: "importing a preconfigured set of caching rules"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:65
+msgid "label_caching_first_time_here_link"
+msgstr ""
+
+#. Default: "Caching proxies"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:163
+msgid "label_caching_proxies"
+msgstr ""
 
 #. Default: "Cancel"
 #: Archetypes/skins/archetypes/edit_macros.pt:236
@@ -10788,6 +11162,11 @@ msgstr ""
 msgid "label_doctype"
 msgstr "Doctype"
 
+#. Default: "Externally facing domains"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:245
+msgid "label_domains"
+msgstr ""
+
 #. Default: "Edit"
 #: CMFPlone/browser/templates/author.pt:85
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:58
@@ -10846,6 +11225,11 @@ msgstr ""
 #: plone/app/theming/browser/controlpanel.pt:741
 msgid "label_enable_new_theme"
 msgstr "Włącz nowy motyw"
+
+#. Default: "Enable caching"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:114
+msgid "label_enabled"
+msgstr ""
 
 #. Default: "Event body text"
 #: widget label of RichWidget - description ""
@@ -11039,6 +11423,11 @@ msgstr "Imię i Nazwisko"
 msgid "label_general"
 msgstr "Ogólne"
 
+#. Default: "global parameters"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:604
+msgid "label_global"
+msgstr ""
+
 #. Default: "Globally enable comments"
 #: plone.app.discussion/plone/app/discussion/interfaces.py:212
 msgid "label_globally_enabled"
@@ -11144,6 +11533,13 @@ msgstr "Nagłówek Obrazu"
 #: plone.app.content/plone/app/content/browser/constraintypes.py:72
 msgid "label_immediately_addable_types"
 msgstr "Dozwolone typy treści"
+
+#. Default: "Import settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:40
+#: plone.app.caching/plone/app/caching/browser/import.pt:21
+#: plone.app.caching/plone/app/caching/browser/purge.pt:21
+msgid "label_import"
+msgstr ""
 
 #. Default: "Include contained items"
 #: plone.app.content/plone/app/content/browser/contents/templates/properties.pt:60
@@ -11299,6 +11695,11 @@ msgstr "Zarządzasz portletami domyślnego widoku kontenera. Jeśli chcesz zmien
 #: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:51
 msgid "label_manage_portlets_default_view_container_go_here"
 msgstr "przejdź tutaj"
+
+#. Default: "Ruleset mappings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:406
+msgid "label_mappings"
+msgstr ""
 
 #. Default: "Mark special links"
 #: plone/app/theming/browser/controlpanel.pt:564
@@ -11509,6 +11910,11 @@ msgstr "Ok"
 msgid "label_oneOrMoreTagsSelected"
 msgstr "Wybrano % tagów."
 
+#. Default: "Operation parameters"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:562
+msgid "label_operation_parameters"
+msgstr ""
+
 #. Default: "or"
 #: plone.app.content/plone/app/content/browser/templates/select_default_view.pt:51
 msgid "label_or"
@@ -11656,11 +12062,50 @@ msgstr ""
 msgid "label_publishing_effective"
 msgstr "Obowiązujący"
 
+#. Default: "Content types to purge"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:187
+msgid "label_purged_content_types"
+msgstr ""
+
+#. Default: "Purge caching proxy"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:45
+#: plone.app.caching/plone/app/caching/browser/import.pt:27
+#: plone.app.caching/plone/app/caching/browser/purge.pt:26
+msgid "label_purging"
+msgstr ""
+
+#. Default: "Enable purging"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:149
+msgid "label_purging_enabled"
+msgstr ""
+
 #. Default: "Quick search"
 #: CMFPlone/controlpanel/browser/usergroups_groupmembership.pt:178
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:112
 msgid "label_quick_search"
 msgstr "Szybkie wyszukiwanie"
+
+#. Default: "Cleanup interval"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:355
+msgid "label_ram_cleanup_interval"
+msgstr ""
+
+#. Default: "Maximum age of entries in the cache"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:332
+msgid "label_ram_max_age"
+msgstr ""
+
+#. Default: "Maximum entries in the cache"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:309
+msgid "label_ram_max_entries"
+msgstr ""
+
+#. Default: "RAM cache"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:50
+#: plone.app.caching/plone/app/caching/browser/import.pt:32
+#: plone.app.caching/plone/app/caching/browser/purge.pt:32
+msgid "label_ramcache"
+msgstr ""
 
 #. Default: "Read network"
 #: plone/app/theming/browser/controlpanel.pt:453
@@ -11753,6 +12198,11 @@ msgstr "Zdarzenie wyzwalające: ${trigger}"
 #: plone/app/theming/browser/controlpanel.pt:378
 msgid "label_rules"
 msgstr "Plik reguł"
+
+#. Default: "per-ruleset parameters"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:621
+msgid "label_ruleset"
+msgstr ""
 
 #. Default: "Save"
 #: Archetypes/skins/archetypes/base_metadata.cpt:96
@@ -11869,6 +12319,13 @@ msgstr "E-mail"
 msgid "label_sender_fullname"
 msgstr "Imię i Nazwisko"
 
+#. Default: "Change settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:34
+#: plone.app.caching/plone/app/caching/browser/import.pt:16
+#: plone.app.caching/plone/app/caching/browser/purge.pt:16
+msgid "label_settings"
+msgstr ""
+
 #. Default: "Short name"
 #: Archetypes/BaseObject.py:90
 #: plone.app.content/plone/app/content/browser/contents/templates/rename.pt:9
@@ -11972,6 +12429,11 @@ msgstr "Zapisz i wyślij wiadomość testową"
 msgid "label_smtp_userid"
 msgstr "Użytkownik ESMTP"
 
+#. Default: "Take a snapshot of the site prior to importing new setting."
+#: plone.app.caching/plone/app/caching/browser/import.pt:102
+msgid "label_snapshot"
+msgstr ""
+
 #. Default: "Some content types:"
 #: plone.app.dexterity/plone/app/dexterity/browser/overview.pt:30
 msgid "label_some_content_types"
@@ -12004,6 +12466,11 @@ msgstr "Wartość"
 msgid "label_subject"
 msgstr "Temat"
 
+#. Default: "Purge synchronously"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:104
+msgid "label_synchronous"
+msgstr ""
+
 #. Default: "Maximum items"
 #: CMFPlone/interfaces/syndication.py:183
 msgid "label_syndication_max_items"
@@ -12019,6 +12486,11 @@ msgstr "Spis treści"
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:104
 msgid "label_tags"
 msgstr "Tagi"
+
+#. Default: "Legacy template mappings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:448
+msgid "label_template_mappings"
+msgstr ""
 
 #. Default: "View template"
 #: Archetypes/TemplateMixin.py:23
@@ -12166,6 +12638,8 @@ msgstr "Wróć do przeglądu grup"
 
 #. Default: "Up to Site Setup"
 #: CMFPlone/controlpanel/browser/maintenance.pt:166
+#: plone.app.caching/plone/app/caching/browser/import.pt:48
+#: plone.app.caching/plone/app/caching/browser/purge.pt:48
 msgid "label_up_to_plone_setup"
 msgstr "Wróć do ustawień witryny"
 
@@ -12191,6 +12665,11 @@ msgstr "Aktualizacja…"
 #: widget label of StringWidget - description ""
 msgid "label_url"
 msgstr "URL"
+
+#. Default: "URLs to purge"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:80
+msgid "label_urls"
+msgstr ""
 
 #. Default: "User Name"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:91
@@ -12237,6 +12716,11 @@ msgstr "Widok"
 #: plone.app.iterate/plone/app/iterate/browser/info_baseline.pt:24
 msgid "label_view_changes"
 msgstr "Widok zmian"
+
+#. Default: "Virtual host rewriting takes place front of the caching proxy"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:223
+msgid "label_virtual_hosting"
+msgstr ""
 
 #. Default: "What"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:44
@@ -12294,10 +12778,25 @@ msgstr "Dodaj nowy(e)"
 msgid "legend_after_migration_cleanup"
 msgstr ""
 
+#. Default: "Caching proxies"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:125
+msgid "legend_caching_proxies"
+msgstr ""
+
+#. Default: "Detailed settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:532
+msgid "legend_detailed_settings"
+msgstr ""
+
 #. Default: "Details"
 #: plone.app.iterate/plone/app/iterate/browser/checkout.pt:40
 msgid "legend_details"
 msgstr "Szczegóły"
+
+#. Default: "Global settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:102
+msgid "legend_global_settings"
+msgstr ""
 
 #. Default: "Log details"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:134
@@ -12313,6 +12812,11 @@ msgstr "Log wyjątków (błędów) (najnowsze na początku)"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:56
 msgid "legend_lognoexceptions"
 msgstr "Brak zapisanych wyjątków (błędów)."
+
+#. Default: "Caching operations"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:380
+msgid "legend_mappings"
+msgstr ""
 
 #. Default: "User Search Criteria"
 #: plone.app.users/plone/app/users/browser/membersearch.py:16
@@ -12336,6 +12840,11 @@ msgstr "Informacje o haśle"
 msgid "legend_personal_details"
 msgstr "Informacje osobiste"
 
+#. Default: "In-memory cache"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:281
+msgid "legend_ram"
+msgstr ""
+
 #. Default: "Optional step - Reindex the Language index"
 #: plone/app/multilingual/browser/templates/migration.pt:114
 msgid "legend_reindex_language_index"
@@ -12355,6 +12864,21 @@ msgstr ""
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/link.pt:23
 msgid "link_address"
 msgstr "Adres odnośnika:"
+
+#. Default: "Create"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:614
+msgid "link_create"
+msgstr ""
+
+#. Default: "View/edit"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:599
+msgid "link_view_edit"
+msgstr ""
+
+#. Default: "View/edit/clear"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:608
+msgid "link_view_edit_clear"
+msgstr ""
 
 #. Default: "Potential link breakage"
 #: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:10
@@ -14102,6 +14626,11 @@ msgstr "Zauważ, że ustawione tu role dotyczą bezpośrednio użytkownika. Symb
 #: validation/validators/ExpressionValidator.py:93
 msgid "validation failed, expr was:$expr"
 msgstr "błąd walidacji, wyrażenie: $expr"
+
+#. Default: "(Not used)"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:430
+msgid "value_not_used"
+msgstr ""
 
 #. Default: "Variable"
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:14
