@@ -3,6 +3,8 @@ Changelog
 
 5.0.15 (unreleased)
 -------------------
+- Complete basque translation.
+  [erral]
 
 - Include plone.app.multilingual translations
   [erral]
