@@ -116,6 +116,10 @@ msgstr "${tname} on luotu."
 msgid "'${name}' is a reserved field name."
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:313
+msgid "(Required)"
+msgstr "(Pakollinen)"
+
 #: plone.app.vocabularies/plone/app/vocabularies/skins.py:65
 msgid "(Unstyled)"
 msgstr "(Tyylitön)"
@@ -189,6 +193,10 @@ msgstr "Tämän keskustelun sisällä uniikki tunniste"
 #: plone.app.contentrules/plone/app/contentrules/actions/copy.py:149
 msgid "A copy action can copy an object to a different folder."
 msgstr "Kopiointitoiminto voi kopioida kohteen toiseen kansioon."
+
+#: plone.app.caching/plone/app/caching/caching.zcml:75
+msgid "A dynamic feed, e.g. using RSS or ATOM"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:88
 msgid "A file extension condition can restrict a rule from executing unless the target is a File with a particular extension."
@@ -273,6 +281,18 @@ msgstr "Kokoelman sisällön näyttävä sovelma"
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet which shows a search box."
 msgstr "Hakulaatikon näyttävä sovelma."
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:296
+msgid "A positive number is required."
+msgstr "Positiivinen numero on pakollinen."
+
+#: plone.app.caching/plone/app/caching/caching.zcml:69
+msgid "A public-facing view for a content item that is a folder or container for other items"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:63
+msgid "A public-facing view for a content item that is not a folder or container for other items"
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/role.py:82
 msgid "A role condition can prevent rules from executing unless the current user has a particular role."
@@ -504,7 +524,7 @@ msgstr "Tuotteiden hallinta"
 msgid "Add-ons"
 msgstr "Lisäosat"
 
-#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:64
+#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:59
 msgid "Adds CMFEditions support for Dexterity."
 msgstr ""
 
@@ -702,6 +722,14 @@ msgstr ""
 #: plone/app/theming/browser/theme-error.pt:12
 msgid "An error occurred trying to parse the rules file:"
 msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:36
+msgid "An example profile for a caching proxy setup with split-view caching enabled."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:293
+msgid "An integer is required."
+msgstr "Kokonaisluku on pakollinen."
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "An item's description"
@@ -928,6 +956,26 @@ msgstr ""
 #: CMFPlone/interfaces/resources.py:23
 msgid "CSS/LESS files"
 msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:283
+msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
+msgstr "Tallenna sekä selaimen että proxyn välimuistiin (oletus: 24 tuntia). Huomioitavaa: Käytä vain sellaisille resursseille, jotka eivät muutu ilman URL:n muuttumista tai joiden ei tarvitse välttämättä olla koko ajan ajantasalla."
+
+#: plone.app.caching/plone/app/caching/operations/default.py:255
+msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the \s-maxage\ token from the response, then stale responses might be seen until the cached entry expires. "
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:227
+msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:656
+msgid "Cache purged."
+msgstr "Välimuisti tyhjennetty."
+
+#: plone.app.caching/plone/app/caching/profiles/default/controlpanel.xml
+msgid "Caching"
+msgstr "Välimuisti"
 
 #: plone.cachepurging/plone/cachepurging/interfaces.py:23
 msgid "Caching proxies"
@@ -1299,6 +1347,22 @@ msgstr ""
 msgid "Content Type"
 msgstr "Sisältötyyppi"
 
+#: plone.app.caching/plone/app/caching/caching.zcml:75
+msgid "Content feed"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:57
+msgid "Content files and images"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:69
+msgid "Content folder view"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:63
+msgid "Content item view"
+msgstr ""
+
 #: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:32
 msgid "Content listing"
 msgstr "Sisältölistaus"
@@ -1332,9 +1396,25 @@ msgstr ""
 msgid "Content type"
 msgstr "Sisältötyyppi"
 
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:231
+msgid "Content type ${contentType} is already mapped to the rule ${ruleset}."
+msgstr "Sisältötyyppi ${contentType} on jo yhdistetty sääntöön ${ruleset}."
+
+#: plone.app.caching/plone/app/caching/interfaces.py:50
+msgid "Content type name"
+msgstr "Sisältötyypin nimi"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:48
+msgid "Content type/ruleset mapping"
+msgstr "Sisältötyypin/sääntöjen yhdistäminen"
+
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:58
 msgid "Content types are: ${names}"
 msgstr "Sisältötyypit ovat: ${names}"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:55
+msgid "Content types to purge"
+msgstr "Välimuistista tyhjennettävät sisältötyypit"
 
 #. Default: "Contents"
 #: CMFPlone/profiles/default/actions.xml
@@ -1637,6 +1717,10 @@ msgstr "Poista kohde"
 msgid "Delete selected items"
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/browser/edit.py:270
+msgid "Delete settings (use defaults)"
+msgstr "Poista asetukset (käytä oletuksia)"
+
 #: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:147
 msgid "Delete the triggering item"
 msgstr ""
@@ -1698,7 +1782,7 @@ msgstr ""
 msgid "Dexterity Content Types"
 msgstr ""
 
-#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:64
+#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:59
 msgid "Dexterity versioning support"
 msgstr ""
 
@@ -1820,6 +1904,14 @@ msgstr "Muokkaa"
 msgid "Edit ${name}"
 msgstr "${name}"
 
+#: plone.app.caching/plone/app/caching/browser/edit.py:233
+msgid "Edit ${operation} options"
+msgstr "Muokkaa ${operation} asetuksia"
+
+#: plone.app.caching/plone/app/caching/browser/edit.py:229
+msgid "Edit ${operation} options for Ruleset: ${ruleset}"
+msgstr "Muokkaa ${operation} asetuksia sääntöjoukolle: ${ruleset}"
+
 #: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:155
 msgid "Edit ${title} (${name})"
 msgstr ""
@@ -1924,6 +2016,7 @@ msgid "Edit cancelled"
 msgstr "Ei muutoksia."
 
 #: CMFPlone/controlpanel/browser/syndication.py:94
+#: plone.app.caching/plone/app/caching/browser/edit.py:261
 #: plone.app.registry/plone/app/registry/browser/edit.py:57
 msgid "Edit cancelled."
 msgstr "Muokkaus peruttu."
@@ -2380,6 +2473,10 @@ msgstr "Tiedostopääte"
 msgid "File Upload"
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/caching.zcml:45
+msgid "File and image resources"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:29
 msgid "File extension"
 msgstr "Tiedostopääte"
@@ -2499,6 +2596,10 @@ msgstr ""
 msgid "Generate tabs for items other than folders."
 msgstr "Luo välilehdet kansioiden lisäksi muillekin kohteille."
 
+#: plone.app.caching/plone/app/caching/operations/default.py:70
+msgid "Generic caching"
+msgstr "Yleiset välimuistiasetukset"
+
 #: plone.app.textfield/plone/app/textfield/interfaces.py:75
 msgid "Get the raw value as an encoded string"
 msgstr ""
@@ -2566,6 +2667,10 @@ msgstr "HTML-suodattimen asetukset"
 
 #: CMFPlone/controlpanel/browser/filter.py:91
 msgid "HTML generation is heavily cached across Plone. You may have to edit existing content or restart your server to see the changes."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/configure.zcml:24
+msgid "HTTP caching support"
 msgstr ""
 
 #: plone.app.contenttypes/plone/app/contenttypes/migration/atct_migrator.pt:78
@@ -2736,9 +2841,10 @@ msgstr ""
 msgid "Images can be referenced in pages or displayed in an album."
 msgstr "Kuviin voidaan viitata sivuilla tai niitä voidaan näyttää kuva-albumissa."
 
+#: plone.app.caching/plone/app/caching/browser/import.pt:113
 #: plone/app/theming/browser/controlpanel.pt:763
 msgid "Import"
-msgstr ""
+msgstr "Tuo"
 
 #: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:99
 msgid "Import Content Types"
@@ -2747,6 +2853,10 @@ msgstr ""
 #: plone.app.dexterity/plone/app/dexterity/browser/types_listing.pt:30
 msgid "Import Type Profiles&hellip;"
 msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:537
+msgid "Import complete."
+msgstr "Tuonti valmis."
 
 #: plone.app.contenttypes/plone/app/contenttypes/migration/atct_migrator.pt:36
 #: plone.app.contenttypes/plone/app/contenttypes/migration/custom_migration.pt:31
@@ -2779,6 +2889,14 @@ msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:1418
 msgid "Include meta tags on pages to give hints to social media on how to render your pages better when shared"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:57
+msgid "Includes files and images in content space."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:45
+msgid "Includes images and files created or customised through the ZMI, those exposed in the portal_skins tool, and images registered in resource directories on the filesystem."
 msgstr ""
 
 #: plone.app.users/plone/app/users/browser/passwordpanel.py:91
@@ -2837,6 +2955,10 @@ msgstr ""
 msgid "Installs a control panel to allow on-the-fly theming with Diazo"
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/configure.zcml:24
+msgid "Installs plone.app.caching"
+msgstr ""
+
 #: plone.formwidget.datetime/plone/formwidget/datetime/configure.zcml:25
 msgid "Installs the package"
 msgstr ""
@@ -2866,6 +2988,10 @@ msgstr "Intranet-työnkulku kansioille"
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Intranet/Extranet Workflow"
 msgstr "Intranet/Extranet-työnkulku"
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:280
+msgid "Invalid URL: ${url}"
+msgstr "Epäkelvollinen URL: ${url}"
 
 #: CMFPlone/RegistrationTool.py:484
 msgid "Invalid email address."
@@ -3039,6 +3165,10 @@ msgstr "Linkki"
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:244
 msgid "Link of the RSS feed to display."
 msgstr "RSS-syötteen näkyvä linkki."
+
+#: plone.app.caching/plone/app/caching/interfaces.py:56
+msgid "List content types which should be purged when modified"
+msgstr "Listaa sisältötyypit, jotka pitäisi tyhjentää välimuistista muokkauksen yhteydessä"
 
 #. Default: "List of values"
 #: criterion description of criterion ATListCriterion
@@ -3272,6 +3402,14 @@ msgstr "Useita ryhmiä?"
 msgid "Many users?"
 msgstr "Useita käyttäjiä?"
 
+#: plone.app.caching/plone/app/caching/interfaces.py:49
+msgid "Maps content type names to ruleset names"
+msgstr "Yhdistää sisältötyyppien nimet sääntöjen nimiin"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:42
+msgid "Maps skin layer page template names to ruleset names"
+msgstr "Yhdistää skins kerroksen sivupohjien nimet sääntöjoukon nimiin"
+
 #: CMFPlone/resources/viewlets/settings.py:14
 msgid "Maps skin names to lists of resource bundle names"
 msgstr ""
@@ -3441,6 +3579,10 @@ msgstr ""
 #: CMFPlone/controlpanel/browser/syndication.py:28
 msgid "Missing syndication settings action."
 msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:254
+msgid "Moderate caching"
+msgstr "Maltillinen välimuistin käyttö"
 
 #: plone.app.discussion/plone/app/discussion/profiles/default/actions.xml
 msgid "Moderate comments"
@@ -3660,6 +3802,14 @@ msgstr ""
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "No"
 msgstr "Ei"
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:567
+msgid "No URLs or paths entered."
+msgstr "URL:ia tai polkua ei annettu."
+
+#: plone.app.caching/plone/app/caching/operations/default.py:339
+msgid "No caching"
+msgstr "Älä käytä välimuistia"
 
 #: plone.app.portlets/plone/app/portlets/browser/formhelper.py:206
 msgid "No changes"
@@ -3887,6 +4037,14 @@ msgstr "Tietokanta pakattu."
 #: plone.app.dexterity/plone/app/dexterity/profiles/testing/types/Document.xml
 msgid "Page"
 msgstr "Sivu"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:43
+msgid "Page template name"
+msgstr "Sivupohjan nimi"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:41
+msgid "Page template/ruleset mapping"
+msgstr "Sivupohjan/sääntöjoukon yhdistäminen"
 
 #: plone/app/theming/interfaces.py:57
 msgid "Parameter expressions"
@@ -4295,6 +4453,11 @@ msgstr "Julkaistu ja on näkyvissä toisille intranet-käyttäjille. Omistajan e
 msgid "Publishing the item makes it visible to other users."
 msgstr "Kohteen julkaiseminen tekee siitä näkyvän muille käyttäjille."
 
+#: plone.app.caching/plone/app/caching/browser/purge.pt:117
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:86
+msgid "Purge"
+msgstr "Tyhjennä"
+
 #. Default: "Puts your item in a review queue, so it can be published externally or internally."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Puts your item in a review queue, so it can be published externally or internally."
@@ -4349,6 +4512,10 @@ msgstr ""
 #: plone.app.querystring/plone/app/querystring/profiles.zcml:18
 msgid "Querystring parser/builder"
 msgstr ""
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:647
+msgid "RAM cache not installed."
+msgstr "RAM-välimuistia ei ole asennettu."
 
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "RSS Feed"
@@ -4472,6 +4639,14 @@ msgstr "Uudelleennimeä '${oldid}' '${newid}':ksi"
 #: CMFPlone/interfaces/syndication.py:175
 msgid "Render Body"
 msgstr ""
+
+#: plone.app.caching/plone/app/caching/interfaces.py:66
+msgid "Request variables"
+msgstr "Kutsun (request) muuttujat"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:63
+msgid "Request variables that prevent caching"
+msgstr "Kutsun (request) muuttujat, jotka estävät välimuistiin tallennuksen"
 
 #: plone.schemaeditor/plone/schemaeditor/interfaces.py:188
 msgid "Required field"
@@ -4625,6 +4800,14 @@ msgstr ""
 #: CMFPlone/profiles/default/actions.xml
 msgid "Rules"
 msgstr "Säännöt"
+
+#: plone.app.caching/plone/app/caching/interfaces.py:44
+msgid "Ruleset name"
+msgstr "Sääntöjoukon nimi"
+
+#: plone.app.caching/plone/app/caching/browser/edit.py:285
+msgid "Ruleset-specific settings removed."
+msgstr "Sääntöjoukko-kohtaiset asetukset poistettu."
 
 #: CMFPlone/browser/templates/plone-upgrade.pt:173
 msgid "Run the upgrade and show the result without actually writing anything to the database."
@@ -4823,6 +5006,14 @@ msgstr ""
 #: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:25
 #: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:48
 msgid "Settings"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:18
+msgid "Settings useful for setups with a caching proxy such as Squid or Varnish"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:27
+msgid "Settings useful for setups without a caching proxy such as Squid or Varnish"
 msgstr ""
 
 #: plone.schemaeditor/plone/schemaeditor/browser/schema/schema_listing.pt:120
@@ -5089,6 +5280,10 @@ msgstr ""
 msgid "Spellchecker plugin to use"
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/caching.zcml:51
+msgid "Stable file and image resources"
+msgstr ""
+
 #. Default: "Standard view"
 #: plone.app.collection/plone/app/collection/browser/configure.zcml:58
 #: plone.app.contenttypes/plone/app/contenttypes/browser/configure.zcml:20
@@ -5128,6 +5323,10 @@ msgstr "Poistettavat yhdistelmät"
 #: CMFPlone/interfaces/controlpanel.py:336
 msgid "Stripped tags"
 msgstr "Poistettavat tagit"
+
+#: plone.app.caching/plone/app/caching/operations/default.py:282
+msgid "Strong caching"
+msgstr "Vahva välimuistin käyttö"
 
 #: CMFPlone/interfaces/resources.py:110
 msgid "Stub JavaScript modules"
@@ -5299,6 +5498,10 @@ msgstr "Väliaikaiskansio"
 #: plone.app.portlets/plone/app/portlets/portlets/classic.py:14
 msgid "Template"
 msgstr "Sivupohja"
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:266
+msgid "Template ${template} is already mapped to the rule ${ruleset}."
+msgstr "Sivupohja ${template} on jo yhdistetty sääntöön ${ruleset}."
 
 #: plone/app/theming/browser/controlpanel.pt:104
 msgid "Test Styles"
@@ -5654,14 +5857,18 @@ msgstr ""
 msgid "There were errors"
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:324
 #: plone.app.users/plone/app/users/browser/membersearch.py:95
 #: plone.app.users/plone/app/users/browser/register.py:70
-#: plone.app.users/plone/app/users/browser/registersettingspanel.py:20
 msgid "There were errors."
-msgstr ""
+msgstr "Tapahtui virhe."
 
 #: CMFPlone/interfaces/controlpanel.py:379
 msgid "These CSS properties are allowed in style attributes."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:51
+msgid "These are resources which can be cached 'forever'. Normally this means that if the object does change, its URL changes too."
 msgstr ""
 
 #: CMFPlone/interfaces/controlpanel.py:357
@@ -5819,6 +6026,10 @@ msgstr "Valitsemasi käyttäjänimi on varattu. Valitse toinen nimi."
 #: CMFPlone/browser/templates/plone-upgrade.pt:70
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
 msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:71
+msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
+msgstr "Tämän operaation aikana kaikkia standardeja välimuistin funktiota voidaan suorittaa valinnaisten parametrien asetusten kautta. Useimmissa tapauksissa on todennäköisesti helpompaa käyttää yksinkertaisempia operaatioita (vahva välimuistin käyttä, maltillinen välimuistin käyttö, heikko välimuistin käyttö tai älä käytä välimuistia)."
 
 #: CMFPlone/interfaces/controlpanel.py:1121
 msgid "Thumb visibility"
@@ -6126,6 +6337,10 @@ msgstr ""
 msgid "Use email address as login name"
 msgstr "Käytä sähköpostiosoitetta käyttäjätunnuksena"
 
+#: plone.app.caching/plone/app/caching/operations/default.py:340
+msgid "Use this operation to keep the response out of all caches."
+msgstr "Käytä tätä operaatiota pitääksesi vastaus (response) pois kaikista välimuisteista."
+
 #: plone.schemaeditor/plone/schemaeditor/interfaces.py:167
 msgid "Used for programmatic access to the field."
 msgstr ""
@@ -6241,15 +6456,19 @@ msgstr "Validointi epäonnistui($name): value on tyhjä ($value)."
 msgid "Validation failed($name: Uploaded data is too large: ${size}MB (max ${max}MB)"
 msgstr "Validointi epäonnistui($name): palvelimelle kopioitu tiedosto on liian suuri: ${size}MB (max ${max}MB)"
 
+#: plone.app.caching/plone/app/caching/interfaces.py:64
+msgid "Variables in the request that prevent caching if present"
+msgstr "Kutsussa (request) olevat muuttujat, jotka läsnäollessaan estävät välimuistin käytön"
+
 #: CMFPlone/interfaces/controlpanel.py:1483
 msgid "Verify login name"
 msgstr ""
 
-#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:30
+#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:25
 msgid "Versioning"
 msgstr ""
 
-#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:30
+#: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:25
 msgid "Versioning support with CMFEditions"
 msgstr ""
 
@@ -6362,6 +6581,10 @@ msgstr "Varoitus"
 msgid "Warning, disabling can be potentially dangereous. Only disable if you know what you are doing."
 msgstr ""
 
+#: plone.app.caching/plone/app/caching/operations/default.py:226
+msgid "Weak caching"
+msgstr "Heikko välimuistin käyttö"
+
 #: CMFPlone/skins/plone_login/login_next.cpy:60
 msgid "Welcome! You are now logged in."
 msgstr "Tervetuloa! Olet nyt kirjautunut sisään."
@@ -6399,12 +6622,24 @@ msgstr "Onko sääntö voimassa"
 msgid "While changing your password an AttributeError occurred. This is usually caused by your user being defined outside the portal."
 msgstr "Salasanasi vaihdon yhteydessä tapahtui AttributeError. Tämä johtuu yleensä siitä, että käyttäjätietosi on määritelty portaalin ulkopuolella."
 
+#: plone.app.caching/plone/app/caching/caching.zcml:18
+msgid "With caching proxy"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:36
+msgid "With caching proxy (and split-view caching)"
+msgstr ""
+
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Within last"
 msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Within next"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/caching.zcml:27
+msgid "Without caching proxy"
 msgstr ""
 
 #: plone.stringinterp/plone/stringinterp/adapters.py:331
@@ -6525,6 +6760,10 @@ msgstr "Anna kelvollinen nimi."
 #: CMFPlone/RegistrationTool.py:235
 msgid "You must enter an email address."
 msgstr "Anna sähköpostiosoite."
+
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:516
+msgid "You must select a profile to import."
+msgstr "Valitse tuotava profiili."
 
 #: CMFPlone/skins/plone_scripts/folder_publish.cpy:19
 #: plone.app.content/plone/app/content/browser/content_status_history.py:112
@@ -7178,6 +7417,26 @@ msgstr ""
 msgid "description_bypass_languageindependent_field_permission_check"
 msgstr ""
 
+#. Default: "If you have enabled a caching proxy, it may end up caching objects which are no longer current. Plone will attempt to automatically purge objects when they change, but if you are seeing stale objects in your cache, you can purge them manually below."
+#: plone.app.caching/plone/app/caching/browser/purge.pt:54
+msgid "description_cache_purging"
+msgstr "Jos olet ottanyt käyttöön välimuistiproxyn, voit saada välimuistista objekteja, jotka eivä ole ajantasaisia. Plone yrittää automaattisesti tyhjentää muuttuneita objekteja välimuistista. Jos tästä huolimatta näet vanhentuneita objekteja välimuistissa, voit tyhjentää ne manuaalisesti alla."
+
+#. Default: "Control how pages, images, style sheets and other resources are cached."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:85
+msgid "description_cache_settings"
+msgstr "Määrittele miten sivut, kuvat, tyylitiedostot ja muut resurssit käyttävät välimuistia."
+
+#. Default: "Choose a profile below to import cache settings. Additional profiles may be installed by third party products. <strong>Warning:</strong> This may overwrite existing settings."
+#: plone.app.caching/plone/app/caching/browser/import.pt:54
+msgid "description_caching_ipmort"
+msgstr "Valitse alla olevasta listasta profiili, jonka välimuistiasetukset haluat tuoda. Kolmannen osapuolen sovellukset voivat myös asentaa lisää profiileja. <strong>Varoitus:</strong> Tämä voi ylikirjoittaa nykyiset asetukset."
+
+#. Default: "High-performance sites will often place a caching reverse proxy such as Varnish or Squid in front of Zope. The caching operations configured elsewhere on this screen can often take advantage of such a proxy by instructing it to cache certain content in a certain way, whilst passing requests for other content through to Plone always. Plone can also send so-called <code>PURGE</code> requests to a caching proxy when content changes, reducing the risk of a stale response from a cached copy."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:129
+msgid "description_caching_proxies"
+msgstr "Suorituskykyiset sivustot asettavat usein välimuistiproxyn (esim. Varnish tai Squid) Zopen edustalle. Muualla määritellyt välimuistioperaatiot käyttävät sitä hyödykseen tallentamalla tietyn sisällön välimuistiin ja ohjaamalla kutsut (request) toiseen sisältöön suoraan Plonelle. Sisällön muuttuessa Plone voi myös lähettää niinsanotun <code>PURGE</code> kutsun välimuistiproxylle vähentäen riskiä saada vanhentuneita vastauksia välimuistissa olevasta kopiosta."
+
 #. Default: "Canceling the check-out will delete this working copy, and any modifications made to it will be lost. The existing version of the content will become unlocked."
 #: plone.app.iterate/plone/app/iterate/browser/cancel.pt:22
 msgid "description_cancel"
@@ -7254,6 +7513,11 @@ msgstr "${plonecms} ${copyright} 2000-${current_year} ${plonefoundation}n ja yst
 #: CMFPlone/controlpanel/browser/overview.pt:151
 msgid "description_debug_mode"
 msgstr "Huomio: Sivusto toimii \"debug-tilassa\". Tämä tila on tarkoitettu kehityssivustoille. Tilan ansiosta monet järjestelmän muutokset näkyvät välittömästi, mutta sivusto toimii tavallista hitaammin. Debug-tilan voi sammuttaa buildout.cfg-tiedostosta lisäämällä sinne rivin \"debug-mode = off\", suorittamalla buildout-skriptin ja käynnistämällä palvelinprosessin uudelleen."
+
+#. Default: "<p> Many caching operations accept parameters to influence their behaviour. For example, an operation which returns a page cached in RAM may accept a parameter specifying the timeout period before pages are re-calculated. Most operations, however, will have \"sensible defaults\", so that they work acceptably even when no parameters have been set. Note also that not all operations support parameters. </p> <p> Parameters can be set at two levels. By default, parameters apply to all uses of particular operation. Thus, if you have assigned an operation to more than one ruleset, the <em>same</em> parameters will be used. However, you can also override the parameters for a particular ruleset. </p> <p> Use the table below to access parameters for a particular operation or ruleset. <strong>Warning:</strong> If you have made changes elsewhere in this form, you should save them before configuring any operation parameters. Otherwise, you will lose your changes. </p>"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:536
+msgid "description_detailed_settings"
+msgstr "<p> Monet välimuistioperaatiot hyväksyvät parametrejä jotka vaikuttavat niiden käytökseen. Esimerkiksi operaatio, joka palauttaa muistiin tallennetun sivun voi hyväksyä parametrina aikajakson, jonka jälkeen sivu päivitetään välimuistiin uudelleen. Useimmilla operaatioilla on yleensä \"järkevät oletusarvot\", jotta ne toimisivat hyväksyttävästi vaikka mitään parametrejä ei olisi asetettu. Huomaa myös, että kaikki operaatiot eivät tue parametrejä. </p> <p> Parametrejä voidaan asettaa kahdella tasolla. Oletuksena parametrit koskevat tietyn operaation kaikkia käyttökertoja. Jos olet asettanut operaation useammalle kuin yhdelle sääntöjoukolle, <em>samaa</em> parametriä käytetään kaikissa. Voit kuitenkin ylikirjoittaa parametrit yksittäisille sääntöjoukoille. </p> <p> Käytä alla olevaa taulukkoa päästäksesi käsiksi tietyn operaation tai sääntöjoukon parametreihin. <strong>Varoitus:</strong> Tallenna muualla tässä lomakkeessa tekemäsi muutokset ennen operaatioiden parametrien määrittelyä. Muussa tapauksessa tekemäsi muutokset menetetään. </p>"
 
 #. Default: "This information, also referred to as <em>metadata</em> is the collection of information that is used to categorize an object, assign effective dates and expiration dates, language, and keywords."
 #: Archetypes/skins/archetypes/metadata_macros.pt:32
@@ -7376,6 +7640,11 @@ msgstr "Sovelmasarakkeet näyttävät vain ne sovelmat, jotka on erikseen kytket
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-group.pt:43
 msgid "description_manage_group_portlets"
 msgstr "Vasen ja oikea sovelma-alue näyttävät nyt vain ne sovelmat, jotka on kytketty tähän ryhmään. Käytä ylös-, alas-, poista- ja muokkaa-linkkejä hallitaksesi käyttäjäsovelmia. Lisää uusi sovelma pudotusvalikosta sarakkeen ylälaidasta."
+
+#. Default: "<p> Caching can be controlled by mapping <em>rulesets</em> to <em>caching operations</em>. </p> <p> A <strong>ruleset</strong> is a name given to a resource published by Plone, such as a view. Rulesets are declared by the developers who write those views. You can think of them as a way to give hints about how something should be cached, without actually implementing the caching operations. </p> <p> The exact caching operations to use are mapped to rulesets in the table below. Caching operations will often set response headers to tell the users's web browser and/or a caching proxy how to cache content. They may also intercept a response to return a cached copy or instruct the browser to use its own cached copy, if it is considered to be current. </p>"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:384
+msgid "description_mappings"
+msgstr "<p> Välimuistin käyttöä voidaan hallita yhdistämällä <em>sääntöjoukkoja</em> <em>välimuisioperaatioihin</em>. </p> <p><strong>Sääntöjoukko</strong> on tietylle Plonen julkaisemalle resurssille annettu nimi (esim. näkymä). Sääntöjoukot määrittelee näiden näkymien kehittäjät. Niitä voidaan pitää tapana antaa vinkkejä miten jokin pitäisi tallentaa välimuistiin ilman välimuistioperaatioiden varsinaista toteuttamista. </p> <p> Käytettävät välimuistioperaatiot yhdistetään sääntöjoukkoon alla olevassa taulukossa. Välimuistioperaatiot asettavat usein vastaukseen (response) otsikkotietoja kertoakseen käyttäjän www-selaimelle ja/tai välimuistiproxylle miten sisältö tallennetaan välimuistiin. Ne voivat myös keskeyttää vastauksen palauttaakseen välimuistiin tallennetun kopion, tai ohjatakseen selainta käyttämään sen omassa välimuistissa olevaa kopiota, jos se on vain ajantasainen."
 
 #. Default: "This search form enables you to find users by specifying one or more search criteria."
 #: plone.app.users/plone/app/users/browser/membersearch.py:90
@@ -7519,11 +7788,26 @@ msgstr "Sivusto toimii \"tuotantotilassa\". Tämä on suositeltu toimintatila k�
 msgid "description_publishing_process_short"
 msgstr "Sisällön tila (tai tarkistustila) määrää, kuka voi nähdä kohteen. Voit määrittää näkyvyyttä myös asettamalla sisällölle <em class=\"discreet\">voimaantulopäivän</em>. Sisältö ei ole julkisesti haettavissa ennen sen voimaantulopäivää. Voimaantulopäivä estää sisältöä näkymästä yleisissä näkymissä kuten sovelmissa tai kansiolistauksissa, vaikka sisällön saakin näkyviin tietämällä sivun verkko-osoitteen."
 
+#. Default: "The following items were purged:"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:65
+msgid "description_purged"
+msgstr "Seuraavat kohteet tyhjennettiin:"
+
 #. Default: "You are logged in via HTTP authentication (i.e. the Zope Management Interface). In order to log out, you must:"
 #: CMFPlone/skins/plone_login/logged_out.cpt:36
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:56
 msgid "description_quit_to_log_out"
 msgstr "Koska olet kirjautunut sisään käyttäen HTTP-tunnistautumista (esim. Zope-hallintaliittymän kautta), ainoa tapa kirjautua ulos on selaimen sulkeminen."
+
+#. Default: "Plone maintains a cache of certain pages and fragments of pages in memory to speed up rendering. Certain caching operations, when mapped, can be used to place entire pages into the RAM cache. Using the RAM cache may allow you to gain some speed (and reduce CPU usage), at the cost of using more memory. Note that the default RAM cache is shared among threads in the same Zope instance, but is not shared between Zope instances. Thus, if you are running a multi-instance ZEO setup, you may find it more efficient to segment your users using a front-end load balancer so that they always reach the same back-end instance. As an alternative, you can integrate a shared cache such as <em>memcached</em>. See the documentation for details."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:285
+msgid "description_ram"
+msgstr "Plone ylläpitää tiettyjä sivuja tai osia sivuista välimuistissa nopeuttaakseen sivujen näyttämistä. Tietyt välimuistioperaatiot yhdistettynä sääntöjoukkoon mahdollistavat kokonaisten sivujen asettamisen RAM-välimuistiin. Käyttämällä RAM-välimuistia voit nopeuttaa sivujen latautumista (ja vähentää CPU kuormaa), mutta samalla muistin kulutus kasvaa. Huomaa, että oletuksena käytössä oleva RAM-välimuisti on jaettu säikeiden kesken samassa Zope-instanssissa, mutta ei Zope-instanssien kesken. Jos käytät ZEO:a useamman instanssin kesken on todennäköisesti edullisempaa käyttää edustalla kuorman tasaajaa osioimaan käyttäjiä niin, että ne päätyvät aina saman instanssiin. Vaihtoehtoisesti voit ottaa käyttöön jaetun välimuistin, kuten <em>memcached</em>:n. Katso lisätietoja dokumentaatiosta."
+
+#. Default: "The table below shows statistics for the default RAM cache. You can use the <em>Purge</em> button to manually clear the cache if you suspect there are stale items there."
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:54
+msgid "description_ramcache_stats"
+msgstr "Alla oleva taulukko näyttää RAM-välimuistin tilastot. Voit käyttää <em>Tyhjennä</em> painiketta tyhjentääksesi välimuistin, jos epäilet siellä olevan vanhentuneita objekteja."
 
 #. Default: "All recently modified items, latest first."
 #: CMFPlone/skins/plone_templates/recently_modified.pt:28
@@ -8033,6 +8317,21 @@ msgstr "Kuinka monelle kielelle näyettään painikkeet rinnakkaiskääntäjäss
 msgid "heading_bypass_languageindependent_field_permission_check"
 msgstr ""
 
+#. Default: "Import caching profiles"
+#: plone.app.caching/plone/app/caching/browser/import.pt:45
+msgid "heading_caching_import"
+msgstr "Tuo välimuistin asetukset profiilista"
+
+#. Default: "Purge caching proxy"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:45
+msgid "heading_caching_purging"
+msgstr "Tyhjennä välimuistiproxy"
+
+#. Default: "Caching settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:81
+msgid "heading_caching_settings"
+msgstr "Välimuistin asetukset"
+
 #. Default: "Change password for ${user}"
 #: CMFPlone/skins/plone_prefs/password_form.pt:15
 msgid "heading_change_password_for"
@@ -8052,6 +8351,11 @@ msgstr "Kirjoittaja"
 #: CMFPlone/browser/templates/contact-info.pt:18
 msgid "heading_contact_form"
 msgstr "Yhteydenottolomake"
+
+#. Default: "Content types"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:480
+msgid "heading_content_types"
+msgstr "Sisältötyypit"
 
 #. Default: "Browse for items"
 #: plone.formwidget.contenttree/plone/formwidget/contenttree/input.pt:10
@@ -8241,6 +8545,11 @@ msgstr ""
 msgid "heading_not_found_suggestions"
 msgstr "Etsit ehkä seuraavia..."
 
+#. Default: "Operation"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:416
+msgid "heading_operation"
+msgstr "Operaatio"
+
 #. Default: "Please wait while you are logged in"
 #: CMFPlone/skins/plone_login/external_login_return.cpt:34
 msgid "heading_please_wait_while_you_are_logged_in"
@@ -8256,11 +8565,21 @@ msgstr "Tähän asetetut sovelmat"
 msgid "heading_publishing_process"
 msgstr "Julkaisuprosessi"
 
+#. Default: "Status"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:64
+msgid "heading_purged"
+msgstr "Tila"
+
 #. Default: "Still logged in as a Zope user"
 #: CMFPlone/skins/plone_login/logged_out.cpt:33
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/logged_out.cpt:53
 msgid "heading_quit_to_log_out"
 msgstr "Olet edelleen Zope käyttäjänä kirjautuneena."
+
+#. Default: "RAM cache statistics"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:45
+msgid "heading_ramcache_stats"
+msgstr "RAM-välimuistin tilastot"
 
 #. Default: "Modified items"
 #: CMFPlone/skins/plone_templates/recently_modified.pt:23
@@ -8297,6 +8616,11 @@ msgstr "Nimeä uudelleen"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:80
 msgid "heading_request"
 msgstr "REQUEST"
+
+#. Default: "Ruleset"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:415
+msgid "heading_ruleset"
+msgstr "Sääntöjoukko"
 
 #. Default: "Search for groups"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:106
@@ -8379,6 +8703,11 @@ msgstr "Tämä sivu ei näytä olevan olemassa..."
 #: CMFPlone/browser/syndication/views.py:81
 msgid "heading_syndication_properties"
 msgstr "Uutisvirran ominaisuudet"
+
+#. Default: "Templates"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:481
+msgid "heading_templates"
+msgstr "Sivupohjat"
 
 #. Default: "Theme settings"
 #: plone/app/theming/browser/controlpanel.pt:72
@@ -8534,6 +8863,11 @@ msgstr "Lyhyt yhteenveto, joka kertoo kuka olet ja mitä teet. Tekemästäsi sis
 msgid "help_boolean_criteria_bool"
 msgstr "Tosi tai epätosi"
 
+#. Default: "Enter the domain name of each caching proxy, one per line. For example, if you have Varnish running on the local machine on port 1234, you could enter <code>http://localhost:1234</code>. The domain name must be reachable by the Zope process, but does not need to be reachable from users' local machines."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:164
+msgid "help_caching_proxies"
+msgstr "Kirjoita jokaisen välimuistiproxyn domain-nimi omalle rivilleen. Jos sinulla on esimerkiksi paikallisella koneella Varnish kuuntelemassa porttia 1234, tekstikentässä voisi lukea <code>http://localhost:1234</code>. Domain-nimen täytyy olla Zope prosessin (mutta ei käyttäjien paikallisten koneiden) saavutettavissa."
+
 #. Default: "Case sensitive, make sure caps lock is not enabled."
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:114
 msgid "help_capslock_password"
@@ -8667,6 +9001,11 @@ msgstr "Tarkista myös keskusteluun / kommentointiin liittyvät asetukset sisäl
 msgid "help_doctype"
 msgstr ""
 
+#. Default: "<p> If you have enabled <em>Virtual host rewriting takes place front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:246
+msgid "help_domains"
+msgstr "<p> Jos olet ottanut käyttöön <em>Virtuaalipalvelun uudelleenkirjaus tapahtuu ennen välimuistiproxyä</em> asetuksen yllä ja sivustosi on saavutettavissa useamman domainin kautta (esim. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>, kirjoita kaikki käytössä olevat domainit alle omalle rivilleen. Tällä varmistetaan, että välimuistin tyhjennyspyynnöt lähetetään jokaiselle domainille. Huomaa, että on tehokkaampaa konfiguroida edustalla oleva www-palvelin yksinkertaisesti ohjaamaan kaikki pyynnöt yhdelle domainille niin, että Zope näkee vain yhden domainin. </p> <p> Tämä lista voidaan jättää tyhjäksi, jos et käytä virtuaalista hostausta, jos virtuaalisen isännän uudelleenkirjaus tapahtuu välimuistiproxyn jälkeen, tai jos sivustolle on virtuaalipalvelussa määritelty vain yksi domain-nimi. </p>"
+
 #. Default: "Switching the email login setting in the ${link} on or off automatically changes the login name for existing users. This may fail when there are duplicates. On this page you can search for duplicates."
 #: CMFPlone/controlpanel/browser/emaillogin.pt:18
 msgid "help_duplicate_login_names"
@@ -8713,6 +9052,11 @@ msgstr ""
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/tableofcontents.py:22
 msgid "help_enable_table_of_contents_description"
 msgstr ""
+
+#. Default: "If this option is disabled, no caching will take place."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:115
+msgid "help_enabled"
+msgstr "Jos tämä ei ole valittuna, välimuistia ei käytetä."
 
 #. Default: "Date and Time related settings like timezone(s), etc."
 #: CMFPlone/controlpanel/browser/dateandtime.py:15
@@ -8816,6 +9160,11 @@ msgstr "Kohteeseen liitetty maantieteellinen arvo, jos kyseinen arvo on tähän 
 msgid "help_login_name_caps"
 msgstr "Kirjainkoolla (esim. a ja A) on käyttäjätunnuksissa merkitystä. Varmista, ettei näppäimistön Caps Lock -toiminto ole päällä."
 
+#. Default: "Use the table below to map rulesets to caching operations."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:407
+msgid "help_main_mappings"
+msgstr "Käytä allaolevaa taulukkoa yhdistääksesi sääntöjoukot välimuistioperaatioihin."
+
 #. Default: "If enabled all external links will be marked with link type specific icons."
 #: plone/app/theming/browser/controlpanel.pt:565
 msgid "help_mark_special_links"
@@ -8894,15 +9243,30 @@ msgstr "Näytetään uutisluettelossa ja itse uutisartikkelissa. Kuva pienennet�
 msgid "help_nextprevious"
 msgstr ""
 
+#. Default: "No parameters"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:592
+msgid "help_no_options"
+msgstr "Ei parametrejä"
+
 #. Default: "There are no items in this folder that can be selected as a default view page."
 #: plone.app.content/plone/app/content/browser/templates/select_default_page.pt:77
 msgid "help_no_selectable_default_pages"
 msgstr "Tässä kansiossa ei ole oletusnäkymäksi soveltuvaa sisältöä."
 
+#. Default: "Not mapped"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:584
+msgid "help_not_mapped"
+msgstr "Ei yhdistetty"
+
 #. Default: "Please type your OpenID URL below to log in."
 #: plone.app.openid/plone/app/openid/skins/ploneopenid/login_form.cpt:67
 msgid "help_openid_identity_url"
 msgstr "Kirjoita OpenID-osoitteesi kirjautuaksesi."
+
+#. Default: "Use the table below to create, clear and edit operation parameters. If you clear the ruleset-specific parameters for a given operation, it will fall back on the global operation parameters."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:563
+msgid "help_operation_parameters"
+msgstr "Käytä alla olevaa taulukkoa luodaksesi, tyhjentääksesi ja muokataksesi operaation parametrejä. Jos tyhjennät sääntöjoukko-kohtaiset parametrit tietylle operaatiolle käytetään niiden sijaan yleisiä parametrejä."
 
 #. Default: "You can define parameters that will be passed to the compiled theme here. In your rules file, you can refer to a parameter by <code>$name</code>. Parameters are defined using TALES expressions, which should evaluate to a string, a number, a boolean or None. Available variables are <code>context</code>, <code>request</code>, <code>portal</code>, <code>portal_state</code>, and <code>context_state</code>. Define one variable per line, in the format <code>name = expression</code>."
 #: plone/app/theming/browser/controlpanel.pt:497
@@ -8957,6 +9321,31 @@ msgstr "Kielivalintasi."
 #: plone.app.content/plone/app/content/browser/templates/content_status_history.pt:280
 msgid "help_publishing_comments"
 msgstr "Tämä kommentti lisätään julkaisuhistoriaan. Jos olet valinnut useita kohteita, lisätään tämä kommentti niihin kaikkiin."
+
+#. Default: "If you have enabled purging, Plone can automatically purge the views of content items when they are modified or removed. Select the types to automatically purge below. <strong>Note:</strong> although a content items's view can be purged easily, it is not always possible to purge every page where that item may appear. Items that appear in dynamic listings (such as <em>Collection</em> portlets), the navigation tree and other navigational aids may appear out of date if you have cached the pages where those items would appear."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:188
+msgid "help_purged_content_types"
+msgstr "Jos olet ottanut tyhjennyksen käyttöön, Plone voi automaattisesti tyhjentää sisältötyyppien näkymät kun niitä muokataan tai poistetaan. Valitse automaattisesti tyhjennettävät tyypit alta. <strong>Huomaa:</strong> vaikka sisältötyyppien näkymät voidaan tyhjentää välimuistista helposti, ei aina ole mahdollista tyhjentää jokaista sivua jossa tämä näkymä esiintyy."
+
+#. Default: "Enable this option if you have configured a caching proxy in front of Plone, and the proxy supports HTTP <code>PURGE</code> requests."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:150
+msgid "help_purging_enabled"
+msgstr "Ota tämä käyttöön, jos olet asettanut välimuistiproxyn Plonen edustalle, ja jos proxy tukee HTTP <code>PURGE</code> pyyntöjä."
+
+#. Default: "Enter the time, in seconds, before attempts to clean up the cache. A lower value may reduce memory consumption by purging items frequently, but can also slow down the system by tying up the cache with maintenance tasks for too long."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:361
+msgid "help_ram_cleanup_interval"
+msgstr "Aika (sekunteina), jonka jälkeen välimuisti yritetään siivota. Lyhyempi aika voi vähentää muistin käyttöä tyhjentämällä objektit säännöllisesti, mutta voi myös hidastaa järjestelmää sitomalla välimuistin ylläpitotehtäviin liian pitkiksi ajoiksi."
+
+#. Default: "Enter the maximum time, in seconds, that an item may remain in the cache before being purged."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:338
+msgid "help_ram_max_age"
+msgstr "Aika (sekunteina), jonka objektit voivat viettää välimuistissa ennen niiden tyhjäystä."
+
+#. Default: "Use this to control how many items can be placed in the cache. The more items you allow, the higher the potential memory consumption."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:315
+msgid "help_ram_max_entries"
+msgstr "Käytä tätä välimuistissa olevien objektien määrän määrittelemiseen. Mitä enemmän objekteja on, sitä suurempi on mahdollinen muistin kulutus."
 
 #. Default: "Allow rules and themes to be read from remote servers."
 #: plone/app/theming/browser/controlpanel.pt:454
@@ -9122,10 +9511,20 @@ msgstr "Tämä on lähtevän sähköpostin SMTP-palvelimen osoite. Se on yleens�
 msgid "help_smtp_userid"
 msgstr "Tämä on sähköpostipalvelimen vaatima käyttäjätunnus. Sitä ei tarvita, ellet käytä ESMTP:tä."
 
+#. Default: "This allows rollback to a previous state via the <em>portal_setup</em> tool."
+#: plone.app.caching/plone/app/caching/browser/import.pt:106
+msgid "help_snapshot"
+msgstr "Tämä mahdollistaa profiilien palauttamisen edelliseen versioon <em>portal_setup</em> työkalun avulla."
+
 #. Default: "A string value."
 #: widget description of StringWidget for label Value
 msgid "help_string_criteria_value"
 msgstr "Tekstiarvo."
+
+#. Default: "Select this option to wait while the purge completes. This allows you to see the results of the purges. Purging asynchronously will return immediately, but you will need to check your caching proxy's log files to see if the purge actually succeeded."
+#: plone.app.caching/plone/app/caching/browser/purge.pt:107
+msgid "help_synchronous"
+msgstr "Valitse tämä odottaaksesi tyhjennyksen valmistumista. Tämän avulla näet tyhjennyksen tulokset. Asynkronisesti tapahtuva tyhjennys palauttaa sinut sivuille välittömästi, mutta sinun täytyy tarkistaa välimuistiproxyn logeistatyhjennyksen onnistuminen."
 
 #. Default: "Maximum number of items that will be syndicated."
 #: CMFPlone/interfaces/syndication.py:184
@@ -9137,6 +9536,11 @@ msgstr "Uutisvirrassa näkyvän sisällön enimmäismäärä."
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:103
 msgid "help_tags"
 msgstr "Tageja käytetään yleisesti sisällön ad-hoc järjestämiseen."
+
+#. Default: "<p> Legacy page templates defined in the <em>portal_skins</em> tool in the ZMI, or created or customised through the web cannot be associated with rulesets in the usual way. There are two options: </p> <ul> <li>If the template is the <em>default type</em> of a content type it is possible to associate the type class or an interface it provides with a ruleset.</li> <li>You can also associate a specific page template (by name) or content type with a ruleset using the options below.</li> </ul> <p> <strong>Note:</strong> By default, folder-like content types are associated with the ruleset <code>plone.content.folderView</code>, and item-like content types are associated with the ruleset <code>plone.content.itemView</code>. Any settings entered below or set via an explicit cache ruleset (in a ZCML file) will override these defaults. </p> <p> <strong>Note:</strong> You can only use each template name or content type once! </p>"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:449
+msgid "help_template_mappings"
+msgstr "<p> Perinteisiä <em>portal_skins</em> kansiossa määriteltyjä, tai www-käyttöliittymän kautta luotuja/muokattuja sivupohjia ei voi yhdistää sääntöjoukkoon tavallisella tavalla. Käytettävissä on kaksi vaihtoehtoa: </p> <ul> <li>Jos sivupohja on sisältötyypin <em>oletusnäkymä</em> on sääntöjoukon liittäminen siihen mahdollista sisältötyypin luokan tai rajapinnan (interface) avulla.</li> <li>Voit myös liittää tietyn sivupohjan tai sisältötyypin sääntöjoukkoon käyttäen alla olevia vaihtoehtoja.</li> </ul> <p> <strong>Huomaa:</strong> Oletuksena kansiotyyppiset sisältötyypit liitetään sääntöjoukkoon <code>plone.content.folderView</code>, ja sisältö-tyyppiset sisältötyypit sääntöjoukkoon <code>plone.content.itemView</code>. Kaikki alle syötetyt, tai ZCML-tiedostossa määritellyt välimuistisäännöt yliajavat nämä oletukset. </p> <p> <strong>Huomaa:</strong> Voit käyttää kutakin sivupohjan nimeä tai sisältötyyppiä vain kerran! </p>"
 
 #. Default: "Choose a template that will be used for viewing this item."
 #: Archetypes/TemplateMixin.py:25
@@ -9204,6 +9608,11 @@ msgstr ""
 msgid "help_url"
 msgstr "Lisää alkuun \"http://\", jos linkin kohde on tämän sivuston ulkopuolella."
 
+#. Default: "Enter URLs to purge, one per line, below. You can either enter a full URL including a domain, or a path relative to the site root, starting with a <em>/</em>."
+#: plone.app.caching/plone/app/caching/browser/purge.pt:82
+msgid "help_urls"
+msgstr "Anna URL:t tyhjennettäviin kohteisiin (yksi/rivi). Voit joko kirjoittaa kokonaisen URL:n sisältäen domainin, tai suhteellisen polun sivuston juuresta (<em>/</em>) aloittaen."
+
 #. Default: "Enter a user name, usually something like 'jsmith'. No spaces or special characters. Usernames and passwords are case sensitive, make sure the caps lock key is not enabled. This is the name used to log in."
 #: plone.app.users/plone/app/users/schema.py:93
 msgid "help_user_name_creation_casesensitive"
@@ -9218,6 +9627,11 @@ msgstr ""
 #: plone.app.versioningbehavior/plone/app/versioningbehavior/behaviors.py:38
 msgid "help_versioning_enabled"
 msgstr ""
+
+#. Default: "Enable this if you are using virtual hosting with Zope's VirtualHostMonster and you perform URL rewriting (to incorporate the special virtual hosting tokens such as <code>VirtualHostBase</code> and <code>VirtualHostRoot</code> in the URL) <em>before</em> the request is passed to the caching proxy, e.g. in an Apache web server that receives requests and passes them on to a Varnish caching proxy. Disable this option if you are not using virtual hosting, or if the caching proxy is in front of whatever performs the rewrite (or is itself performing the rewrites), disable this option."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:224
+msgid "help_virtual_hosting"
+msgstr "Ota tämä käyttöön, jos käytät virtuaalipalvelua (virtual hosting) Zopen VirtualHostMonster:n kanssa ja jos suoritat URL:n uudelleenkirjoituksen (sisällyttääksesi erityisiä virtuaalipalveluihin liittyviä merkintöjä, kuten <code>VirtualHostBase</code> ja <code>VirtualHostRoot</code>) <em>ennen</em> kuin pyyntö välitetään välimuistiproxylle (esim. Apache www-palvelin, joka vastaanottaa pyynnöt ja välittää ne Varnish välimuistiproxylle). Poista tämä käytöstä, jos et käytä virtuaalista hostausta, tai jos välimuistiproxy on ennen URL:n uudelleenkirjoittavaa palvelua (tai tekee uudelleenkirjoituksen itse)."
 
 #. Default: "Wysiwyg editor to use."
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:31
@@ -9571,6 +9985,46 @@ msgstr ""
 #: CMFPlone/skins/plone_content/folder_summary_view.pt:74
 msgid "label_by_author"
 msgstr "tekijä: ${author}"
+
+#. Default: "Entries"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:72
+msgid "label_cache_entries"
+msgstr "Kirjauksia"
+
+#. Default: "Hits"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:69
+msgid "label_cache_hits"
+msgstr "Osumia"
+
+#. Default: "Key"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:68
+msgid "label_cache_key"
+msgstr "Avain"
+
+#. Default: "Misses"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:70
+msgid "label_cache_misses"
+msgstr "Huteja"
+
+#. Default: "Size (bytes)"
+#: plone.app.caching/plone/app/caching/browser/ramcache.pt:71
+msgid "label_cache_size_bytes"
+msgstr "Koko (tavuina)"
+
+#. Default: "First time here? We recommend that you get started by ${link}."
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:65
+msgid "label_caching_first_time_here?"
+msgstr ""
+
+#. Default: "importing a preconfigured set of caching rules"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:65
+msgid "label_caching_first_time_here_link"
+msgstr ""
+
+#. Default: "Caching proxies"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:163
+msgid "label_caching_proxies"
+msgstr "Välimuistiproxyt"
 
 #. Default: "Cancel"
 #: Archetypes/skins/archetypes/edit_macros.pt:236
@@ -10015,6 +10469,11 @@ msgstr ""
 msgid "label_doctype"
 msgstr ""
 
+#. Default: "Externally facing domains"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:245
+msgid "label_domains"
+msgstr "Ulospäin näkyvät domain-nimet"
+
 #. Default: "Edit"
 #: CMFPlone/browser/templates/author.pt:85
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:58
@@ -10073,6 +10532,11 @@ msgstr ""
 #: plone/app/theming/browser/controlpanel.pt:741
 msgid "label_enable_new_theme"
 msgstr ""
+
+#. Default: "Enable caching"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:114
+msgid "label_enabled"
+msgstr "Käytä välimuistia"
 
 #. Default: "Event body text"
 #: widget label of RichWidget - description ""
@@ -10229,6 +10693,11 @@ msgstr "Koko nimi"
 msgid "label_general"
 msgstr ""
 
+#. Default: "global parameters"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:604
+msgid "label_global"
+msgstr "yleiset parametrit"
+
 #. Default: "Globally enable comments"
 #: plone.app.discussion/plone/app/discussion/interfaces.py:197
 msgid "label_globally_enabled"
@@ -10334,6 +10803,13 @@ msgstr "Kuva"
 #: widget label of StringWidget - description ""
 msgid "label_image_caption"
 msgstr "Kuvateksti"
+
+#. Default: "Import settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:40
+#: plone.app.caching/plone/app/caching/browser/import.pt:21
+#: plone.app.caching/plone/app/caching/browser/purge.pt:21
+msgid "label_import"
+msgstr "Tuo asetukset"
 
 #. Default: "Include contained items"
 #: plone.app.content/plone/app/content/browser/contents/templates/workflow.pt:21
@@ -10477,6 +10953,11 @@ msgstr "Olet muokkaamassa kansion oletusnäkymän sovelmia. Jos haluat muokata i
 #: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:23
 msgid "label_manage_portlets_default_view_container_go_here"
 msgstr "mene tänne"
+
+#. Default: "Ruleset mappings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:406
+msgid "label_mappings"
+msgstr "Sääntöjoukon yhteydet"
 
 #. Default: "Mark special links"
 #: plone/app/theming/browser/controlpanel.pt:564
@@ -10680,6 +11161,11 @@ msgstr "% avainsanaa valittuna."
 msgid "label_openid_log_in"
 msgstr "Kirjaudu"
 
+#. Default: "Operation parameters"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:562
+msgid "label_operation_parameters"
+msgstr "Operaation parametrit"
+
 #. Default: "or"
 #: plone.app.content/plone/app/content/browser/templates/select_default_view.pt:51
 msgid "label_or"
@@ -10827,11 +11313,50 @@ msgstr "Hyväksy"
 msgid "label_publishing_effective"
 msgstr "voimassa"
 
+#. Default: "Content types to purge"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:187
+msgid "label_purged_content_types"
+msgstr "Välimuistista tyhjättävät sisältötyypit"
+
+#. Default: "Purge caching proxy"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:45
+#: plone.app.caching/plone/app/caching/browser/import.pt:27
+#: plone.app.caching/plone/app/caching/browser/purge.pt:26
+msgid "label_purging"
+msgstr "Tyhennä välimuistiproxy"
+
+#. Default: "Enable purging"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:149
+msgid "label_purging_enabled"
+msgstr "Käytä välimuistin tyhjennystä"
+
 #. Default: "Quick search"
 #: CMFPlone/controlpanel/browser/usergroups_groupmembership.pt:178
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:112
 msgid "label_quick_search"
 msgstr "Pikahaku"
+
+#. Default: "Cleanup interval"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:355
+msgid "label_ram_cleanup_interval"
+msgstr "Puhdistuksen aikaväli"
+
+#. Default: "Maximum age of entries in the cache"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:332
+msgid "label_ram_max_age"
+msgstr "Välimuistissa olevien kirjausten enimmäisikä"
+
+#. Default: "Maximum entries in the cache"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:309
+msgid "label_ram_max_entries"
+msgstr "Välimuistissa olevien kirjausten enimmäismäärä"
+
+#. Default: "RAM cache"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:50
+#: plone.app.caching/plone/app/caching/browser/import.pt:32
+#: plone.app.caching/plone/app/caching/browser/purge.pt:32
+msgid "label_ramcache"
+msgstr "RAM-välimuisti"
 
 #. Default: "Read network"
 #: plone/app/theming/browser/controlpanel.pt:453
@@ -10926,6 +11451,11 @@ msgstr "Tapahtuman liipaisin: ${trigger}"
 #: plone/app/theming/browser/controlpanel.pt:378
 msgid "label_rules"
 msgstr ""
+
+#. Default: "per-ruleset parameters"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:621
+msgid "label_ruleset"
+msgstr "sääntöjoukkokohtaiset parametrit"
 
 #. Default: "Save"
 #: Archetypes/skins/archetypes/base_metadata.cpt:96
@@ -11042,6 +11572,13 @@ msgstr "Sähköposti"
 msgid "label_sender_fullname"
 msgstr "Nimi"
 
+#. Default: "Change settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:34
+#: plone.app.caching/plone/app/caching/browser/import.pt:16
+#: plone.app.caching/plone/app/caching/browser/purge.pt:16
+msgid "label_settings"
+msgstr "Muuta asetuksia"
+
 #. Default: "Short name"
 #: Archetypes/BaseObject.py:90
 #: plone.app.content/plone/app/content/browser/contents/templates/rename.pt:9
@@ -11143,6 +11680,11 @@ msgstr "Tallenna ja lähetä testisähköposti"
 msgid "label_smtp_userid"
 msgstr "ESMTP-käyttäjätunnus"
 
+#. Default: "Take a snapshot of the site prior to importing new setting."
+#: plone.app.caching/plone/app/caching/browser/import.pt:102
+msgid "label_snapshot"
+msgstr "Ota sivustosta tilannevedos ennen uusien asetusten tuomista."
+
 #. Default: "Some content types:"
 #: plone.app.dexterity/plone/app/dexterity/browser/overview.pt:30
 msgid "label_some_content_types"
@@ -11174,6 +11716,11 @@ msgstr "Arvo"
 msgid "label_subject"
 msgstr "Aihe"
 
+#. Default: "Purge synchronously"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:104
+msgid "label_synchronous"
+msgstr "Tyhjennä synkronisesti"
+
 #. Default: "Maximum items"
 #: CMFPlone/interfaces/syndication.py:182
 msgid "label_syndication_max_items"
@@ -11189,6 +11736,11 @@ msgstr "Sisällysluettelo"
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:102
 msgid "label_tags"
 msgstr "Tagit"
+
+#. Default: "Legacy template mappings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:448
+msgid "label_template_mappings"
+msgstr "Perinteisten sivupohjien yhteydet sääntöjoukkoihin"
 
 #. Default: "View template"
 #: Archetypes/TemplateMixin.py:23
@@ -11331,6 +11883,8 @@ msgstr "Siirry ryhmien hallintaan"
 
 #. Default: "Up to Site Setup"
 #: CMFPlone/controlpanel/browser/maintenance.pt:166
+#: plone.app.caching/plone/app/caching/browser/import.pt:48
+#: plone.app.caching/plone/app/caching/browser/purge.pt:48
 msgid "label_up_to_plone_setup"
 msgstr "Siirry sivuston asetuksiin"
 
@@ -11356,6 +11910,11 @@ msgstr "Päivitä…"
 #: widget label of StringWidget - description ""
 msgid "label_url"
 msgstr "Verkko-osoite"
+
+#. Default: "URLs to purge"
+#: plone.app.caching/plone/app/caching/browser/purge.pt:80
+msgid "label_urls"
+msgstr "Tyhjennettävät URL:it"
 
 #. Default: "User Name"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:91
@@ -11402,6 +11961,11 @@ msgstr "Näytä"
 #: plone.app.iterate/plone/app/iterate/browser/info_baseline.pt:24
 msgid "label_view_changes"
 msgstr "Näytä muutokset"
+
+#. Default: "Virtual host rewriting takes place front of the caching proxy"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:223
+msgid "label_virtual_hosting"
+msgstr "Virtuaalipalvelun uudelleenkirjaus tapahtuu ennen välimuistiproxyä"
 
 #. Default: "What"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:44
@@ -11459,10 +12023,25 @@ msgstr "Lisää uusi"
 msgid "legend_after_migration_cleanup"
 msgstr ""
 
+#. Default: "Caching proxies"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:125
+msgid "legend_caching_proxies"
+msgstr "Välimuistiproxyt"
+
+#. Default: "Detailed settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:532
+msgid "legend_detailed_settings"
+msgstr "Yksityiskohtaiset asetukset"
+
 #. Default: "Details"
 #: plone.app.iterate/plone/app/iterate/browser/checkout.pt:40
 msgid "legend_details"
 msgstr "Yksityiskohdat"
+
+#. Default: "Global settings"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:102
+msgid "legend_global_settings"
+msgstr "Yleiset asetukset"
 
 #. Default: "Log details"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:134
@@ -11478,6 +12057,11 @@ msgstr "Virheloki (viimeisin näytetään ensimmäisenä)"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:56
 msgid "legend_lognoexceptions"
 msgstr "Virheitä ei ole tapahtunut."
+
+#. Default: "Caching operations"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:380
+msgid "legend_mappings"
+msgstr "Välimuistin operaatiot"
 
 #. Default: "User Search Criteria"
 #: plone.app.users/plone/app/users/browser/membersearch.py:17
@@ -11500,6 +12084,11 @@ msgstr "Salasanan tiedot"
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:69
 msgid "legend_personal_details"
 msgstr "Omat tiedot"
+
+#. Default: "In-memory cache"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:281
+msgid "legend_ram"
+msgstr "RAM-välimuisti"
 
 #. Default: "Optional step - Reindex the Language index"
 #: plone/app/multilingual/browser/templates/migration.pt:114
@@ -11525,6 +12114,21 @@ msgstr ""
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/link.pt:25
 msgid "link_address"
 msgstr "Linkin osoite on:"
+
+#. Default: "Create"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:614
+msgid "link_create"
+msgstr "Luo"
+
+#. Default: "View/edit"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:599
+msgid "link_view_edit"
+msgstr "Näytä/muokkaa"
+
+#. Default: "View/edit/clear"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:608
+msgid "link_view_edit_clear"
+msgstr "Näytä/muokkaa/tyhjennä"
 
 #. Default: "Potential link breakage"
 #: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:6
@@ -13056,6 +13660,11 @@ msgstr "Huomaa, että tässä asetetut roolit koskevat käyttäjää suoraan. Sy
 #: validation/validators/ExpressionValidator.py:93
 msgid "validation failed, expr was:$expr"
 msgstr "kelvollisuustarkistus epäonnistui, expr oli:$expr"
+
+#. Default: "(Not used)"
+#: plone.app.caching/plone/app/caching/browser/controlpanel.pt:430
+msgid "value_not_used"
+msgstr "(Ei käytössä)"
 
 #. Default: "Variable"
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:14
