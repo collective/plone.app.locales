@@ -3,6 +3,9 @@ Changelog
 
 5.0.15 (unreleased)
 -------------------
+- Include plone.app.caching translations
+  [erral]
+
 - Include plone.dexterity translations
   [erral]
 
