@@ -3,6 +3,8 @@ Changelog
 
 5.1.8 (unreleased)
 ------------------
+- Compelete basque translation.
+  [erral]
 
 - Include plone.app.caching translations.
   [erral]
