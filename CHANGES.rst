@@ -3,6 +3,10 @@ Changelog
 
 5.0.15 (unreleased)
 -------------------
+
+- Complete spanish translation.
+  [erral]
+
 - Complete basque translation.
   [erral]
 
