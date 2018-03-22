@@ -3,6 +3,10 @@ Changelog
 
 5.1.8 (unreleased)
 ------------------
+
+- Complete spanish translation.
+  [erral]
+
 - Compelete basque translation.
   [erral]
 
