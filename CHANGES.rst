@@ -3,6 +3,10 @@ Changelog
 
 5.1.8 (unreleased)
 ------------------
+
+- Complete spanish translation.
+  [erral]
+
 - Compelete basque translation.
   [erral]
 
@@ -20,6 +24,10 @@ Changelog
 
 - Update German translations.
   [jensens, agitator]
+
+- Update Traditional Chinese translations.
+  [l34marr]
+
 
 5.1.7 (2018-03-11)
 ------------------
