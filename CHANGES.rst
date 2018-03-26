@@ -22,8 +22,12 @@ Changelog
 - Update Italian translations.
   [ale-rt, cekk]
 
+- Update German translations.
+  [jensens, agitator]
+
 - Update Traditional Chinese translations.
   [l34marr]
+
 
 5.1.7 (2018-03-11)
 ------------------
