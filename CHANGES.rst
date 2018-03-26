@@ -22,6 +22,9 @@ Changelog
 - Update Italian translations.
   [ale-rt, cekk]
 
+- Update Traditional Chinese translations.
+  [l34marr]
+
 5.1.7 (2018-03-11)
 ------------------
 
