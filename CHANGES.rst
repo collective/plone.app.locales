@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.8 (unreleased)
+5.1.8 (2018-04-01)
 ------------------
 
 - Complete spanish translation.
