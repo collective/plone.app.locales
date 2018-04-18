@@ -4,6 +4,9 @@ Changelog
 5.0.15 (unreleased)
 -------------------
 
+- Fix checkout/checkin translations in spanish.
+  [erral]
+
 - Complete spanish translation.
   [erral]
 
