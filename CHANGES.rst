@@ -4,7 +4,8 @@ Changelog
 5.1.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Complete catalan translation.
+  [allusa]
 
 
 5.1.8 (2018-04-01)
