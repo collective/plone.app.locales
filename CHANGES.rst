@@ -4,7 +4,8 @@ Changelog
 5.1.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update European Portuguese translations.
+  [emansije]
 
 
 5.1.8 (2018-04-01)
