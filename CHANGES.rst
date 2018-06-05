@@ -4,6 +4,8 @@ Changelog
 5.1.9 (unreleased)
 ------------------
 
+- Update European Portuguese translations.
+  [emansije]
 - Complete catalan translation.
   [allusa]
 
