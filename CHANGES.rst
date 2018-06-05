@@ -6,6 +6,8 @@ Changelog
 
 - Update European Portuguese translations.
   [emansije]
+- Complete catalan translation.
+  [allusa]
 
 
 5.1.8 (2018-04-01)
