@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.9 (unreleased)
+5.1.9 (2018-06-08)
 ------------------
 
 - Update European Portuguese translations.
