@@ -6,6 +6,8 @@ Changelog
 
 - Update Traditional Chinese translations.
   [l34marr]
+- Save Lithuanian plonelocales with utf-8 encoding. Refs #234
+  [pysailor]
 
 
 5.1.9 (2018-06-08)
