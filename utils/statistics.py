@@ -49,14 +49,14 @@ for line in result_file.xreadlines():
     if language not in stats:
         stats[language] = {}
     stats[language][domain] = (translated, fuzzy, untranslated)
-	
+
 result_file.close()
 
 #from pprint import pprint
 #pprint(stats)
 
-print "Number of languages: %d" % len(stats)
-print "Legend: translated (percentage) / fuzzy / untranslated = total"
+print("Number of languages: %d" % len(stats))
+print("Legend: translated (percentage) / fuzzy / untranslated = total")
 
 lg = None
 if len(sys.argv) > 2:
@@ -88,10 +88,10 @@ for language, domains in stats.items():
     else:
         percent = round(float(total[0]) / float(sum_total) * 100.0, 2)
 
-    print "%s\t: %d (%.2f%%) / %d / %d = %d" % (language,
+    print("%s\t: %d (%.2f%%) / %d / %d = %d" % (language,
                 total[0],
                 percent,
                 total[1],
                 total[2],
-                sum_total)
-    print details
+                sum_total))
+    print(details)

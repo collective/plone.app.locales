@@ -11,7 +11,7 @@ __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 
 def main():
     if len(sys.argv) < 3:
-        print 'You have to specify the target and source product.'
+        print('You have to specify the target and source product.')
         sys.exit(1)
 
     target = sys.argv[1]+'.pot'
@@ -21,11 +21,11 @@ def main():
     os.chdir('i18n')
 
     if not os.path.isfile(source):
-        print 'Source pot was not found for the given product.'
+        print('Source pot was not found for the given product.')
         sys.exit(2)
 
     if not os.path.isfile(target):
-        print 'Target pot was not found for the given product.'
+        print('Target pot was not found for the given product.')
         sys.exit(3)
 
     os.system(__I18NDUDE + (' filter %s %s > %s-new') % (target, source, target))

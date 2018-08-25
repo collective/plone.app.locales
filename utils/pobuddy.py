@@ -160,7 +160,7 @@ class analyzer(object):
         potTable, potWarningTable, potCsvTable, potHeaderTable = \
                   self.langAnalyzer(para, 'pot', para['files'])
         if para['verbose']:
-            print 'POT FILES ANALYZED'
+            print('POT FILES ANALYZED')
         poCubic = []
         poWarningCubic = []
         poCsvCubic = []
@@ -173,7 +173,7 @@ class analyzer(object):
             poCsvCubic.append(langCsvTable)
             poHeaderCubic.append(langHeaderTable)
             if para['verbose']:
-                print 'PO FILES ANALYZED FOR:', lang
+                print('PO FILES ANALYZED FOR:', lang)
 
         rData = [potTable, potWarningTable, potCsvTable, potHeaderTable, \
                  poCubic, poWarningCubic, poCsvCubic, poHeaderCubic]
