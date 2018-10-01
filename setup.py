@@ -26,7 +26,7 @@ setup(
     author_email='plone-developers@lists.sourceforge.net',
     url='https://github.com/collective/plone.app.locales',
     license='GPL version 2',
-    packages=find_packages(exclude=['ez_setup']),
+    packages=find_packages(),
     namespace_packages=['plone', 'plone.app'],
     include_package_data=True,
     zip_safe=False,
