@@ -6,6 +6,8 @@ Changelog
 
 - Update Traditional Chinese translations.
   [l34marr]
+- Fix small typo in Dutch translation.
+  [huubbouma]
 
 
 5.1.10 (2018-10-02)
