@@ -51,10 +51,6 @@ msgstr "$h heures et $m minutes"
 msgid "$m minutes"
 msgstr "$m minutes"
 
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:71
-msgid "${DYNAMIC_CONTENT} x"
-msgstr ""
-
 #: plone.app.users/plone/app/users/browser/account-panel.pt:17
 msgid "${action/title}"
 msgstr "${action/title}"
@@ -3907,6 +3903,12 @@ msgstr "Plusieurs utilisateurs trouvés avec le même login."
 #: CMFPlone/utils.py:698
 msgid "Must be empty or a valid JSON-formatted configuration â ${message}."
 msgstr ""
+
+# latest zope.tal has trouble with the – character
+#: CMFPlone/interfaces/controlpanel.py:56
+#: CMFPlone/utils.py:657
+msgid "Must be empty or a valid JSON-formatted configuration – ${message}."
+msgstr "Doit être vide or être une configuration valide au format JSON – ${message}."
 
 #. Default: "My Folder"
 #: CMFPlone/controlpanel/events.py:95
@@ -12295,7 +12297,6 @@ msgid "label_publish"
 msgstr "Approuver"
 
 #. Default: "effective"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:49
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:49
 msgid "label_publishing_effective"
 msgstr "activé"
@@ -13127,7 +13128,7 @@ msgid "linkintegrity_breaches_title"
 msgstr "Liens potentiellement cassés"
 
 #. Default: "Would you like to delete it anyway?"
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:79
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:78
 msgid "linkintegrity_delete_anyway"
 msgstr "Voulez-vous malgré tout le supprimer ?"
 
@@ -13685,6 +13686,11 @@ msgstr "Expressions de configuration"
 #: plone/app/theming/interfaces.py:147
 msgid "parameter_expressions_description"
 msgstr "Vous pouvez définir les paramètres ici, qui seront passés à la compilation du thème. Dans votre fichier de règles, vous pouvez y faire référence en utilisant $name. Les paramètres sont définis à l'aide d'expressions TALES, qui doivent être évaluées en tant que chaine de caractères, nombre, booléen ou None. Les variables disponibles sont `context`, `request`, `portal`, `portal_state`,  et `context_state`."
+
+#. Default: "Password reset successful, you are logged in now!"
+#: CMFPlone/browser/password_reset.py:110
+msgid "password_reset_successful"
+msgstr ""
 
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/browser/i18n.py:127
 msgid "past_end_date"

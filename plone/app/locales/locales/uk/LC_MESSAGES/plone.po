@@ -45,10 +45,6 @@ msgstr "$d години і $h хвилин"
 msgid "$m minutes"
 msgstr "$m хвилин"
 
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:71
-msgid "${DYNAMIC_CONTENT} x"
-msgstr ""
-
 #: plone.app.users/plone/app/users/browser/account-panel.pt:17
 msgid "${action/title}"
 msgstr "${action/title}"
@@ -3901,6 +3897,12 @@ msgstr "Знайдено декілька користувачів з тим ж�
 #: CMFPlone/utils.py:698
 msgid "Must be empty or a valid JSON-formatted configuration â ${message}."
 msgstr ""
+
+# latest zope.tal has trouble with the – character
+#: CMFPlone/interfaces/controlpanel.py:56
+#: CMFPlone/utils.py:657
+msgid "Must be empty or a valid JSON-formatted configuration – ${message}."
+msgstr "Повинно бути пустим або дійсним налаштуванням у JSON форматі - ${message}."
 
 #. Default: "My Folder"
 #: CMFPlone/controlpanel/events.py:95
@@ -12281,7 +12283,6 @@ msgid "label_publish"
 msgstr "Опублікувати"
 
 #. Default: "effective"
-#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:49
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:49
 msgid "label_publishing_effective"
 msgstr "чинний з"
@@ -13113,7 +13114,7 @@ msgid "linkintegrity_breaches_title"
 msgstr "Можлива поломка посилання"
 
 #. Default: "Would you like to delete it anyway?"
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:79
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:78
 msgid "linkintegrity_delete_anyway"
 msgstr "Ви дійсно хочите видалити його?"
 
@@ -13670,6 +13671,11 @@ msgstr "Значення виразів"
 #: plone/app/theming/interfaces.py:147
 msgid "parameter_expressions_description"
 msgstr "Ви можете визначити тут параметри, які будуть передані компільованій темі. У файлі правил, ви можете звернутися до параметру $ім'я. Параметри задаються за допомогою виразу TALES, який повинен повернути стрічкове, числове, логічне значення чи None. Доступні змінні: `context`, `request`, `portal`, `portal_state`, та `context_state`."
+
+#. Default: "Password reset successful, you are logged in now!"
+#: CMFPlone/browser/password_reset.py:110
+msgid "password_reset_successful"
+msgstr ""
 
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/browser/i18n.py:127
 msgid "past_end_date"
