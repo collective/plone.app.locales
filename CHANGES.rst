@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.11 (unreleased)
+5.1.11 (2018-11-19)
 -------------------
 
 - Update Traditional Chinese translations.
