@@ -27,5 +27,5 @@ and the following non core add-ons at ``locales-addons`` directory:
 - plone.app.caching.pot
 - plone.app.caching-manual.pot
 
-This version is compatible with Plone 5.1.x.
+This version is compatible with Plone 5.1.x and Plone 5.2.x
 
