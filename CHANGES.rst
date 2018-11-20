@@ -4,7 +4,8 @@ Changelog
 5.1.12 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update Spanish translations.
+  [gil-cano]
 
 
 5.1.11 (2018-11-19)
