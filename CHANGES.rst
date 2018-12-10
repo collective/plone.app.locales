@@ -7,6 +7,9 @@ Changelog
 - Update Spanish translations.
   [gil-cano]
 
+- Update Traditional Chinese translations.
+  [l34marr]
+
 
 5.1.11 (2018-11-19)
 -------------------

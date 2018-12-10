@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2018-11-05 13:50+0800\n"
+"PO-Revision-Date: 2018-11-28 22:40+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -239,7 +239,7 @@ msgstr "可顯示訊息給特定使用者的通知動作。"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:96
 msgid "A portal type condition makes the rule apply only to certain content types."
-msgstr "用來指定網站型別的條件，讓規則只套用於特定的內容型別。"
+msgstr "用來指定網站型別的條件，讓規則只套用於指定的內容型別。"
 
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet that provides links of an action category"
@@ -1930,7 +1930,7 @@ msgstr "不要昇級"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:59
 msgid "Do not send the email to the user that did the action."
-msgstr "不要寄信給執行動作的使用者。"
+msgstr "勾選的話，不會寄信給觸發動作的使用者。"
 
 #: plone/app/theming/interfaces.py:64
 msgid "Doctype"
@@ -2187,11 +2187,11 @@ msgstr "E-Mail"
 
 #: CMFPlone/skins/plone_login/login_form_validate.vpy:62
 msgid "Email address not known."
-msgstr "電子郵件信箱不可辨識。"
+msgstr "電郵信箱不可辨識。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:50
 msgid "Email recipients"
-msgstr "收信人郵件信箱"
+msgstr "收信人電郵信箱"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:84
 msgid "Email report to ${recipients}"
@@ -2199,7 +2199,7 @@ msgstr "電子郵件通知寄給 ${recipients}"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:42
 msgid "Email source"
-msgstr "寄信人郵件信箱"
+msgstr "寄信人電郵信箱"
 
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:73
 msgid "Enable Comments"
@@ -2440,7 +2440,7 @@ msgstr "排除導覽"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:58
 msgid "Exclude actor from recipients"
-msgstr "設定收信名單"
+msgstr "收信名單排除觸發者"
 
 #: plone.portlet.collection/plone/portlet/collection/collection.py:95
 msgid "Exclude the Current Context"
@@ -3727,7 +3727,7 @@ msgstr "合併方式"
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:62
 #: plone.app.contentrules/plone/app/contentrules/actions/notify.py:23
 msgid "Message"
-msgstr "訊息"
+msgstr "訊息內容"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/notify.py:29
 msgid "Message type"
@@ -5945,7 +5945,7 @@ msgstr "要被執行的 TALES 表示式。"
 
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:30
 msgid "The content type to check for."
-msgstr "要被檢查的內容型別。"
+msgstr "會觸發動作的內容型別。"
 
 #: CMFPlone/interfaces/controlpanel.py:1409
 msgid "The content types that should be available for selection when setting a default page."
@@ -5969,15 +5969,15 @@ msgstr "網站的預設時區。如果事先指定時區設定值的話，使用
 
 #: CMFPlone/RegistrationTool.py:372
 msgid "The email address did not validate."
-msgstr "電子郵件地址並不正確。"
+msgstr "電郵信箱並不正確。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:43
 msgid "The email address that sends the email. If no email is provided here, it will use the portal from address."
-msgstr "用來寄送電子郵件的信箱地址。若沒有提供，將使用網站的來自信箱地址。"
+msgstr "用來寄送訊息的電郵信箱。若沒有提供，將使用網站的 FROM 電郵信箱。"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/mail.py:51
 msgid "The email where you want to send this message. To send it to different email addresses, just separate them with ,"
-msgstr "想要送出訊息的電子信箱。如果要一次送到不同地址，就用逗號(,)來區隔它們。"
+msgstr "需要收到訊息的電郵信箱。想要同時送到不同信箱，請用逗號(,)來區隔它們。"
 
 #. Default: "The end date and time of an event"
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
@@ -7552,12 +7552,12 @@ msgstr "審核"
 #. Default: "Get your username"
 #: CMFPlone/browser/login/login_help.py:108
 msgid "button_pwreset_get_username"
-msgstr ""
+msgstr "取得帳號"
 
 #. Default: "Reset your password"
 #: CMFPlone/browser/login/login_help.py:67
 msgid "button_pwreset_reset_password"
-msgstr ""
+msgstr "重設密碼"
 
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/browser/i18n.py:122
 msgid "bysetpos"
@@ -7635,22 +7635,22 @@ msgstr "確認要刪除所選項目嗎?"
 #. Default: "Do you really want to disconnect this translation?"
 #: plone/app/multilingual/browser/templates/disconnect_translation.pt:23
 msgid "confirm_translation_disconnect"
-msgstr ""
+msgstr "確認要取消翻譯連結?"
 
 #. Default: "Connect existing translation"
 #: plone/app/multilingual/browser/templates/modify_translations.pt:55
 msgid "connect_existing_translation"
-msgstr ""
+msgstr "連結現有翻譯"
 
 #. Default: "Connect translation"
 #: plone/app/multilingual/browser/modify.py:47
 msgid "connect_translation"
-msgstr ""
+msgstr "連結翻譯"
 
 #. Default: "Contact an admin."
 #: CMFPlone/browser/login/templates/login_help.pt:41
 msgid "contact_an_admin"
-msgstr ""
+msgstr "連絡管理員"
 
 #. Default: "Attendees"
 #: plone.app.event/plone/app/event/browser/event_summary.pt:102
@@ -7847,7 +7847,7 @@ msgstr ""
 #. Default: "The default is <em>7 days</em>. If you leave the field blank, the timeout interval will reset to the default."
 #: CMFPlone/browser/login/templates/explainPWResetTool.pt:16
 msgid "desc2_set_exp_interval"
-msgstr ""
+msgstr "預設值是 7 天，欄位留空的話就是使用預設值。"
 
 #. Default: "If the default page is also a folder, add items to it from here."
 #: plone.app.contentmenu/plone/app/contentmenu/menu.py:637
@@ -7872,7 +7872,7 @@ msgstr "使用下列表單來定義、改變或移除內容規則。當特定條
 #. Default: "Some content in the subject, email source, email recipient and message may be replaced with \"$&#123;&#125;\" variables from the table below."
 #: plone.app.contentrules/plone/app/contentrules/actions/templates/mail.pt:5
 msgid "description-contentrules-mailsub"
-msgstr "信件裡的標題、寄件人、收件人、內容，可能會被下列表格裡的「$&#123;&#125;」變數所取代。"
+msgstr "信件裡的標題、寄信人、收信人、訊息內容，可利用下列表格裡的 $&#123;&#125; 變數來取代。"
 
 #. Default: "This site uses the open source Content Management System ${plone}. It meets the Web Content Accessibility Guidelines (<a href=\"https://www.w3.org/TR/WCAG20/\">${wcag} v2.0</a>) level 'AA' for people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity, and combinations of these."
 #: CMFPlone/browser/templates/accessibility-info.pt:21
@@ -8861,7 +8861,7 @@ msgstr "取代既有的檔案"
 #: CMFPlone/browser/templates/search.pt:278
 #: plone.app.querystring/plone/app/querystring/results.pt:71
 msgid "filed under:"
-msgstr "分類:"
+msgstr "關鍵詞:"
 
 #: plone.app.registry/plone/app/registry/browser/templates/records.pt:52
 msgid "filter by..."
@@ -11584,7 +11584,7 @@ msgstr "檔案"
 #. Default: "Filed under:"
 #: plone.app.layout/plone/app/layout/viewlets/keywords.pt:8
 msgid "label_filed_under"
-msgstr "分類:"
+msgstr "關鍵詞:"
 
 #. Default: "Items of this type can act as a folder containing other  items. What content types should be allowed inside?"
 #: plone.app.dexterity/plone/app/dexterity/interfaces.py:73
@@ -14329,7 +14329,7 @@ msgstr "這名使用這不屬於任何群組。"
 #. Default: "Database name:"
 #: CMFPlone/controlpanel/browser/maintenance.pt:105
 msgid "text_zope_database_name"
-msgstr ""
+msgstr "資料庫名稱:"
 
 #. Default: "<strong>Current database size:</strong> ${size}"
 #: CMFPlone/controlpanel/browser/maintenance.pt:109
@@ -14801,7 +14801,7 @@ msgstr "網頁無障礙指南"
 #. Default: "login"
 #: CMFPlone/browser/login/templates/login_help.pt:46
 msgid "to_login_view"
-msgstr ""
+msgstr "登入"
 
 #. Default: "Todays events"
 #: plone.app.event/plone/app/event/browser/event_listing.py:278
@@ -14831,7 +14831,7 @@ msgstr "翻譯成 ${language}"
 #. Default: "Trouble logging in?"
 #: CMFPlone/browser/login/templates/login.pt:87
 msgid "trouble_logging_in"
-msgstr ""
+msgstr "登入遇到困難嗎?"
 
 #: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:65
 msgid "types.xml in archive is invalid."
@@ -15083,4 +15083,4 @@ msgstr "目前位置:"
 #. Default: "Welcome! You are now logged in."
 #: CMFPlone/browser/login/login.py:177
 msgid "you_are_now_logged_in"
-msgstr ""
+msgstr "成功登入"
