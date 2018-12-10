@@ -4,6 +4,9 @@ Changelog
 5.1.12 (unreleased)
 -------------------
 
+- Update Spanish translations.
+  [gil-cano]
+
 - Update Traditional Chinese translations.
   [l34marr]
 
