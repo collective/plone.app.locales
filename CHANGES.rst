@@ -4,6 +4,9 @@ Changelog
 5.1.12 (unreleased)
 -------------------
 
+- Fix French translation.
+  [laulaz]
+
 - Update Spanish translations.
   [gil-cano]
 
