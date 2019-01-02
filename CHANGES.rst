@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.12 (unreleased)
+5.1.12 (2019-01-02)
 -------------------
 
 - Fix French translation.
