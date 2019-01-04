@@ -4,7 +4,8 @@ Changelog
 5.1.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update Italian translations.
+  [arsenico13]
 
 
 5.1.12 (2019-01-02)
