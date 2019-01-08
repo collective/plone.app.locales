@@ -4,6 +4,8 @@ Changelog
 5.1.13 (unreleased)
 -------------------
 
+- Add .gitattributes file to avoid most CHANGES merge conflicts
+  [@arsenico13]
 - Update Traditional Chinese translations.
   [l34marr]
 
