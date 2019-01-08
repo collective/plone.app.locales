@@ -6,6 +6,8 @@ Changelog
 
 - Update Italian translations.
   [arsenico13]
+- Update Traditional Chinese translations.
+  [l34marr]
 
 
 5.1.12 (2019-01-02)
