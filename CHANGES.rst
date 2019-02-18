@@ -5,7 +5,7 @@ Changelog
 -------------------
 
 - Update Italian translations.
-  [arsenico13, cekk]
+  [ale-rt, arsenico13, cekk]
 - Add .gitattributes file to avoid most CHANGES merge conflicts
   [@arsenico13]
 - Update Traditional Chinese translations.
