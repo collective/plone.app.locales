@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.13 (unreleased)
+5.1.13 (2019-03-05)
 -------------------
 
 - Update Italian translations.
