@@ -10,6 +10,8 @@ Changelog
   [@arsenico13]
 - Update Traditional Chinese translations.
   [l34marr]
+- Update Basque translations.
+  [erral]
 
 
 5.1.12 (2019-01-02)
