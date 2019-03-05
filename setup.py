@@ -2,7 +2,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '5.1.13'
+version = '5.1.14.dev0'
 
 setup(
     name='plone.app.locales',
