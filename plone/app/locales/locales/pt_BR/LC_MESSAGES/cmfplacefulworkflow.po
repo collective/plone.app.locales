@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CMFPlacefulWorkflow\n"
-"POT-Creation-Date: 2016-08-20 09:30+0000\n"
+"POT-Creation-Date: 2019-03-27 18:18+0000\n"
 "PO-Revision-Date: 2013-04-08 09:24-0300\n"
 "Last-Translator: Andre Nogueira <andre@simplesconsultoria.com.br>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -25,23 +25,23 @@ msgstr "Adicionar ao Plone a capacidade de alterar cadeias de workflow para tipo
 msgid "Add in Plone the capability to change workflow chains for types in every object. Includes a dependency on core Plone types."
 msgstr "Adicionar ao Plone a capacidade de alterar cadeias de workflow para tipos em cada objeto. Depende dos tipos padrão do Plone."
 
-#: CMFPlacefulWorkflow/profiles.zcml:20
+#: CMFPlacefulWorkflow/profiles.zcml:21
 msgid "Add in Plone the capability to change workflow chains for types in every object. With no dependency on core Plone types."
 msgstr "Adicionar ao Plone a capacidade de alterar cadeias de workflow para tipos em cada objeto. Não depende dos tipos padrão do Plone."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration_set.py:36
+#: CMFPlacefulWorkflow/browser/views.py:54
 msgid "Changed policies."
 msgstr "Regras alteradas."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping_set.py:38
+#: CMFPlacefulWorkflow/browser/views.py:143
 msgid "Changes to criteria saved."
 msgstr "Alterações dos critérios salvas."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration_set.py:19
+#: CMFPlacefulWorkflow/browser/views.py:36
 msgid "Configuration changes cancelled."
 msgstr "Alterações canceladas."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_set.py:21
+#: CMFPlacefulWorkflow/browser/views.py:79
 msgid "Deleted Local Workflow Policy."
 msgstr "Excluída regra de workflow local."
 
@@ -49,11 +49,15 @@ msgstr "Excluída regra de workflow local."
 msgid "Intranet"
 msgstr "Intranet"
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_set.py:27
+#: CMFPlacefulWorkflow/browser/views.py:85
 msgid "Local Workflow Policy added."
 msgstr "Regra de workflow local adicionada."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration_set.py:25
+#: CMFPlacefulWorkflow/browser/views.py:108
+msgid "No Policy selected."
+msgstr ""
+
+#: CMFPlacefulWorkflow/browser/views.py:43
 msgid "No config in this folder."
 msgstr "Sem configuração nesta pasta."
 
@@ -69,15 +73,15 @@ msgstr "Um estado"
 msgid "Simple publication"
 msgstr "Publicação simples"
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_set.py:31
+#: CMFPlacefulWorkflow/browser/views.py:89
 msgid "The policy Id is required."
 msgstr "O ID da regra é obrigatório."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping_set.py:17
+#: CMFPlacefulWorkflow/browser/views.py:122
 msgid "Title is required."
 msgstr "Título é obrigatório."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:207
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:184
 msgid "Update catalog role mappings"
 msgstr "Atualizar mapeamento de papéis"
 
@@ -85,205 +89,209 @@ msgstr "Atualizar mapeamento de papéis"
 msgid "Workflow Policy Support (CMFPlacefulWorkflow)"
 msgstr "Suporte a políticas locais de workflow (CMFPlacefulWorkflow)"
 
-#: CMFPlacefulWorkflow/profiles.zcml:20
+#: CMFPlacefulWorkflow/profiles.zcml:21
 msgid "Workflow Policy Support (CMFPlacefulWorkflow) - no core types dependency"
 msgstr "Suporte a políticas locais de workflow (CMFPlacefulWorkflow) - sem dependência dos tipos padrão"
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration_add.py:9
+#: CMFPlacefulWorkflow/profiles.zcml:29
+msgid "Workflow Policy Support (CMFPlacefulWorkflow) [uninstall]"
+msgstr ""
+
+#: CMFPlacefulWorkflow/browser/views.py:25
 msgid "Workflow policy configuration added."
 msgstr "Configuração de regra de workflow adicionada."
 
 #. Default: "You are viewing the root of your site. Local workflow configuration is only available in subfolders of your site."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:44
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:22
 msgid "You are viewing the root of your site. Local workflow configuration is only available in subfolders of your site."
 msgstr "Você está visualizando a raiz do seu site. As regras de workflow local são isponíveis apenas para sub-pastas de seu site."
 
 #. Default: "Add Workflow policy's local configuration"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:68
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:45
 msgid "description_add_workflow_policy"
 msgstr "Adicionar configuração local de regra de workflow"
 
 #. Default: "Add a workflow policy's local configuration in the ${portal_type}"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:57
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:35
 msgid "description_add_workflow_policy_for_type"
 msgstr "Adicionar uma configuração local de regra de workflow em ${portal_type}"
 
 #. Default: "Modify the workflows only below this Folder. If you want to modify the workflow of this Folder use 'For this Folder' section."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:140
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:117
 msgid "description_below_this_folder"
 msgstr "Modificar o workflow apenas abaixo desta pasta. Se você quer modificar o workflow desta pasta, use 'Nesta pasta'."
 
 #. Default: "Choose a policy to copy when creating the new policy. You also can choose to start with an empty policy."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:147
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:124
 msgid "description_duplicate_policy_id"
 msgstr "Escolher a regra para copiar quando criar a nova regra. Você também pode escolher para iniciar com uma regra vazia."
 
 #. Default: "Modify the workflows of this folder and below. If you don't want to modify the workflow of this Folder use 'Below this Folder' section."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:89
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:66
 msgid "description_in_this_folder"
 msgstr "Modificar o workflow desta pasta e abaixo dela. Se você não quer modificar o workflow desta pasta, use 'Abaixo desta pasta'."
 
 #. Default: "Enter an id for the new workflow policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:129
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:106
 msgid "description_new_policy_id"
 msgstr "Informar um identificador para a nova regra de workflow"
 
 #. Default: "Update catalog security (update role mappings). Note that updating catalog security might be a very long operation if there are a lot of brains to be re-indexed. This operation can be done afterwards as a separate upgrade step."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:195
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:172
 msgid "description_update_security"
 msgstr "Atualiza as informações de segurança do catálogo (atualiza o mapeamento de papéis). Atenção que atualizar as informações de segurança do catálogo pode ser uma operação muito demorada caso existam muitos brains a serem reindexados. Esta operação poderia ser realizada posteriomente em um passo de atualização especializado."
 
 #. Default: "Custom workflow policy which maps content types to workflows."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:45
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:44
 msgid "description_workflow_custom_mapping"
 msgstr "Regras de workflow personalizadas que mapeiam tipos de conteúdos para workflows."
 
 #. Default: "Set your workflow policies' local configuration for this folder and below."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:38
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:16
 msgid "description_workflow_policies"
 msgstr "Define suas configuração locais de regras de workflow para esta pasta e abaixo."
 
 #. Default: "Here you can create and configure your workflow policies. A policy modifies workflows for any items in or below a specific folder. To apply a policy you have to add a local workflow policy configuration to the desired folder using the 'policy' item in the 'state' drop-down menu."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:64
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:41
 msgid "description_workflow_policy_setup"
 msgstr "Aqui você pode criar e configurar suas regras de workflow. Uma regra modifica o workflow para quaisquer itens em, ou abaixo de, uma pasta específica. Para aplicar uma regra você tem que adicionar uma configuração local de regra de workflow na pasta desejada usando o item 'regra' no menu drop-down de workflow."
 
 #. Default: "Workflow Policies"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:45
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:22
 msgid "heading_placeful_workflow"
 msgstr "Regras de Workflow"
 
 #. Default: "Workflow policies' local configuration management"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:34
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:12
 msgid "heading_workflow_policies"
 msgstr "Gerenciamento das configurações locais de regras de workflow"
 
 #. Default: "Default workflow for content types."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:113
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:112
 msgid "help_default_workflow_for_types"
 msgstr "Workflow padrão para os tipos de conteúdos."
 
 #. Default: "The default workflow policy."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:130
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:107
 msgid "help_default_workflow_policy"
 msgstr "A regra de workflow padrão."
 
 #. Default: "You can assign a workflow for all content types."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:139
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:138
 msgid "help_workflow_assign_all_types"
 msgstr "Você pode definir um workflow para todos os tipos de conteúdos."
 
 #. Default: "A brief description of the workflow policy."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:91
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:90
 msgid "help_workflow_policy_description"
 msgstr "Uma breve descrição da regra de workflow."
 
 #. Default: "Add"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:168
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:145
 msgid "label_add"
 msgstr "Adicionar"
 
 #. Default: "Below this Folder"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:139
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:116
 msgid "label_below_this_folder"
 msgstr "Abaixo desta pasta"
 
 #. Default: "Default Policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:125
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:102
 msgid "label_default_policy"
 msgstr "Regra Padrão"
 
 #. Default: "Default Workflow"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:108
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:107
 msgid "label_default_workflow"
 msgstr "Workflow Padrão"
 
 #. Default: "Duplicate another policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:142
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:119
 msgid "label_duplicate_policy_id"
 msgstr "Duplicar outra regra"
 
 #. Default: "Global workflow"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:159
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:136
 msgid "label_duplicate_portal_workflow"
 msgstr "Workflow global"
 
 #. Default: "For this Folder"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:88
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:65
 msgid "label_in_this_folder"
 msgstr "Para esta pasta"
 
 #. Default: "Acquire workflow from above"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:159
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:158
 msgid "label_mapping_acquire_workflow"
 msgstr "Herdar workflow dos níveis superiores"
 
 #. Default: "Default workflow for the policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:166
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:165
 msgid "label_mapping_default_worflow"
 msgstr "Workflow padrão para esta política"
 
 #. Default: "No workflow"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:162
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:161
 msgid "label_mapping_no_workflow"
 msgstr "Nenhum workflow"
 
 #. Default: "New policy Id"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:123
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:100
 msgid "label_new_policy_id"
 msgstr "Novo identificador da regra"
 
 #. Default: "No policy duplicated"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:155
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:132
 msgid "label_no_policy_duplicated"
 msgstr "Nenhuma regra duplicada"
 
 #. Default: "Remove selected"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:111
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:88
 msgid "label_remove_selected"
 msgstr "Remover selecionados"
 
 #. Default: "Up to Placeful Workflow"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:38
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:37
 msgid "label_up_to_placeful_workflow"
 msgstr "Voltar ao Workflow Local"
 
 #. Default: "Update security"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:194
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:171
 msgid "label_update_security"
 msgstr "Atualizar segurança"
 
 #. Default: "Workflows by type"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:134
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:133
 msgid "label_workflow_by_type"
 msgstr "Workflows por tipo"
 
 #. Default: "Add a workflow policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:118
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:95
 msgid "legend_add_workflow_policy"
 msgstr "Adicionar uma regra de workflow"
 
 #. Default: "Workflow policies"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:84
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:61
 msgid "legend_publishing_details"
 msgstr "Regras de workflow"
 
 #. Default: "Existing Workflow Policies"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:80
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:57
 msgid "legend_workflow_policies"
 msgstr "Regras de workflow existentes"
 
 #. Default: "Workflow Policy Details"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:54
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:53
 msgid "legend_workflow_policy_details"
 msgstr "Detalhes da Regra de Workflow"
 
 #. Default: "Workflow to content type mapping."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:143
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:142
 msgid "summary_workflow_type_mapping"
 msgstr "Mapeamento de workflow para tipo de conteúdo."
 
 #. Default: "Workflow Policies Setup"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:60
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:37
 msgid "title_workflow_policy_setup"
 msgstr "Configuração das regras de workflow"

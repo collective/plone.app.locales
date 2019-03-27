@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cmfplacefulworkflow-fr\n"
-"POT-Creation-Date: 2016-08-20 09:30+0000\n"
+"POT-Creation-Date: 2019-03-27 18:18+0000\n"
 "PO-Revision-Date: 2012-10-19 22:06+0100\n"
 "Last-Translator: Vincent Fretin <vincent.fretin@gmail.com>\n"
 "Language-Team: French <plone-fr@lists.plone.org>\n"
@@ -28,23 +28,23 @@ msgstr "Ajoute la capacité de changer les processus documentaire des types de c
 msgid "Add in Plone the capability to change workflow chains for types in every object. Includes a dependency on core Plone types."
 msgstr "Ajoute la capacité de changer les processus documentaire des types de contenu sur chaque objet. Inclus une dépendance sur les types de contenu Plone de base."
 
-#: CMFPlacefulWorkflow/profiles.zcml:20
+#: CMFPlacefulWorkflow/profiles.zcml:21
 msgid "Add in Plone the capability to change workflow chains for types in every object. With no dependency on core Plone types."
 msgstr "Ajoute la capacité de changer les processus documentaire des types de contenu sur chaque objet. Aucune dépendance sur les types de contenu Plone de base."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration_set.py:36
+#: CMFPlacefulWorkflow/browser/views.py:54
 msgid "Changed policies."
 msgstr "Politiques modifiées."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping_set.py:38
+#: CMFPlacefulWorkflow/browser/views.py:143
 msgid "Changes to criteria saved."
 msgstr "Modifications des critères sauvegardées."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration_set.py:19
+#: CMFPlacefulWorkflow/browser/views.py:36
 msgid "Configuration changes cancelled."
 msgstr "Changements de configuration annulés."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_set.py:21
+#: CMFPlacefulWorkflow/browser/views.py:79
 msgid "Deleted Local Workflow Policy."
 msgstr "La politique documentaire a été supprimée."
 
@@ -52,11 +52,15 @@ msgstr "La politique documentaire a été supprimée."
 msgid "Intranet"
 msgstr "Intranet"
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_set.py:27
+#: CMFPlacefulWorkflow/browser/views.py:85
 msgid "Local Workflow Policy added."
 msgstr "Configuration locale des politiques documentaires ajoutée."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration_set.py:25
+#: CMFPlacefulWorkflow/browser/views.py:108
+msgid "No Policy selected."
+msgstr ""
+
+#: CMFPlacefulWorkflow/browser/views.py:43
 msgid "No config in this folder."
 msgstr "Pas de configuration locale dans ce dossier."
 
@@ -72,15 +76,15 @@ msgstr "État unique"
 msgid "Simple publication"
 msgstr "Publication simple"
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_set.py:31
+#: CMFPlacefulWorkflow/browser/views.py:89
 msgid "The policy Id is required."
 msgstr "L'identifiant de la politique est requis."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping_set.py:17
+#: CMFPlacefulWorkflow/browser/views.py:122
 msgid "Title is required."
 msgstr "Le titre est requis."
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:207
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:184
 msgid "Update catalog role mappings"
 msgstr "Met à jour les mappings rôles-permissions"
 
@@ -88,205 +92,209 @@ msgstr "Met à jour les mappings rôles-permissions"
 msgid "Workflow Policy Support (CMFPlacefulWorkflow)"
 msgstr "Support des politiques documentaires locales (CMFPlacefulWorkflow)"
 
-#: CMFPlacefulWorkflow/profiles.zcml:20
+#: CMFPlacefulWorkflow/profiles.zcml:21
 msgid "Workflow Policy Support (CMFPlacefulWorkflow) - no core types dependency"
 msgstr "Support des politiques documentaires locales (CMFPlacefulWorkflow) - aucune dépendance sur le types de contenu Plone de base"
 
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration_add.py:9
+#: CMFPlacefulWorkflow/profiles.zcml:29
+msgid "Workflow Policy Support (CMFPlacefulWorkflow) [uninstall]"
+msgstr ""
+
+#: CMFPlacefulWorkflow/browser/views.py:25
 msgid "Workflow policy configuration added."
 msgstr "Configuration locale des politiques documentaires ajoutée."
 
 #. Default: "You are viewing the root of your site. Local workflow configuration is only available in subfolders of your site."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:44
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:22
 msgid "You are viewing the root of your site. Local workflow configuration is only available in subfolders of your site."
 msgstr "Vous êtes à la racine de votre site. La configuration d'une politique documentaire locale est seulement disponible dans les sous-dossiers de votre site."
 
 #. Default: "Add Workflow policy's local configuration"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:68
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:45
 msgid "description_add_workflow_policy"
 msgstr "Ajouter une configuration locale des politiques documentaires"
 
 #. Default: "Add a workflow policy's local configuration in the ${portal_type}"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:57
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:35
 msgid "description_add_workflow_policy_for_type"
 msgstr "Ajouter une configuration locale des politiques documentaires dans le ${portal_type}"
 
 #. Default: "Modify the workflows only below this Folder. If you want to modify the workflow of this Folder use 'For this Folder' section."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:140
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:117
 msgid "description_below_this_folder"
 msgstr "Modifie les processus en dessous de ce Dossier seulement. Si vous souhaitez modifier le processus de ce Dossier choisissez « Pour ce Dossier »."
 
 #. Default: "Choose a policy to copy when creating the new policy. You also can choose to start with an empty policy."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:147
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:124
 msgid "description_duplicate_policy_id"
 msgstr "Initialise la nouvelle politique à partir d'une autre. Vous pouvez aussi choisir de commencer avec une politique vide."
 
 #. Default: "Modify the workflows of this folder and below. If you don't want to modify the workflow of this Folder use 'Below this Folder' section."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:89
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:66
 msgid "description_in_this_folder"
 msgstr "Modifie les processus de ce Dossier et en dessous. Si vous ne souhaitez pas modifier le processus de ce Dossier choisissez « En dessous de ce Dossier »."
 
 #. Default: "Enter an id for the new workflow policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:129
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:106
 msgid "description_new_policy_id"
 msgstr "Saisissez un identifiant pour la nouvelle politique documentaire"
 
 #. Default: "Update catalog security (update role mappings). Note that updating catalog security might be a very long operation if there are a lot of brains to be re-indexed. This operation can be done afterwards as a separate upgrade step."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:195
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:172
 msgid "description_update_security"
 msgstr "Met à jour la sécurité du catalog (update role mappings). Notez que la mise à jour du catalog peut être une opération très longue s'il y a beaucoup de brains à reindexer. Cette opération peut être réalisée après via une upgrade step."
 
 #. Default: "Custom workflow policy which maps content types to workflows."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:45
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:44
 msgid "description_workflow_custom_mapping"
 msgstr "Carte des processus personnalisés pour les types de contenu."
 
 #. Default: "Set your workflow policies' local configuration for this folder and below."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:38
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:16
 msgid "description_workflow_policies"
 msgstr "Définissez la configuration locale des politiques documentaires pour ce dossier et en dessous."
 
 #. Default: "Here you can create and configure your workflow policies. A policy modifies workflows for any items in or below a specific folder. To apply a policy you have to add a local workflow policy configuration to the desired folder using the 'policy' item in the 'state' drop-down menu."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:64
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:41
 msgid "description_workflow_policy_setup"
 msgstr "Vous pouvez ici créer et configurer vos politiques documentaires. Une politique modifie les processus de vos documents dans ou en dessous d'un dossier. Pour appliquer une politique, vous devez ajouter dans un dossier une configuration locale des processus à partir du menu déroulant 'État'."
 
 #. Default: "Workflow Policies"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:45
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:22
 msgid "heading_placeful_workflow"
 msgstr "Politiques documentaires"
 
 #. Default: "Workflow policies' local configuration management"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:34
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:12
 msgid "heading_workflow_policies"
 msgstr "Gestion de la configuration locale des politiques documentaires"
 
 #. Default: "Default workflow for content types."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:113
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:112
 msgid "help_default_workflow_for_types"
 msgstr "Processus documentaire par défaut pour les types de contenu."
 
 #. Default: "The default workflow policy."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:130
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:107
 msgid "help_default_workflow_policy"
 msgstr "Politique documentaire globale utilisée par défaut dans le site."
 
 #. Default: "You can assign a workflow for all content types."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:139
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:138
 msgid "help_workflow_assign_all_types"
 msgstr "Vous pouvez définir un processus pour tous les types de contenus."
 
 #. Default: "A brief description of the workflow policy."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:91
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:90
 msgid "help_workflow_policy_description"
 msgstr "Une brève description de la politique documentaire."
 
 #. Default: "Add"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:168
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:145
 msgid "label_add"
 msgstr "Ajouter"
 
 #. Default: "Below this Folder"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:139
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:116
 msgid "label_below_this_folder"
 msgstr "En dessous de ce dossier"
 
 #. Default: "Default Policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:125
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:102
 msgid "label_default_policy"
 msgstr "Politique globale"
 
 #. Default: "Default Workflow"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:108
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:107
 msgid "label_default_workflow"
 msgstr "Processus documentaire par défaut"
 
 #. Default: "Duplicate another policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:142
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:119
 msgid "label_duplicate_policy_id"
 msgstr "Cloner une autre politique"
 
 #. Default: "Global workflow"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:159
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:136
 msgid "label_duplicate_portal_workflow"
 msgstr "Politique globale"
 
 #. Default: "For this Folder"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:88
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:65
 msgid "label_in_this_folder"
 msgstr "Pour ce dossier"
 
 #. Default: "Acquire workflow from above"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:159
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:158
 msgid "label_mapping_acquire_workflow"
 msgstr "Acquisition du processus dans les dossiers parents"
 
 #. Default: "Default workflow for the policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:166
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:165
 msgid "label_mapping_default_worflow"
 msgstr "Processus par défaut de la politique"
 
 #. Default: "No workflow"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:162
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:161
 msgid "label_mapping_no_workflow"
 msgstr "Pas de processus"
 
 #. Default: "New policy Id"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:123
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:100
 msgid "label_new_policy_id"
 msgstr "Nouvelle politique documentaire"
 
 #. Default: "No policy duplicated"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:155
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:132
 msgid "label_no_policy_duplicated"
 msgstr "Aucune"
 
 #. Default: "Remove selected"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:111
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:88
 msgid "label_remove_selected"
 msgstr "Supprimer les politiques sélectionnées"
 
 #. Default: "Up to Placeful Workflow"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:38
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:37
 msgid "label_up_to_placeful_workflow"
 msgstr "Aller au niveau supérieur : « Configuration des processus »"
 
 #. Default: "Update security"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:194
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:171
 msgid "label_update_security"
 msgstr "Mettre à jour la sécurité"
 
 #. Default: "Workflows by type"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:134
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:133
 msgid "label_workflow_by_type"
 msgstr "Processus documentaire par type"
 
 #. Default: "Add a workflow policy"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:118
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:95
 msgid "legend_add_workflow_policy"
 msgstr "Ajouter une politique documentaire"
 
 #. Default: "Workflow policies"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/placeful_workflow_configuration.pt:84
+#: CMFPlacefulWorkflow/browser/placeful_workflow_configuration.pt:61
 msgid "legend_publishing_details"
 msgstr "Politiques documentaires"
 
 #. Default: "Existing Workflow Policies"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:80
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:57
 msgid "legend_workflow_policies"
 msgstr "Politiques documentaires existantes"
 
 #. Default: "Workflow Policy Details"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:54
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:53
 msgid "legend_workflow_policy_details"
 msgstr "Détails des politiques documentaires"
 
 #. Default: "Workflow to content type mapping."
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_policy_mapping.pt:143
+#: CMFPlacefulWorkflow/browser/prefs_workflow_policy_mapping.pt:142
 msgid "summary_workflow_type_mapping"
 msgstr "Cartographie des processus des types de contenu"
 
 #. Default: "Workflow Policies Setup"
-#: CMFPlacefulWorkflow/skins/CMFPlacefulWorkflow/prefs_workflow_localpolicies_form.pt:60
+#: CMFPlacefulWorkflow/browser/prefs_workflow_localpolicies_form.pt:37
 msgid "title_workflow_policy_setup"
 msgstr "Configuration des politiques documentaires"
