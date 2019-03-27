@@ -49,6 +49,10 @@ msgstr "$m minutu"
 msgid "${action/title}"
 msgstr "${action/title}"
 
+#: CMFPlone/controlpanel/browser/redirects.py:359
+msgid "${count} alternative urls added."
+msgstr ""
+
 #: plone.app.content/plone/app/content/browser/contents/__init__.py:134
 msgid "${items} could not be found"
 msgstr "Ez dira ${items} elementu aurkitu"
@@ -180,7 +184,7 @@ msgstr "Mozillaren 'about:config'-en antzerako konfigurazio erregistroa"
 msgid "A TALES expression condition makes the rule apply only if TALES expression is not False in context."
 msgstr "TALES espresio erako baldintzak, erregela TALES espresioak False ez den balioren bat itzultzen duenean exekutatzea eragiten du."
 
-#: plone/app/theming/browser/controlpanel.py:296
+#: plone/app/theming/browser/controlpanel.py:299
 msgid "A boilerplate rules.xml was added to your theme, but no index.html file found. Update rules.xml to reference the current theme file."
 msgstr "Zure itxurari oinarrizko rules.xml fitxategia gehitu diogu baina ez du index.html fitxategirik. Eguneratu rules.xml zure HTML fitxategiari erreferentzia egiteko."
 
@@ -216,7 +220,7 @@ msgstr "Fitxategiak estatikoki zerbitzatu eta gordetzeko karpeta"
 msgid "A group condition can prevent a rule from executing unless the current user is a member of a particular group."
 msgstr "Talde-baldintza batek, erregela bat exekutatzea ekidin dezake, uneko erabiltzailea talde jakin bateko kide bada."
 
-#: CMFPlone/interfaces/controlpanel.py:370
+#: CMFPlone/interfaces/controlpanel.py:205
 msgid "A list of valid tags which will be not filtered out."
 msgstr "Etiketa onargarrien zerrenda, hauek ez dira filtratuko"
 
@@ -328,17 +332,21 @@ msgstr "Bilduma baten emaitzak erakusten dituen portleta"
 msgid "A simple review workflow for comments"
 msgstr "Erantzunen moderazio kola"
 
-#: CMFPlone/interfaces/controlpanel.py:1647
+#: CMFPlone/interfaces/controlpanel.py:1489
 msgid "A value for the quality of 2x high pixel density images, from 1 (lowest) to 95 (highest). A value of 0 will mean plone.scaling's default will be used, which is currently 62."
 msgstr "2x pixel dentsitate altuko irudien kalitatearen balioa, 1etik (baxuena) 95era (altuena). 0 idatziz gero, plone.scaling-ek darabilen defektuzko balioa (62) erabiliko da."
 
-#: CMFPlone/interfaces/controlpanel.py:1658
+#: CMFPlone/interfaces/controlpanel.py:1500
 msgid "A value for the quality of 3x high pixel density images, from 1 (lowest) to 95 (highest). A value of 0 will mean plone.scaling's default will be used, which is currently 51."
 msgstr "3x pixel dentsitate altuko irudien kalitatearen balioa, 1etik (baxuena) 95era (altuena). 0 idatziz gero, plone.scaling-ek darabilen defektuzko balioa (51) erabiliko da."
 
-#: CMFPlone/interfaces/controlpanel.py:1625
+#: CMFPlone/interfaces/controlpanel.py:1467
 msgid "A value for the quality of scaled images, from 1 (lowest) to 95 (highest). A value of 0 will mean plone.scaling's default will be used, which is currently 88."
 msgstr "Txikitutako irudien kalitatea, 1etik (txikiena) 95era (handiena). 0 jartzen baduzu plone.scaling-en defektuzko balioa erabiliko da, hau da, 88."
+
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:72
+msgid "A versioning action will store a version of a content no matter versioning is enabled for it or not."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:93
 msgid "A workflow action triggers a workflow transition on an object."
@@ -402,12 +410,14 @@ msgstr "Akzioen portleta"
 msgid "Activate"
 msgstr "Aktibatu"
 
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:169
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:170
 msgid "Activated add-ons"
 msgstr "Aktibatutako produktuak"
 
 #. Default: "Add"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:76
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:126
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:84
 msgid "Add"
 msgstr "Gehitu"
 
@@ -511,6 +521,10 @@ msgstr "Bilaketa portleta gehitu"
 msgid "Add TALES Expression Condition"
 msgstr "TALES espresio erako baldintza gehitu."
 
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:71
+msgid "Add Versioning Action"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:92
 msgid "Add Workflow Action"
 msgstr "Workflow ekintza gehitu"
@@ -567,11 +581,11 @@ msgstr "Dexterityrentzako CMFEditions"
 msgid "Adds Dexterity-based Folder and Document types for testing."
 msgstr "Dexterity-n oinarritutako Karpeta eta Orria elementu-motak gehitzen ditu probak egiteko."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:36
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:37
 msgid "Adds a table of contents"
 msgstr "Edukien-taula gehitzen du"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:46
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:47
 msgid "Adds collection behavior"
 msgstr "Bilduma portaera gehitzen du"
 
@@ -583,7 +597,7 @@ msgstr "Sortzailea, Laguntzaileak eta Eskubideak eremuak gehitzen ditu."
 msgid "Adds effective date and expiration date fields."
 msgstr "Argitaratze- eta iraungitze-datak gehitzen ditu."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:18
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:19
 msgid "Adds image and image caption fields"
 msgstr "Irudia eta Irudi-oina eremuak gehitzen ditu."
 
@@ -591,7 +605,7 @@ msgstr "Irudia eta Irudi-oina eremuak gehitzen ditu."
 msgid "Adds keywords and language fields."
 msgstr "Etiketak eta hizkuntza eremuak gehitzen ditu."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:56
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:58
 msgid "Adds richtext behavior"
 msgstr "Testu aberatseko portaera gehitzen du"
 
@@ -647,7 +661,7 @@ msgstr "Data erlatiboaren ondoren"
 msgid "After the current day"
 msgstr "Uneko egunaren ostean"
 
-#: CMFPlone/interfaces/controlpanel.py:748
+#: CMFPlone/interfaces/controlpanel.py:583
 msgid "After the deadline (FLOSS)"
 msgstr "After the deadline (FLOSS)"
 
@@ -663,7 +677,7 @@ msgstr "Hau egin ostean ezingo duzu zure egungo edukia editatu (nahiz eta ikusi 
 msgid "Album view"
 msgstr "Album bista"
 
-#: CMFPlone/interfaces/controlpanel.py:562
+#: CMFPlone/interfaces/controlpanel.py:397
 msgid "Alignment styles"
 msgstr "Alineazio-estiloak"
 
@@ -681,7 +695,7 @@ msgstr "Eduki guztia"
 msgid "All dates"
 msgstr "Data guztiak"
 
-#: CMFPlone/interfaces/controlpanel.py:1110
+#: CMFPlone/interfaces/controlpanel.py:952
 msgid "Allow anyone to view 'about' information"
 msgstr "Edonori utzi elementuei buruzko informazioa ikusten"
 
@@ -698,7 +712,7 @@ msgstr "Elementu mota hauetan erantzunak uztea aktibatu"
 msgid "Allow discussion on this item"
 msgstr "Elementu honi erentzunak aktibatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1683
+#: CMFPlone/interfaces/controlpanel.py:1525
 msgid "Allow external login sites"
 msgstr "Onartu beste webgune baten login egitea"
 
@@ -730,15 +744,15 @@ msgstr "Baimendutako jario-motak"
 msgid "Allowed MIME types"
 msgstr "Onartutako MIME motak"
 
-#: CMFPlone/interfaces/controlpanel.py:1605
+#: CMFPlone/interfaces/controlpanel.py:1447
 msgid "Allowed image sizes"
 msgstr "Onartutako irudi-tamainak"
 
-#: CMFPlone/interfaces/controlpanel.py:1120
+#: CMFPlone/interfaces/controlpanel.py:962
 msgid "Allows users to login with their email address instead of specifying a separate login name. This also updates the login name of existing users, which may take a while on large sites. The login name is saved as lower case, but to be userfriendly it does not matter which case you use to login. When duplicates are found, saving this form will fail. You can use the @@migrate-to-emaillogin page to show the duplicates."
 msgstr "Erabiltzaileei eposta helbidea erabiliz login egitea aktibatu. Honek orain dauden erabiltzaile guztiei eragiten die eta denbora asko hartu dezake webgune handietan. Login egiteko izena letra xeheak erabiliz gordeko da baina ez dio ardura zer erabiltzen duzun login egiteko. Bikoiztuak aurkitzen baditugu errore mezu bat agertuko da. @@migrate-to-emaillogin orria erabili dezakezu bikoiztuak aurkitzeko."
 
-#: CMFPlone/interfaces/controlpanel.py:1084
+#: CMFPlone/interfaces/controlpanel.py:926
 msgid "Allows users to register themselves on the site. If not selected, only site managers can add new users."
 msgstr "Erabiltzaileei atarian erregistratzea baimendu. Aukeratuta ez badago, kudeatzaileek bakarrik gehitu ditzakete erabiltzaileak"
 
@@ -746,13 +760,49 @@ msgstr "Erabiltzaileei atarian erregistratzea baimendu. Aukeratuta ez badago, ku
 msgid "Allows users to subscribe to feeds of search results"
 msgstr "Erabiltzaileak bilaketaren emaitzen rss jarioetara harpidetzeko aukera eskaintzen du"
 
-#: CMFPlone/interfaces/controlpanel.py:1516
+#: CMFPlone/interfaces/controlpanel.py:1358
 msgid "Alternative formats"
 msgstr "Beste formatuak"
 
-#: CMFPlone/interfaces/controlpanel.py:1202
+#: CMFPlone/controlpanel/browser/redirects.py:131
+msgid "Alternative url added."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:291
+msgid "Alternative url from {0} to {1} added."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:60
+msgid "Alternative url path must not be a view."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:49
+msgid "Alternative url path must start with a slash."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:143
+msgid "Alternative url removed."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:139
+msgid "Alternative urls removed."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:280
+msgid "Alternative urls that point to themselves will cause an endless cycle of redirects."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:335
+msgid "Alternative urls that point to themselves will causean endless cycle of redirects."
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:1044
 msgid "Always"
 msgstr "Beti"
+
+#: CMFPlone/interfaces/controlpanel.py:1659
+msgid "An action with the id \"${actionid}\" already exists"
+msgstr ""
 
 #: plone/app/theming/browser/theme-error.pt:12
 msgid "An error occurred trying to parse the rules file:"
@@ -860,15 +910,15 @@ msgstr "Esleipenak desgaituta."
 msgid "Assignments enabled."
 msgstr "Esleipenak gaituta."
 
-#: CMFPlone/interfaces/controlpanel.py:770
+#: CMFPlone/interfaces/controlpanel.py:605
 msgid "AtD error types to show"
 msgstr "Erakutsiko diren AtD erroreak"
 
-#: CMFPlone/interfaces/controlpanel.py:754
+#: CMFPlone/interfaces/controlpanel.py:589
 msgid "AtD ignore strings"
 msgstr "Kontuan hartuko ez diren AtD testu-kateak"
 
-#: CMFPlone/interfaces/controlpanel.py:793
+#: CMFPlone/interfaces/controlpanel.py:628
 msgid "AtD service URL"
 msgstr "AtDren URLa"
 
@@ -876,7 +926,7 @@ msgstr "AtDren URLa"
 msgid "Attendees extension for Events."
 msgstr "Hitzorduentzako partehartzaileen luzapena"
 
-#: CMFPlone/interfaces/controlpanel.py:1671
+#: CMFPlone/interfaces/controlpanel.py:1513
 msgid "Auth cookie length"
 msgstr "Autentikazio cookiearen luzera"
 
@@ -891,7 +941,7 @@ msgstr "Elementuaren helbidea izenburutik sortu"
 msgid "Automatically generate short URL name for content based on its primary field file name"
 msgstr "Elementuaren helbidea fitxategi-eremuan dagoen fitxategiaren izenaren arabera sortu"
 
-#: CMFPlone/interfaces/controlpanel.py:901
+#: CMFPlone/interfaces/controlpanel.py:743
 msgid "Automatically generate tabs"
 msgstr "Fitxak automatikoki sortu"
 
@@ -903,15 +953,15 @@ msgstr "Aukerak"
 msgid "Available add-ons"
 msgstr "Aktibatu daitezkeen produktuak"
 
-#: CMFPlone/interfaces/controlpanel.py:96
+#: CMFPlone/interfaces/controlpanel.py:105
 msgid "Available editors"
 msgstr "Dauden editoreak"
 
-#: CMFPlone/interfaces/controlpanel.py:97
+#: CMFPlone/interfaces/controlpanel.py:106
 msgid "Available editors in the portal."
 msgstr "Webgunean dauden editoreak"
 
-#: CMFPlone/interfaces/controlpanel.py:1357
+#: CMFPlone/interfaces/controlpanel.py:1199
 msgid "Available timezones"
 msgstr "Ordu-zonak"
 
@@ -979,24 +1029,24 @@ msgstr "Plonerentzat widget berriak"
 msgid "Between dates"
 msgstr "Daten artean"
 
-#: CMFPlone/interfaces/controlpanel.py:551
+#: CMFPlone/interfaces/controlpanel.py:386
 msgid "Block styles"
 msgstr "Bloke-erako estiloak"
 
 #. Default: "Boolean (True/False)"
-#: criterion description of ATBooleanCriterion
+#: criterion description of criterion ATBooleanCriterion
 msgid "Boolean (True/False)"
 msgstr "Boolearra (egiazkoa/faltsua)"
 
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:211
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:213
 msgid "Broken add-ons"
 msgstr "Apurtatuko produktu gehigarriak"
 
-#: CMFPlone/interfaces/controlpanel.py:902
+#: CMFPlone/interfaces/controlpanel.py:744
 msgid "By default, all items created at the root level will appear as tabs. You can turn this off if you prefer manually constructing this part of the navigation."
 msgstr "Defektuz, webgunearen erroan dagoen edozein elementu nabigazio barran agertuko da. Hau desaktibatu egin dezakezu nabigazio hori eskuz sortu nahi baduzu."
 
-#: CMFPlone/interfaces/controlpanel.py:911
+#: CMFPlone/interfaces/controlpanel.py:753
 msgid "By default, any content item in the root of the portal will appear as a tab. If you turn this option off, only folders will be shown. This only has an effect if 'automatically generate tabs' is enabled."
 msgstr "Defektuz, webgunearen erroan dagoen edozein elementu nabigazio barran agertuko da. Aukera hau desgaitzen baduzu, karpetak bakarrik erakutsiko dira. Honek \"Fitxak automatikoki sortu\" aktibatuta badago bakarrik balio du."
 
@@ -1004,19 +1054,19 @@ msgstr "Defektuz, webgunearen erroan dagoen edozein elementu nabigazio barran ag
 msgid "CSS/LESS files"
 msgstr "CSS/LESS fitxategiak"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:283
+#: plone.app.caching/plone/app/caching/operations/default.py:275
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
 msgstr "Nabigatzailean eta proxy-cachean gorde (defektuz: 24 ordu). Kontuz: egonkorrak diren baliabideentzat erabili, hau da, helbidea aldatu gabe sekula aldatzen ez diren elementuentzat; edo aldi batean eguneratu gabe agertzea kritikoa ez den elementuentzat."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:255
+#: plone.app.caching/plone/app/caching/operations/default.py:247
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires."
 msgstr "Nabigatzailean gorde baina berehala iraungu ('cache ahula'), eta proxy-cachean gorde (defektuz: 24 orud). Erabili purgatzea onartzen duten cache zerbitzariak emaitza onenak lortzeko. Kontuz: proxy-cache zerbitzaria ezin bada purgatu, edo ezin bada konfiguratu erantzunetik 's-maxage' goiburukoa kentzeko, freskatu gabeko erantzunak ikusi daitezke elementua cachean iraungi artean."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:227
+#: plone.app.caching/plone/app/caching/operations/default.py:219
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
 msgstr "Nabigatzaileko cachean gorde baina berehala iraungi eta 304 erantzunak aktibatu hurrengo eskaerentzat. 304 erantzunek 'Last-modified' eta/edo 'ETag' goiburukoen konfigurazioa eskatzen dute. 'Last-Modified' goiburukoa edukiaren freskotasuna bermatzeko nahikoa ez bada, aktibatu 'ETag' bidezko egiaztapena berau sortzeko behar diren osagai guztien zerrendarekin. Erantzun publiko guztiak cachean gordetzeko, aktibatu 'RAM cache' aukera."
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:656
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:662
 msgid "Cache purged."
 msgstr "Cachea garbitu egin da"
 
@@ -1067,6 +1117,10 @@ msgstr "Bertsio berria ezeztatu"
 msgid "Cannot find checkout location"
 msgstr "Ezin da aurkitu bertsio berria non dagoen"
 
+#: CMFPlone/controlpanel/browser/redirects.py:77
+msgid "Cannot use a working path as alternative url."
+msgstr ""
+
 #: plone.app.discussion/plone/app/discussion/interfaces.py:197
 msgid "Captcha"
 msgstr "Captcha"
@@ -1083,7 +1137,7 @@ msgstr "Ur-jauzi erregela"
 msgid "Categorization"
 msgstr "Kategorizazioa"
 
-#: CMFPlone/interfaces/controlpanel.py:1726
+#: CMFPlone/interfaces/controlpanel.py:1582
 msgid "Category"
 msgstr "Kategoria"
 
@@ -1119,7 +1173,7 @@ msgstr "Aldaketak aplikatuta."
 msgid "Changes canceled."
 msgstr "Aldaketak berta behera utzi dira."
 
-#: plone/app/theming/browser/controlpanel.py:114
+#: plone/app/theming/browser/controlpanel.py:115
 msgid "Changes cancelled"
 msgstr "Aldaketak bertan behera utzi dira"
 
@@ -1141,7 +1195,7 @@ msgstr "Aldaketak ondo gorde dira"
 msgid "Changes saved."
 msgstr "Aldaketak gordeta."
 
-#: CMFPlone/interfaces/controlpanel.py:1496
+#: CMFPlone/interfaces/controlpanel.py:1338
 msgid "Characterset to use when sending e-mails."
 msgstr "Epostak bidaltzean erabiliko den karaktere-kodeketa"
 
@@ -1177,7 +1231,7 @@ msgstr "Bertsio berria sortzea bertan behera utzi da"
 msgid "Checkout workflow policy"
 msgstr "Bertsio berriak sortzeko workflow politika"
 
-#: CMFPlone/interfaces/controlpanel.py:507
+#: CMFPlone/interfaces/controlpanel.py:342
 msgid "Choose the CSS used in WYSIWYG Editor Area"
 msgstr "WYSIWYG editorean erabiliko den CSSa"
 
@@ -1212,7 +1266,7 @@ msgstr "Elementu-mota klonatu"
 
 #. Default: "Collection"
 #: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:46
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:47
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Collection.xml
 msgid "Collection"
 msgstr "Bilduma"
@@ -1230,6 +1284,7 @@ msgstr "Bilduma portleta"
 msgid "Comma separated values of resource for shim"
 msgstr "Shim-en baliabideentzat Komarekin Banatutako Balioak (CSV)"
 
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:23
 #: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
 #: plone.stringinterp/plone/stringinterp/adapters.py:696
 msgid "Comment"
@@ -1392,11 +1447,12 @@ msgstr "Edukiontzia"
 msgid "Contains"
 msgstr "Dauka"
 
-#: CMFPlone/interfaces/controlpanel.py:818
+#: CMFPlone/interfaces/controlpanel.py:653
 msgid "Contains objects"
 msgstr "Elementuak ditu barnean"
 
-#: CMFPlone/PloneControlPanel.py:71 CMFPlone/browser/templates/author.pt:201
+#: CMFPlone/PloneControlPanel.py:71
+#: CMFPlone/browser/templates/author.pt:201
 msgid "Content"
 msgstr "Edukia"
 
@@ -1594,7 +1650,7 @@ msgstr "Sortzaileen epostak"
 msgid "Creators Ids"
 msgstr "Sortzaileen erabiltzaile-izenak"
 
-#: CMFPlone/interfaces/controlpanel.py:1061
+#: CMFPlone/interfaces/controlpanel.py:903
 msgid "Crop the item description in search result listings after a number of characters."
 msgstr "Bilaketa emaitzetan, elementuen deskribapena karaktere kopuru honetara mugatu"
 
@@ -1614,15 +1670,15 @@ msgstr "Egungo konfigurazioa."
 msgid "Current logged in user"
 msgstr "Unean login egin duen erabiltzailea"
 
-#: CMFPlone/interfaces/controlpanel.py:462
+#: CMFPlone/interfaces/controlpanel.py:297
 msgid "Custom attributes"
 msgstr "Pertsonalizatutako atributuak"
 
-#: CMFPlone/interfaces/controlpanel.py:724
+#: CMFPlone/interfaces/controlpanel.py:559
 msgid "Custom buttons"
 msgstr "Pertsonalizatutako botoiak"
 
-#: CMFPlone/interfaces/controlpanel.py:714
+#: CMFPlone/interfaces/controlpanel.py:549
 msgid "Custom plugins"
 msgstr "Pertsonalizatutako pluginak"
 
@@ -1685,7 +1741,7 @@ msgstr "Datak"
 msgid "Day"
 msgstr "Eguna"
 
-#: CMFPlone/interfaces/controlpanel.py:884
+#: CMFPlone/interfaces/controlpanel.py:719
 msgid "Days of object history to keep after packing"
 msgstr "Trinkotzea egin ostean, zenbat eguneko objektuen historia mantenduko den"
 
@@ -1702,11 +1758,11 @@ msgstr "Defektuzko MIME mota"
 msgid "Default Page"
 msgstr "Defektuzko orria"
 
-#: CMFPlone/interfaces/controlpanel.py:746
+#: CMFPlone/interfaces/controlpanel.py:581
 msgid "Default browser spellchecker"
 msgstr "Nabigatzailearen defektuzko hizkuntza-zuzentzailea"
 
-#: CMFPlone/interfaces/controlpanel.py:105
+#: CMFPlone/interfaces/controlpanel.py:114
 msgid "Default editor"
 msgstr "Defektuzko editorea"
 
@@ -1714,7 +1770,7 @@ msgstr "Defektuzko editorea"
 msgid "Default encoding for the value"
 msgstr "Balioaren defektuzko kodeketa"
 
-#: CMFPlone/interfaces/controlpanel.py:1505
+#: CMFPlone/interfaces/controlpanel.py:1347
 msgid "Default format"
 msgstr "Defektuzko formatua"
 
@@ -1727,7 +1783,7 @@ msgstr "Defektuzko hizkuntza ez dago aktibatutako hizkuntzetan"
 msgid "Default output MIME type"
 msgstr "Erakusteko defektuzko MIME mota"
 
-#: CMFPlone/interfaces/controlpanel.py:1312
+#: CMFPlone/interfaces/controlpanel.py:1154
 msgid "Default page IDs"
 msgstr "Defektuzko orrien idak"
 
@@ -1755,11 +1811,11 @@ msgstr "Zerrendatu nahi dituzun elementuak bilatzeko terminoak zehaztu dagokion 
 msgid "Define the search terms for the items you want to list by choosing what to match on. The list of results will be dynamically updated."
 msgstr "Zerrendatu nahi dituzun elementuen bilaketa terminoak definitu. Emaitzen zerrenda dinamikoki eguneratuko da."
 
-#: CMFPlone/interfaces/controlpanel.py:1041
+#: CMFPlone/interfaces/controlpanel.py:883
 msgid "Define the types that should be searched and be available in the user facing part of the site. Note that if new content types are installed, they will be enabled by default unless explicitly turned off here or by the relevant installer."
 msgstr "Konfiguratu zein elementu bilatu eta erabiltzaileak ikusi ahal izango dituen. Kontuan hartu elementu mota berriak instalatzen badituzu defektuz aktibatuta egongo direla, hemen edo instalatzailean ez badira desaktibatzen behintzat."
 
-#: CMFPlone/interfaces/controlpanel.py:1040
+#: CMFPlone/interfaces/controlpanel.py:882
 msgid "Define the types to be shown in the site and searched"
 msgstr "Definitu atarian ikusi eta bilatuko diren elementu motak"
 
@@ -1824,7 +1880,7 @@ msgstr "Zure webgunean dagoen Archetypes elementu kopuruaren arabera, <strong>os
 msgid "Depends on another bundle"
 msgstr "Beste bilduma baten dependentzia du"
 
-#: CMFPlone/interfaces/controlpanel.py:1735
+#: CMFPlone/interfaces/controlpanel.py:1591
 #: plone.app.content/plone/app/content/browser/contents/__init__.py:202
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
 msgid "Description"
@@ -1834,19 +1890,19 @@ msgstr "Deskribapena"
 msgid "Details link"
 msgstr "Zehaztasunetara lotura"
 
-#: CMFPlone/interfaces/controlpanel.py:117
+#: CMFPlone/interfaces/controlpanel.py:126
 msgid "Determines if the external editor feature is enabled. This feature requires a special client-side application installed. The users also have to enable this in their preferences."
 msgstr "Kanpoko editorea gaituta dagoen ala ez. Bezeroaren aldeko aplikazio berezi bat instalatuta egotea eskatzen du honek. Erabiltzaile bakoitzak bere aukera ere egin dezake bere hobespenetara joanez."
 
-#: CMFPlone/interfaces/controlpanel.py:128
+#: CMFPlone/interfaces/controlpanel.py:137
 msgid "Determines if the users should get warnings when they delete or move content that is linked from inside the site."
 msgstr "Erabiltzaileek atariko beste objektu batzuetatik lotura egiten zaien objektuak ezabatu edo mugitzean oharren bat ikusiko duten konfiguratu."
 
-#: CMFPlone/interfaces/controlpanel.py:1537
+#: CMFPlone/interfaces/controlpanel.py:1379
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of groups it can be very slow or impossible to build a list all groups. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for groups instead of listing all of them."
 msgstr "Zure Plone ataria gune txiki edo handientzat optimizatuta dagoen ala ez. Talde asko dagoen ingurune baten, talde guztien zerrenda egitea oso geldoa edo ezinezkoa izan daiteke. Aukera honekin interfaze hori aldatu eta horrelako kasuetarako Ploneren portaera aldatzen du talde guztiak erakutsi beharrean euren bilaketa egiten utziz."
 
-#: CMFPlone/interfaces/controlpanel.py:1550
+#: CMFPlone/interfaces/controlpanel.py:1392
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of users it can be very slow or impossible to build a list all users. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for users instead of listing all of them."
 msgstr "Zure Plone ataria gune txiki edo handientzat optimizatuta dagoen ala ez. Talde asko dagoen ingurune baten, erabiltzaile guztien zerrenda egitea oso geldoa edo ezinezkoa izan daiteke. Aukera honekin interfaze hori aldatu eta horrelako kasuetarako Ploneren portaera aldatzen du erabiltzaile guztiak erakutsi beharrean euren bilaketa egiten utziz."
 
@@ -1868,11 +1924,11 @@ msgstr "Dexterity elementu-motak"
 msgid "Dexterity versioning support"
 msgstr "Dexterityrentzako bertsioak"
 
-#: plone/app/theming/configure.zcml:32
+#: plone/app/theming/configure.zcml:26
 msgid "Diazo theme support"
 msgstr "Diazo itxuren konfigurazioa"
 
-#: CMFPlone/interfaces/controlpanel.py:352
+#: CMFPlone/interfaces/controlpanel.py:187
 msgid "Disable HTML filtering"
 msgstr "HTML filtroa desaktibatu"
 
@@ -1892,7 +1948,7 @@ msgstr "Migrazioak dirauen artean objektuan berrindexatzea desgaitu?"
 msgid "Disabled"
 msgstr "Desaktibatuta"
 
-#: CMFPlone/interfaces/controlpanel.py:137
+#: CMFPlone/interfaces/controlpanel.py:146
 msgid "Disabling locking here will only affect users editing content through the Plone web UI.  Content edited via WebDAV clients will still be subject to locking."
 msgstr "Edizioa blokeatzea hemen desaktibatzeak Ploneren interfazetik edukia editatzen dutenentzat bakarrik izango du eragina. WebDAV bidez egindako edizioak blokeatzea aktibatuta izango du."
 
@@ -1905,14 +1961,12 @@ msgid "Discussion"
 msgstr "Eztabaida"
 
 #. Default: "Discussion Item"
-#: portal type title of with description Discussion Items are documents which
-#: reply to other content.They should *not* be addable through the standard
-#: 'folder_factories' interface.
+#: portal type title of type with description Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface.
 msgid "Discussion Item"
 msgstr "Eztabaida elementua"
 
 #. Default: "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
-#: portal type description of with title Discussion Item
+#: portal type description of type with title Discussion Item
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Eztabaida elementuak, bestelako edukiari erantzuten dioten dokumentuak dira. Ez lukete 'folder_factories' interfazearen bitartez gehigarri egon behar."
 
@@ -1920,11 +1974,11 @@ msgstr "Eztabaida elementuak, bestelako edukiari erantzuten dioten dokumentuak d
 msgid "Discussion settings"
 msgstr "Eztabaidaren ezarpenak"
 
-#: CMFPlone/interfaces/controlpanel.py:1190
+#: CMFPlone/interfaces/controlpanel.py:1032
 msgid "Display publication date"
 msgstr "Argitaratze-data erakutsi"
 
-#: CMFPlone/interfaces/controlpanel.py:954
+#: CMFPlone/interfaces/controlpanel.py:796
 msgid "Displayed content types"
 msgstr "Erakusten diren elementu-motak"
 
@@ -1973,7 +2027,7 @@ msgstr "Dublin Core"
 msgid "Dublin Core metadata"
 msgstr "Dublin Core metadatuak"
 
-#: plone/app/theming/browser/controlpanel.py:358
+#: plone/app/theming/browser/controlpanel.py:361
 msgid "Duplicate title"
 msgstr "Izenburua bikoiztu"
 
@@ -1981,20 +2035,24 @@ msgstr "Izenburua bikoiztu"
 msgid "E-Mail Address"
 msgstr "E-posta helbidea"
 
-#: CMFPlone/interfaces/controlpanel.py:1495
+#: CMFPlone/interfaces/controlpanel.py:1337
 msgid "E-mail characterset"
 msgstr "Epostaren karaketere-kodeketa"
 
-#: CMFPlone/interfaces/controlpanel.py:1257
+#: CMFPlone/interfaces/controlpanel.py:1099
 msgid "E.g. standard view; This default can be overriden individually."
 msgstr "Bistaratze estandarra; bistaratze hau gainidatzi egin daiteke."
 
-#: CMFPlone/interfaces/controlpanel.py:1265
+#: CMFPlone/interfaces/controlpanel.py:1107
 msgid "E.g., tabular view, folder content listing; This default can be overriden individually."
 msgstr "Taula bista, edukien zerrenda; bistaratze hau gainidatzi egin daiteke."
 
 msgid "EPS image"
 msgstr "EPS irudia"
+
+#: CMFPlone/controlpanel/browser/redirects.py:340
+msgid "Each line must have 2 columns."
+msgstr ""
 
 #. Default: "Edit"
 #: CMFPlone/controlpanel/browser/actions.pt:46
@@ -2109,6 +2167,10 @@ msgstr "Bilaketa portleta aldatu"
 msgid "Edit TALES Expression Condition"
 msgstr "TALES espresio erako baldintza aldatu"
 
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:88
+msgid "Edit Versioning Action"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:107
 msgid "Edit Workflow Action"
 msgstr "Workflow ekintza aldatu"
@@ -2160,7 +2222,7 @@ msgstr "Edizioaren ezarpenak"
 msgid "Editor"
 msgstr "Editorea"
 
-#: CMFPlone/interfaces/controlpanel.py:498
+#: CMFPlone/interfaces/controlpanel.py:333
 msgid "Editor height"
 msgstr "Editorearen altuera"
 
@@ -2168,7 +2230,7 @@ msgstr "Editorearen altuera"
 msgid "Editor rejects submitted content"
 msgstr "Editoreak bidalitako edukia atzera botatzen du"
 
-#: CMFPlone/interfaces/controlpanel.py:490
+#: CMFPlone/interfaces/controlpanel.py:325
 msgid "Editor width"
 msgstr "Editorearen zabalera"
 
@@ -2209,11 +2271,11 @@ msgstr "E-postaren iturburua"
 msgid "Enable Comments"
 msgstr "Erantzunak aktibatu"
 
-#: CMFPlone/interfaces/controlpanel.py:116
+#: CMFPlone/interfaces/controlpanel.py:125
 msgid "Enable External Editor feature"
 msgstr "Kanpo-editorea aktibatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1031
+#: CMFPlone/interfaces/controlpanel.py:873
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:17
 msgid "Enable LiveSearch"
 msgstr "LiveSearch aktibatu"
@@ -2222,11 +2284,11 @@ msgstr "LiveSearch aktibatu"
 msgid "Enable RSS link document action on the syndication content item."
 msgstr "Aktibatu RSS lotura elementuaren akzioetan."
 
-#: CMFPlone/interfaces/controlpanel.py:1102
+#: CMFPlone/interfaces/controlpanel.py:944
 msgid "Enable User Folders"
 msgstr "Erabiltzaileen karpetak aktibatu"
 
-#: CMFPlone/interfaces/controlpanel.py:481
+#: CMFPlone/interfaces/controlpanel.py:316
 msgid "Enable auto resizing of the editor window."
 msgstr "Aktibatu editorearen leihoaren tamaina automatikoki aldatzea"
 
@@ -2234,11 +2296,11 @@ msgstr "Aktibatu editorearen leihoaren tamaina automatikoki aldatzea"
 msgid "Enable checkout workflow"
 msgstr "Bertsio berrien workflowa aktibatu"
 
-#: CMFPlone/interfaces/controlpanel.py:127
+#: CMFPlone/interfaces/controlpanel.py:136
 msgid "Enable link integrity checks"
 msgstr "Loturen integritate egiaztapenak aktibatu"
 
-#: CMFPlone/interfaces/controlpanel.py:136
+#: CMFPlone/interfaces/controlpanel.py:145
 msgid "Enable locking for through-the-web edits"
 msgstr "Webguneko edizioak blokeatzea aktibatu"
 
@@ -2250,11 +2312,11 @@ msgstr "Elementuak \"aurrekoa-hurrengoa\" nabigazioa izatea aktibatu"
 msgid "Enable purging"
 msgstr "Purgatzea aktibatu"
 
-#: CMFPlone/interfaces/controlpanel.py:474
+#: CMFPlone/interfaces/controlpanel.py:309
 msgid "Enable resizing the editor window."
 msgstr "Aktibatu leihoaren tamaina aldatzea"
 
-#: CMFPlone/interfaces/controlpanel.py:1083
+#: CMFPlone/interfaces/controlpanel.py:925
 msgid "Enable self-registration"
 msgstr "Izen-ematea aktibatu"
 
@@ -2268,7 +2330,7 @@ msgstr "Aktibatuta"
 msgid "Enabled by default"
 msgstr "Defektuz aktibatuta"
 
-#: CMFPlone/interfaces/controlpanel.py:1032
+#: CMFPlone/interfaces/controlpanel.py:874
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:18
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "LiveSearch ezaugarria aktibatzen du, honek, emaitzak zuzenean ikustea ahalbidetzen du zure nabigatzaileak JavaScript onartzen badu."
@@ -2277,23 +2339,23 @@ msgstr "LiveSearch ezaugarria aktibatzen du, honek, emaitzak zuzenean ikustea ah
 msgid "End Date"
 msgstr "Bukaera data"
 
-#: CMFPlone/interfaces/controlpanel.py:584
+#: CMFPlone/interfaces/controlpanel.py:419
 msgid "Enter a JSON-formatted style format configuration. A format is for example the style that get applied when you press the bold button inside the editor. See https://www.tinymce.com/docs/configure/content-formatting/#formats"
 msgstr "Sartu JSON formatuko konfigurazioa. Formatu bat, adibidez, letra beltza lortzeko botoian sakatzen duzunean aplikatu beharreko estiloa da. Ikusi https://www.tinymce.com/docs/configure/content-formatting/#formats"
 
-#: CMFPlone/interfaces/controlpanel.py:831
+#: CMFPlone/interfaces/controlpanel.py:666
 msgid "Enter a list of content types which can be used as images. Format is one contenttype per line."
 msgstr "Idatzi irudi gisa erabili daitezkeen elementu motak. Bat lerro bakoitzean."
 
-#: CMFPlone/interfaces/controlpanel.py:819
+#: CMFPlone/interfaces/controlpanel.py:654
 msgid "Enter a list of content types which can contain other objects. Format is one contenttype per line."
 msgstr "Idatzi barnean beste elementu batzuk izan ditzaketen elementu motak. Bat lerro bakoitzean."
 
-#: CMFPlone/interfaces/controlpanel.py:725
+#: CMFPlone/interfaces/controlpanel.py:560
 msgid "Enter a list of custom buttons which will be added to toolbar"
 msgstr "Idatzi tresna-barran gehituko diren botoi gehigarriak"
 
-#: CMFPlone/interfaces/controlpanel.py:715
+#: CMFPlone/interfaces/controlpanel.py:550
 msgid "Enter a list of custom plugins which will be loaded in the editor. Format is pluginname|location, one per line."
 msgstr "Idatzi editorean kargatuko diren plugin gehigarriak. Bat lerro bakoitzean, formatua: pluginizena|kokapena."
 
@@ -2319,7 +2381,7 @@ msgstr "Idatzi ordua..."
 msgid "Enter your new password. ${errors}"
 msgstr "Idatzi zure pasahitz berria. ${errors}"
 
-#: CMFPlone/interfaces/controlpanel.py:839
+#: CMFPlone/interfaces/controlpanel.py:674
 msgid "Entity encoding"
 msgstr "Entitatean kodeketa"
 
@@ -2413,6 +2475,10 @@ msgstr "Hitzorduen errepikapenak"
 msgid "Event end date"
 msgstr "Hitzorduaren bukaera-data"
 
+#: plone.app.event/plone/app/event/browser/configure.zcml:24
+msgid "Event listing"
+msgstr ""
+
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Event start date"
 msgstr "Hitzorduaren hasiera-data"
@@ -2479,19 +2545,19 @@ msgstr "Moten profilak esportatu"
 msgid "Export vars for shim"
 msgstr "Shim-entzat aldagaiak esportatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1159
+#: CMFPlone/interfaces/controlpanel.py:1001
 msgid "Expose Dublin Core metadata"
 msgstr "Dublin Core metadatuak agertarazi"
 
-#: CMFPlone/interfaces/controlpanel.py:1165
+#: CMFPlone/interfaces/controlpanel.py:1007
 msgid "Expose sitemap.xml.gz"
 msgstr "sitemap.xml.gz aktibatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1160
+#: CMFPlone/interfaces/controlpanel.py:1002
 msgid "Exposes the Dublin Core properties as metatags."
 msgstr "Dublin Core metadatuak meta-etiketa gisa erakutsi"
 
-#: CMFPlone/interfaces/controlpanel.py:1166
+#: CMFPlone/interfaces/controlpanel.py:1008
 msgid "Exposes your content as a file according to the <a href='http://sitemaps.org'>sitemaps.org</a> standard. You can submit this to compliant search engines like Google, Yahoo and Microsoft. It allows these search engines to more intelligently crawl your site."
 msgstr "Zure edukia <a href='http://sitemaps.org'>sitemaps.org</a> estandarrari jarraiki argitaratuko du. Horrela zure edukia Google, Yahoo edo Microsoft-en bilatzaileek erraz irakurtzeko indize gisa argitaratuko da. Horrela bilatzaileek zure edukia errazago aztertuko dute."
 
@@ -2521,15 +2587,15 @@ msgstr "Testak konfigurazeko instalazio profila"
 msgid "External Edit"
 msgstr "Kanpoan editatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1702
+#: CMFPlone/interfaces/controlpanel.py:1544
 msgid "External login iframe"
 msgstr "Kanpoan login egiteko iframe-a"
 
-#: CMFPlone/interfaces/controlpanel.py:1690
+#: CMFPlone/interfaces/controlpanel.py:1532
 msgid "External login url"
 msgstr "Kanpoan login egiteko URLa"
 
-#: CMFPlone/interfaces/controlpanel.py:1696
+#: CMFPlone/interfaces/controlpanel.py:1538
 msgid "External logout url"
 msgstr "Kanpoan logout egiteko URLa"
 
@@ -2538,11 +2604,11 @@ msgstr "Kanpoan logout egiteko URLa"
 msgid "Externally visible"
 msgstr "Kanpotik ikus daiteke"
 
-#: CMFPlone/interfaces/controlpanel.py:1590
+#: CMFPlone/interfaces/controlpanel.py:1432
 msgid "Facebook App ID"
 msgstr "Facebook App ID"
 
-#: CMFPlone/interfaces/controlpanel.py:1597
+#: CMFPlone/interfaces/controlpanel.py:1439
 msgid "Facebook username"
 msgstr "Facebook erabiltzailea izena"
 
@@ -2644,6 +2710,7 @@ msgstr "Fitxategiaren luzapena ${ext} da"
 msgid "Filename: ${filename}"
 msgstr "Fitxategia: ${filename}"
 
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:215
 #: plone.app.registry/plone/app/registry/browser/templates/records.pt:57
 msgid "Filter"
 msgstr "Filtroa"
@@ -2652,7 +2719,11 @@ msgstr "Filtroa"
 msgid "Filter Contained Types"
 msgstr "Barnean gehitu daitezkeen elementuak filtratu"
 
-#: CMFPlone/interfaces/controlpanel.py:974
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:207
+msgid "Filter by prefix"
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:816
 msgid "Filter on workflow state"
 msgstr "Worfklow-egoeraren arabera filtratu"
 
@@ -2703,15 +2774,15 @@ msgstr "Karpeta-moduan"
 msgid "Folders"
 msgstr "Karpetak"
 
-#: CMFPlone/interfaces/controlpanel.py:1204
+#: CMFPlone/interfaces/controlpanel.py:1046
 msgid "For authenticated users only"
 msgstr "Login egin duten erabiltzaileentzat soilik"
 
-#: CMFPlone/interfaces/controlpanel.py:1180
+#: CMFPlone/interfaces/controlpanel.py:1022
 msgid "For enabling web statistics support from external providers (e.g. Google Analytics). Paste the provided code snippet here. It will be rendered as entered near the end of the page."
 msgstr "Estatistika zerbitzuak erabiltzeko (Google Analytics adibidez). Itsatsi hemen zerbitzu horiek emandako kode zatiak. Sortutako HTMLan agertuko da, orrialde bukaeran."
 
-#: CMFPlone/interfaces/controlpanel.py:1598
+#: CMFPlone/interfaces/controlpanel.py:1440
 msgid "For linking Open Graph data to a Facebook account"
 msgstr "Open graph datuak facebook kontu bati lotzeko"
 
@@ -2719,7 +2790,7 @@ msgstr "Open graph datuak facebook kontu bati lotzeko"
 msgid "Format"
 msgstr "Formatua"
 
-#: CMFPlone/interfaces/controlpanel.py:583
+#: CMFPlone/interfaces/controlpanel.py:418
 msgid "Formats"
 msgstr "Formatuak"
 
@@ -2738,7 +2809,8 @@ msgid "GIMP image"
 msgstr "GIMP irudia"
 
 #. Default: "General"
-#: CMFPlone/PloneControlPanel.py:70 CMFPlone/interfaces/controlpanel.py:161
+#: CMFPlone/PloneControlPanel.py:70
+#: plone.i18n/plone/i18n/interfaces.py:30
 msgid "General"
 msgstr "Orokorra"
 
@@ -2746,11 +2818,11 @@ msgstr "Orokorra"
 msgid "General types settings."
 msgstr "Mota orokorren ezarpenak"
 
-#: CMFPlone/interfaces/controlpanel.py:910
+#: CMFPlone/interfaces/controlpanel.py:752
 msgid "Generate tabs for items other than folders."
 msgstr "Karpetak ez diren elementuentzat fitxak sortu"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:70
+#: plone.app.caching/plone/app/caching/operations/default.py:62
 msgid "Generic caching"
 msgstr "Cachearen ezarpen orokorrak"
 
@@ -2782,7 +2854,7 @@ msgstr "ZMIra joan"
 msgid "Go to the folder where you want the rule to apply, or at the site root, click on 'rule' tab, and then locally setup the rules."
 msgstr "Joan erregela aplikatu nahi duzun karpetara, edo webgunearen errorea, egin klik 'erregelak fitxan eta ezarri erregelak."
 
-#: CMFPlone/controlpanel/browser/overview.pt:32
+#: CMFPlone/controlpanel/browser/overview.pt:33
 msgid "Go to the upgrade page"
 msgstr "Eguneraketen orrialdera joan"
 
@@ -2831,7 +2903,7 @@ msgstr "HTTP Cachea"
 msgid "Have a look above for more information."
 msgstr "Begiratu goian informazio gehiago lortzeako"
 
-#: CMFPlone/interfaces/controlpanel.py:523
+#: CMFPlone/interfaces/controlpanel.py:358
 msgid "Header styles"
 msgstr "Goiburukoen estiloak"
 
@@ -2847,15 +2919,15 @@ msgstr "Laguntza testua"
 msgid "Hide"
 msgstr "Ezkutatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1018
+#: CMFPlone/interfaces/controlpanel.py:860
 msgid "Hide children of these types"
 msgstr "Elementu hauek umeak ezkutatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1019
+#: CMFPlone/interfaces/controlpanel.py:861
 msgid "Hide content inside the following types in Navigation."
 msgstr "Nabigazioan, elementu-mota hauen barnean dauden elementuak ezkutatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1635
+#: CMFPlone/interfaces/controlpanel.py:1477
 msgid "High pixel density mode"
 msgstr "Pixel dentsitate altuko modua"
 
@@ -2893,11 +2965,11 @@ msgstr "Hala ere, hemen dituzu hizkuntza batzuetan eginda dauden elementu honen 
 msgid "ID"
 msgstr "ID"
 
-#: CMFPlone/interfaces/controlpanel.py:1197
+#: CMFPlone/interfaces/controlpanel.py:1039
 msgid "Icon visibility"
 msgstr "Ikonoak"
 
-#: CMFPlone/interfaces/controlpanel.py:1790
+#: CMFPlone/interfaces/controlpanel.py:1648
 #: plone.stringinterp/plone/stringinterp/adapters.py:608
 msgid "Id"
 msgstr "Ida"
@@ -2922,7 +2994,7 @@ msgstr "Gurasoaren identifikadorea edo kudeatzen duen erabiltzailearen id-a."
 msgid "Identifier, actually URL of the content"
 msgstr "Identifikadorea, hau da, edukiaren URLa"
 
-#: CMFPlone/interfaces/controlpanel.py:992
+#: CMFPlone/interfaces/controlpanel.py:834
 msgid "If an item has been excluded from navigation should it be shown in navigation when viewing content contained within it or within a subfolder."
 msgstr "Elementu bat nabigaziotik baztertuta badago bere barnean dagoen elementu bat ikustean nabigazioan agertu behar den ala ez."
 
@@ -2974,15 +3046,15 @@ msgstr "Emanez gero, portletaren goiburu eta beheko aldeko loturak helbide honet
 msgid "If its true and you modify this bundle you need to build it before production"
 msgstr "Egiazkoa bada eta bilduma hau aldatzen baduzu, produkzioan jarri aurretik eraiki egin beharko duzu"
 
-#: CMFPlone/interfaces/controlpanel.py:1111
+#: CMFPlone/interfaces/controlpanel.py:953
 msgid "If not selected only logged-in users will be able to view information about who created an item and when it was modified."
 msgstr "Aktibatuta ez badago, saioa hasi duten erabiltzaileek bakarrik ikus dezakete elementu bakoitza nork eta noiz sortu duen."
 
-#: CMFPlone/interfaces/controlpanel.py:1092
+#: CMFPlone/interfaces/controlpanel.py:934
 msgid "If not selected, a URL will be generated and e-mailed. Users are instructed to follow the link to reach a page where they can change their password and complete the registration process; this also verifies that they have entered a valid email address."
 msgstr "Aukeratuta ez badago, URL bat sortu eta bidaliko da e-postaz. Erabiltzaileari helbide horretan klik egin eta euren pasahitza ezartzeko aukera emango zaio horrela erregistro prozesua amaituz; gainera, honek benetako e-posta helbide bat darabiltela egiaztatzen du."
 
-#: CMFPlone/interfaces/controlpanel.py:1103
+#: CMFPlone/interfaces/controlpanel.py:945
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Aktibatuz gero, erabiltzaile bakoitzari karpeta pertsonal bat sortuko zaio atarira sartzean."
 
@@ -3016,15 +3088,15 @@ msgstr "Irudien kudeaketa"
 msgid "Image Handling Settings"
 msgstr "Irudi-kudeaketaren ezarpenak"
 
-#: CMFPlone/interfaces/controlpanel.py:830
+#: CMFPlone/interfaces/controlpanel.py:665
 msgid "Image objects"
 msgstr "Irudiak"
 
-#: CMFPlone/interfaces/controlpanel.py:1646
+#: CMFPlone/interfaces/controlpanel.py:1488
 msgid "Image quality at 2x"
 msgstr "Irudien kalitatea 2x-n"
 
-#: CMFPlone/interfaces/controlpanel.py:1657
+#: CMFPlone/interfaces/controlpanel.py:1499
 msgid "Image quality at 3x"
 msgstr "Irudien kalitatea 3x-n"
 
@@ -3045,7 +3117,7 @@ msgstr "Elementu-motak inportatu"
 msgid "Import Type Profiles&hellip;"
 msgstr "Elementu-moten profilak inportatu&hellip;"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:537
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:543
 msgid "Import complete."
 msgstr "Inportazioa bukatu da."
 
@@ -3078,7 +3150,7 @@ msgstr "Baliabide hau baldintza baten arabera erakutsi nahi baduzu (ez da aplika
 msgid "In production mode, bundles are merged together to reduce the quantity of JS and CSS resources loaded by the browser. Choose 'default' if this bundle must be available for all the visitors, choose 'logged-in' if it must be available for logged-in users only, or leave it empty if it must not be merged."
 msgstr "Produkzio moduan, bildumak batu egiten dira nabigatzaileak kargatu beharreko CSS eta JS baliabide kopurua txikitzeko. Aukeratu 'defektuzkoa' bilduma hau bisitari guztiek erabili behar badute, aukeratu 'login eginda daudenak', saioa hasi duten erabiltzaileek bakarrik ikusi behar badute, edo utzi hutsik ez bada batu behar."
 
-#: CMFPlone/interfaces/controlpanel.py:1573
+#: CMFPlone/interfaces/controlpanel.py:1415
 msgid "Include meta tags on pages to give hints to social media on how to better render your pages when shared"
 msgstr "Webgunean sare sozialetan orri hauek elkarbanatzerakoan nola erakutsi dioten meta-etiketak gehitu"
 
@@ -3094,14 +3166,14 @@ msgstr "ZMI, portal_skins eta baliabideen erregistroen bidez gehitu edo pertsona
 msgid "Incorrect value for current password"
 msgstr "Egungo pasahitza ez da zuzena"
 
-#: CMFPlone/interfaces/controlpanel.py:921
+#: CMFPlone/interfaces/controlpanel.py:763
 msgid "Index used to sort the tabs"
 msgstr "Fitxak ordenatzeko indizea"
 
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
-#: CMFPlone/controlpanel/browser/maintenance.pt:20
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:198
+#: CMFPlone/controlpanel/browser/maintenance.pt:21
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:200
 msgid "Info"
 msgstr "Informazioa"
 
@@ -3113,7 +3185,7 @@ msgstr "Informazioa"
 msgid "Init instruction for shim"
 msgstr "Shim-en hasierako aginduak"
 
-#: CMFPlone/interfaces/controlpanel.py:537
+#: CMFPlone/interfaces/controlpanel.py:372
 msgid "Inline styles"
 msgstr "Barneko estiloak"
 
@@ -3146,7 +3218,7 @@ msgstr "${product} ondo instalatu da!"
 msgid "Installing a third party add-on"
 msgstr "Hirugarrenen produktu gehigarriak instalatu"
 
-#: plone/app/theming/configure.zcml:32
+#: plone/app/theming/configure.zcml:26
 msgid "Installs a control panel to allow on-the-fly theming with Diazo"
 msgstr "Diazo erabiliz itxuratzeko kontrol-panela aktibatzen du"
 
@@ -3155,7 +3227,7 @@ msgid "Installs plone.app.caching"
 msgstr "plone.app.caching instalatu"
 
 #. Default: "Integer value or range"
-#: criterion description of ATSimpleIntCriterion
+#: criterion description of criterion ATSimpleIntCriterion
 msgid "Integer value or range"
 msgstr "Balio edo tarte osoa"
 
@@ -3214,7 +3286,7 @@ msgstr "honen artean dago"
 msgid "Is within (relative)"
 msgstr "honen artean dago (erlatiboa)"
 
-#: CMFPlone/interfaces/controlpanel.py:1280
+#: CMFPlone/interfaces/controlpanel.py:1122
 msgid "It can be on the side (vertical mode) or on the top (horizontal mode)"
 msgstr "Alboan agertu daiteke era bertikalean edo goialdean era horizontalean"
 
@@ -3256,7 +3328,7 @@ msgstr "JPEG irudia"
 msgid "JSONField"
 msgstr "JSON Eremua"
 
-#: CMFPlone/interfaces/controlpanel.py:1179
+#: CMFPlone/interfaces/controlpanel.py:1021
 msgid "JavaScript for web statistics support"
 msgstr "Webgunearen estatistiken kontrolerako JavaScripta"
 
@@ -3275,7 +3347,8 @@ msgid "Keep in mind that editors like TinyMCE might have additional filters."
 msgstr "Kontuan izan TinyMCE bezalako editoreek beren filtroak ere aplikatu ditzaketela."
 
 #. Default: "Keywords"
-#: index friendly name of Subject metadata
+#: index friendly name of index Subject
+#: metadata friendly name of metadata Subject
 msgid "Keywords"
 msgstr "Hitz-gakoak"
 
@@ -3327,7 +3400,7 @@ msgstr "Azken aldaketa"
 msgid "Latest available configuration"
 msgstr "Azkenengo konfigurazioa"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:18
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:19
 msgid "Lead Image"
 msgstr "Irudia"
 
@@ -3336,7 +3409,7 @@ msgstr "Irudia"
 msgid "Less than"
 msgstr "Hau baino txikiagoa da"
 
-#: CMFPlone/interfaces/controlpanel.py:1091
+#: CMFPlone/interfaces/controlpanel.py:933
 msgid "Let users select their own passwords"
 msgstr "Utzi erabiltzaileei pasahitzak aukeratzen"
 
@@ -3358,11 +3431,11 @@ msgstr "Muga"
 msgid "Limit Search Results"
 msgstr "Bilaketa emaitzak mugatu"
 
-#: CMFPlone/interfaces/controlpanel.py:147
+#: CMFPlone/interfaces/controlpanel.py:156
 msgid "Limit tags aka keywords vocabulary used for Tags field and in searches to the terms used inside the subtree of the current navigation root. This can be used together with Plone's multilingual extension plone.app.multilingual to only offer keywords of the current selected language. Other addons may utilize this feature for its specific purposes."
 msgstr "Etiketen eremuko hiztegian eta bilaketetan erabilitakoa mugatu uneko nabigazio erroaren barruan. Hau plone.app.multilingualekin batera erabili daiteke, unean aukeratuta dagoen hizkuntzako etiketak bakarrik erakusteko. "
 
-#: CMFPlone/interfaces/controlpanel.py:146
+#: CMFPlone/interfaces/controlpanel.py:155
 msgid "Limit tags/keywords to the current navigation root"
 msgstr "Etiketak uneko nabigazio errora mugatu"
 
@@ -3380,13 +3453,29 @@ msgid "List content types which should be purged when modified"
 msgstr "Aukeratu zein elementu mota garbitu behar diren cachetik aldatzen direnean"
 
 #. Default: "List of values"
-#: criterion description of ATListCriterion
+#: criterion description of criterion ATListCriterion
 msgid "List of values"
 msgstr "Balio-zerrenda"
 
 #: CMFPlone/profiles.zcml:22
 msgid "Load all profiles from other packages/products that are needed for a full Plone site."
 msgstr "Plone atari batek behar dituen produktu guztien profilak kargatu"
+
+#: CMFPlone/interfaces/resources.py:135
+msgid "Load asynchronously"
+msgstr ""
+
+#: CMFPlone/interfaces/resources.py:141
+msgid "Load deferred"
+msgstr ""
+
+#: CMFPlone/interfaces/resources.py:136
+msgid "Load the JavaScript files asynchronously by adding an ``async`` attribute to the script tag."
+msgstr ""
+
+#: CMFPlone/interfaces/resources.py:142
+msgid "Load the JavaScript files deferred after the document has been parsed but before ``DOMContentLoaded`` by adding a ``defer`` attribute to the script tag."
+msgstr ""
 
 #: CMFPlone/interfaces/resources.py:78
 msgid "Loaded resources"
@@ -3412,12 +3501,12 @@ msgid "Location extension for Events."
 msgstr "Hitzorduentzako kokalekuaren luzapena"
 
 #. Default: "Location in site"
-#: criterion description of ATPathCriterion
+#: criterion description of criterion ATPathCriterion
 msgid "Location in site"
 msgstr "Atariko kokalekua"
 
-#: ATContentTypes/criteria/relativepath.py criterion description of
-#: ATRelativePathCriterionSchema
+#: ATContentTypes/criteria/relativepath.py
+#: criterion description of criterion ATRelativePathCriterionSchema
 msgid "Location in site relative to the current location"
 msgstr "Uneko kokapenarekiko erlatiboa den atariko kokapena"
 
@@ -3444,7 +3533,8 @@ msgid "Log a particular event"
 msgstr "Gertaera bat log fitxategian idatzi"
 
 #. Default: "Log in"
-#: CMFPlone/browser/login/login.py:147 CMFPlone/profiles/default/actions.xml
+#: CMFPlone/browser/login/login.py:147
+#: CMFPlone/profiles/default/actions.xml
 msgid "Log in"
 msgstr "Saioa hasi"
 
@@ -3527,7 +3617,8 @@ msgstr "E-posta"
 msgid "Mail Settings"
 msgstr "Eposta ezarpenak"
 
-#: CMFPlone/browser/author.py:130 CMFPlone/browser/sendto.py:106
+#: CMFPlone/browser/author.py:130
+#: CMFPlone/browser/sendto.py:106
 msgid "Mail sent."
 msgstr "Posta bidalia."
 
@@ -3567,8 +3658,8 @@ msgid "Make this content type multilingual aware"
 msgstr "Elementu-mota hauek itzulgarri egin"
 
 #. Default: "Make visible"
-#: workflow action defined in folder_workflow - title Member makes content
-#: visible new state plone_workflow
+#: workflow action defined in folder_workflow - title Member makes content visible new state visible
+#: workflow action defined in plone_workflow - title Member makes content visible new state visible
 msgid "Make visible"
 msgstr "Ikusgai"
 
@@ -3608,11 +3699,11 @@ msgstr "Kudeatzaileen eposta helbideak"
 msgid "Mandatory dependencies for a Plone site"
 msgstr "Plone atari baten derrigorrezko dependentziak"
 
-#: CMFPlone/interfaces/controlpanel.py:1536
+#: CMFPlone/interfaces/controlpanel.py:1378
 msgid "Many groups?"
 msgstr "Talde asko?"
 
-#: CMFPlone/interfaces/controlpanel.py:1549
+#: CMFPlone/interfaces/controlpanel.py:1391
 msgid "Many users?"
 msgstr "Erabiltzaile asko?"
 
@@ -3628,11 +3719,11 @@ msgstr "Txantiloi izenak eta erregelak lotzeko erabiltzen da"
 msgid "Maps skin names to lists of resource bundle names"
 msgstr "Skinen izenak baliabide bildumen izenen zerrendekin lotu"
 
-#: CMFPlone/interfaces/controlpanel.py:1717
+#: CMFPlone/interfaces/controlpanel.py:1559
 msgid "Mark special links"
 msgstr "Lotura bereziak markatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1718
+#: CMFPlone/interfaces/controlpanel.py:1560
 msgid "Marks external or special protocol links with class."
 msgstr "Kanpo- edo protokolo bereziak darabiltzaten loturak klase batekin markatu"
 
@@ -3794,7 +3885,7 @@ msgstr "Rss loturaren akzioa falta da"
 msgid "Missing syndication settings action."
 msgstr "Sindikazioaren konfigurazioaren akzioa falta da"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:254
+#: plone.app.caching/plone/app/caching/operations/default.py:246
 msgid "Moderate caching"
 msgstr "Neurrizko cachea"
 
@@ -3889,12 +3980,14 @@ msgstr "Eleaniztasun-aukerak [kendu]"
 msgid "Multiple users found with the same login name."
 msgstr "Erabiltzaile-izen berdina duten hainbat erabiltzaile aurkitu dira."
 
-#: CMFPlone/interfaces/controlpanel.py:59 CMFPlone/utils.py:698
+#: CMFPlone/interfaces/controlpanel.py:68
+#: CMFPlone/utils.py:698
 msgid "Must be empty or a valid JSON-formatted configuration â ${message}."
 msgstr "Hutsik egon behar da edo bestelta JSON formatuko konfigurazioa idatzi behar da ${message}."
 
 # latest zope.tal has trouble with the – character
-#: CMFPlone/interfaces/controlpanel.py:56 CMFPlone/utils.py:657
+#: CMFPlone/interfaces/controlpanel.py:56
+#: CMFPlone/utils.py:657
 msgid "Must be empty or a valid JSON-formatted configuration – ${message}."
 msgstr "Hutsik edo JSON erako konfigurazioa izan behar da – ${message}."
 
@@ -3920,27 +4013,27 @@ msgstr "Izena fitxategiaren izenetik"
 msgid "Name from title"
 msgstr "Izena izenburutik"
 
-#: CMFPlone/interfaces/controlpanel.py:849
+#: CMFPlone/interfaces/controlpanel.py:684
 msgid "Named"
 msgstr "Izena duena"
 
-#: CMFPlone/interfaces/controlpanel.py:574
+#: CMFPlone/interfaces/controlpanel.py:409
 msgid "Name|class"
 msgstr "Izena|klasea"
 
-#: CMFPlone/interfaces/controlpanel.py:552
+#: CMFPlone/interfaces/controlpanel.py:387
 msgid "Name|format"
 msgstr "Izena|formatua"
 
-#: CMFPlone/interfaces/controlpanel.py:538
+#: CMFPlone/interfaces/controlpanel.py:373
 msgid "Name|format|icon"
 msgstr "Izena|formatua|ikonoa"
 
-#: CMFPlone/interfaces/controlpanel.py:524
+#: CMFPlone/interfaces/controlpanel.py:359
 msgid "Name|tag"
 msgstr "Izena|etiketa"
 
-#: CMFPlone/interfaces/controlpanel.py:359
+#: CMFPlone/interfaces/controlpanel.py:194
 msgid "Nasty tags"
 msgstr "Etiketa zikinak"
 
@@ -3953,6 +4046,10 @@ msgstr "Nabigazioa"
 #: CMFPlone/controlpanel/browser/navigation.py:11
 msgid "Navigation Settings"
 msgstr "Nabigazioaren ezarpenak"
+
+#: CMFPlone/interfaces/controlpanel.py:736
+msgid "Navigation depth"
+msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_5/registry.xml
@@ -3968,11 +4065,11 @@ msgid "Need a field"
 msgstr "Eremua behar da"
 
 #. Default: "Negotiation scheme"
-#: CMFPlone/interfaces/controlpanel.py:233
+#: plone.i18n/plone/i18n/interfaces.py:102
 msgid "Negotiation scheme"
 msgstr "Negoziazioaren konfigurazioa"
 
-#: CMFPlone/interfaces/controlpanel.py:1201
+#: CMFPlone/interfaces/controlpanel.py:1043
 msgid "Never"
 msgstr "Inoiz ez"
 
@@ -3997,7 +4094,8 @@ msgid "New version created but not ready for publication"
 msgstr "Bertsio berria sortu da baina ez dago argitaratzeko prest"
 
 #. Default: "New..."
-#: type action defined on Smart Folder TempFolder
+#: type action defined on Smart Folder
+#: type action defined on TempFolder
 msgid "New..."
 msgstr "Berria..."
 
@@ -4026,15 +4124,19 @@ msgstr "Aurrekoa/Hurrengoa nabigazioa aukera"
 msgid "No"
 msgstr "Ez"
 
-#: CMFPlone/interfaces/controlpanel.py:1219
+#: CMFPlone/interfaces/controlpanel.py:1061
 msgid "No Thumbs in portlets"
 msgstr "Ez erakutsi irudi-txikirik portletetan"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:567
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:573
 msgid "No URLs or paths entered."
 msgstr "Ez duzu URL edo biderik idatzi."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:339
+#: CMFPlone/controlpanel/browser/redirects.py:234
+msgid "No alternative urls selected for removal."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:302
 msgid "No caching"
 msgstr "Ez gorde cachean"
 
@@ -4073,15 +4175,15 @@ msgstr "Bilduma honetan ez da irudirik aurkitu."
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr "Ez dago e-posta bidaltzeko zerbitzaririk konfiguratuta. Ezin dira pasahitzak berrezarri."
 
-#: CMFPlone/interfaces/controlpanel.py:1228
+#: CMFPlone/interfaces/controlpanel.py:1070
 msgid "No thumbs in list views"
 msgstr "Ez erakutsi irudi-txikirik zerrenda erako bistetan"
 
-#: CMFPlone/interfaces/controlpanel.py:1235
+#: CMFPlone/interfaces/controlpanel.py:1077
 msgid "No thumbs in summary views"
 msgstr "Ez erakutsi irudi-txikirik mosaiko erako bistetan"
 
-#: CMFPlone/interfaces/controlpanel.py:1242
+#: CMFPlone/interfaces/controlpanel.py:1084
 msgid "No thumbs in table views"
 msgstr "Ez erakutsi irudi-txikirik taula bistetan"
 
@@ -4123,7 +4225,11 @@ msgstr "Erabiltzaileari jakinarazi"
 msgid "Notify with message ${message}"
 msgstr "${message} mezuarekin jakinarazi"
 
-#: CMFPlone/interfaces/controlpanel.py:1012
+#: CMFPlone/interfaces/controlpanel.py:737
+msgid "Number of folder levels to show in the navigation."
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:854
 msgid "Number of folder levels to show in the site map."
 msgstr "Webgunearen mapan erakutsiko den karpeta-maila kopurua"
 
@@ -4137,7 +4243,7 @@ msgstr "Batch baten erakutsiko den elementu-kopurua"
 msgid "Number of items to display"
 msgstr "Erakutsi beharreko elementu kopurua"
 
-#: CMFPlone/interfaces/controlpanel.py:850
+#: CMFPlone/interfaces/controlpanel.py:685
 msgid "Numeric"
 msgstr "Zenbakizkoa"
 
@@ -4174,6 +4280,10 @@ msgstr "Elementu bat ezabatu da karpeta honetatik"
 msgid "Objects in all"
 msgstr "Objektuak guzrtira"
 
+#: CMFPlone/controlpanel/browser/overview.pt:146
+msgid "Off"
+msgstr ""
+
 msgid "Ogg Audio"
 msgstr "Ogg audioa"
 
@@ -4181,11 +4291,15 @@ msgstr "Ogg audioa"
 msgid "Omit portlet border"
 msgstr "Portletaren inguruko marra ez erakutsi"
 
+#: CMFPlone/controlpanel/browser/overview.pt:145
+msgid "On"
+msgstr ""
+
 #: plone.app.users/plone/app/users/browser/schemaeditor.py:129
 msgid "One image field maximum."
 msgstr "Gehienez irudi-eremu bat"
 
-#: CMFPlone/interfaces/controlpanel.py:1711
+#: CMFPlone/interfaces/controlpanel.py:1553
 msgid "Open external links in new a window"
 msgstr "Kanpo-loturak leiho berrian ireki"
 
@@ -4221,7 +4335,7 @@ msgstr "Sesioak freskatzeko hautazko plone.session produktua."
 msgid "Optional plone.session refresh support. [uninstall]"
 msgstr "Sesioak freskatzeko hautazko plone.session produktua [kendu]"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:63
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:65
 msgid "Options to suppress thumbs and/or icons and to override thumb size in listings, tables etc."
 msgstr "Irudi txikiak edo/eta ikonoak eta euren tamainak aldatzeko aukerak"
 
@@ -4280,7 +4394,7 @@ msgstr "PS dokumentua"
 msgid "PSD image"
 msgstr "PSD irudia"
 
-#: CMFPlone/controlpanel/browser/maintenance.pt:128
+#: CMFPlone/controlpanel/browser/maintenance.pt:129
 msgid "Pack"
 msgstr "Enpaketatu"
 
@@ -4353,7 +4467,7 @@ msgstr "Itsatsi"
 msgid "Path identifier"
 msgstr "Bidea"
 
-#: CMFPlone/interfaces/controlpanel.py:1002
+#: CMFPlone/interfaces/controlpanel.py:844
 msgid "Path to be used as navigation root, relative to Plone site root.Starts with '/'"
 msgstr "Nabigaziorako erro gisa erabiliko den bidea, Plone-ren erroarekiko erlatiboa. Hasi '/' erabiliz."
 
@@ -4442,6 +4556,10 @@ msgstr "Kontutan izan zure pasahitza konfirmatu behar duzula."
 msgid "Please note that migrating references will increase this time."
 msgstr "Kontuan hartu erreferentziak migratzeak denbora hau handitu egingo duela "
 
+#: CMFPlone/controlpanel/browser/redirects.py:303
+msgid "Please pick a file to upload."
+msgstr ""
+
 #: plone.schemaeditor/plone/schemaeditor/browser/schema/add_fieldset.py:33
 msgid "Please select a fieldset name that is not already used."
 msgstr "Mesedez, aukeratu aurrez hartu gabeko eremu-multzo izen bat."
@@ -4505,11 +4623,11 @@ msgstr "Plone Testak 2"
 msgid "Plone Widgets"
 msgstr "Plone Widgetak"
 
-#: CMFPlone/interfaces/controlpanel.py:1483
+#: CMFPlone/interfaces/controlpanel.py:1325
 msgid "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address for the site-wide contact form and the 'Send test e-mail' feature."
 msgstr "Plonek bidalitako e-postek helbide hau darabilte bidaltzaile gisa. Gainera atariaren kontaktu formularioko mezuak ere helbide honetara bidaltzen dira eta baita 'Bidali probako e-posta' aukerakoak ere."
 
-#: CMFPlone/interfaces/controlpanel.py:1474
+#: CMFPlone/interfaces/controlpanel.py:1316
 msgid "Plone generates e-mail using this name as the e-mail sender."
 msgstr "Plonek sortuta e-posta mezuen bidaltzailearen izena hau da."
 
@@ -4541,7 +4659,7 @@ msgstr "Ataria"
 msgid "Portal URL"
 msgstr "Atariaren URL helbidea"
 
-#: CMFPlone/interfaces/controlpanel.py:1346
+#: CMFPlone/interfaces/controlpanel.py:1188
 msgid "Portal default timezone"
 msgstr "Atariaren defektuzko ordu-zona"
 
@@ -4562,7 +4680,7 @@ msgstr "Portletaren oina"
 msgid "Portlet header"
 msgstr "Portletaren goiburua"
 
-#: CMFPlone/interfaces/controlpanel.py:932
+#: CMFPlone/interfaces/controlpanel.py:774
 msgid "Position in Parent"
 msgstr "Gurasoan duen kokapena"
 
@@ -4653,7 +4771,8 @@ msgid "Provides access to workflow history"
 msgstr "Workflowaren historia ikusten utzi"
 
 #. Default: "Public Draft"
-#: workflow state defined in folder_workflow - id visible plone_workflow
+#: workflow state defined in folder_workflow - id visible
+#: workflow state defined in plone_workflow - id visible
 msgid "Public Draft"
 msgstr "Zirriborro publikoa"
 
@@ -4712,6 +4831,10 @@ msgstr "Elementua argitaratzean beste erabiltzaileek ikusi ahal izango dute"
 msgid "Purge"
 msgstr "Garbitu"
 
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:349
+msgid "Purging is still enabled while caching is disabled!"
+msgstr ""
+
 #. Default: "Puts your item in a review queue, so it can be published externally or internally."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Puts your item in a review queue, so it can be published externally or internally."
@@ -4767,7 +4890,7 @@ msgstr "Querystring-ak parseatu eta sortu, bilduma berriak konfiguratzeko"
 msgid "Querystring parser/builder"
 msgstr "Querystring parseatu/sortu"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:647
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:653
 msgid "RAM cache not installed."
 msgstr "RAM cachea ez dago instalatuta"
 
@@ -4786,7 +4909,7 @@ msgstr "RSS jarioa"
 msgid "RSS feed of this listing"
 msgstr "Zerrenda honen RSS jarioa"
 
-#: CMFPlone/interfaces/controlpanel.py:851
+#: CMFPlone/interfaces/controlpanel.py:686
 msgid "Raw"
 msgstr "Gordina"
 
@@ -4810,7 +4933,8 @@ msgstr "Migrazioaren ostean katalogo berriz sortu"
 msgid "Recent items"
 msgstr "Azken elementuak"
 
-#: CMFPlone/RegistrationTool.py:407 CMFPlone/browser/login/login_help.py:175
+#: CMFPlone/RegistrationTool.py:407
+#: CMFPlone/browser/login/login_help.py:175
 msgid "Recipient address rejected by server."
 msgstr "Jasotzailearen helbidea atzera bota du zerbitzariak"
 
@@ -4822,7 +4946,7 @@ msgstr "Erregistroa"
 msgid "Recurrence extension for Events."
 msgstr "Hitzorduentzako errepikapenen luzapena"
 
-#: CMFPlone/interfaces/controlpanel.py:1397
+#: CMFPlone/interfaces/controlpanel.py:1239
 msgid "Redirect links"
 msgstr "Loturak berbideratu"
 
@@ -4856,8 +4980,7 @@ msgid "Reindex"
 msgstr "Berindexatu"
 
 #. Default: "Reject"
-#: workflow action defined in plone_workflow - title Reviewer rejects
-#: submission new state visible
+#: workflow action defined in plone_workflow - title Reviewer rejects submission new state visible
 msgid "Reject"
 msgstr "Reset"
 
@@ -4866,12 +4989,12 @@ msgstr "Reset"
 msgid "Related To"
 msgstr "Honekin erlazionatua"
 
-#: CMFPlone/interfaces/controlpanel.py:1290
+#: CMFPlone/interfaces/controlpanel.py:1132
 msgid "Relative URL for the toolbar logo"
 msgstr "Tresna barraren logoaren URL erlatiboa"
 
 #. Default: "Relative date"
-#: criterion description of ATFriendlyDateCriteria
+#: criterion description of criterion ATFriendlyDateCriteria
 msgid "Relative date"
 msgstr "Data erlatiboa"
 
@@ -4891,6 +5014,8 @@ msgstr "Birkokatu"
 msgid "Relocate content to the proper root language folder"
 msgstr "Edukia dagokion hizkuntzaren karpetan kokatu"
 
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:246
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:117
 #: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:108
 msgid "Remove"
 msgstr "Ezabatu"
@@ -4907,7 +5032,8 @@ msgid "Rename"
 msgstr "Izena aldatu"
 
 #. Default: "Rename items"
-#: type action defined on Smart Folder TempFolder
+#: type action defined on Smart Folder
+#: type action defined on TempFolder
 msgid "Rename items"
 msgstr "Elementuen izena aldatu"
 
@@ -4926,6 +5052,11 @@ msgstr "Eskaeraren aldagaiak"
 #: plone.app.caching/plone/app/caching/interfaces.py:63
 msgid "Request variables that prevent caching"
 msgstr "Cachean ez gordetzea eragiten duten eskaeraren aldagaiak"
+
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:68
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:60
+msgid "Required"
+msgstr ""
 
 #: plone.schemaeditor/plone/schemaeditor/interfaces.py:188
 msgid "Required field"
@@ -4953,7 +5084,7 @@ msgid "Resources base URL"
 msgstr "Baliabideen oinarri-URLa"
 
 #. Default: "Restart"
-#: CMFPlone/controlpanel/browser/maintenance.pt:71
+#: CMFPlone/controlpanel/browser/maintenance.pt:72
 #: CMFPlone/controlpanel/browser/maintenance.py:96
 msgid "Restart"
 msgstr "Berrabiarazi"
@@ -4963,7 +5094,7 @@ msgid "Restrict the content types that can be added to folderish content"
 msgstr "Karpeta batera gehitu daitezkeen elementu-motak ezarri"
 
 #. Default: "Restrict to current user"
-#: criterion description of ATCurrentAuthorCriterion
+#: criterion description of criterion ATCurrentAuthorCriterion
 msgid "Restrict to current user"
 msgstr "Oraingo erabiltzaileari murriztu"
 
@@ -4978,7 +5109,7 @@ msgstr "Atzera egin"
 msgid "Return a portal message to the user"
 msgstr "Erabiltzaileari mezu bat erakutsi"
 
-#: CMFPlone/interfaces/controlpanel.py:947
+#: CMFPlone/interfaces/controlpanel.py:789
 msgid "Reversed sort order for tabs."
 msgstr "Fitxen ordena alderantzikatu"
 
@@ -5051,7 +5182,7 @@ msgstr "Berrikusleen eposta helbideak"
 msgid "Rich Text"
 msgstr "Testu aberatsa"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:56
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:58
 msgid "RichText"
 msgstr "Testu aberatsa"
 
@@ -5067,11 +5198,11 @@ msgstr "Rolak"
 msgid "Roles are: ${names}"
 msgstr "Hauek dira rolak: ${names}"
 
-#: CMFPlone/interfaces/controlpanel.py:1326
+#: CMFPlone/interfaces/controlpanel.py:1168
 msgid "Roles that can add keywords"
 msgstr "Etiketak gehitu ditzaketen erabiltzaile-rolak"
 
-#: CMFPlone/interfaces/controlpanel.py:1000
+#: CMFPlone/interfaces/controlpanel.py:842
 msgid "Root"
 msgstr "Erroa"
 
@@ -5109,7 +5240,7 @@ msgstr "Defektuzkoak gorde"
 msgid "Saved"
 msgstr "Gordeta"
 
-#: CMFPlone/interfaces/controlpanel.py:1624
+#: CMFPlone/interfaces/controlpanel.py:1466
 msgid "Scaled image quality"
 msgstr "Eskalaturako irudiaren kalitatea"
 
@@ -5155,7 +5286,8 @@ msgid "Searchable text"
 msgstr "Testu-librea"
 
 #. Default: "Security"
-#: CMFPlone/PloneControlPanel.py:73 CMFPlone/profiles/default/controlpanel.xml
+#: CMFPlone/PloneControlPanel.py:73
+#: CMFPlone/profiles/default/controlpanel.xml
 msgid "Security"
 msgstr "Segurtasuna"
 
@@ -5176,7 +5308,7 @@ msgid "Select any add-ons you want to activate immediately. You can also activat
 msgstr "Oraintxe aktibatu nahi dituzun produktuak aukeratu. Ataria sortu ostean ere egin dezakezu gau produktuen kontrol panela erabiliz."
 
 #. Default: "Select content types"
-#: criterion description of ATPortalTypeCriterion
+#: criterion description of criterion ATPortalTypeCriterion
 msgid "Select content types"
 msgstr "Hautatu elementu motak"
 
@@ -5185,7 +5317,7 @@ msgid "Select random items"
 msgstr "Elementuak ausaz aukeratu"
 
 #. Default: "Select referenced content"
-#: criterion description of ATReferenceCriterion
+#: criterion description of criterion ATReferenceCriterion
 msgid "Select referenced content"
 msgstr "Hautatu erreferentziatutako edukia"
 
@@ -5193,11 +5325,11 @@ msgstr "Hautatu erreferentziatutako edukia"
 msgid "Select the behaviors to enable for this content type."
 msgstr "Elementu-mota honi aktibatuko zaizkion portaerak aukeratu."
 
-#: CMFPlone/interfaces/controlpanel.py:1506
+#: CMFPlone/interfaces/controlpanel.py:1348
 msgid "Select the default format of textfields for newly created content objects."
 msgstr "Eduki mota berrien testu eremuen defektuzko formatua aukeratu"
 
-#: CMFPlone/interfaces/controlpanel.py:106
+#: CMFPlone/interfaces/controlpanel.py:115
 msgid "Select the default wysiwyg editor. Users will be able to choose their own or select to use the site default."
 msgstr "Aukeratu defektuzko editorea. Erabiltzaile bakoitzak ere egin dezake aukera hau."
 
@@ -5210,11 +5342,11 @@ msgid "Select the workflow transition to attempt"
 msgstr "Erabili beharreko lan-fluxu trantsizioa aukeratu"
 
 #. Default: "Select values from list"
-#: criterion description of ATSelectionCriterion
+#: criterion description of criterion ATSelectionCriterion
 msgid "Select values from list"
 msgstr "Hautatu balioak zerrendatik"
 
-#: CMFPlone/interfaces/controlpanel.py:1313
+#: CMFPlone/interfaces/controlpanel.py:1155
 msgid "Select which IDs (short names) can act as fallback default pages for a container."
 msgstr "Karpeta erako eduki baten defektuzko orri gisa jardun dezaketen elementuan ID edo izen-laburrak zein diren adieraz"
 
@@ -5223,7 +5355,7 @@ msgstr "Karpeta erako eduki baten defektuzko orri gisa jardun dezaketen elementu
 msgid "Select which fields to display when 'Tabular view' is selected in the display menu."
 msgstr "Aukeratu zein eremu erakutsiko diren 'Taula erako bista' aukeratzen denean."
 
-#: CMFPlone/interfaces/controlpanel.py:1517
+#: CMFPlone/interfaces/controlpanel.py:1359
 msgid "Select which formats are available for users as alternative to the default format. Note that if new formats are installed, they will be enabled for text fields by default unless explicitly turned off here or by the relevant installer."
 msgstr "Erabiltzaileek, defektuzkoaz gain, zein formatu erabil ditzaketen aukeratu. Kontuan hartu formatu berriak instalatuz gero, defektuz aktibatuta egongo direla hemen edo instalazioan desaktibatzen ez badira behintzat."
 
@@ -5268,6 +5400,10 @@ msgstr "Elementua atzera botatzean, berau bere jatorrizko egileari bidaliko zaio
 msgid "Separate view name and title by '|'"
 msgstr "Bistaren izena eta izenburua '|' erabiliz banatu"
 
+#: CMFPlone/controlpanel/browser/overview.pt:149
+msgid "Server:"
+msgstr ""
+
 #: plone.session/plone/session/profiles.zcml:12
 msgid "Session refresh support"
 msgstr "Sesioak freskatzeko produktua."
@@ -5307,7 +5443,7 @@ msgstr "Squid edo Varnish bezalako proxy-cacheak erabiltzen ez direnean erabilga
 msgid "Settings&hellip;"
 msgstr "Ezarpenak&hellip;"
 
-#: CMFPlone/interfaces/controlpanel.py:1572
+#: CMFPlone/interfaces/controlpanel.py:1414
 msgid "Share social data"
 msgstr "Sare sozialen datuak"
 
@@ -5322,7 +5458,7 @@ msgstr "Partekatzea"
 msgid "Short Name"
 msgstr "Izen-laburra"
 
-#: CMFPlone/interfaces/controlpanel.py:942
+#: CMFPlone/interfaces/controlpanel.py:784
 msgid "Short Name (ID)"
 msgstr "Izen laburra (ID)"
 
@@ -5372,11 +5508,11 @@ msgstr "Datak erakutsi"
 msgid "Show feed link"
 msgstr "Jarioaren lotura erakutsi"
 
-#: CMFPlone/interfaces/controlpanel.py:1198
+#: CMFPlone/interfaces/controlpanel.py:1040
 msgid "Show icons in listings"
 msgstr "Zerrendetan ikonoak erakutsi"
 
-#: CMFPlone/interfaces/controlpanel.py:1191
+#: CMFPlone/interfaces/controlpanel.py:1033
 msgid "Show in the byline the date a content item was published."
 msgstr "Byline-an elementua argitaratu deneko data erakutsi"
 
@@ -5386,7 +5522,7 @@ msgstr "Byline-an elementua argitaratu deneko data erakutsi"
 msgid "Show internally"
 msgstr "Barruan erakutsi"
 
-#: CMFPlone/interfaces/controlpanel.py:989
+#: CMFPlone/interfaces/controlpanel.py:831
 msgid "Show items normally excluded from navigation if viewing their children."
 msgstr "Nabigaziotik baztertutako elementuak erakutsi beren umeak ikusten ari bagara."
 
@@ -5398,7 +5534,7 @@ msgstr "gehiago... lotura erakutsi"
 msgid "Show settings button"
 msgstr "Ezarpenen botoia erakutsi"
 
-#: CMFPlone/interfaces/controlpanel.py:1209
+#: CMFPlone/interfaces/controlpanel.py:1051
 msgid "Show thumbnail images in listings"
 msgstr "Zerrendetan irudi txikia erakutsi"
 
@@ -5415,12 +5551,12 @@ msgid "Shows up in the form as help text for the field."
 msgstr "Eremuaren laguntza-testu gisa erakutsi formularioan"
 
 #. Default: "Shut down"
-#: CMFPlone/controlpanel/browser/maintenance.pt:64
+#: CMFPlone/controlpanel/browser/maintenance.pt:65
 #: CMFPlone/controlpanel/browser/maintenance.py:72
 msgid "Shut down"
 msgstr "Itzali"
 
-#: CMFPlone/interfaces/controlpanel.py:1285
+#: CMFPlone/interfaces/controlpanel.py:1127
 msgid "Side"
 msgstr "Aldamenean"
 
@@ -5448,11 +5584,11 @@ msgstr "Egoera bakarreko workflowa"
 msgid "Site"
 msgstr "Ataria"
 
-#: CMFPlone/interfaces/controlpanel.py:1482
+#: CMFPlone/interfaces/controlpanel.py:1324
 msgid "Site 'From' address"
 msgstr "Atariaren 'Nork' helbidea"
 
-#: CMFPlone/interfaces/controlpanel.py:1473
+#: CMFPlone/interfaces/controlpanel.py:1315
 msgid "Site 'From' name"
 msgstr "Atariaren 'Nork' izena"
 
@@ -5460,7 +5596,7 @@ msgstr "Atariaren 'Nork' izena"
 msgid "Site Administrator"
 msgstr "Atariaren kudeatzailea"
 
-#: CMFPlone/interfaces/controlpanel.py:1153
+#: CMFPlone/interfaces/controlpanel.py:995
 msgid "Site Logo"
 msgstr "Atariaren logoa"
 
@@ -5481,11 +5617,11 @@ msgstr "Atariaren ezarpenak"
 #. Default: "Site Setup"
 #: CMFPlone/controlpanel/browser/controlpanel_usergroups_layout.pt:13
 #: CMFPlone/controlpanel/browser/filter_controlpanel.pt:13
-#: CMFPlone/controlpanel/browser/maintenance.pt:28
+#: CMFPlone/controlpanel/browser/maintenance.pt:29
 msgid "Site Setup"
 msgstr "Atariaren konfigurazioa"
 
-#: CMFPlone/interfaces/controlpanel.py:1146
+#: CMFPlone/interfaces/controlpanel.py:988
 msgid "Site title"
 msgstr "Atariaren izenburua"
 
@@ -5493,13 +5629,12 @@ msgstr "Atariaren izenburua"
 msgid "Site-wide settings."
 msgstr "Atariaren ezarpen orokorrak"
 
-#: CMFPlone/interfaces/controlpanel.py:1011
+#: CMFPlone/interfaces/controlpanel.py:853
 msgid "Sitemap depth"
 msgstr "Webgunearen maparen sakonera"
 
 #. Default: "Smart Folder"
-#: portal type title of with description An automatically updated stored search
-#: that can be used to display items matching criteria you specify.
+#: portal type title of type with description An automatically updated stored search that can be used to display items matching criteria you specify.
 msgid "Smart Folder"
 msgstr "Karpeta argia"
 
@@ -5520,11 +5655,11 @@ msgstr "Sare-sozialen ezarpenak"
 msgid "Social media sharing settings."
 msgstr "Sare-sozialetan partekatzearen ezarpenak"
 
-#: CMFPlone/interfaces/controlpanel.py:948
+#: CMFPlone/interfaces/controlpanel.py:790
 msgid "Sort tabs in descending."
 msgstr "Fitxak alderantziz ordenatu"
 
-#: CMFPlone/interfaces/controlpanel.py:920
+#: CMFPlone/interfaces/controlpanel.py:762
 msgid "Sort tabs on"
 msgstr "Fitxak honen arabera ordenatu"
 
@@ -5533,7 +5668,7 @@ msgstr "Fitxak honen arabera ordenatu"
 msgid "Sort the collection on this index"
 msgstr "Bilduma hau indize honen arabera ordenatu"
 
-#: CMFPlone/interfaces/controlpanel.py:1069
+#: CMFPlone/interfaces/controlpanel.py:911
 msgid "Sort the default search on this index"
 msgstr "Defektuzko bilaketa, honen arabera ordenatu"
 
@@ -5554,7 +5689,7 @@ msgstr "Identifikadoreetan ezin dira espazioak erabili"
 msgid "Specialized folder for temporary data."
 msgstr "Datu tenporaletarako karpeta berezia"
 
-#: CMFPlone/interfaces/controlpanel.py:1606
+#: CMFPlone/interfaces/controlpanel.py:1448
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is &lt;name&gt; &lt;width&gt;:&lt;height&gt;."
 msgstr "Onartzen diren irudien gehienezko tamainak, bat lerro bakoitzean. Formatua: &lt;izena&gt; &lt;zabalera&gt;:&lt;altuera&gt;."
 
@@ -5570,7 +5705,7 @@ msgstr "Gehienez erakutsiko den elementu kopurua adierazi."
 msgid "Spell Checker"
 msgstr "Hizkuntza-zuzentzailea"
 
-#: CMFPlone/interfaces/controlpanel.py:740
+#: CMFPlone/interfaces/controlpanel.py:575
 msgid "Spellchecker plugin to use"
 msgstr "Zuzentzaile gisa erabiliko den plugina"
 
@@ -5615,7 +5750,11 @@ msgstr "HTML portleta"
 msgid "Stop executing rules"
 msgstr "Erregelak exekutatzeari utzi"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:282
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:237
+msgid "Store a new version of the object"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:274
 msgid "Strong caching"
 msgstr "Cache gogorra"
 
@@ -5728,19 +5867,19 @@ msgstr "Zerrenda, taula edo mosaiko erako bistetan ikonoak kendu"
 msgid "Suppress thumbs"
 msgstr "Irudi-txikiak kendu"
 
-#: CMFPlone/interfaces/controlpanel.py:1229
+#: CMFPlone/interfaces/controlpanel.py:1071
 msgid "Suppress thumbs in all list views; this default can be overriden individually"
 msgstr "Irudi-txikiak zerrenda erako bistetan kendu; gainidatzi egin daiteke"
 
-#: CMFPlone/interfaces/controlpanel.py:1220
+#: CMFPlone/interfaces/controlpanel.py:1062
 msgid "Suppress thumbs in all portlets; this default can be overridden individually in selected portlets"
 msgstr "Irudi-txikiak portletetan kendu; portletez portlet gainidatzi daiteke"
 
-#: CMFPlone/interfaces/controlpanel.py:1236
+#: CMFPlone/interfaces/controlpanel.py:1078
 msgid "Suppress thumbs in all summary views; this default can be overriden individually"
 msgstr "Irudi-txikiak mosaiko erako bistetan kendu; gainidatzi egin daiteke"
 
-#: CMFPlone/interfaces/controlpanel.py:1242
+#: CMFPlone/interfaces/controlpanel.py:1084
 msgid "Suppress thumbs in all tableviews and in folder contents view; this default can be overriden individually"
 msgstr "Irudi-txikiak taula erako bistetan eta karpeten edukien bistaratzean kendu; gainidatzi egin daiteke"
 
@@ -5775,11 +5914,11 @@ msgstr "TIFF irudia"
 msgid "Table Columns"
 msgstr "Taularen zutabeak"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:36
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:37
 msgid "Table of contents"
 msgstr "Edukien taula"
 
-#: CMFPlone/interfaces/controlpanel.py:573
+#: CMFPlone/interfaces/controlpanel.py:408
 msgid "Table styles"
 msgstr "Taulen estiloak"
 
@@ -5821,9 +5960,16 @@ msgstr "Helburu karpeta"
 msgid "Target folder ${target} does not exist."
 msgstr "${target} helburu karpeta ez da existitzen."
 
+#: CMFPlone/controlpanel/browser/redirects.py:62
+msgid "Target path must not be a view."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:57
+msgid "Target path must start with a slash."
+msgstr ""
+
 #. Default: "TempFolder"
-#: portal type title of with description Use folders to put content in
-#: categories.
+#: portal type title of type with description Use folders to put content in categories.
 msgid "TempFolder"
 msgstr "TempKarpeta"
 
@@ -5937,15 +6083,19 @@ msgstr "JSON Schemaren serializazioa"
 msgid "The TALES expression to check."
 msgstr "Egiaztatu behar den TALES espresioa"
 
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:24
+msgid "The comment added to the history while versioning the content."
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:30
 msgid "The content type to check for."
 msgstr "Egiaztatu beharrko elementu mota"
 
-#: CMFPlone/interfaces/controlpanel.py:1409
+#: CMFPlone/interfaces/controlpanel.py:1251
 msgid "The content types that should be available for selection when setting a default page."
 msgstr "Defektuzko orri bat (portada bat) aukeratzerakoan zein motatako elementuak agertu behar diren zerrendan."
 
-#: CMFPlone/interfaces/controlpanel.py:955
+#: CMFPlone/interfaces/controlpanel.py:797
 msgid "The content types that should be shown in the navigation and site map."
 msgstr "Nabigazioan eta webgunearen mapan agertu behar diren elementu-motak."
 
@@ -5982,6 +6132,10 @@ msgstr "Hitzorduaren amaiera data eta ordua"
 msgid "The estimated time for the migration is around: <strong> ${hours} hours ${minutes} minutes ${seconds} seconds </strong>"
 msgstr "Migrazioaren ustezko iraupena: <strong> ${hours} ordu ${minutes} minutu ${seconds} segundo </strong>"
 
+#: CMFPlone/interfaces/controlpanel.py:1571
+msgid "The expression \"${value}\" is invalid"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:30
 msgid "The file extension to check for"
 msgstr "Egiaztatu beharreko fitxategi-luzapena"
@@ -5997,6 +6151,10 @@ msgstr "Zerrenda honetan, exekutatuko diren eguneraketa-pausoak daude. Egunerake
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.py:48
 msgid "The group name you entered is not valid."
 msgstr "Idatzitakoa ez da baliozko talde-izen bat"
+
+#: CMFPlone/interfaces/controlpanel.py:1668
+msgid "The id \"${actionid}\" is invalid"
+msgstr ""
 
 #: plone.app.content/plone/app/content/browser/actions.py:308
 msgid "The item you are trying to paste could not be found. It may have been moved or deleted after you copied or cut it."
@@ -6049,6 +6207,14 @@ msgstr "Elementu batek bere guraso karpetan daukan ordena"
 msgid "The person that created an item"
 msgstr "Elementua sortu duen erabiltzailea"
 
+#: CMFPlone/controlpanel/browser/redirects.py:72
+msgid "The provided alternative url already exists!"
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:82
+msgid "The provided target object does not exist."
+msgstr ""
+
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/z3cform/interfaces.py:21
 msgid "The recurrence rule couldn't be parsed."
 msgstr "Errekurrentzia erregela ezin izan da irakurri"
@@ -6090,7 +6256,7 @@ msgstr "Elementu baten izen laburra (url-en erabilitakoa)"
 msgid "The site configuration is outdated and needs to be upgraded."
 msgstr "Atariaren konfigurazioa zaharkituta dago eta eguneratu egin behar da."
 
-#: CMFPlone/controlpanel/browser/overview.pt:32
+#: CMFPlone/controlpanel/browser/overview.pt:33
 msgid "The site configuration is outdated and needs to be upgraded. Please ${link_continue_with_the_upgrade}."
 msgstr "Atariaren konfigurazioa zaharkituta dago eta eguneratu egin behar da.${link_continue_with_the_upgrade}."
 
@@ -6137,7 +6303,7 @@ msgstr "Emaitzak ikusten ari den erabiltzailea"
 msgid "The username you entered could not be found."
 msgstr "Idatzitako erabiltzailea ez dugu aurkitu."
 
-#: CMFPlone/interfaces/controlpanel.py:975
+#: CMFPlone/interfaces/controlpanel.py:817
 msgid "The workflow states that should be shown in the navigation and the site map."
 msgstr "Zein egoera duten elementuak erakutsi behar diren nabigazio menuan eta webgunearen mapan."
 
@@ -6153,7 +6319,7 @@ msgstr "Egiaztatu beharreko workflow trantsizioak"
 msgid "Theme base"
 msgstr "Oinarrizko itxuria"
 
-#: plone/app/theming/browser/controlpanel.py:392
+#: plone/app/theming/browser/controlpanel.py:395
 msgid "Theme deleted"
 msgstr "Itxura ezabatu egin da"
 
@@ -6161,11 +6327,11 @@ msgstr "Itxura ezabatu egin da"
 msgid "Theme details"
 msgstr "Itxuraren xehetasunak"
 
-#: plone/app/theming/browser/controlpanel.py:154
+#: plone/app/theming/browser/controlpanel.py:155
 msgid "Theme disabled."
 msgstr "Itxura desaktibatu egin da"
 
-#: plone/app/theming/browser/controlpanel.py:134
+#: plone/app/theming/browser/controlpanel.py:135
 msgid "Theme enabled. Note that this control panel page is never themed."
 msgstr "Itxura aktibatu egin da. Kontuan hartu kontrol-panel honek inoiz ez duela itxura berria hartuko."
 
@@ -6205,7 +6371,7 @@ msgstr "Erregela honek ez du beste baldintzarik egiaztatzen."
 msgid "There was an error saving content rules."
 msgstr "Errorea gertatu da eduki-erregelak gordetzerakoan."
 
-#: plone/app/theming/browser/controlpanel.py:217
+#: plone/app/theming/browser/controlpanel.py:220
 msgid "There were errors"
 msgstr "Errorea"
 
@@ -6219,11 +6385,11 @@ msgstr "Errorea gertatu da"
 msgid "These are resources which can be cached 'forever'. Normally this means that if the object does change, its URL changes too."
 msgstr "'Betiko' cachean gorde daitezkeen baliabideak dira hauek. Elementua aldatzen bada bere URLa aldatzen dela esan nahi du honek."
 
-#: CMFPlone/interfaces/controlpanel.py:463
+#: CMFPlone/interfaces/controlpanel.py:298
 msgid "These attributes are additionally allowed."
 msgstr "Atributu hauek onartu egiten dira."
 
-#: CMFPlone/interfaces/controlpanel.py:360
+#: CMFPlone/interfaces/controlpanel.py:195
 msgid "These tags and their content are completely blocked when a page is saved or rendered. They are only deleted if they are not marked as valid_tags"
 msgstr "Etiketa hauek eta beren edukiak guztiz blokeatzen dira orrialde bat gorde edo erakustean. Baliozko etiketa gisa markatuta ez badaude ezabatu ere egiten dira"
 
@@ -6252,7 +6418,7 @@ msgstr "Honek zure migrazioaren abiadura handitu dezake testu asko duen fitxateg
 msgid "This content is not translated yet to the language requested."
 msgstr "Elementu hau ez dago eskatutako hizkuntzan."
 
-#: CMFPlone/interfaces/controlpanel.py:1250
+#: CMFPlone/interfaces/controlpanel.py:1092
 msgid "This default can be overriden individually."
 msgstr "Defektuzko balio hau kasuz kasu gainidatzi daiteke."
 
@@ -6273,7 +6439,7 @@ msgstr "Produktuen konfigurazio panela da hau, hemendik produktuak aktibatu eta 
 msgid "This item doesn't have any translation yet. You can return to the portal site:"
 msgstr "Elementu honek ez du itzulpenenik. Atariaren sarrerara itzuli zaitezke"
 
-#: CMFPlone/interfaces/controlpanel.py:1291
+#: CMFPlone/interfaces/controlpanel.py:1133
 msgid "This must be a URL relative to the site root. By default it is /++plone++static/plone-toolbarlogo.svg"
 msgstr "Webgunearen erroarekiko erlatiboa den URLa izan behar da. Defektuzko balioa /++plone++static/plone-toolbarlogo.svg da."
 
@@ -6285,31 +6451,31 @@ msgstr "Izen hau URLan agertuko da"
 msgid "This operation can take a very long time."
 msgstr "Eragiketa hau luzea izan daiteke."
 
-#: CMFPlone/interfaces/controlpanel.py:741
+#: CMFPlone/interfaces/controlpanel.py:576
 msgid "This option allows you to choose the spellchecker for TinyMCE."
 msgstr "TinyMCEk erabiliko duen hizkuntza-zuzentzailea aukeratu dezakezu"
 
-#: CMFPlone/interfaces/controlpanel.py:840
+#: CMFPlone/interfaces/controlpanel.py:675
 msgid "This option controls how entities/characters get processed. Named: Characters will be converted into named entities based on the entities option. Numeric: Characters will be converted into numeric entities. Raw: All characters will be stored in non-entity form except these XML default entities: amp lt gt quot"
 msgstr "Aukera honek entitateak/karaktereak nola prozesatuko diren adierazten du. Izena: karaktereak izena duten entitate bihurtuguko dira entitateen aukeraren arabera. Zenbakizkoa: karaktereak zenbakizko entitate bihurtuko dira. Gordina: karaktere guztiak era arruntean gordeko dira XMLren defektuzko entitateak izan ezik: amp lt gt eta quot."
 
-#: CMFPlone/interfaces/controlpanel.py:508
+#: CMFPlone/interfaces/controlpanel.py:343
 msgid "This option enables you to specify a custom CSS file that provides content CSS. This CSS file is the one used within the editor (the editable area). In addition to what is listed, here the plone bundle CSS and diazo themes using the tinymce-content-css setting are also added."
 msgstr "Aukera honek edukiaren CSSa adierazten duen CSS fitxategi bat konfiguratzeko aukera ematen dizu. CSS fitxategi hau editorean aplikatuko da edukia editatzen ari zarenean. Hemen esandakoaz gaina, plone bildumaren CSS eta tinymce-content-css darabilten diazo itxurak ere aplikatuko dira."
 
-#: CMFPlone/interfaces/controlpanel.py:482
+#: CMFPlone/interfaces/controlpanel.py:317
 msgid "This option gives you the ability to enable/disable auto resizing the editor window depending on the content."
 msgstr "Aukera honek editorearen leihoaren tamaina edukiaren arabera automatikoki aldatzea aktibatzea/desaktibatzea baimentzen du."
 
-#: CMFPlone/interfaces/controlpanel.py:475
+#: CMFPlone/interfaces/controlpanel.py:310
 msgid "This option gives you the ability to enable/disable resizing the editor window. "
 msgstr "Aukera honek editorearen leihoaren tamaina aldatzea aktibatzea/desaktibatzea baimentzen du."
 
-#: CMFPlone/interfaces/controlpanel.py:499
+#: CMFPlone/interfaces/controlpanel.py:334
 msgid "This option gives you the ability to specify the height of the editor in pixels. If auto resize is enabled this value is used as minimum height."
 msgstr "Aukera honetan editorearen altuera pixeletan zehaztu dezakezu. Tamaina bakarrik aldatzeko aukera aktibatuta badago, balio hau gutxieneko tamaina gisa erabiliko da."
 
-#: CMFPlone/interfaces/controlpanel.py:491
+#: CMFPlone/interfaces/controlpanel.py:326
 msgid "This option gives you the ability to specify the width of the editor (like 100% or 400px)."
 msgstr "Aukera honetan editorearen zabalera zehaztu dezakezu (adb.: 100% edo 400px)."
 
@@ -6357,7 +6523,7 @@ msgstr "Portlet honek datozen hitzorduak zerrendatzen ditu."
 msgid "This portlet shows a search box."
 msgstr "Portlet honek bilaketa leiho bat erakusten du."
 
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:158
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:159
 msgid "This product cannot be uninstalled!"
 msgstr "Produktu hau ezin da kendu!"
 
@@ -6365,11 +6531,11 @@ msgstr "Produktu hau ezin da kendu!"
 msgid "This rule is not assigned to any location"
 msgstr "Erregela hau ez dago inon esleituta"
 
-#: CMFPlone/interfaces/controlpanel.py:1154
+#: CMFPlone/interfaces/controlpanel.py:996
 msgid "This shows a custom logo on your site."
 msgstr "Honek zure atarian zuk nahi duzun logoa erakusten du."
 
-#: CMFPlone/interfaces/controlpanel.py:1147
+#: CMFPlone/interfaces/controlpanel.py:989
 msgid "This shows up in the title bar of browsers and in syndication feeds."
 msgstr "Nabigatzaileen izenburu-barran eta RSS jarioen izenburuetan agertzen da."
 
@@ -6377,7 +6543,7 @@ msgstr "Nabigatzaileen izenburu-barran eta RSS jarioen izenburuetan agertzen da.
 msgid "This site configuration is outdated and needs to be upgraded:"
 msgstr "Atariaren konfigurazioa zaharkituta dago eta eguneratu egin behar da:"
 
-#: plone/app/theming/browser/controlpanel.py:361
+#: plone/app/theming/browser/controlpanel.py:364
 msgid "This title is already in use"
 msgstr "Izenburu hori jada erabilita dago"
 
@@ -6389,27 +6555,27 @@ msgstr "Erabiltzaile izen hori ez dago libre. Aukeratu beste bat, mesedez."
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
 msgstr "Honek plone.app.contenttypes instalatuko du eta zure edukia migratzeko aukera eskainiko dizun formulariora bideratuko zaitu."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:71
+#: plone.app.caching/plone/app/caching/operations/default.py:63
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
 msgstr "Ekintza honen bidez, cachearen ohiko funtzioak hautazko parametroen konbinazioekin egin daitezke. Kasu gehienetan errazagoa izan daiteke ekintza sinpleagoak erabiltzea (Cache gogorra, Neurrizko cachea, Cache ahula edo Ez gorde cachean)."
 
-#: CMFPlone/interfaces/controlpanel.py:1256
+#: CMFPlone/interfaces/controlpanel.py:1098
 msgid "Thumb scale for listings"
 msgstr "Zerrendetako irudi-tamaina"
 
-#: CMFPlone/interfaces/controlpanel.py:1249
+#: CMFPlone/interfaces/controlpanel.py:1091
 msgid "Thumb scale for portlets"
 msgstr "Portletetako irudi-tamaina"
 
-#: CMFPlone/interfaces/controlpanel.py:1272
+#: CMFPlone/interfaces/controlpanel.py:1114
 msgid "Thumb scale for summary view"
 msgstr "Mosaiko ikuspenerako irudi-tamaina"
 
-#: CMFPlone/interfaces/controlpanel.py:1264
+#: CMFPlone/interfaces/controlpanel.py:1106
 msgid "Thumb scale for tables"
 msgstr "Tauletarako irudi-tamaina"
 
-#: CMFPlone/interfaces/controlpanel.py:1208
+#: CMFPlone/interfaces/controlpanel.py:1050
 msgid "Thumb visibility"
 msgstr "Irudi-txikiak erakutsi"
 
@@ -6418,7 +6584,7 @@ msgstr "Irudi-txikiak erakutsi"
 msgid "Thumbnail view"
 msgstr "Album ikuspena"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:63
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:65
 msgid "Thumbs and icon handling"
 msgstr "Irudi txiki eta ikonoen kudeaketa"
 
@@ -6445,13 +6611,13 @@ msgid "Tip: you can use * to autocomplete."
 msgstr "Oharra: erabili * automatikoki osatzeko"
 
 #. Default: "Title"
-#: CMFPlone/interfaces/controlpanel.py:937
+#: CMFPlone/interfaces/controlpanel.py:779
 #: plone.app.content/plone/app/content/browser/contents/__init__.py:277
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
 msgid "Title"
 msgstr "Izenburua"
 
-#: plone/app/theming/browser/controlpanel.py:345
+#: plone/app/theming/browser/controlpanel.py:348
 msgid "Title is required"
 msgstr "Izenburua derrigorrezkoa da"
 
@@ -6464,11 +6630,11 @@ msgstr "Portletaren izenburua. Hutsik utziz gero, jarioaren izenburua erabiliko 
 msgid "Title of the rendered portlet"
 msgstr "Portletaren izenburua"
 
-#: CMFPlone/interfaces/controlpanel.py:1591
+#: CMFPlone/interfaces/controlpanel.py:1433
 msgid "To be used with some integrations like Open Graph data"
 msgstr "Open Graph Data bezalako integrazioekin erabiltzeko"
 
-#: CMFPlone/interfaces/controlpanel.py:1580
+#: CMFPlone/interfaces/controlpanel.py:1422
 msgid "To identify things like Twitter Cards. Do not include the \"@\" prefix character."
 msgstr "Twitter Card bezalako elementuak identifikatzeko. Ez idatzi hasierako \"@\" karakterea."
 
@@ -6481,11 +6647,11 @@ msgstr "Produktu berriak hemen agertzeko, gehitu buildoutaren konfigurazioa, exe
 msgid "Today"
 msgstr "Gaur"
 
-#: CMFPlone/interfaces/controlpanel.py:1279
+#: CMFPlone/interfaces/controlpanel.py:1121
 msgid "Toolbar position"
 msgstr "Tresnabarraren kokapena"
 
-#: CMFPlone/interfaces/controlpanel.py:1286
+#: CMFPlone/interfaces/controlpanel.py:1128
 msgid "Top"
 msgstr "Goian"
 
@@ -6537,7 +6703,7 @@ msgstr "Itzulpena falta da"
 msgid "Triggering event"
 msgstr "Gertaera"
 
-#: CMFPlone/interfaces/controlpanel.py:1579
+#: CMFPlone/interfaces/controlpanel.py:1421
 msgid "Twitter username"
 msgstr "Twitter erabiltzailea"
 
@@ -6574,11 +6740,11 @@ msgstr "Fitxategiko elementuak Dexterity motakoak izan behar dira."
 msgid "Types settings"
 msgstr "Elementu-moten ezarpenak"
 
-#: CMFPlone/interfaces/controlpanel.py:1408
+#: CMFPlone/interfaces/controlpanel.py:1250
 msgid "Types that can be set as a default page"
 msgstr "Defektuzko orri gisa erabili daitezkeen elementuak"
 
-#: CMFPlone/interfaces/controlpanel.py:1383
+#: CMFPlone/interfaces/controlpanel.py:1225
 msgid "Types which use the view action in listing views."
 msgstr "Elementuen zerrendetan, zein elementuren lotura 'Ikusi' akziora izan behar den"
 
@@ -6587,6 +6753,12 @@ msgstr "Elementuen zerrendetan, zein elementuren lotura 'Ikusi' akziora izan beh
 #: plone.schema/plone/schema/editor.py:28
 msgid "URL"
 msgstr "URL"
+
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:46
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:13
+#: CMFPlone/profiles/default/actions.xml
+msgid "URL Management"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:244
 msgid "URL of RSS feed"
@@ -6616,7 +6788,8 @@ msgstr "Ezin izan da ${name} mugitu 'mugitze-ekintza' erregelaren aginduz: ${err
 msgid "Unable to remove ${name} as part of content rule 'delete' action: ${error}"
 msgstr "Ezin izan da ${name} ezabatu eduki-erregelararen 'ezabatu' akzioaren barnean: ${error}"
 
-#: CMFPlone/browser/author.py:123 CMFPlone/browser/sendto.py:100
+#: CMFPlone/browser/author.py:123
+#: CMFPlone/browser/sendto.py:100
 msgid "Unable to send mail."
 msgstr "Ezin izan da eposta bidali"
 
@@ -6637,7 +6810,7 @@ msgstr "Ez duzu baimenik"
 msgid "Undo"
 msgstr "Desegin"
 
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:178
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:179
 msgid "Uninstall"
 msgstr "Desinstalatu"
 
@@ -6710,6 +6883,10 @@ msgstr "Eguneratutako produktuak."
 msgid "Upgrades"
 msgstr "Eguneraketak"
 
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:185
+msgid "Upload"
+msgstr ""
+
 #: plone/app/theming/browser/controlpanel.pt:100
 msgid "Upload Zip file"
 msgstr "Zip fitxategia kargatu"
@@ -6718,19 +6895,19 @@ msgstr "Zip fitxategia kargatu"
 msgid "Use '../' to navigate to parent objects."
 msgstr "Erabili '../' gurasoetara joateko."
 
-#: CMFPlone/interfaces/controlpanel.py:1133
+#: CMFPlone/interfaces/controlpanel.py:975
 msgid "Use UUID user ids"
 msgstr "Erabili UUID erako erabiltzaile id-ak"
 
-#: CMFPlone/interfaces/controlpanel.py:1134
+#: CMFPlone/interfaces/controlpanel.py:976
 msgid "Use automatically generated UUIDs as user id for new users. When not turned on, the default is to use the same as the login name, or when using the email address as login name we generate a user id based on the fullname."
 msgstr "Erabiltzaile berrien id gisa automatikoki sortutako UUIDak erabili. Desaktibatuta badago, login egiteko erabiltzen den erabiltzaile-izenaren berbera izango da, edo epostaren araberako logina aktibatuta badago, izenaren araberako id-a sortzen da."
 
-#: CMFPlone/interfaces/controlpanel.py:1119
+#: CMFPlone/interfaces/controlpanel.py:961
 msgid "Use email address as login name"
 msgstr "Erabili e-posta login egiteko"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:340
+#: plone.app.caching/plone/app/caching/operations/default.py:303
 msgid "Use this operation to keep the response out of all caches."
 msgstr "Erabili ekintza hau erantzuna cachetik kanpo mantentzeko"
 
@@ -6825,7 +7002,7 @@ msgstr "Erabiltzaile eta taldeak"
 msgid "Users who have commented on the item"
 msgstr "Elementuan erantzuna eman duten erabiltzaileak"
 
-#: CMFPlone/interfaces/controlpanel.py:369
+#: CMFPlone/interfaces/controlpanel.py:204
 msgid "Valid tags"
 msgstr "Baliozko etiketak"
 
@@ -6865,9 +7042,13 @@ msgstr "Balidazioak huts egin du: ($name: kargatutako fitxategia handiegia da: $
 msgid "Variables in the request that prevent caching if present"
 msgstr "Eskaeran badaude cachean gordetzea ekiditen duten aldagaiak."
 
-#: CMFPlone/interfaces/controlpanel.py:1677
+#: CMFPlone/interfaces/controlpanel.py:1519
 msgid "Verify login name"
 msgstr "Egiaztatu erabiltzaile-izena"
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:237
+msgid "Version object"
+msgstr ""
 
 #: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:25
 msgid "Versioning"
@@ -6876,6 +7057,10 @@ msgstr "Bertsioak"
 #: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:25
 msgid "Versioning support with CMFEditions"
 msgstr "CMFEditions erabiliz bertsioak erabili"
+
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:41
+msgid "Versioning with comment ${comment}"
+msgstr ""
 
 #. Default: "View"
 #: CMFPlone/profiles/default/types/Discussion_Item.xml
@@ -6968,6 +7153,10 @@ msgstr "OHARRA! Zure datu-baseak orain darabilzuna baino Plone bertsio berriagoa
 msgid "WAV audio"
 msgstr "WAV audioa"
 
+#: CMFPlone/controlpanel/browser/overview.pt:144
+msgid "WSGI:"
+msgstr ""
+
 #. Default: "Waiting to be reviewed, not editable by the owner."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -6976,13 +7165,13 @@ msgid "Waiting to be reviewed, not editable by the owner."
 msgstr "Errebisatzeko zain, jabeak ezin du aldatu."
 
 #. Default: "Warning"
-#: CMFPlone/controlpanel/browser/overview.pt:26
+#: CMFPlone/controlpanel/browser/overview.pt:27
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:94
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/archetypes_warning_viewlet.pt:3
 msgid "Warning"
 msgstr "Oharra"
 
-#: CMFPlone/interfaces/controlpanel.py:353
+#: CMFPlone/interfaces/controlpanel.py:188
 msgid "Warning: disabling this can be dangerous. Only disable if you know what you are doing."
 msgstr "Kontuz, hau desaktibatzea arriskutsua izan daiteke. Zertan ari zaren badakizu bakarrik desaktibatu."
 
@@ -6990,7 +7179,7 @@ msgstr "Kontuz, hau desaktibatzea arriskutsua izan daiteke. Zertan ari zaren bad
 msgid "We will use this address if you need to recover your password"
 msgstr "Helbide hau erabiliko dugu pasahitza berreskuratu behar baduzu"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:226
+#: plone.app.caching/plone/app/caching/operations/default.py:218
 msgid "Weak caching"
 msgstr "Cache ahula"
 
@@ -7160,6 +7349,14 @@ msgstr "Sistematik irten zara"
 msgid "You have multiple Plone sites:"
 msgstr "Plone atari bat baino gehiago duzu:"
 
+#: CMFPlone/controlpanel/browser/redirects.py:46
+msgid "You have to enter a target."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:44
+msgid "You have to enter an alternative url."
+msgstr ""
+
 #: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:100
 msgid "You may import types by uploading a zip archive containing type profiles. The import archive should contain a types.xml file and a types directory containing one or more Dexterity type information files. For a sample, create a content type and export it from the Dexterity Content Types page."
 msgstr "Elementu-moten definizioak profilaren informazioa duen zip fitxategi baten kargatu ditzakezu. Fitxategian types.xml izaneko fitxategi bat egon behar da eta elementu-mota bakoitzari dagokion beste karpeta bat dagokion fitxategiarekin. Adibide bat ikusteko, sortu elementu bat bat eta esportatu ezazu."
@@ -7181,7 +7378,7 @@ msgstr "Izena idatzi behar duzu."
 msgid "You must enter an email address."
 msgstr "E-posta helbidea idatzi behar duzu."
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:516
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:522
 msgid "You must select a profile to import."
 msgstr "Inportatzeko profil bat aukeratu behar duzu"
 
@@ -7203,7 +7400,7 @@ msgstr "Aldez aurretik saioa hasi behar duzu."
 msgid "You normally don't need to change anything here unless you have specific reasons and know what you are doing."
 msgstr "Normalean ez duzu hemengo ezer aldatzeko beharrik benetan zer egiten ari zaren ez badakizu behintzat."
 
-#: CMFPlone/interfaces/controlpanel.py:885
+#: CMFPlone/interfaces/controlpanel.py:720
 msgid "You should pack your database regularly. This number indicates how many days of undo history you want to keep. It is unrelated to versioning, so even if you pack the database, the history of the content changes will be kept. Recommended value is 7 days."
 msgstr "Zure datu-basea noizean behin trinkotu egin beharko zenuke. Zenbaki honek zenbat eguneko desegite-informazioa gorde nahi duzun esan nahi du. Honek ez du bertsio sistemarekin zerikusirik, hau da, nahiz eta datu-basea trinkotu, edukian egindako aldaketak hor gordeko dira. Hemen gomendatzen den balioa 7 egunekoa da."
 
@@ -7265,44 +7462,44 @@ msgid "absolute_url_prefix"
 msgstr "URL absolutuen aurrizkia"
 
 #. Default: "A boolean expression"
-#: CMFPlone/interfaces/controlpanel.py:1754
+#: CMFPlone/interfaces/controlpanel.py:1612
 msgid "action_condition_description"
 msgstr "Espresio boolearra"
 
 #. Default: "Condition"
-#: CMFPlone/interfaces/controlpanel.py:1753
+#: CMFPlone/interfaces/controlpanel.py:1611
 msgid "action_condition_heading"
 msgstr "Baldintza"
 
 #. Default: "There are legacy portlets defined here. Click the button to convert them to new-style portlets."
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:68
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:69
 msgid "action_convert_legacy_portlets"
 msgstr "Hemen definitutako portlet zaharrak daude. Egin klik portlet berri bihurtzeko."
 
 #. Default: "Permissions"
-#: CMFPlone/interfaces/controlpanel.py:1761
+#: CMFPlone/interfaces/controlpanel.py:1619
 msgid "action_permissions_heading"
 msgstr "Baimenak"
 
 #. Default: "Position"
-#: CMFPlone/interfaces/controlpanel.py:1776
+#: CMFPlone/interfaces/controlpanel.py:1634
 msgid "action_position_heading"
 msgstr "Posizioa"
 
 #. Default: "An expression producing the called URL. Example: string:${globals_view/navigationRootUrl}/page"
-#: CMFPlone/interfaces/controlpanel.py:1745
+#: CMFPlone/interfaces/controlpanel.py:1601
 msgid "action_url_description"
 msgstr ""
 "Deituko den URLa sortzen duen espresio bat. Adibidez: string:$\n"
 "{globals_view/navigationRootUrl}/orrialdea"
 
 #. Default: "Action URL"
-#: CMFPlone/interfaces/controlpanel.py:1744
+#: CMFPlone/interfaces/controlpanel.py:1600
 msgid "action_url_heading"
 msgstr "Akzioaren URLa"
 
 #. Default: "Visible?"
-#: CMFPlone/interfaces/controlpanel.py:1771
+#: CMFPlone/interfaces/controlpanel.py:1629
 msgid "action_visibility_heading"
 msgstr "Ikusgai?"
 
@@ -7314,6 +7511,12 @@ msgstr "Gehitu"
 #: plone/app/multilingual/browser/templates/add-form-is-translation.pt:8
 msgid "add-form-is-translation"
 msgstr "Elementu hau ${language}-rako itzulpen bat izango da."
+
+#. Default: "Add a new alternative url"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:54
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:47
+msgid "add_alias"
+msgstr ""
 
 #. Default: "Comment"
 #: plone.app.discussion/plone/app/discussion/browser/comments.py:228
@@ -7377,7 +7580,8 @@ msgstr "Karpeta hau eta bere eduki guztia ezabatzea nahi duzu?"
 msgid "all_events"
 msgstr "Hitzordu guztiak"
 
-#: CMFPlone/browser/search.py:182 CMFPlone/interfaces/controlpanel.py:1074
+#: CMFPlone/browser/search.py:182
+#: CMFPlone/interfaces/controlpanel.py:916
 msgid "alphabetically"
 msgstr "alfabetikoki"
 
@@ -7534,12 +7738,12 @@ msgid "box_upcoming_events"
 msgstr "Datozen hitzorduak…"
 
 #. Default: "Delete"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:68
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:69
 msgid "bulkactions_delete"
 msgstr "Ezabatu"
 
 #. Default: "Approve"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:66
 msgid "bulkactions_publish"
 msgstr "Onartu"
 
@@ -7731,7 +7935,7 @@ msgstr "Erregela gertaera hau gertatzean exekutatuko da."
 msgid "contentrules_perform_actions"
 msgstr "Ekintza hauek exekutatu:"
 
-#: CMFPlone/controlpanel/browser/overview.pt:32
+#: CMFPlone/controlpanel/browser/overview.pt:33
 msgid "continue with the upgrade"
 msgstr "Eguneraketarekin jarraitu"
 
@@ -7784,7 +7988,8 @@ msgstr "Errepikapena:"
 msgid "daily_interval_2"
 msgstr "egunean behin"
 
-#: CMFPlone/browser/search.py:180 CMFPlone/interfaces/controlpanel.py:1072
+#: CMFPlone/browser/search.py:180
+#: CMFPlone/interfaces/controlpanel.py:914
 msgid "date (newest first)"
 msgstr "data (berriena lehenengo)"
 
@@ -7887,6 +8092,11 @@ msgstr "Webgune hau pertsona ezberdinek Internetera sartu eta hau erabiltzeko du
 msgid "description_add_new_item"
 msgstr "Zure karpetara gehitu nahi duzun elementu mota aukeratu."
 
+#. Default: "Using this form, you can manage alternative urls for an item. This is an easy way to make an item available under two different URLs."
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:38
+msgid "description_adding_aliases"
+msgstr ""
+
 #. Default: "Use the fields below to configure the Diazo theme manually. Usually, these settings are applied by enabling a theme from the <strong>Themes</strong> tab."
 #: plone/app/theming/browser/controlpanel.pt:350
 msgid "description_advanced"
@@ -7903,7 +8113,7 @@ msgid "description_after_migration_cleanup"
 msgstr "Pausu honek ITranslatabe interfazearen dependentzia batzuk kkonponduko ditu. LinguaPlone guztiz desinstalatuta dagoenen bakarrik exekutatu behar da."
 
 #. Default: "Related to: use cookie for manual override"
-#: CMFPlone/interfaces/controlpanel.py:281
+#: plone.i18n/plone/i18n/interfaces.py:150
 msgid "description_auth_ookie_manual_override"
 msgstr "Honekin erlazionatuta: erabili cookiea eskuz gainidazteko"
 
@@ -7913,7 +8123,7 @@ msgid "description_author_feedback"
 msgstr "Egile honekin kontaktatzeko, bete ondorengo datu-orria."
 
 #. Default: "The languages in which the site should be translatable."
-#: CMFPlone/interfaces/controlpanel.py:186
+#: plone.i18n/plone/i18n/interfaces.py:55
 msgid "description_available_languages"
 msgstr "Webgunean aktibatutako hizkuntzak"
 
@@ -7928,9 +8138,14 @@ msgid "description_basic_settings"
 msgstr "Erabili botoiak Diazo itxura berri bat sortu, kargatu edo dagoen bat aukeratzeko."
 
 #. Default: "Use browser language request negotiation."
-#: CMFPlone/interfaces/controlpanel.py:325
+#: plone.i18n/plone/i18n/interfaces.py:194
 msgid "description_browser_language_request_negotiation"
 msgstr "Erabili nabigatzailearen hizkuntza-negoziazioa"
+
+#. Default: "Add many alternative urls at once by uploading a CSV file. The first column should be the path to redirect from; the second, the path to redirect to. Both paths must be Plone-site-relative, starting with a slash (/)."
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:146
+msgid "description_bulk_upload"
+msgstr ""
 
 #. Default: "When there are many translations for an item, the number of displayed buttons for them might get too large to fit inside the template. Choose here from which number onwards a drop-down menu will be displayed instead of buttons. Zero means that buttons will always be used."
 #: plone/app/multilingual/interfaces.py:241
@@ -8024,7 +8239,7 @@ msgid "description_control_panel"
 msgstr "Plone eta produktu gehigarrien konfigurazio area"
 
 #. Default: "Required for the language selector viewlet to be rendered."
-#: CMFPlone/interfaces/controlpanel.py:268
+#: plone.i18n/plone/i18n/interfaces.py:137
 msgid "description_cookie_manual_override"
 msgstr "Derrigorrezkoa hizkuntza-aldaketako loturak agertzeko."
 
@@ -8034,7 +8249,7 @@ msgid "description_copyright"
 msgstr "${plonecms} ${copyright} 2000- ${current_year} ${plonefoundation} eta besteak."
 
 #. Default: "You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, stop the server, set 'debug-mode=off' in your buildout.cfg, re-run bin/buildout and then restart the server process."
-#: CMFPlone/controlpanel/browser/overview.pt:151
+#: CMFPlone/controlpanel/browser/overview.pt:169
 msgid "description_debug_mode"
 msgstr "Oharra: orain \"debug moduan\" diharduzu. Funtzionamendu modu hau garapenean dauden webguneentzat pentsatua dago. Honi esker konfigurazio aldaketa asko momentuan ikus daitezke, baina webgunea mantsoago ibiliko da. Debug modu hau desaktibatu nahi baduzu, editatu zure buildout.cfg fitxategia, ezarri  'debug-mode=off' aukera, exekutatu berriz buildouta eta ondren berrabiarazi zerbitzaria."
 
@@ -8115,7 +8330,7 @@ msgid "description_include_error_in_admin_message"
 msgstr "${site_admin}ri errore hau bidali behar badiozu, gehitu zenbaki hau zure mezuan"
 
 #. Default: "Use language codes in URL path for manual override."
-#: CMFPlone/interfaces/controlpanel.py:258
+#: plone.i18n/plone/i18n/interfaces.py:127
 msgid "description_language_codes_in_URL"
 msgstr "Erabili hizkuntza-kodeak URLan eskuz gainidazteko."
 
@@ -8125,7 +8340,7 @@ msgid "description_language_folder"
 msgstr "Erabiltzailearen nabigatzailearen hobespenek dioten hizkuntzara joan"
 
 #. Default: "Use the language of the content item."
-#: CMFPlone/interfaces/controlpanel.py:248
+#: plone.i18n/plone/i18n/interfaces.py:117
 msgid "description_language_of_the_content"
 msgstr "Erabili edukiaren hizkuntza"
 
@@ -8180,7 +8395,7 @@ msgid "description_manage_contenttype_portlets"
 msgstr "Ezker eta eskuin zutabeetan elementu mota honi esleitutako portletak agertuko dira. Erabili, gora, behera, ezabatu eta aldatu loturak erabiltzailearen portletak kudeatzeko. Erabili zerrenda portlet berriak gehitzeko."
 
 #. Default: "The portlet columns will first display portlets explicitly assigned in this context. Use the buttons on each portlet to move them up or down, delete or edit them. To add a new portlet, use the drop-down list at the top of the column."
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:51
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:52
 msgid "description_manage_contextual_portlets"
 msgstr "Ezker eta eskuin zutabeetan kontestu honetan esplizituki esleitutako portletak agertuko dira. Erabili, gora, behera, ezabatu eta aldatu loturak erabiltzailearen portletak kudeatzeko. Erabili aukera-kutxa portlet berriak gehitzeko."
 
@@ -8244,7 +8459,7 @@ msgstr "erregistro formulariora"
 #. Default: "There are currently no items in this folder."
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:173
 #: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
-#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:245
+#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:246
 msgid "description_no_items_in_folder"
 msgstr "Ez dago elementurik karpeta honetan."
 
@@ -8313,7 +8528,7 @@ msgid "description_personal_information_form_otheruser"
 msgstr "$name erabiltzailearen informazioa aldatu"
 
 #. Default: "If you wish to block or unblock certain categories of portlets, you can do so using the drop-down boxes. Portlets that are included by these categories are shown below the selection box."
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:58
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:59
 msgid "description_portlets_block_unblock"
 msgstr "Portlet kategoria jakin batzuk blokeatu edo desblokeatu nahi badituzu, aukera-kutxak erabiliz egin dezakezu. Kategoria horien bidez esleitutako portletak aukera-kutxen azpian agertzen dira."
 
@@ -8323,7 +8538,7 @@ msgid "description_preferences_form_otheruser"
 msgstr "$name erabiltzailearen ezarpenak"
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, stop the server, set 'debug-mode=on' in your buildout.cfg, re-run bin/buildout and then restart the server process."
-#: CMFPlone/controlpanel/browser/overview.pt:139
+#: CMFPlone/controlpanel/browser/overview.pt:157
 msgid "description_production_mode"
 msgstr "Zure webgunea \"produkzio moduan\" ari da lanean. Hau da martxan dagoen webgune baten egoera egokiena, baina honek esan nahi du zenbait konfigurazio aldaketa ez direla ikusiko zure Plone zerbitzaria berrabiarazi edo produktu bat freskatu arte. Une honetan garapenean ari bazara eta debug modua aktibatu nahi baduzu, editatu zure buildout.cfg fitxategia, ezarri 'debug-mode=on' aukera, exekutatu buildouta eta ondoren berrabiarazi zerbitzaria."
 
@@ -8433,7 +8648,7 @@ msgid "description_set_language"
 msgstr "Elementu hau beste hizkuntza batera mugitu"
 
 #. Default: "i.e. also when the 'set_language' request parameter is absent"
-#: CMFPlone/interfaces/controlpanel.py:293
+#: plone.i18n/plone/i18n/interfaces.py:162
 msgid "description_set_language_cookie_always"
 msgstr "adb.: 'set_language' parametroa ez dagoenean ere bai"
 
@@ -8474,7 +8689,7 @@ msgid "description_site_error_thank_you"
 msgstr "Eskerrik asko."
 
 #. Default: "The language used for the content and the UI of this site."
-#: CMFPlone/interfaces/controlpanel.py:173
+#: plone.i18n/plone/i18n/interfaces.py:42
 msgid "description_site_language"
 msgstr "Atariaren interfaze eta edukiaren hizkuntza."
 
@@ -8514,7 +8729,7 @@ msgid "description_test_portlet"
 msgstr "Probarako portleta"
 
 #. Default: "e.g.: www.plone.de"
-#: CMFPlone/interfaces/controlpanel.py:316
+#: plone.i18n/plone/i18n/interfaces.py:185
 msgid "description_top_level_domain"
 msgstr "adb.: www.plone.de"
 
@@ -8554,7 +8769,7 @@ msgid "description_use_form_to_change_password"
 msgstr "Mesedez beheko formularioa erabili zure pasahitza aldatzeko."
 
 #. Default: "e.g.: de.plone.org"
-#: CMFPlone/interfaces/controlpanel.py:307
+#: plone.i18n/plone/i18n/interfaces.py:176
 msgid "description_use_subdomain"
 msgstr "adb.: de.plone.org"
 
@@ -8675,9 +8890,14 @@ msgid "error_allowable_content_types"
 msgstr "${mimetype} eduki motarik ezin da gehitu ${name}-n, zuzendu mesedez."
 
 #. Default: "This theme is already installed. Select 'Replace existing theme' and re-upload to replace it."
-#: plone/app/theming/browser/controlpanel.py:259
+#: plone/app/theming/browser/controlpanel.py:262
 msgid "error_already_installed"
 msgstr "Itxura hau instalatuta dago jada. Ordezkatu nahi baduzu aukeratu 'Ordezkatu existitzen  den itxura' eta berriz kargatu."
+
+#. Default: "No alternative urls were added. Please correct these errors in your CSV file and try again:"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:16
+msgid "error_bulk_upload"
+msgstr ""
 
 #. Default: "End date must be after start date."
 #: plone.app.event/plone/app/event/dx/behaviors.py:162
@@ -8695,7 +8915,7 @@ msgid "error_invalid_date"
 msgstr "Hasiera- edo bukaera-data ez da zuzena"
 
 #. Default: "Please ensure you enter one expression per line, in the format <name> = <expression>."
-#: plone/app/theming/browser/controlpanel.py:180
+#: plone/app/theming/browser/controlpanel.py:181
 msgid "error_invalid_parameter_expressions"
 msgstr "Ziurtatu lerro bakoitzean espresio bat idazten duzula eta formatu hau daukala: <izena> = <espresioa>."
 
@@ -8705,12 +8925,12 @@ msgid "error_invalid_publication"
 msgstr "Argitaratze- edo iraungitze-data ez da zuzena"
 
 #. Default: "The uploaded file is not a valid Zip archive"
-#: plone/app/theming/browser/controlpanel.py:236
+#: plone/app/theming/browser/controlpanel.py:239
 msgid "error_invalid_zip"
 msgstr "Kargatu duzun fitxategia ez da Zip fitxategi zuzena."
 
 #. Default: "The uploaded file does not contain a valid theme archive."
-#: plone/app/theming/browser/controlpanel.py:247
+#: plone/app/theming/browser/controlpanel.py:250
 msgid "error_no_rules_file"
 msgstr "Kargatu duzun fitxategiak ez du itxura baten beharrezko egitura."
 
@@ -8787,6 +9007,16 @@ msgstr "${weeknumber} asteko hitzorduak"
 #: plone.app.event/plone/app/event/browser/event_listing.py:302
 msgid "events_on_day"
 msgstr "${day} eguneko hitzorduak"
+
+#. Default: "/old-home-page.asp,/front-page<br /> /people/JoeT,/Users/joe-thurston"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:153
+msgid "example_bulk_upload"
+msgstr ""
+
+#. Default: "Example:"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:152
+msgid "example_caption_bulk_upload"
+msgstr ""
 
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/browser/i18n.py:139
 msgid "except"
@@ -8936,7 +9166,7 @@ msgid "heading_accessibility_statement"
 msgstr "Irisgarritasun Adierazpena"
 
 #. Default: "Action"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:86
 msgid "heading_action"
 msgstr "Ekintza"
 
@@ -8971,7 +9201,7 @@ msgid "heading_assign_to_groups"
 msgstr "Taldeetara esleitu"
 
 #. Default: "Authenticated users only"
-#: CMFPlone/interfaces/controlpanel.py:279
+#: plone.i18n/plone/i18n/interfaces.py:148
 msgid "heading_auth_cookie_manual_override"
 msgstr "Login egin duten erabiltzaileak bakarrik"
 
@@ -8981,7 +9211,7 @@ msgid "heading_author_content"
 msgstr "Kide honek sortutako elementu berriena"
 
 #. Default: "Available languages"
-#: CMFPlone/interfaces/controlpanel.py:184
+#: plone.i18n/plone/i18n/interfaces.py:53
 msgid "heading_available_languages"
 msgstr "Hizkuntzak"
 
@@ -8991,7 +9221,7 @@ msgid "heading_available_translations"
 msgstr "Elementu honek dituen itzulpenak"
 
 #. Default: "Use browser language request negotiation"
-#: CMFPlone/interfaces/controlpanel.py:323
+#: plone.i18n/plone/i18n/interfaces.py:192
 msgid "heading_browser_language_request_negotiation"
 msgstr "Erabili nabigatzailearen hizkuntza-negoziazioa"
 
@@ -9031,12 +9261,12 @@ msgid "heading_change_password_for"
 msgstr "${user} -rako pasahitza aldatu"
 
 #. Default: "Comment"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
 msgid "heading_comment"
 msgstr "Erantzuna"
 
 #. Default: "Commenter"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:81
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
 msgid "heading_commenter"
 msgstr "Egilea"
 
@@ -9051,7 +9281,7 @@ msgid "heading_content_types"
 msgstr "Elementu motak"
 
 #. Default: "Use cookie for manual override"
-#: CMFPlone/interfaces/controlpanel.py:266
+#: plone.i18n/plone/i18n/interfaces.py:135
 msgid "heading_cookie_manual_override"
 msgstr "Derrigorrezkoa hizkuntza-aldaketako loturak agertzeko."
 
@@ -9071,7 +9301,7 @@ msgid "heading_dashboard"
 msgstr "${user_name}-en lanlekua"
 
 #. Default: "Date"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
 msgid "heading_date"
 msgstr "Data"
 
@@ -9147,17 +9377,17 @@ msgid "heading_groupmembers_current"
 msgstr "Oraingo taldekideak"
 
 #. Default: "In Response To"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
 msgid "heading_in_reponse_to"
 msgstr "Honi erantzunez"
 
 #. Default: "Use language codes in URL path for manual override"
-#: CMFPlone/interfaces/controlpanel.py:255
+#: plone.i18n/plone/i18n/interfaces.py:124
 msgid "heading_language_codes_in_URL"
 msgstr "Erabili hizkuntza-kodeak URLan eskuz gainidazteko."
 
 #. Default: "Use the language of the content item"
-#: CMFPlone/interfaces/controlpanel.py:246
+#: plone.i18n/plone/i18n/interfaces.py:115
 msgid "heading_language_of_the_content"
 msgstr "Erabili edukiaren hizkuntza"
 
@@ -9322,7 +9552,7 @@ msgid "heading_rename_item"
 msgstr "Elementua berrizendatu"
 
 #. Default: "REQUEST"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:80
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:81
 msgid "heading_request"
 msgstr "ESKAERA"
 
@@ -9392,7 +9622,7 @@ msgid "heading_set_content_type_restrictions"
 msgstr "Murriztu zein eduki mota gehi daitezkeen"
 
 #. Default: "Set the language cookie always"
-#: CMFPlone/interfaces/controlpanel.py:290
+#: plone.i18n/plone/i18n/interfaces.py:159
 msgid "heading_set_language_cookie_always"
 msgstr "Hizkuntzaren cookie-a beti ezarri"
 
@@ -9413,7 +9643,7 @@ msgid "heading_site_error_sorry"
 msgstr "Barkatu, errore bat gertatu da"
 
 #. Default: "Site language"
-#: CMFPlone/interfaces/controlpanel.py:172
+#: plone.i18n/plone/i18n/interfaces.py:41
 msgid "heading_site_language"
 msgstr "Atariaren hizkuntza"
 
@@ -9443,7 +9673,7 @@ msgid "heading_title"
 msgstr "Izenburua"
 
 #. Default: "Use top-level domain"
-#: CMFPlone/interfaces/controlpanel.py:314
+#: plone.i18n/plone/i18n/interfaces.py:183
 msgid "heading_top_level_domain"
 msgstr "Domeinua erabili"
 
@@ -9468,7 +9698,7 @@ msgid "heading_un_block_portlets"
 msgstr "Portletak blokeatu/desblokeatu"
 
 #. Default: "Use subdomain"
-#: CMFPlone/interfaces/controlpanel.py:305
+#: plone.i18n/plone/i18n/interfaces.py:174
 msgid "heading_use_subdomain"
 msgstr "Azpidomeinua erabili"
 
@@ -9484,7 +9714,7 @@ msgstr "Balioa"
 
 #. Default: "Version Overview"
 #: CMFPlone/browser/templates/plone-upgrade.pt:200
-#: CMFPlone/controlpanel/browser/overview.pt:132
+#: CMFPlone/controlpanel/browser/overview.pt:136
 msgid "heading_version_overview"
 msgstr "Bertsioen informazioa"
 
@@ -9510,7 +9740,7 @@ msgid "heading_you_are_now_logged_in"
 msgstr "Saioa hasi duzu."
 
 #. Default: "Zope Server"
-#: CMFPlone/controlpanel/browser/maintenance.pt:58
+#: CMFPlone/controlpanel/browser/maintenance.pt:59
 msgid "heading_zope_server"
 msgstr "Zope zerbitzaria"
 
@@ -9539,8 +9769,24 @@ msgstr "Leku honetarako murriztapen politika aukeratu."
 msgid "help_addcontenttype_button"
 msgstr "Egin klik \"Elementu-mota gehitu\" botoian elementu-mota berri bat sortzen hasteko."
 
+#. Default: "Enter the absolute path where the alternative url should exist. The path must start with '/'."
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:80
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:72
+msgid "help_alias"
+msgstr ""
+
+#. Default: "You are managing the alternative urls of a default view in a container. To manage them for the entire container, ${go_here}."
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:28
+msgid "help_aliases"
+msgstr ""
+
+#. Default: "go here"
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:28
+msgid "help_aliases_go_here"
+msgstr ""
+
 #. Default: "Examples: pt-br (Brazilian Portuguese), en-us (American English) etc."
-#: CMFPlone/interfaces/controlpanel.py:202
+#: plone.i18n/plone/i18n/interfaces.py:71
 msgid "help_allow_combined_language_codes"
 msgstr "Adibidez: pt-br (Brasilgo portugesa), en-us (ameriketako ingelesa), etab."
 
@@ -9550,7 +9796,7 @@ msgid "help_allow_comments"
 msgstr "Aukeratuta badago, erabiltzaileek elementu honen gaineko komentarioak idatz ditzakete."
 
 #. Default: "Only the following roles can add new keywords "
-#: CMFPlone/interfaces/controlpanel.py:1327
+#: CMFPlone/interfaces/controlpanel.py:1169
 msgid "help_allow_roles_to_add_keywords"
 msgstr "Erabiltzaile-rol hau duten erabiltzaileek bakarrik gehitu ditzakete etiketak"
 
@@ -9565,17 +9811,17 @@ msgid "help_anonymous_email_enabled"
 msgstr "Aukeratuta badago, erabiltzaile anonimoek eposta helbidea idatzi beharko dute"
 
 #. Default: "The URL of the \"After the Deadline\" grammar and spell checking server. The default value is the public server, but ideally you should download and install your own and specify its address here."
-#: CMFPlone/interfaces/controlpanel.py:794
+#: CMFPlone/interfaces/controlpanel.py:629
 msgid "help_atd_service_url"
 msgstr "\"After the Deadline\" gramatikaren eta zuzentzailearen URLa. Defektuzko balioa zerbitzari publikoa da, baina kodea deskargatu, zure helbide baten jarri eta helbide hori erabili beharko zenuke."
 
 #. Default: "A list of error types which the \"After the Deadline\" spellchecker should check for. By default, all the available error type will be listed here."
-#: CMFPlone/interfaces/controlpanel.py:771
+#: CMFPlone/interfaces/controlpanel.py:606
 msgid "help_atderrortypes_to_show"
 msgstr "\"After the Deadline\" zuzentzaileak egiaztatu beharko lituzkeen erroreak. Defektuz, errore-mota guztiak agertuko dira hemen."
 
 #. Default: "The timezones, which should be available for the portal. Can be set for users and events"
-#: CMFPlone/interfaces/controlpanel.py:1358
+#: CMFPlone/interfaces/controlpanel.py:1200
 msgid "help_available_timezones"
 msgstr "Atarian erabili daitezkeen ordu-zonak. Erabiltzaile eta hitzorduentzat ezarri daiteke."
 
@@ -9881,7 +10127,7 @@ msgid "help_external_url"
 msgstr "Kanpoko helbidea (atariarekiko erlatiboa izan daiteke edo absolutua http:// edo https://-rekin hasten bada)"
 
 #. Default: "First day in the week."
-#: CMFPlone/interfaces/controlpanel.py:1370
+#: CMFPlone/interfaces/controlpanel.py:1212
 msgid "help_first_weekday"
 msgstr "Asteko lehenengo eguna."
 
@@ -10114,7 +10360,7 @@ msgid "help_path_criteria_value"
 msgstr "Zein karpetetan bilatu behar den."
 
 #. Default: "The timezone setting of the portal. Users can set their own timezone, if available timezones are defined."
-#: CMFPlone/interfaces/controlpanel.py:1347
+#: CMFPlone/interfaces/controlpanel.py:1189
 msgid "help_portal_timezone"
 msgstr "Webgunearen ordu-zona. Erabiltzaile bakoitzak berea ezarri dezake, bat baino gehiago konfiguratuta badago."
 
@@ -10180,7 +10426,7 @@ msgid "help_read_network"
 msgstr "Erregela eta itxurak sarearen bidez ekartzea ahalbidetu."
 
 #. Default: "When clicking on a Link type, should the user be taken to the default view or be redirected to the Link's URL?"
-#: CMFPlone/interfaces/controlpanel.py:1398
+#: CMFPlone/interfaces/controlpanel.py:1240
 msgid "help_redirect_links"
 msgstr "Lotura motako elementu baten klik egitean, erabiltzailea elementu horretara ala bertan adierazitako loturara berbideratu behar da?"
 
@@ -10216,7 +10462,7 @@ msgid "help_replace_existing"
 msgstr "Aukera hau aktibatu aurrez jaso den beste itxura bat guztiz ordezkatzeko."
 
 #. Default: "robots.txt is read by search engines to determine how to index your site. For details see <a href='http://www.robotstxt.org'>http://www.robotstxt.org</a>. Use '{portal_url}' for the site URL."
-#: CMFPlone/interfaces/controlpanel.py:1300
+#: CMFPlone/interfaces/controlpanel.py:1142
 msgid "help_robots_txt"
 msgstr "robots.txt web bilatzaileek zure webgunea nola indexatu behar duten zehazteko erabiltzen da. Informazio gehiagorako ikusi <a href='http://www.robotstxt.org'>http://www.robotstxt.org</a>. '{portal_url}' webgunearen benetako helbidearekin ordezkatuko da.\""
 
@@ -10311,22 +10557,22 @@ msgid "help_show_title"
 msgstr "Portlet honen izenburua erakutsi"
 
 #. Default: "The password for the ESMTP user account."
-#: CMFPlone/interfaces/controlpanel.py:1465
+#: CMFPlone/interfaces/controlpanel.py:1307
 msgid "help_smtp_pass"
 msgstr "Hau da emandako erabiltzaile-izenarako erabiltzen den pasahitza. Erabiltzaile-izena zehaztu baduzu soilik izango da beharrezkoa."
 
 #. Default: "The port of your local SMTP (outgoing e-mail) server. Usually '25'."
-#: CMFPlone/interfaces/controlpanel.py:1441
+#: CMFPlone/interfaces/controlpanel.py:1283
 msgid "help_smtp_port"
 msgstr "Zure SMTP zerbitzari lokalaren (posta bidaltzeko zerbitzaria) ataka. Normalean, '25' izaten da."
 
 #. Default: "The address of your local SMTP (outgoing e-mail) server. Usually 'localhost', unless you use an external server to send e-mail."
-#: CMFPlone/interfaces/controlpanel.py:1429
+#: CMFPlone/interfaces/controlpanel.py:1271
 msgid "help_smtp_server"
 msgstr "Zure SMTP zerbitzari lokalaren (posta bidaltzeko zerbitzaria) helbidea. Normalean 'localhost' izaten da, posta bidaltzeko kanpoko zerbitzari bat erabiltzen ez baduzu behintzat."
 
 #. Default: "Username for authentication to your e-mail server. Not required unless you are using ESMTP."
-#: CMFPlone/interfaces/controlpanel.py:1453
+#: CMFPlone/interfaces/controlpanel.py:1295
 msgid "help_smtp_userid"
 msgstr "Hau da zure e-posta zerbitzarian autentifikaziorako erabiliko den erabiltzaile-izena. Orokorrean ez da beharrezkoa bat ematea."
 
@@ -10355,6 +10601,11 @@ msgstr "Sindikatuko diren gehienezko elementu kopurua."
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:106
 msgid "help_tags"
 msgstr "Elementuak sailkatzeko erabiltzen dira etiketak"
+
+#. Default: "Enter the absolute path of the target. The path must start with '/'."
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:113
+msgid "help_target_path"
+msgstr ""
 
 #. Default: "<p> Legacy page templates defined in the <em>portal_skins</em> tool in the ZMI, or created or customised through the web cannot be associated with rulesets in the usual way. There are two options: </p> <ul> <li>If the template is the <em>default type</em> of a content type it is possible to associate the type class or an interface it provides with a ruleset.</li> <li>You can also associate a specific page template (by name) or content type with a ruleset using the options below.</li> </ul> <p> <strong>Note:</strong> By default, folder-like content types are associated with the ruleset <code>plone.content.folderView</code>, and item-like content types are associated with the ruleset <code>plone.content.itemView</code>. Any settings entered below or set via an explicit cache ruleset (in a ZCML file) will override these defaults. </p> <p> <strong>Note:</strong> You can only use each template name or content type once! </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:449
@@ -10392,22 +10643,22 @@ msgid "help_timezone"
 msgstr "Zure ordu-zona"
 
 #. Default: "Enter what items you would like in the menu bar."
-#: CMFPlone/interfaces/controlpanel.py:648
+#: CMFPlone/interfaces/controlpanel.py:483
 msgid "help_tinymce_menubar"
 msgstr "Idatzi zein elementu nahi dituzun menu-barran"
 
 #. Default: "Select plugins to include with tinymce"
-#: CMFPlone/interfaces/controlpanel.py:603
+#: CMFPlone/interfaces/controlpanel.py:438
 msgid "help_tinymce_plugins"
 msgstr "Aukeratu TinyMCEn aktibatu beharreko pluginak"
 
 #. Default: "Enter the list of templates in json format https://www.tinymce.com/docs/plugins/template/"
-#: CMFPlone/interfaces/controlpanel.py:692
+#: CMFPlone/interfaces/controlpanel.py:527
 msgid "help_tinymce_templates"
 msgstr "Idatzi txantiloi zerrendak json formatuan. Ikusi https://www.tinymce.com/docs/plugins/template/"
 
 #. Default: "Enter how you would like the toolbar items to list."
-#: CMFPlone/interfaces/controlpanel.py:705
+#: CMFPlone/interfaces/controlpanel.py:540
 msgid "help_tinymce_toolbar"
 msgstr "Idatzi nola zerrendatu nahi dituzun tresna-barrako elementuak"
 
@@ -10417,12 +10668,13 @@ msgid "help_title"
 msgstr "Portlet honen erakusteko izenburua"
 
 #. Default: "When clicking items in listing views, these types will use the 'view' action instead of using their default view."
-#: CMFPlone/interfaces/controlpanel.py:1384
+#: CMFPlone/interfaces/controlpanel.py:1226
 msgid "help_types_use_view_action_in_listings"
 msgstr "Zerrendetan elementu hauetan klik egitean beren, 'view' akzioa erakutsiko da beren defektuzko bista beharrean"
 
 #. Default: "Add http:// to link outside the site."
 #: widget description of StringWidget for label Event URL
+#: widget description of StringWidget for label URL
 msgid "help_url"
 msgstr "Ataritik kanpoko loturei http:// gehitu."
 
@@ -10471,18 +10723,18 @@ msgid "here"
 msgstr "hemen"
 
 #. Default: "hide"
-#: workflow transition defined in folder_workflow - title Member makes content
-#: private new state plone_workflow
+#: workflow transition defined in folder_workflow - title Member makes content private new state private
+#: workflow transition defined in plone_workflow - title Member makes content private new state private
 msgid "hide"
 msgstr "ezkutatu"
 
 #. Default: "JSON formatted Menu configuration."
-#: CMFPlone/interfaces/controlpanel.py:659
+#: CMFPlone/interfaces/controlpanel.py:494
 msgid "hint_tinymce_menu"
 msgstr "JSON formatuko menuaren konfigurazioa."
 
 #. Default: "Other TinyMCE configuration formatted as JSON."
-#: CMFPlone/interfaces/controlpanel.py:861
+#: CMFPlone/interfaces/controlpanel.py:696
 msgid "hint_tinymce_other_settings"
 msgstr "TinyMCEren beste ezarpenak, JSON moduan jarrita."
 
@@ -10508,7 +10760,7 @@ msgid "html"
 msgstr "HTML"
 
 #. Default: "I18n domain"
-#: CMFPlone/interfaces/controlpanel.py:1739
+#: CMFPlone/interfaces/controlpanel.py:1595
 msgid "i18n_domain_heading"
 msgstr "I18n domeinua"
 
@@ -10747,6 +10999,12 @@ msgstr "Bilaketa aurreratua…"
 msgid "label_affected_content"
 msgstr "Eraginpean dagoen edukia"
 
+#. Default: "Alternative url path"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:62
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:54
+msgid "label_alias"
+msgstr ""
+
 #. Default: "All"
 #: plone.app.content/plone/app/content/browser/table.pt:36
 msgid "label_all"
@@ -10763,7 +11021,7 @@ msgid "label_all_translations"
 msgstr "Itzulpen guztiak"
 
 #. Default: "Show country-specific language variants"
-#: CMFPlone/interfaces/controlpanel.py:198
+#: plone.i18n/plone/i18n/interfaces.py:67
 msgid "label_allow_combined_language_codes"
 msgstr "Erakutsi herrialde jakinetako hizkuntzak"
 
@@ -10778,7 +11036,7 @@ msgid "label_allow_discussion"
 msgstr "Elementu honen inguruko eztabaida onartu"
 
 #. Default: "Always show language selector"
-#: CMFPlone/interfaces/controlpanel.py:222
+#: plone.i18n/plone/i18n/interfaces.py:91
 msgid "label_always_show_selector"
 msgstr "Beti erakutsi hizkuntza aldatzeko loturak"
 
@@ -10809,7 +11067,7 @@ msgid "label_anonymous_user"
 msgstr "Erabiltzaile anonimoa"
 
 #. Default: "Apply"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:71
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:72
 msgid "label_apply"
 msgstr "Aplikatu"
 
@@ -10829,7 +11087,7 @@ msgid "label_at"
 msgstr "(a bildua)"
 
 #. Default: "A list of strings which the \"After the Deadline\" spellchecker should ignore. Note: This option is only applicable when the appropriate spellchecker has been chosen above."
-#: CMFPlone/interfaces/controlpanel.py:755
+#: CMFPlone/interfaces/controlpanel.py:590
 msgid "label_atd_ignore_strings"
 msgstr "\"After the Deadline\" zuzentzaileak kontuan hartu behar ez dituen testuak. Oharra: aukera hau, goian dagokion zuzentzailea aktibatuta badago bakarrik hartuko da kontuan."
 
@@ -10883,6 +11141,16 @@ msgstr "Balioa"
 #: plone.schemaeditor/plone/schemaeditor/fields.py:91
 msgid "label_boolean_field"
 msgstr "Bai/Ez"
+
+#. Default: "Line"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:27
+msgid "label_bulk_upload_line"
+msgstr ""
+
+#. Default: ":"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:31
+msgid "label_bulk_upload_line_suffix"
+msgstr ""
 
 #. Default: "by ${author}"
 #: CMFPlone/browser/templates/search.pt:243
@@ -11176,7 +11444,7 @@ msgid "label_contributors"
 msgstr "Parte hartzaileak"
 
 #. Default: "Convert portlets"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:76
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:77
 msgid "label_convert_portlets"
 msgstr "Portletak eraldatu"
 
@@ -11208,10 +11476,14 @@ msgid "label_creators"
 msgstr "Sortzaileak"
 
 #. Default: "Field name"
-#: widget label of StringWidget - description "Should not contain spaces,
-#: underscores or mixed case. Short Name is part the item's web address."
+#: widget label of StringWidget - description "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
 msgid "label_criteria_field_name"
 msgstr "Eremuaren izena"
+
+#. Default: "CSV file"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:162
+msgid "label_csv_file"
+msgstr ""
 
 #. Default: "(current)"
 #: plone.app.content/plone/app/content/browser/templates/select_default_view.pt:44
@@ -11245,14 +11517,12 @@ msgid "label_current_password"
 msgstr "Oraingo pasahitza"
 
 #. Default: "Display as Table"
-#: widget label of BooleanWidget - description "Columns in the table are
-#: controlled by 'Table Columns' below."
+#: widget label of BooleanWidget - description "Columns in the table are controlled by 'Table Columns' below."
 msgid "label_custom_view"
 msgstr "Taula gisa erakutsi"
 
 #. Default: "Table Columns"
-#: widget label of InAndOutWidget - description "Select which fields to display
-#: when 'Display as Table' is checked."
+#: widget label of InAndOutWidget - description "Select which fields to display when 'Display as Table' is checked."
 msgid "label_custom_view_fields"
 msgstr "Taularen Zutabeak"
 
@@ -11269,14 +11539,12 @@ msgid "label_date_field"
 msgstr "Data"
 
 #. Default: "End Date"
-#: widget label of CalendarWidget - description "The ending the date range to
-#: search."
+#: widget label of CalendarWidget - description "The ending of the date range to search."
 msgid "label_date_range_criteria_end"
 msgstr "Bukaera data."
 
 #. Default: "Start Date"
-#: widget label of CalendarWidget - description "The beginning the date range
-#: to search"
+#: widget label of CalendarWidget - description "The beginning of the date range to search"
 msgid "label_date_range_criteria_start"
 msgstr "Hasiera data"
 
@@ -11308,7 +11576,7 @@ msgstr "Defektuzko workflowa (${title})"
 #. Default: "Delete"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:173
 #: plone.app.discussion/plone/app/discussion/browser/comments.pt:98
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:139
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:140
 msgid "label_delete"
 msgstr "Ezabatu"
 
@@ -11356,7 +11624,7 @@ msgid "label_discussion_enabled"
 msgstr "Gaituta"
 
 #. Default: "Show language flags"
-#: CMFPlone/interfaces/controlpanel.py:212
+#: plone.i18n/plone/i18n/interfaces.py:81
 msgid "label_display_flags"
 msgstr "Hizkuntzen banderak erakutsi"
 
@@ -11402,7 +11670,8 @@ msgid "label_effective_date"
 msgstr "Argitaratze data"
 
 #. Default: "E-mail"
-#: CMFPlone/browser/login/login.py:106 CMFPlone/browser/login/login_help.py:61
+#: CMFPlone/browser/login/login.py:106
+#: CMFPlone/browser/login/login_help.py:61
 #: plone.app.portlets/plone/app/portlets/portlets/login.pt:46
 msgid "label_email"
 msgstr "E-posta"
@@ -11525,12 +11794,12 @@ msgid "label_exception"
 msgstr "Errorea"
 
 #. Default: "Exception Type"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:59
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:60
 msgid "label_exception_type"
 msgstr "Errore-mota"
 
 #. Default: "Exception Value"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:63
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:64
 msgid "label_exception_value"
 msgstr "Errore-mezua"
 
@@ -11598,7 +11867,7 @@ msgid "label_find_group"
 msgstr "Aurkitu ezazu taldea hemen"
 
 #. Default: "First weekday"
-#: CMFPlone/interfaces/controlpanel.py:1369
+#: CMFPlone/interfaces/controlpanel.py:1211
 msgid "label_first_weekday"
 msgstr "Lehenengo asteguna"
 
@@ -11760,8 +12029,7 @@ msgid "label_include_top_node"
 msgstr "Gorengo nodoa sartu"
 
 #. Default: "Inherit Criteria"
-#: widget label of BooleanWidget - description "Narrow down the search results
-#: from parent Smart Folder(s) by using criteria this Folder."
+#: widget label of BooleanWidget - description "Narrow down the search results from the parent Smart Folder(s) by using the criteria from this Smart Folder."
 msgid "label_inherit_criteria"
 msgstr "Heredatutako irizpideak"
 
@@ -11823,8 +12091,7 @@ msgid "label_leadimage_caption"
 msgstr "Irudi-oina"
 
 #. Default: "Limit Search Results"
-#: widget label of BooleanWidget - description "If selected, only the 'Number
-#: Items' indicated below will be displayed."
+#: widget label of BooleanWidget - description "If selected, only the 'Number of Items' indicated below will be displayed."
 msgid "label_limit_number"
 msgstr "Elementu kopuru mugatua"
 
@@ -11846,7 +12113,8 @@ msgid "label_locked"
 msgstr "Blokeatuta"
 
 #. Default: "Log in"
-#: CMFPlone/browser/login/login.py:56 CMFPlone/interfaces/login.py:26
+#: CMFPlone/browser/login/login.py:56
+#: CMFPlone/interfaces/login.py:26
 #: plone.app.portlets/plone/app/portlets/portlets/login.pt:80
 msgid "label_log_in"
 msgstr "Sartu"
@@ -11889,14 +12157,14 @@ msgid "label_main_language"
 msgstr "Hizkuntz nagusia: "
 
 #. Default: "You are managing the portlets of the default view of a container. If you wanted to manage the portlets of the container itself, ${go_here}."
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:44
-#: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:51
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:45
+#: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:52
 msgid "label_manage_portlets_default_view_container"
 msgstr "Karpetaren defektuzko bistaren portletak kudeatzen ari zara, karpetaren beraren portletak aldatu nahi badituzu, ${go_here}."
 
 #. Default: "go here"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:44
-#: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:51
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:45
+#: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:52
 msgid "label_manage_portlets_default_view_container_go_here"
 msgstr "joan bertara"
 
@@ -12045,8 +12313,7 @@ msgid "label_new_title"
 msgstr "Izenburu berria"
 
 #. Default: "Image"
-#: widget label of ImageWidget - description "Will be shown in the news
-#: listing, and item itself. Image will scaled to a sensible size."
+#: widget label of ImageWidget - description "Will be shown in the news listing, and in the news item itself. Image will be scaled to a sensible size."
 msgid "label_news_image"
 msgstr "Irudia"
 
@@ -12088,7 +12355,7 @@ msgid "label_no_group_specified"
 msgstr "Ez da talderik zehaztu."
 
 #. Default: "No preference panels available."
-#: CMFPlone/controlpanel/browser/overview.pt:120
+#: CMFPlone/controlpanel/browser/overview.pt:124
 msgid "label_no_prefs_panels_available"
 msgstr "Ez dago konfigurazio panelik."
 
@@ -12156,8 +12423,8 @@ msgid "label_password_field"
 msgstr "Pasahitza"
 
 #. Default: "Search Sub-Folders"
-#: ATContentTypes/criteria/relativepath.py widget label of BooleanWidget -
-#: description ""
+#: ATContentTypes/criteria/relativepath.py
+#: widget label of BooleanWidget - description ""
 msgid "label_path_criteria_recurse"
 msgstr "Azpikarpetetan bilatu"
 
@@ -12197,8 +12464,7 @@ msgid "label_plone_org_title"
 msgstr "Plone Komunitatearen Ataria"
 
 #. Default: "Value"
-#: widget label of MultiSelectionWidget - description "One the available
-#: content types."
+#: widget label of MultiSelectionWidget - description "One of the available content types."
 msgid "label_portal_type_criteria_value"
 msgstr "Balioa"
 
@@ -12266,7 +12532,7 @@ msgid "label_product_upgrade_old_version"
 msgstr "Bertsio zaharra ${version} zen."
 
 #. Default: "Approve"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:130
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:131
 msgid "label_publish"
 msgstr "Argitaratu"
 
@@ -12392,13 +12658,14 @@ msgid "label_reply"
 msgstr "Erantzuna"
 
 #. Default: "Request URL"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:55
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:56
 msgid "label_request_url"
 msgstr "URL-a eskatu"
 
 #. Default: "(Required)"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:68
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:60
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.pt:30
-#: CMFPlone/skins/plone_templates/test_rendering.pt:233
 msgid "label_required"
 msgstr "(Beharrezkoa)"
 
@@ -12514,7 +12781,8 @@ msgid "label_selection_criteria_value"
 msgstr "Balioa"
 
 #. Default: "Send"
-#: CMFPlone/browser/author.py:41 CMFPlone/browser/contact_info.py:38
+#: CMFPlone/browser/author.py:41
+#: CMFPlone/browser/contact_info.py:38
 #: CMFPlone/browser/sendto.py:41
 msgid "label_send"
 msgstr "Bidali"
@@ -12573,7 +12841,7 @@ msgid "label_show_commenter_image"
 msgstr "Erantzuna eman duenaren irudia erakutsi"
 
 #. Default: "show full comment text"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:123
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:124
 msgid "label_show_full_comment_text"
 msgstr "Erakutsi testu osoa"
 
@@ -12622,17 +12890,17 @@ msgid "label_size"
 msgstr "Tamaina"
 
 #. Default: "ESMTP password"
-#: CMFPlone/interfaces/controlpanel.py:1462
+#: CMFPlone/interfaces/controlpanel.py:1304
 msgid "label_smtp_pass"
 msgstr "ESMTP pasahitza"
 
 #. Default: "SMTP port"
-#: CMFPlone/interfaces/controlpanel.py:1439
+#: CMFPlone/interfaces/controlpanel.py:1281
 msgid "label_smtp_port"
 msgstr "SMTP ataka"
 
 #. Default: "SMTP server"
-#: CMFPlone/interfaces/controlpanel.py:1426
+#: CMFPlone/interfaces/controlpanel.py:1268
 msgid "label_smtp_server"
 msgstr "SMTP zerbitzaria"
 
@@ -12643,7 +12911,7 @@ msgid "label_smtp_test"
 msgstr "Gorde eta proba mezua bidali"
 
 #. Default: "ESMTP username"
-#: CMFPlone/interfaces/controlpanel.py:1450
+#: CMFPlone/interfaces/controlpanel.py:1292
 msgid "label_smtp_userid"
 msgstr "ESMTP erabiltzailea"
 
@@ -12658,7 +12926,7 @@ msgid "label_some_content_types"
 msgstr "Batzuk:"
 
 #. Default: "Sort on"
-#: CMFPlone/interfaces/controlpanel.py:1068
+#: CMFPlone/interfaces/controlpanel.py:910
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:54
 msgid "label_sort_on"
 msgstr "Ordenazioa"
@@ -12705,6 +12973,11 @@ msgstr "Edukiak"
 msgid "label_tags"
 msgstr "Etiketak"
 
+#. Default: "Target Path"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:96
+msgid "label_target_path"
+msgstr ""
+
 #. Default: "Legacy template mappings"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:448
 msgid "label_template_mappings"
@@ -12748,7 +13021,7 @@ msgstr "Itxura aktibatuta"
 
 #. Default: "Time"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:90
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:46
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:47
 msgid "label_time"
 msgstr "Ordua"
 
@@ -12758,32 +13031,32 @@ msgid "label_timezone"
 msgstr "Ordu-zona"
 
 #. Default: "Menu"
-#: CMFPlone/interfaces/controlpanel.py:658
+#: CMFPlone/interfaces/controlpanel.py:493
 msgid "label_tinymce_menu"
 msgstr "Menua"
 
 #. Default: "Menubar"
-#: CMFPlone/interfaces/controlpanel.py:647
+#: CMFPlone/interfaces/controlpanel.py:482
 msgid "label_tinymce_menubar"
 msgstr "Menu barra"
 
 #. Default: "Other settings"
-#: CMFPlone/interfaces/controlpanel.py:860
+#: CMFPlone/interfaces/controlpanel.py:695
 msgid "label_tinymce_other_settings"
 msgstr "Beste ezarpenak"
 
 #. Default: "Editor plugins"
-#: CMFPlone/interfaces/controlpanel.py:602
+#: CMFPlone/interfaces/controlpanel.py:437
 msgid "label_tinymce_plugins"
 msgstr "Editorearen pluginak"
 
 #. Default: "Templates"
-#: CMFPlone/interfaces/controlpanel.py:691
+#: CMFPlone/interfaces/controlpanel.py:526
 msgid "label_tinymce_templates"
 msgstr "Txantiloiak"
 
 #. Default: "Toolbar"
-#: CMFPlone/interfaces/controlpanel.py:704
+#: CMFPlone/interfaces/controlpanel.py:539
 msgid "label_tinymce_toolbar"
 msgstr "Tresna-barra"
 
@@ -12816,7 +13089,7 @@ msgid "label_total_relations"
 msgstr "Ukitutako erlazio kopurua:"
 
 #. Default: "Display traceback as text"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:75
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:76
 msgid "label_traceback_as_text"
 msgstr "Traceback-a testu bezala bistaratu"
 
@@ -12854,14 +13127,14 @@ msgid "label_up_to_groups_overview"
 msgstr "Taldeak errepasatzera jo"
 
 #. Default: "Up to Site Setup"
-#: CMFPlone/controlpanel/browser/maintenance.pt:166
+#: CMFPlone/controlpanel/browser/maintenance.pt:167
 #: plone.app.caching/plone/app/caching/browser/import.pt:48
 #: plone.app.caching/plone/app/caching/browser/purge.pt:48
 msgid "label_up_to_plone_setup"
 msgstr "Ploneren konfigurazio orokorrera joan"
 
 #. Default: "Back to the control panel"
-#: plone/app/theming/browser/mapper.pt:97
+#: plone/app/theming/browser/mapper.pt:99
 msgid "label_up_to_theming_controlpanel"
 msgstr "Kontrol panelera itzuli"
 
@@ -12877,8 +13150,9 @@ msgid "label_upgrade_hellip"
 msgstr "Eguneratu..."
 
 #. Default: "URL"
-#: for external links." to link outside the site." widget label of StringWidget
-#: - description ""
+#: for external links."
+#: to link outside the site."
+#: widget label of StringWidget - description ""
 msgid "label_url"
 msgstr "URL"
 
@@ -12889,7 +13163,7 @@ msgstr "Garbitu beharreko URLak"
 
 #. Default: "User Name"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:91
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:51
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:52
 #: plone.app.users/plone/app/users/schema.py:93
 msgid "label_user_name"
 msgstr "Erabiltzailearen izena"
@@ -12993,6 +13267,16 @@ msgstr "Berria gehitu"
 msgid "legend_after_migration_cleanup"
 msgstr "3. pausua - Migrazioaren osteko garbiketa"
 
+#. Default: "All existing alternative urls for this site"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:203
+msgid "legend_all_existing_aliases"
+msgstr ""
+
+#. Default: "Bulk-upload alternative urls"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:142
+msgid "legend_bulk_upload"
+msgstr ""
+
 #. Default: "Caching proxies"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:125
 msgid "legend_caching_proxies"
@@ -13007,6 +13291,11 @@ msgstr "Ezarpen zehatzak"
 #: plone.app.iterate/plone/app/iterate/browser/checkout.pt:40
 msgid "legend_details"
 msgstr "Zehaztasunak"
+
+#. Default: "Existing alternative urls for this item"
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:99
+msgid "legend_existing_aliases"
+msgstr ""
 
 #. Default: "Global settings"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:102
@@ -13100,7 +13389,7 @@ msgid "linkintegrity_breaches_title"
 msgstr "Linkak apur daitezke"
 
 #. Default: "Would you like to delete it anyway?"
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:78
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:77
 msgid "linkintegrity_delete_anyway"
 msgstr "Ezabatzea nahi al duzu?"
 
@@ -13310,14 +13599,29 @@ msgstr "${portal_name}-ko erabiltzaile berria"
 #: CMFPlone/browser/login/login_help.py:28
 msgid "mailtemplate_username_info"
 msgstr ""
-"From: {encoded_mail_sender}\\nTo: \n"
-"{email}\\nSubject: {portal_url} webguneko zure erabiltzaile-izena \n"
-"\\nContent-Type: text/\n"
-"plain\\nPrecedence: bulk\\n\\{fullname},\n"
-"\\n\\n{portal_url} webgunean duzun erabiltzaile izena \n"
-"gogorarazteko eskatu diguzu.\\nZure erabiltzaile-izena: \n"
-"{login}\\n\\n\\nAgur bat,\\n\\n--\n"
-"\\n\\n{email_from_name}\""
+"From: {encoded_mail_sender}\\n"
+"To: \n"
+"{email}\\n"
+"Subject: {portal_url} webguneko zure erabiltzaile-izena \n"
+"\\n"
+"Content-Type: text/\n"
+"plain\\n"
+"Precedence: bulk\\n"
+"\\{fullname},\n"
+"\\n"
+"\\n"
+"{portal_url} webgunean duzun erabiltzaile izena \n"
+"gogorarazteko eskatu diguzu.\\n"
+"Zure erabiltzaile-izena: \n"
+"{login}\\n"
+"\\n"
+"\\n"
+"Agur bat,\\n"
+"\\n"
+"--\n"
+"\\n"
+"\\n"
+"{email_from_name}\""
 
 #. Default: "All…"
 #: plone.app.contentmenu/plone/app/contentmenu/menu.py:918
@@ -13356,17 +13660,17 @@ msgid "message_email_in_use"
 msgstr "Idatzitako e-posta helbidea beste norbaitek darabil edo ez da baliozkoa. Aukeratu beste bat."
 
 #. Default: "enable the 'Comment Review Workflow' for the Comment content type"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:34
 msgid "message_enable_comment_workflow"
 msgstr "Aktibatu 'Erantzunen Moderazio Workflowa' Erantzuna elementu-motarentzat."
 
 #. Default: "Moderation workflow is disabled. You have to ${enable_comment_workflow} before you can moderate comments here."
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:34
 msgid "message_moderation_disabled"
 msgstr "Moderazioa desaktibatuta dago. ${enable_comment_workflow} behar duzu, hemen ezer moderatu aurretik."
 
 #. Default: "No comments to moderate."
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:43
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:44
 msgid "message_nothing_to_moderate"
 msgstr "Ez dago ezer moderazio kolan"
 
@@ -13812,7 +14116,8 @@ msgid "preview"
 msgstr "Aurreikusi"
 
 #. Default: "private"
-#: workflow state defined in folder_workflow - title Private plone_workflow
+#: workflow state defined in folder_workflow - title Private
+#: workflow state defined in plone_workflow - title Private
 msgid "private"
 msgstr "pribatu"
 
@@ -13822,13 +14127,14 @@ msgid "publiciation_date"
 msgstr "Argitaratze-data"
 
 #. Default: "publish"
-#: workflow transition defined in folder_workflow - title Reviewer publishes
-#: content new state published plone_workflow
+#: workflow transition defined in folder_workflow - title Reviewer publishes content new state published
+#: workflow transition defined in plone_workflow - title Reviewer publishes content new state published
 msgid "publish"
 msgstr "argitaratu"
 
 #. Default: "published"
-#: workflow state defined in folder_workflow - title Published plone_workflow
+#: workflow state defined in folder_workflow - title Published
+#: workflow state defined in plone_workflow - title Published
 msgid "published"
 msgstr "argitaratua"
 
@@ -13904,8 +14210,7 @@ msgid "registry_export_text"
 msgstr "Erregistro guztia XML fitxategi batera esportatuko da."
 
 #. Default: "reject"
-#: workflow transition defined in plone_workflow - title Reviewer rejects
-#: submission new state visible
+#: workflow transition defined in plone_workflow - title Reviewer rejects submission new state visible
 msgid "reject"
 msgstr "ezetsi"
 
@@ -13919,7 +14224,8 @@ msgstr "Ezin da pausu hau exekutatu LinguaPlone guztiz desinstalatu gabe: produk
 msgid "relation_migration_with_not_needed"
 msgstr "Zure atariak ez du erlazio-kataloorik eta beraz, ez pausu hau ez da beharrezkoa."
 
-#: CMFPlone/browser/search.py:178 CMFPlone/interfaces/controlpanel.py:1071
+#: CMFPlone/browser/search.py:178
+#: CMFPlone/interfaces/controlpanel.py:913
 msgid "relevance"
 msgstr "errelebantzia"
 
@@ -13938,8 +14244,8 @@ msgid "reset_passwords_msg"
 msgstr "Erabiltzaile hauei beren pasahitzak berrezartzeko mezuak bidali zaizkie: ${user_ids}"
 
 #. Default: "retract"
-#: workflow transition defined in folder_workflow - title Member retracts
-#: submission new state visible plone_workflow
+#: workflow transition defined in folder_workflow - title Member retracts submission new state visible
+#: workflow transition defined in plone_workflow - title Member retracts submission new state visible
 msgid "retract"
 msgstr "atzera egin"
 
@@ -13950,7 +14256,7 @@ msgstr "atzera egin"
 msgid "return_to_view"
 msgstr "Itzuli"
 
-#: CMFPlone/interfaces/controlpanel.py:1299
+#: CMFPlone/interfaces/controlpanel.py:1141
 msgid "robots.txt"
 msgstr "robots.txt"
 
@@ -13989,8 +14295,8 @@ msgid "shared_folder"
 msgstr "${title} karpeta ireki"
 
 #. Default: "show"
-#: workflow transition defined in folder_workflow - title Member makes content
-#: visible new state plone_workflow
+#: workflow transition defined in folder_workflow - title Member makes content visible new state visible
+#: workflow transition defined in plone_workflow - title Member makes content visible new state visible
 msgid "show"
 msgstr "erakutsi"
 
@@ -14039,8 +14345,7 @@ msgid "structured_text"
 msgstr "Testu Egituratua"
 
 #. Default: "submit"
-#: workflow transition defined in plone_workflow - title Member requests
-#: publishing new state pending
+#: workflow transition defined in plone_workflow - title Member requests publishing new state pending
 msgid "submit"
 msgstr "bidali"
 
@@ -14198,7 +14503,7 @@ msgid "text_creator_date"
 msgstr "${creator}-k sortua , azken eguneratzea: ${date}"
 
 #. Default: "You have configured a custom workflow for the 'Discussion Item' content type. You can enable/disable the comment moderation in this control panel only if you use one of the default 'Discussion Item' workflows. Go to the ${label_discussion_control_panel_link} to choose a workflow for the 'Discussion Item' type."
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:42
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:44
 msgid "text_custom_comment_workflow"
 msgstr "Erantzunentzat workflow pertsonalizatua konfiguratu duzu. Erantzunen moderazioa hemen aktibatu/desaktibatu dezakezu baina bakarrik defektuzko workflowa erabiltzen baudzu. Joan ${label_discussion_control_panel_link}era erantzunen workflowa ezartzeko"
 
@@ -14208,13 +14513,13 @@ msgid "text_default_site_title"
 msgstr "Ataria"
 
 #. Default: "Types control panel"
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:43
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:45
 msgid "text_discussion_type_control_panel_link"
 msgstr "Elementu-moten kontrol panel"
 
 # Do people understand what this message means?
 #. Default: "The specified log entry was not found. It may have expired. If you are using a load-balanced ZEO (cluster) setup, try reloading until you get the right server in the cluster."
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:35
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:36
 msgid "text_errlog_notfound"
 msgstr "Adierazitako log sarrera ez da aurkitu. Agian iraungi egingo zen. ZEO eta karga balantzeagailua erabiltzen ari bazara (cluster bat), saiatu eguneratzen zerbitzari egokia erabili arte."
 
@@ -14235,14 +14540,14 @@ msgid "text_no_email_setup"
 msgstr "Webgune honek ez dauka e-posta ezarpenik konfiguratuta. Hau egin artean ez da posible harremanetarako formularioa erabiltzea."
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
-#: CMFPlone/controlpanel/browser/overview.pt:52
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:22
+#: CMFPlone/controlpanel/browser/overview.pt:54
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:23
 msgid "text_no_mailhost_configured"
 msgstr "Ez duzu posta zerbitzaria edo 'Nork' helbidea konfiguratu, beraz kontaktu formularioak, e-posta jakinarazpenek edo pasahitzak berrezartzeak ez dute funtzionatuko. Joan ${label_mail_control_panel_link} atalera hau konpontzeko"
 
 #. Default: "Mail control panel"
-#: CMFPlone/controlpanel/browser/overview.pt:53
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:23
+#: CMFPlone/controlpanel/browser/overview.pt:55
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:24
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "e-posta ezarpenak"
 
@@ -14262,7 +14567,7 @@ msgid "text_no_new_modified_items"
 msgstr "Ez da elementurik aldatu."
 
 #. Default: "PIL is not installed properly, image scaling will not work."
-#: CMFPlone/controlpanel/browser/overview.pt:87
+#: CMFPlone/controlpanel/browser/overview.pt:91
 msgid "text_no_pil_installed"
 msgstr "Kontuz: PIL ez dagoenez ongi instalatuta irudien tamaina aldaketa ez da ibiliko."
 
@@ -14277,12 +14582,12 @@ msgid "text_no_searchstring_large"
 msgstr "Sartu bilatu nahi duzun erabiltzaile izena edo taldea."
 
 #. Default: "You have not set the portal timezone. Date/Time handling will not work properly for timezone aware date/time values. Go to the ${label_mail_event_settings_link} to fix this."
-#: CMFPlone/controlpanel/browser/overview.pt:72
+#: CMFPlone/controlpanel/browser/overview.pt:75
 msgid "text_no_timezone_configured"
 msgstr "Ez duzu webgunearen defektuzko ordu-zona aukeratu. Data/Orduaren kudeaketa ez da ondo ibiliko ordu-zona duten data/ordu balioentzat. Joan ${label_mail_event_settings_link}era hau konpontzeko"
 
 #. Default: "Date and Time Settings control panel"
-#: CMFPlone/controlpanel/browser/overview.pt:73
+#: CMFPlone/controlpanel/browser/overview.pt:76
 msgid "text_no_timezone_configured_control_panel_link"
 msgstr "Data eta orduaren ezarpenen kontrol panel"
 
@@ -14309,7 +14614,7 @@ msgid "text_nomatches"
 msgstr "Emaitzarik ez"
 
 #. Default: "You are not allowed to manage the Zope server."
-#: CMFPlone/controlpanel/browser/maintenance.pt:160
+#: CMFPlone/controlpanel/browser/maintenance.pt:161
 #: CMFPlone/controlpanel/browser/maintenance.py:58
 msgid "text_not_allowed_manage_server"
 msgstr "Ez daukazu Zoperen zerbitzua kudeatzeko baimenik"
@@ -14330,12 +14635,12 @@ msgid "text_user_not_in_any_group"
 msgstr "Erabiltzaile hau ez da talde bateko partaidea."
 
 #. Default: "Database name:"
-#: CMFPlone/controlpanel/browser/maintenance.pt:105
+#: CMFPlone/controlpanel/browser/maintenance.pt:106
 msgid "text_zope_database_name"
 msgstr "Datubasearen izena:"
 
 #. Default: "<strong>Current database size:</strong> ${size}"
-#: CMFPlone/controlpanel/browser/maintenance.pt:109
+#: CMFPlone/controlpanel/browser/maintenance.pt:110
 msgid "text_zope_database_size"
 msgstr "<strong>Datu-basearen oraingo tamaina:</strong> ${size}"
 
@@ -14375,12 +14680,12 @@ msgid "theming_controlpanel_upload"
 msgstr "Itxura kargatu"
 
 #. Default: "This is a built-in theme, and cannot be edited."
-#: plone/app/theming/browser/mapper.pt:82
+#: plone/app/theming/browser/mapper.pt:84
 msgid "theming_mapper_warning_cannot_edit"
 msgstr "Hau Plonerekin datorren itxura bat da, eta ezin da aldatu."
 
 #. Default: "This theme is currently active. Any changes made will be immediately reflected on the live site."
-#: plone/app/theming/browser/mapper.pt:74
+#: plone/app/theming/browser/mapper.pt:75
 msgid "theming_mapper_warning_live"
 msgstr "Itxura hau aktibatuta dago. Egiten dituzun aldaketa guztiak webgunean berehala aplikatuko dira."
 
@@ -14467,7 +14772,7 @@ msgid "title_built_with_plone"
 msgstr "Atari hau Plone Eduki Kudeaketa Sistema erabiliz sortu da."
 
 #. Default: "Bulk Actions"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:64
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
 msgid "title_bulkactions"
 msgstr "Aldi-bereko ekintzak"
 
@@ -14604,7 +14909,7 @@ msgid "title_language"
 msgstr "Hizkuntza"
 
 #. Default: "Legacy portlets"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:66
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:67
 msgid "title_legacy_portlets"
 msgstr "Portlet zaharrak"
 
@@ -14980,7 +15285,7 @@ msgstr "Aldaketak ikusi"
 
 #. Default: "visible"
 #: workflow state defined in folder_workflow - title Public Draft
-#: plone_workflow
+#: workflow state defined in plone_workflow - title Public Draft
 msgid "visible"
 msgstr "ikusgai"
 

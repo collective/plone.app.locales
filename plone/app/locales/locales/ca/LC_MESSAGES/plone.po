@@ -55,6 +55,10 @@ msgstr "$m minuts"
 msgid "${action/title}"
 msgstr "${action/title}"
 
+#: CMFPlone/controlpanel/browser/redirects.py:359
+msgid "${count} alternative urls added."
+msgstr ""
+
 #: plone.app.content/plone/app/content/browser/contents/__init__.py:134
 msgid "${items} could not be found"
 msgstr "No s'han trobat ${items}"
@@ -186,7 +190,7 @@ msgstr "Un registre de configuració semblant a 'Mozilla about:config'"
 msgid "A TALES expression condition makes the rule apply only if TALES expression is not False in context."
 msgstr "Una condició d'una expressió TALES fa que la regla només s'apliqui si l'expressió TALES no és False en el seu context."
 
-#: plone/app/theming/browser/controlpanel.py:296
+#: plone/app/theming/browser/controlpanel.py:299
 msgid "A boilerplate rules.xml was added to your theme, but no index.html file found. Update rules.xml to reference the current theme file."
 msgstr "S'ha afegit al tema un fitxer rules.xml com a model, però no s'ha trobat cap fitxer index.html. Actualitzeu el fitxer rules.xml perquè indiqui el fitxer correcte del tema."
 
@@ -222,7 +226,7 @@ msgstr "Un directori per a emmagatzemar i servir fitxers amb recursos estàtics"
 msgid "A group condition can prevent a rule from executing unless the current user is a member of a particular group."
 msgstr "Una condició de grup pot evitar que s'executi una regla, tret que l'usuari actual sigui membre d'un grup en concret."
 
-#: CMFPlone/interfaces/controlpanel.py:370
+#: CMFPlone/interfaces/controlpanel.py:205
 msgid "A list of valid tags which will be not filtered out."
 msgstr "Llista d'etiquetes vàlides que no s'han de filtrar"
 
@@ -334,17 +338,21 @@ msgstr "Portlet que mostra els resultats d'un objecte col·lecció"
 msgid "A simple review workflow for comments"
 msgstr "Circuit de treball simple per a comentaris"
 
-#: CMFPlone/interfaces/controlpanel.py:1647
+#: CMFPlone/interfaces/controlpanel.py:1489
 msgid "A value for the quality of 2x high pixel density images, from 1 (lowest) to 95 (highest). A value of 0 will mean plone.scaling's default will be used, which is currently 62."
 msgstr "Valor per a la qualitat de les imatges amb alta densitat de 2x píxels, des de 1 (baixa) fins a 95 (alta). Un valor de 0 significa el valor per defecte de plone.scaling, que actualment és de 62."
 
-#: CMFPlone/interfaces/controlpanel.py:1658
+#: CMFPlone/interfaces/controlpanel.py:1500
 msgid "A value for the quality of 3x high pixel density images, from 1 (lowest) to 95 (highest). A value of 0 will mean plone.scaling's default will be used, which is currently 51."
 msgstr "Valor per a la qualitat de les imatges amb alta densitat de 3x píxels, des de 1 (baixa) fins a 95 (alta). Un valor de 0 significa el valor per defecte de plone.scaling, que actualment és de 51."
 
-#: CMFPlone/interfaces/controlpanel.py:1625
+#: CMFPlone/interfaces/controlpanel.py:1467
 msgid "A value for the quality of scaled images, from 1 (lowest) to 95 (highest). A value of 0 will mean plone.scaling's default will be used, which is currently 88."
 msgstr "Valor per a la qualitat de les imatges comprimides, des de 1 (baixa) fins a 95 (alta). Un valor de 0 significa el valor per defecte de plone.scaling, que actualment és de 88."
+
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:72
+msgid "A versioning action will store a version of a content no matter versioning is enabled for it or not."
+msgstr ""
 
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:93
 msgid "A workflow action triggers a workflow transition on an object."
@@ -408,12 +416,14 @@ msgstr "Portlet d'accions"
 msgid "Activate"
 msgstr "Activa"
 
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:169
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:170
 msgid "Activated add-ons"
 msgstr "Complements activats"
 
 #. Default: "Add"
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:76
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:126
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:84
 msgid "Add"
 msgstr "Afegeix"
 
@@ -517,6 +527,10 @@ msgstr "Afegeix un portlet de cerca"
 msgid "Add TALES Expression Condition"
 msgstr "Afegeix una condició d'expressió TALES"
 
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:71
+msgid "Add Versioning Action"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:92
 msgid "Add Workflow Action"
 msgstr "Afegeix una acció de circuit"
@@ -573,11 +587,11 @@ msgstr "Afegeix suport de CMFEditions per a Dexterity"
 msgid "Adds Dexterity-based Folder and Document types for testing."
 msgstr "Afegeix els tipus Carpeta i Document de Dexterity per a fer proves"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:36
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:37
 msgid "Adds a table of contents"
 msgstr "Afegeix una taula de continguts"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:46
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:47
 msgid "Adds collection behavior"
 msgstr "Afegeix comportament de col·lecció"
 
@@ -589,7 +603,7 @@ msgstr "Afegeix els camps creador, col·laborador i drets d'autor."
 msgid "Adds effective date and expiration date fields."
 msgstr "Afegeix els camps data efectiva i data de venciment."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:18
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:19
 msgid "Adds image and image caption fields"
 msgstr "Afegeix els camps imatge i peu de la imatge."
 
@@ -597,7 +611,7 @@ msgstr "Afegeix els camps imatge i peu de la imatge."
 msgid "Adds keywords and language fields."
 msgstr "Afegeix els camps paraules clau i idioma."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:56
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:58
 msgid "Adds richtext behavior"
 msgstr "Afegeix comportament de text amb format"
 
@@ -653,7 +667,7 @@ msgstr "D'aquí a"
 msgid "After the current day"
 msgstr "Després del dia actual"
 
-#: CMFPlone/interfaces/controlpanel.py:748
+#: CMFPlone/interfaces/controlpanel.py:583
 msgid "After the deadline (FLOSS)"
 msgstr "After the Deadline (programari lliure, FLOSS)"
 
@@ -669,7 +683,7 @@ msgstr "Després d'aquesta acció no es podran editar els continguts que ja exis
 msgid "Album view"
 msgstr "Vista d'àlbum"
 
-#: CMFPlone/interfaces/controlpanel.py:562
+#: CMFPlone/interfaces/controlpanel.py:397
 msgid "Alignment styles"
 msgstr "Estils d'alineació"
 
@@ -687,7 +701,7 @@ msgstr "Tot el contingut"
 msgid "All dates"
 msgstr "Totes les dates"
 
-#: CMFPlone/interfaces/controlpanel.py:1110
+#: CMFPlone/interfaces/controlpanel.py:952
 msgid "Allow anyone to view 'about' information"
 msgstr "Permetre a tothom visualitzar la informació 'quant a'"
 
@@ -704,7 +718,7 @@ msgstr "Permet els comentaris per aquest tipus de contingut."
 msgid "Allow discussion on this item"
 msgstr "Permet els comentaris en aquest element"
 
-#: CMFPlone/interfaces/controlpanel.py:1683
+#: CMFPlone/interfaces/controlpanel.py:1525
 msgid "Allow external login sites"
 msgstr "Permet iniciar la sessió des de llocs webs externs"
 
@@ -736,15 +750,15 @@ msgstr "Formats de canal permesos"
 msgid "Allowed MIME types"
 msgstr "Tipus MIME permesos"
 
-#: CMFPlone/interfaces/controlpanel.py:1605
+#: CMFPlone/interfaces/controlpanel.py:1447
 msgid "Allowed image sizes"
 msgstr "Mides d'imatge permeses"
 
-#: CMFPlone/interfaces/controlpanel.py:1120
+#: CMFPlone/interfaces/controlpanel.py:962
 msgid "Allows users to login with their email address instead of specifying a separate login name. This also updates the login name of existing users, which may take a while on large sites. The login name is saved as lower case, but to be userfriendly it does not matter which case you use to login. When duplicates are found, saving this form will fail. You can use the @@migrate-to-emaillogin page to show the duplicates."
 msgstr "Permet als usuaris iniciar la sessió amb l'adreça de correu electrònic en comptes d'especificar un nom d'usuari. En activar aquesta opció també s'actualitzen els noms d'usuari dels usuaris existents, cosa que pot trigar una bona estona en portals grossos. El nom d'usuari es desa en minúscules, però per simplificar els usuaris poden iniciar sessió tant en minúscules com en majúscules. Si hi ha noms duplicats, en desar aquest formulari es produiran errors. Podeu utilitzar la pàgina @@migrate-to-emaillogin per a inspeccionar els duplicats."
 
-#: CMFPlone/interfaces/controlpanel.py:1084
+#: CMFPlone/interfaces/controlpanel.py:926
 msgid "Allows users to register themselves on the site. If not selected, only site managers can add new users."
 msgstr "Permet que els usuaris es registrin ells mateixos al lloc web. Si no està seleccionat, només poden afegir usuaris nous els administradors del lloc."
 
@@ -752,13 +766,49 @@ msgstr "Permet que els usuaris es registrin ells mateixos al lloc web. Si no est
 msgid "Allows users to subscribe to feeds of search results"
 msgstr "Permet que els resultats de les cerques siguin sindicables mitjançant canals RSS"
 
-#: CMFPlone/interfaces/controlpanel.py:1516
+#: CMFPlone/interfaces/controlpanel.py:1358
 msgid "Alternative formats"
 msgstr "Formats alternatius"
 
-#: CMFPlone/interfaces/controlpanel.py:1202
+#: CMFPlone/controlpanel/browser/redirects.py:131
+msgid "Alternative url added."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:291
+msgid "Alternative url from {0} to {1} added."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:60
+msgid "Alternative url path must not be a view."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:49
+msgid "Alternative url path must start with a slash."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:143
+msgid "Alternative url removed."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:139
+msgid "Alternative urls removed."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:280
+msgid "Alternative urls that point to themselves will cause an endless cycle of redirects."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:335
+msgid "Alternative urls that point to themselves will causean endless cycle of redirects."
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:1044
 msgid "Always"
 msgstr "Sempre"
+
+#: CMFPlone/interfaces/controlpanel.py:1659
+msgid "An action with the id \"${actionid}\" already exists"
+msgstr ""
 
 #: plone/app/theming/browser/theme-error.pt:12
 msgid "An error occurred trying to parse the rules file:"
@@ -866,15 +916,15 @@ msgstr "S'han deshabilitat les assignacions."
 msgid "Assignments enabled."
 msgstr "S'han habilitat les assignacions."
 
-#: CMFPlone/interfaces/controlpanel.py:770
+#: CMFPlone/interfaces/controlpanel.py:605
 msgid "AtD error types to show"
 msgstr "Tipus d'error d'AtD que es mostren"
 
-#: CMFPlone/interfaces/controlpanel.py:754
+#: CMFPlone/interfaces/controlpanel.py:589
 msgid "AtD ignore strings"
 msgstr "Cadenes de text excloses per AtD"
 
-#: CMFPlone/interfaces/controlpanel.py:793
+#: CMFPlone/interfaces/controlpanel.py:628
 msgid "AtD service URL"
 msgstr "URL del servei d'AtD"
 
@@ -882,7 +932,7 @@ msgstr "URL del servei d'AtD"
 msgid "Attendees extension for Events."
 msgstr "Estén els esdeveniments amb el camp assistents."
 
-#: CMFPlone/interfaces/controlpanel.py:1671
+#: CMFPlone/interfaces/controlpanel.py:1513
 msgid "Auth cookie length"
 msgstr "Mida de les galetes d'autenticació"
 
@@ -897,7 +947,7 @@ msgstr "Genera automàticament el nom curt utilitzat a la URL per aquest conting
 msgid "Automatically generate short URL name for content based on its primary field file name"
 msgstr "Genera automàticament el nom curt utilitzat a la URL per aquest contingut, basat en el nom del fitxer"
 
-#: CMFPlone/interfaces/controlpanel.py:901
+#: CMFPlone/interfaces/controlpanel.py:743
 msgid "Automatically generate tabs"
 msgstr "Genera les pestanyes automàticament"
 
@@ -909,15 +959,15 @@ msgstr "Opcions disponibles"
 msgid "Available add-ons"
 msgstr "Complements disponibles"
 
-#: CMFPlone/interfaces/controlpanel.py:96
+#: CMFPlone/interfaces/controlpanel.py:105
 msgid "Available editors"
 msgstr "Editors disponibles"
 
-#: CMFPlone/interfaces/controlpanel.py:97
+#: CMFPlone/interfaces/controlpanel.py:106
 msgid "Available editors in the portal."
 msgstr "Editors disponibles al portal."
 
-#: CMFPlone/interfaces/controlpanel.py:1357
+#: CMFPlone/interfaces/controlpanel.py:1199
 msgid "Available timezones"
 msgstr "Fusos horaris disponibles"
 
@@ -985,7 +1035,7 @@ msgstr "Millors ginys per a Plone"
 msgid "Between dates"
 msgstr "Entre les dates"
 
-#: CMFPlone/interfaces/controlpanel.py:551
+#: CMFPlone/interfaces/controlpanel.py:386
 msgid "Block styles"
 msgstr "Estils de bloc"
 
@@ -994,15 +1044,15 @@ msgstr "Estils de bloc"
 msgid "Boolean (True/False)"
 msgstr "Booleà (Veritat/Fals)"
 
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:211
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:213
 msgid "Broken add-ons"
 msgstr "Complements trencats"
 
-#: CMFPlone/interfaces/controlpanel.py:902
+#: CMFPlone/interfaces/controlpanel.py:744
 msgid "By default, all items created at the root level will appear as tabs. You can turn this off if you prefer manually constructing this part of the navigation."
 msgstr "Per defecte, tots els elements de l'arrel del portal apareixen com pestanyes. Podeu desactivar aquesta opció si voleu construir manualment aquesta part de la navegació."
 
-#: CMFPlone/interfaces/controlpanel.py:911
+#: CMFPlone/interfaces/controlpanel.py:753
 msgid "By default, any content item in the root of the portal will appear as a tab. If you turn this option off, only folders will be shown. This only has an effect if 'automatically generate tabs' is enabled."
 msgstr "Per defecte, qualsevol element a l'arrel del portal apareix com una pestanya. Si desactiveu aquesta opció, només es mostraran les carpetes. Però només té efecte si heu activat l'opció 'Genera les pestanyes automàticament'."
 
@@ -1010,19 +1060,19 @@ msgstr "Per defecte, qualsevol element a l'arrel del portal apareix com una pest
 msgid "CSS/LESS files"
 msgstr "Fitxers CSS/LESS"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:283
+#: plone.app.caching/plone/app/caching/operations/default.py:275
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
 msgstr "Emmagatzema en els navegadors i en els proxy (per defecte: 24 hores). Atenció: només s'ha d'utilitzar per a recursos estables que quan canvien també ho ha fa la seva URL, o bé per a recursos que no passa res si temporalment no s'actualitzen."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:255
+#: plone.app.caching/plone/app/caching/operations/default.py:247
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires."
 msgstr ""
 
-#: plone.app.caching/plone/app/caching/operations/default.py:227
+#: plone.app.caching/plone/app/caching/operations/default.py:219
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
 msgstr "Emmagatzema en els navegadors però caduca immediatament i activa respostes 304 en les sol·licituds següents. Per al 304 s'ha de configurar les capçaleres 'Last-modified' i les 'ETags'. Si la capçalera Last-Modified és insuficient per a assegurar continguts actuals, activeu l'ETag llistant els components que s'han d'utilitzar per a construir la capçalera ETag. Per a emmagatzemar les respostes públiques a la memòria de Zope, activeu la 'memòria cau RAM'."
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:656
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:662
 msgid "Cache purged."
 msgstr "S'ha esborrat la memòria cau."
 
@@ -1073,6 +1123,10 @@ msgstr "Cancel·lar retirada de versió"
 msgid "Cannot find checkout location"
 msgstr "No s'ha trobat la ubicació per a la retirada de versió"
 
+#: CMFPlone/controlpanel/browser/redirects.py:77
+msgid "Cannot use a working path as alternative url."
+msgstr ""
+
 #: plone.app.discussion/plone/app/discussion/interfaces.py:197
 msgid "Captcha"
 msgstr "Captcha"
@@ -1089,7 +1143,7 @@ msgstr "Regla en cascada"
 msgid "Categorization"
 msgstr "Categorització"
 
-#: CMFPlone/interfaces/controlpanel.py:1726
+#: CMFPlone/interfaces/controlpanel.py:1582
 msgid "Category"
 msgstr "Categoria"
 
@@ -1125,7 +1179,7 @@ msgstr "S'han aplicat els canvis."
 msgid "Changes canceled."
 msgstr "S'han cancel·lat els canvis."
 
-#: plone/app/theming/browser/controlpanel.py:114
+#: plone/app/theming/browser/controlpanel.py:115
 msgid "Changes cancelled"
 msgstr "S'han cancel·lat els canvis"
 
@@ -1147,7 +1201,7 @@ msgstr "Canvis guardats"
 msgid "Changes saved."
 msgstr "S'han desat els canvis."
 
-#: CMFPlone/interfaces/controlpanel.py:1496
+#: CMFPlone/interfaces/controlpanel.py:1338
 msgid "Characterset to use when sending e-mails."
 msgstr "Codificació de caràcters que s'utilitza en enviar correus electrònics."
 
@@ -1183,7 +1237,7 @@ msgstr "Retirada de versió cancel·lada"
 msgid "Checkout workflow policy"
 msgstr "Circuit de treball per a retirades de versió"
 
-#: CMFPlone/interfaces/controlpanel.py:507
+#: CMFPlone/interfaces/controlpanel.py:342
 msgid "Choose the CSS used in WYSIWYG Editor Area"
 msgstr "CSS per a l'àrea de l'editor WYSIWYG"
 
@@ -1218,7 +1272,7 @@ msgstr "Clona el tipus de contingut"
 
 #. Default: "Collection"
 #: plone.app.collection/plone/app/collection/profiles/default/types/Collection.xml
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:46
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:47
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Collection.xml
 msgid "Collection"
 msgstr "Col·lecció"
@@ -1236,6 +1290,7 @@ msgstr "Portlet de col·lecció"
 msgid "Comma separated values of resource for shim"
 msgstr "Valors del recurs separats per comes per al paràmetre shim de RequireJS"
 
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:23
 #: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
 #: plone.stringinterp/plone/stringinterp/adapters.py:696
 msgid "Comment"
@@ -1398,7 +1453,7 @@ msgstr "Contenidor"
 msgid "Contains"
 msgstr "Conté"
 
-#: CMFPlone/interfaces/controlpanel.py:818
+#: CMFPlone/interfaces/controlpanel.py:653
 msgid "Contains objects"
 msgstr "Conté objectes"
 
@@ -1601,7 +1656,7 @@ msgstr "Correus dels creadors"
 msgid "Creators Ids"
 msgstr "Els Id dels creadors"
 
-#: CMFPlone/interfaces/controlpanel.py:1061
+#: CMFPlone/interfaces/controlpanel.py:903
 msgid "Crop the item description in search result listings after a number of characters."
 msgstr "Escapça la descripció a partir d'un nombre de caràcters en els resultats de les cerques"
 
@@ -1621,15 +1676,15 @@ msgstr "Configuració activa actual"
 msgid "Current logged in user"
 msgstr "Usuari actual connectat"
 
-#: CMFPlone/interfaces/controlpanel.py:462
+#: CMFPlone/interfaces/controlpanel.py:297
 msgid "Custom attributes"
 msgstr "Atributs personalitzats"
 
-#: CMFPlone/interfaces/controlpanel.py:724
+#: CMFPlone/interfaces/controlpanel.py:559
 msgid "Custom buttons"
 msgstr "Botons personalitzats"
 
-#: CMFPlone/interfaces/controlpanel.py:714
+#: CMFPlone/interfaces/controlpanel.py:549
 msgid "Custom plugins"
 msgstr "Connectors personalitzats"
 
@@ -1692,7 +1747,7 @@ msgstr "Dates"
 msgid "Day"
 msgstr "Dia"
 
-#: CMFPlone/interfaces/controlpanel.py:884
+#: CMFPlone/interfaces/controlpanel.py:719
 msgid "Days of object history to keep after packing"
 msgstr "Dies d'historial d'un objecte que voleu conservar després de la compressió"
 
@@ -1709,11 +1764,11 @@ msgstr "Tipus MIME per defecte"
 msgid "Default Page"
 msgstr "Pàgina per defecte"
 
-#: CMFPlone/interfaces/controlpanel.py:746
+#: CMFPlone/interfaces/controlpanel.py:581
 msgid "Default browser spellchecker"
 msgstr "Corrector ortogràfic del navegador"
 
-#: CMFPlone/interfaces/controlpanel.py:105
+#: CMFPlone/interfaces/controlpanel.py:114
 msgid "Default editor"
 msgstr "Editor per defecte"
 
@@ -1721,7 +1776,7 @@ msgstr "Editor per defecte"
 msgid "Default encoding for the value"
 msgstr "Codificació del valor per defecte"
 
-#: CMFPlone/interfaces/controlpanel.py:1505
+#: CMFPlone/interfaces/controlpanel.py:1347
 msgid "Default format"
 msgstr "Format per defecte"
 
@@ -1734,7 +1789,7 @@ msgstr "L'idioma per defecte no és en els idiomes disponibles"
 msgid "Default output MIME type"
 msgstr "Tipus MIME de sortida per defecte"
 
-#: CMFPlone/interfaces/controlpanel.py:1312
+#: CMFPlone/interfaces/controlpanel.py:1154
 msgid "Default page IDs"
 msgstr "Els ID per defecte de la pàgina"
 
@@ -1762,11 +1817,11 @@ msgstr "Escolliu els termes de cerca perquè coincideixin amb als elements que v
 msgid "Define the search terms for the items you want to list by choosing what to match on. The list of results will be dynamically updated."
 msgstr "Defineix els termes de cerca pels elements que voleu llistar, escollint amb què voleu que coincideixi. La llista dels resultats s'actualitzarà de forma dinàmica."
 
-#: CMFPlone/interfaces/controlpanel.py:1041
+#: CMFPlone/interfaces/controlpanel.py:883
 msgid "Define the types that should be searched and be available in the user facing part of the site. Note that if new content types are installed, they will be enabled by default unless explicitly turned off here or by the relevant installer."
 msgstr "Defineix els tipus que seran cercables i estaran disponibles de cara als usuaris del lloc web. Tingueu en compte que si s'instal·len nous tipus de contingut, estaran habilitats per defecte tret que els desactiveu explícitament aquí o amb l'instal·lador corresponent."
 
-#: CMFPlone/interfaces/controlpanel.py:1040
+#: CMFPlone/interfaces/controlpanel.py:882
 msgid "Define the types to be shown in the site and searched"
 msgstr "Defineix els tipus que es mostraran i es cercaran al lloc web"
 
@@ -1831,7 +1886,7 @@ msgstr "Depenent de quina quantitat d'archetypes hi hagi al portal, la migració
 msgid "Depends on another bundle"
 msgstr "Depèn d'un altre paquet"
 
-#: CMFPlone/interfaces/controlpanel.py:1735
+#: CMFPlone/interfaces/controlpanel.py:1591
 #: plone.app.content/plone/app/content/browser/contents/__init__.py:202
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
 msgid "Description"
@@ -1841,19 +1896,19 @@ msgstr "Descripció"
 msgid "Details link"
 msgstr "Detalls de l'enllaç"
 
-#: CMFPlone/interfaces/controlpanel.py:117
+#: CMFPlone/interfaces/controlpanel.py:126
 msgid "Determines if the external editor feature is enabled. This feature requires a special client-side application installed. The users also have to enable this in their preferences."
 msgstr "Determina la funció de l'editor extern està habilitada. Aquesta característica requereix una aplicació especial instal·lada al client. Els usuaris també han d'habilitar-la a les seves preferències. "
 
-#: CMFPlone/interfaces/controlpanel.py:128
+#: CMFPlone/interfaces/controlpanel.py:137
 msgid "Determines if the users should get warnings when they delete or move content that is linked from inside the site."
 msgstr "Determina si els usuaris han de rebre avisos quan suprimeixin o moguin contingut que està enllaçat dins el lloc."
 
-#: CMFPlone/interfaces/controlpanel.py:1537
+#: CMFPlone/interfaces/controlpanel.py:1379
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of groups it can be very slow or impossible to build a list all groups. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for groups instead of listing all of them."
 msgstr "Determina si el vostre Plone està optimitzat per llocs web petits o grans. En entorns amb molts grups pot ser molt lent o impossible construir una llista de tots els grups. Aquesta opció ajusta la interfície d'usuari i el comportament de Plone per a aquest cas, permetent-vos cercar grups en lloc de llistar-los tots."
 
-#: CMFPlone/interfaces/controlpanel.py:1550
+#: CMFPlone/interfaces/controlpanel.py:1392
 msgid "Determines if your Plone is optimized for small or large sites. In environments with a lot of users it can be very slow or impossible to build a list all users. This option tunes the user interface and behaviour of Plone for this case by allowing you to search for users instead of listing all of them."
 msgstr "Determina si el vostre Plone està optimitzat per llocs web petits o grans. En entorns amb molts usuaris pot ser molt lent o impossible construir una llista de tots els usuaris. Aquesta opció ajusta la interfície d'usuari i el comportament de Plone per a aquest cas, permetent-vos cercar usuaris en lloc de llistar-los tots."
 
@@ -1875,11 +1930,11 @@ msgstr "Tipus de contingut Dexterity"
 msgid "Dexterity versioning support"
 msgstr "Suport de control de versions de Dexterity"
 
-#: plone/app/theming/configure.zcml:32
+#: plone/app/theming/configure.zcml:26
 msgid "Diazo theme support"
 msgstr "Suport de temes mitjançant Diazo"
 
-#: CMFPlone/interfaces/controlpanel.py:352
+#: CMFPlone/interfaces/controlpanel.py:187
 msgid "Disable HTML filtering"
 msgstr "Desactiva el filtratge d'HTML"
 
@@ -1899,7 +1954,7 @@ msgstr "Voleu desactivar la reindexació d'objectes durant la migració?"
 msgid "Disabled"
 msgstr "Desactivat"
 
-#: CMFPlone/interfaces/controlpanel.py:137
+#: CMFPlone/interfaces/controlpanel.py:146
 msgid "Disabling locking here will only affect users editing content through the Plone web UI.  Content edited via WebDAV clients will still be subject to locking."
 msgstr "Deshabilitar el bloqueig aquí, només afectarà els usuaris que editin contingut a través de la interfície d'usuari web de Plone. L'edició de contingut a través de clients WebDAV encara romandrà bloquejada."
 
@@ -1925,11 +1980,11 @@ msgstr "Els elements de discussió són documents en contestació a un altre con
 msgid "Discussion settings"
 msgstr "Configuració dels comentaris"
 
-#: CMFPlone/interfaces/controlpanel.py:1190
+#: CMFPlone/interfaces/controlpanel.py:1032
 msgid "Display publication date"
 msgstr "Mostra la data de publicació"
 
-#: CMFPlone/interfaces/controlpanel.py:954
+#: CMFPlone/interfaces/controlpanel.py:796
 msgid "Displayed content types"
 msgstr "Tipus de contingut mostrats"
 
@@ -1978,7 +2033,7 @@ msgstr "Dublin Core"
 msgid "Dublin Core metadata"
 msgstr "Metadades Dublin Core"
 
-#: plone/app/theming/browser/controlpanel.py:358
+#: plone/app/theming/browser/controlpanel.py:361
 msgid "Duplicate title"
 msgstr "El títol està duplicat"
 
@@ -1986,20 +2041,24 @@ msgstr "El títol està duplicat"
 msgid "E-Mail Address"
 msgstr "Adreça electrònica"
 
-#: CMFPlone/interfaces/controlpanel.py:1495
+#: CMFPlone/interfaces/controlpanel.py:1337
 msgid "E-mail characterset"
 msgstr "Codificació de caràcters per als correus"
 
-#: CMFPlone/interfaces/controlpanel.py:1257
+#: CMFPlone/interfaces/controlpanel.py:1099
 msgid "E.g. standard view; This default can be overriden individually."
 msgstr "Per exemple la vista estàndard; aquesta configuració global es pot canviar individualment"
 
-#: CMFPlone/interfaces/controlpanel.py:1265
+#: CMFPlone/interfaces/controlpanel.py:1107
 msgid "E.g., tabular view, folder content listing; This default can be overriden individually."
 msgstr "Per exemple la vista tabular o la vista de carpeta; aquesta configuració global es pot canviar individualment"
 
 msgid "EPS image"
 msgstr "Imatge EPS"
+
+#: CMFPlone/controlpanel/browser/redirects.py:340
+msgid "Each line must have 2 columns."
+msgstr ""
 
 #. Default: "Edit"
 #: CMFPlone/controlpanel/browser/actions.pt:46
@@ -2114,6 +2173,10 @@ msgstr "Edita el portlet de cerca"
 msgid "Edit TALES Expression Condition"
 msgstr "Edita la condició de l'expressió TALES"
 
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:88
+msgid "Edit Versioning Action"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/actions/workflow.py:107
 msgid "Edit Workflow Action"
 msgstr "Edita acció de circuit"
@@ -2165,7 +2228,7 @@ msgstr "Configuració de l'edició"
 msgid "Editor"
 msgstr "Editor"
 
-#: CMFPlone/interfaces/controlpanel.py:498
+#: CMFPlone/interfaces/controlpanel.py:333
 msgid "Editor height"
 msgstr "Alçada de l'editor"
 
@@ -2173,7 +2236,7 @@ msgstr "Alçada de l'editor"
 msgid "Editor rejects submitted content"
 msgstr "L'editor rebutja el contingut enviat"
 
-#: CMFPlone/interfaces/controlpanel.py:490
+#: CMFPlone/interfaces/controlpanel.py:325
 msgid "Editor width"
 msgstr "Amplada de l'editor"
 
@@ -2214,11 +2277,11 @@ msgstr "Origen del correu electrònic"
 msgid "Enable Comments"
 msgstr "Permetre comentaris"
 
-#: CMFPlone/interfaces/controlpanel.py:116
+#: CMFPlone/interfaces/controlpanel.py:125
 msgid "Enable External Editor feature"
 msgstr "Habilita la funcionalitat de l'editor extern"
 
-#: CMFPlone/interfaces/controlpanel.py:1031
+#: CMFPlone/interfaces/controlpanel.py:873
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:17
 msgid "Enable LiveSearch"
 msgstr "Habilita LiveSearch (cerca en viu)"
@@ -2227,11 +2290,11 @@ msgstr "Habilita LiveSearch (cerca en viu)"
 msgid "Enable RSS link document action on the syndication content item."
 msgstr "Mostra, a l'apartat d'accions de document, l'enllaç RSS per als elements amb la sindicació activada."
 
-#: CMFPlone/interfaces/controlpanel.py:1102
+#: CMFPlone/interfaces/controlpanel.py:944
 msgid "Enable User Folders"
 msgstr "Habilita les carpetes d'usuari"
 
-#: CMFPlone/interfaces/controlpanel.py:481
+#: CMFPlone/interfaces/controlpanel.py:316
 msgid "Enable auto resizing of the editor window."
 msgstr "Permet que la finestra de l'editor es redimensioni automàticament."
 
@@ -2239,11 +2302,11 @@ msgstr "Permet que la finestra de l'editor es redimensioni automàticament."
 msgid "Enable checkout workflow"
 msgstr "Activa el circuit de treball de retirada de versió"
 
-#: CMFPlone/interfaces/controlpanel.py:127
+#: CMFPlone/interfaces/controlpanel.py:136
 msgid "Enable link integrity checks"
 msgstr "Habilita la comprovació de la integritat dels enllaços"
 
-#: CMFPlone/interfaces/controlpanel.py:136
+#: CMFPlone/interfaces/controlpanel.py:145
 msgid "Enable locking for through-the-web edits"
 msgstr "Habilita el bloqueig per a l'edició a través de web"
 
@@ -2255,11 +2318,11 @@ msgstr "Habilita la navegació següent/anterior per tots els objectes d'aquest 
 msgid "Enable purging"
 msgstr "Activa la purga mitjançant PURGE"
 
-#: CMFPlone/interfaces/controlpanel.py:474
+#: CMFPlone/interfaces/controlpanel.py:309
 msgid "Enable resizing the editor window."
 msgstr "Habilita el redimensionament de la finestra de l'editor"
 
-#: CMFPlone/interfaces/controlpanel.py:1083
+#: CMFPlone/interfaces/controlpanel.py:925
 msgid "Enable self-registration"
 msgstr "Habilita l'auto-registre"
 
@@ -2273,7 +2336,7 @@ msgstr "Habilitat"
 msgid "Enabled by default"
 msgstr "Activat per defecte"
 
-#: CMFPlone/interfaces/controlpanel.py:1032
+#: CMFPlone/interfaces/controlpanel.py:874
 #: plone.app.portlets/plone/app/portlets/portlets/search.py:18
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "Habilita la funció LiveSearch, que mostra els resultats en temps real si el navegador suporta JavaScript."
@@ -2282,23 +2345,23 @@ msgstr "Habilita la funció LiveSearch, que mostra els resultats en temps real s
 msgid "End Date"
 msgstr "Data de finalització"
 
-#: CMFPlone/interfaces/controlpanel.py:584
+#: CMFPlone/interfaces/controlpanel.py:419
 msgid "Enter a JSON-formatted style format configuration. A format is for example the style that get applied when you press the bold button inside the editor. See https://www.tinymce.com/docs/configure/content-formatting/#formats"
 msgstr "Configuració de formats d'estil en JSON. Per exemple, un format és l'estil que s'aplica quan es prem el botó de negreta dins de l'editor. Vegeu https://www.tinymce.com/docs/configure/content-formatting/#formats"
 
-#: CMFPlone/interfaces/controlpanel.py:831
+#: CMFPlone/interfaces/controlpanel.py:666
 msgid "Enter a list of content types which can be used as images. Format is one contenttype per line."
 msgstr "Llista dels tipus de contingut que es poden utilitzar com a imatges. Entreu un tipus de contingut per línia."
 
-#: CMFPlone/interfaces/controlpanel.py:819
+#: CMFPlone/interfaces/controlpanel.py:654
 msgid "Enter a list of content types which can contain other objects. Format is one contenttype per line."
 msgstr "Llista dels tipus de contingut que poden contenir altres objectes. Entreu un tipus de contingut per línia."
 
-#: CMFPlone/interfaces/controlpanel.py:725
+#: CMFPlone/interfaces/controlpanel.py:560
 msgid "Enter a list of custom buttons which will be added to toolbar"
 msgstr "Introduïu una llista de botons personalitzats que s'han d'afegir a la barra d'eines"
 
-#: CMFPlone/interfaces/controlpanel.py:715
+#: CMFPlone/interfaces/controlpanel.py:550
 msgid "Enter a list of custom plugins which will be loaded in the editor. Format is pluginname|location, one per line."
 msgstr "Llista d'extensions personalitzades que s'afegeixen a l'editor. Entreu-ne una per línia amb el format nom d'extensió|localització."
 
@@ -2324,7 +2387,7 @@ msgstr "Introduïu l'hora..."
 msgid "Enter your new password. ${errors}"
 msgstr "Introduïu la contrasenya nova. ${errors}"
 
-#: CMFPlone/interfaces/controlpanel.py:839
+#: CMFPlone/interfaces/controlpanel.py:674
 msgid "Entity encoding"
 msgstr "Codificació d'entitats"
 
@@ -2418,6 +2481,10 @@ msgstr "Esdeveniment amb recurrència"
 msgid "Event end date"
 msgstr "Data de finalització de l'esdeveniment"
 
+#: plone.app.event/plone/app/event/browser/configure.zcml:24
+msgid "Event listing"
+msgstr ""
+
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Event start date"
 msgstr "Data d'inici de l'esdeveniment"
@@ -2484,19 +2551,19 @@ msgstr "Exporta els perfils del tipus"
 msgid "Export vars for shim"
 msgstr "Exporta variables per al paràmetre shim de RequireJS"
 
-#: CMFPlone/interfaces/controlpanel.py:1159
+#: CMFPlone/interfaces/controlpanel.py:1001
 msgid "Expose Dublin Core metadata"
 msgstr "Exposa metadades de Dublin Core"
 
-#: CMFPlone/interfaces/controlpanel.py:1165
+#: CMFPlone/interfaces/controlpanel.py:1007
 msgid "Expose sitemap.xml.gz"
 msgstr "Exposa sitemap.xml.gz"
 
-#: CMFPlone/interfaces/controlpanel.py:1160
+#: CMFPlone/interfaces/controlpanel.py:1002
 msgid "Exposes the Dublin Core properties as metatags."
 msgstr "Exposa les propietats de Dublin Core com metaetiquetes."
 
-#: CMFPlone/interfaces/controlpanel.py:1166
+#: CMFPlone/interfaces/controlpanel.py:1008
 msgid "Exposes your content as a file according to the <a href='http://sitemaps.org'>sitemaps.org</a> standard. You can submit this to compliant search engines like Google, Yahoo and Microsoft. It allows these search engines to more intelligently crawl your site."
 msgstr "Exposa tot el contingut en un fitxer seguint l'estàndard de <a href='http://sitemaps.org'>sitemaps.org</a>. Podeu enviar aquest fitxer a motors de cerca que segueixin l'estàndard, com per exemple Google, Yahoo o Microsoft. Permet que els motors de cerca puguin navegar i indexar el lloc de forma més intel·ligent."
 
@@ -2526,15 +2593,15 @@ msgstr "Perfil d'instal·lació de conjunts de test"
 msgid "External Edit"
 msgstr "Edició externa"
 
-#: CMFPlone/interfaces/controlpanel.py:1702
+#: CMFPlone/interfaces/controlpanel.py:1544
 msgid "External login iframe"
 msgstr "Iframe extern d'inici de sessió"
 
-#: CMFPlone/interfaces/controlpanel.py:1690
+#: CMFPlone/interfaces/controlpanel.py:1532
 msgid "External login url"
 msgstr "URL externa d'inici de sessió"
 
-#: CMFPlone/interfaces/controlpanel.py:1696
+#: CMFPlone/interfaces/controlpanel.py:1538
 msgid "External logout url"
 msgstr "URL externa de sortida de sessió"
 
@@ -2543,11 +2610,11 @@ msgstr "URL externa de sortida de sessió"
 msgid "Externally visible"
 msgstr "Visible externament"
 
-#: CMFPlone/interfaces/controlpanel.py:1590
+#: CMFPlone/interfaces/controlpanel.py:1432
 msgid "Facebook App ID"
 msgstr "App ID de Facebook"
 
-#: CMFPlone/interfaces/controlpanel.py:1597
+#: CMFPlone/interfaces/controlpanel.py:1439
 msgid "Facebook username"
 msgstr "Usuari de Facebook"
 
@@ -2649,6 +2716,7 @@ msgstr "L'extensió de fitxer és ${ext}"
 msgid "Filename: ${filename}"
 msgstr "Nom de fitxer: ${filename}"
 
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:215
 #: plone.app.registry/plone/app/registry/browser/templates/records.pt:57
 msgid "Filter"
 msgstr "Filtra"
@@ -2657,7 +2725,11 @@ msgstr "Filtra"
 msgid "Filter Contained Types"
 msgstr "Filtra els tipus continguts"
 
-#: CMFPlone/interfaces/controlpanel.py:974
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:207
+msgid "Filter by prefix"
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:816
 msgid "Filter on workflow state"
 msgstr "Filtra per estat del circuit de treball"
 
@@ -2708,15 +2780,15 @@ msgstr "Tipus carpeta"
 msgid "Folders"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1204
+#: CMFPlone/interfaces/controlpanel.py:1046
 msgid "For authenticated users only"
 msgstr "Només per usuaris autenticats"
 
-#: CMFPlone/interfaces/controlpanel.py:1180
+#: CMFPlone/interfaces/controlpanel.py:1022
 msgid "For enabling web statistics support from external providers (e.g. Google Analytics). Paste the provided code snippet here. It will be rendered as entered near the end of the page."
 msgstr "Per connectar complements d'estadístiques web de proveïdors externs (per exemple Google Analytics). Enganxeu aquí el tros de codi que us hagin donat. Es renderitza tal qual s'introdueix al final de tot de les pàgines."
 
-#: CMFPlone/interfaces/controlpanel.py:1598
+#: CMFPlone/interfaces/controlpanel.py:1440
 msgid "For linking Open Graph data to a Facebook account"
 msgstr "Per a enllaçar les dades del protocol Open Graph a un compte de Facebook"
 
@@ -2724,7 +2796,7 @@ msgstr "Per a enllaçar les dades del protocol Open Graph a un compte de Faceboo
 msgid "Format"
 msgstr "Format"
 
-#: CMFPlone/interfaces/controlpanel.py:583
+#: CMFPlone/interfaces/controlpanel.py:418
 msgid "Formats"
 msgstr "Formats"
 
@@ -2744,7 +2816,7 @@ msgstr "Imatge GIMP"
 
 #. Default: "General"
 #: CMFPlone/PloneControlPanel.py:70
-#: CMFPlone/interfaces/controlpanel.py:161
+#: plone.i18n/plone/i18n/interfaces.py:30
 msgid "General"
 msgstr "General"
 
@@ -2752,11 +2824,11 @@ msgstr "General"
 msgid "General types settings."
 msgstr "Configuració general de tipus."
 
-#: CMFPlone/interfaces/controlpanel.py:910
+#: CMFPlone/interfaces/controlpanel.py:752
 msgid "Generate tabs for items other than folders."
 msgstr "Genera pestanyes per elements que no són carpetes."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:70
+#: plone.app.caching/plone/app/caching/operations/default.py:62
 msgid "Generic caching"
 msgstr "Memòria cau genèrica"
 
@@ -2788,7 +2860,7 @@ msgstr "Vés a la ZMI"
 msgid "Go to the folder where you want the rule to apply, or at the site root, click on 'rule' tab, and then locally setup the rules."
 msgstr "Aneu a la carpeta on voleu aplicar la regla, o bé a l'arrel del portal, cliqueu a la pestanya de 'regles' i configureu localment les regles."
 
-#: CMFPlone/controlpanel/browser/overview.pt:32
+#: CMFPlone/controlpanel/browser/overview.pt:33
 msgid "Go to the upgrade page"
 msgstr "Vés a la pàgina d'actualització"
 
@@ -2837,7 +2909,7 @@ msgstr "Suport de memòria cau a HTTP"
 msgid "Have a look above for more information."
 msgstr "Vegeu més amunt per a més informació."
 
-#: CMFPlone/interfaces/controlpanel.py:523
+#: CMFPlone/interfaces/controlpanel.py:358
 msgid "Header styles"
 msgstr "Estils de capçalera"
 
@@ -2853,15 +2925,15 @@ msgstr "Text d'ajuda"
 msgid "Hide"
 msgstr "Amaga"
 
-#: CMFPlone/interfaces/controlpanel.py:1018
+#: CMFPlone/interfaces/controlpanel.py:860
 msgid "Hide children of these types"
 msgstr "Amaga els elements continguts en un tipus"
 
-#: CMFPlone/interfaces/controlpanel.py:1019
+#: CMFPlone/interfaces/controlpanel.py:861
 msgid "Hide content inside the following types in Navigation."
 msgstr "Amaga a la navegació els objectes que es troben dins dels tipus de contingut següents."
 
-#: CMFPlone/interfaces/controlpanel.py:1635
+#: CMFPlone/interfaces/controlpanel.py:1477
 msgid "High pixel density mode"
 msgstr "Mode d'alta densitat de píxels"
 
@@ -2899,11 +2971,11 @@ msgstr "Això no obstant, aquesta és la llista dels idiomes ja traduïts per al
 msgid "ID"
 msgstr "ID"
 
-#: CMFPlone/interfaces/controlpanel.py:1197
+#: CMFPlone/interfaces/controlpanel.py:1039
 msgid "Icon visibility"
 msgstr "Visibilitat de la icona"
 
-#: CMFPlone/interfaces/controlpanel.py:1790
+#: CMFPlone/interfaces/controlpanel.py:1648
 #: plone.stringinterp/plone/stringinterp/adapters.py:608
 msgid "Id"
 msgstr "Id"
@@ -2928,7 +3000,7 @@ msgstr "Identificador del contingut superior o sessió de l'usuari gestionat"
 msgid "Identifier, actually URL of the content"
 msgstr "Identificador, és a dir la URL del contingut"
 
-#: CMFPlone/interfaces/controlpanel.py:992
+#: CMFPlone/interfaces/controlpanel.py:834
 msgid "If an item has been excluded from navigation should it be shown in navigation when viewing content contained within it or within a subfolder."
 msgstr "Si un element ha estat exclòs de la navegació, es mostrarà en la navegació quan es visualitzi el seu contingut o el d'una subcarpeta."
 
@@ -2980,15 +3052,15 @@ msgstr "Si està informat, la capçalera i el peu s'enllaçaran a aquesta URL."
 msgid "If its true and you modify this bundle you need to build it before production"
 msgstr "Si està activat i modifiqueu aquest paquet, heu de compilar-lo abans de passar a producció"
 
-#: CMFPlone/interfaces/controlpanel.py:1111
+#: CMFPlone/interfaces/controlpanel.py:953
 msgid "If not selected only logged-in users will be able to view information about who created an item and when it was modified."
 msgstr "Si no està seleccionat, només els usuaris connectats podran visualitzar la informació sobre qui va crear un element i quan es va modificar."
 
-#: CMFPlone/interfaces/controlpanel.py:1092
+#: CMFPlone/interfaces/controlpanel.py:934
 msgid "If not selected, a URL will be generated and e-mailed. Users are instructed to follow the link to reach a page where they can change their password and complete the registration process; this also verifies that they have entered a valid email address."
 msgstr "Si no està seleccionat, es generarà un URL i s'enviarà per correu electrònic. Els usuaris tenen instruccions de seguir l'enllaç per arribar a una pàgina on poden canviar la contrasenya i completar el procés de registre, que també comprova que s'ha introduït una adreça de correu electrònic vàlida."
 
-#: CMFPlone/interfaces/controlpanel.py:1103
+#: CMFPlone/interfaces/controlpanel.py:945
 msgid "If selected, home folders where users can create content will be created when they log in."
 msgstr "Si es selecciona, les carpetes d'inici on els usuaris poden crear continguts es crearan quan iniciïn la sessió."
 
@@ -3022,15 +3094,15 @@ msgstr "Manipulació d'imatges"
 msgid "Image Handling Settings"
 msgstr "Opcions de manipulació d'imatges"
 
-#: CMFPlone/interfaces/controlpanel.py:830
+#: CMFPlone/interfaces/controlpanel.py:665
 msgid "Image objects"
 msgstr "Objectes d'imatge"
 
-#: CMFPlone/interfaces/controlpanel.py:1646
+#: CMFPlone/interfaces/controlpanel.py:1488
 msgid "Image quality at 2x"
 msgstr "Qualitat de les imatges a 2x"
 
-#: CMFPlone/interfaces/controlpanel.py:1657
+#: CMFPlone/interfaces/controlpanel.py:1499
 msgid "Image quality at 3x"
 msgstr "Qualitat de les imatges a 3x"
 
@@ -3051,7 +3123,7 @@ msgstr "Importa tipus de contingut"
 msgid "Import Type Profiles&hellip;"
 msgstr "Importa tipus des d'un fitxer&hellip;"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:537
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:543
 msgid "Import complete."
 msgstr "S'ha importat correctament."
 
@@ -3084,7 +3156,7 @@ msgstr "En el cas que vulgueu mostrar aquest recurs segons una condició (no s'a
 msgid "In production mode, bundles are merged together to reduce the quantity of JS and CSS resources loaded by the browser. Choose 'default' if this bundle must be available for all the visitors, choose 'logged-in' if it must be available for logged-in users only, or leave it empty if it must not be merged."
 msgstr "En el mode de producció, els paquets s'ajunten per tal de reduir la quantitat de recursos JS i CSS que el navegador ha de descarregar. Escolliu 'default' si aquest paquet ha de ser disponible per a tots els visitants, escolliu 'logged-in' si ha de ser disponible només per als usuaris autenticats o deixeu-ho en blanc si no s'ha d'ajuntar."
 
-#: CMFPlone/interfaces/controlpanel.py:1573
+#: CMFPlone/interfaces/controlpanel.py:1415
 msgid "Include meta tags on pages to give hints to social media on how to better render your pages when shared"
 msgstr "Inclou metadades perquè les xarxes socials sàpiguen com mostrar les pàgines quan es comparteixen"
 
@@ -3100,14 +3172,14 @@ msgstr "Inclou les imatges i els fitxers creats o personalitzats mitjançant la 
 msgid "Incorrect value for current password"
 msgstr "Valor incorrecte de la contrasenya actual"
 
-#: CMFPlone/interfaces/controlpanel.py:921
+#: CMFPlone/interfaces/controlpanel.py:763
 msgid "Index used to sort the tabs"
 msgstr "Índex que s'utilitza per a ordenar les pestanyes"
 
 #. Default: "Info"
 #: Archetypes/skins/archetypes/edit_macros.pt:36
-#: CMFPlone/controlpanel/browser/maintenance.pt:20
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:198
+#: CMFPlone/controlpanel/browser/maintenance.pt:21
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:200
 msgid "Info"
 msgstr "Informació"
 
@@ -3119,7 +3191,7 @@ msgstr "Informació"
 msgid "Init instruction for shim"
 msgstr "Instruccions d'inici per al paràmetre shim de RequireJS"
 
-#: CMFPlone/interfaces/controlpanel.py:537
+#: CMFPlone/interfaces/controlpanel.py:372
 msgid "Inline styles"
 msgstr "Estils en línia"
 
@@ -3152,7 +3224,7 @@ msgstr "S'ha instal·lat ${product}!"
 msgid "Installing a third party add-on"
 msgstr "S'està instal·lant un complement extra"
 
-#: plone/app/theming/configure.zcml:32
+#: plone/app/theming/configure.zcml:26
 msgid "Installs a control panel to allow on-the-fly theming with Diazo"
 msgstr "Instal·la un panell de control que permet dissenyar en temps real temes amb Diazo"
 
@@ -3220,7 +3292,7 @@ msgstr "Està dins de"
 msgid "Is within (relative)"
 msgstr "Està dins de (relatiu)"
 
-#: CMFPlone/interfaces/controlpanel.py:1280
+#: CMFPlone/interfaces/controlpanel.py:1122
 msgid "It can be on the side (vertical mode) or on the top (horizontal mode)"
 msgstr "Es pot mostrar al costat (mode vertical) o a dalt de tot (mode horitzontal)"
 
@@ -3262,7 +3334,7 @@ msgstr "Imatge JPEG"
 msgid "JSONField"
 msgstr ""
 
-#: CMFPlone/interfaces/controlpanel.py:1179
+#: CMFPlone/interfaces/controlpanel.py:1021
 msgid "JavaScript for web statistics support"
 msgstr "Javascript per al suport d'estadístiques web"
 
@@ -3334,7 +3406,7 @@ msgstr "Darrera modificació"
 msgid "Latest available configuration"
 msgstr "Última configuració disponible"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:18
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:19
 msgid "Lead Image"
 msgstr "Imatge principal"
 
@@ -3343,7 +3415,7 @@ msgstr "Imatge principal"
 msgid "Less than"
 msgstr "Menys que"
 
-#: CMFPlone/interfaces/controlpanel.py:1091
+#: CMFPlone/interfaces/controlpanel.py:933
 msgid "Let users select their own passwords"
 msgstr "Permet que els usuaris seleccionin la seva pròpia contrasenya"
 
@@ -3365,11 +3437,11 @@ msgstr "Límit"
 msgid "Limit Search Results"
 msgstr "Límit dels resultats de cerca"
 
-#: CMFPlone/interfaces/controlpanel.py:147
+#: CMFPlone/interfaces/controlpanel.py:156
 msgid "Limit tags aka keywords vocabulary used for Tags field and in searches to the terms used inside the subtree of the current navigation root. This can be used together with Plone's multilingual extension plone.app.multilingual to only offer keywords of the current selected language. Other addons may utilize this feature for its specific purposes."
 msgstr "Limita les etiquetes, és a dir el vocabulari de paraules clau que s'utilitza en el camp d'Etiquetes i en les cerques, als termes que s'utilitzen dins del subarbre de l'arrel de navegació actual. Això es pot utilitzar conjuntament amb el complement multilingüe de Plone (plone.app.multilingual) per a només mostrar les etiquetes de l'idioma seleccionat. Pot ser que altres complements utilitzin aquesta opció per a altres propòsits específics."
 
-#: CMFPlone/interfaces/controlpanel.py:146
+#: CMFPlone/interfaces/controlpanel.py:155
 msgid "Limit tags/keywords to the current navigation root"
 msgstr "Restringeix les etiquetes/paraules clau a l'arrel de navegació actual"
 
@@ -3394,6 +3466,22 @@ msgstr "Llistat de valors"
 #: CMFPlone/profiles.zcml:22
 msgid "Load all profiles from other packages/products that are needed for a full Plone site."
 msgstr "Instal·la tots els perfils des de tots els paquets/productes que es necessiten per a tenir un Plone complet."
+
+#: CMFPlone/interfaces/resources.py:135
+msgid "Load asynchronously"
+msgstr ""
+
+#: CMFPlone/interfaces/resources.py:141
+msgid "Load deferred"
+msgstr ""
+
+#: CMFPlone/interfaces/resources.py:136
+msgid "Load the JavaScript files asynchronously by adding an ``async`` attribute to the script tag."
+msgstr ""
+
+#: CMFPlone/interfaces/resources.py:142
+msgid "Load the JavaScript files deferred after the document has been parsed but before ``DOMContentLoaded`` by adding a ``defer`` attribute to the script tag."
+msgstr ""
 
 #: CMFPlone/interfaces/resources.py:78
 msgid "Loaded resources"
@@ -3617,11 +3705,11 @@ msgstr "Correus dels administradors"
 msgid "Mandatory dependencies for a Plone site"
 msgstr "Dependències obligatòries per a un portal Plone"
 
-#: CMFPlone/interfaces/controlpanel.py:1536
+#: CMFPlone/interfaces/controlpanel.py:1378
 msgid "Many groups?"
 msgstr "Massa grups?"
 
-#: CMFPlone/interfaces/controlpanel.py:1549
+#: CMFPlone/interfaces/controlpanel.py:1391
 msgid "Many users?"
 msgstr "Massa usuaris?"
 
@@ -3637,11 +3725,11 @@ msgstr "Relaciona noms de plantilla de skin layer amb noms de conjunts de regles
 msgid "Maps skin names to lists of resource bundle names"
 msgstr "Mapa noms d'skin a llistes de noms de paquets de recursos"
 
-#: CMFPlone/interfaces/controlpanel.py:1717
+#: CMFPlone/interfaces/controlpanel.py:1559
 msgid "Mark special links"
 msgstr "Marca els enllaços especials"
 
-#: CMFPlone/interfaces/controlpanel.py:1718
+#: CMFPlone/interfaces/controlpanel.py:1560
 msgid "Marks external or special protocol links with class."
 msgstr "Marca amb classes els enllaços externs o els protocols especials."
 
@@ -3804,7 +3892,7 @@ msgstr "Manca una enllaç per a l'acció RSS."
 msgid "Missing syndication settings action."
 msgstr "Manca la configuració de la sindicació."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:254
+#: plone.app.caching/plone/app/caching/operations/default.py:246
 msgid "Moderate caching"
 msgstr "Cau moderada"
 
@@ -3899,7 +3987,7 @@ msgstr "Suport multilingüe [desinstal·lació]"
 msgid "Multiple users found with the same login name."
 msgstr "S'han trobat diversos usuaris amb el mateix nom d'usuari."
 
-#: CMFPlone/interfaces/controlpanel.py:59
+#: CMFPlone/interfaces/controlpanel.py:68
 #: CMFPlone/utils.py:698
 msgid "Must be empty or a valid JSON-formatted configuration â ${message}."
 msgstr ""
@@ -3932,27 +4020,27 @@ msgstr "Nom a partir del nom de fitxer"
 msgid "Name from title"
 msgstr "Nom a partir del títol"
 
-#: CMFPlone/interfaces/controlpanel.py:849
+#: CMFPlone/interfaces/controlpanel.py:684
 msgid "Named"
 msgstr "Anomena"
 
-#: CMFPlone/interfaces/controlpanel.py:574
+#: CMFPlone/interfaces/controlpanel.py:409
 msgid "Name|class"
 msgstr "Nom|classe"
 
-#: CMFPlone/interfaces/controlpanel.py:552
+#: CMFPlone/interfaces/controlpanel.py:387
 msgid "Name|format"
 msgstr "Nom|format"
 
-#: CMFPlone/interfaces/controlpanel.py:538
+#: CMFPlone/interfaces/controlpanel.py:373
 msgid "Name|format|icon"
 msgstr "Nom|format|icona"
 
-#: CMFPlone/interfaces/controlpanel.py:524
+#: CMFPlone/interfaces/controlpanel.py:359
 msgid "Name|tag"
 msgstr "Nom|etiqueta"
 
-#: CMFPlone/interfaces/controlpanel.py:359
+#: CMFPlone/interfaces/controlpanel.py:194
 msgid "Nasty tags"
 msgstr "Etiquetes no desitjades"
 
@@ -3965,6 +4053,10 @@ msgstr "Navegació"
 #: CMFPlone/controlpanel/browser/navigation.py:11
 msgid "Navigation Settings"
 msgstr "Configuració de la navegació"
+
+#: CMFPlone/interfaces/controlpanel.py:736
+msgid "Navigation depth"
+msgstr ""
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_5/registry.xml
@@ -3980,11 +4072,11 @@ msgid "Need a field"
 msgstr "Cal un camp"
 
 #. Default: "Negotiation scheme"
-#: CMFPlone/interfaces/controlpanel.py:233
+#: plone.i18n/plone/i18n/interfaces.py:102
 msgid "Negotiation scheme"
 msgstr "Protocol de negociació"
 
-#: CMFPlone/interfaces/controlpanel.py:1201
+#: CMFPlone/interfaces/controlpanel.py:1043
 msgid "Never"
 msgstr "Mai"
 
@@ -4039,15 +4131,19 @@ msgstr "Canviar a navegació següent/anterior"
 msgid "No"
 msgstr "No"
 
-#: CMFPlone/interfaces/controlpanel.py:1219
+#: CMFPlone/interfaces/controlpanel.py:1061
 msgid "No Thumbs in portlets"
 msgstr "Sense miniatures als portlets"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:567
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:573
 msgid "No URLs or paths entered."
 msgstr "No s'han introduït ni les URL ni les rutes."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:339
+#: CMFPlone/controlpanel/browser/redirects.py:234
+msgid "No alternative urls selected for removal."
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:302
 msgid "No caching"
 msgstr "Sense cau"
 
@@ -4086,15 +4182,15 @@ msgstr "No s'han trobat imatges en aquesta col·lecció."
 msgid "No mailhost defined. Unable to reset passwords."
 msgstr "No hi ha cap servidor de correu definit. No es poden reinicialitzar les contrasenyes."
 
-#: CMFPlone/interfaces/controlpanel.py:1228
+#: CMFPlone/interfaces/controlpanel.py:1070
 msgid "No thumbs in list views"
 msgstr "Sense miniatures a les vistes de llista"
 
-#: CMFPlone/interfaces/controlpanel.py:1235
+#: CMFPlone/interfaces/controlpanel.py:1077
 msgid "No thumbs in summary views"
 msgstr "Sense miniatures a les vistes resum"
 
-#: CMFPlone/interfaces/controlpanel.py:1242
+#: CMFPlone/interfaces/controlpanel.py:1084
 msgid "No thumbs in table views"
 msgstr "Sense miniatures a les vistes taula"
 
@@ -4136,7 +4232,11 @@ msgstr "Notificar a l'usuari"
 msgid "Notify with message ${message}"
 msgstr "Notifica amb el missatge ${message}"
 
-#: CMFPlone/interfaces/controlpanel.py:1012
+#: CMFPlone/interfaces/controlpanel.py:737
+msgid "Number of folder levels to show in the navigation."
+msgstr ""
+
+#: CMFPlone/interfaces/controlpanel.py:854
 msgid "Number of folder levels to show in the site map."
 msgstr "Quantitat de nivells de carpeta que s'han de mostrar al mapa del lloc."
 
@@ -4150,7 +4250,7 @@ msgstr "Quantitat d'elements que es mostren a cada lot."
 msgid "Number of items to display"
 msgstr "Nombre d'elements a mostrar"
 
-#: CMFPlone/interfaces/controlpanel.py:850
+#: CMFPlone/interfaces/controlpanel.py:685
 msgid "Numeric"
 msgstr "Numèric"
 
@@ -4187,6 +4287,10 @@ msgstr "S'ha eliminat l'objecte d'aquest contenidor"
 msgid "Objects in all"
 msgstr ""
 
+#: CMFPlone/controlpanel/browser/overview.pt:146
+msgid "Off"
+msgstr ""
+
 msgid "Ogg Audio"
 msgstr "Àudio Ogg"
 
@@ -4194,11 +4298,15 @@ msgstr "Àudio Ogg"
 msgid "Omit portlet border"
 msgstr "Omet el contorn del portlet"
 
+#: CMFPlone/controlpanel/browser/overview.pt:145
+msgid "On"
+msgstr ""
+
 #: plone.app.users/plone/app/users/browser/schemaeditor.py:129
 msgid "One image field maximum."
 msgstr "Com a màxim un camp d'imatge."
 
-#: CMFPlone/interfaces/controlpanel.py:1711
+#: CMFPlone/interfaces/controlpanel.py:1553
 msgid "Open external links in new a window"
 msgstr "Obre els enllaços externs en una finestra nova"
 
@@ -4234,7 +4342,7 @@ msgstr "Suport opcional de refresc de plone.session."
 msgid "Optional plone.session refresh support. [uninstall]"
 msgstr "Suport opcional de refresc de plone.session. [desinstal·la]"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:63
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:65
 msgid "Options to suppress thumbs and/or icons and to override thumb size in listings, tables etc."
 msgstr "Opcions per a suprimir les miniatures o les icones i per a sobreescriure'n la mida en els llistats, les taules, etc."
 
@@ -4293,7 +4401,7 @@ msgstr "Document PS"
 msgid "PSD image"
 msgstr "Imatge PSD"
 
-#: CMFPlone/controlpanel/browser/maintenance.pt:128
+#: CMFPlone/controlpanel/browser/maintenance.pt:129
 msgid "Pack"
 msgstr "Comprimeix"
 
@@ -4366,7 +4474,7 @@ msgstr "Enganxa"
 msgid "Path identifier"
 msgstr "Identificador de ruta"
 
-#: CMFPlone/interfaces/controlpanel.py:1002
+#: CMFPlone/interfaces/controlpanel.py:844
 msgid "Path to be used as navigation root, relative to Plone site root.Starts with '/'"
 msgstr "Camí que defineix l'arrel de navegació, és relatiu a l'arrel del portal Plone. Comença amb '/'"
 
@@ -4456,6 +4564,10 @@ msgstr "Assegureu-vos de confirmar la vostra contrasenya."
 msgid "Please note that migrating references will increase this time."
 msgstr "Noteu que si migreu les referències s'incrementarà aquest temps."
 
+#: CMFPlone/controlpanel/browser/redirects.py:303
+msgid "Please pick a file to upload."
+msgstr ""
+
 #: plone.schemaeditor/plone/schemaeditor/browser/schema/add_fieldset.py:33
 msgid "Please select a fieldset name that is not already used."
 msgstr "Seleccioneu un nom de grup de camps que no s'utilitzi."
@@ -4519,11 +4631,11 @@ msgstr ""
 msgid "Plone Widgets"
 msgstr "Widgets de Plone"
 
-#: CMFPlone/interfaces/controlpanel.py:1483
+#: CMFPlone/interfaces/controlpanel.py:1325
 msgid "Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address for the site-wide contact form and the 'Send test e-mail' feature."
 msgstr "Plone genera e-mail amb aquesta adreça com l'adreça del remitent del correu electrònic. També s'utilitza com a adreça de destinació per al formulari de contacte en tot el lloc i la funcionalitat 'Enviar correu electrònic de prova'."
 
-#: CMFPlone/interfaces/controlpanel.py:1474
+#: CMFPlone/interfaces/controlpanel.py:1316
 msgid "Plone generates e-mail using this name as the e-mail sender."
 msgstr "Plone genera els correus electrònics utilitzant aquest nom com a remitent."
 
@@ -4555,7 +4667,7 @@ msgstr "Portal"
 msgid "Portal URL"
 msgstr "URL del portal"
 
-#: CMFPlone/interfaces/controlpanel.py:1346
+#: CMFPlone/interfaces/controlpanel.py:1188
 msgid "Portal default timezone"
 msgstr "Fus horari per defecte del portal"
 
@@ -4576,7 +4688,7 @@ msgstr "Peu del portlet"
 msgid "Portlet header"
 msgstr "Capçalera del portlet"
 
-#: CMFPlone/interfaces/controlpanel.py:932
+#: CMFPlone/interfaces/controlpanel.py:774
 msgid "Position in Parent"
 msgstr "Posició dins la carpeta"
 
@@ -4727,6 +4839,10 @@ msgstr "Publicar l'element el fa visible per a altres usuaris."
 msgid "Purge"
 msgstr "Purga"
 
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:349
+msgid "Purging is still enabled while caching is disabled!"
+msgstr ""
+
 #. Default: "Puts your item in a review queue, so it can be published externally or internally."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Puts your item in a review queue, so it can be published externally or internally."
@@ -4782,7 +4898,7 @@ msgstr "Analitzador i constructor per a cadenes de cerca, bloc de construcció i
 msgid "Querystring parser/builder"
 msgstr "Analitzador i constructor per a cadenes de cerca"
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:647
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:653
 msgid "RAM cache not installed."
 msgstr "La memòria cau RAM no està instal·lada."
 
@@ -4801,7 +4917,7 @@ msgstr "Canal RSS"
 msgid "RSS feed of this listing"
 msgstr "Canal RSS per aquesta llista"
 
-#: CMFPlone/interfaces/controlpanel.py:851
+#: CMFPlone/interfaces/controlpanel.py:686
 msgid "Raw"
 msgstr "Sense processar"
 
@@ -4838,7 +4954,7 @@ msgstr "Registre"
 msgid "Recurrence extension for Events."
 msgstr "Estén els esdeveniments amb camps de recurrència."
 
-#: CMFPlone/interfaces/controlpanel.py:1397
+#: CMFPlone/interfaces/controlpanel.py:1239
 msgid "Redirect links"
 msgstr "Redirigeix els enllaços"
 
@@ -4881,7 +4997,7 @@ msgstr "Rebutja"
 msgid "Related To"
 msgstr "Relacionat amb"
 
-#: CMFPlone/interfaces/controlpanel.py:1290
+#: CMFPlone/interfaces/controlpanel.py:1132
 msgid "Relative URL for the toolbar logo"
 msgstr "URL relativa del logo de la barra d'eines"
 
@@ -4906,6 +5022,8 @@ msgstr "Reestructura"
 msgid "Relocate content to the proper root language folder"
 msgstr "Mou els continguts a la carpeta arrel d'idioma correcta"
 
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:246
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:117
 #: plone.app.portlets/plone/app/portlets/browser/templates/edit-manager-macros.pt:108
 msgid "Remove"
 msgstr "Suprimeix"
@@ -4943,6 +5061,11 @@ msgstr "Variables de la sol·licitud"
 msgid "Request variables that prevent caching"
 msgstr "Variables de la sol·licitud que impedeixen la memòria cau"
 
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:68
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:60
+msgid "Required"
+msgstr ""
+
 #: plone.schemaeditor/plone/schemaeditor/interfaces.py:188
 msgid "Required field"
 msgstr "Camp requerit"
@@ -4969,7 +5092,7 @@ msgid "Resources base URL"
 msgstr "URL base dels recursos"
 
 #. Default: "Restart"
-#: CMFPlone/controlpanel/browser/maintenance.pt:71
+#: CMFPlone/controlpanel/browser/maintenance.pt:72
 #: CMFPlone/controlpanel/browser/maintenance.py:96
 msgid "Restart"
 msgstr "Reinicia"
@@ -4994,7 +5117,7 @@ msgstr "Retira"
 msgid "Return a portal message to the user"
 msgstr "Mostra un missatge del portal a l'usuari"
 
-#: CMFPlone/interfaces/controlpanel.py:947
+#: CMFPlone/interfaces/controlpanel.py:789
 msgid "Reversed sort order for tabs."
 msgstr "Pestanyes en ordre invers."
 
@@ -5067,7 +5190,7 @@ msgstr "Correus dels revisors"
 msgid "Rich Text"
 msgstr "Text amb format"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:56
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:58
 msgid "RichText"
 msgstr "Text amb format"
 
@@ -5083,11 +5206,11 @@ msgstr "Rols"
 msgid "Roles are: ${names}"
 msgstr "Els rols són: ${names}"
 
-#: CMFPlone/interfaces/controlpanel.py:1326
+#: CMFPlone/interfaces/controlpanel.py:1168
 msgid "Roles that can add keywords"
 msgstr "Rols que poden afegir noves etiquetes"
 
-#: CMFPlone/interfaces/controlpanel.py:1000
+#: CMFPlone/interfaces/controlpanel.py:842
 msgid "Root"
 msgstr "Arrel"
 
@@ -5125,7 +5248,7 @@ msgstr "Desa els valors per defecte"
 msgid "Saved"
 msgstr "Guardat"
 
-#: CMFPlone/interfaces/controlpanel.py:1624
+#: CMFPlone/interfaces/controlpanel.py:1466
 msgid "Scaled image quality"
 msgstr "Qualitat de la imatge comprimida"
 
@@ -5210,11 +5333,11 @@ msgstr "Seleccioneu contingut referenciat"
 msgid "Select the behaviors to enable for this content type."
 msgstr "Seleccioneu els comportaments per aquest tipus de contingut."
 
-#: CMFPlone/interfaces/controlpanel.py:1506
+#: CMFPlone/interfaces/controlpanel.py:1348
 msgid "Select the default format of textfields for newly created content objects."
 msgstr "Seleccioneu el format per defecte dels camps de text per als continguts acabats de crear."
 
-#: CMFPlone/interfaces/controlpanel.py:106
+#: CMFPlone/interfaces/controlpanel.py:115
 msgid "Select the default wysiwyg editor. Users will be able to choose their own or select to use the site default."
 msgstr "Seleccioneu l'editor wysiwyg predeterminat. Els usuaris podran escollir el seu propi o bé seleccionar utilitzar el predeterminat."
 
@@ -5231,7 +5354,7 @@ msgstr "Seleccioneu la transició del circuit a intentar"
 msgid "Select values from list"
 msgstr "Seleccioneu valors de la llista"
 
-#: CMFPlone/interfaces/controlpanel.py:1313
+#: CMFPlone/interfaces/controlpanel.py:1155
 msgid "Select which IDs (short names) can act as fallback default pages for a container."
 msgstr "Seleccioneu quins ID (noms curts) poden servir com a alternatives per a les pàgines per defecte dels contenidors."
 
@@ -5240,7 +5363,7 @@ msgstr "Seleccioneu quins ID (noms curts) poden servir com a alternatives per a 
 msgid "Select which fields to display when 'Tabular view' is selected in the display menu."
 msgstr "Seleccioneu els camps que es mostraran quan la 'vista de taula' es selecciona en el menú mostrar."
 
-#: CMFPlone/interfaces/controlpanel.py:1517
+#: CMFPlone/interfaces/controlpanel.py:1359
 msgid "Select which formats are available for users as alternative to the default format. Note that if new formats are installed, they will be enabled for text fields by default unless explicitly turned off here or by the relevant installer."
 msgstr "Seleccioneu quins formats estan disponibles pels usuaris com a alternativa al format per defecte. Tingueu en compte que si s'instal·len formats nous, estaran habilitats per defecte, tret que els desactiveu explícitament aquí o amb l'instal·lador corresponent."
 
@@ -5285,6 +5408,10 @@ msgstr "Retornant l'element s'enviarà a l'autor original enlloc de publicar-lo.
 msgid "Separate view name and title by '|'"
 msgstr "Nom de la vista i títol separats per '|'"
 
+#: CMFPlone/controlpanel/browser/overview.pt:149
+msgid "Server:"
+msgstr ""
+
 #: plone.session/plone/session/profiles.zcml:12
 msgid "Session refresh support"
 msgstr "Suport de refresc de sessió"
@@ -5324,7 +5451,7 @@ msgstr "Configuració adequada per a muntatges sense un proxy amb memòria cau c
 msgid "Settings&hellip;"
 msgstr "Configuració&hellip;"
 
-#: CMFPlone/interfaces/controlpanel.py:1572
+#: CMFPlone/interfaces/controlpanel.py:1414
 msgid "Share social data"
 msgstr "Comparteix les dades socials"
 
@@ -5339,7 +5466,7 @@ msgstr "Comparteix"
 msgid "Short Name"
 msgstr "Nom curt"
 
-#: CMFPlone/interfaces/controlpanel.py:942
+#: CMFPlone/interfaces/controlpanel.py:784
 msgid "Short Name (ID)"
 msgstr "Nom curt (ID)"
 
@@ -5389,11 +5516,11 @@ msgstr "Mostra dates"
 msgid "Show feed link"
 msgstr "Mostra l'enllaç del canal"
 
-#: CMFPlone/interfaces/controlpanel.py:1198
+#: CMFPlone/interfaces/controlpanel.py:1040
 msgid "Show icons in listings"
 msgstr "Mostra les icones en els llistats"
 
-#: CMFPlone/interfaces/controlpanel.py:1191
+#: CMFPlone/interfaces/controlpanel.py:1033
 msgid "Show in the byline the date a content item was published."
 msgstr "Mostra la data de publicació dels elements en les dades d'autoria."
 
@@ -5403,7 +5530,7 @@ msgstr "Mostra la data de publicació dels elements en les dades d'autoria."
 msgid "Show internally"
 msgstr "Mostra internament"
 
-#: CMFPlone/interfaces/controlpanel.py:989
+#: CMFPlone/interfaces/controlpanel.py:831
 msgid "Show items normally excluded from navigation if viewing their children."
 msgstr "Mostra elements normalment exclosos de la navegació si s'està veient els seus fills."
 
@@ -5415,7 +5542,7 @@ msgstr "Mostra més...enllaç"
 msgid "Show settings button"
 msgstr "Mostra un botó de personalització"
 
-#: CMFPlone/interfaces/controlpanel.py:1209
+#: CMFPlone/interfaces/controlpanel.py:1051
 msgid "Show thumbnail images in listings"
 msgstr "Mostra les miniatures als llistats"
 
@@ -5432,12 +5559,12 @@ msgid "Shows up in the form as help text for the field."
 msgstr "Es mostra al formulari com un text d'ajuda per al camp."
 
 #. Default: "Shut down"
-#: CMFPlone/controlpanel/browser/maintenance.pt:64
+#: CMFPlone/controlpanel/browser/maintenance.pt:65
 #: CMFPlone/controlpanel/browser/maintenance.py:72
 msgid "Shut down"
 msgstr "Atura"
 
-#: CMFPlone/interfaces/controlpanel.py:1285
+#: CMFPlone/interfaces/controlpanel.py:1127
 msgid "Side"
 msgstr "Al costat"
 
@@ -5465,11 +5592,11 @@ msgstr "Circuit amb un únic estat"
 msgid "Site"
 msgstr "Lloc"
 
-#: CMFPlone/interfaces/controlpanel.py:1482
+#: CMFPlone/interfaces/controlpanel.py:1324
 msgid "Site 'From' address"
 msgstr "Adreça 'De' del lloc"
 
-#: CMFPlone/interfaces/controlpanel.py:1473
+#: CMFPlone/interfaces/controlpanel.py:1315
 msgid "Site 'From' name"
 msgstr "Nom 'De' del lloc"
 
@@ -5477,7 +5604,7 @@ msgstr "Nom 'De' del lloc"
 msgid "Site Administrator"
 msgstr "Administrador del lloc"
 
-#: CMFPlone/interfaces/controlpanel.py:1153
+#: CMFPlone/interfaces/controlpanel.py:995
 msgid "Site Logo"
 msgstr "Logo del lloc"
 
@@ -5498,11 +5625,11 @@ msgstr "Configuració del portal"
 #. Default: "Site Setup"
 #: CMFPlone/controlpanel/browser/controlpanel_usergroups_layout.pt:13
 #: CMFPlone/controlpanel/browser/filter_controlpanel.pt:13
-#: CMFPlone/controlpanel/browser/maintenance.pt:28
+#: CMFPlone/controlpanel/browser/maintenance.pt:29
 msgid "Site Setup"
 msgstr "Configuració del lloc"
 
-#: CMFPlone/interfaces/controlpanel.py:1146
+#: CMFPlone/interfaces/controlpanel.py:988
 msgid "Site title"
 msgstr "Títol del lloc"
 
@@ -5510,7 +5637,7 @@ msgstr "Títol del lloc"
 msgid "Site-wide settings."
 msgstr "Paràmetres globals del lloc."
 
-#: CMFPlone/interfaces/controlpanel.py:1011
+#: CMFPlone/interfaces/controlpanel.py:853
 msgid "Sitemap depth"
 msgstr "Profunditat del mapa del lloc"
 
@@ -5536,11 +5663,11 @@ msgstr "Configuració de les xarxes socials"
 msgid "Social media sharing settings."
 msgstr "Configuració per compartir a les xarxes socials."
 
-#: CMFPlone/interfaces/controlpanel.py:948
+#: CMFPlone/interfaces/controlpanel.py:790
 msgid "Sort tabs in descending."
 msgstr "Ordena les pestanyes en ordre descendent."
 
-#: CMFPlone/interfaces/controlpanel.py:920
+#: CMFPlone/interfaces/controlpanel.py:762
 msgid "Sort tabs on"
 msgstr "Ordenació de les pestanyes"
 
@@ -5549,7 +5676,7 @@ msgstr "Ordenació de les pestanyes"
 msgid "Sort the collection on this index"
 msgstr "Ordena la col·lecció per aquest índex"
 
-#: CMFPlone/interfaces/controlpanel.py:1069
+#: CMFPlone/interfaces/controlpanel.py:911
 msgid "Sort the default search on this index"
 msgstr "Ordena la cerca per defecte segons aquest índex"
 
@@ -5570,7 +5697,7 @@ msgstr "No es permeten espais en blanc per als ids"
 msgid "Specialized folder for temporary data."
 msgstr "Carpeta especialitzada per a dades temporals."
 
-#: CMFPlone/interfaces/controlpanel.py:1606
+#: CMFPlone/interfaces/controlpanel.py:1448
 msgid "Specify all allowed maximum image dimensions, one per line. The required format is &lt;name&gt; &lt;width&gt;:&lt;height&gt;."
 msgstr "Especifiqueu totes les dimensions màximes permeses per a les imatges, una en cada línia. Heu de seguir el format &lt;name&gt; &lt;width&gt;:&lt;height&gt;."
 
@@ -5586,7 +5713,7 @@ msgstr "Especifiqueu el nombre màxim d'elements a mostrar."
 msgid "Spell Checker"
 msgstr "Corrector ortogràfic"
 
-#: CMFPlone/interfaces/controlpanel.py:740
+#: CMFPlone/interfaces/controlpanel.py:575
 msgid "Spellchecker plugin to use"
 msgstr "Connector per al corrector ortogràfic"
 
@@ -5631,7 +5758,11 @@ msgstr "Portlet de text estàtic"
 msgid "Stop executing rules"
 msgstr "Atura l'execució de regles"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:282
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:237
+msgid "Store a new version of the object"
+msgstr ""
+
+#: plone.app.caching/plone/app/caching/operations/default.py:274
 msgid "Strong caching"
 msgstr "Cau forta"
 
@@ -5744,19 +5875,19 @@ msgstr "Amaga les icones a les llistes, a les taules i a les vistes resum"
 msgid "Suppress thumbs"
 msgstr "Amaga les miniatures"
 
-#: CMFPlone/interfaces/controlpanel.py:1229
+#: CMFPlone/interfaces/controlpanel.py:1071
 msgid "Suppress thumbs in all list views; this default can be overriden individually"
 msgstr "Amaga les miniatures en totes les vistes de llista; aquesta configuració es pot canviar individualment"
 
-#: CMFPlone/interfaces/controlpanel.py:1220
+#: CMFPlone/interfaces/controlpanel.py:1062
 msgid "Suppress thumbs in all portlets; this default can be overridden individually in selected portlets"
 msgstr "Amaga les miniatures en totes els portlets; aquesta configuració es pot canviar individualment per a cada portlet en particular"
 
-#: CMFPlone/interfaces/controlpanel.py:1236
+#: CMFPlone/interfaces/controlpanel.py:1078
 msgid "Suppress thumbs in all summary views; this default can be overriden individually"
 msgstr "Amaga les miniatures en totes les vistes resum; aquesta configuració es pot canviar individualment"
 
-#: CMFPlone/interfaces/controlpanel.py:1242
+#: CMFPlone/interfaces/controlpanel.py:1084
 msgid "Suppress thumbs in all tableviews and in folder contents view; this default can be overriden individually"
 msgstr "Amaga les miniatures en totes les vistes taula i en totes les vistes de continguts d'una carpeta; aquesta configuració es pot canviar individualment"
 
@@ -5791,11 +5922,11 @@ msgstr "Imatge TIFF"
 msgid "Table Columns"
 msgstr "Columnes de la taula"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:36
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:37
 msgid "Table of contents"
 msgstr "Taula de continguts"
 
-#: CMFPlone/interfaces/controlpanel.py:573
+#: CMFPlone/interfaces/controlpanel.py:408
 msgid "Table styles"
 msgstr "Estils de taula"
 
@@ -5836,6 +5967,14 @@ msgstr "Carpeta de destinació"
 #: plone.app.contentrules/plone/app/contentrules/actions/move.py:88
 msgid "Target folder ${target} does not exist."
 msgstr "La carpeta de destinació ${target} no existeix."
+
+#: CMFPlone/controlpanel/browser/redirects.py:62
+msgid "Target path must not be a view."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:57
+msgid "Target path must start with a slash."
+msgstr ""
 
 #. Default: "TempFolder"
 #: portal type title of type with description Use folders to put content in categories.
@@ -5952,15 +6091,19 @@ msgstr ""
 msgid "The TALES expression to check."
 msgstr "L'expressió TALES per revisar."
 
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:24
+msgid "The comment added to the history while versioning the content."
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:30
 msgid "The content type to check for."
 msgstr "El tipus de contingut a verificar."
 
-#: CMFPlone/interfaces/controlpanel.py:1409
+#: CMFPlone/interfaces/controlpanel.py:1251
 msgid "The content types that should be available for selection when setting a default page."
 msgstr "Els tipus de contingut que es poden seleccionar com a pàgina per defecte."
 
-#: CMFPlone/interfaces/controlpanel.py:955
+#: CMFPlone/interfaces/controlpanel.py:797
 msgid "The content types that should be shown in the navigation and site map."
 msgstr "Els tipus de contingut que s'han de mostrar en la navegació i el mapa del lloc"
 
@@ -5997,6 +6140,10 @@ msgstr "La data i hora finals d'un event"
 msgid "The estimated time for the migration is around: <strong> ${hours} hours ${minutes} minutes ${seconds} seconds </strong>"
 msgstr "El temps estimat de migració és de: <strong> ${hours} hores ${minutes} minuts ${seconds} segons </strong>"
 
+#: CMFPlone/interfaces/controlpanel.py:1571
+msgid "The expression \"${value}\" is invalid"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/conditions/fileextension.py:30
 msgid "The file extension to check for"
 msgstr "L'extensió de fitxer a verificar"
@@ -6012,6 +6159,10 @@ msgstr "La llista següent mostra quins passos d'actualització es portaran a te
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.py:48
 msgid "The group name you entered is not valid."
 msgstr "El nom de grup que heu introduït no és vàlid."
+
+#: CMFPlone/interfaces/controlpanel.py:1668
+msgid "The id \"${actionid}\" is invalid"
+msgstr ""
 
 #: plone.app.content/plone/app/content/browser/actions.py:308
 msgid "The item you are trying to paste could not be found. It may have been moved or deleted after you copied or cut it."
@@ -6064,6 +6215,14 @@ msgstr "L'ordre d'un element en la seva carpeta pare"
 msgid "The person that created an item"
 msgstr "La persona que va crear un element"
 
+#: CMFPlone/controlpanel/browser/redirects.py:72
+msgid "The provided alternative url already exists!"
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:82
+msgid "The provided target object does not exist."
+msgstr ""
+
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/z3cform/interfaces.py:21
 msgid "The recurrence rule couldn't be parsed."
 msgstr "No s'ha pogut interpretar la regla de recurrència."
@@ -6105,7 +6264,7 @@ msgstr "El nom curt d'un element (utilitzat en l'URL)"
 msgid "The site configuration is outdated and needs to be upgraded."
 msgstr "La configuració del lloc està antiquada i necessita ser actualitzada."
 
-#: CMFPlone/controlpanel/browser/overview.pt:32
+#: CMFPlone/controlpanel/browser/overview.pt:33
 msgid "The site configuration is outdated and needs to be upgraded. Please ${link_continue_with_the_upgrade}."
 msgstr "La configuració del lloc està antiquada i necessita ser actualitzada. Si us plau, ${link_continue_with_the_upgrade}."
 
@@ -6152,7 +6311,7 @@ msgstr "L'usuari que està veient els resultats de la cadena de cerca"
 msgid "The username you entered could not be found."
 msgstr "No s'ha pogut trobar el nom d'usuari que heu introduït."
 
-#: CMFPlone/interfaces/controlpanel.py:975
+#: CMFPlone/interfaces/controlpanel.py:817
 msgid "The workflow states that should be shown in the navigation and the site map."
 msgstr "Els estats de circuit de treball que es mostren a la navegació i al mapa del portal."
 
@@ -6168,7 +6327,7 @@ msgstr "Les transicions de flux de treball per comprovar."
 msgid "Theme base"
 msgstr "Base pel tema"
 
-#: plone/app/theming/browser/controlpanel.py:392
+#: plone/app/theming/browser/controlpanel.py:395
 msgid "Theme deleted"
 msgstr "Tema suprimit"
 
@@ -6176,11 +6335,11 @@ msgstr "Tema suprimit"
 msgid "Theme details"
 msgstr "Detalls de tema"
 
-#: plone/app/theming/browser/controlpanel.py:154
+#: plone/app/theming/browser/controlpanel.py:155
 msgid "Theme disabled."
 msgstr "Tema desactivat."
 
-#: plone/app/theming/browser/controlpanel.py:134
+#: plone/app/theming/browser/controlpanel.py:135
 msgid "Theme enabled. Note that this control panel page is never themed."
 msgstr "Tema activat. Recordeu que aquest panell de control no utilitza cap tema."
 
@@ -6220,7 +6379,7 @@ msgstr "Aquesta regla no té cap condició addicional activada."
 msgid "There was an error saving content rules."
 msgstr "S'ha produït un error en desar les regles de contingut."
 
-#: plone/app/theming/browser/controlpanel.py:217
+#: plone/app/theming/browser/controlpanel.py:220
 msgid "There were errors"
 msgstr "Hi ha errors"
 
@@ -6234,11 +6393,11 @@ msgstr "Hi ha errors."
 msgid "These are resources which can be cached 'forever'. Normally this means that if the object does change, its URL changes too."
 msgstr "Aquests són recursos que es poden emmagatzemar a la memòria cau 'per sempre'. Normalment això significa que si l'objecte canvia també ho fa la seva URL."
 
-#: CMFPlone/interfaces/controlpanel.py:463
+#: CMFPlone/interfaces/controlpanel.py:298
 msgid "These attributes are additionally allowed."
 msgstr "Aquests atributs també es permeten."
 
-#: CMFPlone/interfaces/controlpanel.py:360
+#: CMFPlone/interfaces/controlpanel.py:195
 msgid "These tags and their content are completely blocked when a page is saved or rendered. They are only deleted if they are not marked as valid_tags"
 msgstr "Aquestes etiquetes i tot el seu contingut són bloquejades quan la pàgina es desa o quan es renderitza. Només se suprimeixen quan no són marcades com a etiquetes vàlides"
 
@@ -6267,7 +6426,7 @@ msgstr "Això pot incrementar la rapidesa en la migració si hi ha molts fitxers
 msgid "This content is not translated yet to the language requested."
 msgstr "Aquest contingut no està traduït a l'idioma sol·licitat."
 
-#: CMFPlone/interfaces/controlpanel.py:1250
+#: CMFPlone/interfaces/controlpanel.py:1092
 msgid "This default can be overriden individually."
 msgstr "Aquesta configuració global es pot canviar individualment."
 
@@ -6288,7 +6447,7 @@ msgstr "Aquesta és la secció de configuració dels complements, podeu activar-
 msgid "This item doesn't have any translation yet. You can return to the portal site:"
 msgstr "Aquest element encara no té traduccions. Podeu retornar a l'inici del portal:"
 
-#: CMFPlone/interfaces/controlpanel.py:1291
+#: CMFPlone/interfaces/controlpanel.py:1133
 msgid "This must be a URL relative to the site root. By default it is /++plone++static/plone-toolbarlogo.svg"
 msgstr "Ha de ser una URL relativa a l'arrel del portal. Per defecte és /++plone++static/plone-toolbarlogo.svg"
 
@@ -6300,31 +6459,31 @@ msgstr "Aquest nom es mostra a la URL."
 msgid "This operation can take a very long time."
 msgstr "Aquesta operació pot trigar una bona estona."
 
-#: CMFPlone/interfaces/controlpanel.py:741
+#: CMFPlone/interfaces/controlpanel.py:576
 msgid "This option allows you to choose the spellchecker for TinyMCE."
 msgstr "Aquesta opció permet escollir el corrector ortogràfic de TinyMCE."
 
-#: CMFPlone/interfaces/controlpanel.py:840
+#: CMFPlone/interfaces/controlpanel.py:675
 msgid "This option controls how entities/characters get processed. Named: Characters will be converted into named entities based on the entities option. Numeric: Characters will be converted into numeric entities. Raw: All characters will be stored in non-entity form except these XML default entities: amp lt gt quot"
 msgstr "Aquesta opció controla com s'han de processar entitats/caràcters (paràmetre entity_encoding de TinyMCE). Anomena: Els caràcters es converteixen en entitats anomenades en funció de les opcions de les entitats. Numèric: Els caràcters es converteixen en entitats numèriques. Sense processar: Tots els caràcters s'emmagatzemen sense forma d'entitat excepte les entitats XML següents: amp lt gt quot"
 
-#: CMFPlone/interfaces/controlpanel.py:508
+#: CMFPlone/interfaces/controlpanel.py:343
 msgid "This option enables you to specify a custom CSS file that provides content CSS. This CSS file is the one used within the editor (the editable area). In addition to what is listed, here the plone bundle CSS and diazo themes using the tinymce-content-css setting are also added."
 msgstr "Aquesta opció permet especificar un fitxer CSS personalitzat. Aquest fitxer CSS s'utilitza per a l'editor (dins de l'àrea editable). A més a més dels fitxers llistats aquí, també s'afegeixen els paquets CSS de Plone i els temes de diazo que utilitzen el paràmetre tinymce-content-css."
 
-#: CMFPlone/interfaces/controlpanel.py:482
+#: CMFPlone/interfaces/controlpanel.py:317
 msgid "This option gives you the ability to enable/disable auto resizing the editor window depending on the content."
 msgstr "Aquesta opció permet activar o desactivar el redimensionament automàtic de la finestra de l'editor en funció del contingut."
 
-#: CMFPlone/interfaces/controlpanel.py:475
+#: CMFPlone/interfaces/controlpanel.py:310
 msgid "This option gives you the ability to enable/disable resizing the editor window. "
 msgstr "Aquesta opció permet activar o desactivar el redimensionament automàtic de la finestra de l'editor"
 
-#: CMFPlone/interfaces/controlpanel.py:499
+#: CMFPlone/interfaces/controlpanel.py:334
 msgid "This option gives you the ability to specify the height of the editor in pixels. If auto resize is enabled this value is used as minimum height."
 msgstr "Aquesta opció permet especificar l'alçada en píxels de l'editor. Quan el redimensionament automàtic està activat, aquest valor defineix l'alçada mínima."
 
-#: CMFPlone/interfaces/controlpanel.py:491
+#: CMFPlone/interfaces/controlpanel.py:326
 msgid "This option gives you the ability to specify the width of the editor (like 100% or 400px)."
 msgstr "Aquesta opció permet especificar l'amplada de l'editor (per exemple 100% o 400px)."
 
@@ -6372,7 +6531,7 @@ msgstr "Aquest portlet llista els propers esdeveniments."
 msgid "This portlet shows a search box."
 msgstr "Aquest portlet mostra un quadre de cerca."
 
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:158
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:159
 msgid "This product cannot be uninstalled!"
 msgstr "Aquest producte no es pot desinstal·lar!"
 
@@ -6380,11 +6539,11 @@ msgstr "Aquest producte no es pot desinstal·lar!"
 msgid "This rule is not assigned to any location"
 msgstr "Aquesta regla no està assignada enlloc."
 
-#: CMFPlone/interfaces/controlpanel.py:1154
+#: CMFPlone/interfaces/controlpanel.py:996
 msgid "This shows a custom logo on your site."
 msgstr "Personalitza el logo del portal."
 
-#: CMFPlone/interfaces/controlpanel.py:1147
+#: CMFPlone/interfaces/controlpanel.py:989
 msgid "This shows up in the title bar of browsers and in syndication feeds."
 msgstr "Això es mostra en la barra de títol dels navegadors i en els canals de distribució."
 
@@ -6392,7 +6551,7 @@ msgstr "Això es mostra en la barra de títol dels navegadors i en els canals de
 msgid "This site configuration is outdated and needs to be upgraded:"
 msgstr "La configuració d'aquest lloc està antiquada i s'ha d'actualitzar:"
 
-#: plone/app/theming/browser/controlpanel.py:361
+#: plone/app/theming/browser/controlpanel.py:364
 msgid "This title is already in use"
 msgstr "Aquest títol ja s'utilitza"
 
@@ -6404,27 +6563,27 @@ msgstr "Aquest nom d'usuari està reservat. Escolliu-ne un altre."
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
 msgstr "S'instal·larà plone.app.contenttypes i sereu redirigits a un formulari on podreu migrar els continguts."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:71
+#: plone.app.caching/plone/app/caching/operations/default.py:63
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
 msgstr "Amb aquesta operació es poden executar totes les funcions estàndards de memòria cau mitjançant la combinació i la configuració dels paràmetres opcionals. Per la majoria de casos, segurament és més fàcil utilitzar una altra operació més senzilla (cau forta, cau moderada, cau feble o sense cau)."
 
-#: CMFPlone/interfaces/controlpanel.py:1256
+#: CMFPlone/interfaces/controlpanel.py:1098
 msgid "Thumb scale for listings"
 msgstr "Mida de les miniatures en els llistats"
 
-#: CMFPlone/interfaces/controlpanel.py:1249
+#: CMFPlone/interfaces/controlpanel.py:1091
 msgid "Thumb scale for portlets"
 msgstr "Mida de les miniatures en els portlets"
 
-#: CMFPlone/interfaces/controlpanel.py:1272
+#: CMFPlone/interfaces/controlpanel.py:1114
 msgid "Thumb scale for summary view"
 msgstr "Mida de les miniatures a les vistes resum"
 
-#: CMFPlone/interfaces/controlpanel.py:1264
+#: CMFPlone/interfaces/controlpanel.py:1106
 msgid "Thumb scale for tables"
 msgstr "Mida de les miniatures a les taules"
 
-#: CMFPlone/interfaces/controlpanel.py:1208
+#: CMFPlone/interfaces/controlpanel.py:1050
 msgid "Thumb visibility"
 msgstr "Visualització de miniatures"
 
@@ -6433,7 +6592,7 @@ msgstr "Visualització de miniatures"
 msgid "Thumbnail view"
 msgstr "Visualització de miniatures"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:63
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:65
 msgid "Thumbs and icon handling"
 msgstr "Gestió de miniatures i icones"
 
@@ -6460,13 +6619,13 @@ msgid "Tip: you can use * to autocomplete."
 msgstr "Consell: podeu utilitzar * per autocompletar."
 
 #. Default: "Title"
-#: CMFPlone/interfaces/controlpanel.py:937
+#: CMFPlone/interfaces/controlpanel.py:779
 #: plone.app.content/plone/app/content/browser/contents/__init__.py:277
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
 msgid "Title"
 msgstr "Títol"
 
-#: plone/app/theming/browser/controlpanel.py:345
+#: plone/app/theming/browser/controlpanel.py:348
 msgid "Title is required"
 msgstr "Es requereix un títol"
 
@@ -6479,11 +6638,11 @@ msgstr "Títol del portlet. Si no s'especifica, s'utilitzarà el títol del cana
 msgid "Title of the rendered portlet"
 msgstr "Títol del portlet visualitzat"
 
-#: CMFPlone/interfaces/controlpanel.py:1591
+#: CMFPlone/interfaces/controlpanel.py:1433
 msgid "To be used with some integrations like Open Graph data"
 msgstr "Per a ser utilitzat amb algunes integracions com per exemple el protocol Open Graph"
 
-#: CMFPlone/interfaces/controlpanel.py:1580
+#: CMFPlone/interfaces/controlpanel.py:1422
 msgid "To identify things like Twitter Cards. Do not include the \"@\" prefix character."
 msgstr "Per a identificar elements com per exemple Twitter Cards. No inclogueu el caràcter \"@\" com a prefix."
 
@@ -6496,11 +6655,11 @@ msgstr "Per tal que els nous complements es mostrin aquí, afegiu-los a la vostr
 msgid "Today"
 msgstr "Avui"
 
-#: CMFPlone/interfaces/controlpanel.py:1279
+#: CMFPlone/interfaces/controlpanel.py:1121
 msgid "Toolbar position"
 msgstr "Posició de la barra d'eines"
 
-#: CMFPlone/interfaces/controlpanel.py:1286
+#: CMFPlone/interfaces/controlpanel.py:1128
 msgid "Top"
 msgstr "Superior"
 
@@ -6552,7 +6711,7 @@ msgstr "Sense traducció"
 msgid "Triggering event"
 msgstr "Esdeveniment disparador"
 
-#: CMFPlone/interfaces/controlpanel.py:1579
+#: CMFPlone/interfaces/controlpanel.py:1421
 msgid "Twitter username"
 msgstr "Nom d'usuari de Twitter"
 
@@ -6589,11 +6748,11 @@ msgstr "Els tipus de dins el fitxer només poden ser tipus Dexterity"
 msgid "Types settings"
 msgstr "Configuració de tipus"
 
-#: CMFPlone/interfaces/controlpanel.py:1408
+#: CMFPlone/interfaces/controlpanel.py:1250
 msgid "Types that can be set as a default page"
 msgstr "Els tipus de contingut que poden ser pàgina per defecte"
 
-#: CMFPlone/interfaces/controlpanel.py:1383
+#: CMFPlone/interfaces/controlpanel.py:1225
 msgid "Types which use the view action in listing views."
 msgstr "Els tipus de contingut que utilitzen l'acció de 'view' a les vistes de llista."
 
@@ -6602,6 +6761,12 @@ msgstr "Els tipus de contingut que utilitzen l'acció de 'view' a les vistes de 
 #: plone.schema/plone/schema/editor.py:28
 msgid "URL"
 msgstr "URL"
+
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:46
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:13
+#: CMFPlone/profiles/default/actions.xml
+msgid "URL Management"
+msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/rss.py:244
 msgid "URL of RSS feed"
@@ -6653,7 +6818,7 @@ msgstr "No autoritzat"
 msgid "Undo"
 msgstr "Desfés"
 
-#: CMFPlone/controlpanel/browser/quickinstaller.pt:178
+#: CMFPlone/controlpanel/browser/quickinstaller.pt:179
 msgid "Uninstall"
 msgstr "Desinstal·la"
 
@@ -6726,6 +6891,10 @@ msgstr "Complements actualitzats."
 msgid "Upgrades"
 msgstr "Actualitzacions"
 
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:185
+msgid "Upload"
+msgstr ""
+
 #: plone/app/theming/browser/controlpanel.pt:100
 msgid "Upload Zip file"
 msgstr "Importa des d'un Zip"
@@ -6734,19 +6903,19 @@ msgstr "Importa des d'un Zip"
 msgid "Use '../' to navigate to parent objects."
 msgstr "Utilitzeu '../' per desplaçar-vos als objectes pare."
 
-#: CMFPlone/interfaces/controlpanel.py:1133
+#: CMFPlone/interfaces/controlpanel.py:975
 msgid "Use UUID user ids"
 msgstr "Utilitza un UUID com a identificador d'usuari"
 
-#: CMFPlone/interfaces/controlpanel.py:1134
+#: CMFPlone/interfaces/controlpanel.py:976
 msgid "Use automatically generated UUIDs as user id for new users. When not turned on, the default is to use the same as the login name, or when using the email address as login name we generate a user id based on the fullname."
 msgstr "Genera un UUID automàticament com a identificador cada cop que es crea un usuari nou. Quan no està activada aquesta opció per defecte s'utilitza el nom d'usuari, o bé el nom complet si el nom d'usuari és l'adreça de correu."
 
-#: CMFPlone/interfaces/controlpanel.py:1119
+#: CMFPlone/interfaces/controlpanel.py:961
 msgid "Use email address as login name"
 msgstr "Utilitza l'adreça de correu electrònic com a nom d'inici de sessió"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:340
+#: plone.app.caching/plone/app/caching/operations/default.py:303
 msgid "Use this operation to keep the response out of all caches."
 msgstr "Utilitzeu aquesta opció per tal de conservar la resposta fora de qualsevol memòria cau."
 
@@ -6841,7 +7010,7 @@ msgstr "Usuaris i grups"
 msgid "Users who have commented on the item"
 msgstr "Usuaris que han afegit comentaris"
 
-#: CMFPlone/interfaces/controlpanel.py:369
+#: CMFPlone/interfaces/controlpanel.py:204
 msgid "Valid tags"
 msgstr "Etiquetes vàlides"
 
@@ -6881,9 +7050,13 @@ msgstr "Ha fallat la validació($name: La informació que s'ha carregat és mass
 msgid "Variables in the request that prevent caching if present"
 msgstr "Variables que si són presents a la sol·licitud impedeixen l'emmagatzematge a la memòria cau"
 
-#: CMFPlone/interfaces/controlpanel.py:1677
+#: CMFPlone/interfaces/controlpanel.py:1519
 msgid "Verify login name"
 msgstr "Verifica el nom d'usuari"
+
+#: plone.app.contentrules/plone/app/contentrules/actions/configure.zcml:237
+msgid "Version object"
+msgstr ""
 
 #: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:25
 msgid "Versioning"
@@ -6892,6 +7065,10 @@ msgstr "Control de versions"
 #: plone.app.versioningbehavior/plone/app/versioningbehavior/configure.zcml:25
 msgid "Versioning support with CMFEditions"
 msgstr "Control de versions amb CMFEditions"
+
+#: plone.app.contentrules/plone/app/contentrules/actions/versioning.py:41
+msgid "Versioning with comment ${comment}"
+msgstr ""
 
 #. Default: "View"
 #: CMFPlone/profiles/default/types/Discussion_Item.xml
@@ -6984,6 +7161,10 @@ msgstr "ADVERTÈNCIA! La seva base de dades requereix una versió de Plone més 
 msgid "WAV audio"
 msgstr "Àudio WAV"
 
+#: CMFPlone/controlpanel/browser/overview.pt:144
+msgid "WSGI:"
+msgstr ""
+
 #. Default: "Waiting to be reviewed, not editable by the owner."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
@@ -6992,13 +7173,13 @@ msgid "Waiting to be reviewed, not editable by the owner."
 msgstr "En espera de revisió, no editable per part del propietari."
 
 #. Default: "Warning"
-#: CMFPlone/controlpanel/browser/overview.pt:26
+#: CMFPlone/controlpanel/browser/overview.pt:27
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:94
 #: plone.app.contenttypes/plone/app/contenttypes/browser/templates/archetypes_warning_viewlet.pt:3
 msgid "Warning"
 msgstr "Avís"
 
-#: CMFPlone/interfaces/controlpanel.py:353
+#: CMFPlone/interfaces/controlpanel.py:188
 msgid "Warning: disabling this can be dangerous. Only disable if you know what you are doing."
 msgstr "Alerta: si desactiveu això pot ser perillós. Només desactiveu-ho si sou conscients del que feu."
 
@@ -7006,7 +7187,7 @@ msgstr "Alerta: si desactiveu això pot ser perillós. Només desactiveu-ho si s
 msgid "We will use this address if you need to recover your password"
 msgstr "S'utilitza aquesta adreça si us cal recuperar la contrasenya"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:226
+#: plone.app.caching/plone/app/caching/operations/default.py:218
 msgid "Weak caching"
 msgstr "Cau feble"
 
@@ -7177,6 +7358,14 @@ msgstr "Heu tancat la sessió."
 msgid "You have multiple Plone sites:"
 msgstr "Teniu diversos lloc Plone. Veure un d'ells:"
 
+#: CMFPlone/controlpanel/browser/redirects.py:46
+msgid "You have to enter a target."
+msgstr ""
+
+#: CMFPlone/controlpanel/browser/redirects.py:44
+msgid "You have to enter an alternative url."
+msgstr ""
+
 #: plone.app.dexterity/plone/app/dexterity/browser/import_types.py:100
 msgid "You may import types by uploading a zip archive containing type profiles. The import archive should contain a types.xml file and a types directory containing one or more Dexterity type information files. For a sample, create a content type and export it from the Dexterity Content Types page."
 msgstr "Podeu importar tipus de contingut mitjançant un arxiu zip que contingui perfils de tipus. L'arxiu des d'on importeu ha de contenir un fitxer types.xml i un directori types amb un o més d'un fitxer amb informació de tipus Dexterity. Per veure'n un exemple, creeu un tipus de contingut i exporteu-lo des de Tipus de contingut Dexterity."
@@ -7198,7 +7387,7 @@ msgstr "Heu d'introduir un nom vàlid."
 msgid "You must enter an email address."
 msgstr "Heu d'introduir una adreça de correu electrònic."
 
-#: plone.app.caching/plone/app/caching/browser/controlpanel.py:516
+#: plone.app.caching/plone/app/caching/browser/controlpanel.py:522
 msgid "You must select a profile to import."
 msgstr "Heu de seleccionar quin perfil voleu importar."
 
@@ -7220,7 +7409,7 @@ msgstr "Primer cal que us identifiqueu."
 msgid "You normally don't need to change anything here unless you have specific reasons and know what you are doing."
 msgstr "Normalment no cal canviar res aquí a menys que hi hagi raons específiques i sapigueu què esteu fent."
 
-#: CMFPlone/interfaces/controlpanel.py:885
+#: CMFPlone/interfaces/controlpanel.py:720
 msgid "You should pack your database regularly. This number indicates how many days of undo history you want to keep. It is unrelated to versioning, so even if you pack the database, the history of the content changes will be kept. Recommended value is 7 days."
 msgstr "Hauríeu de comprimir la vostra base de dades regularment. Aquest nombre indica quants dies d'historial voleu conservar per a l'operació 'desfer'. Això no té relació amb les versions, per tant, encara que compacteu la base de dades, es conservarà l'historial de canvis dels continguts. El valor recomanat és 7 dies."
 
@@ -7282,42 +7471,42 @@ msgid "absolute_url_prefix"
 msgstr "Prefix de l'adreça URL absoluta"
 
 #. Default: "A boolean expression"
-#: CMFPlone/interfaces/controlpanel.py:1754
+#: CMFPlone/interfaces/controlpanel.py:1612
 msgid "action_condition_description"
 msgstr "Expressió booleana"
 
 #. Default: "Condition"
-#: CMFPlone/interfaces/controlpanel.py:1753
+#: CMFPlone/interfaces/controlpanel.py:1611
 msgid "action_condition_heading"
 msgstr "Condició"
 
 #. Default: "There are legacy portlets defined here. Click the button to convert them to new-style portlets."
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:68
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:69
 msgid "action_convert_legacy_portlets"
 msgstr "Hi han portlets heretats definits aquí. Cliqueu el botó per convertir-los al nou estil de portlets."
 
 #. Default: "Permissions"
-#: CMFPlone/interfaces/controlpanel.py:1761
+#: CMFPlone/interfaces/controlpanel.py:1619
 msgid "action_permissions_heading"
 msgstr "Permisos"
 
 #. Default: "Position"
-#: CMFPlone/interfaces/controlpanel.py:1776
+#: CMFPlone/interfaces/controlpanel.py:1634
 msgid "action_position_heading"
 msgstr "Posició"
 
 #. Default: "An expression producing the called URL. Example: string:${globals_view/navigationRootUrl}/page"
-#: CMFPlone/interfaces/controlpanel.py:1745
+#: CMFPlone/interfaces/controlpanel.py:1601
 msgid "action_url_description"
 msgstr "Expressió que construeix la URL que enllaça cap a l'acció. Per exemple: string:${globals_view/navigationRootUrl}/document"
 
 #. Default: "Action URL"
-#: CMFPlone/interfaces/controlpanel.py:1744
+#: CMFPlone/interfaces/controlpanel.py:1600
 msgid "action_url_heading"
 msgstr "URL de l'acció"
 
 #. Default: "Visible?"
-#: CMFPlone/interfaces/controlpanel.py:1771
+#: CMFPlone/interfaces/controlpanel.py:1629
 msgid "action_visibility_heading"
 msgstr "És visible?"
 
@@ -7329,6 +7518,12 @@ msgstr "Afegeix"
 #: plone/app/multilingual/browser/templates/add-form-is-translation.pt:8
 msgid "add-form-is-translation"
 msgstr "Aquest objecte esdevindrà una traducció a ${language} de:"
+
+#. Default: "Add a new alternative url"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:54
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:47
+msgid "add_alias"
+msgstr ""
 
 #. Default: "Comment"
 #: plone.app.discussion/plone/app/discussion/browser/comments.py:228
@@ -7393,7 +7588,7 @@ msgid "all_events"
 msgstr "Tots els esdeveniments"
 
 #: CMFPlone/browser/search.py:182
-#: CMFPlone/interfaces/controlpanel.py:1074
+#: CMFPlone/interfaces/controlpanel.py:916
 msgid "alphabetically"
 msgstr "alfabèticament"
 
@@ -7550,12 +7745,12 @@ msgid "box_upcoming_events"
 msgstr "Propers esdeveniments…"
 
 #. Default: "Delete"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:68
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:69
 msgid "bulkactions_delete"
 msgstr "Esborra"
 
 #. Default: "Approve"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:66
 msgid "bulkactions_publish"
 msgstr "Publica"
 
@@ -7747,7 +7942,7 @@ msgstr "La regla s'executarà quan tingui lloc el següent esdeveniment."
 msgid "contentrules_perform_actions"
 msgstr "Efectua les accions següents:"
 
-#: CMFPlone/controlpanel/browser/overview.pt:32
+#: CMFPlone/controlpanel/browser/overview.pt:33
 msgid "continue with the upgrade"
 msgstr "continua amb l'actualització"
 
@@ -7801,7 +7996,7 @@ msgid "daily_interval_2"
 msgstr "dies"
 
 #: CMFPlone/browser/search.py:180
-#: CMFPlone/interfaces/controlpanel.py:1072
+#: CMFPlone/interfaces/controlpanel.py:914
 msgid "date (newest first)"
 msgstr "data (més recent primer)"
 
@@ -7906,6 +8101,11 @@ msgstr "Aquest portal està dissenyat per a atendre la diversitat de maneres en 
 msgid "description_add_new_item"
 msgstr "Seleccioneu el tipus de contingut que voleu afegir a la carpeta."
 
+#. Default: "Using this form, you can manage alternative urls for an item. This is an easy way to make an item available under two different URLs."
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:38
+msgid "description_adding_aliases"
+msgstr ""
+
 #. Default: "Use the fields below to configure the Diazo theme manually. Usually, these settings are applied by enabling a theme from the <strong>Themes</strong> tab."
 #: plone/app/theming/browser/controlpanel.pt:350
 msgid "description_advanced"
@@ -7922,7 +8122,7 @@ msgid "description_after_migration_cleanup"
 msgstr "Aquest pas arregla algunes dependències trencades de la interfície ITranslatable amagades en el catàleg de relacions. Només s'ha d'executar un cop s'ha desinstal·lat LinguaPlone."
 
 #. Default: "Related to: use cookie for manual override"
-#: CMFPlone/interfaces/controlpanel.py:281
+#: plone.i18n/plone/i18n/interfaces.py:150
 msgid "description_auth_ookie_manual_override"
 msgstr "Relacionat amb: Utilitza galetes per a redefinir manualment"
 
@@ -7932,7 +8132,7 @@ msgid "description_author_feedback"
 msgstr "Si voleu contactar amb aquest autor, ompliu el formulari següent."
 
 #. Default: "The languages in which the site should be translatable."
-#: CMFPlone/interfaces/controlpanel.py:186
+#: plone.i18n/plone/i18n/interfaces.py:55
 msgid "description_available_languages"
 msgstr "El portal es pot traduir a aquest idiomes."
 
@@ -7947,9 +8147,14 @@ msgid "description_basic_settings"
 msgstr "Utilitzeu els botons per a crear o pujar un tema nou de Diazo, o seleccioneu un tema ja creat dels següents."
 
 #. Default: "Use browser language request negotiation."
-#: CMFPlone/interfaces/controlpanel.py:325
+#: plone.i18n/plone/i18n/interfaces.py:194
 msgid "description_browser_language_request_negotiation"
 msgstr "Utilitza els idiomes que negociïn els navegadors."
+
+#. Default: "Add many alternative urls at once by uploading a CSV file. The first column should be the path to redirect from; the second, the path to redirect to. Both paths must be Plone-site-relative, starting with a slash (/)."
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:146
+msgid "description_bulk_upload"
+msgstr ""
 
 #. Default: "When there are many translations for an item, the number of displayed buttons for them might get too large to fit inside the template. Choose here from which number onwards a drop-down menu will be displayed instead of buttons. Zero means that buttons will always be used."
 #: plone/app/multilingual/interfaces.py:241
@@ -8043,7 +8248,7 @@ msgid "description_control_panel"
 msgstr "Àrea de configuració del Plone i dels productes addicionals."
 
 #. Default: "Required for the language selector viewlet to be rendered."
-#: CMFPlone/interfaces/controlpanel.py:268
+#: plone.i18n/plone/i18n/interfaces.py:137
 msgid "description_cookie_manual_override"
 msgstr "Requerit per tal que es pugui mostrar el selector d'idiomes"
 
@@ -8053,7 +8258,7 @@ msgid "description_copyright"
 msgstr "El ${plonecms} és ${copyright} 2000-${current_year} de la ${plonefoundation} i amics."
 
 #. Default: "You are running in \"debug mode\". This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, stop the server, set 'debug-mode=off' in your buildout.cfg, re-run bin/buildout and then restart the server process."
-#: CMFPlone/controlpanel/browser/overview.pt:151
+#: CMFPlone/controlpanel/browser/overview.pt:169
 msgid "description_debug_mode"
 msgstr "Esteu funcionant en \"mode depuració\". Aquest mode està pensat per a llocs que que s'estan desenvolupant. Això permet que molts dels canvis en la configuració siguin visibles immediatament, però farà que el vostre lloc funcioni més lentament.  Per desactivar el mode depuració, atureu el servidor, indiqueu 'debug-mode=off' al vostre fitxer buildout.cfg, torneu a executar bin/buildout i després reinicieu el procés servidor."
 
@@ -8134,7 +8339,7 @@ msgid "description_include_error_in_admin_message"
 msgstr "Si heu d'informar d'això a l'${site_admin}, si us plau, incloeu aquest número d'entrada en el vostre missatge."
 
 #. Default: "Use language codes in URL path for manual override."
-#: CMFPlone/interfaces/controlpanel.py:258
+#: plone.i18n/plone/i18n/interfaces.py:127
 msgid "description_language_codes_in_URL"
 msgstr "Utilitza els codis d'idioma de les URL per a controlar-ho manualment."
 
@@ -8144,7 +8349,7 @@ msgid "description_language_folder"
 msgstr "Aneu a la carpeta d'idioma, segons les preferències que hagueu seleccionat al navegador"
 
 #. Default: "Use the language of the content item."
-#: CMFPlone/interfaces/controlpanel.py:248
+#: plone.i18n/plone/i18n/interfaces.py:117
 msgid "description_language_of_the_content"
 msgstr "Utilitza l'idioma definit en el contingut."
 
@@ -8199,7 +8404,7 @@ msgid "description_manage_contenttype_portlets"
 msgstr "Els espais dels portlets esquerra i dret ara només mostraran aquells portlets assignats a aquest tipus de contingut. Per gestionar els portlets d'usuari, utilitzeu els links de pujar, baixar, eliminar o editar. Utilitzeu la llista desplegable per afegir nous portlets."
 
 #. Default: "The portlet columns will first display portlets explicitly assigned in this context. Use the buttons on each portlet to move them up or down, delete or edit them. To add a new portlet, use the drop-down list at the top of the column."
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:51
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:52
 msgid "description_manage_contextual_portlets"
 msgstr "Les columnes de portlet mostraran en primer lloc aquells portlets assignats explícitament en aquest context. Utilitzeu els botons de cada portlet per moure'ls amunt o avall, eliminar-los o editar-los. Per afegir un nou portlet, utilitzeu la llista desplegable situada a la part superior de la columna."
 
@@ -8263,7 +8468,7 @@ msgstr "formulari de registre"
 #. Default: "There are currently no items in this folder."
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:173
 #: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
-#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:245
+#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:246
 msgid "description_no_items_in_folder"
 msgstr "Actualment no hi ha elements dins d'aquesta carpeta."
 
@@ -8332,7 +8537,7 @@ msgid "description_personal_information_form_otheruser"
 msgstr "Canvieu la informació personal de $name"
 
 #. Default: "If you wish to block or unblock certain categories of portlets, you can do so using the drop-down boxes. Portlets that are included by these categories are shown below the selection box."
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:58
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:59
 msgid "description_portlets_block_unblock"
 msgstr "Si voleu bloquejar o desbloquejar determinades categories de portlets, ho podeu fer utilitzant els quadres desplegables. Els portlets inclosos en aquestes categories es mostren a continuació del quadre de selecció."
 
@@ -8342,7 +8547,7 @@ msgid "description_preferences_form_otheruser"
 msgstr "Configuració personal per a $name"
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, stop the server, set 'debug-mode=on' in your buildout.cfg, re-run bin/buildout and then restart the server process."
-#: CMFPlone/controlpanel/browser/overview.pt:139
+#: CMFPlone/controlpanel/browser/overview.pt:157
 msgid "description_production_mode"
 msgstr "Esteu funcionant en \"mode producció\". Aquest és el mode d'operació desitjable per a un lloc Plone en actiu, però significa que alguns canvis en la configuració no seran efectius fins que el vostre servidor es reiniciï o es recarregui un producte. Si aquesta instància és per a desenvolupament, i voleu habilitar el mode depuració, atureu el servidor, indiqueu 'debug-mode=on' al vostre fitxer buildout.cfg, torneu a executar bin/buildout i després reinicieu el procés servidor."
 
@@ -8453,7 +8658,7 @@ msgid "description_set_language"
 msgstr "Mou la traducció a una altra carpeta d'idioma"
 
 #. Default: "i.e. also when the 'set_language' request parameter is absent"
-#: CMFPlone/interfaces/controlpanel.py:293
+#: plone.i18n/plone/i18n/interfaces.py:162
 msgid "description_set_language_cookie_always"
 msgstr "és a dir, també quan a la sol·licitud no hi ha el paràmetre 'set_language'."
 
@@ -8494,7 +8699,7 @@ msgid "description_site_error_thank_you"
 msgstr "Gràcies."
 
 #. Default: "The language used for the content and the UI of this site."
-#: CMFPlone/interfaces/controlpanel.py:173
+#: plone.i18n/plone/i18n/interfaces.py:42
 msgid "description_site_language"
 msgstr "L'idioma utilitzat per al contingut i per a la interfície d'usuari d'aquest lloc web."
 
@@ -8534,7 +8739,7 @@ msgid "description_test_portlet"
 msgstr ""
 
 #. Default: "e.g.: www.plone.de"
-#: CMFPlone/interfaces/controlpanel.py:316
+#: plone.i18n/plone/i18n/interfaces.py:185
 msgid "description_top_level_domain"
 msgstr "p.ex. www.plone.cat"
 
@@ -8574,7 +8779,7 @@ msgid "description_use_form_to_change_password"
 msgstr "Si us plau, utilitzeu el següent formulari per a canviar la contrasenya."
 
 #. Default: "e.g.: de.plone.org"
-#: CMFPlone/interfaces/controlpanel.py:307
+#: plone.i18n/plone/i18n/interfaces.py:176
 msgid "description_use_subdomain"
 msgstr "p.ex. cat.plone.org"
 
@@ -8695,9 +8900,14 @@ msgid "error_allowable_content_types"
 msgstr "El tipus MIME ${mimetype} no està permès a ${name}."
 
 #. Default: "This theme is already installed. Select 'Replace existing theme' and re-upload to replace it."
-#: plone/app/theming/browser/controlpanel.py:259
+#: plone/app/theming/browser/controlpanel.py:262
 msgid "error_already_installed"
 msgstr "Aquest tema ja està instal·lat. Selecciona 'Substitueix el tema existent' i torna'l a pujar per actualitzar-lo."
+
+#. Default: "No alternative urls were added. Please correct these errors in your CSV file and try again:"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:16
+msgid "error_bulk_upload"
+msgstr ""
 
 #. Default: "End date must be after start date."
 #: plone.app.event/plone/app/event/dx/behaviors.py:162
@@ -8715,7 +8925,7 @@ msgid "error_invalid_date"
 msgstr "Data d'inici o fi incorrecta"
 
 #. Default: "Please ensure you enter one expression per line, in the format <name> = <expression>."
-#: plone/app/theming/browser/controlpanel.py:180
+#: plone/app/theming/browser/controlpanel.py:181
 msgid "error_invalid_parameter_expressions"
 msgstr "Assegureu-vos que hi ha una expressió per línia en el format <nom> = <expressió>."
 
@@ -8725,12 +8935,12 @@ msgid "error_invalid_publication"
 msgstr "La data efectiva o la de venciment no és vàlida"
 
 #. Default: "The uploaded file is not a valid Zip archive"
-#: plone/app/theming/browser/controlpanel.py:236
+#: plone/app/theming/browser/controlpanel.py:239
 msgid "error_invalid_zip"
 msgstr "El fitxer pujat no és un arxiu Zip vàlid"
 
 #. Default: "The uploaded file does not contain a valid theme archive."
-#: plone/app/theming/browser/controlpanel.py:247
+#: plone/app/theming/browser/controlpanel.py:250
 msgid "error_no_rules_file"
 msgstr "El fitxer pujat no conté un arxiu de tema vàlid"
 
@@ -8807,6 +9017,16 @@ msgstr "Esdeveniments en la setmana ${weeknumber}"
 #: plone.app.event/plone/app/event/browser/event_listing.py:302
 msgid "events_on_day"
 msgstr "Esdeveniments en ${day}"
+
+#. Default: "/old-home-page.asp,/front-page<br /> /people/JoeT,/Users/joe-thurston"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:153
+msgid "example_bulk_upload"
+msgstr ""
+
+#. Default: "Example:"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:152
+msgid "example_caption_bulk_upload"
+msgstr ""
 
 #: plone.formwidget.recurrence/plone/formwidget/recurrence/browser/i18n.py:139
 msgid "except"
@@ -8956,7 +9176,7 @@ msgid "heading_accessibility_statement"
 msgstr "Declaració d'accessibilitat"
 
 #. Default: "Action"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:86
 msgid "heading_action"
 msgstr "Acció"
 
@@ -8991,7 +9211,7 @@ msgid "heading_assign_to_groups"
 msgstr "Assigna als grups"
 
 #. Default: "Authenticated users only"
-#: CMFPlone/interfaces/controlpanel.py:279
+#: plone.i18n/plone/i18n/interfaces.py:148
 msgid "heading_auth_cookie_manual_override"
 msgstr "Només usuaris autenticats"
 
@@ -9001,7 +9221,7 @@ msgid "heading_author_content"
 msgstr "Últims continguts creats per aquest usuari"
 
 #. Default: "Available languages"
-#: CMFPlone/interfaces/controlpanel.py:184
+#: plone.i18n/plone/i18n/interfaces.py:53
 msgid "heading_available_languages"
 msgstr "Idiomes disponibles"
 
@@ -9011,7 +9231,7 @@ msgid "heading_available_translations"
 msgstr "Traduccions disponibles per a aquest contingut"
 
 #. Default: "Use browser language request negotiation"
-#: CMFPlone/interfaces/controlpanel.py:323
+#: plone.i18n/plone/i18n/interfaces.py:192
 msgid "heading_browser_language_request_negotiation"
 msgstr "Utilitza els idiomes que negociïn els navegadors"
 
@@ -9051,12 +9271,12 @@ msgid "heading_change_password_for"
 msgstr "Canvia la contrasenya de l'usuari ${user}"
 
 #. Default: "Comment"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:85
 msgid "heading_comment"
 msgstr "Comentari"
 
 #. Default: "Commenter"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:81
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
 msgid "heading_commenter"
 msgstr "Autor"
 
@@ -9071,7 +9291,7 @@ msgid "heading_content_types"
 msgstr "Tipus de contingut"
 
 #. Default: "Use cookie for manual override"
-#: CMFPlone/interfaces/controlpanel.py:266
+#: plone.i18n/plone/i18n/interfaces.py:135
 msgid "heading_cookie_manual_override"
 msgstr "Utilitza galetes per a redefinir manualment"
 
@@ -9091,7 +9311,7 @@ msgid "heading_dashboard"
 msgstr "Escriptori de ${user_name}"
 
 #. Default: "Date"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:82
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
 msgid "heading_date"
 msgstr "Data"
 
@@ -9167,17 +9387,17 @@ msgid "heading_groupmembers_current"
 msgstr "Membres actuals del grup"
 
 #. Default: "In Response To"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:83
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:84
 msgid "heading_in_reponse_to"
 msgstr "En resposta a"
 
 #. Default: "Use language codes in URL path for manual override"
-#: CMFPlone/interfaces/controlpanel.py:255
+#: plone.i18n/plone/i18n/interfaces.py:124
 msgid "heading_language_codes_in_URL"
 msgstr "Utilitza els codis d'idioma de les URL"
 
 #. Default: "Use the language of the content item"
-#: CMFPlone/interfaces/controlpanel.py:246
+#: plone.i18n/plone/i18n/interfaces.py:115
 msgid "heading_language_of_the_content"
 msgstr "Utilitza l'idioma definit en el contingut"
 
@@ -9343,7 +9563,7 @@ msgid "heading_rename_item"
 msgstr "Canvia el nom a l'element"
 
 #. Default: "REQUEST"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:80
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:81
 msgid "heading_request"
 msgstr "Sol·licitud"
 
@@ -9413,7 +9633,7 @@ msgid "heading_set_content_type_restrictions"
 msgstr "Restringeix quins tipus de continguts es poden afegir"
 
 #. Default: "Set the language cookie always"
-#: CMFPlone/interfaces/controlpanel.py:290
+#: plone.i18n/plone/i18n/interfaces.py:159
 msgid "heading_set_language_cookie_always"
 msgstr "Estableix sempre les galetes d'idioma"
 
@@ -9434,7 +9654,7 @@ msgid "heading_site_error_sorry"
 msgstr "Ho sentim, sembla que hi ha un error…"
 
 #. Default: "Site language"
-#: CMFPlone/interfaces/controlpanel.py:172
+#: plone.i18n/plone/i18n/interfaces.py:41
 msgid "heading_site_language"
 msgstr "Idioma del lloc"
 
@@ -9464,7 +9684,7 @@ msgid "heading_title"
 msgstr "Títol"
 
 #. Default: "Use top-level domain"
-#: CMFPlone/interfaces/controlpanel.py:314
+#: plone.i18n/plone/i18n/interfaces.py:183
 msgid "heading_top_level_domain"
 msgstr "Utilitza el domini de primer nivell"
 
@@ -9489,7 +9709,7 @@ msgid "heading_un_block_portlets"
 msgstr "Bloqueja/desbloqueja portlets"
 
 #. Default: "Use subdomain"
-#: CMFPlone/interfaces/controlpanel.py:305
+#: plone.i18n/plone/i18n/interfaces.py:174
 msgid "heading_use_subdomain"
 msgstr "Utilitza el subdomini"
 
@@ -9505,7 +9725,7 @@ msgstr "Valor"
 
 #. Default: "Version Overview"
 #: CMFPlone/browser/templates/plone-upgrade.pt:200
-#: CMFPlone/controlpanel/browser/overview.pt:132
+#: CMFPlone/controlpanel/browser/overview.pt:136
 msgid "heading_version_overview"
 msgstr "Visió general de la versió"
 
@@ -9531,7 +9751,7 @@ msgid "heading_you_are_now_logged_in"
 msgstr "Us heu identificat correctament"
 
 #. Default: "Zope Server"
-#: CMFPlone/controlpanel/browser/maintenance.pt:58
+#: CMFPlone/controlpanel/browser/maintenance.pt:59
 msgid "heading_zope_server"
 msgstr "Servidor Zope"
 
@@ -9560,8 +9780,24 @@ msgstr "Seleccioneu la política de restriccions per a aquesta ubicació."
 msgid "help_addcontenttype_button"
 msgstr "Cliqueu sobre el botó \"Afegeix tipus de contingut\" per a crear un nou tipus de contingut personalitzat."
 
+#. Default: "Enter the absolute path where the alternative url should exist. The path must start with '/'."
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:80
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:72
+msgid "help_alias"
+msgstr ""
+
+#. Default: "You are managing the alternative urls of a default view in a container. To manage them for the entire container, ${go_here}."
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:28
+msgid "help_aliases"
+msgstr ""
+
+#. Default: "go here"
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:28
+msgid "help_aliases_go_here"
+msgstr ""
+
 #. Default: "Examples: pt-br (Brazilian Portuguese), en-us (American English) etc."
-#: CMFPlone/interfaces/controlpanel.py:202
+#: plone.i18n/plone/i18n/interfaces.py:71
 msgid "help_allow_combined_language_codes"
 msgstr "Exemples: pt-br (portuguès de Brasil), en-us (anglès americà), etc."
 
@@ -9571,7 +9807,7 @@ msgid "help_allow_comments"
 msgstr "Si està seleccionat, els usuaris poden afegir comentaris a aquest element."
 
 #. Default: "Only the following roles can add new keywords "
-#: CMFPlone/interfaces/controlpanel.py:1327
+#: CMFPlone/interfaces/controlpanel.py:1169
 msgid "help_allow_roles_to_add_keywords"
 msgstr "Només els rols següents poden afegir etiquetes noves "
 
@@ -9586,17 +9822,17 @@ msgid "help_anonymous_email_enabled"
 msgstr "Si se selecciona, el usuari anònim haurà de donar la seva adreça de correu electrònic."
 
 #. Default: "The URL of the \"After the Deadline\" grammar and spell checking server. The default value is the public server, but ideally you should download and install your own and specify its address here."
-#: CMFPlone/interfaces/controlpanel.py:794
+#: CMFPlone/interfaces/controlpanel.py:629
 msgid "help_atd_service_url"
 msgstr "La URL del servidor de correcció ortogràfica \"After the Deadline\". Per defecte és el servei públic, tot i que seria preferible que descarregueu i instal·leu un servidor propi i en configureu la URL aquí."
 
 #. Default: "A list of error types which the \"After the Deadline\" spellchecker should check for. By default, all the available error type will be listed here."
-#: CMFPlone/interfaces/controlpanel.py:771
+#: CMFPlone/interfaces/controlpanel.py:606
 msgid "help_atderrortypes_to_show"
 msgstr "Una llista dels tipus d'error que el corrector ortogràfic \"After the Deadline\" ha de comprovar. Per defecte, es llisten tots els tipus d'error disponibles."
 
 #. Default: "The timezones, which should be available for the portal. Can be set for users and events"
-#: CMFPlone/interfaces/controlpanel.py:1358
+#: CMFPlone/interfaces/controlpanel.py:1200
 msgid "help_available_timezones"
 msgstr "Els fusos horaris que són disponibles al portal. Es poden configurar per a cada usuari o per a cada esdeveniment."
 
@@ -9899,7 +10135,7 @@ msgid "help_external_url"
 msgstr "URL externa (pot ser relativa a aquest portal o absoluta si comença per http:// o https://)"
 
 #. Default: "First day in the week."
-#: CMFPlone/interfaces/controlpanel.py:1370
+#: CMFPlone/interfaces/controlpanel.py:1212
 msgid "help_first_weekday"
 msgstr "Primer dia de la setmana"
 
@@ -10132,7 +10368,7 @@ msgid "help_path_criteria_value"
 msgstr "Carpetes on cercar."
 
 #. Default: "The timezone setting of the portal. Users can set their own timezone, if available timezones are defined."
-#: CMFPlone/interfaces/controlpanel.py:1347
+#: CMFPlone/interfaces/controlpanel.py:1189
 msgid "help_portal_timezone"
 msgstr "La configuració del fus horari del portal. Els usuaris poden configurar un fus horari propi si definiu altres fusos horaris disponibles."
 
@@ -10198,7 +10434,7 @@ msgid "help_read_network"
 msgstr "Permetre a les regles i temes de connectar-se a servidors remots"
 
 #. Default: "When clicking on a Link type, should the user be taken to the default view or be redirected to the Link's URL?"
-#: CMFPlone/interfaces/controlpanel.py:1398
+#: CMFPlone/interfaces/controlpanel.py:1240
 msgid "help_redirect_links"
 msgstr "Quan es clica en un contingut de tipus Enllaç, s'ha de redirigir l'usuari cap a la vista per defecte o bé directament cap a la URL continguda en l'enllaç?"
 
@@ -10234,7 +10470,7 @@ msgid "help_replace_existing"
 msgstr "Seleccioneu aquesta opció per reemplaçar qualsevol tema existent que s'ha pujat prèviament."
 
 #. Default: "robots.txt is read by search engines to determine how to index your site. For details see <a href='http://www.robotstxt.org'>http://www.robotstxt.org</a>. Use '{portal_url}' for the site URL."
-#: CMFPlone/interfaces/controlpanel.py:1300
+#: CMFPlone/interfaces/controlpanel.py:1142
 msgid "help_robots_txt"
 msgstr "Els motors de cerca obtenen el fitxer robots.txt per tal de saber com poden indexar el portal. Per més detalls vegeu <a href='http://www.robotstxt.org'>http://www.robotstxt.org</a>. Utilitzeu '{portal_url}' per a la URL del lloc web."
 
@@ -10329,22 +10565,22 @@ msgid "help_show_title"
 msgstr "Mostra el títol d'aquest portlet."
 
 #. Default: "The password for the ESMTP user account."
-#: CMFPlone/interfaces/controlpanel.py:1465
+#: CMFPlone/interfaces/controlpanel.py:1307
 msgid "help_smtp_pass"
 msgstr "La contrasenya per al compte d'usuari ESMTP."
 
 #. Default: "The port of your local SMTP (outgoing e-mail) server. Usually '25'."
-#: CMFPlone/interfaces/controlpanel.py:1441
+#: CMFPlone/interfaces/controlpanel.py:1283
 msgid "help_smtp_port"
 msgstr "El port del servidor local d'SMTP (correu de sortida). Normalment '25'."
 
 #. Default: "The address of your local SMTP (outgoing e-mail) server. Usually 'localhost', unless you use an external server to send e-mail."
-#: CMFPlone/interfaces/controlpanel.py:1429
+#: CMFPlone/interfaces/controlpanel.py:1271
 msgid "help_smtp_server"
 msgstr "L'adreça del servidor local d'SMTP (correu de sortida). Normalment  'localhost', tret que utilitzeu un servidor extern per a enviar el correu."
 
 #. Default: "Username for authentication to your e-mail server. Not required unless you are using ESMTP."
-#: CMFPlone/interfaces/controlpanel.py:1453
+#: CMFPlone/interfaces/controlpanel.py:1295
 msgid "help_smtp_userid"
 msgstr "Nom d'usuari utilitzat per a l'autenticació al vostre servidor de correu. No és obligatori tret que utilitzeu ESMTP."
 
@@ -10373,6 +10609,11 @@ msgstr "Nombre màxim d'elements que es sindicaran."
 #: plone.app.dexterity/plone/app/dexterity/behaviors/metadata.py:106
 msgid "help_tags"
 msgstr "Les etiquetes normalment s'utilitzen per una millor organització dels continguts."
+
+#. Default: "Enter the absolute path of the target. The path must start with '/'."
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:113
+msgid "help_target_path"
+msgstr ""
 
 #. Default: "<p> Legacy page templates defined in the <em>portal_skins</em> tool in the ZMI, or created or customised through the web cannot be associated with rulesets in the usual way. There are two options: </p> <ul> <li>If the template is the <em>default type</em> of a content type it is possible to associate the type class or an interface it provides with a ruleset.</li> <li>You can also associate a specific page template (by name) or content type with a ruleset using the options below.</li> </ul> <p> <strong>Note:</strong> By default, folder-like content types are associated with the ruleset <code>plone.content.folderView</code>, and item-like content types are associated with the ruleset <code>plone.content.itemView</code>. Any settings entered below or set via an explicit cache ruleset (in a ZCML file) will override these defaults. </p> <p> <strong>Note:</strong> You can only use each template name or content type once! </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:449
@@ -10410,22 +10651,22 @@ msgid "help_timezone"
 msgstr "El vostre fus horari"
 
 #. Default: "Enter what items you would like in the menu bar."
-#: CMFPlone/interfaces/controlpanel.py:648
+#: CMFPlone/interfaces/controlpanel.py:483
 msgid "help_tinymce_menubar"
 msgstr "Elements que han d'aparèixer a la barra de menús."
 
 #. Default: "Select plugins to include with tinymce"
-#: CMFPlone/interfaces/controlpanel.py:603
+#: CMFPlone/interfaces/controlpanel.py:438
 msgid "help_tinymce_plugins"
 msgstr "Seleccioneu extensions per a incloure a tinymce"
 
 #. Default: "Enter the list of templates in json format https://www.tinymce.com/docs/plugins/template/"
-#: CMFPlone/interfaces/controlpanel.py:692
+#: CMFPlone/interfaces/controlpanel.py:527
 msgid "help_tinymce_templates"
 msgstr "Llista de plantilles en format json https://www.tinymce.com/docs/plugins/template"
 
 #. Default: "Enter how you would like the toolbar items to list."
-#: CMFPlone/interfaces/controlpanel.py:705
+#: CMFPlone/interfaces/controlpanel.py:540
 msgid "help_tinymce_toolbar"
 msgstr "Definiu com s'han de llistar els elements de la barra d'eines."
 
@@ -10435,7 +10676,7 @@ msgid "help_title"
 msgstr "Títol que es mostra d'aquest portlet"
 
 #. Default: "When clicking items in listing views, these types will use the 'view' action instead of using their default view."
-#: CMFPlone/interfaces/controlpanel.py:1384
+#: CMFPlone/interfaces/controlpanel.py:1226
 msgid "help_types_use_view_action_in_listings"
 msgstr "Quan es cliquen elements a les vistes de llista, els tipus següents utilitzen l'acció 'view' en comptes d'utilitzar la vista per defecte."
 
@@ -10496,12 +10737,12 @@ msgid "hide"
 msgstr "oculta"
 
 #. Default: "JSON formatted Menu configuration."
-#: CMFPlone/interfaces/controlpanel.py:659
+#: CMFPlone/interfaces/controlpanel.py:494
 msgid "hint_tinymce_menu"
 msgstr "Configuració del menú en format JSON."
 
 #. Default: "Other TinyMCE configuration formatted as JSON."
-#: CMFPlone/interfaces/controlpanel.py:861
+#: CMFPlone/interfaces/controlpanel.py:696
 msgid "hint_tinymce_other_settings"
 msgstr "Altres configuracions de TinyMCE en format JSON."
 
@@ -10527,7 +10768,7 @@ msgid "html"
 msgstr "HTML"
 
 #. Default: "I18n domain"
-#: CMFPlone/interfaces/controlpanel.py:1739
+#: CMFPlone/interfaces/controlpanel.py:1595
 msgid "i18n_domain_heading"
 msgstr "Domini i18n"
 
@@ -10760,6 +11001,12 @@ msgstr "Cerca avançada…"
 msgid "label_affected_content"
 msgstr "Contingut afectat"
 
+#. Default: "Alternative url path"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:62
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:54
+msgid "label_alias"
+msgstr ""
+
 #. Default: "All"
 #: plone.app.content/plone/app/content/browser/table.pt:36
 msgid "label_all"
@@ -10776,7 +11023,7 @@ msgid "label_all_translations"
 msgstr "Totes les traduccions"
 
 #. Default: "Show country-specific language variants"
-#: CMFPlone/interfaces/controlpanel.py:198
+#: plone.i18n/plone/i18n/interfaces.py:67
 msgid "label_allow_combined_language_codes"
 msgstr "Mostra variants lingüístiques específiques de països"
 
@@ -10791,7 +11038,7 @@ msgid "label_allow_discussion"
 msgstr "Permet la discussió d'aquest element"
 
 #. Default: "Always show language selector"
-#: CMFPlone/interfaces/controlpanel.py:222
+#: plone.i18n/plone/i18n/interfaces.py:91
 msgid "label_always_show_selector"
 msgstr "Mostra sempre el selector d'idioma"
 
@@ -10822,7 +11069,7 @@ msgid "label_anonymous_user"
 msgstr "Usuari anònim"
 
 #. Default: "Apply"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:71
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:72
 msgid "label_apply"
 msgstr "Aplica"
 
@@ -10842,7 +11089,7 @@ msgid "label_at"
 msgstr "a"
 
 #. Default: "A list of strings which the \"After the Deadline\" spellchecker should ignore. Note: This option is only applicable when the appropriate spellchecker has been chosen above."
-#: CMFPlone/interfaces/controlpanel.py:755
+#: CMFPlone/interfaces/controlpanel.py:590
 msgid "label_atd_ignore_strings"
 msgstr "Llista de cadenes de text que el corrector ortogràfic \"After the Deadline\" ha d'ignorar. Nota: aquesta opció només s'aplica quan s'ha seleccionat un connector adequat per al corrector ortogràfic."
 
@@ -10896,6 +11143,16 @@ msgstr "Valor"
 #: plone.schemaeditor/plone/schemaeditor/fields.py:91
 msgid "label_boolean_field"
 msgstr "Booleà (Sí/No)"
+
+#. Default: "Line"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:27
+msgid "label_bulk_upload_line"
+msgstr ""
+
+#. Default: ":"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:31
+msgid "label_bulk_upload_line_suffix"
+msgstr ""
 
 #. Default: "by ${author}"
 #: CMFPlone/browser/templates/search.pt:243
@@ -11189,7 +11446,7 @@ msgid "label_contributors"
 msgstr "Col·laboradors"
 
 #. Default: "Convert portlets"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:76
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:77
 msgid "label_convert_portlets"
 msgstr "Converteix els portlets"
 
@@ -11224,6 +11481,11 @@ msgstr "Creadors"
 #: widget label of StringWidget - description "Should not contain spaces, underscores or mixed case. Short Name is part of the item's web address."
 msgid "label_criteria_field_name"
 msgstr "Nom del camp"
+
+#. Default: "CSV file"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:162
+msgid "label_csv_file"
+msgstr ""
 
 #. Default: "(current)"
 #: plone.app.content/plone/app/content/browser/templates/select_default_view.pt:44
@@ -11316,7 +11578,7 @@ msgstr "Circuit de treball per defecte (${title})"
 #. Default: "Delete"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:173
 #: plone.app.discussion/plone/app/discussion/browser/comments.pt:98
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:139
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:140
 msgid "label_delete"
 msgstr "Suprimeix"
 
@@ -11364,7 +11626,7 @@ msgid "label_discussion_enabled"
 msgstr "Permetre"
 
 #. Default: "Show language flags"
-#: CMFPlone/interfaces/controlpanel.py:212
+#: plone.i18n/plone/i18n/interfaces.py:81
 msgid "label_display_flags"
 msgstr "Mostra les banderes dels idiomes"
 
@@ -11534,12 +11796,12 @@ msgid "label_exception"
 msgstr "Error"
 
 #. Default: "Exception Type"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:59
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:60
 msgid "label_exception_type"
 msgstr "Tipus d'excepció"
 
 #. Default: "Exception Value"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:63
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:64
 msgid "label_exception_value"
 msgstr "Valor d'excepció"
 
@@ -11607,7 +11869,7 @@ msgid "label_find_group"
 msgstr "Troba un grup aquí"
 
 #. Default: "First weekday"
-#: CMFPlone/interfaces/controlpanel.py:1369
+#: CMFPlone/interfaces/controlpanel.py:1211
 msgid "label_first_weekday"
 msgstr "Primer dia de la setmana"
 
@@ -11898,14 +12160,14 @@ msgid "label_main_language"
 msgstr "Idioma principal:"
 
 #. Default: "You are managing the portlets of the default view of a container. If you wanted to manage the portlets of the container itself, ${go_here}."
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:44
-#: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:51
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:45
+#: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:52
 msgid "label_manage_portlets_default_view_container"
 msgstr "Esteu gestionant els portlets de la vista per defecte d'un contenidor. Si voleu gestionar els portlets del propi contenidor, ${go_here}."
 
 #. Default: "go here"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:44
-#: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:51
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:45
+#: plone.app.portlets/plone/app/portlets/browser/templates/topbar-manage-portlets.pt:52
 msgid "label_manage_portlets_default_view_container_go_here"
 msgstr "aneu aquí"
 
@@ -12096,7 +12358,7 @@ msgid "label_no_group_specified"
 msgstr "No heu indicat cap grup."
 
 #. Default: "No preference panels available."
-#: CMFPlone/controlpanel/browser/overview.pt:120
+#: CMFPlone/controlpanel/browser/overview.pt:124
 msgid "label_no_prefs_panels_available"
 msgstr "No hi ha taulers de preferències disponibles."
 
@@ -12273,7 +12535,7 @@ msgid "label_product_upgrade_old_version"
 msgstr "La versió anterior era ${version}."
 
 #. Default: "Approve"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:130
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:131
 msgid "label_publish"
 msgstr "Aprova"
 
@@ -12399,13 +12661,14 @@ msgid "label_reply"
 msgstr "Respon"
 
 #. Default: "Request URL"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:55
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:56
 msgid "label_request_url"
 msgstr "Sol·licita l'URL"
 
 #. Default: "(Required)"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:68
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:60
 #: CMFPlone/controlpanel/browser/usergroups_groupdetails.pt:30
-#: CMFPlone/skins/plone_templates/test_rendering.pt:233
 msgid "label_required"
 msgstr "(Necessari)"
 
@@ -12581,7 +12844,7 @@ msgid "label_show_commenter_image"
 msgstr "Mostra el retrat (o imatge) de l'autor"
 
 #. Default: "show full comment text"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:123
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:124
 msgid "label_show_full_comment_text"
 msgstr "Mostra text complet"
 
@@ -12630,17 +12893,17 @@ msgid "label_size"
 msgstr "Mida"
 
 #. Default: "ESMTP password"
-#: CMFPlone/interfaces/controlpanel.py:1462
+#: CMFPlone/interfaces/controlpanel.py:1304
 msgid "label_smtp_pass"
 msgstr "Contrasenya SMTP"
 
 #. Default: "SMTP port"
-#: CMFPlone/interfaces/controlpanel.py:1439
+#: CMFPlone/interfaces/controlpanel.py:1281
 msgid "label_smtp_port"
 msgstr "Port SMTP"
 
 #. Default: "SMTP server"
-#: CMFPlone/interfaces/controlpanel.py:1426
+#: CMFPlone/interfaces/controlpanel.py:1268
 msgid "label_smtp_server"
 msgstr "Servidor SMTP"
 
@@ -12651,7 +12914,7 @@ msgid "label_smtp_test"
 msgstr "Desa i envia correu electrònic de prova"
 
 #. Default: "ESMTP username"
-#: CMFPlone/interfaces/controlpanel.py:1450
+#: CMFPlone/interfaces/controlpanel.py:1292
 msgid "label_smtp_userid"
 msgstr "Usuari ESMTP"
 
@@ -12666,7 +12929,7 @@ msgid "label_some_content_types"
 msgstr "Alguns tipus de contingut:"
 
 #. Default: "Sort on"
-#: CMFPlone/interfaces/controlpanel.py:1068
+#: CMFPlone/interfaces/controlpanel.py:910
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:54
 msgid "label_sort_on"
 msgstr "Ordena per"
@@ -12713,6 +12976,11 @@ msgstr "Continguts"
 msgid "label_tags"
 msgstr "Etiquetes"
 
+#. Default: "Target Path"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:96
+msgid "label_target_path"
+msgstr ""
+
 #. Default: "Legacy template mappings"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:448
 msgid "label_template_mappings"
@@ -12756,7 +13024,7 @@ msgstr "Tema activat"
 
 #. Default: "Time"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:90
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:46
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:47
 msgid "label_time"
 msgstr "Hora"
 
@@ -12766,32 +13034,32 @@ msgid "label_timezone"
 msgstr "Fus horari"
 
 #. Default: "Menu"
-#: CMFPlone/interfaces/controlpanel.py:658
+#: CMFPlone/interfaces/controlpanel.py:493
 msgid "label_tinymce_menu"
 msgstr "Menú"
 
 #. Default: "Menubar"
-#: CMFPlone/interfaces/controlpanel.py:647
+#: CMFPlone/interfaces/controlpanel.py:482
 msgid "label_tinymce_menubar"
 msgstr "Barra de menús"
 
 #. Default: "Other settings"
-#: CMFPlone/interfaces/controlpanel.py:860
+#: CMFPlone/interfaces/controlpanel.py:695
 msgid "label_tinymce_other_settings"
 msgstr "Altres configuracions"
 
 #. Default: "Editor plugins"
-#: CMFPlone/interfaces/controlpanel.py:602
+#: CMFPlone/interfaces/controlpanel.py:437
 msgid "label_tinymce_plugins"
 msgstr "Extensions de l'editor"
 
 #. Default: "Templates"
-#: CMFPlone/interfaces/controlpanel.py:691
+#: CMFPlone/interfaces/controlpanel.py:526
 msgid "label_tinymce_templates"
 msgstr "Plantilles"
 
 #. Default: "Toolbar"
-#: CMFPlone/interfaces/controlpanel.py:704
+#: CMFPlone/interfaces/controlpanel.py:539
 msgid "label_tinymce_toolbar"
 msgstr "Barra d'eines"
 
@@ -12824,7 +13092,7 @@ msgid "label_total_relations"
 msgstr "Quantitat de relacions modificades:"
 
 #. Default: "Display traceback as text"
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:75
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:76
 msgid "label_traceback_as_text"
 msgstr "Mostra el seguiment com a text"
 
@@ -12862,14 +13130,14 @@ msgid "label_up_to_groups_overview"
 msgstr "Ves a visió general dels grups"
 
 #. Default: "Up to Site Setup"
-#: CMFPlone/controlpanel/browser/maintenance.pt:166
+#: CMFPlone/controlpanel/browser/maintenance.pt:167
 #: plone.app.caching/plone/app/caching/browser/import.pt:48
 #: plone.app.caching/plone/app/caching/browser/purge.pt:48
 msgid "label_up_to_plone_setup"
 msgstr "Ves a configuració del Plone"
 
 #. Default: "Back to the control panel"
-#: plone/app/theming/browser/mapper.pt:97
+#: plone/app/theming/browser/mapper.pt:99
 msgid "label_up_to_theming_controlpanel"
 msgstr "Ves al panell de control"
 
@@ -12898,7 +13166,7 @@ msgstr "Les URL que es volen purgar"
 
 #. Default: "User Name"
 #: CMFPlone/skins/plone_prefs/prefs_error_log_form.pt:91
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:51
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:52
 #: plone.app.users/plone/app/users/schema.py:93
 msgid "label_user_name"
 msgstr "Nom d'usuari"
@@ -13002,6 +13270,16 @@ msgstr "Afegeix"
 msgid "legend_after_migration_cleanup"
 msgstr "Pas 3 - Neteja després de la migració"
 
+#. Default: "All existing alternative urls for this site"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:203
+msgid "legend_all_existing_aliases"
+msgstr ""
+
+#. Default: "Bulk-upload alternative urls"
+#: CMFPlone/controlpanel/browser/redirects-controlpanel.pt:142
+msgid "legend_bulk_upload"
+msgstr ""
+
 #. Default: "Caching proxies"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:125
 msgid "legend_caching_proxies"
@@ -13016,6 +13294,11 @@ msgstr "Configuracions detallades"
 #: plone.app.iterate/plone/app/iterate/browser/checkout.pt:40
 msgid "legend_details"
 msgstr "Detalls"
+
+#. Default: "Existing alternative urls for this item"
+#: CMFPlone/controlpanel/browser/redirects-manage.pt:99
+msgid "legend_existing_aliases"
+msgstr ""
 
 #. Default: "Global settings"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:102
@@ -13109,7 +13392,7 @@ msgid "linkintegrity_breaches_title"
 msgstr "Possible enllaç trencat"
 
 #. Default: "Would you like to delete it anyway?"
-#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:78
+#: plone.app.linkintegrity/plone/app/linkintegrity/browser/delete_confirmation_info.pt:77
 msgid "linkintegrity_delete_anyway"
 msgstr "Voleu eliminar-lo igualment?"
 
@@ -13359,17 +13642,17 @@ msgid "message_email_in_use"
 msgstr "L'adreça de correu que heu seleccionat ja s'està utilitzant o bé no és vàlida com a nom d'inici de sessió. Si us plau, escolliu-ne una altra."
 
 #. Default: "enable the 'Comment Review Workflow' for the Comment content type"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:34
 msgid "message_enable_comment_workflow"
 msgstr "Activa el 'Workflow de moderació de comentaris' per al tipus de contingut 'Comentari'"
 
 #. Default: "Moderation workflow is disabled. You have to ${enable_comment_workflow} before you can moderate comments here."
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:33
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:34
 msgid "message_moderation_disabled"
 msgstr "La moderació està desactivada. Teniu que ${enable_comment_workflow} abans de moderar els comentaris."
 
 #. Default: "No comments to moderate."
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:43
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:44
 msgid "message_nothing_to_moderate"
 msgstr "No hi han comentaris per moderar."
 
@@ -13924,7 +14207,7 @@ msgid "relation_migration_with_not_needed"
 msgstr "Aquest portal no té catàleg de relacions i per tant no fa falta aquest pas de migració"
 
 #: CMFPlone/browser/search.py:178
-#: CMFPlone/interfaces/controlpanel.py:1071
+#: CMFPlone/interfaces/controlpanel.py:913
 msgid "relevance"
 msgstr "rellevància"
 
@@ -13955,7 +14238,7 @@ msgstr "retira"
 msgid "return_to_view"
 msgstr "Torna"
 
-#: CMFPlone/interfaces/controlpanel.py:1299
+#: CMFPlone/interfaces/controlpanel.py:1141
 msgid "robots.txt"
 msgstr "robots.txt"
 
@@ -14199,7 +14482,7 @@ msgid "text_creator_date"
 msgstr "per ${creator}, darrera actualització: ${date}"
 
 #. Default: "You have configured a custom workflow for the 'Discussion Item' content type. You can enable/disable the comment moderation in this control panel only if you use one of the default 'Discussion Item' workflows. Go to the ${label_discussion_control_panel_link} to choose a workflow for the 'Discussion Item' type."
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:42
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:44
 msgid "text_custom_comment_workflow"
 msgstr "Heu personalitzat el circuit de treball per als tipus de contingut 'Element de comentari'. Només podeu activar/desactivar la moderació de comentaris en aquest panell de control quan utilitzeu els circuits de treball per defecte dels 'Elements de comentari'. Aneu a ${label_discussion_control_panel_link} per a escollir un circuit de treball per al tipus 'Element de comentari'."
 
@@ -14209,12 +14492,12 @@ msgid "text_default_site_title"
 msgstr "Lloc web"
 
 #. Default: "Types control panel"
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:43
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:45
 msgid "text_discussion_type_control_panel_link"
 msgstr "Panell de control dels tipus"
 
 #. Default: "The specified log entry was not found. It may have expired. If you are using a load-balanced ZEO (cluster) setup, try reloading until you get the right server in the cluster."
-#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:35
+#: CMFPlone/skins/plone_prefs/prefs_error_log_showEntry.pt:36
 msgid "text_errlog_notfound"
 msgstr "No s'ha trobat l'entrada de registre especificada. Potser que hagi vençut. Si esteu utilitzant un balancejador de càrrega (cluster) basat en ZEO, proveu de recarregar la pàgina fins que contesti el node del cluster que conté la entrada que estàveu buscant."
 
@@ -14235,14 +14518,14 @@ msgid "text_no_email_setup"
 msgstr "Aquest lloc web no té configurades les propietats del correu electrònic, per la qual cosa no podeu utilitzar els formularis de contacte."
 
 #. Default: "You have not configured a mail host or a site 'From' address, various features including contact forms, email notification and password reset will not work. Go to the ${label_mail_control_panel_link} to fix this."
-#: CMFPlone/controlpanel/browser/overview.pt:52
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:22
+#: CMFPlone/controlpanel/browser/overview.pt:54
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:23
 msgid "text_no_mailhost_configured"
 msgstr "No heu configurat un servidor de correu o el valor de l'adreça de correu electrònic del camp 'De' del lloc. Algunes funcionalitats com els formularis de contacte, les notificacions per correu electrònic i el restabliment de la contrasenya no funcionaran. Aneu al ${label_mail_control_panel_link} per a solucionar-ho."
 
 #. Default: "Mail control panel"
-#: CMFPlone/controlpanel/browser/overview.pt:53
-#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:23
+#: CMFPlone/controlpanel/browser/overview.pt:55
+#: plone.app.discussion/plone/app/discussion/browser/controlpanel.pt:24
 msgid "text_no_mailhost_configured_control_panel_link"
 msgstr "Tauler de control del correu electrònic"
 
@@ -14262,7 +14545,7 @@ msgid "text_no_new_modified_items"
 msgstr "No s'ha modificat cap element"
 
 #. Default: "PIL is not installed properly, image scaling will not work."
-#: CMFPlone/controlpanel/browser/overview.pt:87
+#: CMFPlone/controlpanel/browser/overview.pt:91
 msgid "text_no_pil_installed"
 msgstr "L'escalat d'imatges no funciona perquè el mòdul PIL no està instal·lat correctament al servidor."
 
@@ -14277,12 +14560,12 @@ msgid "text_no_searchstring_large"
 msgstr "Introduïu el nom d'usuari o el grup que vol cercar."
 
 #. Default: "You have not set the portal timezone. Date/Time handling will not work properly for timezone aware date/time values. Go to the ${label_mail_event_settings_link} to fix this."
-#: CMFPlone/controlpanel/browser/overview.pt:72
+#: CMFPlone/controlpanel/browser/overview.pt:75
 msgid "text_no_timezone_configured"
 msgstr "No heu configurat el fus horari del portal. La gestió de la data i de l'hora no funcionarà correctament en els valors que necessiten un fus horari. Ho heu d'arreglar a ${label_mail_event_settings_link}."
 
 #. Default: "Date and Time Settings control panel"
-#: CMFPlone/controlpanel/browser/overview.pt:73
+#: CMFPlone/controlpanel/browser/overview.pt:76
 msgid "text_no_timezone_configured_control_panel_link"
 msgstr "Configuració de la data i l'hora"
 
@@ -14309,7 +14592,7 @@ msgid "text_nomatches"
 msgstr "Cap coincidència"
 
 #. Default: "You are not allowed to manage the Zope server."
-#: CMFPlone/controlpanel/browser/maintenance.pt:160
+#: CMFPlone/controlpanel/browser/maintenance.pt:161
 #: CMFPlone/controlpanel/browser/maintenance.py:58
 msgid "text_not_allowed_manage_server"
 msgstr "No teniu permís per administrar el servidor Zope."
@@ -14330,12 +14613,12 @@ msgid "text_user_not_in_any_group"
 msgstr "Aquest usuari no pertany a cap grup"
 
 #. Default: "Database name:"
-#: CMFPlone/controlpanel/browser/maintenance.pt:105
+#: CMFPlone/controlpanel/browser/maintenance.pt:106
 msgid "text_zope_database_name"
 msgstr ""
 
 #. Default: "<strong>Current database size:</strong> ${size}"
-#: CMFPlone/controlpanel/browser/maintenance.pt:109
+#: CMFPlone/controlpanel/browser/maintenance.pt:110
 msgid "text_zope_database_size"
 msgstr "<strong>Mida actual de la base de dades:</strong> ${size}"
 
@@ -14375,12 +14658,12 @@ msgid "theming_controlpanel_upload"
 msgstr "Carrega un tema"
 
 #. Default: "This is a built-in theme, and cannot be edited."
-#: plone/app/theming/browser/mapper.pt:82
+#: plone/app/theming/browser/mapper.pt:84
 msgid "theming_mapper_warning_cannot_edit"
 msgstr "Aquest és tema un tema incorporat i no es pot editar."
 
 #. Default: "This theme is currently active. Any changes made will be immediately reflected on the live site."
-#: plone/app/theming/browser/mapper.pt:74
+#: plone/app/theming/browser/mapper.pt:75
 msgid "theming_mapper_warning_live"
 msgstr "Aquest tema està actiu. Qualsevol canvi es mostrarà immediatament en el portal."
 
@@ -14467,7 +14750,7 @@ msgid "title_built_with_plone"
 msgstr "Aquest lloc web s'ha desenvolupat amb Plone Open Source CMS/WCM."
 
 #. Default: "Bulk Actions"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:64
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:65
 msgid "title_bulkactions"
 msgstr "Accions en bloc"
 
@@ -14604,7 +14887,7 @@ msgid "title_language"
 msgstr "Idioma"
 
 #. Default: "Legacy portlets"
-#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:66
+#: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:67
 msgid "title_legacy_portlets"
 msgstr "Portlets heretats"
 
