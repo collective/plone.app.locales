@@ -4,7 +4,8 @@ Changelog
 5.1.14 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Complete Basque translation.
+  [erral]
 
 
 5.1.13 (2019-03-05)
