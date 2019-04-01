@@ -4,6 +4,9 @@ Changelog
 5.1.14 (unreleased)
 -------------------
 
+- Add missing french translations.
+  [mpeeters]
+
 - Complete Basque translation.
   [erral]
 
