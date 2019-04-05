@@ -16,7 +16,7 @@ from utils import getPoFiles, getLanguage
 
 def main():
     if len(sys.argv) < 3:
-        print 'You have to specify the target and source product.'
+        print('You have to specify the target and source product.')
         sys.exit(1)
 
     target = sys.argv[1]
@@ -27,7 +27,7 @@ def main():
     sourcePoFiles = getPoFiles(source)
 
     if sourcePoFiles == []:
-        print 'No po-files were found for the source product.'
+        print('No po-files were found for the source product.')
         sys.exit(3)
 
     for sourcefile in sourcePoFiles:

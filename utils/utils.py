@@ -93,14 +93,14 @@ def getProduct(f):
 
 def getLongProductName(product):
     """ Returns the product name for a known abbreviation."""
-    if product in PRODUCTS.keys():
+    if product in list(PRODUCTS.keys()):
         return PRODUCTS[product]['name']
     return product
 
 
 def getProductPath(product):
     """ Returns the product path for a known abbreviation."""
-    if product in PRODUCTS.keys():
+    if product in list(PRODUCTS.keys()):
         return PRODUCTS[product]['path']
     if product in PRODUCTNAMES:
         for abbr in PRODUCTS.keys():

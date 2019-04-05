@@ -36,7 +36,7 @@ def rebuild(product, folder=''):
     os.chdir('i18n')
 
     if not os.path.isfile(manualpot):
-        print 'Manual pot missing for the given product: %s.' % manualpot
+        print('Manual pot missing for the given product: %s.' % manualpot)
         sys.exit(3)
 
     folder2 = ''
@@ -115,14 +115,14 @@ def rebuild(product, folder=''):
         foldererror = True
 
     if foldererror:
-        print 'Directory (%s) could not be found.' % folder
+        print('Directory (%s) could not be found.' % folder)
         sys.exit(4)
 
     # Remove the original file
     if os.path.isfile(pot):
         os.remove(pot)
 
-    print 'Using %s to build new pot.\n' % folder
+    print('Using %s to build new pot.\n' % folder)
     cmd = __I18NDUDE + (' rebuild-pot --pot %s --create %s --merge %s ') % (pot, domain, manualpot)
     if product == 'plone':
         cmd += '--merge2 %s ' % generatedpot
@@ -146,12 +146,12 @@ def rebuild(product, folder=''):
         # cmd += '%s %s' % (folder, folder2)
     else:
         cmd += '%s > %s 2>&1' % (folder, log)
-    print 'Rebuilding to %s - this takes a while, logging to %s' % (pot, log)
+    print('Rebuilding to %s - this takes a while, logging to %s' % (pot, log))
     os.system(cmd)
 
 def main():
     if len(sys.argv) < 2:
-        print 'You have to specify an option.'
+        print('You have to specify an option.')
         sys.exit(1)
 
     if len(sys.argv) == 2:

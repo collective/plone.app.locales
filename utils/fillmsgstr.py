@@ -85,7 +85,7 @@ class Usage(Exception):
         self.msg = msg
 
 def dump(s):
-    print '>>> %s' % s
+    print('>>> %s' % s)
 
 def main(argv=None):
     if argv is None:
@@ -94,7 +94,7 @@ def main(argv=None):
         try:
             opts, args = getopt.getopt(argv[1:], "hro:v",
                                        ["help", "output="])
-        except getopt.error, msg:
+        except getopt.error as msg:
              raise Usage(msg)
 
         # option processing
@@ -110,11 +110,11 @@ def main(argv=None):
             if option in ("-r"):
                 reverse = True
         if len(args) < 1:
-            print >> sys.stderr, "You forgot your input file..."
+            print("You forgot your input file...", file=sys.stderr)
             raise Usage(help_message)
 
         if len(args) > 1 and output:
-            print >> sys.stderr, "If you specify an output file, then you may only provide a single input file..."
+            print("If you specify an output file, then you may only provide a single input file...", file=sys.stderr)
             raise Usage(help_message)
 
 
@@ -122,12 +122,12 @@ def main(argv=None):
             if os.path.isfile(infilepath):
                 infile=fileinput.input(infilepath)
             else:
-                print >> sys.stderr, "Check your input file. %s Is it a text file?" % infilepath
+                print("Check your input file. %s Is it a text file?" % infilepath, file=sys.stderr)
                 raise Usage(help_message)
 
-    except Usage, err:
-        print >> sys.stderr, sys.argv[0].split("/")[-1] + ": " + str(err.msg)
-        print >> sys.stderr, "\t for help use --help"
+    except Usage as err:
+        print(sys.argv[0].split("/")[-1] + ": " + str(err.msg), file=sys.stderr)
+        print("\t for help use --help", file=sys.stderr)
         return 2
 
     for infilepath in args:
@@ -186,7 +186,7 @@ def main(argv=None):
                 # as msgid, else write line
                 if line.startswith(msgidMark):
                     outfile.write('#saved%s' % line)
-                    if line[len(msgidMark):] <> buff:
+                    if line[len(msgidMark):] != buff:
                         oline='msgid%s' % buff
                     else:
                         oline=line

@@ -24,12 +24,12 @@ def main():
 
     poFilesPlone = getPoFiles('plone')
     if not poFilesPlone:
-        print 'No po-files were found for Plone.'
+        print('No po-files were found for Plone.')
         sys.exit(2)
 
     poFilesATCT = getPoFiles('atcontenttypes')
     if not poFilesATCT:
-        print 'No po-files were found for ATContentTypes.'
+        print('No po-files were found for ATContentTypes.')
         sys.exit(3)
 
     # format: 'old-domain' : ['msgid1', 'msgid2', ...]
@@ -70,20 +70,20 @@ def main():
         po_ctl = {}
         try:
             po_ctl['plone'] = catalog.MessageCatalog(filename='plone-%s.po' % lang)
-        except IOError, e:
-            print >> sys.stderr, 'I/O Error: %s' % e
+        except IOError as e:
+            print('I/O Error: %s' % e, file=sys.stderr)
         try:
             po_ctl['atcontenttypes'] = catalog.MessageCatalog(filename='atcontenttypes-%s.po' % lang)
-        except IOError, e:
-            print >> sys.stderr, 'I/O Error: %s' % e
+        except IOError as e:
+            print('I/O Error: %s' % e, file=sys.stderr)
 
         changes = {'plone' : False, 'atcontenttypes' : False}
 
         relocate_domain = {'plone' : 'atcontenttypes', 'atcontenttypes' : 'plone'}
 
         msgids = {}
-        msgids['plone'] = po_ctl['plone'].keys()
-        msgids['atcontenttypes'] = po_ctl['atcontenttypes'].keys()
+        msgids['plone'] = list(po_ctl['plone'].keys())
+        msgids['atcontenttypes'] = list(po_ctl['atcontenttypes'].keys())
 
         for old_domain in relocated:
             relocate_msgids = relocated.get(old_domain)
@@ -100,13 +100,13 @@ def main():
                         if old_msgstr.msgstr == '' and msgstr:
                             po_ctl[new_domain][relocate_msgid] = msgstr
                             changes[new_domain] = True
-                            print 'copied msgstr for %s' % relocate_msgid
+                            print('copied msgstr for %s' % relocate_msgid)
                         #else:
                         #    print '%s was already there' % relocate_msgid
                     else:
                         po_ctl[new_domain][relocate_msgid] = msgstr
                         changes[new_domain] = True
-                        print 'copied %s to %s-%s.po' % (relocate_msgid, new_domain, lang)
+                        print('copied %s to %s-%s.po' % (relocate_msgid, new_domain, lang))
                 #else:
                 #    print '%s was not found anymore' % relocate_msgid
 
