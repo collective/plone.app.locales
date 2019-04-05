@@ -20,7 +20,7 @@ def main():
     products = None
     if option == 'all':
         products = [getProduct(p) for p in getPotFiles()]
-    elif option in PRODUCTS.keys():
+    elif option in list(PRODUCTS.keys()):
         products = (getLongProductName(option), )
 
     if products:

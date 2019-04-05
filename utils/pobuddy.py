@@ -15,6 +15,8 @@ import operator
 import datetime
 
 from optparse import OptionParser
+import six
+from six.moves import range
 
 class paraGetter(object):
 
@@ -141,9 +143,9 @@ class paraGetter(object):
                                'X-Is-Fallback-For']
 
         if para['verbose']:
-            print 'AVAILABLE LANG:', para['availLangs']
-            print 'LANGUAGE SCOPE:', para['langs']
-            print 'FILE SCOPE:', para['files']
+            print('AVAILABLE LANG:', para['availLangs'])
+            print('LANGUAGE SCOPE:', para['langs'])
+            print('FILE SCOPE:', para['files'])
 
         return para
 
@@ -173,7 +175,7 @@ class analyzer(object):
             poCsvCubic.append(langCsvTable)
             poHeaderCubic.append(langHeaderTable)
             if para['verbose']:
-                print('PO FILES ANALYZED FOR:', lang)
+                print(('PO FILES ANALYZED FOR:', lang))
 
         rData = [potTable, potWarningTable, potCsvTable, potHeaderTable, \
                  poCubic, poWarningCubic, poCsvCubic, poHeaderCubic]
@@ -233,7 +235,7 @@ class analyzer(object):
             fileWarning.append(warningLine)
 
             if para['verbose']:
-                print 'INPUT FILE NOT FOUND: ', lang, fileName
+                print('INPUT FILE NOT FOUND: ', lang, fileName)
 
             fileStatLine = [lang, sc['langName'], fileName,
                            sc['line'], sc['msg'], sc['filled'], sc['vacancy'],
@@ -248,7 +250,7 @@ class analyzer(object):
             fin.close()
             fin = codecs.open(inFile, 'r', encoding='utf-8', errors='strict')
 
-        except Exception, em:
+        except Exception as em:
             sc['langName'] = 'NOT UTF-8'
             sc['warning'] += 1
 
@@ -258,7 +260,7 @@ class analyzer(object):
             fileWarning.append(warningLine)
 
             if para['verbose']:
-                print 'FILE NOT ENCODED IN UTF-8:', lang, fileName
+                print('FILE NOT ENCODED IN UTF-8:', lang, fileName)
 
             fin.close()
             fin = codecs.open(inFile, 'r', encoding='utf-8', errors='replace')
@@ -442,7 +444,7 @@ class analyzer(object):
                     inFile = para['poTinyMceDir'] + '/' + wklang + \
                              '/LC_MESSAGES/' + wkfileName
                 else:
-                    print '***', wkfile, 'NOT FOUND IN ASSUMED LOCATION'
+                    print('***', wkfile, 'NOT FOUND IN ASSUMED LOCATION')
 
         elif lang == 'pot':
             wkfileName = fileName + '.pot'
@@ -487,7 +489,7 @@ class preparator(object):
             poCubic, poSumTable = self.reportStat(para, potTable, poCubic)
 
         if para['verbose']:
-            print 'STATISTIC DATA GENERATED'
+            print('STATISTIC DATA GENERATED')
 
         potTable, potWarningTable, potCsvTable = \
                   self.potDupInspector(potTable, potWarningTable, potCsvTable)
@@ -495,7 +497,7 @@ class preparator(object):
         if para['verbose']:
             msg = 'POT MSGID DUPLICATION IN DIFFERENT FILES ' + \
                    'WITHIN SAME LANGUAGE INSPECTED'
-            print msg
+            print(msg)
 
         for ix, lang in enumerate(para['langs']):
             langTable, langWarningTable, langCsvTable = self.langDupInspector(
@@ -504,7 +506,7 @@ class preparator(object):
         if para['verbose']:
             msg = 'DIFFERENT PO MSGSTR FOR SAME MSGID IN DIFFERNT ' + \
                    'FILES INSPECTED'
-            print msg
+            print(msg)
         # prepare chart data
         langChart = []
         for poTable in poCubic:
@@ -517,7 +519,7 @@ class preparator(object):
         langChart.reverse()
 
         if para['verbose']:
-            print 'CHART DATA GENERATED'
+            print('CHART DATA GENERATED')
 
         sData = [potTable, potWarningTable, potCsvTable, potHeaderTable, \
                  poCubic, poWarningCubic, poCsvCubic, poHeaderCubic, \
@@ -535,7 +537,7 @@ class preparator(object):
         for ix, irec in enumerate(potTable):
             poSumLine = [u'Total of']
             chosenLang = [poCubic[i][0][0] for i in range(len(poCubic))]
-            poSumLine.append(unicode(','.join(chosenLang)))
+            poSumLine.append(six.text_type(','.join(chosenLang)))
             poSumLine.append(irec[2])
             poSumLine.append(sum([poCubic[i][ix][3] for i in range(len(poCubic))]))
             poSumLine.append(sum([poCubic[i][ix][4] for i in range(len(poCubic))]))
@@ -671,7 +673,7 @@ class csvwriter(object):
             if os.path.isdir(para['csvDir']):
                 msg = 'CSV DIRECTORY EXISTS.  OVERWRITING FILES IN:', \
                        para['csvDir']
-                print msg
+                print(msg)
 
             self.csvWrite(para, 'pot', potCsvTable)
             for ix, poCsvTable in enumerate(poCsvCubic):
@@ -708,7 +710,7 @@ class csvwriter(object):
                     fo.write(uline)
             fo.close()
             if para['verbose']:
-                print 'HEADER CSV FILE WRITTEN:', outFile
+                print('HEADER CSV FILE WRITTEN:', outFile)
 
     def csvWrite(self, para, lang, csvTable):
         for jx, csvFile in enumerate(csvTable):
@@ -723,12 +725,12 @@ class csvwriter(object):
             uline = u','.join(uline) + u'\n'
             fo.write(uline)
             for csvLine in csvFile:
-                ucsvLine = ['"'+unicode(item)+'"' for item in csvLine]
+                ucsvLine = ['"'+six.text_type(item)+'"' for item in csvLine]
                 uline = u','.join(ucsvLine) + u'\n'
                 fo.write(uline)
             fo.close()
         if para['verbose']:
-            print 'CSV FILES WRITTEN FOR:', lang
+            print('CSV FILES WRITTEN FOR:', lang)
 
 class reporter(object):
 
@@ -758,81 +760,81 @@ class reporter(object):
 
     def printPotStat(self,para, table):
         if para['potOn'] and para['statOn']:
-            print
-            print 'LANGUAGE:', table[0][0], table[0][1]
+            print()
+            print('LANGUAGE:', table[0][0], table[0][1])
             title = (
                 'FileName                Lines   Items Warning')
-            print title
+            print(title)
             separator = (
                 '--------------------- ------- ------- -------')
-            print separator
+            print(separator)
             for mx in table:
-                print '%-21s %7d %7d %7d' \
-                % (mx[2][:21],mx[3], mx[5],mx[9])
+                print('%-21s %7d %7d %7d' \
+                % (mx[2][:21],mx[3], mx[5],mx[9]))
 
     def printStat(self, poTable):
-        print
-        print 'LANGUAGE:', poTable[0][0], poTable[0][1]
+        print()
+        print('LANGUAGE:', poTable[0][0], poTable[0][1])
         title = (
             'FileName                Lines POTItem   Items  Filled Vacancy '
             'Fuzzy  Warn Fill%')
-        print title
+        print(title)
         separator = (
             '--------------------- ------- ------- ------- ------- ------- '
             '----- ----- -----')
-        print separator
+        print(separator)
         for mx in poTable:
-            print '%-21s %7d %7d %7d %7d %7d %5d %5d %4d%%' \
-            % (mx[2][:21],mx[3],mx[4],mx[5],mx[6],mx[7],mx[8],mx[9],mx[10])
+            print('%-21s %7d %7d %7d %7d %7d %5d %5d %4d%%' \
+            % (mx[2][:21],mx[3],mx[4],mx[5],mx[6],mx[7],mx[8],mx[9],mx[10]))
 
     def printWarning(self, lang, table):
         ix = 0
-        print
+        print()
         for line in table:
             for mx in line:
                 if mx[3] == 'NO WARNING':
                     pass
                 else:
                     ix = ix + 1
-                    print ix, mx[0], (mx[1] + ':' + str(mx[2])), \
-                          ('*** ' + mx[3] + ' ***'), mx[4]
+                    print(ix, mx[0], (mx[1] + ':' + str(mx[2])), \
+                          ('*** ' + mx[3] + ' ***'), mx[4])
         if ix == 0:
             # print
-            print 'NO WARNING FOUND FOR', lang
+            print('NO WARNING FOUND FOR', lang)
         else:
             # print
-            print 'TOTAL', ix, 'WARNING FOUND FOR', lang
+            print('TOTAL', ix, 'WARNING FOUND FOR', lang)
 
     def printGraph(self, langChart, poWarningCubic, files):
-        print
-        print 'FILLED-OUT RATE PER LANGUAGE'
-        print
+        print()
+        print('FILLED-OUT RATE PER LANGUAGE')
+        print()
         title = ('Nr LangC Vaca Fuzz Warn Fil% Chart ("*"=2%)')
-        print title
+        print(title)
         separator = (
             '-- ----- ---- ---- ---- ---- '
             '--------------------------------------------------')
-        print separator
+        print(separator)
         for i, mx in enumerate(langChart):
             bar = '*' * (mx[10] / 2)
-            print '%2d %-5s %4d %4d %4d %3d%% %-50s' \
-            % (i+1, mx[0][:5], mx[7], mx[8], mx[9], mx[10], bar)
+            print('%2d %-5s %4d %4d %4d %3d%% %-50s' \
+            % (i+1, mx[0][:5], mx[7], mx[8], mx[9], mx[10], bar))
 
-        print
+        print()
         selected = [item[0] for item in langChart if item[10] >= 80]
-        print 'GOLDEN (80-100%):', len(selected), ':', ', '.join(selected)
+        print('GOLDEN (80-100%):', len(selected), ':', ', '.join(selected))
 
-        print
+        print()
         selected = [item[0] for item in langChart \
                                   if item[10] >= 50 and item[10] < 80]
-        print 'SILVER  (50-79%):', len(selected), ':', ', '.join(selected)
+        print('SILVER  (50-79%):', len(selected), ':', ', '.join(selected))
 
-        print
+        print()
         selected = [item[0] for item in langChart if item[10] < 50]
-        print 'BRONZE   (0-49%):', len(selected), ':', ',  '.join(selected)
+        print('BRONZE   (0-49%):', len(selected), ':', ',  '.join(selected))
 
-        print
-        print 'FILES NOT ENCODED IN UTF-8:'
+        print()
+        print('FILES NOT ENCODED IN UTF-8:')
         for file in files:
             selectedCount = 0
             selected = []
@@ -845,10 +847,10 @@ class reporter(object):
                             selectedCount = selectedCount + 1
             selected = sorted(set(selected), key=selected.index)
             if selectedCount > 0:
-                print file, ':', len(selected), ':', \
-                                      ', '.join(selected)
-        print
-        print 'PO FILE NOT FOUND:'
+                print(file, ':', len(selected), ':', \
+                                      ', '.join(selected))
+        print()
+        print('PO FILE NOT FOUND:')
         for file in files:
             selectedCount = 0
             selected = []
@@ -859,14 +861,14 @@ class reporter(object):
                             selected.append(item[0])
                             selectedCount = selectedCount + 1
             if selectedCount > 0:
-                print file, ':', len(selected), ':', \
-                                      ', '.join(selected)
+                print(file, ':', len(selected), ':', \
+                                      ', '.join(selected))
 
 def main():
 
     startTime = datetime.datetime.now()
-    print '******************************************** PROCESS BEGINS:', \
-               startTime.strftime('%Y-%m-%d %H:%M:%S')
+    print('******************************************** PROCESS BEGINS:', \
+               startTime.strftime('%Y-%m-%d %H:%M:%S'))
 
     paraget = paraGetter()
     para = paraget()
@@ -884,11 +886,11 @@ def main():
     report(para, sData)
 
     endTime = datetime.datetime.now()
-    print
-    print '**************************** PROCESS ENDS:', \
+    print()
+    print('**************************** PROCESS ENDS:', \
            endTime.strftime('%Y-%m-%d %H:%M:%S'), \
-          'ELAPSE:', (endTime - startTime).seconds, 'sec.'
-    print
+          'ELAPSE:', (endTime - startTime).seconds, 'sec.')
+    print()
 
 if __name__ == '__main__':
     main()

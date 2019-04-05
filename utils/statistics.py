@@ -31,7 +31,7 @@ DOMAINS = ("atcontenttypes",
 result_file = open(sys.argv[1])
 
 stats = {}
-for line in result_file.xreadlines():
+for line in result_file:
     path, res = line.split(':')
     language = path.split('/')[-3].replace('_', '-')
     domain = os.path.splitext(os.path.basename(path))[0]
@@ -55,7 +55,7 @@ result_file.close()
 #from pprint import pprint
 #pprint(stats)
 
-print("Number of languages: %d" % len(stats))
+print(("Number of languages: %d" % len(stats)))
 print("Legend: translated (percentage) / fuzzy / untranslated = total")
 
 lg = None
@@ -88,10 +88,10 @@ for language, domains in stats.items():
     else:
         percent = round(float(total[0]) / float(sum_total) * 100.0, 2)
 
-    print("%s\t: %d (%.2f%%) / %d / %d = %d" % (language,
+    print(("%s\t: %d (%.2f%%) / %d / %d = %d" % (language,
                 total[0],
                 percent,
                 total[1],
                 total[2],
-                sum_total))
+                sum_total)))
     print(details)
