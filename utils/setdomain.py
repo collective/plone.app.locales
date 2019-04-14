@@ -3,8 +3,8 @@
    Usage: setdomain.py <product> <domain>
 """
 
+from __future__ import print_function
 import os, sys
-import getopt
 from utils import getPoFiles, getLongProductName
 
 from i18ndude import catalog

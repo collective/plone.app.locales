@@ -10,13 +10,15 @@
    before calling this script
 """
 
-import os, sys
+from __future__ import print_function
+from i18ndude import catalog
 from utils import getPoFiles, getLanguage
 
-from i18ndude import catalog
+import os, sys
 
 __PYTHON = os.environ.get('PYTHON', 'python')
 __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
+
 
 def main():
     os.chdir('..')

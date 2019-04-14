@@ -3,9 +3,9 @@
    Usage: setcomment.py <product> <comment>
 """
 
-import os, sys
-import getopt
+from __future__ import print_function
 from utils import getPoFiles, getLongProductName
+import os, sys
 
 from i18ndude import catalog
 

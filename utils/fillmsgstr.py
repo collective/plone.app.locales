@@ -13,6 +13,7 @@
 #  http://www.freebsd.org/copyright/freebsd-license.html
 #  (i.e. do with it what you want but keep this notice.)
 
+from __future__ import print_function
 import os
 import sys
 import getopt
