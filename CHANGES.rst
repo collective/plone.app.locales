@@ -10,6 +10,9 @@ Changelog
 - Complete Basque translation.
   [erral]
 
+- Updated Chinese Simplified translation.
+  [jianaijun]
+
 
 5.1.13 (2019-03-05)
 -------------------
