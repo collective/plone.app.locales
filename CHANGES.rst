@@ -13,6 +13,7 @@ Changelog
 - Updated Chinese Simplified translation.
   [jianaijun]
 
+- Fixed French translations [ale-rt]
 
 5.1.13 (2019-03-05)
 -------------------
