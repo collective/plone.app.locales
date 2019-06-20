@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.15 (unreleased)
+5.1.15 (2019-06-20)
 -------------------
 
 - Review French translation.
