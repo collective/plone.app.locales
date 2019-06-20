@@ -4,7 +4,7 @@ Changelog
 5.1.15 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Review French translation.
 
 
 5.1.14 (2019-06-20)
