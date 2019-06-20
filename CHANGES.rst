@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.14 (unreleased)
+5.1.14 (2019-06-20)
 -------------------
 
 - Add missing french translations.
