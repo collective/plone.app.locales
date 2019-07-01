@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.16 (unreleased)
+5.1.16 (2019-07-01)
 -------------------
 
 - Update French, Basque, Spanish, Norwegian, German translations.
