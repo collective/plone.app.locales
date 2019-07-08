@@ -4,7 +4,8 @@ Changelog
 5.1.18 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update German translations, add most missing.
+  [jensens]
 
 
 5.1.17 (2019-07-03)
