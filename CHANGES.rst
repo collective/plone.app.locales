@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.18 (unreleased)
+5.1.18 (2019-07-12)
 -------------------
 
 - Update German translations, add most missing.
