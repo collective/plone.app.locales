@@ -4,7 +4,8 @@ Changelog
 5.1.19 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update Slovenian translations.
+  [balavec]
 
 
 5.1.18 (2019-07-12)
