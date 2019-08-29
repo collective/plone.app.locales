@@ -8,6 +8,7 @@ setup(name='plone.app.locales',
       long_description=open("README.rst").read() + "\n" +
                        open("CHANGES.txt").read(),
       classifiers=[
+          "Development Status :: 6 - Mature",
           "Environment :: Web Environment",
           "Framework :: Plone",
           "Framework :: Zope2",
