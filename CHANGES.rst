@@ -4,6 +4,10 @@ Changelog
 5.1.19 (unreleased)
 -------------------
 
+- Update basque translation
+  [erral]
+
+
 - Update Slovenian translations.
   [balavec]
 
