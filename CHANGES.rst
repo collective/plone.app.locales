@@ -4,6 +4,9 @@ Changelog
 5.1.19 (unreleased)
 -------------------
 
+- Minor fixes in Basque
+  [erral]
+
 
 - Update Spanish translation.
   [erral]
