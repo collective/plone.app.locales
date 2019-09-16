@@ -4,6 +4,9 @@ Changelog
 5.1.19 (unreleased)
 -------------------
 
+- Update German: Inhalte werden "Erstellt" nicht "Erzeugt".
+  [jensens]
+
 - Minor fixes in Basque
   [erral]
 
