@@ -4,20 +4,20 @@ Changelog
 5.1.19 (unreleased)
 -------------------
 
+- Update Slovenian translations, sync from POT files.
+  [balavec]
+
 - Update German: Inhalte werden "Erstellt" nicht "Erzeugt".
   [jensens]
 
 - Minor fixes in Basque
   [erral]
 
-
 - Update Spanish translation.
   [erral]
 
-
 - Update basque translation
   [erral]
-
 
 - Update Slovenian translations.
   [balavec]
