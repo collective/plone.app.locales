@@ -4,6 +4,10 @@ Changelog
 5.1.19 (unreleased)
 -------------------
 
+- Update Portuguese-BR translations.
+
+- Update French translations.
+
 - Update Slovenian translations, sync from POT files.
   [balavec]
 
