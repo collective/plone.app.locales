@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.19 (unreleased)
+5.1.19 (2019-10-13)
 -------------------
 
 - Update Portuguese-BR translations.
