@@ -2,7 +2,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '5.1.19.dev0'
+version = '5.1.20.dev0'
 
 setup(
     name='plone.app.locales',
@@ -11,6 +11,7 @@ setup(
     long_description=(open('README.rst').read() + '\n' +
                       open('CHANGES.rst').read()),
     classifiers=[
+        'Development Status :: 6 - Mature',
         'Environment :: Web Environment',
         'Framework :: Plone',
         'Framework :: Plone :: 5.1',

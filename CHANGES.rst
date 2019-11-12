@@ -1,10 +1,36 @@
 Changelog
 =========
 
-5.1.19 (unreleased)
+5.1.20 (unreleased)
 -------------------
 
 - Nothing changed yet.
+
+
+5.1.19 (2019-10-13)
+-------------------
+
+- Update Portuguese-BR translations.
+
+- Update French translations.
+
+- Update Slovenian translations, sync from POT files.
+  [balavec]
+
+- Update German: Inhalte werden "Erstellt" nicht "Erzeugt".
+  [jensens]
+
+- Minor fixes in Basque
+  [erral]
+
+- Update Spanish translation.
+  [erral]
+
+- Update basque translation
+  [erral]
+
+- Update Slovenian translations.
+  [balavec]
 
 
 5.1.18 (2019-07-12)
