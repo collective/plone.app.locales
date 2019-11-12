@@ -4,7 +4,7 @@ Changelog
 5.1.20 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update Japanese translations.
 
 
 5.1.19 (2019-10-13)
