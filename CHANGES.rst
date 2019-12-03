@@ -4,6 +4,9 @@ Changelog
 5.1.20 (unreleased)
 -------------------
 
+- Fix French translation.
+  [laulaz]
+
 - Update Japanese translations.
 
 
