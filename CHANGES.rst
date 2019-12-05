@@ -4,7 +4,7 @@ Changelog
 5.1.22 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- plone.app.discussion moderation of comments [ksuess]
 
 
 5.1.21 (2020-01-06)

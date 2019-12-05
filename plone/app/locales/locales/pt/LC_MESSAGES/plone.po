@@ -304,6 +304,10 @@ msgstr ""
 msgid "A public-facing view for a content item that is not a folder or container for other items"
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_multiple_state_review_workflow/definition.xml
+msgid "A review workflow for comments with multiple states"
+msgstr ""
+
 #: plone.app.contentrules/plone/app/contentrules/conditions/role.py:82
 msgid "A role condition can prevent rules from executing unless the current user has a particular role."
 msgstr "Uma condição de papel pode impedir a execução de regras se o utilizador corrente não tiver um papel particular."
@@ -867,6 +871,7 @@ msgstr "Aplicar apenas quando o resultado de uma expressão TALES é verdadeiro"
 msgid "Apply rule on the whole site"
 msgstr "Aplicar a regra em todo o sítio"
 
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:27
 #: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "Approve"
 msgstr "Aprovar"
@@ -1297,6 +1302,10 @@ msgstr "Valores separados por vírgulas de recursos para o adaptador"
 msgid "Comment"
 msgstr "Comentários"
 
+#: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_multiple_state_review_workflow/definition.xml
+msgid "Comment Multiple State Review Workflow"
+msgstr ""
+
 #: plone.app.discussion/plone/app/discussion/profiles/default/workflows/comment_review_workflow/definition.xml
 msgid "Comment Review Workflow"
 msgstr "Fluxo de trabalho da revisão de comentários"
@@ -1306,14 +1315,6 @@ msgstr "Fluxo de trabalho da revisão de comentários"
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Comment about the last transition"
 msgstr "Comentário acerca da última transição"
-
-#: plone.app.discussion/plone/app/discussion/browser/moderation.py:224
-msgid "Comment already approved."
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/browser/moderation.py:220
-msgid "Comment approved."
-msgstr "Comentário aprovado"
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:102
 msgid "Comment author email"
@@ -1327,7 +1328,7 @@ msgstr "Nome completo do autor do comentário"
 msgid "Comment author user name"
 msgstr "Nome de utilizador do autor do comentário"
 
-#: plone.app.discussion/plone/app/discussion/browser/moderation.py:134
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:176
 msgid "Comment deleted."
 msgstr "Comentário excluído."
 
@@ -3986,14 +3987,9 @@ msgstr ""
 msgid "Multiple users found with the same login name."
 msgstr "Foram encontrados vários utilizadores com o mesmo nome de utilizador."
 
+# latest zope.tal has trouble with the – character
 #: CMFPlone/interfaces/controlpanel.py:68
 #: CMFPlone/utils.py:701
-msgid "Must be empty or a valid JSON-formatted configuration â ${message}."
-msgstr ""
-
-# latest zope.tal has trouble with the – character
-#: CMFPlone/interfaces/controlpanel.py:56
-#: CMFPlone/utils.py:657
 msgid "Must be empty or a valid JSON-formatted configuration – ${message}."
 msgstr "Tem que estar em branco ou ser uma configuração válida em JSON – ${message}."
 
@@ -4528,7 +4524,7 @@ msgstr "Texto simples"
 
 #: Archetypes/skins/archetypes/validate_base.vpy:19
 #: Archetypes/skins/archetypes/validate_integrity.cpy:20
-#: CMFPlone/browser/login/password_reset.py:196
+#: CMFPlone/browser/login/password_reset.py:185
 msgid "Please correct the indicated errors."
 msgstr "Por favor corrija os erros indicados."
 
@@ -4911,6 +4907,10 @@ msgstr "Emails dos leitores"
 msgid "Rebuild the catalog after the migration."
 msgstr ""
 
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:26
+msgid "Recall"
+msgstr ""
+
 #: CMFPlone/profiles/dependencies/portlets.xml
 #: plone.app.portlets/plone/app/portlets/portlets/recent.py:72
 msgid "Recent items"
@@ -4962,7 +4962,7 @@ msgid "Reindex"
 msgstr ""
 
 #. Default: "Reject"
-#: workflow action defined in plone_workflow - title Reviewer rejects submission new state visible
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:28
 msgid "Reject"
 msgstr "Rejeitar"
 
@@ -5666,6 +5666,10 @@ msgstr "Título Ordenável"
 #: validation/validators/IdValidator.py:17
 msgid "Spaces are not allowed in ids"
 msgstr "Espaços não são permitidos nos identificadores."
+
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:29
+msgid "Spam"
+msgstr ""
 
 #: CMFPlone/profiles/default/types/TempFolder.xml
 msgid "Specialized folder for temporary data."
@@ -6385,7 +6389,7 @@ msgstr ""
 msgid "This default can be overriden individually."
 msgstr ""
 
-#: CMFPlone/browser/login/password_reset.py:191
+#: CMFPlone/browser/login/password_reset.py:180
 #: CMFPlone/skins/plone_form_scripts/validate_content_status_modify.vpy:15
 msgid "This field is required, please provide some information."
 msgstr "Este campo é obrigatório; por favor forneça alguma informação."
@@ -7339,12 +7343,12 @@ msgid "You must select a profile to import."
 msgstr ""
 
 #: CMFPlone/skins/plone_scripts/folder_publish.cpy:19
-#: plone.app.content/plone/app/content/browser/content_status_history.py:129
+#: plone.app.content/plone/app/content/browser/content_status_history.py:130
 msgid "You must select a publishing action."
 msgstr "Deve escolher uma acção de publicação."
 
 #: CMFPlone/skins/plone_scripts/folder_publish.cpy:23
-#: plone.app.content/plone/app/content/browser/content_status_history.py:134
+#: plone.app.content/plone/app/content/browser/content_status_history.py:135
 msgid "You must select content to change."
 msgstr "Deve seleccionar o conteúdo a modificar."
 
@@ -7538,6 +7542,10 @@ msgstr "Deseja realmente apagar este item?"
 msgid "alert_really_delete_folder"
 msgstr "Deseja realmente apagar esta pasta e todo o seu conteúdo?"
 
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:70
+msgid "all"
+msgstr ""
+
 #. Default: "All events"
 #: plone.app.event/plone/app/event/browser/event_listing.py:265
 msgid "all_events"
@@ -7703,12 +7711,12 @@ msgid "box_upcoming_events"
 msgstr ""
 
 #. Default: "Delete"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:73
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:90
 msgid "bulkactions_delete"
 msgstr "Excluir"
 
 #. Default: "Approve"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:70
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:87
 msgid "bulkactions_publish"
 msgstr "Publicar"
 
@@ -7793,10 +7801,35 @@ msgstr "A edição do comentário foi cancelada"
 msgid "comment_edit_notification"
 msgstr "O comentário foi editado"
 
+#. Default: "pending"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:20
+msgid "comment_pending"
+msgstr ""
+
+#. Default: "approved"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:22
+msgid "comment_published"
+msgstr ""
+
+#. Default: "rejected"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:23
+msgid "comment_rejected"
+msgstr ""
+
+#. Default: "marked as spam"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:24
+msgid "comment_spam"
+msgstr ""
+
 #. Default: "${author_name} on ${content}"
 #: plone.app.discussion/plone/app/discussion/comment.py:44
 msgid "comment_title"
 msgstr "${creator} em ${content}"
+
+#. Default: "Comment ${comment_state}."
+#: plone.app.discussion/plone/app/discussion/browser/moderation.py:263
+msgid "comment_transmitted"
+msgstr ""
 
 #. Default: "Are you certain you want to delete the selected items?"
 #: plone.app.content/plone/app/content/browser/contents/templates/delete.pt:5
@@ -9403,12 +9436,6 @@ msgstr "Acessibilidade"
 msgid "heading_accessibility_statement"
 msgstr "Declaração de Acessibilidade"
 
-#. Default: "Action"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:66
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:90
-msgid "heading_action"
-msgstr "Acção"
-
 #. Default: "Add actions portlet"
 #: plone.app.portlets/plone/app/portlets/portlets/actions.py:177
 msgid "heading_add_actions_portlet"
@@ -9433,11 +9460,6 @@ msgstr ""
 #: plone.app.users/plone/app/users/browser/register.py:620
 msgid "heading_add_user_form"
 msgstr "Adicionar novo utilizador"
-
-#. Default: "Approved by"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:65
-msgid "heading_approvedby"
-msgstr ""
 
 #. Default: "Assign to groups"
 #: CMFPlone/controlpanel/browser/usergroups_usermembership.pt:107
@@ -9504,23 +9526,20 @@ msgstr ""
 msgid "heading_change_password_for"
 msgstr "Alterar senha de ${user}"
 
+#. Default: "Last Action"
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:107
+msgid "heading_changedby"
+msgstr ""
+
 #. Default: "Comment"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:64
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:89
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:106
 msgid "heading_comment"
 msgstr "Comentário"
 
 #. Default: "Commenter"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:61
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:86
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:103
 msgid "heading_commenter"
 msgstr "Autor"
-
-#. Default: "Comments approved"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:24
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:28
-msgid "heading_comments_approved"
-msgstr ""
 
 #. Default: "Contact form"
 #: CMFPlone/browser/templates/contact-info.pt:18
@@ -9553,8 +9572,7 @@ msgid "heading_dashboard"
 msgstr "Painel de instrumentos de ${user_name}"
 
 #. Default: "Date"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:62
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:87
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:104
 msgid "heading_date"
 msgstr "Data"
 
@@ -9630,8 +9648,7 @@ msgid "heading_groupmembers_current"
 msgstr "Membros actuais do grupo"
 
 #. Default: "In Response To"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:63
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:88
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:105
 msgid "heading_in_reponse_to"
 msgstr "Em resposta a"
 
@@ -9696,7 +9713,7 @@ msgid "heading_model_edit"
 msgstr "Editar modelo de campo para ${name}"
 
 #. Default: "Moderate comments"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:24
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:26
 msgid "heading_moderate_comments"
 msgstr "Moderar comentários"
 
@@ -11392,7 +11409,7 @@ msgid "label_add"
 msgstr "Adicionar"
 
 #. Default: "Add comment"
-#: plone.app.discussion/plone/app/discussion/browser/comments.pt:195
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:196
 msgid "label_add_comment"
 msgstr "Adicionar comentário"
 
@@ -11504,7 +11521,7 @@ msgid "label_an_anonymous_user"
 msgstr "um utilizador anónimo"
 
 #. Default: "Anonymous"
-#: plone.app.discussion/plone/app/discussion/browser/comments.pt:76
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:77
 #: plone.app.discussion/plone/app/discussion/comment.py:182
 msgid "label_anonymous"
 msgstr "Anónimo"
@@ -11525,7 +11542,7 @@ msgid "label_anonymous_user"
 msgstr "Utilizador Anónimo"
 
 #. Default: "Apply"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:76
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:93
 msgid "label_apply"
 msgstr "Aplicar"
 
@@ -11795,7 +11812,7 @@ msgid "label_comment"
 msgstr "Comentário"
 
 #. Default: "Commenting has been disabled."
-#: plone.app.discussion/plone/app/discussion/browser/comments.pt:172
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:173
 msgid "label_commenting_disabled"
 msgstr "Os comentários foram desativados."
 
@@ -12039,8 +12056,8 @@ msgstr "Workflow por omissão (${title})"
 
 #. Default: "Delete"
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/controlpanel.pt:173
-#: plone.app.discussion/plone/app/discussion/browser/comments.pt:98
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:108
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:99
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:163
 msgid "label_delete"
 msgstr "Apagar"
 
@@ -12105,7 +12122,7 @@ msgstr ""
 #. Default: "Edit"
 #: CMFPlone/browser/templates/author.pt:85
 #: plone.app.contentrules/plone/app/contentrules/browser/templates/manage-elements.pt:58
-#: plone.app.discussion/plone/app/discussion/browser/comments.pt:132
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:133
 msgid "label_edit"
 msgstr "Editar"
 
@@ -12139,6 +12156,7 @@ msgstr "Data de Publicação"
 #: CMFPlone/browser/login/login.py:109
 #: CMFPlone/browser/login/login_help.py:61
 #: plone.app.portlets/plone/app/portlets/portlets/login.pt:46
+#, fuzzy
 msgid "label_email"
 msgstr "Email"
 
@@ -13006,12 +13024,8 @@ msgstr "Versão anterior do perfil era ${version}."
 msgid "label_product_upgrade_old_version"
 msgstr "Versão anterior era ${version}."
 
-#. Default: "Approve"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:135
-msgid "label_publish"
-msgstr "Aprovar"
-
 #. Default: "effective"
+#: plone.app.layout/plone/app/layout/viewlets/content_history.pt:49
 #: plone.app.layout/plone/app/layout/viewlets/review_history.pt:49
 msgid "label_publishing_effective"
 msgstr "efectivo"
@@ -13128,7 +13142,7 @@ msgid "label_replace_existing"
 msgstr "Substituir o tema existente"
 
 #. Default: "Reply"
-#: plone.app.discussion/plone/app/discussion/browser/comments.pt:163
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:164
 msgid "label_reply"
 msgstr "Responder"
 
@@ -13182,7 +13196,7 @@ msgid "label_save_settings"
 msgstr "Guardar configuração"
 
 #. Default: "says:"
-#: plone.app.discussion/plone/app/discussion/browser/comments.pt:79
+#: plone.app.discussion/plone/app/discussion/browser/comments.pt:80
 msgid "label_says"
 msgstr "disse:"
 
@@ -13318,8 +13332,7 @@ msgid "label_show_commenter_image"
 msgstr "Exibir imagem do autor"
 
 #. Default: "show full comment text"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:92
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:128
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:149
 msgid "label_show_full_comment_text"
 msgstr "Exibir texto completo"
 
@@ -14071,7 +14084,7 @@ msgid "mailtemplate_reset_information"
 msgstr "O administrador do sítio está a pedir-lhe para reiniciar a sua senha para o id de utilizador '${userid}'. A sua senha antiga já não funciona."
 
 #. Default: "Password reset request"
-#: CMFPlone/browser/login/password_reset.py:65
+#: CMFPlone/browser/login/password_reset.py:64
 msgid "mailtemplate_subject_resetpasswordrequest"
 msgstr "Pedido de reinicialização de senha"
 
@@ -14094,7 +14107,7 @@ msgid "mailtemplate_tracking_information"
 msgstr "Se não estava à espera de receber este email, por favor ignore-o. A sua senha não foi alterada. O pedido foi feito a partir do endereço IP ${ipaddress}"
 
 #. Default: "User Account Information for ${portal_name}"
-#: CMFPlone/browser/login/password_reset.py:55
+#: CMFPlone/browser/login/password_reset.py:54
 msgid "mailtemplate_user_account_info"
 msgstr "Informação de conta de utilizador para ${portal_name}"
 
@@ -14143,29 +14156,22 @@ msgstr "O endereço de email que seleccionou já se encontra em utilização ou 
 
 #. type"
 #. Default: "enable the 'Comment Review Workflow' for the Comment content type"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:33
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:38
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:36
 #, fuzzy
 msgid "message_enable_comment_workflow"
 msgstr "Ativar 'Workflow de Moderação de Comentários\" para o tipo de item Comentário"
 
 #. ${enable_comment_workflow} before you can moderate comments here."
 #. Default: "Moderation workflow is disabled. You have to ${enable_comment_workflow} before you can moderate comments here."
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:33
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:38
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:36
 #, fuzzy
 msgid "message_moderation_disabled"
 msgstr "A moderação está desativada. Tem de ${enable_comment_workflow} antes de poder moderar os comentários aqui."
 
-#. Default: "No comments approved"
-#: plone.app.discussion/plone/app/discussion/browser/comments_approved.pt:43
-msgid "message_no_comments_approved"
-msgstr ""
-
-#. Default: "No comments to moderate."
+#. Default: "No comments"
 #: plone.app.discussion/plone/app/discussion/browser/moderation.pt:48
-msgid "message_nothing_to_moderate"
-msgstr "Nenhum comentário para moderação."
+msgid "message_no_comments"
+msgstr ""
 
 #. Others will be immediately redirected to the link's target URL."
 #. Default: "You see this page because you have permission to edit this link. Others will be immediately redirected to the link's target URL."
@@ -14487,7 +14493,7 @@ msgid "parameter_expressions_description"
 msgstr "Pode definir parâmetros aqui que serão passados para o tema compilado. No seu ficheiro de regras pode referir um parâmetro por $nome. Parâmetros são definidos usando expressões TALES que, após avaliação, resultam num texto, número, booleano ou None. Variáveis disponíveis são `context`, `request`, `portal`, `portal_state`, e `context_state`."
 
 #. Default: "Password reset successful, you are logged in now!"
-#: CMFPlone/browser/login/password_reset.py:119
+#: CMFPlone/browser/login/password_reset.py:108
 msgid "password_reset_successful"
 msgstr ""
 
@@ -15340,7 +15346,7 @@ msgid "title_built_with_plone"
 msgstr "Este sítio foi construído usando o Plone CMS/WCM, o Sistema de Software Livre para Gestão de Conteúdos."
 
 #. Default: "Bulk Actions"
-#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:69
+#: plone.app.discussion/plone/app/discussion/browser/moderation.pt:86
 msgid "title_bulkactions"
 msgstr "Ações em massa"
 
