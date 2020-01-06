@@ -1,10 +1,11 @@
 Changelog
 =========
 
-5.1.21 (unreleased)
+5.1.21 (2020-01-06)
 -------------------
 
-- Megaupdate plone.po RU locale.[Serge73]
+- Megaupdate plone.po RU locale.
+  [Serge73]
 
 
 5.1.20 (2019-12-16)
