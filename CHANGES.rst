@@ -4,7 +4,9 @@ Changelog
 5.1.22 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Structure pattern: Change message from misleading "Cannot order items while querying" to "Drag and drop reordering is disabled while filters are applied.".
+  Fixes: https://github.com/collective/plone.app.locales/issues/173
+  [thet]
 
 
 5.1.21 (2020-01-06)
