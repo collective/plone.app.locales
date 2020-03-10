@@ -4,12 +4,30 @@ from setuptools import setup
 
 version = '5.1.22.dev0'
 
+
+def read(filename):
+    with open(filename) as myfile:
+        try:
+            return myfile.read()
+        except UnicodeDecodeError:
+            # Happens on one Jenkins node on Python 3.6,
+            # so maybe it happens for users too.
+            pass
+    # Opening and reading as text failed, so retry opening as bytes.
+    with open(filename, "rb") as myfile:
+        contents = myfile.read()
+        return contents.decode("utf-8")
+
+
+readme = read('README.rst')
+changes = read('CHANGES.rst')
+long_description = '\n'.join([readme, changes])
+
 setup(
     name='plone.app.locales',
     version=version,
     description='Translation files for Plone',
-    long_description=(open('README.rst').read() + '\n' +
-                      open('CHANGES.rst').read()),
+    long_description=long_description,
     classifiers=[
         'Development Status :: 6 - Mature',
         'Environment :: Web Environment',
