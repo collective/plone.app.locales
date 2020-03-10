@@ -4,6 +4,10 @@ Changelog
 5.1.22 (unreleased)
 -------------------
 
+- Fixed possible package install error with Python 3.6 when no system locale is set.
+  See `coredev issue 642 <https://github.com/plone/buildout.coredev/issues/642#issuecomment-597008272>`_.
+  [maurits]
+
 - German translations for widgets.po.
 - Synchronize with latest mockup.
 - Structure pattern: Change message from misleading "Cannot order items while querying" to "Drag and drop reordering is disabled while filters are applied.".
