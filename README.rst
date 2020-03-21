@@ -28,8 +28,6 @@ and the following non core add-ons at ``locales-addons`` directory:
 
 - plone.app.ldap.pot
 - plone.app.ldap-manual.pot
-- plone.app.caching.pot
-- plone.app.caching-manual.pot
 
 
 .. note:: A `Contributor’s Agreement <https://plone.org/foundation/contributors-agreement>`_ is not needed to contribute to this repository.
