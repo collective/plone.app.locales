@@ -7,27 +7,20 @@ This version is compatible with Plone 5.1.x and Plone 5.2.x.
 
 `How to contribute to Plone Core translations <https://docs.plone.org/develop/plone/i18n/contribute_to_translations.html>`_
 
-Plone Core packages:
+Plone Core i18n domains:
 
-- atcontenttypes-manual.pot
-- atcontenttypes.pot
-- atreferencebrowserwidget-manual.pot
-- atreferencebrowserwidget.pot
-- cmfeditions-manual.pot
-- cmfeditions.pot
-- cmfplacefulworkflow-manual.pot
-- cmfplacefulworkflow.pot
-- plone-generated.pot
-- plone-manual.pot
-- plone.pot
-- plonefrontpage.pot
-- plonelocales.pot
-- widgets.pot
+- atcontenttypes
+- atreferencebrowserwidget
+- cmfeditions
+- cmfplacefulworkflow
+- plone
+- plonefrontpage
+- plonelocales
+- widgets (mockup)
 
 and the following non core add-ons at ``locales-addons`` directory:
 
-- plone.app.ldap.pot
-- plone.app.ldap-manual.pot
+- plone.app.ldap
 
 
 .. note:: A `Contributor’s Agreement <https://plone.org/foundation/contributors-agreement>`_ is not needed to contribute to this repository.
