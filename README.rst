@@ -1,31 +1,26 @@
 Introduction
 ============
 
-This package contains the translation files for Plone Core
+The *plone.app.locales* package contains the translation files for Plone Core.
 
-.. note:: A `Contributor’s Agreement <https://plone.org/foundation/contributors-agreement>`_ is not needed to contribute to this repository.
+This version is compatible with Plone 5.1.x and Plone 5.2.x.
 
-- atcontenttypes-manual.pot
-- atcontenttypes.pot
-- atreferencebrowserwidget-manual.pot
-- atreferencebrowserwidget.pot
-- cmfeditions-manual.pot
-- cmfeditions.pot
-- cmfplacefulworkflow-manual.pot
-- cmfplacefulworkflow.pot
-- plone-generated.pot
-- plone-manual.pot
-- plone.pot
-- plonefrontpage.pot
-- plonelocales.pot
-- widgets.pot
+`How to contribute to Plone Core translations <https://docs.plone.org/develop/plone/i18n/contribute_to_translations.html>`_
+
+Plone Core i18n domains:
+
+- atcontenttypes
+- atreferencebrowserwidget
+- cmfeditions
+- cmfplacefulworkflow
+- plone
+- plonefrontpage
+- plonelocales
+- widgets (mockup)
 
 and the following non core add-ons at ``locales-addons`` directory:
 
-- plone.app.ldap.pot
-- plone.app.ldap-manual.pot
-- plone.app.caching.pot
-- plone.app.caching-manual.pot
+- plone.app.ldap
 
-This version is compatible with Plone 5.1.x and Plone 5.2.x
 
+.. note:: A `Contributor’s Agreement <https://plone.org/foundation/contributors-agreement>`_ is not needed to contribute to this repository.
