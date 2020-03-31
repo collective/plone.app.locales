@@ -4,7 +4,7 @@ Changelog
 5.1.22 (unreleased)
 -------------------
 
-- Fix typo in French translations.
+- Fix typos in French translations.
   [laulaz]
 
 - Fixed possible package install error with Python 3.6 when no system locale is set.
