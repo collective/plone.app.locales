@@ -4,6 +4,9 @@ Changelog
 5.1.22 (unreleased)
 -------------------
 
+- Complete Spanish translation for widgets.po
+  [erral]
+
 - Basque translations for widgets.po
   [erral]
 
