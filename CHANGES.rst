@@ -4,6 +4,9 @@ Changelog
 5.1.22 (unreleased)
 -------------------
 
+- Basque translations for widgets.po
+  [erral]
+
 - Fix typos in French translations.
   [laulaz]
 
