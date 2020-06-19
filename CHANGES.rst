@@ -4,6 +4,9 @@ Changelog
 5.1.22 (unreleased)
 -------------------
 
+- Update Italian translations
+  [ale-rt, arsenico13, cekk, pnicolli]
+
 - Complete Spanish translation for widgets.po
   [erral]
 
