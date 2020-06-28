@@ -4,7 +4,7 @@ Changelog
 5.1.23 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update French, German, Spanish, Basque translations.
 
 
 5.1.22 (2020-06-19)
