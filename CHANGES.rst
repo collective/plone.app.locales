@@ -4,7 +4,8 @@ Changelog
 5.1.24 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix French date and hours format for the pickadate widget.
+  [vincentfretin]
 
 
 5.1.23 (2020-06-28)
