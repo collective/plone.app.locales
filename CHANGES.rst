@@ -4,6 +4,9 @@ Changelog
 5.1.24 (unreleased)
 -------------------
 
+- Update Norwegian translations.
+  [espenmn]
+
 - Fix French date and hours format for the pickadate widget.
   [vincentfretin]
 
