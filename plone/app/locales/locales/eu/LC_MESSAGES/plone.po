@@ -53,7 +53,7 @@ msgstr "${action/title}"
 msgid "${count} alternative urls added."
 msgstr "${count} url gehitu dira."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:139
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:140
 msgid "${items} could not be found"
 msgstr "Ez dira ${items} elementu aurkitu"
 
@@ -1074,15 +1074,15 @@ msgstr "Defektuz, webgunearen erroan dagoen edozein elementu nabigazio barran ag
 msgid "CSS/LESS files"
 msgstr "CSS/LESS fitxategiak"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:275
+#: plone.app.caching/plone/app/caching/operations/default.py:292
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
 msgstr "Nabigatzailean eta proxy-cachean gorde (defektuz: 24 ordu). Kontuz: egonkorrak diren baliabideentzat erabili, hau da, helbidea aldatu gabe sekula aldatzen ez diren elementuentzat; edo aldi batean eguneratu gabe agertzea kritikoa ez den elementuentzat."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:247
+#: plone.app.caching/plone/app/caching/operations/default.py:264
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires."
 msgstr "Nabigatzailean gorde baina berehala iraungu ('cache ahula'), eta proxy-cachean gorde (defektuz: 24 orud). Erabili purgatzea onartzen duten cache zerbitzariak emaitza onenak lortzeko. Kontuz: proxy-cache zerbitzaria ezin bada purgatu, edo ezin bada konfiguratu erantzunetik 's-maxage' goiburukoa kentzeko, freskatu gabeko erantzunak ikusi daitezke elementua cachean iraungi artean."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:219
+#: plone.app.caching/plone/app/caching/operations/default.py:236
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
 msgstr "Nabigatzaileko cachean gorde baina berehala iraungi eta 304 erantzunak aktibatu hurrengo eskaerentzat. 304 erantzunek 'Last-modified' eta/edo 'ETag' goiburukoen konfigurazioa eskatzen dute. 'Last-Modified' goiburukoa edukiaren freskotasuna bermatzeko nahikoa ez bada, aktibatu 'ETag' bidezko egiaztapena berau sortzeko behar diren osagai guztien zerrendarekin. Erantzun publiko guztiak cachean gordetzeko, aktibatu 'RAM cache' aukera."
 
@@ -1655,7 +1655,8 @@ msgstr "Plone atari berria sortu"
 msgid "Created before"
 msgstr "Data honen aurretik sortutakoak"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:205
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:248
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:11
 msgid "Created on"
 msgstr "Sorrera data"
 
@@ -1665,8 +1666,9 @@ msgid "Creation date"
 msgstr "Sorrera data"
 
 #. Default: "Creator"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:206
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:249
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:12
 msgid "Creator"
 msgstr "Sortzailea"
 
@@ -1710,7 +1712,7 @@ msgstr "Egungo konfigurazioa."
 msgid "Current logged in user"
 msgstr "Unean login egin duen erabiltzailea"
 
-#: plone/app/theming/interfaces.py:197
+#: plone/app/theming/interfaces.py:198
 msgid "Custom CSS Timestamp"
 msgstr "Pertsonalizatutako CSSaren data eta ordua"
 
@@ -1851,7 +1853,7 @@ msgstr "Defektuzko ordu-zona"
 msgid "Define list of modules that will be defined empty on RequireJS build steps to prevent loading modules multiple times."
 msgstr "RequireJSren eraiketa pausuetan, huts bezala definituko diren moduluen zerrenda definitu, moduluak behin eta berriz kargatu ez daitezen."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:43
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:39
 msgid "Define the search terms for the items you want to list by choosing what to match on. The list of results will be dynamically updated"
 msgstr "Zerrendatu nahi dituzun elementuak bilatzeko terminoak zehaztu dagokion elementua aukeratuz. Emaitzen zerrenda dinamikoki eguneratuko da."
 
@@ -1911,7 +1913,7 @@ msgstr "Akzioa ezabatu?"
 msgid "Delete the triggering item"
 msgstr "Elementua ezabatu"
 
-#: plone/app/theming/interfaces.py:235
+#: plone/app/theming/interfaces.py:236
 msgid "Dependencies"
 msgstr "Dependentziak"
 
@@ -1929,8 +1931,8 @@ msgid "Depends on another bundle"
 msgstr "Beste bilduma baten dependentzia du"
 
 #: CMFPlone/interfaces/controlpanel.py:1627
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:207
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
+#: plone.app.contenttypes/plone/app/contenttypes/schema/image.xml
 msgid "Description"
 msgstr "Deskribapena"
 
@@ -2054,7 +2056,7 @@ msgstr "Zure bildumak RequireJS edo LESS fitxategirik du?"
 msgid "Domains"
 msgstr "Domeinuak"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:108
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:109
 msgid "Done"
 msgstr "Eginda"
 
@@ -2118,7 +2120,7 @@ msgid "Edit"
 msgstr "Editatu"
 
 #: plone.dexterity/plone/dexterity/browser/edit.py:80
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:170
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:171
 msgid "Edit ${name}"
 msgstr "${name} editatu"
 
@@ -2130,7 +2132,7 @@ msgstr "Editatu ${operation} ekintzak"
 msgid "Edit ${operation} options for Ruleset: ${ruleset}"
 msgstr "Editatu ${operation} ekintzak erregela honentzat: ${ruleset}"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:166
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:167
 msgid "Edit ${title} (${name})"
 msgstr "${title} (${name}) editatu"
 
@@ -2395,7 +2397,8 @@ msgstr "Aktibatuta dauden markdown gehigarriak"
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "LiveSearch ezaugarria aktibatzen du, honek, emaitzak zuzenean ikustea ahalbidetzen du zure nabigatzaileak JavaScript onartzen badu."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:209
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:251
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:15
 msgid "End Date"
 msgstr "Bukaera data"
 
@@ -2576,7 +2579,7 @@ msgstr "Oraingo erabiltzailea baztertu jasotzaileen artetik"
 msgid "Exclude the Current Context"
 msgstr "Uneko kontestua ezgaitu"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:210
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:16
 msgid "Excluded from navigation"
 msgstr "Nabigaziotik baztertuta"
 
@@ -2584,8 +2587,9 @@ msgstr "Nabigaziotik baztertuta"
 msgid "Execute transition ${transition}"
 msgstr "${transition} trantsizioa exekutatu"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:211
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:252
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:17
 msgid "Expiration date"
 msgstr "Iraungitze-data"
 
@@ -2712,7 +2716,7 @@ msgstr "Defektuzko orria ezartzeak huts egin du"
 msgid "Failsafe Login"
 msgstr "Babestutako logina"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:56
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:57
 msgid "Failure"
 msgstr "Errorea"
 
@@ -2827,7 +2831,7 @@ msgid "Find the collection which provides the items to list"
 msgstr "Zerrendatu beharreko elementuak bilatzen dituen bilduma aukeratu"
 
 #. Default: "Folder"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:214
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:254
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Folder.xml
 #: plone.app.dexterity/plone/app/dexterity/profiles/testing/types/Folder.xml
 msgid "Folder"
@@ -2898,7 +2902,7 @@ msgstr "Mota orokorren ezarpenak"
 msgid "Generate tabs for items other than folders."
 msgstr "Karpetak ez diren elementuentzat fitxak sortu"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:62
+#: plone.app.caching/plone/app/caching/operations/default.py:64
 msgid "Generic caching"
 msgstr "Cachearen ezarpen orokorrak"
 
@@ -3037,7 +3041,8 @@ msgstr "Zenbat elementu zerrendatu."
 msgid "However, this is the list of the already translated languages for the requested content."
 msgstr "Hala ere, hemen dituzu hizkuntza batzuetan eginda dauden elementu honen itzulpenak."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:213
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:253
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:19
 msgid "ID"
 msgstr "ID"
 
@@ -3185,7 +3190,7 @@ msgid "Images can be referenced in pages or displayed in an album."
 msgstr "Irudiak orrialdeetan edo albumetan agertu daitezke"
 
 #: plone.app.caching/plone/app/caching/browser/import.pt:113
-#: plone/app/theming/browser/controlpanel.pt:793
+#: plone/app/theming/browser/controlpanel.pt:794
 msgid "Import"
 msgstr "Inportatu"
 
@@ -3464,7 +3469,7 @@ msgstr "Hizkuntza neutrala (webgunean lehenetsitakoa)"
 msgid "Larger than"
 msgstr "Hau baino handiagoa da"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:215
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:21
 msgid "Last comment date"
 msgstr "Azken komentarioaren data"
 
@@ -3472,7 +3477,8 @@ msgstr "Azken komentarioaren data"
 msgid "Last compiled date"
 msgstr "Azken konpilazioaren data"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:217
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:255
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:23
 msgid "Last modified"
 msgstr "Azken aldaketa"
 
@@ -3501,13 +3507,13 @@ msgstr "Webguneko nabigazioa nola sortzen den konfiguratzen uzten du. Nabigazio 
 msgid "Lets you upload a file to the site."
 msgstr "Webgunera fitxategi bat kargatzeko."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:66
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:62
 #: plone.portlet.collection/plone/portlet/collection/collection.py:70
 msgid "Limit"
 msgstr "Muga"
 
 #: plone.app.collection/plone/app/collection/collection.py:69
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:67
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:63
 msgid "Limit Search Results"
 msgstr "Bilaketa emaitzak mugatu"
 
@@ -3570,9 +3576,9 @@ msgid "Local configuration for plone.protect"
 msgstr "plone.protect-en konfigurazio lokala"
 
 #. Default: "Location"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:216
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_5/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:22
 msgid "Location"
 msgstr "Kokalekua"
 
@@ -3677,6 +3683,7 @@ msgstr "Begiratu helbide hau erabili daitezkeen gehigarriak zein diren jakiteko:
 
 #: plone.app.discussion/plone/app/discussion/interfaces.py:174
 #: plone.app.textfield/plone/app/textfield/interfaces.py:53
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:29
 msgid "MIME type"
 msgstr "MIME mota"
 
@@ -3981,7 +3988,7 @@ msgstr "Rss loturaren akzioa falta da"
 msgid "Missing syndication settings action."
 msgstr "Sindikazioaren konfigurazioaren akzioa falta da"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:246
+#: plone.app.caching/plone/app/caching/operations/default.py:263
 msgid "Moderate caching"
 msgstr "Neurrizko cachea"
 
@@ -4232,7 +4239,7 @@ msgstr "Ez duzu URL edo biderik idatzi."
 msgid "No alternative urls selected for removal."
 msgstr "Ez duzu ezabatzeko urlrik aukeratu."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:302
+#: plone.app.caching/plone/app/caching/operations/default.py:319
 msgid "No caching"
 msgstr "Ez gorde cachean"
 
@@ -4337,7 +4344,7 @@ msgstr "Nabigazioan erakutsi beharreko maila kopurua"
 msgid "Number of folder levels to show in the site map."
 msgstr "Webgunearen mapan erakutsiko den karpeta-maila kopurua"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:75
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:71
 msgid "Number of items that will show up in one batch."
 msgstr "Batch baten erakutsiko den elementu-kopurua"
 
@@ -4360,7 +4367,7 @@ msgstr "ODS kalkulu-orria"
 msgid "ODT document"
 msgstr "ODT dokumentua"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:212
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:18
 msgid "Object Size"
 msgstr "Objektuaren tamaina"
 
@@ -4607,7 +4614,7 @@ msgstr "Berrikusi beharrekoak"
 msgid "Perform a workflow transition on the triggering object"
 msgstr "Workflowaren trantsizioa bat egin objektuan"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:127
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:128
 msgid "Permission denied for \"${title}\""
 msgstr "Ez duzu baimenik \"${title}\" elementuan"
 
@@ -4755,7 +4762,7 @@ msgstr "Plonerentzat z3c.form produktua"
 msgid "Plugins and Toolbar"
 msgstr "Plugin eta tresna-barrak"
 
-#: plone/app/theming/interfaces.py:236
+#: plone/app/theming/interfaces.py:237
 msgid "Plugins on which this plugin depends"
 msgstr "Plugin honek beste zein pluginen dependentzia duen"
 
@@ -4890,7 +4897,8 @@ msgstr "Zirriborro publikoa"
 msgid "Public draft"
 msgstr "Zirriborro publikoa"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:208
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:250
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:14
 msgid "Publication date"
 msgstr "Argitaratze-data"
 
@@ -4942,6 +4950,10 @@ msgstr "Garbitu"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:334
 msgid "Purging is still enabled while caching is disabled!"
 msgstr "Cache garbiketa aktibatuta dago baina cachea desaktibatuta!"
+
+#: plone/app/theming/browser/controlpanel.pt:606
+msgid "Put your plain css..."
+msgstr ""
 
 #. Default: "Puts your item in a review queue, so it can be published externally or internally."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -5257,8 +5269,9 @@ msgstr "Egoeraren izenburua"
 msgid "Review list"
 msgstr "Berrikuspen zerrenda"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:218
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:256
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:24
 msgid "Review state"
 msgstr "Egoera"
 
@@ -5355,7 +5368,7 @@ msgstr "SVG irudia"
 msgid "Save"
 msgstr "Gorde"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:114
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:115
 msgid "Save Defaults"
 msgstr "Defektuzkoak gorde"
 
@@ -5400,7 +5413,7 @@ msgid "Search results for ${term}"
 msgstr "${term} bilatuz aurkitu dena"
 
 #: plone.app.collection/plone/app/collection/collection.py:31
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:42
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:38
 msgid "Search terms"
 msgstr "Bilaketa terminoak"
 
@@ -5474,7 +5487,7 @@ msgid "Select which IDs (short names) can act as fallback default pages for a co
 msgstr "Karpeta erako eduki baten defektuzko orri gisa jardun dezaketen elementuan ID edo izen-laburrak zein diren adieraz"
 
 #: plone.app.collection/plone/app/collection/collection.py:84
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:83
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:79
 msgid "Select which fields to display when 'Tabular view' is selected in the display menu."
 msgstr "Aukeratu zein eremu erakutsiko diren 'Taula erako bista' aukeratzen denean."
 
@@ -5803,7 +5816,7 @@ msgid "Sort tabs on"
 msgstr "Fitxak honen arabera ordenatu"
 
 #: plone.app.collection/plone/app/collection/collection.py:45
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:55
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:51
 msgid "Sort the collection on this index"
 msgstr "Bilduma hau indize honen arabera ordenatu"
 
@@ -5812,7 +5825,7 @@ msgid "Sort the default search on this index"
 msgstr "Defektuzko bilaketa, honen arabera ordenatu"
 
 #: plone.app.collection/plone/app/collection/collection.py:57
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:61
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:57
 msgid "Sort the results in reversed order"
 msgstr "Emaitzak alderantziz ordenatu"
 
@@ -5862,7 +5875,8 @@ msgstr "Fitxategi edo irudi erako baliabide egonkorrak"
 msgid "Standard view"
 msgstr "Ikuspen normala"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:219
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:258
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:25
 msgid "Start Date"
 msgstr "Hasiera-data"
 
@@ -5897,7 +5911,7 @@ msgstr "Erregelak exekutatzeari utzi"
 msgid "Store a new version of the object"
 msgstr "Elementuaren bertsio berria gorde"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:274
+#: plone.app.caching/plone/app/caching/operations/default.py:291
 msgid "Strong caching"
 msgstr "Cache gogorra"
 
@@ -5939,7 +5953,7 @@ msgstr "Bidalita, argitaratzeko zain"
 msgid "Subtopics"
 msgstr "Azpigaiak"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:55
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:56
 msgid "Success"
 msgstr "Arrakasta"
 
@@ -6053,7 +6067,7 @@ msgid "TIFF image"
 msgstr "TIFF irudia"
 
 #: plone.app.collection/plone/app/collection/collection.py:83
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:82
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:78
 msgid "Table Columns"
 msgstr "Taularen zutabeak"
 
@@ -6076,8 +6090,9 @@ msgstr "Tabulazio ikuspena"
 msgid "Tag"
 msgstr "Etiketa"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:220
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:259
 #: plone.app.content/plone/app/content/browser/contents/tags.py:24
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:26
 msgid "Tags"
 msgstr "Etiketak"
 
@@ -6701,7 +6716,7 @@ msgstr "Erabiltzaile izen hori ez dago libre. Aukeratu beste bat, mesedez."
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
 msgstr "Honek plone.app.contenttypes instalatuko du eta zure edukia migratzeko aukera eskainiko dizun formulariora bideratuko zaitu."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:63
+#: plone.app.caching/plone/app/caching/operations/default.py:65
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
 msgstr "Ekintza honen bidez, cachearen ohiko funtzioak hautazko parametroen konbinazioekin egin daitezke. Kasu gehienetan errazagoa izan daiteke ekintza sinpleagoak erabiltzea (Cache gogorra, Neurrizko cachea, Cache ahula edo Ez gorde cachean)."
 
@@ -6742,7 +6757,7 @@ msgstr "Aukeratuta badago, idatzitako testua bakarrik ikusiko da, goiburu, ingur
 msgid "Time in minutes after which the feed should be reloaded."
 msgstr "Zenbat minuturen ostean birkargatu behar den jarioa."
 
-#: plone/app/theming/interfaces.py:200
+#: plone/app/theming/interfaces.py:201
 msgid "Time stamp when the custom CSS was changed. Used to generate custom.css with timestamp in URL."
 msgstr "Pertsonalizatutako CSSa noiz aldatu zen. custom.css-ren URL helbidea sortzeko erabiltzen da."
 
@@ -6762,7 +6777,7 @@ msgstr "Oharra: erabili * automatikoki osatzeko"
 
 #. Default: "Title"
 #: CMFPlone/interfaces/controlpanel.py:781
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:282
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:257
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
 msgid "Title"
 msgstr "Izenburua"
@@ -6805,7 +6820,8 @@ msgstr "Tresnabarraren kokapena"
 msgid "Top"
 msgstr "Goian"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:222
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:260
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:28
 msgid "Total comments"
 msgstr "Erantzun kopurua"
 
@@ -6857,8 +6873,9 @@ msgstr "Gertaera"
 msgid "Twitter username"
 msgstr "Twitter erabiltzailea"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:221
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:261
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:27
 msgid "Type"
 msgstr "Elementu mota"
 
@@ -7062,7 +7079,7 @@ msgstr "Erabiltzaile berrien id gisa automatikoki sortutako UUIDak erabili. Desa
 msgid "Use email address as login name"
 msgstr "Erabili e-posta login egiteko"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:303
+#: plone.app.caching/plone/app/caching/operations/default.py:320
 msgid "Use this operation to keep the response out of all caches."
 msgstr "Erabili ekintza hau erantzuna cachetik kanpo mantentzeko"
 
@@ -7334,7 +7351,7 @@ msgstr "Kontuz, hau desaktibatzea arriskutsua izan daiteke. Zertan ari zaren bad
 msgid "We will use this address if you need to recover your password"
 msgstr "Helbide hau erabiliko dugu pasahitza berreskuratu behar baduzu"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:218
+#: plone.app.caching/plone/app/caching/operations/default.py:235
 msgid "Weak caching"
 msgstr "Cache ahula"
 
@@ -7488,7 +7505,7 @@ msgstr "Ezin duzu eduki hau editatu ez baduzu ${migrate}"
 msgid "You can't edit this content. Ask your administrator to migrate to Dexterity!"
 msgstr "Ezin duzu eduki hau editatu. Eskatu webgunearen kudeatzailearei Dexterityra migratzeko!"
 
-#: plone.app.content/plone/app/content/browser/constraintypes.py:105
+#: plone.app.content/plone/app/content/browser/constraintypes.py:108
 msgid "You cannot have a type as a secondary type without having it allowed. You have selected ${types}."
 msgstr "Ezin duzu bigarren mailako elementu gisa aurretik aukeratu ez duzun mota aukeratu. Hauek dira zuk aukeratutakoak: ${types}."
 
@@ -8515,7 +8532,7 @@ msgid "description_groups_management2"
 msgstr "${image_link_icon} ikurrak beste talde bateko kide izateagatik heredatutako rola duela esan nahi du."
 
 #. Default: "You can import a Zip file containing an existing theme. This should contain a single top level directory, which will be used as the theme identifier. If no Diazo <code>rules.xml</code> or <code>manifest.cfg</code> file is found in this directory, a default <code>rules.xml</code> file will be created."
-#: plone/app/theming/browser/controlpanel.pt:729
+#: plone/app/theming/browser/controlpanel.pt:730
 msgid "description_import"
 msgstr "Itxura bat duen Zip fitxategia kargatu dezakezu. Fitxategiak goi-mailako karpeta bat izan behar du eta bere izena itxuraren identifikadore bezala erabiliko da. Ez badago <code>rules.xml</code> fitxategi bat edo <code>manifest.cfg</code> fitxategirik karpeta horretan, defektuzko balioak dituen <code>rules.xml</code> fitxategi bat sortuko da automatikoki."
 
@@ -8654,7 +8671,7 @@ msgstr "erregistro formulariora"
 #. Default: "There are currently no items in this folder."
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:173
 #: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
-#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:251
+#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:258
 msgid "description_no_items_in_folder"
 msgstr "Ez dago elementurik karpeta honetan."
 
@@ -9242,12 +9259,12 @@ msgid "external_website"
 msgstr "Webgunea ikusi"
 
 #. Default: "The '${value1}' vocabulary value conflicts with '${value2}'."
-#: plone.schemaeditor/plone/schemaeditor/fields.py:192
+#: plone.schemaeditor/plone/schemaeditor/fields.py:193
 msgid "field_edit_error_conflicting_values"
 msgstr "Hiztegiko '${value1}' balioak arazo bat dauka '${value2}'rekin"
 
 #. Default: "You can not set a vocabulary name AND vocabulary values. Please clear values field or set no value here."
-#: plone.schemaeditor/plone/schemaeditor/fields.py:224
+#: plone.schemaeditor/plone/schemaeditor/fields.py:225
 msgid "field_edit_error_values_and_name"
 msgstr "Ezin dituzu hiztegiaren izena eta hiztegiaren balioak ezarri. Ezabatu balioak edo ez ezarri baliorik hemen"
 
@@ -9824,7 +9841,7 @@ msgid "heading_sent_password"
 msgstr "Pasahitza aldatzeko eskaera bidalia"
 
 #. Default: "Restrict what types of content can be added"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:135
+#: plone.app.content/plone/app/content/browser/constraintypes.py:138
 msgid "heading_set_content_type_restrictions"
 msgstr "Murriztu zein eduki mota gehi daitezkeen"
 
@@ -9967,7 +9984,7 @@ msgid "help_add_actions_portlet"
 msgstr "Akzioen portletak kategoria jakin bateko akzioak erakusten ditu"
 
 #. Default: "Select the restriction policy in this location"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:64
+#: plone.app.content/plone/app/content/browser/constraintypes.py:67
 msgid "help_add_restriction_mode"
 msgstr "Leku honetarako murriztapen politika aukeratu."
 
@@ -10137,7 +10154,7 @@ msgstr "Zure oraingo pasahitza sartu."
 
 #. Default: "Define your own custom CSS in the field below. This is a good place for quick customizations of things like colors and the toolbar. Definitions here will override previously defined CSS of Plone. Please use this only for small customizations, as it is hard to keep track of changes here. For bigger changes you most likely want to customize a full theme and make your changes there."
 #: plone/app/theming/browser/controlpanel.pt:597
-#: plone/app/theming/interfaces.py:182
+#: plone/app/theming/interfaces.py:183
 msgid "help_custom_css"
 msgstr "Beheko eremuan zure CSS pertsonalizatua idatzi dezakezu. Hau pertsonalizazio txiki eta azkarrentzako lekuk egokia izan daiteke, hala nola, kolore aldaketak edo tresna-barra. Hemengo definizioek Ploneren gainontzeko CSSa gainidatzi egingo dute. Aldaketa txikiak egiteko erabili bakarrik, zaila da-eta hemen aldaketen kontrola eramatea. Aldaketa handiagoak egiteko, itxura guztia berriz egitea izan daiteke egokiena."
 
@@ -10238,7 +10255,7 @@ msgid "help_enable_immediately"
 msgstr "Aktibatu aukera hau sortu berri duzun itxura berehala aktibatzeko."
 
 #. Default: "Select this option to enable the newly uploaded theme immediately."
-#: plone/app/theming/browser/controlpanel.pt:772
+#: plone/app/theming/browser/controlpanel.pt:773
 msgid "help_enable_new_theme"
 msgstr "Aukeratu hau kargatuko duzun itxura berria berehala aktibatzeko."
 
@@ -10392,7 +10409,7 @@ msgid "help_ical_import_enable"
 msgstr "Aukeratu kontestu honetak icalendar fitxategietatik inportazioa aktibatzeko"
 
 #. Default: "Controls what types are addable in this location"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:73
+#: plone.app.content/plone/app/content/browser/constraintypes.py:76
 msgid "help_immediately_addable_types"
 msgstr "Aukeratu zein elementu mota gehitu daitekeen hemen"
 
@@ -10424,7 +10441,7 @@ msgid "help_limit_number"
 msgstr "Erakusten den elementu-kopurua zehazten du."
 
 #. Default: "Select which types should be available in the 'More…' submenu <em>instead</em> of in the main pulldown. This is useful to indicate that these are not the preferred types in this location, but are allowed if you really need them."
-#: plone.app.content/plone/app/content/browser/constraintypes.py:83
+#: plone.app.content/plone/app/content/browser/constraintypes.py:86
 msgid "help_locally_allowed_types"
 msgstr "Karpeta honetan <em>menu nagusia beharrean</em> 'Gehiago…' lotura erabiliz gehitu ahal izango diren elementu motak aukeratu. Elementu mota hauek, ez dute leku honetan gehitzeko lehentasunik, baina behar badituzu gehitu ditzakezu."
 
@@ -10670,7 +10687,7 @@ msgid "help_render_body"
 msgstr "Elementu batek testua baldin badu horixe erakutsi, bestela deskribapena erakutsi."
 
 #. Default: "Select this option to replace any existing theme that may have been uploaded previously."
-#: plone/app/theming/browser/controlpanel.pt:786
+#: plone/app/theming/browser/controlpanel.pt:787
 msgid "help_replace_existing"
 msgstr "Aukera hau aktibatu aurrez jaso den beste itxura bat guztiz ordezkatzeko."
 
@@ -10836,7 +10853,7 @@ msgid "help_text_transform"
 msgstr "Erabili aukera hau erantzunaren testua nolabait eraldatu behar bada. \"Testu arrunta\" edo \"Testu argia\"ren artean aukeratu dezakezu. \"Testu argia\"-k testu arrunta HTML bihurtzen du lerro saltoak eta espazioak mantenduz, eta web helbideak eta e-postak klikagarri eginez."
 
 #. Default: "Select a file to upload."
-#: plone/app/theming/browser/controlpanel.pt:750
+#: plone/app/theming/browser/controlpanel.pt:751
 msgid "help_theme_archive"
 msgstr "Aukeratu kargatzeko fitxategi bat."
 
@@ -11361,7 +11378,7 @@ msgid "label_boolean_criteria_bool"
 msgstr "Balioa"
 
 #. Default: "Yes/No"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:91
+#: plone.schemaeditor/plone/schemaeditor/fields.py:92
 msgid "label_boolean_field"
 msgstr "Bai/Ez"
 
@@ -11505,7 +11522,7 @@ msgid "label_checkout_folder"
 msgstr "Bertsio berriaren karpeta"
 
 #. Default: "Choice"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:107
+#: plone.schemaeditor/plone/schemaeditor/fields.py:108
 msgid "label_choice_field"
 msgstr "Aukera"
 
@@ -11741,6 +11758,7 @@ msgstr "Oraingo pasahitza"
 
 #. Default: "Custom CSS"
 #: plone/app/theming/browser/controlpanel.pt:596
+#: plone/app/theming/interfaces.py:179
 msgid "label_custom_css"
 msgstr "Pertsonalizatutako CSSa"
 
@@ -11762,7 +11780,7 @@ msgid "label_dashboard"
 msgstr "Lanlekua"
 
 #. Default: "Date"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:97
+#: plone.schemaeditor/plone/schemaeditor/fields.py:98
 msgid "label_date_field"
 msgstr "Data"
 
@@ -11782,7 +11800,7 @@ msgid "label_dateandtime_settings"
 msgstr "Data eta orduaren ezarpenak"
 
 #. Default: "Date/Time"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:95
+#: plone.schemaeditor/plone/schemaeditor/fields.py:96
 msgid "label_datetime_field"
 msgstr "Data/Ordua"
 
@@ -11921,7 +11939,7 @@ msgid "label_enable_immediately"
 msgstr "Itxura berria berehala aktibatu"
 
 #. Default: "Immediately enable new theme"
-#: plone/app/theming/browser/controlpanel.pt:771
+#: plone/app/theming/browser/controlpanel.pt:772
 msgid "label_enable_new_theme"
 msgstr "Itxura berria berehala aktibatu"
 
@@ -12100,7 +12118,7 @@ msgid "label_first_weekday"
 msgstr "Lehenengo asteguna"
 
 #. Default: "Floating-point number"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:89
+#: plone.schemaeditor/plone/schemaeditor/fields.py:90
 msgid "label_float_field"
 msgstr "Puntu higikorreko zenbakia"
 
@@ -12233,7 +12251,7 @@ msgid "label_image_caption"
 msgstr "Irudi-oina"
 
 #. Default: "Allowed types"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:72
+#: plone.app.content/plone/app/content/browser/constraintypes.py:75
 msgid "label_immediately_addable_types"
 msgstr "Onartutako elementu-motak"
 
@@ -12267,7 +12285,7 @@ msgid "label_inherit_local_roles"
 msgstr "Goragoko mailetatik baimenak heredatu"
 
 #. Default: "Integer"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:87
+#: plone.schemaeditor/plone/schemaeditor/fields.py:88
 msgid "label_integer_field"
 msgstr "Zenbaki osoa"
 
@@ -12277,7 +12295,7 @@ msgid "label_internal_url"
 msgstr "Barrukoa"
 
 #. Default: "Item count"
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:74
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:70
 msgid "label_item_count"
 msgstr "Elementu kopurua"
 
@@ -12324,7 +12342,7 @@ msgid "label_limit_number"
 msgstr "Elementu kopuru mugatua"
 
 #. Default: "Secondary types"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:82
+#: plone.app.content/plone/app/content/browser/constraintypes.py:85
 msgid "label_locally_allowed_types"
 msgstr "Bigarren mailako elementu motak"
 
@@ -12454,7 +12472,7 @@ msgid "label_move_content_to_languages"
 msgstr "Edukia dagokion hizkuntzaren helbidera mugitu"
 
 #. Default: "Multiple Choice"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:247
+#: plone.schemaeditor/plone/schemaeditor/fields.py:248
 msgid "label_multi_choice_field"
 msgstr "Aukera anitza"
 
@@ -12646,7 +12664,7 @@ msgid "label_password_change_mail"
 msgstr "Helbide bat sortu eta e-postaz bidaliko dizugu; sartu e-postaz bidalitako helbide horretara eta bertan alda dezakezu zure pasahitza eta erregistro prozesua bukatu."
 
 #. Default: "Password"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:93
+#: plone.schemaeditor/plone/schemaeditor/fields.py:94
 msgid "label_password_field"
 msgstr "Pasahitza"
 
@@ -12876,7 +12894,7 @@ msgid "label_remove_selected_users"
 msgstr "Aukeratutako taldeak / erabiltzaileak ezabatu"
 
 #. Default: "Replace existing theme"
-#: plone/app/theming/browser/controlpanel.pt:785
+#: plone/app/theming/browser/controlpanel.pt:786
 msgid "label_replace_existing"
 msgstr "Ordezkatu egungo itxura"
 
@@ -13155,12 +13173,12 @@ msgstr "Batzuk:"
 
 #. Default: "Sort on"
 #: CMFPlone/interfaces/controlpanel.py:912
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:54
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:50
 msgid "label_sort_on"
 msgstr "Ordenazioa"
 
 #. Default: "Reversed order"
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:60
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:56
 msgid "label_sort_reversed"
 msgstr "Alderantzizko ordena"
 
@@ -13217,7 +13235,7 @@ msgid "label_template_mixin"
 msgstr "Txantiloia ikusi"
 
 #. Default: "Text"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:85
+#: plone.schemaeditor/plone/schemaeditor/fields.py:86
 msgid "label_text_field"
 msgstr "Testua"
 
@@ -13233,7 +13251,7 @@ msgid "label_text_transform"
 msgstr "Erantzunari aplikatu beharreko transformazioa"
 
 #. Default: "Text line (String)"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:81
+#: plone.schemaeditor/plone/schemaeditor/fields.py:82
 msgid "label_textline_field"
 msgstr "Testu-lerroa (string)"
 
@@ -13343,7 +13361,7 @@ msgid "label_translations_should_be_here"
 msgstr "Elementu honen itzulpenak hemen agertu beharko lirateke"
 
 #. Default: "Type restrictions"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:63
+#: plone.app.content/plone/app/content/browser/constraintypes.py:66
 msgid "label_type_restrictions"
 msgstr "Moten murriztapenak"
 
@@ -14922,7 +14940,7 @@ msgid "theming_controlpanel_delete_confirm_description"
 msgstr "Ekintza hau ezin da desegin. Kontuan hartu fitxategi sistemako itxurak ezin direla Plonetik ezabatu."
 
 #. Default: "New theme"
-#: plone/app/theming/browser/controlpanel.pt:648
+#: plone/app/theming/browser/controlpanel.pt:649
 msgid "theming_controlpanel_new_theme"
 msgstr "Itxura berria"
 
@@ -14932,7 +14950,7 @@ msgid "theming_controlpanel_new_theme_description"
 msgstr "Idatzi zure itxuraren xehetasunak"
 
 #. Default: "Upload theme"
-#: plone/app/theming/browser/controlpanel.pt:727
+#: plone/app/theming/browser/controlpanel.pt:728
 msgid "theming_controlpanel_upload"
 msgstr "Itxura kargatu"
 

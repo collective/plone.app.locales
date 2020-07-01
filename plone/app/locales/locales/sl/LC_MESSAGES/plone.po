@@ -52,7 +52,7 @@ msgstr "${action/title}"
 msgid "${count} alternative urls added."
 msgstr "${count} dodanih alternativnih naslovov."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:139
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:140
 msgid "${items} could not be found"
 msgstr "Ne morem najti ${items}"
 
@@ -1072,15 +1072,15 @@ msgstr "Privzeto se bodo vsi predmeti ustvarjeni v korenskem delu pojavili kot z
 msgid "CSS/LESS files"
 msgstr "Datoteke CSS/LESS"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:275
+#: plone.app.caching/plone/app/caching/operations/default.py:292
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
 msgstr "Shrani v predpomnilnik brskalnika in posrednika (privzeto: 24 ur). Opozorilo: Uporabite samo za stabilne vire, ki se nikoli ne spremenijo, ne da bi spremenili naslov, ali pa kjer začasna ustaljenost ni kritična."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:247
+#: plone.app.caching/plone/app/caching/operations/default.py:264
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires."
 msgstr "Shrani v predpomnilnik brskalnika toda stran poteče takoj (enako kot šibko shranjevanje v predpomnilnik) in shrani v posrednika (privzeto: 24 ur). Uporabi očiščevalno shranjevanje obratnega posrednika za najboljše rezultate. Opozorilo: Če posredniški strežnik ne more biti očiščen ali ne more biti nastavljen tako, da odstrani žeton z max trajanjem iz odziva, potem so zastali odzivi vidni, dokler shranjene strani ne potečejo."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:219
+#: plone.app.caching/plone/app/caching/operations/default.py:236
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
 msgstr "Shrani v predpomnilnik brskalnika a takoj preteče in omogoča odzive št. 304 na poznejše zahtevke. Odziv 304 zahteva nastavitve 'Poslednje-spremenjeno' ter nastavitve 'ETags'. Če glava 'Poslednje-spremenjeno' ne more več zagotavljati ažurnih informacij, vklopite preverjanje ETag tako, da v aktivirate vsako komponento ETag iz seznama za izgradnjo glave ETag. Da shranjuje odzive tudi v predpomnilnik Zope, nastavite 'Shranjevanje v RAM' na True."
 
@@ -1653,7 +1653,8 @@ msgstr "Ustvari  novo spletišče v Plonu"
 msgid "Created before"
 msgstr "Ustvarjeno pred"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:205
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:248
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:11
 msgid "Created on"
 msgstr "Ustvarjeno ob"
 
@@ -1663,8 +1664,9 @@ msgid "Creation date"
 msgstr "Datum stvaritve"
 
 #. Default: "Creator"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:206
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:249
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:12
 msgid "Creator"
 msgstr "Avtor"
 
@@ -1708,7 +1710,7 @@ msgstr "Trenutno aktivna nastavitev"
 msgid "Current logged in user"
 msgstr "Trenutno prijavljeni uporabnik"
 
-#: plone/app/theming/interfaces.py:197
+#: plone/app/theming/interfaces.py:198
 msgid "Custom CSS Timestamp"
 msgstr ""
 
@@ -1849,7 +1851,7 @@ msgstr "Privzeti časovni pas"
 msgid "Define list of modules that will be defined empty on RequireJS build steps to prevent loading modules multiple times."
 msgstr "Določi seznam modulov. ki bodo označeni kot prazni pri koraku izgradnje RequireJS, da se prepreči večkratno nalaganje modulov."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:43
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:39
 msgid "Define the search terms for the items you want to list by choosing what to match on. The list of results will be dynamically updated"
 msgstr "Določite iskalne nize za vsebine, ki jih želite izpisati, z ustreznim izborom iz seznama. Seznam najdenih vsebin se bo dinamično osveževal."
 
@@ -1909,7 +1911,7 @@ msgstr "Naj brišem aktivnost?"
 msgid "Delete the triggering item"
 msgstr "Briši prožilno postavko"
 
-#: plone/app/theming/interfaces.py:235
+#: plone/app/theming/interfaces.py:236
 msgid "Dependencies"
 msgstr "Odvisnosti"
 
@@ -1927,8 +1929,8 @@ msgid "Depends on another bundle"
 msgstr "Je odvisno od naslednjega svežnja."
 
 #: CMFPlone/interfaces/controlpanel.py:1627
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:207
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
+#: plone.app.contenttypes/plone/app/contenttypes/schema/image.xml
 msgid "Description"
 msgstr "Opis"
 
@@ -2052,7 +2054,7 @@ msgstr "Ali vaš sveženj vsebuje datoteko RequireJS ali LESS?"
 msgid "Domains"
 msgstr "Domene"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:108
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:109
 msgid "Done"
 msgstr "Narejeno"
 
@@ -2117,7 +2119,7 @@ msgid "Edit"
 msgstr "Uredi"
 
 #: plone.dexterity/plone/dexterity/browser/edit.py:80
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:170
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:171
 msgid "Edit ${name}"
 msgstr "Uredi ${name}"
 
@@ -2129,7 +2131,7 @@ msgstr "Opcije urejanja ${operation}"
 msgid "Edit ${operation} options for Ruleset: ${ruleset}"
 msgstr "Uredi ${operation} opcije za pravila: ${ruleset}"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:166
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:167
 msgid "Edit ${title} (${name})"
 msgstr "Uredi ${title} (${name})"
 
@@ -2394,7 +2396,8 @@ msgstr ""
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "Omogoči živo iskanje, ki kaže sprotne rezultate iskanja, če brskalnik omogoča JavaScript"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:209
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:251
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:15
 msgid "End Date"
 msgstr "Končni datum"
 
@@ -2576,7 +2579,7 @@ msgstr "Izvzemite ustvarjalca iz seznama prejemnikov"
 msgid "Exclude the Current Context"
 msgstr "Izvzemite trenutni kontekst"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:210
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:16
 msgid "Excluded from navigation"
 msgstr "Izključeno iz navigacije"
 
@@ -2584,8 +2587,9 @@ msgstr "Izključeno iz navigacije"
 msgid "Execute transition ${transition}"
 msgstr "Izvedi prehod stanj ${transition}"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:211
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:252
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:17
 msgid "Expiration date"
 msgstr "Datum izteka"
 
@@ -2712,7 +2716,7 @@ msgstr "Nastavitev privzete strani ni uspela"
 msgid "Failsafe Login"
 msgstr "Zagotovljena prijava"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:56
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:57
 msgid "Failure"
 msgstr "Neuspeh"
 
@@ -2828,7 +2832,7 @@ msgid "Find the collection which provides the items to list"
 msgstr "Poišči zbirko, ki dobavlja prispevke za seznam"
 
 #. Default: "Folder"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:214
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:254
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Folder.xml
 #: plone.app.dexterity/plone/app/dexterity/profiles/testing/types/Folder.xml
 msgid "Folder"
@@ -2899,7 +2903,7 @@ msgstr "Nastavitve splošnih vrst vsebin."
 msgid "Generate tabs for items other than folders."
 msgstr "Generiraj zavihke tudi za druge vsebine poleg map"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:62
+#: plone.app.caching/plone/app/caching/operations/default.py:64
 msgid "Generic caching"
 msgstr "Generično shranjevanje v predpomnilnik"
 
@@ -3038,7 +3042,8 @@ msgstr "Koliko polj na seznam"
 msgid "However, this is the list of the already translated languages for the requested content."
 msgstr "Vendar, tu je seznam že pripravljenih prevodov za zahtevano vsebino."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:213
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:253
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:19
 msgid "ID"
 msgstr "ID"
 
@@ -3187,7 +3192,7 @@ msgid "Images can be referenced in pages or displayed in an album."
 msgstr "Na slike se lahko sklicujete v straneh ali jih prikažete v albumu."
 
 #: plone.app.caching/plone/app/caching/browser/import.pt:113
-#: plone/app/theming/browser/controlpanel.pt:793
+#: plone/app/theming/browser/controlpanel.pt:794
 msgid "Import"
 msgstr "Uvoz"
 
@@ -3466,7 +3471,7 @@ msgstr "Neodvisno od jezika (privzeto za celo spletišče)"
 msgid "Larger than"
 msgstr "Več kot"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:215
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:21
 msgid "Last comment date"
 msgstr "Datum zadnjega komentarja"
 
@@ -3474,7 +3479,8 @@ msgstr "Datum zadnjega komentarja"
 msgid "Last compiled date"
 msgstr "Datum zadnjega prevoda"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:217
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:255
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:23
 msgid "Last modified"
 msgstr "Zadnja sprememba"
 
@@ -3503,13 +3509,13 @@ msgstr "Omogoča nastavitev navigacije po vašem spletišču. Upoštevajte, da p
 msgid "Lets you upload a file to the site."
 msgstr "Dovoljuje prenos datoteke na spletišče."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:66
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:62
 #: plone.portlet.collection/plone/portlet/collection/collection.py:70
 msgid "Limit"
 msgstr "Omejitev"
 
 #: plone.app.collection/plone/app/collection/collection.py:69
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:67
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:63
 msgid "Limit Search Results"
 msgstr "Omeji število zadetkov iskanja"
 
@@ -3572,9 +3578,9 @@ msgid "Local configuration for plone.protect"
 msgstr "Lokalne nastavitve za plone.protect"
 
 #. Default: "Location"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:216
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_5/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:22
 msgid "Location"
 msgstr "Kraj"
 
@@ -3679,6 +3685,7 @@ msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/interfaces.py:174
 #: plone.app.textfield/plone/app/textfield/interfaces.py:53
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:29
 msgid "MIME type"
 msgstr "tip MIME"
 
@@ -3983,7 +3990,7 @@ msgstr "Aktivnost na rss povezavi manjka."
 msgid "Missing syndication settings action."
 msgstr "Povezava pri nastavitvi sindiciranja manjka"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:246
+#: plone.app.caching/plone/app/caching/operations/default.py:263
 msgid "Moderate caching"
 msgstr "Zmerno shranjevanje v predpomnilnik"
 
@@ -4234,7 +4241,7 @@ msgstr "Ni vnesenih naslovov ali poti"
 msgid "No alternative urls selected for removal."
 msgstr "Ni izbranih alternativnih naslovov za odstranitev"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:302
+#: plone.app.caching/plone/app/caching/operations/default.py:319
 msgid "No caching"
 msgstr "Brez rabe predpomnilnika"
 
@@ -4339,7 +4346,7 @@ msgstr "Število nivojev map prikazanih v navigaciji."
 msgid "Number of folder levels to show in the site map."
 msgstr "Število ravni map, ki jih kažemo na načrtu spletišča."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:75
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:71
 msgid "Number of items that will show up in one batch."
 msgstr "Število predmetov, ki naj se prikažejo v enem paketu."
 
@@ -4362,7 +4369,7 @@ msgstr "preglednica ODS"
 msgid "ODT document"
 msgstr "Dokument ODT"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:212
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:18
 msgid "Object Size"
 msgstr "Velikost predmeta"
 
@@ -4610,7 +4617,7 @@ msgstr "Pregled prispevkov v delu"
 msgid "Perform a workflow transition on the triggering object"
 msgstr "Izvedi prehod delovnega toka na prožilni predmet"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:127
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:128
 msgid "Permission denied for \"${title}\""
 msgstr "Dovoljenje zavrnjeno za \"${title}\""
 
@@ -4757,7 +4764,7 @@ msgstr "Plonova podpora obrazcev z3c.form"
 msgid "Plugins and Toolbar"
 msgstr "Vstavki in orodjarna"
 
-#: plone/app/theming/interfaces.py:236
+#: plone/app/theming/interfaces.py:237
 msgid "Plugins on which this plugin depends"
 msgstr "Vstavki od katerih je odvisen ta vstavek"
 
@@ -4891,7 +4898,8 @@ msgstr "Javni Osnutek"
 msgid "Public draft"
 msgstr "Javni osnutek"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:208
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:250
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:14
 msgid "Publication date"
 msgstr "Datum objave"
 
@@ -4943,6 +4951,10 @@ msgstr "Očisti"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:334
 msgid "Purging is still enabled while caching is disabled!"
 msgstr "Čiščenje je še vedno omogočeno, čeprav je onemogočeno shranjevanje v predpomnilnik!"
+
+#: plone/app/theming/browser/controlpanel.pt:606
+msgid "Put your plain css..."
+msgstr ""
 
 #. Default: "Puts your item in a review queue, so it can be published externally or internally."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -5257,8 +5269,9 @@ msgstr "Preglej naslov stanja"
 msgid "Review list"
 msgstr "Seznam prispevkov v recenziji"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:218
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:256
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:24
 msgid "Review state"
 msgstr "V stanju"
 
@@ -5355,7 +5368,7 @@ msgstr "Slika SVG"
 msgid "Save"
 msgstr "Shrani"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:114
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:115
 msgid "Save Defaults"
 msgstr "Shrani privzete vrednosti"
 
@@ -5400,7 +5413,7 @@ msgid "Search results for ${term}"
 msgstr "Zadetki iskanja po ključu ${item}"
 
 #: plone.app.collection/plone/app/collection/collection.py:31
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:42
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:38
 msgid "Search terms"
 msgstr "Ključne besede iskanja"
 
@@ -5474,7 +5487,7 @@ msgid "Select which IDs (short names) can act as fallback default pages for a co
 msgstr "Izberite katere identifikator (kratka imena) lahko služi kot rezervna privzeta spletna stran za vsebnik."
 
 #: plone.app.collection/plone/app/collection/collection.py:84
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:83
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:79
 msgid "Select which fields to display when 'Tabular view' is selected in the display menu."
 msgstr "Izberite katera polja naj bodo prikazana, ko je v menuju izbran \"Tabelarični pogled\""
 
@@ -5800,7 +5813,7 @@ msgid "Sort tabs on"
 msgstr "Sortiraj zavihke glede na"
 
 #: plone.app.collection/plone/app/collection/collection.py:45
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:55
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:51
 msgid "Sort the collection on this index"
 msgstr "Sortiraj zbirko glede na ta indeks"
 
@@ -5809,7 +5822,7 @@ msgid "Sort the default search on this index"
 msgstr "Sortiraj privzeto iskanje na tem indeksu"
 
 #: plone.app.collection/plone/app/collection/collection.py:57
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:61
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:57
 msgid "Sort the results in reversed order"
 msgstr "Sortiraj zadetke v obrnjenem vrstnem redu"
 
@@ -5859,7 +5872,8 @@ msgstr "Stabilni viri datotek in slik"
 msgid "Standard view"
 msgstr "Običajni pogled"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:219
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:258
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:25
 msgid "Start Date"
 msgstr "Začetni datum"
 
@@ -5894,7 +5908,7 @@ msgstr "Prenehaj izvajati pravila"
 msgid "Store a new version of the object"
 msgstr "Shrani novo verzijo tega predmeta"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:274
+#: plone.app.caching/plone/app/caching/operations/default.py:291
 msgid "Strong caching"
 msgstr "Močno shranjevanje v predpomnilnik"
 
@@ -5936,7 +5950,7 @@ msgstr "Predloženo, v čakanju na recenzijo"
 msgid "Subtopics"
 msgstr "Podteme"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:55
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:56
 msgid "Success"
 msgstr "Uspeh"
 
@@ -6050,7 +6064,7 @@ msgid "TIFF image"
 msgstr "Slika TIFF"
 
 #: plone.app.collection/plone/app/collection/collection.py:83
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:82
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:78
 msgid "Table Columns"
 msgstr "Stolpci Tabele"
 
@@ -6073,8 +6087,9 @@ msgstr "Tabelni pregled"
 msgid "Tag"
 msgstr "Značka"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:220
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:259
 #: plone.app.content/plone/app/content/browser/contents/tags.py:24
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:26
 msgid "Tags"
 msgstr "Značke"
 
@@ -6698,7 +6713,7 @@ msgstr "To uporabniško ime je rezervirano. Prosim uporabite drugo ime."
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
 msgstr "To bo namestilo plone.app.contenttypes in vas preusmerilo na obrazec, kjer boste preselili vaše vsebine."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:63
+#: plone.app.caching/plone/app/caching/operations/default.py:65
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
 msgstr "S to operacijo lahko izvedete vse funkcije shranjevanja v predpomnilnik z nastavitvami parametrov. Za večino primerov je verjetno najbolj enostavno uporabiti eno od preprostih operacij (Močno shranjevanje, Zmerno shranjevanje, Šibko shranjevanje ali Brez shranjevanja)."
 
@@ -6739,7 +6754,7 @@ msgstr "Odkljukajte to rubriko, če želite prikazovati besedilo nad standardno 
 msgid "Time in minutes after which the feed should be reloaded."
 msgstr "Čas v minutah po katerih mora biti polnenje ponovljeno."
 
-#: plone/app/theming/interfaces.py:200
+#: plone/app/theming/interfaces.py:201
 msgid "Time stamp when the custom CSS was changed. Used to generate custom.css with timestamp in URL."
 msgstr ""
 
@@ -6759,7 +6774,7 @@ msgstr "Namig: lahko uporabljate * za avtomatsko zaključevanje"
 
 #. Default: "Title"
 #: CMFPlone/interfaces/controlpanel.py:781
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:282
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:257
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
 msgid "Title"
 msgstr "Naslov"
@@ -6802,7 +6817,8 @@ msgstr "Pozicija orodjarne"
 msgid "Top"
 msgstr "Vrh"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:222
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:260
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:28
 msgid "Total comments"
 msgstr "Vseh komentarjev"
 
@@ -6854,8 +6870,9 @@ msgstr "Dogodek, ki sproži prožilnik"
 msgid "Twitter username"
 msgstr "Uporabniško ime na Twitterju"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:221
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:261
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:27
 msgid "Type"
 msgstr "Vrsta vsebin"
 
@@ -7059,7 +7076,7 @@ msgstr "Uporabi avtomatsko ustvarjene UUID kot uporabniške imena za nove uporab
 msgid "Use email address as login name"
 msgstr "Uporabite poštni naslov kot ime za prijavo"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:303
+#: plone.app.caching/plone/app/caching/operations/default.py:320
 msgid "Use this operation to keep the response out of all caches."
 msgstr "Uporabite to operacijo, da bi bil odgovor izven vseh predpomnilnikov."
 
@@ -7331,7 +7348,7 @@ msgstr "Opozorilo: onemogočanje tega je lahko nevarno. Onemogočite samo, če r
 msgid "We will use this address if you need to recover your password"
 msgstr "Uporabili bomo ta naslov, če je treba obnoviti vaše geslo"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:218
+#: plone.app.caching/plone/app/caching/operations/default.py:235
 msgid "Weak caching"
 msgstr "Šibko shranjevanje v predpomnilnik"
 
@@ -7485,7 +7502,7 @@ msgstr "Ne morete urejati vsebine, razen če ${migrate}"
 msgid "You can't edit this content. Ask your administrator to migrate to Dexterity!"
 msgstr "Ne morete urejati teh vsebin. Prosite vašega skrbnika za selitev v Dexterity!"
 
-#: plone.app.content/plone/app/content/browser/constraintypes.py:105
+#: plone.app.content/plone/app/content/browser/constraintypes.py:108
 msgid "You cannot have a type as a secondary type without having it allowed. You have selected ${types}."
 msgstr "Ne morete imeti vrsto vsebine kot sekundarno vrsto, če ni tudi dovoljena. Izbrali ste ${types}."
 
@@ -8510,7 +8527,7 @@ msgid "description_groups_management2"
 msgstr "Simbol ${image_link_icon} kaže, da je vloga podedovana iz vloge, ki izhaja iz članstva v neki drugi skupini."
 
 #. Default: "You can import a Zip file containing an existing theme. This should contain a single top level directory, which will be used as the theme identifier. If no Diazo <code>rules.xml</code> or <code>manifest.cfg</code> file is found in this directory, a default <code>rules.xml</code> file will be created."
-#: plone/app/theming/browser/controlpanel.pt:729
+#: plone/app/theming/browser/controlpanel.pt:730
 msgid "description_import"
 msgstr "Za uvoz preobleke lahko uvozite ZIP datoteko s preobleko. Ta mora vsebovati eno samo vrhovno mapo, ki služi tudi kot identifikator preobleke. Če v tej mapi ni Diazo datotek <code>rules.xml</code> ali <code>manifest.cfg</code>, bo ustvarjena privzeta datoteka <code>rules.xml</code>."
 
@@ -8649,7 +8666,7 @@ msgstr "obrazec za včlanitev"
 #. Default: "There are currently no items in this folder."
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:173
 #: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
-#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:251
+#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:258
 msgid "description_no_items_in_folder"
 msgstr "Trenutno v tej mapi ni prispevkov."
 
@@ -9237,12 +9254,12 @@ msgid "external_website"
 msgstr "Obišči zunanje spletišče"
 
 #. Default: "The '${value1}' vocabulary value conflicts with '${value2}'."
-#: plone.schemaeditor/plone/schemaeditor/fields.py:192
+#: plone.schemaeditor/plone/schemaeditor/fields.py:193
 msgid "field_edit_error_conflicting_values"
 msgstr "Vrednost '${value1}' je v konfliktu z vrednostjo '${value2}'."
 
 #. Default: "You can not set a vocabulary name AND vocabulary values. Please clear values field or set no value here."
-#: plone.schemaeditor/plone/schemaeditor/fields.py:224
+#: plone.schemaeditor/plone/schemaeditor/fields.py:225
 msgid "field_edit_error_values_and_name"
 msgstr "Ne morete sočasno postaviti ime besednjaka in njegovih vrednosti. Prosimo zbrišite polje vrednosti ali ne postavljajte vrednosti tu."
 
@@ -9819,7 +9836,7 @@ msgid "heading_sent_password"
 msgstr "Potrdilo o ponovni nastavitvi gesla je bilo poslano"
 
 #. Default: "Restrict what types of content can be added"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:135
+#: plone.app.content/plone/app/content/browser/constraintypes.py:138
 msgid "heading_set_content_type_restrictions"
 msgstr "Omeji kakšne vrste vsebin lahko dodamo"
 
@@ -9962,7 +9979,7 @@ msgid "help_add_actions_portlet"
 msgstr "Portlet aktivnosti prikazuje aktivnosti glede na kategorijo"
 
 #. Default: "Select the restriction policy in this location"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:64
+#: plone.app.content/plone/app/content/browser/constraintypes.py:67
 msgid "help_add_restriction_mode"
 msgstr "Prosim izberite politiko omejitev v tej lokaciji."
 
@@ -10132,7 +10149,7 @@ msgstr "Prosim vnesite trenutno geslo."
 
 #. Default: "Define your own custom CSS in the field below. This is a good place for quick customizations of things like colors and the toolbar. Definitions here will override previously defined CSS of Plone. Please use this only for small customizations, as it is hard to keep track of changes here. For bigger changes you most likely want to customize a full theme and make your changes there."
 #: plone/app/theming/browser/controlpanel.pt:597
-#: plone/app/theming/interfaces.py:182
+#: plone/app/theming/interfaces.py:183
 msgid "help_custom_css"
 msgstr ""
 
@@ -10233,7 +10250,7 @@ msgid "help_enable_immediately"
 msgstr "Z izborom te opcije takoj omogočite sveže ustvarjeno preobleko."
 
 #. Default: "Select this option to enable the newly uploaded theme immediately."
-#: plone/app/theming/browser/controlpanel.pt:772
+#: plone/app/theming/browser/controlpanel.pt:773
 msgid "help_enable_new_theme"
 msgstr "Če izberete to možnost, takoj omogočite sveže preneseno preobleko."
 
@@ -10387,7 +10404,7 @@ msgid "help_ical_import_enable"
 msgstr "Kliknite za omogočanje uvoza datotek icalendar v tem kontekstu."
 
 #. Default: "Controls what types are addable in this location"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:73
+#: plone.app.content/plone/app/content/browser/constraintypes.py:76
 msgid "help_immediately_addable_types"
 msgstr "Kontrolira katere vrste vsebin je dovoljeno dodajati na tej lokaciji."
 
@@ -10419,7 +10436,7 @@ msgid "help_limit_number"
 msgstr "Če je odkljukano, se bo spodaj prikazalo samo Število prispevkov."
 
 #. Default: "Select which types should be available in the 'More…' submenu <em>instead</em> of in the main pulldown. This is useful to indicate that these are not the preferred types in this location, but are allowed if you really need them."
-#: plone.app.content/plone/app/content/browser/constraintypes.py:83
+#: plone.app.content/plone/app/content/browser/constraintypes.py:86
 msgid "help_locally_allowed_types"
 msgstr "Izberite vrste vsebin, ki so na voljo v roletnem menuju 'Več...' <em>namesto</em> glavnega roletnega menuja. To je namenjeno prikazu, da to niso zaželene vrste vsebin na tej lokaciji, a so dovoljene, če jih zares potrebujete."
 
@@ -10665,7 +10682,7 @@ msgid "help_render_body"
 msgstr "Če obstaja besedilo telesa vsebine, ga prikaži, sicer prikaži samo opis."
 
 #. Default: "Select this option to replace any existing theme that may have been uploaded previously."
-#: plone/app/theming/browser/controlpanel.pt:786
+#: plone/app/theming/browser/controlpanel.pt:787
 msgid "help_replace_existing"
 msgstr "Izberite to možnost za zamenjavo obstoječe preobleke, ki je bila morda prenesena že prej."
 
@@ -10831,7 +10848,7 @@ msgid "help_text_transform"
 msgstr "Uporabite te nastavitve, če želite pretvoriti besedilo komentarjev. Lahko izberete izmed \"Enostavno besedilo\" in \"Inteligentno besedilo\". \"Inteligentno besedilo\" pretvori enostavno besedilo v HTML, kjer ohrani prelome vrstic in zamikanje odstavkov, spletne naslove in naslove elektronske pošte pa pretvori v aktivne povezave."
 
 #. Default: "Select a file to upload."
-#: plone/app/theming/browser/controlpanel.pt:750
+#: plone/app/theming/browser/controlpanel.pt:751
 msgid "help_theme_archive"
 msgstr "Izberite datoteko za prenos na strežnik."
 
@@ -11354,7 +11371,7 @@ msgid "label_boolean_criteria_bool"
 msgstr "Vrednost"
 
 #. Default: "Yes/No"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:91
+#: plone.schemaeditor/plone/schemaeditor/fields.py:92
 msgid "label_boolean_field"
 msgstr "Da/Ne"
 
@@ -11498,7 +11515,7 @@ msgid "label_checkout_folder"
 msgstr "Mapa za hranjenje končnega spremenjenega prispevka."
 
 #. Default: "Choice"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:107
+#: plone.schemaeditor/plone/schemaeditor/fields.py:108
 msgid "label_choice_field"
 msgstr "Izbira"
 
@@ -11734,6 +11751,7 @@ msgstr "Trenutno geslo"
 
 #. Default: "Custom CSS"
 #: plone/app/theming/browser/controlpanel.pt:596
+#: plone/app/theming/interfaces.py:179
 msgid "label_custom_css"
 msgstr ""
 
@@ -11755,7 +11773,7 @@ msgid "label_dashboard"
 msgstr "Oglasna deska"
 
 #. Default: "Date"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:97
+#: plone.schemaeditor/plone/schemaeditor/fields.py:98
 msgid "label_date_field"
 msgstr "Datum"
 
@@ -11775,7 +11793,7 @@ msgid "label_dateandtime_settings"
 msgstr "Nastavitve datuma in časa"
 
 #. Default: "Date/Time"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:95
+#: plone.schemaeditor/plone/schemaeditor/fields.py:96
 msgid "label_datetime_field"
 msgstr "Datum/Čas"
 
@@ -11914,7 +11932,7 @@ msgid "label_enable_immediately"
 msgstr "Takoj omogoči novo preobleko"
 
 #. Default: "Immediately enable new theme"
-#: plone/app/theming/browser/controlpanel.pt:771
+#: plone/app/theming/browser/controlpanel.pt:772
 msgid "label_enable_new_theme"
 msgstr "Takoj omogoči novo preobleko"
 
@@ -12093,7 +12111,7 @@ msgid "label_first_weekday"
 msgstr "Prvi dan v tednu"
 
 #. Default: "Floating-point number"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:89
+#: plone.schemaeditor/plone/schemaeditor/fields.py:90
 msgid "label_float_field"
 msgstr "Število v plavajoči vejici"
 
@@ -12226,7 +12244,7 @@ msgid "label_image_caption"
 msgstr "Opis slike"
 
 #. Default: "Allowed types"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:72
+#: plone.app.content/plone/app/content/browser/constraintypes.py:75
 msgid "label_immediately_addable_types"
 msgstr "Najbolj zaželene zvsti"
 
@@ -12260,7 +12278,7 @@ msgid "label_inherit_local_roles"
 msgstr "Deduj pravice iz višjih nivojev"
 
 #. Default: "Integer"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:87
+#: plone.schemaeditor/plone/schemaeditor/fields.py:88
 msgid "label_integer_field"
 msgstr "Celo število"
 
@@ -12270,7 +12288,7 @@ msgid "label_internal_url"
 msgstr "Notranje"
 
 #. Default: "Item count"
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:74
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:70
 msgid "label_item_count"
 msgstr "Število predmetov"
 
@@ -12317,7 +12335,7 @@ msgid "label_limit_number"
 msgstr "Omeji število zadetkov iskanja"
 
 #. Default: "Secondary types"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:82
+#: plone.app.content/plone/app/content/browser/constraintypes.py:85
 msgid "label_locally_allowed_types"
 msgstr "Sekundarne vrste vsebin"
 
@@ -12447,7 +12465,7 @@ msgid "label_move_content_to_languages"
 msgstr "Prenesi vsebino v ustrezno jezikovno korensko mapo"
 
 #. Default: "Multiple Choice"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:247
+#: plone.schemaeditor/plone/schemaeditor/fields.py:248
 msgid "label_multi_choice_field"
 msgstr "Večkratna Izbira"
 
@@ -12639,7 +12657,7 @@ msgid "label_password_change_mail"
 msgstr "Generiran bo naslov, ki ga boste prejeli po elektronski pošti. Ko boste prišli na sporočeni URL, boste na tej strani lahko spremenili geslo in dokončali postopek prijave."
 
 #. Default: "Password"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:93
+#: plone.schemaeditor/plone/schemaeditor/fields.py:94
 msgid "label_password_field"
 msgstr "Geslo"
 
@@ -12869,7 +12887,7 @@ msgid "label_remove_selected_users"
 msgstr "Osdtrani izbrane uporabnike"
 
 #. Default: "Replace existing theme"
-#: plone/app/theming/browser/controlpanel.pt:785
+#: plone/app/theming/browser/controlpanel.pt:786
 msgid "label_replace_existing"
 msgstr "Zamenjaj obstoječo temo"
 
@@ -13147,12 +13165,12 @@ msgstr "Nekatere vrste vsebin:"
 
 #. Default: "Sort on"
 #: CMFPlone/interfaces/controlpanel.py:912
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:54
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:50
 msgid "label_sort_on"
 msgstr "Sortiraj po"
 
 #. Default: "Reversed order"
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:60
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:56
 msgid "label_sort_reversed"
 msgstr "V obratnem vrstnem redu"
 
@@ -13209,7 +13227,7 @@ msgid "label_template_mixin"
 msgstr "Poglej šablono"
 
 #. Default: "Text"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:85
+#: plone.schemaeditor/plone/schemaeditor/fields.py:86
 msgid "label_text_field"
 msgstr "Besedilo"
 
@@ -13225,7 +13243,7 @@ msgid "label_text_transform"
 msgstr "Transformacija besedila komentarja"
 
 #. Default: "Text line (String)"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:81
+#: plone.schemaeditor/plone/schemaeditor/fields.py:82
 msgid "label_textline_field"
 msgstr "Vrstica besedila (Niz)"
 
@@ -13335,7 +13353,7 @@ msgid "label_translations_should_be_here"
 msgstr "Prevodi, ki so na voljo za to vsebino bi morali biti tu"
 
 #. Default: "Type restrictions"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:63
+#: plone.app.content/plone/app/content/browser/constraintypes.py:66
 msgid "label_type_restrictions"
 msgstr "Omejitve vrst vsebin"
 
@@ -14908,7 +14926,7 @@ msgid "theming_controlpanel_delete_confirm_description"
 msgstr "Te operacije ne morete preklicati. Vedite, da preobleke, ki so določene v datotekah, ne morete zbrisati znotraj Plona."
 
 #. Default: "New theme"
-#: plone/app/theming/browser/controlpanel.pt:648
+#: plone/app/theming/browser/controlpanel.pt:649
 msgid "theming_controlpanel_new_theme"
 msgstr "Nova preobleka"
 
@@ -14918,7 +14936,7 @@ msgid "theming_controlpanel_new_theme_description"
 msgstr "Prosim vnesite podrobnosti vaše nove preobleke"
 
 #. Default: "Upload theme"
-#: plone/app/theming/browser/controlpanel.pt:727
+#: plone/app/theming/browser/controlpanel.pt:728
 msgid "theming_controlpanel_upload"
 msgstr "Prenesite preobleko na strežnik"
 

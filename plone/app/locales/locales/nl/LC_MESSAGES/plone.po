@@ -67,7 +67,7 @@ msgstr "${action/title}"
 msgid "${count} alternative urls added."
 msgstr "${count} alternatieve urls toegevoegd."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:139
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:140
 msgid "${items} could not be found"
 msgstr "${items} konden niet gevonden worden."
 
@@ -1077,15 +1077,15 @@ msgstr ""
 msgid "CSS/LESS files"
 msgstr "CSS/LESS bestanden"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:275
+#: plone.app.caching/plone/app/caching/operations/default.py:292
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
 msgstr ""
 
-#: plone.app.caching/plone/app/caching/operations/default.py:247
+#: plone.app.caching/plone/app/caching/operations/default.py:264
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires."
 msgstr ""
 
-#: plone.app.caching/plone/app/caching/operations/default.py:219
+#: plone.app.caching/plone/app/caching/operations/default.py:236
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
 msgstr ""
 
@@ -1644,7 +1644,8 @@ msgstr "Maak een nieuwe Plone site"
 msgid "Created before"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:205
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:248
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:11
 msgid "Created on"
 msgstr "Aangemaakt op"
 
@@ -1653,8 +1654,9 @@ msgstr "Aangemaakt op"
 msgid "Creation date"
 msgstr "Aanmaakdatum"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:206
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:249
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:12
 msgid "Creator"
 msgstr "Auteur"
 
@@ -1698,7 +1700,7 @@ msgstr "Huidige actieve configuratie"
 msgid "Current logged in user"
 msgstr "Huidige ingelogde gebruiker"
 
-#: plone/app/theming/interfaces.py:197
+#: plone/app/theming/interfaces.py:198
 msgid "Custom CSS Timestamp"
 msgstr ""
 
@@ -1837,7 +1839,7 @@ msgstr "Standaard tijdzone"
 msgid "Define list of modules that will be defined empty on RequireJS build steps to prevent loading modules multiple times."
 msgstr "Definieer een lijst van modules die leeg zijn bij de RequireJS generatie om te voorkomen dat modules meerdere keren worden geladen."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:43
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:39
 msgid "Define the search terms for the items you want to list by choosing what to match on. The list of results will be dynamically updated"
 msgstr "Definieer de zoektermen voor de items die u wilt tonen. De lijst van resultaten wordt dynamisch bijgewerkt."
 
@@ -1896,7 +1898,7 @@ msgstr "Actie verwijderen?"
 msgid "Delete the triggering item"
 msgstr "Verwijder het triggerende item"
 
-#: plone/app/theming/interfaces.py:235
+#: plone/app/theming/interfaces.py:236
 msgid "Dependencies"
 msgstr "Afhankelijkheden"
 
@@ -1914,8 +1916,8 @@ msgid "Depends on another bundle"
 msgstr "Afhankelijk van een andere bundel"
 
 #: CMFPlone/interfaces/controlpanel.py:1627
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:207
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
+#: plone.app.contenttypes/plone/app/contenttypes/schema/image.xml
 msgid "Description"
 msgstr "Beschrijving"
 
@@ -2040,7 +2042,7 @@ msgstr "Bevat de bundel een RequireJS- of LESS-bestand?"
 msgid "Domains"
 msgstr "Domeinen"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:108
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:109
 msgid "Done"
 msgstr ""
 
@@ -2102,7 +2104,7 @@ msgid "Edit"
 msgstr "Bewerken"
 
 #: plone.dexterity/plone/dexterity/browser/edit.py:80
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:170
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:171
 msgid "Edit ${name}"
 msgstr "Bewerk ${name}"
 
@@ -2114,7 +2116,7 @@ msgstr "Bewerk ${operation} opties"
 msgid "Edit ${operation} options for Ruleset: ${ruleset}"
 msgstr "Bewerk ${operation} opties voor regelset: ${ruleset}"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:166
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:167
 msgid "Edit ${title} (${name})"
 msgstr "Bewerk ${title} (${name})"
 
@@ -2378,7 +2380,8 @@ msgstr ""
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "Schakelt de LiveSearch functie in waarmee live resultaten worden getoond indien de browser JavaScript ondersteunt."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:209
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:251
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:15
 msgid "End Date"
 msgstr "Einddatum"
 
@@ -2556,7 +2559,7 @@ msgstr "Huidige gebruiker uitsluiten van geadresseerden "
 msgid "Exclude the Current Context"
 msgstr "De huidige context uitsluiten"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:210
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:16
 msgid "Excluded from navigation"
 msgstr "Uitgesloten van navigatiestructuur"
 
@@ -2564,8 +2567,9 @@ msgstr "Uitgesloten van navigatiestructuur"
 msgid "Execute transition ${transition}"
 msgstr "Transitie ${transition} uitvoeren"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:211
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:252
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:17
 msgid "Expiration date"
 msgstr "Vervaldatum"
 
@@ -2690,7 +2694,7 @@ msgstr "Kon geen standaardpagina instellen"
 msgid "Failsafe Login"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:56
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:57
 msgid "Failure"
 msgstr "Fout"
 
@@ -2800,7 +2804,7 @@ msgstr "Zoek items die andere items kunnen bevatten"
 msgid "Find the collection which provides the items to list"
 msgstr "Zoek de verzameling die de items bevat om te tonen"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:214
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:254
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Folder.xml
 #: plone.app.dexterity/plone/app/dexterity/profiles/testing/types/Folder.xml
 msgid "Folder"
@@ -2869,7 +2873,7 @@ msgstr "Algemene type-instellingen."
 msgid "Generate tabs for items other than folders."
 msgstr "Het genereren van tabs voor andere bestanden dan mappen."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:62
+#: plone.app.caching/plone/app/caching/operations/default.py:64
 msgid "Generic caching"
 msgstr ""
 
@@ -3005,7 +3009,8 @@ msgstr "Aantal te tonen items."
 msgid "However, this is the list of the already translated languages for the requested content."
 msgstr "Hoewel, dit is de lijst met overige vertalingen."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:213
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:253
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:19
 msgid "ID"
 msgstr "ID"
 
@@ -3151,7 +3156,7 @@ msgid "Images can be referenced in pages or displayed in an album."
 msgstr "Naar afbeeldingen kan verwezen worden in pagina's of ze kunnen getoond worden in een album."
 
 #: plone.app.caching/plone/app/caching/browser/import.pt:113
-#: plone/app/theming/browser/controlpanel.pt:793
+#: plone/app/theming/browser/controlpanel.pt:794
 msgid "Import"
 msgstr "Importeren"
 
@@ -3423,7 +3428,7 @@ msgstr "Taal onafhankelijk (standaard-instelling)"
 msgid "Larger than"
 msgstr "Groter dan"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:215
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:21
 msgid "Last comment date"
 msgstr "Datum laatste  reactie"
 
@@ -3431,7 +3436,8 @@ msgstr "Datum laatste  reactie"
 msgid "Last compiled date"
 msgstr "Datum voor het laatst gecompileerd"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:217
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:255
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:23
 msgid "Last modified"
 msgstr "Laatst gewijzigd"
 
@@ -3460,13 +3466,13 @@ msgstr "Laat u bepalen hoe de navigatie is opgebouwd in uw site. Als u wijziging
 msgid "Lets you upload a file to the site."
 msgstr "Laat je een bestand uploaden naar de website."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:66
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:62
 #: plone.portlet.collection/plone/portlet/collection/collection.py:70
 msgid "Limit"
 msgstr "Limiet"
 
 #: plone.app.collection/plone/app/collection/collection.py:69
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:67
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:63
 msgid "Limit Search Results"
 msgstr "Beperk zoekresultaten"
 
@@ -3527,9 +3533,9 @@ msgstr "Lokale rollen"
 msgid "Local configuration for plone.protect"
 msgstr "Lokale instellingen voor plone.protect"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:216
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_5/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:22
 msgid "Location"
 msgstr "Locatie"
 
@@ -3632,6 +3638,7 @@ msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/interfaces.py:174
 #: plone.app.textfield/plone/app/textfield/interfaces.py:53
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:29
 msgid "MIME type"
 msgstr "MIME-type"
 
@@ -3926,7 +3933,7 @@ msgstr "RSS-link actie ontbreekt"
 msgid "Missing syndication settings action."
 msgstr "Ontbrekende RSS-instellingen actie."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:246
+#: plone.app.caching/plone/app/caching/operations/default.py:263
 msgid "Moderate caching"
 msgstr "Moderate caching"
 
@@ -4172,7 +4179,7 @@ msgstr "Geen URL's of paden opgegeven."
 msgid "No alternative urls selected for removal."
 msgstr "Geen alternatieve URL's gekozen voor verwijdering."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:302
+#: plone.app.caching/plone/app/caching/operations/default.py:319
 msgid "No caching"
 msgstr "Geen caching"
 
@@ -4277,7 +4284,7 @@ msgstr "Aantal getoonde mapniveau's in de navigatie"
 msgid "Number of folder levels to show in the site map."
 msgstr "Aantal niveau's van submappen in de sitemap tonen."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:75
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:71
 msgid "Number of items that will show up in one batch."
 msgstr "Aantal items dat in een deellijst (batch) komt."
 
@@ -4300,7 +4307,7 @@ msgstr "ODS-spreadsheet"
 msgid "ODT document"
 msgstr "ODT-bestand"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:212
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:18
 msgid "Object Size"
 msgstr "Objectgrootte"
 
@@ -4542,7 +4549,7 @@ msgstr "Ingediend"
 msgid "Perform a workflow transition on the triggering object"
 msgstr "Voert een publicatieproces-transitie uit op het object"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:127
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:128
 msgid "Permission denied for \"${title}\""
 msgstr "Toegang geweigerd voor \"${title}\""
 
@@ -4687,7 +4694,7 @@ msgstr "Plone z3c.form ondersteuning"
 msgid "Plugins and Toolbar"
 msgstr "Plugins en menubalk"
 
-#: plone/app/theming/interfaces.py:236
+#: plone/app/theming/interfaces.py:237
 msgid "Plugins on which this plugin depends"
 msgstr "Plugins waar deze plugin van afhankelijk is"
 
@@ -4810,7 +4817,8 @@ msgstr "Publiek concept"
 msgid "Public draft"
 msgstr "Publiek concept"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:208
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:250
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:14
 msgid "Publication date"
 msgstr "Publicatiedatum"
 
@@ -4855,6 +4863,10 @@ msgstr ""
 
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:334
 msgid "Purging is still enabled while caching is disabled!"
+msgstr ""
+
+#: plone/app/theming/browser/controlpanel.pt:606
+msgid "Put your plain css..."
 msgstr ""
 
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -5162,8 +5174,9 @@ msgstr "Titel redactiestatus"
 msgid "Review list"
 msgstr "Revisielijst"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:218
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:256
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:24
 msgid "Review state"
 msgstr "Status"
 
@@ -5254,7 +5267,7 @@ msgstr "SVG-afbeelding"
 msgid "Save"
 msgstr "Opslaan"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:114
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:115
 msgid "Save Defaults"
 msgstr "Sla standaardinstellingen op"
 
@@ -5298,7 +5311,7 @@ msgid "Search results for ${term}"
 msgstr "Zoekresultaten voor ${term}"
 
 #: plone.app.collection/plone/app/collection/collection.py:31
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:42
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:38
 msgid "Search terms"
 msgstr "Zoektermen"
 
@@ -5371,7 +5384,7 @@ msgid "Select which IDs (short names) can act as fallback default pages for a co
 msgstr ""
 
 #: plone.app.collection/plone/app/collection/collection.py:84
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:83
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:79
 msgid "Select which fields to display when 'Tabular view' is selected in the display menu."
 msgstr "Selecteer welke velden getoond worden als 'tabelweergave' is geselecteerd in het weergavemenu."
 
@@ -5687,7 +5700,7 @@ msgid "Sort tabs on"
 msgstr "Sorteer tabs op"
 
 #: plone.app.collection/plone/app/collection/collection.py:45
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:55
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:51
 msgid "Sort the collection on this index"
 msgstr "Sorteer de verzameling op deze index"
 
@@ -5696,7 +5709,7 @@ msgid "Sort the default search on this index"
 msgstr "Sorteer de zoekresultaten op basis van een van deze eigenschappen."
 
 #: plone.app.collection/plone/app/collection/collection.py:57
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:61
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:57
 msgid "Sort the results in reversed order"
 msgstr "Sorteer de resultaten in omgekeerde volgorde"
 
@@ -5746,7 +5759,8 @@ msgstr ""
 msgid "Standard view"
 msgstr "Standaard"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:219
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:258
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:25
 msgid "Start Date"
 msgstr "Startdatum"
 
@@ -5781,7 +5795,7 @@ msgstr "Stop met het uitvoeren van regels."
 msgid "Store a new version of the object"
 msgstr ""
 
-#: plone.app.caching/plone/app/caching/operations/default.py:274
+#: plone.app.caching/plone/app/caching/operations/default.py:291
 msgid "Strong caching"
 msgstr ""
 
@@ -5821,7 +5835,7 @@ msgstr "Ingediend, wacht op redactie"
 msgid "Subtopics"
 msgstr "Sub-zoekmappen"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:55
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:56
 msgid "Success"
 msgstr "Gelukt"
 
@@ -5934,7 +5948,7 @@ msgid "TIFF image"
 msgstr "TIFF-afbeelding"
 
 #: plone.app.collection/plone/app/collection/collection.py:83
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:82
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:78
 msgid "Table Columns"
 msgstr "Tabelkolommen"
 
@@ -5957,8 +5971,9 @@ msgstr "Tabel"
 msgid "Tag"
 msgstr "Tag"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:220
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:259
 #: plone.app.content/plone/app/content/browser/contents/tags.py:24
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:26
 msgid "Tags"
 msgstr "Tags"
 
@@ -6571,7 +6586,7 @@ msgstr "Deze gebruikersnaam is niet toegestaan, kies een andere naam."
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
 msgstr "Dit installeert plone.app.contenttypes en stuurt u door naar een formulier waar u de content kan migreren."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:63
+#: plone.app.caching/plone/app/caching/operations/default.py:65
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
 msgstr ""
 
@@ -6612,7 +6627,7 @@ msgstr "Vink dit vakje aan als u de bovenstaande tekst wil laten zien zonder de 
 msgid "Time in minutes after which the feed should be reloaded."
 msgstr "Tijd in minuten waarna de feed opnieuw moet worden geladen."
 
-#: plone/app/theming/interfaces.py:200
+#: plone/app/theming/interfaces.py:201
 msgid "Time stamp when the custom CSS was changed. Used to generate custom.css with timestamp in URL."
 msgstr ""
 
@@ -6631,7 +6646,7 @@ msgid "Tip: you can use * to autocomplete."
 msgstr "Hint: je kan * gebruiken voor automatisch aanvullen"
 
 #: CMFPlone/interfaces/controlpanel.py:781
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:282
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:257
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
 msgid "Title"
 msgstr "Titel"
@@ -6674,7 +6689,8 @@ msgstr "Toolbar positie"
 msgid "Top"
 msgstr "Bovenaan"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:222
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:260
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:28
 msgid "Total comments"
 msgstr "Aantal reacties"
 
@@ -6726,8 +6742,9 @@ msgstr "Veroorzakende gebeurtenis"
 msgid "Twitter username"
 msgstr ""
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:221
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:261
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:27
 msgid "Type"
 msgstr "Type"
 
@@ -6929,7 +6946,7 @@ msgstr "Gebruik automatisch gegenereerde UUIDS als user ID's voor nieuwe gebruik
 msgid "Use email address as login name"
 msgstr "Gebruik e-mailadres als loginnaam"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:303
+#: plone.app.caching/plone/app/caching/operations/default.py:320
 msgid "Use this operation to keep the response out of all caches."
 msgstr ""
 
@@ -7191,7 +7208,7 @@ msgstr "Waarschuwing: het kan gevaarlijk zijn om deze optie uit te schakelen."
 msgid "We will use this address if you need to recover your password"
 msgstr "We gebruiken dit adres voor wachtwoordherstel"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:218
+#: plone.app.caching/plone/app/caching/operations/default.py:235
 msgid "Weak caching"
 msgstr "Weak caching"
 
@@ -7343,7 +7360,7 @@ msgstr "U kunt deze inhoud niet bewerken voordat u ${migrate}"
 msgid "You can't edit this content. Ask your administrator to migrate to Dexterity!"
 msgstr "Deze inhoud kan niet worden bewerkt. Vraag us website-beheerder om te migreren naar Dexterity!"
 
-#: plone.app.content/plone/app/content/browser/constraintypes.py:105
+#: plone.app.content/plone/app/content/browser/constraintypes.py:108
 msgid "You cannot have a type as a secondary type without having it allowed. You have selected ${types}."
 msgstr ""
 
@@ -8430,7 +8447,7 @@ msgstr "Het symbool ${image_link_icon} duidt op een rol overgenomen van een lidm
 #. <code>manifest.cfg</code> file is found in this directory, a default
 #. <code>rules.xml</code> file will be created."
 #. Default: "You can import a Zip file containing an existing theme. This should contain a single top level directory, which will be used as the theme identifier. If no Diazo <code>rules.xml</code> or <code>manifest.cfg</code> file is found in this directory, a default <code>rules.xml</code> file will be created."
-#: plone/app/theming/browser/controlpanel.pt:729
+#: plone/app/theming/browser/controlpanel.pt:730
 msgid "description_import"
 msgstr "Een zip bestand met een bestand thema kan worden geïmporteerd. Deze moet een enkele map bevatten welke wordt gebruikt als thema identifier. Indien er geen Diazo <code>rules.xml</code> of <code>manifest.cfg</code> bestand is gevonden in deze map wordt een standaard <code>rules.xml</code> bestand gecreëerd."
 
@@ -8583,7 +8600,7 @@ msgstr "registratieformulier"
 #. Default: "There are currently no items in this folder."
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:173
 #: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
-#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:251
+#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:258
 msgid "description_no_items_in_folder"
 msgstr "Op dit moment bevinden zich geen items in deze map."
 
@@ -9238,12 +9255,12 @@ msgid "external_website"
 msgstr "Bezoek externe website"
 
 #. Default: "The '${value1}' vocabulary value conflicts with '${value2}'."
-#: plone.schemaeditor/plone/schemaeditor/fields.py:192
+#: plone.schemaeditor/plone/schemaeditor/fields.py:193
 msgid "field_edit_error_conflicting_values"
 msgstr "'${value1}' in de woordenlijst conflicteert met '${value2}'."
 
 #. Default: "You can not set a vocabulary name AND vocabulary values. Please clear values field or set no value here."
-#: plone.schemaeditor/plone/schemaeditor/fields.py:224
+#: plone.schemaeditor/plone/schemaeditor/fields.py:225
 msgid "field_edit_error_values_and_name"
 msgstr "U kunt geen id voor een woordenlijst en losse woorden instellen. Maak het woordenveld leeg of stel hier geen waarde in."
 
@@ -9821,7 +9838,7 @@ msgid "heading_sent_password"
 msgstr "Aanvraag wachtwoord wijzigen gelukt."
 
 #. Default: "Restrict what types of content can be added"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:135
+#: plone.app.content/plone/app/content/browser/constraintypes.py:138
 msgid "heading_set_content_type_restrictions"
 msgstr "Beperken welke content types toegevoegd kunnen worden"
 
@@ -9966,7 +9983,7 @@ msgid "help_add_actions_portlet"
 msgstr "Een actieportlet toont acties van een categorie."
 
 #. Default: "Select the restriction policy in this location"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:64
+#: plone.app.content/plone/app/content/browser/constraintypes.py:67
 msgid "help_add_restriction_mode"
 msgstr "Selecteer het beperkingenbeleid voor deze map."
 
@@ -10144,7 +10161,7 @@ msgstr "Voer uw huidige wachtwoord in."
 
 #. Default: "Define your own custom CSS in the field below. This is a good place for quick customizations of things like colors and the toolbar. Definitions here will override previously defined CSS of Plone. Please use this only for small customizations, as it is hard to keep track of changes here. For bigger changes you most likely want to customize a full theme and make your changes there."
 #: plone/app/theming/browser/controlpanel.pt:597
-#: plone/app/theming/interfaces.py:182
+#: plone/app/theming/interfaces.py:183
 msgid "help_custom_css"
 msgstr ""
 
@@ -10253,7 +10270,7 @@ msgstr "Selecteer deze optie om het zojuist aangemaakte thema direct in te schak
 
 #. immediately."
 #. Default: "Select this option to enable the newly uploaded theme immediately."
-#: plone/app/theming/browser/controlpanel.pt:772
+#: plone/app/theming/browser/controlpanel.pt:773
 msgid "help_enable_new_theme"
 msgstr "Selecteer deze optie om het nieuwe geüploade thema direct te activeren "
 
@@ -10416,7 +10433,7 @@ msgid "help_ical_import_enable"
 msgstr "Klik om de icalendar import feature in te schakelen op deze context"
 
 #. Default: "Controls what types are addable in this location"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:73
+#: plone.app.content/plone/app/content/browser/constraintypes.py:76
 msgid "help_immediately_addable_types"
 msgstr "Bepaalt welke typen er op deze plek kunnen worden toegevoegd."
 
@@ -10457,7 +10474,7 @@ msgid "help_limit_number"
 msgstr "Indien geselecteerd, wordt alleen het onderstaande aantal items weergegeven."
 
 #. Default: "Select which types should be available in the 'More…' submenu <em>instead</em> of in the main pulldown. This is useful to indicate that these are not the preferred types in this location, but are allowed if you really need them."
-#: plone.app.content/plone/app/content/browser/constraintypes.py:83
+#: plone.app.content/plone/app/content/browser/constraintypes.py:86
 msgid "help_locally_allowed_types"
 msgstr "Selecteer welke typen er beschikbaar moeten zijn in het 'Meer...' submenu <em>in plaats van</em> in de hoofd keuzelijst. Dit is handig voor het aangeven van typen die niet de voorkeur genieten op deze plek, maar die zijn toegestaan als u ze toch nodig heeft."
 
@@ -10732,7 +10749,7 @@ msgstr "Als de tekstinhoud beschikbaar is, geef deze dan weer. Laat anders de om
 
 #. been uploaded previously."
 #. Default: "Select this option to replace any existing theme that may have been uploaded previously."
-#: plone/app/theming/browser/controlpanel.pt:786
+#: plone/app/theming/browser/controlpanel.pt:787
 msgid "help_replace_existing"
 msgstr "Selecteer deze optie om een eventueel bestaand thema te vervangen."
 
@@ -10903,7 +10920,7 @@ msgid "help_text_transform"
 msgstr "Hiermee kunnen reacties getransformeerd worden. U kunt kiezen uit \"platte tekst\" en \"intelligente tekst\". \"intelligente tekst\" zet platte tekst om in HTML waarbij nieuwe regels en inspringen worden gehandhaafd, en waarbij web en e-mail adressen in klikbare links worden omgezet."
 
 #. Default: "Select a file to upload."
-#: plone/app/theming/browser/controlpanel.pt:750
+#: plone/app/theming/browser/controlpanel.pt:751
 msgid "help_theme_archive"
 msgstr "Selecteer een bestand om te uploaden."
 
@@ -11439,7 +11456,7 @@ msgid "label_boolean_criteria_bool"
 msgstr "Waarde"
 
 #. Default: "Yes/No"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:91
+#: plone.schemaeditor/plone/schemaeditor/fields.py:92
 msgid "label_boolean_field"
 msgstr "Ja/Nee"
 
@@ -11583,7 +11600,7 @@ msgid "label_checkout_folder"
 msgstr "Uitcheckfolder"
 
 #. Default: "Choice"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:107
+#: plone.schemaeditor/plone/schemaeditor/fields.py:108
 msgid "label_choice_field"
 msgstr "Keuze"
 
@@ -11818,6 +11835,7 @@ msgstr "Huidig wachtwoord"
 
 #. Default: "Custom CSS"
 #: plone/app/theming/browser/controlpanel.pt:596
+#: plone/app/theming/interfaces.py:179
 msgid "label_custom_css"
 msgstr ""
 
@@ -11839,7 +11857,7 @@ msgid "label_dashboard"
 msgstr "Dashboard"
 
 #. Default: "Date"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:97
+#: plone.schemaeditor/plone/schemaeditor/fields.py:98
 msgid "label_date_field"
 msgstr "Datum"
 
@@ -11859,7 +11877,7 @@ msgid "label_dateandtime_settings"
 msgstr "Datum- en tijdinstellingen"
 
 #. Default: "Date/Time"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:95
+#: plone.schemaeditor/plone/schemaeditor/fields.py:96
 msgid "label_datetime_field"
 msgstr "Datum/Tijd"
 
@@ -11999,7 +12017,7 @@ msgid "label_enable_immediately"
 msgstr "Nieuwe thema direct inschakelen"
 
 #. Default: "Immediately enable new theme"
-#: plone/app/theming/browser/controlpanel.pt:771
+#: plone/app/theming/browser/controlpanel.pt:772
 msgid "label_enable_new_theme"
 msgstr "Nieuw thema direct inschakelen"
 
@@ -12179,7 +12197,7 @@ msgid "label_first_weekday"
 msgstr "Week begint op"
 
 #. Default: "Floating-point number"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:89
+#: plone.schemaeditor/plone/schemaeditor/fields.py:90
 msgid "label_float_field"
 msgstr "Komma-getal"
 
@@ -12312,7 +12330,7 @@ msgid "label_image_caption"
 msgstr "Onderschrift bij afbeelding"
 
 #. Default: "Allowed types"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:72
+#: plone.app.content/plone/app/content/browser/constraintypes.py:75
 msgid "label_immediately_addable_types"
 msgstr "Toegestane typen"
 
@@ -12346,7 +12364,7 @@ msgid "label_inherit_local_roles"
 msgstr "Rechten overnemen van bovenliggende map"
 
 #. Default: "Integer"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:87
+#: plone.schemaeditor/plone/schemaeditor/fields.py:88
 msgid "label_integer_field"
 msgstr "Geheel getal"
 
@@ -12356,7 +12374,7 @@ msgid "label_internal_url"
 msgstr ""
 
 #. Default: "Item count"
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:74
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:70
 msgid "label_item_count"
 msgstr "Aantal items"
 
@@ -12403,7 +12421,7 @@ msgid "label_limit_number"
 msgstr "Beperk zoekresultaten"
 
 #. Default: "Secondary types"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:82
+#: plone.app.content/plone/app/content/browser/constraintypes.py:85
 msgid "label_locally_allowed_types"
 msgstr "Secondaire typen"
 
@@ -12534,7 +12552,7 @@ msgid "label_move_content_to_languages"
 msgstr ""
 
 #. Default: "Multiple Choice"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:247
+#: plone.schemaeditor/plone/schemaeditor/fields.py:248
 msgid "label_multi_choice_field"
 msgstr "Meerkeuze"
 
@@ -12727,7 +12745,7 @@ msgid "label_password_change_mail"
 msgstr "Een registratielink zal naar uw e-mailadres worden gestuurd. Volg de registratielink in het e-mailbericht. U komt dan bij een pagina waar u uw wachtwoord kunt invoeren om het registratieproces te voltooien."
 
 #. Default: "Password"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:93
+#: plone.schemaeditor/plone/schemaeditor/fields.py:94
 msgid "label_password_field"
 msgstr "Wachtwoord"
 
@@ -12957,7 +12975,7 @@ msgid "label_remove_selected_users"
 msgstr "Verwijder de geselecteerde groepen / gebruikers"
 
 #. Default: "Replace existing theme"
-#: plone/app/theming/browser/controlpanel.pt:785
+#: plone/app/theming/browser/controlpanel.pt:786
 msgid "label_replace_existing"
 msgstr "Vervang huidig thema"
 
@@ -13236,12 +13254,12 @@ msgstr "Bepaalde contenttypes"
 
 #. Default: "Sort on"
 #: CMFPlone/interfaces/controlpanel.py:912
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:54
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:50
 msgid "label_sort_on"
 msgstr "Sorteer op"
 
 #. Default: "Reversed order"
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:60
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:56
 msgid "label_sort_reversed"
 msgstr "Omgekeerde volgorde"
 
@@ -13298,7 +13316,7 @@ msgid "label_template_mixin"
 msgstr "Geef sjabloon weer"
 
 #. Default: "Text"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:85
+#: plone.schemaeditor/plone/schemaeditor/fields.py:86
 msgid "label_text_field"
 msgstr "Tekst"
 
@@ -13314,7 +13332,7 @@ msgid "label_text_transform"
 msgstr "Reactie transformeren"
 
 #. Default: "Text line (String)"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:81
+#: plone.schemaeditor/plone/schemaeditor/fields.py:82
 msgid "label_textline_field"
 msgstr "Tekstregel (String)"
 
@@ -13424,7 +13442,7 @@ msgid "label_translations_should_be_here"
 msgstr "De beschikbare vertalingen voor deze inhoud moeten hier staan."
 
 #. Default: "Type restrictions"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:63
+#: plone.app.content/plone/app/content/browser/constraintypes.py:66
 msgid "label_type_restrictions"
 msgstr "Type restricties"
 
@@ -15013,7 +15031,7 @@ msgid "theming_controlpanel_delete_confirm_description"
 msgstr "Deze bewerking kan niet ongedaan gemaakt worden. Themas op het bestandssysteem kunnen niet verwijderd worden vanuit Plone."
 
 #. Default: "New theme"
-#: plone/app/theming/browser/controlpanel.pt:648
+#: plone/app/theming/browser/controlpanel.pt:649
 msgid "theming_controlpanel_new_theme"
 msgstr "Nieuw thema"
 
@@ -15023,7 +15041,7 @@ msgid "theming_controlpanel_new_theme_description"
 msgstr "Vul gegevens voor je nieuwe thema in"
 
 #. Default: "Upload theme"
-#: plone/app/theming/browser/controlpanel.pt:727
+#: plone/app/theming/browser/controlpanel.pt:728
 msgid "theming_controlpanel_upload"
 msgstr "Thema uploaden"
 

@@ -55,7 +55,7 @@ msgstr "${action/title}"
 msgid "${count} alternative urls added."
 msgstr "Добавлено ${count} альтернативных URL."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:139
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:140
 msgid "${items} could not be found"
 msgstr "${items} не может быть найден"
 
@@ -1076,15 +1076,15 @@ msgstr "По умолчанию любой элемент контента в к
 msgid "CSS/LESS files"
 msgstr "CSS/LESS файлы"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:275
+#: plone.app.caching/plone/app/caching/operations/default.py:292
 msgid "Cache in browser and proxy (default: 24 hrs). Caution: Only use for stable resources that never change without changing their URL, or resources for which temporary staleness is not critical."
 msgstr "Кэш в браузере и прокси (по умолчанию: 24 часа). Внимание! Используйте только для стабильных ресурсов, которые никогда не меняются без изменения их URL-адреса, или ресурсов, для которых временное устаревание не является критичным."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:247
+#: plone.app.caching/plone/app/caching/operations/default.py:264
 msgid "Cache in browser but expire immediately (same as 'weak caching'), and cache in proxy (default: 24 hrs). Use a purgable caching reverse proxy for best results. Caution: If proxy cannot be purged, or cannot be configured to remove the 's-maxage' token from the response, then stale responses might be seen until the cached entry expires."
 msgstr "Кэширование в браузере, но срок действия истекает немедленно (аналогично «слабому кешированию») и кеширование в прокси (по умолчанию: 24 часа). Используйте очищаемый кеширующий обратный прокси-сервер для достижения наилучших результатов. Предупреждение. Если прокси-сервер не может быть очищен или не может быть настроен на удаление токена 's-maxage' из ответа, то устаревшие ответы могут отображаться до истечения срока действия кэшированной записи."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:219
+#: plone.app.caching/plone/app/caching/operations/default.py:236
 msgid "Cache in browser but expire immediately and enable 304 responses on subsequent requests. 304's require configuration of the 'Last-modified' and/or 'ETags' settings. If Last-Modified  header is insufficient to ensure freshness, turn on ETag checking by listing each ETag components that should be used to construct the ETag header. To also cache public responses in Zope memory, set 'RAM cache' to True."
 msgstr "Кэширование в браузере, но срок истекает немедленно и включается ответ 304 на последующие запросы. 304 требуют настройки параметров «Последнее изменение» и/или «ETags». Если заголовок Last-Modified недостаточен для обеспечения обновления, включите проверку ETag, перечислив все компоненты ETag, которые следует использовать для создания заголовка ETag. Чтобы также кэшировать публичные ответы в памяти Zope, установите для параметра 'RAM cache' значение True."
 
@@ -1657,7 +1657,8 @@ msgstr "Создать новый Плон сайт"
 msgid "Created before"
 msgstr "Создано до"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:205
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:248
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:11
 msgid "Created on"
 msgstr "Создан"
 
@@ -1667,8 +1668,9 @@ msgid "Creation date"
 msgstr "Дата создания"
 
 #. Default: "Creator"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:206
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:249
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:12
 msgid "Creator"
 msgstr "Автор"
 
@@ -1712,7 +1714,7 @@ msgstr "Текущая рабочая конфигурация"
 msgid "Current logged in user"
 msgstr "Текущий пользователь"
 
-#: plone/app/theming/interfaces.py:197
+#: plone/app/theming/interfaces.py:198
 msgid "Custom CSS Timestamp"
 msgstr ""
 
@@ -1853,7 +1855,7 @@ msgstr "Часовой пояс по умолчанию"
 msgid "Define list of modules that will be defined empty on RequireJS build steps to prevent loading modules multiple times."
 msgstr "Определите список модулей, которые будут определены пустыми на этапах сборки RequireJS, чтобы предотвратить загрузку модулей несколько раз."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:43
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:39
 msgid "Define the search terms for the items you want to list by choosing what to match on. The list of results will be dynamically updated"
 msgstr "Определите условия поиска для элементов. Список результатов будет динамически обновляться"
 
@@ -1913,7 +1915,7 @@ msgstr "Удалить действие?"
 msgid "Delete the triggering item"
 msgstr "Удалить элемент триггер "
 
-#: plone/app/theming/interfaces.py:235
+#: plone/app/theming/interfaces.py:236
 msgid "Dependencies"
 msgstr "Зависимости"
 
@@ -1931,8 +1933,8 @@ msgid "Depends on another bundle"
 msgstr "Зависит от другого пакета"
 
 #: CMFPlone/interfaces/controlpanel.py:1627
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:207
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
+#: plone.app.contenttypes/plone/app/contenttypes/schema/image.xml
 msgid "Description"
 msgstr "Описание."
 
@@ -2056,7 +2058,7 @@ msgstr "Содержит ли ваш пакет файл RequireJS или LESS?"
 msgid "Domains"
 msgstr "Домены"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:108
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:109
 msgid "Done"
 msgstr "Выполнено"
 
@@ -2120,7 +2122,7 @@ msgid "Edit"
 msgstr "Правка"
 
 #: plone.dexterity/plone/dexterity/browser/edit.py:80
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:170
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:171
 msgid "Edit ${name}"
 msgstr "Редактировать ${name}"
 
@@ -2132,7 +2134,7 @@ msgstr "Изменить параметры ${operation}"
 msgid "Edit ${operation} options for Ruleset: ${ruleset}"
 msgstr "Изменить параметры ${operation} для набора правил: ${ruleset}"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:166
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:167
 msgid "Edit ${title} (${name})"
 msgstr "Редактировать ${title} (${name})"
 
@@ -2397,7 +2399,8 @@ msgstr ""
 msgid "Enables the LiveSearch feature, which shows live results if the browser supports JavaScript."
 msgstr "Включить возможность использовать поисковую подсказку, которая показывает результаты поиска без перезагрузки страницы (если браузер поддерживат JavaScript)."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:209
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:251
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:15
 msgid "End Date"
 msgstr "Дата окончания"
 
@@ -2578,7 +2581,7 @@ msgstr "Исключить действующее лицо из получате
 msgid "Exclude the Current Context"
 msgstr "исключить текущий контекст"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:210
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:16
 msgid "Excluded from navigation"
 msgstr "Исключить из навигации"
 
@@ -2586,8 +2589,9 @@ msgstr "Исключить из навигации"
 msgid "Execute transition ${transition}"
 msgstr "Произвести перевод в новое состояние ${transition}"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:211
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:252
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:17
 msgid "Expiration date"
 msgstr "Дата окончания срока действия"
 
@@ -2714,7 +2718,7 @@ msgstr "Не удалось установить стрпницу по умол�
 msgid "Failsafe Login"
 msgstr "Отказоустойчивый вход"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:56
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:57
 msgid "Failure"
 msgstr "Отказ"
 
@@ -2829,7 +2833,7 @@ msgid "Find the collection which provides the items to list"
 msgstr "Найти коллекцию, отбирающую элементы"
 
 #. Default: "Folder"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:214
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:254
 #: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Folder.xml
 #: plone.app.dexterity/plone/app/dexterity/profiles/testing/types/Folder.xml
 msgid "Folder"
@@ -2900,7 +2904,7 @@ msgstr "Настройка основных типов"
 msgid "Generate tabs for items other than folders."
 msgstr "Показывать tab'ы для элементов, не являющихся папкой."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:62
+#: plone.app.caching/plone/app/caching/operations/default.py:64
 msgid "Generic caching"
 msgstr "Общее кэширование"
 
@@ -3040,7 +3044,8 @@ msgstr "Сколько показывать элементов."
 msgid "However, this is the list of the already translated languages for the requested content."
 msgstr "Тем не менее, это список уже переведенных языков для запрошенного контента."
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:213
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:253
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:19
 msgid "ID"
 msgstr "Идентификатор"
 
@@ -3188,7 +3193,7 @@ msgid "Images can be referenced in pages or displayed in an album."
 msgstr "Изображения могут быть ссылками на страницах или отображаться в виде альбома."
 
 #: plone.app.caching/plone/app/caching/browser/import.pt:113
-#: plone/app/theming/browser/controlpanel.pt:793
+#: plone/app/theming/browser/controlpanel.pt:794
 msgid "Import"
 msgstr "Импорт"
 
@@ -3467,7 +3472,7 @@ msgstr "Нейтральный к языку (по умолчанию)"
 msgid "Larger than"
 msgstr "Больше чем"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:215
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:21
 msgid "Last comment date"
 msgstr "Дата последнего комментария"
 
@@ -3475,7 +3480,8 @@ msgstr "Дата последнего комментария"
 msgid "Last compiled date"
 msgstr "Дата последней сборки"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:217
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:255
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:23
 msgid "Last modified"
 msgstr "Последнее изменение"
 
@@ -3504,13 +3510,13 @@ msgstr "Позволяет контролировать как создаетс�
 msgid "Lets you upload a file to the site."
 msgstr "Позволяет Вам загружать файлы на сайт"
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:66
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:62
 #: plone.portlet.collection/plone/portlet/collection/collection.py:70
 msgid "Limit"
 msgstr "Ограничение"
 
 #: plone.app.collection/plone/app/collection/collection.py:69
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:67
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:63
 msgid "Limit Search Results"
 msgstr "Ограничить результаты поиска"
 
@@ -3573,9 +3579,9 @@ msgid "Local configuration for plone.protect"
 msgstr "Локальная конфигурация для plone.protect"
 
 #. Default: "Location"
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:216
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 #: plone.app.querystring/plone/app/querystring/profiles/upgrades/to_5/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:22
 msgid "Location"
 msgstr "Расположение"
 
@@ -3680,6 +3686,7 @@ msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/interfaces.py:174
 #: plone.app.textfield/plone/app/textfield/interfaces.py:53
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:29
 msgid "MIME type"
 msgstr "MIME-тип"
 
@@ -3985,7 +3992,7 @@ msgstr "Отсутствует действие rss link."
 msgid "Missing syndication settings action."
 msgstr "Отсутствует действие настроек синдикации."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:246
+#: plone.app.caching/plone/app/caching/operations/default.py:263
 msgid "Moderate caching"
 msgstr "Модерируемый кэш"
 
@@ -4236,7 +4243,7 @@ msgstr "Не указаны URL или путь."
 msgid "No alternative urls selected for removal."
 msgstr "Не выбраны альтернативные URL для удаления."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:302
+#: plone.app.caching/plone/app/caching/operations/default.py:319
 msgid "No caching"
 msgstr "Без кэширования"
 
@@ -4341,7 +4348,7 @@ msgstr "Количество уровней папок для отображен
 msgid "Number of folder levels to show in the site map."
 msgstr "Количество уровней папок отображаемых на карте сайта."
 
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:75
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:71
 msgid "Number of items that will show up in one batch."
 msgstr "Число элементов, которые будут показаны в одном пакете."
 
@@ -4364,7 +4371,7 @@ msgstr "Таблица ODS"
 msgid "ODT document"
 msgstr "Документ ODT"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:212
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:18
 msgid "Object Size"
 msgstr "Размер объекта"
 
@@ -4611,7 +4618,7 @@ msgstr "В ожидании рецензии"
 msgid "Perform a workflow transition on the triggering object"
 msgstr "Выполнить переход рабочего процесса на инициирующий объект"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:127
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:128
 msgid "Permission denied for \"${title}\""
 msgstr "Доступ запрещен для \"${title}\""
 
@@ -4760,7 +4767,7 @@ msgstr "Поддержка Plone z3c.form "
 msgid "Plugins and Toolbar"
 msgstr "Плагины и панель инструментов"
 
-#: plone/app/theming/interfaces.py:236
+#: plone/app/theming/interfaces.py:237
 msgid "Plugins on which this plugin depends"
 msgstr "Плагины, от которых зависит данный плагин"
 
@@ -4895,7 +4902,8 @@ msgstr "Публичный черновик"
 msgid "Public draft"
 msgstr "Публичный черновик"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:208
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:250
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:14
 msgid "Publication date"
 msgstr "Дата публикации"
 
@@ -4947,6 +4955,10 @@ msgstr "Сбросить кэш"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.py:334
 msgid "Purging is still enabled while caching is disabled!"
 msgstr "Очистка все еще включена, а кэширование отключено!"
+
+#: plone/app/theming/browser/controlpanel.pt:606
+msgid "Put your plain css..."
+msgstr ""
 
 #. Default: "Puts your item in a review queue, so it can be published externally or internally."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
@@ -5262,8 +5274,9 @@ msgstr "Название состояния рассмотрения"
 msgid "Review list"
 msgstr "Список на рецензию"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:218
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:256
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:24
 msgid "Review state"
 msgstr "Состояние рецензирования"
 
@@ -5360,7 +5373,7 @@ msgstr "Изображение SVG"
 msgid "Save"
 msgstr "Сохранить"
 
-#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:114
+#: plone.schemaeditor/plone/schemaeditor/browser/schema/listing.py:115
 msgid "Save Defaults"
 msgstr "Сохранить по умолчанию"
 
@@ -5405,7 +5418,7 @@ msgid "Search results for ${term}"
 msgstr "Результаты поиска для ${term}"
 
 #: plone.app.collection/plone/app/collection/collection.py:31
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:42
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:38
 msgid "Search terms"
 msgstr "Условия поиска"
 
@@ -5479,7 +5492,7 @@ msgid "Select which IDs (short names) can act as fallback default pages for a co
 msgstr "Выберите, какие идентификаторы (короткие имена) могут выступать в качестве запасных страниц по умолчанию для контейнера."
 
 #: plone.app.collection/plone/app/collection/collection.py:84
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:83
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:79
 msgid "Select which fields to display when 'Tabular view' is selected in the display menu."
 msgstr "Выберите, какие поля отображать при выборе «Табличное представление» в меню дисплея."
 
@@ -5808,7 +5821,7 @@ msgid "Sort tabs on"
 msgstr "Сортировать вкладки"
 
 #: plone.app.collection/plone/app/collection/collection.py:45
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:55
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:51
 msgid "Sort the collection on this index"
 msgstr "Сортировать коллекцию по этому индексу"
 
@@ -5817,7 +5830,7 @@ msgid "Sort the default search on this index"
 msgstr "Сортировать поиск по умолчанию по этому индексу"
 
 #: plone.app.collection/plone/app/collection/collection.py:57
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:61
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:57
 msgid "Sort the results in reversed order"
 msgstr "Сортировать результаты в обратном порядке"
 
@@ -5867,7 +5880,8 @@ msgstr "Стабильные файловые и графические ресу
 msgid "Standard view"
 msgstr "Стандартный вид"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:219
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:258
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:25
 msgid "Start Date"
 msgstr "Дата Начала"
 
@@ -5902,7 +5916,7 @@ msgstr "Прекратить выполнение правила"
 msgid "Store a new version of the object"
 msgstr "Сохранить новую версию объекта"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:274
+#: plone.app.caching/plone/app/caching/operations/default.py:291
 msgid "Strong caching"
 msgstr "Сильное кеширование"
 
@@ -5944,7 +5958,7 @@ msgstr "Отправлено, ожидает рассмотрения."
 msgid "Subtopics"
 msgstr "Под-темы"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:55
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:56
 msgid "Success"
 msgstr "Успешно"
 
@@ -6058,7 +6072,7 @@ msgid "TIFF image"
 msgstr "TIFF изображение"
 
 #: plone.app.collection/plone/app/collection/collection.py:83
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:82
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:78
 msgid "Table Columns"
 msgstr "Колонки таблицы"
 
@@ -6081,8 +6095,9 @@ msgstr "В виде таблицы"
 msgid "Tag"
 msgstr "Тэг"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:220
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:259
 #: plone.app.content/plone/app/content/browser/contents/tags.py:24
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:26
 msgid "Tags"
 msgstr "Тэги"
 
@@ -6706,7 +6721,7 @@ msgstr "Это имя пользователя занято. Выберите д
 msgid "This will install plone.app.contenttypes and redirect you to a form where you can migrate your content."
 msgstr "Это установит plone.app.contenttypes и перенаправит вас на форму, куда вы сможете перенести свой контент."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:63
+#: plone.app.caching/plone/app/caching/operations/default.py:65
 msgid "Through this operation, all standard caching functions can be performed via various combinations of the optional parameter settings. For most cases, it's probably easier to use one of the other simpler operations (Strong caching, Moderate caching, Weak caching, or No caching)."
 msgstr "Благодаря этой операции все стандартные функции кэширования могут быть выполнены с помощью различных комбинаций необязательных настроек параметров. В большинстве случаев, вероятно, проще использовать одну из других более простых операций (сильное кэширование, умеренное кэширование, слабое кэширование или отсутствие кэширования)."
 
@@ -6747,7 +6762,7 @@ msgstr "Отметьте этот пункт, если хотите, чтобы 
 msgid "Time in minutes after which the feed should be reloaded."
 msgstr "Период в минутах для перезагрузки синдицированной ленты."
 
-#: plone/app/theming/interfaces.py:200
+#: plone/app/theming/interfaces.py:201
 msgid "Time stamp when the custom CSS was changed. Used to generate custom.css with timestamp in URL."
 msgstr ""
 
@@ -6767,7 +6782,7 @@ msgstr "Подсказка: Вы можете использовать * для 
 
 #. Default: "Title"
 #: CMFPlone/interfaces/controlpanel.py:781
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:282
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:257
 #: plone.app.contenttypes/plone/app/contenttypes/schema/file.xml
 msgid "Title"
 msgstr "Название"
@@ -6810,7 +6825,8 @@ msgstr "Положение панели инструментов"
 msgid "Top"
 msgstr "Верх"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:222
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:260
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:28
 msgid "Total comments"
 msgstr "Всего комментариев"
 
@@ -6862,8 +6878,9 @@ msgstr "Инициирующее событие"
 msgid "Twitter username"
 msgstr "Имя пользователя в Твиттере"
 
-#: plone.app.content/plone/app/content/browser/contents/__init__.py:221
+#: plone.app.content/plone/app/content/browser/contents/__init__.py:261
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
+#: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:27
 msgid "Type"
 msgstr "Тип"
 
@@ -7067,7 +7084,7 @@ msgstr "Автоматически генерировать UUIDы, как id п
 msgid "Use email address as login name"
 msgstr "Использовать электронный почтовый адрес вместо имени пользователя."
 
-#: plone.app.caching/plone/app/caching/operations/default.py:303
+#: plone.app.caching/plone/app/caching/operations/default.py:320
 msgid "Use this operation to keep the response out of all caches."
 msgstr "Используйте эту операцию, чтобы исключить ответ из всех кэшей."
 
@@ -7339,7 +7356,7 @@ msgstr "Предупреждение: отключение может быть �
 msgid "We will use this address if you need to recover your password"
 msgstr "Мы будем использовать этот адрес, если вам нужно восстановить пароль"
 
-#: plone.app.caching/plone/app/caching/operations/default.py:218
+#: plone.app.caching/plone/app/caching/operations/default.py:235
 msgid "Weak caching"
 msgstr "Слабое кеширование"
 
@@ -7493,7 +7510,7 @@ msgstr "Вы не можете редактировать этот контен�
 msgid "You can't edit this content. Ask your administrator to migrate to Dexterity!"
 msgstr "Вы не можете редактировать этот контент. Попросите вашего администратора перейти на Dexterity!"
 
-#: plone.app.content/plone/app/content/browser/constraintypes.py:105
+#: plone.app.content/plone/app/content/browser/constraintypes.py:108
 msgid "You cannot have a type as a secondary type without having it allowed. You have selected ${types}."
 msgstr "Вы не можете иметь тип в качестве вторичного типа без его разрешения. Вы выбрали ${types}."
 
@@ -8520,7 +8537,7 @@ msgid "description_groups_management2"
 msgstr "Символ ${image_link_icon} обозначает роль, унаследованную от членства в другой группе."
 
 #. Default: "You can import a Zip file containing an existing theme. This should contain a single top level directory, which will be used as the theme identifier. If no Diazo <code>rules.xml</code> or <code>manifest.cfg</code> file is found in this directory, a default <code>rules.xml</code> file will be created."
-#: plone/app/theming/browser/controlpanel.pt:729
+#: plone/app/theming/browser/controlpanel.pt:730
 msgid "description_import"
 msgstr "Вы можете импортировать Zip-файл, содержащий существующую тему. Он должен содержать один каталог верхнего уровня, который будет использоваться в качестве идентификатора темы. Если в этом каталоге не найден файл Diazo <code>rules.xml</code> или <code>manifest.cfg</code>, будет создан файл по умолчанию <code>rules.xml</code>."
 
@@ -8660,7 +8677,7 @@ msgstr "регистрационной форме"
 #. Default: "There are currently no items in this folder."
 #: plone.app.collection/plone/app/collection/browser/templates/standard_view.pt:173
 #: plone.app.collection/plone/app/collection/browser/templates/tabular_view.pt:25
-#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:251
+#: plone.app.contenttypes/plone/app/contenttypes/browser/folder.py:258
 msgid "description_no_items_in_folder"
 msgstr "В настоящее время в этой папке нет никаких элементов."
 
@@ -9254,12 +9271,12 @@ msgid "external_website"
 msgstr "Посетите внешний сайт"
 
 #. Default: "The '${value1}' vocabulary value conflicts with '${value2}'."
-#: plone.schemaeditor/plone/schemaeditor/fields.py:192
+#: plone.schemaeditor/plone/schemaeditor/fields.py:193
 msgid "field_edit_error_conflicting_values"
 msgstr "Значение словаря '${value1}' конфликтует с '${value2}'."
 
 #. Default: "You can not set a vocabulary name AND vocabulary values. Please clear values field or set no value here."
-#: plone.schemaeditor/plone/schemaeditor/fields.py:224
+#: plone.schemaeditor/plone/schemaeditor/fields.py:225
 msgid "field_edit_error_values_and_name"
 msgstr "Вы не можете установить название словаря И значения словаря. Пожалуйста, очистите поле значений или не устанавливайте здесь значение."
 
@@ -9838,7 +9855,7 @@ msgid "heading_sent_password"
 msgstr "Подтверждение об установке нового пароля отправлено."
 
 #. Default: "Restrict what types of content can be added"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:135
+#: plone.app.content/plone/app/content/browser/constraintypes.py:138
 msgid "heading_set_content_type_restrictions"
 msgstr "Ограничение по типам содержимого"
 
@@ -9981,7 +9998,7 @@ msgid "help_add_actions_portlet"
 msgstr "Портлет действий отображает действия из категории"
 
 #. Default: "Select the restriction policy in this location"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:64
+#: plone.app.content/plone/app/content/browser/constraintypes.py:67
 msgid "help_add_restriction_mode"
 msgstr "Определите политику ограничения в этой папке."
 
@@ -10153,7 +10170,7 @@ msgstr "Введите свой текущий пароль."
 
 #. Default: "Define your own custom CSS in the field below. This is a good place for quick customizations of things like colors and the toolbar. Definitions here will override previously defined CSS of Plone. Please use this only for small customizations, as it is hard to keep track of changes here. For bigger changes you most likely want to customize a full theme and make your changes there."
 #: plone/app/theming/browser/controlpanel.pt:597
-#: plone/app/theming/interfaces.py:182
+#: plone/app/theming/interfaces.py:183
 msgid "help_custom_css"
 msgstr ""
 
@@ -10254,7 +10271,7 @@ msgid "help_enable_immediately"
 msgstr "Выберите эту опцию, чтобы немедленно включить вновь созданную тему."
 
 #. Default: "Select this option to enable the newly uploaded theme immediately."
-#: plone/app/theming/browser/controlpanel.pt:772
+#: plone/app/theming/browser/controlpanel.pt:773
 msgid "help_enable_new_theme"
 msgstr "Выберите эту опцию, чтобы немедленно включить недавно загруженную тему."
 
@@ -10408,7 +10425,7 @@ msgid "help_ical_import_enable"
 msgstr "Нажмите, чтобы включить функцию импорта iСalendar в этом контексте."
 
 #. Default: "Controls what types are addable in this location"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:73
+#: plone.app.content/plone/app/content/browser/constraintypes.py:76
 msgid "help_immediately_addable_types"
 msgstr "Часть из выбранных тут типов будет доступна из выпадающего меню \"Добавить\". Для остальных типов в меню доступна ссылка на дополнительный список."
 
@@ -10440,7 +10457,7 @@ msgid "help_limit_number"
 msgstr "Если отмечено, то  будет показано, 'Количество Элементов', указанное ниже."
 
 #. Default: "Select which types should be available in the 'More…' submenu <em>instead</em> of in the main pulldown. This is useful to indicate that these are not the preferred types in this location, but are allowed if you really need them."
-#: plone.app.content/plone/app/content/browser/constraintypes.py:83
+#: plone.app.content/plone/app/content/browser/constraintypes.py:86
 msgid "help_locally_allowed_types"
 msgstr "Отметьте те типы элементов, которые будет можно добавлять в рамках данной папки, нажав на подменю 'Еще…'. Это удобно для определения тех элементов, которые Вы хотите видеть в этом месте, но также оставляет возможность добавлять и другие элементы, если они действительно Вам понадобятся."
 
@@ -10689,7 +10706,7 @@ msgid "help_render_body"
 msgstr "Если тело элемента содержит текст, то он будет обработан, в противном случае будет использоваться описание."
 
 #. Default: "Select this option to replace any existing theme that may have been uploaded previously."
-#: plone/app/theming/browser/controlpanel.pt:786
+#: plone/app/theming/browser/controlpanel.pt:787
 msgid "help_replace_existing"
 msgstr "Выберите эту опцию, чтобы заменить любую существующую тему, которая могла быть загружена ранее."
 
@@ -10861,7 +10878,7 @@ msgid "help_text_transform"
 msgstr "Используйте этот параметр, чтобы выбрать, следует ли каким-либо образом преобразовывать текст комментария. Вы можете выбрать между \"Обычный текст\" и \"Интеллектуальный текст\". \"Интеллектуальный текст\" преобразует простой текст в HTML, где сохраняются разрывы строк и отступы, а веб-адреса и адреса электронной почты превращаются в интерактивные ссылки."
 
 #. Default: "Select a file to upload."
-#: plone/app/theming/browser/controlpanel.pt:750
+#: plone/app/theming/browser/controlpanel.pt:751
 msgid "help_theme_archive"
 msgstr "Укажите файл для загрузки."
 
@@ -11387,7 +11404,7 @@ msgid "label_boolean_criteria_bool"
 msgstr "Значение"
 
 #. Default: "Yes/No"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:91
+#: plone.schemaeditor/plone/schemaeditor/fields.py:92
 msgid "label_boolean_field"
 msgstr "Да/Нет"
 
@@ -11529,7 +11546,7 @@ msgid "label_checkout_folder"
 msgstr "Папка для приема объекта при выводе"
 
 #. Default: "Choice"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:107
+#: plone.schemaeditor/plone/schemaeditor/fields.py:108
 msgid "label_choice_field"
 msgstr "Выбрать"
 
@@ -11765,6 +11782,7 @@ msgstr "Текущий пароль"
 
 #. Default: "Custom CSS"
 #: plone/app/theming/browser/controlpanel.pt:596
+#: plone/app/theming/interfaces.py:179
 msgid "label_custom_css"
 msgstr ""
 
@@ -11786,7 +11804,7 @@ msgid "label_dashboard"
 msgstr "Личная зона"
 
 #. Default: "Date"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:97
+#: plone.schemaeditor/plone/schemaeditor/fields.py:98
 msgid "label_date_field"
 msgstr "Дата"
 
@@ -11806,7 +11824,7 @@ msgid "label_dateandtime_settings"
 msgstr "Установка даты и времени"
 
 #. Default: "Date/Time"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:95
+#: plone.schemaeditor/plone/schemaeditor/fields.py:96
 msgid "label_datetime_field"
 msgstr "Дата/Время"
 
@@ -11945,7 +11963,7 @@ msgid "label_enable_immediately"
 msgstr "Немедленно включить новую тему"
 
 #. Default: "Immediately enable new theme"
-#: plone/app/theming/browser/controlpanel.pt:771
+#: plone/app/theming/browser/controlpanel.pt:772
 msgid "label_enable_new_theme"
 msgstr "Немедленно включить новую тему"
 
@@ -12126,7 +12144,7 @@ msgid "label_first_weekday"
 msgstr "Первый будний день"
 
 #. Default: "Floating-point number"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:89
+#: plone.schemaeditor/plone/schemaeditor/fields.py:90
 msgid "label_float_field"
 msgstr "Число с плавающей точкой"
 
@@ -12259,7 +12277,7 @@ msgid "label_image_caption"
 msgstr "Название изображения"
 
 #. Default: "Allowed types"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:72
+#: plone.app.content/plone/app/content/browser/constraintypes.py:75
 msgid "label_immediately_addable_types"
 msgstr "Разрешенные типы содержимого"
 
@@ -12293,7 +12311,7 @@ msgid "label_inherit_local_roles"
 msgstr "Наследовать права с верхних уровней"
 
 #. Default: "Integer"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:87
+#: plone.schemaeditor/plone/schemaeditor/fields.py:88
 msgid "label_integer_field"
 msgstr "Целое число"
 
@@ -12303,7 +12321,7 @@ msgid "label_internal_url"
 msgstr "Внутренний"
 
 #. Default: "Item count"
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:74
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:70
 msgid "label_item_count"
 msgstr "Количество элементов"
 
@@ -12351,7 +12369,7 @@ msgid "label_limit_number"
 msgstr "Ограничение результатов поиска"
 
 #. Default: "Secondary types"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:82
+#: plone.app.content/plone/app/content/browser/constraintypes.py:85
 msgid "label_locally_allowed_types"
 msgstr "Дополнительные типы содержимого для добавления"
 
@@ -12482,7 +12500,7 @@ msgid "label_move_content_to_languages"
 msgstr "Переместить содержимое в корневую папку соответствующего языка"
 
 #. Default: "Multiple Choice"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:247
+#: plone.schemaeditor/plone/schemaeditor/fields.py:248
 msgid "label_multi_choice_field"
 msgstr "Множественный выбор"
 
@@ -12674,7 +12692,7 @@ msgid "label_password_change_mail"
 msgstr "По электронной почте отправлена ссылка, пройдя по которой Вы сможете изменить пароль и завершить процесс регистрации."
 
 #. Default: "Password"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:93
+#: plone.schemaeditor/plone/schemaeditor/fields.py:94
 msgid "label_password_field"
 msgstr "Пароль"
 
@@ -12904,7 +12922,7 @@ msgid "label_remove_selected_users"
 msgstr "Удалить выбранные группы / пользователей"
 
 #. Default: "Replace existing theme"
-#: plone/app/theming/browser/controlpanel.pt:785
+#: plone/app/theming/browser/controlpanel.pt:786
 msgid "label_replace_existing"
 msgstr "Заменить существующую тему"
 
@@ -13183,12 +13201,12 @@ msgstr "Некоторые типы контента:"
 
 #. Default: "Sort on"
 #: CMFPlone/interfaces/controlpanel.py:912
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:54
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:50
 msgid "label_sort_on"
 msgstr "Сортировать по"
 
 #. Default: "Reversed order"
-#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:60
+#: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:56
 msgid "label_sort_reversed"
 msgstr "Обратная сортировка"
 
@@ -13245,7 +13263,7 @@ msgid "label_template_mixin"
 msgstr "Просмотр шаблона"
 
 #. Default: "Text"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:85
+#: plone.schemaeditor/plone/schemaeditor/fields.py:86
 msgid "label_text_field"
 msgstr "Текст"
 
@@ -13261,7 +13279,7 @@ msgid "label_text_transform"
 msgstr "Преобразование текста комментария"
 
 #. Default: "Text line (String)"
-#: plone.schemaeditor/plone/schemaeditor/fields.py:81
+#: plone.schemaeditor/plone/schemaeditor/fields.py:82
 msgid "label_textline_field"
 msgstr "Текстовая строка"
 
@@ -13371,7 +13389,7 @@ msgid "label_translations_should_be_here"
 msgstr "Доступные переводы для этого контента должны быть здесь"
 
 #. Default: "Type restrictions"
-#: plone.app.content/plone/app/content/browser/constraintypes.py:63
+#: plone.app.content/plone/app/content/browser/constraintypes.py:66
 msgid "label_type_restrictions"
 msgstr "Ограничения по типу"
 
@@ -14947,7 +14965,7 @@ msgid "theming_controlpanel_delete_confirm_description"
 msgstr "Эта операция не может быть отменена. Обратите внимание, что темы файловой системы не могут быть удалены из Plone."
 
 #. Default: "New theme"
-#: plone/app/theming/browser/controlpanel.pt:648
+#: plone/app/theming/browser/controlpanel.pt:649
 msgid "theming_controlpanel_new_theme"
 msgstr "Новая тема"
 
@@ -14957,7 +14975,7 @@ msgid "theming_controlpanel_new_theme_description"
 msgstr "Пожалуйста, укажите детали вашей новой темы"
 
 #. Default: "Upload theme"
-#: plone/app/theming/browser/controlpanel.pt:727
+#: plone/app/theming/browser/controlpanel.pt:728
 msgid "theming_controlpanel_upload"
 msgstr "Загрузить тему"
 
