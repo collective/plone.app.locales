@@ -4,6 +4,9 @@ Changelog
 5.1.24 (unreleased)
 -------------------
 
+- Update Spanish and Basque translations.
+  [erral]
+
 - Remove use of html tag in info_empty_dashboard.
   This fixes https://github.com/plone/Products.CMFPlone/issues/3128
   [vincentfretin]
