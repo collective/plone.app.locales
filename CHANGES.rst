@@ -4,6 +4,11 @@ Changelog
 5.1.24 (unreleased)
 -------------------
 
+- For French and Catalan, fix mailtemplate_username_info translation that
+  triggered an error when sending the mail.
+  This fixes https://github.com/collective/plone.app.locales/issues/311
+  [vincentfretin]
+
 - Update Spanish and Basque translations.
   [erral]
 
