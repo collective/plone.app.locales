@@ -22,6 +22,9 @@ Changelog
 - Fix French date and hours format for the pickadate widget.
   [vincentfretin]
 
+- Update german wording and be polite.
+  [ksuess]
+
 
 5.1.23 (2020-06-28)
 -------------------
