@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.24 (unreleased)
+5.1.24 (2020-07-14)
 -------------------
 
 - For French and Catalan, fix mailtemplate_username_info translation that
