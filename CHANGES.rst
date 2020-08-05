@@ -4,7 +4,8 @@ Changelog
 5.1.25 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Minor fix in German translation.
+  [jensens]
 
 
 5.1.24 (2020-07-14)
