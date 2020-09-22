@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.25 (unreleased)
+5.1.25 (2020-09-22)
 -------------------
 
 - Minor fix in German translation.
