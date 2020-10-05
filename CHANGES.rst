@@ -4,7 +4,8 @@ Changelog
 5.1.26 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update Italian translations
+  [lelit]
 
 
 5.1.25 (2020-09-22)
