@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.26 (unreleased)
+5.1.26 (2020-10-12)
 -------------------
 
 - Update Italian translations
