@@ -4,7 +4,9 @@ Changelog
 5.1.27 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Use different translations for "User" and "Contributor" in the Italian translation,
+  using respectively "Utente" and "Collaboratore".
+  [lelit]
 
 
 5.1.26 (2020-10-12)
