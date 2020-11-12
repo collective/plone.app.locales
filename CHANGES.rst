@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.27 (unreleased)
+5.1.27 (2020-11-12)
 -------------------
 
 - Use different translations for "User" and "Contributor" in the Italian translation,
