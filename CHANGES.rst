@@ -4,7 +4,8 @@ Changelog
 5.1.28 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix wrong DE translation in plone.app.caching.
+  [jensens]
 
 
 5.1.27 (2020-11-12)
