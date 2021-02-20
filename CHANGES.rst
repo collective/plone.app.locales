@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.28 (unreleased)
+5.1.28 (2021-02-20)
 -------------------
 
 - Fix French and German translation for the assets folder (no spaces and lowercase).
