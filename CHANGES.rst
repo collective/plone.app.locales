@@ -4,6 +4,9 @@ Changelog
 5.1.28 (unreleased)
 -------------------
 
+- Fix French and German translation for the assets folder (no spaces and lowercase).
+  [pbauer]
+
 - Fix wrong DE translation in plone.app.caching.
   [jensens]
 
