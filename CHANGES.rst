@@ -4,7 +4,8 @@ Changelog
 5.1.29 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix French translation.
+  [boulch]
 
 
 5.1.28 (2021-02-20)
