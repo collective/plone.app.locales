@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.29 (unreleased)
+5.1.29 (2021-07-28)
 -------------------
 
 - Update Dutch translations.
