@@ -4,6 +4,12 @@ Changelog
 5.1.29 (unreleased)
 -------------------
 
+- Update Dutch translations.
+  [fredvd]
+
+- Fix German translations.
+  [pbauer]
+
 - Fix French translations.
   [boulch, laulaz]
 
