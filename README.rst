@@ -3,7 +3,7 @@ Introduction
 
 The *plone.app.locales* package contains the translation files for Plone Core.
 
-This version is compatible with Plone 5.1.x and Plone 5.2.x.
+This version is compatible with Plone 6
 
 `How to contribute to Plone Core translations <https://docs.plone.org/develop/plone/i18n/contribute_to_translations.html>`_
 
