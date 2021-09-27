@@ -9,18 +9,12 @@ This version is compatible with Plone 6
 
 Plone Core i18n domains:
 
-- atcontenttypes
-- atreferencebrowserwidget
 - cmfeditions
 - cmfplacefulworkflow
 - plone
 - plonefrontpage
 - plonelocales
 - widgets (mockup)
-
-and the following non core add-ons at ``locales-addons`` directory:
-
-- plone.app.ldap
 
 
 .. note:: A `Contributor’s Agreement <https://plone.org/foundation/contributors-agreement>`_ is not needed to contribute to this repository.
