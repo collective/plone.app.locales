@@ -4,7 +4,8 @@ Changelog
 6.0 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix French translations.
+  [laulaz]
 
 
 5.1.29 (2021-07-28)
