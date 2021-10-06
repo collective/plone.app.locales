@@ -73,6 +73,10 @@ msgstr "${name} 不合法，其中字符 ${characters} 是无效的"
 msgid "${name} is reserved."
 msgstr "${name} 这个名字被保留。"
 
+#: plone/restapi/services/email_send/post.py:81
+msgid "${sender_fullname} via ${portal_title}"
+msgstr ""
+
 #: CMFPlone/RegistrationTool.py:215
 msgid "${sentances}. ${sentance}"
 msgstr "${sentances}. ${sentance}"
@@ -255,6 +259,10 @@ msgstr "通知操作，可以显示消息给用户。"
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:96
 msgid "A portal type condition makes the rule apply only to certain content types."
 msgstr "网站内容类型条件，使规则仅应用于确定的内容类型。"
+
+#: plone/restapi/services/email_send/post.py:74
+msgid "A portal user via ${portal_title}"
+msgstr ""
 
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet that provides links of an action category"
@@ -1744,6 +1752,10 @@ msgstr "定制类型迁移控制面板"
 msgid "Cut"
 msgstr "剪切"
 
+#: plone/restapi/profiles/testing/types/DXTestDocument.xml
+msgid "DX Test Document"
+msgstr ""
+
 #: plone.app.iterate/plone/app/iterate/profiles/testingdx/types/FolderishDocument.xml
 msgid "DX Test Folderish Document"
 msgstr ""
@@ -2638,6 +2650,8 @@ msgstr "扩展配置文件用来来配置测试设置"
 
 #. Default: "External Edit"
 #: CMFPlone/profiles/default/types/Discussion_Item.xml
+#: plone/restapi/profiles/testing/types/ATTestDocument.xml
+#: plone/restapi/profiles/testing/types/ATTestFolder.xml
 msgid "External Edit"
 msgstr "外部编辑"
 
@@ -3005,6 +3019,7 @@ msgstr "高像素模式"
 #. Default: "History"
 #: CMFPlone/profiles/default/actions.xml
 #: plone.stringinterp/plone/stringinterp/adapters.py:703
+#: plone/restapi/profiles/testing/types/ATTestDocument.xml
 msgid "History"
 msgstr "历史"
 
@@ -3080,6 +3095,7 @@ msgid "If enabled, the portlet will not show document type icons"
 msgstr ""
 
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:125
+#: plone/restapi/services/contextnavigation/get.py:126
 msgid "If enabled, the portlet will not show document type icons."
 msgstr ""
 
@@ -3466,6 +3482,10 @@ msgstr "最后编译日期"
 #: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:23
 msgid "Last modified"
 msgstr "最后修改日期"
+
+#: plone/restapi/behaviors.py:23
+msgid "Layout"
+msgstr ""
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:19
 msgid "Lead Image"
@@ -5227,6 +5247,10 @@ msgstr "回退"
 msgid "Revert to draft."
 msgstr "回退到草案。"
 
+#: plone/restapi/services/history/patch.py:28
+msgid "Reverted to revision ${version}"
+msgstr ""
+
 #: plone.stringinterp/plone/stringinterp/adapters.py:340
 msgid "Review State"
 msgstr "审核状态"
@@ -6088,6 +6112,14 @@ msgstr "模板 ${template} 已经映射到规则 ${ruleset} 。"
 
 #: plone.app.caching/plone/app/caching/operations/default.py:333
 msgid "Terse caching"
+msgstr ""
+
+#: plone/restapi/profiles/testing/types/ATTestDocument.xml
+msgid "Test Document"
+msgstr ""
+
+#: plone/restapi/profiles/testing/types/ATTestFolder.xml
+msgid "Test Folder"
 msgstr ""
 
 #: plone/app/theming/browser/controlpanel.pt:104
@@ -7367,6 +7399,10 @@ msgstr "你无权在这里粘贴 ${title}。"
 msgid "You are not authorized to paste here."
 msgstr "您无权在这里粘贴。"
 
+#: plone/restapi/services/email_send/post.py:91
+msgid "You are receiving this mail because ${sender_fullname} sent this message via the site ${portal_title}:"
+msgstr ""
+
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:41
 msgid "You are up to date. High fives."
 msgstr "已经是最新。"
@@ -8104,6 +8140,7 @@ msgstr "删除概览"
 
 #. Default: "Missing dependency"
 #: CMFPlone/controlpanel/browser/quickinstaller.py:191
+#: plone/restapi/services/addons/addons.py:227
 msgid "dependency_missing"
 msgstr "错失已存性"
 
@@ -9947,6 +9984,7 @@ msgstr "不应该包含空格、下划线或混合大小写。对象ID 是该条
 
 #. Default: "If selected, the navigation tree will only show the current folder and its children at all times."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:83
+#: plone/restapi/services/contextnavigation/get.py:84
 msgid "help_current_folder_only"
 msgstr "如果选中，导航树将总是只显示当前文件夹和他的内容。"
 
@@ -10010,7 +10048,7 @@ msgstr ""
 msgid "help_doctype"
 msgstr "您可以指定输出的文档类型字符串，例如 \"<!DOCTYPE html>\"。如果留空，则默认使用 XHTML 1.0 过渡文档类型 或 Diazo 主题中设置的文档类型。"
 
-#. Default: "<p> If you have enabled <em>Virtual host rewriting takes place in front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
+#. Default: "<p> If you have enabled <em>Virtual host rewriting takes place front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:268
 msgid "help_domains"
 msgstr ""
@@ -10225,6 +10263,7 @@ msgstr "如果选中，这将会尝试修改所选文件夹、及其子文件夹
 
 #. Default: "Whether or not to show the top, or 'root', node in the navigation tree. This is affected by the 'Start level' setting."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:68
+#: plone/restapi/services/contextnavigation/get.py:69
 msgid "help_include_top_node"
 msgstr "是否在导航树中显示上一层或“首页”节点。"
 
@@ -10298,21 +10337,25 @@ msgstr "上次内容被修改的时间"
 
 #. Default: "You may search for and choose a folder to act as the root of the navigation tree. Leave blank to use the Plone site root."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:56
+#: plone/restapi/services/contextnavigation/get.py:58
 msgid "help_navigation_root"
 msgstr "设置导航树、网站地图、当前路径的根文件夹路径。“/”表示站点根，“/folder1”表示从“folder1”开始。"
 
 #. Default: "An integer value that specifies the number of folder levels below the site root that must be exceeded before the navigation tree will display. 0 means that the navigation tree should be displayed everywhere including pages in the root of the site. 1 means the tree only shows up inside folders located in the root and downwards, never showing at the top level."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:95
+#: plone/restapi/services/contextnavigation/get.py:96
 msgid "help_navigation_start_level"
 msgstr "这是一个整数，表示导航树仅仅显示距站点根这么多级文件夹下的内容。0表示导航树将显示所有的内容，包括网站根结点的页面。1表示显示站点根下包含当前内容的文件夹。"
 
 #. Default: "The title of the navigation tree."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:47
+#: plone/restapi/services/contextnavigation/get.py:49
 msgid "help_navigation_title"
 msgstr "导航树的标题。"
 
 #. Default: "How many folders should be included before the navigation tree stops. 0 means no limit. 1 only includes the root folder."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:112
+#: plone/restapi/services/contextnavigation/get.py:113
 msgid "help_navigation_tree_depth"
 msgstr "这是一个整数，用于指定导航树最多显示多少级的子文件夹。0表示没有限制，1表示仅仅显示根文件夹。"
 
@@ -11518,6 +11561,7 @@ msgstr "(当前)"
 
 #. Default: "Only show the contents of the current folder."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:79
+#: plone/restapi/services/contextnavigation/get.py:80
 msgid "label_current_folder_only"
 msgstr "当前文件夹作为导航树根结点。"
 
@@ -12022,6 +12066,7 @@ msgstr "包括文件夹内的内容"
 
 #. Default: "Include top node"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:67
+#: plone/restapi/services/contextnavigation/get.py:68
 msgid "label_include_top_node"
 msgstr "包含上一级节点"
 
@@ -12245,21 +12290,25 @@ msgstr "名字"
 
 #. Default: "Root node"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:55
+#: plone/restapi/services/contextnavigation/get.py:57
 msgid "label_navigation_root_path"
 msgstr "根目录路径"
 
 #. Default: "Start level"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:94
+#: plone/restapi/services/contextnavigation/get.py:95
 msgid "label_navigation_startlevel"
 msgstr "起始级别"
 
 #. Default: "Title"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:46
+#: plone/restapi/services/contextnavigation/get.py:48
 msgid "label_navigation_title"
 msgstr "标题"
 
 #. Default: "Navigation tree depth"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:111
+#: plone/restapi/services/contextnavigation/get.py:112
 msgid "label_navigation_tree_depth"
 msgstr "导航树深度"
 

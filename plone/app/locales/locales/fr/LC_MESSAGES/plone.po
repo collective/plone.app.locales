@@ -81,6 +81,10 @@ msgstr "${name} n'est pas un nom valide. Les caractères suivants sont non valid
 msgid "${name} is reserved."
 msgstr "${name} est réservé."
 
+#: plone/restapi/services/email_send/post.py:81
+msgid "${sender_fullname} via ${portal_title}"
+msgstr ""
+
 #: CMFPlone/RegistrationTool.py:215
 msgid "${sentances}. ${sentance}"
 msgstr "${sentances}. ${sentance}"
@@ -263,6 +267,10 @@ msgstr "Une action « notification » permet d'afficher un message à l'utilis
 #: plone.app.contentrules/plone/app/contentrules/conditions/portaltype.py:96
 msgid "A portal type condition makes the rule apply only to certain content types."
 msgstr "Une condition sur les types de contenu permet à la règle de ne s'appliquer qu'à certains types de contenu."
+
+#: plone/restapi/services/email_send/post.py:74
+msgid "A portal user via ${portal_title}"
+msgstr ""
 
 #: CMFPlone/profiles/dependencies/portlets.xml
 msgid "A portlet that provides links of an action category"
@@ -1752,6 +1760,10 @@ msgstr "Panneau de configuration pour la migration des types spécifiques"
 msgid "Cut"
 msgstr "Couper"
 
+#: plone/restapi/profiles/testing/types/DXTestDocument.xml
+msgid "DX Test Document"
+msgstr ""
+
 #: plone.app.iterate/plone/app/iterate/profiles/testingdx/types/FolderishDocument.xml
 msgid "DX Test Folderish Document"
 msgstr ""
@@ -2646,6 +2658,8 @@ msgstr "Profil d'extension pour configurer un test de non régression"
 
 #. Default: "External Edit"
 #: CMFPlone/profiles/default/types/Discussion_Item.xml
+#: plone/restapi/profiles/testing/types/ATTestDocument.xml
+#: plone/restapi/profiles/testing/types/ATTestFolder.xml
 msgid "External Edit"
 msgstr "Éditeur externe"
 
@@ -3013,6 +3027,7 @@ msgstr "Mode haute densité de pixels"
 #. Default: "History"
 #: CMFPlone/profiles/default/actions.xml
 #: plone.stringinterp/plone/stringinterp/adapters.py:703
+#: plone/restapi/profiles/testing/types/ATTestDocument.xml
 msgid "History"
 msgstr "Historique"
 
@@ -3088,6 +3103,7 @@ msgid "If enabled, the portlet will not show document type icons"
 msgstr "Si activé, le portlet n'affichera pas les icônes de types de documents"
 
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:125
+#: plone/restapi/services/contextnavigation/get.py:126
 msgid "If enabled, the portlet will not show document type icons."
 msgstr "Si activé, le portlet n'affichera pas les icônes de types de documents."
 
@@ -3474,6 +3490,10 @@ msgstr "Date de dernière compilation"
 #: plone.app.vocabularies/plone/app/vocabularies/metadatafields.py:23
 msgid "Last modified"
 msgstr "Dernièrement modifié"
+
+#: plone/restapi/behaviors.py:23
+msgid "Layout"
+msgstr ""
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/configure.zcml:19
 msgid "Lead Image"
@@ -5232,6 +5252,10 @@ msgstr "Revenir en arrière"
 msgid "Revert to draft."
 msgstr "Retourne en brouillon."
 
+#: plone/restapi/services/history/patch.py:28
+msgid "Reverted to revision ${version}"
+msgstr ""
+
 #: plone.stringinterp/plone/stringinterp/adapters.py:340
 msgid "Review State"
 msgstr "État éditorial"
@@ -6093,6 +6117,14 @@ msgstr "Le modèle ${template} est déjà mappé sur la règle ${ruleset}."
 
 #: plone.app.caching/plone/app/caching/operations/default.py:333
 msgid "Terse caching"
+msgstr ""
+
+#: plone/restapi/profiles/testing/types/ATTestDocument.xml
+msgid "Test Document"
+msgstr ""
+
+#: plone/restapi/profiles/testing/types/ATTestFolder.xml
+msgid "Test Folder"
 msgstr ""
 
 #: plone/app/theming/browser/controlpanel.pt:104
@@ -7372,6 +7404,10 @@ msgstr "Vous n'êtes pas autorisé à coller ${title} ici."
 msgid "You are not authorized to paste here."
 msgstr "Vous n'êtes pas autorisé à coller ici."
 
+#: plone/restapi/services/email_send/post.py:91
+msgid "You are receiving this mail because ${sender_fullname} sent this message via the site ${portal_title}:"
+msgstr ""
+
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:41
 msgid "You are up to date. High fives."
 msgstr "Vous êtes à jour. Bravo !"
@@ -8109,6 +8145,7 @@ msgstr "Aperçu de la suppression"
 
 #. Default: "Missing dependency"
 #: CMFPlone/controlpanel/browser/quickinstaller.py:191
+#: plone/restapi/services/addons/addons.py:227
 msgid "dependency_missing"
 msgstr "Dépendance manquante"
 
@@ -9941,6 +9978,7 @@ msgstr "Ne devrait pas contenir d'espace, de tiret bas ou de casse mixte. L'iden
 
 #. Default: "If selected, the navigation tree will only show the current folder and its children at all times."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:83
+#: plone/restapi/services/contextnavigation/get.py:84
 msgid "help_current_folder_only"
 msgstr "Sélectionné, le portlet de navigation affichera en permanence uniquement le dossier courant ainsi que ses enfants."
 
@@ -10003,8 +10041,9 @@ msgstr ""
 msgid "help_doctype"
 msgstr "Vous pouvez spécifier un Doctype qui sera défini sur la sortie, par exemple « &lt;!DOCTYPE html&gt; ». Si vous le laissez vide, celui utilisé sera le Doctype transitionnel par défaut XHTML 1.0 ou celui défini par le thème Diazo."
 
-#. Default: "<p> If you have enabled <em>Virtual host rewriting takes place in front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
+#. Default: "<p> If you have enabled <em>Virtual host rewriting takes place front of the caching proxy</em> above, and your site is reachable via multiple domains (e.g. <code>http://example.com:80</code> vs. <code>http://www.example.com:80</code>), enter all available domains here, one per line. This will ensure that purge requests are sent for all domains where applicable. Note that it is more efficient to configure the front-most web server to simply redirect all requests to a single domain, so that Zope only \"sees\" a single domain. </p> <p> It is safe to leave this list blank if you are not using a caching proxy, if you are not using virtual hosting, if virtual host rewriting takes place behind the caching proxy, or if you only have a single virtually hosted domain name. </p>"
 #: plone.app.caching/plone/app/caching/browser/controlpanel.pt:268
+#, fuzzy
 msgid "help_domains"
 msgstr "<p>Si vous avez activé <em>la réécriture de l'hôte virtuel a lieu devant leserveur mandataire de mise en cache</em> ci-dessus et que votre site est accessible via plusieurs domaines (par exemple, <code>http://example.com:80<code>vs <code>http://www.example.com:80</code>), entrez tous les domaines disponibles ici, un par ligne. Cela garantira que les demandes de purge sont envoyées pour tous les domaines, le cas échéant. Notez qu'il est plus efficace de configurer le serveur Web le plus en amont pour qu'il redirige simplement toutes les demandes vers un seul domaine, de sorte que Zope ne« voie » que le même domaine.</p><p>Il est prudent de laisser cette liste vide si vous n'utilisez pas de serveur mandataire de mise en cache, si vous n'utilisez pas d'hébergement virtuel, si la réécriture de l'hôte virtuel a lieu derrière le serveur mandataire de mise en cache, ou si vous ne disposez que d'un seul nom de domaine virtuellement hébergé.</p>"
 
@@ -10217,6 +10256,7 @@ msgstr "Si l'option est activée, l'état de tout le contenu des dossiers sélec
 
 #. Default: "Whether or not to show the top, or 'root', node in the navigation tree. This is affected by the 'Start level' setting."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:68
+#: plone/restapi/services/contextnavigation/get.py:69
 msgid "help_include_top_node"
 msgstr "Afficher ou non le premier nœud, ou la « racine », de l'arbre de navigation.Ce paramètre est modifié par le paramètre « Niveau de départ »."
 
@@ -10289,21 +10329,25 @@ msgstr "Date de modification"
 
 #. Default: "You may search for and choose a folder to act as the root of the navigation tree. Leave blank to use the Plone site root."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:56
+#: plone/restapi/services/contextnavigation/get.py:58
 msgid "help_navigation_root"
 msgstr "Vous devez chercher et choisir un dossier qui agira comme la racine de l'arbre de navigation. Laissez ce champ vide pour utiliser la racine du site Plone."
 
 #. Default: "An integer value that specifies the number of folder levels below the site root that must be exceeded before the navigation tree will display. 0 means that the navigation tree should be displayed everywhere including pages in the root of the site. 1 means the tree only shows up inside folders located in the root and downwards, never showing at the top level."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:95
+#: plone/restapi/services/contextnavigation/get.py:96
 msgid "help_navigation_start_level"
 msgstr "Un nombre entier qui détermine le nombre de niveaux de dossier sous la racine du site qui doit être dépassé avant que le portlet de navigation s'affiche. 0 signifie que le portlet de navigation apparaîtra partout en incluant les éléments de la racine du site. 1 signifie que le portlet apparaîtra à partir des dossiers se trouvant à la racine de site et en dessous."
 
 #. Default: "The title of the navigation tree."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:47
+#: plone/restapi/services/contextnavigation/get.py:49
 msgid "help_navigation_title"
 msgstr "Le titre du portlet de navigation."
 
 #. Default: "How many folders should be included before the navigation tree stops. 0 means no limit. 1 only includes the root folder."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:112
+#: plone/restapi/services/contextnavigation/get.py:113
 msgid "help_navigation_tree_depth"
 msgstr "La profondeur maximale de l'arbre qu'affichera le portlet de navigation. 0 signifie pas de limite. 1 seulement le dossier racine."
 
@@ -11506,6 +11550,7 @@ msgstr "(courant)"
 
 #. Default: "Only show the contents of the current folder."
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:79
+#: plone/restapi/services/contextnavigation/get.py:80
 msgid "label_current_folder_only"
 msgstr "Afficher seulement les contenus du dossier courant."
 
@@ -12009,6 +12054,7 @@ msgstr "Inclure les éléments du dossier"
 
 #. Default: "Include top node"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:67
+#: plone/restapi/services/contextnavigation/get.py:68
 msgid "label_include_top_node"
 msgstr "Inclure la racine"
 
@@ -12232,21 +12278,25 @@ msgstr "Nom"
 
 #. Default: "Root node"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:55
+#: plone/restapi/services/contextnavigation/get.py:57
 msgid "label_navigation_root_path"
 msgstr "Nœud racine"
 
 #. Default: "Start level"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:94
+#: plone/restapi/services/contextnavigation/get.py:95
 msgid "label_navigation_startlevel"
 msgstr "Niveau de départ"
 
 #. Default: "Title"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:46
+#: plone/restapi/services/contextnavigation/get.py:48
 msgid "label_navigation_title"
 msgstr "Titre"
 
 #. Default: "Navigation tree depth"
 #: plone.app.portlets/plone/app/portlets/portlets/navigation.py:111
+#: plone/restapi/services/contextnavigation/get.py:112
 msgid "label_navigation_tree_depth"
 msgstr "Profondeur de l'arbre de navigation"
 
