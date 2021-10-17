@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CMFEditions\n"
-"POT-Creation-Date: 2016-08-20 09:30+0000\n"
+"POT-Creation-Date: 2021-10-17 07:24+0000\n"
 "PO-Revision-Date: 2011-01-15 22:32+0100\n"
 "Last-Translator: Geir Bækholt <baekholt@plone.org>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Domain: cmfeditions\n"
 "X-Is-Fallback-For: nb nb-no no-bok\n"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:30
+#: CMFEditions/skins/CMFEditions/revertversion.py:27
 msgid "${title} has been reverted to revision ${version}."
 msgstr "${title} har blitt tilbakestilt til utgave ${version}."
 
@@ -26,49 +26,40 @@ msgstr "${title} har blitt tilbakestilt til utgave ${version}."
 msgid "CMFEditions"
 msgstr ""
 
-#: CMFEditions/subscriber.py:52
-msgid "Edited (WebDAV)"
-msgstr "Redigert (WebDAV)"
-
 #: CMFEditions/profiles.zcml:12
 msgid "Extension profile for default CMFEditions setup."
 msgstr ""
 
-#: CMFEditions/browser/diff.pt:65
+#: CMFEditions/browser/diff.pt:73
 msgid "First revision"
 msgstr "Første utgave"
 
-#: CMFEditions/skins/CMFEditions/update_version_before_edit.cpy:22
-#: CMFEditions/subscriber.py:59
+#: CMFEditions/browser/views.py:26
 msgid "Initial revision"
 msgstr "Utgangspunkt"
-
-#: CMFEditions/subscriber.py:49
-msgid "Initial revision (WebDAV)"
-msgstr "Utgangspunkt (WebDAV)"
 
 #: CMFEditions/skins/CMFEditions/versions_history_form.pt:228
 msgid "Preview is not available."
 msgstr "Forhåndsvisning er ikke tilgjengelig"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:36
+#: CMFEditions/skins/CMFEditions/revertversion.py:33
 msgid "Reverted to revision ${version}"
 msgstr "Tilbakestilte til utgave ${version}"
 
-#: CMFEditions/browser/diff.pt:75
+#: CMFEditions/browser/diff.pt:84
 msgid "Second revision"
 msgstr "Andre utgave"
 
 #. Default: "Show differences"
-#: CMFEditions/browser/diff.pt:99
+#: CMFEditions/browser/diff.pt:101
 msgid "Show differences"
 msgstr "Vis forskjeller"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:41
+#: CMFEditions/skins/CMFEditions/revertversion.py:38
 msgid "The most current revision of the file could not be saved before reverting because the file is too large."
 msgstr "Den siste utgaven av filen kunne ikke lagres før tilbakestilling, da filen er for stor."
 
-#: CMFEditions/browser/diff.pt:93
+#: CMFEditions/browser/diff.pt:95
 msgid "There are no changes between the selected revisions."
 msgstr "Det er ingen forskjeller mellom de valgte utgavene"
 
@@ -77,7 +68,7 @@ msgstr "Det er ingen forskjeller mellom de valgte utgavene"
 msgid "This field has no inline difference view."
 msgstr "Dette feltet har ikke sammenlikningsmulighet"
 
-#: CMFEditions/skins/CMFEditions/update_version_on_edit.cpy:28
+#: CMFEditions/browser/views.py:56
 msgid "Versioning for this file has been disabled because it is too large"
 msgstr "Versjonering for denne filen er avskrudd da den er for stor"
 
@@ -87,7 +78,7 @@ msgid "Working Copy"
 msgstr "Arbeidskopi"
 
 #. Default: "as code"
-#: CMFEditions/browser/diff.pt:107
+#: CMFEditions/browser/diff.pt:108
 msgid "as code"
 msgstr "som programkode"
 
@@ -101,28 +92,18 @@ msgstr "Lagre som ny utgave"
 msgid "description_version_settings"
 msgstr "Man kan ha forskjellige instillinger for hver innholdstype. Innhold kan ha automatisk versjonering, og man kan også valgfritt få nye versjoner opprettet idet man tilbakestiller til gamle. "
 
-#. Default: "Select to make a version of the current content."
-#: CMFEditions/browser/edit.pt:49
-msgid "help_save_new_version"
-msgstr "Velg for å lage en versjon av det gjeldende innholdet."
-
-#. Default: "Enter a comment that describes the changes you made."
-#: CMFEditions/browser/edit.pt:63
-msgid "help_version_comment"
-msgstr "Skriv en kommentar som beskriver endringene du gjorde."
-
 #. Default: "At any moment you can save the content you just edited as a new revision. Enter below a comment to identify the version and hit the \"Save as new revision\" button."
 #: CMFEditions/skins/CMFEditions/versions_history_form.pt:176
 msgid "help_versioncomment"
 msgstr "Når som helst kan du lagre innholdet du nettopp redigerte som en ny versjon. Skriv en kommentar under og klkk \"lagre som ny versjon\"-knappen."
 
 #. Default: "inline"
-#: CMFEditions/browser/diff.pt:103
+#: CMFEditions/browser/diff.pt:104
 msgid "inline"
 msgstr "direkte"
 
 #. Default: "Click here to get the file"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:21
+#: CMFEditions/browser/templates/version_file_view.pt:21
 msgid "label_click_to_get_file"
 msgstr "Klikk her for å få filen"
 
@@ -187,7 +168,7 @@ msgid "label_enable_versioning"
 msgstr "Versjonering slått på?"
 
 #. Default: "File type"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:45
+#: CMFEditions/browser/templates/version_file_view.pt:45
 msgid "label_file_type"
 msgstr "Filtype"
 
@@ -236,11 +217,6 @@ msgstr "(tidligere rullet tilbake)"
 msgid "label_revert"
 msgstr "Tilbakestill til denne utgaven"
 
-#. Default: "Save as new version"
-#: CMFEditions/browser/edit.pt:46
-msgid "label_save_new_version"
-msgstr "Lagre som ny utgave"
-
 #. Default: "show revisions"
 #: CMFEditions/skins/CMFEditions/versions_history.pt:32
 msgid "label_show_version"
@@ -252,14 +228,9 @@ msgid "label_title_vers_config"
 msgstr "versjoneringsinstillinger"
 
 #. Default: "Update"
-#: CMFEditions/browser/diff.pt:87
+#: CMFEditions/browser/diff.pt:89
 msgid "label_update"
 msgstr "Oppdater"
-
-#. Default: "Change note"
-#: CMFEditions/browser/edit.pt:61
-msgid "label_version_comment"
-msgstr "Kommentar"
 
 #. Default: "Versionable content types"
 #: CMFEditions/skins/CMFEditions/versioning_config_form.pt:43
@@ -287,7 +258,7 @@ msgid "label_versions"
 msgstr "Siste utgaver"
 
 #. Default: "Revisions"
-#: CMFEditions/browser/diff.pt:64
+#: CMFEditions/browser/diff.pt:63
 msgid "legend_revisions"
 msgstr "Utgaver"
 
@@ -321,12 +292,12 @@ msgid "listingheader_performed_by"
 msgstr "Utført av"
 
 #. Default: "(No file has been uploaded yet)"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:29
+#: CMFEditions/browser/templates/version_file_view.pt:29
 msgid "no_file_uploaded"
 msgstr "(Filen har ikke blitt lastet opp ennå)"
 
 #. Default: "This object has no revision information."
-#: CMFEditions/browser/diff.pt:54
+#: CMFEditions/browser/diff.pt:53
 msgid "no_history"
 msgstr "Dette innholdet har ingen versjoneringsinformasjon"
 
@@ -335,7 +306,7 @@ msgstr "Dette innholdet har ingen versjoneringsinformasjon"
 msgid "summary_versions_history"
 msgstr "Versjonshistorikk"
 
-#: CMFEditions/browser/diff.py:35
+#: CMFEditions/browser/diff.py:37
 msgid "version ${version}"
 msgstr "utgave ${version}"
 

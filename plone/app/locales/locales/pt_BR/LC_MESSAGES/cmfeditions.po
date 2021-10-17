@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CMFEditions\n"
-"POT-Creation-Date: 2016-08-20 09:30+0000\n"
+"POT-Creation-Date: 2021-10-17 07:24+0000\n"
 "PO-Revision-Date: 2018-03-12 12:42-0300\n"
 "Last-Translator: Andre Nogueira <andre@simplesconsultoria.com.br>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Language: pt_BR\n"
 "X-Generator: Poedit 1.8.7.1\n"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:30
+#: CMFEditions/skins/CMFEditions/revertversion.py:27
 msgid "${title} has been reverted to revision ${version}."
 msgstr "${title} foi revertido para a revisão ${version}."
 
@@ -28,49 +28,40 @@ msgstr "${title} foi revertido para a revisão ${version}."
 msgid "CMFEditions"
 msgstr "CMFEditions"
 
-#: CMFEditions/subscriber.py:52
-msgid "Edited (WebDAV)"
-msgstr "Editado (WebDAV)"
-
 #: CMFEditions/profiles.zcml:12
 msgid "Extension profile for default CMFEditions setup."
 msgstr "Perfil de extensão para o setup padrão do CMFEditions."
 
-#: CMFEditions/browser/diff.pt:65
+#: CMFEditions/browser/diff.pt:73
 msgid "First revision"
 msgstr "Primeira revisão"
 
-#: CMFEditions/skins/CMFEditions/update_version_before_edit.cpy:22
-#: CMFEditions/subscriber.py:59
+#: CMFEditions/browser/views.py:26
 msgid "Initial revision"
 msgstr "Revisão inicial"
-
-#: CMFEditions/subscriber.py:49
-msgid "Initial revision (WebDAV)"
-msgstr "Revisão inicial (WebDAV)"
 
 #: CMFEditions/skins/CMFEditions/versions_history_form.pt:228
 msgid "Preview is not available."
 msgstr "Pré-visualização não disponível."
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:36
+#: CMFEditions/skins/CMFEditions/revertversion.py:33
 msgid "Reverted to revision ${version}"
 msgstr "Revertido para a revisão ${version}"
 
-#: CMFEditions/browser/diff.pt:75
+#: CMFEditions/browser/diff.pt:84
 msgid "Second revision"
 msgstr "Segunda revisão"
 
 #. Default: "Show differences"
-#: CMFEditions/browser/diff.pt:99
+#: CMFEditions/browser/diff.pt:101
 msgid "Show differences"
 msgstr "Exibir diferenças"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:41
+#: CMFEditions/skins/CMFEditions/revertversion.py:38
 msgid "The most current revision of the file could not be saved before reverting because the file is too large."
 msgstr "A revisão mais recente do arquivo não pode ser salva antes de ser revertida porque o arquivo é muito grande."
 
-#: CMFEditions/browser/diff.pt:93
+#: CMFEditions/browser/diff.pt:95
 msgid "There are no changes between the selected revisions."
 msgstr "Não existem diferenças entre as revisões selecionadas."
 
@@ -79,7 +70,7 @@ msgstr "Não existem diferenças entre as revisões selecionadas."
 msgid "This field has no inline difference view."
 msgstr "Este campo não possui nenhuma visualização de diferenças."
 
-#: CMFEditions/skins/CMFEditions/update_version_on_edit.cpy:28
+#: CMFEditions/browser/views.py:56
 msgid "Versioning for this file has been disabled because it is too large"
 msgstr "O versionamento foi desabilitado para este arquivo porque ele é muito grande."
 
@@ -89,7 +80,7 @@ msgid "Working Copy"
 msgstr "Cópia de Trabalho"
 
 #. Default: "as code"
-#: CMFEditions/browser/diff.pt:107
+#: CMFEditions/browser/diff.pt:108
 msgid "as code"
 msgstr "como código"
 
@@ -103,28 +94,18 @@ msgstr "Salvar como uma nova revisão"
 msgid "description_version_settings"
 msgstr "Você pode ter diferentes configurações, uma para cada tipo de conteúdo. O conteúdo pode ser versionado automaticamente e você também pode optar por criar uma versão quando você reverter uma revisão."
 
-#. Default: "Select to make a version of the current content."
-#: CMFEditions/browser/edit.pt:49
-msgid "help_save_new_version"
-msgstr "Selecione para criar uma versão do conteúdo atual."
-
-#. Default: "Enter a comment that describes the changes you made."
-#: CMFEditions/browser/edit.pt:63
-msgid "help_version_comment"
-msgstr "Informe um comentário descrevendo as alterações que você fez."
-
 #. Default: "At any moment you can save the content you just edited as a new revision. Enter below a comment to identify the version and hit the \"Save as new revision\" button."
 #: CMFEditions/skins/CMFEditions/versions_history_form.pt:176
 msgid "help_versioncomment"
 msgstr "A qualquer momento você pode salvar o conteúdo que você acabou de editar como uma nova revisão. Informe abaixo um comentário para identificar a versão e clique no botão \"Salvar uma nova revisão\"."
 
 #. Default: "inline"
-#: CMFEditions/browser/diff.pt:103
+#: CMFEditions/browser/diff.pt:104
 msgid "inline"
 msgstr "inline"
 
 #. Default: "Click here to get the file"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:21
+#: CMFEditions/browser/templates/version_file_view.pt:21
 msgid "label_click_to_get_file"
 msgstr "Clique aqui para obter este arquivo"
 
@@ -189,7 +170,7 @@ msgid "label_enable_versioning"
 msgstr "O versionamento está ativado?"
 
 #. Default: "File type"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:45
+#: CMFEditions/browser/templates/version_file_view.pt:45
 msgid "label_file_type"
 msgstr "Tipo de arquivo"
 
@@ -238,11 +219,6 @@ msgstr "(revertido anteriormente)"
 msgid "label_revert"
 msgstr "Reverter para esta revisão"
 
-#. Default: "Save as new version"
-#: CMFEditions/browser/edit.pt:46
-msgid "label_save_new_version"
-msgstr "Salvar como nova versão"
-
 #. Default: "show revisions"
 #: CMFEditions/skins/CMFEditions/versions_history.pt:32
 msgid "label_show_version"
@@ -254,14 +230,9 @@ msgid "label_title_vers_config"
 msgstr "Configurações de Versionamento"
 
 #. Default: "Update"
-#: CMFEditions/browser/diff.pt:87
+#: CMFEditions/browser/diff.pt:89
 msgid "label_update"
 msgstr "Atualizar"
-
-#. Default: "Change note"
-#: CMFEditions/browser/edit.pt:61
-msgid "label_version_comment"
-msgstr "Comentário da versão"
 
 #. Default: "Versionable content types"
 #: CMFEditions/skins/CMFEditions/versioning_config_form.pt:43
@@ -289,7 +260,7 @@ msgid "label_versions"
 msgstr "Versões Recentes"
 
 #. Default: "Revisions"
-#: CMFEditions/browser/diff.pt:64
+#: CMFEditions/browser/diff.pt:63
 msgid "legend_revisions"
 msgstr "Revisões"
 
@@ -323,12 +294,12 @@ msgid "listingheader_performed_by"
 msgstr "Realizado por"
 
 #. Default: "(No file has been uploaded yet)"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:29
+#: CMFEditions/browser/templates/version_file_view.pt:29
 msgid "no_file_uploaded"
 msgstr "(Nenhum arquivo foi enviado ainda)"
 
 #. Default: "This object has no revision information."
-#: CMFEditions/browser/diff.pt:54
+#: CMFEditions/browser/diff.pt:53
 msgid "no_history"
 msgstr "Este objeto não possui informações sobre revisões."
 
@@ -337,7 +308,7 @@ msgstr "Este objeto não possui informações sobre revisões."
 msgid "summary_versions_history"
 msgstr "Histórico de Versões"
 
-#: CMFEditions/browser/diff.py:35
+#: CMFEditions/browser/diff.py:37
 msgid "version ${version}"
 msgstr "versão ${version}"
 

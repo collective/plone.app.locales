@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CMFEditions\n"
-"POT-Creation-Date: 2016-08-20 09:30+0000\n"
+"POT-Creation-Date: 2021-10-17 07:24+0000\n"
 "PO-Revision-Date: 2012-04-17 11:42+0100\n"
 "Last-Translator: Piotr Furman <piotr.furman@webservice.pl>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: POLAND\n"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:30
+#: CMFEditions/skins/CMFEditions/revertversion.py:27
 msgid "${title} has been reverted to revision ${version}."
 msgstr "${title} został wycofany do wersji ${version}."
 
@@ -26,49 +26,40 @@ msgstr "${title} został wycofany do wersji ${version}."
 msgid "CMFEditions"
 msgstr ""
 
-#: CMFEditions/subscriber.py:52
-msgid "Edited (WebDAV)"
-msgstr "Edytowano (WebDAV)"
-
 #: CMFEditions/profiles.zcml:12
 msgid "Extension profile for default CMFEditions setup."
 msgstr ""
 
-#: CMFEditions/browser/diff.pt:65
+#: CMFEditions/browser/diff.pt:73
 msgid "First revision"
 msgstr "Wersja pierwsza"
 
-#: CMFEditions/skins/CMFEditions/update_version_before_edit.cpy:22
-#: CMFEditions/subscriber.py:59
+#: CMFEditions/browser/views.py:26
 msgid "Initial revision"
 msgstr "Wersja początkowa"
-
-#: CMFEditions/subscriber.py:49
-msgid "Initial revision (WebDAV)"
-msgstr "Wersja początkowa (WebDAV)"
 
 #: CMFEditions/skins/CMFEditions/versions_history_form.pt:228
 msgid "Preview is not available."
 msgstr "Podgląd jest niedostępny."
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:36
+#: CMFEditions/skins/CMFEditions/revertversion.py:33
 msgid "Reverted to revision ${version}"
 msgstr "Wycofano do wersji ${version}"
 
-#: CMFEditions/browser/diff.pt:75
+#: CMFEditions/browser/diff.pt:84
 msgid "Second revision"
 msgstr "Wersja druga"
 
 #. Default: "Show differences"
-#: CMFEditions/browser/diff.pt:99
+#: CMFEditions/browser/diff.pt:101
 msgid "Show differences"
 msgstr "Pokaż różnice"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:41
+#: CMFEditions/skins/CMFEditions/revertversion.py:38
 msgid "The most current revision of the file could not be saved before reverting because the file is too large."
 msgstr "Najnowsza wersja pliku nie mogła zostać zapisana przed wycofaniem ponieważ plik jest zbyt duży."
 
-#: CMFEditions/browser/diff.pt:93
+#: CMFEditions/browser/diff.pt:95
 msgid "There are no changes between the selected revisions."
 msgstr "Nie ma zmian pomiędzy wybranymi wersjami."
 
@@ -77,7 +68,7 @@ msgstr "Nie ma zmian pomiędzy wybranymi wersjami."
 msgid "This field has no inline difference view."
 msgstr "To pole nie ma podglądu różnic w treści."
 
-#: CMFEditions/skins/CMFEditions/update_version_on_edit.cpy:28
+#: CMFEditions/browser/views.py:56
 msgid "Versioning for this file has been disabled because it is too large"
 msgstr "Wersjonowanie dla tego pliku zostało wyłączone ze względu na jego zbyt duży rozmiar."
 
@@ -87,7 +78,7 @@ msgid "Working Copy"
 msgstr "Kopia robocza"
 
 #. Default: "as code"
-#: CMFEditions/browser/diff.pt:107
+#: CMFEditions/browser/diff.pt:108
 msgid "as code"
 msgstr "w kodzie"
 
@@ -101,28 +92,18 @@ msgstr "Zapisz jako nową wersję"
 msgid "description_version_settings"
 msgstr "Możesz mieć różne ustawienia dla każdego Typu Dokumentu. Dokument może być automatycznie wersjonowany, a także możesz poprosić o stworzenie wersji przy cofaniu się (rezygnacji z nowej wersji)."
 
-#. Default: "Select to make a version of the current content."
-#: CMFEditions/browser/edit.pt:49
-msgid "help_save_new_version"
-msgstr "Wybierz aby stworzyć wersje bieżącego dokumentu."
-
-#. Default: "Enter a comment that describes the changes you made."
-#: CMFEditions/browser/edit.pt:63
-msgid "help_version_comment"
-msgstr "Wpisz komentarz opisujący zmiany których dokonałeś."
-
 #. Default: "At any moment you can save the content you just edited as a new revision. Enter below a comment to identify the version and hit the \"Save as new revision\" button."
 #: CMFEditions/skins/CMFEditions/versions_history_form.pt:176
 msgid "help_versioncomment"
 msgstr "W dowolnym momencie możesz zapisać dokument który edytowałeś jako nową wersję. Wpisz poniżej komentarz identyfikujący wersje i wybierz przycisk „Zapisz jako nową wersję”."
 
 #. Default: "inline"
-#: CMFEditions/browser/diff.pt:103
+#: CMFEditions/browser/diff.pt:104
 msgid "inline"
 msgstr "w treści"
 
 #. Default: "Click here to get the file"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:21
+#: CMFEditions/browser/templates/version_file_view.pt:21
 msgid "label_click_to_get_file"
 msgstr "Kliknij tutaj aby pobrać plik"
 
@@ -187,7 +168,7 @@ msgid "label_enable_versioning"
 msgstr "Wersjonowanie włączone?"
 
 #. Default: "File type"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:45
+#: CMFEditions/browser/templates/version_file_view.pt:45
 msgid "label_file_type"
 msgstr "Typ pliku"
 
@@ -236,11 +217,6 @@ msgstr "(wycofano poprzednio)"
 msgid "label_revert"
 msgstr "Cofnij do tej wersji"
 
-#. Default: "Save as new version"
-#: CMFEditions/browser/edit.pt:46
-msgid "label_save_new_version"
-msgstr "Zapisz jako nową wersje"
-
 #. Default: "show revisions"
 #: CMFEditions/skins/CMFEditions/versions_history.pt:32
 msgid "label_show_version"
@@ -252,14 +228,9 @@ msgid "label_title_vers_config"
 msgstr "Ustawienia wersjonowania"
 
 #. Default: "Update"
-#: CMFEditions/browser/diff.pt:87
+#: CMFEditions/browser/diff.pt:89
 msgid "label_update"
 msgstr "Aktualizuj"
-
-#. Default: "Change note"
-#: CMFEditions/browser/edit.pt:61
-msgid "label_version_comment"
-msgstr "Zmień notatkę"
 
 #. Default: "Versionable content types"
 #: CMFEditions/skins/CMFEditions/versioning_config_form.pt:43
@@ -287,7 +258,7 @@ msgid "label_versions"
 msgstr "Ostatnie wersje"
 
 #. Default: "Revisions"
-#: CMFEditions/browser/diff.pt:64
+#: CMFEditions/browser/diff.pt:63
 msgid "legend_revisions"
 msgstr "Wersje"
 
@@ -321,12 +292,12 @@ msgid "listingheader_performed_by"
 msgstr "Przez kogo"
 
 #. Default: "(No file has been uploaded yet)"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:29
+#: CMFEditions/browser/templates/version_file_view.pt:29
 msgid "no_file_uploaded"
 msgstr "(Nie załadowano jeszcze pliku)"
 
 #. Default: "This object has no revision information."
-#: CMFEditions/browser/diff.pt:54
+#: CMFEditions/browser/diff.pt:53
 msgid "no_history"
 msgstr "Ten element nie ma informacji o wersji."
 
@@ -335,7 +306,7 @@ msgstr "Ten element nie ma informacji o wersji."
 msgid "summary_versions_history"
 msgstr "Historia wersji"
 
-#: CMFEditions/browser/diff.py:35
+#: CMFEditions/browser/diff.py:37
 msgid "version ${version}"
 msgstr "wersja ${version}"
 

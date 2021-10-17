@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CMFEditions\n"
-"POT-Creation-Date: 2016-08-20 09:30+0000\n"
+"POT-Creation-Date: 2021-10-17 07:24+0000\n"
 "PO-Revision-Date: 2011-09-21 23:39+0100\n"
 "Last-Translator: Lidia Esparraguera <lidia@2tweb.com>\n"
 "Language-Team: Català <plone-cat@lists.plone.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Domain: cmfeditions\n"
 "X-Is-Fallback-For: ca-ad ca-es ca-fr ca-it\n"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:30
+#: CMFEditions/skins/CMFEditions/revertversion.py:27
 msgid "${title} has been reverted to revision ${version}."
 msgstr "${title} ha estat retornat a la revisió ${version}."
 
@@ -29,49 +29,40 @@ msgstr "${title} ha estat retornat a la revisió ${version}."
 msgid "CMFEditions"
 msgstr ""
 
-#: CMFEditions/subscriber.py:52
-msgid "Edited (WebDAV)"
-msgstr "S'ha editat (WebDAV)"
-
 #: CMFEditions/profiles.zcml:12
 msgid "Extension profile for default CMFEditions setup."
 msgstr ""
 
-#: CMFEditions/browser/diff.pt:65
+#: CMFEditions/browser/diff.pt:73
 msgid "First revision"
 msgstr "Primera revisió"
 
-#: CMFEditions/skins/CMFEditions/update_version_before_edit.cpy:22
-#: CMFEditions/subscriber.py:59
+#: CMFEditions/browser/views.py:26
 msgid "Initial revision"
 msgstr "Revisió inicial"
-
-#: CMFEditions/subscriber.py:49
-msgid "Initial revision (WebDAV)"
-msgstr "Revisió inicial (WebDAV)"
 
 #: CMFEditions/skins/CMFEditions/versions_history_form.pt:228
 msgid "Preview is not available."
 msgstr "La previsualització no està disponible."
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:36
+#: CMFEditions/skins/CMFEditions/revertversion.py:33
 msgid "Reverted to revision ${version}"
 msgstr "S'ha retornat a la revisió ${version}"
 
-#: CMFEditions/browser/diff.pt:75
+#: CMFEditions/browser/diff.pt:84
 msgid "Second revision"
 msgstr "Segona revisió"
 
 #. Default: "Show differences"
-#: CMFEditions/browser/diff.pt:99
+#: CMFEditions/browser/diff.pt:101
 msgid "Show differences"
 msgstr "Mostra les diferències"
 
-#: CMFEditions/skins/CMFEditions/revertversion.py:41
+#: CMFEditions/skins/CMFEditions/revertversion.py:38
 msgid "The most current revision of the file could not be saved before reverting because the file is too large."
 msgstr "No s'ha pogut desar la revisió més actual del fitxer abans de retornar a la revisió anterior perquè el fitxer és massa gran."
 
-#: CMFEditions/browser/diff.pt:93
+#: CMFEditions/browser/diff.pt:95
 msgid "There are no changes between the selected revisions."
 msgstr "No hi ha canvis entre les revisions seleccionades."
 
@@ -80,7 +71,7 @@ msgstr "No hi ha canvis entre les revisions seleccionades."
 msgid "This field has no inline difference view."
 msgstr "Aquest camp no disposa de visualització de diferències en línia."
 
-#: CMFEditions/skins/CMFEditions/update_version_on_edit.cpy:28
+#: CMFEditions/browser/views.py:56
 msgid "Versioning for this file has been disabled because it is too large"
 msgstr "S'ha deshabilitat el versionat per aquest fitxer perquè és massa gran"
 
@@ -90,7 +81,7 @@ msgid "Working Copy"
 msgstr "Còpia de treball"
 
 #. Default: "as code"
-#: CMFEditions/browser/diff.pt:107
+#: CMFEditions/browser/diff.pt:108
 msgid "as code"
 msgstr "com a codi"
 
@@ -104,28 +95,18 @@ msgstr "Desar com a nova revisió"
 msgid "description_version_settings"
 msgstr "Podeu tenir configuracions diferents per a cada tipus de contingut. El contingut es pot versionar automàticament, o bé podeu optar per a crear una versió quan torneu enrera una revisió."
 
-#. Default: "Select to make a version of the current content."
-#: CMFEditions/browser/edit.pt:49
-msgid "help_save_new_version"
-msgstr "Seleccioneu-ho per a fer una versió del contingut actual."
-
-#. Default: "Enter a comment that describes the changes you made."
-#: CMFEditions/browser/edit.pt:63
-msgid "help_version_comment"
-msgstr "Introduïu un comentari que descrigui els canvis que heu fet."
-
 #. Default: "At any moment you can save the content you just edited as a new revision. Enter below a comment to identify the version and hit the \"Save as new revision\" button."
 #: CMFEditions/skins/CMFEditions/versions_history_form.pt:176
 msgid "help_versioncomment"
 msgstr "En qualsevol moment podeu desar com a nova revisió el contingut que esteu editant . Introduiu un comentari per a identificar la versió i premeu 'Desar com a nova revisió'."
 
 #. Default: "inline"
-#: CMFEditions/browser/diff.pt:103
+#: CMFEditions/browser/diff.pt:104
 msgid "inline"
 msgstr "en línia"
 
 #. Default: "Click here to get the file"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:21
+#: CMFEditions/browser/templates/version_file_view.pt:21
 msgid "label_click_to_get_file"
 msgstr "Cliqueu aquí per a obtenir el fitxer"
 
@@ -190,7 +171,7 @@ msgid "label_enable_versioning"
 msgstr "Està activat el versionat?"
 
 #. Default: "File type"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:45
+#: CMFEditions/browser/templates/version_file_view.pt:45
 msgid "label_file_type"
 msgstr "Tipus de fitxer"
 
@@ -239,11 +220,6 @@ msgstr "(tornat enrera prèviament)"
 msgid "label_revert"
 msgstr "Tornar a aquesta revisió"
 
-#. Default: "Save as new version"
-#: CMFEditions/browser/edit.pt:46
-msgid "label_save_new_version"
-msgstr "Desar com a nova versió"
-
 #. Default: "show revisions"
 #: CMFEditions/skins/CMFEditions/versions_history.pt:32
 msgid "label_show_version"
@@ -255,14 +231,9 @@ msgid "label_title_vers_config"
 msgstr "Paràmetres del versionat"
 
 #. Default: "Update"
-#: CMFEditions/browser/diff.pt:87
+#: CMFEditions/browser/diff.pt:89
 msgid "label_update"
 msgstr "Actualitza"
-
-#. Default: "Change note"
-#: CMFEditions/browser/edit.pt:61
-msgid "label_version_comment"
-msgstr "Canvia la nota"
 
 #. Default: "Versionable content types"
 #: CMFEditions/skins/CMFEditions/versioning_config_form.pt:43
@@ -290,7 +261,7 @@ msgid "label_versions"
 msgstr "Versions recents"
 
 #. Default: "Revisions"
-#: CMFEditions/browser/diff.pt:64
+#: CMFEditions/browser/diff.pt:63
 msgid "legend_revisions"
 msgstr "Revisions"
 
@@ -324,12 +295,12 @@ msgid "listingheader_performed_by"
 msgstr "Realitzat per"
 
 #. Default: "(No file has been uploaded yet)"
-#: CMFEditions/skins/cmfeditions_views/version_file_view.pt:29
+#: CMFEditions/browser/templates/version_file_view.pt:29
 msgid "no_file_uploaded"
 msgstr "(Encara no s'ha carregat cap fitxer)"
 
 #. Default: "This object has no revision information."
-#: CMFEditions/browser/diff.pt:54
+#: CMFEditions/browser/diff.pt:53
 msgid "no_history"
 msgstr "Aquest objecte no té informació de revisió."
 
@@ -338,7 +309,7 @@ msgstr "Aquest objecte no té informació de revisió."
 msgid "summary_versions_history"
 msgstr "Historial de versions"
 
-#: CMFEditions/browser/diff.py:35
+#: CMFEditions/browser/diff.py:37
 msgid "version ${version}"
 msgstr "versió ${version}"
 
