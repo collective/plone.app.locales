@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0 (unreleased)
+6.0 (2021-10-17)
 ----------------
 
 - New Serbian situation:
