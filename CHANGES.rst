@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.30 (unreleased)
+5.1.30 (2021-10-17)
 -------------------
 
 - New Serbian situation:
