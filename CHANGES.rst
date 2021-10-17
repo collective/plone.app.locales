@@ -4,7 +4,17 @@ Changelog
 5.1.30 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- New Serbian situation:
+
+  - Default ``sr`` remains Cyrillic.  This may change in Plone 6.
+  - Copied the Cyrillic translations to ``sr@Cyrl``.
+  - Renamed the Latin translations folder from ``sr_Latn`` to ``sr@Latn``.
+
+  If you prefer the Latin character set of this language, set this environment variable:
+  ``zope_i18n_allowed_languages sr@Latn``
+  If you prefer Cyrillic, you can set it to ``sr@Cyrl`` to be sure you keep getting Cyrillic in newer versions.
+  See `issue 326 <https://github.com/collective/plone.app.locales/issues/326>`_.
+  [maurits, fredvd]
 
 
 5.1.29 (2021-07-28)
