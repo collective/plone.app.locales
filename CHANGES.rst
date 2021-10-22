@@ -4,7 +4,8 @@ Changelog
 6.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Complete eu translation.
+  [erral]
 
 
 6.0 (2021-10-17)
