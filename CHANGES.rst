@@ -4,6 +4,9 @@ Changelog
 6.0.1 (unreleased)
 ------------------
 
+- Rename Dexterity Content Types to Content Types in en and de
+  [tisto]
+
 - Complete eu translation.
   [erral]
 
