@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.1 (unreleased)
+6.0.1 (2021-12-01)
 ------------------
 
 - Rename Dexterity Content Types to Content Types in en and de
