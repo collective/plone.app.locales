@@ -4,7 +4,9 @@ Changelog
 5.1.31 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fixes Portuguese integrity break message when deleting a content, to consider the
+  masculine and feminine gender of the content type.
+  [wesleybl]
 
 
 5.1.30 (2021-10-17)
