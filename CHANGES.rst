@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.2 (unreleased)
+6.0.2 (2022-04-06)
 ------------------
 
 - Fixes Portuguese integrity break message when deleting a content, to consider the
