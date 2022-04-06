@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.31 (unreleased)
+5.1.31 (2022-04-06)
 -------------------
 
 - Fixes Portuguese integrity break message when deleting a content, to consider the
