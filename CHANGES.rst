@@ -4,8 +4,8 @@ Changelog
 6.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- complete basque translation
+  [erral]
 
 6.0.3 (2022-06-26)
 ------------------
