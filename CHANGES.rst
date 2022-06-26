@@ -4,6 +4,9 @@ Changelog
 6.0.4 (unreleased)
 ------------------
 
+- complete spanish translation
+  [erral]
+
 - complete basque translation
   [erral]
 
