@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.3 (unreleased)
+6.0.3 (2022-06-26)
 ------------------
 
 - Update translation files
