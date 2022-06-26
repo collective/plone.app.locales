@@ -4,8 +4,20 @@ Changelog
 6.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update translation files
+  [erral]
 
+- Fixes in dutch translations
+  [laulaz]
+
+- Fixes in german translations
+  [agitator]
+
+- New translations in pat-structure
+  [petschki]
+
+- Complete pt-br translation
+  [ericof]
 
 6.0.2 (2022-04-06)
 ------------------
