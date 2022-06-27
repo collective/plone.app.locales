@@ -4,6 +4,9 @@ Changelog
 6.0.4 (unreleased)
 ------------------
 
+- Remove transifex configuration. See #325
+  [erral]
+
 - complete spanish translation
   [erral]
 
