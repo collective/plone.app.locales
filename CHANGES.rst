@@ -4,6 +4,9 @@ Changelog
 6.0.4 (unreleased)
 ------------------
 
+- Add more Dutch translations, unify the po headers in this language.
+  [maurits]
+
 - complete spanish translation
   [erral]
 
