@@ -4,8 +4,12 @@ Changelog
 6.0.4 (unreleased)
 ------------------
 
+
 - Remove transifex configuration. See #325
   [erral]
+
+- Add more Dutch translations, unify the po headers in this language.
+  [maurits]
 
 - complete spanish translation
   [erral]
