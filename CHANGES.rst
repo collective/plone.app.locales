@@ -4,7 +4,8 @@ Changelog
 6.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixes in German translation
+  [davisagli]
 
 
 6.0.4 (2022-07-22)
