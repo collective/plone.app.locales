@@ -4,6 +4,9 @@ Changelog
 6.0.5 (unreleased)
 ------------------
 
+- Fix Basque translation, remove fuzzy messages
+  [erral]
+
 - Fixes in German translation
   [davisagli]
 
