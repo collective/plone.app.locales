@@ -6,6 +6,9 @@ Changelog
 
 - Fixes in Spanish translation: remove fuzzy messages
   [erral]
+  
+- Fix Basque translation, remove fuzzy messages
+  [erral]
 
 - Fixes in German translation
   [davisagli]
