@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.5 (unreleased)
+6.0.5 (2022-08-21)
 ------------------
 
 - Fixes in Spanish translation: remove fuzzy messages
