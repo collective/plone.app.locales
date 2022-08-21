@@ -4,6 +4,9 @@ Changelog
 6.0.5 (unreleased)
 ------------------
 
+- Fixes in Spanish translation: remove fuzzy messages
+  [erral]
+
 - Fixes in German translation
   [davisagli]
 
