@@ -4,7 +4,7 @@ Changelog
 6.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Complete Dutch translations.  [jladage]
 
 
 6.0.5 (2022-08-21)
@@ -12,7 +12,7 @@ Changelog
 
 - Fixes in Spanish translation: remove fuzzy messages
   [erral]
-  
+
 - Fix Basque translation, remove fuzzy messages
   [erral]
 
