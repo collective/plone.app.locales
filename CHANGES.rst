@@ -4,7 +4,11 @@ Changelog
 6.0.6 (unreleased)
 ------------------
 
-- Complete Dutch translations.  [jladage]
+- Change some control panel translations in basque 
+  [erral]
+
+- Complete Dutch translations.  
+  [jladage]
 
 
 6.0.5 (2022-08-21)
