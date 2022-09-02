@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.6 (unreleased)
+6.0.6 (2022-09-02)
 ------------------
 
 - Change some control panel translations in basque 
