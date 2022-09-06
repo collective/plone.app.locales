@@ -4,7 +4,8 @@ Changelog
 6.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix French translations (fuzzy)
+  [mpeeters]
 
 
 6.0.6 (2022-09-02)
