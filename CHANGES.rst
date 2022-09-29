@@ -4,6 +4,9 @@ Changelog
 6.0.7 (unreleased)
 ------------------
 
+- Complete es translation
+  [erral]
+
 - Update po files with new msgids
   [erral]
 
