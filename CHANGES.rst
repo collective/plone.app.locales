@@ -7,6 +7,9 @@ Changelog
 - Complete es translation
   [erral]
 
+- Complete eu translation
+  [erral]
+  
 - Update po files with new msgids
   [erral]
 
