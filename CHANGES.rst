@@ -6,6 +6,9 @@ Changelog
 
 - Complete eu translation
   [erral]
+  
+- Update po files with new msgids
+  [erral]
 
 - Fail the release when ``zest.pocompile`` is not available.  [maurits]
 
