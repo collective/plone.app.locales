@@ -4,6 +4,9 @@ Changelog
 6.0.7 (unreleased)
 ------------------
 
+- Complete eu translation
+  [erral]
+
 - Fail the release when ``zest.pocompile`` is not available.  [maurits]
 
 - Fix French translations (fuzzy)
