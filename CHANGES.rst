@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.7 (unreleased)
+6.0.7 (2022-10-01)
 ------------------
 
 - Complete es translation
