@@ -13,6 +13,9 @@ Changelog
 - Update po files with new msgids
   [erral]
 
+- Fix some german translations
+  [MrTango]
+
 - Fail the release when ``zest.pocompile`` is not available.  [maurits]
 
 - Fix French translations (fuzzy)
