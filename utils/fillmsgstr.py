@@ -3,14 +3,14 @@
 
 #  fillmsgstr.py
 #  Created by Russ Ferriday 2006.03.28
-#  http://topia.com
+#  https://topia.com
 #  Copyright (c) 2006 Russ Ferriday - russf@topia.com
 #
 #  This program is dedicated to Rhoslyn Prys and Emyr Thomas...
 #     Welcome to Plone! And thank you for Plone in Welsh!
 #
 #  Licenced under the FreeBSD licence:
-#  http://www.freebsd.org/copyright/freebsd-license.html
+#  https://www.freebsd.org/copyright/freebsd-license.html
 #  (i.e. do with it what you want but keep this notice.)
 
 from __future__ import print_function
