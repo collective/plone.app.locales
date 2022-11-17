@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.8 (unreleased)
+6.0.8 (2022-11-17)
 ------------------
 
 - Update italian translations.
