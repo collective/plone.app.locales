@@ -4,7 +4,14 @@ Changelog
 6.0.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update italian translations.
+  [pnicolly, ale-rt, yury]
+
+- Update german translations.
+  [DravenTheRaven, davisable, pbauer, jensens]
+
+- Update links.
+  [Arhell]
 
 
 6.0.7 (2022-10-01)
