@@ -4,7 +4,8 @@ Changelog
 6.0.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update french translation.
+  [jchandelle, ndemonte, mpeeters]
 
 
 6.0.8 (2022-11-17)
