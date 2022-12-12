@@ -4,6 +4,18 @@ Changelog
 6.0.9 (unreleased)
 ------------------
 
+- Update nl translation.
+  [maurits, fredvd]
+
+- Update es translation.
+  [erral]
+
+- Update eu translation.
+  [erral]
+
+- Update pt-br translation.
+  [luxcas]
+
 - Update french translation.
   [jchandelle, ndemonte, mpeeters]
 
