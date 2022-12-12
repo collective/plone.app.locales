@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.9 (unreleased)
+6.0.9 (2022-12-12)
 ------------------
 
 - Update nl translation.
