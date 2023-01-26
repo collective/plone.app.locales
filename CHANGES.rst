@@ -4,6 +4,9 @@ Changelog
 6.0.10 (unreleased)
 -------------------
 
+- Update es translation
+  [erral]
+
 - Update eu translation
   [erral]
 
