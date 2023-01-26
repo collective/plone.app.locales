@@ -4,8 +4,8 @@ Changelog
 6.0.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Update eu translation
+  [erral]
 
 6.0.9 (2022-12-12)
 ------------------
