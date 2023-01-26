@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.10 (unreleased)
+6.0.10 (2023-01-26)
 -------------------
 
 - Update es translation
