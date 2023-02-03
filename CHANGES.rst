@@ -4,7 +4,8 @@ Changelog
 6.0.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update de translation.
+  [petschki]
 
 
 6.0.10 (2023-01-26)
@@ -56,7 +57,7 @@ Changelog
 
 - Complete eu translation
   [erral]
-  
+
 - Update po files with new msgids
   [erral]
 
@@ -72,10 +73,10 @@ Changelog
 6.0.6 (2022-09-02)
 ------------------
 
-- Change some control panel translations in basque 
+- Change some control panel translations in basque
   [erral]
 
-- Complete Dutch translations.  
+- Complete Dutch translations.
   [jladage]
 
 
