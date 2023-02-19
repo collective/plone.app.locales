@@ -4,6 +4,9 @@ Changelog
 6.0.11 (unreleased)
 -------------------
 
+- Update tr translation.
+  [uyar]
+
 - update es translation
   [erral]
   
