@@ -5,7 +5,13 @@ Changelog
 -------------------
 
 - Update tr translation.
-  [uyar & erral]
+  [uyar]
+
+- update es translation
+  [erral]
+  
+- update eu translation.
+  [erral]
 
 - Update de translation.
   [petschki]
