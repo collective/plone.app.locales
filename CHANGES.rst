@@ -4,7 +4,8 @@ Changelog
 5.1.32 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update Turkish translation
+  [uyar]
 
 
 5.1.31 (2022-04-06)
