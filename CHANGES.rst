@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.11 (unreleased)
+6.0.11 (2023-02-19)
 -------------------
 
 - Update tr translation.
