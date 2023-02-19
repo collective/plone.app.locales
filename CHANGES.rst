@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.32 (unreleased)
+5.1.32 (2023-02-19)
 -------------------
 
 - Update Turkish translation
