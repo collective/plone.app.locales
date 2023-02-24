@@ -4,7 +4,8 @@ Changelog
 6.0.12 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update pt_BR translation of terms of plone.app.relationfield.
+  [wesleybl]
 
 
 6.0.11 (2023-02-19)
