@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.12 (unreleased)
+6.0.12 (2023-03-23)
 -------------------
 
 - Update pt_BR translation of terms of plone.app.relationfield.
