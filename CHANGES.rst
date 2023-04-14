@@ -4,18 +4,14 @@ Changelog
 6.0.13 (unreleased)
 -------------------
 
-Breaking changes:
+- Update es translation
+  [erral]
 
-- *add item here*
+- Update eu translation
+  [erral]
 
-New features:
-
-- *add item here*
-
-Bug fixes:
-
-- *add item here*
-
+- Update po files
+  [erral]
 
 6.0.12 (2023-03-23)
 -------------------
