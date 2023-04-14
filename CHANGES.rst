@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.13 (unreleased)
+6.0.13 (2023-04-14)
 -------------------
 
 - Update es translation
