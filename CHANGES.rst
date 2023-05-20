@@ -4,8 +4,8 @@ Changelog
 6.0.14 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Update some default messages after running codespell
+  [erral]
 
 6.0.13 (2023-04-14)
 -------------------
