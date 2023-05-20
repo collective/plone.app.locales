@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.33 (unreleased)
+5.1.33 (2023-05-20)
 -------------------
 
 - Update Italian widgets domain translations.
