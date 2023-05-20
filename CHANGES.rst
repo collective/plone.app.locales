@@ -4,6 +4,9 @@ Changelog
 6.0.14 (unreleased)
 -------------------
 
+- Fix wrongly placed icons in sharing screen translations. Fixes #381. Thanks @petschki
+  [erral]
+
 - Update some default messages after running codespell
   [erral]
 
