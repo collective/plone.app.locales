@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.14 (unreleased)
+6.0.14 (2023-05-20)
 -------------------
 
 - Fix wrongly placed icons in sharing screen translations. Fixes #381. Thanks @petschki
