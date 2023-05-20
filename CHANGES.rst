@@ -4,7 +4,8 @@ Changelog
 5.1.33 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update Italian widgets domain translations.
+  [cekk]
 
 
 5.1.32 (2023-02-19)
