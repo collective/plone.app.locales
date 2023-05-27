@@ -4,7 +4,8 @@ Changelog
 6.0.15 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix pt_BR translation of description of field ``JavaScript for web statistics support``.
+  [wesleybl]
 
 
 6.0.14 (2023-05-20)
