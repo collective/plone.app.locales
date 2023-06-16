@@ -4,6 +4,15 @@ Changelog
 6.0.15 (unreleased)
 -------------------
 
+- Complete eu translation
+  [erral]
+
+- Complete es translation
+  [erral]
+
+- Update translation files
+  [erral]
+
 - Fix pt_BR translation of description of field ``JavaScript for web statistics support``.
   [wesleybl]
 
