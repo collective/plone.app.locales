@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.15 (unreleased)
+6.0.15 (2023-06-16)
 -------------------
 
 - Complete eu translation
