@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
    Usage: admix.py <target-product> <source-product>
 """
@@ -31,7 +30,7 @@ def main():
         for s in sourcePoFiles:
             sourceLanguage = getLanguage(source,s)
             if targetLanguage and sourceLanguage and targetLanguage == sourceLanguage:
-                print('%s %s <- %s' % (getLanguage(target, t), t, s))
+                print(f'{getLanguage(target, t)} {t} <- {s}')
                 os.system(__I18NDUDE + (' admix %s %s > %s-new') % (t, s, t))
                 targetpath = os.path.join(os.curdir, t)
                 os.remove(targetpath)

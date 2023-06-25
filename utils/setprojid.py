@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
 """
    Usage: setprojid.py <product> <projectid>
 """
 
-from __future__ import print_function
 from utils import getPoFiles, getLongProductName
 import os, sys
 
@@ -29,7 +27,7 @@ def main():
     for poFile in poFiles:
         try:
             po_ctl = catalog.MessageCatalog(filename=poFile)
-        except IOError as e:
+        except OSError as e:
             print('I/O Error: %s' % e, file=sys.stderr)
         po_ctl.mime_header['Project-Id-Version'] = projectid
         file = open(poFile, 'w')

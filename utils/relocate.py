@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
    Usage: relocate.py
 
@@ -10,7 +9,6 @@
    before calling this script
 """
 
-from __future__ import print_function
 from i18ndude import catalog
 from utils import getPoFiles, getLanguage
 
@@ -72,11 +70,11 @@ def main():
         po_ctl = {}
         try:
             po_ctl['plone'] = catalog.MessageCatalog(filename='plone-%s.po' % lang)
-        except IOError as e:
+        except OSError as e:
             print('I/O Error: %s' % e, file=sys.stderr)
         try:
             po_ctl['atcontenttypes'] = catalog.MessageCatalog(filename='atcontenttypes-%s.po' % lang)
-        except IOError as e:
+        except OSError as e:
             print('I/O Error: %s' % e, file=sys.stderr)
 
         changes = {'plone' : False, 'atcontenttypes' : False}
@@ -108,13 +106,13 @@ def main():
                     else:
                         po_ctl[new_domain][relocate_msgid] = msgstr
                         changes[new_domain] = True
-                        print('copied %s to %s-%s.po' % (relocate_msgid, new_domain, lang))
+                        print(f'copied {relocate_msgid} to {new_domain}-{lang}.po')
                 #else:
                 #    print '%s was not found anymore' % relocate_msgid
 
         for domain in changes:
             if changes[domain]:
-                file = open('%s-%s.po' % (domain, lang), 'w')
+                file = open(f'{domain}-{lang}.po', 'w')
                 writer = catalog.POWriter(file, po_ctl[domain])
                 writer.write(sort=True)
 

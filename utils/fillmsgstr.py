@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# encoding: utf-8
 
 #  fillmsgstr.py
 #  Created by Russ Ferriday 2006.03.28
@@ -13,7 +12,6 @@
 #  https://www.freebsd.org/copyright/freebsd-license.html
 #  (i.e. do with it what you want but keep this notice.)
 
-from __future__ import print_function
 import os
 import sys
 import getopt

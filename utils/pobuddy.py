@@ -1,5 +1,4 @@
 #!/usr/local/bin/python
-# -*-coding: utf-8 -*-
 
 #  poBuddy utility program   $ ./pobuddy -h  for help, tested on OS-X 10.6.
 #  Updated by Takeshi Yamamoto (retsu)  tyam AT mac.com   2010/July/19
@@ -16,9 +15,8 @@ import datetime
 
 from optparse import OptionParser
 import six
-from six.moves import range
 
-class paraGetter(object):
+class paraGetter:
 
     def __call__(self):
         para = {}
@@ -151,7 +149,7 @@ class paraGetter(object):
 
 #**************************************************************************
 
-class analyzer(object):
+class analyzer:
 
     def __call__(self, para):
         rData = self.analyze(para)
@@ -215,12 +213,12 @@ class analyzer(object):
         sc['comment'] = 0
         sc['default'] = 0
         mc = {}
-        mc['default'] = u''
-        mc['locations'] = u''
-        mc['comment'] = u''
-        mc['id'] = u''
-        mc['idLoc'] = u''
-        mc['string'] = u''
+        mc['default'] = ''
+        mc['locations'] = ''
+        mc['comment'] = ''
+        mc['id'] = ''
+        mc['idLoc'] = ''
+        mc['string'] = ''
         mc['defaultSw'] = False
         mc['idSw'] = False
         mc['stringSw'] = False
@@ -314,7 +312,7 @@ class analyzer(object):
 
             if line[:2] == '#:':
                 mc['defaultSw'] = False
-                if mc['locations'] == u'':
+                if mc['locations'] == '':
                     mc['locations'] = line[3:-1]
                 else:
                     mc['locations'] += ('\n' + line[3:-1])
@@ -362,7 +360,7 @@ class analyzer(object):
                     mc['stringSw'] = False
 
                 if line[:9] == 'msgstr ""' and mc['id'] != '':
-                    mc['string'] = u''
+                    mc['string'] = ''
                     mc['stringSw'] = True
 
                 if line[:9] != 'msgstr ""' and mc['id'] != '':
@@ -389,12 +387,12 @@ class analyzer(object):
                 sc, fileWarning, fileCsv = \
                     self.makeRec(para, sc, mc, fileWarning, fileCsv)
                 mc = {}
-                mc['default'] = u''
-                mc['locations'] = u''
-                mc['comment'] = u''
-                mc['id'] = u''
-                mc['idLoc'] = u''
-                mc['string'] = u''
+                mc['default'] = ''
+                mc['locations'] = ''
+                mc['comment'] = ''
+                mc['id'] = ''
+                mc['idLoc'] = ''
+                mc['string'] = ''
                 mc['defaultSw'] = False
                 mc['idSw'] = False
                 mc['stringSw'] = False
@@ -464,7 +462,7 @@ class analyzer(object):
 
 #**************************************************************************
 
-class preparator(object):
+class preparator:
 
     def __call__(self, para, rData):
         sData = self.prepStat(para, rData)
@@ -511,7 +509,7 @@ class preparator(object):
         langChart = []
         for poTable in poCubic:
             for poLine in poTable:
-                if poLine[2] == u'TOTAL':
+                if poLine[2] == 'TOTAL':
                     langChart.append(poLine)
         langChart = sorted(langChart, key=operator.itemgetter(8),reverse=True)
         langChart = sorted(langChart, key=operator.itemgetter(9),reverse=True)
@@ -535,9 +533,9 @@ class preparator(object):
         # make po summary statistic table
         poSumTable = []
         for ix, irec in enumerate(potTable):
-            poSumLine = [u'Total of']
+            poSumLine = ['Total of']
             chosenLang = [poCubic[i][0][0] for i in range(len(poCubic))]
-            poSumLine.append(six.text_type(','.join(chosenLang)))
+            poSumLine.append(str(','.join(chosenLang)))
             poSumLine.append(irec[2])
             poSumLine.append(sum([poCubic[i][ix][3] for i in range(len(poCubic))]))
             poSumLine.append(sum([poCubic[i][ix][4] for i in range(len(poCubic))]))
@@ -566,7 +564,7 @@ class preparator(object):
     def totalLineMaker(self, table):
         sumLine = [table[0][0]]
         sumLine.append(table[0][1])
-        sumLine.append(u'TOTAL')
+        sumLine.append('TOTAL')
         sumLine.append(sum([table[ix][3] for ix in range(len(table))]))
         sumLine.append(sum([table[ix][4] for ix in range(len(table))]))
         sumLine.append(sum([table[ix][5] for ix in range(len(table))]))
@@ -659,7 +657,7 @@ class preparator(object):
         return langTable, langWarningTable, langCsvTable
 
 
-class csvwriter(object):
+class csvwriter:
 
     def __call__(self, para, rData):
         self.write(para, rData)
@@ -685,7 +683,7 @@ class csvwriter(object):
             uline = ['Language', 'File']
             uline.extend(para['headerNames'])
             uline = ['"'+item+'"' for item in uline]
-            uline = u','.join(uline) + u'\n'
+            uline = ','.join(uline) + '\n'
             fo.write(uline)
             for jx, fileHeader in enumerate(potHeaderTable):
                 uline = ['pot', para['files'][jx]]
@@ -695,7 +693,7 @@ class csvwriter(object):
                     else:
                         uline.append('none')
                 uline = ['"'+item+'"' for item in uline]
-                uline = u','.join(uline) + u'\n'
+                uline = ','.join(uline) + '\n'
                 fo.write(uline)
             for ix, langHeaderTable in enumerate(poHeaderCubic):
                 for jx, fileHeader in enumerate(langHeaderTable):
@@ -706,7 +704,7 @@ class csvwriter(object):
                         else:
                             uline.append('none')
                     uline = ['"'+item+'"' for item in uline]
-                    uline = u','.join(uline) + u'\n'
+                    uline = ','.join(uline) + '\n'
                     fo.write(uline)
             fo.close()
             if para['verbose']:
@@ -722,17 +720,17 @@ class csvwriter(object):
                      'Location Message Used', 'Default',
                      'Message String', 'Comment']
             uline = ['"'+item+'"' for item in uline]
-            uline = u','.join(uline) + u'\n'
+            uline = ','.join(uline) + '\n'
             fo.write(uline)
             for csvLine in csvFile:
-                ucsvLine = ['"'+six.text_type(item)+'"' for item in csvLine]
-                uline = u','.join(ucsvLine) + u'\n'
+                ucsvLine = ['"'+str(item)+'"' for item in csvLine]
+                uline = ','.join(ucsvLine) + '\n'
                 fo.write(uline)
             fo.close()
         if para['verbose']:
             print('CSV FILES WRITTEN FOR:', lang)
 
-class reporter(object):
+class reporter:
 
     def __call__(self, para, sData):
         self.report(para, sData)

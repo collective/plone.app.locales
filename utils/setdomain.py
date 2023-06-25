@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
 """
    Usage: setdomain.py <product> <domain>
 """
 
-from __future__ import print_function
 import os, sys
 from utils import getPoFiles, getLongProductName
 
@@ -29,7 +27,7 @@ def main():
     for poFile in poFiles:
         try:
             po_ctl = catalog.MessageCatalog(filename=poFile)
-        except IOError as e:
+        except OSError as e:
             print('I/O Error: %s' % e, file=sys.stderr)
         po_ctl.mime_header['Domain'] = domain
         file = open(poFile, 'w')

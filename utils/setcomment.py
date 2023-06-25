@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
 """
    Usage: setcomment.py <product> <comment>
 """
 
-from __future__ import print_function
 from utils import getPoFiles, getLongProductName
 import os, sys
 
@@ -28,7 +26,7 @@ def main():
     for poFile in poFiles:
         try:
             po_ctl = catalog.MessageCatalog(filename=poFile)
-        except IOError as e:
+        except OSError as e:
             print('I/O Error: %s' % e, file=sys.stderr)
 
         try:

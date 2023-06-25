@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
    Usage: rebuild-pot.py <product> <path to products dir>
 
@@ -141,12 +140,12 @@ def rebuild(product, folder=''):
                   )
         cmd += '--exclude="%s" ' % ' '.join(ignores)
     if product == 'plone':
-        cmd += '%s %s > %s 2>&1' % (folder, folder2, log)
+        cmd += f'{folder} {folder2} > {log} 2>&1'
         # For debugging
         # cmd += '%s %s' % (folder, folder2)
     else:
-        cmd += '%s > %s 2>&1' % (folder, log)
-    print('Rebuilding to %s - this takes a while, logging to %s' % (pot, log))
+        cmd += f'{folder} > {log} 2>&1'
+    print(f'Rebuilding to {pot} - this takes a while, logging to {log}')
     os.system(cmd)
 
 def main():

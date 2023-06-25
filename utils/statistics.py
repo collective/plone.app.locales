@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
+r"""
 Execute the following commands:
 cd ..
 (for po in `find . -name "*.po"` ; do echo -n "$po:"; LANG=en msgfmt -o /dev/null --statistics $po 2>&1 |tail -n1; done) > raw_numbers.txt
@@ -55,7 +54,7 @@ result_file.close()
 #from pprint import pprint
 #pprint(stats)
 
-print(("Number of languages: %d" % len(stats)))
+print("Number of languages: %d" % len(stats))
 print("Legend: translated (percentage) / fuzzy / untranslated = total")
 
 lg = None
@@ -88,10 +87,10 @@ for language, domains in stats.items():
     else:
         percent = round(float(total[0]) / float(sum_total) * 100.0, 2)
 
-    print(("%s\t: %d (%.2f%%) / %d / %d = %d" % (language,
+    print("%s\t: %d (%.2f%%) / %d / %d = %d" % (language,
                 total[0],
                 percent,
                 total[1],
                 total[2],
-                sum_total)))
+                sum_total))
     print(details)
