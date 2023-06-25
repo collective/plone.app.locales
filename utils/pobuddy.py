@@ -13,8 +13,6 @@ import codecs
 import datetime
 import operator
 import os
-import six
-import sys
 
 
 class paraGetter:
@@ -47,9 +45,7 @@ class paraGetter:
         # set scope of languages
         availLangs = os.listdir(para["poLocalesDir"])
         availLangs = [
-            x
-            for x in availLangs
-            if os.path.isdir(para["poLocalesDir"] + "/" + x) == True
+            x for x in availLangs if os.path.isdir(para["poLocalesDir"] + "/" + x)
         ]
         availLangs = [x for x in availLangs if x != ".svn"]
         availLangs = [x for x in availLangs if x != ".DS_Store"]
@@ -158,7 +154,7 @@ class paraGetter:
         para["graphOn"] = options.graphOn
         para["potOn"] = options.potOn
         para["verbose"] = options.verbose
-        if options.allOn == True:
+        if options.allOn:
             para["statOn"] = True
             para["warningOn"] = True
             para["graphOn"] = True
@@ -302,7 +298,7 @@ class analyzer:
         mc["stringSw"] = False
 
         inFile = self.getPath(para, lang, fileName)
-        if inFile == False:
+        if not inFile:
             sc["warning"] += 1
 
             warningMsg = "FILE NOT FOUND"
@@ -334,7 +330,7 @@ class analyzer:
             fin.close()
             fin = codecs.open(inFile, "r", encoding="utf-8", errors="strict")
 
-        except Exception as em:
+        except Exception:
             sc["langName"] = "NOT UTF-8"
             sc["warning"] += 1
 
@@ -360,7 +356,7 @@ class analyzer:
             sc["line"] += 1
 
             # PO HEADER INFO COLLECTORS
-            if headerOn == True:
+            if headerOn:
                 for item in para["headerNames"]:
                     if line[: len(item) + 2] == '"' + item + ":":
                         fileHeader[item] = line[len(item) + 3 : -4]
@@ -390,7 +386,7 @@ class analyzer:
                 mc["default"] = wkLine
                 continue
 
-            if line[:4] == '#. "' and mc["defaultSw"] == True:
+            if line[:4] == '#. "' and mc["defaultSw"]:
                 wkLine = line[4:-2]
                 # warningLine, fileWarning, sc = \
                 #             self.unicodeCheck(para, line, fileWarning, sc)
@@ -459,9 +455,9 @@ class analyzer:
                 wkLine = line[1:-2]
                 # warningLine, fileWarning, sc = \
                 #             self.unicodeCheck(para, line, fileWarning, sc)
-                if mc["stringSw"] == True:
+                if mc["stringSw"]:
                     mc["string"] += wkLine
-                if mc["idSw"] == True:
+                if mc["idSw"]:
                     mc["id"] += wkLine
 
             if len(line) == 1 and mc["id"] != "":
@@ -552,7 +548,7 @@ class analyzer:
                         + wkfileName
                     )
                 else:
-                    print("***", wkfile, "NOT FOUND IN ASSUMED LOCATION")
+                    print("***", wkfileName, "NOT FOUND IN ASSUMED LOCATION")
 
         elif lang == "pot":
             wkfileName = fileName + ".pot"
@@ -563,7 +559,7 @@ class analyzer:
             if fileName in para["tinyMceFiles"]:
                 inFile = para["poTinyMceDir"] + "/" + wkfileName
 
-        if os.path.isfile(inFile) == True:
+        if os.path.isfile(inFile):
             pass
         else:
             inFile = False
@@ -597,7 +593,7 @@ class preparator:
 
         for ix, potLine in enumerate(potTable):
             langNames = para["langNames"]
-            potLine[1] = para["langNames"][potLine[0]]
+            potLine[1] = langNames[potLine[0]]
             potLine.insert(4, potTable[ix][4])
             filledRate = (100 * potLine[6]) / potLine[4]
             potLine.append(filledRate)
@@ -746,7 +742,6 @@ class preparator:
                     )
                     fileName = item[3]
                     fileName = fileName[: fileName.rfind(":")]
-                    wsMsgLoc = item[3]
                     lineCount = int(wkMsgLoc[wkMsgLoc.rfind(":") + 1 :])
                     warningLine = [lang, fileName, lineCount, warningMsg, warningRef]
                     potWarningTable.append(warningLine)
@@ -800,9 +795,9 @@ class preparator:
                         + item[7]
                         + " WITH "
                         + " MSGLOC: "
-                        + preitem[5]
+                        + preItem[5]
                         + " MSGSTR: "
-                        + preitem[7]
+                        + preItem[7]
                     )
                     fileName = item[3]
                     fileName = fileName[: fileName.rfind(":")]

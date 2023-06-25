@@ -150,7 +150,6 @@ def main(argv=None):
 
         defMark = "#. Default:"
         msgidMark = "msgid "
-        msgstrMark = "msgstr "
         savedMark = "#saved"
         buff = None
         if reverse:

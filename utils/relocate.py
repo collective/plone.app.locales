@@ -92,7 +92,9 @@ def main():
     ploneLanguages = [getLanguage("plone", p) for p in poFilesPlone]
     atctLanguages = [getLanguage("atcontenttypes", p) for p in poFilesATCT]
 
-    languages = [l for l in ploneLanguages if l in atctLanguages and l != "en"]
+    languages = [
+        lang for lang in ploneLanguages if lang in atctLanguages and lang != "en"
+    ]
     changes = {"plone": False, "atcontenttypes": False}
 
     for lang in languages:

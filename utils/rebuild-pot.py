@@ -11,16 +11,8 @@ from utils import getLongProductName
 from utils import getProductPath
 
 import os
-import string
 import sys
 
-
-try:
-    import win32api
-
-    WIN32 = True
-except ImportError:
-    WIN32 = False
 
 __I18NDUDE = os.environ.get("I18NDUDE", "i18ndude")
 __INSTANCE_HOME = os.environ.get("INSTANCE_HOME", "")
