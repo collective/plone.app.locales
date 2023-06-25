@@ -7,14 +7,15 @@
 #  Created by Takeshi Yamamoto (retsu)  tyam AT mac.com   2009/December/27
 #  License: ZPL 2.1 (Zope Public License 2.1)
 
-import sys
-import os
-import codecs
-import operator
-import datetime
-
 from optparse import OptionParser
+
+import codecs
+import datetime
+import operator
+import os
 import six
+import sys
+
 
 class paraGetter:
 

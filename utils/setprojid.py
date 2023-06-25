@@ -2,10 +2,12 @@
    Usage: setprojid.py <product> <projectid>
 """
 
-from utils import getPoFiles, getLongProductName
-import os, sys
-
 from i18ndude import catalog
+from utils import getLongProductName
+from utils import getPoFiles
+
+import os
+import sys
 
 
 def main():

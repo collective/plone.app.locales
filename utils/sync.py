@@ -2,8 +2,15 @@
    Usage: sync.py [<product> | <language-code>]
 """
 
-import os, sys
-from utils import getPoFilesAsCmdLine, getPoFilesByLanguageCode, getProduct, getPotFiles, getLongProductName
+from utils import getLongProductName
+from utils import getPoFilesAsCmdLine
+from utils import getPoFilesByLanguageCode
+from utils import getPotFiles
+from utils import getProduct
+
+import os
+import sys
+
 
 __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 

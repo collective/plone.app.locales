@@ -2,10 +2,12 @@
    Usage: setdomain.py <product> <domain>
 """
 
-import os, sys
-from utils import getPoFiles, getLongProductName
-
 from i18ndude import catalog
+from utils import getLongProductName
+from utils import getPoFiles
+
+import os
+import sys
 
 
 def main():

@@ -10,9 +10,12 @@
 """
 
 from i18ndude import catalog
-from utils import getPoFiles, getLanguage
+from utils import getLanguage
+from utils import getPoFiles
 
-import os, sys
+import os
+import sys
+
 
 __PYTHON = os.environ.get('PYTHON', 'python')
 __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')

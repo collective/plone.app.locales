@@ -7,8 +7,13 @@
    So 'rebuilt-pot.py atrbw' is a valid shorthand.
 """
 
-import os, sys, string
-from utils import getLongProductName, getProductPath
+from utils import getLongProductName
+from utils import getProductPath
+
+import os
+import string
+import sys
+
 
 try:
     import win32api

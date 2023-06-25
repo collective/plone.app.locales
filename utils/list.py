@@ -2,9 +2,14 @@
    Usage: list.py
 """
 
-import os, sys
-from utils import getProduct, getPotFiles, getLongProductName
+from utils import getLongProductName
+from utils import getPotFiles
+from utils import getProduct
 from utils import PRODUCTS
+
+import os
+import sys
+
 
 __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 

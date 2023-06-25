@@ -4,7 +4,9 @@
    Filter out all msgid's in target product that are already in source product.
 """
 
-import os, sys
+import os
+import sys
+
 
 __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 

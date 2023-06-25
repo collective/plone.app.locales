@@ -16,6 +16,7 @@ grep -e " ([789][0-9]\." -e " (100\." /tmp/res |wc -l
 import os
 import sys
 
+
 DOMAINS = ("atcontenttypes",
            "atreferencebrowserwidget",
            "cmfeditions",

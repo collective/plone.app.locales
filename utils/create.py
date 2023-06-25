@@ -9,8 +9,12 @@
    Using admix.py can then copy over existing translations.
 """
 
-import os, sys, shutil
-from utils import getPoFiles, getLanguage
+from utils import getLanguage
+from utils import getPoFiles
+
+import os
+import shutil
+import sys
 
 
 def main():

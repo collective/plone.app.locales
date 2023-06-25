@@ -1,5 +1,6 @@
 import os
 
+
 PRODUCTS = {
     'atct'  : {'name': 'atcontenttypes', 'path': 'ATContentTypes'},
     'atrbw' : {'name': 'atreferencebrowserwidget', 'path': 'ATReferenceBrowserWidget'},

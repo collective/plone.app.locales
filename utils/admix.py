@@ -2,8 +2,13 @@
    Usage: admix.py <target-product> <source-product>
 """
 
-import os, sys, shutil
-from utils import getPoFiles, getLanguage
+from utils import getLanguage
+from utils import getPoFiles
+
+import os
+import shutil
+import sys
+
 
 __I18NDUDE = os.environ.get('I18NDUDE', 'i18ndude')
 

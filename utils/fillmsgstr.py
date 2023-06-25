@@ -12,10 +12,11 @@
 #  https://www.freebsd.org/copyright/freebsd-license.html
 #  (i.e. do with it what you want but keep this notice.)
 
+import fileinput
+import getopt
 import os
 import sys
-import getopt
-import fileinput
+
 
 help_message = '''
 fillmsgstr [-h] [-r] [-v] [-o] <inputFile1> [ <inputFile2> [<inputFile3> ... ] ]
