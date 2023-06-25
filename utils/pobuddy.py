@@ -59,7 +59,7 @@ class paraGetter:
         parser = OptionParser()
         usage = "usage: %prog [options] *arg"
         version = "%prog 2.0.0"
-        description = "This will generate serveral reports and CSV files from various PO files.  You can specify language codes as arguments.  To get all available feature, '$ ./pobuddy.py -av all' is the easiest way.  Note thiw will create more than 900 CSV files under ./pobuddyCSV directory.  The 'headers.csv' file has valuable information, too.  Example for local translator, eg. Japanese: '$ ./pobuddy.py -swf ja'  For i18n manager: '$ ./pobuddy.py -av all'  For code developers to get POT CSV file to consider consolidating messages: '$ ./pobuddy.py -swf pot'  If you have Products.TinyMCE working copy, 't' option will include po files of TinyMCE."
+        description = "This will generate several reports and CSV files from various PO files.  You can specify language codes as arguments.  To get all available feature, '$ ./pobuddy.py -av all' is the easiest way.  Note thiw will create more than 900 CSV files under ./pobuddyCSV directory.  The 'headers.csv' file has valuable information, too.  Example for local translator, eg. Japanese: '$ ./pobuddy.py -swf ja'  For i18n manager: '$ ./pobuddy.py -av all'  For code developers to get POT CSV file to consider consolidating messages: '$ ./pobuddy.py -swf pot'  If you have Products.TinyMCE working copy, 't' option will include po files of TinyMCE."
         parser = OptionParser(usage=usage, version=version, description=description)
         parser.add_option(
             "-s",
@@ -621,7 +621,7 @@ class preparator:
             )
 
         if para["verbose"]:
-            msg = "DIFFERENT PO MSGSTR FOR SAME MSGID IN DIFFERNT " + "FILES INSPECTED"
+            msg = "DIFFERENT PO MSGSTR FOR SAME MSGID IN DIFFERENT FILES INSPECTED"
             print(msg)
         # prepare chart data
         langChart = []
@@ -652,7 +652,7 @@ class preparator:
         return sData
 
     def reportStat(self, para, potTable, poCubic):
-        # calcurate total line and add to poCubic
+        # calculate total line and add to poCubic
         for poTable in poCubic:
             poTable.append(self.totalLineMaker(poTable))
 
@@ -839,12 +839,12 @@ class csvwriter:
 
             # write header CSV file
             outFile = para["csvDir"] + "/" + "headers.csv"
-            fo = codecs.open(outFile, "w", "utf-8")
+            file_out = codecs.open(outFile, "w", "utf-8")
             uline = ["Language", "File"]
             uline.extend(para["headerNames"])
             uline = ['"' + item + '"' for item in uline]
             uline = ",".join(uline) + "\n"
-            fo.write(uline)
+            file_out.write(uline)
             for jx, fileHeader in enumerate(potHeaderTable):
                 uline = ["pot", para["files"][jx]]
                 for item in para["headerNames"]:
@@ -854,7 +854,7 @@ class csvwriter:
                         uline.append("none")
                 uline = ['"' + item + '"' for item in uline]
                 uline = ",".join(uline) + "\n"
-                fo.write(uline)
+                file_out.write(uline)
             for ix, langHeaderTable in enumerate(poHeaderCubic):
                 for jx, fileHeader in enumerate(langHeaderTable):
                     uline = [para["langs"][ix], para["files"][jx]]
@@ -865,15 +865,15 @@ class csvwriter:
                             uline.append("none")
                     uline = ['"' + item + '"' for item in uline]
                     uline = ",".join(uline) + "\n"
-                    fo.write(uline)
-            fo.close()
+                    file_out.write(uline)
+            file_out.close()
             if para["verbose"]:
                 print("HEADER CSV FILE WRITTEN:", outFile)
 
     def csvWrite(self, para, lang, csvTable):
         for jx, csvFile in enumerate(csvTable):
             outFile = para["csvDir"] + "/" + para["files"][jx] + "-" + lang + ".csv"
-            fo = codecs.open(outFile, "w", "utf-8")
+            file_out = codecs.open(outFile, "w", "utf-8")
             uline = [
                 "Serial",
                 "Language",
@@ -887,12 +887,12 @@ class csvwriter:
             ]
             uline = ['"' + item + '"' for item in uline]
             uline = ",".join(uline) + "\n"
-            fo.write(uline)
+            file_out.write(uline)
             for csvLine in csvFile:
                 ucsvLine = ['"' + str(item) + '"' for item in csvLine]
                 uline = ",".join(ucsvLine) + "\n"
-                fo.write(uline)
-            fo.close()
+                file_out.write(uline)
+            file_out.close()
         if para["verbose"]:
             print("CSV FILES WRITTEN FOR:", lang)
 

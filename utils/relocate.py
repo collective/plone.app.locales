@@ -5,7 +5,7 @@
    automates this process, so it can be repeatedly and safely called on po
    files to preserve translations.
 
-   Note that PYTHON and I18NDUDE must have been set as enviroment variables
+   Note that PYTHON and I18NDUDE must have been set as environment variables
    before calling this script
 """
 

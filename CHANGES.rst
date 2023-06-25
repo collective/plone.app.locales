@@ -490,10 +490,10 @@ Changelog
 5.1.7 (2018-03-11)
 ------------------
 
-- Got back the 8 messages for the contrain types menu from the 4.3.x branch.
+- Got back the 8 messages for the constrain types menu from the 4.3.x branch.
   [vincentfretin]
 
-- Complete widgets translation in spanish.
+- Complete widgets translation in Spanish.
   [erral]
 
 - Complete Basque translation for widgets.
@@ -708,7 +708,7 @@ Changelog
 - Fix typo: Fenter -> Fenster
   [agitator]
 
-- Fix typo: shoudl -> should
+- Fix typo
   [ale-rt]
 
 - Add 7 messages from plone.app.discussion and plone.app.contentmenu.
