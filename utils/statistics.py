@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
+r"""
 Execute the following commands:
 cd ..
 (for po in `find . -name "*.po"` ; do echo -n "$po:"; LANG=en msgfmt -o /dev/null --statistics $po 2>&1 |tail -n1; done) > raw_numbers.txt
@@ -17,33 +16,35 @@ grep -e " ([789][0-9]\." -e " (100\." /tmp/res |wc -l
 import os
 import sys
 
-DOMAINS = ("atcontenttypes",
-           "atreferencebrowserwidget",
-           "cmfeditions",
-           "cmfplacefulworkflow",
-           "passwordresettool",
-           "plone",
-           "plonefrontpage",
-           "plonelocales",
-           "widgets",
-           )
+
+DOMAINS = (
+    "atcontenttypes",
+    "atreferencebrowserwidget",
+    "cmfeditions",
+    "cmfplacefulworkflow",
+    "passwordresettool",
+    "plone",
+    "plonefrontpage",
+    "plonelocales",
+    "widgets",
+)
 
 result_file = open(sys.argv[1])
 
 stats = {}
 for line in result_file:
-    path, res = line.split(':')
-    language = path.split('/')[-3].replace('_', '-')
+    path, res = line.split(":")
+    language = path.split("/")[-3].replace("_", "-")
     domain = os.path.splitext(os.path.basename(path))[0]
     language = language.lower()
     translated, fuzzy, untranslated = 0, 0, 0
-    for part in res.split(','):
+    for part in res.split(","):
         n, mtype, dontcare = part.split()
-        if 'translated' == mtype:
+        if "translated" == mtype:
             translated = int(n)
-        if 'fuzzy' == mtype:
+        if "fuzzy" == mtype:
             fuzzy = int(n)
-        if 'untranslated' == mtype:
+        if "untranslated" == mtype:
             untranslated = int(n)
 
     if language not in stats:
@@ -52,10 +53,10 @@ for line in result_file:
 
 result_file.close()
 
-#from pprint import pprint
-#pprint(stats)
+# from pprint import pprint
+# pprint(stats)
 
-print(("Number of languages: %d" % len(stats)))
+print("Number of languages: %d" % len(stats))
 print("Legend: translated (percentage) / fuzzy / untranslated = total")
 
 lg = None
@@ -66,8 +67,8 @@ for language, domains in stats.items():
     if lg is not None and lg != language:
         continue
 
-    total = [0,0,0]
-    details = ''
+    total = [0, 0, 0]
+    details = ""
     for domain in DOMAINS:
         if domain not in domains:
             details += "\t/!\\ %s file missing\n" % domain
@@ -78,8 +79,16 @@ for language, domains in stats.items():
         total[1] += values[1]
         total[2] += values[2]
         sum_values = sum(values)
-        details += "\t%s: %d/%d/%d = %d\n" % (domain, values[0], values[1], values[2], sum_values)
-        if sum_values != sum(stats['fr'][domain]):  # French language has all po files, so this is our reference
+        details += "\t%s: %d/%d/%d = %d\n" % (
+            domain,
+            values[0],
+            values[1],
+            values[2],
+            sum_values,
+        )
+        if sum_values != sum(
+            stats["fr"][domain]
+        ):  # French language has all po files, so this is our reference
             details += "\t/!\\ %s NOT SYNCHRONISED\n" % domain
 
     sum_total = sum(total)
@@ -88,10 +97,8 @@ for language, domains in stats.items():
     else:
         percent = round(float(total[0]) / float(sum_total) * 100.0, 2)
 
-    print(("%s\t: %d (%.2f%%) / %d / %d = %d" % (language,
-                total[0],
-                percent,
-                total[1],
-                total[2],
-                sum_total)))
+    print(
+        "%s\t: %d (%.2f%%) / %d / %d = %d"
+        % (language, total[0], percent, total[1], total[2], sum_total)
+    )
     print(details)

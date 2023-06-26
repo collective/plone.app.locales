@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# encoding: utf-8
 
 #  fillmsgstr.py
 #  Created by Russ Ferriday 2006.03.28
@@ -13,13 +12,13 @@
 #  https://www.freebsd.org/copyright/freebsd-license.html
 #  (i.e. do with it what you want but keep this notice.)
 
-from __future__ import print_function
+import fileinput
+import getopt
 import os
 import sys
-import getopt
-import fileinput
 
-help_message = '''
+
+help_message = """
 fillmsgstr [-h] [-r] [-v] [-o] <inputFile1> [ <inputFile2> [<inputFile3> ... ] ]
   -h : print this text
   -r : reverse the process
@@ -78,29 +77,29 @@ msgstr "Sie sind hier:"
   been removed.
 
   Copyright (c) 2006 Russ Ferriday - russf@topia.com
-'''
+"""
 
 
 class Usage(Exception):
     def __init__(self, msg):
         self.msg = msg
 
+
 def dump(s):
-    print('>>> %s' % s)
+    print(">>> %s" % s)
+
 
 def main(argv=None):
     if argv is None:
         argv = sys.argv
     try:
         try:
-            opts, args = getopt.getopt(argv[1:], "hro:v",
-                                       ["help", "output="])
+            opts, args = getopt.getopt(argv[1:], "hro:v", ["help", "output="])
         except getopt.error as msg:
-             raise Usage(msg)
+            raise Usage(msg)
 
         # option processing
-        verbose, output, infile, infilepath, reverse = \
-          False, None, None, None, False
+        verbose, output, infile, infilepath, reverse = False, None, None, None, False
         for option, value in opts:
             if option == "-v":
                 verbose = True
@@ -115,15 +114,20 @@ def main(argv=None):
             raise Usage(help_message)
 
         if len(args) > 1 and output:
-            print("If you specify an output file, then you may only provide a single input file...", file=sys.stderr)
+            print(
+                "If you specify an output file, then you may only provide a single input file...",
+                file=sys.stderr,
+            )
             raise Usage(help_message)
-
 
         for infilepath in args:
             if os.path.isfile(infilepath):
-                infile=fileinput.input(infilepath)
+                infile = fileinput.input(infilepath)
             else:
-                print("Check your input file. %s Is it a text file?" % infilepath, file=sys.stderr)
+                print(
+                    "Check your input file. %s Is it a text file?" % infilepath,
+                    file=sys.stderr,
+                )
                 raise Usage(help_message)
 
     except Usage as err:
@@ -132,31 +136,30 @@ def main(argv=None):
         return 2
 
     for infilepath in args:
-        infile=fileinput.input(infilepath)
+        infile = fileinput.input(infilepath)
 
         if output:
-            outfilepath=output
+            outfilepath = output
         else:
             if reverse:
-                outfilepath=infilepath + '.unfilled'
+                outfilepath = infilepath + ".unfilled"
             else:
-                outfilepath=infilepath + '.filled'
+                outfilepath = infilepath + ".filled"
 
-        outfile=open(outfilepath, 'w')
+        outfile = open(outfilepath, "w")
 
-        defMark='#. Default:'
-        msgidMark='msgid '
-        msgstrMark='msgstr '
-        savedMark='#saved'
+        defMark = "#. Default:"
+        msgidMark = "msgid "
+        savedMark = "#saved"
         buff = None
         if reverse:
             for line in infile:
                 # convert the #savedmsgid lines back to msgid lines
                 # and swallow the next msgid, i.e. the fake one we created earlier
                 if line.startswith(savedMark):
-                    buff=1
+                    buff = 1
                     # save this line, less the savedMark, until we see the msgstr line
-                    delayedLine=line[len(savedMark):]
+                    delayedLine = line[len(savedMark) :]
                     continue
                 if not buff:
                     outfile.write(line)
@@ -166,7 +169,7 @@ def main(argv=None):
                 #   This ensures it appears after any comments that it may been
                 #   moved ahead of by some translation memory tools.
                 if line.startswith(msgidMark):
-                    buff=None
+                    buff = None
                     outfile.write(delayedLine)
                     continue
                 # but meanwhile other lines remain unchanged
@@ -174,7 +177,7 @@ def main(argv=None):
         else:
             for line in infile:
                 if line.startswith(defMark):
-                    buff=line[len(defMark):]
+                    buff = line[len(defMark) :]
                     outfile.write(line)
                     continue
                 if not buff:
@@ -186,13 +189,13 @@ def main(argv=None):
                 # and if the msgid is cryptic (different from buff) write buff
                 # as msgid, else write line
                 if line.startswith(msgidMark):
-                    outfile.write('#saved%s' % line)
-                    if line[len(msgidMark):] != buff:
-                        oline='msgid%s' % buff
+                    outfile.write("#saved%s" % line)
+                    if line[len(msgidMark) :] != buff:
+                        oline = "msgid%s" % buff
                     else:
-                        oline=line
+                        oline = line
                     outfile.write(oline)
-                    buff=None
+                    buff = None
                     if verbose:
                         dump(oline)
                     continue
