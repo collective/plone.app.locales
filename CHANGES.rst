@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.16 (unreleased)
+6.0.16 (2023-09-11)
 -------------------
 
 - Fixes in Dutch translation
