@@ -4,7 +4,11 @@ Changelog
 6.0.16 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fixes in Dutch translation
+  [ThibautBorn]
+
+- Config with default template
+  [gforcada]
 
 
 6.0.15 (2023-06-16)
