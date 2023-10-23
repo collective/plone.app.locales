@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.17 (unreleased)
+6.0.17 (2023-10-23)
 -------------------
 
 - Fixes in German translation
