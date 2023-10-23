@@ -4,8 +4,8 @@ Changelog
 6.0.17 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Fixes in German translation
+  [pbauer]
 
 6.0.16 (2023-09-11)
 -------------------
