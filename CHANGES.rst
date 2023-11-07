@@ -481,7 +481,7 @@ Changelog
 - Complete spanish translation.
   [erral]
 
-- Compelete basque translation.
+- Complete basque translation.
   [erral]
 
 - Include plone.app.caching translations.
