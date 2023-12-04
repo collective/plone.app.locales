@@ -4,7 +4,14 @@ Changelog
 6.0.18 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Complete es translation
+  [erral]
+
+- Complete eu translation
+  [erral]
+
+- Resync po files
+  [erral]
 
 
 6.0.17 (2023-10-23)
