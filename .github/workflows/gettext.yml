@@ -1,0 +1,21 @@
+# Workflow meant to be used by external repositories
+# that are configured with this `meta` repository
+name: Gettext check
+
+jobs:
+  test:
+    name: Dependencies report
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+        os: ["ubuntu-latest"]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check that *.mo files are created correctly
+        run: |
+          for po in `find . -name "*.po"` ; do msgfmt --no-hash -o `dirname $po`/`basename $po .po`.mo $po; done
