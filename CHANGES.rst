@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.18 (unreleased)
+6.0.18 (2023-12-11)
 -------------------
 
 - Complete es translation
