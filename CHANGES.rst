@@ -13,6 +13,8 @@ Changelog
 - Resync po files
   [erral]
 
+- Add Weblate configuration
+  [erral]
 
 6.0.17 (2023-10-23)
 -------------------
