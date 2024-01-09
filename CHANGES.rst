@@ -4,8 +4,8 @@ Changelog
 5.1.34 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Update Portuguese translation
+  [ksuess]
 
 5.1.33 (2023-05-20)
 -------------------
