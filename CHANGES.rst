@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.34 (unreleased)
+5.1.34 (2024-01-09)
 -------------------
 
 - Update Portuguese translation
