@@ -4,8 +4,8 @@ Changelog
 6.0.19 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Update po files
+  [erral]
 
 6.0.18 (2023-12-11)
 -------------------
