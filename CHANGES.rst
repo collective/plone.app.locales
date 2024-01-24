@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.19 (unreleased)
+6.0.19 (2024-01-24)
 -------------------
 
 - Update po files
