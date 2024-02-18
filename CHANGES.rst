@@ -4,8 +4,8 @@ Changelog
 6.0.20 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Fixes in eu, nl, es, ar translations
+  [various]
 
 6.0.19 (2024-01-24)
 -------------------
