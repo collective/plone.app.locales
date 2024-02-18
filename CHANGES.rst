@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.0.20 (unreleased)
+6.0.20 (2024-02-18)
 -------------------
 
 - Fixes in eu, nl, es, ar translations
