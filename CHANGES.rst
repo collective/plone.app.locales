@@ -4,7 +4,8 @@ Changelog
 6.0.21 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update Brazilian Portuguese translations.
+  [lyralemos]
 
 
 6.0.20 (2024-02-18)
