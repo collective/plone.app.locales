@@ -6,6 +6,8 @@ Changelog
 
 - Update Brazilian Portuguese translations.
   [lyralemos]
+- Update Japanese translations.
+  [terapyon]
 
 
 6.0.20 (2024-02-18)
