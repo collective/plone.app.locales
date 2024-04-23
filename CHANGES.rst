@@ -1,3 +1,24 @@
+6.0.21 (2024-04-23)
+-------------------
+
+Bug fixes:
+
+
+- Update Portuguese translation (270b34a37)
+- Update Japanese translation (54a93a83e)
+- Update Norwegian translation (7af681c8d)
+- Update basque translation (9ef9128bf)
+- Fix fuzzy translations in pt_BR. @wesleybl (#407)
+- Fix fuzzy translations in it_IT. @yurj (#419)
+
+
+Internal:
+
+
+- Update configuration files.
+  [plone devs] (cfffba8c, fe7a1752)
+
+
 Changelog
 =========
 
