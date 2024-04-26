@@ -1,3 +1,14 @@
+6.0.22 (2024-04-26)
+-------------------
+
+Bug fixes:
+
+
+- Add new messages to translate (92f5f74d9)
+- Spanish translation (b11099882)
+- Basque translation (b297d3362)
+
+
 6.0.21 (2024-04-23)
 -------------------
 
