@@ -1,3 +1,14 @@
+6.0.23 (2024-07-31)
+-------------------
+
+Bug fixes:
+
+
+- Hindi translation [iRohitSingh] (#427)
+- German translation [Jesse-Grass, Jensens, Ksuess] (#428)
+- Chinese translation [RickyLam11] (#429)
+
+
 6.0.22 (2024-04-26)
 -------------------
 
