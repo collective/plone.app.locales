@@ -1,5 +1,15 @@
+.. image:: https://hosted.weblate.org/widget/plone/horizontal-auto.svg
+  :alt: Translation stats
+  :target: https://hosted.weblate.org/projects/plone/
+
+.. image:: https://hosted.weblate.org/widget/plone/svg-badge.svg
+  :alt: Translation status
+  :target: https://hosted.weblate.org/projects/plone/
+
+
 Introduction
 ============
+
 
 The *plone.app.locales* package contains the translation files for Plone Core.
 
