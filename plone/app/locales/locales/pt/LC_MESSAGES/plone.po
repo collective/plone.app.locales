@@ -212,7 +212,7 @@ msgid "1 minute"
 msgstr "1 minuto"
 
 #. Default: "Events in next 7 days."
-#: plone.app.event/plone/app/event/browser/event_listing.py:277
+#: plone.app.event/plone/app/event/browser/event_listing.py:284
 msgid "7days_events"
 msgstr ""
 
@@ -758,16 +758,16 @@ msgstr "Todas as datas"
 msgid "Allow anyone to view 'about' information"
 msgstr "Permitir a qualquer pessoa ver informação 'acerca de'"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion"
 msgstr "Permitir discussão"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:31
+#: plone.app.discussion/plone/app/discussion/behavior.py:31
 msgid "Allow discussion for this content object."
 msgstr "Permitir discussão para este objecto de conteúdo."
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion on this item"
 msgstr "Permitir discussão para este item"
 
@@ -1377,25 +1377,17 @@ msgstr "ID do comentário"
 msgid "Comment text"
 msgstr "Texto do comentário"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Commentators"
-msgstr "Comentadores"
-
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:66
 msgid "Commenter Image"
 msgstr "Imagem do comentador"
 
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
 msgid "Commenting infrastructure for Plone"
 msgstr "Infraestrutura de comentários do Plone"
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:51
 msgid "Comments"
 msgstr "Comentários"
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
-msgid "Comments added to a content item."
-msgstr "Comentários adicionados a um item de conteúdo."
 
 #: CMFPlone/controlpanel/browser/relations_rebuild.pt:75
 msgid "Common relations:"
@@ -2002,6 +1994,10 @@ msgstr "Item de Discussão"
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Itens de discussão são documentos em resposta a outros conteúdos. Eles não devem ser adicionados através da interface padrão 'folder_factories'."
 
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
+msgid "Discussion Support"
+msgstr ""
+
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:25
 msgid "Discussion settings"
 msgstr "Configurações da discussão"
@@ -2343,7 +2339,7 @@ msgstr "Activar verificações de integridade das ligações."
 msgid "Enable locking for through-the-web edits"
 msgstr "Activar bloqueio para edições via web."
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Enable next previous navigation for all items of this type"
 msgstr "Permitir navegação para anterior e seguinte em todos os itens deste tipo"
 
@@ -2603,7 +2599,7 @@ msgstr "Expressão a apresentar"
 msgid "Extension profile to configure a test fixture"
 msgstr "Perfil de extensão para configurar um suporte de ensaio"
 
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
 msgid "External Edit"
 msgstr "Edição Externa"
 
@@ -2795,7 +2791,7 @@ msgstr "Limpar e reconstruir intids"
 msgid "Folder"
 msgstr "Pasta"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Folder Addable Constrains"
 msgstr "Restrições adicionáveis de pastas"
 
@@ -2874,7 +2870,7 @@ msgstr "Obtenha todas as relações do catálogo zc.relation e armazene-as numa 
 msgid "Get the raw value as an encoded string"
 msgstr "Obter o valor cru como uma cadeia de texto codificada"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 msgid "Gives the ability to rename an item from its edit form."
 msgstr "Fornece a habilidade de renomear um item a partir do seu formulário de edição."
 
@@ -4097,7 +4093,7 @@ msgstr "Notícias"
 msgid "News Item"
 msgstr "Notícia"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Next previous navigation"
 msgstr "Navegação para o próximo ou anterior"
 
@@ -4106,7 +4102,7 @@ msgid "Next previous navigation toggle"
 msgstr "Comutar navegação para o próximo ou anterior"
 
 #: plone.app.content/plone/app/content/browser/contents/delete.py:38
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:16
+#: plone.app.discussion/plone/app/discussion/behavior.py:16
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "No"
 msgstr "Não"
@@ -4579,10 +4575,6 @@ msgstr "Documentação do programador Plone 6"
 #: CMFPlone/PloneControlPanel.py:73
 msgid "Plone Configuration"
 msgstr "Configuração do Plone"
-
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
-msgid "Plone Discussions"
-msgstr "Discussões Plone"
 
 #: CMFPlone/profiles.zcml:14
 #: CMFPlone/profiles/default/types/Plone_Site.xml
@@ -5108,7 +5100,7 @@ msgstr "Reiniciar"
 msgid "Restore relations from the annotation on the portal."
 msgstr "Restaurar as relações a partir da anotação no portal."
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Restrict the content types that can be added to folderish content"
 msgstr "Restringir os tipos de conteúdos que podem ser adicionados a conteúdo do género pasta"
 
@@ -5441,7 +5433,7 @@ msgstr "Coloque como Nenhum para desactivar a verificação"
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/tableofcontents.py:13
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/thumb_icon.py:15
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:25
+#: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:40
 msgid "Settings"
 msgstr "Configurações"
 
@@ -5474,7 +5466,7 @@ msgstr "Nome Curto"
 msgid "Short Name (ID)"
 msgstr "Nome Curto (ID)"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 #: plone.app.dexterity/plone/app/dexterity/behaviors/id.py:25
 msgid "Short name"
 msgstr "Nome curto"
@@ -6614,14 +6606,6 @@ msgstr "Topo"
 msgid "Total comments"
 msgstr "Todos os comentários"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments"
-msgstr "Número total de comentários"
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments on this item."
-msgstr "Número total de comentários sobre este item."
-
 #: plone.app.discussion/plone/app/discussion/interfaces.py:48
 msgid "Total number of public comments on this item"
 msgstr "Número total de comentários públicos sobre este item"
@@ -6780,6 +6764,14 @@ msgstr "Formato diff unificado"
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:169
 msgid "Uninstall"
 msgstr "Desinstalar"
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Commenting infrastructure for Plone"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Discussion Support"
+msgstr ""
 
 #: plone/app/multilingual/configure.zcml:179
 msgid "Uninstall, removes multilingual content support with plone.app.multilingual"
@@ -6985,10 +6977,6 @@ msgstr "Utilizadores"
 msgid "Users and Groups"
 msgstr "Utilizadores e Grupos"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Users who have commented on the item"
-msgstr "Utilizadores que comentaram o item"
-
 #: plone/base/interfaces/controlpanel.py:229
 msgid "Valid tags"
 msgstr "Tags válidas"
@@ -7017,9 +7005,9 @@ msgstr "Suporte ao controlo de versões com CMFEditions"
 msgid "Versioning with comment ${comment}"
 msgstr "Versionamento com comentário ${comment}"
 
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
 #: CMFPlone/profiles/default/types/Plone_Site.xml
 #: CMFPlone/profiles/default/types/TempFolder.xml
+#: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Collection.xml
 msgid "View"
 msgstr "Visualizar"
 
@@ -7219,7 +7207,7 @@ msgid "Working Copy Support (Iterate) [uninstall]"
 msgstr "Suporte à Cópia de Trabalho (iterar) [desinstalar]"
 
 #: plone.app.content/plone/app/content/browser/contents/delete.py:35
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:15
+#: plone.app.discussion/plone/app/discussion/behavior.py:15
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Yes"
 msgstr "Sim"
@@ -7489,7 +7477,7 @@ msgid "all"
 msgstr "todos"
 
 #. Default: "All events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:262
+#: plone.app.event/plone/app/event/browser/event_listing.py:269
 msgid "all_events"
 msgstr "Todos os eventos"
 
@@ -9159,22 +9147,22 @@ msgid "event_where"
 msgstr "Onde"
 
 #. Default: "${from} until ${until}."
-#: plone.app.event/plone/app/event/browser/event_listing.py:278
+#: plone.app.event/plone/app/event/browser/event_listing.py:285
 msgid "events_from_until"
 msgstr "Eventos entre ${from} e ${until}"
 
 #. Default: "Events in ${month} ${year}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:342
+#: plone.app.event/plone/app/event/browser/event_listing.py:349
 msgid "events_in_month"
 msgstr "Eventos em ${month} de ${year}"
 
 #. Default: "Events in week ${weeknumber}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:315
+#: plone.app.event/plone/app/event/browser/event_listing.py:322
 msgid "events_in_week"
 msgstr "Eventos na semana ${weeknumber}"
 
 #. Default: "Events on ${day}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:300
+#: plone.app.event/plone/app/event/browser/event_listing.py:307
 msgid "events_on_day"
 msgstr "Eventos em ${day}"
 
@@ -9312,7 +9300,7 @@ msgid "footer_login_link_signup"
 msgstr "Inscreva-se aqui"
 
 #. Default: "Future events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:268
+#: plone.app.event/plone/app/event/browser/event_listing.py:275
 msgid "future_events"
 msgstr "Eventos futuros"
 
@@ -14237,7 +14225,7 @@ msgid "past_end_date"
 msgstr "Erro: A data de término não pode ser anterior à data de início"
 
 #. Default: "Past events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:265
+#: plone.app.event/plone/app/event/browser/event_listing.py:272
 msgid "past_events"
 msgstr "Eventos anteriores"
 
@@ -15370,12 +15358,12 @@ msgid "to_login_view"
 msgstr "Entrar"
 
 #. Default: "Todays events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:274
+#: plone.app.event/plone/app/event/browser/event_listing.py:281
 msgid "todays_events"
 msgstr "Eventos do dia de hoje"
 
 #. Default: "Todays upcoming events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:271
+#: plone.app.event/plone/app/event/browser/event_listing.py:278
 msgid "todays_upcoming_events"
 msgstr "Próximos eventos do dia de hoje"
 

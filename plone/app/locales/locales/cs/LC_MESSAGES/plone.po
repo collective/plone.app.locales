@@ -239,7 +239,7 @@ msgid "1 minute"
 msgstr "1 minuta"
 
 #. Default: "Events in next 7 days."
-#: plone.app.event/plone/app/event/browser/event_listing.py:277
+#: plone.app.event/plone/app/event/browser/event_listing.py:284
 msgid "7days_events"
 msgstr "Události v následujícím týdnu."
 
@@ -789,16 +789,16 @@ msgstr ""
 msgid "Allow anyone to view 'about' information"
 msgstr "Povolit aby kdokoli mohl vidět informace \"O uživateli\""
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion"
 msgstr "Povolit diskusi"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:31
+#: plone.app.discussion/plone/app/discussion/behavior.py:31
 msgid "Allow discussion for this content object."
 msgstr "Povolit diskusi pro tuto položku"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion on this item"
 msgstr ""
 
@@ -1418,24 +1418,16 @@ msgstr ""
 msgid "Comment text"
 msgstr ""
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Commentators"
-msgstr ""
-
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:66
 msgid "Commenter Image"
 msgstr "Portét komentujícího"
 
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
 msgid "Commenting infrastructure for Plone"
 msgstr ""
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:51
 msgid "Comments"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
-msgid "Comments added to a content item."
 msgstr ""
 
 #: CMFPlone/controlpanel/browser/relations_rebuild.pt:75
@@ -2053,6 +2045,10 @@ msgstr "Komentář"
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Komentáře jsou reakce na jiné položky. Přidávají se jinak než obvyklé položky."
 
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
+msgid "Discussion Support"
+msgstr ""
+
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:25
 msgid "Discussion settings"
 msgstr "Nastavení komentářů"
@@ -2397,7 +2393,7 @@ msgstr "Zapnout kontrolu integrity odkazů"
 msgid "Enable locking for through-the-web edits"
 msgstr "Povolit zamykaní položek při editaci přes prohlížeč"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Enable next previous navigation for all items of this type"
 msgstr "Povolit navigaci předchozí-další pro všechny položky tohoto typu"
 
@@ -2661,7 +2657,7 @@ msgid "Extension profile to configure a test fixture"
 msgstr ""
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
 msgid "External Edit"
 msgstr "Úpravy pomocí externího editoru"
 
@@ -2859,7 +2855,7 @@ msgstr ""
 msgid "Folder"
 msgstr "Složka"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Folder Addable Constrains"
 msgstr ""
 
@@ -2940,7 +2936,7 @@ msgstr ""
 msgid "Get the raw value as an encoded string"
 msgstr "Získat raw hodnotu jako enkódovaný řetězec"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 msgid "Gives the ability to rename an item from its edit form."
 msgstr ""
 
@@ -4194,7 +4190,7 @@ msgstr "Novinky"
 msgid "News Item"
 msgstr "Novinka"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Next previous navigation"
 msgstr "Navigace předchozí-další"
 
@@ -4204,7 +4200,7 @@ msgstr "Zapnutí navigace předchozí-další"
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:38
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:16
+#: plone.app.discussion/plone/app/discussion/behavior.py:16
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "No"
 msgstr "Ne"
@@ -4686,10 +4682,6 @@ msgstr ""
 #: CMFPlone/PloneControlPanel.py:73
 msgid "Plone Configuration"
 msgstr "Nastavení portálu"
-
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
-msgid "Plone Discussions"
-msgstr ""
 
 #. Default: "Plone Site"
 #: CMFPlone/profiles.zcml:14
@@ -5242,7 +5234,7 @@ msgstr "Restartovat"
 msgid "Restore relations from the annotation on the portal."
 msgstr ""
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Restrict the content types that can be added to folderish content"
 msgstr ""
 
@@ -5587,7 +5579,7 @@ msgstr "Nastavte None pokud nechcete kontrolovat"
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/tableofcontents.py:13
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/thumb_icon.py:15
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:25
+#: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:40
 msgid "Settings"
 msgstr "Nastavení"
 
@@ -5622,7 +5614,7 @@ msgstr "Krátký název"
 msgid "Short Name (ID)"
 msgstr ""
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 #: plone.app.dexterity/plone/app/dexterity/behaviors/id.py:25
 msgid "Short name"
 msgstr ""
@@ -6791,14 +6783,6 @@ msgstr ""
 msgid "Total comments"
 msgstr ""
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments"
-msgstr ""
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments on this item."
-msgstr ""
-
 #: plone.app.discussion/plone/app/discussion/interfaces.py:48
 msgid "Total number of public comments on this item"
 msgstr ""
@@ -6957,6 +6941,14 @@ msgstr ""
 
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:169
 msgid "Uninstall"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Commenting infrastructure for Plone"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Discussion Support"
 msgstr ""
 
 #: plone/app/multilingual/configure.zcml:179
@@ -7165,10 +7157,6 @@ msgstr ""
 msgid "Users and Groups"
 msgstr "Uživatelé a skupiny"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Users who have commented on the item"
-msgstr ""
-
 #: plone/base/interfaces/controlpanel.py:229
 msgid "Valid tags"
 msgstr ""
@@ -7198,9 +7186,9 @@ msgid "Versioning with comment ${comment}"
 msgstr ""
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
 #: CMFPlone/profiles/default/types/Plone_Site.xml
 #: CMFPlone/profiles/default/types/TempFolder.xml
+#: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Collection.xml
 msgid "View"
 msgstr "Zobrazení"
 
@@ -7410,7 +7398,7 @@ msgstr ""
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:35
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:15
+#: plone.app.discussion/plone/app/discussion/behavior.py:15
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Yes"
 msgstr "Ano"
@@ -7674,7 +7662,7 @@ msgid "all"
 msgstr ""
 
 #. Default: "All events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:262
+#: plone.app.event/plone/app/event/browser/event_listing.py:269
 msgid "all_events"
 msgstr "Všechny události"
 
@@ -9109,22 +9097,22 @@ msgid "event_where"
 msgstr ""
 
 #. Default: "${from} until ${until}."
-#: plone.app.event/plone/app/event/browser/event_listing.py:278
+#: plone.app.event/plone/app/event/browser/event_listing.py:285
 msgid "events_from_until"
 msgstr "${from} do ${until}."
 
 #. Default: "Events in ${month} ${year}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:342
+#: plone.app.event/plone/app/event/browser/event_listing.py:349
 msgid "events_in_month"
 msgstr "Události v ${month} ${year}"
 
 #. Default: "Events in week ${weeknumber}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:315
+#: plone.app.event/plone/app/event/browser/event_listing.py:322
 msgid "events_in_week"
 msgstr "Události v týdnu ${weeknumber}"
 
 #. Default: "Events on ${day}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:300
+#: plone.app.event/plone/app/event/browser/event_listing.py:307
 msgid "events_on_day"
 msgstr "Události dne ${day}"
 
@@ -9260,7 +9248,7 @@ msgid "footer_login_link_signup"
 msgstr ""
 
 #. Default: "Future events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:268
+#: plone.app.event/plone/app/event/browser/event_listing.py:275
 msgid "future_events"
 msgstr "Nadcházející události"
 
@@ -13985,7 +13973,7 @@ msgid "past_end_date"
 msgstr ""
 
 #. Default: "Past events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:265
+#: plone.app.event/plone/app/event/browser/event_listing.py:272
 msgid "past_events"
 msgstr "Uskutečněné události"
 
@@ -15096,12 +15084,12 @@ msgid "to_login_view"
 msgstr ""
 
 #. Default: "Todays events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:274
+#: plone.app.event/plone/app/event/browser/event_listing.py:281
 msgid "todays_events"
 msgstr "Dnešní události"
 
 #. Default: "Todays upcoming events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:271
+#: plone.app.event/plone/app/event/browser/event_listing.py:278
 msgid "todays_upcoming_events"
 msgstr "Dnešní nadcházející události"
 

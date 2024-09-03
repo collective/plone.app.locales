@@ -4,21 +4,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2024-08-20 19:09+0000\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/plone/plone/eu/>\n"
-"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.7\n"
 "Language-Code: eu\n"
 "Language-Name: Basque\n"
 "Preferred-Encodings: latin1 utf-8\n"
 "Domain: plone\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: eu\n"
+"X-Generator: Weblate 5.7\n"
 "X-Is-Fallback-For: eu-es\n"
 
 #: plone.app.dexterity/plone/app/dexterity/interfaces.py:89
@@ -219,7 +219,7 @@ msgid "1 minute"
 msgstr "Minutu 1"
 
 #. Default: "Events in next 7 days."
-#: plone.app.event/plone/app/event/browser/event_listing.py:277
+#: plone.app.event/plone/app/event/browser/event_listing.py:284
 msgid "7days_events"
 msgstr "Hurrengo 7 egunetako hitzorduak."
 
@@ -769,16 +769,16 @@ msgstr "Data guztiak"
 msgid "Allow anyone to view 'about' information"
 msgstr "Edonori utzi elementuei buruzko informazioa ikusten"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion"
 msgstr "Erantzunak aktibatu"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:31
+#: plone.app.discussion/plone/app/discussion/behavior.py:31
 msgid "Allow discussion for this content object."
 msgstr "Elementu mota hauetan erantzunak uztea aktibatu."
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion on this item"
 msgstr "Elementu honi erentzunak aktibatu"
 
@@ -1398,25 +1398,17 @@ msgstr "Id-a"
 msgid "Comment text"
 msgstr "Testua"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Commentators"
-msgstr "Erantzuna eman dutenak"
-
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:66
 msgid "Commenter Image"
 msgstr "Erantzuna eman duenaren irudia"
 
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
 msgid "Commenting infrastructure for Plone"
 msgstr "Ploneren erantzunak"
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:51
 msgid "Comments"
 msgstr "Erantzunak"
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
-msgid "Comments added to a content item."
-msgstr "Elementuari erantzunak gehitu zaizkio."
 
 #: CMFPlone/controlpanel/browser/relations_rebuild.pt:75
 msgid "Common relations:"
@@ -2033,6 +2025,10 @@ msgstr "Eztabaida elementua"
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Eztabaida elementuak, bestelako edukiari erantzuten dioten dokumentuak dira. Ez lukete 'folder_factories' interfazearen bitartez gehigarri egon behar."
 
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
+msgid "Discussion Support"
+msgstr ""
+
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:25
 msgid "Discussion settings"
 msgstr "Eztabaidaren ezarpenak"
@@ -2377,7 +2373,7 @@ msgstr "Loturen integritate egiaztapenak aktibatu"
 msgid "Enable locking for through-the-web edits"
 msgstr "Webguneko edizioak blokeatzea aktibatu"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Enable next previous navigation for all items of this type"
 msgstr "Mota honetako elementu guztiek \"aurrekoa-hurrengoa\" nabigazioa izatea aktibatu"
 
@@ -2641,7 +2637,7 @@ msgid "Extension profile to configure a test fixture"
 msgstr "Testak konfigurazeko instalazio profila"
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
 msgid "External Edit"
 msgstr "Kanpoan editatu"
 
@@ -2839,7 +2835,7 @@ msgstr "Intideak garbitu eta berreraiki"
 msgid "Folder"
 msgstr "Karpeta"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Folder Addable Constrains"
 msgstr "Karpetara gehitu daitezkeen murriztapenak"
 
@@ -2920,7 +2916,7 @@ msgstr "Lortu erlazio guztiak zc.relation katalogotik eta atariko \"annotation\"
 msgid "Get the raw value as an encoded string"
 msgstr "Jatorrizko balioa kodetutako karaketere-kate gisa lortu"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 msgid "Gives the ability to rename an item from its edit form."
 msgstr "Bere edizio formularioan elementuaren id-a aldatzeko aukera aktibatzen du."
 
@@ -4173,7 +4169,7 @@ msgstr "Albisteak"
 msgid "News Item"
 msgstr "Albistea"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Next previous navigation"
 msgstr "Aurrekoa/Hurrengoa nabigazioa"
 
@@ -4183,7 +4179,7 @@ msgstr "Aurrekoa/Hurrengoa nabigazioa aktibatzeko aukera"
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:38
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:16
+#: plone.app.discussion/plone/app/discussion/behavior.py:16
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "No"
 msgstr "Ez"
@@ -4665,10 +4661,6 @@ msgstr "Plone 6 garatzaileen dokumentazioa"
 msgid "Plone Configuration"
 msgstr "Ploneren Konfigurazioa"
 
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
-msgid "Plone Discussions"
-msgstr "Plone Erantzunak"
-
 #. Default: "Plone Site"
 #: CMFPlone/profiles.zcml:14
 #: CMFPlone/profiles/default/types/Plone_Site.xml
@@ -4912,16 +4904,13 @@ msgstr "Idatzi hemen zure CSSa..."
 #. Default: "Puts your item in a review queue, so it can be published externally or internally."
 #: CMFPlone/profiles/default/workflows/intranet_workflow/definition.xml
 msgid "Puts your item in a review queue, so it can be published externally or internally."
-msgstr ""
-"Bidali zure elementua errebisatze kolara barrurako zein kanporako argitaratu "
-"ahal izateko."
+msgstr "Bidali zure elementua errebisatze kolara barrurako zein kanporako argitaratu ahal izateko."
 
 #. Default: "Puts your item in a review queue, so it can be published on the site."
 #: CMFPlone/profiles/default/workflows/plone_workflow/definition.xml
 #: CMFPlone/profiles/default/workflows/simple_publication_workflow/definition.xml
 msgid "Puts your item in a review queue, so it can be published on the site."
-msgstr ""
-"Bidali zure elementua errebisatze kolara webgunean argitaratu ahal izateko."
+msgstr "Bidali zure elementua errebisatze kolara webgunean argitaratu ahal izateko."
 
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Querying this is undefined"
@@ -5223,7 +5212,7 @@ msgstr "Berrabiarazi"
 msgid "Restore relations from the annotation on the portal."
 msgstr "Berrezarri erlazioak atariko \"annotation\" elementutik."
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Restrict the content types that can be added to folderish content"
 msgstr "Karpeta batera gehitu daitezkeen elementu-motak ezarri"
 
@@ -5491,9 +5480,7 @@ msgstr "Hautatu balioak zerrendatik"
 
 #: plone/base/interfaces/controlpanel.py:1310
 msgid "Select which IDs (short names) can act as fallback default pages for a container."
-msgstr ""
-"Adierazi karpeta erako eduki baten defektuzko orri gisa jardun dezaketen "
-"elementuen ID edo izen-laburrak zein diren."
+msgstr "Adierazi karpeta erako eduki baten defektuzko orri gisa jardun dezaketen elementuen ID edo izen-laburrak zein diren."
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/collection.py:79
 msgid "Select which fields to display when 'Tabular view' is selected in the display menu."
@@ -5570,7 +5557,7 @@ msgstr "Aukeratu None egiaztaketa desaktibatzeko"
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/tableofcontents.py:13
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/thumb_icon.py:15
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:25
+#: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:40
 msgid "Settings"
 msgstr "Ezarpenak"
 
@@ -5605,7 +5592,7 @@ msgstr "Izen-laburra"
 msgid "Short Name (ID)"
 msgstr "Izen laburra (ID)"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 #: plone.app.dexterity/plone/app/dexterity/behaviors/id.py:25
 msgid "Short name"
 msgstr "Izen-laburra"
@@ -6287,9 +6274,7 @@ msgstr "\"${actionid}\" izena ez da zuzena"
 
 #: plone/base/interfaces/controlpanel.py:371
 msgid "The inline editing mode is useful when creating user experiences where you want the editing view of the page to be merged with the reading view of the page."
-msgstr ""
-"Linean editatzeko modua orrialdea editatzeko eta ikusteko bistak bateratzea "
-"nahi duzunean da erabilgarria."
+msgstr "Linean editatzeko modua orrialdea editatzeko eta ikusteko bistak bateratzea nahi duzunean da erabilgarria."
 
 #: plone.app.content/plone/app/content/browser/actions.py:357
 msgid "The item you are trying to paste could not be found. It may have been moved or deleted after you copied or cut it."
@@ -6776,14 +6761,6 @@ msgstr "Goian"
 msgid "Total comments"
 msgstr "Erantzun kopurua"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments"
-msgstr "Erantzun kopuru totala"
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments on this item."
-msgstr "Elementu honen erantzun kopurua"
-
 #: plone.app.discussion/plone/app/discussion/interfaces.py:48
 msgid "Total number of public comments on this item"
 msgstr "Elementu honen erantzun publiko kopurua"
@@ -6943,6 +6920,14 @@ msgstr "Desberdintasunak ikusteko formatu bateratua"
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:169
 msgid "Uninstall"
 msgstr "Desinstalatu"
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Commenting infrastructure for Plone"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Discussion Support"
+msgstr ""
 
 #: plone/app/multilingual/configure.zcml:179
 msgid "Uninstall, removes multilingual content support with plone.app.multilingual"
@@ -7150,10 +7135,6 @@ msgstr "Erabiltzaileak"
 msgid "Users and Groups"
 msgstr "Erabiltzaile eta taldeak"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Users who have commented on the item"
-msgstr "Elementuan erantzuna eman duten erabiltzaileak"
-
 #: plone/base/interfaces/controlpanel.py:229
 msgid "Valid tags"
 msgstr "Baliozko etiketak"
@@ -7183,9 +7164,9 @@ msgid "Versioning with comment ${comment}"
 msgstr "${comment} iruzkina duen bertsioa"
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
 #: CMFPlone/profiles/default/types/Plone_Site.xml
 #: CMFPlone/profiles/default/types/TempFolder.xml
+#: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Collection.xml
 msgid "View"
 msgstr "Ikusi"
 
@@ -7395,7 +7376,7 @@ msgstr "Objektuen Bertsioak (Iterate) [kendu]"
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:35
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:15
+#: plone.app.discussion/plone/app/discussion/behavior.py:15
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Yes"
 msgstr "Bai"
@@ -7659,7 +7640,7 @@ msgid "all"
 msgstr "guztiak"
 
 #. Default: "All events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:262
+#: plone.app.event/plone/app/event/browser/event_listing.py:269
 msgid "all_events"
 msgstr "Hitzordu guztiak"
 
@@ -9087,22 +9068,22 @@ msgid "event_where"
 msgstr "Non"
 
 #. Default: "${from} until ${until}."
-#: plone.app.event/plone/app/event/browser/event_listing.py:278
+#: plone.app.event/plone/app/event/browser/event_listing.py:285
 msgid "events_from_until"
 msgstr "${from} - ${until}."
 
 #. Default: "Events in ${month} ${year}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:342
+#: plone.app.event/plone/app/event/browser/event_listing.py:349
 msgid "events_in_month"
 msgstr "${year} ${month}ko hitzorduak"
 
 #. Default: "Events in week ${weeknumber}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:315
+#: plone.app.event/plone/app/event/browser/event_listing.py:322
 msgid "events_in_week"
 msgstr "${weeknumber} asteko hitzorduak"
 
 #. Default: "Events on ${day}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:300
+#: plone.app.event/plone/app/event/browser/event_listing.py:307
 msgid "events_on_day"
 msgstr "${day} eguneko hitzorduak"
 
@@ -9238,7 +9219,7 @@ msgid "footer_login_link_signup"
 msgstr "Izena eman"
 
 #. Default: "Future events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:268
+#: plone.app.event/plone/app/event/browser/event_listing.py:275
 msgid "future_events"
 msgstr "Etorkizuneko hitzorduak"
 
@@ -13733,9 +13714,7 @@ msgstr "Erabiltzaile-izen hauek bikoiztuta aurkitu dira:"
 #. Default: "The following packages were previously installed, but are currently missing. This may be a problem."
 #: CMFPlone/browser/templates/plone-upgrade.pt:50
 msgid "msg_missing_packages"
-msgstr ""
-"Pakete hauek lehen instalatuta zauden baina orain ez. Honek arazoak sortu "
-"ditzake."
+msgstr "Pakete hauek lehen instalatuta zauden baina orain ez. Honek arazoak sortu ditzake."
 
 #. Default: "No login names found that are used by more than one account."
 #: CMFPlone/controlpanel/browser/emaillogin.pt:42
@@ -13937,7 +13916,7 @@ msgid "past_end_date"
 msgstr "Errorea: bukaera-data ezin da hasiera-data baino lehenagokoa izan"
 
 #. Default: "Past events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:265
+#: plone.app.event/plone/app/event/browser/event_listing.py:272
 msgid "past_events"
 msgstr "Pasatutako hitzorduak"
 
@@ -15037,12 +15016,12 @@ msgid "to_login_view"
 msgstr "sartu"
 
 #. Default: "Todays events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:274
+#: plone.app.event/plone/app/event/browser/event_listing.py:281
 msgid "todays_events"
 msgstr "Gaurko hitzorduak"
 
 #. Default: "Todays upcoming events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:271
+#: plone.app.event/plone/app/event/browser/event_listing.py:278
 msgid "todays_upcoming_events"
 msgstr "Gaurko hitzorduak"
 

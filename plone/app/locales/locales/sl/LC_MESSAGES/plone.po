@@ -218,7 +218,7 @@ msgid "1 minute"
 msgstr "1 minuta"
 
 #. Default: "Events in next 7 days."
-#: plone.app.event/plone/app/event/browser/event_listing.py:277
+#: plone.app.event/plone/app/event/browser/event_listing.py:284
 msgid "7days_events"
 msgstr "Dogodki naslednjih 7 dni"
 
@@ -767,16 +767,16 @@ msgstr "Vsi datumi"
 msgid "Allow anyone to view 'about' information"
 msgstr "Dovoli vsakemu, da vidi informacije o avtorstvu."
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion"
 msgstr "Dovoli razpravo"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:31
+#: plone.app.discussion/plone/app/discussion/behavior.py:31
 msgid "Allow discussion for this content object."
 msgstr "Dovoli razpravo za ta vsebinski predmet."
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion on this item"
 msgstr "Dovoli razpravo o tem predmetu."
 
@@ -1396,25 +1396,17 @@ msgstr "Identifikacija komentarja"
 msgid "Comment text"
 msgstr "Besedilo komentarja"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Commentators"
-msgstr "Komentatorji"
-
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:66
 msgid "Commenter Image"
 msgstr "Slika komentatorja"
 
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
 msgid "Commenting infrastructure for Plone"
 msgstr "Infrastruktura komentiranja za Plone"
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:51
 msgid "Comments"
 msgstr "Komentarji"
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
-msgid "Comments added to a content item."
-msgstr "Komentarji dodani na postavko vsebine."
 
 #: CMFPlone/controlpanel/browser/relations_rebuild.pt:75
 msgid "Common relations:"
@@ -2031,6 +2023,10 @@ msgstr "Prispevek k debati"
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "Prispevki k debati so dokumenti, ki odgovarjajo na neko drugo vsebino. NE SMEJO jih dodati z vmesnikom za standardne vsebinske mape."
 
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
+msgid "Discussion Support"
+msgstr ""
+
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:25
 msgid "Discussion settings"
 msgstr "Nastavitve diskusije"
@@ -2376,7 +2372,7 @@ msgstr "Omogoči preverjanje povezav"
 msgid "Enable locking for through-the-web edits"
 msgstr "Vklopi zaklepanje za urejanje prek spleta"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Enable next previous navigation for all items of this type"
 msgstr "Omogoči navigacijo naprej nazaj za vse prispevke te vrste"
 
@@ -2641,7 +2637,7 @@ msgid "Extension profile to configure a test fixture"
 msgstr "Profil podaljška za nastavljanje testne napeljave"
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
 msgid "External Edit"
 msgstr "Zunanji urejevalnik"
 
@@ -2840,7 +2836,7 @@ msgstr ""
 msgid "Folder"
 msgstr "Mapa"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Folder Addable Constrains"
 msgstr "Mapa omejitev, ki jih je moč dodati"
 
@@ -2921,7 +2917,7 @@ msgstr ""
 msgid "Get the raw value as an encoded string"
 msgstr "Pridobi surovo vrednost kot kodirani niz"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 msgid "Gives the ability to rename an item from its edit form."
 msgstr "Daje možnost preimenovanja tega prispevka iz obrazca za urejanje."
 
@@ -4175,7 +4171,7 @@ msgstr "Novice"
 msgid "News Item"
 msgstr "Novica"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Next previous navigation"
 msgstr "Navigacija naprej nazaj"
 
@@ -4185,7 +4181,7 @@ msgstr "Preklop navigacije naprej nazaj"
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:38
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:16
+#: plone.app.discussion/plone/app/discussion/behavior.py:16
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "No"
 msgstr "Ne"
@@ -4666,10 +4662,6 @@ msgstr ""
 #: CMFPlone/PloneControlPanel.py:73
 msgid "Plone Configuration"
 msgstr "Nastavitve programa Plone"
-
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
-msgid "Plone Discussions"
-msgstr "Plone diskusija"
 
 #. Default: "Plone Site"
 #: CMFPlone/profiles.zcml:14
@@ -5220,7 +5212,7 @@ msgstr "Ponovno zaženi"
 msgid "Restore relations from the annotation on the portal."
 msgstr ""
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Restrict the content types that can be added to folderish content"
 msgstr "Omeji vrste vsebine, ki jih lahko dodajamo v vsebino mape"
 
@@ -5564,7 +5556,7 @@ msgstr "Postavljeno na Nič za preprečevanje preverjanja"
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/tableofcontents.py:13
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/thumb_icon.py:15
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:25
+#: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:40
 msgid "Settings"
 msgstr "Nastavitve"
 
@@ -5598,7 +5590,7 @@ msgstr "Kratko ime"
 msgid "Short Name (ID)"
 msgstr "Kratko ime (ID)"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 #: plone.app.dexterity/plone/app/dexterity/behaviors/id.py:25
 msgid "Short name"
 msgstr "Kratko ime"
@@ -6766,14 +6758,6 @@ msgstr "Vrh"
 msgid "Total comments"
 msgstr "Vseh komentarjev"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments"
-msgstr "Skupno število komentarjev"
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments on this item."
-msgstr "Skupno število komentarjev na ta prispevek."
-
 #: plone.app.discussion/plone/app/discussion/interfaces.py:48
 msgid "Total number of public comments on this item"
 msgstr "Skupno število javnih komentarjev na ta prispevek"
@@ -6933,6 +6917,14 @@ msgstr "Enotni format diff"
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:169
 msgid "Uninstall"
 msgstr "Odstrani"
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Commenting infrastructure for Plone"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Discussion Support"
+msgstr ""
 
 #: plone/app/multilingual/configure.zcml:179
 msgid "Uninstall, removes multilingual content support with plone.app.multilingual"
@@ -7140,10 +7132,6 @@ msgstr "Uporabniki"
 msgid "Users and Groups"
 msgstr "Uporabniki in skupine"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Users who have commented on the item"
-msgstr "Uporabniki, ki so komentirali prispevek"
-
 #: plone/base/interfaces/controlpanel.py:229
 msgid "Valid tags"
 msgstr "Veljavne značke"
@@ -7173,9 +7161,9 @@ msgid "Versioning with comment ${comment}"
 msgstr "Verzioniranje s komentarjem ${comment}"
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
 #: CMFPlone/profiles/default/types/Plone_Site.xml
 #: CMFPlone/profiles/default/types/TempFolder.xml
+#: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Collection.xml
 msgid "View"
 msgstr "Pogled"
 
@@ -7385,7 +7373,7 @@ msgstr "Podpora delovne kopije (ponavljanja) [odstrani]"
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:35
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:15
+#: plone.app.discussion/plone/app/discussion/behavior.py:15
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Yes"
 msgstr "Da"
@@ -7649,7 +7637,7 @@ msgid "all"
 msgstr ""
 
 #. Default: "All events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:262
+#: plone.app.event/plone/app/event/browser/event_listing.py:269
 msgid "all_events"
 msgstr "Vsi dogodki"
 
@@ -9081,22 +9069,22 @@ msgid "event_where"
 msgstr "Kje"
 
 #. Default: "${from} until ${until}."
-#: plone.app.event/plone/app/event/browser/event_listing.py:278
+#: plone.app.event/plone/app/event/browser/event_listing.py:285
 msgid "events_from_until"
 msgstr "${from} do ${until}."
 
 #. Default: "Events in ${month} ${year}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:342
+#: plone.app.event/plone/app/event/browser/event_listing.py:349
 msgid "events_in_month"
 msgstr "Dogodkov v ${month} ${year}\""
 
 #. Default: "Events in week ${weeknumber}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:315
+#: plone.app.event/plone/app/event/browser/event_listing.py:322
 msgid "events_in_week"
 msgstr "Dogodkov v tednu ${weeknumber}"
 
 #. Default: "Events on ${day}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:300
+#: plone.app.event/plone/app/event/browser/event_listing.py:307
 msgid "events_on_day"
 msgstr "Dogodkov v ${day}"
 
@@ -9232,7 +9220,7 @@ msgid "footer_login_link_signup"
 msgstr "Podpišite tu"
 
 #. Default: "Future events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:268
+#: plone.app.event/plone/app/event/browser/event_listing.py:275
 msgid "future_events"
 msgstr "Prihajajoči dogodki"
 
@@ -13944,7 +13932,7 @@ msgid "past_end_date"
 msgstr "Napaka: Končni datum ne more biti pred začetnim datumom"
 
 #. Default: "Past events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:265
+#: plone.app.event/plone/app/event/browser/event_listing.py:272
 msgid "past_events"
 msgstr "Pretekli dogodki"
 
@@ -15041,12 +15029,12 @@ msgid "to_login_view"
 msgstr "prijava"
 
 #. Default: "Todays events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:274
+#: plone.app.event/plone/app/event/browser/event_listing.py:281
 msgid "todays_events"
 msgstr "Današnji dogodki"
 
 #. Default: "Todays upcoming events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:271
+#: plone.app.event/plone/app/event/browser/event_listing.py:278
 msgid "todays_upcoming_events"
 msgstr "Danes prihajajoči dogodki"
 

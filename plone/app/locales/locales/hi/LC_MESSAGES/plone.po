@@ -214,7 +214,7 @@ msgid "1 minute"
 msgstr "1 मिनट"
 
 #. Default: "Events in next 7 days."
-#: plone.app.event/plone/app/event/browser/event_listing.py:277
+#: plone.app.event/plone/app/event/browser/event_listing.py:284
 msgid "7days_events"
 msgstr "अगले 7 दिनों में आयोजनएँ"
 
@@ -764,16 +764,16 @@ msgstr "सभी तिथियाँ"
 msgid "Allow anyone to view 'about' information"
 msgstr "'के बारे में' जानकारी को किसी भी को देखने की अनुमति दें"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.py:30
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion"
 msgstr "चर्चा की अनुमति दें"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:31
+#: plone.app.discussion/plone/app/discussion/behavior.py:31
 msgid "Allow discussion for this content object."
 msgstr "इस कंटेंट वस्तु के लिए चर्चा की अनुमति दें।"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:122
+#: plone.app.discussion/plone/app/discussion/behavior.zcml:21
 msgid "Allow discussion on this item"
 msgstr "इस आइटम पर चर्चा की अनुमति दें"
 
@@ -1392,25 +1392,17 @@ msgstr "टिप्पणी आईडी"
 msgid "Comment text"
 msgstr "टिप्पणी पाठ"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Commentators"
-msgstr "टिप्पणीकर्ता"
-
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:66
 msgid "Commenter Image"
 msgstr "टिप्पणीकर्ता छवि"
 
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
 msgid "Commenting infrastructure for Plone"
 msgstr "Plone के लिए टिप्पणी संरचना"
 
 #: plone.app.discussion/plone/app/discussion/contentrules.py:51
 msgid "Comments"
 msgstr "टिप्पणियाँ"
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
-msgid "Comments added to a content item."
-msgstr "एक कंटेंट आइटम में टिप्पणियाँ जोड़ी गईं।"
 
 #: CMFPlone/controlpanel/browser/relations_rebuild.pt:75
 msgid "Common relations:"
@@ -2027,6 +2019,10 @@ msgstr "चर्चा का मुद्दा"
 msgid "Discussion Items are documents which reply to other content.They should *not* be addable through the standard 'folder_factories' interface."
 msgstr "चर्चा का मुद्दा वे दस्तावेज़ हैं जो अन्य कंटेंट का जवाब देते हैं। इन्हें मानक 'फ़ोल्डर_फैक्ट्रीज़' इंटरफ़ेस के माध्यम से जोड़ा नहीं जाना चाहिए।"
 
+#: plone.app.discussion/plone/app/discussion/configure.zcml:48
+msgid "Discussion Support"
+msgstr ""
+
 #: plone.app.discussion/plone/app/discussion/browser/controlpanel.py:25
 msgid "Discussion settings"
 msgstr "चर्चा सेटिंग्स"
@@ -2371,7 +2367,7 @@ msgstr "लिंक पूर्णता जाँच सक्षम कर�
 msgid "Enable locking for through-the-web edits"
 msgstr "वेब के माध्यम से संपादन के लिए ताला सक्षम करें"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Enable next previous navigation for all items of this type"
 msgstr "इस प्रकार के सभी आइटमों के लिए अगला पिछला नेविगेशन सक्षम करें"
 
@@ -2635,7 +2631,7 @@ msgid "Extension profile to configure a test fixture"
 msgstr "टेस्ट फिक्स्चर को कॉन्फ़िगर करने के लिए एक्सटेंशन प्रोफ़ाइल"
 
 #. Default: "External Edit"
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
+#: plone.app.discussion/plone/app/discussion/profiles/default/types/Discussion_Item.xml
 msgid "External Edit"
 msgstr "बाह्य संपादन"
 
@@ -2833,7 +2829,7 @@ msgstr "इंटिड्स को फ्लश करें और फिर 
 msgid "Folder"
 msgstr "फ़ोल्डर"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Folder Addable Constrains"
 msgstr "फ़ोल्डर जोड़ने योग्य बाधाएँ"
 
@@ -2914,7 +2910,7 @@ msgstr "zc.relation सूची से सभी संबंधों को �
 msgid "Get the raw value as an encoded string"
 msgstr "कोडित स्ट्रिंग के रूप में मूल मान प्राप्त करें"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 msgid "Gives the ability to rename an item from its edit form."
 msgstr "संपादन फ़ॉर्म से आइटम का नाम बदलने की क्षमता प्रदान करता है।"
 
@@ -4168,7 +4164,7 @@ msgstr "समाचार"
 msgid "News Item"
 msgstr "समाचार आइटम"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:136
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:128
 msgid "Next previous navigation"
 msgstr "अगला पिछला नेविगेशन"
 
@@ -4178,7 +4174,7 @@ msgstr "अगला पिछला नेविगेशन टॉगल"
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:38
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:16
+#: plone.app.discussion/plone/app/discussion/behavior.py:16
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "No"
 msgstr "नहीं"
@@ -4660,10 +4656,6 @@ msgstr ""
 #: CMFPlone/PloneControlPanel.py:73
 msgid "Plone Configuration"
 msgstr "प्लोन संरचना"
-
-#: plone.app.discussion/plone/app/discussion/configure.zcml:46
-msgid "Plone Discussions"
-msgstr ""
 
 #. Default: "Plone Site"
 #: CMFPlone/profiles.zcml:14
@@ -5216,7 +5208,7 @@ msgstr "पुनः आरंभ करें"
 msgid "Restore relations from the annotation on the portal."
 msgstr "पोर्टल पर एनोटेशन से संबंधों को पुनः स्थापित करें।"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:148
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:140
 msgid "Restrict the content types that can be added to folderish content"
 msgstr "फोल्डरिश कंटेंट में जोड़े जा सकने वाले कंटेंट प्रकारों को प्रतिबंधित करें"
 
@@ -5561,7 +5553,7 @@ msgstr "जाँच को अक्षम करने के लिए को
 
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/tableofcontents.py:13
 #: plone.app.contenttypes/plone/app/contenttypes/behaviors/thumb_icon.py:15
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:25
+#: plone.app.dexterity/plone/app/dexterity/behaviors/exclfromnav.py:40
 msgid "Settings"
 msgstr "सेटिंग्स"
 
@@ -5596,7 +5588,7 @@ msgstr "संक्षिप्त नाम"
 msgid "Short Name (ID)"
 msgstr "संक्षिप्त नाम (आईडी)"
 
-#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:158
+#: plone.app.dexterity/plone/app/dexterity/behaviors/configure.zcml:150
 #: plone.app.dexterity/plone/app/dexterity/behaviors/id.py:25
 msgid "Short name"
 msgstr "संक्षिप्त नाम"
@@ -6765,14 +6757,6 @@ msgstr "शीर्ष"
 msgid "Total comments"
 msgstr "कुल टिप्पणियाँ"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments"
-msgstr "कुल टिप्पणियों की संख्या"
-
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Total number of comments on this item."
-msgstr "इस आइटम पर कुल टिप्पणियों की संख्या।"
-
 #: plone.app.discussion/plone/app/discussion/interfaces.py:48
 msgid "Total number of public comments on this item"
 msgstr "इस आइटम पर सार्वजनिक टिप्पणियों की कुल संख्या"
@@ -6932,6 +6916,14 @@ msgstr "एकीकृत अंतर प्रारूप"
 #: CMFPlone/controlpanel/browser/quickinstaller.pt:169
 msgid "Uninstall"
 msgstr "स्थापना हटाएं"
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Commenting infrastructure for Plone"
+msgstr ""
+
+#: plone.app.discussion/plone/app/discussion/configure.zcml:57
+msgid "Uninstall Discussion Support"
+msgstr ""
 
 #: plone/app/multilingual/configure.zcml:179
 msgid "Uninstall, removes multilingual content support with plone.app.multilingual"
@@ -7139,10 +7131,6 @@ msgstr "उपयोगकर्ता"
 msgid "Users and Groups"
 msgstr "उपयोगकर्ता और समूह"
 
-#: plone.app.discussion/plone/app/discussion/profiles/default/portal_atct.xml
-msgid "Users who have commented on the item"
-msgstr "उपयोगकर्ता जिन्होंने आइटम पर टिप्पणी की है"
-
 #: plone/base/interfaces/controlpanel.py:229
 msgid "Valid tags"
 msgstr "मान्य टैग"
@@ -7172,9 +7160,9 @@ msgid "Versioning with comment ${comment}"
 msgstr "टिप्पणी के साथ संस्करणात्मकता ${comment}"
 
 #. Default: "View"
-#: CMFPlone/profiles/default/types/Discussion_Item.xml
 #: CMFPlone/profiles/default/types/Plone_Site.xml
 #: CMFPlone/profiles/default/types/TempFolder.xml
+#: plone.app.contenttypes/plone/app/contenttypes/profiles/default/types/Collection.xml
 msgid "View"
 msgstr "देखें"
 
@@ -7384,7 +7372,7 @@ msgstr "कामकॉपी समर्थन (इटेरेट) [अनइ
 
 #. not sure if this is actually used
 #: plone.app.content/plone/app/content/browser/contents/delete.py:35
-#: plone.app.dexterity/plone/app/dexterity/behaviors/discussion.py:15
+#: plone.app.discussion/plone/app/discussion/behavior.py:15
 #: plone.app.querystring/plone/app/querystring/profiles/default/registry.xml
 msgid "Yes"
 msgstr "हाँ"
@@ -7648,7 +7636,7 @@ msgid "all"
 msgstr "सभी"
 
 #. Default: "All events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:262
+#: plone.app.event/plone/app/event/browser/event_listing.py:269
 msgid "all_events"
 msgstr "सभी आयोजनएँ"
 
@@ -9082,22 +9070,22 @@ msgid "event_where"
 msgstr "कहाँ"
 
 #. Default: "${from} until ${until}."
-#: plone.app.event/plone/app/event/browser/event_listing.py:278
+#: plone.app.event/plone/app/event/browser/event_listing.py:285
 msgid "events_from_until"
 msgstr "${from} से ${until} तक।"
 
 #. Default: "Events in ${month} ${year}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:342
+#: plone.app.event/plone/app/event/browser/event_listing.py:349
 msgid "events_in_month"
 msgstr "${month} ${year} में आयोजनएँ"
 
 #. Default: "Events in week ${weeknumber}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:315
+#: plone.app.event/plone/app/event/browser/event_listing.py:322
 msgid "events_in_week"
 msgstr "सप्ताह ${weeknumber} में आयोजनएँ"
 
 #. Default: "Events on ${day}"
-#: plone.app.event/plone/app/event/browser/event_listing.py:300
+#: plone.app.event/plone/app/event/browser/event_listing.py:307
 msgid "events_on_day"
 msgstr "${day} को आयोजनएँ"
 
@@ -9233,7 +9221,7 @@ msgid "footer_login_link_signup"
 msgstr "यहाँ साइन अप करें"
 
 #. Default: "Future events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:268
+#: plone.app.event/plone/app/event/browser/event_listing.py:275
 msgid "future_events"
 msgstr "भविष्य की आयोजनएँ"
 
@@ -13940,7 +13928,7 @@ msgid "past_end_date"
 msgstr "बीता हुआ अंतिम तिथि"
 
 #. Default: "Past events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:265
+#: plone.app.event/plone/app/event/browser/event_listing.py:272
 msgid "past_events"
 msgstr "बीते कार्यक्रम"
 
@@ -15044,12 +15032,12 @@ msgid "to_login_view"
 msgstr "लॉगिन देखें"
 
 #. Default: "Todays events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:274
+#: plone.app.event/plone/app/event/browser/event_listing.py:281
 msgid "todays_events"
 msgstr "आज की आयोजनएँ"
 
 #. Default: "Todays upcoming events"
-#: plone.app.event/plone/app/event/browser/event_listing.py:271
+#: plone.app.event/plone/app/event/browser/event_listing.py:278
 msgid "todays_upcoming_events"
 msgstr "आज की आगामी आयोजनएँ"
 
