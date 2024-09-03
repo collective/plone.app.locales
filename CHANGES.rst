@@ -1,3 +1,17 @@
+6.0.24 (2024-09-03)
+-------------------
+
+New features:
+
+
+- - Update es translation
+  - Update pt-br translation
+  - Update eu translation
+  - Update cn translation
+  - Update nl translation
+  - Remove Products.validation translations (translations)
+
+
 6.0.23 (2024-07-31)
 -------------------
 
