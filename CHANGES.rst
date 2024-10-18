@@ -1,3 +1,10 @@
+6.0.25 (unreleased)
+-------------------
+
+- Update Japanese translations.
+  [terapyon]
+
+
 6.0.24 (2024-09-03)
 -------------------
 
