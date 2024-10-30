@@ -1,6 +1,15 @@
 6.0.25 (unreleased)
 -------------------
 
+- Update pt-br translations.
+  [ericof]
+
+- Update Spanish translations.
+  [erral]
+
+- Update Chinese translations.
+  [wooze]
+
 - Update Japanese translations.
   [terapyon]
 
