@@ -1,3 +1,25 @@
+6.0.26 (2024-12-12)
+-------------------
+
+Bug fixes:
+
+
+- it translations
+  [yurj] (#457)
+- de translations
+  [petscki]
+
+  eu trnaslations
+  [erral]
+
+  es translations
+  [erral] (#458)
+- ja translations
+  [terapyon] (#459, #460)
+- de translations
+  [tisto, jensens, davisagli] (#461)
+
+
 6.0.25 (2024-10-30)
 -------------------
 
