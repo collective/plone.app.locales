@@ -9,7 +9,7 @@ Bug fixes:
 - de translations
   [petscki]
 
-  eu trnaslations
+  eu translations
   [erral]
 
   es translations
