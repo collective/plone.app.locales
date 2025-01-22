@@ -4,7 +4,8 @@ Changelog
 5.1.35 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update polish, hungarian, croation, and german.
+  [ksuess]
 
 
 5.1.34 (2024-01-09)
