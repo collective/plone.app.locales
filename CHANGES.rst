@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.35 (unreleased)
+5.1.35 (2025-01-23)
 -------------------
 
 - Update polish, hungarian, croation, and german.
