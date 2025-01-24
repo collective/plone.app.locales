@@ -4,7 +4,8 @@ Changelog
 5.1.36 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update spanish, portuguese, and hungarian.
+  [ksuess]
 
 
 5.1.35 (2025-01-23)
