@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.1.36 (unreleased)
+5.1.36 (2025-01-26)
 -------------------
 
 - Update spanish, portuguese, and hungarian.
