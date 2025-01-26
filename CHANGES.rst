@@ -1,3 +1,14 @@
+6.0.28 (2025-01-26)
+-------------------
+
+Bug fixes:
+
+
+- Georgian translations (#466)
+- Dutch translations (#467, #468)
+- Japanese translation (#469)
+- Georgian translation (#470, #471)
+
 
 6.0.27 (2024-12-17)
 -------------------
