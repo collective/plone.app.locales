@@ -1,3 +1,13 @@
+6.0.29 (2025-01-27)
+-------------------
+
+Bug fixes:
+
+
+- Fixes in Finnish translation (#477, #478)
+- Fix German translation. (#479)
+
+
 6.0.28 (2025-01-26)
 -------------------
 
