@@ -1,3 +1,10 @@
+6.x.x (unreleased)
+-------------------
+
+- Japanese translation in widgets.po
+  [terapyon]
+
+
 6.0.29 (2025-01-27)
 -------------------
 
