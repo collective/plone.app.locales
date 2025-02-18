@@ -1,5 +1,5 @@
 """
-   Usage: list.py
+Usage: list.py
 """
 
 from utils import getLongProductName

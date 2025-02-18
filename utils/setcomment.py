@@ -1,5 +1,5 @@
 """
-   Usage: setcomment.py <product> <comment>
+Usage: setcomment.py <product> <comment>
 """
 
 from i18ndude import catalog

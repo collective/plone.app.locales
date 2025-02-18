@@ -1,5 +1,5 @@
 """
-   Usage: sync.py [<product> | <language-code>]
+Usage: sync.py [<product> | <language-code>]
 """
 
 from utils import getLongProductName

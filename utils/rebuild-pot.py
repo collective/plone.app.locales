@@ -1,10 +1,10 @@
 """
-   Usage: rebuild-pot.py <product> <path to products dir>
+Usage: rebuild-pot.py <product> <path to products dir>
 
-   If you are lazy you can also use atct, atrbw etc. as shorthands and if you
-   set your INSTANCE_HOME correctly it will automagically use the right version.
+If you are lazy you can also use atct, atrbw etc. as shorthands and if you
+set your INSTANCE_HOME correctly it will automagically use the right version.
 
-   So 'rebuilt-pot.py atrbw' is a valid shorthand.
+So 'rebuilt-pot.py atrbw' is a valid shorthand.
 """
 
 from utils import getLongProductName
