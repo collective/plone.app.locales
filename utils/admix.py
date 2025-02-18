@@ -1,5 +1,5 @@
 """
-   Usage: admix.py <target-product> <source-product>
+Usage: admix.py <target-product> <source-product>
 """
 
 from utils import getLanguage

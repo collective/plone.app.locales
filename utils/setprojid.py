@@ -1,5 +1,5 @@
 """
-   Usage: setprojid.py <product> <projectid>
+Usage: setprojid.py <product> <projectid>
 """
 
 from i18ndude import catalog

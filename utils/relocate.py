@@ -1,12 +1,12 @@
 """
-   Usage: relocate.py
+Usage: relocate.py
 
-   As we moved quite some messages between domains lately, this script
-   automates this process, so it can be repeatedly and safely called on po
-   files to preserve translations.
+As we moved quite some messages between domains lately, this script
+automates this process, so it can be repeatedly and safely called on po
+files to preserve translations.
 
-   Note that PYTHON and I18NDUDE must have been set as environment variables
-   before calling this script
+Note that PYTHON and I18NDUDE must have been set as environment variables
+before calling this script
 """
 
 from i18ndude import catalog

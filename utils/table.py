@@ -1,5 +1,5 @@
 """
-   Usage: table.py
+Usage: table.py
 """
 
 from utils import getLongProductName

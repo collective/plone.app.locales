@@ -1,12 +1,12 @@
 """
-   Usage: create.py <target-product> <source-product>
+Usage: create.py <target-product> <source-product>
 
-   Creates copies of all existing po files of the source product under the name of the target product.
-   This is useful to preserves headers of the files and to give a starting point for work.
+Creates copies of all existing po files of the source product under the name of the target product.
+This is useful to preserves headers of the files and to give a starting point for work.
 
-   You have to run merge after that, to remove the wrong msgid's and include the one's from the actual product
+You have to run merge after that, to remove the wrong msgid's and include the one's from the actual product
 
-   Using admix.py can then copy over existing translations.
+Using admix.py can then copy over existing translations.
 """
 
 from utils import getLanguage
