@@ -1,4 +1,4 @@
-from setuptools import find_packages
+from setuptools import find_namespace_packages
 from setuptools import setup
 
 
@@ -48,6 +48,7 @@ setup(
     author_email="plone-developers@lists.sourceforge.net",
     url="https://github.com/collective/plone.app.locales",
     license="GPL version 2",
+    packages=find_namespace_packages(),
     include_package_data=True,
     zip_safe=False,
     python_requires=">=3.10",
