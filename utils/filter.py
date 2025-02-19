@@ -1,7 +1,7 @@
 """
-   Usage: filter.py <target-product> <source-product>
+Usage: filter.py <target-product> <source-product>
 
-   Filter out all msgid's in target product that are already in source product.
+Filter out all msgid's in target product that are already in source product.
 """
 
 import os

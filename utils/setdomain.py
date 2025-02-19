@@ -1,5 +1,5 @@
 """
-   Usage: setdomain.py <product> <domain>
+Usage: setdomain.py <product> <domain>
 """
 
 from i18ndude import catalog
