@@ -1,3 +1,30 @@
+6.0.30 (2025-03-14)
+-------------------
+
+New features:
+
+
+- Update widgets @petshki (#457)
+- Tamil and Turkish translations @weblate (#480)
+- Tamil translations @weblate (#482, #483, #484)
+- Dutch and Tamil translations @weblate (#485)
+- Japanese translation @terapyon (#488)
+- Basque translations @erral (#490)
+- Italian translations @yurj (#492, #493)
+- Dutch translations @inovdb (#496)
+- Dutch translations @ingovdb (#497, #499, #500)
+- Japanese translations @terapyon (#498)
+
+
+Internal:
+
+
+- Configure with plone.meta @maurits (#494)
+- Use newer actions/checkout for tests @dependabot (#495)
+- Update configuration files.
+  [plone devs]
+
+
 6.x.x (unreleased)
 -------------------
 

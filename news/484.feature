@@ -1,1 +1,0 @@
-Tamil translations @weblate
