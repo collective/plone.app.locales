@@ -1,3 +1,30 @@
+6.0.31 (2025-06-15)
+-------------------
+
+New features:
+
+
+- Update translations: fi, it, eu (#502)
+- Update translations fi (#503, #504)
+- Update translations zh_TW (#506, #507)
+- Update translations de (#511, #512, #513)
+- Update translations tr (#514)
+- Update translations es, tr (#515)
+- New widgets translations (#516)
+- Update translations es (#517)
+- Update translations ta (#518)
+- Update translations eu, es (#519)
+- Update translations eu (#520)
+
+
+Internal:
+
+
+- Configure with default template @erral (#505)
+- Update configuration files.
+  [plone devs]
+
+
 6.0.30 (2025-03-14)
 -------------------
 

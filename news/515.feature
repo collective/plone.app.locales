@@ -1,1 +1,0 @@
-Update translations es, tr
