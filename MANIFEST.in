@@ -2,10 +2,13 @@ include *.rst
 include pyproject.toml
 
 graft docs
-graft plone
+graft src *
 graft utils
 
 global-include *.mo
 global-exclude *.py[co]
 recursive-exclude news *
 exclude news
+recursive-include src *.po
+recursive-include src *.pot
+recursive-include src *.zcml
