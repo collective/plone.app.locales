@@ -1,3 +1,21 @@
+6.1.0 (2025-10-01)
+------------------
+
+New features:
+
+
+- Japanese translation. @terapyon (ja-202506)
+- Update Swedish, German, Basque, Tamil, Finnish, Chinese (traditional), Turkish, Spanish, Dutch, Italian, Portuguese (#545)
+- Make package compatible with Plone 6.1 only @erral
+- Update po files @erral
+
+
+Internal:
+
+
+- Move to src layout @erral
+
+
 6.0.31 (2025-06-15)
 -------------------
 
