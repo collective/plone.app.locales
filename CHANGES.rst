@@ -1,3 +1,19 @@
+7.0.0a1 (2025-11-21)
+--------------------
+
+Breaking changes:
+
+
+- Replace ``pkg_resources`` namespace with PEP 420 native namespace.
+  Support only Plone 6.2 and Python 3.10+. (#3928)
+
+
+Bug fixes:
+
+
+- Update po files @erral (#554)
+
+
 6.1.0 (2025-10-01)
 ------------------
 
