@@ -1,3 +1,14 @@
+7.0.0a2 (2026-01-09)
+--------------------
+
+Bug fixes:
+
+
+- - Update Tamil translations @TamilNeram (#568)
+- Update German translations @petschki (#574)
+- Fix Estonian translations @Mack (#577)
+
+
 7.0.0a1 (2025-11-21)
 --------------------
 
