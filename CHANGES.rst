@@ -1,3 +1,12 @@
+6.1.1 (2026-01-09)
+------------------
+
+Bug fixes:
+
+
+- Update translations for Swedish, Tamil, Spanish, Dutch, Basque, Tamil, German
+
+
 6.1.0 (2025-10-01)
 ------------------
 
