@@ -17,7 +17,6 @@ import getopt
 import os
 import sys
 
-
 help_message = """
 fillmsgstr [-h] [-r] [-v] [-o] <inputFile1> [ <inputFile2> [<inputFile3> ... ] ]
   -h : print this text

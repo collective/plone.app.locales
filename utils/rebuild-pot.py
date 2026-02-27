@@ -13,7 +13,6 @@ from utils import getProductPath
 import os
 import sys
 
-
 __I18NDUDE = os.environ.get("I18NDUDE", "i18ndude")
 __INSTANCE_HOME = os.environ.get("INSTANCE_HOME", "")
 

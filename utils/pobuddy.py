@@ -145,7 +145,7 @@ class paraGetter:
             + " Default is ./pobuddyCSV",
         )
 
-        (options, args) = parser.parse_args()
+        options, args = parser.parse_args()
 
         para["csvDir"] = options.csvDir
         para["warningOn"] = options.warningOn

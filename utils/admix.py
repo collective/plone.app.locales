@@ -9,7 +9,6 @@ import os
 import shutil
 import sys
 
-
 __I18NDUDE = os.environ.get("I18NDUDE", "i18ndude")
 
 
