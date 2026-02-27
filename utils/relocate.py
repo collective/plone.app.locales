@@ -16,7 +16,6 @@ from utils import getPoFiles
 import os
 import sys
 
-
 __PYTHON = os.environ.get("PYTHON", "python")
 __I18NDUDE = os.environ.get("I18NDUDE", "i18ndude")
 
