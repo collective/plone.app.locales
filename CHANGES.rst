@@ -1,3 +1,25 @@
+7.0.0a3 (2026-03-25)
+--------------------
+
+New features:
+
+
+- Updated translations for es, eu, gl, it @various conttributors
+
+
+Bug fixes:
+
+
+- Update German translations for password reset and creation.
+
+
+Internal:
+
+
+- Update configuration files.
+  [plone devs]
+
+
 7.0.0a2 (2026-01-09)
 --------------------
 
