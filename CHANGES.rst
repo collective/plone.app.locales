@@ -1,3 +1,12 @@
+7.0.0 (2026-05-05)
+------------------
+
+New features:
+
+
+- Complete eu, es translations @various
+
+
 7.0.0a3 (2026-03-25)
 --------------------
 
