@@ -1,3 +1,12 @@
+7.0.0 (2026-05-17)
+------------------
+
+New features:
+
+
+- Complete fr, gl and ta translations @jimbiscuit @xulioxesus @tamilneran (#609)
+
+
 7.0.0rc1 (2026-05-05)
 ---------------------
 
