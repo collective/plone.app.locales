@@ -1,3 +1,13 @@
+7.0.2 (2026-05-19)
+------------------
+
+New features:
+
+
+- Update Brazilian Portuguese (pt_BR) translations for ``plone`` and ``widgets`` domains. @ericof
+- Update Dutch (nl) translations for ``plone`` and ``widgets`` domains. @mauritsvanrees
+
+
 7.0.1 (2026-05-17)
 ------------------
 
