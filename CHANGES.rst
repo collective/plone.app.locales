@@ -1,3 +1,25 @@
+6.1.2 (2026-05-21)
+------------------
+
+New features:
+
+
+- Update translations with those made for Plone 6.2 @erral
+
+
+Bug fixes:
+
+
+- Update German translations for password reset and creation.
+
+
+Internal:
+
+
+- Update configuration files.
+  [plone devs]
+
+
 6.1.1 (2026-01-09)
 ------------------
 
