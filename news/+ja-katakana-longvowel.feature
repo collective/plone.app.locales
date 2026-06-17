@@ -1,0 +1,1 @@
+Standardize Japanese (ja) translations: unify the katakana long-vowel mark (ー) to the elongated form (e.g. ``ユーザー``, ``フォルダー``, ``サーバー``, ``フィルター``, ``パラメーター``, ``エディター``) and fill the missing ``ID`` label, across the ``plone``, ``widgets``, ``cmfplacefulworkflow`` and ``plonefrontpage`` domains. @terapyon
