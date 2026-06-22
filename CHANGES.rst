@@ -1,3 +1,12 @@
+7.0.3 (2026-06-22)
+------------------
+
+New features:
+
+
+- Add translations for pat-filemanager @MrTango @petshki
+
+
 7.0.2 (2026-05-19)
 ------------------
 
