@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = "7.0.3"
+version = "7.0.4.dev0"
 
 
 def read(filename):
