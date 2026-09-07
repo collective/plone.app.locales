@@ -1,3 +1,13 @@
+7.0.4 (2026-09-07)
+------------------
+
+New features:
+
+
+- Improve Japanese (ja) translations: unify the katakana long-vowel mark (ー) to the elongated form (e.g. ``ユーザー``, ``フォルダー``, ``サーバー``, ``フィルター``, ``パラメーター``, ``エディター``), unify inconsistent wording across domains, normalize punctuation to half-width and ``ください`` to kana, translate previously-untranslated short UI labels, and fill the missing ``ID`` label; across the ``plone``, ``widgets``, ``cmfeditions``, ``cmfplacefulworkflow`` and ``plonefrontpage`` domains. @terapyon
+- Update ja, zh_CN, es, eu translations @terapyon @macagua @erral @flytothehighest
+
+
 7.0.3 (2026-06-22)
 ------------------
 
