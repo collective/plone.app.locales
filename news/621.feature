@@ -1,1 +1,0 @@
-Fix es translation @erral

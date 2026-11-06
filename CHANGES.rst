@@ -1,3 +1,21 @@
+7.0.5 (2026-11-06)
+------------------
+
+New features:
+
+
+- Fix es translation @erral (#621)
+- Widgets translations: nl @ingovdb (#622)
+- Update cs and sr translation @Valentina Ostojić (#623)
+
+
+Internal:
+
+
+- Move package metadata from ``setup.py`` to ``pyproject.toml``.
+  [plone devs]
+
+
 7.0.4 (2026-09-07)
 ------------------
 
