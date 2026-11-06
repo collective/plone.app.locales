@@ -1,0 +1,1 @@
+Widgets translations: nl @ingovdb
